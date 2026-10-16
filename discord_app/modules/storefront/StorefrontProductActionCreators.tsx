@@ -1,11 +1,11 @@
-// === Module 8562: StorefrontProductActionCreators ===
+// === Module 8570: StorefrontProductActionCreators ===
 
-// Module 8562 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8564 */;
+// Module 8570 (StorefrontProductActionCreators)
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8563 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7501 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8571 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7503 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -247,7 +247,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 

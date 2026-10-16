@@ -1,11 +1,11 @@
-// === Module 13399: useIsViewingPremiumMemberships ===
+// === Module 13425: useIsViewingPremiumMemberships ===
 
-// Module 13399 (useIsViewingPremiumMemberships)
+// Module 13425 (useIsViewingPremiumMemberships)
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import ChannelConstants from "ChannelConstants" /* 2072 */;
-import _mod5006 from "module_5006" /* 5006 */;
-import RouteUtils from "RouteUtils" /* 5013 */;
+import Constants from "Constants" /* 1087 */;
+import ChannelConstants from "ChannelConstants" /* 2075 */;
+import _mod5009 from "module_5009" /* 5009 */;
+import RouteUtils from "RouteUtils" /* 5016 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,8 +23,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVie
   } else {
     first = cResult[0];
   }
-  return null != _mod5006.useRouteMatch(first);
+  return null != _mod5009.useRouteMatch(first);
 }) : (function useIsViewingPremiumMemberships() {
   const RouteParam = RouteUtils.RouteParam;
-  return null != _mod5006.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  return null != _mod5009.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
 });

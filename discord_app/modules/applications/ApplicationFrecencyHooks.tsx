@@ -1,14 +1,14 @@
-// === Module 11848: ApplicationFrecencyHooks ===
+// === Module 11872: ApplicationFrecencyHooks ===
 
-// Module 11848 (ApplicationFrecencyHooks)
+// Module 11872 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9469 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9485 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const UserSettingsTypes = fn(1095).UserSettingsTypes;
+const UserSettingsTypes = fn(1097).UserSettingsTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");

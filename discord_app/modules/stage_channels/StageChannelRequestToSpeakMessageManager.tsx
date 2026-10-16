@@ -1,17 +1,17 @@
-// === Module 18530: StageChannelRequestToSpeakMessageManager ===
+// === Module 18572: StageChannelRequestToSpeakMessageManager ===
 
-// Module 18530 (StageChannelRequestToSpeakMessageManager)
-import MessageTypes from "MessageTypes" /* 1101 */;
+// Module 18572 (StageChannelRequestToSpeakMessageManager)
+import MessageTypes from "MessageTypes" /* 1103 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5492 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MessageStore from "MessageStore" /* 5494 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import UserStore from "UserStore" /* 1392 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const MessageFlags = fn(1085).MessageFlags;
+const MessageFlags = fn(1087).MessageFlags;
 class StageChannelRequestToSpeakMessageManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -28,12 +28,12 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
       if (requestToSpeakTimestamp.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
-            if (closure_6.can(userId(2073).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
+            if (closure_6.can(userId(2076).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(18531).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(18531);
+                  const result = userId(18573).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(18573);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -48,8 +48,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7395).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7395);
+                  closure_1(7397).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7397);
                 }
               }
             }

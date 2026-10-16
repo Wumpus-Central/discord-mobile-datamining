@@ -1,6 +1,6 @@
-// === Module 6484: RedesignCompat ===
+// === Module 6486: RedesignCompat ===
 
-// Module 6484 (RedesignCompat)
+// Module 6486 (RedesignCompat)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

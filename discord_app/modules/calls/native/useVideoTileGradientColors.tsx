@@ -1,9 +1,9 @@
-// === Module 8598: useVideoTileGradientColors ===
+// === Module 8606: useVideoTileGradientColors ===
 
-// Module 8598 (useVideoTileGradientColors)
+// Module 8606 (useVideoTileGradientColors)
 import c from "c" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8574 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8582 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const ThemeTypes = fn(1085).ThemeTypes;
+const ThemeTypes = fn(1087).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");

@@ -1,24 +1,24 @@
-// === Module 11229: createWebViewController ===
+// === Module 11245: createWebViewController ===
 
-// Module 11229 (createWebViewController)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11230 */;
-import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11249 */;
+// Module 11245 (createWebViewController)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11246 */;
+import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11268 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ComponentActions = fn(1085).ComponentActions;
-let closure_5 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5855).TransportTypes;
+const ComponentActions = fn(1087).ComponentActions;
+let closure_5 = fn(2026).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+const TransportTypes = fn(5857).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 
 export default function createWebViewController(id, contextSource) {
   _require = id;
   ({ getOrigin: importDefault, onDisallowedNavigation: dependencyMap } = contextSource);
-  function postMessageToWebView(arg0) {
+  function postMessageToWebView(arg0, arg1) {
     const self = this;
     const apply = closure_5.apply;
     if (typeof apply === "unknown") {
@@ -29,18 +29,19 @@ export default function createWebViewController(id, contextSource) {
     return applyArgumentsResult;
   }
   closure_5 = async function _postMessageToWebView(arg0) {
-    await webViewProxy.injectJavaScript(closure_1(tmp3[5])(closure_0));
+    closure_3 = tmp3;
+    await webViewProxy.injectJavaScript(closure_1(10956)(closure_0, closure_1));
     if (1 === tmp7) {
-      c4 = 0;
-      closure_129_0 = closure_3;
-      closure_1(tmp3[6]).captureException(closure_129_0);
-      c6 = 3;
-      closure_1(tmp3[6]);
+      c5 = 0;
+      closure_130_0 = closure_4;
+      closure_1(1257).captureException(closure_130_0);
+      c7 = 3;
+      closure_1(1257);
     } else if (arg0 === 1) {
-      c6 = 3;
+      c7 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      c4 = 0;
+      c5 = 0;
     }
     return value;
   };

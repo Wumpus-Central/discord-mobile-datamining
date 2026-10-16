@@ -1,22 +1,22 @@
-// === Module 14256: NUFChannelsManager ===
+// === Module 14288: NUFChannelsManager ===
 
-// Module 14256 (NUFChannelsManager)
+// Module 14288 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import UserUtils from "UserUtils" /* 5018 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5032 */;
-import RootNavigationRef from "RootNavigationRef" /* 5033 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import UserUtils from "UserUtils" /* 5021 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import UserStore from "UserStore" /* 1392 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-const GuildMemberFlags = fn(4792).GuildMemberFlags;
+const GuildFeatures = fn(1087).GuildFeatures;
+const GuildMemberFlags = fn(4795).GuildMemberFlags;
 let c9 = "2020_02_nuf_channels";
 let c10 = "2020_02_nuf_voice_channels";
 class NUFChannelsManager extends tmp2 {
@@ -84,7 +84,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14257, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14289, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }
@@ -98,8 +98,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(5018).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(5018);
+        isNewUserResult = applyArgumentsResult(5021).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(5021);
       }
       return isNewUserResult;
     };

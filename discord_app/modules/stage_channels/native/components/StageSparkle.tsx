@@ -1,21 +1,21 @@
-// === Module 8888: StageSparkle ===
+// === Module 8896: StageSparkle ===
 
-// Module 8888 (StageSparkle)
+// Module 8896 (StageSparkle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import _modDef8889 from "module_8889" /* 8889 */;
-import _modDef8890 from "module_8890" /* 8890 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import _modDef8897 from "module_8897" /* 8897 */;
+import _modDef8898 from "module_8898" /* 8898 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const native = ThemeContextProvider(4883);
+const native = ThemeContextProvider(4886);
 require = fn;
 let closure_3 = ["theme"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" }, iconContainer: null, iconStyle: null, sparkles: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 28, height: 56, width: 56, alignItems: "center", justifyContent: "center" };
 obj2.iconContainer = size;
@@ -28,7 +28,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
   const cResult = c.c(16);
   ({ style, IconComponent, icon } = arg0);
   if (undefined === icon) {
-    icon = _modDef8889;
+    icon = _modDef8897;
   }
   const tmp4 = closure_8();
   if (cResult[0] === style) {
@@ -43,7 +43,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
               let tmp14 = cResult[9];
             }
             if (cResult[10] !== tmp4.sparkles) {
-              const obj2 = { style: tmp4.sparkles, source: _modDef8890 };
+              const obj2 = { style: tmp4.sparkles, source: _modDef8898 };
               const tmp22 = timestampProducer(FastImageDefault, obj2);
               cResult[10] = tmp4.sparkles;
               cResult[11] = tmp22;
@@ -99,7 +99,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
 }) : (function StageSparkleInner(style) {
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = _modDef8889;
+    icon = _modDef8897;
   }
   const tmp3 = closure_8();
   const obj = { style: null, children: null };
@@ -117,8 +117,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
   }
   obj2.children = tmp6Result;
   const items1 = [timestampProducer(View, obj2), ];
-  const obj5 = { style: tmp3.sparkles, source: tmp10(8890) };
-  items1[1] = timestampProducer(tmp10(5088), obj5);
+  const obj5 = { style: tmp3.sparkles, source: tmp10(8898) };
+  items1[1] = timestampProducer(tmp10(5091), obj5);
   obj.children = items1;
   return React5(View, obj);
 });

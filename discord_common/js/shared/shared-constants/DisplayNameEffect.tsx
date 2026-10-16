@@ -1,6 +1,6 @@
-// === Module 1409: DisplayNameEffect ===
+// === Module 1411: DisplayNameEffect ===
 
-// Module 1409 (DisplayNameEffect)
+// Module 1411 (DisplayNameEffect)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx");

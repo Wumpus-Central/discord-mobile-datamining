@@ -1,14 +1,14 @@
-// === Module 18615: ExemptChannelsActionSheet ===
+// === Module 18657: ExemptChannelsActionSheet ===
 
-// Module 18615 (ExemptChannelsActionSheet)
-import TableRow from "TableRow" /* 6400 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7022 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8376 */;
+// Module 18657 (ExemptChannelsActionSheet)
+import TableRow from "TableRow" /* 6402 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7024 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8384 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7021 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7023 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function getChannelOptionId(channel) {
@@ -167,10 +167,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptCh
     tmp10 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.OGiMXJ);
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t.vephiL);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t.OGiMXJ);
+    const intl2 = tmp(1128).intl;
+    const stringResult1 = intl2.string(tmp(1128).t.vephiL);
     cResult[6] = stringResult;
     cResult[7] = stringResult1;
     let tmp12 = stringResult1;
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptCh
       }
     }
   }
-  const tmp16 = jsx(stateFromStores(18614), { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-channels", items: tmp9, initialSelected: exemptChannels, getId: getChannelOptionId, getSearchText: getChannelOptionName, renderLabel: getChannelOptionName, renderIcon: tmp10, onSave });
+  const tmp16 = jsx(stateFromStores(18656), { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-channels", items: tmp9, initialSelected: exemptChannels, getId: getChannelOptionId, getSearchText: getChannelOptionName, renderLabel: getChannelOptionName, renderIcon: tmp10, onSave });
   cResult[8] = exemptChannels;
   cResult[9] = onSave;
   cResult[10] = tmp9;
@@ -217,10 +217,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptCh
   }, items2);
   let obj2 = { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null };
   const tmp2 = closure_11(guildId);
-  const intl = guildId(1126).intl;
-  obj2.title = intl.string(guildId(1126).t.OGiMXJ);
-  const intl2 = guildId(1126).intl;
-  obj2.searchPlaceholder = intl2.string(guildId(1126).t.vephiL);
+  const intl = guildId(1128).intl;
+  obj2.title = intl.string(guildId(1128).t.OGiMXJ);
+  const intl2 = guildId(1128).intl;
+  obj2.searchPlaceholder = intl2.string(guildId(1128).t.vephiL);
   obj2.items = tmp2;
   obj2.initialSelected = exemptChannels;
   obj2.getId = getChannelOptionId;
@@ -228,5 +228,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptCh
   obj2.renderLabel = getChannelOptionName;
   obj2.renderIcon = callback;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(18614), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
+  return jsx(stateFromStores(18656), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
 });

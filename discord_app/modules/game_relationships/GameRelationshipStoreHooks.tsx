@@ -1,13 +1,13 @@
-// === Module 14004: GameRelationshipStoreHooks ===
+// === Module 14036: GameRelationshipStoreHooks ===
 
-// Module 14004 (GameRelationshipStoreHooks)
+// Module 14036 (GameRelationshipStoreHooks)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7563 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7565 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameRelationshipsForUserByType(arg0, arg1) {
@@ -27,7 +27,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGame
       let tmp7 = cResult[4];
     }
     const tmpResult = tmp(504);
-    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(6173).isVersionEqual), 1)[0];
+    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(6175).isVersionEqual), 1)[0];
   }
   const fn = function u() {
     const items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, closure_1), GameRelationshipStore.getGameRelationshipsVersion()];
@@ -161,7 +161,7 @@ export const useHasGameRelationshipsForUserByType = ReactCompilerGating.isReactC
       let tmp7 = cResult[4];
     }
     const tmpResult = tmp(504);
-    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(6173).isVersionEqual), 1)[0];
+    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(6175).isVersionEqual), 1)[0];
   }
   const fn = function u() {
     const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, closure_1);

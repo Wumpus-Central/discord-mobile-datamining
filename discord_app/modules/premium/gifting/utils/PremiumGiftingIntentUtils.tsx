@@ -1,8 +1,8 @@
-// === Module 12436: PremiumGiftingIntentUtils ===
+// === Module 12459: PremiumGiftingIntentUtils ===
 
-// Module 12436 (PremiumGiftingIntentUtils)
-import Constants from "Constants" /* 1085 */;
-import PremiumConstants from "PremiumConstants" /* 1392 */;
+// Module 12459 (PremiumGiftingIntentUtils)
+import Constants from "Constants" /* 1087 */;
+import PremiumConstants from "PremiumConstants" /* 1394 */;
 import size from "module_2" /* 2 */;
 
 const GiftIntentType = PremiumConstants.GiftIntentType;

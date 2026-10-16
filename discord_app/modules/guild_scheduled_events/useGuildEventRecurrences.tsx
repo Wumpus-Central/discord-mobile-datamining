@@ -1,13 +1,13 @@
-// === Module 8879: useGuildEventRecurrences ===
+// === Module 8887: useGuildEventRecurrences ===
 
-// Module 8879 (useGuildEventRecurrences)
+// Module 8887 (useGuildEventRecurrences)
 import _modDef12 from "module_12" /* 12 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8736 */;
-import ScheduleUtils from "ScheduleUtils" /* 8739 */;
-import usePrevValueDefault from "usePrevValue" /* 8880 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8744 */;
+import ScheduleUtils from "ScheduleUtils" /* 8747 */;
+import usePrevValueDefault from "usePrevValue" /* 8888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6270 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6272 */;
 
 const require = globalThis.__r;
 
@@ -75,8 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                           tmp5 = closure_2;
                           mapped = closure_5.map((getTime) => {
                             const time = getTime.getTime();
-                            const rounded = Math.floor(time / closure_1_1(1102).Millis.SECOND);
-                            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1102).Millis.SECOND);
+                            const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
+                            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
                           });
                           obj = closure_1(closure_2[11]);
                           tmp6 = closure_0;
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                       tmp5 = closure_2;
                       mapped = closure_5.map((getTime) => {
                         const time = getTime.getTime();
-                        const rounded = Math.floor(time / closure_1_1(1102).Millis.SECOND);
-                        return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1102).Millis.SECOND);
+                        const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
+                        return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
                       });
                       obj = closure_1(closure_2[11]);
                       tmp6 = closure_0;
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                   tmp5 = closure_2;
                   mapped = closure_5.map((getTime) => {
                     const time = getTime.getTime();
-                    const rounded = Math.floor(time / closure_1_1(1102).Millis.SECOND);
-                    return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1102).Millis.SECOND);
+                    const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
+                    return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
                   });
                   obj = closure_1(closure_2[11]);
                   tmp6 = closure_0;
@@ -192,8 +192,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           tmp5 = closure_2;
           mapped = closure_5.map((getTime) => {
             const time = getTime.getTime();
-            const rounded = Math.floor(time / closure_1_1(1102).Millis.SECOND);
-            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1102).Millis.SECOND);
+            const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
+            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
           });
           obj = closure_1(closure_2[11]);
           tmp6 = closure_0;
@@ -220,12 +220,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(8739);
+      const tmpResult = tmp(8747);
       let _Date = Date;
-      let rRule = tmp(8739).getRRule(byWeekday);
+      let rRule = tmp(8747).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(8739);
+      const tmpResult2 = tmp(8747);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -251,8 +251,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       if (null != closure_1) {
         const mapped = first.map((getTime) => {
           const time = getTime.getTime();
-          const rounded = Math.floor(time / closure_1_1(1102).Millis.SECOND);
-          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1102).Millis.SECOND);
+          const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
+          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
         });
         const guildEventUserCounts = GuildScheduledEventManagerDefault.getGuildEventUserCounts(tmp, closure_0, mapped);
       }

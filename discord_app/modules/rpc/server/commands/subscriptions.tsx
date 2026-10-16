@@ -1,8 +1,8 @@
-// === Module 15420: subscriptions ===
+// === Module 15456: subscriptions ===
 
-// Module 15420 (subscriptions)
+// Module 15456 (subscriptions)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -18,7 +18,7 @@ function removePendingSubscription(arg0, arg1) {
     }
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const weakMap = new WeakMap();
 const size = fn(2);

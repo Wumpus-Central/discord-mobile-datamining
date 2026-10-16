@@ -1,15 +1,25 @@
-// === Module 7391: ReferralTrialStore ===
+// === Module 7393: ReferralTrialStore ===
 
-// Module 7391 (ReferralTrialStore)
+// Module 7393 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageTypes from "MessageTypes" /* 1101 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7392 */;
-import UserStore from "UserStore" /* 1390 */;
+import MessageTypes from "MessageTypes" /* 1103 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7394 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function emitChanges() {
   return true;
+}
+function clearRecipientEligibility() {
+  closure_14 = [];
+  closure_15 = [];
+}
+function invalidateRecipientEligibility(userId) {
+  closure_0 = userId;
+  set3.delete(userId);
+  closure_14 = closure_14.filter((item) => item !== id);
+  closure_15 = closure_15.filter((item) => item !== id);
 }
 function handleLoadMessages(messages) {
   messages = messages.messages;
@@ -33,7 +43,7 @@ function handleLoadMessages(messages) {
     return false;
   });
 }
-const NOOP_NULL = fn(1085).NOOP_NULL;
+const NOOP_NULL = fn(1087).NOOP_NULL;
 let c4 = null;
 let set = new Set();
 let map = new Map();
@@ -44,9 +54,9 @@ let map1 = new Map();
 map = map1;
 let c11 = 0;
 let c12 = null;
-let closure_13 = [];
-let c14 = false;
-let c15 = 0;
+let set3 = new Set();
+let closure_14 = [];
+let closure_15 = [];
 let c16 = false;
 let c17 = false;
 let c18 = null;
@@ -109,13 +119,13 @@ prototype["isResolving"] = function isResolving(arg0) {
   return set1.has(arg0);
 };
 prototype["getEligibleUsers"] = function getEligibleUsers() {
-  return closure_13;
+  return set3;
 };
-prototype["getFetchingEligibleUsers"] = function getFetchingEligibleUsers() {
-  return c14;
+prototype["isFetchingUserEligibility"] = function isFetchingUserEligibility(arg0) {
+  return closure_14.includes(arg0);
 };
-prototype["getNextIndexOfEligibleUsers"] = function getNextIndexOfEligibleUsers() {
-  return c15;
+prototype["hasFetchedUserEligibility"] = function hasFetchedUserEligibility(arg0) {
+  return closure_15.includes(arg0);
 };
 prototype["getIsEligibleToSendReferrals"] = function getIsEligibleToSendReferrals() {
   return c16;
@@ -165,6 +175,12 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     new Set(has_eligible_friends.sent_user_ids);
     c18 = refresh_at;
     c19 = reminder_state_id;
+    if (0 === referrals_remaining) {
+      const _Set = Set;
+      set1 = new Set();
+      closure_14 = [];
+      closure_15 = [];
+    }
     c11 = 0;
     c12 = null;
   },
@@ -193,16 +209,52 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function handleCreateReferralSuccess(userTrialOffer) {
     userTrialOffer = userTrialOffer.userTrialOffer;
+    let hasItem = set.has(userTrialOffer.userId);
     const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
     const result = map.set(userTrialOffer.id, userTrialOffer);
     set.add(userTrialOffer.userId);
+    const userId = userTrialOffer.userId;
+    set3.delete(userId);
+    closure_14 = closure_14.filter((item) => item !== id);
+    closure_15 = closure_15.filter((item) => item !== id);
+    if (!hasItem) {
+      hasItem = null == c4;
+    }
+    if (!hasItem) {
+      const _Math = Math;
+      const bound = Math.max(0, c4 - 1);
+      c4 = bound;
+      if (0 === bound) {
+        const _Set = Set;
+        set = new Set();
+        closure_14 = [];
+        closure_15 = [];
+        set3 = set;
+      }
+    }
   },
-  CREATE_REFERRALS_SUCCESS: function handleCreateReferralsSuccess(arg0) {
+  CREATE_REFERRALS_SUCCESS: function handleCreateReferralsSuccess(userTrialOffers) {
+    userTrialOffers = userTrialOffers.userTrialOffers;
+    const found = userTrialOffers.filter((userId) => !set.has(userId.userId));
+    set = new Set(found.map((userId) => userId.userId));
     const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
-    for (const item10012 of tmp) {
-      let result = map.set(item10012.id, item10012);
-      let addResult = set.add(item10012.userId);
+    const iter = userTrialOffers[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let result = map.set(nextResult.id, nextResult);
+      let addResult = set.add(nextResult.userId);
+      let tmp9 = invalidateRecipientEligibility(nextResult.userId);
       continue;
+    }
+    let tmp10 = null != c4;
+    if (tmp10) {
+      const _Math = Math;
+      const bound = Math.max(0, c4 - set.size);
+      c4 = bound;
+      tmp10 = 0 === bound;
+    }
+    if (tmp10) {
+      clearRecipientEligibility();
     }
   },
   BILLING_REFERRAL_RESOLVE_SUCCESS: function handleReferralTrialResolveSuccess(userTrialOffer) {
@@ -218,15 +270,59 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     set1.delete(userTrialOfferId);
     set2.add(userTrialOfferId);
   },
-  REFERRALS_FETCH_ELIGIBLE_USER_START: function handleReferralsFetchEligibleUsersStart() {
-    c14 = true;
+  REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_START: function handleRecipientEligibilityFetchStart(arg0) {
+    for (const item10007 of tmp) {
+      if (!closure_14.includes(item10007)) {
+        let arr = closure_14.push(item10007);
+      }
+      continue;
+    }
   },
-  REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function handleReferralsFetchEligibleUsersSuccess(arg0) {
-    c14 = false;
-    ({ users: closure_13, nextIndex: c15 } = arg0);
+  REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_SUCCESS: function handleRecipientEligibilityFetchSuccess(recipientIds) {
+    recipientIds = recipientIds.recipientIds;
+    set = new Set(recipientIds.eligibleRecipientIds);
+    const iter = recipientIds[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp2 = nextResult;
+      if (!closure_15.includes(nextResult)) {
+        let arr = closure_15.push(tmp2);
+      }
+      let hasItem = set.has(tmp2);
+      if (hasItem) {
+        hasItem = !set.has(tmp2);
+      }
+      if (hasItem) {
+        hasItem = 0 !== c4;
+      }
+      if (hasItem) {
+        let addResult = set3.add(tmp2);
+      }
+      continue;
+    }
+    closure_14 = closure_14.filter((item) => !recipientIds.includes(item));
   },
-  REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function handleReferralsFetchEligibleUsersFail() {
-    c14 = false;
+  REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_FAILURE: function handleRecipientEligibilityFetchFailure(recipientIds) {
+    recipientIds = recipientIds.recipientIds;
+    closure_14 = closure_14.filter((item) => !recipientIds.includes(item));
+  },
+  RELATIONSHIP_REMOVE: function handleRelationshipRemove(relationship) {
+    const id = relationship.relationship.id;
+    let hasItem = set3.has(id);
+    if (!hasItem) {
+      hasItem = closure_14.includes(id);
+    }
+    if (!hasItem) {
+      hasItem = closure_15.includes(id);
+    }
+    let flag = hasItem;
+    if (flag) {
+      set3.delete(id);
+      closure_14 = closure_14.filter((item) => item !== id);
+      closure_15 = closure_15.filter((item) => item !== id);
+      flag = true;
+    }
+    return flag;
   },
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   MESSAGE_CREATE: function handleMessage(message) {
@@ -258,9 +354,9 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     map = new Map();
     c11 = 0;
     c12 = null;
-    closure_13 = [];
-    c14 = false;
-    c15 = 0;
+    set3 = new Set();
+    closure_14 = [];
+    closure_15 = [];
     c16 = false;
     c17 = false;
     c18 = null;

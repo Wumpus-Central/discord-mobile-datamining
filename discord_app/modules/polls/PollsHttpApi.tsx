@@ -1,6 +1,6 @@
-// === Module 11970: PollsHttpApi ===
+// === Module 11994: PollsHttpApi ===
 
-// Module 11970 (PollsHttpApi)
+// Module 11994 (PollsHttpApi)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -167,7 +167,7 @@ let closure_5 = async function _endPollEarly(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
 

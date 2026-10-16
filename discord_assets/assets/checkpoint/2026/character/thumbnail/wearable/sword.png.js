@@ -1,6 +1,6 @@
-// === Module 5802: ? ===
+// === Module 5804: ? ===
 
-// Module 5802
+// Module 5804
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/wearable/sword.png.js");

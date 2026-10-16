@@ -1,23 +1,23 @@
-// === Module 14134: HeadlessCollectiblesPurchaseFlow ===
+// === Module 14166: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 14134 (HeadlessCollectiblesPurchaseFlow)
+// Module 14166 (HeadlessCollectiblesPurchaseFlow)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4838 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9262 */;
-import ACOMExperiments from "ACOMExperiments" /* 9618 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10386 */;
-import NativePaymentContext from "NativePaymentContext" /* 10399 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 13547 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 14135 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4841 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9275 */;
+import ACOMExperiments from "ACOMExperiments" /* 9634 */;
+import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10402 */;
+import NativePaymentContext from "NativePaymentContext" /* 10415 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 13573 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 14167 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const application_id = fn(1085).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1096).PaymentGateways;
+const application_id = fn(1087).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1098).PaymentGateways;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

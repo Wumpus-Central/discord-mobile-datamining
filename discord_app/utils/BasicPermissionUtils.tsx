@@ -1,7 +1,7 @@
-// === Module 4815: BasicPermissionUtils ===
+// === Module 4818: BasicPermissionUtils ===
 
-// Module 4815 (BasicPermissionUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+// Module 4818 (BasicPermissionUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/BasicPermissionUtils.tsx");

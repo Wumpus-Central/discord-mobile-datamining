@@ -1,16 +1,16 @@
-// === Module 14534: PremiumUnverifiedWarning ===
+// === Module 14566: PremiumUnverifiedWarning ===
 
-// Module 14534 (PremiumUnverifiedWarning)
+// Module 14566 (PremiumUnverifiedWarning)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 import initialize from "initialize" /* 504 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 const obj2 = { warning: { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 } };
 let closure_4 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
@@ -28,7 +28,7 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
   }
   return tmp3;
 };
-PremiumUnverifiedWarning.contextType = fn(4883).ThemeContext;
+PremiumUnverifiedWarning.contextType = fn(4886).ThemeContext;
 let items = [UserStore];
 const obj3 = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
 const size = fn(2);

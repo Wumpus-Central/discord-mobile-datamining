@@ -1,32 +1,32 @@
-// === Module 18416: FileUploadActionComponent ===
+// === Module 18458: FileUploadActionComponent ===
 
-// Module 18416 (FileUploadActionComponent)
+// Module 18458 (FileUploadActionComponent)
 import c from "c" /* 576 */;
-import XSmallIcon from "XSmallIcon" /* 6428 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7087 */;
-import IconButton from "IconButton" /* 7790 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9483 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10241 */;
-import AttachmentPreview from "AttachmentPreview" /* 11907 */;
+import XSmallIcon from "XSmallIcon" /* 6430 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7089 */;
+import IconButton from "IconButton" /* 7793 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9499 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10257 */;
+import AttachmentPreview from "AttachmentPreview" /* 11931 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
 
-const util = obj(1126);
-const InteractionComponentUtils = obj(5496);
-const FileSizeUtils = obj(5856);
-const TableRow = obj(6400);
-const FileUpIcon = obj(11541);
+const util = obj(1128);
+const InteractionComponentUtils = obj(5498);
+const FileSizeUtils = obj(5858);
+const TableRow = obj(6402);
+const FileUpIcon = obj(11564);
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7460).DraftType;
-const NOOP = fn(1085).NOOP;
+const DraftType = fn(7462).DraftType;
+const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MainAreaCanUpload(arg0) {
@@ -667,7 +667,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10242).hideMediaKeyboardActionSheet();
+        return InteractionModal(10258).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -699,7 +699,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
             item = item.item;
             const result = InteractionModal(customId[31]).hideMediaKeyboardActionSheet();
             if (item.isIncluded) {
-              const found = currentUploads.find((item) => InteractionModal(7983).doesImageMatchUpload(item.node.image, item));
+              const found = currentUploads.find((item) => InteractionModal(7986).doesImageMatchUpload(item.node.image, item));
               if (null != found) {
                 callback1(found.id);
               }
@@ -719,8 +719,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FileUplo
             obj.handleViewAllDialog(obj2);
           },
         onManageLimited() {
-            obj = InteractionModal(10241);
-            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10242).hideMediaKeyboardActionSheet, onRestoreKeyboard });
+            obj = InteractionModal(10257);
+            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10258).hideMediaKeyboardActionSheet, onRestoreKeyboard });
           },
         onClose: tmp4(customId[31]).hideMediaKeyboardActionSheet,
         onBack: tmp4(customId[31]).hideMediaKeyboardActionSheet

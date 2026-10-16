@@ -1,12 +1,12 @@
-// === Module 18125: useCanSetVoiceChannelStatus ===
+// === Module 18159: useCanSetVoiceChannelStatus ===
 
-// Module 18125 (useCanSetVoiceChannelStatus)
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 18159 (useCanSetVoiceChannelStatus)
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 let items = [, , ];
 ({ SET_VOICE_CHANNEL_STATUS: arr[0], CONNECT: arr[1], VIEW_CHANNEL: arr[2] } = Permissions);
 let items1 = [Permissions.SET_VOICE_CHANNEL_STATUS];

@@ -1,10 +1,10 @@
-// === Module 7173: useHasRoleSubscriptionInGuild ===
+// === Module 7175: useHasRoleSubscriptionInGuild ===
 
-// Module 7173 (useHasRoleSubscriptionInGuild)
+// Module 7175 (useHasRoleSubscriptionInGuild)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
   }
   return false;
 }
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");

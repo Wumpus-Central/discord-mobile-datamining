@@ -1,42 +1,42 @@
-// === Module 17078: useHappeningNowData ===
+// === Module 17112: useHappeningNowData ===
 
-// Module 17078 (useHappeningNowData)
+// Module 17112 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7196 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7198 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 17079 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7198 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7200 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 17113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 14672 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6270 */;
-import StageInstanceStore from "StageInstanceStore" /* 2070 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7564 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 14704 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6272 */;
+import StageInstanceStore from "StageInstanceStore" /* 2073 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7566 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7193 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore from "GuildChannelStore" /* 4804 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import PresenceStore from "PresenceStore" /* 5167 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7195 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import PresenceStore from "PresenceStore" /* 5169 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import UserStore from "UserStore" /* 1392 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildScheduledEventStore = fn(6270);
+let GuildScheduledEventStore = fn(6272);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const MemberListRowTypes = fn(7193).MemberListRowTypes;
-let closure_20 = fn(4804).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(16237).HappeningNowItem;
-const Constants = fn(1085);
+const MemberListRowTypes = fn(7195).MemberListRowTypes;
+let closure_20 = fn(4807).GUILD_SELECTABLE_CHANNELS_KEY;
+const HappeningNowItem = fn(16270).HappeningNowItem;
+const Constants = fn(1087);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
 const ReactCompilerGating = fn(558);

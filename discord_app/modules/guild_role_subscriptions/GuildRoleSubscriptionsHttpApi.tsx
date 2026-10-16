@@ -1,7 +1,7 @@
-// === Module 7177: GuildRoleSubscriptionsHttpApi ===
+// === Module 7179: GuildRoleSubscriptionsHttpApi ===
 
-// Module 7177 (GuildRoleSubscriptionsHttpApi)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 7179 (GuildRoleSubscriptionsHttpApi)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -1292,8 +1292,8 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
-const PriceTierTypes = fn(1096).PriceTierTypes;
+const Endpoints = fn(1087).Endpoints;
+const PriceTierTypes = fn(1098).PriceTierTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx");
 

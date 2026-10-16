@@ -1,25 +1,25 @@
-// === Module 15305: ShareStore ===
+// === Module 15340: ShareStore ===
 
-// Module 15305 (ShareStore)
+// Module 15340 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8701 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8709 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import UserStore from "UserStore" /* 1390 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
-const AppStates = fn(1085).AppStates;
+const AppStates = fn(1087).AppStates;
 const Store = initializeDefault.Store;
 class ShareStore extends Store {
 }

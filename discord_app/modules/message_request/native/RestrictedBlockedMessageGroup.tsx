@@ -1,10 +1,10 @@
-// === Module 17943: RestrictedBlockedMessageGroup ===
+// === Module 17977: RestrictedBlockedMessageGroup ===
 
-// Module 17943 (RestrictedBlockedMessageGroup)
+// Module 17977 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import Pressables from "Pressables" /* 6405 */;
+import util from "util" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Pressables from "Pressables" /* 6407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,11 +14,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
-let obj2 = { toggle: { marginLeft: fn(17941).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+const createStyles = fn(5153);
+let obj2 = { toggle: { marginLeft: fn(17975).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginLeft: fn(17941).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
+let obj3 = { marginLeft: fn(17975).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
 
@@ -46,9 +46,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
     tmp8 = cResult[2];
   }
   if (cResult[3] !== messages.length) {
-    const intl = renderMessage(1126).intl;
+    const intl = renderMessage(1128).intl;
     const obj3 = { count: messages.length };
-    const formatResult = intl.format(renderMessage(1126).t["+FcYM/"], obj3);
+    const formatResult = intl.format(renderMessage(1128).t["+FcYM/"], obj3);
     cResult[3] = messages.length;
     cResult[4] = formatResult;
     let tmp9 = formatResult;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
   }
   if (cResult[5] !== tmp9) {
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: tmp9 };
-    const tmp13 = closure_5(renderMessage(5147).Text, obj4);
+    const tmp13 = closure_5(renderMessage(5149).Text, obj4);
     cResult[5] = tmp9;
     cResult[6] = tmp13;
     let tmp11 = tmp13;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
       tmp16 = mapped;
     }
   }
-  const tmp15 = closure_5(renderMessage(6405).PressableOpacity, { style: tmp4.toggle, accessibilityRole: "button", accessibilityState: tmp8, onPress: first, children: tmp11 });
+  const tmp15 = closure_5(renderMessage(6407).PressableOpacity, { style: tmp4.toggle, accessibilityRole: "button", accessibilityState: tmp8, onPress: first, children: tmp11 });
   cResult[7] = tmp4.toggle;
   cResult[8] = tmp8;
   cResult[9] = tmp11;

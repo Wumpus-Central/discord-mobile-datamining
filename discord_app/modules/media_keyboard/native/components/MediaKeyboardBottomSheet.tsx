@@ -1,29 +1,29 @@
-// === Module 11988: MediaKeyboardBottomSheet ===
+// === Module 12012: MediaKeyboardBottomSheet ===
 
-// Module 11988 (MediaKeyboardBottomSheet)
+// Module 12012 (MediaKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import ChatInputUtils from "ChatInputUtils" /* 5041 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5117 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import ChatInputUtils from "ChatInputUtils" /* 5044 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1627);
+const MediaKeyboardConstants = fn(1629);
 ({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const MetaQuestUtils = fn(1628);
+const MetaQuestUtils = fn(1630);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

@@ -1,17 +1,17 @@
-// === Module 18300: CaptchaUtils ===
+// === Module 18342: CaptchaUtils ===
 
-// Module 18300 (CaptchaUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import V8APIError from "V8APIError" /* 1349 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5943 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5945 */;
-import MetricEvents from "MetricEvents" /* 5950 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import siteKeyDefault from "siteKey" /* 18301 */;
+// Module 18342 (CaptchaUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import V8APIError from "V8APIError" /* 1351 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5945 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5947 */;
+import MetricEvents from "MetricEvents" /* 5952 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import siteKeyDefault from "siteKey" /* 18343 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ require = fn;
 let captcha_flow_key = ["siteKey", "onVerify", "onError"];
 get_ActivityIndicator = fn(17);
 ({ Keyboard: metroRequire, NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ CaptchaEvent: closure_9, RECAPTCHA_SITE_KEY: c10, AnalyticEvents: closure_11 } = Constants);
 const jsx = fn(21).jsx;
 const CaptchaManager = NativeModules.CaptchaManager;
@@ -115,13 +115,13 @@ export default {
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      const v4Result = self(1279).v4();
+      const v4Result = self(1281).v4();
       closure_2 = v4Result;
-      const HCAPTCHA = self(1349).CaptchaTypes.HCAPTCHA;
-      let obj = self(1279);
+      const HCAPTCHA = self(1351).CaptchaTypes.HCAPTCHA;
+      let obj = self(1281);
       AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(5950).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(5952).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);
@@ -190,10 +190,10 @@ export const InlineHcaptcha = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp11, tmp12);
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const v4Result = tmp(1279).v4();
+    const v4Result = tmp(1281).v4();
     cResult[7] = v4Result;
     let tmp15 = v4Result;
-    const tmpResult2 = tmp(1279);
+    const tmpResult2 = tmp(1281);
   } else {
     tmp15 = cResult[7];
   }
@@ -307,7 +307,7 @@ export const InlineHcaptcha = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   let items = [LocaleStore];
   const stateFromStores = siteKey(504).useStateFromStores(items, () => locale.locale);
   let obj = siteKey(504);
-  const v4Result = siteKey(1279).v4();
+  const v4Result = siteKey(1281).v4();
   c3 = v4Result;
   let items1 = [v4Result, siteKey];
   const effect = noop.useEffect(() => {
@@ -319,7 +319,7 @@ export const InlineHcaptcha = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     obj4.tags = items;
     MonitoringAgentDefault.increment(obj4);
   }, items1);
-  let obj2 = siteKey(1279);
+  let obj2 = siteKey(1281);
   let obj3 = {
     siteKey,
     onMessage(nativeEvent) {

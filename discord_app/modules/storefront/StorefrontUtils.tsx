@@ -1,20 +1,20 @@
-// === Module 7155: StorefrontUtils ===
+// === Module 7157: StorefrontUtils ===
 
-// Module 7155 (StorefrontUtils)
+// Module 7157 (StorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import StorefrontTypes from "StorefrontTypes" /* 7157 */;
-import SlayerStorefrontPriceUtils from "SlayerStorefrontPriceUtils" /* 7158 */;
-import PriceUtils from "PriceUtils" /* 7159 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7162 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import StorefrontTypes from "StorefrontTypes" /* 7159 */;
+import SlayerStorefrontPriceUtils from "SlayerStorefrontPriceUtils" /* 7160 */;
+import PriceUtils from "PriceUtils" /* 7161 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7164 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import UserStore from "UserStore" /* 1390 */;
-import SKUPricesStore from "SKUPricesStore" /* 7156 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import UserStore from "UserStore" /* 1392 */;
+import SKUPricesStore from "SKUPricesStore" /* 7158 */;
 
 require = fn;
 function formatSKUPrice(arg0, stateFromStores) {
@@ -41,9 +41,9 @@ function formatSKUPrice(arg0, stateFromStores) {
   obj2.userPrice = formatPriceResult2;
   return obj2;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ CurrencyCodes: closure_7, PriceSetAssignmentPurchaseTypes: closure_8, PriceTypes: closure_9, SKUFlags: c10, SKUProductLines: closure_11 } = Constants);
-const PremiumTypes = fn(1392).PremiumTypes;
+const PremiumTypes = fn(1394).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useResolvedUserPrice(sku) {
   const cResult = sku(576).c(15);
@@ -85,14 +85,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
   const stateFromStores = sku(504).useStateFromStores(first, tmp7);
   if (cResult[3] !== priceSetAssignmentPurchaseType) {
     if (null == priceSetAssignmentPurchaseType) {
-      let GIFT = tmp(7157).StorefrontPurchaseType.SELF_PURCHASE;
+      let GIFT = tmp(7159).StorefrontPurchaseType.SELF_PURCHASE;
     } else {
       if (constants2.DEFAULT === priceSetAssignmentPurchaseType) {
-        GIFT = tmp(7157).StorefrontPurchaseType.SELF_PURCHASE;
+        GIFT = tmp(7159).StorefrontPurchaseType.SELF_PURCHASE;
       } else if (tmp11.GIFT !== priceSetAssignmentPurchaseType) {
-        GIFT = tmp(7157).StorefrontPurchaseType.SELF_PURCHASE;
+        GIFT = tmp(7159).StorefrontPurchaseType.SELF_PURCHASE;
       }
-      GIFT = tmp(7157).StorefrontPurchaseType.GIFT;
+      GIFT = tmp(7159).StorefrontPurchaseType.GIFT;
     }
     cResult[3] = priceSetAssignmentPurchaseType;
     cResult[4] = GIFT;
@@ -101,7 +101,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
       if (null != stateFromStores) {
         let tmp15 = stateFromStores[tmp10];
         if (tmp15 == null) {
-          tmp15 = stateFromStores[tmp(undefined, 7157).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp15 = stateFromStores[tmp(undefined, 7159).StorefrontPurchaseType.SELF_PURCHASE];
         }
         if (cResult[8] === isOrbPrice) {
           let userPrice;
@@ -148,7 +148,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
       }
       return tmp14;
     }
-    const obj3 = { userPrice: "r", pricesForPurchaseType: "ix", purchaseType: cResult[4], storeHasPrice: null != stateFromStores };
+    const obj3 = { userPrice: "r", pricesForPurchaseType: "Array", purchaseType: cResult[4], storeHasPrice: null != stateFromStores };
     cResult[5] = cResult[4];
     cResult[6] = null != stateFromStores;
     cResult[7] = obj3;
@@ -189,7 +189,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
       if (null != stateFromStores) {
         let tmp12 = stateFromStores[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores[tmp4(undefined, 7157).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores[tmp4(undefined, 7159).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -206,7 +206,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
         return obj;
       }
     }
-    return { userPrice: "r", pricesForPurchaseType: "ix", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "Array", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores };
+    return obj2;
   }, items1);
 });
 ReactCompilerGating = fn(558);

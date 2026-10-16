@@ -1,11 +1,83 @@
-// === Module 11530: ConjureTemplateWizard ===
+// === Module 11551: ConjureTemplateWizard ===
 
-// Module 11530 (ConjureTemplateWizard)
-import util from "util" /* 1126 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import ConjureUtils from "ConjureUtils" /* 7165 */;
-import size from "module_2" /* 2 */;
+// Module 11551 (ConjureTemplateWizard)
+import util from "util" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ConjureUtils from "ConjureUtils" /* 7167 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 11552 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+require = fn;
+function conjureTemplateStartMessage(templateName) {
+  const intl = util.intl;
+  return intl.formatToPlainString(_modDef3865["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+}
+let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
+  closure_0 = arg0;
+  let id = arg1;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_3 = tmp2;
+            closure_2 = tmp3;
+            closure_130_0 = closure_0;
+            closure_130_1 = id;
+            closure_130_2 = undefined;
+            c4 = 1;
+            c5 = 1;
+            const obj5 = { value: conjureTemplateIntakeRequests.fetchStoredConjureIntake(closure_0, id.id), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_130_2 = value;
+          if (null != closure_130_2) {
+            closure_131_4(closure_130_0, closure_130_1.id);
+          } else {
+            closure_131_5(closure_130_0, closure_131_6(closure_130_1.name));
+          }
+          c5 = 3;
+        }
+      } catch (tmp26) {
+        c5 = tmp;
+        throw tmp26;
+      }
+    }
+  })();
+};
+const ConjureConnectionStore = fn(10901);
+({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
 
 export const conjureWizardServerStep = function conjureWizardServerStep(guildId, stateFromStores) {
@@ -55,12 +127,19 @@ export const canLeaveConjureWizardQuestion = function canLeaveConjureWizardQuest
   }
   return tmp;
 };
-export const conjureTemplateStartMessage = function conjureTemplateStartMessage(name) {
-  const intl = util.intl;
-  return intl.formatToPlainString(_modDef3862["/qSx7+"], { templateName: name, locale: util.intl.currentLocale });
+export { conjureTemplateStartMessage };
+export const startConjureTemplateWizard = function startConjureTemplateWizard() {
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
-export const conjureTemplateWizardGuilds = function conjureTemplateWizardGuilds(guildsArray, VibegrationsTemplateWizardSheet) {
-  closure_0 = VibegrationsTemplateWizardSheet;
+export const conjureTemplateWizardGuilds = function conjureTemplateWizardGuilds(guildsArray, ConjureTemplateWizardSheet) {
+  closure_0 = ConjureTemplateWizardSheet;
   const found = guildsArray.filter((item) => ConjureUtils.canStartConjureProject(item, closure_0));
   return found.sort((name, name2) => {
     name = name.name;
@@ -117,9 +196,9 @@ export const conjureWizardServerCopy = function conjureWizardServerCopy(stateFro
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3862.vcxYIA);
+    obj.title = intl.string(_modDef3865.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3862.auUHPZ);
+    obj.hint = intl2.string(_modDef3865.auUHPZ);
     server = obj;
   }
   return server;

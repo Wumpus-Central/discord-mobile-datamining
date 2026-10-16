@@ -1,11 +1,11 @@
-// === Module 1999: AppStateStore ===
+// === Module 2001: AppStateStore ===
 
-// Module 1999 (AppStateStore)
+// Module 2001 (AppStateStore)
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import Constants from "Constants" /* 1087 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import size from "module_2" /* 2 */;
 
 const AppStates = Constants.AppStates;
@@ -22,7 +22,7 @@ prototype["getLastActiveTime"] = function getLastActiveTime() {
   return closure_2;
 };
 AppStateStore.displayName = "AppStateStore";
-asyncRequireImpl(1265, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
+asyncRequireImpl(1267, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_app_state = client_app_state;
   });

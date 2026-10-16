@@ -1,9 +1,9 @@
-// === Module 6180: ExpandedGuildFolderStore ===
+// === Module 6182: ExpandedGuildFolderStore ===
 
-// Module 6180 (ExpandedGuildFolderStore)
+// Module 6182 (ExpandedGuildFolderStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;

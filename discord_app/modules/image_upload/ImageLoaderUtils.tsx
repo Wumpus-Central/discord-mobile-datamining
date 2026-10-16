@@ -1,13 +1,13 @@
-// === Module 1450: ImageLoaderUtils ===
+// === Module 1452: ImageLoaderUtils ===
 
-// Module 1450 (ImageLoaderUtils)
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1451 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1452 */;
-import privDefault from "priv" /* 1457 */;
-import _modDef1491 from "module_1491" /* 1491 */;
-import ImageUtils from "ImageUtils" /* 1494 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1898 */;
+// Module 1452 (ImageLoaderUtils)
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1453 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1454 */;
+import privDefault from "priv" /* 1459 */;
+import _modDef1493 from "module_1493" /* 1493 */;
+import ImageUtils from "ImageUtils" /* 1496 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -44,8 +44,8 @@ function getSrcWithWidthAndHeight(quality) {
       const items = [, ];
       [arr[0], tmp6] = src.split("?");
       let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1491.parse(tmp6);
-      const tmp2Result = _modDef1491;
+      items[1] = _modDef1493.parse(tmp6);
+      const tmp2Result = _modDef1493;
       [tmp8, tmp9] = items;
       if (null != format) {
         tmp9.format = format;
@@ -103,7 +103,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
       if (!tmp2Result3.isEmpty(tmp9)) {
-        _modDef1491;
+        _modDef1493;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -112,7 +112,7 @@ function getSrcWithWidthAndHeight(quality) {
   }
   return src;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ NOOP: hasOwnProperty, MEDIA_PROXY_MAX_TARGET_RESOLUTION: metroRequire } = Constants);
 const re7 = /\.webp($|\?|#)/i;
 const re8 = /\.avif($|\?|#)/i;
@@ -261,7 +261,7 @@ export const loadImage = function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F138384 */ function() { ... });
+                            image.onerror = closure_2_4(/* F138840 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

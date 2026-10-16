@@ -1,13 +1,13 @@
-// === Module 10452: getPrivateChannelCall ===
+// === Module 10468: getPrivateChannelCall ===
 
-// Module 10452 (getPrivateChannelCall)
-import CallsUtils from "CallsUtils" /* 9003 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+// Module 10468 (getPrivateChannelCall)
+import CallsUtils from "CallsUtils" /* 9011 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NOOP_NULL = fn(1085).NOOP_NULL;
+const NOOP_NULL = fn(1087).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 

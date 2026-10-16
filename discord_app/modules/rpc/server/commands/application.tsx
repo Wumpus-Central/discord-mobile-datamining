@@ -1,19 +1,19 @@
-// === Module 15380: application ===
+// === Module 15415: application ===
 
-// Module 15380 (application)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6286 */;
-import TestModeUtils from "TestModeUtils" /* 9282 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11237 */;
-import RPCHelpers from "RPCHelpers" /* 11243 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 15381 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15382 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+// Module 15415 (application)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6288 */;
+import TestModeUtils from "TestModeUtils" /* 9295 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11253 */;
+import RPCHelpers from "RPCHelpers" /* 11259 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 15416 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15417 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ApplicationFlags: closure_4, Endpoints: hasOwnProperty, RPCCommands, RPCErrors: metroRequire } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/application.tsx");
@@ -69,7 +69,7 @@ export default {
     }
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(5855).RPC_LOCAL_SCOPE,
+    scope: fn(5857).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

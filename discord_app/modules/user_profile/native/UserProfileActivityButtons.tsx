@@ -1,49 +1,49 @@
-// === Module 13973: UserProfileActivityButtons ===
+// === Module 14005: UserProfileActivityButtons ===
 
-// Module 13973 (UserProfileActivityButtons)
+// Module 14005 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import LinkingDefault from "Linking" /* 4862 */;
-import RootNavigationRef from "RootNavigationRef" /* 5033 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7698 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7709 */;
-import isStreamingDefault from "isStreaming" /* 8603 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9426 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11124 */;
-import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 11126 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 13974 */;
-import getActivityJoinability from "getActivityJoinability" /* 13975 */;
-import getStreamURLDefault from "getStreamURL" /* 13977 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import LinkingDefault from "Linking" /* 4865 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7701 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7712 */;
+import isStreamingDefault from "isStreaming" /* 8611 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9442 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11140 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 11142 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 14006 */;
+import getActivityJoinability from "getActivityJoinability" /* 14007 */;
+import getStreamURLDefault from "getStreamURL" /* 14009 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5977 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5076 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import LocalActivityStore from "LocalActivityStore" /* 10881 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5975 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import LocalActivityStore from "LocalActivityStore" /* 10896 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 const require = globalThis.__r;
 const getActivityJoinabilityDefault = getActivityJoinability;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(8677);
+const SpotifyConstants = fn(8685);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { icon: { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT } };
 let closure_20 = createStyles.createStyles(obj2);
 fn(558);
@@ -437,13 +437,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
   const tmp3 = closure_20();
   const sync_id = activity.sync_id;
   let tmp5 = null;
-  if (sync_id(10476)(activity)) {
+  if (sync_id(10491)(activity)) {
     tmp5 = null;
     if (null != sync_id) {
       if (cResult[0] !== activity.name) {
-        const intl = Button(1126).intl;
+        const intl = Button(1128).intl;
         let obj2 = { platform: activity.name };
-        const formatToPlainStringResult = intl.formatToPlainString(Button(1126).t.LEgD7t, obj2);
+        const formatToPlainStringResult = intl.formatToPlainString(Button(1128).t.LEgD7t, obj2);
         cResult[0] = activity.name;
         cResult[1] = formatToPlainStringResult;
         let tmp6 = formatToPlainStringResult;
@@ -451,8 +451,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
         tmp6 = cResult[1];
       }
       if (cResult[2] !== tmp3.icon) {
-        const obj3 = { size: Button(1200).Icon.Sizes.SMALL, source: sync_id(8495), disableColor: true, style: tmp3.icon };
-        const tmp10 = jsx(Button(1200).Icon, { size: Button(1200).Icon.Sizes.SMALL, source: sync_id(8495), disableColor: true, style: tmp3.icon });
+        const obj3 = { size: Button(1202).Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp3.icon };
+        const tmp10 = jsx(Button(1202).Icon, { size: Button(1202).Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp3.icon });
         cResult[2] = tmp3.icon;
         cResult[3] = tmp10;
         let tmp8 = tmp10;
@@ -467,7 +467,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
           if (cResult[8] === tmp8) {
           }
         }
-        Button = Button(5439).Button;
+        Button = Button(5441).Button;
         let obj4 = { text: tmp6, icon: tmp8, variant: "secondary", onPress: tmp11 };
         tmp = <Button text={tmp6} icon={tmp8} variant="secondary" onPress={tmp11} />;
         cResult[7] = tmp6;
@@ -507,7 +507,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(11107).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(11122).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
@@ -524,13 +524,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(11107);
+              const obj7 = closure_0(11122);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
               } else {
                 obj7.attributeInstall();
-                sync_id(4862).openURL(constants.APP_STORE);
-                const obj = sync_id(4862);
+                sync_id(4865).openURL(constants.APP_STORE);
+                const obj = sync_id(4865);
               }
               c3 = 0;
               c5 = 3;
@@ -567,15 +567,15 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10476)(activity)) {
+  if (sync_id(10491)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8495), disableColor: true, style: tmp.icon };
-      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8495), disableColor: true, style: tmp.icon });
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp.icon });
       obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
@@ -671,8 +671,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function WatchActivit
     if (null != tmp3) {
       const _Symbol = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = Button(1126).intl;
-        const stringResult = intl.string(Button(1126).t.I6JG46);
+        const intl = Button(1128).intl;
+        const stringResult = intl.string(Button(1128).t.I6JG46);
         cResult[2] = stringResult;
         let tmp8 = stringResult;
       } else {
@@ -680,7 +680,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function WatchActivit
       }
       if (cResult[3] === onAction) {
       }
-      Button = Button(5439).Button;
+      Button = Button(5441).Button;
       const obj2 = {
         text: tmp8,
         variant: "secondary",

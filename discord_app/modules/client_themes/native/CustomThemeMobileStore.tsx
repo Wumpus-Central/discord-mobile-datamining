@@ -1,15 +1,15 @@
-// === Module 1251: CustomThemeMobileStore ===
+// === Module 1253: CustomThemeMobileStore ===
 
-// Module 1251 (CustomThemeMobileStore)
+// Module 1253 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 5021 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 5024 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
 require = fn;
 function reset() {
@@ -59,7 +59,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     }
   }
 }
-const UserSettingsTypes = fn(1095).UserSettingsTypes;
+const UserSettingsTypes = fn(1097).UserSettingsTypes;
 const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {
 }

@@ -1,8 +1,8 @@
-// === Module 13248: NewUserAnalyticsUtils ===
+// === Module 13274: NewUserAnalyticsUtils ===
 
-// Module 13248 (NewUserAnalyticsUtils)
-import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+// Module 13274 (NewUserAnalyticsUtils)
+import Constants from "Constants" /* 1087 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,10 +1,10 @@
-// === Module 9542: PhoneCallIcon ===
+// === Module 9558: PhoneCallIcon ===
 
-// Module 9542 (PhoneCallIcon)
+// Module 9558 (PhoneCallIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod9543 from "module_9543" /* 9543 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod9559 from "module_9559" /* 9559 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const PhoneCallIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9543;
+    const tmpResult = _mod9559;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const PhoneCallIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9543, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9559, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

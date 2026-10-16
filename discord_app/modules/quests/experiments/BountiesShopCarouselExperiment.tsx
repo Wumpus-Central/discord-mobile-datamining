@@ -1,7 +1,7 @@
-// === Module 16006: BountiesShopCarouselExperiment ===
+// === Module 16039: BountiesShopCarouselExperiment ===
 
-// Module 16006 (BountiesShopCarouselExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 16039 (BountiesShopCarouselExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-bounties-shop-carousel", kind: "user", defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default", clickable: false }, variations: null };

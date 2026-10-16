@@ -1,22 +1,22 @@
-// === Module 12517: AppealIngestionSpeedBump ===
+// === Module 12540: AppealIngestionSpeedBump ===
 
-// Module 12517 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12519 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12535 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12536 */;
+// Module 12540 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12542 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12558 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12559 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7753 */;
+import SafetyHubStore from "SafetyHubStore" /* 7756 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7729);
+const SafetyHubConstants = fn(7732);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -44,9 +44,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const safetyHubClassification = emitAppealIngestionEvent(12510).useSafetyHubClassification(stateFromStores);
-  const tmpResult3 = emitAppealIngestionEvent(12510);
-  emitAppealIngestionEvent = emitAppealIngestionEvent(12518).useEmitAppealIngestionEvent();
+  const safetyHubClassification = emitAppealIngestionEvent(12533).useSafetyHubClassification(stateFromStores);
+  const tmpResult3 = emitAppealIngestionEvent(12533);
+  emitAppealIngestionEvent = emitAppealIngestionEvent(12541).useEmitAppealIngestionEvent();
   ({ isDsaEligible, classification } = safetyHubClassification);
   let str;
   if (classification != null) {
@@ -81,16 +81,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     arr2 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t["C5q+pW"]);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t["C5q+pW"]);
     cResult[4] = stringResult;
     let tmp13 = stringResult;
   } else {
     tmp13 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t.URt7VI);
+    const intl2 = tmp(1128).intl;
+    const stringResult1 = intl2.string(tmp(1128).t.URt7VI);
     cResult[5] = stringResult1;
     let tmp15 = stringResult1;
   } else {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { headerText: tmp13, subHeaderText: tmp15 };
-    const tmp19 = closure_8(tmp(12516).AppealIngestionModalHeader, obj2);
+    const tmp19 = closure_8(tmp(12539).AppealIngestionModalHeader, obj2);
     cResult[6] = tmp19;
     let tmp17 = tmp19;
   } else {
@@ -147,9 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
                 let tmp52 = isDsaEligible;
                 if (isDsaEligible) {
                   const obj5 = { variant: "text-xs/normal", children: null };
-                  const intl7 = tmp(1126).intl;
-                  obj5.children = intl7.format(tmp(1126).t.WMUgCX, {});
-                  tmp52 = closure_8(tmp(5147).Text, obj5);
+                  const intl7 = tmp(1128).intl;
+                  obj5.children = intl7.format(tmp(1128).t.WMUgCX, {});
+                  tmp52 = closure_8(tmp(5149).Text, obj5);
                 }
                 cResult[25] = isDsaEligible;
                 cResult[26] = tmp52;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
               obj7.children = items2;
               items1[1] = closure_9(View, obj7);
               obj6.children = items1;
-              const tmp57 = closure_9(tmp(12516).AppealIngestionModalScreen, obj6);
+              const tmp57 = closure_9(tmp(12539).AppealIngestionModalScreen, obj6);
               cResult[27] = tmp4.container;
               cResult[28] = tmp34;
               cResult[29] = tmp40;
@@ -198,8 +198,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
           let tmp47 = !isCoppa;
           if (!isCoppa) {
             const obj8 = { text: null, url: null, onPress: null };
-            const intl6 = tmp(1126).intl;
-            obj8.text = intl6.string(tmp(1126).t["Vtyn/7"]);
+            const intl6 = tmp(1128).intl;
+            obj8.text = intl6.string(tmp(1128).t["Vtyn/7"]);
             obj8.url = str;
             obj8.onPress = function onPress() {
               return emitAppealIngestionEvent(hasOwnProperty.ClickLearnMoreLink);
@@ -215,8 +215,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
         let tmp41 = isDeveloperClassification;
         if (isDeveloperClassification) {
           const obj9 = { text: null, url: null, onPress: null };
-          const intl5 = tmp(1126).intl;
-          obj9.text = intl5.string(tmp(1126).t.n9cZTH);
+          const intl5 = tmp(1128).intl;
+          obj9.text = intl5.string(tmp(1128).t.n9cZTH);
           obj9.url = constants.APP_APPEAL_LINK;
           obj9.onPress = function onPress() {
             return emitAppealIngestionEvent(hasOwnProperty.ClickAppAppealLink);
@@ -235,8 +235,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     }
     if (tmp35) {
       const obj10 = { text: null, url: null, onPress: null };
-      const intl4 = tmp(1126).intl;
-      obj10.text = intl4.string(tmp(1126).t.NBsJvm);
+      const intl4 = tmp(1128).intl;
+      obj10.text = intl4.string(tmp(1128).t.NBsJvm);
       obj10.url = constants.SPAM_LINK;
       obj10.onPress = function onPress() {
         return emitAppealIngestionEvent(hasOwnProperty.ClickSpamWebformLink);
@@ -252,8 +252,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   let tmp29 = isCoppa;
   if (isCoppa) {
     const obj11 = { text: null, url: null, onPress: null };
-    const intl3 = tmp(1126).intl;
-    obj11.text = intl3.string(tmp(1126).t["gJs+kf"]);
+    const intl3 = tmp(1128).intl;
+    obj11.text = intl3.string(tmp(1128).t["gJs+kf"]);
     obj11.url = constants.AGE_VERIFICATION_LINK;
     obj11.onPress = function onPress() {
       return emitAppealIngestionEvent(hasOwnProperty.ClickAgeVerificationLink);
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   cResult[12] = isCoppa;
   cResult[13] = tmp29;
   tmp28 = tmp29;
-  const tmpResult4 = emitAppealIngestionEvent(12518);
+  const tmpResult4 = emitAppealIngestionEvent(12541);
 }) : (function AppealIngestionSpeedBump(arg0) {
   ({ isCoppa, isSpam, isDeveloperClassification } = arg0);
   _require = undefined;
@@ -294,9 +294,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   if (flagged_content == null) {
     flagged_content = [];
   }
-  const intl = tmp2(1126).intl;
+  const intl = tmp2(1128).intl;
   const tmp2Result = require("useEmitAppealIngestionEvent");
-  const intl2 = tmp2(1126).intl;
+  const intl2 = tmp2(1128).intl;
   const stringResult = intl.string(require("util").t["C5q+pW"]);
   const items1 = [closure_8(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(require("util").t.URt7VI) }), ];
   const obj3 = { style: tmp.container, children: null };
@@ -309,8 +309,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   let tmp9Result3 = isCoppa;
   if (isCoppa) {
     const obj6 = { text: null, url: null, onPress: null };
-    const intl3 = tmp2(1126).intl;
-    obj6.text = intl3.string(tmp2(1126).t["gJs+kf"]);
+    const intl3 = tmp2(1128).intl;
+    obj6.text = intl3.string(tmp2(1128).t["gJs+kf"]);
     obj6.url = constants.AGE_VERIFICATION_LINK;
     obj6.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAgeVerificationLink);
@@ -324,8 +324,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (isSpam) {
     const obj7 = { text: null, url: null, onPress: null };
-    const intl4 = tmp2(1126).intl;
-    obj7.text = intl4.string(tmp2(1126).t.NBsJvm);
+    const intl4 = tmp2(1128).intl;
+    obj7.text = intl4.string(tmp2(1128).t.NBsJvm);
     obj7.url = constants.SPAM_LINK;
     obj7.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickSpamWebformLink);
@@ -336,8 +336,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   items2[3] = isSpam;
   if (isDeveloperClassification) {
     const obj8 = { text: null, url: null, onPress: null };
-    const intl5 = tmp2(1126).intl;
-    obj8.text = intl5.string(tmp2(1126).t.n9cZTH);
+    const intl5 = tmp2(1128).intl;
+    obj8.text = intl5.string(tmp2(1128).t.n9cZTH);
     obj8.url = constants.APP_APPEAL_LINK;
     obj8.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAppAppealLink);
@@ -349,8 +349,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   let tmp9Result4 = !isCoppa;
   if (!isCoppa) {
     const obj9 = { text: null, url: null, onPress: null };
-    const intl6 = tmp2(1126).intl;
-    obj9.text = intl6.string(tmp2(1126).t["Vtyn/7"]);
+    const intl6 = tmp2(1128).intl;
+    obj9.text = intl6.string(tmp2(1128).t["Vtyn/7"]);
     obj9.url = str;
     obj9.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickLearnMoreLink);
@@ -361,9 +361,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   items2[5] = tmp9Result4;
   if (isDsaEligible) {
     const obj10 = { variant: "text-xs/normal", children: null };
-    const intl7 = tmp2(1126).intl;
-    obj10.children = intl7.format(tmp2(1126).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5147).Text, obj10);
+    const intl7 = tmp2(1128).intl;
+    obj10.children = intl7.format(tmp2(1128).t.WMUgCX, {});
+    isDsaEligible = closure_8(tmp2(5149).Text, obj10);
   }
   const obj11 = { children: null };
   items2[6] = isDsaEligible;

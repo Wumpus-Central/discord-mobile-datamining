@@ -1,21 +1,21 @@
-// === Module 8838: AddMembersActionSheet ===
+// === Module 8846: AddMembersActionSheet ===
 
-// Module 8838 (AddMembersActionSheet)
+// Module 8846 (AddMembersActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4884 */;
-import RegexUtilsDefault from "RegexUtils" /* 5135 */;
-import GuildUtilsDefault from "GuildUtils" /* 6319 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8822 */;
+import util from "util" /* 1128 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import RegexUtilsDefault from "RegexUtils" /* 5138 */;
+import GuildUtilsDefault from "GuildUtils" /* 6321 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -347,12 +347,12 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7706);
+const ChannelPermissionsConstants = fn(7709);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1 }, inputContainer: { alignItems: "stretch", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 }, tagRoleColor: { height: 12, width: 12, borderRadius: 6 }, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.sm };
 obj2.tagAvatar = size;
@@ -385,16 +385,16 @@ export default function AddMembersActionSheet(channel) {
       if (tmp) {
         if (row.rowType === constants.ROLE) {
           closure_2 = closure_2 + 1;
-          closure_1_0.push(channel(5474).permissionOverwriteForRole(row.id, closure_0.type));
-          const obj = channel(5474);
+          closure_1_0.push(channel(5476).permissionOverwriteForRole(row.id, closure_0.type));
+          const obj = channel(5476);
         } else if (row.rowType === tmp2.MEMBER) {
           closure_1 = closure_1 + 1;
-          closure_1_0.push(channel(5474).permissionOverwriteForUser(row.id, closure_0.type));
-          const obj2 = channel(5474);
+          closure_1_0.push(channel(5476).permissionOverwriteForUser(row.id, closure_0.type));
+          const obj2 = channel(5476);
         }
       }
     });
-    await closure_0(8823).savePermissionUpdates(channel.id, items);
+    await closure_0(8831).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;
@@ -402,11 +402,11 @@ export default function AddMembersActionSheet(channel) {
       c5 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      const result = channel(4864).memberOrRoleAddedToast(closure_128_2, closure_128_1);
-      channel(4864);
-      tmp3(5115).hideActionSheet();
+      const result = channel(4867).memberOrRoleAddedToast(closure_128_2, closure_128_1);
+      channel(4867);
+      tmp3(5118).hideActionSheet();
       dependencyMap = 0;
-      tmp3(5115);
+      tmp3(5118);
     }
     return value;
   };
@@ -421,7 +421,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5481)(channel, true);
+  let str = pendingAdditions(5483)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -431,14 +431,14 @@ export default function AddMembersActionSheet(channel) {
     let _Object = Object;
     const tmp10 = 0 === Object.keys(pendingAdditions).length;
     let obj2 = { title: null, subtitle: null, trailing: null };
-    const intl3 = tmp4(1126).intl;
-    obj2.title = intl3.string(tmp4(1126).t.dMJ3Y6);
+    const intl3 = tmp4(1128).intl;
+    obj2.title = intl3.string(tmp4(1128).t.dMJ3Y6);
     obj2.subtitle = str;
     if (channel.canSkip) {
       if (tmp10) {
         const obj3 = { size: "sm", text: null, onPress: null, variant: "secondary" };
-        const intl2 = tmp4(1126).intl;
-        obj3.text = intl2.string(tmp4(1126).t["5Wxrcd"]);
+        const intl2 = tmp4(1128).intl;
+        obj3.text = intl2.string(tmp4(1128).t["5Wxrcd"]);
         obj3.onPress = function onPress() {
           first(dependencyMap[34]).hideActionSheet();
         };
@@ -446,16 +446,16 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(7060).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(7062).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { channel, guild: stateFromStores, permission: channel.accessPermissions, pendingAdditions, setPendingAdditions: tmp2[1], inActionSheet: true };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(7061).BottomSheet, obj4);
+      return closure_17(tmp4(7063).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
-    const intl = tmp4(1126).intl;
-    obj7.text = intl.string(tmp4(1126).t.OYkgVk);
+    const intl = tmp4(1128).intl;
+    obj7.text = intl.string(tmp4(1128).t.OYkgVk);
     obj7.onPress = function handleAddPressed() {
       const self = this;
       const apply = closure_2.apply;

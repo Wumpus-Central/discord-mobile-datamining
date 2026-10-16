@@ -1,9 +1,9 @@
-// === Module 7073: useAnalyticsLocations ===
+// === Module 7075: useAnalyticsLocations ===
 
-// Module 7073 (useAnalyticsLocations)
+// Module 7075 (useAnalyticsLocations)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import _modDef1355 from "module_1355" /* 1355 */;
+import _modDef1357 from "module_1357" /* 1357 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -71,7 +71,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnalyti
         tmp26 = obj5;
       }
       const fn = function x() {
-        if (!_modDef1355(items, first)) {
+        if (!_modDef1357(items, first)) {
           closure_2(items);
         }
       };
@@ -142,7 +142,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnalyti
   }, items2);
   const items3 = [items, first];
   const effect = noop.useEffect(() => {
-    if (!_modDef1355(items, first)) {
+    if (!_modDef1357(items, first)) {
       closure_2(items);
     }
   }, items3);

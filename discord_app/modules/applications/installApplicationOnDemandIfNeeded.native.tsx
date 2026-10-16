@@ -1,9 +1,9 @@
-// === Module 11164: installApplicationOnDemandIfNeeded ===
+// === Module 11180: installApplicationOnDemandIfNeeded ===
 
-// Module 11164 (installApplicationOnDemandIfNeeded)
+// Module 11180 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+import ApplicationRecord from "ApplicationRecord" /* 2024 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 const require = fn;
 let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
@@ -104,9 +104,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5041).dismissKeyboard();
-          let obj = closure_1_0(5041);
-          closure_1_0(10921).openOAuth2Modal({
+          closure_1_0(5044).dismissKeyboard();
+          let obj = closure_1_0(5044);
+          closure_1_0(10936).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,
@@ -135,7 +135,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 

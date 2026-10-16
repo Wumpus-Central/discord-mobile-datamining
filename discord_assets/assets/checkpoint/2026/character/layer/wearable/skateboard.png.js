@@ -1,6 +1,6 @@
-// === Module 5793: ? ===
+// === Module 5795: ? ===
 
-// Module 5793
+// Module 5795
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/skateboard.png.js");

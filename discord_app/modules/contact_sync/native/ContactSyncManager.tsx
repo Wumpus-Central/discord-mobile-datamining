@@ -1,12 +1,12 @@
-// === Module 13246: ContactSyncManager ===
+// === Module 13272: ContactSyncManager ===
 
-// Module 13246 (ContactSyncManager)
+// Module 13272 (ContactSyncManager)
 import Storage3 from "Storage" /* 510 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13245 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5977 */;
-import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
+import UserStore from "UserStore" /* 1392 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
 let closure_11 = async function _requestAndSyncContacts() {
@@ -117,10 +117,10 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(13244);
+const ContactSyncPersistedStore = fn(13270);
 ({ setStoredContacts: hasOwnProperty, deleteStoredContacts: metroRequire, useContactSyncStore: closure_7 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(13243).ContactPermissions;
-const PlatformTypes = fn(1085).PlatformTypes;
+const ContactPermissions = fn(13269).ContactPermissions;
+const PlatformTypes = fn(1087).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,10 +1,10 @@
-// === Module 8207: canAddNewReactions ===
+// === Module 8210: canAddNewReactions ===
 
-// Module 8207 (canAddNewReactions)
-import GuildVerificationStore from "GuildVerificationStore" /* 6107 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 8210 (canAddNewReactions)
+import GuildVerificationStore from "GuildVerificationStore" /* 6109 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 

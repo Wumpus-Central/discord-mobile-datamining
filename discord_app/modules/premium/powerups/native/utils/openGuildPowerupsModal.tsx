@@ -1,8 +1,8 @@
-// === Module 13063: openGuildPowerupsModal ===
+// === Module 13089: openGuildPowerupsModal ===
 
-// Module 13063 (openGuildPowerupsModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+// Module 13089 (openGuildPowerupsModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
 import size from "module_2" /* 2 */;
 
 let c3 = 0;
@@ -19,5 +19,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13064, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13090, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

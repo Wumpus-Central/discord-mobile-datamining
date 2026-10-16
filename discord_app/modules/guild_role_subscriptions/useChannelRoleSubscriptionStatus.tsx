@@ -1,9 +1,9 @@
-// === Module 5473: useChannelRoleSubscriptionStatus ===
+// === Module 5475: useChannelRoleSubscriptionStatus ===
 
-// Module 5473 (useChannelRoleSubscriptionStatus)
-import GatedChannelStore from "GatedChannelStore" /* 2117 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 5475 (useChannelRoleSubscriptionStatus)
+import GatedChannelStore from "GatedChannelStore" /* 2120 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function getChannelRoleSubscriptionStatus(id) {
   }
   return obj3;
 }
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

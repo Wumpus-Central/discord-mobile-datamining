@@ -1,8 +1,8 @@
-// === Module 1628: MetaQuestUtils ===
+// === Module 1630: MetaQuestUtils ===
 
-// Module 1628 (MetaQuestUtils)
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1381 */;
-import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1366 */;
+// Module 1630 (MetaQuestUtils)
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1383 */;
+import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1368 */;
 
 let NativeMetaQuestModule = NativeMetaQuestModule_mod;
 NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();

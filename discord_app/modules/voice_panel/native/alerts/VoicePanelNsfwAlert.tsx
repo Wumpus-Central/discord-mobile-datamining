@@ -1,12 +1,12 @@
-// === Module 18204: VoicePanelNsfwAlert ===
+// === Module 18246: VoicePanelNsfwAlert ===
 
-// Module 18204 (VoicePanelNsfwAlert)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
+// Module 18246 (VoicePanelNsfwAlert)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = fn;
-const isGuildNSFW = fn(2083).isGuildNSFW;
+const isGuildNSFW = fn(2086).isGuildNSFW;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -151,20 +151,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
 }) : (function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const onConnect = guildId.onConnect;
-  dependencyMap = guildId(5365).useDismissModalCallback();
+  dependencyMap = guildId(5367).useDismissModalCallback();
   const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
-  const intl = guildId(1126).intl;
+  const intl = guildId(1128).intl;
   const string = intl.string;
-  const t = guildId(1126).t;
+  const t = guildId(1128).t;
   if (tmp3) {
     let stringResult = string(t.xi46lg);
   } else {
     stringResult = string(t.ZmwvDc);
   }
   const obj2 = { title: stringResult, content: null, actions: null };
-  const intl2 = tmp(1126).intl;
+  const intl2 = tmp(1128).intl;
   const string2 = intl2.string;
-  const t2 = tmp(1126).t;
+  const t2 = tmp(1128).t;
   if (tmp3) {
     let string2Result = string2(t2.ZtuRts);
   } else {
@@ -181,9 +181,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
     },
     text: null
   };
-  const intl3 = tmp(1126).intl;
-  obj4.text = intl3.string(guildId(1126).t.wVq7uo);
-  const items = [closure_5(guildId(5365).AlertActionButton, obj4, "confirm"), ];
+  const intl3 = tmp(1128).intl;
+  obj4.text = intl3.string(guildId(1128).t.wVq7uo);
+  const items = [closure_5(guildId(5367).AlertActionButton, obj4, "confirm"), ];
   const obj5 = {
     variant: "secondary",
     onPress: function handleDisagree() {
@@ -192,11 +192,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
     },
     text: null
   };
-  const intl4 = tmp(1126).intl;
-  obj5.text = intl4.string(guildId(1126).t["/g10LC"]);
-  items[1] = closure_5(guildId(5365).AlertActionButton, obj5, "add-profile-picture");
+  const intl4 = tmp(1128).intl;
+  obj5.text = intl4.string(guildId(1128).t["/g10LC"]);
+  items[1] = closure_5(guildId(5367).AlertActionButton, obj5, "add-profile-picture");
   obj3.children = items;
-  obj2.actions = closure_6(guildId(5365).AlertActions, obj3);
-  return closure_5(guildId(5365).AlertModal, obj2);
+  obj2.actions = closure_6(guildId(5367).AlertActions, obj3);
+  return closure_5(guildId(5367).AlertModal, obj2);
 });
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

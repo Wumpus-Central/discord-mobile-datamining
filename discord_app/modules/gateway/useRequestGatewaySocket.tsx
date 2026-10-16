@@ -1,7 +1,7 @@
-// === Module 15482: useRequestGatewaySocket ===
+// === Module 15518: useRequestGatewaySocket ===
 
-// Module 15482 (useRequestGatewaySocket)
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9922 */;
+// Module 15518 (useRequestGatewaySocket)
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9938 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export const useRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnable
   _require = arg0;
   const cResult = require("c").c(4);
   const obj = require("c");
-  canUIRequestGatewaySocket = canUIRequestGatewaySocket(6293).useCanUIRequestGatewaySocket();
+  canUIRequestGatewaySocket = canUIRequestGatewaySocket(6295).useCanUIRequestGatewaySocket();
   if (cResult[0] === canUIRequestGatewaySocket) {
     if (cResult[1] === arg0) {
       let tmp3 = cResult[2];
@@ -38,10 +38,10 @@ export const useRequestGatewaySocket = ReactCompilerGating.isReactCompilerEnable
   cResult[3] = items;
   tmp4 = items;
   tmp3 = fn;
-  const obj2 = canUIRequestGatewaySocket(6293);
+  const obj2 = canUIRequestGatewaySocket(6295);
 }) : (function useRequestGatewaySocket(arg0) {
   closure_0 = arg0;
-  canUIRequestGatewaySocket = canUIRequestGatewaySocket(6293).useCanUIRequestGatewaySocket();
+  canUIRequestGatewaySocket = canUIRequestGatewaySocket(6295).useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
   const effect = noop.useEffect(() => {
     if (canUIRequestGatewaySocket) {

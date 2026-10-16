@@ -1,17 +1,17 @@
-// === Module 12911: NewMessageUserList ===
+// === Module 12937: NewMessageUserList ===
 
-// Module 12911 (NewMessageUserList)
+// Module 12937 (NewMessageUserList)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import useChannelName from "useChannelName" /* 5481 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6317 */;
+import util from "util" /* 1128 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useChannelName from "useChannelName" /* 5483 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6319 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function matchGroupDMRecipients(trimmed1, recipients) {
@@ -95,11 +95,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10440).UserRowModes;
+const UserRowModes = fn(10456).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -1115,8 +1115,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
       obj2.title = intl.string(util.t.qGlQrW);
       obj2.items = length.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = closure_6.findIndex((title) => {
-        const intl = selectedUserIds(1126).intl;
-        return title.title === intl.string(selectedUserIds(1126).t.y29JXs);
+        const intl = selectedUserIds(1128).intl;
+        return title.title === intl.string(selectedUserIds(1128).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         let items = [];

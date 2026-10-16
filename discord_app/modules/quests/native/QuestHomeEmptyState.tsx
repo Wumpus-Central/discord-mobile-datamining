@@ -1,26 +1,26 @@
-// === Module 15989: QuestHomeEmptyState ===
+// === Module 16022: QuestHomeEmptyState ===
 
-// Module 15989 (QuestHomeEmptyState)
+// Module 16022 (QuestHomeEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4874 */;
-import useChatLayoutDefault from "useChatLayout" /* 5035 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7035 */;
-import _modDef15990 from "module_15990" /* 15990 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import useToken from "useToken" /* 4877 */;
+import useChatLayoutDefault from "useChatLayout" /* 5038 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7037 */;
+import _modDef16023 from "module_16023" /* 16023 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const VerticalGradient = fn(1085).VerticalGradient;
+const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContentContainer: { top: -55, paddingHorizontal: nativeDefault.space.PX_32 }, emptyStateContentTitle: { textAlign: "center" }, emptyStateContentDescription: { textAlign: "center", marginTop: 4 }, emptyImage: { flex: 1, width: "100%", aspectRatio: 1.6375545851528384, minWidth: "100%", position: "absolute", bottom: 0, zIndex: -1 }, backgroundImage: null, gradient: null, actionWrapper: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
               if (!isChatLockedOpen) {
                 const obj5 = { children: null };
                 const obj6 = { style: tmp8.emptyImage, children: null };
-                const obj7 = { style: tmp8.backgroundImage, source: _modDef15990, resizeMode: "cover" };
+                const obj7 = { style: tmp8.backgroundImage, source: _modDef16023, resizeMode: "cover" };
                 obj6.children = hasOwnProperty(FastImageDefault, obj7);
                 const items1 = [hasOwnProperty(React3, obj6), ];
                 const obj8 = { style: tmp8.gradient, end: null, start: null, colors: null };
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef15990, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef16023, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items2 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

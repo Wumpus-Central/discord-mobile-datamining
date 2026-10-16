@@ -1,20 +1,20 @@
-// === Module 13216: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 13242: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 13216 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 13242 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6339 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6340 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4996 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6342 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4999 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");

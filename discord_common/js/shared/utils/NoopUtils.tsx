@@ -1,6 +1,6 @@
-// === Module 1099: NoopUtils ===
+// === Module 1101: NoopUtils ===
 
-// Module 1099 (NoopUtils)
+// Module 1101 (NoopUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/NoopUtils.tsx");

@@ -1,7 +1,7 @@
-// === Module 7569: maybeDispatchDevOnlyDummyFriendSuggestions ===
+// === Module 7571: maybeDispatchDevOnlyDummyFriendSuggestions ===
 
-// Module 7569 (maybeDispatchDevOnlyDummyFriendSuggestions)
-import UserStore from "UserStore" /* 1390 */;
+// Module 7571 (maybeDispatchDevOnlyDummyFriendSuggestions)
+import UserStore from "UserStore" /* 1392 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");

@@ -1,10 +1,10 @@
-// === Module 8545: useIsScreenLandscape ===
+// === Module 8553: useIsScreenLandscape ===
 
-// Module 8545 (useIsScreenLandscape)
+// Module 8553 (useIsScreenLandscape)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1502 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1498 */;
+import DimensionsStore from "DimensionsStore" /* 1500 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

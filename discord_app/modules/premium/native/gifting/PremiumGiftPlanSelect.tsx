@@ -1,26 +1,26 @@
-// === Module 10272: PremiumGiftPlanSelect ===
+// === Module 10288: PremiumGiftPlanSelect ===
 
-// Module 10272 (PremiumGiftPlanSelect)
+// Module 10288 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import native from "native" /* 1200 */;
-import timing from "timing" /* 5152 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10330 */;
+import native from "native" /* 1202 */;
+import timing from "timing" /* 5154 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10346 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8535 */;
-import PromotionsStore from "PromotionsStore" /* 9343 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8543 */;
+import PromotionsStore from "PromotionsStore" /* 9356 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Pressable: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let VerticalGradient = fn(1085).VerticalGradient;
+let VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [, ];
-({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1392).PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1394).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -914,7 +914,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         const tmp4Result8 = tmp4(tmp2[34]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: "r", user: 131160.78625679022 };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: false, user: false };
       const AvatarSizes = tmp(tmp2[30]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

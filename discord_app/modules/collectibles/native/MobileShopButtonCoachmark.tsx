@@ -1,15 +1,15 @@
-// === Module 13828: MobileShopButtonCoachmark ===
+// === Module 13854: MobileShopButtonCoachmark ===
 
-// Module 13828 (MobileShopButtonCoachmark)
+// Module 13854 (MobileShopButtonCoachmark)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5088 */;
+import util from "util" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 const obj2 = { image: null };
 let size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
 obj2.image = size;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSh
               return;
             }
           }
-          stringResult = obj3.string(navigateToShop(1126).t.fYfGgK);
+          stringResult = obj3.string(navigateToShop(1128).t.fYfGgK);
         }
         cResult[12] = marketing.buttonLabel;
         cResult[13] = stringResult;

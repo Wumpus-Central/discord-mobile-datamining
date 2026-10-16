@@ -1,11 +1,11 @@
-// === Module 12577: ForwardModalUtils ===
+// === Module 12600: ForwardModalUtils ===
 
-// Module 12577 (ForwardModalUtils)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import useAlertStore from "useAlertStore" /* 5361 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12578 */;
-import showSearchableDestinationListModalDefault from "showSearchableDestinationListModal" /* 12579 */;
+// Module 12600 (ForwardModalUtils)
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import useAlertStore from "useAlertStore" /* 5363 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12601 */;
+import showSearchableDestinationListModalDefault from "showSearchableDestinationListModal" /* 12602 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ export const openForwardModal = function openForwardModal(arg0) {
   }
   ({ forwardOptions, customSendHandler } = arg0);
   ForwardingAnalyticsUtils.trackForwardStart(message.channel_id, message.id, source);
-  showSearchableDestinationListModalDefault(asyncRequireImpl(12580, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
+  showSearchableDestinationListModalDefault(asyncRequireImpl(12603, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {
   ModalActionCreatorsDefault.popWithKey(c5);

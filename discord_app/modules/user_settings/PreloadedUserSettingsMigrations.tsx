@@ -1,16 +1,16 @@
-// === Module 15364: PreloadedUserSettingsMigrations ===
+// === Module 15399: PreloadedUserSettingsMigrations ===
 
-// Module 15364 (PreloadedUserSettingsMigrations)
+// Module 15399 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import wrappers from "wrappers" /* 1240 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1246 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2048 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import HotspotStore2 from "HotspotStore" /* 7128 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7459 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import wrappers from "wrappers" /* 1242 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1248 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2051 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import HotspotStore2 from "HotspotStore" /* 7130 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7461 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NOTICE_HUBLINK) {
@@ -37,7 +37,7 @@ function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NO
   }
   return hasHiddenHotspotResult;
 }
-const ChannelNoticeTypes = fn(1085).ChannelNoticeTypes;
+const ChannelNoticeTypes = fn(1087).ChannelNoticeTypes;
 let items = [
   {
     version: 2,

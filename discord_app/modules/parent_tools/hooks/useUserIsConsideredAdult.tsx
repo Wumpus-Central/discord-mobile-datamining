@@ -1,9 +1,9 @@
-// === Module 12501: useUserIsConsideredAdult ===
+// === Module 12524: useUserIsConsideredAdult ===
 
-// Module 12501 (useUserIsConsideredAdult)
+// Module 12524 (useUserIsConsideredAdult)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

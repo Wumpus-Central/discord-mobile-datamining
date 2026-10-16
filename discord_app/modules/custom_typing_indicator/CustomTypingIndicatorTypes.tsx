@@ -1,7 +1,7 @@
-// === Module 1411: CustomTypingIndicatorTypes ===
+// === Module 1413: CustomTypingIndicatorTypes ===
 
-// Module 1411 (CustomTypingIndicatorTypes)
-import user from "user" /* 1398 */;
+// Module 1413 (CustomTypingIndicatorTypes)
+import user from "user" /* 1400 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");

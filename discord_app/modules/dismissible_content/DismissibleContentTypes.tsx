@@ -1,7 +1,7 @@
-// === Module 2056: DismissibleContentTypes ===
+// === Module 2059: DismissibleContentTypes ===
 
-// Module 2056 (DismissibleContentTypes)
-import dismissible_content from "dismissible_content" /* 2049 */;
+// Module 2059 (DismissibleContentTypes)
+import dismissible_content from "dismissible_content" /* 2052 */;
 import size from "module_2" /* 2 */;
 
 function isSingleUseDismissibleContent(item10020) {

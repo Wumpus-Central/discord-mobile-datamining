@@ -1,11 +1,11 @@
-// === Module 16802: CollectiblesCoachmarkScrollDismissContext ===
+// === Module 16835: CollectiblesCoachmarkScrollDismissContext ===
 
-// Module 16802 (CollectiblesCoachmarkScrollDismissContext)
+// Module 16835 (CollectiblesCoachmarkScrollDismissContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const NOOP = fn(1096).NOOP;
+const NOOP = fn(1098).NOOP;
 const jsx = fn(21).jsx;
 const redux = noop.createContext({
   registerDismiss() {

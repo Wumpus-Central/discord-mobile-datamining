@@ -1,30 +1,30 @@
-// === Module 17649: layout/SearchBar ===
+// === Module 17683: layout/SearchBar ===
 
-// Module 17649 (layout/SearchBar)
-import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4884 */;
-import useChannelName from "useChannelName" /* 5481 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12881 */;
-import SearchTokens from "SearchTokens" /* 12889 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12902 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12906 */;
+// Module 17683 (layout/SearchBar)
+import util from "util" /* 1128 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import useChannelName from "useChannelName" /* 5483 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12907 */;
+import SearchTokens from "SearchTokens" /* 12915 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12928 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12932 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
-import SearchQueryStore from "SearchQueryStore" /* 12895 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
+import SearchQueryStore from "SearchQueryStore" /* 12921 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9533);
+const SearchConstants = fn(9549);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9532).SearchFilterAddLocations;
-const SearchTypes = fn(1085).SearchTypes;
+const SearchFilterAddLocations = fn(9548).SearchFilterAddLocations;
+const SearchTypes = fn(1087).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = { searchBar: { minHeight: minHeight + 2 }, icon: { width: 32, minHeight, justifyContent: "center", zIndex: 10 } };
   return obj;

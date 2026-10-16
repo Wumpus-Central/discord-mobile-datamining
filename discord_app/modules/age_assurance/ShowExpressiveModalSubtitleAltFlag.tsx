@@ -1,13 +1,13 @@
-// === Module 7776: ShowExpressiveModalSubtitleAltFlag ===
+// === Module 7779: ShowExpressiveModalSubtitleAltFlag ===
 
-// Module 7776 (ShowExpressiveModalSubtitleAltFlag)
+// Module 7779 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7728 */;
-import SafetyHubStore from "SafetyHubStore" /* 7753 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7731 */;
+import SafetyHubStore from "SafetyHubStore" /* 7756 */;
 
 require = fn;
-const ApexExperiment = fn(1453);
+const ApexExperiment = fn(1455);
 let obj2 = { kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null };
 obj3[1] = { enabled: true };

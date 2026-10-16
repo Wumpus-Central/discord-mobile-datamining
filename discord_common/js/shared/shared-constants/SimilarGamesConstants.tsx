@@ -1,6 +1,6 @@
-// === Module 9182: SimilarGamesConstants ===
+// === Module 9195: SimilarGamesConstants ===
 
-// Module 9182 (SimilarGamesConstants)
+// Module 9195 (SimilarGamesConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SimilarGamesConstants.tsx");

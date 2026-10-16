@@ -1,16 +1,16 @@
-// === Module 17693: ChannelTitle ===
+// === Module 17727: ChannelTitle ===
 
-// Module 17693 (ChannelTitle)
+// Module 17727 (ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17689 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17723 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(6183).UnreadSetting;
+const UnreadSetting = fn(6185).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_6 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
 const ReactCompilerGating = fn(558);
 let obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };

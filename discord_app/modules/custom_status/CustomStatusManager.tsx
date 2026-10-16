@@ -1,16 +1,16 @@
-// === Module 18355: CustomStatusManager ===
+// === Module 18397: CustomStatusManager ===
 
-// Module 18355 (CustomStatusManager)
-import setUserStatusDefault from "setUserStatus" /* 13415 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5975 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18397 (CustomStatusManager)
+import setUserStatusDefault from "setUserStatus" /* 13441 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 let require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticsObjects: closure_4, StatusTypes: hasOwnProperty } = Constants);
-const timeout = new fn(2060).Timeout();
-const timeout1 = new fn(2060).Timeout();
-const timeout2 = new fn(2060).Timeout();
+const timeout = new fn(2063).Timeout();
+const timeout1 = new fn(2063).Timeout();
+const timeout2 = new fn(2063).Timeout();
 const prototype = function CustomStatusManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -35,7 +35,7 @@ const prototype = function CustomStatusManager() {
     const result2 = applyArgumentsResult.manageExpiringFocusMode();
   };
   applyArgumentsResult.manageExpiringCustomStatus = function manageExpiringCustomStatus() {
-    let CustomStatusSetting = applyArgumentsResult(2041).CustomStatusSetting;
+    let CustomStatusSetting = applyArgumentsResult(2044).CustomStatusSetting;
     const setting = CustomStatusSetting.getSetting();
     if (null == setting) {
       timeout2.stop();
@@ -55,7 +55,7 @@ const prototype = function CustomStatusManager() {
               CustomStatusSetting.updateSetting(undefined);
             }, true);
           } else {
-            const CustomStatusSetting2 = applyArgumentsResult(2041).CustomStatusSetting;
+            const CustomStatusSetting2 = applyArgumentsResult(2044).CustomStatusSetting;
             CustomStatusSetting2.updateSetting(undefined);
             timeout2.stop();
           }
@@ -67,7 +67,7 @@ const prototype = function CustomStatusManager() {
     }
   };
   applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
-    const StatusExpiresAtSetting = applyArgumentsResult(2041).StatusExpiresAtSetting;
+    const StatusExpiresAtSetting = applyArgumentsResult(2044).StatusExpiresAtSetting;
     const setting = StatusExpiresAtSetting.getSetting();
     if (null != setting) {
       if ("0" !== setting) {
@@ -105,19 +105,19 @@ const prototype = function CustomStatusManager() {
   applyArgumentsResult.lazilyMigrateStatusCreatedAt = function lazilyMigrateStatusCreatedAt() {
     let tmp = SelfPresenceStore.getStatus() !== constants2.ONLINE;
     if (tmp) {
-      const StatusCreatedAtSetting = applyArgumentsResult(2041).StatusCreatedAtSetting;
+      const StatusCreatedAtSetting = applyArgumentsResult(2044).StatusCreatedAtSetting;
       tmp = null == StatusCreatedAtSetting.getSetting();
     }
     if (tmp) {
-      const PreloadedUserSettingsActionCreators = applyArgumentsResult(2046).PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = applyArgumentsResult(2049).PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("status", async (arg0) => {
         const UInt64Value = closure_1_0(dependencyMap[7]).UInt64Value;
         arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
-      }, applyArgumentsResult(2046).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }, applyArgumentsResult(2049).UserSettingsDelay.INFREQUENT_USER_ACTION);
     }
   };
   applyArgumentsResult.manageExpiringFocusMode = function manageExpiringFocusMode() {
-    const FocusModeExpiresAtSetting = applyArgumentsResult(2041).FocusModeExpiresAtSetting;
+    const FocusModeExpiresAtSetting = applyArgumentsResult(2044).FocusModeExpiresAtSetting;
     const setting = FocusModeExpiresAtSetting.getSetting();
     if (null != setting) {
       if ("0" !== setting) {
@@ -133,9 +133,9 @@ const prototype = function CustomStatusManager() {
             closure_1_0(dependencyMap[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(13414).setFocusMode(false);
+          applyArgumentsResult(13440).setFocusMode(false);
           timeout1.stop();
-          const tmpResult = applyArgumentsResult(13414);
+          const tmpResult = applyArgumentsResult(13440);
         }
       }
     }

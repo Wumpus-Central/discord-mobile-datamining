@@ -1,19 +1,19 @@
-// === Module 11624: ConjureDesignRemarkSheet ===
+// === Module 11648: ConjureDesignRemarkSheet ===
 
-// Module 11624 (ConjureDesignRemarkSheet)
+// Module 11648 (ConjureDesignRemarkSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11587 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11610 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
-const sendUserMessage = fn(10886).sendUserMessage;
+const sendUserMessage = fn(10901).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureDesignRemarkSheet = "ConjureDesignRemarkSheet";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };

@@ -1,8 +1,8 @@
-// === Module 11583: MentionsBadge ===
+// === Module 11606: MentionsBadge ===
 
-// Module 11583 (MentionsBadge)
+// Module 11606 (MentionsBadge)
 import c from "c" /* 576 */;
-import native from "native" /* 1200 */;
+import native from "native" /* 1202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 6483: TableRadioGroup ===
+// === Module 6485: TableRadioGroup ===
 
-// Module 6483 (TableRadioGroup)
+// Module 6485 (TableRadioGroup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let jsx = fn(21).jsx;
-let context = noop.createContext({ selectedValue: null, onSelect: fn(1085).NOOP });
+let context = noop.createContext({ selectedValue: null, onSelect: fn(1087).NOOP });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
@@ -41,7 +41,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled() ? (f
         let tmp9 = cResult[4];
       }
       const imperativeHandle = mapped.useImperativeHandle(groupRef.groupRef, tmp8, tmp9);
-      context = mapped.useContext(onChange(6484).RedesignCompatContext);
+      context = mapped.useContext(onChange(6486).RedesignCompatContext);
       if (cResult[5] === tmp4) {
         if (cResult[6] === onChange) {
           let tmp12 = cResult[7];
@@ -78,7 +78,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled() ? (f
                 }
               }
               const obj3 = { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: cResult[13] };
-              const tmp19 = context(onChange(6485).TableRowGroup, obj3);
+              const tmp19 = context(onChange(6487).TableRowGroup, obj3);
               cResult[16] = accessibilityLabel;
               cResult[17] = description;
               cResult[18] = hasIcons;
@@ -209,7 +209,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled() ? (f
       return selectedValue;
     }
   }), items);
-  jsx = obj.useContext(onChange(6484).RedesignCompatContext);
+  jsx = obj.useContext(onChange(6486).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   onSelect = obj.useCallback((arg0) => {
     if (!closure_1) {
@@ -230,6 +230,6 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled() ? (f
     }
     tmp4 = type;
   });
-  obj2.children = jsx(onChange(6485).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
+  obj2.children = jsx(onChange(6487).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
   return <onSelect.Provider value={noop.useMemo(() => ({ selectedValue, onSelect }), items2)}>{null}</onSelect.Provider>;
 });

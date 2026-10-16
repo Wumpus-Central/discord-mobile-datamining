@@ -1,15 +1,15 @@
-// === Module 8304: useMaybeFetchReferralsRemaining ===
+// === Module 8309: useMaybeFetchReferralsRemaining ===
 
-// Module 8304 (useMaybeFetchReferralsRemaining)
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7330 */;
+// Module 8309 (useMaybeFetchReferralsRemaining)
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7332 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7391 */;
+import UserStore from "UserStore" /* 1392 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7393 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -95,8 +95,8 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   }
   let fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1989).isPremiumExactly(stateFromStores, closure_6.TIER_2);
-    const tmpResult6 = tmp(1989);
+    fetched = tmp(1991).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+    const tmpResult6 = tmp(1991);
   }
   if (fetched) {
     fetched = tmp11.fetched;
@@ -127,18 +127,18 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(8305).useHasDiscountApplied();
-  const obj2 = flag(8305);
-  const hasActiveTrial = flag(8306).useHasActiveTrial();
-  const tmp6 = fetched(7330)();
+  const hasDiscountApplied = flag(8310).useHasDiscountApplied();
+  const obj2 = flag(8310);
+  const hasActiveTrial = flag(8311).useHasActiveTrial();
+  const tmp6 = fetched(7332)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }
   fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1989).isPremiumExactly(stateFromStores, closure_6.TIER_2);
-    const tmpResult = tmp(1989);
+    fetched = tmp(1991).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+    const tmpResult = tmp(1991);
   }
   if (fetched) {
     fetched = tmp6.fetched;
@@ -162,5 +162,5 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(8306);
+  const obj3 = flag(8311);
 });

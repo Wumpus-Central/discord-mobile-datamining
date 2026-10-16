@@ -1,15 +1,15 @@
-// === Module 11580: ConjureStaffAccess ===
+// === Module 11603: ConjureStaffAccess ===
 
-// Module 11580 (ConjureStaffAccess)
+// Module 11603 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildChannelStore from "GuildChannelStore" /* 4804 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 let c7 = "conjuring-help";
 let c8 = "https://i.dis.gd/conjuring-access";
 const ReactCompilerGating = fn(558);

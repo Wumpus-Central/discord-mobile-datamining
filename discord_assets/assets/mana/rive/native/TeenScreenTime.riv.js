@@ -1,6 +1,6 @@
-// === Module 4987: ? ===
+// === Module 4990: ? ===
 
-// Module 4987
+// Module 4990
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js");

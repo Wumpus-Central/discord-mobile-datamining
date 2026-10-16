@@ -1,19 +1,19 @@
-// === Module 7784: InlineNotice ===
+// === Module 7787: InlineNotice ===
 
-// Module 7784 (InlineNotice)
+// Module 7787 (InlineNotice)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import HelpMessageDefault from "HelpMessage" /* 7785 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 7786 */;
-import NewInlineNotice from "NewInlineNotice" /* 7787 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import HelpMessageDefault from "HelpMessage" /* 7788 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 7789 */;
+import NewInlineNotice from "NewInlineNotice" /* 7790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const InlineNotice = "InlineNotice";
-let obj = { critical: fn(7785).HelpMessageTypes.ERROR, warning: fn(7785).HelpMessageTypes.WARNING, info: fn(7785).HelpMessageTypes.INFO, positive: fn(7785).HelpMessageTypes.SUCCESS };
+let obj = { critical: fn(7788).HelpMessageTypes.ERROR, warning: fn(7788).HelpMessageTypes.WARNING, info: fn(7788).HelpMessageTypes.INFO, positive: fn(7788).HelpMessageTypes.SUCCESS };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/mana/components/InlineNotice/InlineNotice.native.tsx");
@@ -41,9 +41,9 @@ export const InlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (func
       if (cResult[2] !== action) {
         let tmp7;
         if (null != action) {
-          ({ text: obj3.text, onClick: obj3.onPress } = action);
-          tmp7 = React3(components_Button_Button.Button, { variant: "secondary", size: "sm", text: null, onPress: null });
-          const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
+          ({ text: obj3.text, onPress: obj3.onPress, loading: obj3.loading } = action);
+          tmp7 = React3(components_Button_Button.Button, { variant: "secondary", size: "sm", text: null, onPress: null, loading: null });
+          const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null, loading: null };
         }
         cResult[2] = action;
         cResult[3] = tmp7;
@@ -99,9 +99,9 @@ export const InlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (func
       const obj4 = { messageType: obj[tmp3], button: null, children: null };
       let tmp14Result;
       if (null != action) {
-        ({ text: obj2.text, onClick: obj2.onPress } = action);
-        tmp14Result = React3(components_Button_Button.Button, { variant: "secondary", size: "sm", text: null, onPress: null });
-        const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
+        ({ text: obj2.text, onPress: obj2.onPress, loading: obj2.loading } = action);
+        tmp14Result = React3(components_Button_Button.Button, { variant: "secondary", size: "sm", text: null, onPress: null, loading: null });
+        const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null, loading: null };
       }
       obj4.button = tmp14Result;
       let tmp7 = message;

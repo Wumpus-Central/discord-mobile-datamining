@@ -1,13 +1,13 @@
-// === Module 8330: EphemeralIndication ===
+// === Module 8335: EphemeralIndication ===
 
-// Module 8330 (EphemeralIndication)
-import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8331 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7969 */;
+// Module 8335 (EphemeralIndication)
+import util from "util" /* 1128 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8336 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7972 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ HelpdeskArticles: closure_4, MessageFlags: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");

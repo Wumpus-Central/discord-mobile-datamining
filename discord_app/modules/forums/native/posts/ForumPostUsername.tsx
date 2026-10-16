@@ -1,24 +1,24 @@
-// === Module 12753: ForumPostUsername ===
+// === Module 12779: ForumPostUsername ===
 
-// Module 12753 (ForumPostUsername)
+// Module 12779 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import native from "native" /* 1200 */;
-import ForumLayout from "ForumLayout" /* 2075 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8197 */;
-import ForumHooks from "ForumHooks" /* 9547 */;
-import useChatWidthDefault from "useChatWidth" /* 11006 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 12754 */;
+import native from "native" /* 1202 */;
+import ForumLayout from "ForumLayout" /* 2078 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8200 */;
+import ForumHooks from "ForumHooks" /* 9563 */;
+import useChatWidthDefault from "useChatWidth" /* 11021 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 12780 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 const View = fn(17).View;
-const useForumChannelStore = fn(12749).useForumChannelStore;
+const useForumChannelStore = fn(12775).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
 fn(558);
 let ReactCompilerGating = fn(558);

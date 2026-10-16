@@ -1,15 +1,15 @@
-// === Module 12842: useSearchContext ===
+// === Module 12868: useSearchContext ===
 
-// Module 12842 (useSearchContext)
+// Module 12868 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchTypes = fn(1085).SearchTypes;
+const SearchTypes = fn(1087).SearchTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildSearchContext(guildId) {

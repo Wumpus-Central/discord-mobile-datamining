@@ -1,17 +1,17 @@
-// === Module 18400: HolidayEventsManager ===
+// === Module 18442: HolidayEventsManager ===
 
-// Module 18400 (HolidayEventsManager)
-import getSoundsForPackDefault from "getSoundsForPack" /* 11281 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18401 */;
-import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 18405 */;
-import SoundpackActions from "SoundpackActions" /* 18406 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 18407 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
-import SoundpackStore from "SoundpackStore" /* 11279 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18442 (HolidayEventsManager)
+import getSoundsForPackDefault from "getSoundsForPack" /* 11301 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18443 */;
+import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 18447 */;
+import SoundpackActions from "SoundpackActions" /* 18448 */;
+import setIncomingRingtone from "setIncomingRingtone" /* 18449 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
+import SoundpackStore from "SoundpackStore" /* 11299 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const Soundpacks = fn(11280).Soundpacks;
+const Soundpacks = fn(11300).Soundpacks;
 class HolidayEventsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

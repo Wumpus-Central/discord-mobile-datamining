@@ -1,28 +1,28 @@
-// === Module 17269: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 17303: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 17269 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 17303 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7061 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8545 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8855 */;
+import util from "util" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7063 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8553 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 1.7289156626506024;
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 obj2.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     [tmp8, dependencyMap] = isScreenLandscape(noop.useState(0), 2);
     const obj2 = noop;
     const tmp7 = isScreenLandscape(noop.useState(0), 2);
-    isScreenLandscape = tmp(8545).useIsScreenLandscape();
+    isScreenLandscape = tmp(8553).useIsScreenLandscape();
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [AccessibilityStore];
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       tmp11 = cResult[3];
       tmp12 = cResult[4];
     }
-    const tmpResult = tmp(8545);
+    const tmpResult = tmp(8553);
     const stateFromStores = tmp(573).useStateFromStores(tmp11, tmp12);
     if (cResult[5] !== isScreenLandscape) {
       function setWidth(arg0) {
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
           return closure_4(guildId.nativeEvent.layout.width);
         }
       }
-      const stringResult = obj5.string(tmp(1126).t.gCgirr);
+      const stringResult = obj5.string(tmp(1128).t.gCgirr);
       class C {
         constructor() {
           return closure_1_6.useReducedMotion;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     const obj3 = { accessibilityRole: "image", accessibilityLabel: tmp20, children: null };
     const size = { style: tmp4.videoContainer, src, width: tmp8, height: result, muted: true, paused: stateFromStores, ariaHidden: true };
-    obj3.children = closure_10(markAsDismissed(8644), size);
+    obj3.children = closure_10(markAsDismissed(8652), size);
     const tmp29 = closure_10(View, obj3);
     cResult[13] = tmp4.videoContainer;
     cResult[14] = result;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const intl = util.intl;
   obj5.accessibilityLabel = intl.string(util.t.gCgirr);
   const size = { style: tmp.videoContainer, src, width: tmp3, height: tmp3 / c12, muted: true, paused: stateFromStores, ariaHidden: true };
-  obj5.children = closure_10(markAsDismissed(8644), size);
+  obj5.children = closure_10(markAsDismissed(8652), size);
   const items2 = [closure_10(View, obj5), , ];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

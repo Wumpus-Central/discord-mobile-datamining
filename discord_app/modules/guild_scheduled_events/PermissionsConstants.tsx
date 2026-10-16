@@ -1,10 +1,10 @@
-// === Module 8792: PermissionsConstants ===
+// === Module 8800: PermissionsConstants ===
 
-// Module 8792 (PermissionsConstants)
-import Constants from "Constants" /* 1085 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
+// Module 8800 (PermissionsConstants)
+import Constants from "Constants" /* 1087 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2076 */;
 import "BigFlagUtils";
-import BigFlagUtils from "BigFlagUtils" /* 1097 */;
+import BigFlagUtils from "BigFlagUtils" /* 1099 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

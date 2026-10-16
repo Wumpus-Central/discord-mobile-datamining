@@ -1,16 +1,16 @@
-// === Module 16249: DarkModeThemeSetting ===
+// === Module 16282: DarkModeThemeSetting ===
 
-// Module 16249 (DarkModeThemeSetting)
+// Module 16282 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16247 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import util from "util" /* 1128 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16280 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
-const SystemTheme = fn(1208).SystemTheme;
+const SystemTheme = fn(1210).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8210).MobileUserSettings.APPEARANCE,
+  parent: fn(8213).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.DARK);
   },
   screen: {
-    route: fn(1085).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
+    route: fn(1087).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
     getComponent() {
       return require("SettingsAppearanceDarkModeThemePickerScreen").default;
     }

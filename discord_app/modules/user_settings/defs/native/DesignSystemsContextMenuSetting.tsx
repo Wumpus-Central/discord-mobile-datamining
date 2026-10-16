@@ -1,9 +1,9 @@
-// === Module 16739: DesignSystemsContextMenuSetting ===
+// === Module 16772: DesignSystemsContextMenuSetting ===
 
-// Module 16739 (DesignSystemsContextMenuSetting)
-import Constants from "Constants" /* 1085 */;
-import SettingsConstants from "SettingsConstants" /* 8210 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
+// Module 16772 (DesignSystemsContextMenuSetting)
+import Constants from "Constants" /* 1087 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

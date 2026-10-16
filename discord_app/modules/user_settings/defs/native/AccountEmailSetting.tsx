@@ -1,15 +1,15 @@
-// === Module 15644: AccountEmailSetting ===
+// === Module 15677: AccountEmailSetting ===
 
-// Module 15644 (AccountEmailSetting)
+// Module 15677 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6418 */;
-import UserStore from "UserStore" /* 1390 */;
+import util from "util" /* 1128 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6420 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountEmailSettingTrailing() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,7 +46,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
   },
-  parent: fn(8210).MobileUserSettings.ACCOUNT,
+  parent: fn(8213).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountEmailSettingTrailing() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

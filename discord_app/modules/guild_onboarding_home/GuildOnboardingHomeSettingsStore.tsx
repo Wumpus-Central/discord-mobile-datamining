@@ -1,6 +1,6 @@
-// === Module 7145: GuildOnboardingHomeSettingsStore ===
+// === Module 7147: GuildOnboardingHomeSettingsStore ===
 
-// Module 7145 (GuildOnboardingHomeSettingsStore)
+// Module 7147 (GuildOnboardingHomeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

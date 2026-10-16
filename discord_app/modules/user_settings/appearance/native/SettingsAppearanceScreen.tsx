@@ -1,20 +1,20 @@
-// === Module 16205: SettingsAppearanceScreen ===
+// === Module 16238: SettingsAppearanceScreen ===
 
-// Module 16205 (SettingsAppearanceScreen)
+// Module 16238 (SettingsAppearanceScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import useMountEffectDefault from "useMountEffect" /* 5456 */;
-import HeaderShared from "HeaderShared" /* 9518 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
-import SettingLayoutDefault from "SettingLayout" /* 15619 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import useMountEffectDefault from "useMountEffect" /* 5458 */;
+import HeaderShared from "HeaderShared" /* 9534 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
+import SettingLayoutDefault from "SettingLayout" /* 15652 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ function getAppearanceSettings() {
   obj6.settings = items6;
   const intl3 = util.intl;
   const obj7 = { helpCenterLink: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  obj6.subLabel = intl3.format(_modDef3444.GR2KOG, obj7);
+  obj6.subLabel = intl3.format(_modDef3447.GR2KOG, obj7);
   items1[5] = obj6;
   const obj9 = { label: null, settings: null };
   const intl4 = util.intl;
@@ -71,10 +71,10 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(16206);
+const FontScaleStore = fn(16239);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8210).MobileUserSettings;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const MobileUserSettings = fn(8213).MobileUserSettings;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFontScalingData() {

@@ -1,39 +1,39 @@
-// === Module 11857: AppDetailContent ===
+// === Module 11881: AppDetailContent ===
 
-// Module 11857 (AppDetailContent)
+// Module 11881 (AppDetailContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import TableRow from "TableRow" /* 6400 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7459 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7463 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9467 */;
-import AppLauncherContext from "AppLauncherContext" /* 10855 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11764 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11767 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 11831 */;
-import BillIcon from "BillIcon" /* 11864 */;
-import ShopIcon from "ShopIcon" /* 11866 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import TableRow from "TableRow" /* 6402 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7461 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7465 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9483 */;
+import AppLauncherContext from "AppLauncherContext" /* 10870 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11788 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 11791 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 11855 */;
+import BillIcon from "BillIcon" /* 11888 */;
+import ShopIcon from "ShopIcon" /* 11890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9468);
+const ApplicationCommandIndexStore = fn(9484);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1502);
+const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_12 = fn(5463).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_12 = fn(5465).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5151);
-let obj2 = { headerSpacer: { height: fn(11858).EXPANDED_HEADER_HEIGHT - fn(11858).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-let obj3 = { height: fn(11858).EXPANDED_HEADER_HEIGHT - fn(11858).SHEET_HANDLE_CONTAINER_HEIGHT };
+const createStyles = fn(5153);
+let obj2 = { headerSpacer: { height: fn(11882).EXPANDED_HEADER_HEIGHT - fn(11882).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(11882).EXPANDED_HEADER_HEIGHT - fn(11882).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
@@ -544,7 +544,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
     }
   }, items1);
   let obj2 = require("CommandRowButton");
-  return closure_13(tmp(6400).TableRow, {
+  return closure_13(tmp(6402).TableRow, {
     start: isFirstRow,
     end: isLastRow,
     label: command.displayName,

@@ -1,24 +1,24 @@
-// === Module 16475: AppIconRows ===
+// === Module 16508: AppIconRows ===
 
-// Module 16475 (AppIconRows)
+// Module 16508 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
-import AppIconTypes from "AppIconTypes" /* 9689 */;
-import AppIconUtils from "AppIconUtils" /* 14418 */;
-import AppIconRowDefault from "AppIconRow" /* 16476 */;
+import util from "util" /* 1128 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
+import AppIconTypes from "AppIconTypes" /* 9705 */;
+import AppIconUtils from "AppIconUtils" /* 14450 */;
+import AppIconRowDefault from "AppIconRow" /* 16509 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 12787 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 12813 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
@@ -41,10 +41,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6485).TableRowGroup;
+  const TableRowGroup = tmp(6487).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.N4YDao);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t.N4YDao);
     cResult[1] = stringResult;
     let tmp10 = stringResult;
   } else {
@@ -110,8 +110,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
     const obj2 = { title: merged.title, accessibilityRole: "radiogroup", accessibilityLabel: null, hasIcons: true, children: null };
-    const intl = merged(1126).intl;
-    obj2.accessibilityLabel = intl.string(merged(1126).t.N4YDao);
+    const intl = merged(1128).intl;
+    obj2.accessibilityLabel = intl.string(merged(1128).t.N4YDao);
     obj2.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(6485).TableRowGroup, obj2);
+    obj.children = closure_9(merged(6487).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 });

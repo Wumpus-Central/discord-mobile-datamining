@@ -1,9 +1,9 @@
-// === Module 9176: ImageWithPlaceholder ===
+// === Module 9189: ImageWithPlaceholder ===
 
-// Module 9176 (ImageWithPlaceholder)
+// Module 9189 (ImageWithPlaceholder)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9177 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9190 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const style = { flex: 1 };
 const ImagePlaceholderVersions = { THUMBHASH: 1, [1]: "THUMBHASH" };
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = ImageWithThumbhashPlaceholderNativeComponentDefault;
 } else {

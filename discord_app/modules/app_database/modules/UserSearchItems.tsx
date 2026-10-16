@@ -1,17 +1,17 @@
-// === Module 7562: UserSearchItems ===
+// === Module 7564: UserSearchItems ===
 
-// Module 7562 (UserSearchItems)
+// Module 7564 (UserSearchItems)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
-import UserSearchUtils from "UserSearchUtils" /* 7566 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2094 */;
+import UserSearchUtils from "UserSearchUtils" /* 7568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7563 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7564 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7565 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7566 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 let closure_9 = new LoggerDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {

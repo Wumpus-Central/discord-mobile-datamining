@@ -1,7 +1,7 @@
-// === Module 10753: getRandomCustomStatusPrompt ===
+// === Module 10768: getRandomCustomStatusPrompt ===
 
-// Module 10753 (getRandomCustomStatusPrompt)
-import Constants from "Constants" /* 10752 */;
+// Module 10768 (getRandomCustomStatusPrompt)
+import Constants from "Constants" /* 10767 */;
 import size from "module_2" /* 2 */;
 
 ({ CustomStatusPrompts: c2, CustomStatusPromptValues: c3 } = Constants);
@@ -16,8 +16,8 @@ export default function getRandomCustomStatusPrompt(size) {
       const obj = {
         value: constants.ADD_STATUS,
         label() {
-              const intl = size(1126).intl;
-              return intl.string(size(1126).t.Vq4UmS);
+              const intl = size(1128).intl;
+              return intl.string(size(1128).t.Vq4UmS);
             }
       };
       let tmp3 = obj;

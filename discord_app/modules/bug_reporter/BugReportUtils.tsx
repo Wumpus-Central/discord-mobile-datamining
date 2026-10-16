@@ -1,14 +1,14 @@
-// === Module 13466: bug_reporter/BugReportUtils ===
+// === Module 13492: bug_reporter/BugReportUtils ===
 
-// Module 13466 (bug_reporter/BugReportUtils)
-import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6154 */;
-import DebugUploadManager from "DebugUploadManager" /* 13467 */;
+// Module 13492 (bug_reporter/BugReportUtils)
+import util from "util" /* 1128 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import DebugUploadManager from "DebugUploadManager" /* 13493 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
 let closure_7 = async function _fetchBugReportConfig() {
@@ -185,7 +185,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
     }
   })();
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ DebugLogCategory: hasOwnProperty, Endpoints: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");

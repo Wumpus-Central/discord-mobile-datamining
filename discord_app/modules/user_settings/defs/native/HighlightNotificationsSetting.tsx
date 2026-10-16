@@ -1,10 +1,10 @@
-// === Module 16469: HighlightNotificationsSetting ===
+// === Module 16502: HighlightNotificationsSetting ===
 
-// Module 16469 (HighlightNotificationsSetting)
+// Module 16502 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import util from "util" /* 1128 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -27,20 +27,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHighlig
   const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 });
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8210).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8213).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);
   },
   usePredicate: tmp2,
   screen: {
-    route: fn(1085).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
+    route: fn(1087).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
     getComponent() {
       return require("UserSettingsHighlightNotifications").default;
     }

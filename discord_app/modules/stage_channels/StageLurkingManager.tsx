@@ -1,10 +1,10 @@
-// === Module 7710: StageLurkingManager ===
+// === Module 7713: StageLurkingManager ===
 
-// Module 7710 (StageLurkingManager)
+// Module 7713 (StageLurkingManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import LifecycleManager from "LifecycleManager" /* 2002 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import LifecycleManager from "LifecycleManager" /* 2004 */;
 
 let require = fn;
 class StageLurkingManager extends tmp2 {
@@ -29,7 +29,7 @@ class StageLurkingManager extends tmp2 {
     applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(guildId) {
       guildId = guildId.getGuildId();
       const items = [guildId, guildId];
-      applyArgumentsResult(7260).stopLurkingAll(items.filter(applyArgumentsResult(1386).isNotNullish));
+      applyArgumentsResult(7262).stopLurkingAll(items.filter(applyArgumentsResult(1388).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.terminate();

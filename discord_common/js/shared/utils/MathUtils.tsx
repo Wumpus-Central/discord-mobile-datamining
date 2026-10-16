@@ -1,6 +1,6 @@
-// === Module 10835: MathUtils ===
+// === Module 10850: MathUtils ===
 
-// Module 10835 (MathUtils)
+// Module 10850 (MathUtils)
 import size from "module_2" /* 2 */;
 
 function roundIfClose(endImportTime, arg1) {

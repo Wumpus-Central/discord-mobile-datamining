@@ -1,12 +1,12 @@
-// === Module 9535: AppChannelChat ===
+// === Module 9551: AppChannelChat ===
 
-// Module 9535 (AppChannelChat)
+// Module 9551 (AppChannelChat)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6279 */;
-import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 9536 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6281 */;
+import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 9552 */;
 import noop from "module_19" /* 19 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6277 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6279 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
 
 const require = globalThis.__r;
 

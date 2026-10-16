@@ -1,17 +1,17 @@
-// === Module 9447: Authorize ===
+// === Module 9463: Authorize ===
 
-// Module 9447 (Authorize)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
-import QueryStringUtils from "QueryStringUtils" /* 5134 */;
-import keysSorter from "keysSorter" /* 6200 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8676 */;
-import scopes from "scopes" /* 9448 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+// Module 9463 (Authorize)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import QueryStringUtils from "QueryStringUtils" /* 5137 */;
+import keysSorter from "keysSorter" /* 6202 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8684 */;
+import scopes from "scopes" /* 9464 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ EMPTY_NUX_SERVER: hasOwnProperty, FAVORITES: metroRequire, ME: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/Authorize.tsx");

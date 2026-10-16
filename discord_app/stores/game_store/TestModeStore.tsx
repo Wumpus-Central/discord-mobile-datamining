@@ -1,12 +1,12 @@
-// === Module 9284: TestModeStore ===
+// === Module 9297: TestModeStore ===
 
-// Module 9284 (TestModeStore)
+// Module 9297 (TestModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7334 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7336 */;
 
 require = fn;
 function reset() {

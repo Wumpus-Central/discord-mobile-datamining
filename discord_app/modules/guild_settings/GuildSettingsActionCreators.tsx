@@ -1,22 +1,22 @@
-// === Module 8855: GuildSettingsActionCreators ===
+// === Module 8863: GuildSettingsActionCreators ===
 
-// Module 8855 (GuildSettingsActionCreators)
+// Module 8863 (GuildSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6154 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7247 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7249 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 2118 */;
-import LurkingStore from "LurkingStore" /* 4807 */;
+import ImpersonateStore from "ImpersonateStore" /* 2121 */;
+import LurkingStore from "LurkingStore" /* 4810 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8856 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: c10, Layers, GuildSettingsSubsections: closure_11, GuildSettingsSections: closure_12, GuildFeatures: map1, Routes: closure_14 } = Constants);
 let closure_15 = new LoggerDefault("GuildSettingsActionCreators");
 let body = {
@@ -208,7 +208,7 @@ let body = {
     obj(584).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(584);
-    const obj6 = obj(6892);
+    const obj6 = obj(6894);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = require("HTTPUtils").HTTP;
     const request = { url: closure_10.GUILD(id), query: { for_discovery: obj.isForDiscovery }, body: obj2, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -310,7 +310,7 @@ let body = {
               closure_128_0 = undefined;
               const isLurkingResult = lurking.isLurking(tmp2);
               closure_128_0 = isLurkingResult;
-              const HTTP = tmp2(1295).HTTP;
+              const HTTP = tmp2(1297).HTTP;
               const request = { url: closure_1_10.GUILD_LEAVE(tmp2), body: null, oldFormErrors: true, rejectWithError: null };
               let isCurrentUserGuestResult = isLurkingResult;
               if (!isLurkingResult) {
@@ -318,15 +318,15 @@ let body = {
               }
               const obj5 = { lurking: isCurrentUserGuestResult };
               request.body = obj5;
-              request.rejectWithError = tmp2(1295).rejectWithMigratedError();
-              const obj4 = tmp2(1295);
+              request.rejectWithError = tmp2(1297).rejectWithMigratedError();
+              const obj4 = tmp2(1297);
               dependencyMap = 1;
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                          const AccessibilityAnnouncer = closure_1_0(5026).AccessibilityAnnouncer;
-                          const intl = closure_1_0(1126).intl;
-                          AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t["7iPyVW"]));
+                          const AccessibilityAnnouncer = closure_1_0(5029).AccessibilityAnnouncer;
+                          const intl = closure_1_0(1128).intl;
+                          AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t["7iPyVW"]));
                         }),
                 done: false
               };
@@ -346,8 +346,8 @@ let body = {
               tmp10 = closure_128_0;
             }
             if (tmp10) {
-              tmp2(1112).transitionTo(constants.GUILD_DISCOVERY);
-              const obj = tmp2(1112);
+              tmp2(1114).transitionTo(constants.GUILD_DISCOVERY);
+              const obj = tmp2(1114);
             }
             c3 = 3;
             return { value: "IconComponent", done: null };
@@ -489,7 +489,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1295).HTTP;
+              const HTTP = v3(1297).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_PIN_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
@@ -541,7 +541,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1295).HTTP;
+              const HTTP = v3(1297).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;

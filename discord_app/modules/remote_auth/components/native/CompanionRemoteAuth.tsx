@@ -1,15 +1,15 @@
-// === Module 16997: CompanionRemoteAuth ===
+// === Module 17030: CompanionRemoteAuth ===
 
-// Module 16997 (CompanionRemoteAuth)
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import GuildIDContextDefault from "GuildIDContext" /* 5847 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6376 */;
-import typing from "typing" /* 16998 */;
-import NativeAuthenticationModuleDefault from "NativeAuthenticationModule" /* 17003 */;
+// Module 17030 (CompanionRemoteAuth)
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import GuildIDContextDefault from "GuildIDContext" /* 5849 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6378 */;
+import typing from "typing" /* 17031 */;
+import NativeAuthenticationModuleDefault from "NativeAuthenticationModule" /* 17036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -62,11 +62,11 @@ function renderSteps(state, style, E, context) {
   return React6(closure_1_8, obj9);
 }
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, LoginSuccessfulSources: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({ statusContainer: { alignItems: "center", marginTop: 32 }, avatar: { marginBottom: 16 }, statusText: { textAlign: "center", marginTop: 16, marginBottom: 24, paddingHorizontal: 32 }, buttonContainer: { width: "100%", paddingHorizontal: 16, marginTop: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -76,7 +76,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
   const cResult = navigation(576).c(15);
   const tmp4 = closure_10();
   let obj = navigation(576);
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   const context = noop.useContext(GuildIDContextDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(arg0) {
@@ -93,8 +93,8 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
   } else {
     first = cResult[0];
   }
-  let obj2 = navigation(1503);
-  const state = navigation(16999).useAuthWebsocket(first, true).state;
+  let obj2 = navigation(1505);
+  const state = navigation(17032).useAuthWebsocket(first, true).state;
   if (cResult[1] !== navigation) {
     class E {
       constructor() {
@@ -112,7 +112,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
       }
     }
   }
-  if (state.step === navigation(16998).RemoteAuthStep.PENDING_REMOTE_INIT) {
+  if (state.step === navigation(17031).RemoteAuthStep.PENDING_REMOTE_INIT) {
     class E {
       constructor() {
         goBackResult = closure_0.goBack();
@@ -150,7 +150,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
         return;
       }
     }
-    const stringResult = obj5.string(tmp(1126).t["7fNJgA"]);
+    const stringResult = obj5.string(tmp(1128).t["7fNJgA"]);
     cResult[6] = stringResult;
   } else {
     class E {
@@ -168,7 +168,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
       }
     }
   }
-  const tmpResult = navigation(16999);
+  const tmpResult = navigation(17032);
   cResult[7] = context;
   cResult[8] = E;
   cResult[9] = state;
@@ -177,8 +177,8 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
   const tmp16 = renderSteps(state, tmp4, E, context);
 }) : (function CompanionRemoteAuth() {
   let tmp = closure_10();
-  navigation = navigation(1503).useNavigation();
-  const context = noop.useContext(fingerprint(5847));
+  navigation = navigation(1505).useNavigation();
+  const context = noop.useContext(fingerprint(5849));
   const callback = noop.useCallback((arg0) => {
     let tmp = arg0;
     const obj2 = { source: constants2.QR_CODE, login_source: "companion_remote_auth", is_new_user: false, login_method: "quest_remote_auth", login_instance_id: null };
@@ -188,15 +188,15 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
     obj2.login_instance_id = tmp;
     fingerprint(dependencyMap[16]).track(constants.LOGIN_SUCCESSFUL, obj2);
   }, []);
-  let obj = navigation(1503);
+  let obj = navigation(1505);
   const tmp5 = fingerprint;
-  const state = navigation(16999).useAuthWebsocket(callback, true).state;
+  const state = navigation(17032).useAuthWebsocket(callback, true).state;
   const items = [navigation];
   const callback1 = noop.useCallback(() => {
     navigation.goBack();
   }, items);
   fingerprint = null;
-  if (state.step === navigation(16998).RemoteAuthStep.PENDING_REMOTE_INIT) {
+  if (state.step === navigation(17031).RemoteAuthStep.PENDING_REMOTE_INIT) {
     fingerprint = state.fingerprint;
   }
   const items1 = [fingerprint];
@@ -211,10 +211,10 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled() 
     }
   }, items1);
   const obj4 = { headerText: null, children: null };
-  const obj3 = navigation(16999);
-  const intl = tmp2(1126).intl;
-  obj4.headerText = intl.string(navigation(1126).t["7fNJgA"]);
-  const tmp5Result = tmp5(6874);
+  const obj3 = navigation(17032);
+  const intl = tmp2(1128).intl;
+  obj4.headerText = intl.string(navigation(1128).t["7fNJgA"]);
+  const tmp5Result = tmp5(6876);
   obj4.children = closure_7(View, { style: tmp.statusContainer, children: renderSteps(state, tmp, callback1, context) });
   return closure_7(tmp5Result, obj4);
 });

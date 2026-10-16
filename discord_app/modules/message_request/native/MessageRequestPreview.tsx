@@ -1,18 +1,18 @@
-// === Module 17920: MessageRequestPreview ===
+// === Module 17954: MessageRequestPreview ===
 
-// Module 17920 (MessageRequestPreview)
+// Module 17954 (MessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import TextStyles_mod from "TextStyles" /* 6122 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import TextStyles_mod from "TextStyles" /* 6124 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { systemContent: null, messageContent: null };
 let obj3 = { fontStyle: "italic" };
 let TextStyles = TextStyles_mod;
@@ -35,7 +35,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const style = channel.style;
   const tmp4 = closure_9();
   let obj = channel(576);
-  const messageRequestPreview = channel(13180).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(13206).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp9 = cResult[3];
   }
-  const obj2 = channel(13180);
+  const obj2 = channel(13206);
   const stateFromStoresObject = channel(504).useStateFromStoresObject(first, S, tmp9);
   if (cResult[4] === channel) {
     class S {
@@ -150,7 +150,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return obj;
           }
         }
-        const stringResult = obj8.string(tmp(1126).t.BZHld2);
+        const stringResult = obj8.string(tmp(1128).t.BZHld2);
         cResult[8] = stringResult;
       } else {
         class S {
@@ -352,7 +352,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   return obj;
                 }
               }
-              const stringResult1 = obj7.string(tmp(1126).t["262oPB"]);
+              const stringResult1 = obj7.string(tmp(1128).t["262oPB"]);
               cResult[13] = stringResult1;
               const tmp20 = stringResult1;
             } else {
@@ -436,7 +436,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   return obj;
                 }
               }
-              const stringResult2 = obj6.string(tmp(1126).t["zuI+by"]);
+              const stringResult2 = obj6.string(tmp(1128).t["zuI+by"]);
               cResult[14] = stringResult2;
               const tmp17 = stringResult2;
             } else {
@@ -519,7 +519,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 return obj;
               }
             }
-            const stringResult3 = obj4.string(tmp(1126).t["0KfDxM"]);
+            const stringResult3 = obj4.string(tmp(1128).t["0KfDxM"]);
             cResult[19] = stringResult3;
             const tmp15 = stringResult3;
           } else {
@@ -595,7 +595,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         tmp29 = tmp32;
       }
       const obj9 = { style: tmp25, numberOfLines: 3, ellipsizeMode: "tail", children: tmp13 };
-      const tmp28 = jsx(tmp(1200).LegacyText, { style: tmp25, numberOfLines: 3, ellipsizeMode: "tail", children: tmp13 });
+      const tmp28 = jsx(tmp(1202).LegacyText, { style: tmp25, numberOfLines: 3, ellipsizeMode: "tail", children: tmp13 });
       cResult[20] = tmp25;
       cResult[21] = tmp13;
       cResult[22] = tmp28;
@@ -626,10 +626,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(13180).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(13206).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(13180);
+  let obj = channel(13206);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
@@ -656,8 +656,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }, items2);
   if (error) {
-    const intl9 = tmp2(1126).intl;
-    let stringResult = intl9.string(tmp2(1126).t.BZHld2);
+    const intl9 = tmp2(1128).intl;
+    let stringResult = intl9.string(tmp2(1128).t.BZHld2);
     let flag = false;
   } else {
     stringResult = null;
@@ -665,15 +665,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (loaded) {
       if (null != message) {
         if (isBlocked) {
-          const intl8 = tmp2(1126).intl;
-          stringResult = intl8.string(tmp2(1126).t["WPe+xL"]);
+          const intl8 = tmp2(1128).intl;
+          stringResult = intl8.string(tmp2(1128).t["WPe+xL"]);
           flag = false;
         }
       }
       if (null != message) {
         if (isIgnored) {
-          const intl7 = tmp2(1126).intl;
-          stringResult = intl7.string(tmp2(1126).t.uxrh1O);
+          const intl7 = tmp2(1128).intl;
+          stringResult = intl7.string(tmp2(1128).t.uxrh1O);
           flag = false;
         }
       }
@@ -683,31 +683,31 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(8356)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(8363)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
             stringResult = content1;
           }
-          const intl6 = tmp2(1126).intl;
-          stringResult = intl6.string(tmp2(1126).t["262oPB"]);
+          const intl6 = tmp2(1128).intl;
+          stringResult = intl6.string(tmp2(1128).t["262oPB"]);
           flag = false;
         }
       }
       if (null != message) {
         if (tmp2Result.getMessageStickers(message).length > 0) {
-          const intl5 = tmp2(1126).intl;
-          let stringResult1 = intl5.string(tmp2(1126).t["zuI+by"]);
+          const intl5 = tmp2(1128).intl;
+          let stringResult1 = intl5.string(tmp2(1128).t["zuI+by"]);
         } else if (null != message.interaction) {
-          const intl4 = tmp2(1126).intl;
-          stringResult1 = intl4.string(tmp2(1126).t["2v7kfl"]);
+          const intl4 = tmp2(1128).intl;
+          stringResult1 = intl4.string(tmp2(1128).t["2v7kfl"]);
         } else if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
-          const intl3 = tmp2(1126).intl;
-          stringResult1 = intl3.string(tmp2(1126).t["6bhHrc"]);
+          const intl3 = tmp2(1128).intl;
+          stringResult1 = intl3.string(tmp2(1128).t["6bhHrc"]);
         } else {
-          const intl2 = tmp2(1126).intl;
+          const intl2 = tmp2(1128).intl;
           const string = intl2.string;
-          const t = tmp2(1126).t;
+          const t = tmp2(1128).t;
           if (hasFlagResult) {
             stringResult1 = string(t.Xxm5i3);
           } else {
@@ -717,14 +717,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(5965);
+        tmp2Result = tmp2(5967);
       } else {
-        const intl = tmp2(1126).intl;
-        stringResult = intl.string(tmp2(1126).t["0KfDxM"]);
+        const intl = tmp2(1128).intl;
+        stringResult = intl.string(tmp2(1128).t["0KfDxM"]);
         flag = false;
       }
     }
   }
-  let obj3 = { style: channel.style, children: jsx(channel(1200).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={channel.style}>{jsx(channel(1200).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  let obj3 = { style: channel.style, children: jsx(channel(1202).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
+  return <View style={channel.style}>{jsx(channel(1202).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 }));

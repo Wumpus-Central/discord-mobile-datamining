@@ -1,10 +1,10 @@
-// === Module 16355: EnableSwitchIconsSetting ===
+// === Module 16388: EnableSwitchIconsSetting ===
 
-// Module 16355 (EnableSwitchIconsSetting)
+// Module 16388 (EnableSwitchIconsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import util from "util" /* 1128 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -27,15 +27,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnableS
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 });
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["S3z+pV"]);
   },
-  parent: fn(8210).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8213).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
-  onValueChange: fn(15348).setSwitchIconsEnabled,
+  onValueChange: fn(15383).setSwitchIconsEnabled,
   hasIcon: true
 });
 const size = fn(2);

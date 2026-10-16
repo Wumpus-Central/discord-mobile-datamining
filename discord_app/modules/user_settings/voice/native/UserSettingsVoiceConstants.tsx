@@ -1,9 +1,9 @@
-// === Module 11368: UserSettingsVoiceConstants ===
+// === Module 11388: UserSettingsVoiceConstants ===
 
-// Module 11368 (UserSettingsVoiceConstants)
-import HelpdeskUtils from "HelpdeskUtils" /* 2128 */;
+// Module 11388 (UserSettingsVoiceConstants)
+import HelpdeskUtils from "HelpdeskUtils" /* 2131 */;
 
-const combined = "" + HelpdeskUtils.getArticleURL(fn(1085).HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
+const combined = "" + HelpdeskUtils.getArticleURL(fn(1087).HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceConstants.tsx");
 

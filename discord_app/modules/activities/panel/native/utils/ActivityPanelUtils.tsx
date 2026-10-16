@@ -1,17 +1,17 @@
-// === Module 18031: ActivityPanelUtils ===
+// === Module 18066: ActivityPanelUtils ===
 
-// Module 18031 (ActivityPanelUtils)
+// Module 18066 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ChannelTypes from "ChannelTypes" /* 1106 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4795 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10714 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import ChannelTypes from "ChannelTypes" /* 1108 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4798 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10729 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 
 require = fn;
-const ActivityPanelModes = fn(6289).ActivityPanelModes;
+const ActivityPanelModes = fn(6291).ActivityPanelModes;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivityPanelFullscreen() {

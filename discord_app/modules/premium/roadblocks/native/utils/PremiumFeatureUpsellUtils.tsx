@@ -1,11 +1,11 @@
-// === Module 9502: PremiumFeatureUpsellUtils ===
+// === Module 9518: PremiumFeatureUpsellUtils ===
 
-// Module 9502 (PremiumFeatureUpsellUtils)
+// Module 9518 (PremiumFeatureUpsellUtils)
 import _modDef38 from "module_38" /* 38 */;
-import Constants from "Constants" /* 1085 */;
-import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import SoundboardTypes from "SoundboardTypes" /* 7270 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9501 */;
+import Constants from "Constants" /* 1087 */;
+import ConstantsIOS from "ConstantsIOS" /* 1107 */;
+import SoundboardTypes from "SoundboardTypes" /* 7272 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9517 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsPages = Constants.AnalyticsPages;

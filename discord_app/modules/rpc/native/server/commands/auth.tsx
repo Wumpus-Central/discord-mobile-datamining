@@ -1,14 +1,14 @@
-// === Module 15433: auth ===
+// === Module 15469: auth ===
 
-// Module 15433 (auth)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 15434 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+// Module 15469 (auth)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 15470 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ComponentActions: closure_4, RPCErrors: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/server/commands/auth.tsx");

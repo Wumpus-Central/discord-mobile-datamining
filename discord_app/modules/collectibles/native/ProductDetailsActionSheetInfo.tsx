@@ -1,18 +1,18 @@
-// === Module 14111: ProductDetailsActionSheetInfo ===
+// === Module 14143: ProductDetailsActionSheetInfo ===
 
-// Module 14111 (ProductDetailsActionSheetInfo)
+// Module 14143 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9262 */;
-import useProductDescription from "useProductDescription" /* 14112 */;
-import InlinePriceTagDefault from "InlinePriceTag" /* 14113 */;
+import util from "util" /* 1128 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9275 */;
+import useProductDescription from "useProductDescription" /* 14144 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 14145 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5151 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

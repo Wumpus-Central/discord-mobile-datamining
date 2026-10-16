@@ -1,7 +1,7 @@
-// === Module 8511: useShouldConvertBioEmoji ===
+// === Module 8519: useShouldConvertBioEmoji ===
 
-// Module 8511 (useShouldConvertBioEmoji)
-import UserSettings from "UserSettings" /* 2041 */;
+// Module 8519 (useShouldConvertBioEmoji)
+import UserSettings from "UserSettings" /* 2044 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

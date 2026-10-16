@@ -1,18 +1,18 @@
-// === Module 9992: Sticker ===
+// === Module 10008: Sticker ===
 
-// Module 9992 (Sticker)
+// Module 10008 (Sticker)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import shared from "shared" /* 5025 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import StickersUtils from "StickersUtils" /* 5965 */;
-import StickersTypes from "StickersTypes" /* 5966 */;
-import _modDef7042 from "module_7042" /* 7042 */;
-import _modDef7043 from "module_7043" /* 7043 */;
-import NativeLottieView from "NativeLottieView" /* 8235 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 9993 */;
+import util from "util" /* 1128 */;
+import shared from "shared" /* 5028 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import StickersUtils from "StickersUtils" /* 5967 */;
+import StickersTypes from "StickersTypes" /* 5968 */;
+import _modDef7044 from "module_7044" /* 7044 */;
+import _modDef7045 from "module_7045" /* 7045 */;
+import NativeLottieView from "NativeLottieView" /* 8240 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 10009 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 const NativeLottieViewDefault = NativeLottieView;
 
@@ -165,9 +165,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
           }
           let obj6 = { enableAnimation: tmp4, resizeMode: "contain", style: tmp22, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
           if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-            let tmp25Result = _modDef7042;
+            let tmp25Result = _modDef7044;
           } else {
-            tmp25Result = _modDef7043;
+            tmp25Result = _modDef7045;
           }
           obj6.placeholder = tmp25Result;
           obj6.source = tmp23;
@@ -273,9 +273,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
     const size3 = { height: size, width: size, opacity: num };
     obj6.style = size3;
     if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef7042;
+      let tmp13Result = _modDef7044;
     } else {
-      tmp13Result = _modDef7043;
+      tmp13Result = _modDef7045;
     }
     obj6.placeholder = tmp13Result;
     const obj7 = { uri: str };

@@ -1,14 +1,14 @@
-// === Module 11626: useConjureControlBar ===
+// === Module 11650: useConjureControlBar ===
 
-// Module 11626 (useConjureControlBar)
+// Module 11650 (useConjureControlBar)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10887 */;
+import ConjureChatStore from "ConjureChatStore" /* 10902 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(10886).interruptTurn;
+const interruptTurn = fn(10901).interruptTurn;
 let c6 = 2400;
 let c7 = 5000;
 fn(558);

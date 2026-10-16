@@ -1,7 +1,7 @@
-// === Module 10468: isGameActivity ===
+// === Module 10484: isGameActivity ===
 
-// Module 10468 (isGameActivity)
-import Constants from "Constants" /* 1085 */;
+// Module 10484 (isGameActivity)
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

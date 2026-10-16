@@ -1,19 +1,19 @@
-// === Module 5445: ButtonHooks ===
+// === Module 5447: ButtonHooks ===
 
-// Module 5445 (ButtonHooks)
+// Module 5447 (ButtonHooks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4874 */;
-import native from "native" /* 4883 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import shared from "shared" /* 5025 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import spring from "spring" /* 5438 */;
-import Icon from "Icon" /* 5441 */;
-import springPresets from "springPresets" /* 5442 */;
-import ButtonConstants from "ButtonConstants" /* 5444 */;
-import useFontScale from "useFontScale" /* 5446 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import useToken from "useToken" /* 4877 */;
+import native from "native" /* 4886 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import shared from "shared" /* 5028 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import spring from "spring" /* 5440 */;
+import Icon from "Icon" /* 5443 */;
+import springPresets from "springPresets" /* 5444 */;
+import ButtonConstants from "ButtonConstants" /* 5446 */;
+import useFontScale from "useFontScale" /* 5448 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -136,9 +136,9 @@ function getButtonColorTokens(arg0) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(5151);
+createStyles = fn(5153);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileThemedButtonStyles(arg0) {
@@ -214,7 +214,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
             tmp33 = cResult[13];
           }
           if (cResult[14] !== tmp31) {
-            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "Array" };
+            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "r" };
             cResult[14] = tmp31;
             cResult[15] = obj5;
             let tmp35 = obj5;
@@ -247,7 +247,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
                 tmp18 = cResult[23];
               }
               if (cResult[24] !== tmp16) {
-                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "Array" };
+                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "r" };
                 cResult[24] = tmp16;
                 cResult[25] = obj6;
                 let tmp20 = obj6;
@@ -325,7 +325,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj9.backgroundColor = items2;
       const items3 = [c4, c4];
@@ -346,7 +346,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
       } else {
         darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj11.backgroundColor = items4;
       const items5 = [c4, c4];
@@ -359,7 +359,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
 });
 let closure_7 = tmp2;
 fn(558);
-createStyles = fn(5151);
+createStyles = fn(5153);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonTextColorStyles(arg0) {

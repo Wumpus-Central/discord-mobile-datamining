@@ -1,9 +1,9 @@
-// === Module 18622: AuditLogActionCreators ===
+// === Module 18664: AuditLogActionCreators ===
 
-// Module 18622 (AuditLogActionCreators)
+// Module 18664 (AuditLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18617 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18659 */;
 
 require = fn;
 function makeRequest(arg0, arg1) {
@@ -34,7 +34,7 @@ function makeRequest(arg0, arg1) {
   const request = { url: React4.GUILD_AUDIT_LOG(arg0), query: obj, oldFormErrors: true, rejectWithError: true };
   return HTTP.get(request);
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: closure_4, AUDIT_LOG_PAGE_LIMIT: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/AuditLogActionCreators.tsx");

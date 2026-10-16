@@ -1,8 +1,9 @@
-// === Module 12634: CheckpointStatsUtils ===
+// === Module 12657: CheckpointStatsUtils ===
 
-// Module 12634 (CheckpointStatsUtils)
-import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
-import UserRecord from "UserRecord" /* 1404 */;
+// Module 12657 (CheckpointStatsUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
+import UserRecord from "UserRecord" /* 1406 */;
 
 require = fn;
 const size = fn(2);
@@ -24,9 +25,8 @@ export const statsFromServer = function statsFromServer(stats) {
   const games1 = games.games;
   obj3.games = games1.map((game) => {
     game = game.game;
-    const game2 = { id: game.id, name: game.name, iconHash: null, bannerHash: null, coverImageHash: null };
-    const icon_hash = game.icon_hash;
-    game2.iconHash = icon_hash;
+    const game2 = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
+    ({ name: obj.name, icon_hash } = game);
     const banner_hash = game.banner_hash;
     game2.bannerHash = banner_hash;
     const cover_image_hash = game.cover_image_hash;

@@ -1,14 +1,14 @@
-// === Module 13118: useCanGuildPowerupBeToggled ===
+// === Module 13144: useCanGuildPowerupBeToggled ===
 
-// Module 13118 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13084 */;
+// Module 13144 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13110 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5063 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5064).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5067).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanGu
                 if (null != cResult[9]) {
                   if (null != allPowerups[tmp15]) {
                     const intl = tmp(unlockedPowerups[7]).intl;
-                    const tmp9Result = require("module_2600");
+                    const tmp9Result = require("module_2603");
                     let title;
                     if (allPowerups[tmp15] != null) {
                       title = tmp24.title;
@@ -173,8 +173,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanGu
           let formatToPlainStringResult;
           if (null != found1) {
             if (null != allPowerups[found1]) {
-              const intl = closure_0(1126).intl;
-              const tmp11 = skuId(2600);
+              const intl = closure_0(1128).intl;
+              const tmp11 = skuId(2603);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

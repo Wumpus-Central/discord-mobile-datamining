@@ -1,11 +1,11 @@
-// === Module 12586: isStaffToNonStaffForward ===
+// === Module 12609: isStaffToNonStaffForward ===
 
-// Module 12586 (isStaffToNonStaffForward)
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 12609 (isStaffToNonStaffForward)
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
 
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 

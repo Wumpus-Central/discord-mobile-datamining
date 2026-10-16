@@ -1,11 +1,11 @@
-// === Module 6950: useNavigationTheme ===
+// === Module 6952: useNavigationTheme ===
 
-// Module 6950 (useNavigationTheme)
+// Module 6952 (useNavigationTheme)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Link from "Link" /* 1504 */;
-import useToken from "useToken" /* 4874 */;
-import shared from "shared" /* 5025 */;
+import Link from "Link" /* 1506 */;
+import useToken from "useToken" /* 4877 */;
+import shared from "shared" /* 5028 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

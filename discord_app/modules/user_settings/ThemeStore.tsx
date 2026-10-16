@@ -1,15 +1,15 @@
-// === Module 1205: ThemeStore ===
+// === Module 1207: ThemeStore ===
 
-// Module 1205 (ThemeStore)
+// Module 1207 (ThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1243 */;
-import resolveThemeDefault from "resolveTheme" /* 1250 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 15048 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1245 */;
+import resolveThemeDefault from "resolveTheme" /* 1252 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2049 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 15081 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
 require = fn;
 function handleThemeChange() {
@@ -22,10 +22,10 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1208);
+const ThemeConstants = fn(1210);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
-const UserSettingsDelay = fn(1095).UserSettingsDelay;
-const ThemeTypes = fn(1085).ThemeTypes;
+const UserSettingsDelay = fn(1097).UserSettingsDelay;
+const ThemeTypes = fn(1087).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };
 let SET = obj.UNSET;
 obj = THEME_PREFERENCES_MOBILE;

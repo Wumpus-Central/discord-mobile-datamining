@@ -1,10 +1,10 @@
-// === Module 13008: ChatInputGuardMessageRequest ===
+// === Module 13034: ChatInputGuardMessageRequest ===
 
-// Module 13008 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 13016 */;
+// Module 13034 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 13042 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
@@ -400,14 +400,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   };
-  importDefault = channel(1503).useNavigation();
-  let obj = channel(1503);
-  const isMessageRequestRestrictedViewer = channel(13009).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(13009);
+  importDefault = channel(1505).useNavigation();
+  let obj = channel(1505);
+  const isMessageRequestRestrictedViewer = channel(13035).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(13035);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(13010).useMessageRequestActions({
+  const messageRequestActions = channel(13036).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -434,7 +434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(13010);
+  let obj4 = channel(13036);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
@@ -448,13 +448,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const tmp7 = closure_5;
-  let intl = tmp(1126).intl;
-  obj6.message = intl.string(channel(1126).t["e/eQVB"]);
-  const intl2 = tmp(1126).intl;
-  const t = tmp(1126).t;
+  let intl = tmp(1128).intl;
+  obj6.message = intl.string(channel(1128).t["e/eQVB"]);
+  const intl2 = tmp(1128).intl;
+  const t = tmp(1128).t;
   obj6.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
-  const intl3 = tmp(1126).intl;
-  obj6.buttonPrimaryText = intl3.string(channel(1126).t.Kz8Pwr);
+  const intl3 = tmp(1128).intl;
+  obj6.buttonPrimaryText = intl3.string(channel(1128).t.Kz8Pwr);
   obj6.buttonPrimaryOnPress = function onAcceptClick(arg0) {
     const self = this;
     const apply = closure_4.apply;
@@ -473,8 +473,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     isAcceptLoading = isOptimisticAccepted;
   }
   obj6.buttonPrimaryLoading = isAcceptLoading;
-  const intl4 = tmp(1126).intl;
-  const t2 = tmp(1126).t;
+  const intl4 = tmp(1128).intl;
+  const t2 = tmp(1128).t;
   obj6.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
   obj6.buttonSecondaryOnPress = function onRejectClick(arg0) {
     const self = this;

@@ -1,22 +1,22 @@
-// === Module 12774: ForumPostListFooter ===
+// === Module 12800: ForumPostListFooter ===
 
-// Module 12774 (ForumPostListFooter)
+// Module 12800 (ForumPostListFooter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7200 */;
-import ForumPostReactions from "ForumPostReactions" /* 10683 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 12715 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12767 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 12768 */;
-import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 12775 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7202 */;
+import ForumPostReactions from "ForumPostReactions" /* 10698 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 12741 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12793 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 12794 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 12801 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsObjects = fn(1085).AnalyticsObjects;
+const AnalyticsObjects = fn(1087).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
 obj2.dot = size;

@@ -1,21 +1,21 @@
-// === Module 18326: AppAnalyticsManager ===
+// === Module 18368: AppAnalyticsManager ===
 
-// Module 18326 (AppAnalyticsManager)
-import DurationsDefault from "Durations" /* 1102 */;
-import Timers from "Timers" /* 2060 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7652 */;
-import getGamePlatformDefault from "getGamePlatform" /* 17787 */;
-import RunningGameStore from "RunningGameStore" /* 2019 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5975 */;
-import SpeakingStore from "SpeakingStore" /* 6163 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5175 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18368 (AppAnalyticsManager)
+import DurationsDefault from "Durations" /* 1104 */;
+import Timers from "Timers" /* 2063 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7654 */;
+import getGamePlatformDefault from "getGamePlatform" /* 17821 */;
+import RunningGameStore from "RunningGameStore" /* 2021 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
+import SpeakingStore from "SpeakingStore" /* 6165 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5177 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, ActivityTypes: c10 } = Constants);
 const MINUTE = DurationsDefault.Millis.MINUTE;
 class AppAnalyticsManager extends tmp3 {

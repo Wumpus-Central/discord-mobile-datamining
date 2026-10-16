@@ -1,25 +1,25 @@
-// === Module 14890: Menu ===
+// === Module 14923: Menu ===
 
-// Module 14890 (Menu)
+// Module 14923 (Menu)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4884 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5431 */;
-import spring from "spring" /* 5438 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5433 */;
+import spring from "spring" /* 5440 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const NOOP = fn(1085).NOOP;
+const NOOP = fn(1087).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let __closure = { duration: 250, easing: fn(14891).STANDARD_EASING };
-const createStyles = fn(5151);
+let __closure = { duration: 250, easing: fn(14924).STANDARD_EASING };
+const createStyles = fn(5153);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -36,7 +36,7 @@ function measureButtonRef(arg0, arg1) {
   }
 }
 let obj5 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
-measureButtonRef.__closure = { measure: fn(4906).measure, runOnJS: fn(4906).runOnJS };
+measureButtonRef.__closure = { measure: fn(4909).measure, runOnJS: fn(4909).runOnJS };
 measureButtonRef.__workletHash = 15651320687527;
 measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
 let closure_13 = { code: "function MenuTsx2(){const{runOnJS,openMenuCallback}=this.__closure;return runOnJS(openMenuCallback)();}" };
@@ -127,6 +127,8 @@ export const Menu = function Menu(toggleButtonRef) {
     return true;
   }, items3);
   offsetAnimated(enabled[17])(callback2);
+  const items4 = [menuClose, callback1];
+  const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
   let obj3 = toggleButtonRef(enabled[8]);
   const boxShadowStyle = toggleButtonRef(enabled[18]).generateBoxShadowStyle(tmp2(tmp3[18]).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
@@ -149,7 +151,7 @@ export const Menu = function Menu(toggleButtonRef) {
     }
     const sum1 = pageY + num2;
     let sum3 = sum1;
-    let tmp19 = sum;
+    let tmp20 = sum;
     if ("end" === str) {
       let num3 = 0;
       if ("row" === str2) {
@@ -161,9 +163,9 @@ export const Menu = function Menu(toggleButtonRef) {
         num4 = size2.height;
       }
       sum3 = sum1 + num4;
-      tmp19 = sum2;
+      tmp20 = sum2;
     }
-    point = { x: tmp19, y: sum3 };
+    point = { x: tmp20, y: sum3 };
   }
   const height = size.height;
   if ("left" === position) {
@@ -188,10 +190,10 @@ export const Menu = function Menu(toggleButtonRef) {
     x = size.width - point.x;
   }
   let y = point.y;
-  const tmp22 = "top" === str12 ? y : height - y;
+  const tmp23 = "top" === str12 ? y : height - y;
   if (null != offset) {
     let sum4 = x + offset.x;
-    let sum5 = tmp22 + offset.y;
+    let sum5 = tmp23 + offset.y;
   } else {
     let num5 = 0;
     if ("column" === str2) {
@@ -202,16 +204,16 @@ export const Menu = function Menu(toggleButtonRef) {
     if ("row" === str2) {
       num6 = 10;
     }
-    sum5 = tmp22 + num6;
+    sum5 = tmp23 + num6;
   }
   const obj4 = {};
   obj4[str9] = sum4;
   obj4[str12] = sum5;
   obj4.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
-  const items4 = [obj4, str9, str12];
-  const tmp5Result = tmp5(items4, 3);
-  closure_12 = tmp26;
-  __initData = tmp27;
+  const items5 = [obj4, str9, str12];
+  const tmp5Result = tmp5(items5, 3);
+  closure_12 = tmp27;
+  __initData = tmp28;
   const tmp2Result = toggleButtonRef(enabled[18]);
   let fn = function z() {
     const obj = { opacity: sharedValue.get(), transform: null };
@@ -301,10 +303,10 @@ export const Menu = function Menu(toggleButtonRef) {
     },
     children: null
   };
-  const items5 = [tmp.menu, boxShadowStyle, tmp5Result[0], animatedStyle, style];
-  obj7.style = items5;
+  const items6 = [tmp.menu, boxShadowStyle, tmp5Result[0], animatedStyle, style];
+  obj7.style = items6;
   let obj8 = { children: null };
-  const obj9 = { value: { menuClose, menuDismiss: callback1 }, children: null };
+  const obj9 = { value: memo, children: null };
   const Children = obj.Children;
   obj9.children = Children.map(children, (label, arg1) => {
     let cloneElementResult = label;

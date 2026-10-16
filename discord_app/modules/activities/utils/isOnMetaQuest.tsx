@@ -1,7 +1,7 @@
-// === Module 13958: isOnMetaQuest ===
+// === Module 13990: isOnMetaQuest ===
 
-// Module 13958 (isOnMetaQuest)
-import Constants from "Constants" /* 1085 */;
+// Module 13990 (isOnMetaQuest)
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const ActivityGamePlatforms = Constants.ActivityGamePlatforms;

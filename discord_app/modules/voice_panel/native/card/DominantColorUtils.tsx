@@ -1,8 +1,8 @@
-// === Module 9247: DominantColorUtils ===
+// === Module 9260: DominantColorUtils ===
 
-// Module 9247 (DominantColorUtils)
+// Module 9260 (DominantColorUtils)
 import nativeDefault from "native" /* 587 */;
-import privDefault from "priv" /* 1457 */;
+import privDefault from "priv" /* 1459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,8 +37,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDominan
       hexToRgbResult = closure_6.get(arg0);
     }
     if (hexToRgbResult == null) {
-      hexToRgbResult = tmp(5023).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
-      const tmpResult = tmp(5023);
+      hexToRgbResult = tmp(5026).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+      const tmpResult = tmp(5026);
     }
     cResult[2] = arg0;
     cResult[3] = hexToRgbResult;
@@ -77,11 +77,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDominan
           let result = closure_1_7.set(str, value2);
           if (null != value2) {
             if (typeof value2 === "number") {
-              let dominantColorsLocalAsset = ref(1899).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-              const obj3 = ref(1899);
+              let dominantColorsLocalAsset = ref(1901).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+              const obj3 = ref(1901);
             } else {
-              dominantColorsLocalAsset = ref(1899).getDominantColors(Image.resolveAssetSource(value2));
-              const obj4 = ref(1899);
+              dominantColorsLocalAsset = ref(1901).getDominantColors(Image.resolveAssetSource(value2));
+              const obj4 = ref(1901);
             }
             dominantColorsLocalAsset.then((result) => {
               const tmp = _slicedToArray(result[0], 3);
@@ -169,11 +169,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDominan
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(1899).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(1899);
+            let dominantColorsLocalAsset = ref(1901).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(1901);
           } else {
-            dominantColorsLocalAsset = ref(1899).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(1899);
+            dominantColorsLocalAsset = ref(1901).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(1901);
           }
           dominantColorsLocalAsset.then((result) => {
             const tmp = _slicedToArray(result[0], 3);

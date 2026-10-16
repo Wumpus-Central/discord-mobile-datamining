@@ -1,9 +1,9 @@
-// === Module 11832: useCommandContext ===
+// === Module 11856: useCommandContext ===
 
-// Module 11832 (useCommandContext)
+// Module 11856 (useCommandContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

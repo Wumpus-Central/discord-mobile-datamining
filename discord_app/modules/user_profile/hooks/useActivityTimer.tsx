@@ -1,8 +1,8 @@
-// === Module 13964: useActivityTimer ===
+// === Module 13996: useActivityTimer ===
 
-// Module 13964 (useActivityTimer)
-import DurationsDefault from "Durations" /* 1102 */;
-import utils from "utils" /* 8489 */;
+// Module 13996 (useActivityTimer)
+import DurationsDefault from "Durations" /* 1104 */;
+import utils from "utils" /* 8497 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   const cResult = first1(576).c(9);
   start = start.start;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const interval = new tmp(2060).Interval();
+    const interval = new tmp(2063).Interval();
     cResult[0] = interval;
     let first = interval;
   } else {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
 }) : (function useActivityTimer(start) {
   start = start.start;
   let first;
-  const interval = new first(2060).Interval();
+  const interval = new first(2063).Interval();
   first = _slicedToArray(closure_5(interval), 1)[0];
   const tmp3 = _slicedToArray(closure_5(() => Date.now()), 2);
   importDefault = tmp3[1];

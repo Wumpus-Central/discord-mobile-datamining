@@ -1,16 +1,16 @@
-// === Module 9840: NsfwGateGuildAlert ===
+// === Module 9856: NsfwGateGuildAlert ===
 
-// Module 9840 (NsfwGateGuildAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import useAlertStore from "useAlertStore" /* 5361 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7136 */;
+// Module 9856 (NsfwGateGuildAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import useAlertStore from "useAlertStore" /* 5363 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7138 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const NsfwGateSource = fn(7135).NsfwGateSource;
-const Constants = fn(1085);
+const NsfwGateSource = fn(7137).NsfwGateSource;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 let c10 = "nsfw-guild-alert";
@@ -61,10 +61,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGateGu
   }
   const effect = noop.useEffect(tmp7, tmp8);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.JqfHGt);
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t.EdXn1A);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t.JqfHGt);
+    const intl2 = tmp(1128).intl;
+    const stringResult1 = intl2.string(tmp(1128).t.EdXn1A);
     cResult[4] = stringResult;
     cResult[5] = stringResult1;
     let tmp11 = stringResult1;
@@ -75,13 +75,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGateGu
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { text: null, onPress: null };
-    const intl3 = tmp(1126).intl;
-    obj2.text = intl3.string(tmp(1126).t.wi6hPV);
+    const intl3 = tmp(1128).intl;
+    obj2.text = intl3.string(tmp(1128).t.wi6hPV);
     obj2.onPress = function onPress() {
-      const obj = first(4862);
-      return obj.openURL(first(2128).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
+      const obj = first(4865);
+      return obj.openURL(first(2131).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
     };
-    const tmp16 = jsx(tmp(5365).AlertActionButton, { text: null, onPress: null }, "help-center");
+    const tmp16 = jsx(tmp(5367).AlertActionButton, { text: null, onPress: null }, "help-center");
     cResult[6] = tmp16;
     let tmp14 = tmp16;
   } else {
@@ -91,11 +91,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGateGu
     let obj3 = { title: tmp10, content: tmp11, actions: null };
     const items1 = [tmp14, ];
     const obj4 = { variant: "secondary", text: null };
-    const intl4 = tmp(1126).intl;
-    obj4.text = intl4.string(tmp(1126).t.WAI6xu);
-    items1[1] = jsx(tmp(5365).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+    const intl4 = tmp(1128).intl;
+    obj4.text = intl4.string(tmp(1128).t.WAI6xu);
+    items1[1] = jsx(tmp(5367).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
     obj3.actions = items1;
-    const tmp19 = jsx(tmp(5365).AlertModal, { title: tmp10, content: tmp11, actions: null });
+    const tmp19 = jsx(tmp(5367).AlertModal, { title: tmp10, content: tmp11, actions: null });
     cResult[7] = tmp19;
     let tmp17 = tmp19;
   } else {
@@ -130,24 +130,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGateGu
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj = { title: null, content: null, actions: null };
-  const intl = guildId(1126).intl;
-  obj.title = intl.string(guildId(1126).t.JqfHGt);
-  const intl2 = guildId(1126).intl;
-  obj.content = intl2.string(guildId(1126).t.EdXn1A);
+  const intl = guildId(1128).intl;
+  obj.title = intl.string(guildId(1128).t.JqfHGt);
+  const intl2 = guildId(1128).intl;
+  obj.content = intl2.string(guildId(1128).t.EdXn1A);
   let obj2 = { text: null, onPress: null };
-  const intl3 = guildId(1126).intl;
-  obj2.text = intl3.string(guildId(1126).t.wi6hPV);
+  const intl3 = guildId(1128).intl;
+  obj2.text = intl3.string(guildId(1128).t.wi6hPV);
   obj2.onPress = function onPress() {
-    const obj = currentUser(4862);
-    return obj.openURL(currentUser(2128).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
+    const obj = currentUser(4865);
+    return obj.openURL(currentUser(2131).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
   };
-  const items1 = [jsx(guildId(5365).AlertActionButton, { text: null, onPress: null }, "help-center"), ];
+  const items1 = [jsx(guildId(5367).AlertActionButton, { text: null, onPress: null }, "help-center"), ];
   let obj3 = { variant: "secondary", text: null };
-  const intl4 = guildId(1126).intl;
-  obj3.text = intl4.string(guildId(1126).t.WAI6xu);
-  items1[1] = jsx(guildId(5365).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+  const intl4 = guildId(1128).intl;
+  obj3.text = intl4.string(guildId(1128).t.WAI6xu);
+  items1[1] = jsx(guildId(5367).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
   obj.actions = items1;
-  return jsx(guildId(5365).AlertModal, { title: null, content: null, actions: null });
+  return jsx(guildId(5367).AlertModal, { title: null, content: null, actions: null });
 });
 let closure_11 = tmp3;
 const size = fn(2);

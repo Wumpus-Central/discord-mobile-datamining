@@ -1,20 +1,20 @@
-// === Module 16183: GuildRoleSubscriptionBenefitRow ===
+// === Module 16216: GuildRoleSubscriptionBenefitRow ===
 
-// Module 16183 (GuildRoleSubscriptionBenefitRow)
+// Module 16216 (GuildRoleSubscriptionBenefitRow)
 import c from "c" /* 576 */;
-import native from "native" /* 1200 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4820 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import useChannelNameDefault from "useChannelName" /* 5481 */;
-import EmojiIconDefault from "EmojiIcon" /* 16181 */;
+import native from "native" /* 1202 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useChannelNameDefault from "useChannelName" /* 5483 */;
+import EmojiIconDefault from "EmojiIcon" /* 16214 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BenefitRow(arg0) {
@@ -138,10 +138,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   const tmp10 = useChannelNameDefault(stateFromStores);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const _HermesInternal = HermesInternal;
-    obj2.children = "[" + intl.string(tmp(1126).t.bz1PZX) + "]";
-    const tmp13 = closure_5(tmp(5147).Text, obj2);
+    obj2.children = "[" + intl.string(tmp(1128).t.bz1PZX) + "]";
+    const tmp13 = closure_5(tmp(5149).Text, obj2);
     cResult[4] = tmp13;
     let tmp11 = tmp13;
   } else {
@@ -183,11 +183,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   } else {
     ({ channelTitle: channelTitle2, channelIcon } = channelTitle);
     if (cResult[5] !== stateFromStores) {
-      const channelIcon1 = tmp(8376).getChannelIcon(stateFromStores);
+      const channelIcon1 = tmp(8384).getChannelIcon(stateFromStores);
       cResult[5] = stateFromStores;
       cResult[6] = channelIcon1;
       let tmp14 = channelIcon1;
-      const tmpResult2 = tmp(8376);
+      const tmpResult2 = tmp(8384);
     } else {
       tmp14 = cResult[6];
     }
@@ -197,7 +197,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
       }
       if (cResult[10] !== tmp10) {
         const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp10 };
-        const tmp21 = closure_5(tmp(5147).Text, obj4);
+        const tmp21 = closure_5(tmp(5149).Text, obj4);
         cResult[10] = tmp10;
         cResult[11] = tmp21;
         let tmp19 = tmp21;
@@ -218,8 +218,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
       cResult[14] = tmp19;
       cResult[15] = tmp25;
     }
-    const obj6 = { style: channelIcon, size: tmp(1200).Icon.Sizes.CUSTOM, source: tmp14 };
-    const tmp18 = closure_5(tmp(1200).Icon, obj6);
+    const obj6 = { style: channelIcon, size: tmp(1202).Icon.Sizes.CUSTOM, source: tmp14 };
+    const tmp18 = closure_5(tmp(1202).Icon, obj6);
     cResult[7] = channelTitle.channelIcon;
     cResult[8] = tmp14;
     cResult[9] = tmp18;
@@ -234,18 +234,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   const stateFromStores = benefit(504).useStateFromStores(items, () => ChannelStore.getChannel(benefit.ref_id), items1);
   const obj = benefit(504);
   const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = benefit(1126).intl;
-  obj2.children = "[" + intl.string(benefit(1126).t.bz1PZX) + "]";
-  let tmp8 = closure_5(benefit(5147).Text, obj2);
+  const intl = benefit(1128).intl;
+  obj2.children = "[" + intl.string(benefit(1128).t.bz1PZX) + "]";
+  let tmp8 = closure_5(benefit(5149).Text, obj2);
   if (null != stateFromStores) {
     const obj3 = { style: tmp.channelTitle, children: null };
-    const obj4 = { style: tmp.channelIcon, size: tmp2(1200).Icon.Sizes.CUSTOM, source: tmp2(8376).getChannelIcon(stateFromStores) };
-    const items2 = [closure_5(tmp2(1200).Icon, obj4), ];
+    const obj4 = { style: tmp.channelIcon, size: tmp2(1202).Icon.Sizes.CUSTOM, source: tmp2(8384).getChannelIcon(stateFromStores) };
+    const items2 = [closure_5(tmp2(1202).Icon, obj4), ];
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    items2[1] = closure_5(tmp2(5147).Text, obj5);
+    items2[1] = closure_5(tmp2(5149).Text, obj5);
     obj3.children = items2;
     tmp8 = closure_6(View, obj3);
-    const tmp2Result = tmp2(8376);
+    const tmp2Result = tmp2(8384);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

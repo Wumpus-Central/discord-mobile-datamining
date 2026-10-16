@@ -1,20 +1,20 @@
-// === Module 18464: PresetAvatarSelect ===
+// === Module 18506: PresetAvatarSelect ===
 
-// Module 18464 (PresetAvatarSelect)
+// Module 18506 (PresetAvatarSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import Pressables from "Pressables" /* 6405 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 18465 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 18466 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 18467 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 18468 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 18469 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 18470 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 18471 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 18472 */;
+import util from "util" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Pressables from "Pressables" /* 6407 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 18507 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 18508 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 18509 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 18510 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 18511 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 18512 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 18513 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 18514 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -138,7 +138,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   }
 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 const obj10 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
 obj10.defaultAvatarButton = size;
@@ -257,9 +257,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PresetAv
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
-    let intl = tmp(1126).intl;
-    obj2.children = intl.string(tmp(1126).t.yP28YL);
-    const tmp7 = closure_4(tmp(5147).Text, obj2);
+    let intl = tmp(1128).intl;
+    obj2.children = intl.string(tmp(1128).t.yP28YL);
+    const tmp7 = closure_4(tmp(5149).Text, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -331,8 +331,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PresetAv
           selected: selectedAvatar === item,
           accessibilityLabel: null
         };
-        const intl = onAvatarSelect(1126).intl;
-        obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1126).t["1K8jaQ"], { index: item + 1, description: dependencyMap2[item].label() });
+        const intl = onAvatarSelect(1128).intl;
+        obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1128).t["1K8jaQ"], { index: item + 1, description: dependencyMap2[item].label() });
         return closure_1_4(closure_1_8, obj2, item);
       });
       cResult[9] = onAvatarSelect;
@@ -357,8 +357,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PresetAv
       selected: selectedAvatar === item,
       accessibilityLabel: null
     };
-    const intl = onAvatarSelect(1126).intl;
-    obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1126).t["1K8jaQ"], { index: item + 1, description: dependencyMap2[item].label() });
+    const intl = onAvatarSelect(1128).intl;
+    obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1128).t["1K8jaQ"], { index: item + 1, description: dependencyMap2[item].label() });
     return closure_1_4(closure_1_8, obj2, item);
   });
   cResult[2] = onAvatarSelect;

@@ -1,11 +1,11 @@
-// === Module 7445: isSpam ===
+// === Module 7447: isSpam ===
 
-// Module 7445 (isSpam)
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7446 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 7447 (isSpam)
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7448 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ UserFlags: c3, ChannelTypes: closure_4 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isSpam.tsx");

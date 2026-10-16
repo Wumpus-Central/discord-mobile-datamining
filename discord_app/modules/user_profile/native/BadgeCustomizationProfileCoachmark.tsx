@@ -1,18 +1,18 @@
-// === Module 17836: BadgeCustomizationProfileCoachmark ===
+// === Module 17870: BadgeCustomizationProfileCoachmark ===
 
-// Module 17836 (BadgeCustomizationProfileCoachmark)
+// Module 17870 (BadgeCustomizationProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4899 */;
+import util from "util" /* 1128 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoachmarkPosition(arg0, arg1) {
@@ -119,19 +119,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
   }
   const obj = markAsDismissed(576);
   const stateFromStores = markAsDismissed(504).useStateFromStores(tmp4, tmp5);
-  const reducedMotion = noop.useContext(markAsDismissed(4890).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = noop.useContext(markAsDismissed(4893).AccessibilityPreferencesContext).reducedMotion;
   const tmp8 = closure_8(targetRef, visible);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = markAsDismissed(1126).intl;
-    const stringResult = intl.string(markAsDismissed(1126).t["9JoKQb"]);
+    const intl = markAsDismissed(1128).intl;
+    const stringResult = intl.string(markAsDismissed(1128).t["9JoKQb"]);
     cResult[2] = stringResult;
     let tmp9 = stringResult;
   } else {
     tmp9 = cResult[2];
   }
   if (cResult[3] !== stateFromStores) {
-    const intl2 = markAsDismissed(1126).intl;
-    const t = markAsDismissed(1126).t;
+    const intl2 = markAsDismissed(1128).intl;
+    const t = markAsDismissed(1128).t;
     const stringResult1 = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     cResult[3] = stateFromStores;
     cResult[4] = stringResult1;
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = markAsDismissed(1126).intl;
-        const stringResult2 = intl3.string(markAsDismissed(1126).t["4P5I8V"]);
+        const intl3 = markAsDismissed(1128).intl;
+        const stringResult2 = intl3.string(markAsDismissed(1128).t["4P5I8V"]);
         cResult[10] = stringResult2;
         let tmp16 = stringResult2;
       } else {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
                   if (cResult[19] === visible) {
                     let tmp19 = cResult[20];
                   }
-                  const coachmark = markAsDismissed(9663).useCoachmark(targetRef, tmp19);
+                  const coachmark = markAsDismissed(9679).useCoachmark(targetRef, tmp19);
                   return null;
                 }
               }
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
       cResult[13] = I;
       tmp18 = I;
     }
-    const obj3 = { type: "rive", rive: markAsDismissed(4899).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    const obj3 = { type: "rive", rive: markAsDismissed(4902).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
     const obj4 = { dataBinding: null };
     const obj5 = { on: null, reducedMotion: reducedMotion.enabled };
     obj4.dataBinding = obj5;

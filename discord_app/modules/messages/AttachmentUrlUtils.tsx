@@ -1,10 +1,10 @@
-// === Module 9538: AttachmentUrlUtils ===
+// === Module 9554: AttachmentUrlUtils ===
 
-// Module 9538 (AttachmentUrlUtils)
-import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2035 */;
+// Module 9554 (AttachmentUrlUtils)
+import DurationsDefault from "Durations" /* 1104 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -302,8 +302,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(5486).ATTACHMENT_PATH_PREFIXES;
-const Endpoints = fn(1085).Endpoints;
+const ATTACHMENT_PATH_PREFIXES = fn(5488).ATTACHMENT_PATH_PREFIXES;
+const Endpoints = fn(1087).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
 let substr;
@@ -363,7 +363,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2036).getHostWithoutPort);
+const mapped = items.map(fn(2039).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {

@@ -1,25 +1,25 @@
-// === Module 13746: PlayStationLinkModal ===
+// === Module 13772: PlayStationLinkModal ===
 
-// Module 13746 (PlayStationLinkModal)
+// Module 13772 (PlayStationLinkModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import Navigator from "Navigator" /* 6908 */;
-import HeaderActionButton from "HeaderActionButton" /* 7310 */;
-import _modDef7945 from "module_7945" /* 7945 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9436 */;
-import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 13744 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 13745 */;
-import PlayStationLinkLanding from "PlayStationLinkLanding" /* 13748 */;
-import PlayStationLinkPreConnect from "PlayStationLinkPreConnect" /* 13750 */;
-import PlayStationLinkDiscordConsent from "PlayStationLinkDiscordConsent" /* 13752 */;
-import PlayStationLinkSuccess from "PlayStationLinkSuccess" /* 13754 */;
-import PlayStationLinkError from "PlayStationLinkError" /* 13755 */;
+import util from "util" /* 1128 */;
+import Navigator from "Navigator" /* 6910 */;
+import HeaderActionButton from "HeaderActionButton" /* 7312 */;
+import _modDef7948 from "module_7948" /* 7948 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9452 */;
+import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 13770 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 13771 */;
+import PlayStationLinkLanding from "PlayStationLinkLanding" /* 13774 */;
+import PlayStationLinkPreConnect from "PlayStationLinkPreConnect" /* 13776 */;
+import PlayStationLinkDiscordConsent from "PlayStationLinkDiscordConsent" /* 13778 */;
+import PlayStationLinkSuccess from "PlayStationLinkSuccess" /* 13780 */;
+import PlayStationLinkError from "PlayStationLinkError" /* 13781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getScreens(platformType, headerStyle) {
   function onClose() {
-    return onClose(13745).hideModal();
+    return onClose(13771).hideModal();
   }
   function blank() {
     return null;
@@ -39,7 +39,7 @@ function getScreens(platformType, headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(platformType(9437).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return jsx(platformType(9453).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
         return jsx(PlayStationLinkPreConnect.PlayStationLinkPreConnect, { platformType });
@@ -50,7 +50,7 @@ function getScreens(platformType, headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(platformType(9437).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return jsx(platformType(9453).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
@@ -77,7 +77,7 @@ function getScreens(platformType, headerStyle) {
     }
   };
 }
-const constants = fn(13747).PlayStationLinkModalScenes;
+const constants = fn(13773).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseButton() {
@@ -92,10 +92,10 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef7945, onPress: first, accessibilityLabel: null };
+    const obj2 = { source: _modDef7948, onPress: first, accessibilityLabel: null };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
-    const tmp8 = jsx(HeaderActionButton.HeaderActionButton, { source: _modDef7945, onPress: first, accessibilityLabel: null });
+    const tmp8 = jsx(HeaderActionButton.HeaderActionButton, { source: _modDef7948, onPress: first, accessibilityLabel: null });
     cResult[1] = tmp8;
     let tmp5 = tmp8;
   } else {
@@ -104,7 +104,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
   return tmp5;
 }) : (function CloseButton() {
   const obj = {
-    source: _modDef7945,
+    source: _modDef7948,
     onPress: function onClose() {
       return PlayStationLinkModalActionCreatorsDefault.hideModal();
     },
@@ -113,7 +113,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7945,
+    source: _modDef7948,
     onPress: function onClose() {
       return PlayStationLinkModalActionCreatorsDefault.hideModal();
     },
@@ -163,13 +163,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PlayStat
   tmp5 = tmp6;
 }) : (function PlayStationLinkModal(platformType) {
   platformType = platformType.platformType;
-  const twoWayLinkStyles = platformType(9436).useTwoWayLinkStyles();
+  const twoWayLinkStyles = platformType(9452).useTwoWayLinkStyles();
   const items = [platformType, twoWayLinkStyles];
   const memo = noop.useMemo(() => getScreens(platformType, twoWayLinkStyles), items);
-  const obj = platformType(9436);
-  const accountLinkStepTracking = platformType(13744).useAccountLinkStepTracking(platformType, platformType.locationStack);
+  const obj = platformType(9452);
+  const accountLinkStepTracking = platformType(13770).useAccountLinkStepTracking(platformType, platformType.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
-  const intl = platformType(1126).intl;
-  obj3.headerBackTitle = intl.string(platformType(1126).t["13/7kX"]);
-  return jsx(platformType(6908).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
+  const intl = platformType(1128).intl;
+  obj3.headerBackTitle = intl.string(platformType(1128).t["13/7kX"]);
+  return jsx(platformType(6910).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
 });

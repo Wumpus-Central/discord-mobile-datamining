@@ -1,19 +1,19 @@
-// === Module 17590: GuildRoleSubscriptionPurchaseCard ===
+// === Module 17624: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 17590 (GuildRoleSubscriptionPurchaseCard)
+// Module 17624 (GuildRoleSubscriptionPurchaseCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import BottomSheetModal from "BottomSheetModal" /* 6527 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6883 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7061 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16168 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 16178 */;
-import Elements from "Elements" /* 17585 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 17591 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import BottomSheetModal from "BottomSheetModal" /* 6529 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6885 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7063 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16201 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 16211 */;
+import Elements from "Elements" /* 17619 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 17625 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

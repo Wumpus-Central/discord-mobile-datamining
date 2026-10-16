@@ -1,6 +1,6 @@
-// === Module 16151: useRestorePurchases ===
+// === Module 16184: useRestorePurchases ===
 
-// Module 16151 (useRestorePurchases)
+// Module 16184 (useRestorePurchases)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,11 +1,11 @@
-// === Module 1391: OverridePremiumTypeStore ===
+// === Module 1393: OverridePremiumTypeStore ===
 
-// Module 1391 (OverridePremiumTypeStore)
+// Module 1393 (OverridePremiumTypeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PerksStateUtils from "PerksStateUtils" /* 1396 */;
-import UserStoreUtils from "UserStoreUtils" /* 1401 */;
-import PremiumConstants from "PremiumConstants" /* 1392 */;
+import PerksStateUtils from "PerksStateUtils" /* 1398 */;
+import UserStoreUtils from "UserStoreUtils" /* 1403 */;
+import PremiumConstants from "PremiumConstants" /* 1394 */;
 import size from "module_2" /* 2 */;
 
 function setActualFromUser(user) {

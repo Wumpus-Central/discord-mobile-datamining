@@ -1,7 +1,7 @@
-// === Module 5470: StaticRouteRendering ===
+// === Module 5472: StaticRouteRendering ===
 
-// Module 5470 (StaticRouteRendering)
-import util from "util" /* 1126 */;
+// Module 5472 (StaticRouteRendering)
+import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");

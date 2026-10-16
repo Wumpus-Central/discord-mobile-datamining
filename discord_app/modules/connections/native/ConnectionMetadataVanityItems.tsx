@@ -1,25 +1,25 @@
-// === Module 11053: ConnectionMetadataVanityItems ===
+// === Module 11068: ConnectionMetadataVanityItems ===
 
-// Module 11053 (ConnectionMetadataVanityItems)
+// Module 11068 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import NumberUtils from "NumberUtils" /* 1901 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7095 */;
-import _modDef11054 from "module_11054" /* 11054 */;
-import _modDef11055 from "module_11055" /* 11055 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import NumberUtils from "NumberUtils" /* 1903 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7097 */;
+import _modDef11069 from "module_11069" /* 11069 */;
+import _modDef11070 from "module_11070" /* 11070 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7096);
+const Constants = fn(7098);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 }, paypalVerifiedTag: null, paypalVerifiedTagText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
 obj2.paypalVerifiedTag = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
@@ -434,7 +434,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11054;
+    obj2.imageSrc = _modDef11069;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -444,7 +444,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11055;
+    obj4.imageSrc = _modDef11070;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));

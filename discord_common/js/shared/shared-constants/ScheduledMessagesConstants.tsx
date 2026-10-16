@@ -1,6 +1,6 @@
-// === Module 9500: ScheduledMessagesConstants ===
+// === Module 9516: ScheduledMessagesConstants ===
 
-// Module 9500 (ScheduledMessagesConstants)
+// Module 9516 (ScheduledMessagesConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx");

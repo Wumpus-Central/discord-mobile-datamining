@@ -1,10 +1,10 @@
-// === Module 9173: AnnouncementMessageUtils ===
+// === Module 9186: AnnouncementMessageUtils ===
 
-// Module 9173 (AnnouncementMessageUtils)
-import util from "util" /* 1126 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import MessageRecord from "MessageRecord" /* 4817 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9175 */;
+// Module 9186 (AnnouncementMessageUtils)
+import util from "util" /* 1128 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import MessageRecord from "MessageRecord" /* 4820 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9188 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
@@ -14,8 +14,8 @@ let result = size.fileFinishedImporting("modules/game_profile/AnnouncementMessag
 
 export const toAnnouncementMessages = function toAnnouncementMessages(messages) {
   return messages.map((reactions) => {
-    const tmp2 = found5(found6[4]);
-    const tmp2Result = tmp2(found4(found6[5]).createMessageRecord(reactions));
+    const tmp2 = found5(found6[5]);
+    const tmp2Result = tmp2(found4(found6[6]).createMessageRecord(reactions));
     if (closure_3(tmp2Result)) {
       const components = tmp2Result.components;
       const found = components.filter((type) => type.type === found4(found6[1]).ComponentType.TEXT_DISPLAY);
@@ -146,8 +146,13 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
                 }
                 iconProxyURL1 = iconURL1;
               }
-              ({ url, color } = first2);
-              const obj6 = { authorName: name, authorIconUrl: iconProxyURL, providerName: text, providerIconUrl: iconProxyURL1, url, color };
+              const url = first2.url;
+              let int2hslResult;
+              if (null != first2.color) {
+                int2hslResult = tmp3(tmp[4]).int2hsl(first2.color, false);
+                const tmp3Result7 = tmp3(tmp[4]);
+              }
+              const obj6 = { authorName: name, authorIconUrl: iconProxyURL, providerName: text, providerIconUrl: iconProxyURL1, url, color: int2hslResult };
               tmp34 = obj6;
             }
             tmp32 = tmp34;
@@ -161,13 +166,13 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
     const found2 = attachments.find((content_type) => found4(found6[3]).isImageContentType(content_type.content_type));
     if (null != found2) {
       result = tmp3(tmp[2]).messageAttachmentToMediaItem(found2, tmp2Result);
-      const tmp3Result6 = tmp3(tmp[2]);
+      const tmp3Result8 = tmp3(tmp[2]);
     } else {
       const attachments1 = tmp2Result.attachments;
       const found3 = attachments1.find((content_type) => found4(found6[3]).isVideoContentType(content_type.content_type));
       if (null != found3) {
         result = tmp3(tmp[2]).messageAttachmentToMediaItem(found3, tmp2Result);
-        const tmp3Result7 = tmp3(tmp[2]);
+        const tmp3Result9 = tmp3(tmp[2]);
       } else {
         const embeds1 = tmp2Result.embeds;
         found4 = embeds1.find((video) => null != video.video && null != video.thumbnail);
@@ -182,7 +187,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
           obj9.embedIndex = embeds3.findIndex((item) => item === found4);
           obj8.identifier = obj9;
           result = tmp3(tmp[2]).embedMediaToMediaItem(found4.thumbnail, obj8, "IMAGE");
-          const tmp3Result8 = tmp3(tmp[2]);
+          const tmp3Result10 = tmp3(tmp[2]);
         } else {
           const embeds4 = tmp2Result.embeds;
           found5 = embeds4.find((image) => null != image.image);
@@ -197,7 +202,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
             obj11.embedIndex = embeds2.findIndex((item) => item === found5);
             obj10.identifier = obj11;
             result = tmp3(tmp[2]).embedMediaToMediaItem(found5.image, obj10, "IMAGE");
-            const tmp3Result9 = tmp3(tmp[2]);
+            const tmp3Result11 = tmp3(tmp[2]);
           } else {
             const embeds5 = tmp2Result.embeds;
             found6 = embeds5.find((thumbnail) => null != thumbnail.thumbnail);
@@ -212,13 +217,13 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
               obj13.embedIndex = embeds.findIndex((item) => item === found6);
               obj12.identifier = obj13;
               result = tmp3(tmp[2]).embedMediaToMediaItem(found6.thumbnail, obj12, "IMAGE");
-              const tmp3Result10 = tmp3(tmp[2]);
+              const tmp3Result12 = tmp3(tmp[2]);
             }
           }
         }
       }
     }
-    const obj = found4(found6[5]);
+    const obj = found4(found6[6]);
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {

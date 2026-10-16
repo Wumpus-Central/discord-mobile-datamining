@@ -1,27 +1,27 @@
-// === Module 10513: GroupDMAvatar ===
+// === Module 10528: GroupDMAvatar ===
 
-// Module 10513 (GroupDMAvatar)
+// Module 10528 (GroupDMAvatar)
 import c from "c" /* 576 */;
-import native from "native" /* 1200 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import ClipView from "ClipView" /* 9234 */;
+import native from "native" /* 1202 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import ClipView from "ClipView" /* 9247 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1200).AvatarSizes.LARGE_48] = fn(1200).AvatarSizes.SMALL;
-obj[fn(1200).AvatarSizes.XLARGE] = fn(1200).AvatarSizes.NORMAL;
-obj[fn(1200).AvatarSizes.XXLARGE] = fn(1200).AvatarSizes.LARGE;
-obj[fn(1200).AvatarSizes.PROFILE] = fn(1200).AvatarSizes.XXLARGE;
-obj[fn(1200).AvatarSizes.REFRESH_MEDIUM_32] = fn(1200).AvatarSizes.XSMALL_20;
-obj[fn(1200).AvatarSizes.XSMALL] = fn(1200).AvatarSizes.SIZE_16;
-obj[fn(1200).AvatarSizes.SIZE_16] = fn(1200).AvatarSizes.XXSMALL_10;
-obj[fn(1200).AvatarSizes.NORMAL] = fn(1200).AvatarSizes.XSMALL;
-const createStyles = fn(5151);
+obj[fn(1202).AvatarSizes.LARGE_48] = fn(1202).AvatarSizes.SMALL;
+obj[fn(1202).AvatarSizes.XLARGE] = fn(1202).AvatarSizes.NORMAL;
+obj[fn(1202).AvatarSizes.XXLARGE] = fn(1202).AvatarSizes.LARGE;
+obj[fn(1202).AvatarSizes.PROFILE] = fn(1202).AvatarSizes.XXLARGE;
+obj[fn(1202).AvatarSizes.REFRESH_MEDIUM_32] = fn(1202).AvatarSizes.XSMALL_20;
+obj[fn(1202).AvatarSizes.XSMALL] = fn(1202).AvatarSizes.SIZE_16;
+obj[fn(1202).AvatarSizes.SIZE_16] = fn(1202).AvatarSizes.XXSMALL_10;
+obj[fn(1202).AvatarSizes.NORMAL] = fn(1202).AvatarSizes.XSMALL;
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGroupDMAvatar(arg0) {
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMA
       }
     }
   }
-  Avatar = Avatar(1200).Avatar;
+  Avatar = Avatar(1202).Avatar;
   tmp = closure_5(Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
   cResult[3] = accessibilityLabel;
   cResult[4] = accessible;
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMA
     }
     return tmp5;
   }
-  tmp5 = closure_5(channel(1200).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
+  tmp5 = closure_5(channel(1202).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
   obj = channel(504);
 });
 export const FacepileGroupDMAvatar = tmp3;

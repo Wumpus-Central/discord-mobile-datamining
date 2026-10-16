@@ -1,17 +1,17 @@
-// === Module 12876: CreateGuildContainer ===
+// === Module 12902: CreateGuildContainer ===
 
-// Module 12876 (CreateGuildContainer)
+// Module 12902 (CreateGuildContainer)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4804 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
-const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6479).NAV_BAR_HEIGHT } };
+const createStyles = fn(5153);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6481).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");

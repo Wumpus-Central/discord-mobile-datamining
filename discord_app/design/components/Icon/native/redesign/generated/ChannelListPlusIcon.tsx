@@ -1,10 +1,10 @@
-// === Module 18592: ChannelListPlusIcon ===
+// === Module 18634: ChannelListPlusIcon ===
 
-// Module 18592 (ChannelListPlusIcon)
+// Module 18634 (ChannelListPlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod18593 from "module_18593" /* 18593 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod18635 from "module_18635" /* 18635 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChannelListPlusIcon = ReactCompilerGating.isReactCompilerEnabled() 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod18593;
+    const tmpResult = _mod18635;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChannelListPlusIcon = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18593, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18635, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

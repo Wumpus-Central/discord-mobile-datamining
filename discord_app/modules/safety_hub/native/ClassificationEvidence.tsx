@@ -1,21 +1,21 @@
-// === Module 12520: ClassificationEvidence ===
+// === Module 12543: ClassificationEvidence ===
 
-// Module 12520 (ClassificationEvidence)
+// Module 12543 (ClassificationEvidence)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 12521 */;
+import util from "util" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 12544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
-const native = fn(1200);
-obj2.cardShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1202);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1202).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.flaggedContent = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
 let obj4 = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
 obj2.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };

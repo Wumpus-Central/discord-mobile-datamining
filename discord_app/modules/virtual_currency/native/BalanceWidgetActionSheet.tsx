@@ -1,15 +1,15 @@
-// === Module 13630: BalanceWidgetActionSheet ===
+// === Module 13656: BalanceWidgetActionSheet ===
 
-// Module 13630 (BalanceWidgetActionSheet)
+// Module 13656 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
-import _mod13631 from "module_13631" /* 13631 */;
-import _mod13632 from "module_13632" /* 13632 */;
-import _mod13633 from "module_13633" /* 13633 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4997 */;
+import _mod13657 from "module_13657" /* 13657 */;
+import _mod13658 from "module_13658" /* 13658 */;
+import _mod13659 from "module_13659" /* 13659 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,12 +17,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, Fonts: closure_7, HelpdeskArticles: closure_8, ThemeTypes: closure_9 } = Constants);
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_13 = createStyles.createStyles((color) => {
   const obj = { actions: { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
   const obj2 = { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -68,7 +68,7 @@ export default function _default(balance) {
   const memo = noop.useMemo(() => {
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod13631.default, backgroundImage: _mod13632.default, bannerImage: _mod13633.default, bannerText: null };
+      const obj = { backgroundVideo: _mod13657.default, backgroundImage: _mod13658.default, bannerImage: _mod13659.default, bannerText: null };
       const intl = util.intl;
       obj.bannerText = intl.string(util.t.LaMEFL);
       tmp = obj;

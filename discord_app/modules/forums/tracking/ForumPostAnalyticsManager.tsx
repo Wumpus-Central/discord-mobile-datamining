@@ -1,11 +1,11 @@
-// === Module 8128: ForumPostAnalyticsManager ===
+// === Module 8131: ForumPostAnalyticsManager ===
 
-// Module 8128 (ForumPostAnalyticsManager)
+// Module 8131 (ForumPostAnalyticsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6276 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6278 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 let require = fn;
 class ForumPostAnalyticsManager extends tmp2 {

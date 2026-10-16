@@ -1,12 +1,12 @@
-// === Module 16038: QuestDisclosureModalInner ===
+// === Module 16071: QuestDisclosureModalInner ===
 
-// Module 16038 (QuestDisclosureModalInner)
+// Module 16071 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1085 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import Constants from "Constants" /* 1087 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5151 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -41,23 +41,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
     const obj2 = { icon: null, text: null };
     let intl = closure_6;
     if (setting) {
-      obj2.icon = intl(tmp(9464).ServerIcon, { size: "xs" });
-      intl = tmp(1126).intl;
-      obj2.text = intl.string(tmp(1126).t["2bL0wT"]);
+      obj2.icon = intl(tmp(9480).ServerIcon, { size: "xs" });
+      intl = tmp(1128).intl;
+      obj2.text = intl.string(tmp(1128).t["2bL0wT"]);
       let items = [obj2];
       let items1 = items;
     } else {
-      obj2.icon = intl(tmp(9321).GlobeEarthIcon, { size: "xs" });
-      const intl2 = tmp(1126).intl;
-      obj2.text = intl2.string(tmp(1126).t.xQSdPv);
+      obj2.icon = intl(tmp(9334).GlobeEarthIcon, { size: "xs" });
+      const intl2 = tmp(1128).intl;
+      obj2.text = intl2.string(tmp(1128).t.xQSdPv);
       items1 = [obj2, , ];
-      const obj3 = { icon: intl(tmp(11573).UserIcon, { size: "xs" }), text: null };
-      const intl3 = tmp(1126).intl;
-      obj3.text = intl3.string(tmp(1126).t.mYt7hQ);
+      const obj3 = { icon: intl(tmp(11596).UserIcon, { size: "xs" }), text: null };
+      const intl3 = tmp(1128).intl;
+      obj3.text = intl3.string(tmp(1128).t.mYt7hQ);
       items1[1] = obj3;
-      const obj4 = { icon: intl(tmp(9433).GameControllerIcon, { size: "xs" }), text: null };
-      const intl4 = tmp(1126).intl;
-      obj4.text = intl4.string(tmp(1126).t.XAsWxQ);
+      const obj4 = { icon: intl(tmp(9449).GameControllerIcon, { size: "xs" }), text: null };
+      const intl4 = tmp(1128).intl;
+      obj4.text = intl4.string(tmp(1128).t.XAsWxQ);
       items1[2] = obj4;
     }
     cResult[0] = setting;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
     const _Symbol = Symbol;
     ({ container, contentContainer } = tmp4);
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_6(tmp(16039).WumpusCouchSpotIllustration, {});
+      const tmp10 = closure_6(tmp(16072).WumpusCouchSpotIllustration, {});
       cResult[2] = tmp10;
       let tmp8 = tmp10;
     } else {
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
                 }
                 if (cResult[13] !== tmp15) {
                   const obj6 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: tmp15 };
-                  const tmp19 = closure_6(tmp(5147).Text, obj6);
+                  const tmp19 = closure_6(tmp(5149).Text, obj6);
                   cResult[13] = tmp15;
                   cResult[14] = tmp19;
                   let tmp17 = tmp19;
@@ -110,20 +110,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
                           const _Symbol2 = Symbol;
                           if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                             const obj7 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-                            const intl5 = tmp(1126).intl;
-                            const obj8 = { privacySettingsUrl: arr(2128).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
-                            obj7.children = intl5.format(tmp(1126).t.tzq9Wa, obj8);
-                            const tmp27 = closure_6(tmp(5147).Text, obj7);
+                            const intl5 = tmp(1128).intl;
+                            const obj8 = { privacySettingsUrl: arr(2131).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
+                            obj7.children = intl5.format(tmp(1128).t.tzq9Wa, obj8);
+                            const tmp27 = closure_6(tmp(5149).Text, obj7);
                             cResult[22] = tmp27;
                             let tmp23 = tmp27;
-                            const obj12 = arr(2128);
+                            const obj12 = arr(2131);
                           } else {
                             tmp23 = cResult[22];
                           }
                           const _Symbol3 = Symbol;
                           if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                            const intl6 = tmp(1126).intl;
-                            const stringResult = intl6.string(tmp(1126).t.cpT0Cq);
+                            const intl6 = tmp(1128).intl;
+                            const stringResult = intl6.string(tmp(1128).t.cpT0Cq);
                             cResult[23] = stringResult;
                             let tmp28 = stringResult;
                           } else {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
                           }
                           if (cResult[24] !== onClose) {
                             const obj9 = { variant: "primary", grow: true, size: "lg", text: tmp28, onPress: onClose };
-                            const tmp32 = closure_6(tmp(5439).Button, obj9);
+                            const tmp32 = closure_6(tmp(5441).Button, obj9);
                             cResult[24] = onClose;
                             cResult[25] = tmp32;
                             let tmp30 = tmp32;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
                                       return React5(React4, obj, index);
                                     })
                   };
-                  tmp21 = closure_6(tmp(6402).Card, obj13);
+                  tmp21 = closure_6(tmp(6404).Card, obj13);
                 }
                 cResult[15] = isTargetedDisclosure;
                 cResult[16] = tmp4.disclosureText;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
       }
     }
     const obj14 = { adCreativeType, gamePublisher, gameTitle, isTargetedDisclosure, isContextualDisclosure: setting, cosponsorName, isVideoQuest };
-    const disclosureText = tmp(9414).getDisclosureText(obj14);
+    const disclosureText = tmp(9430).getDisclosureText(obj14);
     cResult[5] = adCreativeType;
     cResult[6] = cosponsorName;
     cResult[7] = gamePublisher;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
     cResult[11] = isVideoQuest;
     cResult[12] = disclosureText;
     tmp15 = disclosureText;
-    const tmpResult = tmp(9414);
+    const tmpResult = tmp(9430);
   }
   let obj = require("c");
 }) : (function QuestDisclosureModalInner(isTargetedDisclosure) {
@@ -239,24 +239,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj.icon = closure_6(tmp2(9464).ServerIcon, { size: "xs" });
-    const intl4 = tmp2(1126).intl;
-    obj.text = intl4.string(tmp2(1126).t["2bL0wT"]);
+    obj.icon = closure_6(tmp2(9480).ServerIcon, { size: "xs" });
+    const intl4 = tmp2(1128).intl;
+    obj.text = intl4.string(tmp2(1128).t["2bL0wT"]);
     let items = [obj];
     let tmp6 = closure_6;
     items1 = items;
   } else {
-    obj.icon = closure_6(tmp2(9321).GlobeEarthIcon, { size: "xs" });
-    const intl = tmp2(1126).intl;
-    obj.text = intl.string(tmp2(1126).t.xQSdPv);
+    obj.icon = closure_6(tmp2(9334).GlobeEarthIcon, { size: "xs" });
+    const intl = tmp2(1128).intl;
+    obj.text = intl.string(tmp2(1128).t.xQSdPv);
     items1 = [obj, , ];
-    const obj2 = { icon: closure_6(tmp2(11573).UserIcon, { size: "xs" }), text: null };
-    const intl2 = tmp2(1126).intl;
-    obj2.text = intl2.string(tmp2(1126).t.mYt7hQ);
+    const obj2 = { icon: closure_6(tmp2(11596).UserIcon, { size: "xs" }), text: null };
+    const intl2 = tmp2(1128).intl;
+    obj2.text = intl2.string(tmp2(1128).t.mYt7hQ);
     items1[1] = obj2;
-    const obj3 = { icon: closure_6(tmp2(9433).GameControllerIcon, { size: "xs" }), text: null };
-    const intl3 = tmp2(1126).intl;
-    obj3.text = intl3.string(tmp2(1126).t.XAsWxQ);
+    const obj3 = { icon: closure_6(tmp2(9449).GameControllerIcon, { size: "xs" }), text: null };
+    const intl3 = tmp2(1128).intl;
+    obj3.text = intl3.string(tmp2(1128).t.XAsWxQ);
     items1[2] = obj3;
     tmp6 = closure_6;
   }
@@ -284,19 +284,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDis
           return React5(React4, obj, index);
         })
     };
-    isTargetedDisclosure = tmp6(tmp2(6402).Card, obj7);
+    isTargetedDisclosure = tmp6(tmp2(6404).Card, obj7);
   }
   items2[2] = isTargetedDisclosure;
   const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl5 = tmp2(1126).intl;
+  const intl5 = tmp2(1128).intl;
   const obj9 = { privacySettingsUrl: null };
   const tmp2Result = require("QuestCopyUtils");
-  obj9.privacySettingsUrl = items1(2128).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
+  obj9.privacySettingsUrl = items1(2131).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
   obj8.children = intl5.format(require("util").t.tzq9Wa, obj9);
   items2[3] = tmp6(require("Text/Text").Text, obj8);
   const obj10 = { style: tmp.closeButton, children: null };
   const obj12 = { variant: "primary", grow: true, size: "lg", text: null, onPress: null };
-  const intl6 = tmp2(1126).intl;
+  const intl6 = tmp2(1128).intl;
   obj12.text = intl6.string(require("util").t.cpT0Cq);
   obj12.onPress = onClose;
   obj10.children = tmp6(require("components/Button/Button").Button, obj12);

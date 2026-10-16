@@ -1,13 +1,13 @@
-// === Module 9309: StorefrontCollectionActionCreators ===
+// === Module 9322: StorefrontCollectionActionCreators ===
 
-// Module 9309 (StorefrontCollectionActionCreators)
+// Module 9322 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import StoreUtils from "StoreUtils" /* 5860 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8564 */;
+import StoreUtils from "StoreUtils" /* 5862 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9307 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7499 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9320 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7501 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -647,7 +647,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 

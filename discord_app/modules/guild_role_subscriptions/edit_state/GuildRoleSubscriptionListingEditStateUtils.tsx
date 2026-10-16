@@ -1,24 +1,24 @@
-// === Module 16168: GuildRoleSubscriptionListingEditStateUtils ===
+// === Module 16201: GuildRoleSubscriptionListingEditStateUtils ===
 
-// Module 16168 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 16201 (GuildRoleSubscriptionListingEditStateUtils)
 import c from "c" /* 576 */;
-import v1 from "v1" /* 1279 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4797 */;
-import StoreUtils from "StoreUtils" /* 5860 */;
-import useInitialValueDefault from "useInitialValue" /* 6390 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16153 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 16170 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 16173 */;
+import v1 from "v1" /* 1281 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 4800 */;
+import StoreUtils from "StoreUtils" /* 5862 */;
+import useInitialValueDefault from "useInitialValue" /* 6392 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16186 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 16203 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 16206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6203 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4799 */;
+import EmojiStore from "EmojiStore" /* 6205 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4802 */;
 
 const require = globalThis.__r;
 
-const utils_ColorUtils = obj(1103);
-const Contants = obj(16171);
+const utils_ColorUtils = obj(1105);
+const Contants = obj(16204);
 require = fn;
 function getRoleEmojis(arr, arg1) {
   closure_0 = arg1;
@@ -182,7 +182,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
                   obj2.roles = items;
-                  return guildId(9766).updateEmoji(obj2);
+                  return guildId(9782).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -192,11 +192,11 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(9766).updateEmoji(obj3);
-                    const obj2 = guildId(9766);
+                    let updateEmojiResult = guildId(9782).updateEmoji(obj3);
+                    const obj2 = guildId(9782);
                   } else {
-                    updateEmojiResult = guildId(9766).deleteEmoji(guildId, customEmojiById.id);
-                    const obj = guildId(9766);
+                    updateEmojiResult = guildId(9782).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(9782);
                   }
                   return updateEmojiResult;
                 }
@@ -382,12 +382,12 @@ let closure_23 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(16169);
+const GuildRoleSubscriptionEditStore = fn(16202);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(16146).GuildRoleSubscriptionBenefitTypes;
-const Constants = fn(1085);
+let closure_11 = fn(16179).GuildRoleSubscriptionBenefitTypes;
+const Constants = fn(1087);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
-const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useListingEditState(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -1495,8 +1495,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                             if (null != channelBenefits) {
                               const benefits = subscriptionListing.role_benefits.benefits;
                               const benefits1 = subscriptionListing.role_benefits.benefits;
-                              const found = benefits.filter(closure_1_0(16172).isChannelBenefit);
-                              const found1 = benefits1.filter(closure_1_0(16172).isIntangibleBenefit);
+                              const found = benefits.filter(closure_1_0(16205).isChannelBenefit);
+                              const found1 = benefits1.filter(closure_1_0(16205).isIntangibleBenefit);
                               if (channelBenefits == null) {
                                 channelBenefits = found;
                               }
@@ -1510,8 +1510,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                             }
                             if (!obj2.isEmpty(obj)) {
                               const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
-                              subscriptionListing = closure_1_2(7176).updateSubscriptionListing(obj4);
-                              const obj3 = closure_1_2(7176);
+                              subscriptionListing = closure_1_2(7178).updateSubscriptionListing(obj4);
+                              const obj3 = closure_1_2(7178);
                             }
                             return subscriptionListing;
                           })(obj5),
@@ -1591,7 +1591,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               (function moveEditState(arg0, id) {
                 closure_0 = arg0;
                 closure_1 = id;
-                closure_0(1272).batchUpdates(() => {
+                closure_0(1274).batchUpdates(() => {
                   closure_2_10.setState((listings) => {
                     const obj = { listings: null };
                     const obj2 = {};
@@ -1801,7 +1801,7 @@ export const useEditStateIds = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const items2 = [arg1, tmp3, tmp4];
   obj3.addNewEditStateFromTemplate = noop.useCallback((listings) => {
     closure_0 = listings;
-    const v4Result = closure_0(1279).v4();
+    const v4Result = closure_0(1281).v4();
     subscriptionListingsForGroup = v4Result;
     dependencyMap(closure_0, (arg0) => {
       let items = arg0;

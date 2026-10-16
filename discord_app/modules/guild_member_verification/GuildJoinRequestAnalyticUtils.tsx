@@ -1,11 +1,11 @@
-// === Module 6341: GuildJoinRequestAnalyticUtils ===
+// === Module 6343: GuildJoinRequestAnalyticUtils ===
 
-// Module 6341 (GuildJoinRequestAnalyticUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+// Module 6343 (GuildJoinRequestAnalyticUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx");
 

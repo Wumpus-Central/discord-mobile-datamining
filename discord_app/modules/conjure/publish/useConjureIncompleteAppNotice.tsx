@@ -1,9 +1,9 @@
-// === Module 12022: useConjureIncompleteAppNotice ===
+// === Module 12046: useConjureIncompleteAppNotice ===
 
-// Module 12022 (useConjureIncompleteAppNotice)
+// Module 12046 (useConjureIncompleteAppNotice)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjureInc
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
   const cResult = require("c").c(11);
-  const tmp4 = guildId(11591)(arg0);
+  const tmp4 = guildId(11614)(arg0);
   guildId = undefined;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
         cResult[9] = I;
         cResult[10] = obj2;
       }
-      const intl = tmp(1126).intl;
+      const intl = tmp(1128).intl;
       if ("channel" === missingSurface) {
         class I {
           constructor() {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   return tmp12;
 }) : (function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const tmp3 = guildId(11591)(arg0);
+  const tmp3 = guildId(11614)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;
@@ -169,9 +169,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (tmp7[0] !== arg0) {
       const intl = require("util").intl;
       if ("channel" === missingSurface) {
-        let Lm7IRC = tmp(3862)["1cm4fj"];
+        let Lm7IRC = tmp(3865)["1cm4fj"];
       } else {
-        Lm7IRC = tmp(3862).Lm7IRC;
+        Lm7IRC = tmp(3865).Lm7IRC;
       }
       let str2 = stateFromStores;
       if (stateFromStores == null) {

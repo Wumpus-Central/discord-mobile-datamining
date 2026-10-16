@@ -1,9 +1,9 @@
-// === Module 17361: VoiceSubtitle ===
+// === Module 17395: VoiceSubtitle ===
 
-// Module 17361 (VoiceSubtitle)
-import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5469 */;
+// Module 17395 (VoiceSubtitle)
+import util from "util" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSub
     if (cResult[1] === voiceUsers) {
       if (cResult[5] !== cResult[2]) {
         const obj2 = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 };
-        const tmp9 = jsx(tmp(5147).Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 });
+        const tmp9 = jsx(tmp(5149).Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 });
         cResult[5] = tmp4;
         cResult[6] = tmp9;
         let tmp7 = tmp9;
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSub
   } else {
     tmp5 = cResult[4];
   }
-  const intl = tmp(1126).intl;
+  const intl = tmp(1128).intl;
   const obj3 = { users: null, overflowCount: null };
   const substr = voiceUsers.slice(0, 2);
   const mapped = substr.map(tmp5);
@@ -49,8 +49,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSub
   const obj = guildId(576);
   cResult[0] = guildId;
   cResult[1] = voiceUsers;
-  cResult[2] = intl.format(guildId(1126).t.r1Vkoc, obj3);
-  const formatResult = intl.format(guildId(1126).t.r1Vkoc, obj3);
+  cResult[2] = intl.format(guildId(1128).t.r1Vkoc, obj3);
+  const formatResult = intl.format(guildId(1128).t.r1Vkoc, obj3);
 }) : (function VoiceSubtitle(arg0) {
   ({ guildId: require, voiceUsers } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };

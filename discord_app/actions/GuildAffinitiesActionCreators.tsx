@@ -1,9 +1,9 @@
-// === Module 8683: GuildAffinitiesActionCreators ===
+// === Module 8691: GuildAffinitiesActionCreators ===
 
-// Module 8683 (GuildAffinitiesActionCreators)
+// Module 8691 (GuildAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import Constants from "Constants" /* 1087 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

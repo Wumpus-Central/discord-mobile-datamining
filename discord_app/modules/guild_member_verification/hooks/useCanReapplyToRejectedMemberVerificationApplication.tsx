@@ -1,16 +1,16 @@
-// === Module 6344: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 6346: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 6344 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 6346 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5132 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4996 */;
+import InviteStore from "InviteStore" /* 5135 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4999 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx");
 

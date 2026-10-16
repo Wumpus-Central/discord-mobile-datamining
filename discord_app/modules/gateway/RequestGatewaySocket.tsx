@@ -1,7 +1,7 @@
-// === Module 9922: RequestGatewaySocket ===
+// === Module 9938: RequestGatewaySocket ===
 
-// Module 9922 (RequestGatewaySocket)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+// Module 9938 (RequestGatewaySocket)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -103,7 +103,7 @@ let closure_10 = async function _withRequest(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
@@ -135,7 +135,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(7411).requestSafeIdleCallback(() => {
+  combined(7413).requestSafeIdleCallback(() => {
     if (map.has(combined)) {
       const obj3 = { bridge_token: combined, cleared_after: null };
       const _performance = performance;
@@ -154,7 +154,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
       const result = map.set(combined, diff);
     }
   }, { timeout: 5000 });
-  let obj2 = combined(7411);
+  let obj2 = combined(7413);
 };
 export { stopRequest };
 export const withRequest = function withRequest() {

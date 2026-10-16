@@ -1,7 +1,7 @@
-// === Module 13540: UsersListImplExperiment ===
+// === Module 13566: UsersListImplExperiment ===
 
-// Module 13540 (UsersListImplExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 13566 (UsersListImplExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-users-list-impl", defaultConfig: { list: "fast" }, variations: null };

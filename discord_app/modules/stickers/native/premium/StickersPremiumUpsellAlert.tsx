@@ -1,32 +1,32 @@
-// === Module 10002: StickersPremiumUpsellAlert ===
+// === Module 10018: StickersPremiumUpsellAlert ===
 
-// Module 10002 (StickersPremiumUpsellAlert)
+// Module 10018 (StickersPremiumUpsellAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import Pressables from "Pressables" /* 6405 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9614 */;
-import _modDef10003 from "module_10003" /* 10003 */;
-import _modDef10004 from "module_10004" /* 10004 */;
-import _modDef10005 from "module_10005" /* 10005 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Pressables from "Pressables" /* 6407 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
+import _modDef10019 from "module_10019" /* 10019 */;
+import _modDef10020 from "module_10020" /* 10020 */;
+import _modDef10021 from "module_10021" /* 10021 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7353 */;
+import IAPStore from "IAPStore" /* 7355 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, AnalyticsObjects: closure_9 } = Constants);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ SubscriptionPlans: c10, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_11, PRICE_PLACEHOLDER: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef10003,
+    icon: _modDef10019,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -37,7 +37,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef10003,
+  icon: _modDef10019,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -45,31 +45,31 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef10004,
+  icon: _modDef10020,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef10004,
+  icon: _modDef10020,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef10005,
+  icon: _modDef10021,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN
 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef10005,
+  icon: _modDef10021,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -195,19 +195,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     [tmp5, tmp6] = cResult;
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  const tmp9 = analyticsLocations(9617)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp9 = analyticsLocations(9633)(closure_10.PREMIUM_MONTH_TIER_2);
   if (tmp9 != null) {
     const priceString = tmp9.priceString;
   }
-  analyticsLocations = tmp8(7073)().analyticsLocations;
+  analyticsLocations = tmp8(7075)().analyticsLocations;
   if (cResult[2] === analyticsLocation) {
     if (cResult[3] === analyticsLocations) {
       let tmp10 = cResult[4];
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = analyticsLocation(1126).intl;
-      const stringResult = intl.string(analyticsLocation(1126).t.f3Pet9);
+      const intl = analyticsLocation(1128).intl;
+      const stringResult = intl.string(analyticsLocation(1128).t.f3Pet9);
       cResult[5] = stringResult;
       let tmp11 = stringResult;
     } else {
@@ -215,15 +215,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     }
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = analyticsLocation(1126).intl;
-      const stringResult1 = intl2.string(analyticsLocation(1126).t.o3Tnif);
+      const intl2 = analyticsLocation(1128).intl;
+      const stringResult1 = intl2.string(analyticsLocation(1128).t.o3Tnif);
       cResult[6] = stringResult1;
       let tmp13 = stringResult1;
     } else {
       tmp13 = cResult[6];
     }
     let shortHeightAlert = null;
-    if (tmp8(1497)().height <= 580) {
+    if (tmp8(1499)().height <= 580) {
       shortHeightAlert = tmp4.shortHeightAlert;
     }
     if (cResult[7] === tmp4.alert) {
@@ -232,8 +232,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       }
       const _Symbol3 = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: tmp8(7945) };
-        const tmp19 = closure_13(analyticsLocation(1200).Icon, obj2);
+        let obj2 = { source: tmp8(7948) };
+        const tmp19 = closure_13(analyticsLocation(1202).Icon, obj2);
         cResult[10] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       }
       if (cResult[11] !== onClose) {
         let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: tmp17 };
-        const tmp22 = closure_13(analyticsLocation(6405).PressableOpacity, obj3);
+        const tmp22 = closure_13(analyticsLocation(6407).PressableOpacity, obj3);
         cResult[11] = onClose;
         cResult[12] = tmp22;
         let tmp20 = tmp22;
@@ -263,23 +263,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
           tmp27 = cResult[16];
         }
         if (cResult[17] !== tmp4.imageHeader) {
-          const obj4 = { source: tmp8(10006), style: tmp4.imageHeader };
-          const tmp31 = closure_13(tmp8(5088), obj4);
+          const obj4 = { source: tmp8(10022), style: tmp4.imageHeader };
+          const tmp31 = closure_13(tmp8(5091), obj4);
           cResult[17] = tmp4.imageHeader;
           cResult[18] = tmp31;
           let tmp28 = tmp31;
-          const tmp8Result = tmp8(5088);
+          const tmp8Result = tmp8(5091);
         } else {
           tmp28 = cResult[18];
         }
         if (cResult[19] !== priceString) {
-          const intl3 = analyticsLocation(1126).intl;
+          const intl3 = analyticsLocation(1128).intl;
           let tmp33 = priceString;
           if (priceString == null) {
             tmp33 = closure_12;
           }
           const obj5 = { monthlyPrice: tmp33 };
-          const formatResult = intl3.format(analyticsLocation(1126).t.TBsJfQ, obj5);
+          const formatResult = intl3.format(analyticsLocation(1128).t.TBsJfQ, obj5);
           cResult[19] = priceString;
           cResult[20] = formatResult;
           let tmp32 = formatResult;
@@ -325,10 +325,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
                     }
                   }
                 }
-                const obj7 = { cancelText: tmp11, confirmColor: analyticsLocation(1200).ButtonColors.GREEN, confirmText: tmp13, onConfirm: tmp10, onClose, onCancel: onClose, style: tmp16, children: null };
+                const obj7 = { cancelText: tmp11, confirmColor: analyticsLocation(1202).ButtonColors.GREEN, confirmText: tmp13, onConfirm: tmp10, onClose, onCancel: onClose, style: tmp16, children: null };
                 const items1 = [tmp23, tmp45];
                 obj7.children = items1;
-                const tmp54 = closure_14(tmp8(5458), obj7);
+                const tmp54 = closure_14(tmp8(5460), obj7);
                 cResult[32] = onClose;
                 cResult[33] = tmp10;
                 cResult[34] = tmp23;
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
                 cResult[36] = tmp16;
                 cResult[37] = tmp54;
                 tmp51 = tmp54;
-                const tmp8Result2 = tmp8(5458);
+                const tmp8Result2 = tmp8(5460);
               }
             }
           }
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
           tmp45 = tmp50;
         }
         const obj10 = { style: tmp4.description, variant: "text-md/medium", children: tmp32 };
-        const tmp37 = closure_13(analyticsLocation(5147).Text, obj10);
+        const tmp37 = closure_13(analyticsLocation(5149).Text, obj10);
         cResult[21] = tmp4.description;
         cResult[22] = tmp32;
         cResult[23] = tmp37;
@@ -398,12 +398,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       const obj = analyticsLocations(dependencyMap[16]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9617)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9633)(closure_10.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7073)().analyticsLocations;
+  analyticsLocations = tmp3(7075)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = util.intl;
   obj.cancelText = intl.string(util.t.f3Pet9);
@@ -424,15 +424,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   obj.onCancel = onClose;
   items = [tmp.alert, ];
   let shortHeightAlert = null;
-  if (analyticsLocations(1497)().height <= 580) {
+  if (analyticsLocations(1499)().height <= 580) {
     shortHeightAlert = tmp.shortHeightAlert;
   }
   items[1] = shortHeightAlert;
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5458);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(7945) });
+  const tmp3Result = analyticsLocations(5460);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(7948) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2), ];
   const obj5 = {
@@ -443,10 +443,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     children: null
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(7945) };
-  obj6.source = analyticsLocations(10006);
+  const obj4 = { source: analyticsLocations(7948) };
+  obj6.source = analyticsLocations(10022);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(5088), obj6), , ];
+  const items2 = [closure_13(analyticsLocations(5091), obj6), , ];
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -455,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(5088);
+  const tmp3Result2 = analyticsLocations(5091);
   items2[2] = closure_13(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_13(closure_1_17, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj5.children = items2;
   obj8.children = closure_14(closure_4, obj5);

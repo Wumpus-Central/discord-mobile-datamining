@@ -1,37 +1,37 @@
-// === Module 18726: GuildSettingsModalTemplate ===
+// === Module 18768: GuildSettingsModalTemplate ===
 
-// Module 18726 (GuildSettingsModalTemplate)
+// Module 18768 (GuildSettingsModalTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ToastUtils from "ToastUtils" /* 4864 */;
-import CopyIcon2 from "CopyIcon" /* 5101 */;
-import AlertModal from "AlertModal" /* 5365 */;
-import Stack_Stack from "Stack/Stack" /* 5437 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import Card from "Card" /* 6402 */;
-import Input from "Input" /* 6507 */;
-import CircleXIcon2 from "CircleXIcon" /* 6516 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7087 */;
-import ClipboardUtils from "ClipboardUtils" /* 7105 */;
-import HeaderActionButton from "HeaderActionButton" /* 7310 */;
-import native from "native" /* 8762 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12413 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 18727 */;
+import ToastUtils from "ToastUtils" /* 4867 */;
+import CopyIcon2 from "CopyIcon" /* 5104 */;
+import AlertModal from "AlertModal" /* 5367 */;
+import Stack_Stack from "Stack/Stack" /* 5439 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import Card from "Card" /* 6404 */;
+import Input from "Input" /* 6509 */;
+import CircleXIcon2 from "CircleXIcon" /* 6518 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7089 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import HeaderActionButton from "HeaderActionButton" /* 7312 */;
+import native from "native" /* 8770 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12436 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 18769 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const util = Form(1126);
-const Text_Text = Form(5147);
-const SceneLoadingIndicator = Form(6947);
-const Form2 = Form(8800);
+const util = Form(1128);
+const Text_Text = Form(5149);
+const SceneLoadingIndicator = Form(6949);
+const Form2 = Form(8808);
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "delete-guild-template";
 let c11 = "guild-template-unsaved-changes";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { flex: 1 }, containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, copyRow: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.copyRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -117,21 +117,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               _Promise1 = new _Promise((arg0) => {
                 closure_0 = arg0;
                 const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                const intl = guildId(1126).intl;
-                obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                const intl2 = guildId(1126).intl;
-                obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                const intl3 = guildId(1126).intl;
-                obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                const intl4 = guildId(1126).intl;
-                obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                const intl = guildId(1128).intl;
+                obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                const intl2 = guildId(1128).intl;
+                obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                const intl3 = guildId(1128).intl;
+                obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                const intl4 = guildId(1128).intl;
+                obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                 obj2.onConfirm = function onConfirm() {
                   return closure_0(true);
                 };
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5365).showConfirmModal(obj2);
+                guildId(5367).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -152,21 +152,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               _Promise1 = new _Promise((arg0) => {
                 closure_0 = arg0;
                 const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                const intl = guildId(1126).intl;
-                obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                const intl2 = guildId(1126).intl;
-                obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                const intl3 = guildId(1126).intl;
-                obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                const intl4 = guildId(1126).intl;
-                obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                const intl = guildId(1128).intl;
+                obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                const intl2 = guildId(1128).intl;
+                obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                const intl3 = guildId(1128).intl;
+                obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                const intl4 = guildId(1128).intl;
+                obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                 obj2.onConfirm = function onConfirm() {
                   return closure_0(true);
                 };
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5365).showConfirmModal(obj2);
+                guildId(5367).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -187,21 +187,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               _Promise1 = new _Promise((arg0) => {
                 closure_0 = arg0;
                 const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                const intl = guildId(1126).intl;
-                obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                const intl2 = guildId(1126).intl;
-                obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                const intl3 = guildId(1126).intl;
-                obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                const intl4 = guildId(1126).intl;
-                obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                const intl = guildId(1128).intl;
+                obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                const intl2 = guildId(1128).intl;
+                obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                const intl3 = guildId(1128).intl;
+                obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                const intl4 = guildId(1128).intl;
+                obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                 obj2.onConfirm = function onConfirm() {
                   return closure_0(true);
                 };
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5365).showConfirmModal(obj2);
+                guildId(5367).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -223,21 +223,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               _Promise1 = new _Promise((arg0) => {
                 closure_0 = arg0;
                 const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                const intl = guildId(1126).intl;
-                obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                const intl2 = guildId(1126).intl;
-                obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                const intl3 = guildId(1126).intl;
-                obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                const intl4 = guildId(1126).intl;
-                obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                const intl = guildId(1128).intl;
+                obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                const intl2 = guildId(1128).intl;
+                obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                const intl3 = guildId(1128).intl;
+                obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                const intl4 = guildId(1128).intl;
+                obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                 obj2.onConfirm = function onConfirm() {
                   return closure_0(true);
                 };
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5365).showConfirmModal(obj2);
+                guildId(5367).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -258,21 +258,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               _Promise1 = new _Promise((arg0) => {
                 closure_0 = arg0;
                 const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                const intl = guildId(1126).intl;
-                obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                const intl2 = guildId(1126).intl;
-                obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                const intl3 = guildId(1126).intl;
-                obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                const intl4 = guildId(1126).intl;
-                obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                const intl = guildId(1128).intl;
+                obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                const intl2 = guildId(1128).intl;
+                obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                const intl3 = guildId(1128).intl;
+                obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                const intl4 = guildId(1128).intl;
+                obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                 obj2.onConfirm = function onConfirm() {
                   return closure_0(true);
                 };
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5365).showConfirmModal(obj2);
+                guildId(5367).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -291,21 +291,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 _Promise1 = new _Promise((arg0) => {
                   closure_0 = arg0;
                   const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                  const intl = guildId(1126).intl;
-                  obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                  const intl2 = guildId(1126).intl;
-                  obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                  const intl3 = guildId(1126).intl;
-                  obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                  const intl4 = guildId(1126).intl;
-                  obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                  const intl = guildId(1128).intl;
+                  obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                  const intl2 = guildId(1128).intl;
+                  obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                  const intl3 = guildId(1128).intl;
+                  obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                  const intl4 = guildId(1128).intl;
+                  obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                   obj2.onConfirm = function onConfirm() {
                     return closure_0(true);
                   };
                   obj2.onCloseCallback = function onCloseCallback() {
                     return closure_0(false);
                   };
-                  guildId(5365).showConfirmModal(obj2);
+                  guildId(5367).showConfirmModal(obj2);
                 });
               } else {
                 flag = true;
@@ -324,21 +324,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                   _Promise1 = new _Promise((arg0) => {
                     closure_0 = arg0;
                     const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                    const intl = guildId(1126).intl;
-                    obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                    const intl2 = guildId(1126).intl;
-                    obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                    const intl3 = guildId(1126).intl;
-                    obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                    const intl4 = guildId(1126).intl;
-                    obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                    const intl = guildId(1128).intl;
+                    obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                    const intl2 = guildId(1128).intl;
+                    obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                    const intl3 = guildId(1128).intl;
+                    obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                    const intl4 = guildId(1128).intl;
+                    obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                     obj2.onConfirm = function onConfirm() {
                       return closure_0(true);
                     };
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5365).showConfirmModal(obj2);
+                    guildId(5367).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -357,21 +357,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                     _Promise1 = new _Promise((arg0) => {
                       closure_0 = arg0;
                       const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                      const intl = guildId(1126).intl;
-                      obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                      const intl2 = guildId(1126).intl;
-                      obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                      const intl3 = guildId(1126).intl;
-                      obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                      const intl4 = guildId(1126).intl;
-                      obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                      const intl = guildId(1128).intl;
+                      obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                      const intl2 = guildId(1128).intl;
+                      obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                      const intl3 = guildId(1128).intl;
+                      obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                      const intl4 = guildId(1128).intl;
+                      obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                       obj2.onConfirm = function onConfirm() {
                         return closure_0(true);
                       };
                       obj2.onCloseCallback = function onCloseCallback() {
                         return closure_0(false);
                       };
-                      guildId(5365).showConfirmModal(obj2);
+                      guildId(5367).showConfirmModal(obj2);
                     });
                   } else {
                     flag = true;
@@ -392,21 +392,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                     _Promise1 = new _Promise((arg0) => {
                       closure_0 = arg0;
                       const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                      const intl = guildId(1126).intl;
-                      obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                      const intl2 = guildId(1126).intl;
-                      obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                      const intl3 = guildId(1126).intl;
-                      obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                      const intl4 = guildId(1126).intl;
-                      obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                      const intl = guildId(1128).intl;
+                      obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                      const intl2 = guildId(1128).intl;
+                      obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                      const intl3 = guildId(1128).intl;
+                      obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                      const intl4 = guildId(1128).intl;
+                      obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                       obj2.onConfirm = function onConfirm() {
                         return closure_0(true);
                       };
                       obj2.onCloseCallback = function onCloseCallback() {
                         return closure_0(false);
                       };
-                      guildId(5365).showConfirmModal(obj2);
+                      guildId(5367).showConfirmModal(obj2);
                     });
                   } else {
                     flag = true;
@@ -429,21 +429,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
               _Promise1 = new _Promise((arg0) => {
                 closure_0 = arg0;
                 const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-                const intl = guildId(1126).intl;
-                obj2.title = intl.string(guildId(1126).t.pvRCSu);
-                const intl2 = guildId(1126).intl;
-                obj2.content = intl2.string(guildId(1126).t.DRi46S);
-                const intl3 = guildId(1126).intl;
-                obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-                const intl4 = guildId(1126).intl;
-                obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+                const intl = guildId(1128).intl;
+                obj2.title = intl.string(guildId(1128).t.pvRCSu);
+                const intl2 = guildId(1128).intl;
+                obj2.content = intl2.string(guildId(1128).t.DRi46S);
+                const intl3 = guildId(1128).intl;
+                obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+                const intl4 = guildId(1128).intl;
+                obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
                 obj2.onConfirm = function onConfirm() {
                   return closure_0(true);
                 };
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5365).showConfirmModal(obj2);
+                guildId(5367).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -488,7 +488,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                     closure_1_6(null);
                     closure_1_8(true);
                     c3 = 1;
-                    const obj2 = guildTemplate(12413);
+                    const obj2 = guildTemplate(12436);
                     c4 = 2;
                     c5 = 1;
                     const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -499,7 +499,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 if (1 === tmp7) {
                   c3 = 0;
                   closure_128_0 = closure_2;
-                  const aPIError = new handleSave(5851).APIError(closure_128_0);
+                  const aPIError = new handleSave(5853).APIError(closure_128_0);
                   closure_1_6(aPIError);
                 } else if (arg0 === 1) {
                   c5 = 3;
@@ -545,7 +545,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
         }
         let obj2 = { headerLeft: fn, headerRight: null };
         if (first) {
-          let fn2 = () => first(handleSave(6421).HeaderSubmittingIndicator, {});
+          let fn2 = () => first(handleSave(6423).HeaderSubmittingIndicator, {});
         } else if (closure_12) {
           fn2 = () => {
             const obj = { onPress: handleSave, text: null, disabled: null };
@@ -583,21 +583,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
           _Promise1 = new _Promise((arg0) => {
             closure_0 = arg0;
             const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-            const intl = guildId(1126).intl;
-            obj2.title = intl.string(guildId(1126).t.pvRCSu);
-            const intl2 = guildId(1126).intl;
-            obj2.content = intl2.string(guildId(1126).t.DRi46S);
-            const intl3 = guildId(1126).intl;
-            obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-            const intl4 = guildId(1126).intl;
-            obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+            const intl = guildId(1128).intl;
+            obj2.title = intl.string(guildId(1128).t.pvRCSu);
+            const intl2 = guildId(1128).intl;
+            obj2.content = intl2.string(guildId(1128).t.DRi46S);
+            const intl3 = guildId(1128).intl;
+            obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+            const intl4 = guildId(1128).intl;
+            obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
             obj2.onConfirm = function onConfirm() {
               return closure_0(true);
             };
             obj2.onCloseCallback = function onCloseCallback() {
               return closure_0(false);
             };
-            guildId(5365).showConfirmModal(obj2);
+            guildId(5367).showConfirmModal(obj2);
           });
         } else {
           flag = true;
@@ -701,21 +701,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
       let _Promise1 = new _Promise((arg0) => {
         closure_0 = arg0;
         const obj2 = { key, title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-        const intl = guildId(1126).intl;
-        obj2.title = intl.string(guildId(1126).t.pvRCSu);
-        const intl2 = guildId(1126).intl;
-        obj2.content = intl2.string(guildId(1126).t.DRi46S);
-        const intl3 = guildId(1126).intl;
-        obj2.confirmText = intl3.string(guildId(1126).t["6GQDFu"]);
-        const intl4 = guildId(1126).intl;
-        obj2.cancelText = intl4.string(guildId(1126).t.DmDzZB);
+        const intl = guildId(1128).intl;
+        obj2.title = intl.string(guildId(1128).t.pvRCSu);
+        const intl2 = guildId(1128).intl;
+        obj2.content = intl2.string(guildId(1128).t.DRi46S);
+        const intl3 = guildId(1128).intl;
+        obj2.confirmText = intl3.string(guildId(1128).t["6GQDFu"]);
+        const intl4 = guildId(1128).intl;
+        obj2.cancelText = intl4.string(guildId(1128).t.DmDzZB);
         obj2.onConfirm = function onConfirm() {
           return closure_0(true);
         };
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5365).showConfirmModal(obj2);
+        guildId(5367).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -780,7 +780,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12413);
+                const obj2 = guildTemplate(12436);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -791,7 +791,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(5851).APIError(closure_128_0);
+              const aPIError = new handleSave(5853).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -1143,7 +1143,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CopyRo
     tmp10 = importDefault;
   }
   const tmp = closure_12();
-  const items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(587).colors.WHITE }), React5(tmp4(5147).Text, { variant: "text-sm/normal", children: children.label })];
+  const items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(587).colors.WHITE }), React5(tmp4(5149).Text, { variant: "text-sm/normal", children: children.label })];
   obj.children = items;
   return closure_1_8(View, obj);
 });
@@ -1486,7 +1486,7 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(18728)(guildTemplate.code);
+  const tmp3 = guildTemplate(18770)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

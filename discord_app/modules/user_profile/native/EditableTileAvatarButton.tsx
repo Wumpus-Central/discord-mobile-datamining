@@ -1,19 +1,19 @@
-// === Module 15593: EditableTileAvatarButton ===
+// === Module 15626: EditableTileAvatarButton ===
 
-// Module 15593 (EditableTileAvatarButton)
+// Module 15626 (EditableTileAvatarButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8512 */;
-import SpinAnimationDefault from "SpinAnimation" /* 15521 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15589 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15592 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import AvatarUtils from "AvatarUtils" /* 1417 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8520 */;
+import SpinAnimationDefault from "SpinAnimation" /* 15557 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 15622 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 15625 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8503 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8511 */;
 
 require = fn;
 const jsx = fn(21).jsx;

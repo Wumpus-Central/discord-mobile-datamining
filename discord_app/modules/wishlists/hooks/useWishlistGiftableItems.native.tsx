@@ -1,12 +1,12 @@
-// === Module 9217: useWishlistGiftableItems ===
+// === Module 9230: useWishlistGiftableItems ===
 
-// Module 9217 (useWishlistGiftableItems)
+// Module 9230 (useWishlistGiftableItems)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let items = [, , ];
-({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1085).SKUProductLines);
+({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1087).SKUProductLines);
 const set = new Set(items);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

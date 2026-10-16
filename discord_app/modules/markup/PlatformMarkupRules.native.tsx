@@ -1,18 +1,18 @@
-// === Module 8375: PlatformMarkupRules ===
+// === Module 8383: PlatformMarkupRules ===
 
-// Module 8375 (PlatformMarkupRules)
+// Module 8383 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import _modDef1949 from "module_1949" /* 1949 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2030 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4820 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5471 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5472 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5485 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 8370 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8376 */;
-import useGameMentionData from "useGameMentionData" /* 8452 */;
+import util from "util" /* 1128 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import _modDef1951 from "module_1951" /* 1951 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2033 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5473 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5474 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5487 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 8378 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8384 */;
+import useGameMentionData from "useGameMentionData" /* 8460 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -51,7 +51,7 @@ let obj = {
   silentPrefix: null
 };
 let obj2 = {};
-let merged = Object.assign(_modDef1949.defaultRules.escape);
+let merged = Object.assign(_modDef1951.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;

@@ -1,8 +1,8 @@
-// === Module 8550: FileManagerUtils ===
+// === Module 8558: FileManagerUtils ===
 
-// Module 8550 (FileManagerUtils)
+// Module 8558 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeFileModuleDefault from "NativeFileModule" /* 1162 */;
+import NativeFileModuleDefault from "NativeFileModule" /* 1164 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -39,16 +39,16 @@ let closure_5 = async function _readFile(arg0) {
           const tmp41 = (function getBaseDirectory(arg0) {
             if ("shared" === arg0) {
               if (!obj.isAndroid()) {
-                return closure_1_1(1162).getConstants().SharedDirPath;
+                return closure_1_1(1164).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1382);
+              obj = closure_1_0(1384);
             }
             if ("cache" === arg0) {
-              let DocumentsDirPath = closure_1_1(1162).getConstants().CacheDirPath;
-              const obj4 = closure_1_1(1162);
+              let DocumentsDirPath = closure_1_1(1164).getConstants().CacheDirPath;
+              const obj4 = closure_1_1(1164);
             } else {
-              DocumentsDirPath = closure_1_1(1162).getConstants().DocumentsDirPath;
-              const obj3 = closure_1_1(1162);
+              DocumentsDirPath = closure_1_1(1164).getConstants().DocumentsDirPath;
+              const obj3 = closure_1_1(1164);
             }
           })(closure_0);
           closure_131_2 = tmp41;
@@ -136,8 +136,8 @@ export const moveFile = function moveFile(arg0, arg1, arg2) {
 export const removeFile = function removeFile(cache, combined) {
   return NativeFileModuleDefault.removeFile(cache, combined);
 };
-export const clearFolder = function clearFolder(cache, c4) {
-  return NativeFileModuleDefault.clearFolder(cache, c4);
+export const clearFolder = function clearFolder(cache, c3) {
+  return NativeFileModuleDefault.clearFolder(cache, c3);
 };
 export const readFile = function readFile() {
   const self = this;

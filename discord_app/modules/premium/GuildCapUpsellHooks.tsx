@@ -1,15 +1,15 @@
-// === Module 7127: GuildCapUpsellHooks ===
+// === Module 7129: GuildCapUpsellHooks ===
 
-// Module 7127 (GuildCapUpsellHooks)
+// Module 7129 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import HotspotStore2 from "HotspotStore" /* 7128 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import HotspotStore2 from "HotspotStore" /* 7130 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const MAX_USER_GUILDS = fn(1085).MAX_USER_GUILDS;
+const MAX_USER_GUILDS = fn(1087).MAX_USER_GUILDS;
 const ReactCompilerGating = fn(558);
 function hasIncreasedGuildCap(currentUser) {
   let result = PremiumUtilsDefault.canUseIncreasedGuildCap(currentUser);

@@ -1,11 +1,11 @@
-// === Module 7481: CollectiblesCategoryRecord ===
+// === Module 7483: CollectiblesCategoryRecord ===
 
-// Module 7481 (CollectiblesCategoryRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7491 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7482 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7489 */;
+// Module 7483 (CollectiblesCategoryRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7484 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7491 */;
 
 require = fn;
 const prototype = function CollectiblesCategoryRecord(products) {
@@ -66,7 +66,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   return new prototype(obj);
 };
 prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionRecord(id) {
-  const obj = { storeListingId: id.id, skuId: id.id, name: id.name, summary: id.description, unpublishedAt: id.unpublishedAt, isOrbsExclusive: id.isOrbsExclusive, styles: id.styles, products: null, heroRanking: id.heroRanking, heroBannerUrl: id.heroBannerUrl, heroBannerAnimatedUrl: id.heroBannerAnimatedUrl, heroRiveUrl: id.heroRiveUrl, heroLogoUrl: id.heroLogoUrl, catalogBannerUrl: id.catalogBannerUrl, catalogBannerAnimatedUrl: id.catalogBannerAnimatedUrl, catalogBannerRiveUrl: id.catalogBannerRiveUrl, featuredBlockUrl: id.featuredBlockUrl, logoUrl: id.logoUrl, pdpBgUrl: id.pdpBgUrl, mobileBannerUrl: id.mobileBannerUrl, mobileBgUrl: id.mobileBgUrl, heroLogoDisplayConfig: id.heroLogoDisplayConfig, heroBannerDisplayConfig: id.heroDisplayConfig };
+  const obj = { storeListingId: id.id, skuId: id.id, name: id.name, summary: id.description, unpublishedAt: id.willUnpublishAt, isOrbsExclusive: id.isOrbsExclusive, styles: id.styles, products: null, heroRanking: id.heroRanking, heroBannerUrl: id.heroBannerUrl, heroBannerAnimatedUrl: id.heroBannerAnimatedUrl, heroRiveUrl: id.heroRiveUrl, heroLogoUrl: id.heroLogoUrl, catalogBannerUrl: id.catalogBannerUrl, catalogBannerAnimatedUrl: id.catalogBannerAnimatedUrl, catalogBannerRiveUrl: id.catalogBannerRiveUrl, featuredBlockUrl: id.featuredBlockUrl, logoUrl: id.logoUrl, pdpBgUrl: id.pdpBgUrl, mobileBannerUrl: id.mobileBannerUrl, mobileBgUrl: id.mobileBgUrl, heroLogoDisplayConfig: id.heroLogoDisplayConfig, heroBannerDisplayConfig: id.heroDisplayConfig };
   const products = id.products;
   obj.products = products.reduce((arr, item) => {
     const result = CollectiblesProductRecord.fromStorefrontProductRecord(item);

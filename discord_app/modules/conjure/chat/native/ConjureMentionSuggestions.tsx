@@ -1,12 +1,12 @@
-// === Module 12230: ConjureMentionSuggestions ===
+// === Module 12253: ConjureMentionSuggestions ===
 
-// Module 12230 (ConjureMentionSuggestions)
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import UserUtils from "UserUtils" /* 5018 */;
-import TableRow from "TableRow" /* 6400 */;
-import TableRowGroup from "TableRowGroup" /* 6485 */;
+// Module 12253 (ConjureMentionSuggestions)
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import UserUtils from "UserUtils" /* 5021 */;
+import TableRow from "TableRow" /* 6402 */;
+import TableRowGroup from "TableRowGroup" /* 6487 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -25,8 +25,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = onSelect(1126).intl;
-      const stringResult = intl.string(_modDef3862.Vb3sUg);
+      const intl = onSelect(1128).intl;
+      const stringResult = intl.string(_modDef3865.Vb3sUg);
       cResult[0] = stringResult;
       let first = stringResult;
     } else {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
       if (cResult[2] === users) {
         if (cResult[6] !== cResult[3]) {
           let obj2 = { title: first, hasIcons: true, children: tmp7 };
-          const tmp13 = jsx(onSelect(6485).TableRowGroup, { title: first, hasIcons: true, children: tmp7 });
+          const tmp13 = jsx(onSelect(6487).TableRowGroup, { title: first, hasIcons: true, children: tmp7 });
           cResult[6] = tmp7;
           cResult[7] = tmp13;
           let tmp11 = tmp13;
@@ -49,14 +49,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
     if (cResult[4] !== onSelect) {
       const fn = function l(user) {
         closure_0 = user;
-        const obj = { icon: jsx(onSelect(1200).Avatar, { user, size: onSelect(1200).AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null };
-        const obj2 = { user, size: onSelect(1200).AvatarSizes.XSMALL, guildId: "Array" };
-        obj.label = onSelect(5018).getName(user);
+        const obj = { icon: jsx(onSelect(1202).Avatar, { user, size: onSelect(1202).AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null };
+        const obj2 = { user, size: onSelect(1202).AvatarSizes.XSMALL, guildId: "r" };
+        obj.label = onSelect(5021).getName(user);
         obj.subLabel = user.username;
         obj.onPress = function onPress() {
           return onSelect(closure_0);
         };
-        return jsx(onSelect(6400).TableRow, { icon: jsx(onSelect(1200).Avatar, { user, size: onSelect(1200).AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null }, user.id);
+        return jsx(onSelect(6402).TableRow, { icon: jsx(onSelect(1202).Avatar, { user, size: onSelect(1202).AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null }, user.id);
       };
       cResult[4] = onSelect;
       cResult[5] = fn;
@@ -76,17 +76,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   if (0 !== users.length) {
     let obj = { title: null, hasIcons: true, children: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3862.Vb3sUg);
+    obj.title = intl.string(_modDef3865.Vb3sUg);
     obj.children = users.map((user) => {
       closure_0 = user;
-      const obj = { icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null };
-      const obj2 = { user, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+      const obj = { icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null };
+      const obj2 = { user, size: native.AvatarSizes.XSMALL, guildId: "r" };
       obj.label = UserUtils.getName(user);
       obj.subLabel = user.username;
       obj.onPress = function onPress() {
         return require(closure_0);
       };
-      return jsx(TableRow.TableRow, { icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null }, user.id);
+      return jsx(TableRow.TableRow, { icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null }, user.id);
     });
     tmp = jsx(TableRowGroup.TableRowGroup, { title: null, hasIcons: true, children: null });
   }

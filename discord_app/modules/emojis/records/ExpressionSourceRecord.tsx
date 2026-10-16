@@ -1,12 +1,12 @@
-// === Module 6380: ExpressionSourceRecord ===
+// === Module 6382: ExpressionSourceRecord ===
 
-// Module 6380 (ExpressionSourceRecord)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
-import SetUtils from "SetUtils" /* 2082 */;
+// Module 6382 (ExpressionSourceRecord)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
+import SetUtils from "SetUtils" /* 2085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import Record from "Record" /* 1405 */;
+import Record from "Record" /* 1407 */;
 
 require = fn;
 function getEmojiSourceData() {
@@ -70,7 +70,7 @@ let closure_8 = async function _getEmojiSourceData(arg0) {
   }
   return value;
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const EmojiSourceDataTypes = { GUILD: "GUILD", APPLICATION: "APPLICATION", PACK: "PACK" };
 let ExpressionSourceGuildRecord;
@@ -95,7 +95,7 @@ prototype["getIconSource"] = function getIconSource(size) {
   if (hasItem === undefined) {
     flag = false;
   }
-  return self(1415).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1417).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;

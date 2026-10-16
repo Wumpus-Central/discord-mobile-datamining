@@ -1,18 +1,18 @@
-// === Module 9481: ThreadCreationHooks ===
+// === Module 9497: ThreadCreationHooks ===
 
-// Module 9481 (ThreadCreationHooks)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ThreadHooks from "ThreadHooks" /* 7190 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7202 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7395 */;
-import MessageParserDefault from "MessageParser" /* 7586 */;
+// Module 9497 (ThreadCreationHooks)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import ThreadHooks from "ThreadHooks" /* 7192 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7204 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
+import MessageParserDefault from "MessageParser" /* 7588 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7225 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7227 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5492 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MessageStore from "MessageStore" /* 5494 */;
 
 const require = globalThis.__r;
 
@@ -123,22 +123,29 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
   }
 }
 function buildMessageActivity(activity) {
-  let session_id = activity.activity.session_id;
+  activity = activity.activity;
+  let session_id;
+  if (activity != null) {
+    session_id = activity.session_id;
+  }
   if (null == session_id) {
     session_id = AuthenticationStore.getSessionId();
   }
-  let tmp2 = null;
+  let tmp3 = null;
   if (null != session_id) {
-    obj = { type: activity.type, session_id, target_user_id: activity.targetUserId, party_id: null };
-    const party = activity.activity.party;
+    obj = { type: activity.type, session_id, target_user_id: null, party_id: null };
+    ({ targetUserId: obj.target_user_id, activity: activity2 } = activity);
     let id;
-    if (party != null) {
-      id = party.id;
+    if (activity2 != null) {
+      const party = activity2.party;
+      if (party != null) {
+        id = party.id;
+      }
     }
     obj.party_id = id;
-    tmp2 = obj;
+    tmp3 = obj;
   }
-  return tmp2;
+  return tmp3;
 }
 function sendMessage(id, arr, items, key, fn) {
   if (null != fn) {
@@ -456,13 +463,13 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7460).DraftType;
-const SlowmodeType = fn(7591).SlowmodeType;
-const ThreadConstants = fn(1125);
+const DraftType = fn(7462).DraftType;
+const SlowmodeType = fn(7593).SlowmodeType;
+const ThreadConstants = fn(1127);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(5144).MessageSendLocation;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -888,12 +895,12 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
               closure_132_11 = undefined;
               closure_132_12 = undefined;
               let num10 = 0;
-              if (tmp127[0]) {
+              if (tmp128[0]) {
                 num10 = closure_0(appliedTags[24]).addFlag(0, constants4.SUPPRESS_NOTIFICATIONS);
-                tmp83 = tmp128;
+                tmp83 = tmp129;
                 const obj13 = closure_0(appliedTags[24]);
               }
-              tmp127 = analyticsLocations(name(appliedTags[23])(closure_0), 2);
+              tmp128 = analyticsLocations(name(appliedTags[23])(closure_0), 2);
               const autoArchiveDuration = closure_0(appliedTags[18]).getAutoArchiveDuration(closure_0, null);
               closure_132_1 = closure_2_17.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
               const obj8 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
@@ -915,7 +922,12 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
                 tmp96 = null != tmp93;
               }
               if (tmp96) {
-                obj8.message.application_id = tmp93.activity.application_id;
+                const activity = tmp93.activity;
+                let application_id;
+                if (activity != null) {
+                  application_id = activity.application_id;
+                }
+                obj8.message.application_id = application_id;
                 obj8.message.activity = tmp94;
               }
               if (null != applied_tags) {
@@ -1038,12 +1050,12 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           c9 = 3;
           const obj21 = { value, done: true };
           return obj21;
-        } catch (tmp101) {
-          closure_6 = tmp101;
+        } catch (tmp102) {
+          closure_6 = tmp102;
           if (tmp7 === applicationId) {
             c9 = tmp3;
-            throw tmp101;
-          } else if (tmp2 === tmp103) {
+            throw tmp102;
+          } else if (tmp2 === tmp104) {
             voiceChatEnabled = tmp2;
           } else {
             voiceChatEnabled = tmp;
@@ -1133,12 +1145,12 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
                 });
               };
               let num10 = 0;
-              if (tmp127[0]) {
+              if (tmp128[0]) {
                 num10 = closure_0(appliedTags[24]).addFlag(0, constants4.SUPPRESS_NOTIFICATIONS);
-                tmp83 = tmp128;
+                tmp83 = tmp129;
                 const obj13 = closure_0(appliedTags[24]);
               }
-              tmp127 = analyticsLocations(name(appliedTags[23])(closure_0), 2);
+              tmp128 = analyticsLocations(name(appliedTags[23])(closure_0), 2);
               const autoArchiveDuration = closure_0(appliedTags[18]).getAutoArchiveDuration(closure_0, null);
               closure_132_2 = closure_2_17.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
               const obj8 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
@@ -1160,7 +1172,12 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
                 tmp96 = null != tmp93;
               }
               if (tmp96) {
-                obj8.message.application_id = tmp93.activity.application_id;
+                const activity = tmp93.activity;
+                let application_id;
+                if (activity != null) {
+                  application_id = activity.application_id;
+                }
+                obj8.message.application_id = application_id;
                 obj8.message.activity = tmp94;
               }
               if (null != applied_tags) {
@@ -1276,12 +1293,12 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           c9 = 3;
           const obj21 = { value, done: true };
           return obj21;
-        } catch (tmp101) {
-          closure_6 = tmp101;
+        } catch (tmp102) {
+          closure_6 = tmp102;
           if (tmp7 === applicationId) {
             c9 = tmp3;
-            throw tmp101;
-          } else if (tmp2 === tmp103) {
+            throw tmp102;
+          } else if (tmp2 === tmp104) {
             voiceChatEnabled = tmp2;
           } else {
             voiceChatEnabled = tmp;

@@ -1,18 +1,18 @@
-// === Module 15387: botScopedAccess ===
+// === Module 15427: botScopedAccess ===
 
-// Module 15387 (botScopedAccess)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8676 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 11241 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 15373 */;
-import validateScopeDefault from "validateScope" /* 15388 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 15427 (botScopedAccess)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8684 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 11257 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15408 */;
+import validateScopeDefault from "validateScope" /* 15428 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: metroRequire, Permissions: closure_7, RPCErrors: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");
@@ -57,9 +57,9 @@ export const canBotScopeReadMessages = function canBotScopeReadMessages(socket, 
     return type === constants.GUILD_APP && null != channel.application_id && channel.application_id === socket.application.id;
   }
 };
-export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(context, arg1) {
+export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(context, guild_id) {
   if (isPostMessageSocketDefault(context)) {
-    if (arg1 !== getGuildIdForEmbeddedSurfaceDefault(context.context.surface)) {
+    if (guild_id !== getGuildIdForEmbeddedSurfaceDefault(context.context.surface)) {
       const obj2 = { errorCode: constants3.INVALID_PERMISSIONS };
       const tmp14 = new RPCErrorDefault(obj2, "Guild not in embedded context");
       throw tmp14;

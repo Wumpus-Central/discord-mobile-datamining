@@ -1,10 +1,10 @@
-// === Module 5857: AppliedGuildBoostError ===
+// === Module 5859: AppliedGuildBoostError ===
 
-// Module 5857 (AppliedGuildBoostError)
-import DurationsDefault from "Durations" /* 1102 */;
-import util from "util" /* 1126 */;
-import DateUtils from "DateUtils" /* 4849 */;
-import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4848 */;
+// Module 5859 (AppliedGuildBoostError)
+import DurationsDefault from "Durations" /* 1104 */;
+import util from "util" /* 1128 */;
+import DateUtils from "DateUtils" /* 4852 */;
+import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4851 */;
 
 require = fn;
 class AppliedGuildBoostError extends tmp2 {

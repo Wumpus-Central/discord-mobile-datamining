@@ -1,28 +1,28 @@
-// === Module 11216: ActivityTile ===
+// === Module 11232: ActivityTile ===
 
-// Module 11216 (ActivityTile)
+// Module 11232 (ActivityTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import native2 from "native" /* 4883 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11222 */;
+import native from "native" /* 1202 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import native2 from "native" /* 4886 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11238 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import UserStore from "UserStore" /* 1390 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(2024).ActivityLayoutMode;
+let ActivityLayoutMode = fn(2026).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const XSMALL = fn(1200).AvatarSizes.XSMALL;
-const androidRippleConfig = fn(1204).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(5151);
+const XSMALL = fn(1202).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1206).getThemedRippleConfig({ foreground: true });
+const createStyles = fn(5153);
 let obj2 = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 obj2.pressableOpacity = size;
@@ -32,7 +32,7 @@ let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_H
 obj2.titleText = { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
 obj2.subtitleText = { textAlign: "center", marginLeft: 16, marginRight: 16 };
 let obj4 = { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
-obj2.overflow = { height: fn(1200).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj2.overflow = { height: fn(1202).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.buttonWrapper = { marginTop: 8, alignSelf: "center" };
 obj2.buttonPill = { borderRadius: 100 };
 let closure_14 = createStyles.createStyles(obj2);
@@ -500,7 +500,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11126)(obj4), done: false };
+              const obj5 = { value: v1(11142)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -510,8 +510,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11221).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11221);
+          const result = tmp2(11237).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11237);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -672,7 +672,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   return tmp23Result;
 });
 ReactCompilerGating = fn(558);
-let obj5 = { height: fn(1200).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj5 = { height: fn(1202).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
 

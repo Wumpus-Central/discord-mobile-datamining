@@ -1,11 +1,11 @@
-// === Module 11385: WindowsEffectsExperiment ===
+// === Module 11405: WindowsEffectsExperiment ===
 
-// Module 11385 (WindowsEffectsExperiment)
-import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
+// Module 11405 (WindowsEffectsExperiment)
+import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
 
 const require = fn;
 let obj = { preferSystemEffects: false };
-const ApexExperiment = fn(1453);
+const ApexExperiment = fn(1455);
 const obj3 = { name: "2025-12-windows-audio-effects", kind: "user", defaultConfig: obj, variations: null };
 const obj4 = { 1: null };
 const obj5 = {};

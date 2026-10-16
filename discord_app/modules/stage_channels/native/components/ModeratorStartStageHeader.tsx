@@ -1,20 +1,20 @@
-// === Module 11481: ModeratorStartStageHeader ===
+// === Module 11501: ModeratorStartStageHeader ===
 
-// Module 11481 (ModeratorStartStageHeader)
+// Module 11501 (ModeratorStartStageHeader)
 import c from "c" /* 576 */;
-import StageActionHeader from "StageActionHeader" /* 11438 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11442 */;
+import StageActionHeader from "StageActionHeader" /* 11458 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11462 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
-let obj = { header: { height: fn(6479).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" } };
+const createStyles = fn(5153);
+let obj = { header: { height: fn(6481).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { height: fn(6479).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
+let obj3 = { height: fn(6481).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
 

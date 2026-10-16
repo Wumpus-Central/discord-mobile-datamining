@@ -1,8 +1,8 @@
-// === Module 7383: useCountdown ===
+// === Module 7385: useCountdown ===
 
-// Module 7383 (useCountdown)
-import DateUtils from "DateUtils" /* 4849 */;
-import useIntervalDefault from "useInterval" /* 7384 */;
+// Module 7385 (useCountdown)
+import DateUtils from "DateUtils" /* 4852 */;
+import useIntervalDefault from "useInterval" /* 7386 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCount
     tmp9 = A;
   }
   const tmp5 = _slicedToArray(closure_5(Date.now), 2);
-  const diffAsUnitsResult = tmp(4849).diffAsUnits(tmp6, expiresAt);
+  const diffAsUnitsResult = tmp(4852).diffAsUnits(tmp6, expiresAt);
   cResult[0] = expiresAt;
   cResult[1] = tmp6;
   cResult[2] = diffAsUnitsResult;

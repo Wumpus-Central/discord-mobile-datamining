@@ -1,31 +1,31 @@
-// === Module 8611: MediaSourceUtil ===
+// === Module 8619: MediaSourceUtil ===
 
-// Module 8611 (MediaSourceUtil)
+// Module 8619 (MediaSourceUtil)
 import c from "c" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import util from "util" /* 1126 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1445 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1496 */;
-import Server from "Server" /* 1998 */;
-import ToastUtils from "ToastUtils" /* 4864 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5360 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5479 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5496 */;
-import EmbedUtils from "EmbedUtils" /* 5963 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6160 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7210 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7216 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8108 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8356 */;
-import transformMessageComponents from "transformMessageComponents" /* 8465 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8481 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8607 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8612 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8613 */;
-import MediaModalPortal from "MediaModalPortal" /* 8614 */;
+import ConstantsIOS from "ConstantsIOS" /* 1107 */;
+import util from "util" /* 1128 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1447 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1498 */;
+import Server from "Server" /* 2000 */;
+import ToastUtils from "ToastUtils" /* 4867 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5362 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5481 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5498 */;
+import EmbedUtils from "EmbedUtils" /* 5965 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6162 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7212 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7218 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8363 */;
+import transformMessageComponents from "transformMessageComponents" /* 8473 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8489 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8615 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8620 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8621 */;
+import MediaModalPortal from "MediaModalPortal" /* 8622 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
@@ -558,7 +558,7 @@ function handleDownloadError() {
   obj2.body = intl2.string(util.t.r4Zjzv);
   actions_AlertActionCreatorsDefault.show(obj2);
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: metroRequire } = Constants);
 const re7 = /\.avif$/i;
 const ReactCompilerGating = fn(558);
@@ -818,7 +818,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     return null;
   } else {
     const type = value.type;
-    if (tmp(1998).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2000).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -839,9 +839,9 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
         }
         return tmp;
       });
-      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1386).isNotNullish) };
+      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1388).isNotNullish) };
       return obj2;
-    } else if (tmp(1998).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2000).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

@@ -1,11 +1,11 @@
-// === Module 14093: usePrivateChannelCall ===
+// === Module 14125: usePrivateChannelCall ===
 
-// Module 14093 (usePrivateChannelCall)
-import util from "util" /* 1126 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10452 */;
+// Module 14125 (usePrivateChannelCall)
+import util from "util" /* 1128 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10468 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
               if (null == channel) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp3(7234).ensurePrivateChannel(tmp32), done: false };
+                const obj7 = { value: tmp3(7236).ensurePrivateChannel(tmp32), done: false };
                 return obj7;
               }
               tmp32 = closure_0;
@@ -110,8 +110,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
             isPrivateResult = channel.isPrivate();
           }
           if (isPrivateResult) {
-            tmp3(10452)(channel, tmp3).onPress();
-            const obj3 = tmp3(10452)(channel, tmp3);
+            tmp3(10468)(channel, tmp3).onPress();
+            const obj3 = tmp3(10468)(channel, tmp3);
           }
           if (dependencyMap != null) {
             dependencyMap();
@@ -160,9 +160,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
       tmp10 = require;
     }
     const obj3 = { text: stringResult, accessibilityHint: null, inCall: false };
-    const intl2 = tmp10(1126).intl;
+    const intl2 = tmp10(1128).intl;
     const string2 = intl2.string;
-    const t2 = tmp10(1126).t;
+    const t2 = tmp10(1128).t;
     if (closure_1) {
       let string2Result = string2(t2.oCqlGG);
     } else {
@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
       tmp10 = require;
     }
     const obj3 = { text: stringResult, accessibilityHint: null, inCall: false };
-    const intl2 = tmp10(1126).intl;
+    const intl2 = tmp10(1128).intl;
     const string2 = intl2.string;
-    const t2 = tmp10(1126).t;
+    const t2 = tmp10(1128).t;
     if (closure_1) {
       let string2Result = string2(t2.oCqlGG);
     } else {
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
             if (null == channel) {
               dependencyMap = 1;
               c3 = 1;
-              const obj7 = { value: tmp3(7234).ensurePrivateChannel(tmp32), done: false };
+              const obj7 = { value: tmp3(7236).ensurePrivateChannel(tmp32), done: false };
               return obj7;
             }
             tmp32 = closure_0;
@@ -271,8 +271,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(10452)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(10452)(channel, closure_129_1);
+          tmp3(10468)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(10468)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();

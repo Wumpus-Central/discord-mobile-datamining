@@ -1,8 +1,8 @@
-// === Module 15406: activityShareLink ===
+// === Module 15442: activityShareLink ===
 
-// Module 15406 (activityShareLink)
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import findCodedLinks from "findCodedLinks" /* 5131 */;
+// Module 15442 (activityShareLink)
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import findCodedLinks from "findCodedLinks" /* 5134 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

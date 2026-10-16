@@ -1,11 +1,11 @@
-// === Module 11967: useVoteReactors ===
+// === Module 11991: useVoteReactors ===
 
-// Module 11967 (useVoteReactors)
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8118 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8116 */;
+// Module 11991 (useVoteReactors)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8121 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8119 */;
 
 require = fn;
-let closure_4 = fn(1085).DEFAULT_NUM_REACTION_USERS;
+let closure_4 = fn(1087).DEFAULT_NUM_REACTION_USERS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");

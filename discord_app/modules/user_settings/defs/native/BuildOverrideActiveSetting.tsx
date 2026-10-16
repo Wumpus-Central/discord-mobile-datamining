@@ -1,18 +1,18 @@
-// === Module 16710: BuildOverrideActiveSetting ===
+// === Module 16743: BuildOverrideActiveSetting ===
 
-// Module 16710 (BuildOverrideActiveSetting)
+// Module 16743 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import _modDef2206 from "module_2206" /* 2206 */;
-import Stack_Stack from "Stack/Stack" /* 5437 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12408 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15486 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15775 */;
-import DevToolsContent from "DevToolsContent" /* 16708 */;
+import util from "util" /* 1128 */;
+import _modDef2209 from "module_2209" /* 2209 */;
+import Stack_Stack from "Stack/Stack" /* 5439 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12431 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15522 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15808 */;
+import DevToolsContent from "DevToolsContent" /* 16741 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10717 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10732 */;
 
 require = fn;
 function handleBuildOverrideActivePress() {
@@ -58,7 +58,7 @@ ReactCompilerGating = fn(558);
 function useHasBuildOverrideActive() {
   return null != closure_7();
 }
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
   const cResult = c.c(3);
   const tmp4 = closure_7();
@@ -74,7 +74,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOv
     const obj3 = { label: null, value: null };
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    obj3.label = "" + intl.string(_modDef2206.d11XdP) + " ";
+    obj3.label = "" + intl.string(_modDef2209.d11XdP) + " ";
     obj3.value = tmp4.id;
     const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), , ];
     const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -86,7 +86,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOv
     if (staffOrDeveloperSettingPredicate) {
       const obj5 = { text: null, variant: "secondary", onPress: null };
       const intl3 = util.intl;
-      obj5.text = intl3.string(_modDef2206.VBPcR9);
+      obj5.text = intl3.string(_modDef2209.VBPcR9);
       obj5.onPress = handleBuildOverrideActivePress;
       tmp9Result = React4(components_Button_Button.Button, obj5);
     }
@@ -107,7 +107,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOv
     const obj2 = { label: null, value: null };
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    obj2.label = "" + intl.string(_modDef2206.d11XdP) + " ";
+    obj2.label = "" + intl.string(_modDef2209.d11XdP) + " ";
     obj2.value = tmp.id;
     const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj2), , ];
     const obj3 = { text: null, variant: "secondary", onPress: null };
@@ -119,7 +119,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOv
     if (staffOrDeveloperSettingPredicate) {
       const obj4 = { text: null, variant: "secondary", onPress: null };
       const intl3 = util.intl;
-      obj4.text = intl3.string(_modDef2206.VBPcR9);
+      obj4.text = intl3.string(_modDef2209.VBPcR9);
       obj4.onPress = handleBuildOverrideActivePress;
       tmp7Result = React4(components_Button_Button.Button, obj4);
     }
@@ -133,10 +133,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOv
 let obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2206.jBvMiO);
+    return intl.string(_modDef2209.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11535).RefreshIcon,
+  IconComponent: fn(11558).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();
@@ -152,7 +152,7 @@ let obj5 = {
       const obj3 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj3.label = "" + intl.string(_modDef2206.d11XdP) + " ";
+      obj3.label = "" + intl.string(_modDef2209.d11XdP) + " ";
       obj3.value = tmp4.id;
       const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), , ];
       const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -164,7 +164,7 @@ let obj5 = {
       if (staffOrDeveloperSettingPredicate) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2206.VBPcR9);
+        obj5.text = intl3.string(_modDef2209.VBPcR9);
         obj5.onPress = handleBuildOverrideActivePress;
         tmp9Result = React4(components_Button_Button.Button, obj5);
       }
@@ -185,7 +185,7 @@ let obj5 = {
       const obj2 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj2.label = "" + intl.string(_modDef2206.d11XdP) + " ";
+      obj2.label = "" + intl.string(_modDef2209.d11XdP) + " ";
       obj2.value = tmp.id;
       const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj2), , ];
       const obj3 = { text: null, variant: "secondary", onPress: null };
@@ -197,7 +197,7 @@ let obj5 = {
       if (staffOrDeveloperSettingPredicate) {
         const obj4 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj4.text = intl3.string(_modDef2206.VBPcR9);
+        obj4.text = intl3.string(_modDef2209.VBPcR9);
         obj4.onPress = handleBuildOverrideActivePress;
         tmp7Result = React4(components_Button_Button.Button, obj4);
       }
@@ -216,10 +216,10 @@ const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/Bu
 export default SettingBuilders.createStatic({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2206.jBvMiO);
+    return intl.string(_modDef2209.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11535).RefreshIcon,
+  IconComponent: fn(11558).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();
@@ -235,7 +235,7 @@ export default SettingBuilders.createStatic({
       const obj3 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj3.label = "" + intl.string(_modDef2206.d11XdP) + " ";
+      obj3.label = "" + intl.string(_modDef2209.d11XdP) + " ";
       obj3.value = tmp4.id;
       const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), , ];
       const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -247,7 +247,7 @@ export default SettingBuilders.createStatic({
       if (staffOrDeveloperSettingPredicate) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2206.VBPcR9);
+        obj5.text = intl3.string(_modDef2209.VBPcR9);
         obj5.onPress = handleBuildOverrideActivePress;
         tmp9Result = React4(components_Button_Button.Button, obj5);
       }
@@ -268,7 +268,7 @@ export default SettingBuilders.createStatic({
       const obj2 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj2.label = "" + intl.string(_modDef2206.d11XdP) + " ";
+      obj2.label = "" + intl.string(_modDef2209.d11XdP) + " ";
       obj2.value = tmp.id;
       const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj2), , ];
       const obj3 = { text: null, variant: "secondary", onPress: null };
@@ -280,7 +280,7 @@ export default SettingBuilders.createStatic({
       if (staffOrDeveloperSettingPredicate) {
         const obj4 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj4.text = intl3.string(_modDef2206.VBPcR9);
+        obj4.text = intl3.string(_modDef2209.VBPcR9);
         obj4.onPress = handleBuildOverrideActivePress;
         tmp7Result = React4(components_Button_Button.Button, obj4);
       }

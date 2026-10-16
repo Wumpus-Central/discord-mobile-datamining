@@ -1,25 +1,25 @@
-// === Module 17797: GroupDMRecipientLimitTitle ===
+// === Module 17831: GroupDMRecipientLimitTitle ===
 
-// Module 17797 (GroupDMRecipientLimitTitle)
+// Module 17831 (GroupDMRecipientLimitTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import useToken from "useToken" /* 4874 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11072 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11936 */;
+import util from "util" /* 1128 */;
+import useToken from "useToken" /* 4877 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11087 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MAX_GROUP_DM_PARTICIPANTS = fn(1085).MAX_GROUP_DM_PARTICIPANTS;
+const MAX_GROUP_DM_PARTICIPANTS = fn(1087).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { title: { textAlign: "center", fontSize: 18 }, subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, subtitle: { textAlign: "center" }, nitroWheelIcon: null };
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 let tmp5;
 if (PlatformUtils.isAndroid()) {
   let items = [{ translateY: 2 }];

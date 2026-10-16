@@ -1,9 +1,9 @@
-// === Module 13186: openConjureProjectInBuilder ===
+// === Module 13212: openConjureProjectInBuilder ===
 
-// Module 13186 (openConjureProjectInBuilder)
-import ConjureUtils from "ConjureUtils" /* 7165 */;
-import ConjureActivity from "ConjureActivity" /* 12189 */;
-import openConjureProject from "openConjureProject" /* 13187 */;
+// Module 13212 (openConjureProjectInBuilder)
+import ConjureUtils from "ConjureUtils" /* 7167 */;
+import ConjureActivity from "ConjureActivity" /* 11522 */;
+import openConjureProject from "openConjureProject" /* 13213 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/projects/openConjureProjectInBuilder.tsx");
@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/conjure/projects/openConjurePro
 export default function openConjureProjectInBuilder(id) {
   let result = ConjureActivity.conjureProjectGuildId(id);
   if (result == null) {
-    result = ConjureUtils.resolveConjureWorkspaceGuildId("openVibegrationsProjectInBuilder");
+    result = ConjureUtils.resolveConjureWorkspaceGuildId("openConjureProjectInBuilder");
     const tmpResult = ConjureUtils;
   }
   let flag = null != result;

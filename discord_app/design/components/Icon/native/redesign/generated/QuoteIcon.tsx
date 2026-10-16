@@ -1,10 +1,10 @@
-// === Module 14040: QuoteIcon ===
+// === Module 14072: QuoteIcon ===
 
-// Module 14040 (QuoteIcon)
+// Module 14072 (QuoteIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod14041 from "module_14041" /* 14041 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod14073 from "module_14073" /* 14073 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const QuoteIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14041;
+    const tmpResult = _mod14073;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const QuoteIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14041, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14073, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

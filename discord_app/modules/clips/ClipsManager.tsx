@@ -1,33 +1,33 @@
-// === Module 18905: clips/ClipsManager ===
+// === Module 18947: clips/ClipsManager ===
 
-// Module 18905 (clips/ClipsManager)
+// Module 18947 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import DiscordNativeDefault from "DiscordNative" /* 4787 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5196 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
-import isClipsEnabled from "isClipsEnabled" /* 14288 */;
-import ClipsExperiment from "ClipsExperiment" /* 14289 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import DiscordNativeDefault from "DiscordNative" /* 4790 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5198 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
+import isClipsEnabled from "isClipsEnabled" /* 14320 */;
+import ClipsExperiment from "ClipsExperiment" /* 14321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7645 */;
-import ClipsStore from "ClipsStore" /* 2018 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7647 */;
+import ClipsStore from "ClipsStore" /* 2020 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(7647).getSystemAnalyticsInfo;
-const ClipsConstants = fn(7979);
+const getSystemAnalyticsInfo = fn(7649).getSystemAnalyticsInfo;
+const ClipsConstants = fn(7982);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1, CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_14, ClipsHardwareClassification: closure_15, CLIP_RUNTIME: closure_16 } = ClipsConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6114).StreamTypes;
+const StreamTypes = fn(6116).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

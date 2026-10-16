@@ -1,8 +1,8 @@
-// === Module 5495: InteractionRecord ===
+// === Module 5497: InteractionRecord ===
 
-// Module 5495 (InteractionRecord)
-import Record from "Record" /* 1405 */;
-import UserRecord from "UserRecord" /* 1404 */;
+// Module 5497 (InteractionRecord)
+import Record from "Record" /* 1407 */;
+import UserRecord from "UserRecord" /* 1406 */;
 
 const prototype = function InteractionRecord(name) {
   const tmp = new prototype(new.target, name, new.target);

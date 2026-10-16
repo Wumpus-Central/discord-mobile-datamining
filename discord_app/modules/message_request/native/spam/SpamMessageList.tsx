@@ -1,12 +1,12 @@
-// === Module 17933: SpamMessageList ===
+// === Module 17967: SpamMessageList ===
 
-// Module 17933 (SpamMessageList)
+// Module 17967 (SpamMessageList)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import transitionToChannel from "transitionToChannel" /* 5162 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5945 */;
-import MetricEvents from "MetricEvents" /* 5950 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import transitionToChannel from "transitionToChannel" /* 5164 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5947 */;
+import MetricEvents from "MetricEvents" /* 5952 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,10 +14,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;

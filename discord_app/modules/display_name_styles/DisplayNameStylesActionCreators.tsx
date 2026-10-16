@@ -1,6 +1,6 @@
-// === Module 16284: DisplayNameStylesActionCreators ===
+// === Module 16317: DisplayNameStylesActionCreators ===
 
-// Module 16284 (DisplayNameStylesActionCreators)
+// Module 16317 (DisplayNameStylesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

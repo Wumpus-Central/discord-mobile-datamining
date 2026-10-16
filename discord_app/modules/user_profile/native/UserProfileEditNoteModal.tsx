@@ -1,14 +1,14 @@
-// === Module 13996: UserProfileEditNoteModal ===
+// === Module 14028: UserProfileEditNoteModal ===
 
-// Module 13996 (UserProfileEditNoteModal)
+// Module 14028 (UserProfileEditNoteModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import useNavigation from "useNavigation" /* 1503 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import NavigatorHeader from "NavigatorHeader" /* 6421 */;
-import Navigator from "Navigator" /* 6908 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 13997 */;
+import util from "util" /* 1128 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import useNavigation from "useNavigation" /* 1505 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import NavigatorHeader from "NavigatorHeader" /* 6423 */;
+import Navigator from "Navigator" /* 6910 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 14029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -191,9 +191,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   obj5.title = intl.string(util.t.sHHsOM);
   obj5.headerTitle = function headerTitle() {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
-    const intl = userId(1126).intl;
-    obj.children = intl.string(userId(1126).t.sHHsOM);
-    return jsx(userId(5147).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
+    const intl = userId(1128).intl;
+    obj.children = intl.string(userId(1128).t.sHHsOM);
+    return jsx(userId(5149).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
   tmp2Result = utils_PlatformUtils;
   obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(handleClose);

@@ -1,17 +1,17 @@
-// === Module 18108: SoundboardHooks ===
+// === Module 18142: SoundboardHooks ===
 
-// Module 18108 (SoundboardHooks)
+// Module 18142 (SoundboardHooks)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(18100);
+const SoundboardStyleConstants = fn(18135);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
-const ACTION_SHEET_MAX_WIDTH = fn(7062).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7064).ACTION_SHEET_MAX_WIDTH;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundButtonStyleConfig() {
@@ -95,11 +95,11 @@ export const useMaybeFetchSoundboardSounds = ReactCompilerGating.isReactCompiler
                 const obj4 = { value, done: true };
                 return obj4;
               } else if (c0) {
-                const FrecencyUserSettingsActionCreators = v3(2046).FrecencyUserSettingsActionCreators;
+                const FrecencyUserSettingsActionCreators = v3(2049).FrecencyUserSettingsActionCreators;
                 const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
                 c1 = 1;
                 c0 = 1;
-                const obj5 = { value: v3(7269).maybeFetchSoundboardSounds(), done: false };
+                const obj5 = { value: v3(7271).maybeFetchSoundboardSounds(), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -193,11 +193,11 @@ export const useMaybeFetchSoundboardSounds = ReactCompilerGating.isReactCompiler
               const obj4 = { value, done: true };
               return obj4;
             } else if (c0) {
-              const FrecencyUserSettingsActionCreators = shouldFetch(2046).FrecencyUserSettingsActionCreators;
+              const FrecencyUserSettingsActionCreators = shouldFetch(2049).FrecencyUserSettingsActionCreators;
               const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
               c1 = 1;
               c0 = 1;
-              const obj5 = { value: shouldFetch(7269).maybeFetchSoundboardSounds(), done: false };
+              const obj5 = { value: shouldFetch(7271).maybeFetchSoundboardSounds(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

@@ -1,10 +1,10 @@
-// === Module 7159: PriceUtils ===
+// === Module 7161: PriceUtils ===
 
-// Module 7159 (PriceUtils)
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7160 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
+// Module 7161 (PriceUtils)
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7162 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
 
 require = fn;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
@@ -43,8 +43,8 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   }
   return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj2);
 }
-const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
-const CurrencyCodes = fn(1096).CurrencyCodes;
+const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
+const CurrencyCodes = fn(1098).CurrencyCodes;
 let closure_5 = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/PriceUtils.tsx");

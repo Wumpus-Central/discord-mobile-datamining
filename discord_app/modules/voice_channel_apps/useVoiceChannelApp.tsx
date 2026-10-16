@@ -1,13 +1,13 @@
-// === Module 17854: useVoiceChannelApp ===
+// === Module 17888: useVoiceChannelApp ===
 
-// Module 17854 (useVoiceChannelApp)
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 17888 (useVoiceChannelApp)
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVoiceChannelAppEnabled(guild_id) {

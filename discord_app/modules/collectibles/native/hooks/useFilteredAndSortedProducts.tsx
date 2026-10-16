@@ -1,16 +1,16 @@
-// === Module 16001: useFilteredAndSortedProducts ===
+// === Module 16034: useFilteredAndSortedProducts ===
 
-// Module 16001 (useFilteredAndSortedProducts)
+// Module 16034 (useFilteredAndSortedProducts)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import useBadBundleFilter from "useBadBundleFilter" /* 16002 */;
-import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 16003 */;
-import usePurchasedProductsSort from "usePurchasedProductsSort" /* 16004 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import useBadBundleFilter from "useBadBundleFilter" /* 16035 */;
+import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 16036 */;
+import usePurchasedProductsSort from "usePurchasedProductsSort" /* 16037 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const constants = fn(1087).CollectiblesMobileShopScreen;
+const constants = fn(1089).CollectiblesMobileShopScreen;
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePriceFilter(arg0) {

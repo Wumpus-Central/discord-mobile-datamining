@@ -1,10 +1,10 @@
-// === Module 14679: LocalAppDetectionUtils ===
+// === Module 14711: LocalAppDetectionUtils ===
 
-// Module 14679 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 14678 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 14680 */;
+// Module 14711 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 14710 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 14712 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConsentStore from "ConsentStore" /* 6148 */;
+import ConsentStore from "ConsentStore" /* 6150 */;
 
 require = fn;
 function isGameCommunityAddServerEntryEnabled() {
@@ -162,7 +162,7 @@ let closure_9 = async function _detectLocalApps(arg0) {
     }
   })();
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, Consents: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionUtils.tsx");

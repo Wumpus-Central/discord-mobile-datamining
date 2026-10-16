@@ -1,10 +1,10 @@
-// === Module 14808: useMessageRequestPrivacyOption ===
+// === Module 14841: useMessageRequestPrivacyOption ===
 
-// Module 14808 (useMessageRequestPrivacyOption)
+// Module 14841 (useMessageRequestPrivacyOption)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6904 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13013 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6906 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,10 +14,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
   const cResult = id(576).c(14);
   guild = guild.guild;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(2041).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(2044).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   if (cResult[0] === id) {
-    const RestrictedGuildIds = tmp(2041).RestrictedGuildIds;
+    const RestrictedGuildIds = tmp(2044).RestrictedGuildIds;
     const setting1 = RestrictedGuildIds.useSetting();
     if (cResult[3] === guild.id) {
       if (cResult[4] === setting1) {
@@ -84,9 +84,9 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
             return;
           }
         }
-        const stringResult = obj4.string(tmp(1126).t["7UgSGP"]);
-        const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(tmp(1126).t.INRaYb);
+        const stringResult = obj4.string(tmp(1128).t["7UgSGP"]);
+        const intl = tmp(1128).intl;
+        const stringResult1 = intl.string(tmp(1128).t.INRaYb);
         cResult[8] = stringResult;
         cResult[9] = stringResult1;
         let tmp11 = stringResult1;
@@ -153,7 +153,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
         }
       }
       const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-      const tmp17 = jsx(tmp(7114).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
+      const tmp17 = jsx(tmp(7116).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
       cResult[10] = S;
       cResult[11] = tmp6;
       cResult[12] = !tmp6;
@@ -173,10 +173,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
 }) : (function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(2041).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(2044).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(2041).RestrictedGuildIds;
+  const RestrictedGuildIds = id(2044).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -191,10 +191,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
   }, items);
   let obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
-  const intl = id(1126).intl;
-  obj.label = intl.string(id(1126).t["7UgSGP"]);
-  const intl2 = id(1126).intl;
-  obj.subLabel = intl2.string(id(1126).t.INRaYb);
+  const intl = id(1128).intl;
+  obj.label = intl.string(id(1128).t["7UgSGP"]);
+  const intl2 = id(1128).intl;
+  obj.subLabel = intl2.string(id(1128).t.INRaYb);
   let tmp5 = !hasItem1;
   if (!hasItem1) {
     tmp5 = !hasItem;
@@ -202,7 +202,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7114).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7116).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

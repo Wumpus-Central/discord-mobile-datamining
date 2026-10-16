@@ -1,12 +1,12 @@
-// === Module 9355: gift_icon ===
+// === Module 9368: gift_icon ===
 
-// Module 9355 (gift_icon)
-import _mod1210 from "module_1210" /* 1210 */;
-import gradient from "gradient" /* 9356 */;
+// Module 9368 (gift_icon)
+import _mod1212 from "module_1212" /* 1212 */;
+import gradient from "gradient" /* 9369 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1210).MessageType;
+const MessageType = fn(1212).MessageType;
 class GiftIcon$Type extends MessageType {
   constructor() {
     items = [, , , ];
@@ -29,10 +29,10 @@ const prototype = GiftIcon$Type.prototype;
 prototype["create"] = function create(arr) {
   const obj = { boxAnimationUrl: "", trinketAnimationUrl: "", trinketGlowAnimationUrl: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1210.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1210;
+    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1212;
   }
   return obj;
 };
@@ -73,7 +73,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1210.UnknownFieldHandler.onRead;
+              onRead = _mod1212.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -85,27 +85,27 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(boxAnimationUrl, tag, writeUnknownFields) {
   if ("" !== boxAnimationUrl.boxAnimationUrl) {
-    tag.tag(1, _mod1210.WireType.LengthDelimited).string(boxAnimationUrl.boxAnimationUrl);
-    const tagResult = tag.tag(1, _mod1210.WireType.LengthDelimited);
+    tag.tag(1, _mod1212.WireType.LengthDelimited).string(boxAnimationUrl.boxAnimationUrl);
+    const tagResult = tag.tag(1, _mod1212.WireType.LengthDelimited);
   }
   if ("" !== boxAnimationUrl.trinketAnimationUrl) {
-    tag.tag(2, _mod1210.WireType.LengthDelimited).string(boxAnimationUrl.trinketAnimationUrl);
-    const tagResult1 = tag.tag(2, _mod1210.WireType.LengthDelimited);
+    tag.tag(2, _mod1212.WireType.LengthDelimited).string(boxAnimationUrl.trinketAnimationUrl);
+    const tagResult1 = tag.tag(2, _mod1212.WireType.LengthDelimited);
   }
   if ("" !== boxAnimationUrl.trinketGlowAnimationUrl) {
-    tag.tag(3, _mod1210.WireType.LengthDelimited).string(boxAnimationUrl.trinketGlowAnimationUrl);
-    const tagResult2 = tag.tag(3, _mod1210.WireType.LengthDelimited);
+    tag.tag(3, _mod1212.WireType.LengthDelimited).string(boxAnimationUrl.trinketGlowAnimationUrl);
+    const tagResult2 = tag.tag(3, _mod1212.WireType.LengthDelimited);
   }
   if (boxAnimationUrl.gradient) {
     const Gradient = gradient.Gradient;
-    const tagResult3 = tag.tag(4, _mod1210.WireType.LengthDelimited);
-    const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1212.WireType.LengthDelimited);
+    const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1210.UnknownFieldHandler.onWrite;
+      onWrite = _mod1212.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, boxAnimationUrl, tag);

@@ -1,9 +1,9 @@
-// === Module 9993: NativeAPNGView ===
+// === Module 10009: NativeAPNGView ===
 
-// Module 9993 (NativeAPNGView)
+// Module 10009 (NativeAPNGView)
 import _mod17 from "module_17" /* 17 */;
-import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 9994 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
+import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10010 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isAndroid()) {

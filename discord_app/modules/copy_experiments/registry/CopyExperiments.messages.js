@@ -1,20 +1,20 @@
-// === Module 2340: ? ===
+// === Module 2343: ? ===
 
-// Module 2340
-import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
-import _mod2341 from "module_2341" /* 2341 */;
-import module_1165_mod from "module_1165" /* 1165 */;
+// Module 2343
+import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
+import _mod2344 from "module_2344" /* 2344 */;
+import module_1167_mod from "module_1167" /* 1167 */;
 import size from "module_2" /* 2 */;
 
-let module_1165 = module_1165_mod;
-const loader = module_1165.createLoader({
+let module_1167 = module_1167_mod;
+const loader = module_1167.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2341);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2344);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1165 = module_1165_mod;
-const messagesProxy = module_1165.makeMessagesProxy(loader);
+let module_1167 = module_1167_mod;
+const messagesProxy = module_1167.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/copy_experiments/registry/CopyExperiments.messages.js");
 
 export default messagesProxy;

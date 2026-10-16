@@ -1,6 +1,6 @@
-// === Module 8326: FriendAnniversaryGate ===
+// === Module 8331: FriendAnniversaryGate ===
 
-// Module 8326 (FriendAnniversaryGate)
+// Module 8331 (FriendAnniversaryGate)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.tsx");

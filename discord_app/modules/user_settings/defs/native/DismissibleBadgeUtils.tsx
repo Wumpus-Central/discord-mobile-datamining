@@ -1,8 +1,8 @@
-// === Module 15655: DismissibleBadgeUtils ===
+// === Module 15688: DismissibleBadgeUtils ===
 
-// Module 15655 (DismissibleBadgeUtils)
+// Module 15688 (DismissibleBadgeUtils)
 import c from "c" /* 576 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 15654 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 15687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function useAlwaysShow() {
   return true;
 }
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 const size = fn(2);

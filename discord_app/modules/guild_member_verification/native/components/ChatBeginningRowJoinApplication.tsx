@@ -1,21 +1,21 @@
-// === Module 13215: ChatBeginningRowJoinApplication ===
+// === Module 13241: ChatBeginningRowJoinApplication ===
 
-// Module 13215 (ChatBeginningRowJoinApplication)
+// Module 13241 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 587 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5001 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UserStore from "UserStore" /* 1390 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, guildInfoRow: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, divider: null, formQuestion: null };
 let obj3 = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, border: "none", marginVertical: 16 };

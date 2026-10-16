@@ -1,18 +1,18 @@
-// === Module 15078: Avatar ===
+// === Module 15111: Avatar ===
 
-// Module 15078 (Avatar)
+// Module 15111 (Avatar)
 import nativeDefault from "native" /* 587 */;
-import IconDefault from "Icon" /* 5441 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8500 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9233 */;
-import ClipView from "ClipView" /* 9234 */;
-import _modDef11211 from "module_11211" /* 11211 */;
-import _modDef11212 from "module_11212" /* 11212 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13969 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15067 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15068 */;
-import Status from "Status" /* 15069 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 15079 */;
+import IconDefault from "Icon" /* 5443 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8508 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9246 */;
+import ClipView from "ClipView" /* 9247 */;
+import _modDef11227 from "module_11227" /* 11227 */;
+import _modDef11228 from "module_11228" /* 11228 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14001 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15100 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15101 */;
+import Status from "Status" /* 15102 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 15112 */;
 import noop from "module_19" /* 19 */;
 
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;
@@ -120,12 +120,12 @@ function getAvatarStatusCutout(arg0) {
   }
 }
 const View = fn(17).View;
-const StatusTypes = fn(1085).StatusTypes;
-const StatusConstants = fn(1201);
+const StatusTypes = fn(1087).StatusTypes;
+const StatusConstants = fn(1203);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
   const rect = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: nativeDefault.colors.STATUS_SPEAKING };
@@ -377,7 +377,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   const items = [, ];
                                                                   ({ status: arr2[0], voiceStatus: arr2[1] } = closure_21);
                                                                   obj2.style = items;
-                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11211, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11227, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj2.children = closure_2_8(IconDefault, obj3);
                                                                   let tmp2 = closure_2_8(View, obj2);
                                                                 } else if (mute) {
@@ -385,7 +385,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   const items1 = [, ];
                                                                   ({ status: arr[0], voiceStatus: arr[1] } = closure_21);
                                                                   obj.style = items1;
-                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11212, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11228, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj.children = closure_2_8(IconDefault, obj4);
                                                                   tmp2 = closure_2_8(View, obj);
                                                                 }
@@ -741,5 +741,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
 }));
-export const AvatarSizes = fn(13969).AvatarSizes;
+export const AvatarSizes = fn(14001).AvatarSizes;
 export { getStatusSize };

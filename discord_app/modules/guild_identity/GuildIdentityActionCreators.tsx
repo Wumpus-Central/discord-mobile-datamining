@@ -1,6 +1,6 @@
-// === Module 10876: GuildIdentityActionCreators ===
+// === Module 10891: GuildIdentityActionCreators ===
 
-// Module 10876 (GuildIdentityActionCreators)
+// Module 10891 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -189,7 +189,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentityActionCreators.tsx");
 

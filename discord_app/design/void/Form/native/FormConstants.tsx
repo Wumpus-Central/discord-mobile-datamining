@@ -1,13 +1,13 @@
-// === Module 1204: FormConstants ===
+// === Module 1206: FormConstants ===
 
-// Module 1204 (FormConstants)
+// Module 1206 (FormConstants)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils2 from "PlatformUtils" /* 1382 */;
-import shared from "shared" /* 5025 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import PlatformUtils2 from "PlatformUtils" /* 1384 */;
+import shared from "shared" /* 5028 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 let num = 24;
 if (PlatformUtils.isAndroid()) {
   num = 32;
@@ -16,7 +16,7 @@ const internal = nativeDefault.internal;
 const semanticColor = internal.resolveSemanticColor(nativeDefault.themes.DARK, nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
 const internal2 = nativeDefault.internal;
 const semanticColor1 = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
-const DeviceUtils = fn(5127);
+const DeviceUtils = fn(5130);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});

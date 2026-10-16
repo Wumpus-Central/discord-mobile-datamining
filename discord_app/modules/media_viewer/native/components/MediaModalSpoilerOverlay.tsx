@@ -1,16 +1,16 @@
-// === Module 13894: MediaModalSpoilerOverlay ===
+// === Module 13926: MediaModalSpoilerOverlay ===
 
-// Module 13894 (MediaModalSpoilerOverlay)
+// Module 13926 (MediaModalSpoilerOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PlatformUtils2 from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4874 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5425 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8426 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13877 */;
+import util from "util" /* 1128 */;
+import PlatformUtils2 from "PlatformUtils" /* 1384 */;
+import useToken from "useToken" /* 4877 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5427 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8434 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,10 +19,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1382);
+let PlatformUtils = fn(1384);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;

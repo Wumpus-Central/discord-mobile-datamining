@@ -1,9 +1,9 @@
-// === Module 16206: FontScaleStore ===
+// === Module 16239: FontScaleStore ===
 
-// Module 16206 (FontScaleStore)
-import NativeFontModuleDefault from "NativeFontModule" /* 10749 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import identity from "module_1267" /* 1267 */;
+// Module 16239 (FontScaleStore)
+import NativeFontModuleDefault from "NativeFontModule" /* 10764 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import identity from "module_1269" /* 1269 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isAndroid()) {

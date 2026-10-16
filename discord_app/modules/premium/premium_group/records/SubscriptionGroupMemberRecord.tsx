@@ -1,8 +1,8 @@
-// === Module 14452: SubscriptionGroupMemberRecord ===
+// === Module 14484: SubscriptionGroupMemberRecord ===
 
-// Module 14452 (SubscriptionGroupMemberRecord)
-import Record from "Record" /* 1405 */;
-import UserRecord from "UserRecord" /* 1404 */;
+// Module 14484 (SubscriptionGroupMemberRecord)
+import Record from "Record" /* 1407 */;
+import UserRecord from "UserRecord" /* 1406 */;
 
 const SubscriptionMemberTypes = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
 let SubscriptionGroupMemberRecord;

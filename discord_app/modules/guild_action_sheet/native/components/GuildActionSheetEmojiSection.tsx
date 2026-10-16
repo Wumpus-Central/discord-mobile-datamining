@@ -1,28 +1,28 @@
-// === Module 14882: GuildActionSheetEmojiSection ===
+// === Module 14915: GuildActionSheetEmojiSection ===
 
-// Module 14882 (GuildActionSheetEmojiSection)
+// Module 14915 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 587 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import ToastUtils from "ToastUtils" /* 4864 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5117 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9490 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import ToastUtils from "ToastUtils" /* 4867 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9506 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6203 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
-import UserStore from "UserStore" /* 1390 */;
+import EmojiStore from "EmojiStore" /* 6205 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.dotSeparator = size;

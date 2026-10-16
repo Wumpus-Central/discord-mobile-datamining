@@ -1,7 +1,7 @@
-// === Module 7407: ClientHeartbeatPiggyback ===
+// === Module 7409: ClientHeartbeatPiggyback ===
 
-// Module 7407 (ClientHeartbeatPiggyback)
-import RunningGameStore from "RunningGameStore" /* 2019 */;
+// Module 7409 (ClientHeartbeatPiggyback)
+import RunningGameStore from "RunningGameStore" /* 2021 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/ClientHeartbeatPiggyback.tsx");

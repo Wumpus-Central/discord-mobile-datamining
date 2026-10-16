@@ -1,14 +1,14 @@
-// === Module 10935: FramesStore ===
+// === Module 10950: FramesStore ===
 
-// Module 10935 (FramesStore)
+// Module 10950 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1096 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 6289 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 10936 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10937 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10938 */;
-import FramesConstants from "FramesConstants" /* 10919 */;
+import Constants from "Constants" /* 1098 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 6291 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 10951 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10952 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10953 */;
+import FramesConstants from "FramesConstants" /* 10934 */;
 import size from "module_2" /* 2 */;
 
 ({ asLaunched: c3, FrameIntent: closure_4, FrameLayoutModes: hasOwnProperty, getFrameIntentForSurface: metroRequire, isLaunched: closure_7, makeFrameId: closure_8 } = FramesConstants);
@@ -90,7 +90,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         } else {
           const obj3 = { id: null, applicationId: null, intent: null, surface: null, launchRequestId: null, state: "launched", data: null };
           ({ id: obj2.id, applicationId: obj2.applicationId, intent: obj2.intent, surface: obj2.surface, launchRequestId: obj2.launchRequestId } = value);
-          const obj5 = { url: tmp5, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, hostWindowKey: null, launch: null };
+          const obj5 = { url: tmp5, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, runsInBackground: false, iframeId: null, hostWindowKey: null, launch: null };
           const _Date = Date;
           obj5.connectedSince = Date.now();
           obj5.layoutMode = constants2.FOCUSED;
@@ -223,7 +223,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     }
     return flag;
   },
-  FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function handleSetPrefersPictureInPictureOnNavigateAway(frameId) {
+  FRAME_SET_RUNS_IN_BACKGROUND: function handleSetRunsInBackground(frameId) {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
@@ -236,7 +236,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const merged = Object.assign(value);
           const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj3.prefersPictureInPictureOnNavigateAway = tmp;
+          obj3.runsInBackground = tmp;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -310,7 +310,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(data);
           obj3.iframeId = iframeId;
-          obj3.prefersPictureInPictureOnNavigateAway = data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
+          obj3.runsInBackground = data.iframeId === iframeId && data.runsInBackground;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -335,7 +335,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(value.data);
           obj3.iframeId = null;
-          obj3.prefersPictureInPictureOnNavigateAway = false;
+          obj3.runsInBackground = false;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;

@@ -1,17 +1,17 @@
-// === Module 5849: GiftCodeUtils ===
+// === Module 5851: GiftCodeUtils ===
 
-// Module 5849 (GiftCodeUtils)
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import PremiumUtils from "PremiumUtils" /* 4825 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5354 */;
-import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 5960 */;
+// Module 5851 (GiftCodeUtils)
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import PremiumUtils from "PremiumUtils" /* 4828 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5356 */;
+import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 5962 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 5850 */;
-import UserStore from "UserStore" /* 1390 */;
-import RegexUtils from "RegexUtils" /* 5135 */;
+import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 5852 */;
+import UserStore from "UserStore" /* 1392 */;
+import RegexUtils from "RegexUtils" /* 5138 */;
 
 const require = globalThis.__r;
 
@@ -157,9 +157,9 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl.string(util.t["s9+XlB"]);
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: closure_7, AnalyticEvents: closure_8, AbortCodes: closure_9, GiftCodeModalStates: c10, MessageEmbedTypes: closure_11, MessageTypes: closure_12 } = Constants);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = PremiumConstants);
 let items = [RegexUtils.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((item) => RegexUtils.escape(item))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
@@ -205,9 +205,9 @@ function cleanCode(str) {
 }
 function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_5961").match(getOrFetchSubscriptionPlan);
+  const match = require("module_5963").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_5961");
+  const str = require("module_5963");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -245,8 +245,8 @@ function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
   }).otherwise(() => {
-    const intl = subscriptionPlan(1126).intl;
-    return intl.string(subscriptionPlan(1126).t["5ayf7w"]);
+    const intl = subscriptionPlan(1128).intl;
+    return intl.string(subscriptionPlan(1128).t["5ayf7w"]);
   });
 }
 function getErrorMessage(arg0, error, arg2, arg3, onGoToLibrary) {
@@ -509,9 +509,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   } else {
     intervalCount = subscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_5961").match(subscriptionPlan);
+      const match = require("module_5963").match(subscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_5961");
+      const str = require("module_5963");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -535,9 +535,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
         return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
       });
     } else {
-      const match1 = require("module_5961").match(subscriptionPlan);
+      const match1 = require("module_5963").match(subscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_5961");
+      const str2 = require("module_5963");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -577,9 +577,9 @@ export const getBodyText = function getBodyText(arg0) {
         tmp17 = libraryApplication;
       }
     }
-    const intl4 = subscriptionPlan(1126).intl;
+    const intl4 = subscriptionPlan(1128).intl;
     const obj2 = { onGoToLibrary };
-    let formatResult = intl4.format(subscriptionPlan(1126).t["5zyz9y"], obj2);
+    let formatResult = intl4.format(subscriptionPlan(1128).t["5zyz9y"], obj2);
     if (null == tmp17) {
       let tmp22 = null;
       if (null != error) {
@@ -590,9 +590,9 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(5961).match(subscriptionPlan);
+      const match = subscriptionPlan(5963).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(5961);
+      const str = subscriptionPlan(5963);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;
@@ -630,8 +630,8 @@ export const getBodyText = function getBodyText(arg0) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
       }).otherwise(() => {
-        const intl = subscriptionPlan(1126).intl;
-        return intl.string(subscriptionPlan(1126).t["5ayf7w"]);
+        const intl = subscriptionPlan(1128).intl;
+        return intl.string(subscriptionPlan(1128).t["5ayf7w"]);
       });
       const withResult3 = match.with(obj3, () => {
         const intl = util.intl;
@@ -647,28 +647,28 @@ export const getBodyText = function getBodyText(arg0) {
         return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
       });
     } else {
-      const intl3 = subscriptionPlan(1126).intl;
+      const intl3 = subscriptionPlan(1128).intl;
       const obj7 = { skuName: sku.name };
-      otherwiseResult = intl3.formatToPlainString(subscriptionPlan(1126).t["3CPsbo"], obj7);
+      otherwiseResult = intl3.formatToPlainString(subscriptionPlan(1128).t["3CPsbo"], obj7);
     }
     return otherwiseResult;
   } else {
     const CONFIRM = constants3.CONFIRM;
     if (null != subscriptionPlan) {
       if (subscriptionPlan.interval === constants6.MONTH) {
-        let d8rUdy = subscriptionPlan(1126).t.P9eTKt;
+        let d8rUdy = subscriptionPlan(1128).t.P9eTKt;
         let tmp5 = subscriptionPlan;
       } else {
         tmp5 = subscriptionPlan;
-        d8rUdy = subscriptionPlan(1126).t.d8rUdy;
+        d8rUdy = subscriptionPlan(1128).t.d8rUdy;
       }
-      const intl2 = tmp5(1126).intl;
+      const intl2 = tmp5(1128).intl;
       const obj8 = { skuName: sku.name, intervalCount: subscriptionPlan.intervalCount };
       return intl2.format(d8rUdy, obj8);
     } else {
-      let intl = subscriptionPlan(1126).intl;
+      let intl = subscriptionPlan(1128).intl;
       const obj = { skuName: sku.name };
-      return intl.formatToPlainString(subscriptionPlan(1126).t.l6Ea4Z, obj);
+      return intl.formatToPlainString(subscriptionPlan(1128).t.l6Ea4Z, obj);
     }
   }
 };

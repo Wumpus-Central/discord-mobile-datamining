@@ -1,9 +1,9 @@
-// === Module 16773: DesignSystemAIShimmerSetting ===
+// === Module 16806: DesignSystemAIShimmerSetting ===
 
-// Module 16773 (DesignSystemAIShimmerSetting)
-import Constants from "Constants" /* 1085 */;
-import SettingsConstants from "SettingsConstants" /* 8210 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
+// Module 16806 (DesignSystemAIShimmerSetting)
+import Constants from "Constants" /* 1087 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

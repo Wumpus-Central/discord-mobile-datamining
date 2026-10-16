@@ -1,8 +1,8 @@
-// === Module 8687: isItemUnreadInChannel ===
+// === Module 8695: isItemUnreadInChannel ===
 
-// Module 8687 (isItemUnreadInChannel)
+// Module 8695 (isItemUnreadInChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/isItemUnreadInChannel.tsx");

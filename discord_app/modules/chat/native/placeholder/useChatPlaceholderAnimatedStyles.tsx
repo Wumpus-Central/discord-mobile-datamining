@@ -1,13 +1,13 @@
-// === Module 13223: useChatPlaceholderAnimatedStyles ===
+// === Module 13249: useChatPlaceholderAnimatedStyles ===
 
-// Module 13223 (useChatPlaceholderAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import timingPresets from "timingPresets" /* 5155 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+// Module 13249 (useChatPlaceholderAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import timingPresets from "timingPresets" /* 5157 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
-let TIMING_CONFIG = { duration: 1300, easing: fn(1200).STANDARD_EASING };
+let TIMING_CONFIG = { duration: 1300, easing: fn(1202).STANDARD_EASING };
 const __initData = { code: "function useChatPlaceholderAnimatedStylesTsx1(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else{if(!animated||useReducedMotion){return{opacity:0.7};}}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}" };
 const __initData2 = { code: "function useChatPlaceholderAnimatedStylesTsx2(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}" };
 const ReactCompilerGating = fn(558);

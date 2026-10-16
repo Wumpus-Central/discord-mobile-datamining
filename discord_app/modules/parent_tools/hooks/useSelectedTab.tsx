@@ -1,16 +1,16 @@
-// === Module 15804: useSelectedTab ===
+// === Module 15837: useSelectedTab ===
 
-// Module 15804 (useSelectedTab)
+// Module 15837 (useSelectedTab)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7477 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7475 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7479 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7477 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7476);
+const FamilyCenterConstants = fn(7478);
 ({ FamilyCenterAction: closure_4, FamilyCenterSubPages } = FamilyCenterConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");

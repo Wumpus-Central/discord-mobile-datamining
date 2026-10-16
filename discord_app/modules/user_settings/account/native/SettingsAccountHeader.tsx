@@ -1,27 +1,27 @@
-// === Module 15616: SettingsAccountHeader ===
+// === Module 15649: SettingsAccountHeader ===
 
-// Module 15616 (SettingsAccountHeader)
+// Module 15649 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import TableRow from "TableRow" /* 6400 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6418 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6906 */;
-import openUserSettings from "openUserSettings" /* 7315 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15617 */;
+import util from "util" /* 1128 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import TableRow from "TableRow" /* 6402 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6420 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6908 */;
+import openUserSettings from "openUserSettings" /* 7317 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15650 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsSections = fn(1085).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7239).SafetySettingsNoticeType;
+const AnalyticsSections = fn(1087).AnalyticsSections;
+const SafetySettingsNoticeType = fn(7241).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

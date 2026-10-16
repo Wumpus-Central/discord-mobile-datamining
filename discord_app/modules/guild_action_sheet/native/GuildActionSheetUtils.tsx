@@ -1,12 +1,12 @@
-// === Module 14860: GuildActionSheetUtils ===
+// === Module 14893: GuildActionSheetUtils ===
 
-// Module 14860 (GuildActionSheetUtils)
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 14893 (GuildActionSheetUtils)
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");

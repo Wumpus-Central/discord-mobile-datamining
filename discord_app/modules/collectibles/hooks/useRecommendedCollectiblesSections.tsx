@@ -1,10 +1,10 @@
-// === Module 14139: useRecommendedCollectiblesSections ===
+// === Module 14171: useRecommendedCollectiblesSections ===
 
-// Module 14139 (useRecommendedCollectiblesSections)
+// Module 14171 (useRecommendedCollectiblesSections)
 import _mod19 from "module_19" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 6390 */;
-import CollectiblesRecommendationUtils from "CollectiblesRecommendationUtils" /* 14142 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 14140 */;
+import useInitialValueDefault from "useInitialValue" /* 6392 */;
+import CollectiblesRecommendationUtils from "CollectiblesRecommendationUtils" /* 14174 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 14172 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

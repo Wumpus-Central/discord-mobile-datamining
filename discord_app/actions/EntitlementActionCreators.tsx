@@ -1,6 +1,6 @@
-// === Module 7337: EntitlementActionCreators ===
+// === Module 7339: EntitlementActionCreators ===
 
-// Module 7337 (EntitlementActionCreators)
+// Module 7339 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -139,7 +139,7 @@ let closure_6 = async function _fetchGiftableEntitlements() {
   }
   return value;
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/EntitlementActionCreators.tsx");
 

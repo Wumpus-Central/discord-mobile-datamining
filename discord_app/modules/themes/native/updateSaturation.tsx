@@ -1,7 +1,7 @@
-// === Module 15349: updateSaturation ===
+// === Module 15384: updateSaturation ===
 
-// Module 15349 (updateSaturation)
-import NativeThemeModuleDefault from "NativeThemeModule" /* 15350 */;
+// Module 15384 (updateSaturation)
+import NativeThemeModuleDefault from "NativeThemeModule" /* 15385 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/themes/native/updateSaturation.tsx");

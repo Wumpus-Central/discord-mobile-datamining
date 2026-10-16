@@ -1,15 +1,15 @@
-// === Module 11314: useIsVoiceChannelFull ===
+// === Module 11334: useIsVoiceChannelFull ===
 
-// Module 11314 (useIsVoiceChannelFull)
-import ChannelUtils from "ChannelUtils" /* 5474 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+// Module 11334 (useIsVoiceChannelFull)
+import ChannelUtils from "ChannelUtils" /* 5476 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsVoiceChannelLocked(arg0) {

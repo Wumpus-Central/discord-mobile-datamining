@@ -1,12 +1,12 @@
-// === Module 1384: URLUtils ===
+// === Module 1386: URLUtils ===
 
-// Module 1384 (URLUtils)
+// Module 1386 (URLUtils)
 import _modDef12 from "module_12" /* 12 */;
-import Constants from "Constants" /* 1085 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import UrlAll from "Url" /* 1387 */;
-import ip from "ip" /* 1385 */;
+import Constants from "Constants" /* 1087 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import UrlAll from "Url" /* 1389 */;
+import ip from "ip" /* 1387 */;
 import size from "module_2" /* 2 */;
 
 function isDiscordDirectAssetUrl(shareURI) {
@@ -180,13 +180,13 @@ export default {
     }
     return tmp;
   },
-  isDiscordUrl(ctaLink, arg1) {
+  isDiscordUrl(customInstallUrl, arg1) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = false;
     }
-    if (null != ctaLink) {
-      const toURLSafeResult = URLUtilsDefault.toURLSafe(ctaLink);
+    if (null != customInstallUrl) {
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(customInstallUrl);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;

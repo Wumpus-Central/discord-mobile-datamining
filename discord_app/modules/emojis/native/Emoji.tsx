@@ -1,17 +1,17 @@
-// === Module 7041: Emoji ===
+// === Module 7043: Emoji ===
 
-// Module 7041 (Emoji)
+// Module 7043 (Emoji)
 import c from "c" /* 576 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4824 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import _modDef7042 from "module_7042" /* 7042 */;
-import _modDef7043 from "module_7043" /* 7043 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4827 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import _modDef7044 from "module_7044" /* 7044 */;
+import _modDef7045 from "module_7045" /* 7045 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
-const native = LegacyText(1200);
-const PlatformUtils = LegacyText(1382);
-const shared = LegacyText(5025);
+const native = LegacyText(1202);
+const PlatformUtils = LegacyText(1384);
+const shared = LegacyText(5028);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -58,9 +58,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(ar
         if ("" !== tmp2) {
           const obj5 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
           if (LegacyTextResult.isThemeDark(ThemeStore.theme)) {
-            let tmp9Result = _modDef7042;
+            let tmp9Result = _modDef7044;
           } else {
-            tmp9Result = _modDef7043;
+            tmp9Result = _modDef7045;
           }
           obj5.placeholder = tmp9Result;
           const obj6 = { uri: tmp2 };
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Emoji(ar
       if ("" !== uRL) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = _modDef7042;
+          let tmp9Result = _modDef7044;
         } else {
-          tmp9Result = _modDef7043;
+          tmp9Result = _modDef7045;
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };

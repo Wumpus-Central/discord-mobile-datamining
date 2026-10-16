@@ -1,8 +1,8 @@
-// === Module 10591: VoiceChatHooks ===
+// === Module 10606: VoiceChatHooks ===
 
-// Module 10591 (VoiceChatHooks)
+// Module 10606 (VoiceChatHooks)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 const require = fn;
 let ReactCompilerGating = fn(558);

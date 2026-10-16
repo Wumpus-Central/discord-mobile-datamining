@@ -1,10 +1,10 @@
-// === Module 7422: isReadableChannel ===
+// === Module 7424: isReadableChannel ===
 
-// Module 7422 (isReadableChannel)
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import Constants from "Constants" /* 1085 */;
+// Module 7424 (isReadableChannel)
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

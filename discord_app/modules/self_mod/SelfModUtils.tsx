@@ -1,7 +1,7 @@
-// === Module 7209: SelfModUtils ===
+// === Module 7211: SelfModUtils ===
 
-// Module 7209 (SelfModUtils)
-import UserStore from "UserStore" /* 1390 */;
+// Module 7211 (SelfModUtils)
+import UserStore from "UserStore" /* 1392 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");

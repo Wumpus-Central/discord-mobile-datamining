@@ -1,18 +1,18 @@
-// === Module 9252: PremiumFeaturesBackground ===
+// === Module 9265: PremiumFeaturesBackground ===
 
-// Module 9252 (PremiumFeaturesBackground)
+// Module 9265 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(7373).Gradients;
-const PremiumTypes = fn(1392).PremiumTypes;
+const Gradients = fn(7375).Gradients;
+const PremiumTypes = fn(1394).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -71,10 +71,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           }
         }
       }
-      const obj2 = { style: tmp17, colors: tmp15, start: tmp(1105).HorizontalGradient.START, end: tmp(1105).HorizontalGradient.END };
+      const obj2 = { style: tmp17, colors: tmp15, start: tmp(1107).HorizontalGradient.START, end: tmp(1107).HorizontalGradient.END };
       const merged = Object.assign(tmp6);
       obj2.children = tmp4;
-      const tmp25 = jsx(LinearGradientDefault, { style: tmp17, colors: tmp15, start: tmp(1105).HorizontalGradient.START, end: tmp(1105).HorizontalGradient.END });
+      const tmp25 = jsx(LinearGradientDefault, { style: tmp17, colors: tmp15, start: tmp(1107).HorizontalGradient.START, end: tmp(1107).HorizontalGradient.END });
       cResult[12] = tmp4;
       cResult[13] = tmp15;
       cResult[14] = tmp6;
@@ -123,8 +123,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const items = [closure_8().cardContainer, style];
   obj.style = items;
   const tmp2 = closure_8();
-  obj.start = num(1105).HorizontalGradient.START;
-  obj.end = num(1105).HorizontalGradient.END;
+  obj.start = num(1107).HorizontalGradient.START;
+  obj.end = num(1107).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: null, colors: mapped, start: null, end: null });

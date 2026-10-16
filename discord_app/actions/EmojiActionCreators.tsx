@@ -1,19 +1,19 @@
-// === Module 9766: EmojiActionCreators ===
+// === Module 9782: EmojiActionCreators ===
 
-// Module 9766 (EmojiActionCreators)
+// Module 9782 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
-import wrappers from "wrappers" /* 1240 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4820 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6210 */;
-import InlineUploaderDefault from "InlineUploader" /* 6892 */;
+import util from "util" /* 1128 */;
+import wrappers from "wrappers" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6212 */;
+import InlineUploaderDefault from "InlineUploader" /* 6894 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 6203 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6181 */;
+import EmojiStore from "EmojiStore" /* 6205 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6183 */;
 
 const require = globalThis.__r;
 
@@ -103,8 +103,8 @@ let closure_10 = async function _updateEmoji(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
-const UserSettingsConstants = fn(1095);
+const Endpoints = fn(1087).Endpoints;
+const UserSettingsConstants = fn(1097);
 ({ MAX_FAVORITES: closure_8, UserSettingsDelay: closure_9 } = UserSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/EmojiActionCreators.tsx");
@@ -131,7 +131,7 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1295).HTTP;
+  const HTTP = guildId(1297).HTTP;
   const request = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: null, context: null, oldFormErrors: true, rejectWithError: null };
   const tmp3 = guildId;
   request.headers = InlineUploaderDefault.buildHeadersForMd5(originalMd5);
@@ -140,8 +140,8 @@ export const uploadEmoji = function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1295).rejectWithMigratedError();
-  const tmp3Result = tmp3(1295);
+  request.rejectWithError = tmp3(1297).rejectWithMigratedError();
+  const tmp3Result = tmp3(1297);
   return HTTP.post(request).then((body) => {
     DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
     return body.body;
@@ -198,7 +198,7 @@ export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2046).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2049).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;
@@ -263,7 +263,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2046).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2049).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;

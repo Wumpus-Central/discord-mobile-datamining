@@ -1,22 +1,21 @@
-// === Module 11616: useInlineFrameOAuthNavigation ===
+// === Module 11640: useInlineFrameOAuthNavigation ===
 
-// Module 11616 (useInlineFrameOAuthNavigation)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+// Module 11640 (useInlineFrameOAuthNavigation)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 10935 */;
+import FramesStore from "FramesStore" /* 10950 */;
 
 require = fn;
-const isLaunched = fn(10919).isLaunched;
-const ComponentActions = fn(1085).ComponentActions;
-let closure_8 = fn(10922).OAUTH2_AUTHORIZE_MODAL_KEY;
+const isLaunched = fn(10934).isLaunched;
+const ComponentActions = fn(1087).ComponentActions;
+let closure_8 = fn(10937).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
-export default function useInlineFrameOAuthNavigation(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
+export default function useInlineFrameOAuthNavigation(applicationId) {
+  const items = [applicationId];
   const effect = noop.useEffect(() => {
     function dismissOAuthModal() {
       if (c1) {
@@ -102,7 +101,7 @@ export default function useInlineFrameOAuthNavigation(arg0) {
     if (null != c0) {
       c0 = false;
       c1 = false;
-      let ComponentDispatch = closure_0(dependencyMap[9]).ComponentDispatch;
+      let ComponentDispatch = applicationId(dependencyMap[9]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
       return () => {
         c0 = true;

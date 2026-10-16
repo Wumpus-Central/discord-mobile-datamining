@@ -1,24 +1,24 @@
-// === Module 17310: FavoritesGuildChannelList ===
+// === Module 17344: FavoritesGuildChannelList ===
 
-// Module 17310 (FavoritesGuildChannelList)
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7233 */;
-import ChannelListState from "ChannelListState" /* 7467 */;
+// Module 17344 (FavoritesGuildChannelList)
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7235 */;
+import ChannelListState from "ChannelListState" /* 7469 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6270 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6250 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4808 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7027 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7466 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import FavoriteStore from "FavoriteStore" /* 2068 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6272 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6252 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7029 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7468 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import FavoriteStore from "FavoriteStore" /* 2071 */;
 
 const require = globalThis.__r;
 
@@ -110,13 +110,13 @@ function computeFavoritesState(favoriteChannels, arg1) {
       continue;
     } else {
       let tmp4 = favoriteChannels;
-      if (tmp20.type === favoriteChannels(1209).FavoriteChannelType.CATEGORY) {
+      if (tmp20.type === favoriteChannels(1211).FavoriteChannelType.CATEGORY) {
         continue;
       } else {
         let tmp7 = closure_19(favoriteChannels, tmp20, channel);
         if (null != tmp20.parentId) {
           if (null != favoriteChannels[tmp20.parentId]) {
-            if (favoriteChannels[tmp20.parentId].type === tmp4(1209).FavoriteChannelType.CATEGORY) {
+            if (favoriteChannels[tmp20.parentId].type === tmp4(1211).FavoriteChannelType.CATEGORY) {
               let parentId = tmp20.parentId;
               if (!(parentId in obj2)) {
                 obj2[parentId] = [];
@@ -225,7 +225,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
           }
           activeJoinedUnreadThreadsForParent = c6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
         });
-        const found = mapped.filter(favoriteChannels(1386).isNotNullish);
+        const found = mapped.filter(favoriteChannels(1388).isNotNullish);
         const arr = _undefined(12)(items);
         closure_6 = found.sortBy((arg0) => {
           ({ record, position } = arg0);
@@ -250,7 +250,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10546).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10561).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -359,7 +359,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                 }
                 activeJoinedUnreadThreadsForParent = c6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
               });
-              const found = mapped.filter(items(1386).isNotNullish);
+              const found = mapped.filter(items(1388).isNotNullish);
               const arr = closure_1(12)(items);
               closure_1 = found.sortBy((arg0) => {
                 ({ record, position } = arg0);
@@ -562,13 +562,13 @@ function computeFavoritesState(favoriteChannels, arg1) {
     }
   };
 }
-const ChannelRecord = fn(2069);
+const ChannelRecord = fn(2072);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4805).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(2078);
+let closure_19 = fn(4808).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(2081);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7473).ChannelListChannelNoticeRow;
-const Permissions = fn(1096).Permissions;
+const constants = fn(7475).ChannelListChannelNoticeRow;
+const Permissions = fn(1098).Permissions;
 let items = [EmbeddedActivitiesStore, FavoriteStore, GatewayConnectionStore, GuildScheduledEventStore, ActiveJoinedThreadsStore, JoinedThreadsStore, CategoryCollapseStore, ChannelStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -852,7 +852,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
       }
     }
     let flag2 = false;
-    if (tmp22 <= tmp(7467).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+    if (tmp22 <= tmp(7469).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
       class F {
         constructor() {
           tmp = hasAccess;

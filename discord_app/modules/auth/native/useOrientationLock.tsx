@@ -1,10 +1,10 @@
-// === Module 17014: useOrientationLock ===
+// === Module 17047: useOrientationLock ===
 
-// Module 17014 (useOrientationLock)
-import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import DeviceUtils from "DeviceUtils" /* 5127 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6846 */;
-import DeviceOrientation from "DeviceOrientation" /* 8669 */;
+// Module 17047 (useOrientationLock)
+import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
+import DeviceUtils from "DeviceUtils" /* 5130 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6848 */;
+import DeviceOrientation from "DeviceOrientation" /* 8677 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

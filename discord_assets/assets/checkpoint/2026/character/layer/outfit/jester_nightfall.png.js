@@ -1,6 +1,6 @@
-// === Module 5682: ? ===
+// === Module 5684: ? ===
 
-// Module 5682
+// Module 5684
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/jester_nightfall.png.js");

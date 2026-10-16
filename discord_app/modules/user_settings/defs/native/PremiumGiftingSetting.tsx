@@ -1,13 +1,13 @@
-// === Module 15927: PremiumGiftingSetting ===
+// === Module 15960: PremiumGiftingSetting ===
 
-// Module 15927 (PremiumGiftingSetting)
+// Module 15960 (PremiumGiftingSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4838 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7358 */;
-import PromotionsHooks from "PromotionsHooks" /* 9342 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10728 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4841 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7360 */;
+import PromotionsHooks from "PromotionsHooks" /* 9355 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10743 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGiftingSettingTrailing() {
   const cResult = c.c(2);
   const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
@@ -67,7 +67,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(12562).GiftIcon,
+  IconComponent: fn(12585).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
@@ -91,7 +91,7 @@ const route = SettingBuilders.createRoute({
   }),
   unsearchable: true,
   screen: {
-    route: fn(1085).UserSettingsSections.PREMIUM_GIFTING,
+    route: fn(1087).UserSettingsSections.PREMIUM_GIFTING,
     getComponent() {
       return require("UserSettingsPremiumGifting").default;
     }

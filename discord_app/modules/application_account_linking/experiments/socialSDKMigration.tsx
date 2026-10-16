@@ -1,7 +1,7 @@
-// === Module 2027: socialSDKMigration ===
+// === Module 2030: socialSDKMigration ===
 
-// Module 2027 (socialSDKMigration)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 2030 (socialSDKMigration)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-battlenet-social-sdk-migration", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

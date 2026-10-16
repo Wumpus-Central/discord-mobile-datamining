@@ -1,6 +1,6 @@
-// === Module 4961: ? ===
+// === Module 4964: ? ===
 
-// Module 4961
+// Module 4964
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/Camera.riv.js");

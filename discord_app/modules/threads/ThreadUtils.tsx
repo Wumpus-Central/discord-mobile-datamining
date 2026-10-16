@@ -1,18 +1,18 @@
-// === Module 8140: ThreadUtils ===
+// === Module 8143: ThreadUtils ===
 
-// Module 8140 (ThreadUtils)
+// Module 8143 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import _modDef4758 from "module_4758" /* 4758 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7024 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7437 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8129 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7026 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7439 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8132 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4808 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
 
 const require = globalThis.__r;
 
@@ -24,8 +24,8 @@ function getAccessibilityLabelFormatter() {
   return time;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
-const ThreadMemberFlags = fn(1125).ThreadMemberFlags;
-const Constants = fn(1085);
+const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, UserNotificationSettings: c10 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -154,8 +154,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   if (cResult[5] !== createTimestamp) {
     let valueOfResult = null;
     if (null != createTimestamp) {
-      valueOfResult = _modDef4758(createTimestamp).valueOf();
-      const obj4 = _modDef4758(createTimestamp);
+      valueOfResult = _modDef4761(createTimestamp).valueOf();
+      const obj4 = _modDef4761(createTimestamp);
     }
     cResult[5] = createTimestamp;
     cResult[6] = valueOfResult;
@@ -199,8 +199,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4758(createTimestamp).valueOf();
-    const obj3 = _modDef4758(createTimestamp);
+    valueOfResult = _modDef4761(createTimestamp).valueOf();
+    const obj3 = _modDef4761(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

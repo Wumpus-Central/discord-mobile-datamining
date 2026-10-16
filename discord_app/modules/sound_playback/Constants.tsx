@@ -1,6 +1,6 @@
-// === Module 5308: Constants ===
+// === Module 5310: Constants ===
 
-// Module 5308 (Constants)
+// Module 5310 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/sound_playback/Constants.tsx");

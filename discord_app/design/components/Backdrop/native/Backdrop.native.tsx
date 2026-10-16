@@ -1,12 +1,12 @@
-// === Module 5423: Backdrop ===
+// === Module 5425: Backdrop ===
 
-// Module 5423 (Backdrop)
+// Module 5425 (Backdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import native from "native" /* 4883 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
+import util from "util" /* 1128 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import native from "native" /* 4886 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };

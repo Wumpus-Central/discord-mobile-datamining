@@ -1,15 +1,15 @@
-// === Module 17168: useFavoritesGuildHeaderAction ===
+// === Module 17202: useFavoritesGuildHeaderAction ===
 
-// Module 17168 (useFavoritesGuildHeaderAction)
+// Module 17202 (useFavoritesGuildHeaderAction)
 import c from "c" /* 576 */;
-import router_utils from "router_utils" /* 1112 */;
-import util from "util" /* 1126 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import FavoritesHooks from "FavoritesHooks" /* 10546 */;
+import router_utils from "router_utils" /* 1114 */;
+import util from "util" /* 1128 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import FavoritesHooks from "FavoritesHooks" /* 10561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Routes = fn(1085).Routes;
+const Routes = fn(1087).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   if (cResult[1] !== hasAccess) {
     const intl = util.intl;
     if (hasAccess) {
-      tmp2 = _modDef3444;
+      tmp2 = _modDef3447;
       let ojM1xJ = tmp2.G9fGlP;
     } else {
       ojM1xJ = util.t.ojM1xJ;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   }, []);
   const intl = util.intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3444.G9fGlP;
+    let ojM1xJ = _modDef3447.G9fGlP;
   } else {
     ojM1xJ = util.t.ojM1xJ;
   }

@@ -1,9 +1,9 @@
-// === Module 9541: GuildOnboardingHomeTypes ===
+// === Module 9557: GuildOnboardingHomeTypes ===
 
-// Module 9541 (GuildOnboardingHomeTypes)
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+// Module 9557 (GuildOnboardingHomeTypes)
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 function newMemberActionFromServer(channelId) {
@@ -81,7 +81,7 @@ function isSettingsEmpty(welcomeMessage) {
   }
   return tmp;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx");

@@ -1,12 +1,12 @@
-// === Module 8486: useAvatarColor ===
+// === Module 8494: useAvatarColor ===
 
-// Module 8486 (useAvatarColor)
+// Module 8494 (useAvatarColor)
 import c from "c" /* 576 */;
-import tinycolorDefault from "tinycolor" /* 7490 */;
+import tinycolorDefault from "tinycolor" /* 7492 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 function hasFetchedColors(game_name) {
@@ -399,11 +399,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvatarCol
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        const obj = flag(7490)({ r: tmp, g: tmp2, b: tmp3 });
-        ({ h, s, l } = flag(7490)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+        const obj = flag(7492)({ r: tmp, g: tmp2, b: tmp3 });
+        ({ h, s, l } = flag(7492)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
         const obj2 = { h, s: s * stateFromStores, l };
-        const toHslResult = flag(7490)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
-        return flag(7490)({ h, s: s * stateFromStores, l }).toHexString();
+        const toHslResult = flag(7492)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+        return flag(7492)({ h, s: s * stateFromStores, l }).toHexString();
       });
     }
     return mapped;

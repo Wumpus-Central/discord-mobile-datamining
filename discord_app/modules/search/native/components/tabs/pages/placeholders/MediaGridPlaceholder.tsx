@@ -1,26 +1,26 @@
-// === Module 17674: MediaGridPlaceholder ===
+// === Module 17708: MediaGridPlaceholder ===
 
-// Module 17674 (MediaGridPlaceholder)
+// Module 17708 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12881 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 17673 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17675 */;
+import util from "util" /* 1128 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12907 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 17707 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17709 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9533);
+const SearchConstants = fn(9549);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, sectionText: { opacity: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 fn(558);
@@ -101,7 +101,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
     arr = cResult[3];
   }
   const obj = size(576);
-  const placeholderAnimatedStyle = size(17673).usePlaceholderAnimatedStyle(visible);
+  const placeholderAnimatedStyle = size(17707).usePlaceholderAnimatedStyle(visible);
   if (cResult[4] === placeholderAnimatedStyle) {
     if (cResult[5] === row.container) {
       if (cResult[6] === row.recentsContainer) {
@@ -110,8 +110,8 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
       const _Symbol = Symbol;
       ({ section, sectionItem, sectionText } = row);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.LBYpDH);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.LBYpDH);
         cResult[8] = stringResult;
         let tmp12 = stringResult;
       } else {
@@ -119,7 +119,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
       }
       if (cResult[9] !== row.sectionText) {
         const obj2 = { style: sectionText, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: tmp12 };
-        const tmp16 = closure_7(tmp(5147).Text, obj2);
+        const tmp16 = closure_7(tmp(5149).Text, obj2);
         cResult[9] = row.sectionText;
         cResult[10] = tmp16;
         let tmp14 = tmp16;
@@ -133,8 +133,8 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
         const _Symbol2 = Symbol;
         ({ sectionItem: sectionItem2, sectionText: sectionText2 } = row);
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(tmp(1126).t.LFTAUp);
+          const intl2 = tmp(1128).intl;
+          const stringResult1 = intl2.string(tmp(1128).t.LFTAUp);
           cResult[14] = stringResult1;
           let tmp21 = stringResult1;
         } else {
@@ -142,7 +142,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
         }
         if (cResult[15] !== row.sectionText) {
           const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: sectionText2, children: tmp21 };
-          const tmp25 = closure_7(tmp(5147).Text, obj3);
+          const tmp25 = closure_7(tmp(5149).Text, obj3);
           cResult[15] = row.sectionText;
           cResult[16] = tmp25;
           let tmp23 = tmp25;
@@ -191,7 +191,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
                       const obj4 = { style: tmp10, pointerEvents: "none", children: null };
                       const items = [tmp30, cResult[28]];
                       obj4.children = items;
-                      const tmp39 = closure_8(row(4906).View, obj4);
+                      const tmp39 = closure_8(row(4909).View, obj4);
                       cResult[34] = tmp30;
                       cResult[35] = cResult[28];
                       cResult[36] = tmp10;
@@ -293,7 +293,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
   cResult[6] = row.recentsContainer;
   cResult[7] = items2;
   tmp10 = items2;
-  const tmpResult4 = size(17673);
+  const tmpResult4 = size(17707);
 }) : (function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
   let memo;
@@ -348,5 +348,5 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
     })
   ];
   obj2.children = items4;
-  return closure_8(numRows(4906).View, obj2);
+  return closure_8(numRows(4909).View, obj2);
 });

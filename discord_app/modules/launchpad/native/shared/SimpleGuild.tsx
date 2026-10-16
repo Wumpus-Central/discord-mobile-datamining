@@ -1,22 +1,22 @@
-// === Module 18263: SimpleGuild ===
+// === Module 18305: SimpleGuild ===
 
-// Module 18263 (SimpleGuild)
+// Module 18305 (SimpleGuild)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import GuildIconDefault from "GuildIcon" /* 6379 */;
-import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 18264 */;
-import CutoutImageDefault from "CutoutImage" /* 18266 */;
-import useSimpleGuildSizeDefault from "useSimpleGuildSize" /* 18267 */;
+import util from "util" /* 1128 */;
+import GuildIconDefault from "GuildIcon" /* 6381 */;
+import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 18306 */;
+import CutoutImageDefault from "CutoutImage" /* 18308 */;
+import useSimpleGuildSizeDefault from "useSimpleGuildSize" /* 18309 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6300 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6302 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 const View = fn(17).View;
-const getGuildIconSource = fn(2083).getGuildIconSource;
-const ME = fn(1085).ME;
+const getGuildIconSource = fn(2086).getGuildIconSource;
+const ME = fn(1087).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
   ({ guildIconRef, style, guildId } = arg0);
   ({ onPress, onLongPress, onAccessibilityAction, onLayout, backgroundColor, animated, altDefaultBackground, selected, size, iconSize, borderRadius, unread, badge } = arg0);
   if (undefined === iconSize) {
-    iconSize = guildId(6379).GuildIconSizes.LARGE;
+    iconSize = guildId(6381).GuildIconSizes.LARGE;
   }
   const tmp7 = closure_10();
   const obj = guildId(576);
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
   const tmpResult = guildId(504);
   const stateFromStoresObject = guildId(504).useStateFromStoresObject(tmp14, tmp16, tmp17);
   ({ unread: unread2, badge: badge2 } = stateFromStoresObject);
-  const tmpResult5 = guildId(18265);
+  const tmpResult5 = guildId(18307);
   const tmp20 = tmp4 ? tmpResult5.SimpleGuildContainerAnimated : tmpResult5.SimpleGuildContainer;
   if (cResult[7] === size) {
     if (cResult[8] === style) {
@@ -96,9 +96,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
         if (badge2 > 0) {
           if (cResult[10] === badge2) {
           }
-          const intl3 = guildId(1126).intl;
+          const intl3 = guildId(1128).intl;
           const obj2 = { guildName: str, mentions: badge2 };
-          const formatToPlainStringResult = intl3.formatToPlainString(guildId(1126).t["/uzRss"], obj2);
+          const formatToPlainStringResult = intl3.formatToPlainString(guildId(1128).t["/uzRss"], obj2);
           cResult[10] = badge2;
           cResult[11] = str;
           cResult[12] = formatToPlainStringResult;
@@ -111,18 +111,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
           }
           tmp23 = tmp26;
         }
-        const intl2 = guildId(1126).intl;
+        const intl2 = guildId(1128).intl;
         const obj3 = { guildName: str, mentions: badge2 };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(guildId(1126).t["/uzRss"], obj3);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(guildId(1128).t["/uzRss"], obj3);
         cResult[15] = badge2;
         cResult[16] = str;
         cResult[17] = formatToPlainStringResult1;
         tmp26 = formatToPlainStringResult1;
       } else {
         if (cResult[13] !== str) {
-          const intl = guildId(1126).intl;
+          const intl = guildId(1128).intl;
           const obj4 = { guildName: str };
-          const formatToPlainStringResult2 = intl.formatToPlainString(guildId(1126).t.lzqe42, obj4);
+          const formatToPlainStringResult2 = intl.formatToPlainString(guildId(1128).t.lzqe42, obj4);
           cResult[13] = str;
           cResult[14] = formatToPlainStringResult2;
           let tmp24 = formatToPlainStringResult2;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
       }
     }
     const tmp22 = useSimpleGuildSizeDefault(tmp21);
-    const activityIndicatorState = guildId(17369).useActivityIndicatorState(guildId);
+    const activityIndicatorState = guildId(17403).useActivityIndicatorState(guildId);
     let tmp32 = unread2;
     if (!unread2) {
       tmp32 = tmp6;
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
               const obj8 = { style: tmp7.dmsWrapper, children: null };
               let colors = nativeDefault.colors;
               const obj9 = { color: tmp6 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-              colors = jsx(guildId(8416).ChatIcon, { color: tmp6 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+              colors = jsx(guildId(8424).ChatIcon, { color: tmp6 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
               obj8.children = colors;
               <View style={tmp7.dmsWrapper}>{null}</View>;
             }
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
     cResult[21] = tmp32;
     cResult[22] = tmp35Result;
     tmp33 = tmp35Result;
-    const tmpResult6 = guildId(17369);
+    const tmpResult6 = guildId(17403);
   }
   const obj10 = { size, style };
   cResult[7] = size;

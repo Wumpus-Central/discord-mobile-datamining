@@ -1,10 +1,10 @@
-// === Module 8642: MediaModalWebViewBase ===
+// === Module 8650: MediaModalWebViewBase ===
 
-// Module 8642 (MediaModalWebViewBase)
-import LinkingDefault from "Linking" /* 4862 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import WebViewDefault from "WebView" /* 7738 */;
+// Module 8650 (MediaModalWebViewBase)
+import LinkingDefault from "Linking" /* 4865 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import WebViewDefault from "WebView" /* 7741 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,13 +16,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 let str = "";
 if (PlatformUtils.isIOS()) {
   str = "\n  window.addEventListener('click', function(event) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({event: 'click'}));\n  });\n";
 }
 const PlayerState = { UNREADY: 0, [0]: "UNREADY", READY: 1, [1]: "READY", ERRORED: 2, [2]: "ERRORED", UNSTARTED: 3, [3]: "UNSTARTED", ENDED: 4, [4]: "ENDED", PLAYING: 5, [5]: "PLAYING", PAUSED: 6, [6]: "PAUSED", BUFFERING: 7, [7]: "BUFFERING", VIDEO_CUED: 8, [8]: "VIDEO_CUED" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_12 = createStyles.createStyles({ loading: { top: 0, left: 0, right: 0, bottom: 0, position: "absolute", alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function MediaModalWebViewBaseTsx1(){const{withTiming,webviewOpacity}=this.__closure;return{opacity:withTiming(webviewOpacity.get())};}" };
 const __initData2 = { code: "function MediaModalWebViewBaseTsx2(){const{withTiming,loaderOpacity}=this.__closure;return{opacity:withTiming(loaderOpacity.get())};}" };

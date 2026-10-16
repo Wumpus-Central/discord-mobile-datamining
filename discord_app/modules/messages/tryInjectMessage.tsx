@@ -1,15 +1,15 @@
-// === Module 12701: tryInjectMessage ===
+// === Module 12727: tryInjectMessage ===
 
-// Module 12701 (tryInjectMessage)
-import FlagUtils from "FlagUtils" /* 1403 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5494 */;
-import createMessageDefault from "createMessage" /* 10030 */;
-import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 12702 */;
-import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 12703 */;
+// Module 12727 (tryInjectMessage)
+import FlagUtils from "FlagUtils" /* 1405 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
+import createMessageDefault from "createMessage" /* 10046 */;
+import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 12728 */;
+import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 12729 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MessageFlags: closure_4, MessageStates: hasOwnProperty, MessageTypes: metroRequire } = Constants);
 const map = new Map();
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 17817: getPendingRelationshipIds ===
+// === Module 17851: getPendingRelationshipIds ===
 
-// Module 17817 (getPendingRelationshipIds)
-import RelationshipStore from "RelationshipStore" /* 4816 */;
+// Module 17851 (getPendingRelationshipIds)
+import RelationshipStore from "RelationshipStore" /* 4819 */;
 
 function filterFromPending(arg0) {
   return RelationshipStore.isSpam(arg0) || RelationshipStore.isIgnored(arg0);
 }
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/hooks/getPendingRelationshipIds.tsx");
 

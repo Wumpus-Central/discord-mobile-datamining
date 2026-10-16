@@ -1,22 +1,22 @@
-// === Module 11096: PublicGuildAnnouncementProfile ===
+// === Module 11111: PublicGuildAnnouncementProfile ===
 
-// Module 11096 (PublicGuildAnnouncementProfile)
+// Module 11111 (PublicGuildAnnouncementProfile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7061 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8281 */;
-import _modDef11097 from "module_11097" /* 11097 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7063 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8286 */;
+import _modDef11112 from "module_11112" /* 11112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGu
     tmp7 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: _modDef11097, disableColor: true };
+    const obj3 = { source: _modDef11112, disableColor: true };
     const tmp14 = React4(native.Icon, obj3);
     cResult[3] = tmp14;
     let tmp11 = tmp14;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGu
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11097, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11112, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

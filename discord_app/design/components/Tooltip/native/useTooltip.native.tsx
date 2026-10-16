@@ -1,9 +1,9 @@
-// === Module 9664: useTooltip ===
+// === Module 9680: useTooltip ===
 
-// Module 9664 (useTooltip)
+// Module 9680 (useTooltip)
 import LoggerDefault from "Logger" /* 3 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import AnimatedTooltip from "AnimatedTooltip" /* 9665 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import AnimatedTooltip from "AnimatedTooltip" /* 9681 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -78,8 +78,8 @@ function useTooltipHelper(ref, arg1, arg2) {
     closure_0 = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = closure_2_0(9670).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
-      const items = [measurements, closure_2_0(9670).getMeasurements(closure_1, closure_2_0)];
+      const measurements = closure_2_0(9686).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
+      const items = [measurements, closure_2_0(9686).getMeasurements(closure_1, closure_2_0)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;
@@ -133,10 +133,10 @@ const result = size.fileFinishedImporting("design/components/Tooltip/native/useT
 export const useTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (function useTooltip(arg0, arg1) {
   const cResult = ref(576).c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const v4Result = tmp(1279).v4();
+    const v4Result = tmp(1281).v4();
     cResult[0] = v4Result;
     let first = v4Result;
-    const tmpResult = tmp(1279);
+    const tmpResult = tmp(1281);
   } else {
     first = cResult[0];
   }
@@ -148,7 +148,7 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   const tmp8 = useWindowDimensionsDefault();
   closure_3 = tmp8;
   closure_4 = context.useRef(tmp8);
-  context = context.useContext(tmp(7068).LayerContext);
+  context = context.useContext(tmp(7070).LayerContext);
   closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {
@@ -165,8 +165,8 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     closure_0 = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = closure_2_0(9670).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
-      const items = [measurements, closure_2_0(9670).getMeasurements(closure_1, closure_2_0)];
+      const measurements = closure_2_0(9686).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
+      const items = [measurements, closure_2_0(9686).getMeasurements(closure_1, closure_2_0)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;
@@ -214,7 +214,7 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }, items2);
   return callback;
 }) : (function useTooltip(arg0, arg1) {
-  context.useRef(ref(1279).v4());
+  context.useRef(ref(1281).v4());
   const tmp2 = closure_8(arg1);
   importDefault = arg0;
   dependencyMap = tmp2;
@@ -222,7 +222,7 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   const tmp3 = useWindowDimensionsDefault();
   closure_3 = tmp3;
   ref = context.useRef(tmp3);
-  context = context.useContext(ref(7068).LayerContext);
+  context = context.useContext(ref(7070).LayerContext);
   context.useRef(null);
   let items = [context, ref];
   const effect = context.useEffect(() => {
@@ -239,8 +239,8 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     closure_0 = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = closure_2_0(9670).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
-      const items = [measurements, closure_2_0(9670).getMeasurements(closure_1, closure_2_0)];
+      const measurements = closure_2_0(9686).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
+      const items = [measurements, closure_2_0(9686).getMeasurements(closure_1, closure_2_0)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;

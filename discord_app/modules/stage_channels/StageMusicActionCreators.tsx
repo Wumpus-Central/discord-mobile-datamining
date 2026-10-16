@@ -1,6 +1,6 @@
-// === Module 11287: StageMusicActionCreators ===
+// === Module 11307: StageMusicActionCreators ===
 
-// Module 11287 (StageMusicActionCreators)
+// Module 11307 (StageMusicActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

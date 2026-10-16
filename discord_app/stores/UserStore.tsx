@@ -1,23 +1,23 @@
-// === Module 1390: UserStore ===
+// === Module 1392: UserStore ===
 
-// Module 1390 (UserStore)
+// Module 1392 (UserStore)
 import _mod12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import UserStoreUtils from "UserStoreUtils" /* 1401 */;
-import FlagUtilsAll from "FlagUtils" /* 1403 */;
-import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1406 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1407 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1411 */;
-import PremiumStateUtils from "PremiumStateUtils" /* 1412 */;
-import FamilyCenterModels from "FamilyCenterModels" /* 1413 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1985 */;
-import mappers from "mappers" /* 1986 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1997 */;
-import Server from "Server" /* 1998 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1391 */;
-import UserRecord from "UserRecord" /* 1404 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import UserStoreUtils from "UserStoreUtils" /* 1403 */;
+import FlagUtilsAll from "FlagUtils" /* 1405 */;
+import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1408 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1409 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1413 */;
+import PremiumStateUtils from "PremiumStateUtils" /* 1414 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1415 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1987 */;
+import mappers from "mappers" /* 1988 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1999 */;
+import Server from "Server" /* 2000 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1393 */;
+import UserRecord from "UserRecord" /* 1406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
 
 require = fn;
 function mergeGuildAvatar(id, guildId, avatar) {
@@ -1154,9 +1154,9 @@ function handleGuildStickersFetchSuccess(stickers) {
     return tmp;
   }, false);
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ UserFlags: closure_7, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
-let closure_10 = fn(1392).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+let closure_10 = fn(1394).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";

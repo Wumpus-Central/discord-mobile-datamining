@@ -1,7 +1,7 @@
-// === Module 16995: RegistrationEmailOptInCopyExperiment ===
+// === Module 17028: RegistrationEmailOptInCopyExperiment ===
 
-// Module 16995 (RegistrationEmailOptInCopyExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 17028 (RegistrationEmailOptInCopyExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "installation", name: "2026-09-registration-email-opt-in-copy", defaultConfig: { trackingCopy: false }, variations: null };

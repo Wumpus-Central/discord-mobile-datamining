@@ -1,12 +1,12 @@
-// === Module 12549: AgeVerificationSystemNotificationUtils ===
+// === Module 12572: AgeVerificationSystemNotificationUtils ===
 
-// Module 12549 (AgeVerificationSystemNotificationUtils)
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7759 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 10721 */;
-import MessageStore from "MessageStore" /* 5492 */;
+// Module 12572 (AgeVerificationSystemNotificationUtils)
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7762 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 10736 */;
+import MessageStore from "MessageStore" /* 5494 */;
 
 require = fn;
-const MessageEmbedTypes = fn(1085).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1087).MessageEmbedTypes;
 const obj = { CTAS: "ctas", CONTENT_TYPE: "content_type" };
 let obj2 = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", REQUEST_MANUAL_REVIEW: "request_manual_review" };
 const size = fn(2);

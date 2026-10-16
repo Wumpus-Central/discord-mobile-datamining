@@ -1,11 +1,11 @@
-// === Module 5307: CertifiedDeviceStore ===
+// === Module 5309: CertifiedDeviceStore ===
 
-// Module 5307 (CertifiedDeviceStore)
+// Module 5309 (CertifiedDeviceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 5176 */;
+import Constants from "Constants" /* 5178 */;
 import size from "module_2" /* 2 */;
 
 const DeviceTypes = Constants.DeviceTypes;

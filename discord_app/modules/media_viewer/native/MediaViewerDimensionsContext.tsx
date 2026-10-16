@@ -1,9 +1,9 @@
-// === Module 8638: MediaViewerDimensionsContext ===
+// === Module 8646: MediaViewerDimensionsContext ===
 
-// Module 8638 (MediaViewerDimensionsContext)
+// Module 8646 (MediaViewerDimensionsContext)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

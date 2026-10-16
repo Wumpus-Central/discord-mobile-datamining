@@ -1,8 +1,8 @@
-// === Module 12499: MediaChannelActionCreators ===
+// === Module 12522: MediaChannelActionCreators ===
 
-// Module 12499 (MediaChannelActionCreators)
+// Module 12522 (MediaChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -105,7 +105,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 

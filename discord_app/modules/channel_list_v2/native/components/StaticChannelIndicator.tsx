@@ -1,13 +1,13 @@
-// === Module 12933: StaticChannelIndicator ===
+// === Module 12959: StaticChannelIndicator ===
 
-// Module 12933 (StaticChannelIndicator)
+// Module 12959 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4874 */;
-import ReadStateConstants from "ReadStateConstants" /* 6183 */;
+import useToken from "useToken" /* 4877 */;
+import ReadStateConstants from "ReadStateConstants" /* 6185 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5151 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

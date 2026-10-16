@@ -1,16 +1,16 @@
-// === Module 11395: ChannelCallMicButton ===
+// === Module 11415: ChannelCallMicButton ===
 
-// Module 11395 (ChannelCallMicButton)
+// Module 11415 (ChannelCallMicButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import useMuteStatesDefault from "useMuteStates" /* 7278 */;
-import CallBarActionAll from "CallBarAction" /* 11145 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11396 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11397 */;
+import util from "util" /* 1128 */;
+import useMuteStatesDefault from "useMuteStates" /* 7280 */;
+import CallBarActionAll from "CallBarAction" /* 11161 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11416 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11417 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5170 */;
+import GameConsoleStore from "GameConsoleStore" /* 5172 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -62,7 +62,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
     } else {
       tmp16 = cResult[7];
     }
-    const tmp5Result = importDefault(mute ? 11400 : 11401);
+    const tmp5Result = importDefault(mute ? 11420 : 11421);
     if (!tmp4) {
       tmp4 = mute;
     }
@@ -116,15 +116,15 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const items = [GameConsoleStore];
   const stateFromStores = mute(504).useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const obj = mute(504);
-  const muteHandler = mute(11396).createMuteHandler(tmp3, stateFromStores);
+  const muteHandler = mute(11416).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
   const obj3 = { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null };
-  const intl = mute(1126).intl;
-  obj3.accessibilityLabel = intl.string(mute(1126).t.B3zz0G);
+  const intl = mute(1128).intl;
+  obj3.accessibilityLabel = intl.string(mute(1128).t.B3zz0G);
   obj3.onPress = muteHandler.onPress;
-  obj3.source = importDefault(mute ? 11400 : 11401);
+  obj3.source = importDefault(mute ? 11420 : 11421);
   if (!flag) {
     flag = mute;
   }

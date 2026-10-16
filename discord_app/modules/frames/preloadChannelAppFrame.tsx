@@ -1,18 +1,18 @@
-// === Module 17245: preloadChannelAppFrame ===
+// === Module 17279: preloadChannelAppFrame ===
 
-// Module 17245 (preloadChannelAppFrame)
-import getURLForApplicationDefault from "getURLForApplication" /* 10936 */;
-import leaveFrame from "leaveFrame" /* 10948 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import FramesStore from "FramesStore" /* 10935 */;
+// Module 17279 (preloadChannelAppFrame)
+import getURLForApplicationDefault from "getURLForApplication" /* 10951 */;
+import leaveFrame from "leaveFrame" /* 10963 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import FramesStore from "FramesStore" /* 10950 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(10919);
+const FramesConstants = fn(10934);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const map = new Map();
 const size = fn(2);

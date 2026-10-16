@@ -1,13 +1,13 @@
-// === Module 10849: useFriendsSinceDate ===
+// === Module 10864: useFriendsSinceDate ===
 
-// Module 10849 (useFriendsSinceDate)
-import LocaleStore from "LocaleStore" /* 2129 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
+// Module 10864 (useFriendsSinceDate)
+import LocaleStore from "LocaleStore" /* 2132 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");

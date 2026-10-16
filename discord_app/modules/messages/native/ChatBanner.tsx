@@ -1,28 +1,28 @@
-// === Module 10710: ChatBanner ===
+// === Module 10725: ChatBanner ===
 
-// Module 10710 (ChatBanner)
+// Module 10725 (ChatBanner)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7020 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7023 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8119 */;
-import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 10712 */;
-import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 10713 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7022 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7025 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8122 */;
+import useShowChannelOptInNoticeDefault from "useShowChannelOptInNotice" /* 10727 */;
+import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 10728 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(10711).ChatOverlays;
-const Constants = fn(1085);
+const ChatOverlays = fn(10726).ChatOverlays;
+const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticEvents: c10, AnalyticsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { threadBannerContainer: { alignSelf: "stretch", minHeight: 60, flexDirection: "row", paddingHorizontal: 16, paddingVertical: 12, alignItems: "center", flexGrow: 0, zIndex: 100, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, threadBannerTitle: { flex: 1, lineHeight: 18 }, threadBannerButton: { flexGrow: 0, paddingVertical: 7, paddingHorizontal: 16, marginLeft: 16 }, newMessageBar: null, newMessageBarTextContainer: null, newMessageBarCloseButton: null, optInChannelBannerContainer: null, topBorder: null, optInChannelBannerText: null, optInChannelBannerButtonContainer: null };
 let obj3 = { alignSelf: "stretch", minHeight: 60, flexDirection: "row", paddingHorizontal: 16, paddingVertical: 12, alignItems: "center", flexGrow: 0, zIndex: 100, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.newMessageBar = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, flexDirection: "row", justifyContent: "center", alignItems: "center", overflow: "hidden", zIndex: 100, minHeight: 45 };
@@ -90,8 +90,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptInChannel
     }
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1126).intl;
-      const stringResult = intl.string(tmp(1126).t.iOWmmB);
+      const intl = tmp(1128).intl;
+      const stringResult = intl.string(tmp(1128).t.iOWmmB);
       cResult[8] = stringResult;
       let tmp12 = stringResult;
     } else {
@@ -99,7 +99,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptInChannel
     }
     if (cResult[9] !== tmp4.optInChannelBannerText) {
       let obj2 = { lineClamp: 2, style: tmp4.optInChannelBannerText, variant: "text-sm/semibold", children: tmp12 };
-      const tmp16 = closure_12(tmp(5147).Text, obj2);
+      const tmp16 = closure_12(tmp(5149).Text, obj2);
       cResult[9] = tmp4.optInChannelBannerText;
       cResult[10] = tmp16;
       let tmp14 = tmp16;
@@ -108,8 +108,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptInChannel
     }
     const _Symbol2 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = tmp(1126).intl;
-      const stringResult1 = intl2.string(tmp(1126).t["TD/+zP"]);
+      const intl2 = tmp(1128).intl;
+      const stringResult1 = intl2.string(tmp(1128).t["TD/+zP"]);
       cResult[11] = stringResult1;
       let tmp17 = stringResult1;
     } else {
@@ -153,7 +153,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptInChannel
     obj5.onPress = tmp8;
     obj5.size = "sm";
     obj5.text = tmp17;
-    const tmp24 = closure_12(tmp(5439).Button, obj5);
+    const tmp24 = closure_12(tmp(5441).Button, obj5);
     cResult[12] = ctaProps;
     cResult[13] = tmp8;
     cResult[14] = tmp24;
@@ -196,17 +196,17 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptInChannel
   let obj = { style: items2, children: null };
   items2[1] = topBorder;
   let obj2 = { lineClamp: 2, style: tmp.optInChannelBannerText, variant: "text-sm/semibold", children: null };
-  const intl = channel(1126).intl;
-  obj2.children = intl.string(channel(1126).t.iOWmmB);
-  const items3 = [closure_12(channel(5147).Text, obj2), ];
+  const intl = channel(1128).intl;
+  obj2.children = intl.string(channel(1128).t.iOWmmB);
+  const items3 = [closure_12(channel(5149).Text, obj2), ];
   let obj3 = { style: tmp.optInChannelBannerButtonContainer, children: null };
   let obj4 = {};
   let merged = Object.assign(channel.ctaProps);
   obj4.onPress = callback;
   obj4.size = "sm";
-  const intl2 = channel(1126).intl;
-  obj4.text = intl2.string(channel(1126).t["TD/+zP"]);
-  obj3.children = closure_12(channel(5439).Button, obj4);
+  const intl2 = channel(1128).intl;
+  obj4.text = intl2.string(channel(1128).t["TD/+zP"]);
+  obj3.children = closure_12(channel(5441).Button, obj4);
   items3[1] = closure_12(closure_4, obj3);
   obj.children = items3;
   return closure_13(closure_4, obj);
@@ -255,11 +255,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
     tmp8 = cResult[4];
   }
   let obj = channel(576);
-  const canUnarchiveThread = channel(7190).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7192).useCanUnarchiveThread(channel);
   if (cResult[5] !== channel) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const string = intl.string;
-    let t = tmp(1126).t;
+    let t = tmp(1128).t;
     if (isForumPostResult) {
       t = t["833FDn"];
       let stringResult = string(t);
@@ -302,10 +302,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       if (canUnarchiveThread) {
         let obj3 = { style: tmp4.threadBannerButton, children: null };
         let obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
-        const intl2 = tmp(1126).intl;
-        obj4.text = intl2.string(tmp(1126).t["0dvvEi"]);
+        const intl2 = tmp(1128).intl;
+        obj4.text = intl2.string(tmp(1128).t["0dvvEi"]);
         obj4.onPress = tmp8;
-        obj3.children = closure_12(tmp(5439).Button, obj4);
+        obj3.children = closure_12(tmp(5441).Button, obj4);
         tmp19 = closure_12(closure_4, obj3);
       }
       cResult[10] = canUnarchiveThread;
@@ -315,13 +315,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       tmp18 = tmp19;
     }
     const obj5 = { lineClamp: 4, style: tmp4.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: cResult[6] };
-    const tmp17 = closure_12(tmp(5147).Text, obj5);
+    const tmp17 = closure_12(tmp(5149).Text, obj5);
     cResult[7] = tmp4.threadBannerTitle;
     cResult[8] = cResult[6];
     cResult[9] = tmp17;
     tmp15 = tmp17;
   }
-  const tmpResult = channel(7190);
+  const tmpResult = channel(7192);
 }) : (function ArchivedLockedThreadChatBanner(channel) {
   channel = channel.channel;
   const tmp = closure_14();
@@ -334,25 +334,25 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let canUnarchiveThread = channel(7190).useCanUnarchiveThread(channel);
+  let canUnarchiveThread = channel(7192).useCanUnarchiveThread(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = { lineClamp: 4, style: tmp.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: null };
-  let obj = channel(7190);
-  const intl = channel(1126).intl;
+  let obj = channel(7192);
+  const intl = channel(1128).intl;
   const string = intl.string;
-  const t = channel(1126).t;
+  const t = channel(1128).t;
   if (isForumPostResult) {
     let stringResult = string(t["833FDn"]);
   } else {
     stringResult = string(t.rEeodK);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(5147).Text, obj3), ];
+  const items1 = [closure_12(channel(5149).Text, obj3), ];
   if (canUnarchiveThread) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl2 = tmp3(1126).intl;
-    obj5.text = intl2.string(tmp3(1126).t["0dvvEi"]);
+    const intl2 = tmp3(1128).intl;
+    obj5.text = intl2.string(tmp3(1128).t["0dvvEi"]);
     obj5.onPress = function handleClick() {
       const obj2 = {};
       const obj = AnalyticsUtilsDefault;
@@ -363,7 +363,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unarchiveThread(channel, false);
     };
-    obj4.children = closure_12(tmp3(5439).Button, obj5);
+    obj4.children = closure_12(tmp3(5441).Button, obj5);
     canUnarchiveThread = closure_12(closure_4, obj4);
   }
   items1[1] = canUnarchiveThread;
@@ -413,11 +413,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locked
     tmp8 = cResult[4];
   }
   let obj = channel(576);
-  const isThreadModerator = channel(7190).useIsThreadModerator(channel);
+  const isThreadModerator = channel(7192).useIsThreadModerator(channel);
   if (cResult[5] !== channel) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const string = intl.string;
-    let E7oO8u = tmp(1126).t;
+    let E7oO8u = tmp(1128).t;
     if (isForumPostResult) {
       E7oO8u = E7oO8u.E7oO8u;
       let stringResult = string(E7oO8u);
@@ -460,10 +460,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locked
       if (isThreadModerator) {
         let obj3 = { style: tmp4.threadBannerButton, children: null };
         let obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
-        const intl2 = tmp(1126).intl;
-        obj4.text = intl2.string(tmp(1126).t.zA9d1J);
+        const intl2 = tmp(1128).intl;
+        obj4.text = intl2.string(tmp(1128).t.zA9d1J);
         obj4.onPress = tmp8;
-        obj3.children = closure_12(tmp(5439).Button, obj4);
+        obj3.children = closure_12(tmp(5441).Button, obj4);
         tmp18 = closure_12(closure_4, obj3);
       }
       cResult[10] = tmp8;
@@ -473,13 +473,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locked
       tmp17 = tmp18;
     }
     const obj5 = { lineClamp: 4, style: tmp4.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: cResult[6] };
-    const tmp16 = closure_12(tmp(5147).Text, obj5);
+    const tmp16 = closure_12(tmp(5149).Text, obj5);
     cResult[7] = tmp4.threadBannerTitle;
     cResult[8] = cResult[6];
     cResult[9] = tmp16;
     tmp14 = tmp16;
   }
-  const tmpResult = channel(7190);
+  const tmpResult = channel(7192);
 }) : (function LockedThreadChatBanner(channel) {
   channel = channel.channel;
   const tmp = closure_14();
@@ -492,25 +492,25 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locked
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let isThreadModerator = channel(7190).useIsThreadModerator(channel);
+  let isThreadModerator = channel(7192).useIsThreadModerator(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = { lineClamp: 4, style: tmp.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: null };
-  let obj = channel(7190);
-  const intl = channel(1126).intl;
+  let obj = channel(7192);
+  const intl = channel(1128).intl;
   const string = intl.string;
-  const t = channel(1126).t;
+  const t = channel(1128).t;
   if (isForumPostResult) {
     let stringResult = string(t.E7oO8u);
   } else {
     stringResult = string(t["V/JF2N"]);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(5147).Text, obj3), ];
+  const items1 = [closure_12(channel(5149).Text, obj3), ];
   if (isThreadModerator) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl2 = tmp3(1126).intl;
-    obj5.text = intl2.string(tmp3(1126).t.zA9d1J);
+    const intl2 = tmp3(1128).intl;
+    obj5.text = intl2.string(tmp3(1128).t.zA9d1J);
     obj5.onPress = function handleClick() {
       const obj2 = {};
       const obj = AnalyticsUtilsDefault;
@@ -521,7 +521,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locked
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unlockThread(channel);
     };
-    obj4.children = closure_12(tmp3(5439).Button, obj5);
+    obj4.children = closure_12(tmp3(5441).Button, obj5);
     isThreadModerator = closure_12(closure_4, obj4);
   }
   items1[1] = isThreadModerator;
@@ -554,7 +554,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
     if (unreadCount <= 0) {
       return null;
     } else {
-      const t = tmp(1126).t;
+      const t = tmp(1128).t;
       const tmp9 = ReadStateStore.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"];
       if (cResult[3] === tmp9) {
         if (cResult[4] === oldestUnreadTimestamp) {
@@ -563,7 +563,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
           }
           if (cResult[7] !== tmp12) {
             const obj2 = { variant: "text-sm/semibold", color: "text-overlay-light", children: tmp12 };
-            const tmp16 = closure_12(tmp(5147).Text, obj2);
+            const tmp16 = closure_12(tmp(5149).Text, obj2);
             cResult[7] = tmp12;
             cResult[8] = tmp16;
             let tmp14 = tmp16;
@@ -577,8 +577,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
               }
               const _Symbol = Symbol;
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl2 = tmp(1126).intl;
-                const stringResult = intl2.string(tmp(1126).t.e6RscS);
+                const intl2 = tmp(1128).intl;
+                const stringResult = intl2.string(tmp(1128).t.e6RscS);
                 cResult[13] = stringResult;
                 let tmp20 = stringResult;
               } else {
@@ -613,7 +613,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
                   }
                 }
                 const obj3 = { size: "sm", color: nativeDefault.colors.WHITE };
-                const tmp25 = closure_12(tmp(10715).XSmallBoldIcon, obj3);
+                const tmp25 = closure_12(tmp(10730).XSmallBoldIcon, obj3);
                 cResult[16] = tmp25;
                 const tmp23 = tmp25;
               } else {
@@ -652,14 +652,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
                 cResult[23] = tmp32;
               }
               const obj5 = { style: tmp4.newMessageBarCloseButton, accessibilityRole: "button", accessibilityLabel: tmp20, onPress: G, children: tmp23 };
-              const tmp28 = closure_12(tmp(6405).PressableOpacity, obj5);
+              const tmp28 = closure_12(tmp(6407).PressableOpacity, obj5);
               cResult[17] = tmp4.newMessageBarCloseButton;
               cResult[18] = G;
               cResult[19] = tmp28;
             }
           }
           const obj6 = { accessibilityRole: "button", style: tmp11, onPress: handleScrollToNewMessages, children: tmp14 };
-          const tmp19 = closure_12(tmp(6405).PressableOpacity, obj6);
+          const tmp19 = closure_12(tmp(6407).PressableOpacity, obj6);
           cResult[9] = handleScrollToNewMessages;
           cResult[10] = tmp4.newMessageBarTextContainer;
           cResult[11] = tmp14;
@@ -667,7 +667,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
           tmp17 = tmp19;
         }
       }
-      const intl = tmp(1126).intl;
+      const intl = tmp(1128).intl;
       const obj7 = { count: unreadCount, timestamp: oldestUnreadTimestamp };
       const formatResult = intl.format(tmp9, obj7);
       cResult[3] = tmp9;
@@ -700,25 +700,25 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewMes
     if (unreadCount <= 0) {
       tmp2 = null;
     } else {
-      XSmallBoldIcon(1126).t;
+      XSmallBoldIcon(1128).t;
       const isEstimatedResult = ReadStateStore.isEstimated(channel.id);
       const t = { style: stringResult.newMessageBar, children: null };
       const obj2 = { accessibilityRole: "button", style: stringResult.newMessageBarTextContainer, onPress: handleScrollToNewMessages, children: null };
       const obj3 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
-      const intl = XSmallBoldIcon(1126).intl;
+      const intl = XSmallBoldIcon(1128).intl;
       const obj4 = { count: unreadCount, timestamp: channel.oldestUnreadTimestamp };
       obj3.children = intl.format(ReadStateStore.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj4);
-      obj2.children = closure_12(XSmallBoldIcon(5147).Text, obj3);
-      const items1 = [closure_12(XSmallBoldIcon(6405).PressableOpacity, obj2), ];
-      handleScrollToNewMessages = XSmallBoldIcon(6405).PressableOpacity;
+      obj2.children = closure_12(XSmallBoldIcon(5149).Text, obj3);
+      const items1 = [closure_12(XSmallBoldIcon(6407).PressableOpacity, obj2), ];
+      handleScrollToNewMessages = XSmallBoldIcon(6407).PressableOpacity;
       const obj5 = { style: stringResult.newMessageBarCloseButton, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-      const intl2 = XSmallBoldIcon(1126).intl;
-      stringResult = intl2.string(XSmallBoldIcon(1126).t.e6RscS);
+      const intl2 = XSmallBoldIcon(1128).intl;
+      stringResult = intl2.string(XSmallBoldIcon(1128).t.e6RscS);
       obj5.accessibilityLabel = stringResult;
       obj5.onPress = function onPress() {
         return ReadStateActionCreators.ack(channel.id, { section: constants4.NEW_MESSAGES_BANNER, object: constants2.MARK_CHANNEL_AS_READ_BUTTON, objectType: constants.ACK_MANUAL });
       };
-      XSmallBoldIcon = XSmallBoldIcon(10715).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(10730).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;

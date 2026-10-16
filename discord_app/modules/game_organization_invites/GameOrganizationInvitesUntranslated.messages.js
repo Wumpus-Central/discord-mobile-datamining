@@ -1,20 +1,20 @@
-// === Module 2438: ? ===
+// === Module 2441: ? ===
 
-// Module 2438
-import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
-import _mod2439 from "module_2439" /* 2439 */;
-import module_1165_mod from "module_1165" /* 1165 */;
+// Module 2441
+import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
+import _mod2442 from "module_2442" /* 2442 */;
+import module_1167_mod from "module_1167" /* 1167 */;
 import size from "module_2" /* 2 */;
 
-let module_1165 = module_1165_mod;
-const loader = module_1165.createLoader({
+let module_1167 = module_1167_mod;
+const loader = module_1167.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2439);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2442);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1165 = module_1165_mod;
-const messagesProxy = module_1165.makeMessagesProxy(loader);
+let module_1167 = module_1167_mod;
+const messagesProxy = module_1167.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInvitesUntranslated.messages.js");
 
 export default messagesProxy;

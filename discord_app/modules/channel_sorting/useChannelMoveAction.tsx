@@ -1,23 +1,23 @@
-// === Module 13534: useChannelMoveAction ===
+// === Module 13560: useChannelMoveAction ===
 
-// Module 13534 (useChannelMoveAction)
-import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13536 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 13538 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7021 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import UserStore from "UserStore" /* 1390 */;
-import getChannelListRecord from "getChannelListRecord" /* 13535 */;
+// Module 13560 (useChannelMoveAction)
+import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13562 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 13564 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7023 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import UserStore from "UserStore" /* 1392 */;
+import getChannelListRecord from "getChannelListRecord" /* 13561 */;
 
 require = fn;
 function areDestinationsEqual(arr, arg1) {
   dependencyMap = arg1;
   return arr.length === arg1.length && arr.every((id, index) => id.id === dependencyMap[index].id && id.label === dependencyMap[index].label && id.disabled === dependencyMap[index].disabled);
 }
-const NULL_STRING_CHANNEL_ID = fn(1085).NULL_STRING_CHANNEL_ID;
+const NULL_STRING_CHANNEL_ID = fn(1087).NULL_STRING_CHANNEL_ID;
 let closure_12 = [];
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelListContext(getGuildId) {
@@ -38,11 +38,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isFavoritesGuildIdResult = tmp(2090).isFavoritesGuildId(stateFromStores);
+    const isFavoritesGuildIdResult = tmp(2093).isFavoritesGuildId(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isFavoritesGuildIdResult;
     let tmp8 = isFavoritesGuildIdResult;
-    const tmpResult3 = tmp(2090);
+    const tmpResult3 = tmp(2093);
   } else {
     tmp8 = cResult[3];
   }

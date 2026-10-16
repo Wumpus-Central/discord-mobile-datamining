@@ -1,12 +1,12 @@
-// === Module 12714: TypingStore ===
+// === Module 12740: TypingStore ===
 
-// Module 12714 (TypingStore)
+// Module 12740 (TypingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 function handleTypingStart(arg0) {
@@ -106,8 +106,8 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-const SlowmodeType = fn(7591).SlowmodeType;
-const Endpoints = fn(1085).Endpoints;
+const SlowmodeType = fn(7593).SlowmodeType;
+const Endpoints = fn(1087).Endpoints;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
@@ -159,7 +159,7 @@ const typingStore = new TypingStore(DispatcherDefault, {
     const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(7143).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(7145).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;

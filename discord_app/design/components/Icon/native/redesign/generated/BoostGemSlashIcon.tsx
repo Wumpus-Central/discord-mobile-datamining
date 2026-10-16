@@ -1,10 +1,10 @@
-// === Module 13168: BoostGemSlashIcon ===
+// === Module 13194: BoostGemSlashIcon ===
 
-// Module 13168 (BoostGemSlashIcon)
+// Module 13194 (BoostGemSlashIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod13169 from "module_13169" /* 13169 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod13195 from "module_13195" /* 13195 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const BoostGemSlashIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13169;
+    const tmpResult = _mod13195;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const BoostGemSlashIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13169, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13195, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

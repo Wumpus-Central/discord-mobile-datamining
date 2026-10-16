@@ -1,9 +1,9 @@
-// === Module 13974: getActivityChannelId ===
+// === Module 14006: getActivityChannelId ===
 
-// Module 13974 (getActivityChannelId)
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+// Module 14006 (getActivityChannelId)
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

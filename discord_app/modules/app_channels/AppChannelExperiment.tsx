@@ -1,7 +1,7 @@
-// === Module 8819: AppChannelExperiment ===
+// === Module 8827: AppChannelExperiment ===
 
-// Module 8819 (AppChannelExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 8827 (AppChannelExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", name: "2026-07-app-channels", defaultConfig: { enabled: false }, variations: null };

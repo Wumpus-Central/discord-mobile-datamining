@@ -1,14 +1,14 @@
-// === Module 17018: useChannelScreensFromNavigation ===
+// === Module 17051: useChannelScreensFromNavigation ===
 
-// Module 17018 (useChannelScreensFromNavigation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5032 */;
-import RootNavigationRef from "RootNavigationRef" /* 5033 */;
-import useChatLayoutDefault from "useChatLayout" /* 5035 */;
+// Module 17051 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import useChatLayoutDefault from "useChatLayout" /* 5038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 
 const require = globalThis.__r;
 
@@ -141,8 +141,8 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   }
   return tmp8;
 }
-const ME = fn(1085).ME;
-const isStaticChannelRoute = fn(2072).isStaticChannelRoute;
+const ME = fn(1087).ME;
+const isStaticChannelRoute = fn(2075).isStaticChannelRoute;
 const ChannelScreenType = { DEFAULT: 0, [0]: "DEFAULT", BACKGROUND_SAVED: 1, [1]: "BACKGROUND_SAVED", FALLBACK_RENDERED: 2, [2]: "FALLBACK_RENDERED" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5035).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5038).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

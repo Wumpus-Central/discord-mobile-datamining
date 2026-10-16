@@ -1,6 +1,6 @@
-// === Module 14956: AppLauncherBadgeUtils ===
+// === Module 14989: AppLauncherBadgeUtils ===
 
-// Module 14956 (AppLauncherBadgeUtils)
+// Module 14989 (AppLauncherBadgeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");

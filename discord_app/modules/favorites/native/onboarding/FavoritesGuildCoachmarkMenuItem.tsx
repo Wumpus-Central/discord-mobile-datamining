@@ -1,19 +1,19 @@
-// === Module 17252: FavoritesGuildCoachmarkMenuItem ===
+// === Module 17286: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 17252 (FavoritesGuildCoachmarkMenuItem)
+// Module 17286 (FavoritesGuildCoachmarkMenuItem)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10562 */;
+import util from "util" /* 1128 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10577 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 2068 */;
+import FavoriteStore from "FavoriteStore" /* 2071 */;
 
-const LayerScope2 = LayerScope(7067);
+const LayerScope2 = LayerScope(7069);
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [, , ];
-({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1085).ChannelTypes);
+({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1087).ChannelTypes);
 const set = new Set(items);
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -43,7 +43,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     tmp8 = cResult[3];
   }
   const tmpResult = markPopoverAsDismissed(504);
-  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10562).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
+  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10577).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
   ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
   if (cResult[4] !== markPopoverAsDismissed) {
     class S {
@@ -86,7 +86,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
         return;
       }
     }
-    const tmp16 = _modDef3444;
+    const tmp16 = _modDef3447;
     const stringResult = obj4.string(stateFromStores ? tmp16.TWuDTt : tmp16["25YCHl"]);
     cResult[8] = stateFromStores;
     cResult[9] = stringResult;
@@ -105,7 +105,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
           return;
         }
       }
-      const stringResult1 = obj5.string(_modDef3444.Ztl9ht);
+      const stringResult1 = obj5.string(_modDef3447.Ztl9ht);
       cResult[10] = stringResult1;
       const tmp19 = stringResult1;
     } else {
@@ -124,7 +124,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
           return;
         }
       }
-      const stringResult2 = obj6.string(_modDef3444["+h9aza"]);
+      const stringResult2 = obj6.string(_modDef3447["+h9aza"]);
       cResult[11] = stringResult2;
       const tmp22 = stringResult2;
     } else {
@@ -150,7 +150,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     cResult[15] = tmp14;
     cResult[16] = obj2;
   }
-  const tmpResult2 = markPopoverAsDismissed(10562);
+  const tmpResult2 = markPopoverAsDismissed(10577);
 }) : (function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   let stateFromStores;
   let markPopoverAsDismissed;
@@ -175,7 +175,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
   const memo = onDismiss.useMemo(() => {
     const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "Symbol", onButtonPress: null };
     const intl = util.intl;
-    const tmp4 = _modDef3444;
+    const tmp4 = _modDef3447;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = importDefault;
@@ -185,10 +185,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     }
     obj.title = intl.string(TWuDTt);
     const intl2 = util.intl;
-    obj.description = intl2.string(tmp6(3444).Ztl9ht);
+    obj.description = intl2.string(tmp6(3447).Ztl9ht);
     obj.onDismiss = onDismiss;
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(tmp6(3444)["+h9aza"]);
+    obj.buttonLabel = intl3.string(tmp6(3447)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);

@@ -1,22 +1,22 @@
-// === Module 15368: ConjureVoiceSessionCoordinator ===
+// === Module 15403: ConjureVoiceSessionCoordinator ===
 
-// Module 15368 (ConjureVoiceSessionCoordinator)
+// Module 15403 (ConjureVoiceSessionCoordinator)
 import _modDef12 from "module_12" /* 12 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5303 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5306 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10938 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15370 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 11620 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5305 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5308 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10953 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15405 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 11644 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
-import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import UserStore from "UserStore" /* 1392 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 let obj2 = fn;
-const RPCErrors = fn(1085).RPCErrors;
-const Constants = fn(5176);
+const RPCErrors = fn(1087).RPCErrors;
+const Constants = fn(5178);
 ({ Features: c10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -75,7 +75,7 @@ prototype["getCapabilities"] = function getCapabilities() {
   return obj;
 };
 prototype["getSpatialCapabilities"] = function getSpatialCapabilities() {
-  let available = SpatialAudioForVoiceExperimentDefault.getConfig({ location: "VibegrationsVoiceSessionCoordinator" }).enabled;
+  let available = SpatialAudioForVoiceExperimentDefault.getConfig({ location: "ConjureVoiceSessionCoordinator" }).enabled;
   if (available) {
     available = MediaEngineStore.supports(constants.SPATIAL_AUDIO);
   }
@@ -136,15 +136,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp38Result2 = tmp38(15369);
+            tmp38Result2 = tmp38(15404);
           }
-          tmp38Result = tmp38(15369);
+          tmp38Result = tmp38(15404);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = obj2(15369);
+        obj11 = obj2(15404);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -164,7 +164,7 @@ prototype["start"] = function start(id) {
         }
         focusSequence = num;
       }
-      const obj3 = { id: obj2(1279).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, acoustics: {}, focusSequence, backgrounded: !FrameVisibilityStore.isFrameVisible(frameId), pooled: FrameVisibilityStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
+      const obj3 = { id: obj2(1281).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, acoustics: {}, focusSequence, backgrounded: !FrameVisibilityStore.isFrameVisible(frameId), pooled: FrameVisibilityStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
       const _Set = Set;
       const set = new Set();
       obj3.appliedUserIds = set;
@@ -180,7 +180,7 @@ prototype["start"] = function start(id) {
         const tmp34 = new RPCErrorDefault(obj4, "The voice connection is unavailable");
         throw tmp34;
       }
-      const obj7 = obj2(1279);
+      const obj7 = obj2(1281);
     }
   }
   const obj5 = { errorCode: RPCErrors.INVALID_CHANNEL };
@@ -211,16 +211,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15374);
+    obj2 = obj2(15409);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15374).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15409).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15374);
+      const tmp11Result = tmp11(15409);
     }
     tmp11 = obj2;
   } else {
@@ -347,7 +347,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15375).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15410).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

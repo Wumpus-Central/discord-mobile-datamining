@@ -1,25 +1,25 @@
-// === Module 11190: StreamQualityLiveIndicator ===
+// === Module 11206: StreamQualityLiveIndicator ===
 
-// Module 11190 (StreamQualityLiveIndicator)
+// Module 11206 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import timing from "timing" /* 5152 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9614 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9615 */;
+import native from "native" /* 1202 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import timing from "timing" /* 5154 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9631 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const PremiumConstants = fn(1392);
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const PremiumConstants = fn(1394);
 ({ PremiumTypes: metroRequire, PremiumUpsellTypes: closure_7 } = PremiumConstants);
-const ResolutionTypes = fn(5176).ResolutionTypes;
+const ResolutionTypes = fn(5178).ResolutionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 }, liveTag: { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" }, qualityTag: null, qualityTagText: null, reducedQualityTagText: null, nitroWheel: null };
 let obj3 = { borderBottomLeftRadius: nativeDefault.radii.none, borderTopLeftRadius: nativeDefault.radii.none, height: 18, textAlign: "center" };
 obj2.qualityTag = { borderBottomLeftRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };

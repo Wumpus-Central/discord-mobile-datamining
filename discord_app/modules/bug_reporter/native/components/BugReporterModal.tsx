@@ -1,26 +1,26 @@
-// === Module 13464: BugReporterModal ===
+// === Module 13490: BugReporterModal ===
 
-// Module 13464 (BugReporterModal)
+// Module 13490 (BugReporterModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import NavigatorHeader from "NavigatorHeader" /* 6421 */;
-import TableRadioRow from "TableRadioRow" /* 6482 */;
-import Navigator from "Navigator" /* 6908 */;
-import HeaderActionButton from "HeaderActionButton" /* 7310 */;
-import UploadDefault from "Upload" /* 7974 */;
-import UploadPlatform from "UploadPlatform" /* 7975 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import util from "util" /* 1128 */;
+import AvatarUtils from "AvatarUtils" /* 1417 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import NavigatorHeader from "NavigatorHeader" /* 6423 */;
+import TableRadioRow from "TableRadioRow" /* 6484 */;
+import Navigator from "Navigator" /* 6910 */;
+import HeaderActionButton from "HeaderActionButton" /* 7312 */;
+import UploadDefault from "Upload" /* 7977 */;
+import UploadPlatform from "UploadPlatform" /* 7978 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import BugReportStore from "BugReportStore" /* 13463 */;
+import UserStore from "UserStore" /* 1392 */;
+import BugReportStore from "BugReportStore" /* 13489 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
@@ -448,17 +448,17 @@ class BugCreateScreen {
                               if (closure_131_4) {
                                 closure_131_3.succeed();
                                 const obj5 = { text: null, variant: "success", duration: null };
-                                const intl2 = closure_2_0(1126).intl;
-                                obj5.text = intl2.string(closure_2_0(1126).t.jB8yOL);
+                                const intl2 = closure_2_0(1128).intl;
+                                obj5.text = intl2.string(closure_2_0(1128).t.jB8yOL);
                                 obj5.duration = duration;
-                                closure_2_1(4865).open("BUG_REPORT_BUG_SUBMITTED", obj5);
-                                const obj6 = closure_2_1(4865);
+                                closure_2_1(4868).open("BUG_REPORT_BUG_SUBMITTED", obj5);
+                                const obj6 = closure_2_1(4868);
                               } else {
                                 const obj7 = { text: null, variant: "critical" };
-                                const intl = closure_2_0(1126).intl;
-                                obj7.text = intl.string(closure_2_0(1126).t["4t1o0u"]);
-                                closure_2_1(4865).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
-                                const obj4 = closure_2_1(4865);
+                                const intl = closure_2_0(1128).intl;
+                                obj7.text = intl.string(closure_2_0(1128).t["4t1o0u"]);
+                                closure_2_1(4868).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                                const obj4 = closure_2_1(4868);
                               }
                               c6 = 3;
                             }
@@ -503,7 +503,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(13466).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(13492).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -523,22 +523,22 @@ class BugCreateScreen {
                 if (ref.current) {
                   if (first5) {
                     let obj5 = { text: null, variant: "critical", duration: null };
-                    let intl2 = handleSubmit(1126).intl;
-                    obj5.text = intl2.string(handleSubmit(1126).t.Uuqbcm);
+                    let intl2 = handleSubmit(1128).intl;
+                    obj5.text = intl2.string(handleSubmit(1128).t.Uuqbcm);
                     obj5.duration = duration;
-                    screenshot(4865).open("BUG_REPORT_SUBMITTING_BUG", obj5);
+                    screenshot(4868).open("BUG_REPORT_SUBMITTING_BUG", obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(4865);
+                    let obj9 = screenshot(4868);
                   }
                   priority = 3;
                 } else {
                   callback(true);
                   if (null == priority) {
                     let obj7 = { text: null, variant: "critical" };
-                    let intl = handleSubmit(1126).intl;
-                    obj7.text = intl.string(handleSubmit(1126).t["4t1o0u"]);
-                    screenshot(4865).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                    let intl = handleSubmit(1128).intl;
+                    obj7.text = intl.string(handleSubmit(1128).t["4t1o0u"]);
+                    screenshot(4868).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -546,7 +546,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(13465).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(13491).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -895,7 +895,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13476, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13502, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -916,7 +916,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { padding: 16 }, attachmentCarousel: { justifyContent: "center", minWidth: "100%" }, attachmentContainer: { marginHorizontal: 4, marginBottom: 16 }, closeContainer: null, priorityIcon: null, offButton: null, submittingOverlay: null, submittingText: null };
 let size = { position: "absolute", top: 6, right: 10, height: 20, width: 20, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: null };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
@@ -986,6 +986,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BugRepor
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6908).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6910).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 });
 export { BugCreateScreen };

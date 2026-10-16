@@ -1,36 +1,36 @@
-// === Module 17355: HomeDrawerGuildRow ===
+// === Module 17389: HomeDrawerGuildRow ===
 
-// Module 17355 (HomeDrawerGuildRow)
-import Text_Text from "Text/Text" /* 5147 */;
-import useChannelName from "useChannelName" /* 5481 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10579 */;
-import BellZIcon from "BellZIcon" /* 13504 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 17360 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 17361 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 17362 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 17364 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 17365 */;
+// Module 17389 (HomeDrawerGuildRow)
+import Text_Text from "Text/Text" /* 5149 */;
+import useChannelName from "useChannelName" /* 5483 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10594 */;
+import BellZIcon from "BellZIcon" /* 13530 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 17394 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 17395 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 17396 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 17398 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 17399 */;
 import noop from "module_19" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4808 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore from "GuildChannelStore" /* 4804 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6300 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import UserStore from "UserStore" /* 1390 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6302 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const isThread = fn(2069).isThread;
-const Constants = fn(1085);
+const isThread = fn(2072).isThread;
+const Constants = fn(1087);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6183).UnreadSetting;
+const UnreadSetting = fn(6185).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = { STREAMING: "streaming", VOICE: "voice", MENTION: "mention", TYPING: "typing", UNREAD: "unread", NONE: "none" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_21 = createStyles.createStyles({ guildName: { flexDirection: "row", alignItems: "center", gap: 4 }, guildNameText: { flexShrink: 1 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -160,7 +160,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildR
         }
       }
       const obj3 = { variant: "text-md/medium", style: tmp4.guildNameText, lineClamp: 1, color: "text-default", children: guild.name };
-      const tmp22 = closure_18(tmp(5147).Text, obj3);
+      const tmp22 = closure_18(tmp(5149).Text, obj3);
       cResult[12] = guild.name;
       cResult[13] = tmp4.guildNameText;
       cResult[14] = "text-default";
@@ -290,7 +290,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildR
     const tmp = unreadChannel.getMutableGuildStates()[guild.id];
     guild = tmp;
     if (null == tmp) {
-      return { mentionChannel: "done", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
+      return { mentionChannel: "duration", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
     } else {
       const keys = disableSubtitle(onActiveHookChange[27]).keys(tmp.mentionCounts);
       const found = keys.filter((item) => {
@@ -472,7 +472,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   } else {
     tmp8 = cResult[3];
   }
-  const MobileHomeDrawerExperiment = tmp(5038).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = tmp(5041).MobileHomeDrawerExperiment;
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   ({ disableSubtitle, onActiveHookChange } = guildId);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(5038).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(5041).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

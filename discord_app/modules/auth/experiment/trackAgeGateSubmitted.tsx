@@ -1,10 +1,10 @@
-// === Module 16967: trackAgeGateSubmitted ===
+// === Module 17000: trackAgeGateSubmitted ===
 
-// Module 16967 (trackAgeGateSubmitted)
-import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import _modDef4758 from "module_4758" /* 4758 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 16968 */;
+// Module 17000 (trackAgeGateSubmitted)
+import Constants from "Constants" /* 1087 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 17001 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -16,7 +16,7 @@ export default function trackAgeGateSubmitted(date, section) {
   if (obj2.diff(date, "years") < 18) {
     tmp3 = formatDateForAPIDefault(date);
   }
-  obj2 = _modDef4758();
+  obj2 = _modDef4761();
   obj.track(AnalyticEvents.AGE_GATE_SUBMITTED, { dob: tmp3, dob_day: date.date(), dob_month: date.month() + 1, dob_year: date.year(), source: { section } });
   const obj3 = { dob: tmp3, dob_day: date.date(), dob_month: date.month() + 1, dob_year: date.year(), source: { section } };
 };

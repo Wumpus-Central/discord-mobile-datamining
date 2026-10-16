@@ -1,20 +1,20 @@
-// === Module 15561: UserProfilePremiumTryItOutSection ===
+// === Module 15594: UserProfilePremiumTryItOutSection ===
 
-// Module 15561 (UserProfilePremiumTryItOutSection)
+// Module 15594 (UserProfilePremiumTryItOutSection)
 import nativeDefault from "native" /* 587 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9614 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9615 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15562 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15584 */;
-import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2" /* 15594 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9631 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15595 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15617 */;
+import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2" /* 15627 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, cardInner: null, divider: null, dividerLine: null, lockCircle: null, lockIcon: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16 };
 obj2.cardInner = { paddingTop: nativeDefault.space.PX_24 };
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }
   ({ container, cardInner } = tmp4);
   if (cResult[2] !== tmp7) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const obj2 = { onClick: tmp7 };
-    const formatResult = intl.format(tmp(1126).t.TmfgI2, obj2);
+    const formatResult = intl.format(tmp(1128).t.TmfgI2, obj2);
     cResult[2] = tmp7;
     cResult[3] = formatResult;
     let tmp8 = formatResult;
@@ -60,8 +60,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     tmp8 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = tmp(1126).intl;
-    const stringResult = intl2.string(tmp(1126).t.PxUx8e);
+    const intl2 = tmp(1128).intl;
+    const stringResult = intl2.string(tmp(1128).t.PxUx8e);
     cResult[4] = stringResult;
     let tmp10 = stringResult;
   } else {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }
   if (cResult[7] !== tmp4.lockIcon) {
     const obj4 = { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp4.lockIcon };
-    const tmp18 = closure_5(tmp(8440).LockIcon, obj4);
+    const tmp18 = closure_5(tmp(8448).LockIcon, obj4);
     cResult[7] = tmp4.lockIcon;
     cResult[8] = tmp18;
     let tmp16 = tmp18;
@@ -162,10 +162,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     openPremiumModalDefault(obj);
   }, items);
   let obj = { style: tmp.container, innerStyle: tmp.cardInner, text: null, textAlign: "center", buttonText: null, onButtonPress: null, onLayout: null, children: null };
-  const intl = analyticsLocations(1126).intl;
-  obj.text = intl.format(analyticsLocations(1126).t.TmfgI2, { onClick: callback });
-  const intl2 = analyticsLocations(1126).intl;
-  obj.buttonText = intl2.string(analyticsLocations(1126).t.PxUx8e);
+  const intl = analyticsLocations(1128).intl;
+  obj.text = intl.format(analyticsLocations(1128).t.TmfgI2, { onClick: callback });
+  const intl2 = analyticsLocations(1128).intl;
+  obj.buttonText = intl2.string(analyticsLocations(1128).t.PxUx8e);
   obj.onButtonPress = onPreviewPremium;
   obj.onLayout = onLayout;
   const obj2 = { style: tmp.divider, children: null };
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj4 = { style: tmp.lockCircle, children: null };
   const obj3 = { style: tmp.dividerLine };
   const tmp4 = UserProfileUpsellCardV2Default;
-  obj4.children = closure_5(analyticsLocations(8440).LockIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp.lockIcon });
+  obj4.children = closure_5(analyticsLocations(8448).LockIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp.lockIcon });
   items1[1] = closure_5(View, obj4);
   obj2.children = items1;
   const items2 = [closure_6(View, obj2), closure_5(UserProfileTryItOutFieldsDefault, { currentUser, mode: "entrypoint" })];

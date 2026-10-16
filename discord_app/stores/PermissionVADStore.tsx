@@ -1,14 +1,14 @@
-// === Module 15306: PermissionVADStore ===
+// === Module 15341: PermissionVADStore ===
 
-// Module 15306 (PermissionVADStore)
+// Module 15341 (PermissionVADStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 function handleUpdateVADPermission() {
   const channelId = RTCConnectionStore.getChannelId();
@@ -39,7 +39,7 @@ function handleUpdateVADPermission() {
   }
   return flag2;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InputModes: closure_8, Permissions: closure_9 } = Constants);
 let c11 = true;
 const Store = initializeDefault.Store;

@@ -1,19 +1,19 @@
-// === Module 8271: GuildProductPurchaseSystemMessage ===
+// === Module 8276: GuildProductPurchaseSystemMessage ===
 
-// Module 8271 (GuildProductPurchaseSystemMessage)
-import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import useMessageAuthor from "useMessageAuthor" /* 5843 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8196 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8200 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8229 */;
-import MessageRecord from "MessageRecord" /* 4817 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+// Module 8276 (GuildProductPurchaseSystemMessage)
+import util from "util" /* 1128 */;
+import AvatarUtils from "AvatarUtils" /* 1417 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
+import useMessageAuthor from "useMessageAuthor" /* 5845 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8199 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8201 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8203 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8232 */;
+import MessageRecord from "MessageRecord" /* 4820 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
-const MessageTypes = fn(1085).MessageTypes;
+const MessageTypes = fn(1087).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
 

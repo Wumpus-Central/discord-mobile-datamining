@@ -1,24 +1,24 @@
-// === Module 18257: LaunchPadWrapper ===
+// === Module 18299: LaunchPadWrapper ===
 
-// Module 18257 (LaunchPadWrapper)
+// Module 18299 (LaunchPadWrapper)
 import nativeDefault from "native" /* 587 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import RouteManagerDefault from "RouteManager" /* 11494 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 18255 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import RouteManagerDefault from "RouteManager" /* 11514 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 18297 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableOpacity: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(10987).LaunchPadTypes;
-const Constants = fn(1085);
+const LaunchPadTypes = fn(11002).LaunchPadTypes;
+const Constants = fn(1087);
 ({ AnalyticEvents: c10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;
@@ -40,9 +40,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLau
         showLaunchPad.setLaunchPadPosition(0);
       }
       closure_2 = RouteManagerDefault.addRouteChangeListener(hideLaunchPad);
-      let ComponentDispatch = closure_0(1121).ComponentDispatch;
+      let ComponentDispatch = closure_0(1123).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.LAUNCH_PAD_SHOW, showLaunchPad);
-      let ComponentDispatch2 = closure_0(1121).ComponentDispatch;
+      let ComponentDispatch2 = closure_0(1123).ComponentDispatch;
       const subscription1 = ComponentDispatch2.subscribe(constants.LAUNCH_PAD_HIDE, hideLaunchPad);
       return () => {
         closure_2();
@@ -76,9 +76,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLau
       showLaunchPad.setLaunchPadPosition(0);
     }
     closure_2 = RouteManagerDefault.addRouteChangeListener(hideLaunchPad);
-    let ComponentDispatch = closure_0(1121).ComponentDispatch;
+    let ComponentDispatch = closure_0(1123).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(constants.LAUNCH_PAD_SHOW, showLaunchPad);
-    let ComponentDispatch2 = closure_0(1121).ComponentDispatch;
+    let ComponentDispatch2 = closure_0(1123).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(constants.LAUNCH_PAD_HIDE, hideLaunchPad);
     return () => {
       closure_2();

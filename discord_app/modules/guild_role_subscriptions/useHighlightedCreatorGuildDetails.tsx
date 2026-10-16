@@ -1,13 +1,13 @@
-// === Module 18811: useHighlightedCreatorGuildDetails ===
+// === Module 18853: useHighlightedCreatorGuildDetails ===
 
-// Module 18811 (useHighlightedCreatorGuildDetails)
+// Module 18853 (useHighlightedCreatorGuildDetails)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 18812 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 18854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MarketingURLs = fn(1085).MarketingURLs;
+const MarketingURLs = fn(1087).MarketingURLs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");

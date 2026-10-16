@@ -1,12 +1,12 @@
-// === Module 9524: PressableNavigatorButtonWrapper ===
+// === Module 9540: PressableNavigatorButtonWrapper ===
 
-// Module 9524 (PressableNavigatorButtonWrapper)
+// Module 9540 (PressableNavigatorButtonWrapper)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import MainTabsV2Constants from "MainTabsV2Constants" /* 9519 */;
-import createStyles from "createStyles" /* 5151 */;
+import MainTabsV2Constants from "MainTabsV2Constants" /* 9535 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

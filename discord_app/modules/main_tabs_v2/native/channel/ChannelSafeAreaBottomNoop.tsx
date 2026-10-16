@@ -1,6 +1,6 @@
-// === Module 13227: ChannelSafeAreaBottomNoop ===
+// === Module 13253: ChannelSafeAreaBottomNoop ===
 
-// Module 13227 (ChannelSafeAreaBottomNoop)
+// Module 13253 (ChannelSafeAreaBottomNoop)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

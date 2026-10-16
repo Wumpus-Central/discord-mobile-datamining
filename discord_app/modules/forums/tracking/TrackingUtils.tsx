@@ -1,20 +1,20 @@
-// === Module 8123: TrackingUtils ===
+// === Module 8126: TrackingUtils ===
 
-// Module 8123 (TrackingUtils)
+// Module 8126 (TrackingUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2074 */;
-import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 8126 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8127 */;
-import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 8128 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6276 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4808 */;
-import ThreadMembersStore from "ThreadMembersStore" /* 8124 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7226 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import DraftStore from "DraftStore" /* 7460 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8125 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7205 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2077 */;
+import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 8129 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8130 */;
+import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 8131 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6278 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
+import ThreadMembersStore from "ThreadMembersStore" /* 8127 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7228 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import DraftStore from "DraftStore" /* 7462 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8128 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7207 */;
 
 require = fn;
 function collectForumAnalyticsMetadata(sessionId) {
@@ -71,10 +71,10 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(7460).DraftType;
-const Permissions = fn(1085).Permissions;
-const ChannelFlags = fn(2072).ChannelFlags;
-const constants = fn(1125).ThreadSortOrderReadableForAnalytics;
+const DraftType = fn(7462).DraftType;
+const Permissions = fn(1087).Permissions;
+const ChannelFlags = fn(2075).ChannelFlags;
+const constants = fn(1127).ThreadSortOrderReadableForAnalytics;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
 

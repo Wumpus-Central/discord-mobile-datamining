@@ -1,23 +1,23 @@
-// === Module 16102: UserSettingsAppearanceThemeUtils ===
+// === Module 16135: UserSettingsAppearanceThemeUtils ===
 
-// Module 16102 (UserSettingsAppearanceThemeUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1254 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5022 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5320 */;
-import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 12696 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16103 */;
-import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 16104 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1251 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+// Module 16135 (UserSettingsAppearanceThemeUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5025 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 5322 */;
+import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 12722 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 16136 */;
+import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 16137 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
-const SystemThemeState = fn(1208).SystemThemeState;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_7 = fn(1253).BACKGROUND_GRADIENT_PRESETS_MOBILE;
-const constants = fn(1392).AnalyticsPremiumFeatureNames;
+const SystemThemeState = fn(1210).SystemThemeState;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_7 = fn(1255).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+const constants = fn(1394).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
@@ -154,7 +154,7 @@ export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
 };
 export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   if (null != userPreset) {
-    const findIndexResult = memo1.findIndex((type) => type.type === userPreset(1254).ClientThemeType.BACKGROUND_GRADIENT_PRESET);
+    const findIndexResult = memo1.findIndex((type) => type.type === userPreset(1256).ClientThemeType.BACKGROUND_GRADIENT_PRESET);
     const findIndexResult1 = closure_7.findIndex((id) => id.id === userPreset.id);
     let num4 = 0;
     if (findIndexResult >= 0) {
@@ -167,7 +167,7 @@ export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1254).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((type) => type.type === userPreset(1256).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
     const findIndexResult2 = memo1.findIndex((theme) => theme.theme === str);

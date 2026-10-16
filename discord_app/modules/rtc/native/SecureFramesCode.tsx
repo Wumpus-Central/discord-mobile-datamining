@@ -1,9 +1,9 @@
-// === Module 9060: SecureFramesCode ===
+// === Module 9068: SecureFramesCode ===
 
-// Module 9060 (SecureFramesCode)
+// Module 9068 (SecureFramesCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,8 +11,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5151);
-let obj2 = { codeText: { fontFamily: fn(1096).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
+const createStyles = fn(5153);
+let obj2 = { codeText: { fontFamily: fn(1098).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
 let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };

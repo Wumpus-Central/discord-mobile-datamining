@@ -1,15 +1,15 @@
-// === Module 14684: GuildOfficialMessagesStore ===
+// === Module 14716: GuildOfficialMessagesStore ===
 
-// Module 14684 (GuildOfficialMessagesStore)
+// Module 14716 (GuildOfficialMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5494 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function updateGuildState(guildId, fn) {
@@ -111,7 +111,7 @@ function handleRelationshipUpdate() {
     return false;
   }
 }
-const MessageFlags = fn(1085).MessageFlags;
+const MessageFlags = fn(1087).MessageFlags;
 let obj = {};
 const Store = initializeDefault.Store;
 class GuildOfficialMessagesStore extends Store {

@@ -1,13 +1,13 @@
-// === Module 7148: canUseGuildSpace ===
+// === Module 7150: canUseGuildSpace ===
 
-// Module 7148 (canUseGuildSpace)
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 7150 (canUseGuildSpace)
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGuildSpaceAdmin(arg0) {
   _require = arg0;

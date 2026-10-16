@@ -1,13 +1,13 @@
-// === Module 14125: OrbCheckoutModalContext ===
+// === Module 14157: OrbCheckoutModalContext ===
 
-// Module 14125 (OrbCheckoutModalContext)
+// Module 14157 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7491 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import SKUStore from "SKUStore" /* 6310 */;
-import v1 from "v1" /* 1279 */;
+import UserStore from "UserStore" /* 1392 */;
+import SKUStore from "SKUStore" /* 6312 */;
+import v1 from "v1" /* 1281 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
 import size from "module_2" /* 2 */;
@@ -364,22 +364,33 @@ export const OrbCheckoutModalContextProvider = ReactCompilerGating.isReactCompil
   cResult[2] = skuId;
   cResult[3] = obj4;
   tmp2 = obj4;
-}) : (function OrbCheckoutModalContextProvider(onCheckoutSuccess) {
-  ({ skuId, loadId, analyticsLocations } = onCheckoutSuccess);
-  ({ analyticsSourceLocation, children } = onCheckoutSuccess);
-  const tmp = closure_10({ skuId, loadId, onCheckoutSuccess: onCheckoutSuccess.onCheckoutSuccess });
-  const obj2 = { skuId, skuProductLine: tmp.skuProductLine, skuApplicationId: tmp.skuApplicationId, loadId, analyticsLocations: null, analyticsSourceLocation: null, orbProductContext: null, onRedeemVirtualCurrency: null, isRedeeming: null, orbRedemptionError: null };
-  ({ orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError } = tmp);
-  if (analyticsLocations == null) {
-    analyticsLocations = [];
-  }
-  obj2.analyticsLocations = analyticsLocations;
-  obj2.analyticsSourceLocation = analyticsSourceLocation;
-  obj2.orbProductContext = orbProductContext;
-  obj2.onRedeemVirtualCurrency = onRedeemVirtualCurrency;
-  obj2.isRedeeming = isRedeeming;
-  obj2.orbRedemptionError = orbRedemptionError;
-  return <redux.Provider value={obj2}>{children}</redux.Provider>;
+}) : (function OrbCheckoutModalContextProvider(children) {
+  const skuId = children.skuId;
+  const loadId = children.loadId;
+  const analyticsSourceLocation = children.analyticsSourceLocation;
+  const analyticsLocations = children.analyticsLocations;
+  const tmp = closure_10({ skuId, loadId, onCheckoutSuccess: children.onCheckoutSuccess });
+  const orbProductContext = tmp.orbProductContext;
+  const onRedeemVirtualCurrency = tmp.onRedeemVirtualCurrency;
+  const isRedeeming = tmp.isRedeeming;
+  const orbRedemptionError = tmp.orbRedemptionError;
+  const skuProductLine = tmp.skuProductLine;
+  const skuApplicationId = tmp.skuApplicationId;
+  let items = [skuId, skuProductLine, skuApplicationId, loadId, analyticsLocations, analyticsSourceLocation, orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError];
+  return <redux.Provider value={hasOwnProperty(() => {
+    const obj = { skuId, skuProductLine, skuApplicationId, loadId, analyticsLocations: null, analyticsSourceLocation: null, orbProductContext: null, onRedeemVirtualCurrency: null, isRedeeming: null, orbRedemptionError: null };
+    let items = analyticsLocations;
+    if (analyticsLocations == null) {
+      items = [];
+    }
+    obj.analyticsLocations = items;
+    obj.analyticsSourceLocation = analyticsSourceLocation;
+    obj.orbProductContext = orbProductContext;
+    obj.onRedeemVirtualCurrency = onRedeemVirtualCurrency;
+    obj.isRedeeming = isRedeeming;
+    obj.orbRedemptionError = orbRedemptionError;
+    return obj;
+  }, items)}>{children.children}</redux.Provider>;
 });
 export const useOrbCheckoutModalContext = function useOrbCheckoutModalContext() {
   return React3(closure_9);

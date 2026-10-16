@@ -1,6 +1,6 @@
-// === Module 1103: utils/ColorUtils ===
+// === Module 1105: utils/ColorUtils ===
 
-// Module 1103 (utils/ColorUtils)
+// Module 1105 (utils/ColorUtils)
 import _modDef683 from "module_683" /* 683 */;
 import size from "module_2" /* 2 */;
 
@@ -124,7 +124,7 @@ export const int2hslValues = function int2hslValues(initialColor) {
   }
   return combined;
 };
-export const int2hsl = function int2hsl(accent_color, arg1) {
+export const int2hsl = function int2hsl(color, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -137,7 +137,7 @@ export const int2hsl = function int2hsl(accent_color, arg1) {
   if (arg3 === undefined) {
     num = 1;
   }
-  const tmp2 = int2hslRaw(accent_color);
+  const tmp2 = int2hslRaw(color);
   const h = tmp2.h;
   const result = 100 * tmp2.s;
   const tmp3 = +result.toFixed(1);

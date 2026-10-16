@@ -1,6 +1,6 @@
-// === Module 4887: ThemeContext ===
+// === Module 4890: ThemeContext ===
 
-// Module 4887 (ThemeContext)
+// Module 4890 (ThemeContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeCont
   }
 });
 let closure_5 = tmp3;
-let obj = { theme: fn(1096).ThemeTypes.LIGHT, primaryColor: null, secondaryColor: null, gradient: null, flags: 0, contrast: 1, saturation: 1, density: "compact", disableAdaptiveTheme: false, reduceAdaptiveTheme: false };
+let obj = { theme: fn(1098).ThemeTypes.LIGHT, primaryColor: null, secondaryColor: null, gradient: null, flags: 0, contrast: 1, saturation: 1, density: "compact", disableAdaptiveTheme: false, reduceAdaptiveTheme: false };
 const obj3 = {};
 let json = JSON.stringify(obj);
 let merged = Object.assign(obj);

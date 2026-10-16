@@ -1,12 +1,12 @@
-// === Module 10523: LobbyUtils ===
+// === Module 10538: LobbyUtils ===
 
-// Module 10523 (LobbyUtils)
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 10538 (LobbyUtils)
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 function canUnlinkLobbyChannel(channel, arg1) {
   let obj = arg1;

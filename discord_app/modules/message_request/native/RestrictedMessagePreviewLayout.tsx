@@ -1,7 +1,7 @@
-// === Module 17941: RestrictedMessagePreviewLayout ===
+// === Module 17975: RestrictedMessagePreviewLayout ===
 
-// Module 17941 (RestrictedMessagePreviewLayout)
-import native from "native" /* 1200 */;
+// Module 17975 (RestrictedMessagePreviewLayout)
+import native from "native" /* 1202 */;
 import size from "module_2" /* 2 */;
 
 const tmp2 = native.AVATAR_SIZE_MAP[native.AvatarSizes.NORMAL];

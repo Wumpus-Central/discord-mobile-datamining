@@ -1,15 +1,15 @@
-// === Module 8241: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
+// === Module 8246: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
 
-// Module 8241 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
-import util from "util" /* 1126 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8196 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8200 */;
-import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8239 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8240 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8242 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
+// Module 8246 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
+import util from "util" /* 1128 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8199 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8201 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8203 */;
+import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 8244 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8245 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8247 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 const size = fn(2);

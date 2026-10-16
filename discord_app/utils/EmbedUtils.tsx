@@ -1,14 +1,13 @@
-// === Module 5963: EmbedUtils ===
+// === Module 5965: EmbedUtils ===
 
-// Module 5963 (EmbedUtils)
+// Module 5965 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import _modDef4758 from "module_4758" /* 4758 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5496 */;
-import EmbedConstants from "EmbedConstants" /* 5964 */;
-import Constants from "Constants" /* 1085 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5498 */;
+import EmbedConstants from "EmbedConstants" /* 5966 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 function getEffectiveVideoProvider(name, url) {
@@ -66,22 +65,22 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef4758(date);
-    const tmpResult = _modDef4758;
+    obj.timestamp = _modDef4761(date);
+    const tmpResult = _modDef4761;
   }
   if (null != footer.color) {
-    obj.color = utils_ColorUtils.int2hsl(footer.color, false);
+    obj.color = footer.color;
   }
   if (null != footer.thumbnail) {
     const thumbnail2 = footer.thumbnail;
-    if (tmp12) {
+    if (tmp11) {
       const type = obj.type;
       if (constants2.ARTICLE !== type) {
         if (constants2.IMAGE !== type) {
           const thumbnail3 = footer.thumbnail;
           ({ flags, content_type } = thumbnail3);
           const size = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-          ({ url: obj18.url, proxy_url: obj18.proxyURL, width: obj18.width, height: obj18.height, placeholder: obj18.placeholder, placeholder_version: obj18.placeholderVersion, description: obj18.description } = thumbnail3);
+          ({ url: obj17.url, proxy_url: obj17.proxyURL, width: obj17.width, height: obj17.height, placeholder: obj17.placeholder, placeholder_version: obj17.placeholderVersion, description: obj17.description } = thumbnail3);
           let num = flags;
           if (flags == null) {
             num = 0;
@@ -98,7 +97,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       const thumbnail = footer.thumbnail;
       ({ flags: flags2, content_type: content_type2 } = thumbnail);
       const size1 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-      ({ url: obj7.url, proxy_url: obj7.proxyURL, width: obj7.width, height: obj7.height, placeholder: obj7.placeholder, placeholder_version: obj7.placeholderVersion, description: obj7.description } = thumbnail);
+      ({ url: obj6.url, proxy_url: obj6.proxyURL, width: obj6.width, height: obj6.height, placeholder: obj6.placeholder, placeholder_version: obj6.placeholderVersion, description: obj6.description } = thumbnail);
       let num2 = flags2;
       if (flags2 == null) {
         num2 = 0;
@@ -111,19 +110,19 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       size1.contentType = content_type2;
       obj.image = size1;
     }
-    tmp12 = thumbnail2.width > 0 && thumbnail2.height > 0;
+    tmp11 = thumbnail2.width > 0 && thumbnail2.height > 0;
   }
-  let tmp16 = null != footer.image;
-  if (tmp16) {
+  let tmp15 = null != footer.image;
+  if (tmp15) {
     const image = footer.image;
-    tmp16 = image.width > 0 && image.height > 0;
-    const tmp17 = image.width > 0 && image.height > 0;
+    tmp15 = image.width > 0 && image.height > 0;
+    const tmp16 = image.width > 0 && image.height > 0;
   }
-  if (tmp16) {
+  if (tmp15) {
     const image2 = footer.image;
     ({ flags: flags3, content_type: content_type3 } = image2);
     const size2 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-    ({ url: obj9.url, proxy_url: obj9.proxyURL, width: obj9.width, height: obj9.height, placeholder: obj9.placeholder, placeholder_version: obj9.placeholderVersion, description: obj9.description } = image2);
+    ({ url: obj8.url, proxy_url: obj8.proxyURL, width: obj8.width, height: obj8.height, placeholder: obj8.placeholder, placeholder_version: obj8.placeholderVersion, description: obj8.description } = image2);
     let num4 = flags3;
     if (flags3 == null) {
       num4 = 0;
@@ -137,13 +136,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.image = size2;
   }
   if (null != footer.video) {
-    let tmp20 = null == obj.thumbnail && null != footer.video.proxy_url;
-    if (tmp20) {
+    let tmp19 = null == obj.thumbnail && null != footer.video.proxy_url;
+    if (tmp19) {
       const video = footer.video;
-      tmp20 = video.width > 0 && video.height > 0;
-      const tmp21 = video.width > 0 && video.height > 0;
+      tmp19 = video.width > 0 && video.height > 0;
+      const tmp20 = video.width > 0 && video.height > 0;
     }
-    if (tmp20) {
+    if (tmp19) {
       const size3 = { width: footer.video.width, height: footer.video.height, url: null };
       const _URL = URL;
       const str = new URL(footer.video.proxy_url);
@@ -151,35 +150,35 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       const keys = Object.keys({ format: "webp" });
       const item = keys.forEach((item) => {
         const searchParams = str.searchParams;
-        const result = searchParams.set(item, obj11[item]);
+        const result = searchParams.set(item, obj10[item]);
       });
       size3.url = str.toString();
       obj.thumbnail = size3;
-      const obj11 = { format: "webp" };
+      const obj10 = { format: "webp" };
     }
-    let tmp27 = null != obj.thumbnail;
-    if (tmp27) {
+    let tmp26 = null != obj.thumbnail;
+    if (tmp26) {
       const video2 = footer.video;
-      tmp27 = video2.width > 0 && video2.height > 0;
-      const tmp28 = video2.width > 0 && video2.height > 0;
+      tmp26 = video2.width > 0 && video2.height > 0;
+      const tmp27 = video2.width > 0 && video2.height > 0;
     }
-    if (tmp27) {
+    if (tmp26) {
       ({ provider, video: video3 } = footer);
       if (null == provider) {
-        let flag2 = false;
+        let flag = false;
         if (!re8.test(video3.url)) {
           let isMatch = null != video3.proxy_url;
           if (!isMatch) {
             isMatch = /^https:/i.test(video3.url);
-            const obj13 = /^https:/i;
+            const obj12 = /^https:/i;
           }
-          let tmp33 = null != id;
-          if (tmp33) {
-            tmp33 = SnowflakeUtilsDefault.extractTimestamp(id) < 1492472454139;
+          let tmp32 = null != id;
+          if (tmp32) {
+            tmp32 = SnowflakeUtilsDefault.extractTimestamp(id) < 1492472454139;
             const tmpResult2 = SnowflakeUtilsDefault;
           }
-          let tmp34 = isMatch;
-          if (tmp33) {
+          let tmp33 = isMatch;
+          if (tmp32) {
             let isMatch1 = isMatch;
             if (isMatch) {
               isMatch1 = null != provider;
@@ -187,20 +186,20 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
             if (isMatch1) {
               isMatch1 = re9.test(provider.name);
             }
-            tmp34 = isMatch1;
+            tmp33 = isMatch1;
           }
-          flag2 = tmp34;
+          flag = tmp33;
         }
       } else {
-        flag2 = false;
+        flag = false;
       }
-      tmp27 = flag2;
+      tmp26 = flag;
     }
-    if (tmp27) {
+    if (tmp26) {
       const video4 = footer.video;
       ({ flags: flags4, content_type: content_type4 } = video4);
       const size4 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-      ({ url: obj15.url, proxy_url: obj15.proxyURL, width: obj15.width, height: obj15.height, placeholder: obj15.placeholder, placeholder_version: obj15.placeholderVersion, description: obj15.description } = video4);
+      ({ url: obj14.url, proxy_url: obj14.proxyURL, width: obj14.width, height: obj14.height, placeholder: obj14.placeholder, placeholder_version: obj14.placeholderVersion, description: obj14.description } = video4);
       let num8 = flags4;
       if (flags4 == null) {
         num8 = 0;
@@ -225,11 +224,11 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   }
   if (null != footer.components) {
     const transformComponentsResult = InteractionComponentUtils.transformComponents(footer.components);
-    let tmp40;
+    let tmp39;
     if (transformComponentsResult.length > 0) {
-      tmp40 = transformComponentsResult;
+      tmp39 = transformComponentsResult;
     }
-    obj.components = tmp40;
+    obj.components = tmp39;
   }
   return obj;
 };

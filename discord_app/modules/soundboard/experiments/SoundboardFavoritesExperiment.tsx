@@ -1,7 +1,7 @@
-// === Module 5491: SoundboardFavoritesExperiment ===
+// === Module 5493: SoundboardFavoritesExperiment ===
 
-// Module 5491 (SoundboardFavoritesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 5493 (SoundboardFavoritesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-soundboard-favorites", defaultConfig: { sortOrder: "creation-date", allowReordering: false }, variations: null };

@@ -1,17 +1,17 @@
-// === Module 9823: MessageImpressionAnalyticsHelpers ===
+// === Module 9839: MessageImpressionAnalyticsHelpers ===
 
-// Module 9823 (MessageImpressionAnalyticsHelpers)
+// Module 9839 (MessageImpressionAnalyticsHelpers)
 import c from "c" /* 576 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5133 */;
-import CodedLink from "CodedLink" /* 5136 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7188 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7639 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 9824 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 9825 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 9826 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5136 */;
+import CodedLink from "CodedLink" /* 5139 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7190 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7641 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 9840 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 9841 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 9842 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5132 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5175 */;
+import InviteStore from "InviteStore" /* 5135 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5177 */;
 
 const require = globalThis.__r;
 
@@ -56,10 +56,10 @@ function getVoiceInviteEmbedRenderInfo(state) {
   }
   return null;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(7593).LinkType;
-const InviteTypes = fn(7640).InviteTypes;
+const LinkType = fn(7595).LinkType;
+const InviteTypes = fn(7642).InviteTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackAnnouncementMessageViews(arg0) {

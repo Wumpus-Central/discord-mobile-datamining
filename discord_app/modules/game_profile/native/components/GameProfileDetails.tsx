@@ -1,22 +1,22 @@
-// === Module 9312: GameProfileDetails ===
+// === Module 9325: GameProfileDetails ===
 
-// Module 9312 (GameProfileDetails)
+// Module 9325 (GameProfileDetails)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Server from "Server" /* 1998 */;
-import DateUtilsAll from "DateUtils" /* 4849 */;
-import LinkingDefault from "Linking" /* 4862 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import SKUUtils from "SKUUtils" /* 9139 */;
+import util from "util" /* 1128 */;
+import Server from "Server" /* 2000 */;
+import DateUtilsAll from "DateUtils" /* 4852 */;
+import LinkingDefault from "Linking" /* 4865 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import SKUUtils from "SKUUtils" /* 9147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8688).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8696).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       let joined;
       if (platformsContainer != null) {
         const genres1 = platformsContainer.genres;
-        const mapped = genres1.map(trackAction(9139).getGenreText);
+        const mapped = genres1.map(trackAction(9147).getGenreText);
         joined = mapped.join(", ");
       }
       let genres2;
@@ -131,11 +131,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       if ("" !== tmp8) {
         if (cResult[8] !== platformsContainer.genres.length) {
           if (1 !== platformsContainer.genres.length) {
-            const intl2 = trackAction(1126).intl;
-            let stringResult = intl2.string(trackAction(1126).t.pDgwYB);
+            const intl2 = trackAction(1128).intl;
+            let stringResult = intl2.string(trackAction(1128).t.pDgwYB);
           } else {
-            const intl = trackAction(1126).intl;
-            stringResult = intl.string(trackAction(1126).t.mjFKqn);
+            const intl = trackAction(1128).intl;
+            stringResult = intl.string(trackAction(1128).t.mjFKqn);
           }
           cResult[8] = platformsContainer.genres.length;
           cResult[9] = stringResult;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     if (cResult[13] !== platformsContainer) {
       let companyByRole;
       if (platformsContainer != null) {
-        companyByRole = platformsContainer.getCompanyByRole(trackAction(1998).GameCompanyRole.PUBLISHER);
+        companyByRole = platformsContainer.getCompanyByRole(trackAction(2000).GameCompanyRole.PUBLISHER);
       }
       const _Symbol2 = Symbol;
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               return arg0.name;
             }
           }
-          const tmp24Result = tmp24(trackAction(1998).GameCompanyRole.DEVELOPER);
+          const tmp24Result = tmp24(trackAction(2000).GameCompanyRole.DEVELOPER);
         }
         const _Symbol3 = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                   return arg0.name;
                 }
               }
-              const stringResult1 = obj6.string(trackAction(1126).t.H3mPDT);
+              const stringResult1 = obj6.string(trackAction(1128).t.H3mPDT);
               cResult[31] = stringResult1;
               const tmp31 = stringResult1;
             } else {
@@ -297,10 +297,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               }
               const _Date = Date;
               const date = new Date(tmp30);
-              const dateFormatResult = tmp5(4849).dateFormat(date, "LL");
+              const dateFormatResult = tmp5(4852).dateFormat(date, "LL");
               cResult[32] = tmp30;
               cResult[33] = dateFormatResult;
-              const obj7 = tmp5(4849);
+              const obj7 = tmp5(4852);
             } else {
               class S {
                 constructor(arg0) {
@@ -391,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                   return arg0.name;
                 }
               }
-              const stringResult2 = obj8.string(trackAction(1126).t["Oj3o1/"]);
+              const stringResult2 = obj8.string(trackAction(1128).t["Oj3o1/"]);
               cResult[47] = stringResult2;
               const tmp46 = stringResult2;
             } else {
@@ -476,10 +476,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 return jsx(GameProfileWebsiteButton, obj, url);
               }
             }
-            const stringResult3 = obj10.string(trackAction(1126).t["BwQ+9e"]);
-            const intl3 = trackAction(1126).intl;
+            const stringResult3 = obj10.string(trackAction(1128).t["BwQ+9e"]);
+            const intl3 = trackAction(1128).intl;
             const obj4 = { igdbLink: IGDB_ATTRIBUTION_LINK };
-            const formatResult = intl3.format(trackAction(1126).t.XPFZVl, obj4);
+            const formatResult = intl3.format(trackAction(1128).t.XPFZVl, obj4);
             cResult[52] = stringResult3;
             cResult[53] = formatResult;
             let tmp56 = formatResult;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             return jsx(GameProfileWebsiteButton, obj, url);
           }
         }
-        const stringResult4 = obj12.string(trackAction(1126).t["7OjmmH"]);
+        const stringResult4 = obj12.string(trackAction(1128).t["7OjmmH"]);
         cResult[56] = stringResult4;
         const tmp64 = stringResult4;
       } else {
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           }
         }
         const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp64 };
-        const tmp67 = closure_8(trackAction(5147).Text, obj5);
+        const tmp67 = closure_8(trackAction(5149).Text, obj5);
         cResult[57] = tmp4.headerText;
         cResult[58] = tmp67;
       } else {
@@ -721,7 +721,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               if (game != null) {
                 const websites = game.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(9320)(item, trackAction(587).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(9333)(item, trackAction(587).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -765,7 +765,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj7 = { label: stringResult, value: null };
-              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9313).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
+              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9326).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
               obj7.value = closure_2_8(hasOwnProperty, obj8);
               items.push(obj7);
             }

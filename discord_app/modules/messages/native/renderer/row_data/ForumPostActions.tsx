@@ -1,11 +1,11 @@
-// === Module 8110: ForumPostActions ===
+// === Module 8113: ForumPostActions ===
 
-// Module 8110 (ForumPostActions)
-import Constants from "Constants" /* 1085 */;
-import ReactionUtils from "ReactionUtils" /* 4818 */;
-import _modDef6417 from "module_6417" /* 6417 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8108 */;
-import _modDef8111 from "module_8111" /* 8111 */;
+// Module 8113 (ForumPostActions)
+import Constants from "Constants" /* 1087 */;
+import ReactionUtils from "ReactionUtils" /* 4821 */;
+import _modDef6419 from "module_6419" /* 6419 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
+import _modDef8114 from "module_8114" /* 8114 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: -1057705723495850500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, displayName: -1454778631689679300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "levelUpProgress", displayName: "Label" };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -72,50 +72,50 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(_modDef6417);
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef6419);
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef8111);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef8114);
     tmp6 = importDefault;
     tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(8108).getAssetUriForEmbed(tmp6(5098));
+    const assetUriForEmbed1 = tmp8(8111).getAssetUriForEmbed(tmp6(5101));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
         emoji = defaultReaction.emoji;
       }
       if (null == emoji) {
-        const intl = tmp8(1126).intl;
-        stringResult = intl.string(tmp8(1126).t.xpOyTO);
+        const intl = tmp8(1128).intl;
+        stringResult = intl.string(tmp8(1128).t.xpOyTO);
       }
     }
     let tmp14;
     if (showMediaPostSharePrompt) {
       const obj = { title: null, subtitle: null, cta: null, icon: null, closeIcon: null };
-      const intl2 = tmp8(1126).intl;
-      obj.title = intl2.string(tmp8(1126).t["5uAO7d"]);
-      const intl3 = tmp8(1126).intl;
+      const intl2 = tmp8(1128).intl;
+      obj.title = intl2.string(tmp8(1128).t["5uAO7d"]);
+      const intl3 = tmp8(1128).intl;
       const obj2 = { helpArticleUrl: null };
-      const obj3 = { url: tmp6(2128).getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
+      const obj3 = { url: tmp6(2131).getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
       obj2.helpArticleUrl = obj3;
-      obj.subtitle = intl3.formatToParts(tmp8(1126).t.YtCu5p, obj2);
-      const intl4 = tmp8(1126).intl;
-      obj.cta = intl4.string(tmp8(1126).t.C5UQC9);
-      const tmp6Result = tmp6(2128);
-      obj.icon = tmp8(8108).getAssetUriForEmbed(tmp6(8112));
-      const tmp8Result3 = tmp8(8108);
-      obj.closeIcon = tmp8(8108).getAssetUriForEmbed(tmp6(6998));
+      obj.subtitle = intl3.formatToParts(tmp8(1128).t.YtCu5p, obj2);
+      const intl4 = tmp8(1128).intl;
+      obj.cta = intl4.string(tmp8(1128).t.C5UQC9);
+      const tmp6Result = tmp6(2131);
+      obj.icon = tmp8(8111).getAssetUriForEmbed(tmp6(8115));
+      const tmp8Result3 = tmp8(8111);
+      obj.closeIcon = tmp8(8111).getAssetUriForEmbed(tmp6(7000));
       tmp14 = obj;
-      const tmp8Result4 = tmp8(8108);
+      const tmp8Result4 = tmp8(8111);
     }
     const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
-    const intl5 = tmp8(1126).intl;
+    const intl5 = tmp8(1128).intl;
     const string = intl5.string;
-    const t = tmp8(1126).t;
+    const t = tmp8(1128).t;
     if (isFollowing) {
       let stringResult1 = string(t["OtF+lC"]);
     } else {
@@ -123,15 +123,15 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     }
     obj4.followLabel = stringResult1;
     obj4.shareIcon = assetUriForEmbed1;
-    const intl6 = tmp8(1126).intl;
-    obj4.shareLabel = intl6.string(tmp8(1126).t.Ej3B3Y);
+    const intl6 = tmp8(1128).intl;
+    obj4.shareLabel = intl6.string(tmp8(1128).t.Ej3B3Y);
     obj4.defaultReaction = defaultReaction;
     obj4.addReactLabel = stringResult;
     obj4.sharePrompt = tmp14;
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1255).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6417 : 8111));
-    const tmp6Result2 = tmp6(1255);
+    tmp6(1257).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6419 : 8114));
+    const tmp6Result2 = tmp6(1257);
   }
 };

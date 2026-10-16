@@ -1,17 +1,17 @@
-// === Module 8829: useGuildEmbeddedApplications ===
+// === Module 8837: useGuildEmbeddedApplications ===
 
-// Module 8829 (useGuildEmbeddedApplications)
+// Module 8837 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6284 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1085).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
+  getQueryId: fn(1087).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
     const guildEmbeddedApplications = ApplicationStore.getGuildEmbeddedApplications(arg1, arg0);

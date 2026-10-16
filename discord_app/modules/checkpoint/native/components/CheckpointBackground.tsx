@@ -1,14 +1,14 @@
-// === Module 12648: CheckpointBackground ===
+// === Module 12671: CheckpointBackground ===
 
-// Module 12648 (CheckpointBackground)
+// Module 12671 (CheckpointBackground)
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
-import CheckpointConstants from "CheckpointConstants" /* 5497 */;
-import _modDef12649 from "module_12649" /* 12649 */;
+import Constants from "Constants" /* 1087 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import CheckpointConstants from "CheckpointConstants" /* 5499 */;
+import _modDef12672 from "module_12672" /* 12672 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5151 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { uri: _modDef12649 };
+    const obj4 = { uri: _modDef12672 };
     cResult[2] = obj4;
     let tmp10 = obj4;
   } else {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj = { children: null };
   const items = [hasOwnProperty(LinearGradientDefault, { colors, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.background }), ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: _modDef12649 };
+  const obj4 = { uri: _modDef12672 };
   obj3.source = obj4;
   obj3.style = tmp.background;
   items[1] = hasOwnProperty(FastImageDefault, obj3);

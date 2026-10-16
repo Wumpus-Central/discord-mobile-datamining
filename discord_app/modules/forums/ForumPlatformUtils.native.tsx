@@ -1,7 +1,7 @@
-// === Module 7707: ForumPlatformUtils ===
+// === Module 7710: ForumPlatformUtils ===
 
-// Module 7707 (ForumPlatformUtils)
-import util from "util" /* 1126 */;
+// Module 7710 (ForumPlatformUtils)
+import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");

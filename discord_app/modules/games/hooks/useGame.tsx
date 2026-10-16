@@ -1,18 +1,18 @@
-// === Module 7229: useGame ===
+// === Module 7231: useGame ===
 
-// Module 7229 (useGame)
-import DurationsDefault from "Durations" /* 1102 */;
-import GameActionCreators from "GameActionCreators" /* 7230 */;
+// Module 7231 (useGame)
+import DurationsDefault from "Durations" /* 1104 */;
+import GameActionCreators from "GameActionCreators" /* 7232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2020 */;
+import GameStore from "GameStore" /* 2022 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1085).QueryIds.GAME,
+  getQueryId: fn(1087).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(gameId) {
     if (null == gameId) {

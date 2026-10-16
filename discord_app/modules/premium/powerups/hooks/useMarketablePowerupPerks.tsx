@@ -1,17 +1,17 @@
-// === Module 14540: useMarketablePowerupPerks ===
+// === Module 14572: useMarketablePowerupPerks ===
 
-// Module 14540 (useMarketablePowerupPerks)
-import Powerups from "Powerups" /* 5067 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 13160 */;
+// Module 14572 (useMarketablePowerupPerks)
+import Powerups from "Powerups" /* 5070 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 13186 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5063 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5064);
+const GuildPowerupsConstants = fn(5067);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
-let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(5067).VANITY_URL_POWERUP_SKU_ID];
+let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(5070).VANITY_URL_POWERUP_SKU_ID];
 let set = new Set(items);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMarke
     const _Set = Set;
     set = new Set(set);
     if (serverThemeRollbackEnabled) {
-      set.add(tmp(5067).GUILD_POWERUP_GUILD_THEME_SKU_ID);
+      set.add(tmp(5070).GUILD_POWERUP_GUILD_THEME_SKU_ID);
     }
     cResult[3] = serverThemeRollbackEnabled;
     cResult[4] = set;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMarke
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(13160)(arg0);
+  let tmp2 = stateFromStores(13186)(arg0);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(arg0, "useMarketablePowerupPerks");

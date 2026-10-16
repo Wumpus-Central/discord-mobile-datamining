@@ -1,15 +1,15 @@
-// === Module 5482: LinkUtils ===
+// === Module 5484: LinkUtils ===
 
-// Module 5482 (LinkUtils)
-import RegexUtilsDefault from "RegexUtils" /* 5135 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 5484 (LinkUtils)
+import RegexUtilsDefault from "RegexUtils" /* 5138 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
-const Constants = fn(1085);
+const Constants = fn(1087);
 const ME = Constants.ME;
 const Permissions = Constants.Permissions;
-const mapped = Array.from(fn(2072).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
+const mapped = Array.from(fn(2075).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");

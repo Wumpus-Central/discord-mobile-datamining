@@ -1,13 +1,13 @@
-// === Module 15892: ConnectionsSettingScreen ===
+// === Module 15925: ConnectionsSettingScreen ===
 
-// Module 15892 (ConnectionsSettingScreen)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+// Module 15925 (ConnectionsSettingScreen)
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15893, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15926, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -18,9 +18,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = stackNavigation(576).c(5);
   let obj = stackNavigation(576);
   const tmp = stackNavigation;
-  stackNavigation = stackNavigation(1503).useStackNavigation();
-  const obj2 = stackNavigation(1503);
-  const params = stackNavigation(6903).useSettingNavigationRoute().params;
+  stackNavigation = stackNavigation(1505).useStackNavigation();
+  const obj2 = stackNavigation(1505);
+  const params = stackNavigation(6905).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -32,9 +32,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj = {};
           const merged = Object.assign(arg0);
           obj.onPress = onPress;
-          const intl = stackNavigation(1126).intl;
-          obj.label = intl.string(stackNavigation(1126).t.OYkgVk);
-          return closure_1_4(stackNavigation(9518).HeaderTextButton, obj);
+          const intl = stackNavigation(1128).intl;
+          obj.label = intl.string(stackNavigation(1128).t.OYkgVk);
+          return closure_1_4(stackNavigation(9534).HeaderTextButton, obj);
         }
       });
     };
@@ -51,7 +51,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
   if (cResult[3] !== selectedPlatformType) {
     const obj4 = { selectedPlatformType };
-    const tmp11 = jsx(tmp(15894).UserSettingsConnections, { selectedPlatformType });
+    const tmp11 = jsx(tmp(15927).UserSettingsConnections, { selectedPlatformType });
     cResult[3] = selectedPlatformType;
     cResult[4] = tmp11;
     let tmp9 = tmp11;
@@ -60,10 +60,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   return tmp9;
 }) : (function ConnectionsSettingScreen() {
-  stackNavigation = stackNavigation(1503).useStackNavigation();
-  let obj = stackNavigation(1503);
+  stackNavigation = stackNavigation(1505).useStackNavigation();
+  let obj = stackNavigation(1505);
   const tmp = stackNavigation;
-  const params = stackNavigation(6903).useSettingNavigationRoute().params;
+  const params = stackNavigation(6905).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -75,11 +75,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj = {};
         const merged = Object.assign(arg0);
         obj.onPress = onPress;
-        const intl = stackNavigation(1126).intl;
-        obj.label = intl.string(stackNavigation(1126).t.OYkgVk);
-        return closure_1_4(stackNavigation(9518).HeaderTextButton, obj);
+        const intl = stackNavigation(1128).intl;
+        obj.label = intl.string(stackNavigation(1128).t.OYkgVk);
+        return closure_1_4(stackNavigation(9534).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(15894).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(15927).UserSettingsConnections, { selectedPlatformType });
 }));

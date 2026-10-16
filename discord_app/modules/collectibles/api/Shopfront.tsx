@@ -1,6 +1,6 @@
-// === Module 15999: Shopfront ===
+// === Module 16032: Shopfront ===
 
-// Module 15999 (Shopfront)
+// Module 16032 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -92,7 +92,7 @@ let closure_4 = async function _search(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/api/Shopfront.tsx");
 

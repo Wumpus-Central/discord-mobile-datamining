@@ -1,12 +1,12 @@
-// === Module 17872: useGuildEligibleForStageChannels ===
+// === Module 17906: useGuildEligibleForStageChannels ===
 
-// Module 17872 (useGuildEligibleForStageChannels)
-import GuildStore from "GuildStore" /* 2087 */;
+// Module 17906 (useGuildEligibleForStageChannels)
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 function isGuildEligibleForStageChannels(id) {
   let tmp = arg1;

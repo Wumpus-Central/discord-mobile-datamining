@@ -1,7 +1,7 @@
-// === Module 16429: ContextualOptInNudgeHoldoutExperiment ===
+// === Module 16462: ContextualOptInNudgeHoldoutExperiment ===
 
-// Module 16429 (ContextualOptInNudgeHoldoutExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 16462 (ContextualOptInNudgeHoldoutExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-contextual-opt-in-nudge-holdout", kind: "user", defaultConfig: { inHoldout: false }, variations: { 0: { inHoldout: false }, 1: { inHoldout: true } } });

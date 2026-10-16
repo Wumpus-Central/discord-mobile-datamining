@@ -1,21 +1,21 @@
-// === Module 9754: PremiumFeatureUpsell ===
+// === Module 9770: PremiumFeatureUpsell ===
 
-// Module 9754 (PremiumFeatureUpsell)
+// Module 9770 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 587 */;
-import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PremiumUtils from "PremiumUtils" /* 4825 */;
-import spring from "spring" /* 5438 */;
-import springPresets from "springPresets" /* 5442 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9498 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9501 */;
+import ConstantsIOS from "ConstantsIOS" /* 1107 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import PremiumUtils from "PremiumUtils" /* 4828 */;
+import spring from "spring" /* 5440 */;
+import springPresets from "springPresets" /* 5444 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9514 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9517 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
 
 const require = globalThis.__r;
 
@@ -51,13 +51,13 @@ function getPremiumUpsellLabel(TIER_0, featureName, fn) {
 let closure_3 = ["shouldShow"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7373).Gradients;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const Gradients = fn(7375).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = { container: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_12, justifyContent: "space-between" }, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
   const obj3 = {};
@@ -479,11 +479,11 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5438).withSpring, springStandard: fn(5442).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5440).withSpring, springStandard: fn(5444).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5438).withSpring, springStandard: fn(5442).springStandard };
+let obj3 = { withSpring: fn(5440).withSpring, springStandard: fn(5444).springStandard };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 

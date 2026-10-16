@@ -1,28 +1,28 @@
-// === Module 14499: GuildBoostingGuildList ===
+// === Module 14531: GuildBoostingGuildList ===
 
-// Module 14499 (GuildBoostingGuildList)
+// Module 14531 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 5087 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import GuildIconDefault from "GuildIcon" /* 6379 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6900 */;
-import transitionToGuild from "transitionToGuild" /* 7274 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8247 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8891 */;
-import _modDef10004 from "module_10004" /* 10004 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 14468 */;
+import useThemeDefault from "useTheme" /* 5090 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import GuildIconDefault from "GuildIcon" /* 6381 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6902 */;
+import transitionToGuild from "transitionToGuild" /* 7276 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8252 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8899 */;
+import _modDef10020 from "module_10020" /* 10020 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 14500 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SortedGuildStore from "SortedGuildStore" /* 6179 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SortedGuildStore from "SortedGuildStore" /* 6181 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(1085).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
+let closure_6 = fn(1087).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { guildCard: { padding: 12, paddingLeft: 16, borderRadius: nativeDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, guildIcon: { marginRight: 16 }, guildCardDescription: { flex: 1 }, subscriptionInfo: { flexDirection: "row", alignItems: "center" }, premiumGuildImage: { width: 18, height: 12, marginLeft: -5 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -76,7 +76,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildB
       }
       if (cResult[8] !== stateFromStores.name) {
         const obj2 = { variant: "text-md/bold", children: stateFromStores.name };
-        const tmp20 = closure_7(tmp(5147).Text, obj2);
+        const tmp20 = closure_7(tmp(5149).Text, obj2);
         cResult[8] = stateFromStores.name;
         cResult[9] = tmp20;
         let tmp18 = tmp20;
@@ -84,7 +84,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildB
         tmp18 = cResult[9];
       }
       if (cResult[10] !== tmp4.premiumGuildImage) {
-        const obj3 = { source: _modDef10004, style: tmp4.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+        const obj3 = { source: _modDef10020, style: tmp4.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
         const tmp24 = closure_7(FastImageDefault, obj3);
         cResult[10] = tmp4.premiumGuildImage;
         cResult[11] = tmp24;
@@ -94,9 +94,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildB
         tmp21 = cResult[11];
       }
       if (cResult[12] !== total) {
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         const obj4 = { subscriberCount: total };
-        const formatResult = intl.format(tmp(1126).t.If4iTS, obj4);
+        const formatResult = intl.format(tmp(1128).t.If4iTS, obj4);
         cResult[12] = total;
         cResult[13] = formatResult;
         let tmp25 = formatResult;
@@ -105,7 +105,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildB
       }
       if (cResult[14] !== tmp25) {
         const obj5 = { variant: "text-xs/medium", children: tmp25 };
-        const tmp29 = closure_7(tmp(5147).Text, obj5);
+        const tmp29 = closure_7(tmp(5149).Text, obj5);
         cResult[14] = tmp25;
         cResult[15] = tmp29;
         let tmp27 = tmp29;
@@ -179,7 +179,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildB
       cResult[19] = tmp33;
       tmp30 = tmp33;
     }
-    const obj10 = { guild: stateFromStores, size: tmp(6379).GuildIconSizes.LARGE, style: tmp4.guildIcon, selected: false };
+    const obj10 = { guild: stateFromStores, size: tmp(6381).GuildIconSizes.LARGE, style: tmp4.guildIcon, selected: false };
     const tmp17 = closure_7(GuildIconDefault, obj10);
     cResult[5] = stateFromStores;
     cResult[6] = tmp4.guildIcon;
@@ -212,23 +212,23 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildB
     };
     const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
     const tmp2Result = TouchableHitBoxDefault;
-    obj3.size = tmp5(6379).GuildIconSizes.LARGE;
+    obj3.size = tmp5(6381).GuildIconSizes.LARGE;
     obj3.style = tmp.guildIcon;
     const items1 = [closure_7(GuildIconDefault, obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
-    const items2 = [closure_7(tmp5(5147).Text, obj5), ];
+    const items2 = [closure_7(tmp5(5149).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
-    obj7.source = _modDef10004;
+    obj7.source = _modDef10020;
     obj7.style = tmp.premiumGuildImage;
     const items3 = [closure_7(FastImageDefault, obj7), ];
     const obj8 = { variant: "text-xs/medium", children: null };
-    const intl = tmp5(1126).intl;
+    const intl = tmp5(1128).intl;
     const obj9 = { subscriberCount: tmp8 };
-    obj8.children = intl.format(tmp5(1126).t.If4iTS, obj9);
-    items3[1] = closure_7(tmp5(5147).Text, obj8);
+    obj8.children = intl.format(tmp5(1128).t.If4iTS, obj9);
+    items3[1] = closure_7(tmp5(5149).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_8(View, obj6);
     obj4.children = items2;

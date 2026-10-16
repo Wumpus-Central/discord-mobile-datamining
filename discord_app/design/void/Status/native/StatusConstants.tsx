@@ -1,6 +1,6 @@
-// === Module 1201: StatusConstants ===
+// === Module 1203: StatusConstants ===
 
-// Module 1201 (StatusConstants)
+// Module 1203 (StatusConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Status/native/StatusConstants.tsx");

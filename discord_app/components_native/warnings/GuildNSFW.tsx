@@ -1,12 +1,12 @@
-// === Module 11484: GuildNSFW ===
+// === Module 11504: GuildNSFW ===
 
-// Module 11484 (GuildNSFW)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7714 */;
-import GatedContentDefault from "GatedContent" /* 11485 */;
+// Module 11504 (GuildNSFW)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7717 */;
+import GatedContentDefault from "GatedContent" /* 11505 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildNSF
         return;
       }
     }
-    const stringResult = obj4.string(tmp(1126).t["/g10LC"]);
+    const stringResult = obj4.string(tmp(1128).t["/g10LC"]);
     cResult[12] = stringResult;
     const tmp19 = stringResult;
   } else {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildNSF
   const obj3 = {};
   const callback = noop.useCallback(() => {
     const obj = AgeVerificationActionCreatorsDefault;
-    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: channelId(6134).AgeVerificationModalEntryPoint.NSFW_GUILD });
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: channelId(6136).AgeVerificationModalEntryPoint.NSFW_GUILD });
   }, []);
   const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_4));
   let id;
@@ -172,11 +172,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildNSF
   }
   obj3.guildId = id;
   obj3.channelId = channelId.channelId;
-  const intl = tmp(1126).intl;
+  const intl = tmp(1128).intl;
   obj3.disagreement = intl.string(require("util").t["/g10LC"]);
   if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
-    if (tmp(6134).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
-      if (tmp(6134).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+    if (tmp(6136).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+      if (tmp(6136).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
         const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
         const merged1 = Object.assign(obj3);
         return jsx(GatedContentDefault, { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree });

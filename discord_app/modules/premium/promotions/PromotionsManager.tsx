@@ -1,15 +1,15 @@
-// === Module 18508: PromotionsManager ===
+// === Module 18550: PromotionsManager ===
 
-// Module 18508 (PromotionsManager)
-import PromotionsActionCreators from "PromotionsActionCreators" /* 9379 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import SubscriptionStore from "SubscriptionStore" /* 4831 */;
-import PromotionsStore from "PromotionsStore" /* 9343 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18550 (PromotionsManager)
+import PromotionsActionCreators from "PromotionsActionCreators" /* 9395 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import SubscriptionStore from "SubscriptionStore" /* 4834 */;
+import PromotionsStore from "PromotionsStore" /* 9356 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const EntitlementTypes = fn(1085).EntitlementTypes;
-const SubscriptionTypes = fn(1096).SubscriptionTypes;
+const EntitlementTypes = fn(1087).EntitlementTypes;
+const SubscriptionTypes = fn(1098).SubscriptionTypes;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,9 +1,9 @@
-// === Module 18721: ChangeVanityURLActionCreators ===
+// === Module 18763: ChangeVanityURLActionCreators ===
 
-// Module 18721 (ChangeVanityURLActionCreators)
+// Module 18763 (ChangeVanityURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import Constants from "Constants" /* 1087 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -26,7 +26,7 @@ export default {
   changeVanityURL(id, vanityURLCode) {
     const self = this;
     DispatcherDefault.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
-    const HTTP = self(1295).HTTP;
+    const HTTP = self(1297).HTTP;
     const request = { url: Endpoints.GUILD_VANITY_URL(id), body: { code: vanityURLCode }, oldFormErrors: true, rejectWithError: true };
     const obj2 = { code: vanityURLCode };
     return HTTP.patch(request).then((body) => {

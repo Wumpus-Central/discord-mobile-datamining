@@ -1,6 +1,6 @@
-// === Module 14635: GatewayCapabilities ===
+// === Module 14667: GatewayCapabilities ===
 
-// Module 14635 (GatewayCapabilities)
+// Module 14667 (GatewayCapabilities)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");

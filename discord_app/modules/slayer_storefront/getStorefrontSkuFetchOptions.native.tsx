@@ -1,11 +1,11 @@
-// === Module 18448: getStorefrontSkuFetchOptions ===
+// === Module 18490: getStorefrontSkuFetchOptions ===
 
-// Module 18448 (getStorefrontSkuFetchOptions)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import GenericIAPStore from "GenericIAPStore" /* 18449 */;
+// Module 18490 (getStorefrontSkuFetchOptions)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import GenericIAPStore from "GenericIAPStore" /* 18491 */;
 
 require = fn;
-const PaymentGateways = fn(1085).PaymentGateways;
+const PaymentGateways = fn(1087).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/getStorefrontSkuFetchOptions.native.tsx");
 

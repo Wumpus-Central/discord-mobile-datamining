@@ -1,6 +1,6 @@
-// === Module 9106: distributorStoreUrls ===
+// === Module 9114: distributorStoreUrls ===
 
-// Module 9106 (distributorStoreUrls)
+// Module 9114 (distributorStoreUrls)
 import size from "module_2" /* 2 */;
 
 const discord7937464 = "discord7937464";

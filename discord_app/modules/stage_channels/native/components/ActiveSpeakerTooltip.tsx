@@ -1,24 +1,24 @@
-// === Module 11482: ActiveSpeakerTooltip ===
+// === Module 11502: ActiveSpeakerTooltip ===
 
-// Module 11482 (ActiveSpeakerTooltip)
+// Module 11502 (ActiveSpeakerTooltip)
 import nativeDefault from "native" /* 587 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11050 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(11452);
+const StageChannelListStore = fn(11472);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" }, participantItemContainer: { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round }, participantAvatarContainer: { alignItems: "center", justifyContent: "center" }, participantAvatarText: null, participantNameplateContainer: null, participantNameplateSpeakingText: null };
 let obj3 = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round };
-obj.participantAvatarText = { fontSize: 12, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
+obj.participantAvatarText = { fontSize: 12, fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
 obj.participantNameplateContainer = { paddingHorizontal: 3, flexDirection: "row", alignItems: "center", justifyContent: "center" };
-let obj4 = { fontSize: 12, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
+let obj4 = { fontSize: 12, fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
 obj.participantNameplateSpeakingText = { lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_10 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -54,7 +54,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp8 = cResult[3];
   }
   const obj = channel(576);
-  const first1 = _slicedToArray(channel(504).useStateFromStores(first, tmp7, tmp8, tmp(6173).isVersionEqual), 1)[0];
+  const first1 = _slicedToArray(channel(504).useStateFromStores(first, tmp7, tmp8, tmp(6175).isVersionEqual), 1)[0];
   const tmp9 = _slicedToArray(closure_6(), 2)[1];
   if (0 !== first1.length) {
     if (_slicedToArray(closure_7(), 1)[0]) {
@@ -79,9 +79,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
               ({ participantNameplateContainer, participantNameplateSpeakingText } = tmp4);
               if (cResult[14] !== first1.length) {
-                const intl = tmp(1126).intl;
+                const intl = tmp(1128).intl;
                 const obj2 = { count: first1.length };
-                const formatResult = intl.format(tmp(1126).t["+dia6l"], obj2);
+                const formatResult = intl.format(tmp(1128).t["+dia6l"], obj2);
                 cResult[14] = first1.length;
                 cResult[15] = formatResult;
                 let tmp20 = formatResult;
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         }
                       }
                       const obj3 = { accessibilityRole: "button", style: container, onPress: tmp9, children: tmp29 };
-                      const tmp35 = closure_8(tmp(6405).PressableOpacity, obj3);
+                      const tmp35 = closure_8(tmp(6407).PressableOpacity, obj3);
                       cResult[26] = tmp9;
                       cResult[27] = tmp4.container;
                       cResult[28] = tmp29;
@@ -136,7 +136,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 tmp25 = tmp28;
               }
               const obj6 = { style: participantNameplateSpeakingText, variant: "text-xs/medium", color: "text-default", children: tmp20 };
-              const tmp24 = closure_8(tmp(5147).Text, obj6);
+              const tmp24 = closure_8(tmp(5149).Text, obj6);
               cResult[16] = tmp4.participantNameplateSpeakingText;
               cResult[17] = tmp20;
               cResult[18] = tmp24;
@@ -171,7 +171,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(6173).isVersionEqual), 1)[0];
+  }, items1, channel(6175).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -184,14 +184,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const items2 = [closure_8(View, obj4), ];
       const obj6 = { style: tmp.participantNameplateContainer, children: null };
       const obj7 = { style: tmp.participantNameplateSpeakingText, variant: "text-xs/medium", color: "text-default", children: null };
-      const intl = tmp2(1126).intl;
+      const intl = tmp2(1128).intl;
       const obj8 = { count: first.length };
-      obj7.children = intl.format(tmp2(1126).t["+dia6l"], obj8);
-      obj6.children = closure_8(tmp2(5147).Text, obj7);
+      obj7.children = intl.format(tmp2(1128).t["+dia6l"], obj8);
+      obj6.children = closure_8(tmp2(5149).Text, obj7);
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);
-      tmp5 = closure_8(tmp2(6405).PressableOpacity, obj2);
+      tmp5 = closure_8(tmp2(6407).PressableOpacity, obj2);
     }
   }
   return tmp5;

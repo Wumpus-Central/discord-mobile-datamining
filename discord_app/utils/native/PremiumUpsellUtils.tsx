@@ -1,27 +1,27 @@
-// === Module 9490: PremiumUpsellUtils ===
+// === Module 9506: PremiumUpsellUtils ===
 
-// Module 9490 (PremiumUpsellUtils)
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import PremiumUtils from "PremiumUtils" /* 4825 */;
-import ChatInputUtils from "ChatInputUtils" /* 5041 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import _modDef9491 from "module_9491" /* 9491 */;
-import _modDef9492 from "module_9492" /* 9492 */;
-import _modDef9493 from "module_9493" /* 9493 */;
-import _modDef9494 from "module_9494" /* 9494 */;
-import _modDef9495 from "module_9495" /* 9495 */;
-import _modDef9496 from "module_9496" /* 9496 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9614 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9615 */;
+// Module 9506 (PremiumUpsellUtils)
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import PremiumUtils from "PremiumUtils" /* 4828 */;
+import ChatInputUtils from "ChatInputUtils" /* 5044 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import _modDef9507 from "module_9507" /* 9507 */;
+import _modDef9508 from "module_9508" /* 9508 */;
+import _modDef9509 from "module_9509" /* 9509 */;
+import _modDef9510 from "module_9510" /* 9510 */;
+import _modDef9511 from "module_9511" /* 9511 */;
+import _modDef9512 from "module_9512" /* 9512 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9631 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsObjects: metroRequire, UpsellTypes: closure_7 } = Constants);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumTypes: closure_9 } = PremiumConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -374,7 +374,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-                return asyncRequireImpl(9687, dependencyMap.paths).then((result) => {
+                return asyncRequireImpl(9703, dependencyMap.paths).then((result) => {
                   closure_0 = result.default;
                   return (arg0) => {
                     const obj = {};
@@ -402,7 +402,7 @@ export default {
   usePremiumUpsellConfig: tmp4
 };
 export const getUpsellItems = function getUpsellItems() {
-  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef9491, activeTitle: null, passiveTitle: null, description: null };
+  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef9507, activeTitle: null, passiveTitle: null, description: null };
   const intl = util.intl;
   obj.activeTitle = intl.string(util.t.gKtr8N);
   const intl2 = util.intl;
@@ -410,7 +410,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl3 = util.intl;
   obj.description = intl3.format(util.t.rf7Ixp, {});
   const items = [obj, , , , , ];
-  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef9492, activeTitle: null, passiveTitle: null, description: null };
+  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef9508, activeTitle: null, passiveTitle: null, description: null };
   const intl4 = util.intl;
   obj2.activeTitle = intl4.string(util.t.F6rmyq);
   const intl5 = util.intl;
@@ -418,7 +418,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl6 = util.intl;
   obj2.description = intl6.format(util.t.JxTzzb, {});
   items[1] = obj2;
-  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef9493, activeTitle: null, passiveTitle: null, description: null };
+  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef9509, activeTitle: null, passiveTitle: null, description: null };
   const intl7 = util.intl;
   obj3.activeTitle = intl7.string(util.t["tQh+gF"]);
   const intl8 = util.intl;
@@ -426,7 +426,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9494, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9510, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -438,7 +438,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React6.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9495, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9511, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -446,7 +446,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl16 = util.intl;
   obj7.description = intl16.format(util.t["p7i+li"], {});
   items[4] = obj7;
-  const obj8 = { key: constants3.APP_ICONS, image: _modDef9496, activeTitle: null, passiveTitle: null, description: null };
+  const obj8 = { key: constants3.APP_ICONS, image: _modDef9512, activeTitle: null, passiveTitle: null, description: null };
   const intl17 = util.intl;
   obj8.activeTitle = intl17.string(util.t["1B1Cyn"]);
   const intl18 = util.intl;

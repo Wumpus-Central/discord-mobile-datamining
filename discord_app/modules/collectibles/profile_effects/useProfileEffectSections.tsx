@@ -1,11 +1,11 @@
-// === Module 15542: useProfileEffectSections ===
+// === Module 15578: useProfileEffectSections ===
 
-// Module 15542 (useProfileEffectSections)
-import util from "util" /* 1126 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
+// Module 15578 (useProfileEffectSections)
+import util from "util" /* 1128 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7496 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7482 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7498 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -65,8 +65,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
           }
         }
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t["9x1v/p"]);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t["9x1v/p"]);
           class P {
             constructor() {
               items = [, ];
@@ -93,8 +93,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
             }
           }
           if (tmp29 === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = tmp(1126).intl;
-            const stringResult1 = intl2.string(tmp(1126).t.TiLCgw);
+            const intl2 = tmp(1128).intl;
+            const stringResult1 = intl2.string(tmp(1128).t.TiLCgw);
             class P {
               constructor() {
                 items = [, ];
@@ -126,8 +126,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
           const _Symbol2 = Symbol;
           let preview = tmp14.preview;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = tmp(1126).intl;
-            const stringResult2 = intl3.string(tmp(1126).t["1vbbee"]);
+            const intl3 = tmp(1128).intl;
+            const stringResult2 = intl3.string(tmp(1128).t["1vbbee"]);
             class P {
               constructor() {
                 items = [, ];
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  let profileEffects = stateFromStores(7492).getProfileEffects(stateFromStores, tmp12);
+  let profileEffects = stateFromStores(7494).getProfileEffects(stateFromStores, tmp12);
   if (cResult[10] === tmp13) {
     if (cResult[11] === stateFromStores) {
       let tmp17 = cResult[12];
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   cResult[11] = stateFromStores;
   cResult[12] = U;
   tmp17 = U;
-  const tmpResult4 = stateFromStores(7492);
+  const tmpResult4 = stateFromStores(7494);
 }) : (function useProfileEffectSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14139)(useMemo(() => {
+  return first(14171)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileEffects = obj.getProfileEffects(stateFromStores, first);
     const reduced = profileEffects.reduce((premium_purchase, skuId) => {

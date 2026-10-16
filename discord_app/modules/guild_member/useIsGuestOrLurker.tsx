@@ -1,13 +1,13 @@
-// === Module 11456: useIsGuestOrLurker ===
+// === Module 11476: useIsGuestOrLurker ===
 
-// Module 11456 (useIsGuestOrLurker)
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
+// Module 11476 (useIsGuestOrLurker)
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");

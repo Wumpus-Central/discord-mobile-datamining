@@ -1,9 +1,9 @@
-// === Module 7489: CollectiblesStoreListingRecord ===
+// === Module 7491: CollectiblesStoreListingRecord ===
 
-// Module 7489 (CollectiblesStoreListingRecord)
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import tinycolorDefault from "tinycolor" /* 7490 */;
-import Record from "Record" /* 1405 */;
+// Module 7491 (CollectiblesStoreListingRecord)
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import tinycolorDefault from "tinycolor" /* 7492 */;
+import Record from "Record" /* 1407 */;
 
 require = fn;
 const prototype = function CollectiblesStoreListingRecord(styles) {

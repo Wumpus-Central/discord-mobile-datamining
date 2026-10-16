@@ -1,17 +1,17 @@
-// === Module 15603: GuildSelectComponentActionSheet ===
+// === Module 15636: GuildSelectComponentActionSheet ===
 
-// Module 15603 (GuildSelectComponentActionSheet)
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5469 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5505 */;
-import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11575 */;
+// Module 15636 (GuildSelectComponentActionSheet)
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5471 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5507 */;
+import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SortedGuildStore from "SortedGuildStore" /* 6179 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SortedGuildStore from "SortedGuildStore" /* 6181 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({ guildIdentity: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 16 }, avatar: { marginRight: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
   const tmp5 = first;
   [tmp7, r10022] = first(noop.useState(""), 2);
   if (cResult[0] !== selectedGuild) {
-    const obj4 = { type: onSelectGuild(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+    const obj4 = { type: onSelectGuild(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
     ({ id: obj3.value, name: obj3.label } = selectedGuild);
     obj4.guild = selectedGuild;
     cResult[0] = selectedGuild;
@@ -63,8 +63,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj6 = { maxValues: 1, minValues: 1, placeholder: null };
-      const intl = onSelectGuild(1126).intl;
-      obj6.placeholder = intl.string(onSelectGuild(1126).t["ZImm/x"]);
+      const intl = onSelectGuild(1128).intl;
+      obj6.placeholder = intl.string(onSelectGuild(1128).t["ZImm/x"]);
       cResult[4] = obj6;
     }
     const _Symbol2 = Symbol;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -446,7 +446,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -522,7 +522,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
               reduced = flattenedGuildIds.reduce((arr, item) => {
                 guild = guild.getGuild(item);
                 if (null != guild) {
-                  const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                  const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                   ({ id: obj.value, name: obj.label } = guild);
                   obj.guild = guild;
                   arr = arr.push(obj);
@@ -559,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
               queryGuildsResult = obj.queryGuilds(obj1);
               reduced = queryGuildsResult.map((record) => {
                 record = record.record;
-                return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+                return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
               });
             }
             return reduced;
@@ -590,7 +590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -606,7 +606,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -645,7 +645,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -667,7 +667,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -683,7 +683,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -705,7 +705,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             reduced = flattenedGuildIds.reduce((arr, item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
-                const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+                const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
                 ({ id: obj.value, name: obj.label } = guild);
                 obj.guild = guild;
                 arr = arr.push(obj);
@@ -721,7 +721,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
             queryGuildsResult = obj.queryGuilds(obj1);
             reduced = queryGuildsResult.map((record) => {
               record = record.record;
-              return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+              return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
             });
           }
           return reduced;
@@ -783,7 +783,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
       let reduced = flattenedGuildIds.reduce((arr, item) => {
         guild = guild.getGuild(item);
         if (null != guild) {
-          const obj = { type: closure_1_0(5505).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          const obj = { type: closure_1_0(5507).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
           arr = arr.push(obj);
@@ -795,7 +795,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSel
       let obj = require("AutocompleteUtils");
       reduced = require("AutocompleteUtils").queryGuilds(obj2).map((record) => {
         record = record.record;
-        return { type: closure_1_0(5505).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+        return { type: closure_1_0(5507).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
       });
       const queryGuildsResult = require("AutocompleteUtils").queryGuilds(obj2);
     }

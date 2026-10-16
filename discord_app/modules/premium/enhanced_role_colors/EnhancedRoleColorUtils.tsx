@@ -1,8 +1,8 @@
-// === Module 2122: EnhancedRoleColorUtils ===
+// === Module 2125: EnhancedRoleColorUtils ===
 
-// Module 2122 (EnhancedRoleColorUtils)
-import Constants from "Constants" /* 1085 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
+// Module 2125 (EnhancedRoleColorUtils)
+import Constants from "Constants" /* 1087 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import size from "module_2" /* 2 */;
 
 const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;

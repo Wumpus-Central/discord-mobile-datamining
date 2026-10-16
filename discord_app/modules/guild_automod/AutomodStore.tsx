@@ -1,8 +1,8 @@
-// === Module 18579: AutomodStore ===
+// === Module 18621: AutomodStore ===
 
-// Module 18579 (AutomodStore)
-import _mod4789 from "module_4789" /* 4789 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 18580 */;
+// Module 18621 (AutomodStore)
+import _mod4792 from "module_4792" /* 4792 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 18622 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,10 +10,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12487).AutomodTriggerType;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
+const AutomodTriggerType = fn(12510).AutomodTriggerType;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1267);
+const identity = fn(1269);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -54,7 +54,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1272).batchUpdates(() => {
+      guildId(1274).batchUpdates(() => {
         obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -81,7 +81,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1272).batchUpdates(() => {
+      closure_0(1274).batchUpdates(() => {
         const obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -217,7 +217,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4789").shallow), 2);
+  }, require("module_4792").shallow), 2);
   first = tmp3[0];
   asyncGeneratorStep = tmp5;
   const items = [tmp2[0], ];
@@ -377,7 +377,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4789").shallow), 2);
+  }, require("module_4792").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   let items = [tmp[0], ];
@@ -510,7 +510,7 @@ function useSyncAutomodRules(arg0) {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _mod4789.shallow), 2);
+  }, _mod4792.shallow), 2);
   const first = tmp2[0];
   closure_3 = tmp4;
   const items = [tmp[0], ];
@@ -620,7 +620,7 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() 
   } else {
     tmp4 = cResult[1];
   }
-  return withEqualityFn(tmp4, require("module_4789").shallow);
+  return withEqualityFn(tmp4, require("module_4792").shallow);
 }) : (function useAutomodRulesList(arg0) {
   _require = arg0;
   return withEqualityFn((updateRule) => {
@@ -633,5 +633,5 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() 
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_4789").shallow);
+  }, require("module_4792").shallow);
 });

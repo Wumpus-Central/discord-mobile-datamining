@@ -1,15 +1,15 @@
-// === Module 18445: useGameOrganizationInviteFetch ===
+// === Module 18487: useGameOrganizationInviteFetch ===
 
-// Module 18445 (useGameOrganizationInviteFetch)
-import DurationsDefault from "Durations" /* 1102 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 18446 */;
+// Module 18487 (useGameOrganizationInviteFetch)
+import DurationsDefault from "Durations" /* 1104 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 18488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10718 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10733 */;
 
-const constants = fn(10719).GameOrganizationInviteStates;
+const constants = fn(10734).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1085).QueryIds.GAME_ORGANIZATION_INVITE,
+  getQueryId: fn(1087).QueryIds.GAME_ORGANIZATION_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   get(arg0) {

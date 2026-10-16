@@ -1,6 +1,6 @@
-// === Module 1351: stringifyErrors ===
+// === Module 1353: stringifyErrors ===
 
-// Module 1351 (stringifyErrors)
+// Module 1353 (stringifyErrors)
 import size from "module_2" /* 2 */;
 
 function stringifyErrors(message) {

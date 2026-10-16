@@ -1,10 +1,10 @@
-// === Module 4956: BountiesScrollGradientRive ===
+// === Module 4959: BountiesScrollGradientRive ===
 
-// Module 4956 (BountiesScrollGradientRive)
+// Module 4959 (BountiesScrollGradientRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 4900 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4953 */;
-import _modDef4957 from "module_4957" /* 4957 */;
+import BaseRive from "BaseRive" /* 4903 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4956 */;
+import _modDef4960 from "module_4960" /* 4960 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -59,7 +59,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bountie
     }
   }
   const merged = Object.assign(tmp5);
-  const tmp15 = jsx(BaseRive.BaseRive, { ref: tmp4, src: _modDef4957, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 });
+  const tmp15 = jsx(BaseRive.BaseRive, { ref: tmp4, src: _modDef4960, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 });
   cResult[6] = str;
   cResult[7] = tmp12;
   cResult[8] = tmp4;
@@ -67,7 +67,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bountie
   cResult[10] = tmp6;
   cResult[11] = tmp15;
   tmp13 = tmp15;
-  const obj2 = { ref: tmp4, src: _modDef4957, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 };
+  const obj2 = { ref: tmp4, src: _modDef4960, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 };
 }) : (function BountiesScrollGradientRiveInner(defaultViewModelInstance) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Bounty Scroll Gradient";
@@ -81,7 +81,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bountie
   }
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_4);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef4957, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef4960, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

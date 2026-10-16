@@ -1,9 +1,9 @@
-// === Module 12669: CheckpointSidekickStatsScreen ===
+// === Module 12694: CheckpointSidekickStatsScreen ===
 
-// Module 12669 (CheckpointSidekickStatsScreen)
+// Module 12694 (CheckpointSidekickStatsScreen)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 12664 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 12689 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

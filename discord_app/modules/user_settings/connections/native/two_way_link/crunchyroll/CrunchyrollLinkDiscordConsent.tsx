@@ -1,12 +1,12 @@
-// === Module 13763: CrunchyrollLinkDiscordConsent ===
+// === Module 13789: CrunchyrollLinkDiscordConsent ===
 
-// Module 13763 (CrunchyrollLinkDiscordConsent)
+// Module 13789 (CrunchyrollLinkDiscordConsent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(13758).CrunchyrollLinkModalScenes;
-const PlatformTypes = fn(1085).PlatformTypes;
-const CrunchyrollConnectionConstants = fn(8675);
+let closure_3 = fn(13784).CrunchyrollLinkModalScenes;
+const PlatformTypes = fn(1087).PlatformTypes;
+const CrunchyrollConnectionConstants = fn(8683);
 ({ CRUNCHYROLL_CLIENT_ID: hasOwnProperty, CRUNCHYROLL_CLIENT_SCOPES: metroRequire } = CrunchyrollConnectionConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   ({ callbackCode, callbackState } = arg0);
   const obj = navigation(576);
   const tmp = navigation;
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function c() {
       navigation.push(constants.SUCCESS);
@@ -49,19 +49,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
       }
     }
   }
-  const tmp8 = jsx(tmp(9444).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: tmp5, onError: tmp6 });
+  const tmp8 = jsx(tmp(9460).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: tmp5, onError: tmp6 });
   cResult[4] = callbackCode;
   cResult[5] = callbackState;
   cResult[6] = tmp6;
   cResult[7] = tmp5;
   cResult[8] = tmp8;
   tmp7 = tmp8;
-  const obj2 = navigation(1503);
+  const obj2 = navigation(1505);
   const obj3 = { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: tmp5, onError: tmp6 };
 }) : (function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
@@ -70,5 +70,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  return jsx(navigation(9444).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
+  return jsx(navigation(9460).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
 });

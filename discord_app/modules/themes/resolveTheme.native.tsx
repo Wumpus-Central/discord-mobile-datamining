@@ -1,16 +1,16 @@
-// === Module 1250: resolveTheme ===
+// === Module 1252: resolveTheme ===
 
-// Module 1250 (resolveTheme)
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7573 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1251 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+// Module 1252 (resolveTheme)
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7575 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
 require = fn;
-const ThemeConstants = fn(1208);
+const ThemeConstants = fn(1210);
 ({ PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire, SystemTheme: closure_7, SystemThemeState: closure_8 } = ThemeConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/themes/resolveTheme.native.tsx");

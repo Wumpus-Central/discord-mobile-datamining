@@ -1,24 +1,31 @@
-// === Module 12172: ConjurePlanCommandText ===
+// === Module 12196: ConjurePlanCommandText ===
 
-// Module 12172 (ConjurePlanCommandText)
+// Module 12196 (ConjurePlanCommandText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const COMMAND_SENTINEL = fn(5464).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(5466).COMMAND_SENTINEL;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 let closure_5 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanCommandMention(arg0) {
   const cResult = c.c(4);
-  ({ name, size } = arg0);
+  ({ name, prefix, size } = arg0);
+  if (undefined === prefix) {
+    prefix = COMMAND_SENTINEL;
+  }
   const tmp4 = closure_5();
   const combined = "" + size + "/bold";
-  const combined1 = "" + COMMAND_SENTINEL + "\u2060" + name;
+  let combined1 = name;
+  if ("" !== prefix) {
+    const _HermesInternal = HermesInternal;
+    combined1 = "" + prefix + "\u2060" + name;
+  }
   if (cResult[0] === tmp4.mention) {
     if (cResult[1] === combined) {
       if (cResult[2] === combined1) {
@@ -34,10 +41,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePla
   cResult[3] = tmp8;
   tmp7 = tmp8;
   const obj2 = { variant: combined, color: "none", style: tmp4.mention, children: combined1 };
-}) : (function ConjurePlanCommandMention(arg0) {
-  ({ name, size } = arg0);
-  const tmp = closure_5();
-  return jsx(Text_Text.Text, { variant: "" + size + "/bold", color: "none", style: closure_5().mention, children: "" + COMMAND_SENTINEL + "\u2060" + name });
+}) : (function ConjurePlanCommandMention(size) {
+  ({ name, prefix } = size);
+  if (prefix === undefined) {
+    prefix = COMMAND_SENTINEL;
+  }
+  const obj = { variant: "" + size.size + "/bold", color: "none", style: closure_5().mention, children: null };
+  let combined = name;
+  if ("" !== prefix) {
+    const _HermesInternal = HermesInternal;
+    combined = "" + prefix + "\u2060" + name;
+  }
+  obj.children = combined;
+  return jsx(Text_Text.Text, { variant: "" + size.size + "/bold", color: "none", style: closure_5().mention, children: null });
 });
 let closure_6 = tmp2;
 fn(558);
@@ -47,7 +63,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanC
   const cResult = size(576).c(4);
   ({ text, size, commandNames } = arg0);
   const obj = size(576);
-  const conjurePlanCommandPattern = size(12155).useConjurePlanCommandPattern(commandNames);
+  const conjurePlanCommandPattern = size(12179).useConjurePlanCommandPattern(commandNames);
   if (cResult[0] === conjurePlanCommandPattern) {
     if (cResult[1] === size) {
       if (cResult[2] === text) {
@@ -56,8 +72,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanC
       return tmp5;
     }
   }
-  const obj2 = size(12155);
-  const result = size(12155).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const obj2 = size(12179);
+  const result = size(12179).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   let mapped = text;
   if (null != result) {
     mapped = result.map((kind) => {
@@ -75,13 +91,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanC
   cResult[2] = text;
   cResult[3] = mapped;
   tmp5 = mapped;
-  const tmpResult = size(12155);
+  const tmpResult = size(12179);
 }) : (function ConjurePlanCommandText(text) {
   text = text.text;
   ({ commandNames, size } = text);
-  const conjurePlanCommandPattern = size(12155).useConjurePlanCommandPattern(commandNames);
-  const obj = size(12155);
-  const result = size(12155).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const conjurePlanCommandPattern = size(12179).useConjurePlanCommandPattern(commandNames);
+  const obj = size(12179);
+  const result = size(12179).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   if (null != result) {
     text = result.map((kind) => {
       if ("command" === kind.kind) {

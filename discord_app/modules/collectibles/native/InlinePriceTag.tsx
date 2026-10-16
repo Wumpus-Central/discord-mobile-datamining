@@ -1,35 +1,35 @@
-// === Module 14113: InlinePriceTag ===
+// === Module 14145: InlinePriceTag ===
 
-// Module 14113 (InlinePriceTag)
+// Module 14145 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import useToken from "useToken" /* 4874 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7098 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7125 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7491 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
-import useCurrentUser from "useCurrentUser" /* 8521 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
-import OrbsIcon from "OrbsIcon" /* 9257 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9276 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9292 */;
-import TagIcon from "TagIcon" /* 9293 */;
-import useProductDisableState from "useProductDisableState" /* 9301 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14119 */;
-import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 14120 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 14121 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import useToken from "useToken" /* 4877 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7127 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
+import useCurrentUser from "useCurrentUser" /* 8529 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
+import OrbsIcon from "OrbsIcon" /* 9270 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9289 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9305 */;
+import TagIcon from "TagIcon" /* 9306 */;
+import useProductDisableState from "useProductDisableState" /* 9314 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 14151 */;
+import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 14152 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 14153 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7353 */;
+import IAPStore from "IAPStore" /* 7355 */;
 
 require = fn;
 function ExpressiveNitroUpsell(arg0) {
@@ -50,7 +50,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(14114, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(14146, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -124,12 +124,12 @@ function ExpressiveNitroUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ShopCtaEnum = fn(1087).ShopCtaEnum;
-const Constants = fn(1085);
+const ShopCtaEnum = fn(1089).ShopCtaEnum;
+const Constants = fn(1087);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let obj2 = { priceTag: { flexDirection: "row", alignItems: "center" }, strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 }, strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 }, regularPrice: {}, nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 }, nitroIconSubscribeNow: { marginLeft: 0 }, root: { flexDirection: "column" }, container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }, priceTagRow: { flexDirection: "row", alignItems: "center" }, nitroUpsellPill: { alignSelf: "stretch", marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.round, overflow: "hidden", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4 }, nitroUpsellGradient: null, nitroUpsellSavings: null, nitroUpsellCta: null, nitroUpsellIcon: null, nitroUpsellChevron: null, underline: null, subscribeNowPressable: null, androidTextPadding: null, orbsIcon: null, disabled: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -510,7 +510,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroU
         cResult[6] = tmp4.androidTextPadding;
         cResult[7] = androidTextPadding;
         let tmp10 = androidTextPadding;
-        tmpResult = tmp(1382);
+        tmpResult = tmp(1384);
       } else {
         tmp10 = cResult[7];
       }
@@ -542,7 +542,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroU
             tmp19 = tmp22;
           }
           const obj3 = { variant: "text-md/normal", color: "interactive-text-default", style: tmp10, children: cResult[10] };
-          const tmp18 = closure_9(tmp(5147).Text, obj3);
+          const tmp18 = closure_9(tmp(5149).Text, obj3);
           cResult[13] = tmp10;
           cResult[14] = cResult[10];
           cResult[15] = tmp18;
@@ -559,9 +559,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroU
       } else {
         tmp13 = cResult[12];
       }
-      const intl = tmp(1126).intl;
+      const intl = tmp(1128).intl;
       const obj4 = { price: underline, subscribeNowHook: tmp13 };
-      const formatResult = intl.format(tmp(1126).t.Kxw2LT, obj4);
+      const formatResult = intl.format(tmp(1128).t.Kxw2LT, obj4);
       cResult[8] = underline;
       underline = tmp4.underline;
       cResult[9] = underline;
@@ -571,7 +571,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroU
     const items1 = [, ];
     ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
     obj5.style = items1;
-    const tmp9 = closure_9(tmp(9253).NitroWheelIcon, obj5);
+    const tmp9 = closure_9(tmp(9266).NitroWheelIcon, obj5);
     cResult[3] = tmp4.nitroIcon;
     cResult[4] = tmp4.nitroIconSubscribeNow;
     cResult[5] = tmp9;
@@ -626,7 +626,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroU
 });
 fn(558);
 let obj6 = { alignSelf: "flex-start", marginBottom: -2, marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-createStyles = fn(5151);
+createStyles = fn(5153);
 let closure_19 = createStyles.createStyles(() => {
   const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: nativeDefault.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;

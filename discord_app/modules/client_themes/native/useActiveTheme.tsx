@@ -1,15 +1,15 @@
-// === Module 9529: useActiveTheme ===
+// === Module 9545: useActiveTheme ===
 
-// Module 9529 (useActiveTheme)
+// Module 9545 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5031 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1251 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5034 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
 
 require = fn;
-const ThemeConstants = fn(1208);
+const ThemeConstants = fn(1210);
 ({ SystemThemeState: metroRequire, ActiveThemeType: closure_7 } = ThemeConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

@@ -1,10 +1,10 @@
-// === Module 12174: ActivitiesIcon ===
+// === Module 9160: GooglePlayNeutralIcon ===
 
-// Module 12174 (ActivitiesIcon)
+// Module 9160 (GooglePlayNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod12175 from "module_12175" /* 12175 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod9161 from "module_9161" /* 9161 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,9 +13,9 @@ let closure_3 = ["style", "color"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ActivitiesIcon.tsx");
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/GooglePlayNeutralIcon.tsx");
 
-export const ActivitiesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivitiesIcon(arg0) {
+export const GooglePlayNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function GooglePlayNeutralIcon(arg0) {
   const cResult = c.c(9);
   if (cResult[0] !== arg0) {
     ({ style, color } = arg0);
@@ -36,7 +36,7 @@ export const ActivitiesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12175;
+    const tmpResult = _mod9161;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -58,12 +58,12 @@ export const ActivitiesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   cResult[8] = tmp14;
   tmp12 = tmp14;
   const obj2 = { source: tmp10, color: INTERACTIVE_ICON_DEFAULT, style: tmp5 };
-}) : (function ActivitiesIcon(color) {
+}) : (function GooglePlayNeutralIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12175, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9161, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

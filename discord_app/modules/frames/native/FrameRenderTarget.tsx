@@ -1,14 +1,14 @@
-// === Module 11617: FrameRenderTarget ===
+// === Module 11641: FrameRenderTarget ===
 
-// Module 11617 (FrameRenderTarget)
+// Module 11641 (FrameRenderTarget)
 import c from "c" /* 576 */;
-import useFramePoolBorrowDefault from "useFramePoolBorrow" /* 11618 */;
+import useFramePoolBorrowDefault from "useFramePoolBorrow" /* 11642 */;
 import noop from "module_19" /* 19 */;
 
-const WebView = WebViewTarget(7738);
+const WebView = WebViewTarget(7741);
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_5 = createStyles.createStyles({ target: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMemoizedPresentation(arg0) {

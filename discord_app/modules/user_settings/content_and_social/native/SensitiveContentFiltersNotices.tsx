@@ -1,18 +1,18 @@
-// === Module 15756: SensitiveContentFiltersNotices ===
+// === Module 15789: SensitiveContentFiltersNotices ===
 
-// Module 15756 (SensitiveContentFiltersNotices)
+// Module 15789 (SensitiveContentFiltersNotices)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import LinkingDefault from "Linking" /* 4862 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7714 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15617 */;
+import util from "util" /* 1128 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import LinkingDefault from "Linking" /* 4865 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7717 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15650 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(7239).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7241).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -21,9 +21,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SensitiveC
   let tmp = dependencyMap;
   const cResult = sensitiveContentFilterHelpArticle(576).c(5);
   let obj = sensitiveContentFilterHelpArticle(576);
-  const isTinyBroncoSettingsNoticeEnabled = sensitiveContentFilterHelpArticle(15748).useIsTinyBroncoSettingsNoticeEnabled();
-  const obj2 = sensitiveContentFilterHelpArticle(15748);
-  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(7220).useSensitiveContentFilterHelpArticle();
+  const isTinyBroncoSettingsNoticeEnabled = sensitiveContentFilterHelpArticle(15781).useIsTinyBroncoSettingsNoticeEnabled();
+  const obj2 = sensitiveContentFilterHelpArticle(15781);
+  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(7222).useSensitiveContentFilterHelpArticle();
   if (cResult[0] !== sensitiveContentFilterHelpArticle) {
     function handleOpenHelpCenterArticle() {
       const obj = LinkingDefault;
@@ -38,14 +38,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SensitiveC
   if (isTinyBroncoSettingsNoticeEnabled) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      ContentFiltersTeenNotice = ContentFiltersTeenNotice(15748).ContentFiltersTeenNotice;
+      ContentFiltersTeenNotice = ContentFiltersTeenNotice(15781).ContentFiltersTeenNotice;
       tmp = <ContentFiltersTeenNotice />;
       cResult[2] = tmp;
     }
   } else {
     if (cResult[3] !== tmp5) {
-      const obj4 = { label: ContentFiltersTeenNotice(1126).t.EUo0yj, labelHook: tmp5, noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE };
-      const tmp11 = jsx(SafetySettingsNoticeDefault, { label: ContentFiltersTeenNotice(1126).t.EUo0yj, labelHook: tmp5, noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE });
+      const obj4 = { label: ContentFiltersTeenNotice(1128).t.EUo0yj, labelHook: tmp5, noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE };
+      const tmp11 = jsx(SafetySettingsNoticeDefault, { label: ContentFiltersTeenNotice(1128).t.EUo0yj, labelHook: tmp5, noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE });
       cResult[3] = tmp5;
       cResult[4] = tmp11;
       let tmp6 = tmp11;
@@ -54,16 +54,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SensitiveC
     }
     return tmp6;
   }
-  const obj3 = sensitiveContentFilterHelpArticle(7220);
+  const obj3 = sensitiveContentFilterHelpArticle(7222);
 }) : (function SensitiveContentFiltersTeenNotice() {
   const isTinyBroncoSettingsNoticeEnabled = require("TinyBroncoSettingsNoticesLazy").useIsTinyBroncoSettingsNoticeEnabled();
   let obj = require("TinyBroncoSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(15748).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(15781).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
-      label: tmp(1126).t.EUo0yj,
+      label: tmp(1128).t.EUo0yj,
       labelHook: function handleOpenHelpCenterArticle() {
           const obj = LinkingDefault;
           obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
@@ -71,7 +71,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SensitiveC
       noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
     };
     tmp4Result = jsx(SafetySettingsNoticeDefault, {
-      label: tmp(1126).t.EUo0yj,
+      label: tmp(1128).t.EUo0yj,
       labelHook: function handleOpenHelpCenterArticle() {
           const obj = LinkingDefault;
           obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));

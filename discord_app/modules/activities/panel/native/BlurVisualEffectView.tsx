@@ -1,17 +1,17 @@
-// === Module 18049: BlurVisualEffectView ===
+// === Module 18084: BlurVisualEffectView ===
 
-// Module 18049 (BlurVisualEffectView)
+// Module 18084 (BlurVisualEffectView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4874 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5425 */;
+import useToken from "useToken" /* 4877 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const ThemeTypes = fn(1085).ThemeTypes;
+const ThemeTypes = fn(1087).ThemeTypes;
 const jsx = fn(21).jsx;
-const ColorUtils = fn(5023);
+const ColorUtils = fn(5026);
 const tintColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.24);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

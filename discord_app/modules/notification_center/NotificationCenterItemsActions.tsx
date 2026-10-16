@@ -1,14 +1,14 @@
-// === Module 17451: NotificationCenterItemsActions ===
+// === Module 17485: NotificationCenterItemsActions ===
 
-// Module 17451 (NotificationCenterItemsActions)
+// Module 17485 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6154 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6275 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6156 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6277 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6273 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6275 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0) {
@@ -301,7 +301,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
 

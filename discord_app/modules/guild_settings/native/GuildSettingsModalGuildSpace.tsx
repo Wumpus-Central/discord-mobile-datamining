@@ -1,21 +1,21 @@
-// === Module 18892: GuildSettingsModalGuildSpace ===
+// === Module 18934: GuildSettingsModalGuildSpace ===
 
-// Module 18892 (GuildSettingsModalGuildSpace)
+// Module 18934 (GuildSettingsModalGuildSpace)
 import nativeDefault from "native" /* 587 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import _modDef2472 from "module_2472" /* 2472 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8855 */;
-import ServerHubAnalytics from "ServerHubAnalytics" /* 18573 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import _modDef2475 from "module_2475" /* 2475 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
+import ServerHubAnalytics from "ServerHubAnalytics" /* 18615 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8856 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -67,7 +67,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
       }
     }
   }
-  const fn = function n(value) {
+  const fn = function l(value) {
     const setFlagResult = FlagUtils.setFlag(guild.systemChannelFlags, flag, !value);
     GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelFlags: setFlagResult });
     const result = ServerHubAnalytics.trackServerHubToggleSetting(guild.id, settingType, value);
@@ -99,7 +99,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalGuildSpace.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalGuildSpace(contentContainerStyle) {
-  const cResult = stateFromStores(576).c(34);
+  const cResult = stateFromStores(576).c(40);
   contentContainerStyle = contentContainerStyle.contentContainerStyle;
   const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -127,18 +127,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     tmp10 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    class I {
+    class G {
       constructor() {
         return closure_4.can(Permissions.MANAGE_GUILD, closure_0);
       }
     }
     const items3 = [stateFromStores];
     cResult[4] = stateFromStores;
-    cResult[5] = I;
+    cResult[5] = G;
     cResult[6] = items3;
     let tmp13 = items3;
   } else {
-    class I {
+    class G {
       constructor() {
         return closure_4.can(Permissions.MANAGE_GUILD, closure_0);
       }
@@ -146,15 +146,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     tmp13 = cResult[6];
   }
   const tmpResult = stateFromStores(504);
-  const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp10, I, tmp13);
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp10, G, tmp13);
   if (null == stateFromStores) {
-    class I {
+    class G {
       constructor() {
         return closure_4.can(Permissions.MANAGE_GUILD, closure_0);
       }
     }
   } else {
-    class I {
+    class G {
       constructor() {
         return closure_4.can(Permissions.MANAGE_GUILD, closure_0);
       }
@@ -182,26 +182,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     obj4.contentContainerStyle = items3;
     const obj5 = { style: tmp.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
     const obj6 = { title: null, description: null, hasIcons: false, children: null };
-    const intl = tmp2(1126).intl;
-    obj6.title = intl.string(tmp2(1126).t["0JLdD3"]);
-    const intl2 = tmp2(1126).intl;
-    obj6.description = intl2.string(tmp2(1126).t.Xa1KEN);
-    const obj7 = { guild: stateFromStores, flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS, settingType: tmp2(18573).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
-    const intl3 = tmp2(1126).intl;
-    obj7.label = intl3.string(_modDef2472.btBTIw);
-    const intl4 = tmp2(1126).intl;
-    obj7.subLabel = intl4.string(tmp2(1126).t.n3aRYQ);
+    const intl = tmp2(1128).intl;
+    obj6.title = intl.string(tmp2(1128).t["0JLdD3"]);
+    const intl2 = tmp2(1128).intl;
+    obj6.description = intl2.string(tmp2(1128).t.Xa1KEN);
+    const obj7 = { guild: stateFromStores, flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS, settingType: tmp2(18615).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
+    const intl3 = tmp2(1128).intl;
+    obj7.label = intl3.string(_modDef2475.btBTIw);
+    const intl4 = tmp2(1128).intl;
+    obj7.subLabel = intl4.string(tmp2(1128).t.n3aRYQ);
     obj7.disabled = !stateFromStores1;
-    const items4 = [closure_8(closure_12, obj7), ];
-    const obj8 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS, settingType: tmp2(18573).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES, label: null, disabled: null };
-    const intl5 = tmp2(1126).intl;
-    obj8.label = intl5.string(tmp2(1126).t["9tlK5J"]);
+    const items4 = [closure_8(closure_12, obj7), , ];
+    const obj8 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS, settingType: tmp2(18615).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES, label: null, disabled: null };
+    const intl5 = tmp2(1128).intl;
+    obj8.label = intl5.string(tmp2(1128).t["9tlK5J"]);
     obj8.disabled = !stateFromStores1;
     items4[1] = closure_8(closure_12, obj8);
+    const obj9 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS, settingType: tmp2(18615).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
+    const intl6 = tmp2(1128).intl;
+    obj9.label = intl6.string(_modDef2475["5xxUI2"]);
+    const intl7 = tmp2(1128).intl;
+    obj9.subLabel = intl7.string(_modDef2475.FMGoDB);
+    obj9.disabled = !stateFromStores1;
+    items4[2] = closure_8(closure_12, obj9);
     obj6.children = items4;
-    obj5.children = closure_9(tmp2(6485).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(5437).Stack, obj5);
-    const items5 = [closure_8(tmp2(8800).Form, obj4), closure_8(tmp2(6948).NavScrim, {})];
+    obj5.children = closure_9(tmp2(6487).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(5439).Stack, obj5);
+    const items5 = [closure_8(tmp2(8808).Form, obj4), closure_8(tmp2(6950).NavScrim, {})];
     obj3.children = items5;
     tmp6 = closure_9(closure_10, obj3);
   }

@@ -1,11 +1,11 @@
-// === Module 7171: useRoleSubscriptionsVisibleInGuild ===
+// === Module 7173: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 7171 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7172 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7173 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 7179 */;
-import ImpersonateStore from "ImpersonateStore" /* 2118 */;
-import GuildStore from "GuildStore" /* 2087 */;
+// Module 7173 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7174 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7175 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 7181 */;
+import ImpersonateStore from "ImpersonateStore" /* 2121 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
@@ -34,7 +34,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     return isViewingServerShopResult;
   }
 }
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleSubscriptionsVisibleInGuild(arg0) {
   _require = arg0;

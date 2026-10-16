@@ -1,17 +1,17 @@
-// === Module 9767: useEmojiAndSource ===
+// === Module 9783: useEmojiAndSource ===
 
-// Module 9767 (useEmojiAndSource)
-import EmojiTypes from "EmojiTypes" /* 4823 */;
+// Module 9783 (useEmojiAndSource)
+import EmojiTypes from "EmojiTypes" /* 4826 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import EmojiStore from "EmojiStore" /* 6203 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import EmojiStore from "EmojiStore" /* 6205 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(6380);
+const ExpressionSourceRecord = fn(6382);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
@@ -421,7 +421,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
       if (current != null) {
         currentResult = current();
       }
-      closure_0 = closure_2(/* F155441 */ function() { ... });
+      closure_0 = closure_2(/* F155915 */ function() { ... });
       if (closure_2) {
         tmp4 = (function fetch() { ... })();
       } else {

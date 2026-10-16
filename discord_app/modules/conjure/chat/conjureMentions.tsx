@@ -1,10 +1,10 @@
-// === Module 12070: conjureMentions ===
+// === Module 12094: conjureMentions ===
 
-// Module 12070 (conjureMentions)
-import UserUtils from "UserUtils" /* 5018 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12069 */;
+// Module 12094 (conjureMentions)
+import UserUtils from "UserUtils" /* 5021 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12093 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
@@ -212,10 +212,10 @@ export const encodeConjureMentions = function encodeConjureMentions(chat, arr) {
 export { splitConjureMentions };
 export const useRequestConjureMentionedUsers = tmp2;
 export const withConjureMentionNames = function withConjureMentionNames(body) {
-  const f111496 = (arg0) => user.getUser(arg0);
+  const f111828 = (arg0) => user.getUser(arg0);
   return body.replace(closure_4, (arg0, arg1) => {
     let combined = arg0;
-    const tmp2 = f145304(arg1);
+    const tmp2 = f145765(arg1);
     if (null != tmp2) {
       const _HermesInternal = HermesInternal;
       combined = "@" + closure_0(dependencyMap[2]).getName(tmp2);
@@ -236,10 +236,10 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
   }
   if (cResult[1] !== arg0) {
     const fn = function s() {
-      const f145303 = (arg0) => user.getUser(arg0);
+      const f145764 = (arg0) => user.getUser(arg0);
       return closure_0.replace(re4, (arg0, arg1) => {
         let combined = arg0;
-        const tmp2 = f145304(arg1);
+        const tmp2 = f145765(arg1);
         if (null != tmp2) {
           const _HermesInternal = HermesInternal;
           combined = "@" + closure_0(dependencyMap[2]).getName(tmp2);
@@ -265,10 +265,10 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
   const items = [UserStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
-    const f145304 = (arg0) => user.getUser(arg0);
+    const f145765 = (arg0) => user.getUser(arg0);
     return closure_0.replace(re4, (arg0, arg1) => {
       let combined = arg0;
-      const tmp2 = f145304(arg1);
+      const tmp2 = f145765(arg1);
       if (null != tmp2) {
         const _HermesInternal = HermesInternal;
         combined = "@" + closure_0(dependencyMap[2]).getName(tmp2);

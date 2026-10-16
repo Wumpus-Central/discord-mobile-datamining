@@ -1,23 +1,23 @@
-// === Module 13278: PencilIllocon ===
+// === Module 13304: PencilIllocon ===
 
-// Module 13278 (PencilIllocon)
+// Module 13304 (PencilIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import assetHelpers from "assetHelpers" /* 6493 */;
-import _modDef13174 from "module_13174" /* 13174 */;
-import _modDef13279 from "module_13279" /* 13279 */;
-import _modDef13280 from "module_13280" /* 13280 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import assetHelpers from "assetHelpers" /* 6495 */;
+import _modDef13200 from "module_13200" /* 13200 */;
+import _modDef13305 from "module_13305" /* 13305 */;
+import _modDef13306 from "module_13306" /* 13306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13279 }, 3: null };
-const obj2 = { uri: _modDef13279 };
-obj[2] = { uri: _modDef13174 };
-const obj3 = { uri: _modDef13174 };
-obj[3] = { uri: _modDef13280 };
+let obj = { 1: null, 2: { uri: _modDef13305 }, 3: null };
+const obj2 = { uri: _modDef13305 };
+obj[2] = { uri: _modDef13200 };
+const obj3 = { uri: _modDef13200 };
+obj[3] = { uri: _modDef13306 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13280 };
+const obj4 = { uri: _modDef13306 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PencilIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const PencilIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6493).getAssetSource(obj);
+  obj.source = num(6495).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

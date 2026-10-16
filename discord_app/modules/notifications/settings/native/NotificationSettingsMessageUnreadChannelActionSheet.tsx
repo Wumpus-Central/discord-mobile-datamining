@@ -1,19 +1,19 @@
-// === Module 13453: NotificationSettingsMessageUnreadChannelActionSheet ===
+// === Module 13479: NotificationSettingsMessageUnreadChannelActionSheet ===
 
-// Module 13453 (NotificationSettingsMessageUnreadChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7024 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7029 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10681 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 13452 */;
+// Module 13479 (NotificationSettingsMessageUnreadChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7026 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7031 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10696 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 13478 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(6183).UnreadSetting;
-let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
+const UserNotificationSettings = fn(1087).UserNotificationSettings;
+const UnreadSetting = fn(6185).UnreadSetting;
+let closure_6 = fn(1097).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,8 +28,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   if (cResult[0] !== notification) {
     let stringResult;
     if (notification === UserNotificationSettings.ALL_MESSAGES) {
-      const intl = tmp(1126).intl;
-      stringResult = intl.string(tmp(1126).t.eP8yWU);
+      const intl = tmp(1128).intl;
+      stringResult = intl.string(tmp(1128).t.eP8yWU);
     }
     cResult[0] = notification;
     cResult[1] = stringResult;
@@ -85,8 +85,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   let stringResult;
   let obj = require("notficationSettingsChannelFlagUtils");
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
-    const intl = tmp(1126).intl;
-    stringResult = intl.string(tmp(1126).t.eP8yWU);
+    const intl = tmp(1128).intl;
+    stringResult = intl.string(tmp(1128).t.eP8yWU);
   }
   obj2.disabledMentionOnlyWithReason = stringResult;
   obj2.onChange = function onChange(toggleExpandedHistory) {

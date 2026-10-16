@@ -1,26 +1,26 @@
-// === Module 9987: StickerPackHeader ===
+// === Module 10003: StickerPackHeader ===
 
-// Module 9987 (StickerPackHeader)
+// Module 10003 (StickerPackHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef9988 from "module_9988" /* 9988 */;
-import _modDef9989 from "module_9989" /* 9989 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 9990 */;
+import _modDef10004 from "module_10004" /* 10004 */;
+import _modDef10005 from "module_10005" /* 10005 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10006 */;
 import noop from "module_19" /* 19 */;
 
-const util = PressableOpacity(1126);
-const native = PressableOpacity(1200);
-const Text_Text = PressableOpacity(5147);
-const StickersUtils = PressableOpacity(5965);
-const Pressables = PressableOpacity(6405);
+const util = PressableOpacity(1128);
+const native = PressableOpacity(1202);
+const Text_Text = PressableOpacity(5149);
+const StickersUtils = PressableOpacity(5967);
+const Pressables = PressableOpacity(6407);
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(9946);
+const StickerPickerConstants = fn(9962);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { section: { paddingTop: PADDING_VERTICAL, paddingHorizontal: PADDING_HORIZONTAL, height: 36 + result, justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, label: { flex: -1 }, header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, bannerContainer: { aspectRatio: 3.824074074074074, marginVertical: -8, width: "100%" }, banner: { height: "100%" }, headline: { height: 20, flex: 1, flexDirection: "row", alignItems: "center" }, iconContainer: null, icon: null, animatedIcon: null, premiumIcon: null };
 let size = { marginLeft: 8, height: 16, width: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;
@@ -212,7 +212,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[13] = tmp18;
             tmp15 = tmp18;
           }
-          const obj13 = { source: _modDef9989, style: section.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: section.icon.color };
+          const obj13 = { source: _modDef10005, style: section.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: section.icon.color };
           const tmp14 = React4(native.Icon, obj13);
           cResult[8] = section.icon.color;
           cResult[9] = section.premiumIcon;
@@ -224,7 +224,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let result = StickersUtils.isStickerPackAnimated(stickerPack);
     if (result) {
       const obj14 = { style: section.iconContainer, children: null };
-      const obj16 = { source: _modDef9988, style: section.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: section.icon.color };
+      const obj16 = { source: _modDef10004, style: section.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: section.icon.color };
       obj14.children = React4(native.Icon, obj16);
       result = React4(View, obj14);
     }
@@ -258,14 +258,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let result = StickersUtils.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
-    const obj6 = { source: _modDef9988, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    const obj6 = { source: _modDef10004, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
     obj5.children = React4(native.Icon, obj6);
     result = React4(View, obj5);
   }
   items[1] = result;
   const obj7 = { style: tmp.iconContainer, children: null };
   const obj3 = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  obj7.children = React4(native.Icon, { source: _modDef9989, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
+  obj7.children = React4(native.Icon, { source: _modDef10005, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
   items[2] = React4(View, obj7);
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);

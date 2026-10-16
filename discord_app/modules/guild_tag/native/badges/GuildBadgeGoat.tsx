@@ -1,9 +1,9 @@
-// === Module 14841: GuildBadgeGoat ===
+// === Module 14874: GuildBadgeGoat ===
 
-// Module 14841 (GuildBadgeGoat)
+// Module 14874 (GuildBadgeGoat)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7793 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14816 */;
+import inlineStyles from "inlineStyles" /* 7796 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14849 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 18511: PushNotificationCacheManager ===
+// === Module 18553: PushNotificationCacheManager ===
 
-// Module 18511 (PushNotificationCacheManager)
-import PushNotificationDefault from "PushNotification" /* 10930 */;
-import MultiAccountStore from "MultiAccountStore" /* 12972 */;
-import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18553 (PushNotificationCacheManager)
+import PushNotificationDefault from "PushNotification" /* 10945 */;
+import MultiAccountStore from "MultiAccountStore" /* 12998 */;
+import UserStore from "UserStore" /* 1392 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 const prototype = function PushNotificationCacheManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -26,11 +26,11 @@ const prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(10930).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(10930);
+      applyArgumentsResult(10945).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(10945);
     } else {
-      applyArgumentsResult(10930).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(10930);
+      applyArgumentsResult(10945).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(10945);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
@@ -42,15 +42,15 @@ const prototype = function PushNotificationCacheManager() {
       } else {
         obj4 = {};
         const item = validUsers.forEach((id) => {
-          obj4[id.id] = applyArgumentsResult(5018).getUserTag(id, { identifiable: "always" });
+          obj4[id.id] = applyArgumentsResult(5021).getUserTag(id, { identifiable: "always" });
         });
         obj3 = obj4;
       }
     } else {
       obj3 = {};
     }
-    obj4(10930).setMultiAccountUsers(obj3);
-    const obj = obj4(10930);
+    obj4(10945).setMultiAccountUsers(obj3);
+    const obj = obj4(10945);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
     const result = PushNotificationDefault.clearPushNotificationLogs();

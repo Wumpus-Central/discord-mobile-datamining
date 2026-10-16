@@ -1,8 +1,8 @@
-// === Module 5296: ProcessBoostExperiment ===
+// === Module 5298: ProcessBoostExperiment ===
 
-// Module 5296 (ProcessBoostExperiment)
-import Constants from "Constants" /* 5176 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 5298 (ProcessBoostExperiment)
+import Constants from "Constants" /* 5178 */;
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const ProcessPriority = Constants.ProcessPriority;

@@ -1,13 +1,13 @@
-// === Module 7598: appMessageEmbedTracking ===
+// === Module 7600: appMessageEmbedTracking ===
 
-// Module 7598 (appMessageEmbedTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+// Module 7600 (appMessageEmbedTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 function trackAppEmbedViewed(arg0) {
   ({ appId, linkType, referrerId, customId, guildId, channelId, messageId, appEmbedState } = arg0);
@@ -25,11 +25,11 @@ export { trackAppEmbedViewed };
 export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAppEmbedViewed(id) {
   const cResult = require("c").c(4);
   if (cResult[0] !== id) {
-    const result = tmp(7599).trackingConfigWithDefaults(id);
+    const result = tmp(7601).trackingConfigWithDefaults(id);
     cResult[0] = id;
     cResult[1] = result;
     let tmp4 = result;
-    const tmpResult = tmp(7599);
+    const tmpResult = tmp(7601);
   } else {
     tmp4 = cResult[1];
   }

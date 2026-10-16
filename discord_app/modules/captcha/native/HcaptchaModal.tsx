@@ -1,13 +1,13 @@
-// === Module 18302: HcaptchaModal ===
+// === Module 18344: HcaptchaModal ===
 
-// Module 18302 (HcaptchaModal)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5432 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5943 */;
+// Module 18344 (HcaptchaModal)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5434 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5945 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import UserStore from "UserStore" /* 1390 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 let closure_3 = ["onMessage", "onClose"];
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_7, View: closure_8, StyleSheet: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_14 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModal(arg0) {
@@ -83,8 +83,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
   }
   const tmpResult3 = require("useNavigation");
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.wsoPhr);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t.wsoPhr);
     class I {
       constructor() {
         return closure_1_11.getCurrentUser();
@@ -211,7 +211,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
                 return closure_1_11.getCurrentUser();
               }
             }
-            const tmp49 = closure_12(tmp(10482).XLargeIcon, { color: null });
+            const tmp49 = closure_12(tmp(10497).XLargeIcon, { color: null });
             cResult[25] = tmp49;
             let obj2 = { color: null };
             const tmp48 = tmp49;
@@ -272,7 +272,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
             cResult[31] = tmp55;
           }
           const obj5 = { accessibilityRole: "button", accessibilityLabel: tmp47, onPress: O, style: tmp9.closeButtonHitArea, children: tmp48 };
-          const tmp52 = closure_12(tmp(6405).PressableOpacity, obj5);
+          const tmp52 = closure_12(tmp(6407).PressableOpacity, obj5);
           cResult[26] = O;
           cResult[27] = tmp9.closeButtonHitArea;
           cResult[28] = tmp52;
@@ -303,12 +303,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
     const merged = Object.assign(tmp4);
     obj8.languageCode = LocaleStore.locale;
     obj8.onMessage = onMessage;
-    obj7.children = closure_12(tmp18(18301), obj8);
+    obj7.children = closure_12(tmp18(18343), obj8);
     const tmp40 = closure_12(closure_8, obj7);
     cResult[15] = tmp4;
     cResult[16] = onMessage;
     cResult[17] = tmp40;
-    const tmp18Result = tmp18(18301);
+    const tmp18Result = tmp18(18343);
   }
   let tmp28Result = !tmp16;
   if (!tmp16) {
@@ -325,7 +325,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
       }
     }
     const obj10 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp9.title, children: tmp20 };
-    const items3 = [closure_12(tmp(5147).Text, obj10), ];
+    const items3 = [closure_12(tmp(5149).Text, obj10), ];
     if (tmpResult4.isAndroid()) {
       class F {
         constructor() {
@@ -337,8 +337,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
     const obj11 = { size: "small", color: undefined };
     items3[1] = closure_12(closure_7, obj11);
     obj9.children = items3;
-    tmp28Result = tmp28(tmp(5437).Stack, obj9);
-    tmpResult4 = tmp(1382);
+    tmp28Result = tmp28(tmp(5439).Stack, obj9);
+    tmpResult4 = tmp(1384);
   }
   cResult[12] = tmp16;
   cResult[13] = tmp9.title;
@@ -351,7 +351,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
   const items = [UserStore];
   const stateFromStores = onMessage(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = onMessage(504);
-  const navigation = onMessage(1503).useNavigation();
+  const navigation = onMessage(1505).useNavigation();
   const routes = navigation.getState().routes;
   let tmp6 = routes.length > 0;
   if (tmp6) {
@@ -362,12 +362,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    tmp6 = prop === tmp3(1998).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp6 = prop === tmp3(2000).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
-  const rect = onPress(1631)();
-  const intl = tmp3(1126).intl;
+  const rect = onPress(1633)();
+  const intl = tmp3(1128).intl;
   const items1 = [onMessage];
-  let obj2 = onMessage(1503);
+  let obj2 = onMessage(1505);
   onPress = noop.useCallback(() => {
     if (onMessage != null) {
       const obj = { nativeEvent: null };
@@ -376,7 +376,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
       tmp(obj);
     }
   }, items1);
-  onPress(5432)(() => {
+  onPress(5434)(() => {
     callback();
     return true;
   });
@@ -385,7 +385,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
   if (!tmp6) {
     const obj4 = { spacing: tmp9(587).space.PX_16, align: "center", children: null };
     const obj5 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp2.title, children: stringResult };
-    const items2 = [closure_12(tmp3(5147).Text, obj5), ];
+    const items2 = [closure_12(tmp3(5149).Text, obj5), ];
     let WHITE;
     if (tmp3Result.isAndroid()) {
       WHITE = tmp9(587).unsafe_rawColors.WHITE;
@@ -393,36 +393,36 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HcaptchaModa
     const obj6 = { size: "small", color: WHITE };
     items2[1] = closure_12(closure_7, obj6);
     obj4.children = items2;
-    tmp13Result = closure_13(tmp3(5437).Stack, obj4);
-    tmp3Result = tmp3(1382);
+    tmp13Result = closure_13(tmp3(5439).Stack, obj4);
+    tmp3Result = tmp3(1384);
   }
   const items3 = [tmp13Result, , ];
   const obj7 = { style: closure_9.absoluteFillObject, children: null };
   const obj8 = {};
-  stringResult = intl.string(onMessage(1126).t.wsoPhr);
+  stringResult = intl.string(onMessage(1128).t.wsoPhr);
   const merged = Object.assign(tmp);
   obj8.languageCode = LocaleStore.locale;
   obj8.onMessage = onMessage;
-  obj7.children = closure_12(onPress(18301), obj8);
+  obj7.children = closure_12(onPress(18343), obj8);
   items3[1] = closure_12(closure_8, obj7);
   const obj9 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [tmp2.closeButtonContainer, ];
-  const tmp9Result = onPress(18301);
+  const tmp9Result = onPress(18343);
   items4[1] = { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 };
   obj9.style = items4;
   const obj11 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-  const intl2 = tmp3(1126).intl;
-  obj11.accessibilityLabel = intl2.string(onMessage(1126).t.cpT0Cq);
+  const intl2 = tmp3(1128).intl;
+  obj11.accessibilityLabel = intl2.string(onMessage(1128).t.cpT0Cq);
   obj11.onPress = onPress;
   obj11.style = tmp2.closeButtonHitArea;
   const obj10 = { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 };
-  obj11.children = closure_12(onMessage(10482).XLargeIcon, { color: onPress(587).colors.INTERACTIVE_ICON_DEFAULT });
-  obj9.children = closure_12(onMessage(6405).PressableOpacity, obj11);
+  obj11.children = closure_12(onMessage(10497).XLargeIcon, { color: onPress(587).colors.INTERACTIVE_ICON_DEFAULT });
+  obj9.children = closure_12(onMessage(6407).PressableOpacity, obj11);
   items3[2] = closure_12(closure_8, obj9);
   obj3.children = items3;
   return closure_13(closure_8, obj3);
 });
-tmp4.modalConfig = { animation: fn(1085).ModalAnimation.FADE };
+tmp4.modalConfig = { animation: fn(1087).ModalAnimation.FADE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
 

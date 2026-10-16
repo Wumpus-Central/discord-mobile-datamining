@@ -1,17 +1,17 @@
-// === Module 1244: UserSettingsProtoStore ===
+// === Module 1246: UserSettingsProtoStore ===
 
-// Module 1244 (UserSettingsProtoStore)
+// Module 1246 (UserSettingsProtoStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import timestamp from "timestamp" /* 1239 */;
-import frecency_user_settings from "frecency_user_settings" /* 1245 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1246 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1248 */;
-import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1249 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import timestamp from "timestamp" /* 1241 */;
+import frecency_user_settings from "frecency_user_settings" /* 1247 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1248 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1250 */;
+import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1251 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
 import size from "module_2" /* 2 */;
 
 function handleConnectionClosedOrResumed() {

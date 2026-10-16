@@ -1,20 +1,20 @@
-// === Module 18083: VoicePanelDismissableContent ===
+// === Module 18118: VoicePanelDismissableContent ===
 
-// Module 18083 (VoicePanelDismissableContent)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+// Module 18118 (VoicePanelDismissableContent)
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(18084, dependencyMap.paths);
+  return asyncRequireImpl(18119, dependencyMap.paths);
 }
-const VoicePanelModes = fn(12817).VoicePanelModes;
-const isActivityParticipant = fn(5174).isActivityParticipant;
+const VoicePanelModes = fn(12843).VoicePanelModes;
+const isActivityParticipant = fn(5176).isActivityParticipant;
 const jsx = fn(21).jsx;
 const VoiceControlToggleNuxActionSheet = "VoiceControlToggleNuxActionSheet";
 const __initData = { code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}" };

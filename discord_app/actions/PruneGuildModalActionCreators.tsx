@@ -1,11 +1,11 @@
-// === Module 17621: PruneGuildModalActionCreators ===
+// === Module 17655: PruneGuildModalActionCreators ===
 
-// Module 17621 (PruneGuildModalActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 17655 (PruneGuildModalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
 
@@ -14,8 +14,8 @@ export default {
     closure_0 = arg0;
     asyncGeneratorStep = arg2;
     return (async () => {
-      const HTTP = v3(1295).HTTP;
-      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1295).rejectWithMigratedError() };
+      const HTTP = v3(1297).HTTP;
+      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1297).rejectWithMigratedError() };
       await HTTP.get(request);
       return value.body.pruned;
     })();
@@ -48,11 +48,11 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1295).HTTP;
+              const HTTP = v3(1297).HTTP;
               const request = { url: Endpoints.GUILD_PRUNE_V2(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
               const obj4 = { days: num, include_roles };
               request.query = obj4;
-              request.rejectWithError = v3(1295).rejectWithMigratedError();
+              request.rejectWithError = v3(1297).rejectWithMigratedError();
               dependencyMap = 1;
               v3 = 1;
               const obj5 = { value: HTTP.get(request), done: false };

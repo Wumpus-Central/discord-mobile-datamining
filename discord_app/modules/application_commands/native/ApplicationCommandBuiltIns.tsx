@@ -1,14 +1,14 @@
-// === Module 9478: application_commands/ApplicationCommandBuiltIns ===
+// === Module 9494: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 9478 (application_commands/ApplicationCommandBuiltIns)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7234 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7395 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 9494 (application_commands/ApplicationCommandBuiltIns)
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(1998).ApplicationCommandType.CHAT, inputType: fn(7463).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5463).BuiltInSectionId.BUILT_IN };
+let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(2000).ApplicationCommandType.CHAT, inputType: fn(7465).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5465).BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -30,28 +30,28 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(5481).computeChannelName(channel, UserStore, RelationshipStore);
-    const intl5 = channel(1126).intl;
+    const channelName = channel(5483).computeChannelName(channel, UserStore, RelationshipStore);
+    const intl5 = channel(1128).intl;
     let obj2 = { name: channelName };
-    const obj5 = channel(5481);
-    const intl6 = channel(1126).intl;
+    const obj5 = channel(5483);
+    const intl6 = channel(1128).intl;
     const obj4 = { name: channelName };
-    let formatResult = intl6.format(channel(1126).t.SSIVOu, obj4);
-    let formatToPlainStringResult1 = intl5.formatToPlainString(channel(1126).t.hJ5Ap4, obj2);
+    let formatResult = intl6.format(channel(1128).t.SSIVOu, obj4);
+    let formatToPlainStringResult1 = intl5.formatToPlainString(channel(1128).t.hJ5Ap4, obj2);
     if (channel.isManaged()) {
-      let intl = tmp5(1126).intl;
+      let intl = tmp5(1128).intl;
       let obj = { name: channelName };
-      formatToPlainStringResult1 = intl.formatToPlainString(tmp5(1126).t.hVGjEW, obj);
-      const intl2 = tmp5(1126).intl;
+      formatToPlainStringResult1 = intl.formatToPlainString(tmp5(1128).t.hVGjEW, obj);
+      const intl2 = tmp5(1128).intl;
       const obj6 = { name: channelName };
-      formatResult = intl2.format(tmp5(1126).t.IK1Qvs, obj6);
+      formatResult = intl2.format(tmp5(1128).t.IK1Qvs, obj6);
     }
-    const formatToPlainStringResult = intl5.formatToPlainString(channel(1126).t.hJ5Ap4, obj2);
+    const formatToPlainStringResult = intl5.formatToPlainString(channel(1128).t.hJ5Ap4, obj2);
     const obj7 = { title: formatToPlainStringResult1, body: formatResult, confirmText: null, cancelText: null, onConfirm: null };
-    const intl3 = tmp5(1126).intl;
-    obj7.confirmText = intl3.string(channel(1126).t["26C4oi"]);
-    const intl4 = tmp5(1126).intl;
-    obj7.cancelText = intl4.string(channel(1126).t["ETE/oC"]);
+    const intl3 = tmp5(1128).intl;
+    obj7.confirmText = intl3.string(channel(1128).t["26C4oi"]);
+    const intl4 = tmp5(1128).intl;
+    obj7.cancelText = intl4.string(channel(1128).t["ETE/oC"]);
     obj7.onConfirm = function onConfirm() {
       try {
         ChannelActionCreatorsDefault.closePrivateChannel(channel.id);

@@ -1,32 +1,32 @@
-// === Module 17400: useYouBarCoachmark ===
+// === Module 17434: useYouBarCoachmark ===
 
-// Module 17400 (useYouBarCoachmark)
+// Module 17434 (useYouBarCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import Link from "Link" /* 1504 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7321 */;
-import useCoachmark from "useCoachmark" /* 9663 */;
-import TinyBroncoLazy from "TinyBroncoLazy" /* 15647 */;
-import usePrivateProfileCoachmarkProps from "usePrivateProfileCoachmarkProps" /* 17401 */;
+import util from "util" /* 1128 */;
+import Link from "Link" /* 1506 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7323 */;
+import useCoachmark from "useCoachmark" /* 9679 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 15680 */;
+import usePrivateProfileCoachmarkProps from "usePrivateProfileCoachmarkProps" /* 17435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 let closure_6 = [];
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwipeCoachmarkProps(markAsDismissed) {
   const cResult = markAsDismissed(576).c(7);
   markAsDismissed = markAsDismissed.markAsDismissed;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.gMFchc);
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t["V3j11+"]);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t.gMFchc);
+    const intl2 = tmp(1128).intl;
+    const stringResult1 = intl2.string(tmp(1128).t["V3j11+"]);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwip
   } else {
     tmp8 = cResult[3];
   }
-  const tmp9 = markAsDismissed.visibleContent === markAsDismissed(2049).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
+  const tmp9 = markAsDismissed.visibleContent === markAsDismissed(2052).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
   if (cResult[4] === tmp9) {
     if (cResult[5] === tmp8) {
       let tmp10 = cResult[6];

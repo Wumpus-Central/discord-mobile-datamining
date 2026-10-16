@@ -1,15 +1,15 @@
-// === Module 18913: QuestFetchManager ===
+// === Module 18955: QuestFetchManager ===
 
-// Module 18913 (QuestFetchManager)
-import DurationsDefault from "Durations" /* 1102 */;
-import SentryUtilsDefault from "SentryUtils" /* 1255 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6293 */;
-import QuestsEligibility from "QuestsEligibility" /* 9387 */;
-import QuestActionCreators from "QuestActionCreators" /* 9393 */;
-import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 18914 */;
-import QuestStore from "QuestStore" /* 7607 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18955 (QuestFetchManager)
+import DurationsDefault from "Durations" /* 1104 */;
+import SentryUtilsDefault from "SentryUtils" /* 1257 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6295 */;
+import QuestsEligibility from "QuestsEligibility" /* 9403 */;
+import QuestActionCreators from "QuestActionCreators" /* 9409 */;
+import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 18956 */;
+import QuestStore from "QuestStore" /* 7609 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;

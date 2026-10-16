@@ -1,9 +1,9 @@
-// === Module 16747: DesignSystemsTooltipSetting ===
+// === Module 16780: DesignSystemsTooltipSetting ===
 
-// Module 16747 (DesignSystemsTooltipSetting)
-import Constants from "Constants" /* 1085 */;
-import SettingsConstants from "SettingsConstants" /* 8210 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
+// Module 16780 (DesignSystemsTooltipSetting)
+import Constants from "Constants" /* 1087 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

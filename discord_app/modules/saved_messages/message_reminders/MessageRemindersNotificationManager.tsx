@@ -1,9 +1,9 @@
-// === Module 18520: MessageRemindersNotificationManager ===
+// === Module 18562: MessageRemindersNotificationManager ===
 
-// Module 18520 (MessageRemindersNotificationManager)
+// Module 18562 (MessageRemindersNotificationManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9899 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9915 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 function scheduleNextNotification() {
   if (null != timeout) {
@@ -31,7 +31,7 @@ function scheduleNextNotification() {
     let _Date = Date;
     const timestamp = Date.now();
     const dueAt = found.saveData.dueAt;
-    const sum = timestamp + found(1102).Millis.WEEK;
+    const sum = timestamp + found(1104).Millis.WEEK;
     if (dueAt.getTime() <= sum) {
       const dueAt2 = found.saveData.dueAt;
       const _Date2 = Date;

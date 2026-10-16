@@ -1,9 +1,9 @@
-// === Module 7763: GoogleWalletActionCreators ===
+// === Module 7766: GoogleWalletActionCreators ===
 
-// Module 7763 (GoogleWalletActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7728 */;
-import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7764 */;
+// Module 7766 (GoogleWalletActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7731 */;
+import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7767 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -234,7 +234,7 @@ let closure_9 = async function _getGoogleWalletCredential() {
   await NativeDigitalCredentialModuleDefault.getCredential(closure_0);
   return value;
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/GoogleWalletActionCreators.native.tsx");
 

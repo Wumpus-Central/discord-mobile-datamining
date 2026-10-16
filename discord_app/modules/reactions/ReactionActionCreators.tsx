@@ -1,18 +1,18 @@
-// === Module 8117: ReactionActionCreators ===
+// === Module 8120: ReactionActionCreators ===
 
-// Module 8117 (ReactionActionCreators)
+// Module 8120 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import util from "util" /* 1126 */;
-import EmojiUtils from "EmojiUtils" /* 4824 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8118 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8119 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import util from "util" /* 1128 */;
+import EmojiUtils from "EmojiUtils" /* 4827 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8121 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8122 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5492 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MessageStore from "MessageStore" /* 5494 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -786,11 +786,11 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(5025).AccessibilityAnnouncer;
-                  intl = channelId(1126).intl;
+                  const AccessibilityAnnouncer = channelId(5028).AccessibilityAnnouncer;
+                  intl = channelId(1128).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };
-                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1126).t["tD9+b+"], obj6));
+                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1128).t["tD9+b+"], obj6));
                   }
                 }
                 const obj7 = { name: tmp2.name };
@@ -899,7 +899,7 @@ function hasUserAlreadyReacted(arg0, arg1, arg2, arg3) {
   }
   return result;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AbortCodes: closure_7, AnalyticEvents: closure_8, ComponentActions: closure_9, Endpoints: c10 } = Constants);
 const ReactionLocations = { MESSAGE: "Message", FORUM_TOOLBAR: "Forum Toolbar", MOBILE_MEDIA_VIEWER: "Mobile Media Viewer", MESSAGE_HOVER_BAR: "Message Hover Bar", MESSAGE_INLINE_BUTTON: "Message Inline Button", MESSAGE_CONTEXT_MENU: "Message Context Menu", MESSAGE_REACTION_PICKER: "Message Reaction Picker", MESSAGE_SHORTCUT: "Message Shortcut", DOUBLE_TAP: "Double Tap", IN_APP_NOTIFICATION: "In App Notification" };
 const size = fn(2);

@@ -1,15 +1,15 @@
-// === Module 5064: GuildPowerupsConstants ===
+// === Module 5067: GuildPowerupsConstants ===
 
-// Module 5064 (GuildPowerupsConstants)
-import util from "util" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import GameServerConstants from "GameServerConstants" /* 5065 */;
-import Powerups from "Powerups" /* 5067 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5068 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5069 */;
-import GameServerExperiment from "GameServerExperiment" /* 5082 */;
-import PremiumConstants from "PremiumConstants" /* 1392 */;
-import Constants from "Constants" /* 1085 */;
+// Module 5067 (GuildPowerupsConstants)
+import util from "util" /* 1128 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import GameServerConstants from "GameServerConstants" /* 5068 */;
+import Powerups from "Powerups" /* 5070 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5071 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5072 */;
+import GameServerExperiment from "GameServerExperiment" /* 5085 */;
+import PremiumConstants from "PremiumConstants" /* 1394 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ BoostedGuildFeatures: c2, PerkIcons: c3 } = PremiumConstants);

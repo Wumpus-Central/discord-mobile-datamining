@@ -1,20 +1,20 @@
-// === Module 16262: MessagePreviewManager ===
+// === Module 16295: MessagePreviewManager ===
 
-// Module 16262 (MessagePreviewManager)
+// Module 16295 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 16263 */;
+import RemoteFetchData from "RemoteFetchData" /* 16296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 14682 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 14714 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const isThread = fn(2069).isThread;
-const Endpoints = fn(1085).Endpoints;
+const isThread = fn(2072).isThread;
+const Endpoints = fn(1087).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
   constructor() {
@@ -361,7 +361,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               let body;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")");
-              const HTTP = tmp2(1295).HTTP;
+              const HTTP = tmp2(1297).HTTP;
               const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
               const obj4 = { channel_ids: nextWantsResult };
               request.body = obj4;

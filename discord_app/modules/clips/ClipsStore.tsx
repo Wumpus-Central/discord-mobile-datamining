@@ -1,14 +1,14 @@
-// === Module 2018: ClipsStore ===
+// === Module 2020: ClipsStore ===
 
-// Module 2018 (ClipsStore)
+// Module 2020 (ClipsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import DiscordNativeDefault from "DiscordNative" /* 4787 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 14961 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14963 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import DiscordNativeDefault from "DiscordNative" /* 4790 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14994 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14996 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RunningGameStore from "RunningGameStore" /* 2019 */;
+import RunningGameStore from "RunningGameStore" /* 2021 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -239,11 +239,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(7979);
+const ClipsConstants = fn(7982);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5271);
+const StreamSettingsConstants = fn(5273);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -730,15 +730,13 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp2 = nextResult;
-      if (nextResult.isCandidate) {
-        iter.return();
-      } else {
+      if (!nextResult.isCandidate) {
         closure_18[tmp2.id] = tmp2;
         if (null != tmp2.remoteClipId) {
           closure_19[tmp2.remoteClipId] = tmp2.id;
         }
-        continue;
       }
+      continue;
     }
     obj.hasClips = Object.keys(closure_18).length > 0;
   },

@@ -1,15 +1,15 @@
-// === Module 10551: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10566: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10551 (useTrackFavoritesGuildUpsellModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7098 */;
+// Module 10566 (useTrackFavoritesGuildUpsellModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");

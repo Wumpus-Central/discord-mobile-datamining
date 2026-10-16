@@ -1,20 +1,20 @@
-// === Module 7623: AnalyticsActions ===
+// === Module 7625: AnalyticsActions ===
 
-// Module 7623 (AnalyticsActions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5166 */;
-import QuestTypes from "QuestTypes" /* 6191 */;
-import AdCreativeType from "AdCreativeType" /* 6195 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7400 */;
-import QuestDataUtils from "QuestDataUtils" /* 7603 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7626 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7627 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7629 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
+// Module 7625 (AnalyticsActions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5168 */;
+import QuestTypes from "QuestTypes" /* 6193 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7402 */;
+import QuestDataUtils from "QuestDataUtils" /* 7605 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7628 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7629 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7631 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7624 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
-import QuestStore from "QuestStore" /* 7607 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7626 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
+import QuestStore from "QuestStore" /* 7609 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -347,7 +347,7 @@ let closure_14 = async function _trackAdContentClicked() {
   ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
   return "test";
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const items = [, , ];
 ({ QUEST_CONTENT_VIEWED: arr[0], QUEST_CONTENT_ENGAGED_VIEWED: arr[1], QUEST_CONTENT_CLICKED: arr[2] } = AnalyticEvents);
 let set = new Set(items);

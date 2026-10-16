@@ -1,8 +1,8 @@
-// === Module 17408: YouConstants ===
+// === Module 17442: YouConstants ===
 
-// Module 17408 (YouConstants)
+// Module 17442 (YouConstants)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
+import native from "native" /* 1202 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");

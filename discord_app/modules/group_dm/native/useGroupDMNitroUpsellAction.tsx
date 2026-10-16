@@ -1,14 +1,14 @@
-// === Module 11079: useGroupDMNitroUpsellAction ===
+// === Module 11094: useGroupDMNitroUpsellAction ===
 
-// Module 11079 (useGroupDMNitroUpsellAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import openUserSettings from "openUserSettings" /* 7315 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11072 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11078 */;
+// Module 11094 (useGroupDMNitroUpsellAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import openUserSettings from "openUserSettings" /* 7317 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11087 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

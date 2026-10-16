@@ -1,21 +1,21 @@
-// === Module 17820: YouScreenContainer ===
+// === Module 17854: YouScreenContainer ===
 
-// Module 17820 (YouScreenContainer)
+// Module 17854 (YouScreenContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17033 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17066 */;
 import noop from "module_19" /* 19 */;
 
-const useWindowDimensionsDefault = tmp4(1497);
-const useChatLayoutDefault = tmp4(5035);
-const YouScreenDefault = tmp4(17821);
+const useWindowDimensionsDefault = tmp4(1499);
+const useChatLayoutDefault = tmp4(5038);
+const YouScreenDefault = tmp4(17855);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(10870).RootNavigatorScreen;
+const RootNavigatorScreen = fn(10885).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };
 let obj3 = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl };
 obj.androidContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };

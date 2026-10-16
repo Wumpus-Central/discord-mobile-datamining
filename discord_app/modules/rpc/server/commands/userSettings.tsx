@@ -1,15 +1,17 @@
-// === Module 15423: userSettings ===
+// === Module 15459: userSettings ===
 
-// Module 15423 (userSettings)
-import LocaleStore from "LocaleStore" /* 2129 */;
+// Module 15459 (userSettings)
+import LocaleStore from "LocaleStore" /* 2132 */;
 
+const RPCCommands = fn(1087).RPCCommands;
 const obj = {};
-obj[fn(1085).RPCCommands.USER_SETTINGS_GET_LOCALE] = {
-  scope: fn(8676).OAuth2Scopes.IDENTIFY,
+const CONTEXT_MENU_ICON_NAMES = fn(15422);
+obj[RPCCommands.USER_SETTINGS_GET_LOCALE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.USER_SETTINGS_GET_LOCALE, {
+  scope: fn(8684).OAuth2Scopes.IDENTIFY,
   handler() {
     return { locale: LocaleStore.locale };
   }
-};
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/userSettings.tsx");
 

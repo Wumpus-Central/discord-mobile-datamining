@@ -1,14 +1,14 @@
-// === Module 17902: SearchNavigatorPreviewScreen ===
+// === Module 17936: SearchNavigatorPreviewScreen ===
 
-// Module 17902 (SearchNavigatorPreviewScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12902 */;
+// Module 17936 (SearchNavigatorPreviewScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12928 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-const SearchTypes = fn(1085).SearchTypes;
+const SearchTypes = fn(1087).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_7 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

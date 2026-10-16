@@ -1,12 +1,52 @@
-// === Module 10905: ConjureAnalytics ===
+// === Module 10920: ConjureAnalytics ===
 
-// Module 10905 (ConjureAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ConjureUtils from "ConjureUtils" /* 7165 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+// Module 10920 (ConjureAnalytics)
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import ConjureUtils from "ConjureUtils" /* 7167 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 
 require = fn;
+function projectFields(project_id) {
+  const project = ConjureProjectStore.getProject(project_id);
+  const obj = { project_id, project_name: null, application_id: null, preview_application_id: null, install_scope: null };
+  let name;
+  if (project != null) {
+    name = project.name;
+  }
+  let substr = null;
+  if (null != name) {
+    substr = null;
+    if ("" !== name) {
+      substr = name.slice(0, 256);
+    }
+  }
+  obj.project_name = substr;
+  let application_id;
+  if (project != null) {
+    application_id = project.application_id;
+  }
+  if (application_id == null) {
+    application_id = null;
+  }
+  obj.application_id = application_id;
+  let prop;
+  if (project != null) {
+    prop = project.preview_application_id;
+  }
+  if (prop == null) {
+    prop = null;
+  }
+  obj.preview_application_id = prop;
+  let install_scope;
+  if (project != null) {
+    install_scope = project.install_scope;
+  }
+  if (install_scope == null) {
+    install_scope = null;
+  }
+  obj.install_scope = install_scope;
+  return obj;
+}
 function conjureLocation(project_id, isPreview) {
   const project = ConjureProjectStore.getProject(project_id);
   if (isPreview) {
@@ -44,197 +84,103 @@ function conjureLocation(project_id, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 
 export const ConjureErrorCodes = { BUILD_FAILED: "BUILD_FAILED", HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED", AGENT_ERROR: "AGENT_ERROR", PUBLISH_FAILED: "PUBLISH_FAILED", WS_OPEN_FAILED: "WS_OPEN_FAILED", SEND_FAILED: "SEND_FAILED", RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR", RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR" };
-export const trackConjureTurnResulted = function trackConjureTurnResulted(projectId, result) {
-  const project = ConjureProjectStore.getProject(projectId);
-  const obj2 = { project_id: projectId, project_name: null, application_id: null, preview_application_id: null };
-  let name;
-  if (project != null) {
-    name = project.name;
+export const trackConjureTurnResulted = function trackConjureTurnResulted(projectId, turn_id) {
+  const obj2 = {};
+  const merged = Object.assign(projectFields(projectId));
+  const merged1 = Object.assign(conjureLocation(projectId, true));
+  turn_id = turn_id.turn_id;
+  if (turn_id == null) {
+    turn_id = null;
   }
-  let substr = null;
-  if (null != name) {
-    substr = null;
-    if ("" !== name) {
-      substr = name.slice(0, 256);
-    }
-  }
-  obj2.project_name = substr;
-  let application_id;
-  if (project != null) {
-    application_id = project.application_id;
-  }
-  if (application_id == null) {
-    application_id = null;
-  }
-  obj2.application_id = application_id;
-  let prop;
-  if (project != null) {
-    prop = project.preview_application_id;
-  }
-  if (prop == null) {
-    prop = null;
-  }
-  const obj3 = {};
-  obj2.preview_application_id = prop;
-  const merged = Object.assign(obj2);
-  result = result.result;
+  obj2.turn_id = turn_id;
+  let result = turn_id.result;
   if (result == null) {
     result = null;
   }
-  obj3.turn_result = result;
-  let detail = result.detail;
+  obj2.turn_result = result;
+  let detail = turn_id.detail;
   if (detail == null) {
-    detail = result.summary;
+    detail = turn_id.summary;
   }
-  let substr1 = null;
+  let substr = null;
   if (null != detail) {
-    substr1 = null;
+    substr = null;
     if ("" !== detail) {
-      substr1 = detail.slice(0, 256);
+      substr = detail.slice(0, 256);
     }
   }
-  obj3.turn_summary = substr1;
-  let cost_usd = result.cost_usd;
+  obj2.turn_summary = substr;
+  let cost_usd = turn_id.cost_usd;
   if (cost_usd == null) {
     cost_usd = null;
   }
-  obj3.turn_cost = cost_usd;
-  const tokens = result.tokens;
+  obj2.turn_cost = cost_usd;
+  let duration_ms = turn_id.duration_ms;
+  if (duration_ms == null) {
+    duration_ms = null;
+  }
+  obj2.turn_duration_ms = duration_ms;
+  let model_tier = turn_id.model_tier;
+  if (model_tier == null) {
+    model_tier = null;
+  }
+  obj2.model_tier = model_tier;
+  const tokens = turn_id.tokens;
   if (null == tokens) {
-    let obj7 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
+    let obj5 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
   } else {
-    obj7 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
-    ({ input_tokens: obj4.turn_input_tokens, output_tokens: obj4.turn_output_tokens, cache_creation_input_tokens: obj4.turn_cache_write_tokens, cache_read_input_tokens: obj4.turn_cache_read_tokens } = tokens);
-    obj7.turn_total_tokens = tokens.input_tokens + tokens.output_tokens + tokens.cache_creation_input_tokens + tokens.cache_read_input_tokens;
+    obj5 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
+    ({ input_tokens: obj3.turn_input_tokens, output_tokens: obj3.turn_output_tokens, cache_creation_input_tokens: obj3.turn_cache_write_tokens, cache_read_input_tokens: obj3.turn_cache_read_tokens } = tokens);
+    obj5.turn_total_tokens = tokens.input_tokens + tokens.output_tokens + tokens.cache_creation_input_tokens + tokens.cache_read_input_tokens;
   }
-  const merged1 = Object.assign(obj7);
-  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_TURN_RESULTED, obj3);
+  const merged2 = Object.assign(obj5);
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_TURN_RESULTED, obj2);
 };
-export const trackConjureDeployed = function trackConjureDeployed(project_id, isPreview) {
-  isPreview = isPreview.isPreview;
-  const project = ConjureProjectStore.getProject(project_id);
-  const obj = { project_id, project_name: null, application_id: null, preview_application_id: null };
-  let name;
-  if (project != null) {
-    name = project.name;
-  }
-  let substr = null;
-  if (null != name) {
-    substr = null;
-    if ("" !== name) {
-      substr = name.slice(0, 256);
-    }
-  }
-  obj.project_name = substr;
-  let application_id;
-  if (project != null) {
-    application_id = project.application_id;
-  }
-  if (application_id == null) {
-    application_id = null;
-  }
-  obj.application_id = application_id;
-  let prop;
-  if (project != null) {
-    prop = project.preview_application_id;
-  }
-  if (prop == null) {
-    prop = null;
-  }
-  obj.preview_application_id = prop;
-  const tmp6 = isPreview ? obj.preview_application_id : obj.application_id;
-  let application = null;
-  if (null != tmp6) {
-    application = ApplicationStore.getApplication(tmp6);
-  }
-  const obj3 = {};
-  const merged = Object.assign(obj);
-  let description;
-  if (application != null) {
-    description = application.description;
-  }
-  let substr1 = null;
-  if (null != description) {
-    substr1 = null;
-    if ("" !== description) {
-      substr1 = description.slice(0, 256);
-    }
-  }
-  obj3.project_summary = substr1;
-  obj3.is_preview = isPreview;
-  const merged1 = Object.assign(conjureLocation(project_id, isPreview));
-  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_DEPLOYED, obj3);
-};
-export const trackConjureErrored = function trackConjureErrored(projectId, arg1) {
-  ({ message, details, isPreview } = arg1);
-  ({ location: _location, code } = arg1);
+export const trackConjureErrored = function trackConjureErrored(projectId, turnId) {
+  ({ message, details, isPreview } = turnId);
+  ({ location: _location, code } = turnId);
   if (isPreview === undefined) {
     isPreview = true;
   }
-  const project = ConjureProjectStore.getProject(projectId);
-  const obj2 = { project_id: projectId, project_name: null, application_id: null, preview_application_id: null };
-  let name;
-  if (project != null) {
-    name = project.name;
-  }
-  let substr = null;
-  if (null != name) {
-    substr = null;
-    if ("" !== name) {
-      substr = name.slice(0, 256);
-    }
-  }
-  obj2.project_name = substr;
-  let application_id;
-  if (project != null) {
-    application_id = project.application_id;
-  }
-  if (application_id == null) {
-    application_id = null;
-  }
-  obj2.application_id = application_id;
-  let prop;
-  if (project != null) {
-    prop = project.preview_application_id;
-  }
-  if (prop == null) {
-    prop = null;
-  }
-  const obj3 = {};
-  obj2.preview_application_id = prop;
-  const merged = Object.assign(obj2);
-  obj3.is_preview = isPreview;
+  turnId = turnId.turnId;
+  const obj2 = {};
+  const merged = Object.assign(projectFields(projectId));
+  obj2.is_preview = isPreview;
   const merged1 = Object.assign(conjureLocation(projectId, isPreview));
-  obj3.error_location = _location;
-  obj3.error_code = code;
-  let substr1 = null;
+  if (turnId == null) {
+    turnId = null;
+  }
+  obj2.turn_id = turnId;
+  obj2.error_location = _location;
+  obj2.error_code = code;
+  let substr = null;
   if (null != message) {
-    substr1 = null;
+    substr = null;
     if ("" !== message) {
-      substr1 = message.slice(0, 256);
+      substr = message.slice(0, 256);
     }
   }
-  obj3.error_message = substr1;
-  let substr2 = null;
+  obj2.error_message = substr;
+  let substr1 = null;
   if (null != details) {
-    substr2 = null;
+    substr1 = null;
     if ("" !== details) {
-      substr2 = details.slice(0, 256);
+      substr1 = details.slice(0, 256);
     }
   }
-  obj3.error_details = substr2;
-  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_ERRORED, obj3);
+  obj2.error_details = substr1;
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_ERRORED, obj2);
 };
 export const trackConjurePublishActionClicked = function trackConjurePublishActionClicked(project_id, installScope) {
   installScope = installScope.installScope;
   ({ entryPoint, publishState, surface, action } = installScope);
   const project = ConjureProjectStore.getProject(project_id);
-  const obj2 = { project_id, application_id: null, guild_id: null, entry_point: null, publish_state: null, surface: null, install_scope: null, action: null };
+  const obj2 = { project_id, application_id: null };
   let application_id;
   if (project != null) {
     application_id = project.application_id;
@@ -243,22 +189,16 @@ export const trackConjurePublishActionClicked = function trackConjurePublishActi
     application_id = null;
   }
   obj2.application_id = application_id;
-  let tmp3 = null;
-  if ("user" !== installScope) {
-    let guild_id;
-    if (project != null) {
-      guild_id = project.guild_id;
-    }
-    if (guild_id == null) {
-      guild_id = null;
-    }
-    tmp3 = guild_id;
+  if ("user" === installScope) {
+    let obj3 = { guild_id: null, channel_id: null };
+  } else {
+    obj3 = conjureLocation(project_id, false);
   }
-  obj2.guild_id = tmp3;
+  const merged = Object.assign(obj3);
   obj2.entry_point = entryPoint;
   obj2.publish_state = publishState;
   obj2.surface = surface;
   obj2.install_scope = installScope;
   obj2.action = action;
-  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_PUBLISH_ACTION_CLICKED, obj2);
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_PUBLISH_ACTION_CLICKED, obj2);
 };

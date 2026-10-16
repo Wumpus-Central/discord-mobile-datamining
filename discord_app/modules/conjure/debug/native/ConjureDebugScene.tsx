@@ -1,27 +1,27 @@
-// === Module 12236: ConjureDebugScene ===
+// === Module 12259: ConjureDebugScene ===
 
-// Module 12236 (ConjureDebugScene)
+// Module 12259 (ConjureDebugScene)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
-import CopyIcon from "CopyIcon" /* 5101 */;
-import ClipboardUtils from "ClipboardUtils" /* 7105 */;
-import conjureDebugConnection from "conjureDebugConnection" /* 10913 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 11607 */;
-import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12237 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12246 */;
+import util from "util" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import CopyIcon from "CopyIcon" /* 5104 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import conjureDebugConnection from "conjureDebugConnection" /* 10928 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 11631 */;
+import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12260 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12269 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10891 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10906 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(10886).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(10901).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabs: null, content: null, report: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabs = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_12 };
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     obj.copy(ConjureDebugSnapshot.conjureDebugSnapshot(projectId));
     const obj4 = { text: null, icon: null };
     const intl = util.intl;
-    obj4.text = intl.string(_modDef3862.wI6fhl);
+    obj4.text = intl.string(_modDef3865.wI6fhl);
     obj4.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_DEBUG_COPIED", obj4);
   }, items10);

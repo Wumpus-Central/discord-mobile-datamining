@@ -1,13 +1,13 @@
-// === Module 11030: useBatchUpdateSelectOption ===
+// === Module 11045: useBatchUpdateSelectOption ===
 
-// Module 11030 (useBatchUpdateSelectOption)
+// Module 11045 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7014 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7016 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7009 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7011 */;
 
 const require = globalThis.__r;
 
@@ -134,7 +134,7 @@ function getChannels(arg0) {
     differenceResult1 = _modDef12.difference(found3, found4);
   }
 }
-let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
+let closure_6 = fn(1097).ChannelNotificationSettingsFlags;
 let closure_9 = {};
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -204,14 +204,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBatch
         const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-          obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+          obj.flags = closure_0(1405).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
           acc[item] = obj;
           return acc;
         }, {}));
         const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-          obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+          obj.flags = closure_0(1405).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
           acc[item] = obj;
           return acc;
         }, {}));
@@ -296,14 +296,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBatch
     const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
       const obj = { flags: null };
       const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-      obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+      obj.flags = closure_0(1405).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
       acc[item] = obj;
       return acc;
     }, {}));
     const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
       const obj = { flags: null };
       const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-      obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+      obj.flags = closure_0(1405).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
       acc[item] = obj;
       return acc;
     }, {}));

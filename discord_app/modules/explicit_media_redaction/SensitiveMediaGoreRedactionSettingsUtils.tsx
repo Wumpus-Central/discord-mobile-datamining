@@ -1,12 +1,12 @@
-// === Module 7220: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 7222: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 7220 (SensitiveMediaGoreRedactionSettingsUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6137 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7218 */;
+// Module 7222 (SensitiveMediaGoreRedactionSettingsUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6139 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7220 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function resolveGoreSettingWithDefaults(isFriend) {
@@ -75,7 +75,7 @@ function resolveGoreSettingWithDefaults(isFriend) {
   }
   obj = RegionalFeatureConfigUtils;
 }
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
 function resolveGoreSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;

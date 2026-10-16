@@ -1,23 +1,23 @@
-// === Module 12623: SoundmojiActionSheet ===
+// === Module 12646: SoundmojiActionSheet ===
 
-// Module 12623 (SoundmojiActionSheet)
+// Module 12646 (SoundmojiActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import EmojiDefault from "Emoji" /* 7041 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12624 */;
+import EmojiDefault from "Emoji" /* 7043 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12647 */;
 import noop from "module_19" /* 19 */;
 
-const util = BottomSheet(1126);
-const Text_Text = BottomSheet(5147);
-const getSoundmojiASTFromString = BottomSheet(5487);
-const Sheet_BottomSheet = BottomSheet(7061);
+const util = BottomSheet(1128);
+const Text_Text = BottomSheet(5149);
+const getSoundmojiASTFromString = BottomSheet(5489);
+const Sheet_BottomSheet = BottomSheet(7063);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 }, soundmojiContainer: { flexDirection: "row", alignItems: "center" }, emoji: null, textContainer: null };
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 32;

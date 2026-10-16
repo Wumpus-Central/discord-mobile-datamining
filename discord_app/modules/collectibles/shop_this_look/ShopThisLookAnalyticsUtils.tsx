@@ -1,9 +1,9 @@
-// === Module 13920: ShopThisLookAnalyticsUtils ===
+// === Module 13952: ShopThisLookAnalyticsUtils ===
 
-// Module 13920 (ShopThisLookAnalyticsUtils)
-import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+// Module 13952 (ShopThisLookAnalyticsUtils)
+import Constants from "Constants" /* 1087 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

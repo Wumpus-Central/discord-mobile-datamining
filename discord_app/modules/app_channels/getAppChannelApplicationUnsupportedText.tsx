@@ -1,8 +1,8 @@
-// === Module 8832: getAppChannelApplicationUnsupportedText ===
+// === Module 8840: getAppChannelApplicationUnsupportedText ===
 
-// Module 8832 (getAppChannelApplicationUnsupportedText)
-import util from "util" /* 1126 */;
-import GuildEmbeddedApplicationUnsupportedReason from "GuildEmbeddedApplicationUnsupportedReason" /* 8833 */;
+// Module 8840 (getAppChannelApplicationUnsupportedText)
+import util from "util" /* 1128 */;
+import GuildEmbeddedApplicationUnsupportedReason from "GuildEmbeddedApplicationUnsupportedReason" /* 8841 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_channels/getAppChannelApplicationUnsupportedText.tsx");

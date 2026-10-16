@@ -1,28 +1,28 @@
-// === Module 17367: useGuildsBarBadges ===
+// === Module 17401: useGuildsBarBadges ===
 
-// Module 17367 (useGuildsBarBadges)
-import native from "native" /* 1200 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4997 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17336 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17369 */;
+// Module 17401 (useGuildsBarBadges)
+import native from "native" /* 1202 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5000 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17370 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17403 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11021 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4996 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11036 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4999 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["guildActivityIndicatorSource"];
 let closure_4 = ["guildActivityIndicatorSource"];
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_16 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -271,12 +271,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
     const tmpResult5 = tmp(504);
     const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(17368)(arg0);
+    const tmp20 = stateFromStores(17402)(arg0);
     const tmpResult6 = tmp(504);
-    const token = tmp(4874).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-    const tmpResult7 = tmp(4874);
-    const token1 = tmp(4874).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-    const diff = token1 - tmp(1200).BADGE_PADDING;
+    const token = tmp(4877).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+    const tmpResult7 = tmp(4877);
+    const token1 = tmp(4877).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+    const diff = token1 - tmp(1202).BADGE_PADDING;
     if (cResult[12] !== diff) {
       class U {
         constructor() {
@@ -792,7 +792,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     cResult[14] = tmp4.topRightBadge;
     cResult[15] = tmp25;
     cResult[16] = items4;
-    const tmpResult8 = tmp(4874);
+    const tmpResult8 = tmp(4877);
   }
   class C {
     constructor() {

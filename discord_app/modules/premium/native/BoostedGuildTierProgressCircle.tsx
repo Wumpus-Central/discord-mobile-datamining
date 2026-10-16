@@ -1,26 +1,26 @@
-// === Module 14468: BoostedGuildTierProgressCircle ===
+// === Module 14500: BoostedGuildTierProgressCircle ===
 
-// Module 14468 (BoostedGuildTierProgressCircle)
+// Module 14500 (BoostedGuildTierProgressCircle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8242 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8247 */;
-import ProgressCircleDefault from "ProgressCircle" /* 13176 */;
-import Tier048Px from "Tier048Px" /* 14469 */;
-import _modDef14473 from "module_14473" /* 14473 */;
-import _modDef14474 from "module_14474" /* 14474 */;
-import _modDef14475 from "module_14475" /* 14475 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8247 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8252 */;
+import ProgressCircleDefault from "ProgressCircle" /* 13202 */;
+import Tier048Px from "Tier048Px" /* 14501 */;
+import _modDef14505 from "module_14505" /* 14505 */;
+import _modDef14506 from "module_14506" /* 14506 */;
+import _modDef14507 from "module_14507" /* 14507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { guildTierProgressCircle: { position: "relative", width: 70, height: 70 }, guildTierBackground: null, guildTierNoneIcon: null, guildTierIcon: null, guildTierName: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xxl };
 obj2.guildTierBackground = size;
@@ -156,13 +156,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource1 = _modDef14473;
+          let tier048PxSource1 = _modDef14505;
         } else if (constants.TIER_2 !== premiumTier) {
           if (constants.TIER_3 === premiumTier) {
-            tier048PxSource1 = _modDef14475;
+            tier048PxSource1 = _modDef14507;
           }
         }
-        tier048PxSource1 = _modDef14474;
+        tier048PxSource1 = _modDef14506;
       }
       cResult[8] = guild;
       cResult[9] = theme;
@@ -206,11 +206,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef14473;
+          let tmp2Result4 = _modDef14505;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef14474;
+          tmp2Result4 = _modDef14506;
         } else if (constants.TIER_3 === premiumTier) {
-          tmp2Result4 = _modDef14475;
+          tmp2Result4 = _modDef14507;
         }
       }
       const obj5 = { source: tmp2Result4, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };

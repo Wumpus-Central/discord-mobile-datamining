@@ -1,9 +1,9 @@
-// === Module 14813: GuildTagActionCreators ===
+// === Module 14846: GuildTagActionCreators ===
 
-// Module 14813 (GuildTagActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 14846 (GuildTagActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 let closure_6 = async function _adoptGuildIdentity() {
@@ -86,7 +86,7 @@ let closure_6 = async function _adoptGuildIdentity() {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
 

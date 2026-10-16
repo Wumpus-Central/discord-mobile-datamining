@@ -1,24 +1,25 @@
-// === Module 16082: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 16115: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 16082 (useVideoQuestClickCtaAndMaybeCloseModal)
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9414 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9425 */;
+// Module 16115 (useVideoQuestClickCtaAndMaybeCloseModal)
+import parseURLDefault from "parseURL" /* 5131 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9430 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+const LinkingTypes = fn(1087).LinkingTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx");
 
 export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
-  const cResult = quest(sourceQuestContent[2]).c(5);
+  const cResult = quest(sourceQuestContent[3]).c(5);
   quest = quest.quest;
   const onClose = quest.onClose;
   sourceQuestContent = quest.sourceQuestContent;
-  let obj = quest(sourceQuestContent[2]);
-  const getQuestImpressionId = quest(sourceQuestContent[3]).useGetQuestImpressionId();
+  let obj = quest(sourceQuestContent[3]);
+  const getQuestImpressionId = quest(sourceQuestContent[4]).useGetQuestImpressionId();
   if (cResult[0] === getQuestImpressionId) {
     if (cResult[1] === onClose) {
       if (cResult[2] === quest) {
@@ -29,15 +30,15 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isRea
       }
     }
   }
-  const fn = function s(content) {
-    const obj = URLUtilsDefault;
-    if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
+  const fn = function o(content) {
+    const tmp2 = parseURLDefault;
+    if (tmp2(obj.getCtaLink(quest.config)).payload.type !== LinkingTypes.NONE) {
       onClose();
     }
-    obj2 = QuestCopyUtils;
-    const tmp2Result = QuestPlatformUtils;
-    tmp2Result.openGameLinkDirectly(quest, { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
-    const obj3 = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    obj = QuestCopyUtils;
+    const tmp3Result = QuestPlatformUtils;
+    tmp3Result.openGameLinkDirectly(quest, { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
+    const obj2 = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
   };
   cResult[0] = getQuestImpressionId;
   cResult[1] = onClose;
@@ -49,16 +50,16 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = ReactCompilerGating.isRea
   quest = quest.quest;
   const onClose = quest.onClose;
   const sourceQuestContent = quest.sourceQuestContent;
-  const getQuestImpressionId = quest(sourceQuestContent[3]).useGetQuestImpressionId();
+  const getQuestImpressionId = quest(sourceQuestContent[4]).useGetQuestImpressionId();
   const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback((content) => {
-    const obj = URLUtilsDefault;
-    if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
+    const tmp2 = parseURLDefault;
+    if (tmp2(obj.getCtaLink(quest.config)).payload.type !== LinkingTypes.NONE) {
       onClose();
     }
-    obj2 = QuestCopyUtils;
-    const tmp2Result = QuestPlatformUtils;
-    tmp2Result.openGameLinkDirectly(quest, { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
-    const obj3 = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    obj = QuestCopyUtils;
+    const tmp3Result = QuestPlatformUtils;
+    tmp3Result.openGameLinkDirectly(quest, { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
+    const obj2 = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
   }, items);
 });

@@ -1,16 +1,16 @@
-// === Module 11232: PostMessageTransport ===
+// === Module 11248: PostMessageTransport ===
 
-// Module 11232 (PostMessageTransport)
-import DurationsDefault from "Durations" /* 1102 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11233 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
+// Module 11248 (PostMessageTransport)
+import DurationsDefault from "Durations" /* 1104 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11249 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(5855).RPC_EMBEDDED_APP_SCOPE;
-const Constants = fn(1085);
+const RPC_EMBEDDED_APP_SCOPE = fn(5857).RPC_EMBEDDED_APP_SCOPE;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
@@ -50,10 +50,10 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          const obj = closure_1_1(1265);
-          obj2.channel_id = closure_1_0(4795).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4795);
-          obj2.guild_id = closure_1_0(4795).getEmbeddedActivityLocationGuildId(tmp2.location);
+          const obj = closure_1_1(1267);
+          obj2.channel_id = closure_1_0(4798).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4798);
+          obj2.guild_id = closure_1_0(4798).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });

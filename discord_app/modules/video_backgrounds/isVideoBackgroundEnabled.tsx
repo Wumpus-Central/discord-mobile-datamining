@@ -1,9 +1,9 @@
-// === Module 5327: isVideoBackgroundEnabled ===
+// === Module 5329: isVideoBackgroundEnabled ===
 
-// Module 5327 (isVideoBackgroundEnabled)
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 5328 */;
-import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 5329 */;
+// Module 5329 (isVideoBackgroundEnabled)
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 5330 */;
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 5331 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundEnabled.tsx");

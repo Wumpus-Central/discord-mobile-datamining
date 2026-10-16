@@ -1,14 +1,14 @@
-// === Module 11806: Timestamp ===
+// === Module 11830: Timestamp ===
 
-// Module 11806 (Timestamp)
+// Module 11830 (Timestamp)
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
-import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11807 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11831 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Timestam
       return tmp7;
     }
   }
-  const tmp8 = jsx(tmp(1200).LegacyText, { style, onPress: tmp6, children: tmp5 });
+  const tmp8 = jsx(tmp(1202).LegacyText, { style, onPress: tmp6, children: tmp5 });
   cResult[2] = tmp5;
   cResult[3] = style;
   cResult[4] = tmp6;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Timestam
     style = node.style;
   }
   const tmp2 = useFormattedTimestampDefault(node);
-  return jsx(node(1200).LegacyText, {
+  return jsx(node(1202).LegacyText, {
     style,
     onPress() {
       ToastActionCreatorsDefault.open("TIMESTAMP", { text: node.full });

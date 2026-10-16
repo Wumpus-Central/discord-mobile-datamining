@@ -1,6 +1,6 @@
-// === Module 15503: ColorPickerUtils ===
+// === Module 15539: ColorPickerUtils ===
 
-// Module 15503 (ColorPickerUtils)
+// Module 15539 (ColorPickerUtils)
 import size from "module_2" /* 2 */;
 
 function normalizeValue(arg0) {

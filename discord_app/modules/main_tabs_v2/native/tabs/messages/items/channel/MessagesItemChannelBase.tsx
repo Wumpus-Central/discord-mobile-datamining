@@ -1,24 +1,24 @@
-// === Module 17049: MessagesItemChannelBase ===
+// === Module 17083: MessagesItemChannelBase ===
 
-// Module 17049 (MessagesItemChannelBase)
+// Module 17083 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5162 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7234 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10516 */;
+import transitionToChannel from "transitionToChannel" /* 5164 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10531 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5167 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import UserStore from "UserStore" /* 1390 */;
+import PresenceStore from "PresenceStore" /* 5169 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const ActivityTypes = fn(1085).ActivityTypes;
+const ActivityTypes = fn(1087).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { pressable: { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 }, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   const obj2 = { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
@@ -287,7 +287,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp15, tmp17);
     ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
     const tmpResult9 = tmp(504);
-    ({ isIncomingCall, isOngoingCall } = setIsPressed(17050)(channel.id));
+    ({ isIncomingCall, isOngoingCall } = setIsPressed(17084)(channel.id));
     const _Symbol3 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -350,7 +350,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const tmp20 = setIsPressed(17050)(channel.id);
+    const tmp20 = setIsPressed(17084)(channel.id);
     const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
     ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
     const _Symbol4 = Symbol;
@@ -545,7 +545,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const tmpResult12 = tmp(504);
-    const nameplate = tmp(8561).useNameplate(tmp32);
+    const nameplate = tmp(8569).useNameplate(tmp32);
     let tmp35 = null != nameplate;
     if (tmp35) {
       class Z {
@@ -588,7 +588,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       tmp35 = tmp36;
     }
-    const tmpResult13 = tmp(8561);
+    const tmpResult13 = tmp(8569);
     if (tmpResult14.isIOS()) {
       class Z {
         constructor() {
@@ -676,7 +676,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[26] = channel.id;
     cResult[27] = setIsPressed;
     cResult[28] = re;
-    tmpResult14 = tmp(1382);
+    tmpResult14 = tmp(1384);
   }
   const items6 = [tmp8.pressable, undefined];
   cResult[5] = tmp8.pressable;

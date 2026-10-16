@@ -1,24 +1,24 @@
-// === Module 10609: useChannelSafeAreaBottomStyles ===
+// === Module 10624: useChannelSafeAreaBottomStyles ===
 
-// Module 10609 (useChannelSafeAreaBottomStyles)
+// Module 10624 (useChannelSafeAreaBottomStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import useToken from "useToken" /* 4874 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9527 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import KeyboardTypes from "KeyboardTypes" /* 1631 */;
+import useToken from "useToken" /* 4877 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9543 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
-import LurkingStore from "LurkingStore" /* 4807 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import LurkingStore from "LurkingStore" /* 4810 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
 
 require = fn;
-const InputModes = fn(1085).InputModes;
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
+const InputModes = fn(1087).InputModes;
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const constants = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;
@@ -301,9 +301,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   }
   return prop;
 }) : (function useChannelSafeAreaBottomStyles(arg0) {
-  const token = gradientBottom(4874).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-  let obj = gradientBottom(4874);
-  gradientBottom = gradientBottom(9527).useGradientBottom();
+  const token = gradientBottom(4877).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+  let obj = gradientBottom(4877);
+  gradientBottom = gradientBottom(9543).useGradientBottom();
   let backgroundColor1;
   if (gradientBottom != null) {
     backgroundColor1 = gradientBottom.backgroundColor;

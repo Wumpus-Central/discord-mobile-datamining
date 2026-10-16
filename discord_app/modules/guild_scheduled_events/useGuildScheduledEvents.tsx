@@ -1,24 +1,24 @@
-// === Module 8872: useGuildScheduledEvents ===
+// === Module 8880: useGuildScheduledEvents ===
 
-// Module 8872 (useGuildScheduledEvents)
-import DurationsDefault from "Durations" /* 1102 */;
+// Module 8880 (useGuildScheduledEvents)
+import DurationsDefault from "Durations" /* 1104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6270 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 8873 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6272 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 8881 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(6270);
+let GuildScheduledEventStore = fn(6272);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(2071);
+const GuildScheduledEventsConstants = fn(2074);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
 let closure_15 = [];
 let closure_16 = 15 * DurationsDefault.Millis.MINUTE;
@@ -912,11 +912,11 @@ export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompile
   }, items1);
   const items2 = [stateFromStores];
   return noop.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = closure_1_0(8747).getEventSchedule(status);
+    const eventSchedule = closure_1_0(8755).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = closure_1_0(8747);
+    const obj = closure_1_0(8755);
     let toISOStringResult1;
-    const obj2 = closure_1_0(8739);
+    const obj2 = closure_1_0(8747);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

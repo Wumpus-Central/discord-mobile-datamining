@@ -1,12 +1,12 @@
-// === Module 9124: MinecraftNeutralIcon ===
+// === Module 9132: MinecraftNeutralIcon ===
 
-// Module 9124 (MinecraftNeutralIcon)
+// Module 9132 (MinecraftNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod9125 from "module_9125" /* 9125 */;
-import _mod9126 from "module_9126" /* 9126 */;
-import _mod9127 from "module_9127" /* 9127 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod9133 from "module_9133" /* 9133 */;
+import _mod9134 from "module_9134" /* 9134 */;
+import _mod9135 from "module_9135" /* 9135 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,7 +54,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
     str2 = tmp7;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9125;
+    const tmpResult = _mod9133;
     cResult[6] = tmpResult;
     let tmp12 = tmpResult;
   } else {
@@ -67,7 +67,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
       }
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult3 = _mod9126;
+        const tmpResult3 = _mod9134;
         cResult[11] = tmpResult3;
         let tmp17 = tmpResult3;
       } else {
@@ -95,7 +95,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol3 = Symbol;
             if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmpResult4 = _mod9127;
+              const tmpResult4 = _mod9135;
               cResult[19] = tmpResult4;
               let tmp29 = tmpResult4;
             } else {
@@ -186,15 +186,15 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
   const merged = Object.assign(secondaryColor, Object.assign({ style: 0, color: 0, secondaryColor: 0, tertiaryColor: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod9125, color, style }), , ];
-  const obj3 = { source: _mod9126, color: str, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod9133, color, style }), , ];
+  const obj3 = { source: _mod9134, color: str, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
   obj3.style = items2;
   const merged2 = Object.assign(merged);
   items[1] = timestampProducer(BaseIconImage.BaseIconImage, obj3);
-  const obj4 = { source: _mod9127, color: str2, style: null };
+  const obj4 = { source: _mod9135, color: str2, style: null };
   const items3 = [style];
   const items4 = [];
   items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };

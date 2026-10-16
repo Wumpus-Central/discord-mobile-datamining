@@ -1,8 +1,8 @@
-// === Module 7158: SlayerStorefrontPriceUtils ===
+// === Module 7160: SlayerStorefrontPriceUtils ===
 
-// Module 7158 (SlayerStorefrontPriceUtils)
-import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 1096 */;
+// Module 7160 (SlayerStorefrontPriceUtils)
+import Constants from "Constants" /* 1087 */;
+import Constants2 from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
 function getPrice(price, arg1) {

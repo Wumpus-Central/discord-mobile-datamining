@@ -1,40 +1,40 @@
-// === Module 15876: UserSettingsAuthedApp ===
+// === Module 15909: UserSettingsAuthedApp ===
 
-// Module 15876 (UserSettingsAuthedApp)
+// Module 15909 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Link from "Link" /* 1504 */;
-import RootNavigationRef from "RootNavigationRef" /* 5033 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5105 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import useAlertStore from "useAlertStore" /* 5361 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6900 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6904 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7024 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7029 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7079 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8709 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10953 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13183 */;
+import util from "util" /* 1128 */;
+import Link from "Link" /* 1506 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5108 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useAlertStore from "useAlertStore" /* 5363 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6902 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6906 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7026 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7031 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7081 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8717 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10968 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13209 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7017 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7019 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(9848).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10648).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(9864).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10663).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;
@@ -91,7 +91,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Author
   const cResult = navigation(576).c(7);
   application = application.application;
   const obj = navigation(576);
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
       const CommonActions = Link.CommonActions;
@@ -118,25 +118,25 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Author
     }
     return tmp8;
   }
-  const intl = tmp(1126).intl;
-  const formatResult = intl.format(navigation(1126).t.jUhnwb, { applicationName: application.name, onConnectionPress: tmp5 });
+  const intl = tmp(1128).intl;
+  const formatResult = intl.format(navigation(1128).t.jUhnwb, { applicationName: application.name, onConnectionPress: tmp5 });
   cResult[2] = application.name;
   cResult[3] = tmp5;
   cResult[4] = formatResult;
   tmp6 = formatResult;
-  const obj2 = navigation(1503);
+  const obj2 = navigation(1505);
   const obj4 = { applicationName: application.name, onConnectionPress: tmp5 };
 }) : (function AuthorizedAppTwoWay(application) {
   let navigation;
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   const items = [navigation];
   const obj2 = { text: null };
   const callback = noop.useCallback(() => {
     const CommonActions = Link.CommonActions;
     navigation.dispatch(CommonActions.navigate(constants.CONNECTIONS));
   }, items);
-  const intl = navigation(1126).intl;
-  obj2.text = intl.format(navigation(1126).t.jUhnwb, { applicationName: application.application.name, onConnectionPress: callback });
+  const intl = navigation(1128).intl;
+  obj2.text = intl.format(navigation(1128).t.jUhnwb, { applicationName: application.application.name, onConnectionPress: callback });
   return closure_17(closure_20, obj2);
 });
 ReactCompilerGating = fn(558);

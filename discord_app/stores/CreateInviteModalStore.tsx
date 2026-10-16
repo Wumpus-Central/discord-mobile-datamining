@@ -1,14 +1,14 @@
-// === Module 8901: CreateInviteModalStore ===
+// === Module 8909: CreateInviteModalStore ===
 
-// Module 8901 (CreateInviteModalStore)
+// Module 8909 (CreateInviteModalStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8902 */;
-import DefaultInviteExpirationExperiments from "DefaultInviteExpirationExperiments" /* 8904 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import InstantInviteStore from "InstantInviteStore" /* 8716 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8910 */;
+import DefaultInviteExpirationExperiments from "DefaultInviteExpirationExperiments" /* 8912 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import InstantInviteStore from "InstantInviteStore" /* 8724 */;
 
 require = fn;
 function updateWithLatestInvite(channelId, arg1) {
@@ -60,7 +60,7 @@ function updateWithLatestInvite(channelId, arg1) {
   closure_6 = obj2;
   closure_7 = obj2;
 }
-const FormStates = fn(1085).FormStates;
+const FormStates = fn(1087).FormStates;
 InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

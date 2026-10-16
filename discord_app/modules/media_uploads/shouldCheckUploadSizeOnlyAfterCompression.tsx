@@ -1,8 +1,8 @@
-// === Module 9924: shouldCheckUploadSizeOnlyAfterCompression ===
+// === Module 9940: shouldCheckUploadSizeOnlyAfterCompression ===
 
-// Module 9924 (shouldCheckUploadSizeOnlyAfterCompression)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 9940 (shouldCheckUploadSizeOnlyAfterCompression)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const size = fn(2);

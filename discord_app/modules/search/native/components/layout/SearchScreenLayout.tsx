@@ -1,18 +1,18 @@
-// === Module 17657: SearchScreenLayout ===
+// === Module 17691: SearchScreenLayout ===
 
-// Module 17657 (SearchScreenLayout)
+// Module 17691 (SearchScreenLayout)
 import c from "c" /* 576 */;
-import AppFreezerDefault from "AppFreezer" /* 17559 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17658 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 17768 */;
+import AppFreezerDefault from "AppFreezer" /* 17593 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17692 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 17802 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12895 */;
+import SearchQueryStore from "SearchQueryStore" /* 12921 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SearchFreezeContainer(arg0) {

@@ -1,23 +1,23 @@
-// === Module 13272: NUFGuildTemplates ===
+// === Module 13298: NUFGuildTemplates ===
 
-// Module 13272 (NUFGuildTemplates)
+// Module 13298 (NUFGuildTemplates)
 import c from "c" /* 576 */;
-import router_utils from "router_utils" /* 1112 */;
-import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
-import NavigatorHeader from "NavigatorHeader" /* 6421 */;
-import Navigator from "Navigator" /* 6908 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13248 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13274 */;
-import GuildTemplatesDefault from "GuildTemplates" /* 13276 */;
-import CreationIntentDefault from "CreationIntent" /* 13305 */;
-import components_JoinServerDefault from "components/JoinServer" /* 13319 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13320 */;
-import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 13332 */;
+import router_utils from "router_utils" /* 1114 */;
+import util from "util" /* 1128 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
+import NavigatorHeader from "NavigatorHeader" /* 6423 */;
+import Navigator from "Navigator" /* 6910 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13274 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13300 */;
+import GuildTemplatesDefault from "GuildTemplates" /* 13302 */;
+import CreationIntentDefault from "CreationIntent" /* 13331 */;
+import components_JoinServerDefault from "components/JoinServer" /* 13345 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 13346 */;
+import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 13358 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4999 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5002 */;
 
 require = fn;
 function onCreateGuild() {
@@ -209,9 +209,9 @@ function getScreens() {
           return applyArgumentsResult;
         })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
       };
-      const intl = guildTemplate(1126).intl;
-      obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12876), obj);
+      const intl = guildTemplate(1128).intl;
+      obj.customTitle = intl.string(guildTemplate(1128).t["5HZu07"]);
+      return closure_14(closure_1(12902), obj);
     }
   };
   const obj5 = {
@@ -238,9 +238,9 @@ function getScreens() {
           return applyArgumentsResult;
         })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
       };
-      const intl = guildTemplate(1126).intl;
-      obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12876), obj);
+      const intl = guildTemplate(1128).intl;
+      obj.customTitle = intl.string(guildTemplate(1128).t["5HZu07"]);
+      return closure_14(closure_1(12902), obj);
     }
   };
   impressionProperties[constants.JOIN_SERVER] = {
@@ -316,9 +316,9 @@ function getScreens() {
         guildId,
         buttonText: null
       };
-      const intl = guildId(1126).intl;
-      obj.buttonText = intl.string(guildId(1126).t["uHXB+F"]);
-      return closure_14(closure_1(13354), obj);
+      const intl = guildId(1128).intl;
+      obj.buttonText = intl.string(guildId(1128).t["uHXB+F"]);
+      return closure_14(closure_1(13380), obj);
     }
   };
   const obj9 = {
@@ -340,13 +340,13 @@ function getScreens() {
   return impressionProperties;
 }
 const Keyboard = fn(17).Keyboard;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(13273).GuildTemplateId;
-const CreateGuildConstants = fn(6882);
+const GuildTemplateId = fn(13299).GuildTemplateId;
+const CreateGuildConstants = fn(6884);
 ({ CreateGuildModalStates: closure_11, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-let impressionProperties = { impression_group: fn(1273).ImpressionGroups.GUILD_ADD_FLOW };
+let impressionProperties = { impression_group: fn(1275).ImpressionGroups.GUILD_ADD_FLOW };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");

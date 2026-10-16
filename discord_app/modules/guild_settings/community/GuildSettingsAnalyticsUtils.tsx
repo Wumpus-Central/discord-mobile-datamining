@@ -1,18 +1,40 @@
-// === Module 18759: GuildSettingsAnalyticsUtils ===
+// === Module 18801: GuildSettingsAnalyticsUtils ===
 
-// Module 18759 (GuildSettingsAnalyticsUtils)
-import util from "util" /* 1126 */;
-import NumberUtils from "NumberUtils" /* 1901 */;
-import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 18778 */;
+// Module 18801 (GuildSettingsAnalyticsUtils)
+import util from "util" /* 1128 */;
+import NumberUtils from "NumberUtils" /* 1903 */;
+import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 18820 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5076 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 18760 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 18802 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1085);
+function getNotice(errorCode, arg1) {
+  if (arg1) {
+    const obj2 = { type: "info", message: null, role: "none" };
+    const intl3 = util.intl;
+    obj2.message = intl3.string(util.t["FsgE/B"]);
+    let tmp3 = obj2;
+  } else if (errorCode === constants.NOT_ENOUGH_GUILD_MEMBERS) {
+    const obj3 = { type: "info", message: null, role: "status" };
+    const intl2 = util.intl;
+    obj3.message = intl2.string(util.t["FsgE/B"]);
+    tmp3 = obj3;
+  } else {
+    tmp3 = null;
+    if (null != errorCode) {
+      const obj = { type: "critical", message: null, role: "alert" };
+      const intl = util.intl;
+      obj.message = intl.string(util.t.Iju63e);
+      tmp3 = obj;
+    }
+  }
+  return tmp3;
+}
+const Constants = fn(1087);
 ({ AbortCodes: metroRequire, GuildFeatures: closure_7 } = Constants);
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFailsMemberCount(arg0) {
@@ -26,7 +48,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFail
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function o() {
       return GuildStore.getGuild(closure_0);
     };
     const items1 = [arg0];
@@ -110,7 +132,6 @@ let result = size.fileFinishedImporting("modules/guild_settings/community/GuildS
 
 export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAnalyticsOverview(arg0) {
   _require = arg0;
-  let stringResult = dependencyMap;
   const cResult = require("c").c(14);
   const tmp4 = closure_8(arg0);
   dependencyMap = tmp4;
@@ -122,7 +143,7 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function u() {
+    const fn = function o() {
       let overviewAnalytics = null;
       if (null != closure_0) {
         overviewAnalytics = GuildSettingsAnalyticsStore.getOverviewAnalytics(tmp);
@@ -150,38 +171,25 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
     const effect = noop.useEffect(tmp10, tmp11);
     if (cResult[8] === errorCode) {
       if (cResult[9] === tmp4) {
-        if (cResult[11] === analytics) {
-          if (cResult[12] === tmp14) {
-            let tmp18 = cResult[13];
-          }
-          return tmp18;
-        }
-        let obj2 = { analytics, notice: cResult[10] };
-        cResult[11] = analytics;
-        cResult[12] = cResult[10];
-        cResult[13] = obj2;
-        tmp18 = obj2;
+        let tmp14 = cResult[10];
       }
-    }
-    if (!tmp4) {
-      if (errorCode !== constants.NOT_ENOUGH_GUILD_MEMBERS) {
-        let tmp16 = null;
-        if (null != errorCode) {
-          let obj3 = { type: "critical", message: null };
-          const intl = tmp(1126).intl;
-          obj3.message = intl.string(tmp(1126).t.Iju63e);
-          tmp16 = obj3;
+      if (cResult[11] === analytics) {
+        if (cResult[12] === tmp14) {
+          let tmp17 = cResult[13];
         }
+        return tmp17;
       }
-      cResult[8] = errorCode;
-      cResult[9] = tmp4;
-      cResult[10] = tmp16;
+      let obj2 = { analytics, notice: tmp14 };
+      cResult[11] = analytics;
+      cResult[12] = tmp14;
+      cResult[13] = obj2;
+      tmp17 = obj2;
     }
-    const obj4 = { type: "info", message: null };
-    const intl2 = tmp(1126).intl;
-    stringResult = intl2.string(tmp(1126).t["FsgE/B"]);
-    obj4.message = stringResult;
-    tmp16 = obj4;
+    const tmp16 = getNotice(errorCode, tmp4);
+    cResult[8] = errorCode;
+    cResult[9] = tmp4;
+    cResult[10] = tmp16;
+    tmp14 = tmp16;
   }
   const fn2 = function y() {
     if (!tmp2) {
@@ -212,8 +220,8 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
     }
     return { analytics: overviewAnalytics, errorCode: GuildSettingsAnalyticsStore.getError() };
   }, items1);
-  const errorCode = stateFromStoresObject.errorCode;
   const items2 = [arg0, tmp];
+  ({ analytics, errorCode } = stateFromStoresObject);
   const effect = noop.useEffect(() => {
     if (!tmp2) {
       const engagementOverview = GuildSettingsAnalyticsActionCreators.fetchEngagementOverview(closure_0);
@@ -222,25 +230,8 @@ export const useGuildAnalyticsOverview = ReactCompilerGating.isReactCompilerEnab
     }
     tmp2 = null == closure_0 || closure_1;
   }, items2);
-  let obj2 = { analytics: stateFromStoresObject.analytics, notice: null };
-  if (!tmp) {
-    if (errorCode !== constants.NOT_ENOUGH_GUILD_MEMBERS) {
-      let tmp7 = null;
-      if (null != errorCode) {
-        let obj3 = { type: "critical", message: null };
-        const intl = tmp2(1126).intl;
-        obj3.message = intl.string(tmp2(1126).t.Iju63e);
-        tmp7 = obj3;
-      }
-    }
-    obj2.notice = tmp7;
-    return obj2;
-  }
-  const obj4 = { type: "info", message: null };
-  const intl2 = tmp2(1126).intl;
-  obj4.message = intl2.string(require("util").t["FsgE/B"]);
-  tmp7 = obj4;
   let obj = require("initialize");
+  return { analytics, notice: getNotice(errorCode, tmp) };
 });
 export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(communicators, communicatorsChange, stateFromStores, arg3) {
   let flag = arg3;

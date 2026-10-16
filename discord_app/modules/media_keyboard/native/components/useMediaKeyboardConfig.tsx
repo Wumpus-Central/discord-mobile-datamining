@@ -1,18 +1,18 @@
-// === Module 11950: useMediaKeyboardConfig ===
+// === Module 11974: useMediaKeyboardConfig ===
 
-// Module 11950 (useMediaKeyboardConfig)
+// Module 11974 (useMediaKeyboardConfig)
 import c from "c" /* 576 */;
-import Server from "Server" /* 1998 */;
-import ThreadHooks from "ThreadHooks" /* 7190 */;
-import PollsUtils from "PollsUtils" /* 8115 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 8731 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10241 */;
-import useUploadDisabledDefault from "useUploadDisabled" /* 11951 */;
+import Server from "Server" /* 2000 */;
+import ThreadHooks from "ThreadHooks" /* 7192 */;
+import PollsUtils from "PollsUtils" /* 8118 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 8739 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10257 */;
+import useUploadDisabledDefault from "useUploadDisabled" /* 11975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let MediaKeyboardTarget = fn(1627).MediaKeyboardTarget;
-const Constants = fn(1085);
+let MediaKeyboardTarget = fn(1629).MediaKeyboardTarget;
+const Constants = fn(1087);
 ({ ChannelTypesSets: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -114,12 +114,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMedia
   ({ channel, context } = arg0);
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
-  const tmp4 = context(8115).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp4 = context(8118).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
-  let obj = context(8115);
-  let canStartThread = context(7190).useCanStartThread(channel);
+  let obj = context(8118);
+  let canStartThread = context(7192).useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
@@ -130,11 +130,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMedia
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  const tmp2Result = context(7190);
-  const tmp8 = context(8731).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp2Result = context(7192);
+  const tmp8 = context(8739).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
-  const tmp2Result3 = context(8731);
-  mediaKeyboardDraftType = context(10241).getMediaKeyboardDraftType(context.target);
+  const tmp2Result3 = context(8739);
+  mediaKeyboardDraftType = context(10257).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

@@ -1,37 +1,37 @@
-// === Module 16574: IntlTestingSettingsPage ===
+// === Module 16607: IntlTestingSettingsPage ===
 
-// Module 16574 (IntlTestingSettingsPage)
+// Module 16607 (IntlTestingSettingsPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import _mod1165 from "module_1165" /* 1165 */;
-import _modDef4758 from "module_4758" /* 4758 */;
-import TableRow from "TableRow" /* 6400 */;
-import TableRowGroup from "TableRowGroup" /* 6485 */;
-import _modDef16575 from "module_16575" /* 16575 */;
-import _modDef16607 from "module_16607" /* 16607 */;
+import util from "util" /* 1128 */;
+import _mod1167 from "module_1167" /* 1167 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import TableRow from "TableRow" /* 6402 */;
+import TableRowGroup from "TableRowGroup" /* 6487 */;
+import _modDef16608 from "module_16608" /* 16608 */;
+import _modDef16640 from "module_16640" /* 16640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const setAppLocale = fn(2130).setAppLocale;
+const setAppLocale = fn(2133).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function TestLocaleSelector() {
   const cResult = require("c").c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { title: "Locale", hasIcons: false, defaultValue: tmp(1126).intl.currentLocale, onChange: null, children: null };
+    let obj2 = { title: "Locale", hasIcons: false, defaultValue: tmp(1128).intl.currentLocale, onChange: null, children: null };
     _require = asyncGeneratorStep(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
@@ -91,9 +91,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function TestLo
       }
       return applyArgumentsResult;
     };
-    const items = [closure_10(tmp(6482).TableRadioRow, { label: "English", value: "en-US" }), closure_10(tmp(6482).TableRadioRow, { label: "French", value: "fr" })];
+    const items = [closure_10(tmp(6484).TableRadioRow, { label: "English", value: "en-US" }), closure_10(tmp(6484).TableRadioRow, { label: "French", value: "fr" })];
     obj2.children = items;
-    const tmp8 = closure_11(tmp(6483).TableRadioGroup, obj2);
+    const tmp8 = closure_11(tmp(6485).TableRadioGroup, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
   } else {
@@ -185,11 +185,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locale
   const tmpResult = initialize;
   [tmp8, tmp9] = initialize.useStateFromStoresArray(tmp4, tmp5);
   const tmp7 = _slicedToArray(initialize.useStateFromStoresArray(tmp4, tmp5), 2);
-  [tmp12, require] = noop.useState(_modDef4758.locale);
+  [tmp12, require] = noop.useState(_modDef4761.locale);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function s() {
       const timerId = setTimeout(() => {
-        closure_1_0(_modDef4758.locale());
+        closure_1_0(_modDef4761.locale());
       }, 0);
     };
     cResult[2] = fn2;
@@ -206,7 +206,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locale
     tmp14 = cResult[4];
   }
   const effect = noop.useEffect(tmp13, tmp14);
-  const tmp11 = _slicedToArray(noop.useState(_modDef4758.locale), 2);
+  const tmp11 = _slicedToArray(noop.useState(_modDef4761.locale), 2);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { label: "Active System", trailing: closure_10(TableRow.TableRow.TrailingText, { text: "@discord/intl" }) };
     const tmp18 = closure_10(TableRow.TableRow, obj2);
@@ -287,7 +287,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locale
   cResult[14] = str;
   cResult[15] = tmp32;
   tmp31 = tmp32;
-  tmp10Result = _modDef4758;
+  tmp10Result = _modDef4761;
 }) : (function LocaleInfo() {
   let items = [LocaleStore];
   const tmp = _slicedToArray(initialize.useStateFromStoresArray(items, () => {
@@ -296,15 +296,15 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Locale
     return items;
   }), 2);
   const first = tmp[0];
-  [tmp4, require] = noop.useState(_modDef4758.locale);
+  [tmp4, require] = noop.useState(_modDef4761.locale);
   const items1 = [first];
   const effect = noop.useEffect(() => {
     const timerId = setTimeout(() => {
-      closure_1_0(_modDef4758.locale());
+      closure_1_0(_modDef4761.locale());
     }, 0);
   }, items1);
-  const tmp3 = _slicedToArray(noop.useState(_modDef4758.locale), 2);
-  const obj2 = _modDef4758;
+  const tmp3 = _slicedToArray(noop.useState(_modDef4761.locale), 2);
+  const obj2 = _modDef4761;
   const items2 = [closure_10(TableRow.TableRow, { label: "Active System", trailing: closure_10(TableRow.TableRow.TrailingText, { text: "@discord/intl" }) }), , , , ];
   const obj3 = { label: "Active System", trailing: closure_10(TableRow.TableRow.TrailingText, { text: "@discord/intl" }) };
   items2[1] = closure_10(TableRow.TableRow, { label: "App locale", trailing: closure_10(TableRow.TableRow.TrailingText, { text: first }) });
@@ -335,14 +335,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      return closure_0(1126).intl.currentLocale;
+      return closure_0(1128).intl.currentLocale;
     };
     cResult[0] = fn;
     let first = fn;
   } else {
     first = cResult[0];
   }
-  const syncExternalStore = noop.useSyncExternalStore(tmp(1126).intl.onLocaleChange, first);
+  const syncExternalStore = noop.useSyncExternalStore(tmp(1128).intl.onLocaleChange, first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = {};
     cResult[1] = obj3;
@@ -444,9 +444,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
       }
     }
     const obj4 = { variant: "text-md/normal", children: null };
-    const intl = tmp(1126).intl;
-    obj4.children = intl.format(_modDef16575.HMvEC5, {});
-    const tmp21 = closure_10(tmp(5147).Text, obj4);
+    const intl = tmp(1128).intl;
+    obj4.children = intl.format(_modDef16608.HMvEC5, {});
+    const tmp21 = closure_10(tmp(5149).Text, obj4);
     cResult[7] = tmp21;
     const tmp19 = tmp21;
   } else {
@@ -473,9 +473,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
       }
     }
     const obj5 = { variant: "text-md/normal", children: null };
-    const intl2 = tmp(1126).intl;
-    obj5.children = intl2.format(_modDef16607.swfLzV, {});
-    const tmp24 = closure_10(tmp(5147).Text, obj5);
+    const intl2 = tmp(1128).intl;
+    obj5.children = intl2.format(_modDef16640.swfLzV, {});
+    const tmp24 = closure_10(tmp(5149).Text, obj5);
     cResult[8] = tmp24;
     const tmp22 = tmp24;
   } else {
@@ -502,9 +502,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
       }
     }
     const obj6 = { variant: "text-md/normal", children: null };
-    const intl3 = tmp(1126).intl;
-    obj6.children = intl3.format(_modDef16575.rmps8y, {});
-    const tmp27 = closure_10(tmp(5147).Text, obj6);
+    const intl3 = tmp(1128).intl;
+    obj6.children = intl3.format(_modDef16608.rmps8y, {});
+    const tmp27 = closure_10(tmp(5149).Text, obj6);
     cResult[9] = tmp27;
     const tmp25 = tmp27;
   } else {
@@ -531,14 +531,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
       }
     }
     const obj7 = { variant: "text-md/normal", children: null };
-    const intl4 = tmp(1126).intl;
+    const intl4 = tmp(1128).intl;
     const obj8 = {
       linkTarget() {
 
         }
     };
-    obj7.children = intl4.format(_modDef16575.uczI4g, obj8);
-    const tmp30 = closure_10(tmp(5147).Text, obj7);
+    obj7.children = intl4.format(_modDef16608.uczI4g, obj8);
+    const tmp30 = closure_10(tmp(5149).Text, obj7);
     cResult[10] = tmp30;
     const tmp28 = tmp30;
   } else {
@@ -565,9 +565,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
       }
     }
     const obj9 = { variant: "text-md/normal", children: null };
-    const intl5 = tmp(1126).intl;
-    obj9.children = intl5.format(_modDef16575.rdfRyh, {});
-    const tmp33 = closure_10(tmp(5147).Text, obj9);
+    const intl5 = tmp(1128).intl;
+    obj9.children = intl5.format(_modDef16608.rdfRyh, {});
+    const tmp33 = closure_10(tmp(5149).Text, obj9);
     cResult[11] = tmp33;
     const tmp31 = tmp33;
   } else {
@@ -594,16 +594,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
       }
     }
     const obj10 = { variant: "text-md/normal", children: null };
-    const intl6 = tmp(1126).intl;
+    const intl6 = tmp(1128).intl;
     const obj11 = {
       username: "some user",
       usernameHook(children) {
-          const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5147).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
+          const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5149).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
           return closure_1_10(closure_1_6, obj);
         }
     };
-    obj10.children = intl6.format(_modDef16575.XOdbAy, obj11);
-    const tmp36 = closure_10(tmp(5147).Text, obj10);
+    obj10.children = intl6.format(_modDef16608.XOdbAy, obj11);
+    const tmp36 = closure_10(tmp(5149).Text, obj10);
     cResult[12] = tmp36;
     const tmp34 = tmp36;
   } else {
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
     const obj12 = { spacing: 24, style: tmp4.container, children: null };
     const items = [tmp13, tmp14, tmp19, tmp22, tmp25, tmp28, tmp31, tmp34];
     obj12.children = items;
-    const tmp38 = closure_11(tmp(5437).Stack, obj12);
+    const tmp38 = closure_11(tmp(5439).Stack, obj12);
     cResult[13] = tmp4.container;
     cResult[14] = tmp38;
   } else {
@@ -668,10 +668,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
   const obj13 = { style: tmp4.wrap, children: tmp37 };
 }) : (function IntlTestingSettingsPage() {
   const tmp = closure_12();
-  const syncExternalStore = noop.useSyncExternalStore(require("util").intl.onLocaleChange, () => closure_0(1126).intl.currentLocale);
+  const syncExternalStore = noop.useSyncExternalStore(require("util").intl.onLocaleChange, () => closure_0(1128).intl.currentLocale);
   _require = _slicedToArray(noop.useState({}), 2)[1];
   const effect = noop.useEffect(() => {
-    const result = _mod1165.waitForAllDefaultIntlMessagesLoaded();
+    const result = _mod1167.waitForAllDefaultIntlMessagesLoaded();
     result.then(() => {
       closure_1_0({});
     });
@@ -681,19 +681,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
   const items = [closure_10(closure_14, {}), closure_10(closure_13, {}), , , , , , ];
   const obj3 = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef16575.HMvEC5, {});
+  obj3.children = intl.format(_modDef16608.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
   const obj4 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef16607.swfLzV, {});
+  obj4.children = intl2.format(_modDef16640.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef16575.rmps8y, {});
+  obj5.children = intl3.format(_modDef16608.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef16575.uczI4g, {
+  obj6.children = intl4.format(_modDef16608.uczI4g, {
     linkTarget() {
 
     }
@@ -701,14 +701,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IntlTest
   items[5] = closure_10(require("Text/Text").Text, obj6);
   const obj8 = { variant: "text-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef16575.rdfRyh, {});
+  obj8.children = intl5.format(_modDef16608.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
   const obj9 = { variant: "text-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef16575.XOdbAy, {
+  obj9.children = intl6.format(_modDef16608.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5147).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
+      const obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: closure_1_10(closure_0(5149).Text, { variant: "text-sm/normal", color: "text-overlay-light", children }) };
       return closure_1_10(closure_1_6, obj);
     }
   });

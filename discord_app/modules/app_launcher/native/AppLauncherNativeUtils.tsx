@@ -1,25 +1,25 @@
-// === Module 11764: AppLauncherNativeUtils ===
+// === Module 11788: AppLauncherNativeUtils ===
 
-// Module 11764 (AppLauncherNativeUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import _modDef1988 from "module_1988" /* 1988 */;
-import Server from "Server" /* 1998 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7459 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7463 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8137 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9467 */;
-import FrecencySection from "FrecencySection" /* 11765 */;
+// Module 11788 (AppLauncherNativeUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import _modDef1990 from "module_1990" /* 1990 */;
+import Server from "Server" /* 2000 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7461 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7465 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8140 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9483 */;
+import FrecencySection from "FrecencySection" /* 11789 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import UserStore from "UserStore" /* 1390 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const AppLauncherNativeConstants = fn(1502);
+const AppLauncherNativeConstants = fn(1504);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const BuiltInSectionId = fn(5463).BuiltInSectionId;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const BuiltInSectionId = fn(5465).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLogAppLauncherEmptyStateView(arg0, arg1) {
@@ -257,7 +257,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1988;
+    let applicationIconSource = _modDef1990;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {

@@ -1,16 +1,16 @@
-// === Module 16789: useFeedBlockSkuIds ===
+// === Module 16822: useFeedBlockSkuIds ===
 
-// Module 16789 (useFeedBlockSkuIds)
+// Module 16822 (useFeedBlockSkuIds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ShopHomeSortType from "ShopHomeSortType" /* 16790 */;
+import ShopHomeSortType from "ShopHomeSortType" /* 16823 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6148 */;
+import ConsentStore from "ConsentStore" /* 6150 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Consents = fn(1085).Consents;
+const Consents = fn(1087).Consents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useFeedBlockSkuIds.tsx");

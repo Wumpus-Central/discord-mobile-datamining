@@ -1,6 +1,6 @@
-// === Module 6396: TableRowConstants ===
+// === Module 6398: TableRowConstants ===
 
-// Module 6396 (TableRowConstants)
+// Module 6398 (TableRowConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");

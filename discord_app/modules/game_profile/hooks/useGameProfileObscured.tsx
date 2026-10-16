@@ -1,10 +1,10 @@
-// === Module 8455: useGameProfileObscured ===
+// === Module 8463: useGameProfileObscured ===
 
-// Module 8455 (useGameProfileObscured)
+// Module 8463 (useGameProfileObscured)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import utils from "utils" /* 6258 */;
-import UserStore from "UserStore" /* 1390 */;
+import utils from "utils" /* 6260 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

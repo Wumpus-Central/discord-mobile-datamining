@@ -1,16 +1,16 @@
-// === Module 10312: GiftingPromotionUtils ===
+// === Module 10328: GiftingPromotionUtils ===
 
-// Module 10312 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10317 */;
-import MarketingComponentType from "MarketingComponentType" /* 10318 */;
+// Module 10328 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 2052 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4997 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10333 */;
+import MarketingComponentType from "MarketingComponentType" /* 10334 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9343 */;
+import PromotionsStore from "PromotionsStore" /* 9356 */;
 
 require = fn;
-const SubscriptionPlans = fn(1392).SubscriptionPlans;
+const SubscriptionPlans = fn(1394).SubscriptionPlans;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchClaimableGiftingPromotionRewardSkuIds() {

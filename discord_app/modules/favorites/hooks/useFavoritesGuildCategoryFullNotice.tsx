@@ -1,17 +1,17 @@
-// === Module 17125: useFavoritesGuildCategoryFullNotice ===
+// === Module 17159: useFavoritesGuildCategoryFullNotice ===
 
-// Module 17125 (useFavoritesGuildCategoryFullNotice)
+// Module 17159 (useFavoritesGuildCategoryFullNotice)
 import c from "c" /* 576 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import FavoriteStore from "FavoriteStore" /* 2068 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import FavoriteStore from "FavoriteStore" /* 2071 */;
 
 const initialize = intl(504);
-const util = intl(1126);
-const FavoritesUtils = intl(2090);
-const FavoritesHooks = intl(10546);
+const util = intl(1128);
+const FavoritesUtils = intl(2093);
+const FavoritesHooks = intl(10561);
 require = fn;
-let closure_4 = fn(2078).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
-const ChannelTypes = fn(1085).ChannelTypes;
+let closure_4 = fn(2081).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+const ChannelTypes = fn(1087).ChannelTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
@@ -52,9 +52,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
               if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj2 = { label: null, tooltip: null };
                 const intl2 = util.intl;
-                obj2.label = intl2.string(_modDef3444.WsUrMD);
+                obj2.label = intl2.string(_modDef3447.WsUrMD);
                 intl = util.intl;
-                stringResult = intl.string(_modDef3444.dW9Kov);
+                stringResult = intl.string(_modDef3447.dW9Kov);
                 obj2.tooltip = stringResult;
                 cResult[2] = obj2;
               }
@@ -86,9 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
-              obj2.label = intl.string(_modDef3444.WsUrMD);
+              obj2.label = intl.string(_modDef3447.WsUrMD);
               const intl2 = util.intl;
-              obj2.tooltip = intl2.string(_modDef3444.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3447.dW9Kov);
               tmp6 = obj2;
             }
           }

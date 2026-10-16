@@ -1,13 +1,13 @@
-// === Module 7968: MessageWithContent ===
+// === Module 7971: MessageWithContent ===
 
-// Module 7968 (MessageWithContent)
-import util from "util" /* 1126 */;
-import createMessageContentDefault from "createMessageContent" /* 8100 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8463 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7969 */;
+// Module 7971 (MessageWithContent)
+import util from "util" /* 1128 */;
+import createMessageContentDefault from "createMessageContent" /* 8103 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8471 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7972 */;
 
 require = fn;
-const RowType = fn(7964).RowType;
+const RowType = fn(7967).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 

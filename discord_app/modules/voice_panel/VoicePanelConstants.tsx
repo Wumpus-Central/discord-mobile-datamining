@@ -1,7 +1,7 @@
-// === Module 12817: VoicePanelConstants ===
+// === Module 12843: VoicePanelConstants ===
 
-// Module 12817 (VoicePanelConstants)
-import PlatformUtils_mod from "PlatformUtils" /* 1382 */;
+// Module 12843 (VoicePanelConstants)
+import PlatformUtils_mod from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };

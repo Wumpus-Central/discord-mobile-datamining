@@ -1,6 +1,6 @@
-// === Module 5670: ? ===
+// === Module 5672: ? ===
 
-// Module 5670
+// Module 5672
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/astronaut_martian.png.js");

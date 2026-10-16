@@ -1,12 +1,12 @@
-// === Module 7266: useGuildOnboardingAvailable ===
+// === Module 7268: useGuildOnboardingAvailable ===
 
-// Module 7266 (useGuildOnboardingAvailable)
-import ImpersonateStore from "ImpersonateStore" /* 2118 */;
+// Module 7268 (useGuildOnboardingAvailable)
+import ImpersonateStore from "ImpersonateStore" /* 2121 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");

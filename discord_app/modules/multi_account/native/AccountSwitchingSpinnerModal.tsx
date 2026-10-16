@@ -1,15 +1,15 @@
-// === Module 18454: AccountSwitchingSpinnerModal ===
+// === Module 18496: AccountSwitchingSpinnerModal ===
 
-// Module 18454 (AccountSwitchingSpinnerModal)
+// Module 18496 (AccountSwitchingSpinnerModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6376 */;
+import util from "util" /* 1128 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_4 = createStyles.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountSwitchingSpinnerModal() {
@@ -43,7 +43,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountSwi
   obj.children = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
   return <View style={closure_4().switchingSpinnerContainer} accessible accessibilityLabel={null}>{null}</View>;
 });
-tmp3.modalConfig = { animation: fn(1105).ModalAnimation.FADE, closable: false };
+tmp3.modalConfig = { animation: fn(1107).ModalAnimation.FADE, closable: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 

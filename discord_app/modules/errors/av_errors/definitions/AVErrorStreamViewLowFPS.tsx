@@ -1,18 +1,18 @@
-// === Module 18936: AVErrorStreamViewLowFPS ===
+// === Module 18978: AVErrorStreamViewLowFPS ===
 
-// Module 18936 (AVErrorStreamViewLowFPS)
-import StreamQualityUtils from "StreamQualityUtils" /* 5330 */;
-import AVError from "AVError" /* 5349 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
-import AVErrorContext from "AVErrorContext" /* 18934 */;
-import AVErrorUtils from "AVErrorUtils" /* 18937 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
+// Module 18978 (AVErrorStreamViewLowFPS)
+import StreamQualityUtils from "StreamQualityUtils" /* 5332 */;
+import AVError from "AVError" /* 5351 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
+import AVErrorContext from "AVErrorContext" /* 18976 */;
+import AVErrorUtils from "AVErrorUtils" /* 18979 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7645 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7647 */;
 
 require = fn;
-const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
+const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
 

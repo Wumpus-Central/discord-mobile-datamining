@@ -1,19 +1,19 @@
-// === Module 16786: useMaybeFetchShopHome ===
+// === Module 16819: useMaybeFetchShopHome ===
 
-// Module 16786 (useMaybeFetchShopHome)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7479 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7525 */;
+// Module 16819 (useMaybeFetchShopHome)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7481 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7527 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5072 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7522 */;
+import ExperimentStore from "ExperimentStore" /* 5075 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7482 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7524 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4, useMemo: hasOwnProperty } = noop);
-const CollectiblesShopConstants = fn(1087);
+const CollectiblesShopConstants = fn(1089);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_9, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: c10 } = CollectiblesShopConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

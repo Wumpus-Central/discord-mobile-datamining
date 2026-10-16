@@ -1,11 +1,11 @@
-// === Module 10376: useWishlistApplicationIds ===
+// === Module 10392: useWishlistApplicationIds ===
 
-// Module 10376 (useWishlistApplicationIds)
+// Module 10392 (useWishlistApplicationIds)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(1085).COLLECTIBLES_APPLICATION_ID;
+let closure_3 = fn(1087).COLLECTIBLES_APPLICATION_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistApplicationIds.native.tsx");

@@ -1,11 +1,11 @@
-// === Module 5105: CircleInformationIcon ===
+// === Module 5108: CircleInformationIcon ===
 
-// Module 5105 (CircleInformationIcon)
+// Module 5108 (CircleInformationIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod5106 from "module_5106" /* 5106 */;
-import _mod5107 from "module_5107" /* 5107 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod5109 from "module_5109" /* 5109 */;
+import _mod5110 from "module_5110" /* 5110 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export const CircleInformationIcon = ReactCompilerGating.isReactCompilerEnabled(
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod5106;
+    const tmpResult = _mod5109;
     cResult[5] = tmpResult;
     let tmp11 = tmpResult;
   } else {
@@ -59,7 +59,7 @@ export const CircleInformationIcon = ReactCompilerGating.isReactCompilerEnabled(
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult2 = _mod5107;
+        const tmpResult2 = _mod5110;
         cResult[10] = tmpResult2;
         let tmp16 = tmpResult2;
       } else {
@@ -132,8 +132,8 @@ export const CircleInformationIcon = ReactCompilerGating.isReactCompilerEnabled(
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod5106, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod5107, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod5109, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod5110, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

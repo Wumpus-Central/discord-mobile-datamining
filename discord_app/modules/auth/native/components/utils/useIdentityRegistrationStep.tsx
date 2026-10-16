@@ -1,8 +1,8 @@
-// === Module 16964: useIdentityRegistrationStep ===
+// === Module 16997: useIdentityRegistrationStep ===
 
-// Module 16964 (useIdentityRegistrationStep)
-import util from "util" /* 1126 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6865 */;
+// Module 16997 (useIdentityRegistrationStep)
+import util from "util" /* 1128 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,11 +10,11 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(16954);
+const RegistrationUIStore = fn(16987);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(16955);
+const RegistrationConstants = fn(16988);
 ({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
-const AbortCodes = fn(1085).AbortCodes;
+const AbortCodes = fn(1087).AbortCodes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");

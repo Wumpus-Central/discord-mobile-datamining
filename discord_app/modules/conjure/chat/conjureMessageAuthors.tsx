@@ -1,9 +1,9 @@
-// === Module 12069: conjureMessageAuthors ===
+// === Module 12093: conjureMessageAuthors ===
 
-// Module 12069 (conjureMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 8524 */;
+// Module 12093 (conjureMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8532 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 

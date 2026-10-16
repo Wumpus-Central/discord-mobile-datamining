@@ -1,52 +1,52 @@
-// === Module 18142: VoicePanelCard ===
+// === Module 18181: VoicePanelCard ===
 
-// Module 18142 (VoicePanelCard)
+// Module 18181 (VoicePanelCard)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4883 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import spring from "spring" /* 5438 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
-import StreamActionCreators from "StreamActionCreators" /* 7660 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8522 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9799 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11808 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18076 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18145 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18146 */;
+import native from "native" /* 4886 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import spring from "spring" /* 5440 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
+import StreamActionCreators from "StreamActionCreators" /* 7663 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9815 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11832 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18111 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18184 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
-import SpeakingStore from "SpeakingStore" /* 6163 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import SpeakingStore from "SpeakingStore" /* 6165 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12817);
+const VoicePanelConstants = fn(12843);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12815).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18077).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12820).EDGE_GUTTER;
-const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
-const ParticipantTypes = fn(5174).ParticipantTypes;
-let SCALE_PHYSICS = fn(12818).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12841).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18112).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12846).EDGE_GUTTER;
+const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
+const ParticipantTypes = fn(5176).ParticipantTypes;
+let SCALE_PHYSICS = fn(12844).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(5147).Text);
+let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(5149).Text);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let tmp4 = fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.XXLARGE];
+let tmp4 = fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.XXLARGE];
 let obj = {};
 let merged = Object.assign(SCALE_PHYSICS);
 obj.stiffness = 150;
 let closure_26 = { duration: 200 };
 let closure_27 = { duration: 0 };
 let c28 = 0.75;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { positionWrapper: null, userRoundedCard: null, nonUserRoundedCard: null, blackBackground: null, selfStreamFocusedSubtitle: null, avatarImageMaskStyles: null, avatarPlaceholder: null, image: null, speakingIndicatorWrapper: null, speakingIndicatorUnderlay: null, speakingIndicatorBar: null };
 const rect = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK };
 obj2.positionWrapper = rect;
@@ -78,26 +78,45 @@ let __initData = { code: "function VoicePanelCardTsx1(){const{isFocused,sharedCo
 const __initData2 = { code: "function VoicePanelCardTsx2(){const{isFocused,sharedCoords}=this.__closure;return{textAlign:'center',paddingHorizontal:16,paddingVertical:isFocused?0:16,width:isFocused?'auto':sharedCoords.get().width};}" };
 let ReactCompilerGating = fn(558);
 const defaultBorderRadius2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SelfStreamCard(sharedCoords) {
-  const cResult = sharedCoords(isFocused[21]).c(18);
+  const cResult = sharedCoords(isFocused[21]).c(23);
   sharedCoords = sharedCoords.sharedCoords;
   const stream = sharedCoords.stream;
   isFocused = sharedCoords.isFocused;
   const tmp4 = closure_29();
-  if (cResult[0] !== stream) {
-    const fn = function s() {
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [ApplicationStreamingStore];
+    const fn = function n() {
+      currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+      let state;
+      if (currentUserActiveStream != null) {
+        state = currentUserActiveStream.state;
+      }
+      return state === constants.PAUSED;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp5 = items;
+    tmp6 = fn;
+  } else {
+    [tmp5, tmp6] = cResult;
+  }
+  obj = sharedCoords(isFocused[21]);
+  const stateFromStores = sharedCoords(isFocused[22]).useStateFromStores(tmp5, tmp6);
+  if (cResult[2] !== stream) {
+    const fn2 = function p() {
       if (null != stream) {
         obj = StreamActionCreators;
         obj.stopStream(StreamKeyUtils.encodeStreamKey(tmp));
       }
     };
-    cResult[0] = stream;
-    cResult[1] = fn;
-    let tmp5 = fn;
+    cResult[2] = stream;
+    cResult[3] = fn2;
+    let tmp9 = fn2;
   } else {
-    tmp5 = cResult[1];
+    tmp9 = cResult[3];
   }
-  obj = sharedCoords(isFocused[21]);
-  const fn2 = function h() {
+  const tmpResult = sharedCoords(isFocused[22]);
+  const fn3 = function f() {
     let num = 16;
     if (isFocused) {
       num = 0;
@@ -110,108 +129,143 @@ const defaultBorderRadius2 = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     obj.width = str;
     return obj;
   };
-  fn2.__closure = { isFocused, sharedCoords };
-  fn2.__workletHash = 1330083185339;
-  fn2.__initData = __initData;
-  const animatedStyle = sharedCoords(isFocused[14]).useAnimatedStyle(fn2);
-  if (cResult[2] === isFocused) {
-    if (cResult[3] === tmp4.blackBackground) {
-      let tmp8 = cResult[4];
+  fn3.__closure = { isFocused, sharedCoords };
+  fn3.__workletHash = 1330083185339;
+  fn3.__initData = __initData;
+  const animatedStyle = sharedCoords(isFocused[14]).useAnimatedStyle(fn3);
+  if (cResult[4] === isFocused) {
+    if (cResult[5] === tmp4.blackBackground) {
+      let tmp11 = cResult[6];
     }
     let str = "text-sm/semibold";
     if (isFocused) {
       str = "text-lg/semibold";
     }
-    const _Symbol = Symbol;
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(tmp2[25]).intl;
-      const stringResult = intl.string(tmp(tmp2[25]).t.gMOwov);
-      cResult[5] = stringResult;
-      let tmp13 = stringResult;
-    } else {
-      tmp13 = cResult[5];
-    }
-    if (cResult[6] === str) {
-      if (cResult[7] === animatedStyle) {
-        let tmp15 = cResult[8];
+    if (cResult[7] !== stateFromStores) {
+      const intl = tmp(tmp2[26]).intl;
+      const string = intl.string;
+      let t = tmp(tmp2[26]).t;
+      if (stateFromStores) {
+        t = t["5q17w5"];
+        let stringResult = string(t);
+      } else {
+        stringResult = string(t.gMOwov);
       }
-      if (cResult[9] === tmp5) {
-        if (cResult[10] === isFocused) {
-          if (cResult[11] === tmp4.selfStreamFocusedSubtitle) {
+      cResult[7] = stateFromStores;
+      cResult[8] = stringResult;
+    } else {
+      if (cResult[9] === str) {
+        if (cResult[10] === tmp15) {
+          if (cResult[11] === animatedStyle) {
             let tmp19 = cResult[12];
           }
-          if (cResult[13] === tmp4.nonUserRoundedCard) {
-            if (cResult[14] === tmp8) {
-              if (cResult[15] === tmp15) {
-                if (cResult[16] === tmp19) {
-                  let tmp24 = cResult[17];
+          if (cResult[13] === tmp9) {
+            if (cResult[14] === isFocused) {
+              if (cResult[15] === stateFromStores) {
+                if (cResult[16] === tmp4.selfStreamFocusedSubtitle) {
+                  let tmp23 = cResult[17];
                 }
-                return tmp24;
+                if (cResult[18] === tmp4.nonUserRoundedCard) {
+                  if (cResult[19] === tmp11) {
+                    if (cResult[20] === tmp19) {
+                      if (cResult[21] === tmp23) {
+                        let tmp31 = cResult[22];
+                      }
+                      return tmp31;
+                    }
+                  }
+                }
+                let obj2 = { style: tmp4.nonUserRoundedCard, children: null };
+                const items1 = [tmp11, tmp19, tmp23];
+                obj2.children = items1;
+                const tmp34 = closure_22(stream(tmp2[25]), obj2);
+                cResult[18] = tmp4.nonUserRoundedCard;
+                cResult[19] = tmp11;
+                cResult[20] = tmp19;
+                cResult[21] = tmp23;
+                cResult[22] = tmp34;
+                tmp31 = tmp34;
               }
             }
           }
-          let obj2 = { style: tmp7, children: null };
-          const items = [tmp8, tmp15, tmp19];
-          obj2.children = items;
-          const tmp27 = closure_22(stream(tmp2[24]), obj2);
-          cResult[13] = tmp4.nonUserRoundedCard;
-          cResult[14] = tmp8;
-          cResult[15] = tmp15;
-          cResult[16] = tmp19;
-          cResult[17] = tmp27;
-          tmp24 = tmp27;
+          if (!isFocused) {
+            cResult[13] = tmp9;
+            cResult[14] = isFocused;
+            cResult[15] = stateFromStores;
+            cResult[16] = tmp4.selfStreamFocusedSubtitle;
+            cResult[17] = null;
+            tmp23 = null;
+          } else {
+            let Text = tmp(tmp2[15]).Text;
+            let obj3 = { style: tmp4.selfStreamFocusedSubtitle, variant: "text-sm/medium", color: "text-overlay-light", children: null };
+            let string2 = tmp(tmp2[26]).intl;
+            let string3 = string2.string;
+            let t1 = tmp(tmp2[26]).t;
+            if (stateFromStores) {
+              let string3Result = string3(t1.LV1NSN);
+            } else {
+              string3Result = string3(t1.dKeLGt);
+            }
+            t1 = { children: null };
+            obj3.children = string3Result;
+            obj3 = [, ];
+            obj3[0] = closure_20(Text, obj3);
+            const obj4 = { size: "lg", variant: "primary-overlay", onPress: tmp9, text: null };
+            const intl2 = tmp(tmp2[26]).intl;
+            string2 = intl2.string;
+            string3 = string2(tmp(tmp2[26]).t.CpkXwZ);
+            obj4.text = string3;
+            Text = closure_20(tmp(tmp2[27]).Button, obj4);
+            obj3[1] = Text;
+            t1.children = obj3;
+            closure_22(closure_21, t1);
+            const tmp27Result = closure_20(Text, obj3);
+          }
         }
       }
-      let tmp20 = null;
-      if (isFocused) {
-        const obj3 = { children: null };
-        const obj4 = { style: tmp4.selfStreamFocusedSubtitle, variant: "text-sm/medium", color: "text-overlay-light", children: null };
-        const intl2 = tmp(tmp2[25]).intl;
-        obj4.children = intl2.string(tmp(tmp2[25]).t.dKeLGt);
-        const items1 = [closure_20(tmp(tmp2[15]).Text, obj4), ];
-        const obj5 = { size: "lg", variant: "primary-overlay", onPress: tmp5, text: null };
-        const intl3 = tmp(tmp2[25]).intl;
-        obj5.text = intl3.string(tmp(tmp2[25]).t.CpkXwZ);
-        items1[1] = closure_20(tmp(tmp2[26]).Button, obj5);
-        obj3.children = items1;
-        tmp20 = closure_22(closure_21, obj3);
-      }
-      cResult[9] = tmp5;
-      cResult[10] = isFocused;
-      cResult[11] = tmp4.selfStreamFocusedSubtitle;
-      cResult[12] = tmp20;
-      tmp19 = tmp20;
+      const obj5 = { style: animatedStyle, variant: str, color: "text-overlay-light", children: cResult[8] };
+      const tmp22 = closure_20(closure_23, obj5);
+      cResult[9] = str;
+      cResult[10] = cResult[8];
+      cResult[11] = animatedStyle;
+      cResult[12] = tmp22;
+      tmp19 = tmp22;
     }
-    const obj6 = { style: animatedStyle, variant: str, color: "text-overlay-light", children: tmp13 };
-    const tmp18 = closure_20(closure_23, obj6);
-    cResult[6] = str;
-    cResult[7] = animatedStyle;
-    cResult[8] = tmp18;
-    tmp15 = tmp18;
   }
-  let tmp9 = isFocused;
+  let tmp12 = isFocused;
   if (isFocused) {
-    const obj7 = { style: tmp4.blackBackground };
-    tmp9 = closure_20(stream(tmp2[24]), obj7);
+    const obj6 = { style: tmp4.blackBackground };
+    tmp12 = closure_20(stream(tmp2[25]), obj6);
   }
-  cResult[2] = isFocused;
-  cResult[3] = tmp4.blackBackground;
-  cResult[4] = tmp9;
-  tmp8 = tmp9;
-  const tmpResult = sharedCoords(isFocused[14]);
+  cResult[4] = isFocused;
+  cResult[5] = tmp4.blackBackground;
+  cResult[6] = tmp12;
+  tmp11 = tmp12;
+  const tmpResult2 = sharedCoords(isFocused[14]);
 }) : (function SelfStreamCard(sharedCoords) {
   sharedCoords = sharedCoords.sharedCoords;
   const stream = sharedCoords.stream;
   const isFocused = sharedCoords.isFocused;
   const tmp = closure_29();
-  const items = [stream];
-  const callback = noop.useCallback(() => {
+  let stringResult = isFocused;
+  const items = [ApplicationStreamingStore];
+  const stateFromStores = sharedCoords(isFocused[22]).useStateFromStores(items, () => {
+    currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+    let state;
+    if (currentUserActiveStream != null) {
+      state = currentUserActiveStream.state;
+    }
+    return state === constants.PAUSED;
+  });
+  const items1 = [stream];
+  let string = noop.useCallback(() => {
     if (null != stream) {
       obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(tmp));
     }
-  }, items);
-  const fn = function l() {
+  }, items1);
+  obj = sharedCoords(isFocused[22]);
+  const fn = function c() {
     let num = 16;
     if (isFocused) {
       num = 0;
@@ -228,41 +282,62 @@ const defaultBorderRadius2 = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   fn.__workletHash = 4905346923512;
   fn.__initData = __initData2;
   const animatedStyle = sharedCoords(isFocused[14]).useAnimatedStyle(fn);
-  let obj2 = { style: tmp.nonUserRoundedCard, children: null };
+  const obj3 = { style: tmp.nonUserRoundedCard, children: null };
   let tmp9 = isFocused;
-  obj = sharedCoords(isFocused[14]);
+  let obj2 = sharedCoords(isFocused[14]);
   const tmp7 = stream;
   if (isFocused) {
-    const obj3 = { style: tmp.blackBackground };
-    tmp9 = closure_20(tmp7(tmp4[24]), obj3);
+    const obj4 = { style: tmp.blackBackground };
+    tmp9 = closure_20(tmp7(stringResult[25]), obj4);
   }
-  const items1 = [tmp9, , ];
-  const obj4 = { style: animatedStyle, variant: null, color: "text-overlay-light", children: null };
+  const items2 = [tmp9, , ];
+  const obj5 = { style: animatedStyle, variant: null, color: "text-overlay-light", children: null };
   let str = "text-sm/semibold";
   if (isFocused) {
     str = "text-lg/semibold";
   }
-  obj4.variant = str;
-  const intl = tmp3(tmp4[25]).intl;
-  obj4.children = intl.string(sharedCoords(isFocused[25]).t.gMOwov);
-  items1[1] = closure_20(closure_23, obj4);
-  let tmp6Result = null;
-  if (isFocused) {
-    const obj5 = { children: null };
-    const obj6 = { style: tmp.selfStreamFocusedSubtitle, variant: "text-sm/medium", color: "text-overlay-light", children: null };
-    const intl2 = tmp3(tmp4[25]).intl;
-    obj6.children = intl2.string(tmp3(tmp4[25]).t.dKeLGt);
-    const items2 = [closure_20(tmp3(tmp4[15]).Text, obj6), ];
-    const obj7 = { size: "lg", variant: "primary-overlay", onPress: callback, text: null };
-    const intl3 = tmp3(tmp4[25]).intl;
-    obj7.text = intl3.string(tmp3(tmp4[25]).t.CpkXwZ);
-    items2[1] = closure_20(tmp3(tmp4[26]).Button, obj7);
-    obj5.children = items2;
-    tmp6Result = closure_22(closure_21, obj5);
+  obj5.variant = str;
+  const intl = tmp2(stringResult[26]).intl;
+  const string2 = intl.string;
+  const t = tmp2(stringResult[26]).t;
+  if (stateFromStores) {
+    let string2Result = string2(t["5q17w5"]);
+  } else {
+    string2Result = string2(t.gMOwov);
   }
-  items1[2] = tmp6Result;
-  obj2.children = items1;
-  return closure_22(stream(isFocused[24]), obj2);
+  obj5.children = string2Result;
+  items2[1] = closure_20(closure_23, obj5);
+  if (!isFocused) {
+    items2[2] = null;
+    obj3.children = items2;
+    return closure_22(tmp8, obj3);
+  } else {
+    let Text = tmp2(stringResult[15]).Text;
+    let obj6 = { style: tmp.selfStreamFocusedSubtitle, variant: "text-sm/medium", color: "text-overlay-light", children: null };
+    const intl2 = tmp2(stringResult[26]).intl;
+    let intl3 = intl2.string;
+    let t1 = tmp2(stringResult[26]).t;
+    if (stateFromStores) {
+      let intl3Result = intl3(t1.LV1NSN);
+    } else {
+      intl3Result = intl3(t1.dKeLGt);
+    }
+    t1 = { children: null };
+    obj6.children = intl3Result;
+    obj6 = [, ];
+    obj6[0] = closure_20(Text, obj6);
+    const obj7 = { size: "lg", variant: "primary-overlay", onPress: string, text: null };
+    intl3 = tmp2(stringResult[26]).intl;
+    string = intl3.string;
+    stringResult = string(tmp2(stringResult[26]).t.CpkXwZ);
+    obj7.text = stringResult;
+    Text = closure_20(tmp2(stringResult[27]).Button, obj7);
+    obj6[1] = Text;
+    t1.children = obj6;
+    closure_22(closure_21, t1);
+    const tmp11Result = closure_20(Text, obj6);
+  }
+  tmp8 = stream(isFocused[25]);
 });
 const __initData3 = { code: "function VoicePanelCardTsx3(){const{focused,id}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;}" };
 __initData = { code: "function VoicePanelCardTsx4(isFocused_0,lastIsFocused){const{runOnJS,setIsFocused}=this.__closure;if(isFocused_0!==lastIsFocused){runOnJS(setIsFocused)(isFocused_0);}}" };
@@ -275,7 +350,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const userId = id.userId;
   ({ streamId, streamGuildId } = id);
   ({ userNick, sharedCoords, isScrollVisible, layout } = id);
-  const context = setFocused.useContext(userId(streamGuildId[27]));
+  const context = setFocused.useContext(userId(streamGuildId[28]));
   const focused = context.focused;
   ({ mode, setFocused } = context);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -290,7 +365,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp8 = cResult[3];
       let tmp9 = cResult[4];
     }
-    const stateFromStoresObject = tmp(streamGuildId[28]).useStateFromStoresObject(first, tmp8, tmp9);
+    const stateFromStoresObject = tmp(streamGuildId[22]).useStateFromStoresObject(first, tmp8, tmp9);
     const stream = stateFromStoresObject.stream;
     const activeStream = stateFromStoresObject.activeStream;
     if (cResult[5] === setFocused) {
@@ -428,8 +503,8 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
               const _Symbol = Symbol;
               if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj8 = { title: null };
-                const intl3 = tmp(streamGuildId[25]).intl;
-                obj8.title = intl3.string(tmp(streamGuildId[25]).t["pdFFK+"]);
+                const intl3 = tmp(streamGuildId[26]).intl;
+                obj8.title = intl3.string(tmp(streamGuildId[26]).t["pdFFK+"]);
                 cResult[24] = closure_20(tmp(streamGuildId[33]).StreamTextOverlay, obj8);
                 class G {
                   constructor() {
@@ -448,18 +523,18 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
               if (activeStream.state === ApplicationStreamStates.PAUSED) {
                 const _Symbol2 = Symbol;
                 if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl = tmp(streamGuildId[25]).intl;
-                  const stringResult = intl.string(tmp(streamGuildId[25]).t["5q17w5"]);
+                  const intl = tmp(streamGuildId[26]).intl;
+                  const stringResult = intl.string(tmp(streamGuildId[26]).t["5q17w5"]);
                   cResult[25] = stringResult;
                   let tmp22 = stringResult;
                 } else {
                   tmp22 = cResult[25];
                 }
                 if (cResult[26] !== userNick) {
-                  const intl2 = tmp(streamGuildId[25]).intl;
+                  const intl2 = tmp(streamGuildId[26]).intl;
                   const obj9 = { username: userNick };
                   cResult[26] = userNick;
-                  cResult[27] = intl2.formatToPlainString(tmp(streamGuildId[25]).t.meVVlb, obj9);
+                  cResult[27] = intl2.formatToPlainString(tmp(streamGuildId[26]).t.meVVlb, obj9);
                   class G {
                     constructor() {
                       value = focused.get();
@@ -470,7 +545,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       return id === id;
                     }
                   }
-                  const formatToPlainStringResult = intl2.formatToPlainString(tmp(streamGuildId[25]).t.meVVlb, obj9);
+                  const formatToPlainStringResult = intl2.formatToPlainString(tmp(streamGuildId[26]).t.meVVlb, obj9);
                 }
                 if (cResult[28] !== tmp24) {
                   const obj10 = { title: tmp22, subtext: tmp24 };
@@ -496,11 +571,11 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 streamId = null;
               }
               if (cResult[30] !== activeStream) {
-                const encodeStreamKeyResult = tmp(streamGuildId[23]).encodeStreamKey(activeStream);
+                const encodeStreamKeyResult = tmp(streamGuildId[24]).encodeStreamKey(activeStream);
                 cResult[30] = activeStream;
                 cResult[31] = encodeStreamKeyResult;
                 let tmp34 = encodeStreamKeyResult;
-                const tmpResult4 = tmp(streamGuildId[23]);
+                const tmpResult4 = tmp(streamGuildId[24]);
               } else {
                 tmp34 = cResult[31];
               }
@@ -638,7 +713,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[6] = stream;
     cResult[7] = fn2;
     tmp11 = fn2;
-    const tmpResult = tmp(streamGuildId[28]);
+    const tmpResult = tmp(streamGuildId[22]);
   }
   const fn = function u() {
     return { stream: ApplicationStreamingStore.getStreamForUser(userId, streamGuildId), activeStream: ApplicationStreamingStore.getActiveStreamForUser(userId, streamGuildId) };
@@ -659,12 +734,12 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   let setFocused;
   c6 = undefined;
   ({ userNick, isSelf, isScrollVisible } = id);
-  const context = setFocused.useContext(userId(streamGuildId[27]));
+  const context = setFocused.useContext(userId(streamGuildId[28]));
   const focused = context.focused;
   setFocused = context.setFocused;
   const items = [c6];
   const items1 = [userId, streamGuildId];
-  const stateFromStoresObject = id(streamGuildId[28]).useStateFromStoresObject(items, () => ({ stream: ApplicationStreamingStore.getStreamForUser(userId, streamGuildId), activeStream: ApplicationStreamingStore.getActiveStreamForUser(userId, streamGuildId) }), items1);
+  const stateFromStoresObject = id(streamGuildId[22]).useStateFromStoresObject(items, () => ({ stream: ApplicationStreamingStore.getStreamForUser(userId, streamGuildId), activeStream: ApplicationStreamingStore.getActiveStreamForUser(userId, streamGuildId) }), items1);
   const stream = stateFromStoresObject.stream;
   const activeStream = stateFromStoresObject.activeStream;
   const items2 = [stream, setFocused];
@@ -674,7 +749,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       setFocused(StreamKeyUtils.encodeStreamKey(stream));
     }
   }, items2);
-  obj = id(streamGuildId[28]);
+  obj = id(streamGuildId[22]);
   [tmp8, tmp9] = focused(setFocused.useState(false), 2);
   c6 = tmp9;
   const tmp7 = focused(setFocused.useState(false), 2);
@@ -723,18 +798,18 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         } else {
           if (activeStream.state === ApplicationStreamStates.RECONNECTING) {
             const obj7 = { title: null };
-            const intl = tmp4(streamGuildId[25]).intl;
-            obj7.title = intl.string(tmp4(streamGuildId[25]).t["pdFFK+"]);
+            const intl = tmp4(streamGuildId[26]).intl;
+            obj7.title = intl.string(tmp4(streamGuildId[26]).t["pdFFK+"]);
             let tmp15 = closure_20(tmp4(streamGuildId[33]).StreamTextOverlay, obj7);
           } else {
             tmp15 = null;
             if (activeStream.state === ApplicationStreamStates.PAUSED) {
               const obj8 = { title: null, subtext: null };
-              const intl2 = tmp4(streamGuildId[25]).intl;
-              obj8.title = intl2.string(tmp4(streamGuildId[25]).t["5q17w5"]);
-              const intl3 = tmp4(streamGuildId[25]).intl;
+              const intl2 = tmp4(streamGuildId[26]).intl;
+              obj8.title = intl2.string(tmp4(streamGuildId[26]).t["5q17w5"]);
+              const intl3 = tmp4(streamGuildId[26]).intl;
               const obj9 = { username: userNick };
-              obj8.subtext = intl3.formatToPlainString(tmp4(streamGuildId[25]).t.meVVlb, obj9);
+              obj8.subtext = intl3.formatToPlainString(tmp4(streamGuildId[26]).t.meVVlb, obj9);
               tmp15 = closure_20(tmp4(streamGuildId[33]).StreamTextOverlay, obj8);
             }
           }
@@ -746,7 +821,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           obj10.streamId = streamId;
           obj10.userId = userId;
           const tmpResult3 = tmp(streamGuildId[34]);
-          obj10.streamKey = tmp4(streamGuildId[23]).encodeStreamKey(activeStream);
+          obj10.streamKey = tmp4(streamGuildId[24]).encodeStreamKey(activeStream);
           obj10.isScrollVisible = isScrollVisible;
           obj10.videoSpinnerContext = tmp4(streamGuildId[35]).VideoSpinnerContext.REMOTE_STREAM;
           obj10.sharedCoords = sharedCoords;
@@ -773,7 +848,7 @@ let closure_42 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ layout, avatarURI, avatarDecoration, layoutPhysics } = isRinging);
   ({ userId, guildId } = isRinging);
   let image = closure_29();
-  mode = noop.useContext(layoutPhysics(mode[27])).mode;
+  mode = noop.useContext(layoutPhysics(mode[28])).mode;
   isRinging(mode[36]);
   if (cResult[0] === guildId) {
     if (cResult[1] === userId) {
@@ -928,8 +1003,8 @@ let closure_42 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 return obj1;
               }
             }
-            let tmp24 = closure_20(layoutPhysics(tmp2[24]), obj6);
-            const tmp26 = closure_20(layoutPhysics(tmp2[24]), obj6);
+            let tmp24 = closure_20(layoutPhysics(tmp2[25]), obj6);
+            const tmp26 = closure_20(layoutPhysics(tmp2[25]), obj6);
           } else {
             tmp24 = cResult[12];
           }
@@ -1018,7 +1093,7 @@ let closure_42 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   let mode;
   ({ userId, guildId } = isRinging);
   const tmp = closure_29();
-  mode = noop.useContext(layoutPhysics(mode[27])).mode;
+  mode = noop.useContext(layoutPhysics(mode[28])).mode;
   const dominantColorFromImage = isRinging(mode[36]).useDominantColorFromImage(avatarURI);
   const tmp6 = layoutPhysics(mode[37])({ userId, guildId, location: "VoicePanelCard-native" });
   let str = "transparent";
@@ -1071,7 +1146,7 @@ let closure_42 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const items1 = [tmp12, ];
   if (null == cachedSourceFromURI) {
     const obj6 = { style: tmp.avatarPlaceholder };
-    let tmp21Result2 = closure_20(layoutPhysics(tmp3[24]), obj6);
+    let tmp21Result2 = closure_20(layoutPhysics(tmp3[25]), obj6);
   } else {
     let prop;
     if (null == avatarDecoration) {
@@ -1109,7 +1184,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
   ({ userId, isSelf } = id);
   speaking = id.speaking;
   const layout = id.layout;
-  const context = focused.useContext(isSelf(speaking[27]));
+  const context = focused.useContext(isSelf(speaking[28]));
   const mode = context.mode;
   focused = context.focused;
   const guildId = context.guildId;
@@ -1378,7 +1453,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
   const speaking = userId.speaking;
   const layout = userId.layout;
   let focused;
-  const context = focused.useContext(isSelf(speaking[27]));
+  const context = focused.useContext(isSelf(speaking[28]));
   const mode = context.mode;
   focused = context.focused;
   const tmp2 = closure_29();
@@ -1914,7 +1989,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
 }
 let obj4 = { position: "relative", borderRadius: nativeDefault.radii.round, overflow: "hidden" };
 let obj8 = {};
-layoutTransitionFunction.__closure = { withSpring: fn(5438).withSpring };
+layoutTransitionFunction.__closure = { withSpring: fn(5440).withSpring };
 layoutTransitionFunction.__workletHash = 14607823135698;
 layoutTransitionFunction.__initData = { code: "function layoutTransitionFunction_VoicePanelCardTsx25(values,physics,scale,lastScale,disableAnimation=false){const{withSpring}=this.__closure;const scaleAdjustment=scale.get()/lastScale.get();const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth*scaleAdjustment,height:values.currentHeight*scaleAdjustment},callback:function(){lastScale.set(scale.get());}};}" };
 const __initData24 = { code: "function VoicePanelCardTsx26(){const{id,pipState,mode,VoicePanelModes}=this.__closure;if(id===pipState.id&&mode.get()===VoicePanelModes.PIP){return true;}return false;}" };
@@ -1943,7 +2018,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   ({ transitionState, sharedVisible } = coords);
   const analyticsLocations = coords(id[48])().analyticsLocations;
   derivedValue2();
-  const context = isScrollVisible.useContext(coords(id[27]));
+  const context = isScrollVisible.useContext(coords(id[28]));
   const channelId = context.channelId;
   const connected = context.connected;
   const contentDimensions = context.contentDimensions;
@@ -2526,7 +2601,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   let sharedValue1;
   ({ children, transitionState } = cleanUp);
   const analyticsLocations = coords(id[48])().analyticsLocations;
-  const context = isScrollVisible.useContext(coords(id[27]));
+  const context = isScrollVisible.useContext(coords(id[28]));
   const channelId = context.channelId;
   const connected = context.connected;
   const contentDimensions = context.contentDimensions;
@@ -2948,7 +3023,7 @@ const __initData37 = { code: "function layoutTransition_VoicePanelCardTsx41(valu
 const __initData38 = { code: "function VoicePanelCardTsx42(){const{EDGE_GUTTER,coords,scrollPosition,windowDimensions}=this.__closure;const yPos=EDGE_GUTTER+coords.get().y;return yPos>scrollPosition.get()-coords.get().height&&yPos<scrollPosition.get()+windowDimensions.get().height;}" };
 let closure_80 = { code: "function layoutTransition_VoicePanelCardTsx43(values,disableAnimation=false){const{layoutTransitionFunction,physics,pipState,lastPipScale}=this.__closure;return layoutTransitionFunction(values,physics,pipState.scale,lastPipScale,disableAnimation);}" };
 ReactCompilerGating = fn(558);
-let obj9 = { withSpring: fn(5438).withSpring };
+let obj9 = { withSpring: fn(5440).withSpring };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
 
@@ -2956,7 +3031,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = scrollPosition(id2[21]).c(81);
   ({ item, transitionState, cleanUp } = arg0);
   const id = item.id;
-  const context = noop.useContext(windowDimensions(id2[27]));
+  const context = noop.useContext(windowDimensions(id2[28]));
   ({ guildId, isCall, mountedCards, scrollPosition } = context);
   windowDimensions = context.windowDimensions;
   ({ channelId, layoutManager } = context);
@@ -2992,7 +3067,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   obj = scrollPosition(id2[21]);
   const obj2 = noop;
-  const stateFromStores = scrollPosition(id2[28]).useStateFromStores(tmp9, tmp10);
+  const stateFromStores = scrollPosition(id2[22]).useStateFromStores(tmp9, tmp10);
   if (cResult[4] !== tmp6) {
     const tmp14 = scrollPosition(tmp2[50]).isStableUserParticipant(tmp6) && tmp6.ringing;
     class N {
@@ -3014,7 +3089,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   let type1;
-  const tmpResult10 = scrollPosition(id2[28]);
+  const tmpResult10 = scrollPosition(id2[22]);
   if (tmp6 != null) {
     type1 = tmp6.type;
   }
@@ -3409,7 +3484,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let pIPState;
   let sharedValue2;
   const id = item.id;
-  const context = cardLayoutCoordsSubscription.useContext(windowDimensions(id2[27]));
+  const context = cardLayoutCoordsSubscription.useContext(windowDimensions(id2[28]));
   ({ guildId, isCall, mountedCards, scrollPosition } = context);
   windowDimensions = context.windowDimensions;
   ({ channelId, layoutManager } = context);
@@ -3422,8 +3497,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   id2 = tmp6.user.id;
   obj2 = scrollPosition(id2[50]);
   const items = [RTCConnectionStore];
-  const stateFromStores = scrollPosition(id2[28]).useStateFromStores(items, () => connected.isConnected());
-  const tmp5Result = scrollPosition(id2[28]);
+  const stateFromStores = scrollPosition(id2[22]).useStateFromStores(items, () => connected.isConnected());
+  const tmp5Result = scrollPosition(id2[22]);
   const tmp8 = scrollPosition(id2[50]).isStableUserParticipant(tmp4) && tmp4.ringing;
   let str = "";
   if (null != tmp4) {

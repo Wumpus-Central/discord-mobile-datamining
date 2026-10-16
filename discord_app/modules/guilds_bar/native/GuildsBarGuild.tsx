@@ -1,31 +1,31 @@
-// === Module 17354: GuildsBarGuild ===
+// === Module 17388: GuildsBarGuild ===
 
-// Module 17354 (GuildsBarGuild)
+// Module 17388 (GuildsBarGuild)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import spring from "spring" /* 5438 */;
-import GuildIcon from "GuildIcon" /* 6379 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17324 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17347 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 17374 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import spring from "spring" /* 5440 */;
+import GuildIcon from "GuildIcon" /* 6381 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 17358 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17381 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 17408 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6181 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6300 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import SortedGuildStore from "SortedGuildStore" /* 6179 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6183 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6302 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import SortedGuildStore from "SortedGuildStore" /* 6181 */;
 
 require = fn;
-const GuildRecord = fn(2083);
+const GuildRecord = fn(2086);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(17323).useItemDragState;
-const TRANSITION_PHYSICS = fn(17320).TRANSITION_PHYSICS;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const useItemDragState = fn(17357).useItemDragState;
+const TRANSITION_PHYSICS = fn(17354).TRANSITION_PHYSICS;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;

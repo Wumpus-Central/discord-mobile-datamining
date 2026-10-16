@@ -1,13 +1,14 @@
-// === Module 8333: GuildSpaceSystemMessage ===
+// === Module 8338: GuildSpaceSystemMessage ===
 
-// Module 8333 (GuildSpaceSystemMessage)
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import _modDef2472 from "module_2472" /* 2472 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
-import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 8334 */;
+// Module 8338 (GuildSpaceSystemMessage)
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import _modDef2475 from "module_2475" /* 2475 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8201 */;
+import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 8339 */;
+import GuildSpaceMusicSystemMessage from "GuildSpaceMusicSystemMessage" /* 8341 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import UserStore from "UserStore" /* 1390 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const size = fn(2);
@@ -31,43 +32,52 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
     if (0 !== substr.length) {
       if (diff > 0) {
         const channel = ChannelStore.getChannel(message.channel_id);
-        [tmp18, tmp19] = substr;
-        const tmp17 = _slicedToArray(substr, 2);
-        const userAuthorWithProcessedColor = string(8196).getUserAuthorWithProcessedColor(tmp18, channel);
-        const stringResult = string(8196);
-        const userAuthorWithProcessedColor1 = string(8196).getUserAuthorWithProcessedColor(tmp19, channel);
-        const intl2 = string(1126).intl;
-        let tmp11 = importDefault;
-        const obj2 = { displayCount: substr.length, username: userAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, additionalCount: null };
-        const obj3 = { userId: tmp18.id, message, author: userAuthorWithProcessedColor, roleStyle };
-        obj2.usernameOnClick = formatUsernameOnClickDefault(obj3);
-        obj2.username2 = userAuthorWithProcessedColor1.nick;
-        let tmp8;
-        if (null != tmp19) {
-          const obj4 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp8 = tmp11(8198)(obj4);
+        [tmp21, tmp22] = substr;
+        const tmp20 = _slicedToArray(substr, 2);
+        const userAuthorWithProcessedColor = string(8199).getUserAuthorWithProcessedColor(tmp21, channel);
+        const stringResult = string(8199);
+        const userAuthorWithProcessedColor1 = string(8199).getUserAuthorWithProcessedColor(tmp22, channel);
+        const intl2 = string(1128).intl;
+        let tmp14 = importDefault;
+        const obj3 = { displayCount: substr.length, username: userAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, additionalCount: null };
+        const obj4 = { userId: tmp21.id, message, author: userAuthorWithProcessedColor, roleStyle };
+        obj3.usernameOnClick = formatUsernameOnClickDefault(obj4);
+        obj3.username2 = userAuthorWithProcessedColor1.nick;
+        let tmp11;
+        if (null != tmp22) {
+          const obj5 = { userId: tmp22.id, message, author: userAuthorWithProcessedColor1, roleStyle };
+          tmp11 = tmp14(8201)(obj5);
         }
-        obj2.username2OnClick = tmp8;
-        obj2.additionalCount = diff;
-        let formatToPartsResult = intl2.formatToParts(_modDef2472.zUiZPF, obj2);
-        const stringResult1 = string(8196);
+        obj3.username2OnClick = tmp11;
+        obj3.additionalCount = diff;
+        let formatToPartsResult = intl2.formatToParts(_modDef2475.zUiZPF, obj3);
+        const stringResult1 = string(8199);
       }
-      const obj5 = { content: formatToPartsResult };
-      merged = Object.assign(tmp11(8200)(message));
+      const obj6 = { content: formatToPartsResult };
+      merged = Object.assign(tmp14(8203)(message));
     }
-    const intl = string(1126).intl;
+    const intl = string(1128).intl;
     string = intl.string;
-    formatToPartsResult = string(_modDef2472.Sxxqdx);
-    tmp11 = importDefault;
+    formatToPartsResult = string(_modDef2475.Sxxqdx);
+    tmp14 = importDefault;
   } else {
-    const guildSpaceData2 = message.message.guildSpaceData;
+    const guildSpaceData3 = message.message.guildSpaceData;
     let leaderboard;
-    if (guildSpaceData2 != null) {
-      leaderboard = guildSpaceData2.leaderboard;
+    if (guildSpaceData3 != null) {
+      leaderboard = guildSpaceData3.leaderboard;
     }
-    let guildSpaceLeaderboardSystemMessage = null;
     if (null != leaderboard) {
-      guildSpaceLeaderboardSystemMessage = GuildSpaceLeaderboardSystemMessage.createGuildSpaceLeaderboardSystemMessage(message);
+      let guildSpaceLeaderboardSystemMessage = GuildSpaceLeaderboardSystemMessage.createGuildSpaceLeaderboardSystemMessage(message);
+    } else {
+      const guildSpaceData2 = message.message.guildSpaceData;
+      let music;
+      if (guildSpaceData2 != null) {
+        music = guildSpaceData2.music;
+      }
+      guildSpaceLeaderboardSystemMessage = null;
+      if (null != music) {
+        guildSpaceLeaderboardSystemMessage = GuildSpaceMusicSystemMessage.createGuildSpaceMusicSystemMessage(message);
+      }
     }
     return guildSpaceLeaderboardSystemMessage;
   }

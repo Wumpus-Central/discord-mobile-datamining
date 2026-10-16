@@ -1,11 +1,11 @@
-// === Module 15714: AuthSessionsUtils ===
+// === Module 15747: AuthSessionsUtils ===
 
-// Module 15714 (AuthSessionsUtils)
-import util from "util" /* 1126 */;
-import _modDef4758 from "module_4758" /* 4758 */;
+// Module 15747 (AuthSessionsUtils)
+import util from "util" /* 1128 */;
+import _modDef4761 from "module_4761" /* 4761 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AuthSessionsStore from "AuthSessionsStore" /* 15715 */;
+import AuthSessionsStore from "AuthSessionsStore" /* 15748 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -89,8 +89,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef4758(arg0).fromNow();
-    const obj = _modDef4758(arg0);
+    stringResult = _modDef4761(arg0).fromNow();
+    const obj = _modDef4761(arg0);
   }
   return stringResult;
 };

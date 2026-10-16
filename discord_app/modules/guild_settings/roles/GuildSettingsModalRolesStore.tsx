@@ -1,14 +1,14 @@
-// === Module 18679: GuildSettingsModalRolesStore ===
+// === Module 18721: GuildSettingsModalRolesStore ===
 
-// Module 18679 (GuildSettingsModalRolesStore)
+// Module 18721 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import util from "util" /* 1126 */;
-import shared from "shared" /* 5025 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12975 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import util from "util" /* 1128 */;
+import shared from "shared" /* 5028 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13001 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 function handleGuildRoleCreateOrUpdate(arg0) {
@@ -17,7 +17,7 @@ function handleGuildRoleCreateOrUpdate(arg0) {
     c9 = sortedRoles.map((id) => id.id);
   }
 }
-const FormStates = fn(1085).FormStates;
+const FormStates = fn(1087).FormStates;
 let OPEN = FormStates.CLOSED;
 let c8 = false;
 let c9 = null;

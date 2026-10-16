@@ -1,10 +1,10 @@
-// === Module 17510: GuildDiscoveryCategoryActionCreators ===
+// === Module 17544: GuildDiscoveryCategoryActionCreators ===
 
-// Module 17510 (GuildDiscoveryCategoryActionCreators)
+// Module 17544 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17511 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17545 */;
 
 const require = globalThis.__r;
 
@@ -223,7 +223,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx");
 

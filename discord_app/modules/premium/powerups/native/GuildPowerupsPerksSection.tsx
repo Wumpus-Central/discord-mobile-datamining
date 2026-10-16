@@ -1,16 +1,16 @@
-// === Module 13153: GuildPowerupsPerksSection ===
+// === Module 13179: GuildPowerupsPerksSection ===
 
-// Module 13153 (GuildPowerupsPerksSection)
+// Module 13179 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import _modDef2600 from "module_2600" /* 2600 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 13136 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 13154 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 13156 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 13158 */;
+import util from "util" /* 1128 */;
+import _modDef2603 from "module_2603" /* 2603 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 13162 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 13180 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 13182 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 13184 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5151 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -28,10 +28,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { title: null, description: null };
-    const intl = tmp(1126).intl;
-    obj2.title = intl.string(_modDef2600.TV3Vm8);
-    const intl2 = tmp(1126).intl;
-    obj2.description = intl2.string(_modDef2600.STx9hp);
+    const intl = tmp(1128).intl;
+    obj2.title = intl.string(_modDef2603.TV3Vm8);
+    const intl2 = tmp(1128).intl;
+    obj2.description = intl2.string(_modDef2603.STx9hp);
     const tmp9 = closure_4(GuildPowerupsSectionHeaderDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
@@ -94,9 +94,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   let obj2 = { title: null, description: null };
   const tmp = closure_7();
   const intl = util.intl;
-  obj2.title = intl.string(_modDef2600.TV3Vm8);
+  obj2.title = intl.string(_modDef2603.TV3Vm8);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2600.STx9hp);
+  obj2.description = intl2.string(_modDef2603.STx9hp);
   const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2), ];
   items[1] = closure_4(View, {
     style: tmp.container,

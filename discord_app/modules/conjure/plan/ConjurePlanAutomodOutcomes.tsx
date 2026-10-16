@@ -1,10 +1,10 @@
-// === Module 12164: ConjurePlanAutomodOutcomes ===
+// === Module 12191: ConjurePlanAutomodOutcomes ===
 
-// Module 12164 (ConjurePlanAutomodOutcomes)
-import util from "util" /* 1126 */;
-import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2127 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5138 */;
+// Module 12191 (ConjurePlanAutomodOutcomes)
+import util from "util" /* 1128 */;
+import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2130 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;
@@ -17,28 +17,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862.Vi4cjL);
+      return intl.string(_modDef3865.Vi4cjL);
     },
     blockedStyle: false
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862.YdnZ8q);
+      return intl.string(_modDef3865.YdnZ8q);
     },
     blockedStyle: true
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862.QGrx9O);
+      return intl.string(_modDef3865.QGrx9O);
     },
     blockedStyle: true
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862.RGzFNK);
+      return intl.string(_modDef3865.RGzFNK);
     },
     blockedStyle: false
   }
@@ -47,21 +47,21 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862.YdnZ8q);
+      return intl.string(_modDef3865.YdnZ8q);
     },
     tone: "red"
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862["8ockl9"]);
+      return intl.string(_modDef3865["8ockl9"]);
     },
     tone: "blurple"
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3862.RGzFNK);
+      return intl.string(_modDef3865.RGzFNK);
     },
     tone: "green"
   }
@@ -87,26 +87,26 @@ export const planAutomodReasonText = function planAutomodReasonText(example) {
         const obj2 = { duration: tmp3 };
         formatToPlainStringResult = intl.formatToPlainString(util.t["3LYql6"], obj2);
       } else if (timeout_seconds % c6 === 0) {
-        const intl6 = EmoBD2(1126).intl;
-        EmoBD2 = EmoBD2(1126).t.EmoBD2;
+        const intl6 = EmoBD2(1128).intl;
+        EmoBD2 = EmoBD2(1128).t.EmoBD2;
         obj = { weeks: timeout_seconds / tmp8 };
         let formatToPlainStringResult1 = intl6.formatToPlainString(EmoBD2, obj);
       } else if (timeout_seconds % 86400 === 0) {
-        const intl5 = EmoBD2(1126).intl;
+        const intl5 = EmoBD2(1128).intl;
         const obj3 = { days: timeout_seconds / 86400 };
-        formatToPlainStringResult1 = intl5.formatToPlainString(EmoBD2(1126).t["k2UNz+"], obj3);
+        formatToPlainStringResult1 = intl5.formatToPlainString(EmoBD2(1128).t["k2UNz+"], obj3);
       } else if (timeout_seconds % 3600 === 0) {
-        const intl4 = EmoBD2(1126).intl;
+        const intl4 = EmoBD2(1128).intl;
         const obj4 = { hours: timeout_seconds / 3600 };
-        formatToPlainStringResult1 = intl4.formatToPlainString(EmoBD2(1126).t.xCjYxK, obj4);
+        formatToPlainStringResult1 = intl4.formatToPlainString(EmoBD2(1128).t.xCjYxK, obj4);
       } else if (timeout_seconds % 60 === 0) {
-        const intl3 = EmoBD2(1126).intl;
+        const intl3 = EmoBD2(1128).intl;
         const obj5 = { mins: timeout_seconds / 60 };
-        formatToPlainStringResult1 = intl3.formatToPlainString(EmoBD2(1126).t.opVZ9q, obj5);
+        formatToPlainStringResult1 = intl3.formatToPlainString(EmoBD2(1128).t.opVZ9q, obj5);
       } else {
-        const intl2 = EmoBD2(1126).intl;
+        const intl2 = EmoBD2(1128).intl;
         const obj6 = { secs: timeout_seconds };
-        formatToPlainStringResult1 = intl2.formatToPlainString(EmoBD2(1126).t["4zv/jq"], obj6);
+        formatToPlainStringResult1 = intl2.formatToPlainString(EmoBD2(1128).t["4zv/jq"], obj6);
       }
     }
   }

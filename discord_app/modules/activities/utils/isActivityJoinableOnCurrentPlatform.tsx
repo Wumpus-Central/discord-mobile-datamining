@@ -1,10 +1,10 @@
-// === Module 13976: isActivityJoinableOnCurrentPlatform ===
+// === Module 14008: isActivityJoinableOnCurrentPlatform ===
 
-// Module 13976 (isActivityJoinableOnCurrentPlatform)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import hasFlagDefault from "hasFlag" /* 7232 */;
-import Constants from "Constants" /* 1085 */;
+// Module 14008 (isActivityJoinableOnCurrentPlatform)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
+import hasFlagDefault from "hasFlag" /* 7234 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ActivityGamePlatforms: closure_4, ActivityTypes: hasOwnProperty } = Constants);

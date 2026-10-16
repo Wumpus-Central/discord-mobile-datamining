@@ -1,8 +1,8 @@
-// === Module 10329: GiftingBadgeIcon ===
+// === Module 10345: GiftingBadgeIcon ===
 
-// Module 10329 (GiftingBadgeIcon)
+// Module 10345 (GiftingBadgeIcon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5088 */;
+import FastImageDefault from "FastImage" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

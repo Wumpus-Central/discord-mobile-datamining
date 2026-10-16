@@ -1,10 +1,10 @@
-// === Module 12478: ClockWarningIcon ===
+// === Module 12501: ClockWarningIcon ===
 
-// Module 12478 (ClockWarningIcon)
+// Module 12501 (ClockWarningIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod12479 from "module_12479" /* 12479 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod12502 from "module_12502" /* 12502 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ClockWarningIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12479;
+    const tmpResult = _mod12502;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ClockWarningIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12479, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12502, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

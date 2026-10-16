@@ -1,21 +1,21 @@
-// === Module 18958: NativeIntentsManager ===
+// === Module 19000: NativeIntentsManager ===
 
-// Module 18958 (NativeIntentsManager)
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import useChannelName from "useChannelName" /* 5481 */;
-import getChannelIcon from "getChannelIcon" /* 13971 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 18959 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 18960 */;
+// Module 19000 (NativeIntentsManager)
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import useChannelName from "useChannelName" /* 5483 */;
+import getChannelIcon from "getChannelIcon" /* 14003 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 19001 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 19002 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import UserStore from "UserStore" /* 1392 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
 function indexingEnabled() {
@@ -264,7 +264,7 @@ function indexChannelUpdates(items) {
     }
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ME: c10, ChannelTypes: closure_11, Links: closure_12, Permissions: map1, Routes: closure_14 } = Constants);
 const constants4 = { GUILD: 100, [100]: "GUILD", DM: 75, [75]: "DM", OTHER_CHANNEL: 50, [50]: "OTHER_CHANNEL" };
 class NativeIntentsManager extends tmp3 {

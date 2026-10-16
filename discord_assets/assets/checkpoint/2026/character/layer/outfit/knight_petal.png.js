@@ -1,6 +1,6 @@
-// === Module 5712: ? ===
+// === Module 5714: ? ===
 
-// Module 5712
+// Module 5714
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/knight_petal.png.js");

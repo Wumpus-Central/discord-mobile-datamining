@@ -1,14 +1,14 @@
-// === Module 15365: FrecencySettingsMigrations ===
+// === Module 15400: FrecencySettingsMigrations ===
 
-// Module 15365 (FrecencySettingsMigrations)
+// Module 15400 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import Constants from "Constants" /* 1085 */;
-import frecency_user_settings from "frecency_user_settings" /* 1245 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1246 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
+import Constants from "Constants" /* 1087 */;
+import frecency_user_settings from "frecency_user_settings" /* 1247 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1248 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

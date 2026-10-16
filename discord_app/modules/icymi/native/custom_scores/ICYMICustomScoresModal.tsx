@@ -1,6 +1,6 @@
-// === Module 17496: ICYMICustomScoresModal ===
+// === Module 17530: ICYMICustomScoresModal ===
 
-// Module 17496 (ICYMICustomScoresModal)
+// Module 17530 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -11,9 +11,9 @@ const require = fn;
 let closure_3 = ["children"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9565);
+const NativeStackNavigator = fn(9581);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_8 = createStyles.createStyles(obj3);
 const ReactCompilerGating = fn(558);
@@ -37,14 +37,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
         name: "default",
         options(navigation) {
               const obj = { title: null, headerLeft: null };
-              const intl = closure_0(1126).intl;
-              obj.title = intl.string(closure_0(1126).t.jVshKt);
-              obj.headerLeft = closure_0(9518).getRenderModalCloseImage(navigation.navigation);
-              const merged = Object.assign(accessibilityNativeStackOptions(9855)());
+              const intl = closure_0(1128).intl;
+              obj.title = intl.string(closure_0(1128).t.jVshKt);
+              obj.headerLeft = closure_0(9534).getRenderModalCloseImage(navigation.navigation);
+              const merged = Object.assign(accessibilityNativeStackOptions(9871)());
               return obj;
             },
         getComponent() {
-              return closure_0(17497).default;
+              return closure_0(17531).default;
             }
       };
       const tmp9 = closure_5(closure_7.Screen, obj3);
@@ -58,11 +58,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
       const obj4 = {
         name: "guild",
         options(navigation) {
-              const obj = { headerLeft: closure_0(9518).getRenderModalBackImage(navigation.navigation) };
+              const obj = { headerLeft: closure_0(9534).getRenderModalBackImage(navigation.navigation) };
               return obj;
             },
         getComponent() {
-              return closure_0(17498).default;
+              return closure_0(17532).default;
             }
       };
       const tmp13 = closure_5(closure_7.Screen, obj4);
@@ -124,24 +124,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
       name: "default",
       options(navigation) {
         const obj = { title: null, headerLeft: null };
-        const intl = closure_0(1126).intl;
-        obj.title = intl.string(closure_0(1126).t.jVshKt);
-        obj.headerLeft = closure_0(9518).getRenderModalCloseImage(navigation.navigation);
-        const merged = Object.assign(closure_1(9855)());
+        const intl = closure_0(1128).intl;
+        obj.title = intl.string(closure_0(1128).t.jVshKt);
+        obj.headerLeft = closure_0(9534).getRenderModalCloseImage(navigation.navigation);
+        const merged = Object.assign(closure_1(9871)());
         return obj;
       },
       getComponent() {
-        return closure_0(17497).default;
+        return closure_0(17531).default;
       }
     }),
     closure_5(closure_7.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: closure_0(9518).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: closure_0(9534).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return closure_0(17498).default;
+        return closure_0(17532).default;
       }
     })
   ];

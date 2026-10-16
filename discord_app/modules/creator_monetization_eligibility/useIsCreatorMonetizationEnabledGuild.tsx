@@ -1,12 +1,12 @@
-// === Module 7172: useIsCreatorMonetizationEnabledGuild ===
+// === Module 7174: useIsCreatorMonetizationEnabledGuild ===
 
-// Module 7172 (useIsCreatorMonetizationEnabledGuild)
-import GuildStore from "GuildStore" /* 2087 */;
+// Module 7174 (useIsCreatorMonetizationEnabledGuild)
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 function isCreatorMonetizationEnabledGuild(guild) {
   const features = guild.features;

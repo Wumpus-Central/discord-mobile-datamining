@@ -1,13 +1,13 @@
-// === Module 7508: CollectiblesPurchaseRecord ===
+// === Module 7510: CollectiblesPurchaseRecord ===
 
-// Module 7508 (CollectiblesPurchaseRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6313 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7483 */;
+// Module 7510 (CollectiblesPurchaseRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 6315 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7485 */;
 
-let closure_3 = fn(7484).createCollectiblesItemsFromServerResponse;
-const fromServer = fn(7482).CollectiblesVariantProductRecord;
-let closure_5 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const PREMIUM_TYPE_NONE = fn(1085).PREMIUM_TYPE_NONE;
+let closure_3 = fn(7486).createCollectiblesItemsFromServerResponse;
+const fromServer = fn(7484).CollectiblesVariantProductRecord;
+let closure_5 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const PREMIUM_TYPE_NONE = fn(1087).PREMIUM_TYPE_NONE;
 const prototype = function CollectiblesPurchaseRecord(arg0) {
   ({ skuId: tmp.skuId, name: tmp.name, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue, purchasedAt: tmp.purchasedAt, purchaseType: tmp.purchaseType, expiresAt: tmp.expiresAt } = arg0);
   return Object.create(new.target.prototype);

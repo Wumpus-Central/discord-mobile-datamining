@@ -1,13 +1,13 @@
-// === Module 11402: useGameConsoleAccounts ===
+// === Module 11422: useGameConsoleAccounts ===
 
-// Module 11402 (useGameConsoleAccounts)
+// Module 11422 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5977 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
 
 require = fn;
-const PlatformTypes = fn(1085).PlatformTypes;
+const PlatformTypes = fn(1087).PlatformTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");

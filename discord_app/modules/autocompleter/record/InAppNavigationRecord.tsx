@@ -1,13 +1,13 @@
-// === Module 6187: InAppNavigationRecord ===
+// === Module 6189: InAppNavigationRecord ===
 
-// Module 6187 (InAppNavigationRecord)
-import UserSettingsURLUtils from "UserSettingsURLUtils" /* 6198 */;
-import Record from "Record" /* 1405 */;
+// Module 6189 (InAppNavigationRecord)
+import UserSettingsURLUtils from "UserSettingsURLUtils" /* 6200 */;
+import Record from "Record" /* 1407 */;
 
 require = fn;
-const Routes = fn(1085).Routes;
-const RewardFilterTypes = fn(6188).RewardFilterTypes;
-const UserSettingsPath = fn(1095).UserSettingsPath;
+const Routes = fn(1087).Routes;
+const RewardFilterTypes = fn(6190).RewardFilterTypes;
+const UserSettingsPath = fn(1097).UserSettingsPath;
 const InAppNavigationType = { SHOP: "SHOP", SHOP_ORBS_TAB: "SHOP_ORBS_TAB", NITRO_HOME: "NITRO_HOME", QUEST_HOME: "QUEST_HOME", QUEST_ORBS: "QUEST_ORBS", APPS_HOME: "APPS_HOME", SETTINGS: "SETTINGS", PLAYGROUND: "PLAYGROUND" };
 const prototype = function InAppNavigationRecord(collectionId) {
   const tmp3 = new prototype(tmp2, tmp);

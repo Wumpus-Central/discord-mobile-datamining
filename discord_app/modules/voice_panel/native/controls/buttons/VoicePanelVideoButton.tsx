@@ -1,27 +1,27 @@
-// === Module 18209: VoicePanelVideoButton ===
+// === Module 18251: VoicePanelVideoButton ===
 
-// Module 18209 (VoicePanelVideoButton)
+// Module 18251 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import CameraRive from "CameraRive" /* 4960 */;
-import useAlertStore from "useAlertStore" /* 5361 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6123 */;
-import CallsUtils from "CallsUtils" /* 9003 */;
-import VideoIcon from "VideoIcon" /* 11093 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11155 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13680 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 13987 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18210 */;
+import util from "util" /* 1128 */;
+import CameraRive from "CameraRive" /* 4963 */;
+import useAlertStore from "useAlertStore" /* 5363 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6125 */;
+import CallsUtils from "CallsUtils" /* 9011 */;
+import VideoIcon from "VideoIcon" /* 11108 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11171 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13706 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 14019 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18252 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11135 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11151 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5176).Features;
+const Features = fn(5178).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

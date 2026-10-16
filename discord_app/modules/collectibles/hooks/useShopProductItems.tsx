@@ -1,8 +1,8 @@
-// === Module 8514: useShopProductItems ===
+// === Module 8522: useShopProductItems ===
 
-// Module 8514 (useShopProductItems)
+// Module 8522 (useShopProductItems)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

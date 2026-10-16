@@ -1,8 +1,8 @@
-// === Module 16086: QuestDockBlurredContentBackground ===
+// === Module 16119: QuestDockBlurredContentBackground ===
 
-// Module 16086 (QuestDockBlurredContentBackground)
+// Module 16119 (QuestDockBlurredContentBackground)
 import c from "c" /* 576 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5424 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5426 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

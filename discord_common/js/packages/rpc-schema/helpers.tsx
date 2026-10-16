@@ -1,7 +1,7 @@
-// === Module 15393: helpers ===
+// === Module 15425: helpers ===
 
-// Module 15393 (helpers)
-import Constants from "Constants" /* 1096 */;
+// Module 15425 (helpers)
+import Constants from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
 ({ RPCCommands, RPCEvents } = Constants);
@@ -11,7 +11,4 @@ export const RPCCommand = RPCCommands;
 export const RPCEvent = RPCEvents;
 export const joiReqObj = function joiReqObj(required) {
   return required.required().unknown(true);
-};
-export const joiEnum = function joiEnum(ActivityPlatform) {
-  return Object.values(ActivityPlatform);
 };

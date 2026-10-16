@@ -1,13 +1,13 @@
-// === Module 8309: UserOfferActionCreators ===
+// === Module 8314: UserOfferActionCreators ===
 
-// Module 8309 (UserOfferActionCreators)
+// Module 8314 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8310 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7393 */;
-import UserOfferStore from "UserOfferStore" /* 7389 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8315 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7395 */;
+import UserOfferStore from "UserOfferStore" /* 7391 */;
 
 const require = globalThis.__r;
 
@@ -273,8 +273,8 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
   }
   return value;
 };
-let closure_7 = fn(1392).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
-const Constants = fn(1085);
+let closure_7 = fn(1394).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, PaymentGateways: c10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/UserOfferActionCreators.tsx");
@@ -379,13 +379,13 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1382);
+      postResultResult = postResult(1384);
     }
     const obj5 = { payment_gateway: GOOGLE, trigger_type: _JSON, trigger_location_stack, trigger_metadata: null, trigger_uptime_app: null };
     _JSON = JSON;
     obj5.trigger_metadata = JSON.stringify(tmp5);
     obj5.trigger_uptime_app = UserOfferStore.getUptimeForTrigger();
-    const HTTP = postResult(1295).HTTP;
+    const HTTP = postResult(1297).HTTP;
     const request = { url: constants.USER_OFFER_TRIGGER, body: obj5, rejectWithError: true };
     postResult = HTTP.post(request);
     then = postResult.then;

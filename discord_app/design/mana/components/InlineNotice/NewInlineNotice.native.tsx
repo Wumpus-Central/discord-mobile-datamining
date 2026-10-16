@@ -1,30 +1,30 @@
-// === Module 7787: NewInlineNotice ===
+// === Module 7790: NewInlineNotice ===
 
-// Module 7787 (NewInlineNotice)
+// Module 7790 (NewInlineNotice)
 import nativeDefault from "native" /* 587 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import _modDef2142 from "module_2142" /* 2142 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4884 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import _modDef2145 from "module_2145" /* 2145 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { critical: { Icon: fn(6510).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2142.uKMqrF }, warning: null, info: null, positive: null };
-let obj2 = { Icon: fn(6510).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2142.uKMqrF };
-obj.warning = { Icon: fn(7788).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2142["7vL/d/"] };
-let obj3 = { Icon: fn(7788).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2142["7vL/d/"] };
-obj.info = { Icon: fn(5105).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2142.BReS7U };
-let obj4 = { Icon: fn(5105).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2142.BReS7U };
-obj.positive = { Icon: fn(7087).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2142["1MXXPf"] };
-const TextVariantsFlat = fn(5148).TextVariantsFlat;
+let obj = { critical: { Icon: fn(6512).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2145.uKMqrF }, warning: null, info: null, positive: null };
+let obj2 = { Icon: fn(6512).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2145.uKMqrF };
+obj.warning = { Icon: fn(7791).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2145["7vL/d/"] };
+let obj3 = { Icon: fn(7791).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2145["7vL/d/"] };
+obj.info = { Icon: fn(5108).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2145.BReS7U };
+let obj4 = { Icon: fn(5108).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2145.BReS7U };
+obj.positive = { Icon: fn(7089).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2145["1MXXPf"] };
+const TextVariantsFlat = fn(5150).TextVariantsFlat;
 let found = TextVariantsFlat.find((name) => "experimental/body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
   lineHeight = found.lineHeight;
 }
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_9 = createStyles.createStyles((arg0, height) => {
   obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, backgroundColor: obj[arg0].background, borderColor: obj[arg0].border }, iconAndText: null, iconContainer: null, contents: null, copy: null, cta: null };
   const obj2 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, backgroundColor: obj[arg0].background, borderColor: obj[arg0].border };
@@ -39,7 +39,7 @@ let closure_9 = createStyles.createStyles((arg0, height) => {
   return obj;
 });
 const ReactCompilerGating = fn(558);
-let obj5 = { Icon: fn(7087).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2142["1MXXPf"] };
+let obj5 = { Icon: fn(7089).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2145["1MXXPf"] };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/mana/components/InlineNotice/NewInlineNotice.native.tsx");
 
@@ -109,8 +109,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                   isIOSResult = obj.isIOS();
                   if (isIOSResult) {
                     tmp4 = role;
-                    str = "static";
-                    isIOSResult = "static" !== role;
+                    str = "none";
+                    isIOSResult = "none" !== role;
                   }
                   if (isIOSResult) {
                     tmp5 = hidden;
@@ -131,7 +131,7 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                 }
               }
             } else if ("status" !== role) {
-              if ("static" === role) {
+              if ("none" === role) {
                 obj3 = {};
               }
             }
@@ -161,8 +161,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                         isIOSResult = obj.isIOS();
                         if (isIOSResult) {
                           tmp4 = role;
-                          str = "static";
-                          isIOSResult = "static" !== role;
+                          str = "none";
+                          isIOSResult = "none" !== role;
                         }
                         if (isIOSResult) {
                           tmp5 = hidden;
@@ -197,8 +197,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                         isIOSResult = obj.isIOS();
                         if (isIOSResult) {
                           tmp4 = role;
-                          str = "static";
-                          isIOSResult = "static" !== role;
+                          str = "none";
+                          isIOSResult = "none" !== role;
                         }
                         if (isIOSResult) {
                           tmp5 = hidden;
@@ -254,8 +254,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                                         isIOSResult = obj.isIOS();
                                         if (isIOSResult) {
                                           tmp4 = role;
-                                          str = "static";
-                                          isIOSResult = "static" !== role;
+                                          str = "none";
+                                          isIOSResult = "none" !== role;
                                         }
                                         if (isIOSResult) {
                                           tmp5 = hidden;
@@ -288,8 +288,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                                       isIOSResult = obj.isIOS();
                                       if (isIOSResult) {
                                         tmp4 = role;
-                                        str = "static";
-                                        isIOSResult = "static" !== role;
+                                        str = "none";
+                                        isIOSResult = "none" !== role;
                                       }
                                       if (isIOSResult) {
                                         tmp5 = hidden;
@@ -331,8 +331,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                                     isIOSResult = obj.isIOS();
                                     if (isIOSResult) {
                                       tmp4 = role;
-                                      str = "static";
-                                      isIOSResult = "static" !== role;
+                                      str = "none";
+                                      isIOSResult = "none" !== role;
                                     }
                                     if (isIOSResult) {
                                       tmp5 = hidden;
@@ -374,8 +374,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                                 isIOSResult = obj.isIOS();
                                 if (isIOSResult) {
                                   tmp4 = role;
-                                  str = "static";
-                                  isIOSResult = "static" !== role;
+                                  str = "none";
+                                  isIOSResult = "none" !== role;
                                 }
                                 if (isIOSResult) {
                                   tmp5 = hidden;
@@ -414,8 +414,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                             isIOSResult = obj.isIOS();
                             if (isIOSResult) {
                               tmp4 = role;
-                              str = "static";
-                              isIOSResult = "static" !== role;
+                              str = "none";
+                              isIOSResult = "none" !== role;
                             }
                             if (isIOSResult) {
                               tmp5 = hidden;
@@ -447,7 +447,6 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                       let tmp38 = null;
                       if (null != action) {
                         const obj10 = { style: tmp4Result.cta, children: null };
-                        const obj11 = { variant: "secondary", size: "sm", text: null, onPress: null };
                         class F {
                           constructor() {
                             tmp = closure_0;
@@ -456,8 +455,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                             isIOSResult = obj.isIOS();
                             if (isIOSResult) {
                               tmp4 = role;
-                              str = "static";
-                              isIOSResult = "static" !== role;
+                              str = "none";
+                              isIOSResult = "none" !== role;
                             }
                             if (isIOSResult) {
                               tmp5 = hidden;
@@ -477,9 +476,10 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                             return;
                           }
                         }
-                        obj11.onPress = action.onClick;
-                        obj10.children = closure_5(role(tmp2[19]).Button, obj11);
+                        ({ onPress: obj13.onPress, loading: obj13.loading } = action);
+                        obj10.children = closure_5(role(tmp2[19]).Button, { variant: "secondary", size: "sm", text: null, onPress: null, loading: null });
                         tmp38 = closure_5(View, obj10);
+                        const obj11 = { variant: "secondary", size: "sm", text: null, onPress: null, loading: null };
                       }
                       class F {
                         constructor() {
@@ -489,8 +489,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                           isIOSResult = obj.isIOS();
                           if (isIOSResult) {
                             tmp4 = role;
-                            str = "static";
-                            isIOSResult = "static" !== role;
+                            str = "none";
+                            isIOSResult = "none" !== role;
                           }
                           if (isIOSResult) {
                             tmp5 = hidden;
@@ -523,8 +523,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                       isIOSResult = obj.isIOS();
                       if (isIOSResult) {
                         tmp4 = role;
-                        str = "static";
-                        isIOSResult = "static" !== role;
+                        str = "none";
+                        isIOSResult = "none" !== role;
                       }
                       if (isIOSResult) {
                         tmp5 = hidden;
@@ -554,7 +554,7 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                   cResult[31] = tmp36;
                   tmp34 = tmp36;
                 }
-                const obj13 = { style: null, children: null };
+                const obj14 = { style: null, children: null };
                 class F {
                   constructor() {
                     tmp = closure_0;
@@ -563,8 +563,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                     isIOSResult = obj.isIOS();
                     if (isIOSResult) {
                       tmp4 = role;
-                      str = "static";
-                      isIOSResult = "static" !== role;
+                      str = "none";
+                      isIOSResult = "none" !== role;
                     }
                     if (isIOSResult) {
                       tmp5 = hidden;
@@ -584,15 +584,15 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                     return;
                   }
                 }
-                obj13.children = tmp21;
-                const tmp27 = closure_5(View, obj13);
+                obj14.children = tmp21;
+                const tmp27 = closure_5(View, obj14);
                 cResult[21] = tmp4Result.iconContainer;
                 cResult[22] = tmp21;
                 cResult[23] = tmp27;
                 tmp24 = tmp27;
               }
             }
-            const obj14 = { size: "xs", color: iconColor, accessibilityLabel: null };
+            const obj15 = { size: "xs", color: iconColor, accessibilityLabel: null };
             class F {
               constructor() {
                 tmp = closure_0;
@@ -601,8 +601,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                 isIOSResult = obj.isIOS();
                 if (isIOSResult) {
                   tmp4 = role;
-                  str = "static";
-                  isIOSResult = "static" !== role;
+                  str = "none";
+                  isIOSResult = "none" !== role;
                 }
                 if (isIOSResult) {
                   tmp5 = hidden;
@@ -622,7 +622,7 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
                 return;
               }
             }
-            const tmp23 = closure_5(Icon, obj14);
+            const tmp23 = closure_5(Icon, obj15);
             cResult[17] = Icon;
             cResult[18] = iconColor;
             cResult[19] = tmp7;
@@ -639,8 +639,8 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
           isIOSResult = obj.isIOS();
           if (isIOSResult) {
             tmp4 = role;
-            str = "static";
-            isIOSResult = "static" !== role;
+            str = "none";
+            isIOSResult = "none" !== role;
           }
           if (isIOSResult) {
             tmp5 = hidden;
@@ -712,7 +712,7 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const effect = noop.useEffect(() => {
     let isIOSResult = utils_PlatformUtils.isIOS();
     if (isIOSResult) {
-      isIOSResult = "static" !== role;
+      isIOSResult = "none" !== role;
     }
     if (isIOSResult) {
       isIOSResult = !hidden;
@@ -733,7 +733,7 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
       let obj3 = { accessibilityRole: "alert", accessibilityLiveRegion: "assertive" };
     } else if ("status" === role) {
       obj3 = { accessibilityLiveRegion: "polite" };
-    } else if ("static" === role) {
+    } else if ("none" === role) {
       obj3 = {};
     }
     const merged = Object.assign(obj3);
@@ -757,10 +757,10 @@ export const NewInlineNotice = ReactCompilerGating.isReactCompilerEnabled() ? (f
     let tmp15Result3 = null;
     if (null != action) {
       const obj11 = { style: tmp3Result.cta, children: null };
-      ({ text: obj15.text, onClick: obj15.onPress } = action);
-      obj11.children = closure_5(role(tmp2[19]).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+      ({ text: obj15.text, onPress: obj15.onPress, loading: obj15.loading } = action);
+      obj11.children = closure_5(role(tmp2[19]).Button, { variant: "secondary", size: "sm", text: null, onPress: null, loading: null });
       tmp15Result3 = closure_5(View, obj11);
-      const obj12 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      const obj12 = { variant: "secondary", size: "sm", text: null, onPress: null, loading: null };
     }
     items4[1] = tmp15Result3;
     obj7.children = items4;

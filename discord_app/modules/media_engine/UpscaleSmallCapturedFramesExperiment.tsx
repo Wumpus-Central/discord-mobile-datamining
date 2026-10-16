@@ -1,7 +1,7 @@
-// === Module 14974: UpscaleSmallCapturedFramesExperiment ===
+// === Module 15007: UpscaleSmallCapturedFramesExperiment ===
 
-// Module 14974 (UpscaleSmallCapturedFramesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 15007 (UpscaleSmallCapturedFramesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-upscale-small-captured-frames", kind: "user", defaultConfig: { minCaptureWidth: 0, minCaptureHeight: 0 }, variations: null };

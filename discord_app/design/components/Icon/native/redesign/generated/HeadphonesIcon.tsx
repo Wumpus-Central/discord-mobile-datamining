@@ -1,10 +1,10 @@
-// === Module 13112: HeadphonesIcon ===
+// === Module 13138: HeadphonesIcon ===
 
-// Module 13112 (HeadphonesIcon)
+// Module 13138 (HeadphonesIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod13113 from "module_13113" /* 13113 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod13139 from "module_13139" /* 13139 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const HeadphonesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13113;
+    const tmpResult = _mod13139;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const HeadphonesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13113, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13139, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

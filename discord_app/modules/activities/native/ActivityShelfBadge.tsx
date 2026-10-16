@@ -1,26 +1,26 @@
-// === Module 11811: ActivityShelfBadge ===
+// === Module 11835: ActivityShelfBadge ===
 
-// Module 11811 (ActivityShelfBadge)
+// Module 11835 (ActivityShelfBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Server from "Server" /* 1998 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import util from "util" /* 1128 */;
+import Server from "Server" /* 2000 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = { position: "absolute", top: 4, right: 4, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
 obj2.badge = rect;
 obj2.newBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 let obj3 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 obj2.updatedBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
-const native = fn(1200);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
-obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1085).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
+const native = fn(1202);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1202).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1087).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };

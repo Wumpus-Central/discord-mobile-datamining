@@ -1,11 +1,11 @@
-// === Module 9957: gif_picker/GIFPickerUtils ===
+// === Module 9973: gif_picker/GIFPickerUtils ===
 
-// Module 9957 (gif_picker/GIFPickerUtils)
+// Module 9973 (gif_picker/GIFPickerUtils)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9538 */;
-import FavoriteGIFHooks from "FavoriteGIFHooks" /* 9958 */;
+import util from "util" /* 1128 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9554 */;
+import FavoriteGIFHooks from "FavoriteGIFHooks" /* 9974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,7 +53,7 @@ function transformFavoriteGifUrl(url, arg1) {
     return combined;
   }
 }
-fn(1085).GIFPickerResultTypes;
+fn(1087).GIFPickerResultTypes;
 const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re7 = /(tenor\.com)/;
 const re8 = /-(?:.(?!-))+$/;
@@ -95,9 +95,9 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
   cResult[2] = tmp5;
   tmp4 = tmp5;
 }) : (function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(9958).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(9974).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(9958);
+  let obj = sortedFavoriteGIFs(9974);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

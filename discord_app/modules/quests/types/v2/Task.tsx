@@ -1,10 +1,10 @@
-// === Module 7617: Task ===
+// === Module 7619: Task ===
 
-// Module 7617 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6196 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7618 */;
-import v2_Video from "v2/Video" /* 7619 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7620 */;
+// Module 7619 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6198 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7620 */;
+import v2_Video from "v2/Video" /* 7621 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7622 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {

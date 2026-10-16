@@ -1,23 +1,23 @@
-// === Module 10546: FavoritesHooks ===
+// === Module 10561: FavoritesHooks ===
 
-// Module 10546 (FavoritesHooks)
+// Module 10561 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1989 */;
-import FavoritesUtils from "FavoritesUtils" /* 2090 */;
-import FavoritesLimits from "FavoritesLimits" /* 10547 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10548 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import UserStore from "UserStore" /* 1390 */;
-import FavoriteStore from "FavoriteStore" /* 2068 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1991 */;
+import FavoritesUtils from "FavoritesUtils" /* 2093 */;
+import FavoritesLimits from "FavoritesLimits" /* 10562 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10563 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import UserStore from "UserStore" /* 1392 */;
+import FavoriteStore from "FavoriteStore" /* 2071 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(2078).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1392).PremiumTypes;
+const MAX_FAVORITE_CHANNELS = fn(2081).MAX_FAVORITE_CHANNELS;
+const PremiumTypes = fn(1394).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesAccess(arg0) {
   const cResult = c.c(8);

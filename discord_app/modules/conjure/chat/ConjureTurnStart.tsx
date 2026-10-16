@@ -1,6 +1,6 @@
-// === Module 12035: ConjureTurnStart ===
+// === Module 12059: ConjureTurnStart ===
 
-// Module 12035 (ConjureTurnStart)
+// Module 12059 (ConjureTurnStart)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

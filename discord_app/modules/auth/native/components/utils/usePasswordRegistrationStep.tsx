@@ -1,7 +1,7 @@
-// === Module 16977: usePasswordRegistrationStep ===
+// === Module 17010: usePasswordRegistrationStep ===
 
-// Module 16977 (usePasswordRegistrationStep)
-import getErrorDefault from "getError" /* 6859 */;
+// Module 17010 (usePasswordRegistrationStep)
+import getErrorDefault from "getError" /* 6861 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(16954).useRegistrationUIStore;
+const useRegistrationUIStore = fn(16987).useRegistrationUIStore;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
@@ -115,9 +115,9 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
             if (null != tmp3) {
               if ("" !== tmp3) {
                 if (tmp3.length < 8) {
-                  const intl2 = tmp3(1126).intl;
+                  const intl2 = tmp3(1128).intl;
                   c4 = 3;
-                  const obj5 = { value: intl2.string(tmp3(1126).t.DfaKHr), done: true };
+                  const obj5 = { value: intl2.string(tmp3(1128).t.DfaKHr), done: true };
                   return obj5;
                 } else if (null != c1) {
                   c4 = 3;
@@ -127,14 +127,14 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
                   c3 = 1;
                   c1 = 2;
                   c4 = 1;
-                  const obj7 = { value: tmp3(16965).scorePassword(tmp3), done: false };
+                  const obj7 = { value: tmp3(16998).scorePassword(tmp3), done: false };
                   return obj7;
                 }
               }
             }
-            const intl3 = tmp3(1126).intl;
+            const intl3 = tmp3(1128).intl;
             c4 = 3;
-            const obj8 = { value: intl3.string(tmp3(1126).t.R98xD5), done: true };
+            const obj8 = { value: intl3.string(tmp3(1128).t.R98xD5), done: true };
             return obj8;
           }
         } else {
@@ -152,10 +152,10 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
           } else if (false !== value.valid) {
             c3 = 0;
           }
-          const intl = tmp3(1126).intl;
+          const intl = tmp3(1128).intl;
           c3 = 0;
           c4 = 3;
-          const obj = { value: intl.string(tmp3(1126).t.DfaKHr), done: true };
+          const obj = { value: intl.string(tmp3(1128).t.DfaKHr), done: true };
           return obj;
         }
       } catch (tmp25) {

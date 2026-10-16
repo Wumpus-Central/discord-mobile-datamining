@@ -1,10 +1,10 @@
-// === Module 16555: BurgerIcon ===
+// === Module 16588: BurgerIcon ===
 
-// Module 16555 (BurgerIcon)
+// Module 16588 (BurgerIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod16556 from "module_16556" /* 16556 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod16589 from "module_16589" /* 16589 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const BurgerIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16556;
+    const tmpResult = _mod16589;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const BurgerIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16556, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16589, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

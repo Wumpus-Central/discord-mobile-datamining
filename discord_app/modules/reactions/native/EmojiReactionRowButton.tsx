@@ -1,28 +1,28 @@
-// === Module 13660: EmojiReactionRowButton ===
+// === Module 13686: EmojiReactionRowButton ===
 
-// Module 13660 (EmojiReactionRowButton)
+// Module 13686 (EmojiReactionRowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import EmojiTypes from "EmojiTypes" /* 4823 */;
-import shared from "shared" /* 5025 */;
-import Pressables from "Pressables" /* 6405 */;
-import EmojiDefault from "Emoji" /* 7041 */;
-import ReactionIcon from "ReactionIcon" /* 9178 */;
+import util from "util" /* 1128 */;
+import EmojiTypes from "EmojiTypes" /* 4826 */;
+import shared from "shared" /* 5028 */;
+import Pressables from "Pressables" /* 6407 */;
+import EmojiDefault from "Emoji" /* 7043 */;
+import ReactionIcon from "ReactionIcon" /* 9191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
-const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(5151);
+createStyles = fn(5153);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = { lineHeight, fontSize, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: lineHeight, height: lineHeight };
@@ -191,7 +191,7 @@ export const EmojiReactionRowButton = ReactCompilerGating.isReactCompilerEnabled
       }
       obj11.name = str;
       if (null != emoji.id) {
-        const emojiURL = getEmojiURL(1415);
+        const emojiURL = getEmojiURL(1417);
         getEmojiURL = emojiURL.getEmojiURL;
         const obj12 = { id: null, animated: null, size: null };
         ({ id: obj5.id, animated: obj5.animated } = emoji);
@@ -239,7 +239,7 @@ export const EmojiReactionRowButton = ReactCompilerGating.isReactCompilerEnabled
     }
     obj5.name = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1415);
+      const emojiURL = getEmojiURL(1417);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj.id, animated } = animated);

@@ -1,9 +1,9 @@
-// === Module 8505: BioMaxLengthExperiment ===
+// === Module 8513: BioMaxLengthExperiment ===
 
-// Module 8505 (BioMaxLengthExperiment)
+// Module 8513 (BioMaxLengthExperiment)
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1085 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+import Constants from "Constants" /* 1087 */;
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

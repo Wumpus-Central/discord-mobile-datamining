@@ -1,8 +1,8 @@
-// === Module 11827: useTrackAppLauncherItemImpressionOnFirstView ===
+// === Module 11851: useTrackAppLauncherItemImpressionOnFirstView ===
 
-// Module 11827 (useTrackAppLauncherItemImpressionOnFirstView)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import useTrackImpression from "useTrackImpression" /* 9189 */;
+// Module 11851 (useTrackAppLauncherItemImpressionOnFirstView)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import useTrackImpression from "useTrackImpression" /* 9202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
   const cResult = entrypoint(576).c(6);
   let obj = entrypoint(576);
   const tmp = entrypoint;
-  entrypoint = entrypoint(10855).useAppLauncherContext().entrypoint;
+  entrypoint = entrypoint(10870).useAppLauncherContext().entrypoint;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const _Set = Set;
     const set = new Set();
@@ -34,8 +34,8 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
   } else {
     tmp9 = cResult[1];
   }
-  let obj2 = entrypoint(10855);
-  const focusEffect = tmp(1504).useFocusEffect(tmp9);
+  let obj2 = entrypoint(10870);
+  const focusEffect = tmp(1506).useFocusEffect(tmp9);
   if (cResult[2] !== entrypoint) {
     const fn2 = function p(itemKey) {
       itemKey = itemKey.itemKey;
@@ -66,11 +66,11 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
   }
   return tmp12;
 }) : (function useTrackAppLauncherItemImpressionOnFirstView() {
-  entrypoint = entrypoint(10855).useAppLauncherContext().entrypoint;
-  let obj = entrypoint(10855);
+  entrypoint = entrypoint(10870).useAppLauncherContext().entrypoint;
+  let obj = entrypoint(10870);
   dependencyMap = noop.useRef(new Set());
   const set = new Set();
-  const focusEffect = entrypoint(1504).useFocusEffect(noop.useCallback(() => {
+  const focusEffect = entrypoint(1506).useFocusEffect(noop.useCallback(() => {
     const current = ref.current;
     current.clear();
   }, []));

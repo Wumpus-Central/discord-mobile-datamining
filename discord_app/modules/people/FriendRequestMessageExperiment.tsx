@@ -1,7 +1,7 @@
-// === Module 14749: FriendRequestMessageExperiment ===
+// === Module 14782: FriendRequestMessageExperiment ===
 
-// Module 14749 (FriendRequestMessageExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 14782 (FriendRequestMessageExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-03-friend-request-message", defaultConfig: { enabled: false }, variations: null };

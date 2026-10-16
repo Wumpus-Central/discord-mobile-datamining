@@ -1,30 +1,30 @@
-// === Module 13016: ChatInputGuard ===
+// === Module 13042: ChatInputGuard ===
 
-// Module 13016 (ChatInputGuard)
+// Module 13042 (ChatInputGuard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Radius from "Radius" /* 681 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import ButtonGroup from "ButtonGroup" /* 6174 */;
-import TableRow from "TableRow" /* 6400 */;
-import IconButton from "IconButton" /* 7790 */;
-import native from "native" /* 8762 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9528 */;
-import CountDownDefault from "CountDown" /* 9860 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10449 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10525 */;
-import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 12805 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12811 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import ButtonGroup from "ButtonGroup" /* 6176 */;
+import TableRow from "TableRow" /* 6402 */;
+import IconButton from "IconButton" /* 7793 */;
+import native from "native" /* 8770 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9544 */;
+import CountDownDefault from "CountDown" /* 9876 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10465 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10540 */;
+import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 12831 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9604).updateChatInputContainerHeight;
+let closure_6 = fn(9620).updateChatInputContainerHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8 }, content: null, underlay: null, wrapper: null, floating: null, text: null, subtext: null, spacing: null };
   let lg;
@@ -61,7 +61,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   ({ channelId, onJumpToPresent, children } = screenIndex);
   const tmp5 = useIsUsingClientThemeDefault();
   const obj = screenIndex(576);
-  const chatInputFloatingOverlayStyle = screenIndex(12806).useChatInputFloatingOverlayStyle();
+  const chatInputFloatingOverlayStyle = screenIndex(12832).useChatInputFloatingOverlayStyle();
   const tmp7 = closure_9(tmp5);
   if (cResult[0] !== screenIndex) {
     const fn = function n(nativeEvent) {
@@ -89,7 +89,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
     tmp11 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp14 = closure_7(tmp(12806).ChatInputScrimGradient, {});
+    const tmp14 = closure_7(tmp(12832).ChatInputScrimGradient, {});
     cResult[5] = tmp14;
     let tmp12 = tmp14;
   } else {
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
         cResult[17] = screenIndex;
         cResult[18] = tmp28;
         tmp26 = tmp28;
-        tmpResult = tmp(1382);
+        tmpResult = tmp(1384);
       }
     }
     const obj6 = { style: tmp7.content, children: null };
@@ -193,13 +193,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   cResult[7] = tmp7.underlay;
   cResult[8] = tmp16;
   tmp15 = tmp16;
-  const obj2 = screenIndex(12806);
+  const obj2 = screenIndex(12832);
 }) : (function ChatInputGuardContainer(screenIndex) {
   screenIndex = screenIndex.screenIndex;
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  const chatInputFloatingOverlayStyle = screenIndex(12806).useChatInputFloatingOverlayStyle();
+  const chatInputFloatingOverlayStyle = screenIndex(12832).useChatInputFloatingOverlayStyle();
   const tmp6 = closure_9(tmp3);
   const items = [screenIndex];
   const obj2 = { style: null, onLayout: null, collapsable: false, children: null };
@@ -209,7 +209,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj2.style = items1;
   obj2.onLayout = callback;
-  const items2 = [closure_7(screenIndex(12806).ChatInputScrimGradient, {}), ];
+  const items2 = [closure_7(screenIndex(12832).ChatInputScrimGradient, {}), ];
   const obj3 = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {
@@ -225,7 +225,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGua
   const items4 = [tmp10Result3, children];
   obj5.children = items4;
   items3[1] = closure_8(closure_5, obj5);
-  const obj = screenIndex(12806);
+  const obj = screenIndex(12832);
   let tmp10Result4 = null;
   if (tmp4Result.isIOS()) {
     tmp10Result4 = null;

@@ -1,14 +1,14 @@
-// === Module 11627: AILoader ===
+// === Module 11651: AILoader ===
 
-// Module 11627 (AILoader)
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import AIGlyphText from "AIGlyphText" /* 11629 */;
+// Module 11651 (AILoader)
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import AIGlyphText from "AIGlyphText" /* 11653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(11628);
+const AILoaderConstants = fn(11652);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: metroRequire, AI_LOADER_GLYPHS: closure_7, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_REST_FRACTION } = AILoaderConstants);
 ({ AI_LOADER_SLOT_COUNT: c10, AI_LOADER_SLOT_STAGGER_MS: closure_11, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
 const AI_LOADER_TRACK_STEPS = AILoaderConstants.AI_LOADER_TRACK_STEPS;
@@ -25,7 +25,7 @@ function trackStepAt(arg0) {
 trackStepAt.__closure = { AI_LOADER_REST_FRACTION, AI_LOADER_TRACK_STEPS, AI_LOADER_STEP_FRACTION };
 trackStepAt.__workletHash = 2403964493846;
 trackStepAt.__initData = { code: "function trackStepAt_AILoaderNativeTsx1(progress){const{AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION}=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];}" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_16 = createStyles.createStyles((width) => {
   const obj = { loader: { flexDirection: "row", gap: width * timestampProducer }, slot: { width, height: width, overflow: "hidden" }, glyph: { height: width } };
   return obj;
@@ -216,7 +216,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Slot(i
   const stagger = index.stagger;
   const tmp = closure_16(size);
   const glyph = tmp;
-  const sharedValue = index(4906).useSharedValue(0);
+  const sharedValue = index(4909).useSharedValue(0);
   let items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
@@ -227,7 +227,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Slot(i
     const result2 = sharedValue.set(obj.withDelay(result1, obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: ReanimatedRexport.Easing.linear }, "animate-always"), -1)));
     return () => index(color[7]).cancelAnimation(sharedValue);
   }, items);
-  let obj = index(4906);
+  let obj = index(4909);
   class R {
     constructor() {
       value = closure_6.get();
@@ -262,10 +262,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Slot(i
   R.__workletHash = 6102802507505;
   R.__initData = __initData2;
   const obj4 = { style: tmp.slot, children: null };
-  const animatedStyle = index(4906).useAnimatedStyle(R);
-  let obj2 = index(4906);
+  const animatedStyle = index(4909).useAnimatedStyle(R);
+  let obj2 = index(4909);
   let obj3 = { trackStepAt, progress: sharedValue, size };
-  obj4.children = jsx(size(4906).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
+  obj4.children = jsx(size(4909).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
   return <stagger style={tmp.slot}>{null}</stagger>;
 });
 ReactCompilerGating = fn(558);
@@ -284,7 +284,7 @@ export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ?
     str = color;
   }
   const tmp4 = closure_16(num);
-  const reducedMotion = num2.useContext(num(4883).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4886).AccessibilityPreferencesContext).reducedMotion;
   const tmp5 = reducedMotion.enabled ? closure_8 : closure_5;
   dependencyMap = tmp5;
   num2 = 0;
@@ -362,7 +362,7 @@ export const AILoader = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(4883).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4886).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

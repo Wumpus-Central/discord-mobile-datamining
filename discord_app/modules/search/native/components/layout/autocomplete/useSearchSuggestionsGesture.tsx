@@ -1,9 +1,9 @@
-// === Module 17646: useSearchSuggestionsGesture ===
+// === Module 17680: useSearchSuggestionsGesture ===
 
-// Module 17646 (useSearchSuggestionsGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6555 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12881 */;
+// Module 17680 (useSearchSuggestionsGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6557 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12907 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

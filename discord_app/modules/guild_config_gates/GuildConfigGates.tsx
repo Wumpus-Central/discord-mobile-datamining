@@ -1,12 +1,12 @@
-// === Module 18716: GuildConfigGates ===
+// === Module 18758: GuildConfigGates ===
 
-// Module 18716 (GuildConfigGates)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 18758 (GuildConfigGates)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18717 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18759 */;
 
 require = fn;
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0) {

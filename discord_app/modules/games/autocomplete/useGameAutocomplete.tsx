@@ -1,18 +1,18 @@
-// === Module 8923: useGameAutocomplete ===
+// === Module 8931: useGameAutocomplete ===
 
-// Module 8923 (useGameAutocomplete)
+// Module 8931 (useGameAutocomplete)
 import c from "c" /* 576 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8454 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8924 */;
-import GameSearchSession from "GameSearchSession" /* 8925 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8462 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8932 */;
+import GameSearchSession from "GameSearchSession" /* 8933 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8453 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8461 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const QueryIds = fn(1085).QueryIds;
+const QueryIds = fn(1087).QueryIds;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
   getQueryId(name, arg1) {

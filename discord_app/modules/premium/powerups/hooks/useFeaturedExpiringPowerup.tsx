@@ -1,10 +1,10 @@
-// === Module 13090: useFeaturedExpiringPowerup ===
+// === Module 13116: useFeaturedExpiringPowerup ===
 
-// Module 13090 (useFeaturedExpiringPowerup)
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
+// Module 13116 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8248 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5063 */;
+import GameServerStore from "GameServerStore" /* 8253 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5066 */;
 
 const require = globalThis.__r;
 
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFeatu
       const _Math = Math;
       const _Date = Date;
       const date = new Date(reduced.ends_at);
-      const bound = Math.max(0, tmp(7492).getDaysRemaining(date));
+      const bound = Math.max(0, tmp(7494).getDaysRemaining(date));
       if (reduced.metadata != null) {
         class S {
           constructor(arg0, arg1) {
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFeatu
       cResult[15] = undefined;
       cResult[16] = undefined;
       cResult[17] = obj2;
-      const tmpResult6 = tmp(7492);
+      const tmpResult6 = tmp(7494);
     }
   }
   cResult[6] = expiringPowerupCoachmarkEnabled;

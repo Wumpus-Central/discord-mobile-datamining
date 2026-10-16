@@ -1,11 +1,11 @@
-// === Module 4834: InvoiceRecord ===
+// === Module 4837: InvoiceRecord ===
 
-// Module 4834 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4835 */;
-import Record from "Record" /* 1405 */;
+// Module 4837 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4838 */;
+import Record from "Record" /* 1407 */;
 
 require = fn;
-const PaymentGateways = fn(1085).PaymentGateways;
+const PaymentGateways = fn(1087).PaymentGateways;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {

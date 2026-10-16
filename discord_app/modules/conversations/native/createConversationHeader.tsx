@@ -1,21 +1,21 @@
-// === Module 12700: createConversationHeader ===
+// === Module 12726: createConversationHeader ===
 
-// Module 12700 (createConversationHeader)
-import util from "util" /* 1126 */;
-import _modDef3764 from "module_3764" /* 3764 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8108 */;
-import computeScrollData from "computeScrollData" /* 9817 */;
-import _modDef12184 from "module_12184" /* 12184 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7964 */;
+// Module 12726 (createConversationHeader)
+import util from "util" /* 1128 */;
+import _modDef3767 from "module_3767" /* 3767 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
+import computeScrollData from "computeScrollData" /* 9833 */;
+import _modDef12208 from "module_12208" /* 12208 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7967 */;
 import size from "module_2" /* 2 */;
 
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const result = size.fileFinishedImporting("modules/conversations/native/createConversationHeader.tsx");
 
 export default function createConversationHeader(conversationId) {
-  const obj = { conversationId: conversationId.id, channelId: conversationId.channelId, startMessageId: conversationId.startMessageId, title: conversationId.title, expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12184), expandAccessibilityLabel: null };
+  const obj = { conversationId: conversationId.id, channelId: conversationId.channelId, startMessageId: conversationId.startMessageId, title: conversationId.title, expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12208), expandAccessibilityLabel: null };
   const intl = util.intl;
-  obj.expandAccessibilityLabel = intl.string(_modDef3764.pU5Dut);
+  obj.expandAccessibilityLabel = intl.string(_modDef3767.pU5Dut);
   return obj;
 };
 export const isConversationStartMessage = function isConversationStartMessage(startMessageId, id) {

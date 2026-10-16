@@ -1,13 +1,13 @@
-// === Module 8206: canReactToMessage ===
+// === Module 8209: canReactToMessage ===
 
-// Module 8206 (canReactToMessage)
-import FlagUtils from "FlagUtils" /* 1403 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4793 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8207 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6107 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 8209 (canReactToMessage)
+import FlagUtils from "FlagUtils" /* 1405 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4796 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8210 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6109 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
@@ -42,7 +42,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   return tmp6;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MessageStates: closure_7, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,14 +1,14 @@
-// === Module 15707: AccountWebAuthnViewSetting ===
+// === Module 15740: AccountWebAuthnViewSetting ===
 
-// Module 15707 (AccountWebAuthnViewSetting)
+// Module 15740 (AccountWebAuthnViewSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6155 */;
+import util from "util" /* 1128 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6157 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 15612 */;
-import UserStore from "UserStore" /* 1390 */;
+import WebAuthnStore from "WebAuthnStore" /* 15645 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 fn(558);
@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
     return flag;
   }, []);
 });
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountSecurityKeysSettingTrailing() {
   const cResult = c.c(2);
   if (!WebAuthnStore.hasFetchedCredentials()) {
@@ -98,7 +98,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(8210).MobileUserSettings.ACCOUNT,
+  parent: fn(8213).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountSecurityKeysSettingTrailing() {
     const cResult = c.c(2);
@@ -131,7 +131,7 @@ const route = SettingBuilders.createRoute({
     });
   }),
   screen: {
-    route: fn(1085).UserSettingsSections.WEBAUTHN_VIEW,
+    route: fn(1087).UserSettingsSections.WEBAUTHN_VIEW,
     getComponent() {
       return require("PasskeyInitStep").default;
     }

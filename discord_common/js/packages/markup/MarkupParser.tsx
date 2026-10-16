@@ -1,7 +1,7 @@
-// === Module 8222: MarkupParser ===
+// === Module 8225: MarkupParser ===
 
-// Module 8222 (MarkupParser)
-import markup_MarkupParser from "markup/MarkupParser" /* 8223 */;
+// Module 8225 (MarkupParser)
+import markup_MarkupParser from "markup/MarkupParser" /* 8226 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

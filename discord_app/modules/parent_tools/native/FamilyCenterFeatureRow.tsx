@@ -1,28 +1,28 @@
-// === Module 15818: FamilyCenterFeatureRow ===
+// === Module 15851: FamilyCenterFeatureRow ===
 
-// Module 15818 (FamilyCenterFeatureRow)
+// Module 15851 (FamilyCenterFeatureRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import Stack_Stack from "Stack/Stack" /* 5437 */;
-import TableRow from "TableRow" /* 6400 */;
-import TableRowGroup from "TableRowGroup" /* 6485 */;
-import EyeIcon from "EyeIcon" /* 6872 */;
-import _modDef8948 from "module_8948" /* 8948 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12559 */;
-import _modDef12929 from "module_12929" /* 12929 */;
-import QrCodeIcon from "QrCodeIcon" /* 15815 */;
-import _modDef15819 from "module_15819" /* 15819 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 15820 */;
+import util from "util" /* 1128 */;
+import _modDef2571 from "module_2571" /* 2571 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Stack_Stack from "Stack/Stack" /* 5439 */;
+import TableRow from "TableRow" /* 6402 */;
+import TableRowGroup from "TableRowGroup" /* 6487 */;
+import EyeIcon from "EyeIcon" /* 6874 */;
+import _modDef8956 from "module_8956" /* 8956 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12582 */;
+import _modDef12955 from "module_12955" /* 12955 */;
+import QrCodeIcon from "QrCodeIcon" /* 15848 */;
+import _modDef15852 from "module_15852" /* 15852 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 15853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { tableGroup: { marginTop: 20, marginBottom: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -35,9 +35,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2568.qITXhY);
+    const stringResult = intl.string(_modDef2571.qITXhY);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef2568.bmhCnL);
+    const stringResult1 = intl2.string(_modDef2571.bmhCnL);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp5 = stringResult;
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText = useAgeSpecificText.useAgeSpecificText(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = util.intl;
-    const stringResult2 = intl3.string(_modDef2568.t7SkFy);
+    const stringResult2 = intl3.string(_modDef2571.t7SkFy);
     const intl4 = util.intl;
-    const stringResult3 = intl4.string(_modDef2568["68zfxD"]);
+    const stringResult3 = intl4.string(_modDef2571["68zfxD"]);
     cResult[2] = stringResult2;
     cResult[3] = stringResult3;
     let tmp12 = stringResult3;
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp11, tmp12);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const intl5 = util.intl;
-    const stringResult4 = intl5.string(_modDef2568["+pi4Yt"]);
+    const stringResult4 = intl5.string(_modDef2571["+pi4Yt"]);
     const intl6 = util.intl;
-    const stringResult5 = intl6.string(_modDef2568["1xPTwE"]);
+    const stringResult5 = intl6.string(_modDef2571["1xPTwE"]);
     cResult[4] = stringResult4;
     cResult[5] = stringResult5;
     let tmp18 = stringResult5;
@@ -78,14 +78,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText2 = useAgeSpecificText.useAgeSpecificText(tmp17, tmp18);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const intl7 = util.intl;
-    const stringResult6 = intl7.string(_modDef2568["001l3m"]);
+    const stringResult6 = intl7.string(_modDef2571["001l3m"]);
     cResult[6] = stringResult6;
     let tmp23 = stringResult6;
   } else {
     tmp23 = cResult[6];
   }
   if (cResult[7] !== ageSpecificText) {
-    const obj2 = { icon: _modDef15819, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
+    const obj2 = { icon: _modDef15852, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
     cResult[7] = ageSpecificText;
     cResult[8] = obj2;
     let tmp26 = obj2;
@@ -94,14 +94,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     const intl8 = util.intl;
-    const stringResult7 = intl8.string(_modDef2568.yipAeP);
+    const stringResult7 = intl8.string(_modDef2571.yipAeP);
     cResult[9] = stringResult7;
     let tmp28 = stringResult7;
   } else {
     tmp28 = cResult[9];
   }
   if (cResult[10] !== ageSpecificText1) {
-    const obj3 = { icon: _modDef12929, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
+    const obj3 = { icon: _modDef12955, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
     cResult[10] = ageSpecificText1;
     cResult[11] = obj3;
     let tmp31 = obj3;
@@ -110,14 +110,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   }
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     const intl9 = util.intl;
-    const stringResult8 = intl9.string(_modDef2568.hhOuMe);
+    const stringResult8 = intl9.string(_modDef2571.hhOuMe);
     cResult[12] = stringResult8;
     let tmp33 = stringResult8;
   } else {
     tmp33 = cResult[12];
   }
   if (cResult[13] !== ageSpecificText2) {
-    const obj4 = { icon: _modDef8948, IconComponent: QrCodeIcon.QrCodeIcon, header: tmp33, description: ageSpecificText2 };
+    const obj4 = { icon: _modDef8956, IconComponent: QrCodeIcon.QrCodeIcon, header: tmp33, description: ageSpecificText2 };
     cResult[13] = ageSpecificText2;
     cResult[14] = obj4;
     let tmp36 = obj4;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
       if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl10 = util.intl;
-        obj5.children = intl10.string(_modDef2568["6JkHSg"]);
+        obj5.children = intl10.string(_modDef2571["6JkHSg"]);
         const tmp41 = React4(Text_Text.Text, obj5);
         cResult[19] = tmp41;
         let tmp38 = tmp41;
@@ -186,41 +186,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const intl = util.intl;
   const obj = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2568.qITXhY), intl2.string(_modDef2568.bmhCnL));
-  const stringResult = intl.string(_modDef2568.qITXhY);
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2571.qITXhY), intl2.string(_modDef2571.bmhCnL));
+  const stringResult = intl.string(_modDef2571.qITXhY);
   const intl3 = util.intl;
   const obj2 = useAgeSpecificText;
   const intl4 = util.intl;
-  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.string(_modDef2568.t7SkFy), intl4.string(_modDef2568["68zfxD"]));
-  const stringResult1 = intl3.string(_modDef2568.t7SkFy);
+  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.string(_modDef2571.t7SkFy), intl4.string(_modDef2571["68zfxD"]));
+  const stringResult1 = intl3.string(_modDef2571.t7SkFy);
   const intl5 = util.intl;
   const obj3 = useAgeSpecificText;
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
-  const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2568["+pi4Yt"]), intl6.string(_modDef2568["1xPTwE"]));
-  obj4.icon = _modDef15819;
+  const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2571["+pi4Yt"]), intl6.string(_modDef2571["1xPTwE"]));
+  obj4.icon = _modDef15852;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
-  obj4.header = intl7.string(_modDef2568["001l3m"]);
+  obj4.header = intl7.string(_modDef2571["001l3m"]);
   obj4.description = ageSpecificText;
   const items = [obj4, , ];
-  const obj5 = { icon: _modDef12929, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef12955, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
-  obj5.header = intl8.string(_modDef2568.yipAeP);
+  obj5.header = intl8.string(_modDef2571.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef8948, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef8956, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
-  obj6.header = intl9.string(_modDef2568.hhOuMe);
+  obj6.header = intl9.string(_modDef2571.hhOuMe);
   obj6.description = ageSpecificText2;
   items[2] = obj6;
   const obj7 = { style: tmp.tableGroup, children: null };
   const obj8 = { spacing: 8, children: null };
   const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl10 = util.intl;
-  obj9.children = intl10.string(_modDef2568["6JkHSg"]);
+  obj9.children = intl10.string(_modDef2571["6JkHSg"]);
   const items1 = [React4(Text_Text.Text, obj9), ];
-  const stringResult2 = intl5.string(_modDef2568["+pi4Yt"]);
+  const stringResult2 = intl5.string(_modDef2571["+pi4Yt"]);
   items1[1] = React4(TableRowGroup.TableRowGroup, {
     hasIcons: true,
     children: items.map((header) => {

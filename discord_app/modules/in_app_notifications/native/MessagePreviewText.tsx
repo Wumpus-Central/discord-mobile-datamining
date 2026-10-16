@@ -1,36 +1,37 @@
-// === Module 13427: MessagePreviewText ===
+// === Module 13453: MessagePreviewText ===
 
-// Module 13427 (MessagePreviewText)
+// Module 13453 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
-import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import useMessageAuthor from "useMessageAuthor" /* 5843 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7222 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9534 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13418 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13428 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13429 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13430 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 13433 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13434 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1109 */;
+import util from "util" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useMessageAuthor from "useMessageAuthor" /* 5845 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7224 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9550 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13444 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13454 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13455 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13456 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 13459 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13460 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13419);
+const InAppNotificationConstants = fn(13445);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
-const Fonts = fn(1096).Fonts;
+const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5151);
-const PlatformUtils = fn(1383);
+let createStyles = fn(5153);
+const PlatformUtils = fn(1385);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5151);
+createStyles = fn(5153);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -38,7 +39,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "ix" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "unicodeVersion" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);
@@ -194,7 +195,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbedM
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbedCard(embed) {
-  const cResult = c.c(25);
+  const cResult = c.c(27);
   embed = embed.embed;
   const tmp4 = closure_11();
   const provider = embed.provider;
@@ -211,139 +212,146 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbedC
   if (thumbnail == null) {
     thumbnail = embed.image;
   }
-  let color;
-  if (null != embed.color) {
-    if ("#ffffff" !== str.toLowerCase()) {
-      color = embed.color;
+  if (cResult[0] !== embed.color) {
+    let int2hslResult;
+    if (null != embed.color) {
+      if (16777215 !== embed.color) {
+        int2hslResult = utils_ColorUtils.int2hsl(embed.color);
+        const tmpResult = utils_ColorUtils;
+      }
     }
-    str = embed.color;
+    cResult[0] = embed.color;
+    cResult[1] = int2hslResult;
+    let tmp7 = int2hslResult;
+  } else {
+    tmp7 = cResult[1];
   }
-  if (cResult[0] === color) {
-    if (cResult[1] === tmp4.embedAccentBar) {
-      let tmp9 = cResult[2];
+  if (cResult[2] === tmp7) {
+    if (cResult[3] === tmp4.embedAccentBar) {
+      let tmp10 = cResult[4];
     }
-    if (cResult[3] !== name) {
-      let tmp14 = null != name;
-      if (tmp14) {
+    if (cResult[5] !== name) {
+      let tmp15 = null != name;
+      if (tmp15) {
         const obj2 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: name };
-        tmp14 = closure_1_8(Text_Text.Text, obj2);
+        tmp15 = closure_1_8(Text_Text.Text, obj2);
       }
-      cResult[3] = name;
-      cResult[4] = tmp14;
-      let tmp13 = tmp14;
+      cResult[5] = name;
+      cResult[6] = tmp15;
+      let tmp14 = tmp15;
     } else {
-      tmp13 = cResult[4];
+      tmp14 = cResult[6];
     }
-    if (cResult[5] !== name1) {
-      let tmp17 = null != name1;
-      if (tmp17) {
+    if (cResult[7] !== name1) {
+      let tmp18 = null != name1;
+      if (tmp18) {
         const obj3 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: name1 };
-        tmp17 = closure_1_8(Text_Text.Text, obj3);
+        tmp18 = closure_1_8(Text_Text.Text, obj3);
       }
-      cResult[5] = name1;
-      cResult[6] = tmp17;
-      let tmp16 = tmp17;
+      cResult[7] = name1;
+      cResult[8] = tmp18;
+      let tmp17 = tmp18;
     } else {
-      tmp16 = cResult[6];
+      tmp17 = cResult[8];
     }
-    if (cResult[7] === tmp8) {
-      if (cResult[8] === rawTitle) {
-        let tmp19 = cResult[9];
+    if (cResult[9] === tmp9) {
+      if (cResult[10] === rawTitle) {
+        let tmp20 = cResult[11];
       }
-      if (cResult[10] !== embed.rawDescription) {
-        let tmp23 = null != embed.rawDescription;
-        if (tmp23) {
+      if (cResult[12] !== embed.rawDescription) {
+        let tmp24 = null != embed.rawDescription;
+        if (tmp24) {
           const obj4 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: embed.rawDescription };
-          tmp23 = closure_1_8(Text_Text.Text, obj4);
+          tmp24 = closure_1_8(Text_Text.Text, obj4);
         }
-        cResult[10] = embed.rawDescription;
-        cResult[11] = tmp23;
-        let tmp22 = tmp23;
+        cResult[12] = embed.rawDescription;
+        cResult[13] = tmp24;
+        let tmp23 = tmp24;
       } else {
-        tmp22 = cResult[11];
+        tmp23 = cResult[13];
       }
-      if (cResult[12] === tmp4.embedTextContainer) {
-        if (cResult[13] === tmp13) {
-          if (cResult[14] === tmp16) {
-            if (cResult[15] === tmp19) {
-              if (cResult[16] === tmp22) {
-                let tmp25 = cResult[17];
+      if (cResult[14] === tmp4.embedTextContainer) {
+        if (cResult[15] === tmp14) {
+          if (cResult[16] === tmp17) {
+            if (cResult[17] === tmp20) {
+              if (cResult[18] === tmp23) {
+                let tmp26 = cResult[19];
               }
-              if (cResult[18] !== thumbnail) {
-                let tmp30 = null != thumbnail;
-                if (tmp30) {
+              if (cResult[20] !== thumbnail) {
+                let tmp31 = null != thumbnail;
+                if (tmp31) {
                   const obj5 = { media: thumbnail };
-                  tmp30 = closure_1_8(closure_14, obj5);
+                  tmp31 = closure_1_8(closure_14, obj5);
                 }
-                cResult[18] = thumbnail;
-                cResult[19] = tmp30;
-                let tmp29 = tmp30;
+                cResult[20] = thumbnail;
+                cResult[21] = tmp31;
+                let tmp30 = tmp31;
               } else {
-                tmp29 = cResult[19];
+                tmp30 = cResult[21];
               }
-              if (cResult[20] === tmp4.embedContainer) {
-                if (cResult[21] === tmp9) {
-                  if (cResult[22] === tmp25) {
-                    if (cResult[23] === tmp29) {
-                      let tmp33 = cResult[24];
+              if (cResult[22] === tmp4.embedContainer) {
+                if (cResult[23] === tmp10) {
+                  if (cResult[24] === tmp26) {
+                    if (cResult[25] === tmp30) {
+                      let tmp34 = cResult[26];
                     }
-                    return tmp33;
+                    return tmp34;
                   }
                 }
               }
               const obj6 = { style: tmp4.embedContainer, children: null };
-              const items = [tmp9, tmp25, tmp29];
+              const items = [tmp10, tmp26, tmp30];
               obj6.children = items;
-              const tmp36 = React6(View, obj6);
-              cResult[20] = tmp4.embedContainer;
-              cResult[21] = tmp9;
-              cResult[22] = tmp25;
-              cResult[23] = tmp29;
-              cResult[24] = tmp36;
-              tmp33 = tmp36;
+              const tmp37 = React6(View, obj6);
+              cResult[22] = tmp4.embedContainer;
+              cResult[23] = tmp10;
+              cResult[24] = tmp26;
+              cResult[25] = tmp30;
+              cResult[26] = tmp37;
+              tmp34 = tmp37;
             }
           }
         }
       }
       const obj7 = { style: tmp4.embedTextContainer, children: null };
-      const items1 = [tmp13, tmp16, tmp19, tmp22];
+      const items1 = [tmp14, tmp17, tmp20, tmp23];
       obj7.children = items1;
-      const tmp28 = React6(View, obj7);
-      cResult[12] = tmp4.embedTextContainer;
-      cResult[13] = tmp13;
-      cResult[14] = tmp16;
-      cResult[15] = tmp19;
-      cResult[16] = tmp22;
-      cResult[17] = tmp28;
-      tmp25 = tmp28;
+      const tmp29 = React6(View, obj7);
+      cResult[14] = tmp4.embedTextContainer;
+      cResult[15] = tmp14;
+      cResult[16] = tmp17;
+      cResult[17] = tmp20;
+      cResult[18] = tmp23;
+      cResult[19] = tmp29;
+      tmp26 = tmp29;
     }
-    let tmp21Result = null != rawTitle;
-    if (tmp21Result) {
-      let num5 = 1;
-      if (tmp8) {
-        num5 = 3;
+    let tmp22Result = null != rawTitle;
+    if (tmp22Result) {
+      let num8 = 1;
+      if (tmp9) {
+        num8 = 3;
       }
-      const obj8 = { variant: "text-xs/medium", color: "text-link", lineClamp: num5, children: rawTitle };
-      tmp21Result = closure_1_8(Text_Text.Text, obj8);
+      const obj8 = { variant: "text-xs/medium", color: "text-link", lineClamp: num8, children: rawTitle };
+      tmp22Result = closure_1_8(Text_Text.Text, obj8);
     }
-    cResult[7] = tmp8;
-    cResult[8] = rawTitle;
-    cResult[9] = tmp21Result;
-    tmp19 = tmp21Result;
+    cResult[9] = tmp9;
+    cResult[10] = rawTitle;
+    cResult[11] = tmp22Result;
+    tmp20 = tmp22Result;
   }
-  let tmp10 = null != color;
-  if (tmp10) {
+  let tmp11 = null != tmp7;
+  if (tmp11) {
     const obj9 = { style: null };
     const items2 = [tmp4.embedAccentBar, ];
-    const obj10 = { backgroundColor: color };
+    const obj10 = { backgroundColor: tmp7 };
     items2[1] = obj10;
     obj9.style = items2;
-    tmp10 = closure_1_8(View, obj9);
+    tmp11 = closure_1_8(View, obj9);
   }
-  cResult[0] = color;
-  cResult[1] = tmp4.embedAccentBar;
-  cResult[2] = tmp10;
-  tmp9 = tmp10;
+  cResult[2] = tmp7;
+  cResult[3] = tmp4.embedAccentBar;
+  cResult[4] = tmp11;
+  tmp10 = tmp11;
 }) : (function EmbedCard(embed) {
   embed = embed.embed;
   const tmp = closure_11();
@@ -361,66 +369,65 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbedC
   if (thumbnail == null) {
     thumbnail = embed.image;
   }
-  let color;
+  let int2hslResult;
   if (null != embed.color) {
-    if ("#ffffff" !== str.toLowerCase()) {
-      color = embed.color;
+    if (16777215 !== embed.color) {
+      int2hslResult = utils_ColorUtils.int2hsl(embed.color);
     }
-    str = embed.color;
   }
-  const obj = { style: tmp.embedContainer, children: null };
-  let tmp7 = null != color;
-  if (tmp7) {
-    const obj2 = { style: null };
-    const items = [tmp.embedAccentBar, ];
-    const obj3 = { backgroundColor: color };
-    items[1] = obj3;
-    obj2.style = items;
-    tmp7 = closure_1_8(View, obj2);
-  }
-  const items1 = [tmp7, , ];
-  const obj4 = { style: tmp.embedTextContainer, children: null };
-  let tmp9 = null != name;
+  const obj2 = { style: tmp.embedContainer, children: null };
+  let tmp9 = null != int2hslResult;
   if (tmp9) {
-    const obj5 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: name };
-    tmp9 = closure_1_8(Text_Text.Text, obj5);
+    const obj3 = { style: null };
+    const items = [tmp.embedAccentBar, ];
+    const obj4 = { backgroundColor: int2hslResult };
+    items[1] = obj4;
+    obj3.style = items;
+    tmp9 = closure_1_8(View, obj3);
   }
-  const items2 = [tmp9, , , ];
-  let tmp13 = null != name1;
-  if (tmp13) {
-    const obj6 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: name1 };
-    tmp13 = closure_1_8(Text_Text.Text, obj6);
+  const items1 = [tmp9, , ];
+  const obj5 = { style: tmp.embedTextContainer, children: null };
+  let tmp11 = null != name;
+  if (tmp11) {
+    const obj6 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: name };
+    tmp11 = closure_1_8(Text_Text.Text, obj6);
   }
-  items2[1] = tmp13;
-  let tmp18Result = null != rawTitle;
-  if (tmp18Result) {
-    let num2 = 1;
+  const items2 = [tmp11, , , ];
+  let tmp15 = null != name1;
+  if (tmp15) {
+    const obj7 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: name1 };
+    tmp15 = closure_1_8(Text_Text.Text, obj7);
+  }
+  items2[1] = tmp15;
+  let tmp20Result = null != rawTitle;
+  if (tmp20Result) {
+    let num3 = 1;
     if (null == name) {
-      num2 = 1;
+      num3 = 1;
       if (null == name1) {
-        num2 = 3;
+        num3 = 3;
       }
     }
-    const obj7 = { variant: "text-xs/medium", color: "text-link", lineClamp: num2, children: rawTitle };
-    tmp18Result = closure_1_8(Text_Text.Text, obj7);
+    const obj8 = { variant: "text-xs/medium", color: "text-link", lineClamp: num3, children: rawTitle };
+    tmp20Result = closure_1_8(Text_Text.Text, obj8);
   }
-  items2[2] = tmp18Result;
-  let tmp21 = null != embed.rawDescription;
-  if (tmp21) {
-    const obj8 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: embed.rawDescription };
-    tmp21 = closure_1_8(Text_Text.Text, obj8);
+  items2[2] = tmp20Result;
+  let tmp23 = null != embed.rawDescription;
+  if (tmp23) {
+    const obj9 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: embed.rawDescription };
+    tmp23 = closure_1_8(Text_Text.Text, obj9);
   }
-  items2[3] = tmp21;
-  obj4.children = items2;
-  items1[1] = React6(View, obj4);
-  let tmp25 = null != thumbnail;
-  if (tmp25) {
-    const obj9 = { media: thumbnail };
-    tmp25 = closure_1_8(closure_14, obj9);
+  items2[3] = tmp23;
+  obj5.children = items2;
+  items1[1] = React6(View, obj5);
+  let tmp27 = null != thumbnail;
+  if (tmp27) {
+    const obj10 = { media: thumbnail };
+    tmp27 = closure_1_8(closure_14, obj10);
   }
-  items1[2] = tmp25;
-  obj.children = items1;
-  return React6(View, obj);
+  items1[2] = tmp27;
+  obj2.children = items1;
+  return React6(View, obj2);
 });
 ReactCompilerGating = fn(558);
 let obj9 = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };

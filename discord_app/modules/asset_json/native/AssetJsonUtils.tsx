@@ -1,9 +1,7 @@
-// === Module 1130: AssetJsonUtils ===
+// === Module 1132: AssetJsonUtils ===
 
-// Module 1130 (AssetJsonUtils)
-import _mod1131 from "module_1131" /* 1131 */;
+// Module 1132 (AssetJsonUtils)
 import _mod1133 from "module_1133" /* 1133 */;
-import _mod1134 from "module_1134" /* 1134 */;
 import _mod1135 from "module_1135" /* 1135 */;
 import _mod1136 from "module_1136" /* 1136 */;
 import _mod1137 from "module_1137" /* 1137 */;
@@ -31,6 +29,8 @@ import _mod1158 from "module_1158" /* 1158 */;
 import _mod1159 from "module_1159" /* 1159 */;
 import _mod1160 from "module_1160" /* 1160 */;
 import _mod1161 from "module_1161" /* 1161 */;
+import _mod1162 from "module_1162" /* 1162 */;
+import _mod1163 from "module_1163" /* 1163 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -148,94 +148,94 @@ const result = size.fileFinishedImporting("modules/asset_json/native/AssetJsonUt
 
 export const jsonAssets = {
   i18n_bg() {
-    return loadJsonAsset(_mod1131);
-  },
-  i18n_cs() {
     return loadJsonAsset(_mod1133);
   },
-  i18n_da() {
-    return loadJsonAsset(_mod1134);
-  },
-  i18n_de() {
+  i18n_cs() {
     return loadJsonAsset(_mod1135);
   },
-  i18n_el() {
+  i18n_da() {
     return loadJsonAsset(_mod1136);
   },
-  i18n_enGB() {
+  i18n_de() {
     return loadJsonAsset(_mod1137);
   },
-  i18n_esES() {
+  i18n_el() {
     return loadJsonAsset(_mod1138);
   },
-  i18n_es419() {
+  i18n_enGB() {
     return loadJsonAsset(_mod1139);
   },
-  i18n_fi() {
+  i18n_esES() {
     return loadJsonAsset(_mod1140);
   },
-  i18n_fr() {
+  i18n_es419() {
     return loadJsonAsset(_mod1141);
   },
-  i18n_hr() {
+  i18n_fi() {
     return loadJsonAsset(_mod1142);
   },
-  i18n_hu() {
+  i18n_fr() {
     return loadJsonAsset(_mod1143);
   },
-  i18n_it() {
+  i18n_hr() {
     return loadJsonAsset(_mod1144);
   },
-  i18n_ja() {
+  i18n_hu() {
     return loadJsonAsset(_mod1145);
   },
-  i18n_ko() {
+  i18n_it() {
     return loadJsonAsset(_mod1146);
   },
-  i18n_lt() {
+  i18n_ja() {
     return loadJsonAsset(_mod1147);
   },
-  i18n_nl() {
+  i18n_ko() {
     return loadJsonAsset(_mod1148);
   },
-  i18n_no() {
+  i18n_lt() {
     return loadJsonAsset(_mod1149);
   },
-  i18n_pl() {
+  i18n_nl() {
     return loadJsonAsset(_mod1150);
   },
-  i18n_ptBR() {
+  i18n_no() {
     return loadJsonAsset(_mod1151);
   },
-  i18n_ro() {
+  i18n_pl() {
     return loadJsonAsset(_mod1152);
   },
-  i18n_ru() {
+  i18n_ptBR() {
     return loadJsonAsset(_mod1153);
   },
-  i18n_svSE() {
+  i18n_ro() {
     return loadJsonAsset(_mod1154);
   },
-  i18n_th() {
+  i18n_ru() {
     return loadJsonAsset(_mod1155);
   },
-  i18n_tr() {
+  i18n_svSE() {
     return loadJsonAsset(_mod1156);
   },
-  i18n_uk() {
+  i18n_th() {
     return loadJsonAsset(_mod1157);
   },
-  i18n_vi() {
+  i18n_tr() {
     return loadJsonAsset(_mod1158);
   },
-  i18n_zhCN() {
+  i18n_uk() {
     return loadJsonAsset(_mod1159);
   },
-  i18n_zhTW() {
+  i18n_vi() {
     return loadJsonAsset(_mod1160);
   },
-  i18n_hi() {
+  i18n_zhCN() {
     return loadJsonAsset(_mod1161);
+  },
+  i18n_zhTW() {
+    return loadJsonAsset(_mod1162);
+  },
+  i18n_hi() {
+    return loadJsonAsset(_mod1163);
   }
 };
 export { loadJsonAsset };

@@ -1,12 +1,12 @@
-// === Module 6339: GuildJoinRequestActionCreators ===
+// === Module 6341: GuildJoinRequestActionCreators ===
 
-// Module 6339 (GuildJoinRequestActionCreators)
+// Module 6341 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6341 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5001 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6343 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6340 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6342 */;
 
 require = fn;
 let closure_9 = async function _fetchGuildJoinRequests(arg0) {
@@ -327,12 +327,12 @@ let closure_13 = async function _updateGuildJoinRequest() {
     }
     if (body) {
       const obj2 = { title: null, body: null };
-      const intl = closure_1_0(1126).intl;
-      obj2.title = intl.string(closure_1_0(1126).t.DxJj4e);
-      const intl2 = closure_1_0(1126).intl;
-      obj2.body = intl2.string(closure_1_0(1126).t.rSAOk9);
-      closure_1_1(5359).show(obj2);
-      const obj = closure_1_1(5359);
+      const intl = closure_1_0(1128).intl;
+      obj2.title = intl.string(closure_1_0(1128).t.DxJj4e);
+      const intl2 = closure_1_0(1128).intl;
+      obj2.body = intl2.string(closure_1_0(1128).t.rSAOk9);
+      closure_1_1(5361).show(obj2);
+      const obj = closure_1_1(5361);
     }
     return Promise.reject(error);
   });
@@ -567,9 +567,9 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
     }
   }
 };
-let closure_4 = fn(2069).createChannelRecordFromServer;
-const joinRequestFromServer = fn(4996).joinRequestFromServer;
-const Constants = fn(1085);
+let closure_4 = fn(2072).createChannelRecordFromServer;
+const joinRequestFromServer = fn(4999).joinRequestFromServer;
+const Constants = fn(1087);
 ({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestActionCreators.tsx");

@@ -1,18 +1,18 @@
-// === Module 6524: NativeTextInput ===
+// === Module 6526: NativeTextInput ===
 
-// Module 6524 (NativeTextInput)
+// Module 6526 (NativeTextInput)
 import c from "c" /* 576 */;
-import native from "native" /* 4876 */;
-import native2 from "native" /* 4883 */;
-import useMountEffect from "useMountEffect" /* 5456 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6526 */;
+import native from "native" /* 4879 */;
+import native2 from "native" /* 4886 */;
+import useMountEffect from "useMountEffect" /* 5458 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6528 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, TextInput: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const KeyboardThemes = fn(1085).KeyboardThemes;
+const KeyboardThemes = fn(1087).KeyboardThemes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let ReactCompilerGating = fn(558);

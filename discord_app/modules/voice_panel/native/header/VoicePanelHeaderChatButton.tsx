@@ -1,21 +1,21 @@
-// === Module 18139: VoicePanelHeaderChatButton ===
+// === Module 18178: VoicePanelHeaderChatButton ===
 
-// Module 18139 (VoicePanelHeaderChatButton)
+// Module 18178 (VoicePanelHeaderChatButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import util from "util" /* 1126 */;
-import NativeViewDefault from "NativeView" /* 6382 */;
-import ChatIcon from "ChatIcon" /* 8416 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18059 */;
-import useChatBadgeDefault from "useChatBadge" /* 18140 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import util from "util" /* 1128 */;
+import NativeViewDefault from "NativeView" /* 6384 */;
+import ChatIcon from "ChatIcon" /* 8424 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18094 */;
+import useChatBadgeDefault from "useChatBadge" /* 18179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ComponentActions = fn(1085).ComponentActions;
+const ComponentActions = fn(1087).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;

@@ -1,14 +1,14 @@
-// === Module 5167: PresenceStore ===
+// === Module 5169: PresenceStore ===
 
-// Module 5167 (PresenceStore)
+// Module 5169 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef1355 from "module_1355" /* 1355 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5168 */;
+import _modDef1357 from "module_1357" /* 1357 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5170 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 function sortActivity(type, type2) {
   type = type2.type;
@@ -288,7 +288,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1355(tmp25.activities, sorted)) {
+        if (_modDef1357(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -381,7 +381,7 @@ function clearPresences(id) {
   }
   tmp2 = keys[Symbol.iterator]();
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ StatusTypes: closure_4, ActivityTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};

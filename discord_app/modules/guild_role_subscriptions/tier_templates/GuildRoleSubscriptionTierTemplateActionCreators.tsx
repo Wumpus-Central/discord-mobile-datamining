@@ -1,8 +1,8 @@
-// === Module 18890: GuildRoleSubscriptionTierTemplateActionCreators ===
+// === Module 18932: GuildRoleSubscriptionTierTemplateActionCreators ===
 
-// Module 18890 (GuildRoleSubscriptionTierTemplateActionCreators)
+// Module 18932 (GuildRoleSubscriptionTierTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -65,7 +65,7 @@ let closure_5 = async function _getTemplates(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
 

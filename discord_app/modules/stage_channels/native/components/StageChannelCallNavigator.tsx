@@ -1,23 +1,23 @@
-// === Module 11268: StageChannelCallNavigator ===
+// === Module 11288: StageChannelCallNavigator ===
 
-// Module 11268 (StageChannelCallNavigator)
+// Module 11288 (StageChannelCallNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5165 */;
-import spring from "spring" /* 5438 */;
-import MessageManagerDefault from "MessageManager" /* 9537 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11203 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 11274 */;
-import JoinStageViewDefault from "JoinStageView" /* 11338 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11483 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5167 */;
+import spring from "spring" /* 5440 */;
+import MessageManagerDefault from "MessageManager" /* 9553 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11219 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 11294 */;
+import JoinStageViewDefault from "JoinStageView" /* 11358 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11503 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ThemeTypes = fn(1096).ThemeTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const viewAnimationConfig = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: false, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
@@ -238,8 +238,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  const obj3 = showOverlay(4906);
-  fn.__closure = { withSpring: showOverlay(5438).withSpring, showOverlay, viewAnimationConfig };
+  const obj3 = showOverlay(4909);
+  fn.__closure = { withSpring: showOverlay(5440).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 3866068723381;
   fn.__initData = __initData3;
   const animatedStyle = obj3.useAnimatedStyle(fn);
@@ -296,7 +296,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   cResult[8] = tmp13;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-  const obj4 = { withSpring: showOverlay(5438).withSpring, showOverlay, viewAnimationConfig };
+  const obj4 = { withSpring: showOverlay(5440).withSpring, showOverlay, viewAnimationConfig };
 }) : (function JoinStageOverlay(channel) {
   showOverlay = undefined;
   importDefault = undefined;
@@ -308,8 +308,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = showOverlay(4906);
-  fn.__closure = { withSpring: showOverlay(5438).withSpring, showOverlay, viewAnimationConfig };
+  let obj = showOverlay(4909);
+  fn.__closure = { withSpring: showOverlay(5440).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 17555856853074;
   fn.__initData = __initData4;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -323,7 +323,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5438).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5440).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;
@@ -331,7 +331,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   return closure_8(ReanimatedRexportDefault.View, obj3);
 });
 ReactCompilerGating = fn(558);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj5 = { startStagePrompt: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallNavigator(channel) {
   const cResult = channel(first[6]).c(31);

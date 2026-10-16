@@ -1,25 +1,25 @@
-// === Module 18865: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 18907: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 18865 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 18907 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import FormHeaderDefault from "FormHeader" /* 8894 */;
-import FormStylesDefault from "FormStyles" /* 14796 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18834 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 18850 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 18866 */;
+import util from "util" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import FormHeaderDefault from "FormHeader" /* 8902 */;
+import FormStylesDefault from "FormStyles" /* 14829 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18876 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18892 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 18908 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 18832 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18874 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;

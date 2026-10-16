@@ -1,9 +1,9 @@
-// === Module 11852: getCollectionItemAssetUrl ===
+// === Module 11876: getCollectionItemAssetUrl ===
 
-// Module 11852 (getCollectionItemAssetUrl)
-import Constants from "Constants" /* 1085 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
+// Module 11876 (getCollectionItemAssetUrl)
+import Constants from "Constants" /* 1087 */;
+import AvatarUtils from "AvatarUtils" /* 1417 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

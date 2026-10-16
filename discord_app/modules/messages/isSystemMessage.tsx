@@ -1,7 +1,7 @@
-// === Module 6302: isSystemMessage ===
+// === Module 6304: isSystemMessage ===
 
-// Module 6302 (isSystemMessage)
-import MessageTypes from "MessageTypes" /* 1101 */;
+// Module 6304 (isSystemMessage)
+import MessageTypes from "MessageTypes" /* 1103 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/isSystemMessage.tsx");

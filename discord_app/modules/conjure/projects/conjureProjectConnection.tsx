@@ -1,9 +1,9 @@
-// === Module 10979: conjureProjectConnection ===
+// === Module 10994: conjureProjectConnection ===
 
-// Module 10979 (conjureProjectConnection)
+// Module 10994 (conjureProjectConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10907 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10922 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 
 require = fn;
 const size = fn(2);
@@ -65,6 +65,19 @@ export const projectStepHandlers = {
           }
         });
       }
+    }
+  },
+  app_cover_set(cover_image, arg1) {
+    if (undefined !== cover_image.cover_image) {
+      const setProjectCoverResult = ConjureActionCreators.setProjectCover(tmp, cover_image.cover_image);
+      ConjureActionCreators.setProjectCover(tmp, cover_image.cover_image).then((result) => {
+
+      }).catch(() => {
+
+      });
+      const nextPromise = ConjureActionCreators.setProjectCover(tmp, cover_image.cover_image).then((result) => {
+
+      });
     }
   }
 };

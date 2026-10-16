@@ -1,8 +1,8 @@
-// === Module 13533: getFavoritesAddButtonLabel ===
+// === Module 13559: getFavoritesAddButtonLabel ===
 
-// Module 13533 (getFavoritesAddButtonLabel)
-import util from "util" /* 1126 */;
-import _modDef3444 from "module_3444" /* 3444 */;
+// Module 13559 (getFavoritesAddButtonLabel)
+import util from "util" /* 1128 */;
+import _modDef3447 from "module_3447" /* 3447 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
@@ -11,10 +11,10 @@ export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(le
   if (length >= 2) {
     const intl2 = util.intl;
     const obj = { count: length };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3444.LbCa8x, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3447.LbCa8x, obj);
   } else {
     const intl = util.intl;
-    formatToPlainStringResult = intl.string(_modDef3444.xKXcSu);
+    formatToPlainStringResult = intl.string(_modDef3447.xKXcSu);
   }
   return formatToPlainStringResult;
 };

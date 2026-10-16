@@ -1,37 +1,37 @@
-// === Module 16078: QuestContextMenu ===
+// === Module 16111: QuestContextMenu ===
 
-// Module 16078 (QuestContextMenu)
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4884 */;
-import CopyIcon from "CopyIcon" /* 5101 */;
-import parseURLDefault from "parseURL" /* 5128 */;
-import QuestTypes from "QuestTypes" /* 6191 */;
-import AdCreativeType from "AdCreativeType" /* 6195 */;
-import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 6416 */;
-import ClipboardUtils from "ClipboardUtils" /* 7105 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
-import IconButton from "IconButton" /* 7790 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7922 */;
-import _modDef8989 from "module_8989" /* 8989 */;
-import QuestUtils from "QuestUtils" /* 9389 */;
-import QuestActionCreators from "QuestActionCreators" /* 9393 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9395 */;
-import captureAdUserAction from "captureAdUserAction" /* 9396 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9399 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9414 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9425 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16036 */;
-import _modDef16079 from "module_16079" /* 16079 */;
+// Module 16111 (QuestContextMenu)
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import CopyIcon from "CopyIcon" /* 5104 */;
+import parseURLDefault from "parseURL" /* 5131 */;
+import QuestTypes from "QuestTypes" /* 6193 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 6418 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
+import IconButton from "IconButton" /* 7793 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7925 */;
+import _modDef8997 from "module_8997" /* 8997 */;
+import QuestUtils from "QuestUtils" /* 9405 */;
+import QuestActionCreators from "QuestActionCreators" /* 9409 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9411 */;
+import captureAdUserAction from "captureAdUserAction" /* 9412 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9430 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9441 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 16069 */;
+import _modDef16112 from "module_16112" /* 16112 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7607 */;
+import QuestStore from "QuestStore" /* 7609 */;
 
 require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef8989;
+  obj.icon = _modDef8997;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -40,7 +40,7 @@ function renderDefaultButton(ref) {
   return jsx(IconButton.IconButton, { ref: ref.ref });
 }
 let closure_3 = ["ref"];
-const LinkingTypes = fn(1085).LinkingTypes;
+const LinkingTypes = fn(1087).LinkingTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -325,7 +325,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef16079;
+    obj2.iconSource = _modDef16112;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

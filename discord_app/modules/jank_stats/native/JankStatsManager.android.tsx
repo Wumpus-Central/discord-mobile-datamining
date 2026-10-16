@@ -1,11 +1,11 @@
-// === Module 18433: JankStatsManager ===
+// === Module 18474: JankStatsManager ===
 
-// Module 18433 (JankStatsManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7413 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17029 */;
-import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+// Module 18474 (JankStatsManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7415 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 18475 */;
+import Constants from "Constants" /* 1087 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 import size from "module_2" /* 2 */;
 
 ({ AppStates: c3, AnalyticEvents: closure_4 } = Constants);
@@ -61,24 +61,12 @@ prototype["scheduleReport"] = function scheduleReport() {
       self._timeoutId = null;
       self.sendReport("timer");
       self._isScheduledReportSent = true;
-      const obj = NativeJankStatsModuleDefault;
-      if (obj != null) {
-        obj.stopTracking();
-      }
+      NativeJankStatsModuleDefault.stopTracking();
     }, 300000);
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  const obj = NativeJankStatsModuleDefault;
-  let report;
-  if (obj != null) {
-    report = obj.requestReport();
-  }
-  let tmp4 = null == report;
-  if (!tmp4) {
-    tmp4 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
-    const tmp5 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
-  }
+  const report = NativeJankStatsModuleDefault.requestReport();
   if (!tmp4) {
     const obj2 = {};
     const tmpResult = AnalyticsUtilsDefault;
@@ -88,6 +76,7 @@ prototype["sendReport"] = function sendReport(background) {
     obj2.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj2);
   }
+  tmp4 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
 };
 const jankStatsManager = new JankStatsManager();
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");

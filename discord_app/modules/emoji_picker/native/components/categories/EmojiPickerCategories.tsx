@@ -1,22 +1,22 @@
-// === Module 9781: EmojiPickerCategories ===
+// === Module 9797: EmojiPickerCategories ===
 
-// Module 9781 (EmojiPickerCategories)
+// Module 9797 (EmojiPickerCategories)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5117 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9782 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9798 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(6207).EmojiCategoryTypes;
-const Constants = fn(1085);
+const EmojiCategoryTypes = fn(6209).EmojiCategoryTypes;
+const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
-let ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}" };

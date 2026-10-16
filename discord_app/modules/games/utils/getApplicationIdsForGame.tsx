@@ -1,8 +1,8 @@
-// === Module 13382: getApplicationIdsForGame ===
+// === Module 13408: getApplicationIdsForGame ===
 
-// Module 13382 (getApplicationIdsForGame)
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import GameStore from "GameStore" /* 2020 */;
+// Module 13408 (getApplicationIdsForGame)
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import GameStore from "GameStore" /* 2022 */;
 
 const require = globalThis.__r;
 

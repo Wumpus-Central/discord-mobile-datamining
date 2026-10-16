@@ -1,6 +1,6 @@
-// === Module 5114: NativeBrowserManagerModuleIOS ===
+// === Module 5117: NativeBrowserManagerModuleIOS ===
 
-// Module 5114 (NativeBrowserManagerModuleIOS)
+// Module 5117 (NativeBrowserManagerModuleIOS)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

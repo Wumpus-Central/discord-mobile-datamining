@@ -1,25 +1,25 @@
-// === Module 16214: SettingsAppearanceThemeCarousel ===
+// === Module 16247: SettingsAppearanceThemeCarousel ===
 
-// Module 16214 (SettingsAppearanceThemeCarousel)
+// Module 16247 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1254 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import timing from "timing" /* 5152 */;
-import timingPresets from "timingPresets" /* 5155 */;
+import util from "util" /* 1128 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import timing from "timing" /* 5154 */;
+import timingPresets from "timingPresets" /* 5157 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16215 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16248 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const ThemeTypes = fn(1085).ThemeTypes;
+const ThemeTypes = fn(1087).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
-const createStyles = fn(5151);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
+const createStyles = fn(5153);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };

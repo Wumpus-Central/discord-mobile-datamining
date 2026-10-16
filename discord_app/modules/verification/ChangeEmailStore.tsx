@@ -1,7 +1,7 @@
-// === Module 6420: ChangeEmailStore ===
+// === Module 6422: ChangeEmailStore ===
 
-// Module 6420 (ChangeEmailStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
+// Module 6422 (ChangeEmailStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

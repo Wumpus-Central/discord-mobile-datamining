@@ -1,8 +1,8 @@
-// === Module 11123: startAuthorizationNoHook ===
+// === Module 11139: startAuthorizationNoHook ===
 
-// Module 11123 (startAuthorizationNoHook)
-import LinkingDefault from "Linking" /* 4862 */;
-import useAuthorizationApp from "useAuthorizationApp" /* 7076 */;
+// Module 11139 (startAuthorizationNoHook)
+import LinkingDefault from "Linking" /* 4865 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 7078 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -80,7 +80,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 

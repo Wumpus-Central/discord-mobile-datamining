@@ -1,16 +1,16 @@
-// === Module 6273: NotificationCenterItemsStore ===
+// === Module 6275: NotificationCenterItemsStore ===
 
-// Module 6273 (NotificationCenterItemsStore)
+// Module 6275 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5494 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6274 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6275 */;
-import ExperimentStore from "ExperimentStore" /* 5072 */;
-import MessageRecord from "MessageRecord" /* 4817 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6276 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6277 */;
+import ExperimentStore from "ExperimentStore" /* 5075 */;
+import MessageRecord from "MessageRecord" /* 4820 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function _validate(id) {
@@ -195,8 +195,8 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6270).isGuildEventEnded;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const isGuildEventEnded = fn(6272).isGuildEventEnded;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6275);
+        obj = id(6277);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);

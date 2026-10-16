@@ -1,16 +1,16 @@
-// === Module 16187: VoiceSetting ===
+// === Module 16220: VoiceSetting ===
 
-// Module 16187 (VoiceSetting)
+// Module 16220 (VoiceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import util from "util" /* 1128 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11398).MicrophoneIcon,
+  IconComponent: fn(11418).MicrophoneIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
     let Q8gkVL = dependencyMap;
     const cResult = c.c(4);

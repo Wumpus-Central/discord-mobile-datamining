@@ -1,11 +1,11 @@
-// === Module 14451: PremiumGroupActionCreators ===
+// === Module 14483: PremiumGroupActionCreators ===
 
-// Module 14451 (PremiumGroupActionCreators)
+// Module 14483 (PremiumGroupActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 14452 */;
+import UserRecord from "UserRecord" /* 1406 */;
+import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 14484 */;
 
 require = fn;
 let closure_7 = async function _fetchPremiumGroupMembership() {
@@ -586,7 +586,7 @@ let closure_15 = async function _fetchPremiumGroupInvite() {
     return value;
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
 

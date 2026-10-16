@@ -1,8 +1,8 @@
-// === Module 17861: InstantInviteSelfMeasurer ===
+// === Module 17895: InstantInviteSelfMeasurer ===
 
-// Module 17861 (InstantInviteSelfMeasurer)
+// Module 17895 (InstantInviteSelfMeasurer)
 import c from "c" /* 576 */;
-import InstantInvite from "InstantInvite" /* 10522 */;
+import InstantInvite from "InstantInvite" /* 10537 */;
 import noop from "module_19" /* 19 */;
 
 const InstantInviteDefault = InstantInvite;
@@ -10,7 +10,7 @@ const InstantInviteDefault = InstantInvite;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

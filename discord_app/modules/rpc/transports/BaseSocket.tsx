@@ -1,9 +1,9 @@
-// === Module 11248: BaseSocket ===
+// === Module 11267: BaseSocket ===
 
-// Module 11248 (BaseSocket)
+// Module 11267 (BaseSocket)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import Constants from "Constants" /* 1085 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_VERSION: c2, RPCCloseCodes: c3 } = Constants);

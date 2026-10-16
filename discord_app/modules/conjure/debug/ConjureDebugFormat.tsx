@@ -1,6 +1,6 @@
-// === Module 12249: ConjureDebugFormat ===
+// === Module 12273: ConjureDebugFormat ===
 
-// Module 12249 (ConjureDebugFormat)
+// Module 12273 (ConjureDebugFormat)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugFormat.tsx");
@@ -104,23 +104,6 @@ export const formatCount = function formatCount(cache_read_input_tokens) {
     str = cache_read_input_tokens.toLocaleString();
   }
   return str;
-};
-export const formatClockTime = function formatClockTime(ts) {
-  let combined = ts;
-  const date = new Date(ts);
-  if (!Number.isNaN(date.getTime())) {
-    const _String = String;
-    const padStartResult = String(date.getHours()).padStart(2, "0");
-    const _String2 = String;
-    const StringResult = String(date.getHours());
-    const _String3 = String;
-    const StringResult1 = String(date.getMinutes());
-    const padStartResult1 = String(date.getMinutes()).padStart(2, "0");
-    const _HermesInternal = HermesInternal;
-    combined = "" + padStartResult + ":" + padStartResult1 + ":" + String(date.getSeconds()).padStart(2, "0");
-    const StringResult2 = String(date.getSeconds());
-  }
-  return combined;
 };
 export const formatObservedAt = function formatObservedAt(observedAt) {
   const date = new Date(observedAt);

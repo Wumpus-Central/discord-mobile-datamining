@@ -1,8 +1,8 @@
-// === Module 12540: AppealIngestionBreadcrumbs ===
+// === Module 12563: AppealIngestionBreadcrumbs ===
 
-// Module 12540 (AppealIngestionBreadcrumbs)
+// Module 12563 (AppealIngestionBreadcrumbs)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", marginBottom: 8 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
 let size = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.breadCrumbDot = size;
@@ -34,8 +34,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     const _Symbol = Symbol;
     ({ container, title } = tmp4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1126).intl;
-      const stringResult = intl.string(tmp(1126).t.eQg0Ck);
+      const intl = tmp(1128).intl;
+      const stringResult = intl.string(tmp(1128).t.eQg0Ck);
       cResult[0] = stringResult;
       let first = stringResult;
     } else {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     }
     if (cResult[1] !== tmp4.title) {
       const obj2 = { style: title, accessibilityRole: "header", variant: "text-xs/bold", children: first };
-      const tmp9 = closure_3(tmp(5147).Text, obj2);
+      const tmp9 = closure_3(tmp(5149).Text, obj2);
       cResult[1] = tmp4.title;
       cResult[2] = tmp9;
       let tmp7 = tmp9;

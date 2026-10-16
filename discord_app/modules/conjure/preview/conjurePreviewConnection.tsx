@@ -1,16 +1,16 @@
-// === Module 10917: conjurePreviewConnection ===
+// === Module 10932: conjurePreviewConnection ===
 
-// Module 10917 (conjurePreviewConnection)
+// Module 10932 (conjurePreviewConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureChatConnection from "conjureChatConnection" /* 10904 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10906 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10918 */;
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10943 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 10962 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10963 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 10969 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10972 */;
-import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10973 */;
+import conjureChatConnection from "conjureChatConnection" /* 10919 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10921 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10933 */;
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10958 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 10977 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10978 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 10984 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10987 */;
+import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10988 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -329,13 +329,22 @@ export const previewFrameHandlers = {
   }
 };
 export const previewStepHandlers = {
-  preview_ready(turnId, projectId) {
+  preview_ready(integration_installed, projectId) {
     projectId = projectId.projectId;
-    conjureChatConnection.appendTurnStep(projectId, turnId);
-    const result = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true });
+    conjureChatConnection.appendTurnStep(projectId, integration_installed);
+    let tmp4;
+    if (null != integration_installed.integration_installed) {
+      if (null != integration_installed.bot_permissions_changed) {
+        ({ integration_installed: obj2.integrationInstalled, bot_permissions_changed: obj2.botPermissionsChanged } = integration_installed);
+        tmp4 = { integrationInstalled: null, botPermissionsChanged: null };
+        const obj3 = { integrationInstalled: null, botPermissionsChanged: null };
+      }
+    }
+    const result = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true, install: tmp4 });
     result.catch(() => {
 
     });
+    const tmpResult = ConjurePublishActionCreators;
   }
 };
 export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(projectId, arg1) {

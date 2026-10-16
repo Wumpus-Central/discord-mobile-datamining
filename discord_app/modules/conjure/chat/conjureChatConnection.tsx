@@ -1,12 +1,12 @@
-// === Module 10904: conjureChatConnection ===
+// === Module 10919: conjureChatConnection ===
 
-// Module 10904 (conjureChatConnection)
+// Module 10919 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10905 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10906 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10907 */;
+import util from "util" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10920 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10921 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10922 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -21,6 +21,7 @@ function appendFailureStep(turnId, projectId) {
     stderr_tail = turnId.stderr_tail;
   }
   obj4.details = stderr_tail;
+  obj4.turnId = turnId.turn_id;
   ConjureAnalytics.trackConjureErrored(projectId, obj4);
 }
 function handleProjectEvent(event, projectId) {
@@ -79,7 +80,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3862["913RMa"]);
+      const stringResult = intl.string(_modDef3865["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -168,7 +169,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3862["0+RUWx"]);
+      const stringResult = intl.string(_modDef3865["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -245,7 +246,9 @@ let obj2 = {
     if (fields.length > 0) {
       const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: projectId.projectId, turnId: fields.turn_id, patch: null };
       obj3 = { secretRequest: null };
-      const obj7 = { request_id: fields.request_id, fields, note: null, copy_values: null };
+      const obj7 = { request_id: null, over_mcp: null, fields: null, note: null, copy_values: null };
+      ({ request_id: obj4.request_id, over_mcp: obj4.over_mcp } = fields);
+      obj7.fields = fields;
       ({ note: obj4.note, copy_values: obj4.copy_values } = fields);
       obj3.secretRequest = obj7;
       obj2.patch = obj3;

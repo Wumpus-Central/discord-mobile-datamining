@@ -1,8 +1,8 @@
-// === Module 8229: GuildProductSystemMessageUtils ===
+// === Module 8232: GuildProductSystemMessageUtils ===
 
-// Module 8229 (GuildProductSystemMessageUtils)
-import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
+// Module 8232 (GuildProductSystemMessageUtils)
+import Constants from "Constants" /* 1087 */;
+import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 
 const NOOP = Constants.NOOP;

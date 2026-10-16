@@ -1,18 +1,18 @@
-// === Module 12149: ConjureNativeStepImages ===
+// === Module 12173: ConjureNativeStepImages ===
 
-// Module 12149 (ConjureNativeStepImages)
+// Module 12173 (ConjureNativeStepImages)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import openMediaModal from "openMediaModal" /* 8605 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12150 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import openMediaModal from "openMediaModal" /* 8613 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 }, thumb: null, placeholder: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
 obj2.thumb = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         return size;
       });
       const obj = openMediaModal;
-      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "VibegrationsChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
+      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "ConjureChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
     }, () => {
 
     });
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         return size;
       });
       const obj = openMediaModal;
-      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "VibegrationsChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
+      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "ConjureChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
     }, () => {
 
     });

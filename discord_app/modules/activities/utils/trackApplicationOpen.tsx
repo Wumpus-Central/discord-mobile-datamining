@@ -1,8 +1,8 @@
-// === Module 11162: trackApplicationOpen ===
+// === Module 11178: trackApplicationOpen ===
 
-// Module 11162 (trackApplicationOpen)
-import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+// Module 11178 (trackApplicationOpen)
+import Constants from "Constants" /* 1087 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

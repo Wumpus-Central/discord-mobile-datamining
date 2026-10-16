@@ -1,9 +1,9 @@
-// === Module 10758: useSafeAreaAvoidingInputs ===
+// === Module 10773: useSafeAreaAvoidingInputs ===
 
-// Module 10758 (useSafeAreaAvoidingInputs)
+// Module 10773 (useSafeAreaAvoidingInputs)
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensions from "useWindowDimensions" /* 1497 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6886 */;
+import useWindowDimensions from "useWindowDimensions" /* 1499 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 6888 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
               if (null != current2) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp3(10759).measureViewRefInWindow(found.ref), done: false };
+                const obj4 = { value: tmp3(10774).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
             closure_128_2 = value;
             dependencyMap = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(10759).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+            const obj6 = { value: tmp3(10774).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
         } else {
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSafeA
                 if (null != closure_128_3) {
                   dependencyMap = 3;
                   c3 = 1;
-                  const obj9 = { value: tmp3(10759).measureViewInWindow(closure_128_0), done: false };
+                  const obj9 = { value: tmp3(10774).measureViewInWindow(closure_128_0), done: false };
                   return obj9;
                 }
               }

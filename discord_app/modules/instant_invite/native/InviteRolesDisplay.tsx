@@ -1,15 +1,15 @@
-// === Module 10537: InviteRolesDisplay ===
+// === Module 10552: InviteRolesDisplay ===
 
-// Module 10537 (InviteRolesDisplay)
-import RolePillDefault from "RolePill" /* 10538 */;
+// Module 10552 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 10553 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_7 = createStyles.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -39,8 +39,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
       const _Symbol = Symbol;
       ({ container, label } = tmp4);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.stcSfI);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.stcSfI);
         cResult[5] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
       }
       if (cResult[6] !== tmp4.label) {
         const obj2 = { variant: "text-xs/semibold", color: "text-muted", style: label, children: tmp9 };
-        const tmp13 = closure_5(tmp(5147).Text, obj2);
+        const tmp13 = closure_5(tmp(5149).Text, obj2);
         cResult[6] = tmp4.label;
         cResult[7] = tmp13;
         let tmp11 = tmp13;
@@ -137,9 +137,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
-    const intl = tmp2(1126).intl;
-    obj3.children = intl.string(tmp2(1126).t.stcSfI);
-    const items2 = [closure_5(tmp2(5147).Text, obj3), ];
+    const intl = tmp2(1128).intl;
+    obj3.children = intl.string(tmp2(1128).t.stcSfI);
+    const items2 = [closure_5(tmp2(5149).Text, obj3), ];
     const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
     items2[1] = closure_5(View, obj4);
     obj2.children = items2;

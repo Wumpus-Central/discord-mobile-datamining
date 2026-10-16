@@ -1,24 +1,24 @@
-// === Module 12990: useEmojiSuggestionNuxCoachmark ===
+// === Module 13016: useEmojiSuggestionNuxCoachmark ===
 
-// Module 12990 (useEmojiSuggestionNuxCoachmark)
+// Module 13016 (useEmojiSuggestionNuxCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1645 */;
-import useToken from "useToken" /* 4874 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5043 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6888 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12712 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import KeyboardTypes from "KeyboardTypes" /* 1631 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1647 */;
+import useToken from "useToken" /* 4877 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5046 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6890 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const EmojiSuggestionNuxCoachmark = "EmojiSuggestionNuxCoachmark";
 let ReactCompilerGating = fn(558);
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
   }
   if (cResult[0] !== tmp7) {
     if (tmp7) {
-      const items = [tmp2(2049).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+      const items = [tmp2(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
       let items1 = items;
     } else {
       items1 = [];
@@ -92,11 +92,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
     cResult[0] = tmp7;
     cResult[1] = items1;
   } else {
-    const tmp5Result = _slicedToArray(tmp2(7321).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp5Result = _slicedToArray(tmp2(7323).useSelectedDismissibleContent(cResult[1]), 2);
     _require = tmp12;
-    const tmp13 = tmp5Result[0] === tmp2(2049).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
+    const tmp13 = tmp5Result[0] === tmp2(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
     closure_1 = tmp13;
-    const tmp2Result = tmp2(7321);
+    const tmp2Result = tmp2(7323);
     if (cResult[2] !== tmp13) {
       const fn = function f() {
         if (closure_1) {
@@ -118,10 +118,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
     if (cResult[5] === tmp5Result[1]) {
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp2(1126).intl;
-        const stringResult = intl.string(tmp2(1126).t.l8nVB9);
-        const intl2 = tmp2(1126).intl;
-        const stringResult1 = intl2.string(tmp2(1126).t.ujfS5V);
+        const intl = tmp2(1128).intl;
+        const stringResult = intl.string(tmp2(1128).t.l8nVB9);
+        const intl2 = tmp2(1128).intl;
+        const stringResult1 = intl2.string(tmp2(1128).t.ujfS5V);
         cResult[8] = stringResult;
         cResult[9] = stringResult1;
         let tmp22 = stringResult1;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
             return closure_0(ContentDismissActionType.USER_DISMISS);
           }
         }
-        const stringResult2 = obj4.string(tmp2(1126).t["NX+WJN"]);
+        const stringResult2 = obj4.string(tmp2(1128).t["NX+WJN"]);
         cResult[13] = stringResult2;
         const tmp28 = stringResult2;
       } else {
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
   }
   const tmp3 = _slicedToArray(noop.useState(arg1), 2);
   if (tmp4) {
-    const items = [tmp7(2049).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+    const items = [tmp7(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];

@@ -1,8 +1,8 @@
-// === Module 10391: useMobileSocialLayerPurchaseSKU ===
+// === Module 10407: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10391 (useMobileSocialLayerPurchaseSKU)
-import GPlayActionCreators from "GPlayActionCreators" /* 9620 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10392 */;
+// Module 10407 (useMobileSocialLayerPurchaseSKU)
+import GPlayActionCreators from "GPlayActionCreators" /* 9636 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10408 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["sku"];
-const constants = fn(1085).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1087).PriceSetAssignmentPurchaseTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");

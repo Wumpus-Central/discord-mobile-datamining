@@ -1,23 +1,23 @@
-// === Module 5474: ChannelUtils ===
+// === Module 5476: ChannelUtils ===
 
-// Module 5474 (ChannelUtils)
+// Module 5476 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import util from "util" /* 1126 */;
-import PremiumConstants from "PremiumConstants" /* 1392 */;
-import Server from "Server" /* 1998 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import ChannelListUtils from "ChannelListUtils" /* 5475 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5476 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 5483 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore from "GuildChannelStore" /* 4804 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5175 */;
-import Constants from "Constants" /* 1085 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import util from "util" /* 1128 */;
+import PremiumConstants from "PremiumConstants" /* 1394 */;
+import Server from "Server" /* 2000 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import ChannelListUtils from "ChannelListUtils" /* 5477 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5478 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 5485 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5177 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

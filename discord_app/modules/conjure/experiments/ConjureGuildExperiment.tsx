@@ -1,8 +1,8 @@
-// === Module 6283: ConjureGuildExperiment ===
+// === Module 6285: ConjureGuildExperiment ===
 
-// Module 6283 (ConjureGuildExperiment)
+// Module 6285 (ConjureGuildExperiment)
 import c from "c" /* 576 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
@@ -40,8 +40,8 @@ function hasConjureGuildWithoutExposure(conjure_resume) {
   }
   return false;
 }
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1453);
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
+const ApexExperiment = fn(1455);
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -94,7 +94,7 @@ export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled() ?
   const autoTrackExposure = tmp4.autoTrackExposure;
   dependencyMap = tmp5;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1453).ApexExperimentStore];
+    const items = [GuildStore, tmp(1455).ApexExperimentStore];
     cResult[2] = items;
     let tmp6 = items;
   } else {

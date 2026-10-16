@@ -1,15 +1,15 @@
-// === Module 16416: ShowSpoilersSetting ===
+// === Module 16449: ShowSpoilersSetting ===
 
-// Module 16416 (ShowSpoilersSetting)
+// Module 16449 (ShowSpoilersSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2041 */;
+import util from "util" /* 1128 */;
+import UserSettings from "UserSettings" /* 2044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SpoilerRenderSetting = fn(1085).SpoilerRenderSetting;
+const SpoilerRenderSetting = fn(1087).SpoilerRenderSetting;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowSpoilersOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,8 +59,8 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(8210).MobileUserSettings.CHAT,
-  useValue: fn(2041).RenderSpoilers.useSetting,
+  parent: fn(8213).MobileUserSettings.CHAT,
+  useValue: fn(2044).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;
     RenderSpoilers.updateSetting(arg0);

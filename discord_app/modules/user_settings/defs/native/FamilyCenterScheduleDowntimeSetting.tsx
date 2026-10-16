@@ -1,11 +1,11 @@
-// === Module 15868: FamilyCenterScheduleDowntimeSetting ===
+// === Module 15901: FamilyCenterScheduleDowntimeSetting ===
 
-// Module 15868 (FamilyCenterScheduleDowntimeSetting)
-import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import SettingsConstants from "SettingsConstants" /* 8210 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
+// Module 15901 (FamilyCenterScheduleDowntimeSetting)
+import Constants from "Constants" /* 1087 */;
+import util from "util" /* 1128 */;
+import _modDef2571 from "module_2571" /* 2571 */;
+import SettingsConstants from "SettingsConstants" /* 8213 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2568["w/ISB8"]);
+    return intl.string(_modDef2571["w/ISB8"]);
   },
   parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,

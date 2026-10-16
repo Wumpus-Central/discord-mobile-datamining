@@ -1,13 +1,13 @@
-// === Module 9058: SecureFramesExistingVerificationsHelpMessage ===
+// === Module 9066: SecureFramesExistingVerificationsHelpMessage ===
 
-// Module 9058 (SecureFramesExistingVerificationsHelpMessage)
+// Module 9066 (SecureFramesExistingVerificationsHelpMessage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import InlineNotice from "InlineNotice" /* 7784 */;
-import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9059 */;
-import createStyles from "createStyles" /* 5151 */;
+import util from "util" /* 1128 */;
+import InlineNotice from "InlineNotice" /* 7787 */;
+import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9067 */;
+import createStyles from "createStyles" /* 5153 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
           tmp9 = cResult[7];
         }
         if (cResult[8] !== tmp9) {
-          const obj3 = { type: "info", message: tmp9, role: "static" };
-          const tmp13 = jsx(InlineNotice.InlineNotice, { type: "info", message: tmp9, role: "static" });
+          const obj3 = { type: "info", message: tmp9, role: "none" };
+          const tmp13 = jsx(InlineNotice.InlineNotice, { type: "info", message: tmp9, role: "none" });
           cResult[8] = tmp9;
           cResult[9] = tmp13;
           let tmp11 = tmp13;
@@ -81,11 +81,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     const obj2 = { style: null, children: null };
     const items = [tmp.container, style];
     obj2.style = items;
-    const obj3 = { type: "info", message: null, role: "static" };
+    const obj3 = { type: "info", message: null, role: "none" };
     const intl = util.intl;
     const obj4 = { count: secureFramesUserVerifiedKeysCount };
     obj3.message = intl.format(util.t.uZDkz0, obj4);
-    obj2.children = jsx(InlineNotice.InlineNotice, { type: "info", message: null, role: "static" });
+    obj2.children = jsx(InlineNotice.InlineNotice, { type: "info", message: null, role: "none" });
     tmp5 = <View style={null}>{null}</View>;
   }
   return tmp5;

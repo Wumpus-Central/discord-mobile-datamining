@@ -1,8 +1,8 @@
-// === Module 12952: useAutocompleteAnimatedHeightStyles ===
+// === Module 12978: useAutocompleteAnimatedHeightStyles ===
 
-// Module 12952 (useAutocompleteAnimatedHeightStyles)
-import timing from "timing" /* 5152 */;
-import timingPresets from "timingPresets" /* 5155 */;
+// Module 12978 (useAutocompleteAnimatedHeightStyles)
+import timing from "timing" /* 5154 */;
+import timingPresets from "timingPresets" /* 5157 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

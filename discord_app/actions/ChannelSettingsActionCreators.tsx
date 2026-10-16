@@ -1,12 +1,12 @@
-// === Module 9915: ChannelSettingsActionCreators ===
+// === Module 9931: ChannelSettingsActionCreators ===
 
-// Module 9915 (ChannelSettingsActionCreators)
+// Module 9931 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import RootNavigationRef from "RootNavigationRef" /* 5033 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 9916 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 9932 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 function init(channelId, location, subsection) {
@@ -200,8 +200,8 @@ let closure_9 = async function _saveChannel(arg0) {
             tmp5 = isThreadResult;
           }
           if (!tmp5) {
-            const result = closure_1(7247).checkGuildTemplateDirty(guildId);
-            const tmpResult = closure_1(7247);
+            const result = closure_1(7249).checkGuildTemplateDirty(guildId);
+            const tmpResult = closure_1(7249);
           }
           return arg0;
         }, (body) => {
@@ -309,7 +309,7 @@ function removeLinkedLobby(arg0) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.del({ url: timestampProducer.CHANNEL_LINKED_LOBBY(arg0), rejectWithError: true });
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: metroRequire, Layers, ChannelSettingsSections: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");

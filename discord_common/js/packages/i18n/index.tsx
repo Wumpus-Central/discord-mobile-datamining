@@ -1,8 +1,8 @@
-// === Module 1903: i18n ===
+// === Module 1905: i18n ===
 
-// Module 1903 (i18n)
-import i18n_i18n from "i18n/i18n" /* 1904 */;
-import parse from "parse" /* 1947 */;
+// Module 1905 (i18n)
+import i18n_i18n from "i18n/i18n" /* 1906 */;
+import parse from "parse" /* 1949 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/index.tsx");

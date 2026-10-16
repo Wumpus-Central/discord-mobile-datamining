@@ -1,7 +1,7 @@
-// === Module 10326: GiftingBadgeCoachmarkAudienceExperiment ===
+// === Module 10342: GiftingBadgeCoachmarkAudienceExperiment ===
 
-// Module 10326 (GiftingBadgeCoachmarkAudienceExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 10342 (GiftingBadgeCoachmarkAudienceExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-gifting-badge-coachmark-audience", kind: "user", defaultConfig: { enabled: false }, variations: null };

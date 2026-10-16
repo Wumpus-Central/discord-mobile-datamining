@@ -1,13 +1,13 @@
-// === Module 10819: useShowBadgePersonalizationNotice ===
+// === Module 10834: useShowBadgePersonalizationNotice ===
 
-// Module 10819 (useShowBadgePersonalizationNotice)
+// Module 10834 (useShowBadgePersonalizationNotice)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import BadgeUtils from "BadgeUtils" /* 10812 */;
-import ConsentStore from "ConsentStore" /* 6148 */;
+import BadgeUtils from "BadgeUtils" /* 10827 */;
+import ConsentStore from "ConsentStore" /* 6150 */;
 
 require = fn;
-const Consents = fn(1085).Consents;
+const Consents = fn(1087).Consents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgePersonalizationNotice.tsx");

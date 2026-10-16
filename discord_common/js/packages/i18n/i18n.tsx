@@ -1,15 +1,13 @@
-// === Module 1904: i18n/i18n ===
+// === Module 1906: i18n/i18n ===
 
-// Module 1904 (i18n/i18n)
-import getSystemLocale from "getSystemLocale" /* 1361 */;
-import _modDef1905 from "module_1905" /* 1905 */;
-import _mod1946 from "module_1946" /* 1946 */;
-import parse from "parse" /* 1947 */;
+// Module 1906 (i18n/i18n)
+import getSystemLocale from "getSystemLocale" /* 1363 */;
+import _modDef1907 from "module_1907" /* 1907 */;
+import _mod1948 from "module_1948" /* 1948 */;
+import parse from "parse" /* 1949 */;
 
 require = fn;
-global.IntlMessageFormat = _modDef1905;
-const module_1914 = fn(1914);
-const module_1915 = fn(1915);
+global.IntlMessageFormat = _modDef1907;
 const module_1916 = fn(1916);
 const module_1917 = fn(1917);
 const module_1918 = fn(1918);
@@ -36,9 +34,11 @@ const module_1938 = fn(1938);
 const module_1939 = fn(1939);
 const module_1940 = fn(1940);
 const module_1941 = fn(1941);
+const module_1942 = fn(1942);
+const module_1943 = fn(1943);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(1942);
+  fn(1944);
 }
 const React2 = "en-US";
 class Provider {
@@ -136,10 +136,10 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj3);
     } else {
       try {
-        return self(1947).getMessage(tmp4, locale);
+        return self(1949).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(1947).getMessage(tmp7, tmp);
+          return self(1949).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -339,5 +339,5 @@ prototype["_fetchMessages"] = function _fetchMessages(c2) {
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
-export const getSystemLocale = fn(1361).getSystemLocale;
+export const getSystemLocale = fn(1363).getSystemLocale;
 export { I18N };

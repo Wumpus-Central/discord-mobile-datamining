@@ -1,31 +1,31 @@
-// === Module 13688: ChannelHeaderShared ===
+// === Module 13714: ChannelHeaderShared ===
 
-// Module 13688 (ChannelHeaderShared)
+// Module 13714 (ChannelHeaderShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4874 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import useChannelName from "useChannelName" /* 5481 */;
-import Pressables from "Pressables" /* 6405 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6884 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8376 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10486 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10513 */;
-import _modDef13689 from "module_13689" /* 13689 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13690 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import useToken from "useToken" /* 4877 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useChannelName from "useChannelName" /* 5483 */;
+import Pressables from "Pressables" /* 6407 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6886 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8384 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10501 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10528 */;
+import _modDef13715 from "module_13715" /* 13715 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               }
               let tmp13 = !tmp4;
               if (!tmp4) {
-                const obj6 = { source: _modDef13689, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
+                const obj6 = { source: _modDef13715, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
                 tmp13 = closure_1_8(native.Icon, obj6);
               }
               cResult[7] = tmp4;
@@ -259,7 +259,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13689, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13715, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;

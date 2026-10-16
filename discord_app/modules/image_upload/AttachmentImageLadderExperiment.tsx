@@ -1,8 +1,8 @@
-// === Module 1451: AttachmentImageLadderExperiment ===
+// === Module 1453: AttachmentImageLadderExperiment ===
 
-// Module 1451 (AttachmentImageLadderExperiment)
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1452 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 1453 (AttachmentImageLadderExperiment)
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1454 */;
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { enabled: false, maxUpscale: AttachmentImageLadder.ATTACHMENT_LADDER_MAX_UPSCALE, minSnapDownDpr: 2 };

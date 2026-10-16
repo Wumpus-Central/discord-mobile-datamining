@@ -1,16 +1,16 @@
-// === Module 16782: CollectiblesShopScreen ===
+// === Module 16815: CollectiblesShopScreen ===
 
-// Module 16782 (CollectiblesShopScreen)
+// Module 16815 (CollectiblesShopScreen)
 import c from "c" /* 576 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6903 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7098 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7318 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 16783 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 16784 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6905 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7320 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 16816 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 16817 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(1087).CollectiblesMobileShopScreen;
+const constants = fn(1089).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

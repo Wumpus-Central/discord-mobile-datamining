@@ -1,10 +1,10 @@
-// === Module 7005: GuildOnboardingStore ===
+// === Module 7007: GuildOnboardingStore ===
 
-// Module 7005 (GuildOnboardingStore)
+// Module 7007 (GuildOnboardingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
-import FavoritesUtils from "FavoritesUtils" /* 2090 */;
+import Constants from "Constants" /* 1087 */;
+import FavoritesUtils from "FavoritesUtils" /* 2093 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;
@@ -15,11 +15,11 @@ const Store = initializeDefault.Store;
 class GuildOnboardingStore extends Store {
 }
 const prototype = GuildOnboardingStore.prototype;
-prototype["shouldShowOnboarding"] = function shouldShowOnboarding(guildId) {
-  let tmp = guildId !== ME;
+prototype["shouldShowOnboarding"] = function shouldShowOnboarding(id) {
+  let tmp = id !== ME;
   if (tmp) {
     const obj = FavoritesUtils;
-    tmp = !obj.isFavoritesGuildId(guildId);
+    tmp = !obj.isFavoritesGuildId(id);
   }
   if (tmp) {
     let hasItem = null != tmp5;

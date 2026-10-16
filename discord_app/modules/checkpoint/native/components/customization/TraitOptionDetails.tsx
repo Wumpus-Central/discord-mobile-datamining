@@ -1,18 +1,18 @@
-// === Module 12681: TraitOptionDetails ===
+// === Module 12706: TraitOptionDetails ===
 
-// Module 12681 (TraitOptionDetails)
+// Module 12706 (TraitOptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3120 from "module_3120" /* 3120 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import RarityBadgeDefault from "RarityBadge" /* 12682 */;
+import _modDef3123 from "module_3123" /* 3123 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import RarityBadgeDefault from "RarityBadge" /* 12707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, title: { textTransform: "capitalize" }, subscribeLink: { textDecorationLine: "underline" } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -23,10 +23,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
   _require = tmp4;
   let tmp5 = null;
   if (!asset.hidden) {
-    if (asset.rarity === tmp(5498).CheckpointTraitRarity.NITRO) {
+    if (asset.rarity === tmp(5500).CheckpointTraitRarity.NITRO) {
       if (true === asset.locked) {
         if (cResult[0] !== tmp4) {
-          const intl = tmp(1126).intl;
+          const intl = tmp(1128).intl;
           const obj2 = {
             subscribeHook(children, arg1) {
                       return React4(Text_Text.Text, {
@@ -35,27 +35,27 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                         style: subscribeLink.subscribeLink,
                         onPress() {
                           const obj = { analyticsLocations: null };
-                          const items = [closure_1_1(7098).CHECKPOINT];
+                          const items = [closure_1_1(7100).CHECKPOINT];
                           obj.analyticsLocations = items;
-                          return closure_1_1(9614)(obj);
+                          return closure_1_1(9630)(obj);
                         },
                         accessibilityRole: "link",
                         children
                       }, arg1);
                     }
           };
-          const formatResult = intl.format(_modDef3120["3Wq/bk"], obj2);
+          const formatResult = intl.format(_modDef3123["3Wq/bk"], obj2);
           cResult[0] = tmp4;
           cResult[1] = formatResult;
         }
       }
     }
     if (cResult[2] !== asset) {
-      const assetDescription = tmp(12643).getAssetDescription(asset);
+      const assetDescription = tmp(12666).getAssetDescription(asset);
       cResult[2] = asset;
       cResult[3] = assetDescription;
       let tmp6 = assetDescription;
-      const tmpResult = tmp(12643);
+      const tmpResult = tmp(12666);
     } else {
       tmp6 = cResult[3];
     }
@@ -83,10 +83,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
     let format = _require;
     let obj = dependencyMap;
     if (asset.rarity !== require("CheckpointTraitRarity").CheckpointTraitRarity.NITRO) {
-      let assetDescription = format(12643).getAssetDescription(asset);
-      const formatResult = format(12643);
+      let assetDescription = format(12666).getAssetDescription(asset);
+      const formatResult = format(12666);
     }
-    const intl = format(1126).intl;
+    const intl = format(1128).intl;
     format = intl.format;
     obj = {
       subscribeHook(children, arg1) {
@@ -96,16 +96,16 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
             style: subscribeLink.subscribeLink,
             onPress() {
               const obj = { analyticsLocations: null };
-              const items = [closure_1_1(7098).CHECKPOINT];
+              const items = [closure_1_1(7100).CHECKPOINT];
               obj.analyticsLocations = items;
-              return closure_1_1(9614)(obj);
+              return closure_1_1(9630)(obj);
             },
             accessibilityRole: "link",
             children
           }, arg1);
         }
     };
-    assetDescription = format(_modDef3120["3Wq/bk"], obj);
+    assetDescription = format(_modDef3123["3Wq/bk"], obj);
   }
 });
 ReactCompilerGating = fn(558);

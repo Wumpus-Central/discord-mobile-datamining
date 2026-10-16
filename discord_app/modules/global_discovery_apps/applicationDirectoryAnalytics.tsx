@@ -1,11 +1,11 @@
-// === Module 7597: applicationDirectoryAnalytics ===
+// === Module 7599: applicationDirectoryAnalytics ===
 
-// Module 7597 (applicationDirectoryAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+// Module 7599 (applicationDirectoryAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 12451: GuildAntiRaidActionCreators ===
+// === Module 12474: GuildAntiRaidActionCreators ===
 
-// Module 12451 (GuildAntiRaidActionCreators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import _modDef4758 from "module_4758" /* 4758 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8855 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 12452 */;
+// Module 12474 (GuildAntiRaidActionCreators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 12475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -91,9 +91,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef4758();
-    toISOStringResult = _modDef4758().add(tmp8, "hours").toISOString();
-    _modDef4758().add(tmp8, "hours");
+    _modDef4761();
+    toISOStringResult = _modDef4761().add(tmp8, "hours").toISOString();
+    _modDef4761().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -243,8 +243,8 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8262).DEFAULT_LOCKDOWN_DURATION;
-const Constants = fn(1085);
+const DEFAULT_LOCKDOWN_DURATION = fn(8267).DEFAULT_LOCKDOWN_DURATION;
+const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");

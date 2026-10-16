@@ -1,26 +1,26 @@
-// === Module 9425: QuestPlatformUtils ===
+// === Module 9441: QuestPlatformUtils ===
 
-// Module 9425 (QuestPlatformUtils)
+// Module 9441 (QuestPlatformUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import openURLDefault from "openURL" /* 4856 */;
-import BrowserManager from "BrowserManager" /* 5112 */;
-import QuestConstants from "QuestConstants" /* 6188 */;
-import AdCreativeType from "AdCreativeType" /* 6195 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6196 */;
-import openUserSettings from "openUserSettings" /* 7315 */;
-import AnalyticsActions from "AnalyticsActions" /* 7623 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7629 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9395 */;
-import captureAdUserAction from "captureAdUserAction" /* 9396 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9399 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9426 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13771 */;
-import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 13788 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 13789 */;
-import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1128 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import openURLDefault from "openURL" /* 4859 */;
+import BrowserManager from "BrowserManager" /* 5115 */;
+import QuestConstants from "QuestConstants" /* 6190 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6198 */;
+import openUserSettings from "openUserSettings" /* 7317 */;
+import AnalyticsActions from "AnalyticsActions" /* 7625 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7631 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9411 */;
+import captureAdUserAction from "captureAdUserAction" /* 9412 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9442 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13797 */;
+import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 13814 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 13815 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -151,8 +151,8 @@ function openAppStoreOrUrl(link) {
               }
               result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg0);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg0);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, result);
               const tmp = link(inlineStoreParams[14]);
@@ -160,22 +160,22 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                  const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                  const ComponentDispatch = closure_0(1123).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
               });
@@ -190,8 +190,8 @@ function openAppStoreOrUrl(link) {
               }
               result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg0);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg0);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, result);
               const tmp = link(inlineStoreParams[14]);
@@ -199,22 +199,22 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                  const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                  const ComponentDispatch = closure_0(1123).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
               });
@@ -227,23 +227,23 @@ function openAppStoreOrUrl(link) {
               }
               const result = BrowserManager.openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg0);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg0);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, undefined);
               const nextPromise = result.then((result) => {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                  const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                  const ComponentDispatch = closure_0(1123).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
@@ -252,22 +252,22 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                  const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                  const ComponentDispatch = closure_0(1123).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
               }).then(closure_0);
@@ -282,8 +282,8 @@ function openAppStoreOrUrl(link) {
               }
               result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg0);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg0);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }, result);
               const tmp = link(inlineStoreParams[14]);
@@ -291,22 +291,22 @@ function openAppStoreOrUrl(link) {
                 if (result) {
                   const obj = {
                     trackOverlayEvent(arg0, arg1) {
-                        return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                        return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                       }
                   };
                   dependencyMap(obj);
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
                 } else {
                   closure_1_1();
-                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                  const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                  closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                  const ComponentDispatch = closure_0(1123).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 }
                 return result;
               }).catch(() => {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
                 return false;
               });
@@ -321,8 +321,8 @@ function openAppStoreOrUrl(link) {
             }
             let result = link(inlineStoreParams[13]).openPlayStoreInlineInstall(url, appId, (arg0) => {
               closure_1_1();
-              closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg0);
-              const ComponentDispatch = closure_0(1121).ComponentDispatch;
+              closure_0(constants.QUEST_APP_STORE_OVERLAY_CLOSED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg0);
+              const ComponentDispatch = closure_0(1123).ComponentDispatch;
               ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
             }, undefined);
             const tmpResult = link(inlineStoreParams[14]);
@@ -330,15 +330,15 @@ function openAppStoreOrUrl(link) {
               if (result) {
                 const obj = {
                   trackOverlayEvent(arg0, arg1) {
-                      return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                      return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                     }
                 };
                 dependencyMap(obj);
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
               } else {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }
               return result;
@@ -347,22 +347,22 @@ function openAppStoreOrUrl(link) {
               if (result) {
                 const obj = {
                   trackOverlayEvent(arg0, arg1) {
-                      return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                      return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                     }
                 };
                 dependencyMap(obj);
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
               } else {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }
               return result;
             }).catch(() => {
               closure_1_1();
-              closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-              const ComponentDispatch = closure_0(1121).ComponentDispatch;
+              closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+              const ComponentDispatch = closure_0(1123).ComponentDispatch;
               ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               return false;
             }).then(toResult);
@@ -370,22 +370,22 @@ function openAppStoreOrUrl(link) {
               if (result) {
                 const obj = {
                   trackOverlayEvent(arg0, arg1) {
-                      return closure_1_0(arg0, str, closure_0(7623).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7623).AppStoreOverlaySurfaces.MAIN_CTA);
+                      return closure_1_0(arg0, str, closure_0(7625).AppStoreOverlayVariant.NATIVE, arg1, closure_0(7625).AppStoreOverlaySurfaces.MAIN_CTA);
                     }
                 };
                 dependencyMap(obj);
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
               } else {
                 closure_1_1();
-                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-                const ComponentDispatch = closure_0(1121).ComponentDispatch;
+                closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+                const ComponentDispatch = closure_0(1123).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               }
               return result;
             }).catch(() => {
               closure_1_1();
-              closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7623).AppStoreOverlayVariant.NATIVE);
-              const ComponentDispatch = closure_0(1121).ComponentDispatch;
+              closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str, closure_0(7625).AppStoreOverlayVariant.NATIVE);
+              const ComponentDispatch = closure_0(1123).ComponentDispatch;
               ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
               return false;
             });
@@ -433,7 +433,7 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  const ComponentDispatch = adContentId(1121).ComponentDispatch;
+  const ComponentDispatch = adContentId(1123).ComponentDispatch;
   ComponentDispatch.dispatch(constants.QUEST_GAME_LINK_OPENED);
   impressionId = impressionId.impressionId;
   let iosAttributionClickFramework = null;
@@ -443,8 +443,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(13786).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
-    const tmp2Result = tmp2(13786);
+    iosAttributionClickFramework = tmp2(13812).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
+    const tmp2Result = tmp2(13812);
   }
   let fn;
   if (null != iosAttributionClickFramework) {
@@ -605,10 +605,10 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, impress
   const ctaConfig = quest.config.ctaConfig;
   let tmp4 = null;
   if (null != ctaConfig) {
-    const obj3 = { url: tmp(9414).getCtaLink(quest.config), android: null, ios: null };
+    const obj3 = { url: tmp(9430).getCtaLink(quest.config), android: null, ios: null };
     ({ android: obj2.android, ios: obj2.ios } = ctaConfig);
     tmp4 = getDirectAppStoreLinkFromCta(obj3);
-    const tmpResult = tmp(9414);
+    const tmpResult = tmp(9430);
   }
   let tmp6 = ctaLink;
   let tmp7 = ctaLink;
@@ -626,7 +626,7 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, impress
       return false;
     }
   })(tmp7)) {
-    const v4Result = tmp(1279).v4();
+    const v4Result = tmp(1281).v4();
     dependencyMap = v4Result;
     tmp6 = (function setClickIdOnUrl(directAppStoreLinkFromCta, v4Result) {
       try {
@@ -639,7 +639,7 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, impress
         return tmp;
       }
     })(tmp7, v4Result);
-    const tmpResult4 = tmp(1279);
+    const tmpResult4 = tmp(1281);
   }
   impressionId = impressionId.impressionId;
   let iosAttributionClickFramework = null;
@@ -652,18 +652,18 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, impress
         iosAppId = ios.iosAppId;
       }
     }
-    iosAttributionClickFramework = tmp(13786).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, quest.id);
-    const tmpResult5 = tmp(13786);
+    iosAttributionClickFramework = tmp(13812).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, quest.id);
+    const tmpResult5 = tmp(13812);
   }
-  const ComponentDispatch = tmp(1121).ComponentDispatch;
+  const ComponentDispatch = tmp(1123).ComponentDispatch;
   ComponentDispatch.dispatch(constants.QUEST_GAME_LINK_OPENED);
   const ctaConfig3 = quest.config.ctaConfig;
   let tmp12 = null;
   if (null != ctaConfig3) {
-    let obj4 = { url: tmp(9414).getCtaLink(quest.config), android: null, ios: null };
+    let obj4 = { url: tmp(9430).getCtaLink(quest.config), android: null, ios: null };
     ({ android: obj6.android, ios: obj6.ios } = ctaConfig3);
     tmp12 = getInlineStoreParamsFromCta(obj4);
-    const tmpResult6 = tmp(9414);
+    const tmpResult6 = tmp(9430);
   }
   const obj5 = {
     link: tmp6,

@@ -1,25 +1,25 @@
-// === Module 15790: UseDataToCustomizeDiscordSetting ===
+// === Module 15823: UseDataToCustomizeDiscordSetting ===
 
-// Module 15790 (UseDataToCustomizeDiscordSetting)
+// Module 15823 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import common_AlertDefault from "common/Alert" /* 5458 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15750 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 15788 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15789 */;
-import ConsentStore from "ConsentStore" /* 6148 */;
+import util from "util" /* 1128 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import common_AlertDefault from "common/Alert" /* 5460 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15783 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 15821 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15822 */;
+import ConsentStore from "ConsentStore" /* 6150 */;
 
 require = fn;
-const Consents = fn(1085).Consents;
+const Consents = fn(1087).Consents;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8210).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8213).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

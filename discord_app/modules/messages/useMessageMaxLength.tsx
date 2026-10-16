@@ -1,13 +1,13 @@
-// === Module 9480: useMessageMaxLength ===
+// === Module 9496: useMessageMaxLength ===
 
-// Module 9480 (useMessageMaxLength)
+// Module 9496 (useMessageMaxLength)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import UserStore from "UserStore" /* 1390 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MAX_MESSAGE_LENGTH_PREMIUM: closure_4, MAX_MESSAGE_LENGTH: hasOwnProperty } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

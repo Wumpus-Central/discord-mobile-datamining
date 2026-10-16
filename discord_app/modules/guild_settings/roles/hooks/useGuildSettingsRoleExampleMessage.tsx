@@ -1,18 +1,18 @@
-// === Module 18706: useGuildSettingsRoleExampleMessage ===
+// === Module 18748: useGuildSettingsRoleExampleMessage ===
 
-// Module 18706 (useGuildSettingsRoleExampleMessage)
+// Module 18748 (useGuildSettingsRoleExampleMessage)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5494 */;
-import UserActionCreatorsAll from "UserActionCreators" /* 8524 */;
-import createMessageDefault from "createMessage" /* 10030 */;
+import util from "util" /* 1128 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
+import UserActionCreatorsAll from "UserActionCreators" /* 8532 */;
+import createMessageDefault from "createMessage" /* 10046 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1404 */;
+import UserRecord from "UserRecord" /* 1406 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MessageStates = fn(1085).MessageStates;
+const MessageStates = fn(1087).MessageStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
@@ -35,7 +35,7 @@ export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCom
     const insertStaticUserResult = UserActionCreatorsAll.insertStaticUser(tmp14);
     if (null != insertStaticUserResult) {
       messageRecord.author = insertStaticUserResult;
-      messageRecord.author.getAvatarURL = () => require("module_13519");
+      messageRecord.author.getAvatarURL = () => require("module_13545");
     }
     cResult[0] = content;
     cResult[1] = messageRecord;

@@ -1,9 +1,9 @@
-// === Module 8932: InviteSuggestionsActionCreators ===
+// === Module 8940: InviteSuggestionsActionCreators ===
 
-// Module 8932 (InviteSuggestionsActionCreators)
+// Module 8940 (InviteSuggestionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8933 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8915 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8941 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8923 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");

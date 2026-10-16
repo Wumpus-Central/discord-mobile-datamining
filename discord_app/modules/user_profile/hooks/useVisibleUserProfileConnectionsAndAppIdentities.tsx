@@ -1,10 +1,10 @@
-// === Module 14069: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 14101: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 14069 (useVisibleUserProfileConnectionsAndAppIdentities)
-import PlatformsDefault from "Platforms" /* 5979 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7077 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14070 */;
-import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 14071 */;
+// Module 14101 (useVisibleUserProfileConnectionsAndAppIdentities)
+import PlatformsDefault from "Platforms" /* 5981 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7079 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14102 */;
+import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 14103 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVisib
   }
   const arr5 = useGetOrFetchApplicationsDefault(tmp13);
   if (cResult[4] !== arr5) {
-    const found = arr5.filter(tmp(1386).isNotNullish);
+    const found = arr5.filter(tmp(1388).isNotNullish);
     cResult[4] = arr5;
     cResult[5] = found;
     let tmp17 = found;

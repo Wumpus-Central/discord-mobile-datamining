@@ -1,11 +1,11 @@
-// === Module 9332: GameProfileReportButton ===
+// === Module 9345: GameProfileReportButton ===
 
-// Module 9332 (GameProfileReportButton)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9095 */;
-import GameDetectionReportModal from "GameDetectionReportModal" /* 9333 */;
+// Module 9345 (GameProfileReportButton)
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9103 */;
+import GameDetectionReportModal from "GameDetectionReportModal" /* 9346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,11 +22,11 @@ export default function GameProfileReportButton(applicationId) {
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
     const obj2 = ModalActionCreatorsDefault;
     const obj3 = { applicationId };
-    obj2.pushLazy(asyncRequireImpl(9333, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
+    obj2.pushLazy(asyncRequireImpl(9346, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl = applicationId(1126).intl;
-  obj.text = intl.string(applicationId(1126).t.qP2cXd);
+  const intl = applicationId(1128).intl;
+  obj.text = intl.string(applicationId(1128).t.qP2cXd);
   obj.onPress = callback;
-  return jsx(applicationId(5439).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(5441).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 };

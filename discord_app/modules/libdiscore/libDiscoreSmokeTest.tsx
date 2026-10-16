@@ -1,10 +1,10 @@
-// === Module 19025: libDiscoreSmokeTest ===
+// === Module 19069: libDiscoreSmokeTest ===
 
-// Module 19025 (libDiscoreSmokeTest)
+// Module 19069 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import initLibdiscore from "initLibdiscore" /* 566 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -124,7 +124,7 @@ function trackLibdiscoreFailure(arg0) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const logger = new LoggerDefault("libdiscore");
 let c6 = false;
 const size = fn(2);

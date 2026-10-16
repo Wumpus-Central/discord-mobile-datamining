@@ -1,9 +1,9 @@
-// === Module 16692: DevToolsPerformanceTestingScreen ===
+// === Module 16725: DevToolsPerformanceTestingScreen ===
 
-// Module 16692 (DevToolsPerformanceTestingScreen)
+// Module 16725 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15486 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15522 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = navigation(576).c(9);
   const tmp4 = closure_6();
   let obj = navigation(576);
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   const sum = useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16;
   if (cResult[0] !== sum) {
     const obj3 = { paddingBottom: sum };
@@ -36,7 +36,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const _Object = Object;
-    const entries = Object.entries(tmp(16530).PerformanceTestingScreens);
+    const entries = Object.entries(tmp(16563).PerformanceTestingScreens);
     cResult[2] = entries;
     let arr = entries;
   } else {
@@ -47,9 +47,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       hasIcons: true,
       children: arr.map((item) => {
           [screenKey, { headerTitle, Icon }] = item;
-          return jsx(navigation(6400).TableRow, {
+          return jsx(navigation(6402).TableRow, {
             label: headerTitle,
-            icon: jsx(navigation(6400).TableRow.Icon, { IconComponent: Icon }),
+            icon: jsx(navigation(6402).TableRow.Icon, { IconComponent: Icon }),
             arrow: true,
             onPress() {
               if (null != navigation.push) {
@@ -62,13 +62,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }, screenKey);
         })
     };
-    const tmp11 = jsx(tmp(6485).TableRowGroup, {
+    const tmp11 = jsx(tmp(6487).TableRowGroup, {
       hasIcons: true,
       children: arr.map((item) => {
           [screenKey, { headerTitle, Icon }] = item;
-          return jsx(navigation(6400).TableRow, {
+          return jsx(navigation(6402).TableRow, {
             label: headerTitle,
-            icon: jsx(navigation(6400).TableRow.Icon, { IconComponent: Icon }),
+            icon: jsx(navigation(6402).TableRow.Icon, { IconComponent: Icon }),
             arrow: true,
             onPress() {
               if (null != navigation.push) {
@@ -101,7 +101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp9;
   cResult[8] = tmp13;
   tmp12 = tmp13;
-  let obj2 = navigation(1503);
+  let obj2 = navigation(1505);
 }) : (function DevToolsPerformanceTestingScreen() {
   const tmp = closure_6();
   _require = require("useNavigation").useNavigation();
@@ -112,9 +112,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const entries = Object.entries(require("DevToolsScreens").PerformanceTestingScreens);
   obj4.children = entries.map((item) => {
     [tmp, ] = item;
-    return jsx(screenKey(6400).TableRow, {
+    return jsx(screenKey(6402).TableRow, {
       label: tmp2,
-      icon: jsx(screenKey(6400).TableRow.Icon, { IconComponent: tmp3 }),
+      icon: jsx(screenKey(6402).TableRow.Icon, { IconComponent: tmp3 }),
       arrow: true,
       onPress() {
         if (null != screenKey.push) {

@@ -1,29 +1,29 @@
-// === Module 18895: InviteSettingsModal ===
+// === Module 18937: InviteSettingsModal ===
 
-// Module 18895 (InviteSettingsModal)
+// Module 18937 (InviteSettingsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import NavigatorHeader from "NavigatorHeader" /* 6421 */;
-import Navigator from "Navigator" /* 6908 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8907 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 18896 */;
+import util from "util" /* 1128 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import NavigatorHeader from "NavigatorHeader" /* 6423 */;
+import Navigator from "Navigator" /* 6910 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8915 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 18938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8901 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8909 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 }, formContent: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 obj2.formContent = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -33,7 +33,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
   const cResult = navigation(576).c(33);
   closure_12();
   let obj = navigation(576);
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1505).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore, CreateInviteModalStore, GuildStore];
     const fn = function v() {
@@ -55,7 +55,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
   } else {
     [tmp6, tmp7] = cResult;
   }
-  let obj2 = navigation(1503);
+  let obj2 = navigation(1505);
   const stateFromStoresObject = navigation(504).useStateFromStoresObject(tmp6, tmp7);
   ({ settings, inviteSettings, channel } = stateFromStoresObject);
   const tmp12 = _slicedToArray(noop.useState(channel), 2);
@@ -172,7 +172,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
         }
       }
     }
-    const unmountEffect = tmp(5456).useUnmountEffect(O);
+    const unmountEffect = tmp(5458).useUnmountEffect(O);
     if (cResult[9] !== channel) {
       class V {
         constructor() {
@@ -275,9 +275,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
                   let tmp;
                   if (dependencyMap) {
                     const obj = { onPress, text: null };
-                    const intl = navigation(1126).intl;
-                    obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-                    tmp = jsx(navigation(7310).HeaderActionButton, { onPress, text: null });
+                    const intl = navigation(1128).intl;
+                    obj.text = intl.string(navigation(1128).t["R3BPH+"]);
+                    tmp = jsx(navigation(7312).HeaderActionButton, { onPress, text: null });
                   }
                   return tmp;
                 }
@@ -292,7 +292,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
     cResult[13] = navigation;
     cResult[14] = P;
     cResult[15] = items2;
-    const tmpResult3 = tmp(5456);
+    const tmpResult3 = tmp(5458);
   }
   const tmpResult = navigation(504);
   const isEqualResult = navigation(12).isEqual(settings, inviteSettings);
@@ -303,8 +303,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
   const tmpResult4 = navigation(12);
 }) : (function AdvancedInstantInviteScreen() {
   let tmp = closure_12();
-  navigation = navigation(1503).useNavigation();
-  let obj = navigation(1503);
+  navigation = navigation(1505).useNavigation();
+  let obj = navigation(1505);
   const items = [ChannelStore, CreateInviteModalStore, GuildStore];
   const stateFromStoresObject = navigation(504).useStateFromStoresObject(items, () => {
     const pendingSettings = CreateInviteModalStore.getPendingSettings();
@@ -355,8 +355,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5456).useUnmountEffect(() => {
-    channel(8907).resetSettings();
+  const unmountEffect = navigation(5458).useUnmountEffect(() => {
+    channel(8915).resetSettings();
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -381,41 +381,41 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Advanc
         let tmp;
         if (dependencyMap) {
           const obj = { onPress, text: null };
-          const intl = navigation(1126).intl;
-          obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-          tmp = jsx(navigation(7310).HeaderActionButton, { onPress, text: null });
+          const intl = navigation(1128).intl;
+          obj.text = intl.string(navigation(1128).t["R3BPH+"]);
+          tmp = jsx(navigation(7312).HeaderActionButton, { onPress, text: null });
         }
         return tmp;
       }
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(8907).updateSettings({ maxUses });
+    channel(8915).updateSettings({ maxUses });
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(8907).updateSettings({ maxAge });
+    channel(8915).updateSettings({ maxAge });
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(8907).updateSettings({ temporary });
+    channel(8915).updateSettings({ temporary });
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(8907).updateSettings({ flags });
+    channel(8915).updateSettings({ flags });
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(8907).updateSettings({ roleIds });
+    channel(8915).updateSettings({ roleIds });
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null };
-  const tmp2Result2 = navigation(5456);
-  obj5.maxUsesOptions = channel(8902).getMaxUsesOptions;
+  const tmp2Result2 = navigation(5458);
+  obj5.maxUsesOptions = channel(8910).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
   obj5.onChangeMaxUses = callback1;
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(18897), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
-  return jsx(navigation(8800).Form, { contentContainerStyle: tmp.formContainer, children: null });
+  obj4.children = jsx(channel(18939), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  return jsx(navigation(8808).Form, { contentContainerStyle: tmp.formContainer, children: null });
 });
 ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };

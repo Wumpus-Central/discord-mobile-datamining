@@ -1,10 +1,10 @@
-// === Module 10853: SlashBoxIcon ===
+// === Module 10868: SlashBoxIcon ===
 
-// Module 10853 (SlashBoxIcon)
+// Module 10868 (SlashBoxIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod10854 from "module_10854" /* 10854 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod10869 from "module_10869" /* 10869 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const SlashBoxIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10854;
+    const tmpResult = _mod10869;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const SlashBoxIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10854, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10869, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

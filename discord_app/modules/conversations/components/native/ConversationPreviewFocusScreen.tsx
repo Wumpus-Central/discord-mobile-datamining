@@ -1,9 +1,9 @@
-// === Module 17903: ConversationPreviewFocusScreen ===
+// === Module 17937: ConversationPreviewFocusScreen ===
 
-// Module 17903 (ConversationPreviewFocusScreen)
-import ConversationFocusViewDefault from "ConversationFocusView" /* 9599 */;
+// Module 17937 (ConversationPreviewFocusScreen)
+import ConversationFocusViewDefault from "ConversationFocusView" /* 9615 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7535 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7537 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationPreviewFocusScreen() {
   const cResult = conversationId(576).c(16);
   let obj = conversationId(576);
-  const params = conversationId(1506).useRoute().params;
+  const params = conversationId(1508).useRoute().params;
   ({ channelId, conversationId } = params);
   const messageId = params.messageId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj2 = conversationId(1506);
+  const obj2 = conversationId(1508);
   const stateFromStores = conversationId(504).useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ConversationPreviewStore];
@@ -102,10 +102,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
   tmp14 = tmp15;
   const tmpResult2 = conversationId(504);
 }) : (function ConversationPreviewFocusScreen() {
-  const params = conversationId(1506).useRoute().params;
+  const params = conversationId(1508).useRoute().params;
   conversationId = params.conversationId;
   ({ channelId, messageId } = params);
-  let obj = conversationId(1506);
+  let obj = conversationId(1508);
   const items = [ConversationPreviewStore];
   const items1 = [conversationId];
   const messages = conversationId(504).useStateFromStores(items, () => ConversationPreviewStore.getHydratedMessages(conversationId), items1);

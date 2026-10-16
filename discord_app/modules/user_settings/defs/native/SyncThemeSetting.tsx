@@ -1,18 +1,18 @@
-// === Module 16251: SyncThemeSetting ===
+// === Module 16284: SyncThemeSetting ===
 
-// Module 16251 (SyncThemeSetting)
+// Module 16284 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5320 */;
-import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 16252 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import util from "util" /* 1128 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5322 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 16285 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncThemeDisabled() {
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncThe
   const items = [ThemeStore];
   return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
 });
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncThemeAcrossClientsValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,7 +59,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8210).MobileUserSettings.APPEARANCE,
+  parent: fn(8213).MobileUserSettings.APPEARANCE,
   useIsDisabled: tmp2,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncThemeAcrossClientsValue() {
     const cResult = c.c(2);

@@ -1,13 +1,13 @@
-// === Module 5432: useBackPressHandler ===
+// === Module 5434: useBackPressHandler ===
 
-// Module 5432 (useBackPressHandler)
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import KeyCommands from "KeyCommands" /* 5433 */;
+// Module 5434 (useBackPressHandler)
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import KeyCommands from "KeyCommands" /* 5435 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const BackPressTracking = tmp(5435);
+const BackPressTracking = tmp(5437);
 require = fn;
 const NativeModules = fn(17).NativeModules;
 const ReactCompilerGating = fn(558);

@@ -1,16 +1,16 @@
-// === Module 6373: MemberVerificationModalHooks ===
+// === Module 6375: MemberVerificationModalHooks ===
 
-// Module 6373 (MemberVerificationModalHooks)
+// Module 6375 (MemberVerificationModalHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 6374 */;
+import UserStore from "UserStore" /* 1392 */;
+import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 6376 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const setInitialVerification = fn(6374).setInitialVerification;
+const setInitialVerification = fn(6376).setInitialVerification;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserVerificationState() {

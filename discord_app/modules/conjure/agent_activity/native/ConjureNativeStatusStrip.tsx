@@ -1,22 +1,22 @@
-// === Module 12206: ConjureNativeStatusStrip ===
+// === Module 12229: ConjureNativeStatusStrip ===
 
-// Module 12206 (ConjureNativeStatusStrip)
+// Module 12229 (ConjureNativeStatusStrip)
 import nativeDefault from "native" /* 587 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5115 */;
-import ConjureStatusLabels from "ConjureStatusLabels" /* 12038 */;
-import ConjureUsageSheet from "ConjureUsageSheet" /* 12212 */;
-import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12213 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5118 */;
+import ConjureStatusLabels from "ConjureStatusLabels" /* 12062 */;
+import ConjureUsageSheet from "ConjureUsageSheet" /* 12235 */;
+import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10901 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10916 */;
 
 require = fn;
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(11628).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(11652).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_4, minHeight: nativeDefault.space.PX_4 + nativeDefault.space.PX_24 }, activity: null, live: null, indicator: null, label: null, runes: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_4, minHeight: nativeDefault.space.PX_4 + nativeDefault.space.PX_24 };
 obj2.activity = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_16 };
@@ -361,8 +361,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                 if (cResult[14] !== projectUsage) {
                   let runesUsedLabelsResult = null;
                   if (null != projectUsage) {
-                    runesUsedLabelsResult = tmp(12038).runesUsedLabels(projectUsage);
-                    const tmpResult3 = tmp(12038);
+                    runesUsedLabelsResult = tmp(12062).runesUsedLabels(projectUsage);
+                    const tmpResult3 = tmp(12062);
                   }
                   cResult[14] = projectUsage;
                   cResult[15] = runesUsedLabelsResult;
@@ -402,7 +402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                     }
                   }
                 }
-                const tmp23 = tmp15 === tmp(12038).RECALLING_LINES[0];
+                const tmp23 = tmp15 === tmp(12062).RECALLING_LINES[0];
                 if (cResult[18] === tmp14) {
                   class K {
                     constructor() {
@@ -515,14 +515,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                       return;
                     }
                   }
-                  stringResult = obj7.string(_modDef3862["0Kemnh"]);
+                  stringResult = obj7.string(_modDef3865["0Kemnh"]);
                 }
                 obj2.accessibilityHint = stringResult;
                 obj2.disabled = !thinking;
                 obj2.onPress = onToggleThinking;
                 const obj3 = { line: tmp16, rotating: tmp23, immediate: tmp4 };
                 obj2.children = closure_8(closure_11, obj3);
-                tmp26Result = closure_8(tmp(6405).PressableOpacity, obj2);
+                tmp26Result = closure_8(tmp(6407).PressableOpacity, obj2);
               }
             }
           }
@@ -546,8 +546,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   }
   obj4.publishPending = stateFromStores;
   obj4.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12038).thinkingLabel(obj4);
-  const intl = tmp(1126).intl;
+  const thinkingLabelResult = projectId(12062).thinkingLabel(obj4);
+  const intl = tmp(1128).intl;
   const stringResult1 = intl.string(thinkingLabelResult);
   cResult[4] = activity;
   cResult[5] = tmp14;
@@ -561,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   cResult[13] = stringResult1;
   tmp16 = stringResult1;
   tmp15 = thinkingLabelResult;
-  const tmpResult4 = projectId(12038);
+  const tmpResult4 = projectId(12062);
 }) : (function ConjureNativeStatusStrip(projectId) {
   projectId = projectId.projectId;
   ({ thinking, remixStartedAt, saving } = projectId);
@@ -608,13 +608,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   }
   obj2.publishPending = tmp8;
   obj2.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12038).thinkingLabel(obj2);
-  const intl = tmp2(1126).intl;
+  const thinkingLabelResult = projectId(12062).thinkingLabel(obj2);
+  const intl = tmp2(1128).intl;
   const stringResult = intl.string(thinkingLabelResult);
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(12038).runesUsedLabels(projectUsage);
-    const tmp2Result2 = tmp2(12038);
+    runesUsedLabelsResult = tmp2(12062).runesUsedLabels(projectUsage);
+    const tmp2Result2 = tmp2(12062);
   }
   let tmp12 = null != activity;
   if (tmp12) {
@@ -651,24 +651,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         str3 = "text-feedback-critical";
       }
       const obj7 = { variant: "text-xs/medium", color: str3, children: connLabel };
-      tmp16Result3 = closure_8(tmp2(5147).Text, obj7);
+      tmp16Result3 = closure_8(tmp2(5149).Text, obj7);
     }
     items3[1] = tmp16Result3;
     let tmp14Result = null;
     if (null != runesUsedLabelsResult) {
       const obj8 = { accessibilityRole: "button", accessibilityLabel: runesUsedLabelsResult.aria, hitSlop: 8, style: tmp.runes, onPress: tmp13, children: null };
       const obj9 = { variant: "text-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-      const items4 = [closure_8(tmp2(5147).Text, obj9), ];
+      const items4 = [closure_8(tmp2(5149).Text, obj9), ];
       const obj10 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-      items4[1] = closure_8(tmp2(5105).CircleInformationIcon, obj10);
+      items4[1] = closure_8(tmp2(5108).CircleInformationIcon, obj10);
       obj8.children = items4;
-      tmp14Result = closure_9(tmp2(6405).PressableOpacity, obj8);
+      tmp14Result = closure_9(tmp2(6407).PressableOpacity, obj8);
     }
     items3[2] = tmp14Result;
     obj3.children = items3;
     return closure_9(View, obj3);
   }
-  const tmp18 = thinkingLabelResult === projectId(12038).RECALLING_LINES[0];
+  const tmp18 = thinkingLabelResult === projectId(12062).RECALLING_LINES[0];
   let tmp19 = thinking;
   if (!thinking) {
     tmp19 = tmp18;
@@ -691,13 +691,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   obj11.accessibilityLabel = tmp21;
   let stringResult1;
   if (thinking) {
-    const intl2 = tmp2(1126).intl;
-    stringResult1 = intl2.string(_modDef3862["0Kemnh"]);
+    const intl2 = tmp2(1128).intl;
+    stringResult1 = intl2.string(_modDef3865["0Kemnh"]);
   }
   obj11.accessibilityHint = stringResult1;
   obj11.disabled = !thinking;
   obj11.onPress = onToggleThinking;
   obj11.children = closure_8(closure_11, { line: stringResult, rotating: tmp18, immediate: saving });
-  tmp16Result4 = closure_8(tmp2(6405).PressableOpacity, obj11);
-  const tmp2Result = projectId(12038);
+  tmp16Result4 = closure_8(tmp2(6407).PressableOpacity, obj11);
+  const tmp2Result = projectId(12062);
 });

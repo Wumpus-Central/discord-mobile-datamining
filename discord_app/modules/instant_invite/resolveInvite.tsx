@@ -1,19 +1,19 @@
-// === Module 13847: resolveInvite ===
+// === Module 13879: resolveInvite ===
 
-// Module 13847 (resolveInvite)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import TypeUtils from "TypeUtils" /* 2077 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7639 */;
+// Module 13879 (resolveInvite)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import TypeUtils from "TypeUtils" /* 2080 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7641 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6154);
+const TrackedHTTPUtilsDefault = tmp4(6156);
 require = fn;
-let Constants = fn(7640);
+let Constants = fn(7642);
 ({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
-Constants = fn(1085);
+Constants = fn(1087);
 ({ Endpoints: closure_7, AnalyticEvents: closure_8, LoggingInviteTypes: closure_9, AbortCodes: c10 } = Constants);
 const map = new Map();
 const size = fn(2);
@@ -55,7 +55,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
     obj5.with_guild_experiments = withGuildExperiments || undefined;
     const request = { url: closure_7.INVITE(baseCode), query: obj5, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
     const obj6 = {
-      event: tmp(1273).NetworkActionNames.INVITE_RESOLVE,
+      event: tmp(1275).NetworkActionNames.INVITE_RESOLVE,
       properties(ok) {
           let body1 = null;
           if (ok.ok) {

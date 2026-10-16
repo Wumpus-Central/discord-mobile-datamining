@@ -1,9 +1,9 @@
-// === Module 13415: setUserStatus ===
+// === Module 13441: setUserStatus ===
 
-// Module 13415 (setUserStatus)
+// Module 13441 (setUserStatus)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7025 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5975 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7027 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
 
 const require = fn;
 let closure_7 = async function _setUserStatus() {
@@ -19,7 +19,7 @@ let closure_7 = async function _setUserStatus() {
   closure_129_5 = str;
   const PreloadedUserSettingsActionCreators = closure_130_0(closure_130_2[7]).PreloadedUserSettingsActionCreators;
   await PreloadedUserSettingsActionCreators.updateAsync("status", async (statusCreatedAtMs) => {
-    const StringValue = value(1240).StringValue;
+    const StringValue = value(1242).StringValue;
     statusCreatedAtMs.status = StringValue.create({ value });
     statusCreatedAtMs.statusExpiresAtMs = statusExpiresAtMs;
     if (closure_1_1 === value) {
@@ -28,32 +28,32 @@ let closure_7 = async function _setUserStatus() {
       }
       statusCreatedAtMs.statusCreatedAtMs = statusCreatedAtMs;
     }
-    const UInt64Value = value(1240).UInt64Value;
+    const UInt64Value = value(1242).UInt64Value;
     statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
     const obj = { value };
     const obj2 = { value: "" + Date.now() };
   }, closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION);
   closure_129_6 = (function getStatusUpdateAnnouncement(status, arg1) {
-    const humanizeStatusResult = value(5018).humanizeStatus(status);
+    const humanizeStatusResult = value(5021).humanizeStatus(status);
     if ("0" === arg1) {
-      const intl3 = value(1126).intl;
+      const intl3 = value(1128).intl;
       const obj2 = { statusLabel: humanizeStatusResult };
-      return intl3.formatToPlainString(value(1126).t.dO2aLi, obj2);
+      return intl3.formatToPlainString(value(1128).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(13416).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(13442).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
-        const intl2 = value(1126).intl;
+        const intl2 = value(1128).intl;
         const obj3 = { statusLabel: humanizeStatusResult, timeString };
-        let formatToPlainStringResult = intl2.formatToPlainString(value(1126).t["r50t/S"], obj3);
+        let formatToPlainStringResult = intl2.formatToPlainString(value(1128).t["r50t/S"], obj3);
       } else {
-        const intl = value(1126).intl;
+        const intl = value(1128).intl;
         const obj4 = { statusLabel: humanizeStatusResult, dateString: tmp6, timeString };
-        formatToPlainStringResult = intl.formatToPlainString(value(1126).t["J+GJHv"], obj4);
+        formatToPlainStringResult = intl.formatToPlainString(value(1128).t["J+GJHv"], obj4);
       }
       return formatToPlainStringResult;
     }
-    const obj = value(5018);
+    const obj = value(5021);
   })(closure_129_0, closure_129_5);
   const AccessibilityAnnouncer = closure_130_0(closure_130_2[9]).AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(closure_129_6);
@@ -87,7 +87,7 @@ let closure_7 = async function _setUserStatus() {
   closure_129_4 = disableTracking;
   return "test";
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/setUserStatus.tsx");
 

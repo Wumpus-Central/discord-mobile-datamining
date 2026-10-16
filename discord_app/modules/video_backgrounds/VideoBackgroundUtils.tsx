@@ -1,11 +1,11 @@
-// === Module 5319: VideoBackgroundUtils ===
+// === Module 5321: VideoBackgroundUtils ===
 
-// Module 5319 (VideoBackgroundUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+// Module 5321 (VideoBackgroundUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import AvatarUtils from "AvatarUtils" /* 1417 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
 
 require = fn;
 function isAnimatedBackgroundOption(type) {
@@ -92,9 +92,9 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(5315);
+const VideoBackgroundConstants = fn(5317);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 

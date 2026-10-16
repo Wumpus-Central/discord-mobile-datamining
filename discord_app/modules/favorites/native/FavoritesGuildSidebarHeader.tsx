@@ -1,20 +1,20 @@
-// === Module 17316: FavoritesGuildSidebarHeader ===
+// === Module 17350: FavoritesGuildSidebarHeader ===
 
-// Module 17316 (FavoritesGuildSidebarHeader)
+// Module 17350 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import Stack_Stack from "Stack/Stack" /* 5437 */;
-import ChatIcon from "ChatIcon" /* 8416 */;
-import TextIcon from "TextIcon" /* 8425 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8446 */;
-import FavoritesHooks from "FavoritesHooks" /* 10546 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10549 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13529 */;
+import util from "util" /* 1128 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import _modDef3447 from "module_3447" /* 3447 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import Stack_Stack from "Stack/Stack" /* 5439 */;
+import ChatIcon from "ChatIcon" /* 8424 */;
+import TextIcon from "TextIcon" /* 8433 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8454 */;
+import FavoritesHooks from "FavoritesHooks" /* 10561 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10564 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13555 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,15 +31,15 @@ function EmptyBody() {
   }, []);
   let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3444.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3447.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(17219).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17253).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { variant, color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef3444["1n0TGE"]);
+      obj2.children = intl.string(_modDef3447["1n0TGE"]);
       const tmp16 = timestampProducer(Text_Text.Heading, obj2);
       const tmp18 = timestampProducer(EmptyBody, {});
       cResult[3] = tmp16;
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3444["1n0TGE"]);
+  obj4.children = intl.string(_modDef3447["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
   obj3.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj3);

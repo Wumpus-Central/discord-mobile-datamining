@@ -1,21 +1,21 @@
-// === Module 9396: captureAdUserAction ===
+// === Module 9412: captureAdUserAction ===
 
-// Module 9396 (captureAdUserAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import v1 from "v1" /* 1279 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import AdCreativeType from "AdCreativeType" /* 6195 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7581 */;
-import QuestDataUtils from "QuestDataUtils" /* 7603 */;
-import getQuestLogger from "getQuestLogger" /* 7614 */;
-import AnalyticsActions from "AnalyticsActions" /* 7623 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
-import AdDataUtils from "AdDataUtils" /* 7633 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7638 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 9397 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9399 */;
+// Module 9412 (captureAdUserAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import v1 from "v1" /* 1281 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7583 */;
+import QuestDataUtils from "QuestDataUtils" /* 7605 */;
+import getQuestLogger from "getQuestLogger" /* 7616 */;
+import AnalyticsActions from "AnalyticsActions" /* 7625 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
+import AdDataUtils from "AdDataUtils" /* 7635 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7640 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 9413 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7607 */;
+import QuestStore from "QuestStore" /* 7609 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -430,7 +430,7 @@ function reportCaptureAdUserActionError(arg0) {
   const questLogger = getQuestLogger.getQuestLogger();
   questLogger.error("captureAdUserAction failed to report an ad user action", arg0);
 }
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 18790: useCreatorMonetizationEligibilityItems ===
+// === Module 18832: useCreatorMonetizationEligibilityItems ===
 
-// Module 18790 (useCreatorMonetizationEligibilityItems)
-import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 18793 */;
+// Module 18832 (useCreatorMonetizationEligibilityItems)
+import util from "util" /* 1128 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 18835 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
@@ -564,8 +564,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         let handleContactSupportClick;
         if (!noRecentViolations) {
           handleContactSupportClick = function handleContactSupportClick() {
-            const tmp = onEligibilityBecameStale(4856);
-            return tmp(onEligibilityBecameStale(2128).getSubmitRequestURL());
+            const tmp = onEligibilityBecameStale(4859);
+            return tmp(onEligibilityBecameStale(2131).getSubmitRequestURL());
           };
         }
         obj2.actionHandler = handleContactSupportClick;

@@ -1,22 +1,22 @@
-// === Module 18482: RedesignAddAvatarModal ===
+// === Module 18524: RedesignAddAvatarModal ===
 
-// Module 18482 (RedesignAddAvatarModal)
+// Module 18524 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18461 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18503 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8503 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8511 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(7985).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(7988).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -550,23 +550,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(15498);
-              obj11.description = tmp2(8512).generateAvatarDescription();
+              const obj = tmp2(15534);
+              obj11.description = tmp2(8520).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8512);
+              const obj3 = tmp2(8520);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8507).setPendingChanges(obj12);
-            const obj4 = tmp2(8507);
+            tmp2(8515).setPendingChanges(obj12);
+            const obj4 = tmp2(8515);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8509).announcePendingAvatarChange(str);
+            const result = tmp2(8517).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8509);
+            const obj6 = tmp2(8517);
           }
           closure_129_1(true);
         }

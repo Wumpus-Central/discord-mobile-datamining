@@ -1,16 +1,16 @@
-// === Module 13674: ForumChannelSearch ===
+// === Module 13700: ForumChannelSearch ===
 
-// Module 13674 (ForumChannelSearch)
-import Tracking from "Tracking" /* 8121 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9549 */;
+// Module 13700 (ForumChannelSearch)
+import Tracking from "Tracking" /* 8124 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9565 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import ForumSearchStore from "ForumSearchStore" /* 8122 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import ForumSearchStore from "ForumSearchStore" /* 8125 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -134,7 +134,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
   const guildId = channelId.guildId;
   closure_8();
   let obj = channelId(576);
-  const canSearchForumPostsByChannelId = channelId(13675).useCanSearchForumPostsByChannelId(channelId);
+  const canSearchForumPostsByChannelId = channelId(13701).useCanSearchForumPostsByChannelId(channelId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ForumSearchStore];
     cResult[0] = items;
@@ -160,7 +160,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  let obj2 = channelId(13675);
+  let obj2 = channelId(13701);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ChannelStore];
@@ -277,8 +277,8 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13675).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13675);
+  const canSearchForumPostsByChannelId = channelId(13701).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(13701);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
@@ -327,8 +327,8 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
         obj3.children = <tmp10 {...obj4} />;
         tmp8Result = <View {...obj3} />;
       } else {
-        const intl = tmp2(1126).intl;
-        const t = tmp2(1126).t;
+        const intl = tmp2(1128).intl;
+        const t = tmp2(1128).t;
         intl.string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
       }
     }

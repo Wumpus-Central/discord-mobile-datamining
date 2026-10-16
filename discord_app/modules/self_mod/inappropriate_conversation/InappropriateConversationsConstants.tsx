@@ -1,6 +1,6 @@
-// === Module 10669: InappropriateConversationsConstants ===
+// === Module 10684: InappropriateConversationsConstants ===
 
-// Module 10669 (InappropriateConversationsConstants)
+// Module 10684 (InappropriateConversationsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsConstants.tsx");

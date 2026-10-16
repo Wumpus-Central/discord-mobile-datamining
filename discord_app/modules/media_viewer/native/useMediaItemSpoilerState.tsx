@@ -1,9 +1,9 @@
-// === Module 13877: useMediaItemSpoilerState ===
+// === Module 13909: useMediaItemSpoilerState ===
 
-// Module 13877 (useMediaItemSpoilerState)
-import native from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
+// Module 13909 (useMediaItemSpoilerState)
+import native from "native" /* 1202 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,15 +20,15 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
   const cResult = mediaItemHasSpoiler(576).c(7);
   let obj = mediaItemHasSpoiler(576);
   const tmp = mediaItemHasSpoiler;
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8610).useMediaItemHasSpoiler(arg0);
-  let obj2 = mediaItemHasSpoiler(8610);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8618).useMediaItemHasSpoiler(arg0);
+  let obj2 = mediaItemHasSpoiler(8618);
   [tmp6, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp5 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   let num = 0;
   if (mediaItemHasSpoiler) {
     num = 1;
   }
-  sharedValue = mediaItemHasSpoiler(4906).useSharedValue(num);
+  sharedValue = mediaItemHasSpoiler(4909).useSharedValue(num);
   if (cResult[0] === mediaItemHasSpoiler) {
     if (cResult[1] === sharedValue) {
       let tmp8 = cResult[2];
@@ -45,7 +45,7 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
     A.__closure = obj5;
     A.__workletHash = 8496335051493;
     A.__initData = __initData;
-    const animatedStyle = tmp(4906).useAnimatedStyle(A);
+    const animatedStyle = tmp(4909).useAnimatedStyle(A);
     if (cResult[4] === tmp6) {
       if (cResult[5] === animatedStyle) {
         let tmp13 = cResult[6];
@@ -57,7 +57,7 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
     cResult[5] = animatedStyle;
     cResult[6] = items;
     tmp13 = items;
-    const tmpResult = tmp(4906);
+    const tmpResult = tmp(4909);
   }
   let fn = function c() {
     let num = 0;
@@ -82,10 +82,10 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
   cResult[3] = items1;
   tmp9 = items1;
   tmp8 = fn;
-  const obj4 = mediaItemHasSpoiler(4906);
+  const obj4 = mediaItemHasSpoiler(4909);
 }) : (function useMediaItemSpoilerState(arg0) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8610).useMediaItemHasSpoiler(arg0);
-  let obj = mediaItemHasSpoiler(8610);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8618).useMediaItemHasSpoiler(arg0);
+  let obj = mediaItemHasSpoiler(8618);
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
@@ -93,7 +93,7 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
   if (mediaItemHasSpoiler) {
     num = 1;
   }
-  sharedValue = mediaItemHasSpoiler(4906).useSharedValue(num);
+  sharedValue = mediaItemHasSpoiler(4909).useSharedValue(num);
   const items = [mediaItemHasSpoiler, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 0;
@@ -112,13 +112,13 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
     const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: mediaItemHasSpoiler };
   }, items);
   const items1 = [tmp5, ];
-  let obj3 = mediaItemHasSpoiler(4906);
+  let obj3 = mediaItemHasSpoiler(4909);
   let fn = function n() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { spoilerOpacity: sharedValue };
   fn.__workletHash = 11024579603555;
   fn.__initData = __initData2;
-  items1[1] = tmp(4906).useAnimatedStyle(fn);
+  items1[1] = tmp(4909).useAnimatedStyle(fn);
   return items1;
 });

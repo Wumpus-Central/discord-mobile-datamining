@@ -1,9 +1,9 @@
-// === Module 14710: TwitchApplicationRecord ===
+// === Module 14743: TwitchApplicationRecord ===
 
-// Module 14710 (TwitchApplicationRecord)
-import util from "util" /* 1126 */;
-import PlatformsDefault from "Platforms" /* 5979 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
+// Module 14743 (TwitchApplicationRecord)
+import util from "util" /* 1128 */;
+import PlatformsDefault from "Platforms" /* 5981 */;
+import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 
 require = fn;
 let c3 = "twitch:";

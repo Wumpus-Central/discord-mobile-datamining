@@ -1,7 +1,7 @@
-// === Module 13902: MediaViewerItemPresenter ===
+// === Module 13934: MediaViewerItemPresenter ===
 
-// Module 13902 (MediaViewerItemPresenter)
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+// Module 13934 (MediaViewerItemPresenter)
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

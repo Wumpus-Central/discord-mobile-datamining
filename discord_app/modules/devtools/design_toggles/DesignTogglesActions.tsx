@@ -1,8 +1,8 @@
-// === Module 16671: DesignTogglesActions ===
+// === Module 16704: DesignTogglesActions ===
 
-// Module 16671 (DesignTogglesActions)
+// Module 16704 (DesignTogglesActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DesignTogglesStore from "DesignTogglesStore" /* 6424 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 6426 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");

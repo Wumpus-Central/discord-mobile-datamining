@@ -1,10 +1,10 @@
-// === Module 17504: NativeICYMIActionCreators ===
+// === Module 17538: NativeICYMIActionCreators ===
 
-// Module 17504 (NativeICYMIActionCreators)
+// Module 17538 (NativeICYMIActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 

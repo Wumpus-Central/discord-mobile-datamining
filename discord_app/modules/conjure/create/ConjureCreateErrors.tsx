@@ -1,9 +1,9 @@
-// === Module 10910: ConjureCreateErrors ===
+// === Module 10925: ConjureCreateErrors ===
 
-// Module 10910 (ConjureCreateErrors)
-import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
-import _modDef3862 from "module_3862" /* 3862 */;
+// Module 10925 (ConjureCreateErrors)
+import Constants from "Constants" /* 1087 */;
+import util from "util" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
@@ -34,7 +34,7 @@ export const classifyCreateFailure = function classifyCreateFailure(obj) {
         let str2 = "unknown";
         if (409 === status) {
           str2 = "unknown";
-          if (code === AbortCodes.TOO_MANY_VIBEGRATIONS_PROJECTS) {
+          if (code === AbortCodes.TOO_MANY_CONJURE_PROJECTS) {
             str2 = "project_limit";
           }
         }
@@ -62,12 +62,12 @@ export const getConjureCreateErrorMessage = function getConjureCreateErrorMessag
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3862["lh+h/p"]);
+    return intl3.string(_modDef3865["lh+h/p"]);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3862.zBENJU);
+    return intl2.string(_modDef3865.zBENJU);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3862["9m86fn"]);
+    return intl.string(_modDef3865["9m86fn"]);
   }
 };

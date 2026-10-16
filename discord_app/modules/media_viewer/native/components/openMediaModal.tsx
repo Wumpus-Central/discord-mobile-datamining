@@ -1,9 +1,9 @@
-// === Module 8605: openMediaModal ===
+// === Module 8613: openMediaModal ===
 
-// Module 8605 (openMediaModal)
+// Module 8613 (openMediaModal)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 4858 */;
+import ActionSheetStore from "ActionSheetStore" /* 4861 */;
 
 const require = fn;
 let closure_7 = async function _openMediaModal() {
@@ -82,7 +82,7 @@ let closure_7 = async function _openMediaModal() {
   closure_129_7 = Object.assign(closure_0, Object.assign({ originViewOrOriginLayout: 0, initialIndex: 0, initialSources: 0, analyticsSource: 0, channelId: 0, onClose: 0, openAs: 0 }));
   return "test";
 };
-const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
+const MEDIA_MODAL_KEY = fn(1087).MEDIA_MODAL_KEY;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/openMediaModal.tsx");
 

@@ -1,18 +1,19 @@
-// === Module 10985: ActivityFlagUtils ===
+// === Module 11000: ActivityFlagUtils ===
 
-// Module 10985 (ActivityFlagUtils)
+// Module 11000 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7643 */;
-import Constants from "Constants" /* 1085 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7645 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
-export const computeActivityFlags = function computeActivityFlags(activity) {
-  if (flag === undefined) {
+export const computeActivityFlags = function computeActivityFlags(secrets) {
+  let flag = hasFlagResult;
+  if (hasFlagResult === undefined) {
     flag = false;
   }
   let flag2 = arg2;
@@ -27,7 +28,7 @@ export const computeActivityFlags = function computeActivityFlags(activity) {
   if (privacy === undefined) {
     PRIVATE = constants2.PRIVATE;
   }
-  const secrets = activity.secrets;
+  secrets = secrets.secrets;
   let num = 0;
   if (flag) {
     num = constants.INSTANCE | 0;

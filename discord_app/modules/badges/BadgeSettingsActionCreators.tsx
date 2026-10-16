@@ -1,6 +1,6 @@
-// === Module 15514: BadgeSettingsActionCreators ===
+// === Module 15550: BadgeSettingsActionCreators ===
 
-// Module 15514 (BadgeSettingsActionCreators)
+// Module 15550 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -108,7 +108,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 

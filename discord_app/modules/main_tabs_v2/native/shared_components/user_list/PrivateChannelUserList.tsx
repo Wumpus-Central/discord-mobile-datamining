@@ -1,21 +1,21 @@
-// === Module 11934: PrivateChannelUserList ===
+// === Module 11958: PrivateChannelUserList ===
 
-// Module 11934 (PrivateChannelUserList)
+// Module 11958 (PrivateChannelUserList)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8522 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11936 */;
+import util from "util" /* 1128 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 11960 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import RelationshipStore from "RelationshipStore" /* 4816 */;
-import UserStore from "UserStore" /* 1390 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import RelationshipStore from "RelationshipStore" /* 4819 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ RelationshipTypes: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

@@ -1,8 +1,8 @@
-// === Module 12026: ConjureTodoState ===
+// === Module 12050: ConjureTodoState ===
 
-// Module 12026 (ConjureTodoState)
-import conjureChatTurns from "conjureChatTurns" /* 10888 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12027 */;
+// Module 12050 (ConjureTodoState)
+import conjureChatTurns from "conjureChatTurns" /* 10903 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12051 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
@@ -33,6 +33,9 @@ export const checklistLive = function checklistLive(memo) {
     tmp2 = true !== memo.stopRequested;
   }
   return tmp2;
+};
+export const todoProgress = function todoProgress(todos) {
+  return { completed: todos.filter((status) => "completed" === status.status).length, total: todos.length };
 };
 export const unfinishedTodoCount = function unfinishedTodoCount(arr) {
   return arr.filter((status) => "completed" !== status.status).length;

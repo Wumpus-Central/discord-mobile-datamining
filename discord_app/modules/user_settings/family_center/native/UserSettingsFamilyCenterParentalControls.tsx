@@ -1,10 +1,10 @@
-// === Module 15864: UserSettingsFamilyCenterParentalControls ===
+// === Module 15897: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15864 (UserSettingsFamilyCenterParentalControls)
+// Module 15897 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7477 */;
+import util from "util" /* 1128 */;
+import _modDef2571 from "module_2571" /* 2571 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7479 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,11 +13,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const UserSettingsSections = fn(1085).UserSettingsSections;
-const FamilyCenterSubPages = fn(7476).FamilyCenterSubPages;
+const UserSettingsSections = fn(1087).UserSettingsSections;
+const FamilyCenterSubPages = fn(7478).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -488,7 +488,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
       if (null != id) {
         let obj = { title: null, headerRight: null };
         let intl = util.intl;
-        obj.title = intl.string(_modDef2568["1Op+NP"]);
+        obj.title = intl.string(_modDef2571["1Op+NP"]);
         let fn;
         if (!closure_5) {
           fn = (arg0) => {

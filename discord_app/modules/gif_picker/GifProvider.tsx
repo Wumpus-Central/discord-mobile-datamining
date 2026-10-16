@@ -1,7 +1,7 @@
-// === Module 9955: GifProvider ===
+// === Module 9971: GifProvider ===
 
-// Module 9955 (GifProvider)
-import util from "util" /* 1126 */;
+// Module 9971 (GifProvider)
+import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gif_picker/GifProvider.tsx");

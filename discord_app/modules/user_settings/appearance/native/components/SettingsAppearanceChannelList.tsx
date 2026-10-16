@@ -1,13 +1,13 @@
-// === Module 16232: SettingsAppearanceChannelList ===
+// === Module 16265: SettingsAppearanceChannelList ===
 
-// Module 16232 (SettingsAppearanceChannelList)
+// Module 16265 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 16233 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 16234 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 16235 */;
-import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 16241 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 16244 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 16266 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 16267 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 16268 */;
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 16274 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 16277 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -76,8 +76,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = animatedStyles(1126).intl;
-        const stringResult = intl.string(animatedStyles(1126).t.iGxm3x);
+        const intl = animatedStyles(1128).intl;
+        const stringResult = intl.string(animatedStyles(1128).t.iGxm3x);
         cResult[6] = stringResult;
         let tmp8 = stringResult;
       } else {
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
               tmp23 = tmp26;
             }
             const obj5 = { contentContainerStyle: tmp16, data, renderItem: tmp5, keyExtractor: tmp18, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
-            const tmp21 = closure_5(animatedStyles(7034).FlashList, obj5);
+            const tmp21 = closure_5(animatedStyles(7036).FlashList, obj5);
             cResult[14] = data;
             cResult[15] = tmp5;
             cResult[16] = tmp21;
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
   }
   let obj = { style: items1, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
   items1[2] = bgSurfaceHigh;
-  const intl = animatedStyles(1126).intl;
-  obj.accessibilityLabel = intl.string(animatedStyles(1126).t.iGxm3x);
+  const intl = animatedStyles(1128).intl;
+  obj.accessibilityLabel = intl.string(animatedStyles(1128).t.iGxm3x);
   let tmp7 = null;
   if (useGradientBackground) {
     let obj2 = { style: tmp.channelPreviewGradient, children: null };
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = closure_5(animatedStyles(7034).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(7036).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj.children = items2;
   return closure_6(ReanimatedRexportDefault.View, obj);

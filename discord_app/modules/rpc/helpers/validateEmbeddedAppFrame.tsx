@@ -1,14 +1,14 @@
-// === Module 15370: validateEmbeddedAppFrame ===
+// === Module 15405: validateEmbeddedAppFrame ===
 
-// Module 15370 (validateEmbeddedAppFrame)
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7259 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10934 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import RPCHelpers from "RPCHelpers" /* 11243 */;
-import getSocketFrameDefault from "getSocketFrame" /* 15372 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 15373 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15371 */;
+// Module 15405 (validateEmbeddedAppFrame)
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10949 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import RPCHelpers from "RPCHelpers" /* 11259 */;
+import getSocketFrameDefault from "getSocketFrame" /* 15407 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15408 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15406 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -21,7 +21,7 @@ function validateEmbeddedAppFrame(transport) {
       if (null != tmp18) {
         tmp20 = null;
         if (tmp18.applicationId === transport.application.id) {
-          const tmp21 = tmp18.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId() || tmp18.data.prefersPictureInPictureOnNavigateAway;
+          const tmp21 = tmp18.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId() || tmp18.data.runsInBackground;
           const type = tmp18.surface.type;
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
@@ -74,7 +74,7 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = EmbeddedSurfaceUtils;
 }
-const RPCErrors = fn(1085).RPCErrors;
+const RPCErrors = fn(1087).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

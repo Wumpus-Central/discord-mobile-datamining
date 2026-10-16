@@ -1,13 +1,13 @@
-// === Module 17126: useFavoritesGuildCategoryLongPress ===
+// === Module 17160: useFavoritesGuildCategoryLongPress ===
 
-// Module 17126 (useFavoritesGuildCategoryLongPress)
-import util from "util" /* 1126 */;
-import FavoritesUtils from "FavoritesUtils" /* 2090 */;
-import openFavoritesGuildCategoryActionSheetDefault from "openFavoritesGuildCategoryActionSheet" /* 17127 */;
+// Module 17160 (useFavoritesGuildCategoryLongPress)
+import util from "util" /* 1128 */;
+import FavoritesUtils from "FavoritesUtils" /* 2093 */;
+import openFavoritesGuildCategoryActionSheetDefault from "openFavoritesGuildCategoryActionSheet" /* 17161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = fn(1087).ChannelTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
@@ -15,14 +15,14 @@ const result = size.fileFinishedImporting("modules/favorites/native/action/useFa
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildCategoryLongPress(getGuildId) {
   const cResult = id(576).c(5);
   if (cResult[0] !== getGuildId) {
-    let isFavoritesGuildIdResult = tmp(2090).isFavoritesGuildId(getGuildId.getGuildId());
+    let isFavoritesGuildIdResult = tmp(2093).isFavoritesGuildId(getGuildId.getGuildId());
     if (isFavoritesGuildIdResult) {
       isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
     }
     cResult[0] = getGuildId;
     cResult[1] = isFavoritesGuildIdResult;
     let tmp4 = isFavoritesGuildIdResult;
-    const tmpResult = tmp(2090);
+    const tmpResult = tmp(2093);
   } else {
     tmp4 = cResult[1];
   }
@@ -36,8 +36,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   let tmp8 = null;
   if (tmp4) {
     const obj2 = { label: null, perform: null };
-    const intl = tmp(1126).intl;
-    obj2.label = intl.string(tmp(1126).t.Xm41aV);
+    const intl = tmp(1128).intl;
+    obj2.label = intl.string(tmp(1128).t.Xm41aV);
     obj2.perform = function perform() {
       return openFavoritesGuildCategoryActionSheetDefault(id);
     };

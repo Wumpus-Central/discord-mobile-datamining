@@ -1,6 +1,6 @@
-// === Module 11207: VadColorConstants ===
+// === Module 11223: VadColorConstants ===
 
-// Module 11207 (VadColorConstants)
+// Module 11223 (VadColorConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/calls/VadColorConstants.tsx");

@@ -1,14 +1,14 @@
-// === Module 6986: SMSBackupWarningAlert ===
+// === Module 6988: SMSBackupWarningAlert ===
 
-// Module 6986 (SMSBackupWarningAlert)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5360 */;
-import common_AlertDefault from "common/Alert" /* 5458 */;
+// Module 6988 (SMSBackupWarningAlert)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5362 */;
+import common_AlertDefault from "common/Alert" /* 5460 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_5 = createStyles.createStyles({ title: { textAlign: "center" }, body: { marginTop: 8, textAlign: "center", lineHeight: 18 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -30,10 +30,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t["ETE/oC"]);
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t.N86XcP);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t["ETE/oC"]);
+    const intl2 = tmp(1128).intl;
+    const stringResult1 = intl2.string(tmp(1128).t.N86XcP);
     cResult[2] = stringResult;
     cResult[3] = stringResult1;
     let tmp7 = stringResult1;
@@ -52,8 +52,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
     tmp10 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = tmp(1126).intl;
-    const stringResult2 = intl3.string(tmp(1126).t.Ed4XQB);
+    const intl3 = tmp(1128).intl;
+    const stringResult2 = intl3.string(tmp(1128).t.Ed4XQB);
     cResult[5] = stringResult2;
     let tmp11 = stringResult2;
   } else {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
   }
   if (cResult[6] !== tmp4.title) {
     const obj2 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp11 };
-    const tmp15 = closure_3(tmp(5147).Text, obj2);
+    const tmp15 = closure_3(tmp(5149).Text, obj2);
     cResult[6] = tmp4.title;
     cResult[7] = tmp15;
     let tmp13 = tmp15;
@@ -69,8 +69,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
     tmp13 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl4 = tmp(1126).intl;
-    const stringResult3 = intl4.string(tmp(1126).t.EDU2Eg);
+    const intl4 = tmp(1128).intl;
+    const stringResult3 = intl4.string(tmp(1128).t.EDU2Eg);
     cResult[8] = stringResult3;
     let tmp16 = stringResult3;
   } else {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
   }
   if (cResult[9] !== tmp4.body) {
     const obj3 = { style: tmp4.body, variant: "text-sm/medium", color: "text-default", children: tmp16 };
-    const tmp20 = closure_3(tmp(5147).Text, obj3);
+    const tmp20 = closure_3(tmp(5149).Text, obj3);
     cResult[9] = tmp4.body;
     cResult[10] = tmp20;
     let tmp18 = tmp20;
@@ -107,10 +107,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
   onConfirm = onConfirm.onConfirm;
   const tmp = closure_5();
   const obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
-  const intl = onConfirm(1126).intl;
-  obj.cancelText = intl.string(onConfirm(1126).t["ETE/oC"]);
-  const intl2 = onConfirm(1126).intl;
-  obj.confirmText = intl2.string(onConfirm(1126).t.N86XcP);
+  const intl = onConfirm(1128).intl;
+  obj.cancelText = intl.string(onConfirm(1128).t["ETE/oC"]);
+  const intl2 = onConfirm(1128).intl;
+  obj.confirmText = intl2.string(onConfirm(1128).t.N86XcP);
   obj.onConfirm = function handleConfirm() {
     onConfirm();
     actions_AlertActionCreatorsDefault.close();
@@ -119,13 +119,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SMSBacku
     return actions_AlertActionCreatorsDefault.close();
   };
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = onConfirm(1126).intl;
-  obj2.children = intl3.string(onConfirm(1126).t.Ed4XQB);
-  const items = [closure_3(onConfirm(5147).Text, obj2), ];
+  const intl3 = onConfirm(1128).intl;
+  obj2.children = intl3.string(onConfirm(1128).t.Ed4XQB);
+  const items = [closure_3(onConfirm(5149).Text, obj2), ];
   const obj3 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = onConfirm(1126).intl;
-  obj3.children = intl4.string(onConfirm(1126).t.EDU2Eg);
-  items[1] = closure_3(onConfirm(5147).Text, obj3);
+  const intl4 = onConfirm(1128).intl;
+  obj3.children = intl4.string(onConfirm(1128).t.EDU2Eg);
+  items[1] = closure_3(onConfirm(5149).Text, obj3);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 });

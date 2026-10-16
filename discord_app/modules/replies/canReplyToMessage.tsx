@@ -1,19 +1,19 @@
-// === Module 8211: canReplyToMessage ===
+// === Module 8214: canReplyToMessage ===
 
-// Module 8211 (canReplyToMessage)
-import MessageTypes from "MessageTypes" /* 1101 */;
-import ThreadHooks from "ThreadHooks" /* 7190 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8212 */;
+// Module 8214 (canReplyToMessage)
+import MessageTypes from "MessageTypes" /* 1103 */;
+import ThreadHooks from "ThreadHooks" /* 7192 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8215 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UserStore from "UserStore" /* 1390 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MessageFlags: hasOwnProperty, MessageStates: metroRequire } = Constants);
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");

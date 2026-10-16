@@ -1,7 +1,7 @@
-// === Module 10470: conjurePresenceActivity ===
+// === Module 10486: conjurePresenceActivity ===
 
-// Module 10470 (conjurePresenceActivity)
-import Constants from "Constants" /* 1085 */;
+// Module 10486 (conjurePresenceActivity)
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

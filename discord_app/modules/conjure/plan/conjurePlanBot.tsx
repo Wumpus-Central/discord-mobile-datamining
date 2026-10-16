@@ -1,9 +1,9 @@
-// === Module 12162: conjurePlanBot ===
+// === Module 12185: conjurePlanBot ===
 
-// Module 12162 (conjurePlanBot)
-import Server from "Server" /* 1998 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7166 */;
-import conjurePlanTags from "conjurePlanTags" /* 12157 */;
+// Module 12185 (conjurePlanBot)
+import Server from "Server" /* 2000 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
+import conjurePlanTags from "conjurePlanTags" /* 12186 */;
 import size from "module_2" /* 2 */;
 
 function isAppCommand(type) {
@@ -80,10 +80,10 @@ const set = new Set(items);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanBot.tsx");
 
 export { isAppCommand };
-export const getConjurePlanBotInteraction = function getConjurePlanBotInteraction(proposal) {
-  bot = proposal;
-  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
-  if (!obj2.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
+export const getConjurePlanBotInteraction = function getConjurePlanBotInteraction(supported_surfaces) {
+  bot = supported_surfaces;
+  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(supported_surfaces, ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
+  if (!obj2.planDeclaresSurface(supported_surfaces, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
     if (!planDeclaresSurfaceResult) {
       return null;
     }
@@ -102,8 +102,96 @@ export const getConjurePlanBotInteraction = function getConjurePlanBotInteractio
   }
   obj2 = conjurePlanTags;
 };
-export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bot, cResult, bot2) {
-  closure_0 = cResult;
+export const getConjurePlanExperienceBotExchanges = function getConjurePlanExperienceBotExchanges(arr) {
+  const found = arr.filter((bot) => "" !== bot.bot.trim());
+  const substr = found.slice(0, 3);
+  return substr.map((item) => {
+    ({ user, bot } = item);
+    const trimmed = user.trim();
+    if ("" === trimmed) {
+      const obj = { kind: "event", user: "", bot };
+      let obj2 = obj;
+    } else {
+      let str2 = "message";
+      if (trimmed.startsWith("/")) {
+        str2 = "command";
+      }
+      obj2 = { kind: str2, user: trimmed, bot };
+    }
+    return obj2;
+  });
+};
+export const mergeConjurePlanBotExchanges = function mergeConjurePlanBotExchanges(arr, arg1) {
+  if (0 !== arg1.length) {
+    if (!arr.some((kind) => {
+      let tmp = "command" === kind.kind;
+      if (!tmp) {
+        let tmp2 = "user_command" === kind.kind;
+        if (!tmp2) {
+          tmp2 = "message_command" === kind.kind;
+        }
+        tmp = tmp2;
+      }
+      return tmp;
+    })) {
+      let items = [];
+      items[HermesBuiltin.arraySpread(arr.slice(0, 2), 0)] = arg1[0];
+    }
+    return items;
+  }
+  items = arr.slice(0, 3);
+};
+export const getConjurePlanSectionBotExchanges = function getConjurePlanSectionBotExchanges(kind, botExchanges, conjurePlanCommandExchanges) {
+  if ("commands" === kind.kind) {
+    return conjurePlanCommandExchanges;
+  } else {
+    let example_exchanges = kind.example_exchanges;
+    if (example_exchanges == null) {
+      example_exchanges = [];
+    }
+    let arr2 = botExchanges;
+    const found = example_exchanges.filter((bot) => "" !== bot.bot.trim());
+    const substr = found.slice(0, 3);
+    const mapped = substr.map((item) => {
+      ({ user, bot } = item);
+      const trimmed = user.trim();
+      if ("" === trimmed) {
+        const obj = { kind: "event", user: "", bot };
+        let obj2 = obj;
+      } else {
+        let str2 = "message";
+        if (trimmed.startsWith("/")) {
+          str2 = "command";
+        }
+        obj2 = { kind: str2, user: trimmed, bot };
+      }
+      return obj2;
+    });
+    if (mapped.length > 0) {
+      arr2 = mapped;
+    }
+    if (0 !== conjurePlanCommandExchanges.length) {
+      if (!arr2.some((kind) => {
+        let tmp = "command" === kind.kind;
+        if (!tmp) {
+          let tmp2 = "user_command" === kind.kind;
+          if (!tmp2) {
+            tmp2 = "message_command" === kind.kind;
+          }
+          tmp = tmp2;
+        }
+        return tmp;
+      })) {
+        let items = [];
+        items[HermesBuiltin.arraySpread(arr2.slice(0, 2), 0)] = conjurePlanCommandExchanges[0];
+      }
+      return items;
+    }
+    items = arr2.slice(0, 3);
+  }
+};
+export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bot, commands, bot2) {
+  closure_0 = commands;
   bot = bot.bot;
   let example_exchanges;
   if (bot != null) {
@@ -113,7 +201,7 @@ export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bo
     example_exchanges = [];
   }
   let obj = { kind: "event", user: "", bot: bot2.event };
-  if ("events" === cResult) {
+  if ("events" === commands) {
     const substr = example_exchanges.slice(0, 3);
     let mapped = substr.map((bot) => {
       if ("" !== bot.bot.trim()) {
@@ -152,13 +240,13 @@ export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bo
     });
     let obj3 = { kind: "message", user: null, bot: null };
     ({ message: obj2.user, reply: obj2.bot } = bot2);
-    if ("messages" === cResult) {
+    if ("messages" === commands) {
       if (0 === flatMapResult.length) {
         const items1 = [obj3];
         return items1;
       }
     }
-    const commands = bot.commands;
+    commands = bot.commands;
     const found = commands.filter(isAppCommand);
     const mapped1 = found.map((description) => {
       let str2;
@@ -189,7 +277,7 @@ export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bo
       }
       return obj;
     });
-    if ("messages" === cResult) {
+    if ("messages" === commands) {
       let items2 = [];
     } else {
       items2 = mapped1.filter(isContextMenuExchange);
@@ -200,7 +288,7 @@ export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bo
       let tmp3Result = pickSamples(items3, true);
     } else {
       let tmp4 = mapped1;
-      if ("both" === cResult) {
+      if ("both" === commands) {
         const items4 = [];
         items4[HermesBuiltin.arraySpread(mapped1, 0)] = obj3;
         tmp4 = items4;

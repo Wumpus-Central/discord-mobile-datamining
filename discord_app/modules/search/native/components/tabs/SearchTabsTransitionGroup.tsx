@@ -1,12 +1,12 @@
-// === Module 17762: SearchTabsTransitionGroup ===
+// === Module 17796: SearchTabsTransitionGroup ===
 
-// Module 17762 (SearchTabsTransitionGroup)
+// Module 17796 (SearchTabsTransitionGroup)
 import c from "c" /* 576 */;
-import native from "native" /* 4883 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import spring from "spring" /* 5438 */;
-import springPresets from "springPresets" /* 5442 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 11577 */;
+import native from "native" /* 4886 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import spring from "spring" /* 5440 */;
+import springPresets from "springPresets" /* 5444 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCountFormatter() {
   const cResult = setting(576).c(2);
   let obj = setting(576);
-  setting = setting(2041).SearchResultExactCountEnabled.useSetting();
+  setting = setting(2044).SearchResultExactCountEnabled.useSetting();
   if (cResult[0] !== setting) {
     const fn = function t(toLocaleString) {
       if (!setting) {
@@ -43,7 +43,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoun
   }
   return tmp3;
 }) : (function useCountFormatter() {
-  setting = setting(2041).SearchResultExactCountEnabled.useSetting();
+  setting = setting(2044).SearchResultExactCountEnabled.useSetting();
   const items = [setting];
   return noop.useCallback((toLocaleString) => {
     if (!setting) {

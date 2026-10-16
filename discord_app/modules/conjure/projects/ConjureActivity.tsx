@@ -1,6 +1,6 @@
-// === Module 12189: ConjureActivity ===
+// === Module 11522: ConjureActivity ===
 
-// Module 12189 (ConjureActivity)
+// Module 11522 (ConjureActivity)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { building: 0, done: 1, idle: 2 };
@@ -40,6 +40,18 @@ export const sortConjureProjects = function sortConjureProjects(items) {
       return localeCompareResult;
     }
   });
+};
+export const compareConjureProjectsByUpdatedAt = function compareConjureProjectsByUpdatedAt(updated_at, updated_at2) {
+  let num = 1;
+  if (null != updated_at.updated_at) {
+    let num2 = -1;
+    if (null != updated_at2.updated_at) {
+      updated_at = updated_at2.updated_at;
+      num2 = updated_at.localeCompare(updated_at.updated_at);
+    }
+    num = num2;
+  }
+  return num;
 };
 export const conjureProjectGuildId = function conjureProjectGuildId(guild_id) {
   guild_id = guild_id.guild_id;

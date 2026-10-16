@@ -1,23 +1,23 @@
-// === Module 11875: FrecencyCommandsSection ===
+// === Module 11899: FrecencyCommandsSection ===
 
-// Module 11875 (FrecencyCommandsSection)
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7463 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10856 */;
-import AppDetailContent from "AppDetailContent" /* 11857 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11876 */;
+// Module 11899 (FrecencyCommandsSection)
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7465 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10871 */;
+import AppDetailContent from "AppDetailContent" /* 11881 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
-let obj2 = { container: { marginBottom: fn(11857).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
+const createStyles = fn(5153);
+let obj2 = { container: { marginBottom: fn(11881).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: fn(11857).BETWEEN_SECTIONS_MARGIN };
+let obj3 = { marginBottom: fn(11881).BETWEEN_SECTIONS_MARGIN };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
 
@@ -239,9 +239,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Frecency
     let obj = { style: tmp.container, children: null };
     let obj2 = { style: tmp.header, children: null };
     const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
-    const intl = context(1126).intl;
-    obj3.children = intl.string(context(1126).t.acSE0h);
-    obj2.children = arr(context(5147).Heading, obj3);
+    const intl = context(1128).intl;
+    obj3.children = intl.string(context(1128).t.acSE0h);
+    obj2.children = arr(context(5149).Heading, obj3);
     const items1 = [arr(View, obj2), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
     obj.children = items1;
     tmp4 = closure_7(View, obj);

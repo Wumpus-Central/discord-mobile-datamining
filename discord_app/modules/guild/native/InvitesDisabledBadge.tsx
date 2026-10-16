@@ -1,20 +1,20 @@
-// === Module 17341: InvitesDisabledBadge ===
+// === Module 17375: InvitesDisabledBadge ===
 
-// Module 17341 (InvitesDisabledBadge)
+// Module 17375 (InvitesDisabledBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1200 */;
-import _modDef13330 from "module_13330" /* 13330 */;
+import native from "native" /* 1202 */;
+import _modDef13356 from "module_13356" /* 13356 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 }, pauseBackground: null, pauseRing: null };
-let size = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, padding: fn(1200).BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
+let size = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, padding: fn(1202).BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
 obj.pauseBackground = size;
-const size1 = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, position: "absolute", bottom: -fn(1200).BADGE_PADDING, right: -fn(1200).BADGE_PADDING, padding: fn(1200).BADGE_PADDING, height: 22, width: 22, alignContent: "center", justifyContent: "center" };
+const size1 = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, position: "absolute", bottom: -fn(1202).BADGE_PADDING, right: -fn(1202).BADGE_PADDING, padding: fn(1202).BADGE_PADDING, height: 22, width: 22, alignContent: "center", justifyContent: "center" };
 obj.pauseRing = size1;
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -30,8 +30,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.pause) {
-      const obj2 = { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13330 };
-      const tmp9 = jsx(native.ThemedIcon, { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13330 });
+      const obj2 = { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13356 };
+      const tmp9 = jsx(native.ThemedIcon, { style: tmp4.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13356 });
       cResult[3] = tmp4.pause;
       cResult[4] = tmp9;
       let tmp6 = tmp9;
@@ -72,7 +72,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = { style: null, children: null };
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
-  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13330 }) };
-  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13330 })}</View>;
+  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13356 }) };
+  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef13356 })}</View>;
   return <View style={null}>{null}</View>;
 }));

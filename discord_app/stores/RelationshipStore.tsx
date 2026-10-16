@@ -1,12 +1,14 @@
-// === Module 4816: RelationshipStore ===
+// === Module 4819: RelationshipStore ===
 
-// Module 4816 (RelationshipStore)
+// Module 4819 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4797 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4817 */;
-import UserStore from "UserStore" /* 1390 */;
+import MessageRecord from "MessageRecord" /* 4820 */;
+import UserStore from "UserStore" /* 1392 */;
 
+require = fn;
 function markAllUserIdListsStale() {
   set3.add("friends");
   set3.add("blocked");
@@ -15,7 +17,7 @@ function markAllUserIdListsStale() {
 }
 function flushStaleUserIdLists() {
   for (const item10005 of set3) {
-    closure_19[item10005] = undefined;
+    closure_20[item10005] = undefined;
     continue;
   }
   set3.clear();
@@ -82,19 +84,19 @@ function recountPending() {
   if (num == null) {
     num = 0;
   }
-  closure_16 = Math.max(num - size - size, 0);
-  closure_14 = closure_14 + 1;
+  closure_17 = Math.max(num - size - size, 0);
+  closure_15 = closure_15 + 1;
 }
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const map = new Map();
 let set = new Set();
 const set1 = new Set();
 const set2 = new Set();
-let closure_14 = 0;
+let closure_15 = 0;
 const dependencyMap = {};
-let closure_16 = 0;
+let closure_17 = 0;
 let size = 0;
-let closure_19 = { friends: "ix", blocked: "isReactCompilerEnabled", ignored: "section", blockedOrIgnored: "Array" };
+let closure_20 = { friends: "unicodeVersion", blocked: "marginTop", ignored: "shapes", blockedOrIgnored: "Array" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -127,13 +129,13 @@ prototype["isBlocked"] = function isBlocked(arg0) {
   return tmp;
 };
 prototype["isBlockedForMessage"] = function isBlockedForMessage(message) {
+  const self = this;
   if (null != message.author) {
     if (map.get(message.author.id) === RelationshipTypes.BLOCKED) {
       return true;
     }
   }
-  const self = this;
-  const isBlocked = this.isBlocked;
+  const isBlocked = self.isBlocked;
   if (message instanceof MessageRecord) {
     const interactionMetadata = message.interactionMetadata;
     let id;
@@ -159,7 +161,25 @@ prototype["isBlockedForMessage"] = function isBlockedForMessage(message) {
       return true;
     }
   }
-  return false;
+  if (message instanceof MessageRecord) {
+    const guildSpaceData = message.guildSpaceData;
+    let leaderboard1;
+    if (guildSpaceData != null) {
+      leaderboard1 = guildSpaceData.leaderboard;
+    }
+    let leaderboard = leaderboard1;
+  } else {
+    const guild_space_data = message.guild_space_data;
+    if (guild_space_data != null) {
+      leaderboard = guild_space_data.leaderboard;
+    }
+  }
+  let someResult = null != leaderboard;
+  if (someResult) {
+    const guildSpaceLeaderboardUserIds = GuildLeaderboardTypes.getGuildSpaceLeaderboardUserIds(leaderboard);
+    someResult = guildSpaceLeaderboardUserIds.some((item) => self.isBlocked(item));
+  }
+  return someResult;
 };
 prototype["isIgnored"] = function isIgnored(arg0) {
   let tmp = null != arg0;
@@ -205,14 +225,32 @@ prototype["isIgnoredForMessage"] = function isIgnoredForMessage(message) {
       return true;
     }
   }
-  return false;
+  if (message instanceof MessageRecord) {
+    const guildSpaceData = message.guildSpaceData;
+    let leaderboard1;
+    if (guildSpaceData != null) {
+      leaderboard1 = guildSpaceData.leaderboard;
+    }
+    let leaderboard = leaderboard1;
+  } else {
+    const guild_space_data = message.guild_space_data;
+    if (guild_space_data != null) {
+      leaderboard = guild_space_data.leaderboard;
+    }
+  }
+  let someResult = null != leaderboard;
+  if (someResult) {
+    const guildSpaceLeaderboardUserIds = GuildLeaderboardTypes.getGuildSpaceLeaderboardUserIds(leaderboard);
+    someResult = guildSpaceLeaderboardUserIds.some((item) => self.isIgnored(item));
+  }
+  return someResult;
 };
 prototype["isUnfilteredPendingIncoming"] = function isUnfilteredPendingIncoming(nextResult) {
   const self = this;
   return map.get(nextResult) === RelationshipTypes.PENDING_INCOMING && !self.isSpam(nextResult) && !self.isIgnored(nextResult);
 };
 prototype["getPendingCount"] = function getPendingCount() {
-  return closure_16;
+  return closure_17;
 };
 prototype["getSpamCount"] = function getSpamCount() {
   return size;
@@ -249,7 +287,7 @@ prototype["getMutableRelationships"] = function getMutableRelationships() {
   return map;
 };
 prototype["getVersion"] = function getVersion() {
-  return closure_14;
+  return closure_15;
 };
 prototype["isSpam"] = function isSpam(arg0) {
   return set.has(arg0);
@@ -274,37 +312,37 @@ prototype["getNote"] = function getNote(arg0) {
   return obj4[arg0];
 };
 prototype["getFriendIDs"] = function getFriendIDs() {
-  if (null == closure_19.friends) {
+  if (null == closure_20.friends) {
     let items = map1.get(RelationshipTypes.FRIEND);
     if (items == null) {
       items = [];
     }
-    closure_19.friends = Array.from(items);
+    closure_20.friends = Array.from(items);
   }
-  return closure_19.friends;
+  return closure_20.friends;
 };
 prototype["getBlockedIDs"] = function getBlockedIDs() {
-  if (null == closure_19.blocked) {
+  if (null == closure_20.blocked) {
     let items = map1.get(RelationshipTypes.BLOCKED);
     if (items == null) {
       items = [];
     }
-    closure_19.blocked = Array.from(items);
+    closure_20.blocked = Array.from(items);
   }
-  return closure_19.blocked;
+  return closure_20.blocked;
 };
 prototype["getIgnoredIDs"] = function getIgnoredIDs() {
   const self = this;
-  if (null == closure_19.ignored) {
+  if (null == closure_20.ignored) {
     const _Array = Array;
-    closure_19.ignored = Array.from(set1.values()).filter((item) => self.isIgnored(item));
+    closure_20.ignored = Array.from(set1.values()).filter((item) => self.isIgnored(item));
     const arr = Array.from(set1.values());
   }
-  return closure_19.ignored;
+  return closure_20.ignored;
 };
 prototype["getBlockedOrIgnoredIDs"] = function getBlockedOrIgnoredIDs() {
-  let tmp = closure_19;
-  if (null == closure_19.blockedOrIgnored) {
+  let tmp = closure_20;
+  if (null == closure_20.blockedOrIgnored) {
     const _Set = Set;
     set = new Set(set1);
     value = map1.get(RelationshipTypes.BLOCKED);
@@ -314,8 +352,8 @@ prototype["getBlockedOrIgnoredIDs"] = function getBlockedOrIgnoredIDs() {
         continue;
       }
     }
-    closure_19.blockedOrIgnored = set;
-    tmp = closure_19;
+    closure_20.blockedOrIgnored = set;
+    tmp = closure_20;
   }
   return tmp.blockedOrIgnored;
 };
@@ -344,7 +382,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     set3.add("blocked");
     set3.add("ignored");
     set3.add("blockedOrIgnored");
-    closure_15 = {};
+    closure_16 = {};
     relationships = relationships.relationships;
     const item = relationships.forEach((id) => {
       upsertRelationship(id.id, id.type);
@@ -385,8 +423,8 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     if (num == null) {
       num = 0;
     }
-    closure_16 = Math.max(num - size - size, 0);
-    closure_14 = closure_14 + 1;
+    closure_17 = Math.max(num - size - size, 0);
+    closure_15 = closure_15 + 1;
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
     map.clear();
@@ -463,8 +501,8 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     if (num == null) {
       num = 0;
     }
-    closure_16 = Math.max(num - size - size, 0);
-    closure_14 = closure_14 + 1;
+    closure_17 = Math.max(num - size - size, 0);
+    closure_15 = closure_15 + 1;
     if (tmp35) {
       const obj8 = { type: "FRIEND_REQUEST_ACCEPTED", user: relationship.relationship.user };
       DispatcherDefault.dispatch(obj8);
@@ -530,8 +568,8 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     if (num == null) {
       num = 0;
     }
-    closure_16 = Math.max(num - size - size, 0);
-    closure_14 = closure_14 + 1;
+    closure_17 = Math.max(num - size - size, 0);
+    closure_15 = closure_15 + 1;
   },
   RELATIONSHIP_UPDATE: function handleRelationshipUpdate(relationship) {
     relationship = relationship.relationship;
@@ -596,8 +634,8 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     if (num == null) {
       num = 0;
     }
-    closure_16 = Math.max(num - size - size, 0);
-    closure_14 = closure_14 + 1;
+    closure_17 = Math.max(num - size - size, 0);
+    closure_15 = closure_15 + 1;
   },
   RELATIONSHIP_PENDING_INCOMING_REMOVED: function handlePendingIncomingRemoved() {
     const keys = map.keys();
@@ -617,7 +655,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     recountPending();
   },
   UPDATE_STRANGER_STATUS: function handleUpdateStrangerStatus(isStranger) {
-    closure_15[isStranger.userId] = { expiry: Date.now() + 300000, isStranger: isStranger.isStranger };
+    closure_16[isStranger.userId] = { expiry: Date.now() + 300000, isStranger: isStranger.isStranger };
   }
 });
 size = fn(2);

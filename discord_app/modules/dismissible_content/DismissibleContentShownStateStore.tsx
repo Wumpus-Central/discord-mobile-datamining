@@ -1,13 +1,13 @@
-// === Module 2057: DismissibleContentShownStateStore ===
+// === Module 2060: DismissibleContentShownStateStore ===
 
-// Module 2057 (DismissibleContentShownStateStore)
+// Module 2060 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import isActionRequiredDefault from "isActionRequired" /* 2061 */;
+import isActionRequiredDefault from "isActionRequired" /* 2064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2058 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2059 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2061 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2062 */;
 
 function withContent(currentlyShown, content) {
   let tmp = found;
@@ -330,12 +330,12 @@ function isInCooldown() {
   }
   return tmp4;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: metroRequire, NOOP: closure_7 } = Constants);
 let closure_8 = new BackoffDefault(1000, 60000);
 let closure_9 = {};
 let c10 = null;
-const identity = fn(1267);
+const identity = fn(1269);
 let closure_11 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
@@ -559,7 +559,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(2060).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(2063).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -603,7 +603,7 @@ function isStateInCooldown(shownFatigableCandidate) {
   return tmp3;
 }
 function reset() {
-  closure_0(1272).batchUpdates(() => {
+  closure_0(1274).batchUpdates(() => {
     state.setState(() => {
       const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       const map = new Map();
@@ -635,7 +635,7 @@ prototype["setHasRequiredAction"] = function setHasRequiredAction() {
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
 const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(DispatcherDefault, {
   CONNECTION_OPEN() {
-    closure_0(1272).batchUpdates(() => {
+    closure_0(1274).batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
@@ -652,7 +652,7 @@ const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(
     batchInvocationManager.reset();
   },
   LOGOUT() {
-    closure_0(1272).batchUpdates(() => {
+    closure_0(1274).batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
@@ -681,10 +681,10 @@ export { isInCooldown };
 export { isStateInCooldown };
 export const addCandidateContent = function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(2053).bypassesFatigue(content.content);
+  closure_1 = closure_0(2056).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(2053);
-  closure_0(1272).batchUpdates(() => {
+  let obj = closure_0(2056);
+  closure_0(1274).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -711,7 +711,7 @@ export const addCandidateContent = function addCandidateContent(content) {
   if (null != dependencyMap) {
     applyWinnerUpdateResult(dependencyMap);
   }
-  const obj2 = closure_0(1272);
+  const obj2 = closure_0(1274);
 };
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   closure_0 = arg0;
@@ -719,7 +719,7 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
   dependencyMap = null;
   c3 = false;
   c4 = false;
-  closure_0(1272).batchUpdates(() => {
+  closure_0(1274).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -797,7 +797,7 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
     closure_8.succeed();
     batchInvocationManager.reset();
   }
-  let obj = closure_0(1272);
+  let obj = closure_0(1274);
 };
 export const getLastShownDismissibleContent = function getLastShownDismissibleContent() {
   let first = closure_11.getState().recentlyShown[0];
@@ -861,7 +861,7 @@ export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
 };
 export { reset };
 export const resetFatigueCooldown = function resetFatigueCooldown() {
-  closure_0(1272).batchUpdates(() => {
+  closure_0(1274).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);

@@ -1,7 +1,7 @@
-// === Module 6360: SpellcheckExperiment ===
+// === Module 6362: SpellcheckExperiment ===
 
-// Module 6360 (SpellcheckExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 6362 (SpellcheckExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-05-electron-multilang-spellcheck", defaultConfig: { enableElectronMultilangSpellcheck: false }, variations: null };

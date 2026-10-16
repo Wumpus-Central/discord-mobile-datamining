@@ -1,13 +1,13 @@
-// === Module 13434: useGetInitialMessagePreview ===
+// === Module 13460: useGetInitialMessagePreview ===
 
-// Module 13434 (useGetInitialMessagePreview)
+// Module 13460 (useGetInitialMessagePreview)
 import c from "c" /* 576 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7222 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7224 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4817 */;
+import MessageRecord from "MessageRecord" /* 4820 */;
 
 require = fn;
-const MessageSnapshotRecord = fn(4817).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(4820).MessageSnapshotRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");

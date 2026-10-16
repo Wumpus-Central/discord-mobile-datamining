@@ -1,30 +1,30 @@
-// === Module 17541: ICYMIShareModal ===
+// === Module 17575: ICYMIShareModal ===
 
-// Module 17541 (ICYMIShareModal)
+// Module 17575 (ICYMIShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6885 */;
-import ShareEventUtils from "ShareEventUtils" /* 8754 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 12603 */;
-import ShareChatInputDefault from "ShareChatInput" /* 12612 */;
+import util from "util" /* 1128 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6887 */;
+import ShareEventUtils from "ShareEventUtils" /* 8762 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 12626 */;
+import ShareChatInputDefault from "ShareChatInput" /* 12635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10440).UserRowModes;
-const MessageSendLocation = fn(5144).MessageSendLocation;
+const AbortCodes = fn(1087).AbortCodes;
+const UserRowModes = fn(10456).UserRowModes;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { footer: { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_13 = createStyles.createStyles(obj2);
 fn(558);
@@ -703,8 +703,8 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   content = content.content;
   _require = content;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let intl = tmp(1126).intl;
-    let stringResult = intl.string(tmp(1126).t["59CWHK"]);
+    let intl = tmp(1128).intl;
+    let stringResult = intl.string(tmp(1128).t["59CWHK"]);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -745,7 +745,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
               const obj5 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
               c5 = 2;
               c6 = 1;
-              const obj6 = { value: entry(17542).sendMessageWithEmbed(obj5), done: false };
+              const obj6 = { value: entry(17576).sendMessageWithEmbed(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -756,9 +756,9 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
               tmp12 = closure_129_0.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
             }
             closure_129_1 = tmp12;
-            const intl = entry(1126).intl;
+            const intl = entry(1128).intl;
             const string = intl.string;
-            let t = entry(1126).t;
+            let t = entry(1128).t;
             if (closure_129_1) {
               let stringResult = string(t.BC5vfD);
             } else {
@@ -845,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(17542).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(17576).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {
@@ -856,9 +856,9 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             tmp12 = closure_129_1.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
           }
           closure_129_0 = tmp12;
-          const intl = entry(1126).intl;
+          const intl = entry(1128).intl;
           const string = intl.string;
-          let t = entry(1126).t;
+          let t = entry(1128).t;
           if (closure_129_0) {
             let stringResult = string(t.BC5vfD);
           } else {

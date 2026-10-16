@@ -1,6 +1,6 @@
-// === Module 7532: ConversationConstants ===
+// === Module 7534: ConversationConstants ===
 
-// Module 7532 (ConversationConstants)
+// Module 7534 (ConversationConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");

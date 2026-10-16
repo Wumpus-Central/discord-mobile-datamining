@@ -1,10 +1,10 @@
-// === Module 18030: ActivityPanelContainer ===
+// === Module 18065: ActivityPanelContainer ===
 
-// Module 18030 (ActivityPanelContainer)
+// Module 18065 (ActivityPanelContainer)
 import c from "c" /* 576 */;
-import ActivityPanelUtils from "ActivityPanelUtils" /* 18031 */;
-import ActivityPanelControllerDefault from "ActivityPanelController" /* 18032 */;
-import ActivityPanelUIDefault from "ActivityPanelUI" /* 18040 */;
+import ActivityPanelUtils from "ActivityPanelUtils" /* 18066 */;
+import ActivityPanelControllerDefault from "ActivityPanelController" /* 18067 */;
+import ActivityPanelUIDefault from "ActivityPanelUI" /* 18075 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

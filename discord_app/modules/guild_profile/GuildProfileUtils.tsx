@@ -1,9 +1,9 @@
-// === Module 7641: GuildProfileUtils ===
+// === Module 7643: GuildProfileUtils ===
 
-// Module 7641 (GuildProfileUtils)
-import Constants from "Constants" /* 1085 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
+// Module 7643 (GuildProfileUtils)
+import Constants from "Constants" /* 1087 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ChannelRecord.createChannelRecordFromInvite;

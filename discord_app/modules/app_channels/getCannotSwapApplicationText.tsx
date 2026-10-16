@@ -1,8 +1,8 @@
-// === Module 17852: getCannotSwapApplicationText ===
+// === Module 17886: getCannotSwapApplicationText ===
 
-// Module 17852 (getCannotSwapApplicationText)
-import LocaleStore from "LocaleStore" /* 2129 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 17886 (getCannotSwapApplicationText)
+import LocaleStore from "LocaleStore" /* 2132 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ export default function getCannotSwapApplicationText(arg0) {
   if (0 !== found.length) {
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
-    const intl = tmp(1126).intl;
-    const obj = { permissions: listFormat.format(found.map(tmp(9458).getPermissionName)), count: found.length };
-    return intl.formatToPlainString(tmp(1126).t.na1rJc, obj);
+    const intl = tmp(1128).intl;
+    const obj = { permissions: listFormat.format(found.map(tmp(9474).getPermissionName)), count: found.length };
+    return intl.formatToPlainString(tmp(1128).t.na1rJc, obj);
   }
 };

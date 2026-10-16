@@ -1,31 +1,31 @@
-// === Module 13276: GuildTemplates ===
+// === Module 13302: GuildTemplates ===
 
-// Module 13276 (GuildTemplates)
+// Module 13302 (GuildTemplates)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 12875 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13248 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 13277 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 12901 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13274 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 13303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(13273);
+let CreateGuildConstants = fn(13299);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6882);
+CreateGuildConstants = fn(6884);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5151);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6479).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-let obj3 = { marginTop: fn(6479).NAV_BAR_HEIGHT };
+const createStyles = fn(5153);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6481).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
+let obj3 = { marginTop: fn(6481).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
@@ -269,13 +269,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   trigger = trigger.trigger;
   const onHeightChange = trigger.onHeightChange;
   const tmp = closure_16();
-  dependencyMap = trigger(1503).useNavigation();
+  dependencyMap = trigger(1505).useNavigation();
   if (trigger === constants3.NUF) {
-    const intl2 = tmp2(1126).intl;
-    let stringResult = intl2.string(tmp2(1126).t.INo2NK);
+    const intl2 = tmp2(1128).intl;
+    let stringResult = intl2.string(tmp2(1128).t.INo2NK);
   } else {
-    const intl = tmp2(1126).intl;
-    stringResult = intl.string(tmp2(1126).t.riOUtB);
+    const intl = tmp2(1128).intl;
+    stringResult = intl.string(tmp2(1128).t.riOUtB);
   }
   const items = [onHeightChange];
   let obj2 = {
@@ -285,15 +285,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     }, items),
     children: null
   };
-  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1631)().bottom }];
+  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1633)().bottom }];
   obj2.style = items1;
   let obj3 = { style: tmp.footerContainer, children: null };
   let obj4 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = tmp2(1126).intl;
-  obj4.children = intl3.string(trigger(1126).t["N+Mi/U"]);
+  const intl3 = tmp2(1128).intl;
+  obj4.children = intl3.string(trigger(1128).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(5147).Text, obj4),
-    closure_14(trigger(5439).Button, {
+    closure_14(trigger(5149).Text, obj4),
+    closure_14(trigger(5441).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,

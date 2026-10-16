@@ -1,6 +1,6 @@
-// === Module 12133: ? ===
+// === Module 12157: ? ===
 
-// Module 12133
+// Module 12157
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DogIllocon-3x.png.js");

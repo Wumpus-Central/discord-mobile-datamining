@@ -1,13 +1,13 @@
-// === Module 9061: SecureFramesStreamVerificationBottomSheet ===
+// === Module 9069: SecureFramesStreamVerificationBottomSheet ===
 
-// Module 9061 (SecureFramesStreamVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8700 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9049 */;
+// Module 9069 (SecureFramesStreamVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8708 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9057 */;
 import noop from "module_19" /* 19 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7645 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7647 */;
 
 require = fn;
-const AnalyticsSections = fn(1085).AnalyticsSections;
+const AnalyticsSections = fn(1087).AnalyticsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -80,19 +80,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
         return;
       }
     }
-    const stringResult = obj3.string(tmp(1126).t.QogHld);
-    const intl = tmp(1126).intl;
-    const stringResult1 = intl.string(tmp(1126).t.qODBkW);
-    const intl2 = tmp(1126).intl;
-    let obj2 = { helpArticle: tmp(9046).getSecureFramesHelpdeskArticle() };
-    const formatResult = intl2.format(tmp(1126).t["H3+ktv"], obj2);
+    const stringResult = obj3.string(tmp(1128).t.QogHld);
+    const intl = tmp(1128).intl;
+    const stringResult1 = intl.string(tmp(1128).t.qODBkW);
+    const intl2 = tmp(1128).intl;
+    let obj2 = { helpArticle: tmp(9054).getSecureFramesHelpdeskArticle() };
+    const formatResult = intl2.format(tmp(1128).t["H3+ktv"], obj2);
     cResult[5] = stringResult;
     cResult[6] = stringResult1;
     cResult[7] = formatResult;
     let tmp11 = formatResult;
     let tmp10 = stringResult1;
     const tmp9 = stringResult;
-    const tmpResult2 = tmp(9046);
+    const tmpResult2 = tmp(9054);
   } else {
     class E {
       constructor(arg0) {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     }
     return tmp15;
   }
-  tmp15 = jsx(streamKey(9062), { title: tmp9, subtitle: tmp10, footer: tmp11, epochAuthenticator: stateFromStores, onShareClick: E });
+  tmp15 = jsx(streamKey(9070), { title: tmp9, subtitle: tmp10, footer: tmp11, epochAuthenticator: stateFromStores, onShareClick: E });
   cResult[8] = stateFromStores;
   cResult[9] = E;
   cResult[10] = tmp15;
@@ -147,15 +147,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1126).intl;
-  obj2.title = intl.string(channelId(1126).t.QogHld);
-  const intl2 = channelId(1126).intl;
-  obj2.subtitle = intl2.string(channelId(1126).t.qODBkW);
-  const intl3 = channelId(1126).intl;
+  const intl = channelId(1128).intl;
+  obj2.title = intl.string(channelId(1128).t.QogHld);
+  const intl2 = channelId(1128).intl;
+  obj2.subtitle = intl2.string(channelId(1128).t.qODBkW);
+  const intl3 = channelId(1128).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(9062);
-  obj3.helpArticle = channelId(9046).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1126).t["H3+ktv"], obj3);
+  const tmp3 = streamKey(9070);
+  obj3.helpArticle = channelId(9054).getSecureFramesHelpdeskArticle();
+  obj2.footer = intl3.format(channelId(1128).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

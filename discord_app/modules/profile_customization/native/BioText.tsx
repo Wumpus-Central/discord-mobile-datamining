@@ -1,21 +1,21 @@
-// === Module 10847: BioText ===
+// === Module 10862: BioText ===
 
-// Module 10847 (BioText)
+// Module 10862 (BioText)
 import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import isChangelogUserDefault from "isChangelogUser" /* 2114 */;
-import LinkingDefault from "Linking" /* 4862 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 10848 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import isChangelogUserDefault from "isChangelogUser" /* 2117 */;
+import LinkingDefault from "Linking" /* 4865 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 10863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const CHANGELOG_URL = fn(2115).CHANGELOG_URL;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const CHANGELOG_URL = fn(2118).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton(arg0) {
@@ -107,8 +107,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
         }
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = lineClamp(1126).intl;
-          const stringResult = intl.string(lineClamp(1126).t.OJmNR9);
+          const intl = lineClamp(1128).intl;
+          const stringResult = intl.string(lineClamp(1128).t.OJmNR9);
           cResult[4] = stringResult;
           let tmp14 = stringResult;
         } else {
@@ -124,13 +124,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
                 str3 = "text-muted";
               }
               if (cResult[10] !== lineClamp) {
-                const intl2 = lineClamp(1126).intl;
+                const intl2 = lineClamp(1128).intl;
                 const obj2 = {
                   blogHook(text, arg1) {
                                   return closure_2_8(closure_11, { lineClamp, text }, arg1);
                                 }
                 };
-                const formatResult = intl2.format(lineClamp(1126).t.RCYeBL, obj2);
+                const formatResult = intl2.format(lineClamp(1128).t.RCYeBL, obj2);
                 cResult[10] = lineClamp;
                 cResult[11] = formatResult;
                 let tmp19 = formatResult;
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
                 }
               }
               const obj4 = { variant: str, color: str3, lineClamp, style: tmp4.span, children: tmp19 };
-              const tmp23 = closure_8(lineClamp(5147).Text, obj4, "changelog-cta");
+              const tmp23 = closure_8(lineClamp(5149).Text, obj4, "changelog-cta");
               cResult[12] = lineClamp;
               cResult[13] = tmp4.span;
               cResult[14] = tmp19;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
         const obj5 = { variant: str, color: str4, lineClamp, style: tmp4.text, children: null };
         const items1 = [tmp14, "\n"];
         obj5.children = items1;
-        const tmp18 = closure_7(lineClamp(5147).Text, obj5, "changelog-bio");
+        const tmp18 = closure_7(lineClamp(5149).Text, obj5, "changelog-bio");
         cResult[5] = lineClamp;
         cResult[6] = tmp4.text;
         cResult[7] = str4;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
           }
         }
         const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-        const tmp12 = closure_8(lineClamp(5147).Text, obj6);
+        const tmp12 = closure_8(lineClamp(5149).Text, obj6);
         cResult[21] = lineClamp;
         cResult[22] = tmp4.text;
         cResult[23] = str2;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
   }
   const obj = lineClamp(576);
   const obj7 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
-  const tmpResult = lineClamp(10848);
+  const tmpResult = lineClamp(10863);
   let num;
   if (tmpResult2.isAndroid()) {
     num = 3;
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BioText(
   cResult[2] = str;
   cResult[3] = parseBioReactResult;
   tmp5 = parseBioReactResult;
-  tmpResult2 = lineClamp(1382);
+  tmpResult2 = lineClamp(1384);
 }) : (function BioText(lineClamp) {
   ({ placeholder, bio } = lineClamp);
   lineClamp = lineClamp.lineClamp;

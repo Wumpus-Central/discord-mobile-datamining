@@ -1,8 +1,8 @@
-// === Module 7256: MobileWebHandoffUtils ===
+// === Module 7258: MobileWebHandoffUtils ===
 
-// Module 7256 (MobileWebHandoffUtils)
-import v1 from "v1" /* 1279 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 7258 (MobileWebHandoffUtils)
+import v1 from "v1" /* 1281 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -67,7 +67,7 @@ let closure_4 = async function _createHandoffToken(key) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 15369: validateConjureAppFrame ===
+// === Module 15404: validateConjureAppFrame ===
 
-// Module 15369 (validateConjureAppFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7259 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9455 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15370 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+// Module 15404 (validateConjureAppFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9471 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15405 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
-const RPCErrors = fn(1085).RPCErrors;
+const RPCErrors = fn(1087).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateConjureAppFrame.tsx");
 

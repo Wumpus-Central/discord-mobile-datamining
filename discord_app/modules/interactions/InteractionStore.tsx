@@ -1,15 +1,15 @@
-// === Module 8101: InteractionStore ===
+// === Module 8104: InteractionStore ===
 
-// Module 8101 (InteractionStore)
+// Module 8104 (InteractionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import InteractionTypes from "InteractionTypes" /* 5502 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 5503 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7395 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import InteractionTypes from "InteractionTypes" /* 5504 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 5505 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 function deleteNonce(nonce) {
@@ -264,7 +264,7 @@ obj = {
   },
   INTERACTION_IFRAME_MODAL_CREATE: function handleIFrameModalCreate(applicationId) {
     const nonce = applicationId.nonce;
-    obj = { applicationId: applicationId.application.id, interactionId: applicationId.id, customId: applicationId.customId, channelId: applicationId.channelId, modalKey: "format" };
+    obj = { applicationId: applicationId.application.id, interactionId: applicationId.id, customId: applicationId.customId, channelId: applicationId.channelId, modalKey: "formatToPlainString" };
     if (null != nonce) {
       if (null != dependencyMap[nonce]) {
         const onSuccess = tmp16.onSuccess;

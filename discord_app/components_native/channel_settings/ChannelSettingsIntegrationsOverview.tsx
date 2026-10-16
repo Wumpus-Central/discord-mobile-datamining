@@ -1,23 +1,23 @@
-// === Module 17879: ChannelSettingsIntegrationsOverview ===
+// === Module 17913: ChannelSettingsIntegrationsOverview ===
 
-// Module 17879 (ChannelSettingsIntegrationsOverview)
+// Module 17913 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import useNavigation from "useNavigation" /* 1503 */;
-import Stack_Stack from "Stack/Stack" /* 5437 */;
-import TableRow2 from "TableRow" /* 6400 */;
-import TableRowGroup from "TableRowGroup" /* 6485 */;
-import Form2 from "Form" /* 8800 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8830 */;
-import WebhookIcon from "WebhookIcon" /* 17771 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17880 */;
+import util from "util" /* 1128 */;
+import useNavigation from "useNavigation" /* 1505 */;
+import Stack_Stack from "Stack/Stack" /* 5439 */;
+import TableRow2 from "TableRow" /* 6402 */;
+import TableRowGroup from "TableRowGroup" /* 6487 */;
+import Form2 from "Form" /* 8808 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8838 */;
+import WebhookIcon from "WebhookIcon" /* 17805 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17914 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
-fn(2069).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-const ChannelSettingsSections = fn(1085).ChannelSettingsSections;
+fn(2072).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+const ChannelSettingsSections = fn(1087).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -27,21 +27,21 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
   const cResult = channel(576).c(10);
   channel = channel.channel;
   const obj = channel(576);
-  const navigation = channel(1503).useNavigation();
-  const obj2 = channel(1503);
+  const navigation = channel(1505).useNavigation();
+  const obj2 = channel(1505);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  let name = channel(7077).useGetOrFetchApplication(application_id);
+  let name = channel(7079).useGetOrFetchApplication(application_id);
   if (null == name) {
     return null;
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = TableRow(1126).intl;
-      const stringResult = intl.string(TableRow(1126).t.oAvIAg);
+      const intl = TableRow(1128).intl;
+      const stringResult = intl.string(TableRow(1128).t.oAvIAg);
       cResult[0] = stringResult;
       let name2 = stringResult;
     } else {
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
     }
     if (cResult[1] !== name) {
       const obj4 = { application: name };
-      const tmp10 = closure_6(navigation(8830), obj4);
+      const tmp10 = closure_6(navigation(8838), obj4);
       cResult[1] = name;
       cResult[2] = tmp10;
       let tmp7 = tmp10;
@@ -65,7 +65,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
         }
       }
       const obj5 = { title: name2, hasIcons: true, children: null };
-      TableRow = TableRow(6400).TableRow;
+      TableRow = TableRow(6402).TableRow;
       const obj6 = { label: null, icon: null, arrow: true, onPress: null };
       name2 = name.name;
       obj6.label = name2;
@@ -73,7 +73,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
       obj6.onPress = tmp11;
       tmp = closure_6(TableRow, obj6);
       obj5.children = tmp;
-      const tmp14 = closure_6(TableRow(6485).TableRowGroup, obj5);
+      const tmp14 = closure_6(TableRow(6487).TableRowGroup, obj5);
       name = name.name;
       cResult[6] = name;
       cResult[7] = tmp7;
@@ -88,34 +88,34 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkedL
     cResult[5] = fn;
     tmp11 = fn;
   }
-  const obj3 = channel(7077);
+  const obj3 = channel(7079);
 }) : (function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = channel(1503).useNavigation();
-  const obj = channel(1503);
+  importDefault = channel(1505).useNavigation();
+  const obj = channel(1505);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7077).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7079).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
-    const intl = tmp(1126).intl;
-    obj3.title = intl.string(tmp(1126).t.oAvIAg);
+    const intl = tmp(1128).intl;
+    obj3.title = intl.string(tmp(1128).t.oAvIAg);
     const obj4 = { label: getOrFetchApplication.name, icon: null, arrow: true, onPress: null };
     const obj5 = { application: getOrFetchApplication };
     obj4.icon = closure_6(TableRowApplicationIconDefault, obj5);
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(6400).TableRow, obj4);
-    tmp5 = closure_6(tmp(6485).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6402).TableRow, obj4);
+    tmp5 = closure_6(tmp(6487).TableRowGroup, obj3);
   }
   return tmp5;
 });
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj3 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj3);
 ReactCompilerGating = fn(558);
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   channelId = channelId.channelId;
   ({ canManageWebhooks, canUnlinkLobby } = channelId);
   const obj = channelId(576);
-  const navigation = channelId(1503).useNavigation();
+  const navigation = channelId(1505).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   } else {
     tmp6 = cResult[2];
   }
-  const obj2 = channelId(1503);
+  const obj2 = channelId(1505);
   const stateFromStores = Form(504).useStateFromStores(first, tmp6);
   let screenContainer = closure_9();
   if (null == stateFromStores) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
             }
             if (cResult[14] === screenContainer.screenContainer) {
             }
-            Form = Form(8800).Form;
+            Form = Form(8808).Form;
             const obj4 = { style: screenContainer.screenContainer, children: tmp20 };
             tmp = closure_6(Form, obj4);
             screenContainer = screenContainer.screenContainer;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
           const obj5 = { style: tmp8, spacing: navigation(587).space.PX_24, children: null };
           const items1 = [tmp10, tmp16];
           obj5.children = items1;
-          const tmp23 = closure_7(Form(5437).Stack, obj5);
+          const tmp23 = closure_7(Form(5439).Stack, obj5);
           cResult[11] = tmp10;
           cResult[12] = tmp16;
           cResult[13] = tmp23;
@@ -211,32 +211,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
     let tmp12Result = canManageWebhooks;
     if (canManageWebhooks) {
       const obj7 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
-      const intl = Form(1126).intl;
-      obj7.label = intl.string(Form(1126).t.jp25Id);
-      const intl2 = Form(1126).intl;
-      obj7.subLabel = intl2.string(Form(1126).t.mKIOkI);
-      obj7.icon = closure_6(Form(17771).WebhookIcon, {});
+      const intl = Form(1128).intl;
+      obj7.label = intl.string(Form(1128).t.jp25Id);
+      const intl2 = Form(1128).intl;
+      obj7.subLabel = intl2.string(Form(1128).t.mKIOkI);
+      obj7.icon = closure_6(Form(17805).WebhookIcon, {});
       obj7.onPress = function onPress() {
         return navigation.push(ChannelSettingsSections.WEBHOOKS);
       };
-      const items2 = [closure_6(Form(6400).TableRow, obj7), ];
+      const items2 = [closure_6(Form(6402).TableRow, obj7), ];
       let hasItem = set.has(stateFromStores.type);
       if (hasItem) {
         const obj8 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
-        const intl3 = Form(1126).intl;
-        obj8.label = intl3.string(Form(1126).t.OrV60r);
-        const intl4 = Form(1126).intl;
-        obj8.subLabel = intl4.string(Form(1126).t.rQREJl);
-        obj8.icon = closure_6(Form(17880).ChannelsFollowedIcon, {});
+        const intl3 = Form(1128).intl;
+        obj8.label = intl3.string(Form(1128).t.OrV60r);
+        const intl4 = Form(1128).intl;
+        obj8.subLabel = intl4.string(Form(1128).t.rQREJl);
+        obj8.icon = closure_6(Form(17914).ChannelsFollowedIcon, {});
         obj8.onPress = function onPress() {
           return navigation.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
         };
-        hasItem = closure_6(Form(6400).TableRow, obj8);
+        hasItem = closure_6(Form(6402).TableRow, obj8);
       }
       const obj9 = { hasIcons: true, children: null };
       items2[1] = hasItem;
       obj9.children = items2;
-      tmp12Result = closure_7(Form(6485).TableRowGroup, obj9);
+      tmp12Result = closure_7(Form(6487).TableRowGroup, obj9);
     }
     cResult[4] = canManageWebhooks;
     cResult[5] = stateFromStores;

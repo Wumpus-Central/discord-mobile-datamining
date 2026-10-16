@@ -717,6 +717,9 @@ prototype5["setTTICallback"] = function setTTICallback(arg0) {
     }
   };
 };
+prototype5["getInitialPage"] = function getInitialPage() {
+  return this.initialPage;
+};
 prototype5["setInitialPage"] = function setInitialPage(page) {
   this.initialPage = page;
 };

@@ -1,7 +1,7 @@
-// === Module 7988: AndroidPhotoPickerExperiment ===
+// === Module 7991: AndroidPhotoPickerExperiment ===
 
-// Module 7988 (AndroidPhotoPickerExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 7991 (AndroidPhotoPickerExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-10-android-photo-picker", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

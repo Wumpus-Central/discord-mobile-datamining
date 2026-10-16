@@ -1,6 +1,6 @@
-// === Module 13058: GuildProgressActionCreators ===
+// === Module 13084: GuildProgressActionCreators ===
 
-// Module 13058 (GuildProgressActionCreators)
+// Module 13084 (GuildProgressActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

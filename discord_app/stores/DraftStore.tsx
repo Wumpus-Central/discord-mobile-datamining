@@ -1,16 +1,16 @@
-// === Module 7460: DraftStore ===
+// === Module 7462: DraftStore ===
 
-// Module 7460 (DraftStore)
+// Module 7462 (DraftStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import DraftCommand from "DraftCommand" /* 7461 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import DraftCommand from "DraftCommand" /* 7463 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6181 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6183 */;
 
 require = fn;
 function handleChanged(type) {
@@ -136,7 +136,7 @@ function handleChannelDelete(arg0) {
   }
   return false;
 }
-let closure_7 = fn(1085).MAX_MESSAGE_LENGTH_PREMIUM + 500;
+let closure_7 = fn(1087).MAX_MESSAGE_LENGTH_PREMIUM + 500;
 const DraftType = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;

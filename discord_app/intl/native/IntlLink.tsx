@@ -1,14 +1,14 @@
-// === Module 10960: IntlLink ===
+// === Module 10975: IntlLink ===
 
-// Module 10960 (IntlLink)
+// Module 10975 (IntlLink)
 import nativeDefault from "native" /* 587 */;
-import _modDef1949 from "module_1949" /* 1949 */;
-import LinkingDefault from "Linking" /* 4862 */;
+import _modDef1951 from "module_1951" /* 1951 */;
+import LinkingDefault from "Linking" /* 4865 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -26,12 +26,12 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
   const cResult = target(576).c(7);
   target = target.target;
   const children = target.children;
-  const tmp4 = closure_5(noop.useContext(target(4890).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  const tmp4 = closure_5(noop.useContext(target(4893).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
   if (typeof target === "string") {
     if (cResult[0] !== target) {
       const fn = function s() {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef1949.sanitizeUrl(target));
+        return obj.openURL(_modDef1951.sanitizeUrl(target));
       };
       cResult[0] = target;
       cResult[1] = fn;
@@ -62,7 +62,7 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
       }
     }
     const obj2 = { accessible: true, accessibilityRole: str, onPress: tmp5, style: tmp4.link, children };
-    const tmp10 = jsx(tmp(1200).LegacyText, { accessible: true, accessibilityRole: str, onPress: tmp5, style: tmp4.link, children });
+    const tmp10 = jsx(tmp(1202).LegacyText, { accessible: true, accessibilityRole: str, onPress: tmp5, style: tmp4.link, children });
     cResult[2] = str;
     cResult[3] = children;
     cResult[4] = tmp5;
@@ -77,7 +77,7 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
   if (typeof target === "string") {
     let fn = function y() {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef1949.sanitizeUrl(target));
+      return obj.openURL(_modDef1951.sanitizeUrl(target));
     };
     let str = "link";
   } else {
@@ -97,6 +97,6 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4890).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1200).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4890).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(4893).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1202).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4893).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 });

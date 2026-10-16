@@ -1,14 +1,14 @@
-// === Module 14347: useAppleSubscriptionOwnership ===
+// === Module 14379: useAppleSubscriptionOwnership ===
 
-// Module 14347 (useAppleSubscriptionOwnership)
+// Module 14379 (useAppleSubscriptionOwnership)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplePurchasesStore from "ApplePurchasesStore" /* 14348 */;
-import AppStateStore from "AppStateStore" /* 1999 */;
-import IAPStore from "IAPStore" /* 7353 */;
+import ApplePurchasesStore from "ApplePurchasesStore" /* 14380 */;
+import AppStateStore from "AppStateStore" /* 2001 */;
+import IAPStore from "IAPStore" /* 7355 */;
 
 const require = fn;
-const AppStates = fn(1085).AppStates;
+const AppStates = fn(1087).AppStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useAppleSubscriptionOwnership.tsx");

@@ -1,11 +1,11 @@
-// === Module 8212: useUserCommunicationDisabled ===
+// === Module 8215: useUserCommunicationDisabled ===
 
-// Module 8212 (useUserCommunicationDisabled)
+// Module 8215 (useUserCommunicationDisabled)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4793 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import UserStore from "UserStore" /* 1390 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4796 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 fn(558);
@@ -35,11 +35,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserCom
       if (prop == null) {
         prop = null;
       }
-      const items1 = [prop, tmp(4793).isMemberCommunicationDisabled(stateFromStores)];
+      const items1 = [prop, tmp(4796).isMemberCommunicationDisabled(stateFromStores)];
       cResult[5] = stateFromStores;
       cResult[6] = items1;
       let tmp9 = items1;
-      const tmpResult2 = tmp(4793);
+      const tmpResult2 = tmp(4796);
     } else {
       tmp9 = cResult[6];
     }

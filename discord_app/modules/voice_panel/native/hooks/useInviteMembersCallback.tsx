@@ -1,15 +1,15 @@
-// === Module 18088: useInviteMembersCallback ===
+// === Module 18123: useInviteMembersCallback ===
 
-// Module 18088 (useInviteMembersCallback)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8900 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11071 */;
+// Module 18123 (useInviteMembersCallback)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8908 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11086 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticsPages: hasOwnProperty, InstantInviteSources: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

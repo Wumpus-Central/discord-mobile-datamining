@@ -1,13 +1,13 @@
-// === Module 5316: VideoBackgroundActionCreators ===
+// === Module 5318: VideoBackgroundActionCreators ===
 
-// Module 5316 (VideoBackgroundActionCreators)
+// Module 5318 (VideoBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 5319 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5320 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 5321 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import UserStore from "UserStore" /* 1390 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 let closure_7 = async function _fetchVideoFilterAssets() {
@@ -308,7 +308,7 @@ let closure_11 = async function _saveLastUsedBackgroundOption() {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
 

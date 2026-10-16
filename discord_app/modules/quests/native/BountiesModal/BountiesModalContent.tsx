@@ -1,29 +1,29 @@
-// === Module 15987: BountiesModalContent ===
+// === Module 16020: BountiesModalContent ===
 
-// Module 15987 (BountiesModalContent)
+// Module 16020 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Patterns from "Patterns" /* 5118 */;
-import timing from "timing" /* 5152 */;
-import timingPresets from "timingPresets" /* 5155 */;
-import QuestContent from "QuestContent" /* 6193 */;
-import AdCreativeType from "AdCreativeType" /* 6195 */;
-import QuestDataUtils from "QuestDataUtils" /* 7603 */;
-import AnalyticsActions from "AnalyticsActions" /* 7623 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
-import AnimationUtils from "AnimationUtils" /* 13628 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13771 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 13793 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13810 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15933 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import Patterns from "Patterns" /* 5121 */;
+import timing from "timing" /* 5154 */;
+import timingPresets from "timingPresets" /* 5157 */;
+import QuestContent from "QuestContent" /* 6195 */;
+import AdCreativeType from "AdCreativeType" /* 6197 */;
+import QuestDataUtils from "QuestDataUtils" /* 7605 */;
+import AnalyticsActions from "AnalyticsActions" /* 7625 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
+import AnimationUtils from "AnimationUtils" /* 13654 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13797 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 13819 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13836 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7606 */;
+import BountyStore from "BountyStore" /* 7608 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -54,13 +54,13 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(6188);
+const QuestConstants = fn(6190);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15937);
+const BountiesModalConstants = fn(15970);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
-const ThemeTypes = fn(1096).ThemeTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 0.5625;
@@ -105,10 +105,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
   cResult[5] = size;
   tmp11 = size;
 }) : (function useBountiesModalVideoLayout() {
-  let size = height(1497)();
+  let size = height(1499)();
   const width = size.width;
   height = size.height;
-  const tmp = height(1631)();
+  const tmp = height(1633)();
   dependencyMap = tmp;
   const items = [width, height, , , , ];
   ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp);
@@ -128,7 +128,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
     return size;
   }, items);
 });
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(9278).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(9278);
+                          const balance = tmp(9291).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9291);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {
@@ -699,8 +699,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   const height = useWindowDimensionsDefault().height;
   const size = closure_20();
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4906).useSharedValue(0);
-  let obj2 = sharedValue(4906);
+  sharedValue = sharedValue(4909).useSharedValue(0);
+  let obj2 = sharedValue(4909);
   [tmp4, importDefault] = noop.useState(null);
   dependencyMap = noop.useRef(null);
   bounty = noop.useRef(0);

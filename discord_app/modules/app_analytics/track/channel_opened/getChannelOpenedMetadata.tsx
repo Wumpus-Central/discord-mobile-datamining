@@ -1,21 +1,21 @@
-// === Module 8130: getChannelOpenedMetadata ===
+// === Module 8133: getChannelOpenedMetadata ===
 
-// Module 8130 (getChannelOpenedMetadata)
-import DurationsDefault from "Durations" /* 1102 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8131 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 8132 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import ReadStateStore from "ReadStateStore" /* 6251 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 8133 (getChannelOpenedMetadata)
+import DurationsDefault from "Durations" /* 1104 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8134 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 8135 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import ReadStateStore from "ReadStateStore" /* 6253 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-const isStaticChannelRoute = fn(2072).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2075).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx");
 

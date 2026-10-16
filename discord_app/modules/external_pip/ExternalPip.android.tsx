@@ -1,6 +1,6 @@
-// === Module 5280: ExternalPip ===
+// === Module 5282: ExternalPip ===
 
-// Module 5280 (ExternalPip)
+// Module 5282 (ExternalPip)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -50,6 +50,9 @@ prototype["updateSourceTrackingView"] = function updateSourceTrackingView() {
 prototype["setEnabled"] = function setEnabled(_enabled) {
   this._enabled = _enabled;
   ExternalPip.setEnabled(this._enabled);
+};
+prototype["setAutoEnterEnabled"] = function setAutoEnterEnabled(arg0) {
+  ExternalPip.setAutoEnterEnabled(arg0);
 };
 prototype["setActive"] = function setActive(arg0) {
   return ExternalPip.setActive(arg0);

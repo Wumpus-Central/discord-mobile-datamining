@@ -1,7 +1,7 @@
-// === Module 10970: ConjureWorkerTickets ===
+// === Module 10985: ConjureWorkerTickets ===
 
-// Module 10970 (ConjureWorkerTickets)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 10985 (ConjureWorkerTickets)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_5 = async function _mintTicket() {
     return obj7;
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureWorkerTickets.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 17990: AccountLinkStore ===
+// === Module 18024: AccountLinkStore ===
 
-// Module 17990 (AccountLinkStore)
+// Module 18024 (AccountLinkStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7017 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7019 */;
 
 const map = new Map();
 let set = new Set();

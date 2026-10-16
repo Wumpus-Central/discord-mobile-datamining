@@ -1,15 +1,15 @@
-// === Module 6299: isOptInEnabled ===
+// === Module 6301: isOptInEnabled ===
 
-// Module 6299 (isOptInEnabled)
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 6301 (isOptInEnabled)
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: metroRequire, Permissions: closure_7 } = Constants);
 fn(558);
 const ReactCompilerGating = fn(558);

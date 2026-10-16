@@ -1,13 +1,13 @@
-// === Module 8233: useIsStickerReplyEnabled ===
+// === Module 8238: useIsStickerReplyEnabled ===
 
-// Module 8233 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7190 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import UserStore from "UserStore" /* 1390 */;
+// Module 8238 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7192 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
 

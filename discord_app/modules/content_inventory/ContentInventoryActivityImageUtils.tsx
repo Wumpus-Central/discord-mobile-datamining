@@ -1,26 +1,26 @@
-// === Module 13936: ContentInventoryActivityImageUtils ===
+// === Module 13968: ContentInventoryActivityImageUtils ===
 
-// Module 13936 (ContentInventoryActivityImageUtils)
+// Module 13968 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import Constants2 from "Constants" /* 2024 */;
-import PlatformsDefault from "Platforms" /* 5979 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7077 */;
-import useGame from "useGame" /* 7229 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8492 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8678 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8681 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10470 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10477 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13937 */;
-import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 13939 */;
-import isOnXboxDefault from "isOnXbox" /* 13943 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 13944 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import Constants2 from "Constants" /* 2026 */;
+import PlatformsDefault from "Platforms" /* 5981 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7079 */;
+import useGame from "useGame" /* 7231 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8500 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8686 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8689 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10486 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10492 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13969 */;
+import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 13971 */;
+import isOnXboxDefault from "isOnXbox" /* 13975 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13976 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import Constants from "Constants" /* 1087 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

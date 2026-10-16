@@ -1,6 +1,6 @@
-// === Module 1092: ConferenceModeConstants ===
+// === Module 1094: ConferenceModeConstants ===
 
-// Module 1092 (ConferenceModeConstants)
+// Module 1094 (ConferenceModeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conference_mode/ConferenceModeConstants.tsx");

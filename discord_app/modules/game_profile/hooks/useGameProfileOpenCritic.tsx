@@ -1,12 +1,12 @@
-// === Module 9154: useGameProfileOpenCritic ===
+// === Module 9164: useGameProfileOpenCritic ===
 
-// Module 9154 (useGameProfileOpenCritic)
-import util from "util" /* 1126 */;
-import OpenCriticTier from "OpenCriticTier" /* 9155 */;
-import _modDef9156 from "module_9156" /* 9156 */;
-import _modDef9157 from "module_9157" /* 9157 */;
-import _modDef9158 from "module_9158" /* 9158 */;
-import _modDef9159 from "module_9159" /* 9159 */;
+// Module 9164 (useGameProfileOpenCritic)
+import util from "util" /* 1128 */;
+import OpenCriticTier from "OpenCriticTier" /* 9165 */;
+import _modDef9166 from "module_9166" /* 9166 */;
+import _modDef9167 from "module_9167" /* 9167 */;
+import _modDef9168 from "module_9168" /* 9168 */;
+import _modDef9169 from "module_9169" /* 9169 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
@@ -28,13 +28,13 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return _modDef9156;
+    return _modDef9166;
   } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
-    return _modDef9157;
+    return _modDef9167;
   } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
-    return _modDef9158;
+    return _modDef9168;
   } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
-    return _modDef9159;
+    return _modDef9169;
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {

@@ -1,9 +1,9 @@
-// === Module 11208: useVadColors ===
+// === Module 11224: useVadColors ===
 
-// Module 11208 (useVadColors)
+// Module 11224 (useVadColors)
 import initialize from "initialize" /* 504 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

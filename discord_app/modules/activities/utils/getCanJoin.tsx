@@ -1,15 +1,15 @@
-// === Module 11112: getCanJoin ===
+// === Module 11127: getCanJoin ===
 
-// Module 11112 (getCanJoin)
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import hasFlagDefault from "hasFlag" /* 7232 */;
-import isInviteActiveDefault from "isInviteActive" /* 11113 */;
-import getPartySize from "getPartySize" /* 11114 */;
-import isPartyFull from "isPartyFull" /* 11116 */;
-import getIsInParty from "getIsInParty" /* 11117 */;
-import getIsAskToJoin from "getIsAskToJoin" /* 11118 */;
-import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 11119 */;
-import Constants from "Constants" /* 1085 */;
+// Module 11127 (getCanJoin)
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import hasFlagDefault from "hasFlag" /* 7234 */;
+import isInviteActiveDefault from "isInviteActive" /* 11128 */;
+import getPartySize from "getPartySize" /* 11130 */;
+import isPartyFull from "isPartyFull" /* 11132 */;
+import getIsInParty from "getIsInParty" /* 11133 */;
+import getIsAskToJoin from "getIsAskToJoin" /* 11134 */;
+import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 11135 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityActionTypes: c3, ActivityFlags: closure_4 } = Constants);

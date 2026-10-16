@@ -1,25 +1,25 @@
-// === Module 10240: UploadPreviewActionSheet ===
+// === Module 10256: UploadPreviewActionSheet ===
 
-// Module 10240 (UploadPreviewActionSheet)
+// Module 10256 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7985 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9483 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10241 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13640 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7988 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9499 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10257 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7460).DraftType;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(7062).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(7462).DraftType;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const ACTION_SHEET_MAX_WIDTH = fn(7064).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };

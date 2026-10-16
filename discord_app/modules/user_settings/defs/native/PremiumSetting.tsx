@@ -1,16 +1,16 @@
-// === Module 15915: PremiumSetting ===
+// === Module 15948: PremiumSetting ===
 
-// Module 15915 (PremiumSetting)
+// Module 15948 (PremiumSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4825 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7358 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10728 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 14359 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15916 */;
+import util from "util" /* 1128 */;
+import PremiumUtils from "PremiumUtils" /* 4828 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7360 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10743 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 14391 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15949 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
-import SubscriptionStore from "SubscriptionStore" /* 4831 */;
+import UserStore from "UserStore" /* 1392 */;
+import SubscriptionStore from "SubscriptionStore" /* 4834 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,7 +79,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(9253).NitroWheelIcon,
+  IconComponent: fn(9266).NitroWheelIcon,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
     const cResult = c.c(1);
@@ -95,7 +95,7 @@ const route = SettingBuilders.createRoute({
     return jsx(PremiumTabBadgeDefault, {});
   }),
   screen: {
-    route: fn(1085).UserSettingsSections.PREMIUM,
+    route: fn(1087).UserSettingsSections.PREMIUM,
     getComponent() {
       return require("PremiumSettingScreen").default;
     }

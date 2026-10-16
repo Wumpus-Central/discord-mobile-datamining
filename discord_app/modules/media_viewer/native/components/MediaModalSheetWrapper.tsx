@@ -1,7 +1,7 @@
-// === Module 8633: MediaModalSheetWrapper ===
+// === Module 8641: MediaModalSheetWrapper ===
 
-// Module 8633 (MediaModalSheetWrapper)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+// Module 8641 (MediaModalSheetWrapper)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 let closure_3 = ["onCloseCallback"];
-const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
+const MEDIA_MODAL_KEY = fn(1087).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
     _require = cResult[1];
     tmp4 = cResult[2];
   }
-  context = noop.useContext(context(7063));
+  context = noop.useContext(context(7065));
   if (cResult[3] !== context) {
     const fn = function f() {
       let transitionState;
@@ -92,16 +92,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
   const obj = require("c");
   const merged = Object.assign(tmp4);
   obj3.onClose = M;
-  tmp16 = jsx(context(8634), {});
+  tmp16 = jsx(context(8642), {});
   cResult[8] = M;
   cResult[9] = tmp4;
   cResult[10] = tmp16;
-  const tmp8Result = context(8634);
+  const tmp8Result = context(8642);
 }) : (function MediaModalSheetWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   let context;
-  context = noop.useContext(context(7063));
+  context = noop.useContext(context(7065));
   const items = [context];
   const effect = noop.useEffect(() => {
     let transitionState;
@@ -122,5 +122,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.onClose = callback;
-  return jsx(context(8634), {});
+  return jsx(context(8642), {});
 });

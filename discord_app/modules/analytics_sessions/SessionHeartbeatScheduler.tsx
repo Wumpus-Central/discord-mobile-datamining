@@ -1,23 +1,23 @@
-// === Module 7400: SessionHeartbeatScheduler ===
+// === Module 7402: SessionHeartbeatScheduler ===
 
-// Module 7400 (SessionHeartbeatScheduler)
+// Module 7402 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import SentryUtilsDefault from "SentryUtils" /* 1255 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7401 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 7402 */;
-import MonotonicClock from "MonotonicClock" /* 7403 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7408 */;
-import SessionUtils from "SessionUtils" /* 7410 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import SentryUtilsDefault from "SentryUtils" /* 1257 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7403 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 7404 */;
+import MonotonicClock from "MonotonicClock" /* 7405 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7410 */;
+import SessionUtils from "SessionUtils" /* 7412 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6104 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+import IdleStore from "IdleStore" /* 6106 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
 
 require = fn;
 function trackHeartbeat() {
@@ -511,7 +511,7 @@ let closure_39 = async function _getSession() {
     }
   }
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: c10 } = Constants);
 let closure_11 = 15 * DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
@@ -523,9 +523,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7401);
+const SessionForegroundUtils = fn(7403);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7402);
+const SessionRouteUtils = fn(7404);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

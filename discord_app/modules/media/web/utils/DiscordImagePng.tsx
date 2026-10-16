@@ -1,7 +1,7 @@
-// === Module 8042: DiscordImagePng ===
+// === Module 8045: DiscordImagePng ===
 
-// Module 8042 (DiscordImagePng)
-import decodeImageDefault from "decodeImage" /* 1996 */;
+// Module 8045 (DiscordImagePng)
+import decodeImageDefault from "decodeImage" /* 1998 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

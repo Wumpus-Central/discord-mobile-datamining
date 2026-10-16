@@ -1,13 +1,13 @@
-// === Module 13095: useHasAllocateBoostPermission ===
+// === Module 13121: useHasAllocateBoostPermission ===
 
-// Module 13095 (useHasAllocateBoostPermission)
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 13121 (useHasAllocateBoostPermission)
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 const ReactCompilerGating = fn(558);
 function getHasAllocateBoostPermission(PermissionStore, guild) {
   let canResult = null;

@@ -1,26 +1,26 @@
-// === Module 15961: BountyVideo ===
+// === Module 15994: BountyVideo ===
 
-// Module 15961 (BountyVideo)
+// Module 15994 (BountyVideo)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 5152 */;
-import timingPresets from "timingPresets" /* 5155 */;
-import LinearGradientDefault from "LinearGradient" /* 5451 */;
-import AssetUtils from "AssetUtils" /* 9406 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 15962 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 15963 */;
+import timing from "timing" /* 5154 */;
+import timingPresets from "timingPresets" /* 5157 */;
+import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import AssetUtils from "AssetUtils" /* 9422 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 15995 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 15996 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import n_mod from "module_683" /* 683 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(15937);
+const BountiesModalConstants = fn(15970);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1383);
+const PlatformUtils = fn(1385);
 let closure_15 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
@@ -33,7 +33,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0).hex();
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null, scrimGradient: null };
   const obj2 = {};
@@ -101,11 +101,14 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     if (cResult[1] === videoRenditions) {
       let tmp15 = cResult[2];
     }
+    if (null != tmp15) {
+      videoHls = tmp15.url;
+    }
     if (cResult[3] === height) {
-      if (cResult[4] === tmp15) {
+      if (cResult[4] === videoHls) {
         const token = handleVideoProgress(onFirstFrame[16]).useToken(handleVideoError(onFirstFrame[7]).colors.TEXT_DEFAULT);
         const _HermesInternal = HermesInternal;
-        const combined = "" + bounty.id + ":" + tmp7 + ":" + tmp15;
+        const combined = "" + bounty.id + ":" + tmp7 + ":" + videoHls;
         const tmp10Result = isScrollingInBoundsSharedValue(width.useState(combined), 2);
         if (tmp10Result[0] !== combined) {
           tmp10Result[1](combined);
@@ -114,7 +117,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class Ie {
+          class Fe {
             constructor() {
               return () => {
                 if (null != ref.current) {
@@ -125,9 +128,9 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
               };
             }
           }
-          cResult[7] = Ie;
+          cResult[7] = Fe;
         } else {
-          class Ie {
+          class Fe {
             constructor() {
               return () => {
                 if (null != ref.current) {
@@ -140,7 +143,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         if (cResult[8] !== combined) {
-          class Ie {
+          class Fe {
             constructor() {
               return () => {
                 if (null != ref.current) {
@@ -155,7 +158,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           cResult[8] = combined;
           cResult[9] = tmp31;
         } else {
-          class Ie {
+          class Fe {
             constructor() {
               return () => {
                 if (null != ref.current) {
@@ -167,9 +170,9 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
         }
-        const effect = width.useEffect(Ie, tmp31);
+        const effect = width.useEffect(Fe, tmp31);
         if (cResult[10] === first) {
-          class Ie {
+          class Fe {
             constructor() {
               return () => {
                 if (null != ref.current) {
@@ -180,10 +183,10 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
               };
             }
           }
-          const effect1 = width.useEffect(De, tmp34);
+          const effect1 = width.useEffect(He, tmp34);
           const _Symbol2 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            class Ie {
+            class Fe {
               constructor() {
                 return () => {
                   if (null != ref.current) {
@@ -196,7 +199,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
             cResult[14] = tmp37;
           } else {
-            class Ie {
+            class Fe {
               constructor() {
                 return () => {
                   if (null != ref.current) {
@@ -209,7 +212,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           if (cResult[15] !== onFirstFrame) {
-            class Ie {
+            class Fe {
               constructor() {
                 return () => {
                   if (null != ref.current) {
@@ -223,7 +226,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             cResult[15] = onFirstFrame;
             cResult[16] = tmp39;
           } else {
-            class Ie {
+            class Fe {
               constructor() {
                 return () => {
                   if (null != ref.current) {
@@ -236,7 +239,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           if (cResult[17] !== handleVideoError) {
-            class Xe {
+            class Qe {
               constructor(arg0) {
                 tmp = closure_12();
                 if (handleVideoError != null) {
@@ -247,9 +250,9 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
               }
             }
             cResult[17] = handleVideoError;
-            cResult[18] = Xe;
+            cResult[18] = Qe;
           } else {
-            class Xe {
+            class Qe {
               constructor(arg0) {
                 tmp = closure_12();
                 if (handleVideoError != null) {
@@ -261,40 +264,45 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           if (cResult[19] !== handleVideoProgress) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
             cResult[19] = handleVideoProgress;
-            cResult[20] = tmp42;
+            cResult[20] = Ke;
           } else {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
           }
-          function qe() {
-            return { opacity: sharedValue.get() };
+          class Je {
+            constructor() {
+              obj = { opacity: closure_11.get() };
+              return obj;
+            }
           }
           let obj3 = { posterOpacity: sharedValue };
-          qe.__closure = obj3;
-          qe.__workletHash = 4975136521719;
-          qe.__initData = __initData;
-          const animatedStyle = handleVideoProgress(onFirstFrame[8]).useAnimatedStyle(qe);
+          Je.__closure = obj3;
+          Je.__workletHash = 4975136521719;
+          Je.__initData = __initData;
+          const animatedStyle = handleVideoProgress(onFirstFrame[8]).useAnimatedStyle(Je);
           handleVideoProgress(onFirstFrame[8]);
-          class Je {
+          class Ze {
             constructor() {
               obj = closure_3;
               if (closure_3 != null) {
@@ -316,7 +324,7 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           const obj4 = { isScrollingInBoundsSharedValue, withTiming: null, isActive: null, timingStandard: null };
-          class De {
+          class He {
             constructor() {
               if (closure_8) {
                 tmp = closure_11;
@@ -332,256 +340,259 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           obj4.withTiming = handleVideoProgress(onFirstFrame[17]).withTiming;
           obj4.isActive = tmp5;
           obj4.timingStandard = handleVideoProgress(onFirstFrame[18]).timingStandard;
-          Je.__closure = obj4;
-          Je.__workletHash = 12676706441349;
-          Je.__initData = __initData2;
-          tmp46(Je);
+          Ze.__closure = obj4;
+          Ze.__workletHash = 12676706441349;
+          Ze.__initData = __initData2;
+          tmp45(Ze);
           const tmpResult10 = handleVideoProgress(onFirstFrame[8]);
           const bountyVideoEndAppStoreContext = handleVideoProgress(onFirstFrame[19]).useBountyVideoEndAppStoreContext();
-          let tmp50;
+          let tmp49;
           if (tmp5) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
             if (bountyVideoEndAppStoreContext != null) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
-            tmp50 = tmp51;
+            tmp49 = tmp50;
           }
           if (bountyVideoEndAppStoreContext != null) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
           }
           if (undefined == null) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
           }
-          c14 = tmp52;
-          tmp51 = tmp50;
+          c14 = tmp51;
+          tmp50 = tmp49;
           const tmpResult12 = handleVideoProgress(onFirstFrame[19]);
-          class Ze {
-            constructor() {
-              obj = videoEndPeekProgress;
-              if (null == videoEndPeekProgress) {
-                tmp = StyleSheet;
-                return StyleSheet.absoluteFillObject;
-              } else {
-                value = obj.get();
-                tmp3 = closure_10;
-                tmp4 = c14;
-                tmp5 = closure_10(value, c14);
-                tmp6 = closure_9;
-                tmp7 = width;
-                tmp8 = height;
-                tmp9 = closure_9(value, width, height);
-                size = { position: "absolute", top: 0, left: 0, width: null, height: null, overflow: "hidden", borderRadius: null, transform: null };
-                size.width = width;
-                size.height = tmp9;
-                tmp10 = lg;
-                size.borderRadius = lg;
-                obj1 = { translateY: null };
-                num = 1;
-                num2 = 2;
-                obj1.translateY = -tmp9 * (1 - tmp5) / 2;
-                items = [, ];
-                items[0] = obj1;
-                obj5 = { scale: null };
-                obj5.scale = tmp5;
-                items[1] = obj5;
-                size.transform = items;
-                return size;
-              }
+          function et() {
+            if (null == tmp50) {
+              return StyleSheet.absoluteFillObject;
+            } else {
+              value = tmp50.get();
+              const tmp5 = getBountyVideoEndPeekScale(value, c14);
+              const tmp9 = getBountyVideoEndPeekClipHeight(value, width, height);
+              const size = { position: "absolute", top: 0, left: 0, width, height: tmp9, overflow: "hidden", borderRadius: lg, transform: null };
+              const obj2 = { translateY: -tmp9 * (1 - tmp5) / 2 };
+              items = [obj2, ];
+              const obj3 = { scale: tmp5 };
+              items[1] = obj3;
+              size.transform = items;
+              return size;
             }
           }
-          let size = { videoEndPeekProgress: tmp50, StyleSheet, getBountyVideoEndPeekScale, videoEndPeekTargetScale: undefined, getBountyVideoEndPeekClipHeight, width, height, VIDEO_CONTAINER_BORDER_RADIUS: lg };
-          Ze.__closure = size;
-          Ze.__workletHash = 6241135979205;
-          Ze.__initData = __initData3;
-          const animatedStyle1 = handleVideoProgress(onFirstFrame[8]).useAnimatedStyle(Ze);
-          const tmp53 = StyleSheet;
+          let size = { videoEndPeekProgress: tmp49, StyleSheet, getBountyVideoEndPeekScale, videoEndPeekTargetScale: undefined, getBountyVideoEndPeekClipHeight, width, height, VIDEO_CONTAINER_BORDER_RADIUS: lg };
+          et.__closure = size;
+          et.__workletHash = 6241135979205;
+          et.__initData = __initData3;
+          const animatedStyle1 = handleVideoProgress(onFirstFrame[8]).useAnimatedStyle(et);
+          const tmp52 = StyleSheet;
           const tmpResult13 = handleVideoProgress(onFirstFrame[8]);
-          function et() {
-            if (null == tmp51) {
+          function tt() {
+            if (null == tmp50) {
               return StyleSheet.absoluteFillObject;
             } else {
               const size = { width, height, transform: null };
-              const obj2 = { translateY: (getBountyVideoEndPeekClipHeight(tmp51.get(), width, height) - height) / 2 };
+              const obj2 = { translateY: (getBountyVideoEndPeekClipHeight(tmp50.get(), width, height) - height) / 2 };
               items = [obj2];
               size.transform = items;
               return size;
             }
           }
-          const size1 = { videoEndPeekProgress: tmp50, StyleSheet, getBountyVideoEndPeekClipHeight, width, height };
-          et.__closure = size1;
-          et.__workletHash = 2736417945524;
-          et.__initData = __initData4;
-          const animatedStyle2 = handleVideoProgress(onFirstFrame[8]).useAnimatedStyle(et);
+          const size1 = { videoEndPeekProgress: tmp49, StyleSheet, getBountyVideoEndPeekClipHeight, width, height };
+          tt.__closure = size1;
+          tt.__workletHash = 2736417945524;
+          tt.__initData = __initData4;
+          const animatedStyle2 = handleVideoProgress(onFirstFrame[8]).useAnimatedStyle(tt);
           if (isCtaVisible) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
           }
           if (true === tmp5) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
             if (bountyVideoEndAppStoreContext != null) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
-            if (true === tmp62) {
-              class Xe {
+            if (true === tmp61) {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
           }
           if (tmp4) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
             if (bountyVideoEndAppStoreContext != null) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
-            tmp4 = true !== tmp63;
+            tmp4 = true !== tmp62;
           }
           if (cResult[21] === tmp8) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
           }
-          let tmp66Result = null;
+          let tmp65Result = null;
           if (tmp7) {
-            class Xe {
+            class Ke {
               constructor(arg0) {
-                tmp = closure_12();
-                if (handleVideoError != null) {
-                  tmp3 = height;
-                  tmp2Result = tmp2(height);
+                if (height.currentTime > 0) {
+                  tmp = closure_7;
+                  flag = true;
+                  tmp2 = closure_7(true);
                 }
+                tmp3 = handleVideoProgress(height);
                 return;
               }
             }
             const obj5 = { ref: playerRef, source: null, automaticallyWaitsToMinimizeStalling: false, maxBitRate: null, bufferConfig: null, preferredForwardBufferDuration: null, initialProgress: null, isFullscreen: false, externallyPaused: null, style: null, contentInsets: null, onProgress: null, onEnd: null, onPausePlayback: null, onResumePlayback: null, onError: null, onLoadStart: null, onBuffer: null, onReadyForDisplay: null, onVideoTracks: null, hideControls: null, showSkipButtons: false, repeat: null, bufferingSpinnerPlacement: "center", onPlayerStateChange: null };
-            const obj6 = { uri: tmp15 };
+            const obj6 = { uri: videoHls };
             obj5.source = obj6;
             if (tmp8) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
             obj5.maxBitRate = undefined;
+            class Je {
+              constructor() {
+                obj = { opacity: closure_11.get() };
+                return obj;
+              }
+            }
             if (tmp8) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
-            obj5.bufferConfig = undefined;
+            obj5.bufferConfig = tmp67;
             if (tmp8) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
@@ -589,30 +600,32 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             obj5.preferredForwardBufferDuration = undefined;
             obj5.initialProgress = initialProgress;
             if (tmp5) {
-              class Xe {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
-            if (!tmp70) {
-              class Xe {
+            if (!tmp69) {
+              class Ke {
                 constructor(arg0) {
-                  tmp = closure_12();
-                  if (handleVideoError != null) {
-                    tmp3 = height;
-                    tmp2Result = tmp2(height);
+                  if (height.currentTime > 0) {
+                    tmp = closure_7;
+                    flag = true;
+                    tmp2 = closure_7(true);
                   }
+                  tmp3 = handleVideoProgress(height);
                   return;
                 }
               }
             }
-            class Je {
+            class Ze {
               constructor() {
                 obj = closure_3;
                 if (closure_3 != null) {
@@ -633,8 +646,8 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 return obj1;
               }
             }
-            obj5.style = tmp53.absoluteFillObject;
-            class De {
+            obj5.style = tmp52.absoluteFillObject;
+            class He {
               constructor() {
                 if (closure_8) {
                   tmp = closure_11;
@@ -647,11 +660,11 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 return;
               }
             }
-            obj5.onProgress = tmp42;
+            obj5.onProgress = Ke;
             obj5.onEnd = handleVideoEnd;
             obj5.onPausePlayback = handleVideoPaused;
             obj5.onResumePlayback = handleVideoResumed;
-            obj5.onError = Xe;
+            obj5.onError = Qe;
             obj5.onLoadStart = onLoadStart;
             obj5.onBuffer = onBuffer;
             obj5.onReadyForDisplay = tmp39;
@@ -659,17 +672,17 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             obj5.hideControls = isEndCardVisible;
             obj5.repeat = repeat;
             obj5.onPlayerStateChange = onPlayerStateChange;
-            tmp66Result = tmp66(handleVideoProgress(onFirstFrame[20]).AdVideoPlayer, obj5);
-            tmp70 = !tmp5;
+            tmp65Result = tmp65(handleVideoProgress(onFirstFrame[20]).AdVideoPlayer, obj5);
+            tmp69 = !tmp5;
           }
           cResult[21] = tmp8;
           cResult[22] = tmp39;
           cResult[23] = handleVideoEnd;
-          cResult[24] = Xe;
+          cResult[24] = Qe;
           cResult[25] = handleVideoPaused;
-          cResult[26] = tmp42;
+          cResult[26] = Ke;
           cResult[27] = handleVideoResumed;
-          cResult[28] = tmp15;
+          cResult[28] = videoHls;
           cResult[29] = initialProgress;
           cResult[30] = tmp5;
           cResult[31] = isEndCardVisible;
@@ -681,10 +694,10 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           cResult[37] = playerRef;
           cResult[38] = repeat;
           cResult[39] = tmp7;
-          cResult[40] = tmp66Result;
+          cResult[40] = tmp65Result;
           const tmpResult14 = handleVideoProgress(onFirstFrame[8]);
         }
-        class De {
+        class He {
           constructor() {
             if (closure_8) {
               tmp = closure_11;
@@ -700,22 +713,21 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
         items = [first, sharedValue];
         cResult[10] = first;
         cResult[11] = sharedValue;
-        cResult[12] = De;
+        cResult[12] = He;
         cResult[13] = items;
         tmp34 = items;
         const tmpResult9 = handleVideoProgress(onFirstFrame[16]);
       }
     }
-    const size2 = { assetUrl: tmp15, width, height };
+    const size2 = { assetUrl: videoHls, width, height };
     const scaledFirstFrameImageUrl = handleVideoProgress(onFirstFrame[6]).getScaledFirstFrameImageUrl(size2);
-    cResult[3] = height;
-    cResult[4] = tmp15;
+    cResult[4] = videoHls;
     cResult[5] = width;
     cResult[6] = scaledFirstFrameImageUrl;
     const tmpResult15 = handleVideoProgress(onFirstFrame[6]);
   }
   const tmpResult = handleVideoProgress(onFirstFrame[8]);
-  const result1 = handleVideoProgress(onFirstFrame[15]).pickBountyPlaybackHlsUri({ videoHls, videoRenditions }, handleVideoProgress(onFirstFrame[15]).BOUNTY_MOBILE_MODAL_RENDITION_PICK);
+  const result1 = handleVideoProgress(onFirstFrame[15]).pickBountyVideoRenditionWithFallback({ videoHls, videoRenditions }, handleVideoProgress(onFirstFrame[15]).BOUNTY_MOBILE_MODAL_RENDITION_PICK);
   cResult[0] = videoHls;
   cResult[1] = videoRenditions;
   cResult[2] = result1;
@@ -774,7 +786,14 @@ export const BountyVideo = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   videoHls = bounty.videoHls;
   videoRenditions = bounty.videoRenditions;
   items = [videoHls, videoRenditions];
-  memo = isScrollingInBoundsSharedValue.useMemo(() => pickBountyVideoRendition.pickBountyPlaybackHlsUri({ videoHls, videoRenditions }, pickBountyVideoRendition.BOUNTY_MOBILE_MODAL_RENDITION_PICK), items);
+  memo = isScrollingInBoundsSharedValue.useMemo(() => {
+    let url = videoHls;
+    const result = pickBountyVideoRendition.pickBountyVideoRenditionWithFallback({ videoHls, videoRenditions }, pickBountyVideoRendition.BOUNTY_MOBILE_MODAL_RENDITION_PICK);
+    if (null != result) {
+      url = result.url;
+    }
+    return url;
+  }, items);
   const items1 = [memo, width, height];
   const memo1 = isScrollingInBoundsSharedValue.useMemo(() => {
     const size = { assetUrl: memo, width, height };

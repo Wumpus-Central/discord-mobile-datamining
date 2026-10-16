@@ -1,15 +1,15 @@
-// === Module 16282: useDisplayNameStylesNewItems ===
+// === Module 16315: useDisplayNameStylesNewItems ===
 
-// Module 16282 (useDisplayNameStylesNewItems)
+// Module 16315 (useDisplayNameStylesNewItems)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16283 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16316 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1408);
+const DisplayNameStylesConstants = fn(1410);
 ({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
 fn(558);
 let ReactCompilerGating = fn(558);

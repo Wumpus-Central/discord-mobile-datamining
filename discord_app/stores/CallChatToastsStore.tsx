@@ -1,6 +1,6 @@
-// === Module 17636: CallChatToastsStore ===
+// === Module 17670: CallChatToastsStore ===
 
-// Module 17636 (CallChatToastsStore)
+// Module 17670 (CallChatToastsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

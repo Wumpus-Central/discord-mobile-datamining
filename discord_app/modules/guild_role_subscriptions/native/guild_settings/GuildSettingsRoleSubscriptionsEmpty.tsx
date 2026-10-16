@@ -1,18 +1,18 @@
-// === Module 18781: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 18823: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 18781 (GuildSettingsRoleSubscriptionsEmpty)
+// Module 18823 (GuildSettingsRoleSubscriptionsEmpty)
 import c from "c" /* 576 */;
-import useNavigation from "useNavigation" /* 1503 */;
-import useGuildApplicationDefault from "useGuildApplication" /* 18782 */;
+import useNavigation from "useNavigation" /* 1505 */;
+import useGuildApplicationDefault from "useGuildApplication" /* 18824 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
-const PlaceholderDefault = tmp3(18783);
-const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(18784);
+const PlaceholderDefault = tmp3(18825);
+const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(18826);
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1373).ApplicationTypes;
+const ApplicationTypes = fn(1375).ApplicationTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionsEmptyContent(guild) {

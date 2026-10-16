@@ -1,19 +1,19 @@
-// === Module 12941: ChannelAutocompleteEmojiUpsell ===
+// === Module 12967: ChannelAutocompleteEmojiUpsell ===
 
-// Module 12941 (ChannelAutocompleteEmojiUpsell)
+// Module 12967 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import FastImageDefault from "FastImage" /* 5088 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import FastImageDefault from "FastImage" /* 5091 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, title: { lineHeight: 16, flex: 1 }, emojis: { height: 28 }, emojiWrapper: null, emoji: null };
 let size = { position: "absolute", width: 28, height: 28, padding: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderRadius: 14, borderColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
 obj2.emojiWrapper = size;
@@ -34,9 +34,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
         const result = 24 * cResult[3].length;
         ({ upsell, title } = tmp4);
         if (cResult[8] !== results.length) {
-          const intl = tmp(1126).intl;
+          const intl = tmp(1128).intl;
           const obj2 = { count: results.length };
-          const formatResult = intl.format(tmp(1126).t.uEky42, obj2);
+          const formatResult = intl.format(tmp(1128).t.uEky42, obj2);
           cResult[8] = results.length;
           cResult[9] = formatResult;
           let tmp11 = formatResult;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
           tmp18 = items1;
         }
         const obj6 = { style: title, accessibilityRole: "header", variant: "text-sm/medium", children: tmp11 };
-        const tmp15 = closure_5(tmp(5147).Text, obj6);
+        const tmp15 = closure_5(tmp(5149).Text, obj6);
         cResult[10] = tmp4.title;
         cResult[11] = tmp11;
         cResult[12] = tmp15;

@@ -1,10 +1,10 @@
-// === Module 11331: TooltipStore ===
+// === Module 11351: TooltipStore ===
 
-// Module 11331 (TooltipStore)
+// Module 11351 (TooltipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1085 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const StorageKeys = Constants.StorageKeys;

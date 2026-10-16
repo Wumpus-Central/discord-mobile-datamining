@@ -1,31 +1,32 @@
-// === Module 5462: MarkupRules ===
+// === Module 5464: MarkupRules ===
 
-// Module 5462 (MarkupRules)
-import util from "util" /* 1126 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2122 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4820 */;
-import UserUtilsDefault from "UserUtils" /* 5018 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 5465 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5468 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5469 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 5470 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5471 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5472 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5485 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5487 */;
-import MarkupListRuleDefault from "MarkupListRule" /* 8348 */;
-import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8349 */;
-import TimestampUtils from "TimestampUtils" /* 8373 */;
-import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8375 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14728 */;
+// Module 5464 (MarkupRules)
+import util from "util" /* 1128 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2125 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
+import UserUtilsDefault from "UserUtils" /* 5021 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 5467 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5470 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5471 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 5472 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5473 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5474 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5487 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5489 */;
+import MarkupListRuleDefault from "MarkupListRule" /* 8355 */;
+import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8356 */;
+import HighlightJsAnsiLanguage from "HighlightJsAnsiLanguage" /* 8377 */;
+import TimestampUtils from "TimestampUtils" /* 8381 */;
+import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8383 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
-import t_mod from "module_1949" /* 1949 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5461 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
+import t_mod from "module_1951" /* 1951 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5463 */;
 import "module_12";
 import apply_mod from "module_12" /* 12 */;
 
@@ -39,7 +40,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "ix" };
+    obj3 = { type: "link", content: null, target: null, title: "unicodeVersion" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     const items = [obj4];
     obj3.content = items;
@@ -215,16 +216,15 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
   obj.channelId = id;
   return obj;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5463).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5464).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5465).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5466).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
 const re17 = /^ *> ?/gm;
 const re18 = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-const regExp = new RegExp(fn(5146).ANSI_CONTROL_SEQUENCE_RE, "g");
 let obj = { newline: t.defaultRules.newline, paragraph: t.defaultRules.paragraph, escape: null, blockQuote: null, link: null, autolink: null, mailto: null, tel: null, url: null, strong: null, em: null, u: null, br: null, text: null, inlineCode: null, emoticon: null, codeBlock: null, roleMention: null, mention: null, silentPrefix: null, channelMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, commandMention: null, timestampMentionInput: null, gameMention: null, emoji: null, soundboard: null, customEmoji: null, timestamp: null, s: null, spoiler: null, staticRouteLink: null, heading: null, list: null, subtext: null };
 let obj2 = {};
 let merged = Object.assign(t.defaultRules.escape);
@@ -880,7 +880,7 @@ let items1 = [
             formatted = str3.toLowerCase();
           }
           if ("ansi" === formatted) {
-            match[2] = match[2].replaceAll(regExp, "");
+            match[2] = match[2].replaceAll(HighlightJsAnsiLanguage.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
           }
           return match;
         } else {
@@ -905,7 +905,7 @@ const obj24 = {
           formatted = str3.toLowerCase();
         }
         if ("ansi" === formatted) {
-          match[2] = match[2].replaceAll(regExp, "");
+          match[2] = match[2].replaceAll(HighlightJsAnsiLanguage.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
         }
         return match;
       } else {

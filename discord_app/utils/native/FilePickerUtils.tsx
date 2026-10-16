@@ -1,6 +1,6 @@
-// === Module 11506: FilePickerUtils ===
+// === Module 11527: FilePickerUtils ===
 
-// Module 11506 (FilePickerUtils)
+// Module 11527 (FilePickerUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -172,7 +172,7 @@ let closure_5 = async function _handleDocumentSelection() {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/FilePickerUtils.tsx");
 

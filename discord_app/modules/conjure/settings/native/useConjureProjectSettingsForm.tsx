@@ -1,26 +1,26 @@
-// === Module 11552: useConjureProjectSettingsForm ===
+// === Module 11575: useConjureProjectSettingsForm ===
 
-// Module 11552 (useConjureProjectSettingsForm)
+// Module 11575 (useConjureProjectSettingsForm)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5115 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7166 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5118 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 
 const require = globalThis.__r;
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
 let View = fn(17).View;
-const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
+const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -31,7 +31,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5151);
+createStyles = fn(5153);
 let closure_14 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -496,12 +496,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   let obj2 = { count: first.size, max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES };
   const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[15]).intl;
-  obj3.dismissAccessibilityLabel = intl2.string(require("module_3862").un99lK);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_3862").g5I05P, { count: first.size, max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES });
-  obj3.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[17]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3862").g5I05P, { count: first.size, max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
+  obj3.dismissAccessibilityLabel = intl2.string(require("module_3865").un99lK);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_3865").g5I05P, { count: first.size, max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES });
+  obj3.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[17]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3865").g5I05P, { count: first.size, max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
   const obj5 = { title: null, trailing: null };
   const intl3 = guildId(onSave[15]).intl;
-  obj5.title = intl3.string(require("module_3862")["pO3+p5"]);
+  obj5.title = intl3.string(require("module_3865")["pO3+p5"]);
   const obj6 = { label: null, onPress: null };
   const intl4 = guildId(onSave[15]).intl;
   obj6.label = intl4.string(guildId(onSave[15]).t.i4jeWR);
@@ -555,7 +555,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           if (tmp3) {
             const intl = guildId(onSave[15]).intl;
             const obj4 = { max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_3862")["dH7+/Z"], obj4);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_3865")["dH7+/Z"], obj4);
           }
           obj2.accessibilityHint = formatToPlainStringResult;
           obj2.onPress = function onPress(arg0) {
@@ -1004,9 +1004,9 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   const obj20 = { hasIcons: false, children: null };
   const obj21 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
   const intl9 = tmp2(tmp3[15]).intl;
-  obj21.label = intl9.string(require("module_3862")["4liZ45"]);
+  obj21.label = intl9.string(require("module_3865")["4liZ45"]);
   const intl10 = tmp2(tmp3[15]).intl;
-  obj21.subLabel = intl10.string(require("module_3862").I5cl7p);
+  obj21.subLabel = intl10.string(require("module_3865").I5cl7p);
   obj21.checked = conjureSmartContextSetting.checked;
   obj21.disabled = first2;
   obj21.onPress = function onPress(arg0) {

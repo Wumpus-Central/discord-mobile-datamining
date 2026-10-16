@@ -1,7 +1,7 @@
-// === Module 7609: VideoQuestUIStore ===
+// === Module 7611: VideoQuestUIStore ===
 
-// Module 7609 (VideoQuestUIStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
+// Module 7611 (VideoQuestUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -37,16 +37,16 @@ function _toPropertyKey(obj) {
   return text;
 }
 const VideoProgressState = { UNKNOWN: "UNKNOWN", NOT_STARTED: "NOT_STARTED", IN_PROGRESS: "IN_PROGRESS", COMPLETED: "COMPLETED" };
-let identity = fn(1267);
+let identity = fn(1269);
 identity = identity.createWithEqualityFn();
-fn(5046);
+fn(5049);
 const obj4 = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-const module_5046 = fn(5046);
-obj4.storage = module_5046.createJSONStorage(() => require("LocalStorageWrapper"));
+const module_5049 = fn(5049);
+obj4.storage = module_5049.createJSONStorage(() => require("LocalStorageWrapper"));
 obj4.partialize = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
-const withEqualityFnResult = identity(module_5046.persist((arg0, arg1) => {
+const withEqualityFnResult = identity(module_5049.persist((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
   return {
@@ -57,10 +57,10 @@ const withEqualityFnResult = identity(module_5046.persist((arg0, arg1) => {
     videoProgress: {},
     transcript: null,
     setVolume(volume) {
-      volume(1272).batchUpdates(() => volume({ volume }));
+      volume(1274).batchUpdates(() => volume({ volume }));
     },
     setMuted(muted) {
-      muted(1272).batchUpdates(() => muted({ muted }));
+      muted(1274).batchUpdates(() => muted({ muted }));
     },
     setVideoProgress(arg0, timestampSec, duration) {
       closure_0 = arg0;
@@ -73,7 +73,7 @@ const withEqualityFnResult = identity(module_5046.persist((arg0, arg1) => {
         num = 0;
       }
       const maxTimestampSec = Math.max(num, timestampSec);
-      closure_0(1272).batchUpdates(() => {
+      closure_0(1274).batchUpdates(() => {
         const obj = { videoProgress: null };
         const obj2 = {};
         const merged = Object.assign(timestampSec().videoProgress);
@@ -83,10 +83,10 @@ const withEqualityFnResult = identity(module_5046.persist((arg0, arg1) => {
       });
     },
     setTranscriptEnabled(transcriptEnabled) {
-      transcriptEnabled(1272).batchUpdates(() => transcriptEnabled({ transcriptEnabled }));
+      transcriptEnabled(1274).batchUpdates(() => transcriptEnabled({ transcriptEnabled }));
     },
     setCaptionEnabled(captionEnabled) {
-      captionEnabled(1272).batchUpdates(() => captionEnabled({ captionEnabled }));
+      captionEnabled(1274).batchUpdates(() => captionEnabled({ captionEnabled }));
     },
     getVideoProgress(questId) {
       return closure_1().videoProgress[questId];
@@ -105,7 +105,7 @@ const withEqualityFnResult = identity(module_5046.persist((arg0, arg1) => {
       return IN_PROGRESS;
     },
     resetQuest(questId) {
-      questId(1272).batchUpdates(() => {
+      questId(1274).batchUpdates(() => {
         const items = [questId];
         questId({ videoProgress: _objectWithoutProperties(closure_1().videoProgress, items.map(_toPropertyKey)) });
       });
@@ -116,7 +116,7 @@ const withEqualityFnResult = identity(module_5046.persist((arg0, arg1) => {
       });
     },
     setTranscriptAsset(transcript) {
-      transcript(1272).batchUpdates(() => {
+      transcript(1274).batchUpdates(() => {
         transcript({ transcript });
       });
     }

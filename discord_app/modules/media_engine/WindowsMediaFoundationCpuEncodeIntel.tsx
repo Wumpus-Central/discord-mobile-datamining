@@ -1,7 +1,7 @@
-// === Module 15028: WindowsMediaFoundationCpuEncodeIntel ===
+// === Module 15061: WindowsMediaFoundationCpuEncodeIntel ===
 
-// Module 15028 (WindowsMediaFoundationCpuEncodeIntel)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 15061 (WindowsMediaFoundationCpuEncodeIntel)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-wmf-cpu-encode-intel", kind: "user", defaultConfig: { enabled: false }, variations: null };

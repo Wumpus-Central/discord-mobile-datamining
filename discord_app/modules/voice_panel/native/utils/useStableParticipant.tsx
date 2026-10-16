@@ -1,14 +1,14 @@
-// === Module 18090: useStableParticipant ===
+// === Module 18125: useStableParticipant ===
 
-// Module 18090 (useStableParticipant)
+// Module 18125 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import NicknameUtils from "NicknameUtils" /* 5469 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6269 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11203 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
+import NicknameUtils from "NicknameUtils" /* 5471 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6271 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11219 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import UserStore from "UserStore" /* 1390 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5174).ParticipantTypes;
+const ParticipantTypes = fn(5176).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStabl
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 0.699, isSelf: 0 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 0, isSelf: 1 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStabl
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 0.699, isSelf: 0 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: 0, isSelf: 1 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

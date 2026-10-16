@@ -1,27 +1,27 @@
-// === Module 15520: ChangeAvatarActionSheet ===
+// === Module 15556: ChangeAvatarActionSheet ===
 
-// Module 15520 (ChangeAvatarActionSheet)
+// Module 15556 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import TableRow from "TableRow" /* 6400 */;
-import TableRowGroup from "TableRowGroup" /* 6485 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7060 */;
-import ActionSheet from "ActionSheet" /* 7118 */;
-import Form from "Form" /* 8800 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15499 */;
+import util from "util" /* 1128 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import TableRow from "TableRow" /* 6402 */;
+import TableRowGroup from "TableRowGroup" /* 6487 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7062 */;
+import ActionSheet from "ActionSheet" /* 7120 */;
+import Form from "Form" /* 8808 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15535 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsObjects = fn(1085).AnalyticsObjects;
+const AnalyticsObjects = fn(1087).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };

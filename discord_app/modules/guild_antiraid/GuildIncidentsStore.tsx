@@ -1,13 +1,13 @@
-// === Module 11021: GuildIncidentsStore ===
+// === Module 11036: GuildIncidentsStore ===
 
-// Module 11021 (GuildIncidentsStore)
+// Module 11036 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8261 */;
-import ExperimentStore from "ExperimentStore" /* 5072 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8266 */;
+import ExperimentStore from "ExperimentStore" /* 5075 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 require = fn;
 function computeAlertSettings() {

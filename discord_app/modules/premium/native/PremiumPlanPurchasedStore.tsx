@@ -1,15 +1,15 @@
-// === Module 7362: PremiumPlanPurchasedStore ===
+// === Module 7364: PremiumPlanPurchasedStore ===
 
-// Module 7362 (PremiumPlanPurchasedStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7098 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7363 */;
-import ActionSheetStore from "ActionSheetStore" /* 4858 */;
+// Module 7364 (PremiumPlanPurchasedStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7365 */;
+import ActionSheetStore from "ActionSheetStore" /* 4861 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 const module_570 = fn(570);
 const obj3 = module_570.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
@@ -20,7 +20,7 @@ export const usePremiumPlanPurchasedStore = obj3;
 export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1272).batchUpdates(() => {
+  productId(1274).batchUpdates(() => {
     obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
   });
   if (onPaymentStart != null) {
@@ -84,6 +84,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "ix", onPaymentDismiss: "opacity" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "unicodeVersion", onPaymentDismiss: "shapes" });
   });
 };

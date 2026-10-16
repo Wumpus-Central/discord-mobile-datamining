@@ -1,41 +1,41 @@
-// === Module 17952: PictureInPictureGlobal ===
+// === Module 17986: PictureInPictureGlobal ===
 
-// Module 17952 (PictureInPictureGlobal)
+// Module 17986 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native2 from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6254 */;
-import NavigatorConstants from "NavigatorConstants" /* 6479 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7698 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11128 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11137 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11139 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17953 */;
+import native2 from "native" /* 1202 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6256 */;
+import NavigatorConstants from "NavigatorConstants" /* 6481 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7701 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11144 */;
+import PictureInPictureDefault from "PictureInPicture" /* 11153 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11155 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17987 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11141);
+const usePipDimensionsDefault = tmp5(11157);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9604).useBestActiveChatInputContainerHeight;
-const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
-const ParticipantTypes = fn(5174).ParticipantTypes;
+let closure_10 = fn(9620).useBestActiveChatInputContainerHeight;
+const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
+const ParticipantTypes = fn(5176).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
-const native = fn(1200);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1200).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1202);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1202).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.pip = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -360,8 +360,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(11138).useShouldForcePipOrientation(tmp31);
-    tmp(8545);
+    const shouldForcePipOrientation = tmp(11154).useShouldForcePipOrientation(tmp31);
+    tmp(8553);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {
@@ -409,7 +409,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
     tmp35 = obj2;
-    const tmpResult9 = tmp(11138);
+    const tmpResult9 = tmp(11154);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {

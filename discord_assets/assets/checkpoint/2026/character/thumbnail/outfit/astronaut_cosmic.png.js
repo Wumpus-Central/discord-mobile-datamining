@@ -1,6 +1,6 @@
-// === Module 5675: ? ===
+// === Module 5677: ? ===
 
-// Module 5675
+// Module 5677
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/astronaut_cosmic.png.js");

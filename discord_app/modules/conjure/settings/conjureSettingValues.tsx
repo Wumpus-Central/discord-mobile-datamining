@@ -1,6 +1,6 @@
-// === Module 11566: conjureSettingValues ===
+// === Module 11589: conjureSettingValues ===
 
-// Module 11566 (conjureSettingValues)
+// Module 11589 (conjureSettingValues)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingValues.tsx");

@@ -1,22 +1,22 @@
-// === Module 8242: GuildBoostingUtils ===
+// === Module 8247: GuildBoostingUtils ===
 
-// Module 8242 (GuildBoostingUtils)
-import util from "util" /* 1126 */;
-import SentryUtilsDefault from "SentryUtils" /* 1255 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import _modDef3282 from "module_3282" /* 3282 */;
-import _modDef4758 from "module_4758" /* 4758 */;
-import PremiumUtilsAll from "PremiumUtils" /* 4825 */;
-import FileSizeUtils from "FileSizeUtils" /* 5856 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8243 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8244 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8247 */;
+// Module 8247 (GuildBoostingUtils)
+import util from "util" /* 1128 */;
+import SentryUtilsDefault from "SentryUtils" /* 1257 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import _modDef3285 from "module_3285" /* 3285 */;
+import _modDef4761 from "module_4761" /* 4761 */;
+import PremiumUtilsAll from "PremiumUtils" /* 4828 */;
+import FileSizeUtils from "FileSizeUtils" /* 5858 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8248 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8249 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8252 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import UserStore from "UserStore" /* 1390 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7340 */;
-import SubscriptionStore from "SubscriptionStore" /* 4831 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import UserStore from "UserStore" /* 1392 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7342 */;
+import SubscriptionStore from "SubscriptionStore" /* 4834 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -31,15 +31,15 @@ function getGuildTierFromGuild(arg0) {
   }
   return premiumTier;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_9, AppliedGuildBoostsRequiredForBoostedGuildTier } = Constants);
 const BoostedGuildTiers = Constants.BoostedGuildTiers;
 ({ GuildFeatures: closure_12, HelpdeskArticles: map1, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: closure_14, MAX_STAGE_VIDEO_USER_LIMIT_TIER3: closure_15, SubscriptionStatusTypes: closure_16 } = Constants);
-const EmojiConstants = fn(1393);
+const EmojiConstants = fn(1395);
 ({ DEFAULT_EMOJI_SLOTS: closure_17, EMOJI_MAX_SLOTS_MORE: closure_18 } = EmojiConstants);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ BoostedGuildFeatures: closure_19, DEFAULT_SOUND_SLOTS: closure_20, MORE_SOUNDBOARD_SOUNDS: closure_21, FractionalPremiumStates: closure_22, IncrementalStickerCountsByTier: closure_23, TotalSoundboardSoundCountsByTier: closure_24, TotalStickerCountsByTier: closure_25, PerkIcons: closure_26 } = PremiumConstants);
-let closure_27 = fn(4839).getPremiumGroupProductName;
+let closure_27 = fn(4842).getPremiumGroupProductName;
 let obj = { LEVEL_1: 1, [1]: "LEVEL_1", LEVEL_2: 2, [2]: "LEVEL_2", LEVEL_3: 3, [3]: "LEVEL_3", LEVEL_4: 4, [4]: "LEVEL_4", LEVEL_5: 5, [5]: "LEVEL_5", LEVEL_6: 6, [6]: "LEVEL_6", LEVEL_7: 7, [7]: "LEVEL_7", LEVEL_8: 8, [8]: "LEVEL_8", LEVEL_9: 9, [9]: "LEVEL_9" };
 let closure_28 = Object.freeze({ [obj.LEVEL_1]: 1, [obj.LEVEL_2]: 2, [obj.LEVEL_3]: 3, [obj.LEVEL_4]: 6, [obj.LEVEL_5]: 9, [obj.LEVEL_6]: 12, [obj.LEVEL_7]: 15, [obj.LEVEL_8]: 18, [obj.LEVEL_9]: 24 });
 let items = [, , , ];
@@ -423,7 +423,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef4758().diff(_modDef4758(arg0), "months");
+  let num = _modDef4761().diff(_modDef4761(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -431,9 +431,9 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4758();
+  const obj = _modDef4761();
   const entries = Object.entries(closure_28);
-  const diffResult = _modDef4758().diff(arg0, "months");
+  const diffResult = _modDef4761().diff(arg0, "months");
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     let first = tmp6[0];
@@ -492,7 +492,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_27() };
-    return intl7.formatToPlainString(_modDef3282["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3285["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -758,7 +758,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8251).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8256).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

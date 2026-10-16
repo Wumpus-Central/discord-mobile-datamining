@@ -1,13 +1,13 @@
-// === Module 17325: GuildsBarFolderMenuItems ===
+// === Module 17359: GuildsBarFolderMenuItems ===
 
-// Module 17325 (GuildsBarFolderMenuItems)
+// Module 17359 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SortedGuildStore from "SortedGuildStore" /* 6179 */;
+import SortedGuildStore from "SortedGuildStore" /* 6181 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticsSections = fn(1085).AnalyticsSections;
+const AnalyticsSections = fn(1087).AnalyticsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 

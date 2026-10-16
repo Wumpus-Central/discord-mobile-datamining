@@ -1,7 +1,7 @@
-// === Module 8861: getDefaultGuildSettingsSection ===
+// === Module 8869: getDefaultGuildSettingsSection ===
 
-// Module 8861 (getDefaultGuildSettingsSection)
-import Constants from "Constants" /* 1085 */;
+// Module 8869 (getDefaultGuildSettingsSection)
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const GuildSettingsSections = Constants.GuildSettingsSections;

@@ -1,18 +1,18 @@
-// === Module 13546: CollectiblesShopGiftModal ===
+// === Module 13572: CollectiblesShopGiftModal ===
 
-// Module 13546 (CollectiblesShopGiftModal)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7479 */;
-import BadgeId from "BadgeId" /* 8527 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8540 */;
-import openGiftModal from "openGiftModal" /* 13545 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13548 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13551 */;
+// Module 13572 (CollectiblesShopGiftModal)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7481 */;
+import BadgeId from "BadgeId" /* 8535 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8548 */;
+import openGiftModal from "openGiftModal" /* 13571 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13574 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 13577 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7482 */;
 
 require = fn;
-const application_id = fn(1085).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1096).PaymentGateways;
+const application_id = fn(1087).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1098).PaymentGateways;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopGiftModalContent(product) {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   } else {
     first = cResult[0];
   }
-  const GiftingBadgeExperiment = tmp(10319).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp(10335).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig(first).enabled;
   if (cResult[1] !== enabled) {
     class O {
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
         return;
       }
     }
-    tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(7098).COLLECTIBLES_MOBILE_GIFT_MODAL;
+    tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(7100).COLLECTIBLES_MOBILE_GIFT_MODAL;
     cResult[8] = analyticsLocations;
     cResult[9] = tmp14;
     const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
       }
     }
   }
-  const analyticsLocations2 = enabled(7073)(tmp14).analyticsLocations;
+  const analyticsLocations2 = enabled(7075)(tmp14).analyticsLocations;
   if (stateFromStores != null) {
     class O {
       constructor() {
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
             return resolved;
           }
         }
-        const stringResult = obj5.string(tmp(1126).t["JCFN/y"]);
+        const stringResult = obj5.string(tmp(1128).t["JCFN/y"]);
         cResult[12] = stringResult;
         const tmp22 = stringResult;
       } else {
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
           }
         }
         const obj3 = { onDismiss: onGiftModalDismiss, title: tmp22 };
-        const tmp25 = jsx(tmp19(10402), { onDismiss: onGiftModalDismiss, title: tmp22 });
+        const tmp25 = jsx(tmp19(10418), { onDismiss: onGiftModalDismiss, title: tmp22 });
         cResult[13] = onGiftModalDismiss;
         cResult[14] = tmp25;
       } else {

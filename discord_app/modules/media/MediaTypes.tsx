@@ -1,11 +1,11 @@
-// === Module 5504: MediaTypes ===
+// === Module 5506: MediaTypes ===
 
-// Module 5504 (MediaTypes)
-import Constants from "Constants" /* 1085 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import Server from "Server" /* 1998 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5479 */;
+// Module 5506 (MediaTypes)
+import Constants from "Constants" /* 1087 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
+import Server from "Server" /* 2000 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5481 */;
 import size from "module_2" /* 2 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {

@@ -1,9 +1,9 @@
-// === Module 8248: GameServerStore ===
+// === Module 8253: GameServerStore ===
 
-// Module 8248 (GameServerStore)
+// Module 8253 (GameServerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8250 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8255 */;
 
 function handleGameServerInstanceCreated(arg0) {
   ({ guildId, gameServer } = arg0);

@@ -1,13 +1,13 @@
-// === Module 7048: Form/FormCheckbox ===
+// === Module 7050: Form/FormCheckbox ===
 
-// Module 7048 (Form/FormCheckbox)
+// Module 7050 (Form/FormCheckbox)
 import c from "c" /* 576 */;
-import native from "native" /* 1200 */;
+import native from "native" /* 1202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_3 = createStyles.createStyles({ checkbox: { width: 22, height: 22 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

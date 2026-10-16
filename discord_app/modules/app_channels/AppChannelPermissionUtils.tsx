@@ -1,14 +1,14 @@
-// === Module 11091: AppChannelPermissionUtils ===
+// === Module 11106: AppChannelPermissionUtils ===
 
-// Module 11091 (AppChannelPermissionUtils)
+// Module 11106 (AppChannelPermissionUtils)
 import c from "c" /* 576 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4813 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7167 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4816 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7169 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 require = fn;
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = fn(1087).ChannelTypes;
 const ReactCompilerGating = fn(558);
 function getAppChannelBotUserIdFromApplication(type, bot) {
   if (type.type === ChannelTypes.GUILD_APP) {

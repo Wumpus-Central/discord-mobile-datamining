@@ -1,32 +1,32 @@
-// === Module 13131: GuildPowerupsMultiPerkBottomSheet ===
+// === Module 13157: GuildPowerupsMultiPerkBottomSheet ===
 
-// Module 13131 (GuildPowerupsMultiPerkBottomSheet)
+// Module 13157 (GuildPowerupsMultiPerkBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import _modDef2600 from "module_2600" /* 2600 */;
-import themes from "themes" /* 4881 */;
-import useThemeDefault from "useTheme" /* 5087 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13080 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 13084 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13095 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13101 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13102 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13105 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13106 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13118 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13119 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13123 */;
-import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 13132 */;
-import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 13133 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import _modDef2603 from "module_2603" /* 2603 */;
+import themes from "themes" /* 4884 */;
+import useThemeDefault from "useTheme" /* 5090 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13106 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 13110 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13121 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13127 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13128 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13131 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13132 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13144 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13145 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13149 */;
+import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 13158 */;
+import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 13159 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles_mod from "createStyles" /* 5151 */;
+import createStyles_mod from "createStyles" /* 5153 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -236,7 +236,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPo
                                 }
                                 obj4.variant = str5;
                                 const intl2 = util.intl;
-                                const tmp4Result = _modDef2600;
+                                const tmp4Result = _modDef2603;
                                 obj4.text = intl2.string(tmp13 ? tmp4Result.TZsu1U : tmp4Result.gSxlHf);
                                 obj4.onPress = function onPress() {
                                   if (closure_0) {
@@ -415,7 +415,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPo
     }
     obj13.variant = str2;
     const intl2 = util.intl;
-    const tmp3Result2 = _modDef2600;
+    const tmp3Result2 = _modDef2603;
     obj13.text = intl2.string(result ? tmp3Result2.TZsu1U : tmp3Result2.gSxlHf);
     obj13.onPress = function onPress() {
       if (c0) {
@@ -437,8 +437,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   guildId = guildId.guildId;
   ({ listing, onDismiss } = guildId);
   const tmp4 = closure_7();
-  const bottom = forceStaticImages(1631)().bottom;
-  forceStaticImages = forceStaticImages(13133)(guildId, listing);
+  const bottom = forceStaticImages(1633)().bottom;
+  forceStaticImages = forceStaticImages(13159)(guildId, listing);
   if (null == forceStaticImages) {
     return null;
   } else {
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
                         return tmp26;
                       }
                       const obj4 = { scrollable: true, startExpanded: true, onDismiss, children: tmp23 };
-                      const tmp28 = closure_4(tmp(7061).BottomSheet, obj4);
+                      const tmp28 = closure_4(tmp(7063).BottomSheet, obj4);
                       cResult[23] = onDismiss;
                       cResult[24] = tmp23;
                       cResult[25] = tmp28;
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
                 const obj5 = { contentContainerStyle: tmp6, children: null };
                 const items = [tmp7, tmp10, tmp19];
                 obj5.children = items;
-                const tmp25 = closure_5(tmp(6527).BottomSheetScrollView, obj5);
+                const tmp25 = closure_5(tmp(6529).BottomSheetScrollView, obj5);
                 cResult[18] = tmp6;
                 cResult[19] = tmp7;
                 cResult[20] = tmp10;
@@ -531,7 +531,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       if (tmp11) {
         const obj7 = { style: tmp4.disabledReasonContainer, children: null };
         const obj8 = { text: forceStaticImages.disabledReason };
-        obj7.children = closure_4(tmp5(13129), obj8);
+        obj7.children = closure_4(tmp5(13155), obj8);
         tmp11 = closure_4(View, obj7);
       }
       cResult[5] = forceStaticImages.disabledReason;
@@ -540,7 +540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       tmp10 = tmp11;
     }
     ({ title: obj3.title, description: obj3.description } = forceStaticImages);
-    const tmp9 = closure_4(tmp5(13136), { title: null, description: null });
+    const tmp9 = closure_4(tmp5(13162), { title: null, description: null });
     cResult[2] = forceStaticImages.description;
     cResult[3] = forceStaticImages.title;
     cResult[4] = tmp9;
@@ -561,12 +561,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
     obj2.contentContainerStyle = obj3;
     ({ title: obj4.title, description: obj4.description } = tmp4);
-    const items = [closure_4(tmp2(13136), { title: null, description: null }), , ];
+    const items = [closure_4(tmp2(13162), { title: null, description: null }), , ];
     let tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj6 = { style: tmp.disabledReasonContainer, children: null };
       const obj7 = { text: tmp4.disabledReason };
-      obj6.children = closure_4(tmp2(13129), obj7);
+      obj6.children = closure_4(tmp2(13155), obj7);
       tmp6Result = closure_4(View, obj6);
     }
     items[1] = tmp6Result;
@@ -575,8 +575,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     obj13.children = powerups.map((powerup) => React4(closure_8, { guildId, powerup, forceStaticImage: forceStaticImages.forceStaticImages }, powerup.skuId));
     items[2] = closure_4(View, obj13);
     obj2.children = items;
-    obj.children = closure_5(guildId(6527).BottomSheetScrollView, obj2);
-    tmp6Result2 = closure_4(guildId(7061).BottomSheet, obj);
+    obj.children = closure_5(guildId(6529).BottomSheetScrollView, obj2);
+    tmp6Result2 = closure_4(guildId(7063).BottomSheet, obj);
     const obj5 = { title: null, description: null };
   }
   return tmp6Result2;

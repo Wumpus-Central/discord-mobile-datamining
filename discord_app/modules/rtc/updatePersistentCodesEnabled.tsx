@@ -1,14 +1,14 @@
-// === Module 16847: updatePersistentCodesEnabled ===
+// === Module 16880: updatePersistentCodesEnabled ===
 
-// Module 16847 (updatePersistentCodesEnabled)
+// Module 16880 (updatePersistentCodesEnabled)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9046 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9050 */;
+import util from "util" /* 1128 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9054 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import VoiceStateStore from "VoiceStateStore" /* 5174 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -176,17 +176,17 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
               tmp10 = require;
             }
             let obj5 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
-            const intl2 = tmp10(1126).intl;
+            const intl2 = tmp10(1128).intl;
             const string2 = intl2.string;
-            let intl3 = tmp10(1126).t;
+            let intl3 = tmp10(1128).t;
             if (closure_0) {
               let string2Result = string2(intl3.y015ZY);
             } else {
               string2Result = string2(intl3.E66FQn);
             }
             obj5.subtitle = string2Result;
-            intl3 = tmp10(1126).intl;
-            obj5.confirmText = intl3.string(tmp10(1126).t.aTuFYT);
+            intl3 = tmp10(1128).intl;
+            obj5.confirmText = intl3.string(tmp10(1128).t.aTuFYT);
             closure_1 = asyncGeneratorStep(async () => {
               if (c0 === 2) {
                 c0 = 3;
@@ -216,9 +216,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(6105).disconnect();
-                                  const obj = c1(6105);
-                                  const voiceChannel = c1(6105).selectVoiceChannel(dependencyMap);
+                                  c1(6107).disconnect();
+                                  const obj = c1(6107);
+                                  const voiceChannel = c1(6107).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };
@@ -276,8 +276,8 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9047).SECURE_FRAMES_PUBLIC_KEY_VERSION;
-const ChannelTypes = fn(1085).ChannelTypes;
+let closure_7 = fn(9055).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+const ChannelTypes = fn(1087).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");
 

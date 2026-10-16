@@ -1,13 +1,13 @@
-// === Module 8802: RowButton ===
+// === Module 8810: RowButton ===
 
-// Module 8802 (RowButton)
+// Module 8810 (RowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import TableRow from "TableRow" /* 6400 */;
-import Card from "Card" /* 6402 */;
-import TableRowIcon from "TableRowIcon" /* 6408 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8771 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import TableRow from "TableRow" /* 6402 */;
+import Card from "Card" /* 6404 */;
+import TableRowIcon from "TableRowIcon" /* 6410 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8779 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 let closure_3 = ["arrow", "disabled", "variant", "icon", "onPress", "experimental_withBlurBackground"];
 let closure_4 = ["experimental_withBlurBackground", "onPress", "disabled", "children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
@@ -359,9 +359,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function RowButt
   }
   return jsx(Card.InternalCard, obj4);
 });
-tmp2.Icon = fn(6408).TableRowIcon;
+tmp2.Icon = fn(6410).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6408).TableRowIconProps;
+export const RowButtonIconProps = fn(6410).TableRowIconProps;
 export const RowButton = tmp2;

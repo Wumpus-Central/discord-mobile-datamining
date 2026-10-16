@@ -1,12 +1,12 @@
-// === Module 13947: useTimestampTickedNow ===
+// === Module 13979: useTimestampTickedNow ===
 
-// Module 13947 (useTimestampTickedNow)
+// Module 13979 (useTimestampTickedNow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DurationsDefault from "Durations" /* 1102 */;
+import DurationsDefault from "Durations" /* 1104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const require = globalThis.__r;
 
@@ -36,8 +36,8 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / result(1102).Millis.SECOND);
-      return rounded * result(1102).Millis.SECOND;
+      const rounded = Math.floor(timestamp / result(1104).Millis.SECOND);
+      return rounded * result(1104).Millis.SECOND;
     };
     cResult[2] = fn;
     let tmp6 = fn;
@@ -79,8 +79,8 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
       const interval = new require("Timers").Interval();
       interval.start(closure_1, () => {
         const timestamp = Date.now();
-        const rounded = Math.floor(timestamp / result(1102).Millis.SECOND);
-        interval(rounded * result(1102).Millis.SECOND);
+        const rounded = Math.floor(timestamp / result(1104).Millis.SECOND);
+        interval(rounded * result(1104).Millis.SECOND);
       });
       return () => interval.stop();
     };
@@ -119,8 +119,8 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   importDefault = undefined;
   const now = _slicedToArray(noop.useState(() => {
     const timestamp = Date.now();
-    const rounded = Math.floor(timestamp / _undefined(1102).Millis.SECOND);
-    return rounded * _undefined(1102).Millis.SECOND;
+    const rounded = Math.floor(timestamp / _undefined(1104).Millis.SECOND);
+    return rounded * _undefined(1104).Millis.SECOND;
   }), 2);
   _require = now[1];
   const items = [AccessibilityStore];
@@ -141,11 +141,11 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(2060).Interval();
+    const interval = new closure_0(2063).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / c1(1102).Millis.SECOND);
-      interval(rounded * c1(1102).Millis.SECOND);
+      const rounded = Math.floor(timestamp / c1(1104).Millis.SECOND);
+      interval(rounded * c1(1104).Millis.SECOND);
     });
     return () => interval.stop();
   }, items1);

@@ -1,22 +1,22 @@
-// === Module 17430: YouBarButton ===
+// === Module 17464: YouBarButton ===
 
-// Module 17430 (YouBarButton)
+// Module 17464 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import IconButton from "IconButton" /* 7790 */;
-import ClipView from "ClipView" /* 9234 */;
-import BadgeDefault from "Badge" /* 9523 */;
+import IconButton from "IconButton" /* 7793 */;
+import ClipView from "ClipView" /* 9247 */;
+import BadgeDefault from "Badge" /* 9539 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16023);
+const YouBarConstants = fn(16056);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { buttonContainer: { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "applicationId", bottom: "color", padding: "s", minWidth: "r" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "unicodeVersion", bottom: "rejectWithError", padding: "for", minWidth: "applicationId" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
@@ -127,7 +127,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "applicationId", bottom: "color", padding: "s", minWidth: "r" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "unicodeVersion", bottom: "rejectWithError", padding: "for", minWidth: "applicationId" };
     return rect;
   }, items);
 });

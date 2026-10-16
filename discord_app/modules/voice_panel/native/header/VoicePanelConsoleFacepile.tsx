@@ -1,13 +1,13 @@
-// === Module 18135: VoicePanelConsoleFacepile ===
+// === Module 18169: VoicePanelConsoleFacepile ===
 
-// Module 18135 (VoicePanelConsoleFacepile)
+// Module 18169 (VoicePanelConsoleFacepile)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import NativeViewDefault from "NativeView" /* 6382 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11402 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 13845 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import NativeViewDefault from "NativeView" /* 6384 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11422 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 13877 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -33,9 +33,9 @@ function getConsoleInfo(type) {
     return null;
   }
 }
-const PlatformTypes = fn(1085).PlatformTypes;
+const PlatformTypes = fn(1087).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { consoleIconContainer: { borderRadius: nativeDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, consoleIcon: null };
 const obj3 = { borderRadius: nativeDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.consoleIcon = { tintColor: nativeDefault.colors.WHITE };
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
   const arr = useGameConsoleAccountsDefault();
   if (cResult[0] !== arr) {
     const mapped = arr.map(getConsoleInfo);
-    const found = mapped.filter(tmp(1386).isNotNullish);
+    const found = mapped.filter(tmp(1388).isNotNullish);
     cResult[0] = arr;
     cResult[1] = found;
     let tmp5 = found;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
       return tmp9;
     }
     const obj2 = { items: tmp5, renderItem: tmp8, offsetAmount: -3 };
-    const tmp11 = jsx(tmp(1200).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
+    const tmp11 = jsx(tmp(1202).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
     cResult[5] = tmp5;
     cResult[6] = tmp8;
     cResult[7] = tmp11;

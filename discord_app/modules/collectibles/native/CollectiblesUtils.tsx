@@ -1,15 +1,15 @@
-// === Module 9276: collectibles/CollectiblesUtils ===
+// === Module 9289: collectibles/CollectiblesUtils ===
 
-// Module 9276 (collectibles/CollectiblesUtils)
-import Constants from "Constants" /* 1085 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4825 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4838 */;
-import PriceUtils from "PriceUtils" /* 7159 */;
-import IAPStoreDefault from "IAPStore" /* 7353 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7491 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
-import types from "types" /* 8539 */;
-import _modDef9277 from "module_9277" /* 9277 */;
+// Module 9289 (collectibles/CollectiblesUtils)
+import Constants from "Constants" /* 1087 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4841 */;
+import PriceUtils from "PriceUtils" /* 7161 */;
+import IAPStoreDefault from "IAPStore" /* 7355 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
+import types from "types" /* 8547 */;
+import _modDef9290 from "module_9290" /* 9290 */;
 import size from "module_2" /* 2 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -362,5 +362,5 @@ export const filterHiddenCategories = function filterHiddenCategories(result1) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9277, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9290, description: "", isPreviewMode: true };
 };

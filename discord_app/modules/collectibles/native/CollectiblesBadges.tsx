@@ -1,21 +1,21 @@
-// === Module 9251: CollectiblesBadges ===
+// === Module 9264: CollectiblesBadges ===
 
-// Module 9251 (CollectiblesBadges)
+// Module 9264 (CollectiblesBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import LockIcon from "LockIcon" /* 8440 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9252 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
+import util from "util" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import LockIcon from "LockIcon" /* 8448 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9265 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1392).PremiumTypes;
+const PremiumTypes = fn(1394).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE }, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };

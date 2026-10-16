@@ -1,13 +1,13 @@
-// === Module 5519: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5521: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5519 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5521 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1126 */;
-import Server from "Server" /* 1998 */;
-import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointTrait from "CheckpointTrait" /* 5521 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5522 */;
-import CheckpointConstants from "CheckpointConstants" /* 5497 */;
+import util from "util" /* 1128 */;
+import Server from "Server" /* 2000 */;
+import _modDef3091 from "module_3091" /* 3091 */;
+import CheckpointTrait from "CheckpointTrait" /* 5523 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5524 */;
+import CheckpointConstants from "CheckpointConstants" /* 5499 */;
 import size from "module_2" /* 2 */;
 
 ({ CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: c3, CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_4, CHECKPOINT_2026_POWER_BAR_UNITS: hasOwnProperty, NATIVE_CHARACTER_LAYER_SIZE: metroRequire, CheckpointVersions: closure_7 } = CheckpointConstants);
@@ -203,7 +203,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (V2025.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3088.goiR2u);
+    return intl.string(_modDef3091.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

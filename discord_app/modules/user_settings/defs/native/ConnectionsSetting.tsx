@@ -1,10 +1,10 @@
-// === Module 15889: ConnectionsSetting ===
+// === Module 15922: ConnectionsSetting ===
 
-// Module 15889 (ConnectionsSetting)
-import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
-import PuzzlePieceIcon from "PuzzlePieceIcon" /* 15890 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
+// Module 15922 (ConnectionsSetting)
+import Constants from "Constants" /* 1087 */;
+import util from "util" /* 1128 */;
+import PuzzlePieceIcon from "PuzzlePieceIcon" /* 15923 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

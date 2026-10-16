@@ -1,22 +1,22 @@
-// === Module 16800: ShopBlockItem ===
+// === Module 16833: ShopBlockItem ===
 
-// Module 16800 (ShopBlockItem)
+// Module 16833 (ShopBlockItem)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ShopBlockType from "ShopBlockType" /* 7511 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9188 */;
-import HeroBlockDefault from "HeroBlock" /* 16801 */;
-import FeaturedBlockDefault from "FeaturedBlock" /* 16822 */;
-import FeedBlockDefault from "FeedBlock" /* 16824 */;
-import ShelfBlockDefault from "ShelfBlock" /* 16830 */;
+import ShopBlockType from "ShopBlockType" /* 7513 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9201 */;
+import HeroBlockDefault from "HeroBlock" /* 16834 */;
+import FeaturedBlockDefault from "FeaturedBlock" /* 16855 */;
+import FeedBlockDefault from "FeedBlock" /* 16857 */;
+import ShelfBlockDefault from "ShelfBlock" /* 16863 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7482 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { shopBlockSpacing: { marginTop: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

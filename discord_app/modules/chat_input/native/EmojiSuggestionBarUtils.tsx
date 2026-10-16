@@ -1,20 +1,20 @@
-// === Module 12985: EmojiSuggestionBarUtils ===
+// === Module 13011: EmojiSuggestionBarUtils ===
 
-// Module 12985 (EmojiSuggestionBarUtils)
-import native from "native" /* 4883 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import timing from "timing" /* 5152 */;
-import spring from "spring" /* 5438 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9490 */;
+// Module 13011 (EmojiSuggestionBarUtils)
+import native from "native" /* 4886 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import timing from "timing" /* 5154 */;
+import spring from "spring" /* 5440 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9506 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
-const UpsellTypes = fn(1085).UpsellTypes;
+const UpsellTypes = fn(1087).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1200).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1202).STANDARD_EASING };
 let obj2 = { duration: 200, dampingRatio: 0.7 };
 const __initData = { code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}" };
 const __initData2 = { code: "function EmojiSuggestionBarUtilsTsx2(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}" };

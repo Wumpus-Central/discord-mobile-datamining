@@ -1,14 +1,14 @@
-// === Module 18942: AVErrorStreamSoundshareFailed ===
+// === Module 18984: AVErrorStreamSoundshareFailed ===
 
-// Module 18942 (AVErrorStreamSoundshareFailed)
-import AVError from "AVError" /* 5349 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
-import AVErrorContext from "AVErrorContext" /* 18934 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
-import HookErrorStore from "HookErrorStore" /* 7648 */;
+// Module 18984 (AVErrorStreamSoundshareFailed)
+import AVError from "AVError" /* 5351 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
+import AVErrorContext from "AVErrorContext" /* 18976 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+import HookErrorStore from "HookErrorStore" /* 7650 */;
 
 require = fn;
-const MediaEngineHookTypes = fn(1085).MediaEngineHookTypes;
+const MediaEngineHookTypes = fn(1087).MediaEngineHookTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
 

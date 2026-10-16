@@ -1,10 +1,10 @@
-// === Module 13477: BugReportManager ===
+// === Module 13503: BugReportManager ===
 
-// Module 13477 (BugReportManager)
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7722 */;
+// Module 13503 (BugReportManager)
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7725 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 const require = fn;
 function showNotification(uri) {
@@ -124,15 +124,15 @@ function showNotification(uri) {
                 };
                 return obj10;
               }
-              obj2 = tmp2(1382);
+              obj2 = tmp2(1384);
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(13418).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(13418);
+            notificationDuration = tmp2(13444).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(13444);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(13420);
-            obj11.key = tmp2(1279).v4();
+            const obj6 = tmp3(13446);
+            obj11.key = tmp2(1281).v4();
             obj11.image = closure_128_0;
             uri = undefined;
             if (closure_128_0 != null) {
@@ -142,8 +142,8 @@ function showNotification(uri) {
             obj11.onDismiss = function onDismiss() {
               closure_1_1(dependencyMap[7]).clearNotification();
             };
-            const obj8 = tmp2(1279);
-            obj11.inAppNotificationId = tmp2(1279).v4();
+            const obj8 = tmp2(1281);
+            obj11.inAppNotificationId = tmp2(1281).v4();
             obj6.enqueueNotification(obj11);
             c3 = 3;
             return { value: "IconComponent", done: null };
@@ -168,8 +168,8 @@ function showNotification(uri) {
 }
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-const InAppNotificationTypes = fn(1085).InAppNotificationTypes;
-const NativePermissionStatus = fn(7699).NativePermissionStatus;
+const InAppNotificationTypes = fn(1087).InAppNotificationTypes;
+const NativePermissionStatus = fn(7702).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {
 }

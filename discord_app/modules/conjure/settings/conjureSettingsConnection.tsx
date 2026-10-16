@@ -1,8 +1,8 @@
-// === Module 10976: conjureSettingsConnection ===
+// === Module 10991: conjureSettingsConnection ===
 
-// Module 10976 (conjureSettingsConnection)
+// Module 10991 (conjureSettingsConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10972 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

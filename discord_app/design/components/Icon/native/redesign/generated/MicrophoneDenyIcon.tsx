@@ -1,10 +1,10 @@
-// === Module 9021: MicrophoneDenyIcon ===
+// === Module 9029: MicrophoneDenyIcon ===
 
-// Module 9021 (MicrophoneDenyIcon)
+// Module 9029 (MicrophoneDenyIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod9022 from "module_9022" /* 9022 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod9030 from "module_9030" /* 9030 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const MicrophoneDenyIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9022;
+    const tmpResult = _mod9030;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const MicrophoneDenyIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9022, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9030, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,16 +1,16 @@
-// === Module 13219: PortalAccessibilityWorkaroundView ===
+// === Module 13245: PortalAccessibilityWorkaroundView ===
 
-// Module 13219 (PortalAccessibilityWorkaroundView)
+// Module 13245 (PortalAccessibilityWorkaroundView)
 import c from "c" /* 576 */;
-import PlatformUtils2 from "PlatformUtils" /* 1382 */;
+import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let _default = fn(17).View;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 if (PlatformUtils.isIOS()) {
-  _default = fn(13220).default;
+  _default = fn(13246).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

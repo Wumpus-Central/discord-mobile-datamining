@@ -1,8 +1,8 @@
-// === Module 9084: GuildTraits ===
+// === Module 9092: GuildTraits ===
 
-// Module 9084 (GuildTraits)
-import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
-import Constants from "Constants" /* 1085 */;
+// Module 9092 (GuildTraits)
+import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ GuildFeatures: c2, BoostedGuildTiers: c3 } = Constants);

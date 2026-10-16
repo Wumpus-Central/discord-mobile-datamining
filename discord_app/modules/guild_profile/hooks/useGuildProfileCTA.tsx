@@ -1,22 +1,22 @@
-// === Module 12411: useGuildProfileCTA ===
+// === Module 12434: useGuildProfileCTA ===
 
-// Module 12411 (useGuildProfileCTA)
-import FlagUtils from "FlagUtils" /* 1403 */;
-import GuildTagUtils from "GuildTagUtils" /* 8508 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8729 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 12412 */;
+// Module 12434 (useGuildProfileCTA)
+import FlagUtils from "FlagUtils" /* 1405 */;
+import GuildTagUtils from "GuildTagUtils" /* 8516 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8737 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 12435 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import InviteStore from "InviteStore" /* 5132 */;
-import UserStore from "UserStore" /* 1390 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import InviteStore from "InviteStore" /* 5135 */;
+import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
 const CTATypes = { IS_MEMBER: 0, [0]: "IS_MEMBER", ADOPT_TAG: 1, [1]: "ADOPT_TAG", HAS_APPLICATION: 2, [2]: "HAS_APPLICATION", APPLY_TO_JOIN: 3, [3]: "APPLY_TO_JOIN", LURK_DISCOVERABLE: 4, [4]: "LURK_DISCOVERABLE", JOIN_VIA_INVITE: 5, [5]: "JOIN_VIA_INVITE", ACCEPT_ROLES: 6, [6]: "ACCEPT_ROLES" };
 let obj2 = { INVITE: "INVITE" };

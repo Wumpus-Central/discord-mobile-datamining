@@ -1,17 +1,17 @@
-// === Module 11107: UserActivitySpotify ===
+// === Module 11122: UserActivitySpotify ===
 
-// Module 11107 (UserActivitySpotify)
-import native from "native" /* 1200 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1381 */;
-import LinkingDefault from "Linking" /* 4862 */;
-import _modDef8495 from "module_8495" /* 8495 */;
+// Module 11122 (UserActivitySpotify)
+import native from "native" /* 1202 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1383 */;
+import LinkingDefault from "Linking" /* 4865 */;
+import _modDef8503 from "module_8503" /* 8503 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8677);
+const SpotifyConstants = fn(8685);
 ({ SPOTIFY_APP_PROTOCOL: metroRequire, SpotifyEndpoints: closure_7, SpotifyResourceTypes: closure_8 } = SpotifyConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -261,7 +261,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled() ? 
           });
           const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
         } else {
-          const HTTP = activity(1295).HTTP;
+          const HTTP = activity(1297).HTTP;
           const obj2 = { url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier), rejectWithError: true };
           value = HTTP.get(obj2);
           catchPromise = LinkingDefault.openURL(closure_2_7.APP_STORE);
@@ -278,17 +278,17 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled() ? 
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { source: _modDef8495 };
-    const tmp8 = closure_9(tmp(5439).Button.Icon, obj2);
+    let obj2 = { source: _modDef8503 };
+    const tmp8 = closure_9(tmp(5441).Button.Icon, obj2);
     cResult[2] = tmp8;
     let tmp5 = tmp8;
   } else {
     tmp5 = cResult[2];
   }
   if (cResult[3] !== activity.name) {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     let obj3 = { platform: activity.name };
-    const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.LEgD7t, obj3);
+    const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.LEgD7t, obj3);
     cResult[3] = activity.name;
     cResult[4] = formatToPlainStringResult;
     let tmp9 = formatToPlainStringResult;
@@ -312,7 +312,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled() ? 
     cResult[10] = tmp16;
     tmp13 = tmp16;
   }
-  const tmp12 = closure_9(activity(5439).Button, { icon: tmp5, text: tmp9, size: "sm", onPress: tmp4, grow: true });
+  const tmp12 = closure_9(activity(5441).Button, { icon: tmp5, text: tmp9, size: "sm", onPress: tmp4, grow: true });
   cResult[5] = tmp4;
   cResult[6] = tmp9;
   cResult[7] = tmp12;
@@ -321,9 +321,9 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled() ? 
 }) : (function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  let obj2 = { icon: closure_9(activity(5439).Button.Icon, { source: _modDef8495 }), text: null, size: "sm", onPress: null, grow: true };
-  const intl = activity(1126).intl;
-  obj2.text = intl.formatToPlainString(activity(1126).t.LEgD7t, { platform: activity.name });
+  let obj2 = { icon: closure_9(activity(5441).Button.Icon, { source: _modDef8503 }), text: null, size: "sm", onPress: null, grow: true };
+  const intl = activity(1128).intl;
+  obj2.text = intl.formatToPlainString(activity(1128).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function handlePress() {
     const sync_id = activity.sync_id;
     const canOpenURLResult = React4.canOpenURL("" + timestampProducer + ":");
@@ -334,7 +334,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled() ? 
         });
         const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
       } else {
-        const HTTP = activity(1295).HTTP;
+        const HTTP = activity(1297).HTTP;
         const obj2 = { url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier), rejectWithError: true };
         value = HTTP.get(obj2);
         catchPromise = LinkingDefault.openURL(closure_2_7.APP_STORE);
@@ -344,7 +344,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled() ? 
 
     });
   };
-  obj.children = closure_9(activity(5439).Button, obj2);
+  obj.children = closure_9(activity(5441).Button, obj2);
   return closure_9(closure_5, obj);
 });
 export { SpotifyTrack };

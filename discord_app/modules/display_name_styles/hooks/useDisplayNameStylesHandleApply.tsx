@@ -1,11 +1,11 @@
-// === Module 16279: useDisplayNameStylesHandleApply ===
+// === Module 16312: useDisplayNameStylesHandleApply ===
 
-// Module 16279 (useDisplayNameStylesHandleApply)
+// Module 16312 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
 

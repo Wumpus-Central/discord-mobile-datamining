@@ -1,6 +1,6 @@
-// === Module 15974: bountiesSoftCapPreload ===
+// === Module 16007: bountiesSoftCapPreload ===
 
-// Module 15974 (bountiesSoftCapPreload)
+// Module 16007 (bountiesSoftCapPreload)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSoftCapPreload.tsx");

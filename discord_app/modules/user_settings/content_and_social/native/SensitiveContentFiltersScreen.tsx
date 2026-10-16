@@ -1,11 +1,11 @@
-// === Module 15745: SensitiveContentFiltersScreen ===
+// === Module 15778: SensitiveContentFiltersScreen ===
 
-// Module 15745 (SensitiveContentFiltersScreen)
+// Module 15778 (SensitiveContentFiltersScreen)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import SettingBuilders from "SettingBuilders" /* 10991 */;
-import SettingLayoutDefault from "SettingLayout" /* 15619 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 15746 */;
+import util from "util" /* 1128 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
+import SettingLayoutDefault from "SettingLayout" /* 15652 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 15779 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
@@ -32,7 +32,7 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(8210).MobileUserSettings;
+const MobileUserSettings = fn(8213).MobileUserSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function SensitiveContentFiltersNotices() {

@@ -1,11 +1,11 @@
-// === Module 4830: SubscriptionPlanStore ===
+// === Module 4833: SubscriptionPlanStore ===
 
-// Module 4830 (SubscriptionPlanStore)
+// Module 4833 (SubscriptionPlanStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FunctionUtils from "FunctionUtils" /* 2039 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4826 */;
+import FunctionUtils from "FunctionUtils" /* 2042 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4829 */;
 
 require = fn;
 function addSubscriptionPlan(fromServer) {
@@ -53,9 +53,9 @@ function reset() {
     addSubscriptionPlan(SubscriptionPlanRecord.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
   });
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);

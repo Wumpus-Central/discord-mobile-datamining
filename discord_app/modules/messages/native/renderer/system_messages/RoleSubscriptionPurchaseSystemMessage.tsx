@@ -1,21 +1,21 @@
-// === Module 8269: RoleSubscriptionPurchaseSystemMessage ===
+// === Module 8274: RoleSubscriptionPurchaseSystemMessage ===
 
-// Module 8269 (RoleSubscriptionPurchaseSystemMessage)
-import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import useMessageAuthor from "useMessageAuthor" /* 5843 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8196 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8200 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8227 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8233 */;
-import transformSticker from "transformSticker" /* 8234 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildStore from "GuildStore" /* 2087 */;
+// Module 8274 (RoleSubscriptionPurchaseSystemMessage)
+import util from "util" /* 1128 */;
+import AvatarUtils from "AvatarUtils" /* 1417 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
+import useMessageAuthor from "useMessageAuthor" /* 5845 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8199 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8201 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8203 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8230 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8238 */;
+import transformSticker from "transformSticker" /* 8239 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
-const SystemChannelFlags = fn(1085).SystemChannelFlags;
+const SystemChannelFlags = fn(1087).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx");
 

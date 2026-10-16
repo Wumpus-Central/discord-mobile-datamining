@@ -1,14 +1,10 @@
-// === Module 12942: GameSearchRowExperiment ===
+// === Module 12968: GameSearchRowExperiment ===
 
-// Module 12942 (GameSearchRowExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 12968 (GameSearchRowExperiment)
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 
-const obj = { name: "2026-09-game-search-row", kind: "user", defaultConfig: { extraChromeEnabled: false }, variations: null };
-const obj2 = { 1: null };
-obj2[1] = { extraChromeEnabled: true };
-obj.variations = obj2;
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-game-search-row", kind: "user", defaultConfig: { extraChromeEnabled: false }, variations: { 0: { extraChromeEnabled: false }, 1: { extraChromeEnabled: true } } });
 const result = size.fileFinishedImporting("modules/games/GameSearchRowExperiment.tsx");
 
 export default apexExperiment;

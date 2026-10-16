@@ -1,23 +1,23 @@
-// === Module 15994: BountiesPosterSpotIllustration ===
+// === Module 16027: BountiesPosterSpotIllustration ===
 
-// Module 15994 (BountiesPosterSpotIllustration)
+// Module 16027 (BountiesPosterSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import assetHelpers from "assetHelpers" /* 6493 */;
-import _modDef15995 from "module_15995" /* 15995 */;
-import _modDef15996 from "module_15996" /* 15996 */;
-import _modDef15997 from "module_15997" /* 15997 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import assetHelpers from "assetHelpers" /* 6495 */;
+import _modDef16028 from "module_16028" /* 16028 */;
+import _modDef16029 from "module_16029" /* 16029 */;
+import _modDef16030 from "module_16030" /* 16030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15995 }, 3: null };
-let obj2 = { uri: _modDef15995 };
-obj[2] = { uri: _modDef15996 };
-const obj3 = { uri: _modDef15996 };
-obj[3] = { uri: _modDef15997 };
+let obj = { 1: null, 2: { uri: _modDef16028 }, 3: null };
+let obj2 = { uri: _modDef16028 };
+obj[2] = { uri: _modDef16029 };
+const obj3 = { uri: _modDef16029 };
+obj[3] = { uri: _modDef16030 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef15997 };
+const obj4 = { uri: _modDef16030 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx");
 

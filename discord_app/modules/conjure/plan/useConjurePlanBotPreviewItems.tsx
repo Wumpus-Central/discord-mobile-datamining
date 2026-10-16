@@ -1,19 +1,19 @@
-// === Module 12161: useConjurePlanBotPreviewItems ===
+// === Module 12184: useConjurePlanBotPreviewItems ===
 
-// Module 12161 (useConjurePlanBotPreviewItems)
+// Module 12184 (useConjurePlanBotPreviewItems)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5494 */;
-import InteractionTypes from "InteractionTypes" /* 5502 */;
-import UserActionCreators from "UserActionCreators" /* 8524 */;
-import createMessage from "createMessage" /* 10030 */;
-import conjurePlanBot from "conjurePlanBot" /* 12162 */;
+import util from "util" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
+import InteractionTypes from "InteractionTypes" /* 5504 */;
+import UserActionCreators from "UserActionCreators" /* 8532 */;
+import createMessage from "createMessage" /* 10046 */;
+import conjurePlanBot from "conjurePlanBot" /* 12185 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import UserStore from "UserStore" /* 1390 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import UserRecord from "UserRecord" /* 1406 */;
+import UserStore from "UserStore" /* 1392 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 
 const require = globalThis.__r;
 const createMessageDefault = createMessage;
@@ -117,16 +117,15 @@ function buildPreviewItems(arg0, arg1, memberMessage) {
   }
   return items;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ MessageStates: closure_8, MessageTypes: closure_9 } = Constants);
 let c10 = "31337";
 let c11 = "31338";
 let c12 = "31339";
-const guildTextChannelRecord = new fn(2069).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
+const guildTextChannelRecord = new fn(2072).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSampleUser(id, username, arg2) {
-  const _require = id;
-  importDefault = username;
+  _require = id;
   const cResult = require("c").c(20);
   if (cResult[0] !== arg2) {
     let obj2 = arg2;
@@ -218,49 +217,28 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSam
   if (stateFromStores != null) {
     username1 = stateFromStores.username;
   }
-  class E {
-    constructor() {
-      tmp = enabled;
-      if (enabled) {
-        tmp2 = null;
-        username = undefined;
-        if (closure_5 != null) {
-          username = closure_5.username;
-        }
-        tmp4 = closure_1;
-        tmp = username !== closure_1;
+  const fn2 = function h() {
+    let tmp = closure_4;
+    if (closure_4) {
+      username = undefined;
+      if (stateFromStores != null) {
+        username = stateFromStores.username;
       }
-      if (tmp) {
-        tmp5 = closure_0;
-        tmp6 = closure_2;
-        obj = closure_0(closure_2[10]);
-        tmp7 = closure_5;
-        obj1 = { id: null, username: null, discriminator: null, bot: null };
-        tmp8 = closure_0;
-        obj1.id = closure_0;
-        tmp9 = closure_1;
-        obj1.username = closure_1;
-        tmp10 = discriminator;
-        obj1.discriminator = discriminator;
-        tmp11 = bot;
-        obj1.bot = bot;
-        tmp12 = new.target;
-        tmp13 = new.target;
-        tmp14 = obj1;
-        tmp15 = new closure_5(obj1);
-        tmp16 = tmp15;
-        insertStaticUserResult = obj.insertStaticUser(tmp15);
-      }
-      return;
+      tmp = username !== username;
     }
-  }
+    if (tmp) {
+      const obj2 = { id, username, discriminator: str, bot };
+      const tmp15 = new UserRecord(obj2);
+      UserActionCreators.insertStaticUser(tmp15);
+    }
+  };
   cResult[10] = username1;
   cResult[11] = username;
-  cResult[12] = E;
-  tmp14 = E;
+  cResult[12] = fn2;
+  tmp14 = fn2;
   const tmpResult = require("initialize");
 }) : (function useSampleUser(id, username) {
-  const _require = id;
+  _require = id;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -302,11 +280,11 @@ const re15 = /^@\S+/;
 fn(558);
 ReactCompilerGating = fn(558);
 let obj = { id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" };
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePlanBotExchanges(proposal) {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePlanBotExchanges(supported_surfaces) {
   const cResult = c.c(8);
-  if (cResult[0] !== proposal) {
-    const conjurePlanBotInteraction = conjurePlanBot.getConjurePlanBotInteraction(proposal);
-    cResult[0] = proposal;
+  if (cResult[0] !== supported_surfaces) {
+    const conjurePlanBotInteraction = conjurePlanBot.getConjurePlanBotInteraction(supported_surfaces);
+    cResult[0] = supported_surfaces;
     cResult[1] = conjurePlanBotInteraction;
     let tmp4 = conjurePlanBotInteraction;
     const tmpResult = conjurePlanBot;
@@ -314,7 +292,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePl
     tmp4 = cResult[1];
   }
   if (cResult[2] === tmp4) {
-    if (cResult[3] === proposal) {
+    if (cResult[3] === supported_surfaces) {
       if (cResult[5] === cResult[4]) {
         if (cResult[6] === tmp4) {
           let tmp7 = cResult[7];
@@ -333,21 +311,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePl
   } else {
     const obj3 = { message: null, reply: null, event: null };
     const intl = util.intl;
-    obj3.message = intl.string(_modDef3862.J7qggf);
+    obj3.message = intl.string(_modDef3865.J7qggf);
     const intl2 = util.intl;
-    obj3.reply = intl2.string(_modDef3862.nqYtiy);
+    obj3.reply = intl2.string(_modDef3865.nqYtiy);
     const intl3 = util.intl;
-    obj3.event = intl3.string(_modDef3862["05lU9W"]);
-    items = conjurePlanBot.getConjurePlanBotExchanges(proposal, tmp4, obj3);
+    obj3.event = intl3.string(_modDef3865["05lU9W"]);
+    items = conjurePlanBot.getConjurePlanBotExchanges(supported_surfaces, tmp4, obj3);
     const tmpResult2 = conjurePlanBot;
   }
   cResult[2] = tmp4;
-  cResult[3] = proposal;
+  cResult[3] = supported_surfaces;
   cResult[4] = items;
-}) : (function useConjurePlanBotExchanges(proposal) {
-  const _require = proposal;
-  const conjurePlanBotInteraction = require("conjurePlanBot").getConjurePlanBotInteraction(proposal);
-  let items = [proposal, conjurePlanBotInteraction];
+}) : (function useConjurePlanBotExchanges(supported_surfaces) {
+  _require = supported_surfaces;
+  const conjurePlanBotInteraction = require("conjurePlanBot").getConjurePlanBotInteraction(supported_surfaces);
+  let items = [supported_surfaces, conjurePlanBotInteraction];
   let obj = require("conjurePlanBot");
   return {
     botInteraction: conjurePlanBotInteraction,
@@ -357,24 +335,76 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePl
       } else {
         const obj2 = { message: null, reply: null, event: null };
         const intl = util.intl;
-        obj2.message = intl.string(_modDef3862.J7qggf);
+        obj2.message = intl.string(_modDef3865.J7qggf);
         const intl2 = util.intl;
-        obj2.reply = intl2.string(_modDef3862.nqYtiy);
+        obj2.reply = intl2.string(_modDef3865.nqYtiy);
         const intl3 = util.intl;
-        obj2.event = intl3.string(_modDef3862["05lU9W"]);
+        obj2.event = intl3.string(_modDef3865["05lU9W"]);
         items = conjurePlanBot.getConjurePlanBotExchanges(closure_0, tmp, obj2);
       }
       return items;
     }, items)
   };
 });
+ReactCompilerGating = fn(558);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePlanCommandExchanges(commands) {
+  let intl = require;
+  const cResult = c.c(2);
+  if (cResult[0] !== commands) {
+    commands = commands.commands;
+    if (commands.some(conjurePlanBot.isAppCommand)) {
+      const obj2 = {};
+      const merged = Object.assign(commands);
+      obj2.bot = undefined;
+      const obj3 = { message: null, reply: null, event: null };
+      const intl2 = util.intl;
+      obj3.message = intl2.string(_modDef3865.J7qggf);
+      const intl3 = util.intl;
+      obj3.reply = intl3.string(_modDef3865.nqYtiy);
+      intl = util.intl;
+      obj3.event = intl.string(_modDef3865["05lU9W"]);
+      let conjurePlanBotExchanges = conjurePlanBot.getConjurePlanBotExchanges(obj2, "commands", obj3);
+      const intlResult = conjurePlanBot;
+    } else {
+      conjurePlanBotExchanges = [];
+    }
+    cResult[0] = commands;
+    cResult[1] = conjurePlanBotExchanges;
+  } else {
+    return cResult[1];
+  }
+}) : (function useConjurePlanCommandExchanges(arg0) {
+  let commands = arg0;
+  const items = [arg0];
+  return noop.useMemo(() => {
+    commands = commands.commands;
+    if (commands.some(conjurePlanBot.isAppCommand)) {
+      const obj = {};
+      const merged = Object.assign(tmp);
+      obj.bot = undefined;
+      const obj2 = { message: null, reply: null, event: null };
+      const intl = util.intl;
+      obj2.message = intl.string(_modDef3865.J7qggf);
+      const intl2 = util.intl;
+      obj2.reply = intl2.string(_modDef3865.nqYtiy);
+      const intl3 = util.intl;
+      obj2.event = intl3.string(_modDef3865["05lU9W"]);
+      let conjurePlanBotExchanges = conjurePlanBot.getConjurePlanBotExchanges(obj, "commands", obj2);
+      const tmp2Result = conjurePlanBot;
+    } else {
+      conjurePlanBotExchanges = [];
+    }
+    return conjurePlanBotExchanges;
+  }, items);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/useConjurePlanBotPreviewItems.tsx");
 
 export const CONJURE_PLAN_BOT_PREVIEW_CHANNEL = guildTextChannelRecord;
 export const useConjurePlanBotExchanges = tmp4;
+export const useConjurePlanCommandExchanges = tmp5;
 export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePlanBotPreviewItems(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   const cResult = require("c").c(36);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -421,444 +451,266 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
     tmp13 = cResult[5];
   }
   if (cResult[6] !== application_id) {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+    const fn3 = function y() {
+      const application = ApplicationStore.getApplication(application_id);
+      let iconURL;
+      if (application != null) {
+        iconURL = application.getIconURL(80);
       }
-    }
+      if (iconURL == null) {
+        iconURL = null;
+      }
+      return iconURL;
+    };
     const items3 = [application_id];
     cResult[6] = application_id;
-    cResult[7] = I;
+    cResult[7] = fn3;
     cResult[8] = items3;
     let tmp16 = items3;
+    let tmp15 = fn3;
   } else {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
-      }
-    }
+    tmp15 = cResult[7];
     tmp16 = cResult[8];
   }
   const tmpResult4 = require("initialize");
-  const stateFromStores2 = require("initialize").useStateFromStores(tmp13, I, tmp16);
+  const stateFromStores2 = require("initialize").useStateFromStores(tmp13, tmp15, tmp16);
+  let name;
   if (stateFromStores1 != null) {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
-      }
-    }
+    name = stateFromStores1.name;
   }
-  if (cResult[9] !== undefined) {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
-      }
-    }
+  if (cResult[9] !== name) {
+    let name1;
     if (stateFromStores1 != null) {
-      class I {
-        constructor() {
-          application = closure_4.getApplication(application_id);
-          iconURL = undefined;
-          if (application != null) {
-            num = 80;
-            iconURL = application.getIconURL(80);
-          }
-          if (iconURL == null) {
-            iconURL = null;
-          }
-          return iconURL;
-        }
-      }
+      name1 = stateFromStores1.name;
     }
-    if (stringResult == null) {
-      class I {
-        constructor() {
-          application = closure_4.getApplication(application_id);
-          iconURL = undefined;
-          if (application != null) {
-            num = 80;
-            iconURL = application.getIconURL(80);
-          }
-          if (iconURL == null) {
-            iconURL = null;
-          }
-          return iconURL;
-        }
-      }
-      stringResult = obj5.string(application_id(3862).JEYq8M);
+    if (name1 == null) {
+      const intl = tmp(1128).intl;
+      name1 = intl.string(application_id(3865).JEYq8M);
     }
+    let name2;
     if (stateFromStores1 != null) {
-      class I {
-        constructor() {
-          application = closure_4.getApplication(application_id);
-          iconURL = undefined;
-          if (application != null) {
-            num = 80;
-            iconURL = application.getIconURL(80);
-          }
-          if (iconURL == null) {
-            iconURL = null;
-          }
-          return iconURL;
-        }
-      }
+      name2 = stateFromStores1.name;
     }
-    cResult[9] = undefined;
-    cResult[10] = stringResult;
-    const tmp18 = stringResult;
+    cResult[9] = name2;
+    cResult[10] = name1;
+    let tmp19 = name1;
   } else {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
-      }
-    }
+    tmp19 = cResult[10];
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
-      }
-    }
     const items4 = [UserStore];
     cResult[11] = items4;
-    const tmp22 = items4;
+    let tmp23 = items4;
   } else {
-    class I {
-      constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
-        }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
-      }
-    }
+    tmp23 = cResult[11];
   }
   if (cResult[12] !== application_id) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
     const items5 = [application_id];
     cResult[12] = application_id;
     cResult[13] = items5;
-    cResult[14] = tmp25;
-    let tmp24 = tmp25;
-    const tmp23 = items5;
+    cResult[14] = N;
+    let tmp26 = N;
+    const tmp25 = items5;
   } else {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
-    tmp24 = cResult[14];
+    tmp26 = cResult[14];
   }
   const tmpResult5 = require("initialize");
-  const stateFromStores3 = require("initialize").useStateFromStores(tmp22, tmp24, tmp23);
+  const stateFromStores3 = require("initialize").useStateFromStores(tmp23, tmp26, tmp25);
   if (stateFromStores3 != null) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
   if (cResult[15] !== true !== undefined) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
-    tmp30[1] = tmp28;
-    cResult[15] = tmp28;
-    cResult[16] = tmp30;
+    tmp31[1] = tmp29;
+    cResult[15] = tmp29;
+    cResult[16] = tmp31;
   } else {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
   const tmpResult6 = require("initialize");
   if (true === undefined) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
   if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
-    const stringResult1 = obj7.string(application_id(3862)["9iAOsw"]);
+    const stringResult = obj6.string(application_id(3865)["9iAOsw"]);
     const obj2 = { discriminator: "0003" };
-    cResult[17] = stringResult1;
+    cResult[17] = stringResult;
     cResult[18] = obj2;
-    let tmp34 = obj2;
-    const tmp33 = stringResult1;
+    let tmp35 = obj2;
+    const tmp34 = stringResult;
   } else {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
-    tmp34 = cResult[18];
+    tmp35 = cResult[18];
   }
-  closure_14(c11, tmp33, tmp34);
+  closure_14(c11, tmp34, tmp35);
   if (cResult[19] !== stateFromStores) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
-    const name = obj9.getName(stateFromStores);
-    if (name == null) {
-      class I {
+    const name3 = obj8.getName(stateFromStores);
+    if (name3 == null) {
+      class N {
         constructor() {
-          application = closure_4.getApplication(application_id);
-          iconURL = undefined;
-          if (application != null) {
-            num = 80;
-            iconURL = application.getIconURL(80);
+          user = undefined;
+          if (null != application_id) {
+            tmp3 = closure_6;
+            user = closure_6.getUser(tmp);
           }
-          if (iconURL == null) {
-            iconURL = null;
-          }
-          return iconURL;
+          return user;
         }
       }
     }
     cResult[19] = stateFromStores;
-    cResult[20] = name;
-    const tmp38 = name;
+    cResult[20] = name3;
+    const tmp39 = name3;
   } else {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
   if (cResult[21] !== (null != stateFromStores)) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
-    tmp42[0] = tmp40;
-    cResult[21] = tmp40;
-    cResult[22] = tmp42;
+    tmp43[0] = tmp41;
+    cResult[21] = tmp41;
+    cResult[22] = tmp43;
   } else {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
-  closure_14(c12, tmp38, tmp42);
-  if (cResult[23] === tmp32) {
-    class I {
+  closure_14(c12, tmp39, tmp43);
+  if (cResult[23] === tmp33) {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
   if (null != stateFromStores) {
-    class I {
+    class N {
       constructor() {
-        application = closure_4.getApplication(application_id);
-        iconURL = undefined;
-        if (application != null) {
-          num = 80;
-          iconURL = application.getIconURL(80);
+        user = undefined;
+        if (null != application_id) {
+          tmp3 = closure_6;
+          user = closure_6.getUser(tmp);
         }
-        if (iconURL == null) {
-          iconURL = null;
-        }
-        return iconURL;
+        return user;
       }
     }
   }
-  tmp32 = closure_14(c10, tmp18, tmp30);
+  tmp33 = closure_14(c10, tmp19, tmp31);
 }) : (function useConjurePlanBotPreviewItems(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = arg1;
   const items = [currentUser];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -890,7 +742,7 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
   }
   if (name == null) {
     let intl = tmp(tmp2[15]).intl;
-    name = intl.string(require("module_3862").JEYq8M);
+    name = intl.string(require("module_3865").JEYq8M);
   }
   const tmpResult = require("initialize");
   const items4 = [tmp3];
@@ -911,7 +763,7 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
     obj6 = stateFromStores3;
   }
   let intl2 = tmp(tmp2[15]).intl;
-  const tmp13Result = closure_14(c11, intl2.string(require("module_3862")["9iAOsw"]), { discriminator: "0003" });
+  const tmp13Result = closure_14(c11, intl2.string(require("module_3865")["9iAOsw"]), { discriminator: "0003" });
   closure_5 = tmp13Result;
   const obj3 = { bot: true, enabled: true !== bot };
   const tmpResult3 = require("initialize");
@@ -931,9 +783,9 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
             const obj = { bot: tmp4, currentUser: tmp, viewer: tmp3, member: tmp5 };
             const obj2 = { targetMessage: null, memberMessage: null };
             const intl = util.intl;
-            obj2.targetMessage = intl.string(_modDef3862["y+QYes"]);
+            obj2.targetMessage = intl.string(_modDef3865["y+QYes"]);
             const intl2 = util.intl;
-            obj2.memberMessage = intl2.string(_modDef3862.BUTRDc);
+            obj2.memberMessage = intl2.string(_modDef3865.BUTRDc);
             buildPreviewItems(closure_1, obj, obj2);
           }
           return [];

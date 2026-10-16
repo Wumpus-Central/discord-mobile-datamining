@@ -1,20 +1,20 @@
-// === Module 15911: FriendRequestsEveryoneSetting ===
+// === Module 15944: FriendRequestsEveryoneSetting ===
 
-// Module 15911 (FriendRequestsEveryoneSetting)
+// Module 15944 (FriendRequestsEveryoneSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2041 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6904 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15750 */;
+import util from "util" /* 1128 */;
+import UserSettings from "UserSettings" /* 2044 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6906 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15783 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -30,7 +30,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendReq
   }
   return tmp5.all;
 }) : (function useFriendRequestsEveryoneSettingValue() {
-  const FriendSourceFlagsSetting = setting(2041).FriendSourceFlagsSetting;
+  const FriendSourceFlagsSetting = setting(2044).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
@@ -40,7 +40,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8210).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8213).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
     const cResult = c.c(2);
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -56,7 +56,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return tmp5.all;
   }) : (function useFriendRequestsEveryoneSettingValue() {
-    const FriendSourceFlagsSetting = setting(2041).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(2044).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;

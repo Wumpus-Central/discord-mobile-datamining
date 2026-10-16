@@ -1,11 +1,11 @@
-// === Module 15551: useNameplateSections ===
+// === Module 15587: useNameplateSections ===
 
-// Module 15551 (useNameplateSections)
-import util from "util" /* 1126 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7492 */;
+// Module 15587 (useNameplateSections)
+import util from "util" /* 1128 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7496 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7482 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7498 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -65,8 +65,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
           }
         }
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.WfGV52);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t.WfGV52);
           class S {
             constructor() {
               items = [, ];
@@ -93,8 +93,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
             }
           }
           if (tmp29 === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = tmp(1126).intl;
-            const stringResult1 = intl2.string(tmp(1126).t.TiLCgw);
+            const intl2 = tmp(1128).intl;
+            const stringResult1 = intl2.string(tmp(1128).t.TiLCgw);
             class S {
               constructor() {
                 items = [, ];
@@ -126,8 +126,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
           const _Symbol2 = Symbol;
           let preview = tmp14.preview;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = tmp(1126).intl;
-            const stringResult2 = intl3.string(tmp(1126).t["1vbbee"]);
+            const intl3 = tmp(1128).intl;
+            const stringResult2 = intl3.string(tmp(1128).t["1vbbee"]);
             class S {
               constructor() {
                 items = [, ];
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  let nameplates = stateFromStores(7492).getNameplates(stateFromStores, tmp12);
+  let nameplates = stateFromStores(7494).getNameplates(stateFromStores, tmp12);
   if (cResult[10] === tmp13) {
     if (cResult[11] === stateFromStores) {
       let tmp17 = cResult[12];
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
   cResult[11] = stateFromStores;
   cResult[12] = M;
   tmp17 = M;
-  const tmpResult4 = stateFromStores(7492);
+  const tmpResult4 = stateFromStores(7494);
 }) : (function useNameplateSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14139)(useMemo(() => {
+  return first(14171)(useMemo(() => {
     let obj = CollectiblesUtils;
     const nameplates = obj.getNameplates(stateFromStores, first);
     const reduced = nameplates.reduce((premium_purchase, skuId) => {

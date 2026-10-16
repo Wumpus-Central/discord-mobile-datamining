@@ -1,14 +1,14 @@
-// === Module 11987: MediaKeyboardFloatingSend ===
+// === Module 12011: MediaKeyboardFloatingSend ===
 
-// Module 11987 (MediaKeyboardFloatingSend)
+// Module 12011 (MediaKeyboardFloatingSend)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
-import spring from "spring" /* 5438 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import spring from "spring" /* 5440 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8125 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8128 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.7;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -124,7 +124,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = c.c(30);
   ({ animatedIndex, channelId, draftType, onSend } = ref);
   const tmp4 = closure_9();
-  const tmp6 = bottom(1631)();
+  const tmp6 = bottom(1633)();
   [bottom, require] = noop.useState(null);
   if (bottom == null) {
     bottom = tmp6.bottom;

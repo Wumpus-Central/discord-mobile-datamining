@@ -1,16 +1,16 @@
-// === Module 10336: PremiumGiftPromotionDetails ===
+// === Module 10352: PremiumGiftPromotionDetails ===
 
-// Module 10336 (PremiumGiftPromotionDetails)
+// Module 10352 (PremiumGiftPromotionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import SKUPreview from "SKUPreview" /* 9193 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import SKUPreview from "SKUPreview" /* 9206 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
 let closure_3 = ["imageUrl", "shouldAnimate"];
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
@@ -349,7 +349,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   tmpResult = shouldAnimate(aPNGPlayerControls[13]);
 });
 ReactCompilerGating = fn(558);
-createStyles = fn(5151);
+createStyles = fn(5153);
 let obj6 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: null, overflow: "hidden" };
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftPromotionDetails(arg0) {
@@ -533,7 +533,7 @@ export const PremiumGiftPromotionCollectibleRewardDetails = ReactCompilerGating.
       let rounded = Math.floor(1.2 * PX_40);
     } else {
       rounded = PX_40;
-      if (memo.item.type === tmp8(1993).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(1995).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * PX_40);
       }

@@ -1,10 +1,10 @@
-// === Module 7345: BillingStandaloneUtils ===
+// === Module 7347: BillingStandaloneUtils ===
 
-// Module 7345 (BillingStandaloneUtils)
-import v1 from "v1" /* 1279 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import Constants from "Constants" /* 1085 */;
+// Module 7347 (BillingStandaloneUtils)
+import v1 from "v1" /* 1281 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 function goToStandalonePremiumCheckout(planId, arg1, arg2) {

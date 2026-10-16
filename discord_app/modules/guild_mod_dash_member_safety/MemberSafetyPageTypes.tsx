@@ -1,7 +1,7 @@
-// === Module 17614: MemberSafetyPageTypes ===
+// === Module 17648: MemberSafetyPageTypes ===
 
-// Module 17614 (MemberSafetyPageTypes)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
+// Module 17648 (MemberSafetyPageTypes)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5001 */;
 import size from "module_2" /* 2 */;
 
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };

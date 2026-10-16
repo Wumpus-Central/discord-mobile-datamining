@@ -1,27 +1,27 @@
-// === Module 11793: AppLauncherNavigator ===
+// === Module 11817: AppLauncherNavigator ===
 
-// Module 11793 (AppLauncherNavigator)
+// Module 11817 (AppLauncherNavigator)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7098 */;
-import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 11794 */;
-import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 11855 */;
-import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 11881 */;
-import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 11943 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
+import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 11818 */;
+import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 11879 */;
+import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 11905 */;
+import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 11967 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["initialRouteName"];
 let closure_4 = ["initialRouteName"];
-const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9565);
+const NativeStackNavigator = fn(9581);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { navigator: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingTop: 16, overflow: "visible", flex: 1 } };
 let closure_12 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -30,25 +30,25 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherNavigator(arg0) {
-  const cResult = entrypoint(576).c(64);
+  const cResult = entrypoint(576).c(69);
   ({ bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, context, chatInputRef, contentStyle, entrypoint } = arg0);
-  ({ expandBottomSheet, keyboardCloseReasonRef, onActivityItemSelected, width, overrideParams: referrerId } = arg0);
+  ({ expandBottomSheet, keyboardCloseReasonRef, onActivityItemSelected, width, overrideParams } = arg0);
   const obj = entrypoint(576);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_LAUNCHER).analyticsLocations;
-  const navigationContainerRef = entrypoint(1504).useNavigationContainerRef();
-  const obj2 = entrypoint(1504);
-  const trackNavigationBackPress = entrypoint(5435).useTrackNavigationBackPress(navigationContainerRef);
+  const navigationContainerRef = entrypoint(1506).useNavigationContainerRef();
+  const obj2 = entrypoint(1506);
+  const trackNavigationBackPress = entrypoint(5437).useTrackNavigationBackPress(navigationContainerRef);
   const tmp8 = closure_12();
-  const obj3 = entrypoint(5435);
-  if (referrerId == null) {
-    referrerId = obj4.useKeyboardContextForType(entrypoint(1629).KeyboardTypes.APP_LAUNCHER);
+  const obj3 = entrypoint(5437);
+  if (overrideParams == null) {
+    overrideParams = obj4.useKeyboardContextForType(entrypoint(1631).KeyboardTypes.APP_LAUNCHER);
   }
-  obj4 = entrypoint(5043);
-  const accessibilityNativeStackOptions = entrypoint(6908).useAccessibilityNativeStackOptions();
-  if (cResult[0] !== referrerId) {
-    const initialRouteName = referrerId.initialRouteName;
-    const tmp14 = _objectWithoutProperties(referrerId, closure_3);
-    cResult[0] = referrerId;
+  obj4 = entrypoint(5046);
+  const accessibilityNativeStackOptions = entrypoint(6910).useAccessibilityNativeStackOptions();
+  if (cResult[0] !== overrideParams) {
+    const initialRouteName = overrideParams.initialRouteName;
+    const tmp14 = _objectWithoutProperties(overrideParams, closure_3);
+    cResult[0] = overrideParams;
     cResult[1] = initialRouteName;
     cResult[2] = tmp14;
     let tmp11 = tmp14;
@@ -81,8 +81,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let tmp19 = cResult[11];
       }
       let initialSearchQuery;
-      if (referrerId.initialRouteName === AppLauncherRouteName.HOME) {
-        initialSearchQuery = referrerId.initialSearchQuery;
+      if (overrideParams.initialRouteName === AppLauncherRouteName.HOME) {
+        initialSearchQuery = overrideParams.initialSearchQuery;
       }
       if (cResult[12] === context) {
         if (cResult[13] === initialSearchQuery) {
@@ -97,7 +97,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               if (cResult[20] === tmp29) {
                 let tmp30 = cResult[21];
               }
-              if (cResult[22] === referrerId.initialRouteName) {
+              if (cResult[22] === overrideParams.initialRouteName) {
                 if (cResult[23] === tmp11) {
                   let tmp38 = cResult[24];
                 }
@@ -106,7 +106,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     if (cResult[27] === context) {
                       let tmp39 = cResult[28];
                     }
-                    if (cResult[29] === referrerId.initialRouteName) {
+                    if (cResult[29] === overrideParams.initialRouteName) {
                       if (cResult[30] === tmp11) {
                         let tmp46 = cResult[31];
                       }
@@ -130,34 +130,59 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                       if (cResult[46] === tmp58) {
                                         let tmp61 = cResult[47];
                                       }
-                                      let tmp64 = "customId" in referrerId;
-                                      if (!tmp64) {
-                                        tmp64 = "referrerId" in referrerId;
+                                      if (cResult[48] !== overrideParams) {
+                                        let tmp67 = "customId" in overrideParams;
+                                        if (!tmp67) {
+                                          tmp67 = "referrerId" in overrideParams;
+                                        }
+                                        let flag = false;
+                                        referrerId = undefined;
+                                        customId = undefined;
+                                        if (tmp67) {
+                                          ({ customId, referrerId } = overrideParams);
+                                          flag = true;
+                                        }
+                                        cResult[48] = overrideParams;
+                                        cResult[49] = customId;
+                                        cResult[50] = referrerId;
+                                        cResult[51] = flag;
+                                        let tmp66 = flag;
+                                        let tmp65 = referrerId;
+                                        let tmp64 = customId;
+                                      } else {
+                                        tmp64 = cResult[49];
+                                        tmp65 = cResult[50];
+                                        tmp66 = cResult[51];
                                       }
-                                      if (!tmp64) {
-                                        if (cResult[51] === bottomSheetExpandReasonRef) {
-                                          if (cResult[52] === bottomSheetIndex) {
-                                            if (cResult[53] === bottomSheetPosition) {
-                                              if (cResult[54] === chatInputRef) {
-                                                if (cResult[55] === entrypoint) {
-                                                  if (cResult[56] === null) {
-                                                    if (cResult[57] === keyboardCloseReasonRef) {
-                                                      if (cResult[58] === onActivityItemSelected) {
-                                                        if (cResult[59] === width) {
-                                                          let tmp68 = cResult[60];
-                                                        }
-                                                        if (cResult[61] === tmp61) {
-                                                          if (cResult[62] === tmp68) {
-                                                            let tmp69 = cResult[63];
+                                      if (cResult[52] === tmp64) {
+                                        if (cResult[53] === tmp65) {
+                                          if (cResult[54] === tmp66) {
+                                            let tmp68 = cResult[55];
+                                          }
+                                          if (cResult[56] === bottomSheetExpandReasonRef) {
+                                            if (cResult[57] === bottomSheetIndex) {
+                                              if (cResult[58] === bottomSheetPosition) {
+                                                if (cResult[59] === chatInputRef) {
+                                                  if (cResult[60] === entrypoint) {
+                                                    if (cResult[61] === tmp68) {
+                                                      if (cResult[62] === keyboardCloseReasonRef) {
+                                                        if (cResult[63] === onActivityItemSelected) {
+                                                          if (cResult[64] === width) {
+                                                            let tmp70 = cResult[65];
                                                           }
-                                                          return tmp69;
+                                                          if (cResult[66] === tmp70) {
+                                                            if (cResult[67] === tmp61) {
+                                                              let tmp71 = cResult[68];
+                                                            }
+                                                            return tmp71;
+                                                          }
+                                                          const obj5 = { value: tmp70, children: tmp61 };
+                                                          const tmp73 = closure_9(entrypoint(10870).AppLauncherContext.Provider, obj5);
+                                                          cResult[66] = tmp70;
+                                                          cResult[67] = tmp61;
+                                                          cResult[68] = tmp73;
+                                                          tmp71 = tmp73;
                                                         }
-                                                        const obj5 = { value: tmp68, children: tmp61 };
-                                                        const tmp71 = closure_9(entrypoint(10855).AppLauncherContext.Provider, obj5);
-                                                        cResult[61] = tmp61;
-                                                        cResult[62] = tmp68;
-                                                        cResult[63] = tmp71;
-                                                        tmp69 = tmp71;
                                                       }
                                                     }
                                                   }
@@ -165,40 +190,42 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                               }
                                             }
                                           }
+                                          const obj6 = { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: tmp68, keyboardCloseReasonRef, onActivityItemSelected, width };
+                                          cResult[56] = bottomSheetExpandReasonRef;
+                                          cResult[57] = bottomSheetIndex;
+                                          cResult[58] = bottomSheetPosition;
+                                          cResult[59] = chatInputRef;
+                                          cResult[60] = entrypoint;
+                                          cResult[61] = tmp68;
+                                          cResult[62] = keyboardCloseReasonRef;
+                                          cResult[63] = onActivityItemSelected;
+                                          cResult[64] = width;
+                                          cResult[65] = obj6;
+                                          tmp70 = obj6;
                                         }
-                                        const obj6 = { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: null, keyboardCloseReasonRef, onActivityItemSelected, width };
-                                        cResult[51] = bottomSheetExpandReasonRef;
-                                        cResult[52] = bottomSheetIndex;
-                                        cResult[53] = bottomSheetPosition;
-                                        cResult[54] = chatInputRef;
-                                        cResult[55] = entrypoint;
-                                        cResult[56] = null;
-                                        cResult[57] = keyboardCloseReasonRef;
-                                        cResult[58] = onActivityItemSelected;
-                                        cResult[59] = width;
-                                        cResult[60] = obj6;
-                                        tmp68 = obj6;
-                                      } else {
-                                        if (cResult[48] === referrerId.customId) {
-                                        }
-                                        const obj7 = { customId: null, referrerId: null };
-                                        ({ customId: obj22.customId, referrerId: obj22.referrerId } = referrerId);
-                                        ({ customId: tmp3[48], referrerId } = referrerId);
-                                        cResult[49] = referrerId;
-                                        cResult[50] = obj7;
                                       }
+                                      let tmp69 = null;
+                                      if (tmp66) {
+                                        const obj7 = { customId: tmp64, referrerId: tmp65 };
+                                        tmp69 = obj7;
+                                      }
+                                      cResult[52] = tmp64;
+                                      cResult[53] = tmp65;
+                                      cResult[54] = tmp66;
+                                      cResult[55] = tmp69;
+                                      tmp68 = tmp69;
                                     }
                                     const obj8 = { children: null };
                                     const obj9 = { ref: navigationContainerRef, children: tmp58 };
-                                    obj8.children = closure_9(entrypoint(1504).NavigationContainer, obj9);
-                                    const tmp63 = closure_9(entrypoint(1504).NavigationIndependentTree, obj8);
+                                    obj8.children = closure_9(entrypoint(1506).NavigationContainer, obj9);
+                                    const tmp63 = closure_9(entrypoint(1506).NavigationIndependentTree, obj8);
                                     cResult[45] = navigationContainerRef;
                                     cResult[46] = tmp58;
                                     cResult[47] = tmp63;
                                     tmp61 = tmp63;
                                   }
                                   const obj10 = { value: analyticsLocations, children: tmp54 };
-                                  const tmp60 = closure_9(entrypoint(7073).AnalyticsLocationProvider, obj10);
+                                  const tmp60 = closure_9(entrypoint(7075).AnalyticsLocationProvider, obj10);
                                   cResult[42] = analyticsLocations;
                                   cResult[43] = tmp54;
                                   cResult[44] = tmp60;
@@ -232,10 +259,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       tmp47 = tmp53;
                     }
                     let obj14 = tmp11;
-                    if (referrerId.initialRouteName !== AppLauncherRouteName.APP_LIST_VIEW) {
+                    if (overrideParams.initialRouteName !== AppLauncherRouteName.APP_LIST_VIEW) {
                       obj14 = {};
                     }
-                    cResult[29] = referrerId.initialRouteName;
+                    cResult[29] = overrideParams.initialRouteName;
                     cResult[30] = tmp11;
                     cResult[31] = obj14;
                     tmp46 = obj14;
@@ -254,10 +281,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 tmp39 = tmp45;
               }
               let obj17 = tmp11;
-              if (referrerId.initialRouteName !== AppLauncherRouteName.COMMAND_VIEW) {
+              if (overrideParams.initialRouteName !== AppLauncherRouteName.COMMAND_VIEW) {
                 obj17 = {};
               }
-              cResult[22] = referrerId.initialRouteName;
+              cResult[22] = overrideParams.initialRouteName;
               cResult[23] = tmp11;
               cResult[24] = obj17;
               tmp38 = obj17;
@@ -285,113 +312,138 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         tmp29 = obj20;
       }
       const obj21 = { name: AppLauncherRouteName.HOME, component: AppLauncherHomeScreenDefault, initialParams: null };
-      const obj23 = { context, initialSearchQuery };
-      obj21.initialParams = obj23;
+      const obj22 = { context, initialSearchQuery };
+      obj21.initialParams = obj22;
       const tmp28 = closure_9(closure_11.Screen, obj21);
       cResult[12] = context;
       cResult[13] = initialSearchQuery;
       cResult[14] = tmp28;
       tmp25 = tmp28;
     }
-    const obj24 = { contentStyle: tmp18, headerShown: false, fullScreenGestureEnabled: true };
+    const obj23 = { contentStyle: tmp18, headerShown: false, fullScreenGestureEnabled: true };
     const merged3 = Object.assign(accessibilityNativeStackOptions);
     cResult[9] = accessibilityNativeStackOptions;
     cResult[10] = tmp18;
-    cResult[11] = obj24;
-    tmp19 = obj24;
+    cResult[11] = obj23;
+    tmp19 = obj23;
   }
   const items2 = [tmp8.navigator, contentStyle];
   cResult[6] = contentStyle;
   cResult[7] = tmp8.navigator;
   cResult[8] = items2;
   tmp18 = items2;
-  const tmpResult = entrypoint(6908);
-}) : (function AppLauncherNavigator(arg0) {
-  ({ context, entrypoint } = arg0);
-  ({ expandBottomSheet, overrideParams } = arg0);
-  ({ bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, contentStyle, keyboardCloseReasonRef, onActivityItemSelected, width } = arg0);
-  const tmp3 = useAnalyticsLocationsDefault;
-  const navigationContainerRef = entrypoint(1504).useNavigationContainerRef();
-  const obj = entrypoint(1504);
-  const trackNavigationBackPress = entrypoint(5435).useTrackNavigationBackPress(navigationContainerRef);
-  const obj2 = entrypoint(5435);
+  const tmpResult = entrypoint(6910);
+}) : (function AppLauncherNavigator(bottomSheetExpandReasonRef) {
+  bottomSheetExpandReasonRef = bottomSheetExpandReasonRef.bottomSheetExpandReasonRef;
+  const bottomSheetIndex = bottomSheetExpandReasonRef.bottomSheetIndex;
+  const bottomSheetPosition = bottomSheetExpandReasonRef.bottomSheetPosition;
+  ({ context, chatInputRef } = bottomSheetExpandReasonRef);
+  const entrypoint = bottomSheetExpandReasonRef.entrypoint;
+  ({ expandBottomSheet, keyboardCloseReasonRef } = bottomSheetExpandReasonRef);
+  const onActivityItemSelected = bottomSheetExpandReasonRef.onActivityItemSelected;
+  const width = bottomSheetExpandReasonRef.width;
+  let overrideParams = bottomSheetExpandReasonRef.overrideParams;
+  let customId;
+  let referrerId;
+  c10 = undefined;
+  let memo;
+  const tmp3 = bottomSheetIndex(bottomSheetPosition[10]);
+  const navigationContainerRef = bottomSheetExpandReasonRef(bottomSheetPosition[12]).useNavigationContainerRef();
+  let obj = bottomSheetExpandReasonRef(bottomSheetPosition[12]);
+  const trackNavigationBackPress = bottomSheetExpandReasonRef(bottomSheetPosition[13]).useTrackNavigationBackPress(navigationContainerRef);
+  const obj2 = bottomSheetExpandReasonRef(bottomSheetPosition[13]);
   const tmp7 = closure_12();
   if (overrideParams == null) {
-    overrideParams = obj3.useKeyboardContextForType(entrypoint(1629).KeyboardTypes.APP_LAUNCHER);
+    overrideParams = obj3.useKeyboardContextForType(bottomSheetExpandReasonRef(bottomSheetPosition[15]).KeyboardTypes.APP_LAUNCHER);
   }
-  obj3 = entrypoint(5043);
-  const accessibilityNativeStackOptions = entrypoint(6908).useAccessibilityNativeStackOptions();
+  obj3 = bottomSheetExpandReasonRef(bottomSheetPosition[14]);
+  const accessibilityNativeStackOptions = bottomSheetExpandReasonRef(bottomSheetPosition[16]).useAccessibilityNativeStackOptions();
   const initialRouteName = overrideParams.initialRouteName;
-  let obj18 = _objectWithoutProperties(overrideParams, closure_4);
+  let obj19 = keyboardCloseReasonRef(overrideParams, entrypoint);
   const items = [entrypoint];
-  const layoutEffect = noop.useLayoutEffect(() => {
+  const layoutEffect = onActivityItemSelected.useLayoutEffect(() => {
     AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_TOP_OF_FUNNEL, { location: "app_launcher", source: entrypoint });
   }, items);
   const obj4 = { ref: navigationContainerRef, children: null };
-  const obj5 = { value: tmp3(AnalyticsLocationDefault.APP_LAUNCHER).analyticsLocations, children: null };
-  const obj6 = { initialRouteName, screenOptions: null, children: null };
-  const obj7 = { contentStyle: null, headerShown: false, fullScreenGestureEnabled: true };
-  const items1 = [tmp7.navigator, contentStyle];
-  obj7.contentStyle = items1;
+  const obj5 = { value: tmp3(bottomSheetIndex(bottomSheetPosition[11]).APP_LAUNCHER).analyticsLocations, children: null };
+  const obj7 = { initialRouteName, screenOptions: null, children: null };
+  const obj8 = { contentStyle: null, headerShown: false, fullScreenGestureEnabled: true };
+  const items1 = [tmp7.navigator, bottomSheetExpandReasonRef.contentStyle];
+  obj8.contentStyle = items1;
   const merged = Object.assign(accessibilityNativeStackOptions);
-  obj6.screenOptions = obj7;
-  const obj8 = { name: AppLauncherRouteName.HOME, component: AppLauncherHomeScreenDefault, initialParams: null };
-  const obj9 = { context, initialSearchQuery: null };
+  obj7.screenOptions = obj8;
+  const obj9 = { name: width.HOME, component: bottomSheetIndex(bottomSheetPosition[18]), initialParams: null };
+  const obj10 = { context, initialSearchQuery: null };
   let initialSearchQuery;
-  if (overrideParams.initialRouteName === AppLauncherRouteName.HOME) {
+  if (overrideParams.initialRouteName === width.HOME) {
     initialSearchQuery = overrideParams.initialSearchQuery;
   }
-  obj9.initialSearchQuery = initialSearchQuery;
-  obj8.initialParams = obj9;
-  const items2 = [closure_9(closure_11.Screen, obj8), , , ];
-  const obj10 = { name: AppLauncherRouteName.APPLICATION_VIEW, component: AppLauncherApplicationViewScreenDefault, initialParams: null };
-  const obj11 = { context };
-  let obj12 = obj18;
-  if (initialRouteName !== AppLauncherRouteName.APPLICATION_VIEW) {
-    obj12 = {};
+  obj10.initialSearchQuery = initialSearchQuery;
+  obj9.initialParams = obj10;
+  const items2 = [referrerId(memo.Screen, obj9), , , ];
+  const obj11 = { name: width.APPLICATION_VIEW, component: bottomSheetIndex(bottomSheetPosition[19]), initialParams: null };
+  const obj12 = { context };
+  let obj13 = obj19;
+  if (initialRouteName !== width.APPLICATION_VIEW) {
+    obj13 = {};
   }
-  const merged1 = Object.assign(obj12);
-  obj11.expandBottomSheet = expandBottomSheet;
-  obj10.initialParams = obj11;
-  items2[1] = closure_9(closure_11.Screen, obj10);
-  const obj13 = { name: AppLauncherRouteName.COMMAND_VIEW, component: AppLauncherCommandViewScreenDefault, initialParams: null };
+  const merged1 = Object.assign(obj13);
+  obj12.expandBottomSheet = expandBottomSheet;
+  obj11.initialParams = obj12;
+  items2[1] = referrerId(memo.Screen, obj11);
+  const obj14 = { name: width.COMMAND_VIEW, component: bottomSheetIndex(bottomSheetPosition[20]), initialParams: null };
   let tmp17;
   if ("channel" === context.type) {
     tmp17 = context;
   }
-  const obj14 = { context: tmp17 };
-  let obj15 = obj18;
-  if (overrideParams.initialRouteName !== AppLauncherRouteName.COMMAND_VIEW) {
-    obj15 = {};
+  const obj15 = { context: tmp17 };
+  let obj16 = obj19;
+  if (overrideParams.initialRouteName !== width.COMMAND_VIEW) {
+    obj16 = {};
   }
-  const merged2 = Object.assign(obj15);
-  obj14.expandBottomSheet = expandBottomSheet;
-  obj13.initialParams = obj14;
-  items2[2] = closure_9(closure_11.Screen, obj13);
-  const obj16 = { name: AppLauncherRouteName.APP_LIST_VIEW, component: AppLauncherViewAllScreenDefault, initialParams: null };
-  if (overrideParams.initialRouteName !== AppLauncherRouteName.APP_LIST_VIEW) {
-    obj18 = {};
+  const merged2 = Object.assign(obj16);
+  obj15.expandBottomSheet = expandBottomSheet;
+  obj14.initialParams = obj15;
+  items2[2] = referrerId(memo.Screen, obj14);
+  const obj17 = { name: width.APP_LIST_VIEW, component: bottomSheetIndex(bottomSheetPosition[21]), initialParams: null };
+  if (overrideParams.initialRouteName !== width.APP_LIST_VIEW) {
+    obj19 = {};
   }
-  const obj19 = { children: null };
-  const merged3 = Object.assign(obj18);
-  obj16.initialParams = { context };
-  items2[3] = closure_9(closure_11.Screen, obj16);
-  obj6.children = items2;
-  obj5.children = closure_10(closure_11.Navigator, obj6);
-  obj4.children = closure_9(entrypoint(7073).AnalyticsLocationProvider, obj5);
-  obj19.children = closure_9(entrypoint(1504).NavigationContainer, obj4);
+  const obj20 = { children: null };
+  const merged3 = Object.assign(obj19);
+  obj17.initialParams = { context };
+  items2[3] = referrerId(memo.Screen, obj17);
+  obj7.children = items2;
+  obj5.children = c10(memo.Navigator, obj7);
+  obj4.children = referrerId(bottomSheetExpandReasonRef(bottomSheetPosition[10]).AnalyticsLocationProvider, obj5);
+  obj20.children = referrerId(bottomSheetExpandReasonRef(bottomSheetPosition[12]).NavigationContainer, obj4);
+  c10 = false;
   let tmp21 = "customId" in overrideParams;
-  const obj17 = { context };
-  const tmp4Result = entrypoint(6908);
+  const children = tmp10(tmp4(tmp2[12]).NavigationIndependentTree, obj20);
   if (!tmp21) {
     tmp21 = "referrerId" in overrideParams;
   }
-  let tmp22 = null;
+  let flag = false;
+  let tmp22;
+  let tmp23;
   if (tmp21) {
-    ({ customId: obj21.customId, referrerId: obj21.referrerId } = overrideParams);
-    tmp22 = { customId: null, referrerId: null };
-    const obj20 = { customId: null, referrerId: null };
+    c10 = true;
+    customId = overrideParams.customId;
+    referrerId = overrideParams.referrerId;
+    flag = true;
+    tmp22 = referrerId;
+    tmp23 = customId;
   }
-  const tmp10Result = closure_9(entrypoint(1504).NavigationIndependentTree, obj19);
-  return closure_9(entrypoint(10855).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: tmp22, keyboardCloseReasonRef, onActivityItemSelected, width }, children: closure_9(entrypoint(1504).NavigationIndependentTree, obj19) });
+  const items3 = [flag, tmp23, tmp22];
+  memo = obj6.useMemo(() => {
+    let tmp = null;
+    if (c10) {
+      const obj = { customId, referrerId };
+      tmp = obj;
+    }
+    return tmp;
+  }, items3);
+  const items4 = [bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, memo, keyboardCloseReasonRef, onActivityItemSelected, width];
+  value = obj6.useMemo(() => ({ bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: memo, keyboardCloseReasonRef, onActivityItemSelected, width }), items4);
+  return referrerId(bottomSheetExpandReasonRef(bottomSheetPosition[22]).AppLauncherContext.Provider, { value, children });
 }));

@@ -1,12 +1,12 @@
-// === Module 17288: useGameClaimCoachmark ===
+// === Module 17323: useGameClaimCoachmark ===
 
-// Module 17288 (useGameClaimCoachmark)
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 17323 (useGameClaimCoachmark)
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");

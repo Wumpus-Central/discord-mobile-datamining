@@ -1,15 +1,15 @@
-// === Module 13236: HubProgressBarUtils ===
+// === Module 13262: HubProgressBarUtils ===
 
-// Module 13236 (HubProgressBarUtils)
+// Module 13262 (HubProgressBarUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import GlobalUtils from "GlobalUtils" /* 1386 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
+import util from "util" /* 1128 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import FlagUtils from "FlagUtils" /* 1405 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5977 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
 
 require = fn;
 function convertHubProgressFlagSetToSet(stateFromStores) {
@@ -23,8 +23,8 @@ function convertHubProgressFlagSetToSet(stateFromStores) {
   }
   return set;
 }
-const HUB_PROGRESS_STEP_ORDER = fn(8913).HUB_PROGRESS_STEP_ORDER;
-const PlatformTypes = fn(1085).PlatformTypes;
+const HUB_PROGRESS_STEP_ORDER = fn(8921).HUB_PROGRESS_STEP_ORDER;
+const PlatformTypes = fn(1087).PlatformTypes;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useContactSyncEverEnabled() {
   const cResult = c.c(2);

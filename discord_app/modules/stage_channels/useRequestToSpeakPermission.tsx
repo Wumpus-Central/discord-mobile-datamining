@@ -1,15 +1,15 @@
-// === Module 11293: useRequestToSpeakPermission ===
+// === Module 11313: useRequestToSpeakPermission ===
 
-// Module 11293 (useRequestToSpeakPermission)
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7704 */;
+// Module 11313 (useRequestToSpeakPermission)
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
@@ -51,10 +51,10 @@ export const useRequestToSpeakPermission = ReactCompilerGating.isReactCompilerEn
         return closure_5.getChannel(closure_0);
       }
     }
-    const canEveryoneRoleResult = stateFromStores(4811).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+    const canEveryoneRoleResult = stateFromStores(4814).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
     cResult[4] = stateFromStores;
     cResult[5] = canEveryoneRoleResult;
-    const obj3 = stateFromStores(4811);
+    const obj3 = stateFromStores(4814);
   } else {
     class S {
       constructor() {
@@ -106,8 +106,8 @@ export const useRequestToSpeakPermission = ReactCompilerGating.isReactCompilerEn
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4811).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4811);
+  const canEveryoneRoleResult = stateFromStores(4814).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4814);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

@@ -1,15 +1,15 @@
-// === Module 17611: OnboardingHomeScrollView ===
+// === Module 17645: OnboardingHomeScrollView ===
 
-// Module 17611 (OnboardingHomeScrollView)
+// Module 17645 (OnboardingHomeScrollView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 const obj2 = { guildFeedBackground: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

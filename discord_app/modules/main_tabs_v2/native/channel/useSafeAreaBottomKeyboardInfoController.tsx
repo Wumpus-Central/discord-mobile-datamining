@@ -1,12 +1,12 @@
-// === Module 10607: useSafeAreaBottomKeyboardInfoController ===
+// === Module 10622: useSafeAreaBottomKeyboardInfoController ===
 
-// Module 10607 (useSafeAreaBottomKeyboardInfoController)
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1893 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+// Module 10622 (useSafeAreaBottomKeyboardInfoController)
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1895 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let MetaQuestUtils = fn(1628);
+let MetaQuestUtils = fn(1630);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 const __initData = { code: "function useSafeAreaBottomKeyboardInfoControllerTsx1(e_1){const{runOnJS,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight}=this.__closure;runOnJS(KeyboardStateDebugging.keyboardControllerWorkletEvent)(\"onStart\",e_1.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL){return;}if(e_1.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e_1.height);}}" };
 const __initData2 = { code: "function useSafeAreaBottomKeyboardInfoControllerTsx2(e_2){const{runOnJS,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight}=this.__closure;runOnJS(KeyboardStateDebugging.keyboardControllerWorkletEvent)(\"onEnd\",e_2.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL){return;}if(e_2.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e_2.height);}}" };

@@ -1,8 +1,8 @@
-// === Module 16171: Contants ===
+// === Module 16204: Contants ===
 
-// Module 16171 (Contants)
-import Constants from "Constants" /* 1085 */;
-import GuildRoleRecordUtils from "GuildRoleRecordUtils" /* 2121 */;
+// Module 16204 (Contants)
+import Constants from "Constants" /* 1087 */;
+import GuildRoleRecordUtils from "GuildRoleRecordUtils" /* 2124 */;
 import size from "module_2" /* 2 */;
 
 const result = GuildRoleRecordUtils.constructGuildRoleInPlace({ id: "0", guildId: "0", name: "", mentionable: false, managed: false, position: 0, hoist: false, permissions: Constants.Permissions.SEND_MESSAGES, color: 0, colors: { primary_color: 0, secondary_color: null, tertiary_color: null }, colorString: "0", colorStrings: { primaryColor: "0", secondaryColor: null, tertiaryColor: null }, icon: null, unicodeEmoji: null, flags: 0, description: null, tags: {}, version: 0 });

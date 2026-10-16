@@ -1,21 +1,21 @@
-// === Module 17652: SearchFilterUtils ===
+// === Module 17686: SearchFilterUtils ===
 
-// Module 17652 (SearchFilterUtils)
-import util from "util" /* 1126 */;
-import AtIcon from "AtIcon" /* 8435 */;
-import CalendarIcon from "CalendarIcon" /* 8897 */;
-import TrackingConstants from "TrackingConstants" /* 9532 */;
-import AttachmentIcon from "AttachmentIcon" /* 10246 */;
-import RobotIcon from "RobotIcon" /* 11548 */;
-import UserIcon from "UserIcon" /* 11573 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 11976 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12881 */;
-import SearchTokens from "SearchTokens" /* 12889 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12906 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14735 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 17653 */;
-import SearchConstants from "SearchConstants" /* 9533 */;
-import Constants from "Constants" /* 1085 */;
+// Module 17686 (SearchFilterUtils)
+import util from "util" /* 1128 */;
+import AtIcon from "AtIcon" /* 8443 */;
+import CalendarIcon from "CalendarIcon" /* 8905 */;
+import TrackingConstants from "TrackingConstants" /* 9548 */;
+import AttachmentIcon from "AttachmentIcon" /* 10262 */;
+import RobotIcon from "RobotIcon" /* 11571 */;
+import UserIcon from "UserIcon" /* 11596 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12000 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12907 */;
+import SearchTokens from "SearchTokens" /* 12915 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12932 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14768 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 17687 */;
+import SearchConstants from "SearchConstants" /* 9549 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -213,7 +213,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12889));
+  const keys = Object.keys(items(12915));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

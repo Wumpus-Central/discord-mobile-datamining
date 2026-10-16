@@ -1,12 +1,12 @@
-// === Module 7334: LibraryApplicationStore ===
+// === Module 7336: LibraryApplicationStore ===
 
-// Module 7334 (LibraryApplicationStore)
+// Module 7336 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtilsAll from "FlagUtils" /* 1403 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7336 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7335 */;
+import FlagUtilsAll from "FlagUtils" /* 1405 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7338 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7337 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function handleLibraryApplicationUpdate(libraryApplication) {
   closure_9[comboId] = fromServer;
   set.delete(comboId);
 }
-const LibraryApplicationFlags = fn(1085).LibraryApplicationFlags;
+const LibraryApplicationFlags = fn(1087).LibraryApplicationFlags;
 const LibraryApplicationStore = "LibraryApplicationStore";
 let c8 = false;
 const dependencyMap = {};

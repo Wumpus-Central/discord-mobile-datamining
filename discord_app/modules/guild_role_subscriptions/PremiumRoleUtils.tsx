@@ -1,6 +1,6 @@
-// === Module 4796: PremiumRoleUtils ===
+// === Module 4799: PremiumRoleUtils ===
 
-// Module 4796 (PremiumRoleUtils)
+// Module 4799 (PremiumRoleUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");

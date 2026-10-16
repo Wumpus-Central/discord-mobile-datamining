@@ -1,10 +1,10 @@
-// === Module 2020: GameStore ===
+// === Module 2022: GameStore ===
 
-// Module 2020 (GameStore)
+// Module 2022 (GameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import GameRecord from "GameRecord" /* 2021 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import GameRecord from "GameRecord" /* 2023 */;
 
 function createGamesFromMessage(referenced_message) {
   closure_0 = false;
@@ -228,10 +228,10 @@ prototype["hasNoData"] = function hasNoData(item) {
   }
   return hasItem;
 };
-prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
+prototype["getCoverImageUrl"] = function getCoverImageUrl(id, arg1) {
   let tmp = null;
-  if (null != arg0) {
-    value = map.get(arg0);
+  if (null != id) {
+    value = map.get(id);
     let coverURL;
     if (value != null) {
       coverURL = value.getCoverURL();
@@ -240,14 +240,14 @@ prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
   }
   if (null == tmp) {
     return null;
-  } else if (null == size) {
+  } else if (null == arg1) {
     return tmp;
   } else {
     const str = URLUtilsDefault.toURLSafe(tmp);
     let str1 = tmp;
     if (null != str) {
       const searchParams = str.searchParams;
-      const result = searchParams.set("size", size.size.toString());
+      const result = searchParams.set("size", arg1.size.toString());
       str1 = str.toString();
     }
     return str1;

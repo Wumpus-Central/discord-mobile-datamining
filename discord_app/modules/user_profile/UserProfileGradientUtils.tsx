@@ -1,15 +1,15 @@
-// === Module 8574: UserProfileGradientUtils ===
+// === Module 8582: UserProfileGradientUtils ===
 
-// Module 8574 (UserProfileGradientUtils)
+// Module 8582 (UserProfileGradientUtils)
 import _mod12 from "module_12" /* 12 */;
 import _modDef683 from "module_683" /* 683 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import utils_ColorDefault from "utils/Color" /* 5024 */;
-import shared from "shared" /* 5025 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import utils_ColorDefault from "utils/Color" /* 5027 */;
+import shared from "shared" /* 5028 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const ThemeTypes = fn(1085).ThemeTypes;
+const ThemeTypes = fn(1087).ThemeTypes;
 fn(12);
 const apply = fn(12);
 const memoizeResult = apply.memoize((primaryColor) => {

@@ -1,10 +1,10 @@
-// === Module 17360: StreamingSubtitle ===
+// === Module 17394: StreamingSubtitle ===
 
-// Module 17360 (StreamingSubtitle)
+// Module 17394 (StreamingSubtitle)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5469 */;
+import util from "util" /* 1128 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

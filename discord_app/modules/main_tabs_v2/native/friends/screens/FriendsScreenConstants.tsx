@@ -1,6 +1,6 @@
-// === Module 13265: FriendsScreenConstants ===
+// === Module 13291: FriendsScreenConstants ===
 
-// Module 13265 (FriendsScreenConstants)
+// Module 13291 (FriendsScreenConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx");

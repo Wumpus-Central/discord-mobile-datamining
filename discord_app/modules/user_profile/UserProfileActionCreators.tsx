@@ -1,18 +1,18 @@
-// === Module 8510: UserProfileActionCreators ===
+// === Module 8518: UserProfileActionCreators ===
 
-// Module 8510 (UserProfileActionCreators)
+// Module 8518 (UserProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import shared from "shared" /* 5025 */;
-import InlineUploaderDefault from "InlineUploader" /* 6892 */;
-import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 6896 */;
-import MessageParserDefault from "MessageParser" /* 7586 */;
-import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8511 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import shared from "shared" /* 5028 */;
+import InlineUploaderDefault from "InlineUploader" /* 6894 */;
+import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 6898 */;
+import MessageParserDefault from "MessageParser" /* 7588 */;
+import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8519 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1390 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 let closure_11 = async function _saveProfileChanges(arg0) {
@@ -136,9 +136,9 @@ let closure_11 = async function _saveProfileChanges(arg0) {
     }
   }
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ComponentActions: hasOwnProperty, AnalyticEvents: metroRequire, Endpoints: closure_7, ME: closure_8 } = Constants);
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({ AnalyticsPremiumFeatureTiers: closure_9, AnalyticsPremiumFeatureNames: c10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");

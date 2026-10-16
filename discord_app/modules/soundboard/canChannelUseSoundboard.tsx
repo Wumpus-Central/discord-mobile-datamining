@@ -1,14 +1,14 @@
-// === Module 7308: canChannelUseSoundboard ===
+// === Module 7310: canChannelUseSoundboard ===
 
-// Module 7308 (canChannelUseSoundboard)
-import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
+// Module 7310 (canChannelUseSoundboard)
+import ChannelStore from "ChannelStore" /* 2068 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 function canChannelUseSoundboard(type) {

@@ -1,8 +1,8 @@
-// === Module 17787: getGamePlatform ===
+// === Module 17821: getGamePlatform ===
 
-// Module 17787 (getGamePlatform)
-import isOnXboxDefault from "isOnXbox" /* 13943 */;
-import Constants from "Constants" /* 1085 */;
+// Module 17821 (getGamePlatform)
+import isOnXboxDefault from "isOnXbox" /* 13975 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityTypes: c2, ActivityGamePlatforms: c3 } = Constants);

@@ -1,23 +1,23 @@
-// === Module 13793: VideoQuestUtils ===
+// === Module 13819: VideoQuestUtils ===
 
-// Module 13793 (VideoQuestUtils)
-import util from "util" /* 1126 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5032 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7613 */;
-import AnalyticsActions from "AnalyticsActions" /* 7623 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7629 */;
-import QuestActionCreators from "QuestActionCreators" /* 9393 */;
-import NetworkStore from "NetworkStore" /* 5342 */;
-import QuestStore from "QuestStore" /* 7607 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7609 */;
+// Module 13819 (VideoQuestUtils)
+import util from "util" /* 1128 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7615 */;
+import AnalyticsActions from "AnalyticsActions" /* 7625 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7631 */;
+import QuestActionCreators from "QuestActionCreators" /* 9409 */;
+import NetworkStore from "NetworkStore" /* 5344 */;
+import QuestStore from "QuestStore" /* 7609 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7611 */;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(13794).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(13820).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {

@@ -1,32 +1,25 @@
-// === Module 15395: guilds ===
+// === Module 15431: guilds ===
 
-// Module 15395 (guilds)
-import GuildRecord from "GuildRecord" /* 2083 */;
-import Constants2 from "Constants" /* 5855 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8676 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11237 */;
-import botScopedAccess from "botScopedAccess" /* 15387 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import Constants from "Constants" /* 1085 */;
+// Module 15431 (guilds)
+import GuildRecord from "GuildRecord" /* 2086 */;
+import Constants2 from "Constants" /* 5857 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8684 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import botScopedAccess from "botScopedAccess" /* 15427 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import Constants from "Constants" /* 1087 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15422 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;
 ({ RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 let obj = {};
-let obj2 = { scope: null, validation: null, validateAccess: null, handler: null };
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+let obj2 = { scope: null, validateAccess: null, handler: null };
 const obj3 = {};
 const items = [OAuth2Scopes.OAuth2Scopes.RPC, OAuth2Scopes.OAuth2Scopes.BOT];
 obj3[Constants2.RPC_SCOPE_CONFIG.ANY] = items;
 obj2.scope = obj3;
-obj2.validation = function validation(string) {
-  const obj = createRpcJoiSchemaObjectDefault(string);
-  const obj2 = { guild_id: string.string(), timeout: null };
-  const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
-  const numberResult = string.number();
-  obj2.timeout = string.number().min(0).max(60);
-  return requiredResult.keys(obj2);
-};
 obj2.validateAccess = function validateAccess(botScopeOnly) {
   if (botScopeOnly.botScopeOnly) {
     return botScopedAccess.validateBotScopeHasGuildAccess(tmp2, tmp);
@@ -61,8 +54,9 @@ obj2.handler = function handler(socket) {
     }
   });
 };
-obj[RPCCommands.GET_GUILD] = obj2;
-obj[RPCCommands.GET_GUILDS] = {
+obj[RPCCommands.GET_GUILD] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_GUILD, obj2);
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj[RPCCommands.GET_GUILDS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_GUILDS, {
   scope: OAuth2Scopes.OAuth2Scopes.RPC,
   handler() {
     let obj = { guilds: null };
@@ -78,7 +72,7 @@ obj[RPCCommands.GET_GUILDS] = {
     });
     return obj;
   }
-};
+});
 const result = size.fileFinishedImporting("modules/rpc/server/commands/guilds.tsx");
 
 export default obj;

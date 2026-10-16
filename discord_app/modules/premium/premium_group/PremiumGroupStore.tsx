@@ -1,10 +1,10 @@
-// === Module 14450: PremiumGroupStore ===
+// === Module 14482: PremiumGroupStore ===
 
-// Module 14450 (PremiumGroupStore)
+// Module 14482 (PremiumGroupStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 14451 */;
-import SubscriptionStore from "SubscriptionStore" /* 4831 */;
+import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 14483 */;
+import SubscriptionStore from "SubscriptionStore" /* 4834 */;
 
 require = fn;
 function handleMutationStart() {
@@ -18,9 +18,9 @@ function handleMutationSuccess(subscriptionId) {
 function handleMutationFailure() {
   closure_6.membersData.isUpdating = false;
 }
-const PremiumGroupConstants = fn(4839);
+const PremiumGroupConstants = fn(4842);
 ({ PremiumGroupAPIErrorCodes: c3, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: closure_4 } = PremiumGroupConstants);
-const NOOP_NULL = fn(1085).NOOP_NULL;
+const NOOP_NULL = fn(1087).NOOP_NULL;
 let closure_6 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
 const Store = initializeDefault.Store;
 class PremiumGroupStore extends Store {

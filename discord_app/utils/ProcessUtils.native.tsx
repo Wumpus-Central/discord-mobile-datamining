@@ -1,8 +1,8 @@
-// === Module 1376: ProcessUtils ===
+// === Module 1378: ProcessUtils ===
 
-// Module 1376 (ProcessUtils)
+// Module 1378 (ProcessUtils)
 import _mod17 from "module_17" /* 17 */;
-import ProcessUtilsBase from "ProcessUtilsBase" /* 1377 */;
+import ProcessUtilsBase from "ProcessUtilsBase" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 let closure_1 = function getHermesInstrumentedStatsSummary() {

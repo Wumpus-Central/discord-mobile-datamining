@@ -1,8 +1,8 @@
-// === Module 13471: serializePushNotifcationLogs ===
+// === Module 13497: serializePushNotifcationLogs ===
 
-// Module 13471 (serializePushNotifcationLogs)
+// Module 13497 (serializePushNotifcationLogs)
 import Storage3 from "Storage" /* 510 */;
-import Constants from "Constants" /* 1085 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ DEVICE_TOKEN: c2, DEVICE_VOIP_TOKEN: c3 } = Constants);

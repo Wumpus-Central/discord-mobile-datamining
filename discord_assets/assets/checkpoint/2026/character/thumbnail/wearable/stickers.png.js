@@ -1,6 +1,6 @@
-// === Module 5788: ? ===
+// === Module 5790: ? ===
 
-// Module 5788
+// Module 5790
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/wearable/stickers.png.js");

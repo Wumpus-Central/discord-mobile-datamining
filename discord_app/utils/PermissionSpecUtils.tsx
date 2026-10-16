@@ -1,20 +1,20 @@
-// === Module 17871: PermissionSpecUtils ===
+// === Module 17905: PermissionSpecUtils ===
 
-// Module 17871 (PermissionSpecUtils)
-import util from "util" /* 1126 */;
-import ChannelRecord from "ChannelRecord" /* 2069 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7172 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7189 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7706 */;
-import Tracking from "Tracking" /* 8121 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8855 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 12622 */;
-import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 17872 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17873 */;
-import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 17875 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import Constants from "Constants" /* 1085 */;
+// Module 17905 (PermissionSpecUtils)
+import util from "util" /* 1128 */;
+import ChannelRecord from "ChannelRecord" /* 2072 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7174 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7191 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7709 */;
+import Tracking from "Tracking" /* 8124 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 12645 */;
+import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 17906 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17907 */;
+import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 17909 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 function getPermissionOptions(id) {
@@ -60,15 +60,15 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(7190).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(7192).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(6111);
-    const isStageVideoEnabledResult = tmp4(6111).isStageVideoEnabled(guild_id);
-    let result = tmp4(17874).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(6113);
+    const isStageVideoEnabledResult = tmp4(6113).isStageVideoEnabled(guild_id);
+    let result = tmp4(17908).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -89,105 +89,105 @@ export default {
     const type = stateFromStores.type;
     if (constants2.GUILD_CATEGORY === type) {
       let obj33 = importAll;
-      const intl23 = tmp4(1126).intl;
-      const items = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl23.string(tmp4(1126).t["AkPxc+"])), , , , , ];
-      const intl24 = tmp4(1126).intl;
-      items[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl24.string(tmp4(1126).t.Ny49TN));
-      const intl25 = tmp4(1126).intl;
+      const intl23 = tmp4(1128).intl;
+      const items = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl23.string(tmp4(1128).t["AkPxc+"])), , , , , ];
+      const intl24 = tmp4(1128).intl;
+      items[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl24.string(tmp4(1128).t.Ny49TN));
+      const intl25 = tmp4(1128).intl;
       const obj4 = { showPrivateThreads: true, showCreateThreads: true, inSoundmojiExperiment };
-      items[2] = permissions_PermissionUtilsAll.generateChannelTextSection(tmp3, intl25.string(tmp4(1126).t.cKobO5), obj4);
-      const intl26 = tmp4(1126).intl;
-      items[3] = permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl26.string(tmp4(1126).t["46Ra1b"]));
-      const intl27 = tmp4(1126).intl;
-      items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1126).t["rrh/W6"]));
+      items[2] = permissions_PermissionUtilsAll.generateChannelTextSection(tmp3, intl25.string(tmp4(1128).t.cKobO5), obj4);
+      const intl26 = tmp4(1128).intl;
+      items[3] = permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl26.string(tmp4(1128).t["46Ra1b"]));
+      const intl27 = tmp4(1128).intl;
+      items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1128).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
-        const intl28 = tmp4(1126).intl;
-        const items1 = [obj33(17875).generateChannelStageSection(tmp3, intl28.string(tmp4(1126).t.yniauk))];
+        const intl28 = tmp4(1128).intl;
+        const items1 = [obj33(17909).generateChannelStageSection(tmp3, intl28.string(tmp4(1128).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(17875);
+        const obj33Result = obj33(17909);
       } else {
         items2 = [];
       }
-      obj33 = obj33(17875);
-      const intl29 = tmp4(1126).intl;
-      channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1126).t.b8lplT));
+      obj33 = obj33(17909);
+      const intl29 = tmp4(1128).intl;
+      channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1128).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
       const arraySpreadResult = HermesBuiltin.arraySpread(items2, 5);
     } else {
       if (constants2.GUILD_VOICE === type) {
-        const intl16 = tmp4(1126).intl;
-        const items3 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl16.string(tmp4(1126).t.ouHggI), { showManageWebhooks: true }), , , , , ];
-        const intl17 = tmp4(1126).intl;
-        items3[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl17.string(tmp4(1126).t.Ny49TN));
-        const intl18 = tmp4(1126).intl;
-        items3[2] = permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl18.string(tmp4(1126).t["46Ra1b"]));
-        const intl19 = tmp4(1126).intl;
+        const intl16 = tmp4(1128).intl;
+        const items3 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl16.string(tmp4(1128).t.ouHggI), { showManageWebhooks: true }), , , , , ];
+        const intl17 = tmp4(1128).intl;
+        items3[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl17.string(tmp4(1128).t.Ny49TN));
+        const intl18 = tmp4(1128).intl;
+        items3[2] = permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl18.string(tmp4(1128).t["46Ra1b"]));
+        const intl19 = tmp4(1128).intl;
         let formatResult;
         const obj28 = permissions_PermissionUtilsAll;
         if (result) {
-          const intl20 = tmp4(1126).intl;
+          const intl20 = tmp4(1128).intl;
           const obj5 = {
             setUpAutomod() {
                     GuildSettingsActionCreatorsDefault.open(set, constants5.GUILD_AUTOMOD);
                   }
           };
-          formatResult = intl20.format(tmp4(1126).t["4Z9Fbb"], obj5);
+          formatResult = intl20.format(tmp4(1128).t["4Z9Fbb"], obj5);
         }
         const obj7 = { sectionDescription: formatResult, inSoundmojiExperiment };
-        items3[3] = obj28.generateChannelVoiceChatSection(tmp3, intl19.string(tmp4(1126).t.iqlsnD), obj7);
-        const stringResult = intl19.string(tmp4(1126).t.iqlsnD);
-        const intl21 = tmp4(1126).intl;
-        items3[4] = permissions_PermissionUtilsAll.generateChannelEventsSection(tmp3, intl21.string(tmp4(1126).t.b8lplT));
+        items3[3] = obj28.generateChannelVoiceChatSection(tmp3, intl19.string(tmp4(1128).t.iqlsnD), obj7);
+        const stringResult = intl19.string(tmp4(1128).t.iqlsnD);
+        const intl21 = tmp4(1128).intl;
+        items3[4] = permissions_PermissionUtilsAll.generateChannelEventsSection(tmp3, intl21.string(tmp4(1128).t.b8lplT));
         const tmp30Result = permissions_PermissionUtilsAll;
-        const intl22 = tmp4(1126).intl;
-        items3[5] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl22.string(tmp4(1126).t["rrh/W6"]));
+        const intl22 = tmp4(1128).intl;
+        items3[5] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl22.string(tmp4(1128).t["rrh/W6"]));
         let items5 = items3;
         const tmp30Result2 = permissions_PermissionUtilsAll;
       } else if (constants2.GUILD_STAGE_VOICE === type) {
-        const intl8 = tmp4(1126).intl;
-        const items4 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl8.string(tmp4(1126).t.ouHggI), { showManageWebhooks: false }), , , , , , ];
-        const intl9 = tmp4(1126).intl;
-        items4[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl9.string(tmp4(1126).t.Ny49TN));
-        const intl10 = tmp4(1126).intl;
-        items4[2] = permissions_PermissionUtilsAll.generateChannelStageVoiceSection(tmp3, intl10.string(tmp4(1126).t["46Ra1b"]), isStageVideoEnabledResult);
-        const intl11 = tmp4(1126).intl;
-        items4[3] = permissions_PermissionUtilsAll.generateChannelStageSection(tmp3, intl11.string(tmp4(1126).t.yniauk));
-        const intl12 = tmp4(1126).intl;
-        items4[4] = permissions_PermissionUtilsAll.generateChannelEventsSection(tmp3, intl12.string(tmp4(1126).t.b8lplT));
-        const intl13 = tmp4(1126).intl;
+        const intl8 = tmp4(1128).intl;
+        const items4 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl8.string(tmp4(1128).t.ouHggI), { showManageWebhooks: false }), , , , , , ];
+        const intl9 = tmp4(1128).intl;
+        items4[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl9.string(tmp4(1128).t.Ny49TN));
+        const intl10 = tmp4(1128).intl;
+        items4[2] = permissions_PermissionUtilsAll.generateChannelStageVoiceSection(tmp3, intl10.string(tmp4(1128).t["46Ra1b"]), isStageVideoEnabledResult);
+        const intl11 = tmp4(1128).intl;
+        items4[3] = permissions_PermissionUtilsAll.generateChannelStageSection(tmp3, intl11.string(tmp4(1128).t.yniauk));
+        const intl12 = tmp4(1128).intl;
+        items4[4] = permissions_PermissionUtilsAll.generateChannelEventsSection(tmp3, intl12.string(tmp4(1128).t.b8lplT));
+        const intl13 = tmp4(1128).intl;
         let formatResult1;
         const obj21 = permissions_PermissionUtilsAll;
         if (result) {
-          const intl14 = tmp4(1126).intl;
+          const intl14 = tmp4(1128).intl;
           const obj8 = {
             setUpAutomod() {
                     GuildSettingsActionCreatorsDefault.open(set, constants5.GUILD_AUTOMOD);
                   }
           };
-          formatResult1 = intl14.format(tmp4(1126).t["4Z9Fbb"], obj8);
+          formatResult1 = intl14.format(tmp4(1128).t["4Z9Fbb"], obj8);
         }
         const obj12 = { sectionDescription: formatResult1, inSoundmojiExperiment };
-        items4[5] = obj21.generateChannelVoiceChatSection(tmp3, intl13.string(tmp4(1126).t.iqlsnD), obj12);
-        const stringResult1 = intl13.string(tmp4(1126).t.iqlsnD);
-        const intl15 = tmp4(1126).intl;
-        items4[6] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl15.string(tmp4(1126).t["rrh/W6"]), { showActivities: false });
+        items4[5] = obj21.generateChannelVoiceChatSection(tmp3, intl13.string(tmp4(1128).t.iqlsnD), obj12);
+        const stringResult1 = intl13.string(tmp4(1128).t.iqlsnD);
+        const intl15 = tmp4(1128).intl;
+        items4[6] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl15.string(tmp4(1128).t["rrh/W6"]), { showActivities: false });
         items5 = items4;
         const tmp27Result = permissions_PermissionUtilsAll;
       } else {
         if (constants2.GUILD_FORUM !== type) {
           if (constants2.GUILD_MEDIA !== type) {
-            const intl30 = tmp4(1126).intl;
-            items5 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl30.string(tmp4(1126).t.ouHggI)), , , ];
-            const intl31 = tmp4(1126).intl;
-            items5[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl31.string(tmp4(1126).t.Ny49TN));
-            const intl32 = tmp4(1126).intl;
+            const intl30 = tmp4(1128).intl;
+            items5 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl30.string(tmp4(1128).t.ouHggI)), , , ];
+            const intl31 = tmp4(1128).intl;
+            items5[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl31.string(tmp4(1128).t.Ny49TN));
+            const intl32 = tmp4(1128).intl;
             const obj13 = { showPrivateThreads: stateFromStores.type !== constants2.GUILD_ANNOUNCEMENT, showCreateThreads: true, inSoundmojiExperiment };
-            items5[2] = permissions_PermissionUtilsAll.generateChannelTextSection(tmp3, intl32.string(tmp4(1126).t.cKobO5), obj13);
-            const intl33 = tmp4(1126).intl;
-            items5[3] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl33.string(tmp4(1126).t["rrh/W6"]));
+            items5[2] = permissions_PermissionUtilsAll.generateChannelTextSection(tmp3, intl32.string(tmp4(1128).t.cKobO5), obj13);
+            const intl33 = tmp4(1128).intl;
+            items5[3] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl33.string(tmp4(1128).t["rrh/W6"]));
             if (enabled) {
-              const intl = tmp4(1126).intl;
-              const items6 = [permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl.string(tmp4(1126).t["46Ra1b"]))];
+              const intl = tmp4(1128).intl;
+              const items6 = [permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl.string(tmp4(1128).t["46Ra1b"]))];
               let items7 = items6;
               const tmp38Result = permissions_PermissionUtilsAll;
             } else {
@@ -196,23 +196,23 @@ export default {
             HermesBuiltin.arraySpread(items7, 4);
           }
         }
-        const intl2 = tmp4(1126).intl;
+        const intl2 = tmp4(1128).intl;
         const string = intl2.string;
-        const t = tmp4(1126).t;
+        const t = tmp4(1128).t;
         if (isMediaChannelResult) {
           let stringResult2 = string(t.aSjPgw);
         } else {
           stringResult2 = string(t.TS7Cnb);
         }
-        const t2 = tmp4(1126).t;
-        const intl3 = tmp4(1126).intl;
-        const items8 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl3.string(tmp4(1126).t.ouHggI)), , , ];
+        const t2 = tmp4(1128).t;
+        const intl3 = tmp4(1128).intl;
+        const items8 = [permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl3.string(tmp4(1128).t.ouHggI)), , , ];
         const tmp21 = isMediaChannelResult ? t2.YjJTtH : t2["1MTnqY"];
-        const intl4 = tmp4(1126).intl;
-        items8[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl4.string(tmp4(1126).t.Ny49TN));
+        const intl4 = tmp4(1128).intl;
+        items8[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(tmp3, intl4.string(tmp4(1128).t.Ny49TN));
         let formatResult2;
         if (result) {
-          const intl5 = tmp4(1126).intl;
+          const intl5 = tmp4(1128).intl;
           const obj14 = {
             setUpAutomod() {
                     if (!isMediaChannelResult) {
@@ -225,11 +225,11 @@ export default {
         }
         const obj15 = { showPrivateThreads: false, showCreateThreads: false, sectionDescription: formatResult2, inSoundmojiExperiment };
         items8[2] = permissions_PermissionUtilsAll.generateChannelTextSection(tmp3, stringResult2, obj15);
-        const intl6 = tmp4(1126).intl;
-        items8[3] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl6.string(tmp4(1126).t["rrh/W6"]));
+        const intl6 = tmp4(1128).intl;
+        items8[3] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl6.string(tmp4(1128).t["rrh/W6"]));
         if (enabled) {
-          const intl7 = tmp4(1126).intl;
-          const items9 = [permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl7.string(tmp4(1126).t["46Ra1b"]))];
+          const intl7 = tmp4(1128).intl;
+          const items9 = [permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl7.string(tmp4(1128).t["46Ra1b"]))];
           let items10 = items9;
           const tmp22Result2 = permissions_PermissionUtilsAll;
         } else {
@@ -251,7 +251,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(17874);
+    const tmp4Result2 = tmp4(17908);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

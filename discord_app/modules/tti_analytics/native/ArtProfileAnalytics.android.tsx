@@ -1,8 +1,8 @@
-// === Module 7580: ArtProfileAnalytics ===
+// === Module 7582: ArtProfileAnalytics ===
 
-// Module 7580 (ArtProfileAnalytics)
-import Timers from "Timers" /* 2060 */;
-import NativeTTIModuleDefault from "NativeTTIModule" /* 7578 */;
+// Module 7582 (ArtProfileAnalytics)
+import Timers from "Timers" /* 2063 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7580 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -88,7 +88,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const UNKNOWN_STATUS = "UNKNOWN_STATUS";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/ArtProfileAnalytics.android.tsx");

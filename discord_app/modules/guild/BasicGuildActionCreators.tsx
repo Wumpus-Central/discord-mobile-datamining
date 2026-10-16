@@ -1,11 +1,11 @@
-// === Module 18925: BasicGuildActionCreators ===
+// === Module 18967: BasicGuildActionCreators ===
 
-// Module 18925 (BasicGuildActionCreators)
+// Module 18967 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import BasicGuildStore from "BasicGuildStore" /* 8191 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import BasicGuildStore from "BasicGuildStore" /* 8194 */;
 
 require = fn;
 let closure_8 = async function _fetchBasicGuild() {
@@ -101,7 +101,7 @@ let closure_8 = async function _fetchBasicGuild() {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");

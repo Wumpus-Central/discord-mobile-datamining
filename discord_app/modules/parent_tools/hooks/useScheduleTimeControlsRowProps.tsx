@@ -1,11 +1,11 @@
-// === Module 15843: useScheduleTimeControlsRowProps ===
+// === Module 15876: useScheduleTimeControlsRowProps ===
 
-// Module 15843 (useScheduleTimeControlsRowProps)
+// Module 15876 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import Text_Text from "Text/Text" /* 5147 */;
+import util from "util" /* 1128 */;
+import _modDef2571 from "module_2571" /* 2571 */;
+import Text_Text from "Text/Text" /* 5149 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSched
       const obj2 = { subLabel: null, trailing: "r" };
       const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = util.intl;
-      obj3.children = intl3.string(_modDef2568.fOBIZH);
+      obj3.children = intl3.string(_modDef2571.fOBIZH);
       obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
       cResult[0] = obj2;
       let first = obj2;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSched
     if (cResult[4] !== arr.length) {
       const intl = util.intl;
       const obj4 = { count: arr.length };
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef2568.XfwcpX, obj4);
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef2571.XfwcpX, obj4);
       cResult[4] = arr.length;
       cResult[5] = formatToPlainStringResult;
       let tmp9 = formatToPlainStringResult;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSched
     if (cResult[6] !== cResult[2]) {
       const intl2 = util.intl;
       const string = intl2.string;
-      let v8vDHRq = _modDef2568;
+      let v8vDHRq = _modDef2571;
       if (tmp4) {
         v8vDHRq = v8vDHRq["8vDHRq"];
         let stringResult = string(v8vDHRq);
@@ -93,17 +93,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSched
     const obj2 = { subLabel: null, trailing: "r" };
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef2568.fOBIZH);
+    obj3.children = intl.string(_modDef2571.fOBIZH);
     obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
     return obj2;
   } else {
     const obj4 = { subLabel: null, trailing: null };
     const intl2 = util.intl;
     const obj5 = { count: arr.length };
-    obj4.subLabel = intl2.formatToPlainString(_modDef2568.XfwcpX, obj5);
+    obj4.subLabel = intl2.formatToPlainString(_modDef2571.XfwcpX, obj5);
     const intl3 = util.intl;
     const string = intl3.string;
-    const tmp11 = _modDef2568;
+    const tmp11 = _modDef2571;
     if (someResult) {
       let stringResult = string(tmp11["8vDHRq"]);
     } else {

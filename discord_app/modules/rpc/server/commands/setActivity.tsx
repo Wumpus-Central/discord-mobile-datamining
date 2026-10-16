@@ -1,378 +1,378 @@
-// === Module 15411: setActivity ===
+// === Module 15447: setActivity ===
 
-// Module 15411 (setActivity)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10474 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11237 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+// Module 15447 (setActivity)
+import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
-require = fn;
-let Constants = fn(5855);
+const require = fn;
+let closure_3 = ["buttons"];
+let Constants = fn(5857);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1085);
-({ ActivityGamePlatforms: closure_7, ActivityPartyPrivacy: closure_8, ActivityTypes: closure_9, AnalyticEvents: c10, RPCErrors: closure_11 } = Constants);
-let closure_12 = ["1402418171662569542"];
+Constants = fn(1087);
+({ ActivityGamePlatforms: closure_11, ActivityTypes: closure_12, AnalyticEvents: map1, RPCCommands, RPCErrors: closure_14 } = Constants);
+let closure_15 = ["1402418171662569542"];
 let items = [, , ];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-let obj2 = { scope: null, validation: null, handler: null };
-let obj3 = {};
-let items1 = [fn(8676).OAuth2Scopes.RPC, fn(8676).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
-obj3[RPC_SCOPE_CONFIG.ANY] = items1;
-obj2.scope = obj3;
-obj2.validation = function validation(number) {
-  const obj = createRpcJoiSchemaObjectDefault(number);
-  const obj2 = { pid: null, activity: null };
-  const requiredResult = createRpcJoiSchemaObjectDefault(number).required();
-  obj2.pid = number.number().min(0);
-  const numberResult = number.number();
-  const obj3 = { name: null, state: null, state_url: null, details: null, details_url: null, timestamps: null, assets: null, party: null, secrets: null, buttons: null, instance: null, supported_platforms: null, type: null, status_display_type: null };
-  const obj5 = createRpcJoiSchemaObjectDefault(number);
-  const stringResult = number.string();
-  obj3.name = number.string().min(1).max(128);
-  const minResult = number.string().min(1);
-  const stringResult1 = number.string();
-  obj3.state = number.string().min(2).max(128);
-  const minResult1 = number.string().min(2);
-  const stringResult2 = number.string();
-  const uriResult = number.string().uri();
-  obj3.state_url = number.string().uri().min(1).max(256);
-  const minResult2 = number.string().uri().min(1);
-  const stringResult3 = number.string();
-  obj3.details = number.string().min(2).max(128);
-  const minResult3 = number.string().min(2);
-  const stringResult4 = number.string();
-  const uriResult1 = number.string().uri();
-  obj3.details_url = number.string().uri().min(1).max(256);
-  const minResult4 = number.string().uri().min(1);
-  const obj4 = { start: null, end: null };
-  const obj19 = createRpcJoiSchemaObjectDefault(number);
-  obj4.start = number.number().min(1);
-  const numberResult1 = number.number();
-  obj4.end = number.number().min(1);
-  obj3.timestamps = obj19.keys(obj4);
-  const numberResult2 = number.number();
-  const obj6 = { large_image: null, large_text: null, large_url: null, small_image: null, small_text: null, small_url: null, invite_cover_image: null };
-  const obj23 = createRpcJoiSchemaObjectDefault(number);
-  const stringResult5 = number.string();
-  obj6.large_image = number.string().min(1).max(300);
-  const minResult5 = number.string().min(1);
-  const stringResult6 = number.string();
-  obj6.large_text = number.string().min(2).max(128);
-  const minResult6 = number.string().min(2);
-  const stringResult7 = number.string();
-  const uriResult2 = number.string().uri();
-  obj6.large_url = number.string().uri().min(1).max(256);
-  const minResult7 = number.string().uri().min(1);
-  const stringResult8 = number.string();
-  obj6.small_image = number.string().min(1).max(300);
-  const minResult8 = number.string().min(1);
-  const stringResult9 = number.string();
-  obj6.small_text = number.string().min(2).max(128);
-  const minResult9 = number.string().min(2);
-  const stringResult10 = number.string();
-  const uriResult3 = number.string().uri();
-  obj6.small_url = number.string().uri().min(1).max(256);
-  const minResult10 = number.string().uri().min(1);
-  const stringResult11 = number.string();
-  obj6.invite_cover_image = number.string().min(1).max(300);
-  obj3.assets = obj23.keys(obj6);
-  const minResult11 = number.string().min(1);
-  const obj7 = { id: null, size: null, privacy: null };
-  const obj41 = createRpcJoiSchemaObjectDefault(number);
-  const stringResult12 = number.string();
-  obj7.id = number.string().min(2).max(128);
-  const minResult12 = number.string().min(2);
-  const arrayResult = number.array();
-  const numberResult3 = number.number();
-  obj7.size = arrayResult.items(number.number().min(0)).length(2);
-  const itemsResult = arrayResult.items(number.number().min(0));
-  const numberResult4 = number.number();
-  items = [, ];
-  ({ PRIVATE: arr2[0], PUBLIC: arr2[1] } = constants);
-  obj7.privacy = number.number().default(constants.PRIVATE).valid(items);
-  obj3.party = obj41.keys(obj7);
-  const defaultResult = number.number().default(constants.PRIVATE);
-  const obj8 = { match: null, join: null, spectate: null };
-  const obj49 = createRpcJoiSchemaObjectDefault(number);
-  const stringResult13 = number.string();
-  obj8.match = number.string().min(2).max(128);
-  const minResult13 = number.string().min(2);
-  const stringResult14 = number.string();
-  obj8.join = number.string().min(2).max(128);
-  const minResult14 = number.string().min(2);
-  const stringResult15 = number.string();
-  obj8.spectate = number.string().min(2).max(128);
-  obj3.secrets = obj49.keys(obj8);
-  const minResult15 = number.string().min(2);
-  const arrayResult3 = number.array();
-  const obj9 = { label: null, url: null };
-  const obj58 = createRpcJoiSchemaObjectDefault(number);
-  const stringResult16 = number.string();
-  const minResult16 = number.string().min(1);
-  obj9.label = number.string().min(1).max(32).required();
-  const maxResult = number.string().min(1).max(32);
-  const stringResult17 = number.string();
-  const uriResult4 = number.string().uri();
-  const minResult17 = number.string().uri().min(1);
-  obj9.url = number.string().uri().min(1).max(512).required();
-  const maxResult1 = number.string().uri().min(1).max(512);
-  const itemsResult1 = arrayResult3.items(obj58.keys(obj9));
-  obj3.buttons = arrayResult3.items(obj58.keys(obj9)).min(1).max(2);
-  obj3.instance = number.boolean();
-  const minResult18 = arrayResult3.items(obj58.keys(obj9)).min(1);
-  const arrayResult4 = number.array();
-  const stringResult18 = number.string();
-  const minResult19 = number.string().min(1);
-  const itemsResult2 = arrayResult4.items(number.string().min(1).max(32));
-  obj3.supported_platforms = arrayResult4.items(number.string().min(1).max(32)).min(1).max(10);
-  const minResult20 = arrayResult4.items(number.string().min(1).max(32)).min(1);
-  const numberResult5 = number.number();
-  obj3.type = number.number().default(constants2.PLAYING).valid(constants2.PLAYING, constants2.LISTENING, constants2.WATCHING, constants2.COMPETING);
-  const defaultResult1 = number.number().default(constants2.PLAYING);
-  const numberResult6 = number.number();
-  obj3.status_display_type = number.number().optional().valid(StatusDisplayTypes.StatusDisplayTypes.NAME, StatusDisplayTypes.StatusDisplayTypes.STATE, StatusDisplayTypes.StatusDisplayTypes.DETAILS);
-  const keys = obj5.keys(obj3);
-  obj2.activity = keys.allow(null);
-  return requiredResult.keys(obj2);
-};
-obj2.handler = function handler(socket) {
-  socket = socket.socket;
-  const args = socket.args;
-  const pid = args.pid;
-  const activity = args.activity;
-  const isSocketConnected = socket.isSocketConnected;
-  let id;
-  let privacy;
-  let assets;
-  const scopes = socket.authorization.scopes;
-  const hasItem = scopes.has(socket(activity[4]).OAuth2Scopes.RPC);
-  let tmp8 = !hasItem;
-  if (!hasItem) {
-    const scopes2 = socket.authorization.scopes;
-    tmp8 = !scopes2.has(tmp4(tmp6[4]).OAuth2Scopes.RPC_ACTIVITIES_WRITE);
-  }
-  if (tmp8) {
-    const scopes3 = socket.authorization.scopes;
-    tmp8 = !scopes3.has(privacy);
-  }
-  let tmp11 = null;
-  if (tmp8) {
-    tmp11 = pid(tmp6[7])(socket);
-  }
-  if (items.includes(socket.transport)) {
-    if (null == pid) {
-      if (assets.IPC === socket.transport) {
-        let obj2 = { errorCode: constants4.INVALID_COMMAND };
-        const tmp107 = new pid(tmp5[8])(obj2, "nonzero pid required");
-        throw tmp107;
-      }
-    }
-    id = socket.application.id;
-    if (null == activity) {
-      const obj3 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: socket.id, pid, applicationId: id, activity };
-      pid(tmp6[9]).dispatch(obj3);
-      return Promise.resolve(activity);
-    } else {
-      let surface;
-      if (tmp11 != null) {
-        surface = tmp11.frame.surface;
-      }
-      const tmp112Result = pid(tmp6[10])(surface);
-      let result = null != tmp112Result;
-      if (result) {
-        result = tmp4(tmp6[11]).isConjureChannelCandidate(id.getChannel(tmp112Result), "setActivity");
-        const tmp4Result = tmp4(tmp6[11]);
-      }
-      let obj4 = {};
-      if (result) {
-        obj4.channel_id = tmp112Result;
-      }
-      if (!activity.name) {
-        activity.name = socket.application.name;
-      }
-      activity.application_id = id;
-      activity.platform = socket.transport === assets.POST_MESSAGE ? constants.EMBEDDED : constants.DESKTOP;
-      const application = isSocketConnected.getApplication(id);
-      let flag = activity.instance;
-      if (flag == null) {
-        flag = false;
-      }
-      const party = activity.party;
-      privacy = undefined;
-      if (party != null) {
-        privacy = party.privacy;
-      }
-      delete tmp[tmp2];
-      if (activity.party != null) {
-        delete tmp3[tmp2];
-      }
-      const tmp4Result3 = tmp4(tmp6[12]);
-      let result1 = null != application;
-      if (result1) {
-        result1 = tmp4(tmp6[13]).canLaunchContextlessFrame(application);
-        const tmp4Result4 = tmp4(tmp6[13]);
-      }
-      if (result1) {
-        result1 = tmp33;
-      }
-      const activityFlags = tmp4Result3.computeActivityFlags(activity, flag, tmp33, result1, privacy);
-      if (activityFlags > 0) {
-        activity.flags = activityFlags;
-      }
-      assets = activity.assets;
-      ({ party: party2, secrets, timestamps, buttons } = activity);
-      if (null == activity.type) {
-        activity.type = constants2.PLAYING;
-      }
-      if (null != secrets) {
-        const values = tmp110(tmp6[14]).values(secrets);
-        const found = values.filter((item) => item);
-        if (null != party2) {
-          items = [party2.id];
-          if (tmp110Result3.intersection(found, items).length > 0) {
-            const obj5 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
-            const tmp94 = new tmp110(tmp6[8])(obj5, "secrets cannot match the party id");
-            throw tmp94;
-          }
-          tmp110Result3 = tmp110(tmp6[14]);
-        }
-        const tmp110Result = tmp110(tmp6[14]);
-        if (tmp110Result4.uniq(found).length < found.length) {
-          const obj6 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
-          const tmp86 = new tmp110(tmp6[8])(obj6, "secrets must be unique");
-          throw tmp86;
-        } else if (null != buttons) {
-          const obj7 = { errorCode: constants4.INVALID_ACTIVITY_SECRET };
-          const tmp78 = new tmp110(tmp6[8])(obj7, "secrets cannot currently be sent with buttons");
-          throw tmp78;
-        }
-        tmp110Result4 = tmp110(tmp6[14]);
-      }
-      if (null != buttons) {
-        obj4.button_urls = buttons.map((url) => url.url);
-        activity.buttons = buttons.map((label) => label.label);
-      }
-      activity.metadata = obj4;
-      if (null != timestamps) {
-        const _Object = Object;
-        const keys = Object.keys(timestamps);
-        const iter = keys[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp57 = nextResult;
-          let _Date = Date;
-          let str6 = Date.now();
-          let str7 = timestamps[nextResult];
-          if (str6.toString().length - str7.toString().length > 2) {
-            let _Math = Math;
-            timestamps[tmp57] = Math.floor(timestamps[tmp57] * pid(activity[15]).Millis.SECOND);
-          }
-          continue;
-        }
-      }
-      if (null == assets) {
-        let resolved = Promise.resolve([]);
+const CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj3 = { scope: null, handler: null };
+let obj4 = {};
+let items1 = [fn(8684).OAuth2Scopes.RPC, fn(8684).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
+obj4[RPC_SCOPE_CONFIG.ANY] = items1;
+obj3.scope = obj4;
+obj3.handler = function handler(isSocketConnected) {
+  ({ socket: require, args } = isSocketConnected);
+  ({ pid: importDefault, activity: dependencyMap } = args);
+  isSocketConnected = isSocketConnected.isSocketConnected;
+  return (async () => {
+    if (constants3 === 2) {
+      constants3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp14 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        if (null != socket.application) {
-          if (null != socket.application.id) {
-            const items1 = [, , ];
-            ({ large_image: arr2[0], small_image: arr2[1], invite_cover_image: arr2[2] } = assets);
-            resolved = socket(activity[16]).fetchAssetIds(socket.application.id, items1);
-            const obj8 = socket(activity[16]);
-          }
-        }
-        const _Error = Error;
-        const error = new Error();
-        throw error;
+        return { value: "IconComponent", done: null };
       }
-      return resolved.then((result) => {
-        [tmp5, tmp6, tmp7] = result;
-        if (null != assets) {
-          if (null != tmp5) {
-            tmp8.large_image = tmp5;
+    } else {
+      try {
+        constants3 = 2;
+        if (0 === constants2) {
+          if (arg0 === 1) {
+            constants3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            constants3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            delete tmp4[tmp3];
+            closure_9 = tmp15;
+            closure_137_0 = undefined;
+            closure_137_1 = undefined;
+            closure_137_2 = undefined;
+            closure_137_3 = undefined;
+            closure_137_4 = undefined;
+            closure_137_5 = undefined;
+            closure_137_6 = undefined;
+            closure_137_7 = undefined;
+            closure_137_8 = undefined;
+            closure_137_9 = undefined;
+            closure_137_10 = undefined;
+            closure_137_11 = undefined;
+            const scopes3 = require.authorization.scopes;
+            const hasItem = scopes3.has(_undefined(PLAYING[8]).OAuth2Scopes.RPC);
+            let tmp40 = !hasItem;
+            if (!hasItem) {
+              const scopes = require.authorization.scopes;
+              tmp40 = !scopes.has(tmp243(PLAYING[8]).OAuth2Scopes.RPC_ACTIVITIES_WRITE);
+            }
+            if (tmp40) {
+              const scopes2 = require.authorization.scopes;
+              tmp40 = !scopes2.has(closure_9);
+            }
+            let tmp43 = null;
+            if (tmp40) {
+              tmp43 = name(PLAYING[9])(require);
+            }
+            if (closure_1_16.includes(require.transport)) {
+              if (null == pid) {
+                if (tmp6.IPC === require.transport) {
+                  const obj4 = { errorCode: constants3.INVALID_COMMAND };
+                  const tmp223 = new name(PLAYING[10])(obj4, "nonzero pid required");
+                  throw tmp223;
+                }
+              }
+              const id = require.application.id;
+              _undefined = id;
+              if (id == null) {
+                _undefined = undefined;
+              }
+              closure_137_0 = _undefined;
+              if (null == dependencyMap) {
+                const obj5 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: require.id, pid, applicationId: tmp63, activity: dependencyMap };
+                name(PLAYING[11]).dispatch(obj5);
+                constants3 = 3;
+                return { value: null, done: true };
+              } else {
+                let surface;
+                if (tmp43 != null) {
+                  surface = tmp43.frame.surface;
+                }
+                const tmp248Result = name(PLAYING[12])(surface);
+                let result = null != tmp248Result;
+                if (result) {
+                  result = tmp243(PLAYING[13]).isConjureChannelCandidate(state.getChannel(tmp248Result), "setActivity");
+                  const tmp243Result = tmp243(PLAYING[13]);
+                }
+                const obj6 = {};
+                if (result) {
+                  obj6.channel_id = tmp248Result;
+                }
+                const buttons = dependencyMap.buttons;
+                const tmp72 = closure_5(dependencyMap, c3);
+                const obj7 = {};
+                const merged = Object.assign(tmp72);
+                name = tmp72.name;
+                if (name == null) {
+                  name = require.application.name;
+                }
+                obj7.name = name;
+                const type = tmp72.type;
+                PLAYING = type;
+                if (type == null) {
+                  PLAYING = constants.PLAYING;
+                }
+                obj7.type = PLAYING;
+                closure_137_1 = obj7;
+                obj7.application_id = tmp63;
+                if (require.transport === tmp6.POST_MESSAGE) {
+                  let DESKTOP = tmp83.EMBEDDED;
+                } else {
+                  DESKTOP = tmp83.DESKTOP;
+                }
+                obj7.platform = DESKTOP;
+                c3 = tmp63;
+                if (tmp63 == null) {
+                  c3 = undefined;
+                }
+                const application = details.getApplication(c3);
+                const instance = obj7.instance;
+                c4 = instance;
+                if (instance == null) {
+                  c4 = false;
+                }
+                const party = obj7.party;
+                let privacy;
+                if (party != null) {
+                  privacy = party.privacy;
+                }
+                closure_137_2 = privacy;
+                delete tmp11[tmp7];
+                if (obj7.party != null) {
+                  delete tmp12[tmp8];
+                }
+                const tmp243Result3 = tmp243(PLAYING[14]);
+                let result1 = null != application;
+                if (result1) {
+                  result1 = tmp243(PLAYING[15]).canLaunchContextlessFrame(application);
+                  const tmp243Result4 = tmp243(PLAYING[15]);
+                }
+                if (result1) {
+                  result1 = tmp82;
+                }
+                const activityFlags = tmp243Result3.computeActivityFlags(obj7, tmp87, tmp82, result1, privacy);
+                if (activityFlags > 0) {
+                  obj7.flags = activityFlags;
+                }
+                const assets = obj7.assets;
+                closure_137_3 = assets;
+                const party2 = obj7.party;
+                closure_137_4 = party2;
+                const secrets = obj7.secrets;
+                closure_137_5 = secrets;
+                const timestamps = obj7.timestamps;
+                if (null != secrets) {
+                  const values = name(PLAYING[16]).values(secrets);
+                  const found = values.filter((item) => {
+                    let tmp = null != item;
+                    if (tmp) {
+                      tmp = "" !== item;
+                    }
+                    return tmp;
+                  });
+                  if (null != party2) {
+                    items = [party2.id];
+                    if (obj8.intersection(found, items).length > 0) {
+                      const obj11 = { errorCode: constants3.INVALID_ACTIVITY_SECRET };
+                      const tmp210 = new name(PLAYING[10])(obj11, "secrets cannot match the party id");
+                      throw tmp210;
+                    }
+                    obj8 = name(PLAYING[16]);
+                  }
+                  const obj26 = name(PLAYING[16]);
+                  if (obj9.uniq(found).length < found.length) {
+                    const obj12 = { errorCode: constants3.INVALID_ACTIVITY_SECRET };
+                    const tmp202 = new name(PLAYING[10])(obj12, "secrets must be unique");
+                    throw tmp202;
+                  } else if (null != buttons) {
+                    const obj14 = { errorCode: constants3.INVALID_ACTIVITY_SECRET };
+                    const tmp194 = new name(PLAYING[10])(obj14, "secrets cannot currently be sent with buttons");
+                    throw tmp194;
+                  }
+                  obj9 = name(PLAYING[16]);
+                }
+                if (null != buttons) {
+                  obj6.button_urls = buttons.map((url) => url.url);
+                  obj7.buttons = buttons.map((label) => label.label);
+                }
+                obj7.metadata = obj6;
+                if (null != timestamps) {
+                  const items1 = ["start", "end"];
+                  closure_5 = items1[Symbol.iterator]();
+                  const nextResult = closure_5.next();
+                  while (closure_5 !== undefined) {
+                    constants = 1;
+                    let str22 = timestamps[nextResult];
+                    let tmp106 = null != str22;
+                    if (tmp106) {
+                      let _Date = Date;
+                      let str = Date.now();
+                      tmp106 = str.toString().length - str22.toString().length > 2;
+                    }
+                    if (tmp106) {
+                      let _Math = Math;
+                      timestamps[nextResult] = Math.floor(str22 * name(PLAYING[17]).Millis.SECOND);
+                    }
+                    constants = 0;
+                    continue;
+                  }
+                }
+                if (null != assets) {
+                  if (null == tmp63) {
+                    const obj16 = { errorCode: constants3.INVALID_COMMAND };
+                    const tmp186 = new name(PLAYING[10])(obj16, "No application.");
+                    throw tmp186;
+                  } else {
+                    const items2 = [, , ];
+                    ({ large_image: arr3[0], small_image: arr3[1], invite_cover_image: arr3[2] } = assets);
+                    constants2 = 2;
+                    constants3 = 1;
+                    const obj17 = { value: _undefined(PLAYING[18]).fetchAssetIds(tmp63, items2), done: false };
+                    return obj17;
+                  }
+                }
+                const tmp248 = name(PLAYING[12]);
+              }
+            } else {
+              const obj18 = { errorCode: constants3.INVALID_COMMAND };
+              const _HermesInternal = HermesInternal;
+              const tmp512 = new name(PLAYING[10])(obj18, "command not available from \"" + require.transport + "\" transport");
+              throw tmp512;
+            }
           }
-          if (null != tmp6) {
-            tmp8.small_image = tmp6;
+        } else if (1 === tmp15) {
+          constants = 0;
+          closure_5.return();
+          throw closure_11;
+        } else if (arg0 === 1) {
+          constants3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          constants3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_137_6 = value;
+          closure_137_7 = c4(closure_137_6, 3);
+          closure_137_8 = closure_137_7[0];
+          closure_137_9 = closure_137_7[1];
+          closure_137_10 = closure_137_7[2];
+          if (null != closure_137_8) {
+            closure_137_3.large_image = closure_137_8;
           } else {
-            delete tmp4[tmp2];
+            delete tmp10[tmp3];
           }
-          if (null != tmp7) {
-            tmp8.invite_cover_image = tmp7;
+          if (null != closure_137_9) {
+            closure_137_3.small_image = closure_137_9;
           } else {
-            delete tmp4[tmp];
+            delete tmp10[tmp4];
+          }
+          if (null != closure_137_10) {
+            closure_137_3.invite_cover_image = closure_137_10;
+          } else {
+            delete tmp10[tmp5];
           }
         }
-        if (isSocketConnected()) {
-          const obj2 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: socket.id, pid, applicationId: id, activity, partyPrivacy: privacy };
-          DispatcherDefault.dispatch(obj2);
-          ({ secrets, party } = activity);
-          const obj4 = { application_id: socket.application.id, type: null, name: null, status_display_type: null, details: null, state: null, has_urls: null };
-          ({ type: obj3.type, name: obj3.name, status_display_type: obj3.status_display_type, details } = activity);
+        if (closure_138_3()) {
+          const obj19 = { type: "LOCAL_ACTIVITY_UPDATE", socketId: closure_138_0.id, pid: closure_138_1, applicationId: closure_137_0, activity: closure_137_1, partyPrivacy: closure_137_2 };
+          name(PLAYING[11]).dispatch(obj19);
+          const obj20 = { application_id: closure_138_0.application.id, type: closure_137_1.type, name: closure_137_1.name, status_display_type: closure_137_1.status_display_type, details: null, state: null, has_urls: null };
+          details = closure_137_1.details;
           if (details == null) {
             details = "";
           }
-          obj4.details = details;
-          let str4 = activity.state;
-          if (str4 == null) {
-            str4 = "";
+          obj20.details = details;
+          state = closure_137_1.state;
+          if (state == null) {
+            state = "";
           }
-          obj4.state = str4;
-          let tmp17 = null != activity.state_url || null != activity.details_url;
-          if (!tmp17) {
-            assets = activity.assets;
+          obj20.state = state;
+          let tmp132 = null != closure_137_1.state_url;
+          if (!tmp132) {
+            tmp132 = null != closure_137_1.details_url;
+          }
+          if (!tmp132) {
+            const assets2 = closure_137_1.assets;
             let large_url;
-            if (assets != null) {
-              large_url = assets.large_url;
-            }
-            tmp17 = null != large_url;
-          }
-          if (!tmp17) {
-            const assets2 = activity.assets;
-            let small_url;
             if (assets2 != null) {
-              small_url = assets2.small_url;
+              large_url = assets2.large_url;
             }
-            tmp17 = null != small_url;
+            tmp132 = null != large_url;
           }
-          obj4.has_urls = tmp17;
-          if (null != secrets) {
-            obj4.has_match_secret = secrets.match;
-            obj4.has_join_secret = secrets.join;
+          if (!tmp132) {
+            const assets3 = closure_137_1.assets;
+            let small_url;
+            if (assets3 != null) {
+              small_url = assets3.small_url;
+            }
+            tmp132 = null != small_url;
           }
-          if (null != tmp8) {
-            obj4.has_images = tmp8.large_image || tmp8.small_image || tmp8.invite_cover_image;
-            const tmp20 = tmp8.large_image || tmp8.small_image || tmp8.invite_cover_image;
+          obj20.has_urls = tmp132;
+          closure_137_11 = obj20;
+          if (null != closure_137_5) {
+            closure_137_11.has_match_secret = null != closure_137_5.match;
+            closure_137_11.has_join_secret = null != closure_137_5.join;
           }
-          if (null != party) {
-            let tmp21;
-            if (null != party.size) {
-              if (party.size[1] > 0) {
-                tmp21 = party.size[1];
+          if (null != closure_137_3) {
+            let tmp153 = null != closure_137_3.large_image;
+            if (!tmp153) {
+              tmp153 = null != closure_137_3.small_image;
+            }
+            if (!tmp153) {
+              tmp153 = null != closure_137_3.invite_cover_image;
+            }
+            closure_137_11.has_images = tmp153;
+          }
+          if (null != closure_137_4) {
+            let tmp163;
+            if (null != closure_137_4.size) {
+              if (closure_137_4.size[1] > 0) {
+                tmp163 = closure_137_4.size[1];
               }
             }
-            obj4.party_max = tmp21;
-            obj4.party_id = party.id;
+            closure_137_11.party_max = tmp163;
+            closure_137_11.party_id = closure_137_4.id;
           }
-          AnalyticsUtilsDefault.track(constants3.ACTIVITY_UPDATED, obj4);
-          return activity;
+          const obj10 = name(PLAYING[11]);
+          name(PLAYING[19]).track(constants2.ACTIVITY_UPDATED, closure_137_11);
+          constants3 = 3;
+          const obj22 = { value: closure_137_1, done: true };
+          return obj22;
+        } else {
+          constants3 = 3;
+          return { value: null, done: true };
         }
-      });
+      } catch (tmp225) {
+        closure_11 = tmp225;
+        if (tmp9 === constants) {
+          constants3 = tmp2;
+          throw tmp225;
+        } else {
+          constants2 = tmp;
+        }
+      }
     }
-  } else {
-    let obj = { errorCode: constants4.INVALID_COMMAND };
-    const _HermesInternal = HermesInternal;
-    const tmp182 = new pid(tmp6[8])(obj, "command not available from \"" + socket.transport + "\" transport");
-    throw tmp182;
-  }
+  })();
 };
-obj[Constants.RPCCommands.SET_ACTIVITY] = obj2;
+obj[RPCCommands.SET_ACTIVITY] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SET_ACTIVITY, obj3);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
 

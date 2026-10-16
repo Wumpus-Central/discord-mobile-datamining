@@ -1,19 +1,19 @@
-// === Module 10707: UnreadSettingNotice ===
+// === Module 10722: UnreadSettingNotice ===
 
-// Module 10707 (UnreadSettingNotice)
+// Module 10722 (UnreadSettingNotice)
 import nativeDefault from "native" /* 587 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10708 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 10709 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10723 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 10724 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(1095).ChannelNotificationSettingsFlags;
+let closure_4 = fn(1097).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = { display: "flex", flexDirection: "row", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSe
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-md/semibold", children: null };
-    const intl = tmp(1126).intl;
-    obj3.children = intl.string(tmp(1126).t.i4xQ5o);
-    const tmp11 = closure_5(tmp(5147).Text, obj3);
+    const intl = tmp(1128).intl;
+    obj3.children = intl.string(tmp(1128).t.i4xQ5o);
+    const tmp11 = closure_5(tmp(5149).Text, obj3);
     cResult[2] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -71,9 +71,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSe
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const obj5 = { variant: "text-xs/medium", color: "text-link", children: null };
-    const intl2 = tmp(1126).intl;
-    obj5.children = intl2.string(tmp(1126).t.KyUKhT);
-    const tmp19 = closure_5(tmp(5147).Text, obj5);
+    const intl2 = tmp(1128).intl;
+    obj5.children = intl2.string(tmp(1128).t.KyUKhT);
+    const tmp19 = closure_5(tmp(5149).Text, obj5);
     cResult[7] = tmp19;
     let tmp17 = tmp19;
   } else {

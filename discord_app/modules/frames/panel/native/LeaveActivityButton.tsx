@@ -1,12 +1,12 @@
-// === Module 18070: panel/LeaveActivityButton ===
+// === Module 18105: panel/LeaveActivityButton ===
 
-// Module 18070 (panel/LeaveActivityButton)
-import leaveFrame from "leaveFrame" /* 10948 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 18060 */;
+// Module 18105 (panel/LeaveActivityButton)
+import leaveFrame from "leaveFrame" /* 10963 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 18095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityPanelModes = fn(6289).ActivityPanelModes;
+const ActivityPanelModes = fn(6291).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

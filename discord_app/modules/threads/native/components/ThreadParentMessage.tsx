@@ -1,17 +1,17 @@
-// === Module 17642: ThreadParentMessage ===
+// === Module 17676: ThreadParentMessage ===
 
-// Module 17642 (ThreadParentMessage)
+// Module 17676 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
-import router_utils from "router_utils" /* 1112 */;
-import Pressables from "Pressables" /* 6405 */;
-import RowGeneratorDefault from "RowGenerator" /* 7963 */;
-import ChatItemDefault from "ChatItem" /* 9594 */;
+import router_utils from "router_utils" /* 1114 */;
+import Pressables from "Pressables" /* 6407 */;
+import RowGeneratorDefault from "RowGenerator" /* 7966 */;
+import ChatItemDefault from "ChatItem" /* 9610 */;
 import noop from "module_19" /* 19 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7529 */;
-import MessageStore from "MessageStore" /* 5492 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7531 */;
+import MessageStore from "MessageStore" /* 5494 */;
 
 require = fn;
-const ReferencedMessageState = fn(7529).ReferencedMessageState;
+const ReferencedMessageState = fn(7531).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
@@ -160,7 +160,7 @@ export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerE
       }
       if (cResult[5] !== stateFromStores) {
         const obj3 = { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" };
-        tmp2 = jsx(channelId(9594), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
+        tmp2 = jsx(channelId(9610), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
         cResult[5] = stateFromStores;
         cResult[6] = tmp2;
       }

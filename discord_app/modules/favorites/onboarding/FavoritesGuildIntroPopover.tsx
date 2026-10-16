@@ -1,21 +1,21 @@
-// === Module 10560: FavoritesGuildIntroPopover ===
+// === Module 10575: FavoritesGuildIntroPopover ===
 
-// Module 10560 (FavoritesGuildIntroPopover)
+// Module 10575 (FavoritesGuildIntroPopover)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import dismissible_content from "dismissible_content" /* 2049 */;
-import FavoritesHooks from "FavoritesHooks" /* 10546 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10561 */;
+import dismissible_content from "dismissible_content" /* 2052 */;
+import FavoritesHooks from "FavoritesHooks" /* 10561 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 2057 */;
-import FavoriteStore from "FavoriteStore" /* 2068 */;
+import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 2060 */;
+import FavoriteStore from "FavoriteStore" /* 2071 */;
 
 require = fn;
-let DismissibleContentShownStateStore = fn(2057);
+let DismissibleContentShownStateStore = fn(2060);
 ({ isContentShown: hasOwnProperty, useIsContentShown: metroRequire } = DismissibleContentShownStateStore);
 let DismissibleContentShownStateStore = DismissibleContentShownStateStore_mod;
-const NOOP = fn(1085).NOOP;
+const NOOP = fn(1087).NOOP;
 const module_570 = fn(570);
 const state = module_570.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
@@ -99,12 +99,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[5] === isFreemium) {
         if (cResult[6] === stateFromStores) {
           if (cResult[7] === tmp11) {
-            const tmpResult3 = tmp(7321);
-            [tmp14, tmp15] = tmp(7321).useSelectedDismissibleContent(cResult[8]);
+            const tmpResult3 = tmp(7323);
+            [tmp14, tmp15] = tmp(7323).useSelectedDismissibleContent(cResult[8]);
             const require = tmp15;
             if (cResult[9] !== tmp14) {
-              if (tmp14 === tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-                const items1 = [tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+              if (tmp14 === tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+                const items1 = [tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
                 let items2 = items1;
               } else {
                 items2 = [];
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               } else {
                 tmp17 = cResult[11];
               }
-              const tmp18 = _slicedToArray(tmp(7321).useSelectedDismissibleContent(cResult[10], tmp17), 1)[0] === tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+              const tmp18 = _slicedToArray(tmp(7323).useSelectedDismissibleContent(cResult[10], tmp17), 1)[0] === tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
               importDefault = tmp18;
               if (cResult[12] !== tmp18) {
                 class T {
@@ -196,9 +196,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               cResult[17] = G;
               cResult[18] = items5;
               tmp23 = items5;
-              const tmpResult4 = tmp(7321);
+              const tmpResult4 = tmp(7323);
             }
-            const tmp13 = _slicedToArray(tmp(7321).useSelectedDismissibleContent(cResult[8]), 2);
+            const tmp13 = _slicedToArray(tmp(7323).useSelectedDismissibleContent(cResult[8]), 2);
           }
         }
       }
@@ -226,17 +226,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (!stateFromStores) {
         if (tmp5) {
           if (tmp6) {
-            let items1 = [tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
+            let items1 = [tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
           const tmp10 = _slicedToArray(tmp8(items1), 2);
           _require = tmp11;
-          if (tmp10[0] === tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-            const items2 = [tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (tmp10[0] === tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+            const items2 = [tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
             let items3 = items2;
           } else {
             items3 = [];
           }
-          const tmp12 = _slicedToArray(tmp(7321).useSelectedDismissibleContent(items3, { bypassAutoDismiss: true }), 1)[0] === tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = _slicedToArray(tmp(7323).useSelectedDismissibleContent(items3, { bypassAutoDismiss: true }), 1)[0] === tmp(2052).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = noop.useEffect(() => {

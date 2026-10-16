@@ -1,20 +1,20 @@
-// === Module 11346: useScreenshareUtils ===
+// === Module 11366: useScreenshareUtils ===
 
-// Module 11346 (useScreenshareUtils)
-import util from "util" /* 1126 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import inject from "inject" /* 2014 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5303 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
-import StreamActionCreators from "StreamActionCreators" /* 7660 */;
-import CallsUtils from "CallsUtils" /* 9003 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9921 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 11341 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11352 */;
+// Module 11366 (useScreenshareUtils)
+import util from "util" /* 1128 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
+import inject from "inject" /* 2016 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5305 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
+import StreamActionCreators from "StreamActionCreators" /* 7663 */;
+import CallsUtils from "CallsUtils" /* 9011 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9937 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 11361 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11372 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
 const useHasVideoPermissionDefault = useHasVideoPermission;
@@ -48,9 +48,9 @@ function startStream() {
   }
   obj = inject;
 }
-const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
-const Features = fn(5176).Features;
-const DeviceUtils = fn(5127);
+const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
+const Features = fn(5178).Features;
+const DeviceUtils = fn(5130);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 const BroadcastUploadManager = fn(17).NativeModules.BroadcastUploadManager;
 const ReactCompilerGating = fn(558);
@@ -125,7 +125,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScreenshareUtils(arg0) {
   const cResult = require("c").c(24);
-  const tmp5 = analyticsLocations(11341)(arg0);
+  const tmp5 = analyticsLocations(11361)(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[0] = closure_8 >= 12;
     let first = tmp8;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp13 = cResult[3];
   }
   const tmpResult = require("initialize");
-  const showMobileGoLiveUpsell = analyticsLocations(11352).useConfig(tmp13).showMobileGoLiveUpsell;
+  const showMobileGoLiveUpsell = analyticsLocations(11372).useConfig(tmp13).showMobileGoLiveUpsell;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationStreamingStore];
     class E {
@@ -171,9 +171,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp14 = cResult[4];
     tmp15 = cResult[5];
   }
-  const tmp4Result = analyticsLocations(11352);
+  const tmp4Result = analyticsLocations(11372);
   const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-  analyticsLocations = tmp4(7073)().analyticsLocations;
+  analyticsLocations = tmp4(7075)().analyticsLocations;
   let tmp18 = null != stateFromStores1;
   if (tmp18) {
     tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;
@@ -225,13 +225,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
                     tmp29 = obj3;
                   }
                 }
-                tmp(1628);
+                tmp(1630);
                 class E {
                   constructor() {
                     return closure_1_4.getCurrentUserActiveStream();
                   }
                 }
-                tmp4(tmp18 ? 11357 : 11358);
+                tmp4(tmp18 ? 11377 : 11378);
               }
             }
           }
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     cResult[7] = showMobileGoLiveUpsell;
     cResult[8] = stringResult;
   }
-  const intl = tmp(1126).intl;
+  const intl = tmp(1128).intl;
   stringResult = intl.string(require("util").t.fjBNo1);
   const tmpResult3 = require("initialize");
 }) : (function useScreenshareUtils(arg0) {

@@ -1,21 +1,21 @@
-// === Module 9969: GIFPickerItemActionSheet ===
+// === Module 9985: GIFPickerItemActionSheet ===
 
-// Module 9969 (GIFPickerItemActionSheet)
+// Module 9985 (GIFPickerItemActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4864 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import ClipboardUtils from "ClipboardUtils" /* 7105 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9954 */;
-import GifIcon from "GifIcon" /* 9970 */;
+import util from "util" /* 1128 */;
+import ToastUtils from "ToastUtils" /* 4867 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import ClipboardUtils from "ClipboardUtils" /* 7107 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9970 */;
+import GifIcon from "GifIcon" /* 9986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 }, gifContainer: { flexDirection: "column", alignItems: "center" }, gifImage: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.gifImage = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -30,18 +30,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicke
   item = item.item;
   const tmp4 = closure_7();
   if (cResult[0] !== item.url) {
-    const gifUrlKeyResult = tmp(9954).gifUrlKey(item.url);
+    const gifUrlKeyResult = tmp(9970).gifUrlKey(item.url);
     cResult[0] = item.url;
     cResult[1] = gifUrlKeyResult;
     let tmp5 = gifUrlKeyResult;
-    const tmpResult = tmp(9954);
+    const tmpResult = tmp(9970);
   } else {
     tmp5 = cResult[1];
   }
   let obj = item(576);
-  const isFavoriteGIF = item(9958).useIsFavoriteGIF(tmp5);
-  const tmpResult2 = item(9958);
-  ({ width, height } = isFavoriteGIF(1497)());
+  const isFavoriteGIF = item(9974).useIsFavoriteGIF(tmp5);
+  const tmpResult2 = item(9974);
+  ({ width, height } = isFavoriteGIF(1499)());
   const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, 0.5 * height / item.height);
   const result = item.width * bound;
   const result1 = item.height * bound;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicke
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function w() {
-        isFavoriteGIF(5115).hideActionSheet();
+        isFavoriteGIF(5118).hideActionSheet();
       };
       cResult[5] = fn;
       let tmp13 = fn;
@@ -479,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicke
             let obj3 = { children: null };
             const items1 = [tmp26, tmp30];
             obj3.children = items1;
-            const tmp32 = closure_6(tmp(6174).ButtonGroup, obj3);
+            const tmp32 = closure_6(tmp(6176).ButtonGroup, obj3);
             cResult[27] = tmp26;
             cResult[28] = tmp30;
             cResult[29] = tmp32;
@@ -754,7 +754,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicke
   cResult[3] = result1;
   cResult[4] = size;
   tmp12 = size;
-  const tmp8 = isFavoriteGIF(1497)();
+  const tmp8 = isFavoriteGIF(1499)();
 }) : (function GIFPickerItemActionSheet(item) {
   item = item.item;
   let width;

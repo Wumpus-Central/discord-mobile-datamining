@@ -1,12 +1,12 @@
-// === Module 7026: UserGuildSettingsManager ===
+// === Module 7028: UserGuildSettingsManager ===
 
-// Module 7026 (UserGuildSettingsManager)
-import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
+// Module 7028 (UserGuildSettingsManager)
+import DurationsDefault from "Durations" /* 1104 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7027 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7029 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -265,7 +265,7 @@ function handleUserGuildSettingsFullUpdate() {
   const obj = {};
   const merged = Object.assign(CategoryCollapseStore.getCollapsedCategories());
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: hasOwnProperty, FAVORITES: metroRequire, ME: closure_7 } = Constants);
 let actions = {};
 let closure_9 = 0;

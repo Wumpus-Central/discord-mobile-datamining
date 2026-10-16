@@ -1,25 +1,25 @@
-// === Module 17907: SearchNavigatorScreen ===
+// === Module 17941: SearchNavigatorScreen ===
 
-// Module 17907 (SearchNavigatorScreen)
+// Module 17941 (SearchNavigatorScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5037 */;
-import Pressables from "Pressables" /* 6405 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6425 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10449 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 17398 */;
-import useSearchSuggestionsGesture from "useSearchSuggestionsGesture" /* 17646 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 17648 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 17657 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 17908 */;
+import util from "util" /* 1128 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5040 */;
+import Pressables from "Pressables" /* 6407 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6427 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10465 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 17432 */;
+import useSearchSuggestionsGesture from "useSearchSuggestionsGesture" /* 17680 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 17682 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 17691 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 17942 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
@@ -178,10 +178,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchNa
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(17646).useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(17680).useSearchSuggestionsGesture(searchContext);
   ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  let obj = navigation(17646);
+  let obj = navigation(17680);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -204,8 +204,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchNa
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj5.children = items3;
   obj4.children = closure_6(View, obj5);
-  obj3.children = closure_5(navigation(17398).NonCollapsableGestureDetector, obj4);
-  items1[1] = closure_5(navigation(17646).SearchSuggestionsProvider, obj3);
+  obj3.children = closure_5(navigation(17432).NonCollapsableGestureDetector, obj4);
+  items1[1] = closure_5(navigation(17680).SearchSuggestionsProvider, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 });

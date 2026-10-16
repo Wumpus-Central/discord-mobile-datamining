@@ -1,18 +1,18 @@
-// === Module 17386: GuildsBarItemUnavailableGuilds ===
+// === Module 17420: GuildsBarItemUnavailableGuilds ===
 
-// Module 17386 (GuildsBarItemUnavailableGuilds)
+// Module 17420 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5359 */;
-import _modDef17377 from "module_17377" /* 17377 */;
+import util from "util" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
+import _modDef17411 from "module_17411" /* 17411 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6181 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6183 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;
@@ -43,9 +43,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return null;
   } else {
     if (cResult[2] !== stateFromStores) {
-      let intl = tmp(1126).intl;
+      let intl = tmp(1128).intl;
       let obj2 = { count: stateFromStores };
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t["MEpX+2"], obj2);
+      const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t["MEpX+2"], obj2);
       cResult[2] = stateFromStores;
       cResult[3] = formatToPlainStringResult;
       let tmp8 = formatToPlainStringResult;
@@ -97,8 +97,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return;
         }
       }
-      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17377 };
-      const tmp14 = jsx(FastImageDefault, { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17377 });
+      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17411 };
+      const tmp14 = jsx(FastImageDefault, { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17411 });
       cResult[6] = unavailableGuilds.unavailableGuildsIcon;
       cResult[7] = tmp14;
     } else {
@@ -148,9 +148,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let tmp5 = null;
   if (stateFromStores > 0) {
     let obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    let intl = tmp2(1126).intl;
+    let intl = tmp2(1128).intl;
     const obj3 = { count: stateFromStores };
-    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1126).t["MEpX+2"], obj3);
+    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1128).t["MEpX+2"], obj3);
     obj2.onPress = function onPress() {
       const obj2 = { title: null, body: null };
       const intl = util.intl;
@@ -160,8 +160,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17377 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17377 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17411 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17411 });
     tmp5 = <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</Pressable>;
   }
   return tmp5;

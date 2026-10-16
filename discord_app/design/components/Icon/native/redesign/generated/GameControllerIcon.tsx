@@ -1,10 +1,10 @@
-// === Module 9433: GameControllerIcon ===
+// === Module 9449: GameControllerIcon ===
 
-// Module 9433 (GameControllerIcon)
+// Module 9449 (GameControllerIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4873 */;
-import _mod8491 from "module_8491" /* 8491 */;
+import BaseIconImage from "BaseIconImage" /* 4876 */;
+import _mod8499 from "module_8499" /* 8499 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const GameControllerIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8491;
+    const tmpResult = _mod8499;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const GameControllerIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8491, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8499, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

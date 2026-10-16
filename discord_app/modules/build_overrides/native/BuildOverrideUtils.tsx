@@ -1,11 +1,11 @@
-// === Module 12408: build_overrides/BuildOverrideUtils ===
+// === Module 12431: build_overrides/BuildOverrideUtils ===
 
-// Module 12408 (build_overrides/BuildOverrideUtils)
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1379 */;
-import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 12409 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12410 */;
+// Module 12431 (build_overrides/BuildOverrideUtils)
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1381 */;
+import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 12432 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12433 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10717 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10732 */;
 
 require = fn;
 function setBuildOverrideForBranch(id) {
@@ -315,7 +315,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
     }
   }
 };
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 let str = "discord_ios";
 if (PlatformUtils.isAndroid()) {
   str = "discord_android";

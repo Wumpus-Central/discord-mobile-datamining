@@ -1,23 +1,24 @@
-// === Module 5497: CheckpointConstants ===
+// === Module 5499: CheckpointConstants ===
 
-// Module 5497 (CheckpointConstants)
-import _modDef3120 from "module_3120" /* 3120 */;
+// Module 5499 (CheckpointConstants)
+import _modDef3123 from "module_3123" /* 3123 */;
 
-const obj = { [fn(5498).CheckpointTraitRarity.DEFAULT]: "#FFE047", [fn(5498).CheckpointTraitRarity.COMMON]: "#35ED7E", [fn(5498).CheckpointTraitRarity.RARE]: "#EF3054", [fn(5498).CheckpointTraitRarity.EPIC]: "#7D53DE", [fn(5498).CheckpointTraitRarity.ULTRA]: "#FC7A1E" };
-obj[fn(5498).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+const obj = { [fn(5500).CheckpointTraitRarity.DEFAULT]: "#FFE047", [fn(5500).CheckpointTraitRarity.COMMON]: "#35ED7E", [fn(5500).CheckpointTraitRarity.RARE]: "#EF3054", [fn(5500).CheckpointTraitRarity.EPIC]: "#7D53DE", [fn(5500).CheckpointTraitRarity.ULTRA]: "#FC7A1E" };
+obj[fn(5500).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
 const obj2 = {};
-obj2[fn(5498).CheckpointTraitRarity.DEFAULT] = _modDef3120.bP4GV1;
-obj2[fn(5498).CheckpointTraitRarity.COMMON] = _modDef3120.QwkKWr;
-obj2[fn(5498).CheckpointTraitRarity.RARE] = _modDef3120.KLmNgL;
-obj2[fn(5498).CheckpointTraitRarity.EPIC] = _modDef3120.hAmdLZ;
-obj2[fn(5498).CheckpointTraitRarity.ULTRA] = _modDef3120.Tv4xyf;
-obj2[fn(5498).CheckpointTraitRarity.NITRO] = _modDef3120["0ModIv"];
-const items = [fn(5498).CheckpointTraitRarity.ULTRA, fn(5498).CheckpointTraitRarity.EPIC, fn(5498).CheckpointTraitRarity.RARE, fn(5498).CheckpointTraitRarity.COMMON, fn(5498).CheckpointTraitRarity.DEFAULT, fn(5498).CheckpointTraitRarity.NITRO];
+obj2[fn(5500).CheckpointTraitRarity.DEFAULT] = _modDef3123.bP4GV1;
+obj2[fn(5500).CheckpointTraitRarity.COMMON] = _modDef3123.QwkKWr;
+obj2[fn(5500).CheckpointTraitRarity.RARE] = _modDef3123.KLmNgL;
+obj2[fn(5500).CheckpointTraitRarity.EPIC] = _modDef3123.hAmdLZ;
+obj2[fn(5500).CheckpointTraitRarity.ULTRA] = _modDef3123.Tv4xyf;
+obj2[fn(5500).CheckpointTraitRarity.NITRO] = _modDef3123["0ModIv"];
+const items = [fn(5500).CheckpointTraitRarity.ULTRA, fn(5500).CheckpointTraitRarity.EPIC, fn(5500).CheckpointTraitRarity.RARE, fn(5500).CheckpointTraitRarity.COMMON, fn(5500).CheckpointTraitRarity.DEFAULT, fn(5500).CheckpointTraitRarity.NITRO];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
 
 export const CheckpointVersions = { V2025: 0, [0]: "V2025", V2026: 1, [1]: "V2026" };
 export const CHECKPOINT_PRIMARY = "#34E2F1";
+export const CHECKPOINT_WHITE = "#DFDFDF";
 export const CHECKPOINT_YELLOW = "#FFE047";
 export const CHECKPOINT_GREEN = "#35ED7E";
 export const CHECKPOINT_PINK = "#EF3054";

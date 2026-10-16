@@ -1,15 +1,16 @@
-// === Module 12685: useCheckpointPreloader ===
+// === Module 12710: useCheckpointPreloader ===
 
-// Module 12685 (useCheckpointPreloader)
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import _modDef4969 from "module_4969" /* 4969 */;
-import _modDef4971 from "module_4971" /* 4971 */;
-import _modDef12640 from "module_12640" /* 12640 */;
-import _modDef12642 from "module_12642" /* 12642 */;
-import _modDef12649 from "module_12649" /* 12649 */;
-import _modDef12658 from "module_12658" /* 12658 */;
-import _modDef12662 from "module_12662" /* 12662 */;
-import _modDef12671 from "module_12671" /* 12671 */;
+// Module 12710 (useCheckpointPreloader)
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import _modDef4972 from "module_4972" /* 4972 */;
+import _modDef4974 from "module_4974" /* 4974 */;
+import _modDef12663 from "module_12663" /* 12663 */;
+import _modDef12665 from "module_12665" /* 12665 */;
+import _modDef12672 from "module_12672" /* 12672 */;
+import _modDef12681 from "module_12681" /* 12681 */;
+import _modDef12685 from "module_12685" /* 12685 */;
+import _modDef12692 from "module_12692" /* 12692 */;
+import _modDef12696 from "module_12696" /* 12696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,8 +18,8 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(12631).CheckpointFetchStates;
-let items = [_modDef4969, _modDef4971, _modDef12649, _modDef12671, _modDef12662, _modDef12658, _modDef12642, _modDef12640];
+const CheckpointFetchStates = fn(12654).CheckpointFetchStates;
+let items = [_modDef4972, _modDef4974, _modDef12672, _modDef12696, _modDef12685, _modDef12681, _modDef12692, _modDef12665, _modDef12663];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPreloader.tsx");

@@ -1,6 +1,6 @@
-// === Module 11051: ConnectionsRoleActionCreators ===
+// === Module 11066: ConnectionsRoleActionCreators ===
 
-// Module 11051 (ConnectionsRoleActionCreators)
+// Module 11066 (ConnectionsRoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -104,7 +104,7 @@ let closure_6 = async function _fetchUserApplicationRoleConnections() {
   await HTTP.get({ url: constants.APPLICATION_USER_ROLE_CONNECTIONS, rejectWithError: false });
   return value.body;
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/ConnectionsRoleActionCreators.tsx");
 

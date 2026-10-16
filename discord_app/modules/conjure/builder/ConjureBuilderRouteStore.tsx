@@ -1,9 +1,9 @@
-// === Module 7141: ConjureBuilderRouteStore ===
+// === Module 7143: ConjureBuilderRouteStore ===
 
-// Module 7141 (ConjureBuilderRouteStore)
+// Module 7143 (ConjureBuilderRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelConstants from "ChannelConstants" /* 2072 */;
+import ChannelConstants from "ChannelConstants" /* 2075 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -35,8 +35,8 @@ prototype["getRoutedProjectId"] = function getRoutedProjectId(guildId) {
   }
   return projectId;
 };
-prototype["getLastProjectId"] = function getLastProjectId(guildId) {
-  let tmp = closure_3.lastProjectIdByGuildId[guildId];
+prototype["getLastProjectId"] = function getLastProjectId(id) {
+  let tmp = closure_3.lastProjectIdByGuildId[id];
   if (tmp == null) {
     tmp = null;
   }

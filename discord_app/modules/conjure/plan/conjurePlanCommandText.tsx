@@ -1,8 +1,8 @@
-// === Module 12155: conjurePlanCommandText ===
+// === Module 12179: conjurePlanCommandText ===
 
-// Module 12155 (conjurePlanCommandText)
+// Module 12179 (conjurePlanCommandText)
 import c from "c" /* 576 */;
-import escapeRegExpDefault from "escapeRegExp" /* 5015 */;
+import escapeRegExpDefault from "escapeRegExp" /* 5018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePl
     return found.map((name) => name.name);
   }, items);
 });
-function conjurePlanSlashCommandNames(dependencyMap) {
-  const found = dependencyMap.filter((item) => "/" === closure_1_0(closure_1_2[1]).conjurePlanCommandPrefix(item));
+function conjurePlanSlashCommandNames(arr) {
+  const found = arr.filter((item) => "/" === closure_1_0(closure_1_2[1]).conjurePlanCommandPrefix(item));
   return found.map((name) => name.name);
 }
 function conjurePlanCommandPattern(size) {
@@ -52,6 +52,17 @@ const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanComma
 export { conjurePlanSlashCommandNames };
 export const useConjurePlanSlashCommandNames = tmp2;
 export { conjurePlanCommandPattern };
+export const conjurePlanTextMentionsCommand = function conjurePlanTextMentionsCommand(item, arr) {
+  if (0 === arr.length) {
+    return false;
+  } else {
+    const mapped = arr.map(escapeRegExpDefault);
+    const _RegExp = RegExp;
+    const _HermesInternal = HermesInternal;
+    const regExp = new RegExp("(?<![\\p{L}\\p{N}/.:])/(?:" + mapped.join("|") + ")(?![\\p{L}\\p{N}_-])", "iu");
+    return regExp.test(item);
+  }
+};
 export const useConjurePlanCommandPattern = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePlanCommandPattern(arg0) {
   const cResult = c.c(2);
   if (cResult[0] !== arg0) {

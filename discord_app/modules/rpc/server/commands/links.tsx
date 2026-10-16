@@ -1,23 +1,23 @@
-// === Module 15399: links ===
+// === Module 15435: links ===
 
-// Module 15399 (links)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4795 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5145 */;
-import openUserSettings from "openUserSettings" /* 7315 */;
-import RPCErrorDefault from "RPCError" /* 11234 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11237 */;
-import RPCHelpers from "RPCHelpers" /* 11243 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15370 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15400 */;
-import internalDeepLinks from "internalDeepLinks" /* 15401 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15402 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15404 */;
+// Module 15435 (links)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4798 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5148 */;
+import openUserSettings from "openUserSettings" /* 7317 */;
+import RPCErrorDefault from "RPCError" /* 11250 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11253 */;
+import RPCHelpers from "RPCHelpers" /* 11259 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15405 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15436 */;
+import internalDeepLinks from "internalDeepLinks" /* 15437 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15438 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15440 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 require = fn;
 let closure_11 = async function _openExternalLink(arg0) {
@@ -154,15 +154,15 @@ let closure_11 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4856)(url);
+                  closure_1(4859)(url);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1265).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url, opened: true });
+                  closure_1(1267).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url, opened: true });
                   closure_0({ opened: true });
-                  const obj = closure_1(1265);
+                  const obj = closure_1(1267);
                 },
                 onCancel() {
                   application = closure_2_0.application;
@@ -170,7 +170,7 @@ let closure_11 = async function _openExternalLink(arg0) {
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1265).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url, opened: false });
+                  closure_1(1267).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url, opened: false });
                   closure_0({ opened: false });
                 }
               };
@@ -192,25 +192,19 @@ let closure_11 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(5855);
+let Constants = fn(5857);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1085);
+Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
-Constants = fn(2024);
+Constants = fn(2026);
 const items = [, ];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
 const weakMap = new WeakMap();
-let obj = { [RPCCommands.OPEN_EXTERNAL_LINK]: obj2, [RPCCommands.NAVIGATE_TO_CONNECTIONS]: obj3 };
-obj2 = {
+let obj = {};
+let CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj3 = {
   scope: null,
-  validation(string) {
-    const obj = createRpcJoiSchemaObjectDefault(string);
-    const obj2 = { url: null };
-    const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
-    obj2.url = string.string().required();
-    return requiredResult.keys(obj2);
-  },
   handler(socket) {
     socket = socket.socket;
     const url = socket.args.url;
@@ -316,8 +310,9 @@ obj2 = {
   }
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE];
-obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-obj3 = {
+obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
+obj[RPCCommands.OPEN_EXTERNAL_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_EXTERNAL_LINK, obj3);
+let obj4 = {
   validation(arg0) {
     return createRpcJoiSchemaObjectDefault(arg0);
   },
@@ -337,9 +332,10 @@ obj3 = {
   }
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
-obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(15391);
-let obj5 = {
+obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
+obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
+CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj6 = {
   scope: null,
   handler(arg0) {
     ({ socket, args } = arg0);
@@ -381,8 +377,8 @@ let obj5 = {
   }
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];
-obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
-obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, obj5);
+obj6.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
+obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, obj6);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/links.tsx");
 

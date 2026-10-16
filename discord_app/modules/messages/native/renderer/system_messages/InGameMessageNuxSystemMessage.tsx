@@ -1,16 +1,16 @@
-// === Module 8291: InGameMessageNuxSystemMessage ===
+// === Module 8296: InGameMessageNuxSystemMessage ===
 
-// Module 8291 (InGameMessageNuxSystemMessage)
-import util from "util" /* 1126 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8189 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8196 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8200 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
+// Module 8296 (InGameMessageNuxSystemMessage)
+import util from "util" /* 1128 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8192 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8199 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8201 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8203 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
 
 require = fn;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
 

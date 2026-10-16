@@ -1,13 +1,13 @@
-// === Module 10951: _launchFrame ===
+// === Module 10966: _launchFrame ===
 
-// Module 10951 (_launchFrame)
+// Module 10966 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10938 */;
-import leaveFrame from "leaveFrame" /* 10948 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10952 */;
-import createProxyTicket from "createProxyTicket" /* 10954 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10953 */;
+import leaveFrame from "leaveFrame" /* 10963 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10967 */;
+import createProxyTicket from "createProxyTicket" /* 10969 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 10935 */;
+import FramesStore from "FramesStore" /* 10950 */;
 
 require = fn;
 let closure_11 = async function _launchFrame(arg0) {
@@ -206,7 +206,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10948);
+    obj2 = obj2(10963);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -337,9 +337,9 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(10919);
+const FramesConstants = fn(10934);
 ({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getFrameIntentForSurface: closure_7, makeFrameId: closure_8 } = FramesConstants);
-const ActivityPanelModes = fn(6289).ActivityPanelModes;
+const ActivityPanelModes = fn(6291).ActivityPanelModes;
 let c10 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
@@ -358,8 +358,8 @@ export { clearMainFrameSlot };
 export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
-export const setFramePrefersPictureInPictureOnNavigateAway = function setFramePrefersPictureInPictureOnNavigateAway(frameId, enabled) {
-  DispatcherDefault.dispatch({ type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId, enabled });
+export const setFrameRunsInBackground = function setFrameRunsInBackground(frameId, enabled) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId, enabled });
 };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });

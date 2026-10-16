@@ -1,6 +1,6 @@
-// === Module 6212: LazyPromiseInitializer ===
+// === Module 6214: LazyPromiseInitializer ===
 
-// Module 6212 (LazyPromiseInitializer)
+// Module 6214 (LazyPromiseInitializer)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");

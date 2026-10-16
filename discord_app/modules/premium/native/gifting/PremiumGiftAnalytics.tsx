@@ -1,15 +1,15 @@
-// === Module 13637: PremiumGiftAnalytics ===
+// === Module 13663: PremiumGiftAnalytics ===
 
-// Module 13637 (PremiumGiftAnalytics)
-import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10271 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10387 */;
+// Module 13663 (PremiumGiftAnalytics)
+import util from "util" /* 1128 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10287 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10403 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");

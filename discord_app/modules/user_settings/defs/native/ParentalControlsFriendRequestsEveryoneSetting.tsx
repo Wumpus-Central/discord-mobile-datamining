@@ -1,19 +1,19 @@
-// === Module 16892: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 16925: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 16892 (ParentalControlsFriendRequestsEveryoneSetting)
+// Module 16925 (ParentalControlsFriendRequestsEveryoneSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6904 */;
-import useSelectedTeen from "useSelectedTeen" /* 7957 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15751 */;
+import util from "util" /* 1128 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6906 */;
+import useSelectedTeen from "useSelectedTeen" /* 7960 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15784 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7475 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7477 */;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
   const cResult = c.c(2);
   const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -30,8 +30,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendR
   }
   return tmp6.all;
 }) : (function useFriendRequestsEveryoneSettingValue() {
-  const selectedTeenId = controlledSetting(7957).useSelectedTeenId();
-  const ParentalControlledFriendSourceFlags = controlledSetting(15751).ParentalControlledFriendSourceFlags;
+  const selectedTeenId = controlledSetting(7960).useSelectedTeenId();
+  const ParentalControlledFriendSourceFlags = controlledSetting(15784).ParentalControlledFriendSourceFlags;
   controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
   const items = [controlledSetting];
   return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
@@ -41,7 +41,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8210).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8213).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
     const cResult = c.c(2);
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -58,8 +58,8 @@ const toggle = SettingBuilders.createToggle({
     }
     return tmp6.all;
   }) : (function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(7957).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(15751).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(7960).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(15784).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

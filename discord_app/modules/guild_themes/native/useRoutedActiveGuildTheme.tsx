@@ -1,11 +1,11 @@
-// === Module 5031: useRoutedActiveGuildTheme ===
+// === Module 5034: useRoutedActiveGuildTheme ===
 
-// Module 5031 (useRoutedActiveGuildTheme)
+// Module 5034 (useRoutedActiveGuildTheme)
 import c from "c" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5032 */;
-import RootNavigationRef from "RootNavigationRef" /* 5033 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5058 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 5059 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
+import RootNavigationRef from "RootNavigationRef" /* 5036 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5061 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 5062 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -148,7 +148,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const ME = fn(1085).ME;
+const ME = fn(1087).ME;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoutedActiveGuildThemeGuildId() {
   const cResult = c.c(2);

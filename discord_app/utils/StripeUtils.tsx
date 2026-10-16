@@ -1,21 +1,21 @@
-// === Module 5955: StripeUtils ===
+// === Module 5957: StripeUtils ===
 
-// Module 5955 (StripeUtils)
+// Module 5957 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import HTTPUtils from "HTTPUtils" /* 1295 */;
-import _mod5956 from "module_5956" /* 5956 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import _mod5958 from "module_5958" /* 5958 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
 
 require = fn;
 function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod5956.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod5958.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -201,7 +201,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
     }
   }
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: metroRequire, PaymentSettings: closure_7 } = Constants);
 const logger = new LoggerDefault("StripeUtils");
 let closure_9 = { REQUIRES_PAYMENT_METHOD: "requires_payment_method", REQUIRES_CONFIRMATION: "requires_confirmation", REQUIRES_ACTION: "requires_action", PROCESSING: "processing", CANCELED: "canceled", SUCCEEDED: "succeeded" };

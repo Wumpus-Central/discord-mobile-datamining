@@ -1,31 +1,32 @@
-// === Module 16277: DisplayNameStylesEditScreen ===
+// === Module 16310: DisplayNameStylesEditScreen ===
 
-// Module 16277 (DisplayNameStylesEditScreen)
+// Module 16310 (DisplayNameStylesEditScreen)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1407 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1409 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import HapticUtils from "HapticUtils" /* 5116 */;
-import spring from "spring" /* 5438 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8507 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8510 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1409 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import HapticUtils from "HapticUtils" /* 5119 */;
+import spring from "spring" /* 5440 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8515 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
-import UserStore from "UserStore" /* 1390 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1627).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1629).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let items = [fn(1409).DisplayNameEffect.GRADIENT, fn(1409).DisplayNameEffect.GUMMY, fn(1409).DisplayNameEffect.PRISM];
-const createStyles = fn(5151);
+let items = [fn(1411).DisplayNameEffect.GRADIENT, fn(1411).DisplayNameEffect.GUMMY, fn(1411).DisplayNameEffect.PRISM];
+let value = { overrideSettings: true };
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -43,13 +44,13 @@ let obj9 = { flexDirection: "row", gap: nativeDefault.space.PX_8, flexShrink: 0 
 obj2.fieldButtonTrailing = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let obj10 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.buttonContainer = { marginVertical: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_MUTED, gap: nativeDefault.space.PX_16 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_16 = createStyles.createStyles(obj2);
 const __initData = { code: "function DisplayNameStylesEditScreenTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?\"box-none\":\"none\"};}" };
 const __initData2 = { code: "function DisplayNameStylesEditScreenTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:\"absolute\",bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:\"column\",justifyContent:\"flex-end\",transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };
 const __initData3 = { code: "function DisplayNameStylesEditScreenTsx3(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}" };
 const __initData4 = { code: "function DisplayNameStylesEditScreenTsx4(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };
 const ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplyButton(onPress) {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplyButton(onPress) {
   const cResult = onPress(stateFromStores[53]).c(16);
   onPress = onPress.onPress;
   const visible = onPress.visible;
@@ -254,7 +255,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx");
 
 export default function DisplayNameStylesEditScreen() {
-  let tmp = onSelectColor();
+  let tmp = first4();
   const tmp2 = navigation;
   let tmp3 = isTryItOut;
   const route = navigation(isTryItOut[11]).useRoute();
@@ -330,7 +331,7 @@ export default function DisplayNameStylesEditScreen() {
     }
     const tmp16Result3 = tmp16(tmp25(first2), 2);
     const first3 = tmp16Result3[0];
-    onSelectColor = tmp16Result3[1];
+    value = tmp16Result3[1];
     const tmp16Result4 = tmp16(obj8.useState(() => Object.fromEntries(items.map((item) => {
       items = [item, ];
       let tmp = length;
@@ -340,7 +341,7 @@ export default function DisplayNameStylesEditScreen() {
       items[1] = tmp;
       return items;
     }))), 2);
-    const first4 = tmp16Result4[0];
+    first4 = tmp16Result4[0];
     closure_17 = tmp16Result4[1];
     const callback = obj8.useCallback((arg0, arg1) => {
       closure_0 = arg0;
@@ -457,7 +458,7 @@ export default function DisplayNameStylesEditScreen() {
       if (showFontsBadge) {
         dismissFontsBadge();
       }
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16285, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16318, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName });
       const obj2 = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName };
     }, items6);
     if (stateFromStores != null) {
@@ -476,9 +477,9 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj.openLazy(asyncRequireImpl(16287, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
+      obj.openLazy(asyncRequireImpl(16320, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
       const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-      const tmp3 = asyncRequireImpl(16287, dependencyMap.paths);
+      const tmp3 = asyncRequireImpl(16320, dependencyMap.paths);
     }, items7);
     const callback6 = obj8.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -488,7 +489,7 @@ export default function DisplayNameStylesEditScreen() {
               return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16288, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16321, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         const tmp2Result = asyncRequireImpl;
@@ -500,10 +501,10 @@ export default function DisplayNameStylesEditScreen() {
                   return callback(first1, arg0);
                 }
           };
-          openLazy(tmp2Result(16293, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+          openLazy(tmp2Result(16326, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
           const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(16297, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(16330, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);
@@ -512,7 +513,7 @@ export default function DisplayNameStylesEditScreen() {
     let tmp47Result5 = null;
     if (null != stateFromStores) {
       const obj5 = { theme: tmp14, children: null };
-      const obj6 = { value: { overrideSettings: true }, children: null };
+      const obj6 = { value, children: null };
       const obj7 = { style: tmp.container, children: null };
       const obj9 = {};
       let merged = Object.assign(tmp.contentContainer);
@@ -551,7 +552,7 @@ export default function DisplayNameStylesEditScreen() {
         const obj17 = { style: tmp.fieldButtonTrailing, children: null };
         const items12 = [tmp47(tmp2(tmp3[45]).NewTag, {}), tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" })];
         obj17.children = items12;
-        let tmp47Result3 = tmp48(tmp49, obj17);
+        let tmp47Result3 = tmp49(tmp50, obj17);
       } else {
         tmp47Result3 = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
       }
@@ -587,11 +588,11 @@ export default function DisplayNameStylesEditScreen() {
         const obj22 = { style: tmp.fieldButtonTrailing, children: null };
         const items17 = [tmp47(tmp2(tmp3[45]).NewTag, {}), tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" })];
         obj22.children = items17;
-        let tmp48Result2 = tmp48(tmp49, obj22);
+        let tmp49Result2 = tmp49(tmp50, obj22);
       } else {
-        tmp48Result2 = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
+        tmp49Result2 = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
       }
-      items16[1] = tmp48Result2;
+      items16[1] = tmp49Result2;
       obj18.children = items16;
       items13[1] = colors(onSelectFont, obj18);
       const obj23 = { onPress: callback6, style: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -644,7 +645,7 @@ export default function DisplayNameStylesEditScreen() {
       let tmp47Result4 = null != guildId;
       if (tmp47Result4) {
         tmp47Result4 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
-        const tmp70 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
+        const tmp71 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
       }
       if (tmp47Result4) {
         const obj32 = { text: null, onPress: null, variant: "tertiary", size: "lg", grow: true, icon: null, iconPosition: "start" };
@@ -660,7 +661,7 @@ export default function DisplayNameStylesEditScreen() {
       obj10.children = items9;
       const items23 = [colors(selectedFontId, obj10), ];
       const obj33 = { onPress: displayNameStylesHandleApply, visible: memo1 };
-      items23[1] = closure_12(visibleFontOrder, obj33);
+      items23[1] = closure_12(visibleEffectOrder, obj33);
       obj7.children = items23;
       obj6.children = colors(closure_5, obj7);
       obj5.children = closure_12(tmp2(tmp3[41]).DisplayNameStylesContext.Provider, obj6);

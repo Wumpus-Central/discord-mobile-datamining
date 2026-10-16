@@ -1,22 +1,22 @@
-// === Module 14114: ShopNitroUpsellPromoSheet ===
+// === Module 14146: ShopNitroUpsellPromoSheet ===
 
-// Module 14114 (ShopNitroUpsellPromoSheet)
+// Module 14146 (ShopNitroUpsellPromoSheet)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import ButtonGroup from "ButtonGroup" /* 6174 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9490 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9501 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9502 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9739 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10000 */;
-import PromoSheet from "PromoSheet" /* 10557 */;
-import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 14115 */;
+import util from "util" /* 1128 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import ButtonGroup from "ButtonGroup" /* 6176 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9506 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9517 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9518 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9755 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10016 */;
+import PromoSheet from "PromoSheet" /* 10572 */;
+import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 14147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AnalyticsPages = fn(1085).AnalyticsPages;
+const AnalyticsPages = fn(1087).AnalyticsPages;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ReactCompilerGating = fn(558);

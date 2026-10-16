@@ -1,22 +1,22 @@
-// === Module 18194: VoicePanelVisualEffectView ===
+// === Module 18236: VoicePanelVisualEffectView ===
 
-// Module 18194 (VoicePanelVisualEffectView)
+// Module 18236 (VoicePanelVisualEffectView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4874 */;
-import shared from "shared" /* 5025 */;
-import native from "native" /* 8762 */;
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import useToken from "useToken" /* 4877 */;
+import shared from "shared" /* 5028 */;
+import native from "native" /* 8770 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ DynamicColorIOS: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { wrapper: null, border: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.wrapper = {};

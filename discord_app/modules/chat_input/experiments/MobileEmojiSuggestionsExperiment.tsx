@@ -1,12 +1,12 @@
-// === Module 12712: MobileEmojiSuggestionsExperiment ===
+// === Module 12738: MobileEmojiSuggestionsExperiment ===
 
-// Module 12712 (MobileEmojiSuggestionsExperiment)
+// Module 12738 (MobileEmojiSuggestionsExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-emoji-suggestions", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true, style: "large" }, 2: { enabled: true, style: "small" }, 3: { enabled: true, style: "button" } } });
+let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-emoji-suggestions", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true, style: "large", searchDebounceMs: 500 }, 2: { enabled: true, style: "small" }, 3: { enabled: true, style: "button" } } });
 const result = size.fileFinishedImporting("modules/chat_input/experiments/MobileEmojiSuggestionsExperiment.tsx");
 
 export const useMobileEmojiSuggestionsConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useMobileEmojiSuggestionsConfig(location) {

@@ -1,15 +1,15 @@
-// === Module 9660: DoubleTapEmojiUpdatedToast ===
+// === Module 9676: DoubleTapEmojiUpdatedToast ===
 
-// Module 9660 (DoubleTapEmojiUpdatedToast)
-import util from "util" /* 1126 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4884 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5422 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+// Module 9676 (DoubleTapEmojiUpdatedToast)
+import util from "util" /* 1128 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5424 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 

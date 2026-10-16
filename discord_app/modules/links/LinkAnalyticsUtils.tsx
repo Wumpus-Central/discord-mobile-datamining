@@ -1,10 +1,10 @@
-// === Module 8713: LinkAnalyticsUtils ===
+// === Module 8721: LinkAnalyticsUtils ===
 
-// Module 8713 (LinkAnalyticsUtils)
-import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import URLUtilsDefault from "URLUtils" /* 1384 */;
-import LinkUtils from "LinkUtils" /* 5482 */;
+// Module 8721 (LinkAnalyticsUtils)
+import Constants from "Constants" /* 1087 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import URLUtilsDefault from "URLUtils" /* 1386 */;
+import LinkUtils from "LinkUtils" /* 5484 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -82,9 +82,9 @@ export default {
     }
     UNKNOWN = constants.UNKNOWN;
   },
-  trackLinkClicked(ctaLink, arg1) {
-    if (null != ctaLink) {
-      let tmp3 = URLUtilsDefault.isDiscordUrl(ctaLink, true) || null != arg1;
+  trackLinkClicked(customInstallUrl, arg1) {
+    if (null != customInstallUrl) {
+      let tmp3 = URLUtilsDefault.isDiscordUrl(customInstallUrl, true) || null != arg1;
       AnalyticsUtilsDefault;
       const obj2 = { is_discord_link: tmp3, discord_link_type: null };
       if (!tmp3) {
@@ -93,17 +93,17 @@ export default {
       } else {
         if (null != arg1) {
           if (null == arg1) {
-            let UNKNOWN = (function getDiscordLinkTypeFromUrl(ctaLink) {
+            let UNKNOWN = (function getDiscordLinkTypeFromUrl(customInstallUrl) {
               const iter = dependencyMap[Symbol.iterator]();
               while (iter !== undefined) {
-                let tmp2 = iter.next()(ctaLink);
+                let tmp2 = iter.next()(customInstallUrl);
                 if (null != tmp2) {
                   iter.return();
                   return tmp2;
                 }
               }
               return constants.UNKNOWN;
-            })(ctaLink);
+            })(customInstallUrl);
           } else {
             if (null != arg1.guildId) {
               if (null != arg1.channelId) {

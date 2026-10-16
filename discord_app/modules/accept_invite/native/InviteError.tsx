@@ -1,31 +1,31 @@
-// === Module 13326: InviteError ===
+// === Module 13352: InviteError ===
 
-// Module 13326 (InviteError)
+// Module 13352 (InviteError)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import shared from "shared" /* 5025 */;
-import useThemeDefault from "useTheme" /* 5087 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import components_Button_Button from "components/Button/Button" /* 5439 */;
-import GuildIcon from "GuildIcon" /* 6379 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 13329 */;
-import _modDef13330 from "module_13330" /* 13330 */;
+import util from "util" /* 1128 */;
+import native from "native" /* 1202 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
+import shared from "shared" /* 5028 */;
+import useThemeDefault from "useTheme" /* 5090 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import components_Button_Button from "components/Button/Button" /* 5441 */;
+import GuildIcon from "GuildIcon" /* 6381 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 13355 */;
+import _modDef13356 from "module_13356" /* 13356 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, InviteStates: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { expiredImage: { marginTop: 32, marginBottom: 32 }, expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" }, expiredBody: { backgroundColor: "transparent", marginBottom: 24 }, disabledView: { justifyContent: "center", alignItems: "center" }, disabledPauseIcon: null, guildIcon: null, disabledTitle: null, disabledBody: null };
 let size = { position: "absolute", alignSelf: "center", tintColor: nativeDefault.colors.WHITE, width: 42, height: 42 };
 obj2.disabledPauseIcon = size;
@@ -51,17 +51,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
   }
   importDefault = tmp5;
   let obj = onPressClose(576);
-  const tmp6Result = importDefault(onPressClose(5025).isThemeDark(useThemeDefault()) ? 13327 : 13328);
+  const tmp6Result = importDefault(onPressClose(5028).isThemeDark(useThemeDefault()) ? 13353 : 13354);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
   }
   if (cResult[2] !== code) {
-    const descriptiveInviteError = onPressClose(13329).getDescriptiveInviteError(code);
+    const descriptiveInviteError = onPressClose(13355).getDescriptiveInviteError(code);
     cResult[2] = code;
     cResult[3] = descriptiveInviteError;
     let tmp9 = descriptiveInviteError;
-    const tmpResult2 = onPressClose(13329);
+    const tmpResult2 = onPressClose(13355);
   } else {
     tmp9 = cResult[3];
   }
@@ -101,8 +101,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
           title1 = tmp9.title;
         }
         if (title1 == null) {
-          const intl3 = onPressClose(1126).intl;
-          title1 = intl3.string(onPressClose(1126).t.u9zxnX);
+          const intl3 = onPressClose(1128).intl;
+          title1 = intl3.string(onPressClose(1128).t.u9zxnX);
         }
         let title2;
         if (tmp9 != null) {
@@ -152,37 +152,37 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
           tmp31 = tmp34;
         }
         const obj3 = { style: tmp4.expiredBody, variant: "text-sm/medium", color: "text-default", children: tmp12 };
-        const tmp28 = closure_7(onPressClose(5147).Text, obj3);
+        const tmp28 = closure_7(onPressClose(5149).Text, obj3);
         cResult[17] = tmp12;
         cResult[18] = tmp4.expiredBody;
         cResult[19] = tmp28;
         tmp26 = tmp28;
       }
       const obj4 = { style: tmp4.expiredTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp20 };
-      const tmp25 = closure_7(onPressClose(5147).Text, obj4);
+      const tmp25 = closure_7(onPressClose(5149).Text, obj4);
       cResult[14] = tmp4.expiredTitle;
       cResult[15] = tmp20;
       cResult[16] = tmp25;
       tmp23 = tmp25;
     }
     const obj5 = { style: tmp4.expiredImage, source: tmp6Result };
-    const tmp18 = closure_7(tmp6(5088), obj5);
+    const tmp18 = closure_7(tmp6(5091), obj5);
     cResult[9] = tmp6Result;
     cResult[10] = tmp4.expiredImage;
     cResult[11] = tmp18;
     tmp16 = tmp18;
   }
   if (invite.state === constants3.BANNED) {
-    const intl2 = onPressClose(1126).intl;
-    let stringResult = intl2.string(onPressClose(1126).t["GzD/aa"]);
+    const intl2 = onPressClose(1128).intl;
+    let stringResult = intl2.string(onPressClose(1128).t["GzD/aa"]);
   } else {
     stringResult = undefined;
     if (tmp9 != null) {
       stringResult = tmp9.description;
     }
     if (stringResult == null) {
-      let intl = onPressClose(1126).intl;
-      stringResult = intl.string(onPressClose(1126).t.FWkU6P);
+      let intl = onPressClose(1128).intl;
+      stringResult = intl.string(onPressClose(1128).t.FWkU6P);
     }
   }
   let description1;
@@ -193,11 +193,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
   cResult[5] = invite.state;
   cResult[6] = stringResult;
   tmp12 = stringResult;
-  const tmpResult = onPressClose(5025);
+  const tmpResult = onPressClose(5028);
 }) : (function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_10();
-  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 13327 : 13328);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 13353 : 13354);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -280,8 +280,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
         tmp9 = cResult[6];
       }
       if (cResult[7] !== tmp4.disabledPauseIcon) {
-        const obj4 = { style: tmp4.disabledPauseIcon, source: _modDef13330 };
-        const tmp13 = closure_7(tmp(1200).Icon, obj4);
+        const obj4 = { style: tmp4.disabledPauseIcon, source: _modDef13356 };
+        const tmp13 = closure_7(tmp(1202).Icon, obj4);
         cResult[7] = tmp4.disabledPauseIcon;
         cResult[8] = tmp13;
         let tmp10 = tmp13;
@@ -299,8 +299,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
             }
             const _Symbol = Symbol;
             if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-              let intl = tmp(1126).intl;
-              const stringResult = intl.string(tmp(1126).t.jlLX2Z);
+              let intl = tmp(1128).intl;
+              const stringResult = intl.string(tmp(1128).t.jlLX2Z);
               cResult[16] = stringResult;
               let tmp24 = stringResult;
             } else {
@@ -308,7 +308,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
             }
             if (cResult[17] !== tmp4.disabledTitle) {
               const obj5 = { style: tmp4.disabledTitle, variant: "heading-xl/semibold", color: "text-feedback-critical", children: tmp24 };
-              const tmp28 = closure_7(tmp(5147).Text, obj5);
+              const tmp28 = closure_7(tmp(5149).Text, obj5);
               cResult[17] = tmp4.disabledTitle;
               cResult[18] = tmp28;
               let tmp26 = tmp28;
@@ -317,9 +317,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
             }
             const _Symbol2 = Symbol;
             if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = tmp(1126).intl;
+              const intl2 = tmp(1128).intl;
               const obj6 = { articleLink: HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED) };
-              const formatResult = intl2.format(tmp(1126).t.RXSeLl, obj6);
+              const formatResult = intl2.format(tmp(1128).t.RXSeLl, obj6);
               cResult[19] = formatResult;
               let tmp29 = formatResult;
             } else {
@@ -359,7 +359,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
               tmp38 = tmp41;
             }
             const obj8 = { style: tmp4.disabledBody, variant: "text-md/normal", color: "text-default", children: tmp29 };
-            const tmp35 = closure_7(tmp(5147).Text, obj8);
+            const tmp35 = closure_7(tmp(5149).Text, obj8);
             cResult[20] = tmp4.disabledBody;
             cResult[21] = tmp29;
             cResult[22] = tmp35;
@@ -376,7 +376,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
         cResult[15] = tmp22;
         tmp19 = tmp22;
       }
-      const obj11 = { style: tmp4.guildIcon, icon: tmp6, size: tmp(6379).GuildIconSizes.XLARGE };
+      const obj11 = { style: tmp4.guildIcon, icon: tmp6, size: tmp(6381).GuildIconSizes.XLARGE };
       const tmp18 = closure_7(GuildIconDefault, obj11);
       cResult[9] = tmp6;
       cResult[10] = tmp4.guildIcon;
@@ -406,7 +406,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
     const obj4 = { children: null };
     const obj5 = { style: tmp.disabledView, children: null };
     const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef13330 };
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef13356 };
     const items = [React5(native.Icon, obj6), ];
     const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
     const obj3 = { id: null, icon: null, size: 64, canAnimate: false };

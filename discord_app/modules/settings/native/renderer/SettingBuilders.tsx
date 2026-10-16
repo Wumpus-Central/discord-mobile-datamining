@@ -1,7 +1,7 @@
-// === Module 10991: SettingBuilders ===
+// === Module 11006: SettingBuilders ===
 
-// Module 10991 (SettingBuilders)
-import SettingRendererConstants from "SettingRendererConstants" /* 10992 */;
+// Module 11006 (SettingBuilders)
+import SettingRendererConstants from "SettingRendererConstants" /* 11007 */;
 import size from "module_2" /* 2 */;
 
 const NodeType = SettingRendererConstants.NodeType;

@@ -1,12 +1,12 @@
-// === Module 7168: safeTransitionTo ===
+// === Module 7170: safeTransitionTo ===
 
-// Module 7168 (safeTransitionTo)
-import router_utils from "router_utils" /* 1112 */;
-import LinkUtils from "LinkUtils" /* 5482 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7169 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7170 */;
+// Module 7170 (safeTransitionTo)
+import router_utils from "router_utils" /* 1114 */;
+import LinkUtils from "LinkUtils" /* 5484 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7171 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7172 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2087 */;
+import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {
@@ -153,7 +153,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
     }
   }
 };
-const Routes = fn(1085).Routes;
+const Routes = fn(1087).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 

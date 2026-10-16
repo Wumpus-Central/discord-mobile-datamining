@@ -1,11 +1,11 @@
-// === Module 7629: QuestTaskUtils ===
+// === Module 7631: QuestTaskUtils ===
 
-// Module 7629 (QuestTaskUtils)
+// Module 7631 (QuestTaskUtils)
 import _mod12 from "module_12" /* 12 */;
-import DurationsDefault from "Durations" /* 1102 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6196 */;
-import QuestDataUtils from "QuestDataUtils" /* 7603 */;
-import QuestStore from "QuestStore" /* 7607 */;
+import DurationsDefault from "Durations" /* 1104 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6198 */;
+import QuestDataUtils from "QuestDataUtils" /* 7605 */;
+import QuestStore from "QuestStore" /* 7609 */;
 
 require = fn;
 function getApplicationIdsByTaskTypes(nextResult, items) {
@@ -280,33 +280,33 @@ function formatWatchTaskTimeFromSeconds(arg0, arg1) {
   const padStartResult1 = String(bound2).padStart(2, "0");
   return "" + padStartResult1 + ":" + String(bound3).padStart(2, "0");
 }
-let items = [fn(6196).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(6196).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
+let items = [fn(6198).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(6198).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
 let closure_129_0 = items;
 const hasSomeConsoleTasks = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items1 = [fn(6196).FirstPartyQuestTaskTypes.WATCH_VIDEO];
+const items1 = [fn(6198).FirstPartyQuestTaskTypes.WATCH_VIDEO];
 let closure_130_0 = items1;
 const fn2 = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items2 = [fn(6196).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+const items2 = [fn(6198).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
 let closure_131_0 = items2;
 const fn3 = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items3 = [fn(6196).FirstPartyQuestTaskTypes.WATCH_VIDEO, fn(6196).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+const items3 = [fn(6198).FirstPartyQuestTaskTypes.WATCH_VIDEO, fn(6198).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
 let closure_132_0 = items3;
 const fn4 = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items4 = [fn(6196).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, fn(6196).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, fn(6196).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, fn(6196).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(6196).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
+const items4 = [fn(6198).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, fn(6198).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, fn(6198).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, fn(6198).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(6198).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
 let closure_133_0 = items4;
-const items5 = [fn(6196).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, fn(6196).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items5 = [fn(6198).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, fn(6198).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 let closure_134_0 = items5;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestTaskUtils.tsx");
@@ -482,7 +482,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
         tmp13Result = (function _getLatestTaskDetails(arg0) {
           ({ quest, includeTaskTypes } = arg0);
           if (includeTaskTypes === undefined) {
-            includeTaskTypes = value(6196).FirstPartyQuestTaskTypesSets.ALL;
+            includeTaskTypes = value(6198).FirstPartyQuestTaskTypesSets.ALL;
           }
           const userStatus = quest.userStatus;
           let progress;
@@ -556,7 +556,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
               }
             }
           });
-          const found = sorted.filter(value(1386).isNotNullish);
+          const found = sorted.filter(value(1388).isNotNullish);
           const obj3 = found[Symbol.iterator]();
           while (obj3 !== undefined) {
             let tmp6 = _parseFirstPartyTaskType(tmp4.eventName);

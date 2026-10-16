@@ -1,16 +1,16 @@
-// === Module 10740: useFetchCollectiblesProduct ===
+// === Module 10755: useFetchCollectiblesProduct ===
 
-// Module 10740 (useFetchCollectiblesProduct)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7479 */;
+// Module 10755 (useFetchCollectiblesProduct)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7481 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 6310 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
+import SKUStore from "SKUStore" /* 6312 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7482 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-let SKUProductLines = fn(1085).SKUProductLines;
+let SKUProductLines = fn(1087).SKUProductLines;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
@@ -107,7 +107,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
         }
       }
     }
-    tmp20 = tmp21 === tmp(1993).CollectiblesItemType.BUNDLE;
+    tmp20 = tmp21 === tmp(1995).CollectiblesItemType.BUNDLE;
   }
   if (tmp20) {
     class L {
@@ -220,7 +220,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(1993).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1995).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

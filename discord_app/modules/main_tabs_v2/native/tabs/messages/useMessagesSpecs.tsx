@@ -1,20 +1,20 @@
-// === Module 17044: useMessagesSpecs ===
+// === Module 17078: useMessagesSpecs ===
 
-// Module 17044 (useMessagesSpecs)
+// Module 17078 (useMessagesSpecs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useFontScale from "useFontScale" /* 5446 */;
-import MessagesHeader from "MessagesHeader" /* 17045 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 17048 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17059 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
+import useFontScale from "useFontScale" /* 5448 */;
+import MessagesHeader from "MessagesHeader" /* 17079 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 17082 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17093 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["height"];
 let closure_4 = ["height"];
-const DM_WIDTH = fn(1085).DM_WIDTH;
+const DM_WIDTH = fn(1087).DM_WIDTH;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
@@ -75,8 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessa
   cResult[12] = obj4;
   tmp17 = obj4;
 }) : (function useMessagesSpecs() {
-  fontScale = fontScale(5446).useFontScale();
-  top = top(1631)().top;
+  fontScale = fontScale(5448).useFontScale();
+  top = top(1633)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {
     const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);

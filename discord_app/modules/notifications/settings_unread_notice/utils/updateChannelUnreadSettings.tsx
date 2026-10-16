@@ -1,15 +1,15 @@
-// === Module 10709: updateChannelUnreadSettings ===
+// === Module 10724: updateChannelUnreadSettings ===
 
-// Module 10709 (updateChannelUnreadSettings)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7024 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7029 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10681 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6182 */;
+// Module 10724 (updateChannelUnreadSettings)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7026 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7031 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10696 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
 
 require = fn;
-const AnalyticsObjects = fn(1085).AnalyticsObjects;
-const UnreadSetting = fn(6183).UnreadSetting;
-const constants = fn(1095).ChannelNotificationSettingsFlags;
+const AnalyticsObjects = fn(1087).AnalyticsObjects;
+const UnreadSetting = fn(6185).UnreadSetting;
+const constants = fn(1097).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 17796: useOnMessageSend ===
+// === Module 17830: useOnMessageSend ===
 
-// Module 17796 (useOnMessageSend)
+// Module 17830 (useOnMessageSend)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const MessageStates = fn(1085).MessageStates;
+const MessageStates = fn(1087).MessageStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx");

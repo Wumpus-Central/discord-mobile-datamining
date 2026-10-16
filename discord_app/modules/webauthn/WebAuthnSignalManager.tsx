@@ -1,9 +1,9 @@
-// === Module 18926: WebAuthnSignalManager ===
+// === Module 18968: WebAuthnSignalManager ===
 
-// Module 18926 (WebAuthnSignalManager)
+// Module 18968 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 class WebAuthnSignalManager extends tmp2 {
   constructor() {

@@ -1,23 +1,23 @@
-// === Module 11042: OfficialConnectionIcon ===
+// === Module 11057: OfficialConnectionIcon ===
 
-// Module 11042 (OfficialConnectionIcon)
+// Module 11057 (OfficialConnectionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import native from "native" /* 1200 */;
-import useRoleIconProps from "useRoleIconProps" /* 7102 */;
-import RoleIconDefault from "RoleIcon" /* 7121 */;
-import _modDef11043 from "module_11043" /* 11043 */;
-import _modDef11044 from "module_11044" /* 11044 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import native from "native" /* 1202 */;
+import useRoleIconProps from "useRoleIconProps" /* 7104 */;
+import RoleIconDefault from "RoleIcon" /* 7123 */;
+import _modDef11058 from "module_11058" /* 11058 */;
+import _modDef11059 from "module_11059" /* 11059 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Official
                 cResult[32] = tmp25;
                 tmp22 = tmp25;
               }
-              const obj5 = { style: tmp18, size: native.Icon.Sizes.CUSTOM, source: _modDef11044, color: PRIMARY_630 };
+              const obj5 = { style: tmp18, size: native.Icon.Sizes.CUSTOM, source: _modDef11059, color: PRIMARY_630 };
               const tmp21 = timestampProducer(native.Icon, obj5);
               cResult[26] = PRIMARY_630;
               cResult[27] = tmp18;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Official
             cResult[25] = items2;
             tmp18 = items2;
           }
-          const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef11043, color: roleColor };
+          const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef11058, color: roleColor };
           const tmp17 = timestampProducer(native.Icon, obj6);
           cResult[20] = roleColor;
           cResult[21] = tmp14;
@@ -231,11 +231,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Official
   const obj5 = { style: null, children: null };
   const items1 = [style, size1];
   obj5.style = items1;
-  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11043, color: roleColor };
+  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11058, color: roleColor };
   const items2 = [tmp.verifiedCheck, size1];
   obj6.style = items2;
   const items3 = [timestampProducer(native.Icon, obj6), ];
-  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11044, color: PRIMARY_630 };
+  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11059, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size1];
   obj7.style = items4;
   items3[1] = timestampProducer(native.Icon, obj7);

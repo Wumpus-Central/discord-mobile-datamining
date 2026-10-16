@@ -1,24 +1,24 @@
-// === Module 18315: AcceptInviteManager ===
+// === Module 18357: AcceptInviteManager ===
 
-// Module 18315 (AcceptInviteManager)
-import router_utils from "router_utils" /* 1112 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7639 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9170 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 18317 */;
+// Module 18357 (AcceptInviteManager)
+import router_utils from "router_utils" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7641 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9183 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 18359 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import InviteStore from "InviteStore" /* 5132 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
+import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import InviteStore from "InviteStore" /* 5135 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7576).ACCEPT_INVITE_MODAL_KEY;
-const Constants = fn(1085);
+const ACCEPT_INVITE_MODAL_KEY = fn(7578).ACCEPT_INVITE_MODAL_KEY;
+const Constants = fn(1087);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -135,7 +135,7 @@ const prototype = function AcceptInviteManager() {
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18316, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18358, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }

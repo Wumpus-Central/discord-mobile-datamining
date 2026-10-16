@@ -1,19 +1,19 @@
-// === Module 14211: getCanSendInvite ===
+// === Module 14243: getCanSendInvite ===
 
-// Module 14211 (getCanSendInvite)
-import hasFlagDefault from "hasFlag" /* 7232 */;
-import isInviteActiveDefault from "isInviteActive" /* 11113 */;
-import getPartySize from "getPartySize" /* 11114 */;
-import hasPartySize from "hasPartySize" /* 11115 */;
-import isPartyFull from "isPartyFull" /* 11116 */;
-import Constants from "Constants" /* 1085 */;
+// Module 14243 (getCanSendInvite)
+import hasFlagDefault from "hasFlag" /* 7234 */;
+import isInviteActiveDefault from "isInviteActive" /* 11128 */;
+import getPartySize from "getPartySize" /* 11130 */;
+import hasPartySize from "hasPartySize" /* 11131 */;
+import isPartyFull from "isPartyFull" /* 11132 */;
+import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ActivityActionTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");
 
-export const getCanSendInvite = function getCanSendInvite(findActivityResult, author, application1, id2) {
-  if (author.author.id === id2) {
+export const getCanSendInvite = function getCanSendInvite(findActivityResult, author, application1, id1) {
+  if (author.author.id === id1) {
     return false;
   } else if (isInviteActiveDefault(findActivityResult, author, application1.id)) {
     const activity = author.activity;

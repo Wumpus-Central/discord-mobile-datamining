@@ -1,6 +1,6 @@
-// === Module 5717: ? ===
+// === Module 5719: ? ===
 
-// Module 5717
+// Module 5719
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/magical_sapphire.png.js");

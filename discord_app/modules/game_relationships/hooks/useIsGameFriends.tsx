@@ -1,13 +1,13 @@
-// === Module 14056: useIsGameFriends ===
+// === Module 14088: useIsGameFriends ===
 
-// Module 14056 (useIsGameFriends)
+// Module 14088 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7563 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7565 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");

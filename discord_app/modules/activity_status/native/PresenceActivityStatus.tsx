@@ -1,16 +1,16 @@
-// === Module 10469: PresenceActivityStatus ===
+// === Module 10485: PresenceActivityStatus ===
 
-// Module 10469 (PresenceActivityStatus)
+// Module 10485 (PresenceActivityStatus)
 import c from "c" /* 576 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7643 */;
-import AppsIcon2 from "AppsIcon" /* 8451 */;
-import GameControllerIcon2 from "GameControllerIcon" /* 9433 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10464 */;
-import TvIcon from "TvIcon" /* 10465 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10467 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10470 */;
-import MusicIcon from "MusicIcon" /* 10471 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10473 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7645 */;
+import AppsIcon2 from "AppsIcon" /* 8459 */;
+import GameControllerIcon2 from "GameControllerIcon" /* 9449 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10480 */;
+import TvIcon from "TvIcon" /* 10481 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10483 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10486 */;
+import MusicIcon from "MusicIcon" /* 10487 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function getActivityStatusIcon(activity) {
     AppsIcon = AppsIcon2.AppsIcon;
   }
 }
-const ActivityTypes = fn(1085).ActivityTypes;
+const ActivityTypes = fn(1087).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);

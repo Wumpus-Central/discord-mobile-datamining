@@ -1,9 +1,9 @@
-// === Module 7230: GameActionCreators ===
+// === Module 7232: GameActionCreators ===
 
-// Module 7230 (GameActionCreators)
+// Module 7232 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameStore from "GameStore" /* 2020 */;
+import GameStore from "GameStore" /* 2022 */;
 
 function requestGames() {
   const self = this;
@@ -88,7 +88,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (v3 === 2) {
     v3 = 3;
@@ -137,7 +137,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(2060).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(2063).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

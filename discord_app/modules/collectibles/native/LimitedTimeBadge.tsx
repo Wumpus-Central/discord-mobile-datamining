@@ -1,16 +1,16 @@
-// === Module 9256: LimitedTimeBadge ===
+// === Module 9269: LimitedTimeBadge ===
 
-// Module 9256 (LimitedTimeBadge)
+// Module 9269 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import shared from "shared" /* 5025 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import useCountdownDefault from "useCountdown" /* 7383 */;
+import util from "util" /* 1128 */;
+import shared from "shared" /* 5028 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import useCountdownDefault from "useCountdown" /* 7385 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2129 */;
-import ThemeStore from "ThemeStore" /* 1205 */;
+import LocaleStore from "LocaleStore" /* 2132 */;
+import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
 function getBadgeString(hasItem, days, hours) {
@@ -39,7 +39,7 @@ function getBadgeString(hasItem, days, hours) {
     if (days <= 1) {
       if (days > 1) {
         const intl3 = util.intl;
-        sum1 = `0${tmp5(tmp(1126).t["1LyF1h"])}`;
+        sum1 = `0${tmp5(tmp(1128).t["1LyF1h"])}`;
       }
       sum = sum1;
     }
@@ -48,7 +48,7 @@ function getBadgeString(hasItem, days, hours) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };

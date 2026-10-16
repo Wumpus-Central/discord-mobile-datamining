@@ -1,15 +1,15 @@
-// === Module 7011: DefaultChannelUtils ===
+// === Module 7013: DefaultChannelUtils ===
 
-// Module 7011 (DefaultChannelUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
-import GatedChannelStore from "GatedChannelStore" /* 2117 */;
-import ChannelStore from "ChannelStore" /* 2065 */;
+// Module 7013 (DefaultChannelUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import GatedChannelStore from "GatedChannelStore" /* 2120 */;
+import ChannelStore from "ChannelStore" /* 2068 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

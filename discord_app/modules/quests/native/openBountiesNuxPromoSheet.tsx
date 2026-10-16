@@ -1,14 +1,14 @@
-// === Module 15992: openBountiesNuxPromoSheet ===
+// === Module 16025: openBountiesNuxPromoSheet ===
 
-// Module 15992 (openBountiesNuxPromoSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+// Module 16025 (openBountiesNuxPromoSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import size from "module_2" /* 2 */;
 
 const BountiesNuxPromoSheet = "BountiesNuxPromoSheet";
 const result = size.fileFinishedImporting("modules/quests/native/openBountiesNuxPromoSheet.tsx");
 
 export default function openBountiesNuxPromoSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15993, dependencyMap.paths), BountiesNuxPromoSheet, {});
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16026, dependencyMap.paths), BountiesNuxPromoSheet, {});
 };
 export const PROMO_SHEET_KEY = "BountiesNuxPromoSheet";

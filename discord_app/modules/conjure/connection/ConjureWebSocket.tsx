@@ -1,6 +1,6 @@
-// === Module 10980: ConjureWebSocket ===
+// === Module 10995: ConjureWebSocket ===
 
-// Module 10980 (ConjureWebSocket)
+// Module 10995 (ConjureWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureWebSocket.tsx");
@@ -189,6 +189,20 @@ prototype["sendOverlayBackgroundBlur"] = function sendOverlayBackgroundBlur(enab
       const socket = self.socket;
       const _JSON = JSON;
       const obj = { type: "set_overlay_background_blur", enabled };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendPrepareTemplate"] = function sendPrepareTemplate(template_id) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "prepare_template", template_id };
       socket.send(JSON.stringify(obj));
     }
   }

@@ -1,13 +1,13 @@
-// === Module 13101: useCalculatePowerupCardStatus ===
+// === Module 13127: useCalculatePowerupCardStatus ===
 
-// Module 13101 (useCalculatePowerupCardStatus)
+// Module 13127 (useCalculatePowerupCardStatus)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import _modDef2600 from "module_2600" /* 2600 */;
+import util from "util" /* 1128 */;
+import _modDef2603 from "module_2603" /* 2603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PowerupActiveStatusType = fn(5064).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5067).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
@@ -36,7 +36,7 @@ export const useCalculatePowerupCardStatus = ReactCompilerGating.isReactCompiler
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { type: "active", statusText: null };
           const intl3 = util.intl;
-          obj3.statusText = intl3.string(_modDef2600.FFLkmx);
+          obj3.statusText = intl3.string(_modDef2603.FFLkmx);
           cResult[8] = obj3;
           let tmp15 = obj3;
         } else {
@@ -62,7 +62,7 @@ export const useCalculatePowerupCardStatus = ReactCompilerGating.isReactCompiler
           title1 = intl2.string(util.t.BfF6ED);
         }
         const obj4 = { perkName: title1 };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2600.WRRYUT, obj4);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2603.WRRYUT, obj4);
         const sourcePowerup2 = sourceEntitlement.sourcePowerup;
         let title2;
         if (sourcePowerup2 != null) {
@@ -127,12 +127,12 @@ export const useCalculatePowerupCardStatus = ReactCompilerGating.isReactCompiler
         }
         const obj4 = { type: "active", statusText: null };
         const obj5 = { perkName: title };
-        obj4.statusText = intl2.formatToPlainString(_modDef2600.WRRYUT, obj5);
+        obj4.statusText = intl2.formatToPlainString(_modDef2603.WRRYUT, obj5);
         tmp5 = obj4;
       } else if (tmp.type !== tmp4.INACTIVE) {
         const obj = { type: "active", statusText: null };
         const intl = util.intl;
-        obj.statusText = intl.string(_modDef2600.FFLkmx);
+        obj.statusText = intl.string(_modDef2603.FFLkmx);
         tmp5 = obj;
       }
     }

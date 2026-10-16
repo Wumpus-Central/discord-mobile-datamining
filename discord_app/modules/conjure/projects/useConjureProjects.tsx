@@ -1,22 +1,22 @@
-// === Module 12188: useConjureProjects ===
+// === Module 12212: useConjureProjects ===
 
-// Module 12188 (useConjureProjects)
+// Module 12212 (useConjureProjects)
 import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
-import _modDef3862 from "module_3862" /* 3862 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6283 */;
-import conjureAppInServer from "conjureAppInServer" /* 10911 */;
-import ConjureActivity from "ConjureActivity" /* 12189 */;
+import util from "util" /* 1128 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6285 */;
+import conjureAppInServer from "conjureAppInServer" /* 10926 */;
+import ConjureActivity from "ConjureActivity" /* 11522 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5500 */;
-import UserProfileStore from "UserProfileStore" /* 7537 */;
-import GuildChannelStore from "GuildChannelStore" /* 4804 */;
-import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
-import ConjureChatStore from "ConjureChatStore" /* 10887 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+import ApplicationStore from "ApplicationStore" /* 5502 */;
+import UserProfileStore from "UserProfileStore" /* 7539 */;
+import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import GuildStore from "GuildStore" /* 2090 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
+import ConjureChatStore from "ConjureChatStore" /* 10902 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
 
 const require = globalThis.__r;
 
@@ -198,7 +198,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePr
   const tmp4 = _slicedToArray(noop.useState(0), 2);
   const first = tmp4[0];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ConjureProjectStore, ConjureChatStore, GuildStore, GuildChannelStore, UserProfileStore, ApplicationStore, tmp(1453).ApexExperimentStore];
+    const items = [ConjureProjectStore, ConjureChatStore, GuildStore, GuildChannelStore, UserProfileStore, ApplicationStore, tmp(1455).ApexExperimentStore];
     cResult[0] = items;
     let first1 = items;
   } else {
@@ -244,7 +244,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureEl
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1453).ApexExperimentStore, PermissionStore];
+    const items = [GuildStore, tmp(1455).ApexExperimentStore, PermissionStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -291,24 +291,24 @@ export const describeConjureProjectRow = function describeConjureProjectRow(entr
   if (entry.notInServer) {
     const obj3 = { serverName: null, label: null };
     const intl4 = util.intl;
-    obj3.serverName = intl4.string(_modDef3862["08PzLy"]);
+    obj3.serverName = intl4.string(_modDef3865["08PzLy"]);
     const intl5 = util.intl;
     const obj4 = { name: entry.name };
-    obj3.label = intl5.formatToPlainString(_modDef3862.pyh2pa, obj4);
+    obj3.label = intl5.formatToPlainString(_modDef3865.pyh2pa, obj4);
     let obj = obj3;
   } else if (null == entry.guildName) {
     const obj5 = { serverName: null, label: null };
     const intl2 = util.intl;
-    obj5.serverName = intl2.string(_modDef3862["3QFps8"]);
+    obj5.serverName = intl2.string(_modDef3865["3QFps8"]);
     const intl3 = util.intl;
     const obj6 = { name: entry.name };
-    obj5.label = intl3.formatToPlainString(_modDef3862["2sBOnp"], obj6);
+    obj5.label = intl3.formatToPlainString(_modDef3865["2sBOnp"], obj6);
     obj = obj5;
   } else {
     obj = { serverName: entry.guildName, label: null };
     const intl = util.intl;
     ({ name: obj2.name, guildName: obj2.server } = entry);
-    obj.label = intl.formatToPlainString(_modDef3862["hd+GF1"], { name: null, server: null });
+    obj.label = intl.formatToPlainString(_modDef3865["hd+GF1"], { name: null, server: null });
     const obj11 = { name: null, server: null };
   }
   return obj;
@@ -319,7 +319,7 @@ export const useConjureForMeGuildId = ReactCompilerGating.isReactCompilerEnabled
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, SelectedGuildStore, tmp(1453).ApexExperimentStore];
+    const items = [GuildStore, SelectedGuildStore, tmp(1455).ApexExperimentStore];
     cResult[0] = items;
     let first = items;
   } else {

@@ -1,11 +1,11 @@
-// === Module 8892: LiveStageNotificationsUtils ===
+// === Module 8900: LiveStageNotificationsUtils ===
 
-// Module 8892 (LiveStageNotificationsUtils)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5076 */;
-import PermissionStore from "PermissionStore" /* 4806 */;
+// Module 8900 (LiveStageNotificationsUtils)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
+import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSendStageStartNotification(arg0) {

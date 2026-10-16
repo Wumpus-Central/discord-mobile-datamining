@@ -1,16 +1,16 @@
-// === Module 14565: GuildBoostingMarketingTopPerksCards ===
+// === Module 14597: GuildBoostingMarketingTopPerksCards ===
 
-// Module 14565 (GuildBoostingMarketingTopPerksCards)
+// Module 14597 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5088 */;
-import Text_Text from "Text/Text" /* 5147 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 6328 */;
-import _modDef14566 from "module_14566" /* 14566 */;
-import _mod14567 from "module_14567" /* 14567 */;
-import _modDef14568 from "module_14568" /* 14568 */;
+import util from "util" /* 1128 */;
+import FastImageDefault from "FastImage" /* 5091 */;
+import Text_Text from "Text/Text" /* 5149 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 6330 */;
+import _modDef14598 from "module_14598" /* 14598 */;
+import _mod14599 from "module_14599" /* 14599 */;
+import _modDef14600 from "module_14600" /* 14600 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import AccessibilityStore from "AccessibilityStore" /* 5143 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 }, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
 let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 obj2.cardGraphic = size;
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14566 };
+      const obj = { style, source: _modDef14598 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   },
@@ -51,7 +51,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod14567, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod14599, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     }
   },
@@ -65,7 +65,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14568 };
+      const obj = { style, source: _modDef14600 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   }
@@ -82,7 +82,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    const obj = { style, source: _modDef14566 };
+    const obj = { style, source: _modDef14598 };
     return hasOwnProperty(FastImageDefault, obj);
   }
 };
@@ -95,8 +95,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   _require = tmp4;
   ({ wrapper, heading } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.aGdB3E);
+    const intl = tmp(1128).intl;
+    const stringResult = intl.string(tmp(1128).t.aGdB3E);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   }
   if (cResult[1] !== tmp4.heading) {
     let obj2 = { style: heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: first };
-    const tmp9 = closure_5(tmp(5147).Heading, obj2);
+    const tmp9 = closure_5(tmp(5149).Heading, obj2);
     cResult[1] = tmp4.heading;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
             tmp17 = tmp20;
           }
           const obj4 = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp10, children: tmp11 };
-          const tmp16 = closure_5(tmp(13152).MarketingCardsScroller, obj4);
+          const tmp16 = closure_5(tmp(13178).MarketingCardsScroller, obj4);
           cResult[9] = tmp4.scrollerContent;
           cResult[10] = tmp11;
           cResult[11] = tmp16;

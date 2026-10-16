@@ -1,8 +1,8 @@
-// === Module 18046: triggerIOSHaptic ===
+// === Module 18081: triggerIOSHaptic ===
 
-// Module 18046 (triggerIOSHaptic)
-import HapticUtils from "HapticUtils" /* 5116 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 12818 */;
+// Module 18081 (triggerIOSHaptic)
+import HapticUtils from "HapticUtils" /* 5119 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 12844 */;
 import size from "module_2" /* 2 */;
 
 const IS_IOS = MorphablePanelConstants.IS_IOS;
