@@ -1,31 +1,35 @@
 // === Module 9588: ? ===
 
 // Module 9588
-import _slicedToArray from "module_32" /* 32 */;
+import Link from "Link" /* 1506 */;
 import noop from "module_19" /* 19 */;
 
+require = arg1;
 
-export const useDismissedRouteError = function useDismissedRouteError(state) {
-  const setNextDismissedKey = _slicedToArray(noop.useState(null), 2);
-  const first = setNextDismissedKey[0];
-  let tmp3 = null;
-  if (first) {
-    const routes = state.routes;
-    const found = routes.find((key) => key.key === first);
-    let name;
-    if (found != null) {
-      name = found.name;
+export const useInvalidPreventRemoveError = function useInvalidPreventRemoveError(descriptors) {
+  const first = Object.keys(Link.usePreventRemoveContext().preventedRoutes)[0];
+  let prop;
+  if (descriptors[first] != null) {
+    const options = tmp2.options;
+    if (options != null) {
+      prop = options.headerBackButtonMenuEnabled;
     }
-    tmp3 = name;
   }
-  name = tmp3;
-  const items = [tmp3];
+  let name;
+  if (descriptors[first] != null) {
+    const route = tmp2.route;
+    if (route != null) {
+      name = route.name;
+    }
+  }
+  const items = [first, prop, name];
   const effect = noop.useEffect(() => {
-    if (name) {
-      const _HermesInternal = HermesInternal;
-      const _console = console;
-      console.error("The screen '" + tmp + "' was removed natively but didn't get removed from JS state. This can happen if the action was prevented in a 'beforeRemove' listener, which is not fully supported in native-stack.\n\nConsider using a 'usePreventRemove' hook with 'headerBackButtonMenuEnabled: false' to prevent users from natively going back multiple screens.");
+    if (null != first) {
+      if (prop) {
+        const _HermesInternal = HermesInternal;
+        const _console = console;
+        console.error("The screen " + name + " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " + name + " screen to get rid of this error.");
+      }
     }
   }, items);
-  return { setNextDismissedKey: setNextDismissedKey[1] };
 };

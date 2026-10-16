@@ -2,7 +2,13 @@
 
 // Module 12419
 
-export const escapeStringForRegex = function escapeStringForRegex(str) {
-  str = str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
-  return str.replace(/-/g, "\\x2d");
+export function getSDKSource() {
+  return "npm";
+}
+export const isBrowserBundle = function isBrowserBundle() {
+  let prop = typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined";
+  if (typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined") {
+    prop = globalThis.__SENTRY_BROWSER_BUNDLE__;
+  }
+  return prop;
 };

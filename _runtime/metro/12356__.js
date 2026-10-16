@@ -1,25 +1,74 @@
 // === Module 12356: ? ===
 
 // Module 12356
-import _mod12312 from "module_12312" /* 12312 */;
-import _mod12342 from "module_12342" /* 12342 */;
-
-require = arg1;
+const require = arg1;
 const dependencyMap = arg6;
-
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let result = arg2;
-  const items = [{ type: "client_report" }, ];
-  if (!arg2) {
-    result = _mod12312.dateTimestampInSeconds();
-  }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    const obj3 = { dsn };
-    let obj4 = obj3;
+function getFilenameToDebugIdMap(arg0) {
+  _require = arg0;
+  _sentryDebugIds = require("module_12305").GLOBAL_OBJ._sentryDebugIds;
+  if (_sentryDebugIds) {
+    const _Object = Object;
+    const keys = Object.keys(_sentryDebugIds);
+    if (reduced) {
+      return reduced;
+    }
+    reduced = keys.reduce((acc, item) => {
+      let filename;
+      let tmp = obj;
+      if (!obj) {
+        obj = {};
+        tmp = obj;
+      }
+      if (tmp[item]) {
+        acc[tmp2[0]] = tmp2[1];
+      } else {
+        const arr = closure_0(item);
+        let diff = arr.length - 1;
+        if (0 <= diff) {
+          while (true) {
+            let tmp5 = arr[diff];
+            filename = tmp5;
+            if (tmp5) {
+              filename = tmp5.filename;
+            }
+            if (filename) {
+              if (_sentryDebugIds[item]) {
+                break;
+              }
+            }
+            diff = diff - 1;
+          }
+          acc[filename] = tmp8;
+          const items = [filename, tmp8];
+          obj[item] = items;
+        }
+      }
+      return acc;
+    }, {});
   } else {
-    obj4 = {};
+    return {};
   }
-  const items1 = [items];
-  return _mod12342.createEnvelope(obj4, items1);
+}
+
+export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
+  const tmp = getFilenameToDebugIdMap(arg0);
+  const items = [];
+  if (tmp) {
+    const iter = arg1[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp7 = nextResult;
+      if (nextResult) {
+        obj = { type: "sourcemap", code_file: null, debug_id: null };
+        obj.code_file = tmp7;
+        obj.debug_id = tmp[tmp7];
+        let arr = items.push(obj);
+      }
+      continue;
+    }
+    return items;
+  } else {
+    return items;
+  }
 };
+export { getFilenameToDebugIdMap };

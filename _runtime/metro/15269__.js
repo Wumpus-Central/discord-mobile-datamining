@@ -1,23 +1,16 @@
 // === Module 15269: ? ===
 
 // Module 15269
-import _mod15241 from "module_15241" /* 15241 */;
-import _mod15267 from "module_15267" /* 15267 */;
+import prop_mod from "module_15270" /* 15270 */;
 
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod15241[arg0];
-    let tmp8;
-    if (_mod15267(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod15241[arg0];
-    if (tmp3) {
-      tmp3 = _mod15241[arg0][arg1];
-    }
-  }
-  return tmp3;
-};
+export default prop;

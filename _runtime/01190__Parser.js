@@ -10,13 +10,13 @@ const require = globalThis.__r;
 
 e.__exportStar(TYPE, exports);
 
-export const parse = function parse(arg0, arg1) {
+export const parse = function parse(acknowledgedBadgeLabel, arg1) {
   let obj = arg1;
   if (undefined === arg1) {
     obj = {};
   }
   const __assignResult = e.__assign({ shouldParseSkeletons: true, requiresOtherClause: true }, obj);
-  const parser = new Parser.Parser(arg0, __assignResult);
+  const parser = new Parser.Parser(acknowledgedBadgeLabel, __assignResult);
   const parsed = parser.parse();
   if (parsed.err) {
     const _SyntaxError = SyntaxError;

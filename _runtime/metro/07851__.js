@@ -1,9 +1,82 @@
 // === Module 7851: ? ===
 
 // Module 7851
-import module_65 from "module_65" /* 65 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7835 from "module_7835" /* 7835 */;
+import _modDef7836 from "module_7836" /* 7836 */;
+import _modDef7852 from "module_7852" /* 7852 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeFlood", validAttributes: { x: true, y: true, width: true, height: true, result: true, floodColor: true, floodOpacity: true } };
+const FeFlood = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeFlood {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, FeFlood);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeFlood);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeFlood, _modDef7836);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeFlood(7835).extractFilter(this.props));
+    const merged1 = Object.assign(_modDef7835(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
-export default module_65.get("RNSVGFeFlood", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

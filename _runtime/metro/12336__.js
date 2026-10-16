@@ -1,95 +1,36 @@
 // === Module 12336: ? ===
 
 // Module 12336
-import _mod12298 from "module_12298" /* 12298 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12303 */;
-import _mod12326 from "module_12326" /* 12326 */;
+import _mod12331 from "module_12331" /* 12331 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const logSpanEnd = function logSpanEnd(spanContext) {
-  if (_mod12326.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+    if (!globalThis.__SENTRY_TRACING__) {
+      return false;
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult = spanTimeInputToSeconds;
-    let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
-      str3 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const logger = _mod12298.logger;
-    logger.log(combined);
-    tmpResult2 = spanTimeInputToSeconds;
   }
-};
-export const logSpanStart = function logSpanStart(spanContext) {
-  if (_mod12326.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+  let tmp = tracesSampler;
+  const client = _mod12331.getClient();
+  if (!tracesSampler) {
+    let options = client;
+    if (client) {
+      options = client.getOptions();
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const parent_span_id = spanToJSONResult.parent_span_id;
-    const tmpResult = spanTimeInputToSeconds;
-    const tmpResult4 = spanTimeInputToSeconds;
-    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    let str3 = "unsampled";
-    if (spanIsSampledResult) {
-      str3 = "sampled";
-    }
-    let str5 = "";
-    if (rootSpan === spanContext) {
-      str5 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, , ];
-    const _HermesInternal3 = HermesInternal;
-    items[1] = "name: " + str;
-    const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
-    if (parent_span_id) {
-      const _HermesInternal5 = HermesInternal;
-      items.push("parent ID: " + parent_span_id);
-    }
-    if (rootSpan !== spanContext) {
-      const tmpResult6 = spanTimeInputToSeconds;
-      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
-      const _HermesInternal6 = HermesInternal;
-      items.push("root ID: " + rootSpan.spanContext().spanId);
-      if (op2) {
-        const _HermesInternal7 = HermesInternal;
-        items.push("root op: " + op2);
-      }
-      if (description2) {
-        const _HermesInternal8 = HermesInternal;
-        items.push("root description: " + description2);
-      }
-      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
-    }
-    const logger = _mod12298.logger;
-    const _HermesInternal9 = HermesInternal;
-    logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult5 = spanTimeInputToSeconds;
+    tmp = options;
   }
+  let tmp3 = tmp;
+  if (tmp3) {
+    let enableTracing = tmp.enableTracing;
+    if (!enableTracing) {
+      enableTracing = "tracesSampleRate" in tmp;
+    }
+    if (!enableTracing) {
+      enableTracing = "tracesSampler" in tmp;
+    }
+    tmp3 = enableTracing;
+  }
+  return tmp3;
 };

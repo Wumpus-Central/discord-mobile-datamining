@@ -1,10 +1,10 @@
 // === Module 15306: ? ===
 
 // Module 15306
-import _mod15284 from "module_15284" /* 15284 */;
-import _mod15285 from "module_15285" /* 15285 */;
+import _mod15254 from "module_15254" /* 15254 */;
+import _mod15255 from "module_15255" /* 15255 */;
 
 
-export default Object.keys || (function keys(arg0) {
-  return _mod15285(arg0, _mod15284);
-});
+export default _mod15254 && _mod15255(() => 42 !== Object.defineProperty(() => {
+
+}, "prototype", { value: 42, writable: false }).prototype);

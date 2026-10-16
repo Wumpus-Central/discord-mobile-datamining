@@ -1,36 +1,21 @@
 // === Module 12330: ? ===
 
 // Module 12330
-import _mod12325 from "module_12325" /* 12325 */;
+import _mod12305 from "module_12305" /* 12305 */;
+import ScopeClass from "ScopeClass" /* 12325 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
-    }
-  }
-  let tmp = tracesSampler;
-  const client = _mod12325.getClient();
-  if (!tracesSampler) {
-    let options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
-  }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
-  }
-  return tmp3;
+export const getDefaultCurrentScope = function getDefaultCurrentScope() {
+  return _mod12305.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getDefaultIsolationScope = function getDefaultIsolationScope() {
+  return _mod12305.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 };

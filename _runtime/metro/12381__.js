@@ -1,56 +1,110 @@
 // === Module 12381: ? ===
 
 // Module 12381
-const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
+import _mod12311 from "module_12311" /* 12311 */;
+import _mod12313 from "module_12313" /* 12313 */;
 
-export const getClientIPAddress = function getClientIPAddress(headers) {
-  let mapped = items.map((item) => {
-    let str = obj;
-    if (Array.isArray(headers[item])) {
-      str = obj.join(";");
+require = arg1;
+let dependencyMap = arg6;
+function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
+  _require = fn;
+  dependencyMap = value;
+  aggregateExceptionsFromError = arg2;
+  closure_3 = source;
+  if (arg5.length >= arg2 + 1) {
+    return arg5;
+  } else {
+    let items = [];
+    HermesBuiltin.arraySpread(arg5, 0);
+    length = items;
+    const _Error = Error;
+    if (obj3.isInstanceOf(errors[source], Error)) {
+      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
+      let obj = {};
+      let merged = Object.assign(mechanism.mechanism);
+      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
+      let merged1 = Object.assign(tmp3);
+      obj.exception_id = exception_id;
+      mechanism.mechanism = obj;
+      const tmp7 = fn(value, errors[source]);
+      length = length.length;
+      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
+      let obj2 = {};
+      let merged2 = Object.assign(tmp7.mechanism);
+      obj2.type = "chained";
+      obj2.source = source;
+      obj2.exception_id = length;
+      obj2.parent_id = exception_id;
+      tmp7.mechanism = obj2;
+      const items1 = [tmp7];
+      HermesBuiltin.arraySpread(length, 1);
+      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
     }
-    if ("Forwarded" === item) {
-      let mapped = (function parseForwardedHeader(str) {
-        if (str) {
-          const parts = str.split(";");
-          const iter = parts[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let arr = nextResult;
-            if (nextResult.startsWith("for=")) {
-              let substr = arr.slice(4);
-              iter.return();
-              return substr;
-            }
+    const _Array = Array;
+    if (Array.isArray(errors.errors)) {
+      errors = errors.errors;
+      const item = errors.forEach((item, index) => {
+        if (obj.isInstanceOf(item, Error)) {
+          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
+          const obj2 = {};
+          const merged = Object.assign(tmp.mechanism);
+          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
+          const merged1 = Object.assign(tmp5);
+          obj2.exception_id = exception_id;
+          mechanism.mechanism = obj2;
+          const tmp12 = closure_0(closure_1, item);
+          length = length.length;
+          const _HermesInternal = HermesInternal;
+          mechanism = tmp12.mechanism;
+          const combined = "errors[" + index + "]";
+          if (!mechanism) {
+            mechanism = { type: "generic", handled: true };
           }
-          return null;
-        } else {
-          return null;
+          tmp12.mechanism = mechanism;
+          const obj3 = {};
+          const merged2 = Object.assign(tmp12.mechanism);
+          obj3.type = "chained";
+          obj3.source = combined;
+          obj3.exception_id = length;
+          obj3.parent_id = exception_id;
+          tmp12.mechanism = obj3;
+          const items = [tmp12];
+          HermesBuiltin.arraySpread(length, 1);
+          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
         }
-      })(str);
-    } else {
-      mapped = str;
-      if (str) {
-        let parts = str.split(",");
-        mapped = parts.map((item) => item.trim());
+        obj = _mod12311;
+      });
+    }
+    return length;
+  }
+}
+
+export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 250;
+  }
+  if (exception.exception) {
+    if (exception.exception.values) {
+      if (originalException) {
+        const _Error = Error;
+        if (obj.isInstanceOf(originalException.originalException, Error)) {
+          let tmp5;
+          if (exception.exception.values.length > 0) {
+            tmp5 = exception.exception.values[exception.exception.values.length - 1];
+          }
+          if (tmp5) {
+            exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
+              if (value.value) {
+                value.value = _mod12313.truncate(value.value, num);
+              }
+              return value;
+            });
+            const arr = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
+          }
+        }
+        obj = num(12311);
       }
     }
-    return mapped;
-  });
-  const reduced = mapped.reduce((arr, item) => {
-    let combined = arr;
-    if (item) {
-      combined = arr.concat(item);
-    }
-    return combined;
-  }, []);
-  return reduced.find((item) => {
-    let isMatch = null !== item;
-    if (isMatch) {
-      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
-      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
-    }
-    return isMatch;
-  }) || null;
+  }
 };
-export const ipHeaderNames = items;

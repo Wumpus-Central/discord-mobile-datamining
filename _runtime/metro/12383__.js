@@ -1,71 +1,77 @@
 // === Module 12383: ? ===
 
 // Module 12383
-import _mod12325 from "module_12325" /* 12325 */;
-import _mod12385 from "module_12385" /* 12385 */;
-import setupIntegration from "module_12354" /* 12354 */;
+import _mod12305 from "module_12305" /* 12305 */;
 
-
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod12325.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
+require = arg1;
+const dependencyMap = arg6;
+function getMetadataForUrl(fn, arg1) {
+  (function ensureMetadataStacksAreParsed(fn) {
+    if (_mod12305.GLOBAL_OBJ._sentryModuleMetadata) {
+      const _Object = Object;
+      const keys = Object.keys(_mod12305.GLOBAL_OBJ._sentryModuleMetadata);
+      for (const item10026 of keys) {
+        let tmp16 = _mod12305.GLOBAL_OBJ._sentryModuleMetadata[item10026];
+        if (!set.has(item10026)) {
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
+          let reversed = obj2.reverse();
+          for (const item10050 of reversed) {
+            if (item10050.filename) {
+              let result = map.set(tmp22.filename, tmp16);
+              obj3.return();
+              break;
+            }
+            continue;
           }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod12385.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod12385;
-            _mod12325.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(12346).captureException(found, obj2);
-                  const tmp14Result = args(12346);
-                } else {
-                  const tmp14Result2 = args(12307);
-                  const safeJoinResult = args(12307).safeJoin(args, " ");
-                  args(12346).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(12346);
-                }
-              } else if (!args[0]) {
-                const obj = args(12307);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(12307).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(12346);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(12307).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod12325;
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+        }
+        continue;
       }
     }
-  };
-});
+  })(fn);
+  return map.get(arg1);
+}
+const map = new Map();
+const set = new Set();
+
+export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
+  closure_0 = arg0;
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp = stacktrace.stacktrace.frames || [];
+        for (const item10010 of tmp) {
+          if (item10010.filename) {
+            if (!item10010.module_metadata) {
+              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
+              if (tmp9) {
+                item10010.module_metadata = tmp10;
+              }
+            }
+          }
+          continue;
+        }
+      }
+    });
+  } catch (err) {
+  }
+};
+export { getMetadataForUrl };
+export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp3 = stacktrace.stacktrace.frames || [];
+        const iter = tmp3[Symbol.iterator]();
+        iter.next();
+        while (iter !== undefined) {
+          delete tmp2[tmp];
+          continue;
+        }
+      }
+    });
+  } catch (err) {
+  }
+};

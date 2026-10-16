@@ -1,26 +1,36 @@
 // === Module 12411: ? ===
 
 // Module 12411
-import _mod12299 from "module_12299" /* 12299 */;
-import _mod12412 from "module_12412" /* 12412 */;
+import _mod12310 from "module_12310" /* 12310 */;
+import _mod12331 from "module_12331" /* 12331 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const isBrowser = function isBrowser() {
-  let tmp = typeof window !== "undefined";
-  if (typeof window !== "undefined") {
-    const isNodeEnvResult = _mod12412.isNodeEnv();
-    let tmp3 = !isNodeEnvResult;
-    if (isNodeEnvResult) {
-      const _process = _mod12299.GLOBAL_OBJ.process;
-      let tmp2 = _process;
-      if (tmp2) {
-        tmp2 = "renderer" === _process.type;
-      }
-      tmp3 = tmp2;
-    }
-    tmp = tmp3;
+export const captureFeedback = function captureFeedback(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  return tmp;
+  let currentScope = arg2;
+  if (arg2 === undefined) {
+    currentScope = _mod12331.getCurrentScope();
+  }
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = { feedback: _mod12310.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
+  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
+  if (!client) {
+    client = _mod12331.getClient();
+    const tmp3Result = _mod12331;
+  }
+  if (client) {
+    client.emit("beforeSendFeedback", obj2, obj);
+  }
+  return currentScope.captureEvent(obj2, obj);
 };

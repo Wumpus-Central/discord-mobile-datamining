@@ -1,30 +1,14 @@
 // === Module 6772: ? ===
 
 // Module 6772
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      exports = (arg0) => typeof arg0;
-    }
-    module.exports = exports;
-    return exports(arg0);
-  }
-  exports = (arg0) => {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let exports = _typeof;
+import _mod6773 from "module_6773" /* 6773 */;
 
-export default _typeof;
+
+export default function toPropertyKey(arg0) {
+  const tmp = _mod6773(arg0, "string");
+  let text = tmp;
+  if ("symbol" != obj.default(tmp)) {
+    text = `${tmp}`;
+  }
+  return text;
+};

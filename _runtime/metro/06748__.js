@@ -1,8 +1,7 @@
 // === Module 6748: ? ===
 
 // Module 6748
-import _mod17 from "module_17" /* 17 */;
+import _modDef6749 from "module_6749" /* 6749 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export default _modDef6749;

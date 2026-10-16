@@ -1,148 +1,87 @@
 // === Module 12321: ? ===
 
 // Module 12321
-import _mod12304 from "module_12304" /* 12304 */;
-import _mod12309 from "module_12309" /* 12309 */;
-import _mod12312 from "module_12312" /* 12312 */;
-import _mod12322 from "module_12322" /* 12322 */;
-import __SENTRY_DEBUG__ from "module_12297" /* 12297 */;
-import consoleSandbox from "module_12298" /* 12298 */;
 
-function updateSession(ipAddress) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
+export const SPAN_STATUS_ERROR = 2;
+export const SPAN_STATUS_OK = 1;
+export const SPAN_STATUS_UNSET = 0;
+export const getSpanStatusFromHttpCode = function getSpanStatusFromHttpCode(arg0) {
+  if (arg0 < 400) {
+    if (arg0 >= 100) {
+      return { code: 1 };
+    }
   }
-  if (obj.user) {
-    ipAddress = ipAddress.ipAddress;
-    let ip_address = !ipAddress;
-    if (!ipAddress) {
-      ip_address = obj.user.ip_address;
-    }
-    if (ip_address) {
-      ipAddress.ipAddress = obj.user.ip_address;
-    }
-    if (!tmp) {
-      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
-    }
-    tmp = ipAddress.did || obj.did;
-  }
-  let timestamp = obj.timestamp;
-  if (!timestamp) {
-    timestamp = _mod12312.timestampInSeconds();
-  }
-  ipAddress.timestamp = timestamp;
-  if (obj.abnormal_mechanism) {
-    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
-  }
-  if (obj.ignoreDuration) {
-    ipAddress.ignoreDuration = obj.ignoreDuration;
-  }
-  if (!obj.sid) {
-    if (undefined !== obj.init) {
-      ipAddress.init = obj.init;
-    }
-    const did = ipAddress.did;
-    let did2 = !did;
-    if (!did) {
-      did2 = obj.did;
-    }
-    if (did2) {
-      const _HermesInternal = HermesInternal;
-      ipAddress.did = "" + obj.did;
-    }
-    if (typeof obj.started === "number") {
-      ipAddress.started = obj.started;
-    }
-    if (ipAddress.ignoreDuration) {
-      ipAddress.duration = undefined;
-    } else if (typeof obj.duration === "number") {
-      ipAddress.duration = obj.duration;
-    } else {
-      const diff = ipAddress.timestamp - ipAddress.started;
-      let num2 = 0;
-      if (diff >= 0) {
-        num2 = diff;
+  if (arg0 >= 400) {
+    if (arg0 < 500) {
+      if (401 === arg0) {
+        return { code: 2, message: "unauthenticated" };
+      } else if (403 === arg0) {
+        return { code: 2, message: "permission_denied" };
+      } else if (404 === arg0) {
+        return { code: 2, message: "not_found" };
+      } else if (409 === arg0) {
+        return { code: 2, message: "already_exists" };
+      } else if (413 === arg0) {
+        return { code: 2, message: "failed_precondition" };
+      } else if (429 === arg0) {
+        return { code: 2, message: "resource_exhausted" };
+      } else {
+        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
       }
-      ipAddress.duration = num2;
-    }
-    if (obj.release) {
-      ipAddress.release = obj.release;
-    }
-    if (obj.environment) {
-      ipAddress.environment = obj.environment;
-    }
-    const ipAddress2 = ipAddress.ipAddress;
-    let ipAddress3 = !ipAddress2;
-    if (!ipAddress2) {
-      ipAddress3 = obj.ipAddress;
-    }
-    if (ipAddress3) {
-      ipAddress.ipAddress = obj.ipAddress;
-    }
-    const userAgent = ipAddress.userAgent;
-    let userAgent2 = !userAgent;
-    if (!userAgent) {
-      userAgent2 = obj.userAgent;
-    }
-    if (userAgent2) {
-      ipAddress.userAgent = obj.userAgent;
-    }
-    if (typeof obj.errors === "number") {
-      ipAddress.errors = obj.errors;
-    }
-    if (obj.status) {
-      ipAddress.status = obj.status;
-    }
-  } else {
-    if (32 === obj.sid.length) {
-      let sid = obj.sid;
-    } else {
-      sid = _mod12309.uuid4();
-    }
-    ipAddress.sid = sid;
-  }
-}
-_mod12322;
-
-export const closeSession = function closeSession(status, status2) {
-  if (status2) {
-    const obj2 = { status: status2 };
-    let obj = obj2;
-  } else {
-    obj = {};
-    if ("ok" === status.status) {
-      obj = { status: "exited" };
     }
   }
-  updateSession(status, obj);
+  if (arg0 >= 500) {
+    if (arg0 < 600) {
+      if (501 === arg0) {
+        return { code: 2, message: "unimplemented" };
+      } else if (503 === arg0) {
+        return { code: 2, message: "unavailable" };
+      } else {
+        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
+      }
+    }
+  }
+  return { code: 2, message: "unknown_error" };
 };
-export const makeSession = function makeSession(arg0) {
-  const timestampInSecondsResult = obj2(12312).timestampInSeconds();
-  obj2 = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
-  let obj = obj2(12312);
-  obj2.sid = obj2(12309).uuid4();
-  obj2.timestamp = timestampInSecondsResult;
-  obj2.started = timestampInSecondsResult;
-  obj2.toJSON = function toJSON() {
-    const obj3 = { sid: "" + obj2.sid, init: obj2.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
-    const obj = _mod12304;
-    obj3.started = new Date(1000 * obj2.started).toISOString();
-    const date = new Date(1000 * obj2.started);
-    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
-    ({ status: obj2.status, errors: obj2.errors } = obj2);
-    if (typeof obj2.did === "number") {
-      const _HermesInternal = HermesInternal;
-      const combined = "" + obj2.did;
+export const setHttpStatus = function setHttpStatus(setAttribute, arg1) {
+  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
+  if (arg1 < 400) {
+    if (arg1 >= 100) {
+      let obj = { code: 1 };
     }
-    obj3.did = combined;
-    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
-    obj3.attrs = { release: obj2.release, environment: obj2.environment, ip_address: obj2.ipAddress, user_agent: obj2.userAgent };
-    return obj.dropUndefinedKeys(obj3);
-  };
-  if (arg0) {
-    updateSession(obj2, arg0);
+    if ("unknown_error" !== obj.message) {
+      setAttribute.setStatus(obj);
+    }
   }
-  return obj2;
+  if (arg1 >= 400) {
+    if (arg1 < 500) {
+      if (401 === arg1) {
+        obj = { code: 2, message: "unauthenticated" };
+      } else if (403 === arg1) {
+        obj = { code: 2, message: "permission_denied" };
+      } else if (404 === arg1) {
+        obj = { code: 2, message: "not_found" };
+      } else if (409 === arg1) {
+        obj = { code: 2, message: "already_exists" };
+      } else if (413 === arg1) {
+        obj = { code: 2, message: "failed_precondition" };
+      } else if (429 === arg1) {
+        obj = { code: 2, message: "resource_exhausted" };
+      } else {
+        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+      }
+    }
+  }
+  if (arg1 >= 500) {
+    if (arg1 < 600) {
+      if (501 === arg1) {
+        obj = { code: 2, message: "unimplemented" };
+      } else if (503 === arg1) {
+        obj = { code: 2, message: "unavailable" };
+      } else {
+        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
+      }
+    }
+  }
+  obj = { code: 2, message: "unknown_error" };
 };
-export { updateSession };

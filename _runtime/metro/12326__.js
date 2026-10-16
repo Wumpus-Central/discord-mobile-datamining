@@ -1,9 +1,19 @@
 // === Module 12326: ? ===
 
 // Module 12326
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod12310 from "module_12310" /* 12310 */;
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+require = arg1;
+const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
+
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+};
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12310.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
+  }
+};

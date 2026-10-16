@@ -1,91 +1,26 @@
 // === Module 12417: ? ===
 
 // Module 12417
-import _readOnlyError from "_readOnlyError" /* 377 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod12305 from "module_12305" /* 12305 */;
+import _mod12418 from "module_12418" /* 12418 */;
 
-let _classCallCheck = _classCallCheck_mod;
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
-  }
-}
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    }
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    }
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    }
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    }
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    }
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    }
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    }
-  }
-];
+require = arg1;
+const dependencyMap = arg6;
 
-export const LRUMap = _createClass(LRUMap, items);
+export const isBrowser = function isBrowser() {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
+    const isNodeEnvResult = _mod12418.isNodeEnv();
+    let tmp3 = !isNodeEnvResult;
+    if (isNodeEnvResult) {
+      const _process = _mod12305.GLOBAL_OBJ.process;
+      let tmp2 = _process;
+      if (tmp2) {
+        tmp2 = "renderer" === _process.type;
+      }
+      tmp3 = tmp2;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};

@@ -1,8 +1,7 @@
 // === Module 18806: ? ===
 
 // Module 18806
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import registerAsset from "module_1134" /* 1134 */;
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 88, height: 80, scales: [2, 3], hash: "6d22576d9f7927048034966be0fe9d4c", name: "channel_setup_darker", type: "png" });

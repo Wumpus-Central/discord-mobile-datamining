@@ -1,7 +1,46 @@
 // === Module 5918: ? ===
 
 // Module 5918
-import _mod1307 from "module_1307" /* 1307 */;
+import _mod5919 from "module_5919" /* 5919 */;
+import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 5920 */;
 
+const tmp = _mod5919("%Reflect.construct%", true);
+let closure_0 = tmp;
+try {
+  const obj = {
+    () => {
 
-export default _mod1307;
+      }
+  };
+  DefinePropertyOrThrow({}, "", obj);
+  let tmp4 = DefinePropertyOrThrow;
+  if (tmp4) {
+    if (tmp) {
+      let closure_1 = {};
+      const obj3 = {
+        () => {
+                throw closure_1;
+              },
+        "[[Enumerable]]": true
+      };
+      tmp4({}, "length", obj3);
+      module.exports = function IsConstructor(arg0) {
+        try {
+          closure_0(arg0, obj2);
+        } catch (tmp5) {
+          return tmp5 === closure_1;
+        }
+      };
+      const obj2 = {};
+    }
+  }
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
+    }
+    return prototype;
+  };
+} catch (err) {
+  tmp4 = null;
+}

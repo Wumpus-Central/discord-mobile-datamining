@@ -1,52 +1,107 @@
 // === Module 12340: ? ===
 
 // Module 12340
-import _mod12298 from "module_12298" /* 12298 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12303 */;
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 12313 */;
-import _mod12326 from "module_12326" /* 12326 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12309 */;
+import _mod12310 from "module_12310" /* 12310 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12317 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 12319 */;
+import _mod12331 from "module_12331" /* 12331 */;
+import _mod12341 from "module_12341" /* 12341 */;
 
 require = arg1;
 const dependencyMap = arg6;
+function getDynamicSamplingContextFromSpan(spanContext) {
+  const client = _mod12331.getClient();
+  if (client) {
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    if (rootSpan[_frozenDsc]) {
+      return tmp5;
+    } else {
+      const traceState = rootSpan.spanContext().traceState;
+      value = traceState;
+      if (traceState) {
+        value = traceState.get("sentry.dsc");
+      }
+      let result = value;
+      if (value) {
+        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
+        const tmpResult6 = BAGGAGE_HEADER_NAME;
+      }
+      if (result) {
+        return result;
+      } else {
+        const options = client.getOptions();
+        const tmp9 = client.getDsn() || {};
+        let DEFAULT_ENVIRONMENT = options.environment;
+        if (!DEFAULT_ENVIRONMENT) {
+          DEFAULT_ENVIRONMENT = _mod12341.DEFAULT_ENVIRONMENT;
+        }
+        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp9.publicKey, trace_id: spanContext.spanContext().traceId };
+        const dropUndefinedKeysResult = _mod12310.dropUndefinedKeys(obj2);
+        client.emit("createDsc", dropUndefinedKeysResult);
+        const tmpResult7 = _mod12310;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
+        const tmp13 = spanToJSONResult.data || {};
+        const tmp14 = tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        if (null != tmp14) {
+          const _HermesInternal = HermesInternal;
+          dropUndefinedKeysResult.sample_rate = "" + tmp14;
+        }
+        const description = spanToJSONResult.description;
+        const tmpResult8 = spanTimeInputToSeconds;
+        if (tmp17) {
+          dropUndefinedKeysResult.transaction = description;
+        }
+        tmp17 = "url" !== tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        if (tmpResult9.hasTracingEnabled()) {
+          const _String = String;
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
+        return dropUndefinedKeysResult;
+      }
+    }
+    const tmpResult = spanTimeInputToSeconds;
+  } else {
+    return {};
+  }
+}
+const _frozenDsc = "_frozenDsc";
 
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod12326.DEBUG_BUILD) {
-      const logger = _mod12298.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
-    }
-    const obj2 = {};
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
-  }
+export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
+  const result = _mod12310.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
 };
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
-    }
+export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
+  const options = getOptions.getOptions();
+  const tmp2 = getOptions.getDsn() || {};
+  let DEFAULT_ENVIRONMENT = options.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod12341.DEFAULT_ENVIRONMENT;
   }
+  const dropUndefinedKeysResult = _mod12310.dropUndefinedKeys({ environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp2.publicKey, trace_id });
+  getOptions.emit("createDsc", dropUndefinedKeysResult);
+  return dropUndefinedKeysResult;
+};
+export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  let dsc = propagationContext.dsc;
+  if (!dsc) {
+    const options = getOptions.getOptions();
+    const tmp4 = getOptions.getDsn() || {};
+    let DEFAULT_ENVIRONMENT = options.environment;
+    if (!DEFAULT_ENVIRONMENT) {
+      DEFAULT_ENVIRONMENT = _mod12341.DEFAULT_ENVIRONMENT;
+    }
+    const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp4.publicKey, trace_id: propagationContext.traceId };
+    const dropUndefinedKeysResult = _mod12310.dropUndefinedKeys(obj2);
+    getOptions.emit("createDsc", dropUndefinedKeysResult);
+    dsc = dropUndefinedKeysResult;
+  }
+  return dsc;
+};
+export { getDynamicSamplingContextFromSpan };
+export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
+  const tmp = getDynamicSamplingContextFromSpan(arg0);
+  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
 };

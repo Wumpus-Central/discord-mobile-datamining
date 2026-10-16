@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/images", width: 608, height: 608, scales: [2, 3], hash: "6936c050862daceed7175a327466cd4a", name: "quests_embed_mobile_missing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "dcfca3dda846f0acd5adc9867fb467b3", name: "ic_group_dm", type: "png" });

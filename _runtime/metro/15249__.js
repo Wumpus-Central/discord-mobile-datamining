@@ -1,17 +1,9 @@
 // === Module 15249: ? ===
 
 // Module 15249
-import _mod15245 from "module_15245" /* 15245 */;
+import _mod15315 from "module_15315" /* 15315 */;
+import module_15250 from "module_15250" /* 15250 */;
 
-
-export default !_mod15245(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod15315;
+module_15250(obj, { assign: _mod15315 });

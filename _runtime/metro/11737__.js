@@ -1,8 +1,7 @@
 // === Module 11737: ? ===
 
 // Module 11737
-import _mod11669 from "module_11669" /* 11669 */;
-import _mod11735 from "module_11735" /* 11735 */;
+const require = globalThis.__r;
 
 const self = this;
 let self2 = this;
@@ -55,49 +54,35 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.ZodISODateTime = undefined;
-    exports.ZodISODate = undefined;
-    exports.ZodISOTime = undefined;
-    exports.ZodISODuration = undefined;
-    exports.datetime = function datetime(message) {
-      return fnResult._isoDateTime(exports.ZodISODateTime, message);
+    exports.ZodIssueCode = undefined;
+    exports.$brand = undefined;
+    exports.config = undefined;
+    exports.ZodFirstPartyTypeKind = undefined;
+    exports.setErrorMap = function setErrorMap(customError) {
+      closure_4.config({ customError });
     };
-    exports.date = function date(message) {
-      return fnResult._isoDate(exports.ZodISODate, message);
+    exports.getErrorMap = function getErrorMap() {
+      return closure_4.config().customError;
     };
-    exports.time = function time(message) {
-      return fnResult._isoTime(exports.ZodISOTime, message);
+    let closure_4 = fn(require("module_11666"));
+    exports.ZodIssueCode = { invalid_type: "invalid_type", too_big: "too_big", too_small: "too_small", invalid_format: "invalid_format", not_multiple_of: "not_multiple_of", unrecognized_keys: "unrecognized_keys", invalid_union: "invalid_union", invalid_key: "invalid_key", invalid_element: "invalid_element", invalid_value: "invalid_value", custom: "custom" };
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_11666").$brand;
+          }
     };
-    exports.duration = function duration(message) {
-      return fnResult._isoDuration(exports.ZodISODuration, message);
+    Object.defineProperty(exports, "$brand", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_11666").config;
+          }
     };
-    const fnResult = fn(_mod11669);
-    let c3 = fnResult;
-    let closure_4 = fn(_mod11735);
-    exports.ZodISODateTime = fnResult.$constructor("ZodISODateTime", (arg0, arg1) => {
-      const $ZodISODateTime = fnResult.$ZodISODateTime;
-      $ZodISODateTime.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
-    exports.ZodISODate = fnResult.$constructor("ZodISODate", (arg0, arg1) => {
-      const $ZodISODate = fnResult.$ZodISODate;
-      $ZodISODate.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
-    exports.ZodISOTime = fnResult.$constructor("ZodISOTime", (arg0, arg1) => {
-      const $ZodISOTime = fnResult.$ZodISOTime;
-      $ZodISOTime.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
-    exports.ZodISODuration = fnResult.$constructor("ZodISODuration", (arg0, arg1) => {
-      const $ZodISODuration = fnResult.$ZodISODuration;
-      $ZodISODuration.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
+    Object.defineProperty(exports, "config", obj2);
+    exports.ZodFirstPartyTypeKind = {};
   } else {
     const _Object2 = Object;
   }

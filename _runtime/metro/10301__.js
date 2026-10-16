@@ -1,21 +1,12 @@
 // === Module 10301: ? ===
 
 // Module 10301
-import _mod19 from "module_19" /* 19 */;
-import _modDef10302 from "module_10302" /* 10302 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useStableMemo(cResult, cResult2) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = cResult();
-    tmp2.current = cResult2;
-  } else if (!_modDef10302(cResult2, tmp2.current)) {
-    tmp.current = cResult();
-    tmp2.current = cResult2;
-  }
-  return tmp.current;
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
 };

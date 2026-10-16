@@ -1,78 +1,267 @@
 // === Module 12310: ? ===
 
 // Module 12310
-import generatePropagationContext from "generatePropagationContext" /* 12308 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12311 */;
+import _mod12303 from "module_12303" /* 12303 */;
+import _mod12304 from "module_12304" /* 12304 */;
+import _mod12311 from "module_12311" /* 12311 */;
+import _mod12312 from "module_12312" /* 12312 */;
+import _mod12313 from "module_12313" /* 12313 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
-
-export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
+function addNonEnumerableProperty(arg0, arg1, value) {
+  try {
+    const _Object = Object;
+    const obj = { value, writable: true, configurable: true };
+    Object.defineProperty(arg0, arg1, obj);
+  } catch (err) {
+    if (_mod12303.DEBUG_BUILD) {
+      const logger = _mod12304.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
+    }
+  }
+}
+function markFunctionWrapped(arg0, arg1) {
+  try {
+    let prototype = arg1.prototype;
+    if (!prototype) {
+      prototype = {};
+    }
+    arg1.prototype = prototype;
+    arg0.prototype = prototype;
+    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+  } catch (err) {
+  }
+}
+function convertToPlainObject(type) {
+  if (obj.isError(type)) {
+    const error = { message: null, name: null, stack: null };
+    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
+    if (typeof type === "object") {
+      if (null !== type) {
+        const obj2 = {};
+        let obj3 = obj2;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          obj3 = obj2;
+          while (keys[tmp] !== undefined) {
+            let _Object2 = Object;
+            let call2 = hasOwnProperty2.call;
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
+              continue;
+            } else {
+              obj2[tmp17] = type[tmp17];
+              continue;
+            }
+            continue;
+          }
         }
       }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      const merged = Object.assign(obj3);
+      return error;
+    }
+    obj3 = {};
+  } else {
+    if (tmp2Result.isEvent(type)) {
+      const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
+      if (typeof type === "object") {
+        if (null !== type) {
+          const obj5 = {};
+          let obj7 = obj5;
+          const keys1 = Object.keys();
+          if (keys1 !== undefined) {
+            obj7 = obj5;
+            while (keys1[tmp] !== undefined) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
+                continue;
+              } else {
+                obj5[tmp8] = type[tmp8];
+                continue;
+              }
+              continue;
+            }
+          }
+        }
+        const merged1 = Object.assign(obj7);
+        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
+        if (typeof globalThis.CustomEvent !== "undefined") {
+          isInstanceOfResult = _mod12311.isInstanceOf(type, globalThis.CustomEvent);
+          const tmp2Result2 = _mod12311;
+        }
+        if (isInstanceOfResult) {
+          obj4.detail = type.detail;
+        }
+        return obj4;
+      }
+      obj7 = {};
+    } else {
+      return type;
+    }
+    tmp2Result = _mod12311;
+  }
+  obj = _mod12311;
+}
+function serializeEventTarget(arg0) {
+  try {
+    if (obj.isElement(arg0)) {
+      let htmlTreeAsStringResult = _mod12312.htmlTreeAsString(arg0);
+      const tmp2Result = _mod12312;
+    } else {
+      const _Object = Object;
+      const call = toString.call;
+      if (typeof call === "unknown") {
+        htmlTreeAsStringResult = toString();
+      } else {
+        htmlTreeAsStringResult = call(arg0);
+      }
+    }
+    return htmlTreeAsStringResult;
+  } catch (err) {
+    return "<unknown>";
+  }
+}
+function _dropUndefinedKeys(arr, map) {
+  if ((function isPojo(arr) {
+    if (obj.isPlainObject(arr)) {
+      try {
+        const _Object = Object;
+        const name = Object.getPrototypeOf(arr).constructor.name;
+        let tmp3 = !name;
+        if (name) {
+          tmp3 = "Object" === tmp2;
+        }
+        return tmp3;
+      } catch (err) {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  })(arr)) {
+    value = map.get(arr);
+    if (undefined !== value) {
+      return value;
+    } else {
+      const obj = {};
+      const result = map.set(arr, obj);
+      let _Object = Object;
+      const ownPropertyNames = Object.getOwnPropertyNames(arr);
+      for (const item10030 of ownPropertyNames) {
+        if (undefined !== arg0[item10030]) {
+          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
+        }
+        continue;
+      }
       return obj;
     }
-  }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  if (traceId === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
-  }
-  if (spanId === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== sampled) {
-    let str2 = "-0";
-    if (sampled) {
-      str2 = "-1";
+  } else {
+    const _Array = Array;
+    if (Array.isArray(arr)) {
+      value2 = map.get(arr);
+      if (undefined !== value2) {
+        return value2;
+      } else {
+        const items = [];
+        const result1 = map.set(arr, items);
+        const item = arr.forEach((item) => {
+          items.push(_dropUndefinedKeys(item, closure_0));
+        });
+        return items;
+      }
+    } else {
+      return arr;
     }
-    str = str2;
   }
-  return "" + traceId + "-" + spanId + str;
+}
+
+export { addNonEnumerableProperty };
+export { convertToPlainObject };
+export const dropUndefinedKeys = function dropUndefinedKeys(arr) {
+  return _dropUndefinedKeys(arr, new Map());
 };
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
+export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 40;
+  }
+  const keys = Object.keys(convertToPlainObject(name));
+  const sorted = keys.sort();
+  const first = keys[0];
+  if (first) {
+    if (first.length >= num) {
+      return _mod12313.truncate(first, num);
+    } else {
+      let length = keys.length;
+      if (length > 0) {
+        const substr = keys.slice(0, length);
+        const joined = substr.join(", ");
+        while (joined.length > num) {
+          length = length - 1;
         }
+        let truncateResult = joined;
+        if (length !== keys.length) {
+          truncateResult = _mod12313.truncate(joined, num);
+        }
+        return truncateResult;
       }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
+      return "";
+    }
+  } else {
+    return "[object has no keys]";
+  }
+};
+export const fill = function fill(GLOBAL_OBJ, fetch, fn) {
+  if (fetch in GLOBAL_OBJ) {
+    const tmp6 = fn(GLOBAL_OBJ[fetch]);
+    if (typeof tmp6 === "function") {
+      markFunctionWrapped(tmp6, tmp5);
+    }
+    try {
+      GLOBAL_OBJ[fetch] = tmp6;
+    } catch (err) {
+      if (_mod12303.DEBUG_BUILD) {
+        const logger = _mod12304.logger;
+        const _HermesInternal = HermesInternal;
+        logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+      }
     }
   }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
-  if (tmp) {
-    if (tmp.traceId) {
-      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      obj3.spanId = generatePropagationContext.generateSpanId();
-      obj3.sampled = parentSampled;
-      if (!result) {
-        result = {};
+};
+export const getOriginalFunction = function getOriginalFunction(__sentry_original__) {
+  return __sentry_original__.__sentry_original__;
+};
+export { markFunctionWrapped };
+export const objectify = function objectify(arg0) {
+  if (null == arg0 === true) {
+    const _String = String;
+    let string = new String(arg0);
+  } else {
+    let tmp = typeof arg0 === "symbol";
+    if (typeof arg0 !== "symbol") {
+      tmp = typeof arg0 === "bigint";
+    }
+    if (tmp === true) {
+      const _Object = Object;
+      string = Object(arg0);
+    } else {
+      string = arg0;
+      if (obj.isPrimitive(arg0) === true) {
+        string = new arg0.constructor(arg0);
       }
-      obj3.dsc = result;
-      return obj3;
+      obj = _mod12311;
     }
   }
-  const obj4 = { traceId: null, spanId: null };
-  obj4.traceId = generatePropagationContext.generateTraceId();
-  const tmp4Result3 = generatePropagationContext;
-  obj4.spanId = generatePropagationContext.generateSpanId();
-  return obj4;
+  return string;
+};
+export const urlEncode = function urlEncode(arg0) {
+  const entries = Object.entries(arg0);
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+  });
+  return mapped.join("&");
 };

@@ -1,20 +1,11 @@
 // === Module 15274: ? ===
 
 // Module 15274
-import _mod15249 from "module_15249" /* 15249 */;
+import _mod15258 from "module_15258" /* 15258 */;
+import _mod15275 from "module_15275" /* 15275 */;
 
-if (_mod15249) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
+let closure_2 = _mod15258({}.hasOwnProperty);
 
-export default fn;
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod15275(arg0), arg1);
+});

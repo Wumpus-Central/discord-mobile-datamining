@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 20, height: 20, scales: [2, 3], hash: "6d92319c85fd42e305e389df8a64c64a", name: "badge", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 24, height: 24, scales: [2, 3], hash: "81c4c8246b195a90d6f5bb90212bbc6a", name: "tier_3_32px", type: "png" });

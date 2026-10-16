@@ -1,30 +1,78 @@
 // === Module 12316: ? ===
 
 // Module 12316
-import _mod12299 from "module_12299" /* 12299 */;
-import _mod12300 from "module_12300" /* 12300 */;
+import generatePropagationContext from "generatePropagationContext" /* 12314 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12317 */;
 
 require = arg1;
 const dependencyMap = arg6;
+const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 
-export const getMainCarrier = function getMainCarrier() {
-  const GLOBAL_OBJ = _mod12299.GLOBAL_OBJ;
-  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
-  GLOBAL_OBJ.__SENTRY__ = tmp3;
-  tmp3.version = tmp3.version || _mod12300.SDK_VERSION;
-  const tmp4 = tmp3.version || _mod12300.SDK_VERSION;
-  tmp3[_mod12300.SDK_VERSION] = tmp3[_mod12300.SDK_VERSION] || {};
-  return _mod12299.GLOBAL_OBJ;
-};
-export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
-  const tmp = __SENTRY__.__SENTRY__ || {};
-  __SENTRY__.__SENTRY__ = tmp;
-  let SDK_VERSION = tmp.version;
-  if (!SDK_VERSION) {
-    SDK_VERSION = _mod12300.SDK_VERSION;
+export const TRACEPARENT_REGEXP = regExp;
+export const extractTraceparentData = function extractTraceparentData(str) {
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
+      }
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      return obj;
+    }
   }
-  tmp.version = SDK_VERSION;
-  const tmp4 = tmp[_mod12300.SDK_VERSION] || {};
-  tmp[_mod12300.SDK_VERSION] = tmp4;
-  return tmp4;
+};
+export const generateSentryTraceHeader = function generateSentryTraceHeader() {
+  if (traceId === undefined) {
+    traceId = generatePropagationContext.generateTraceId();
+  }
+  if (spanId === undefined) {
+    spanId = generatePropagationContext.generateSpanId();
+  }
+  let str = "";
+  if (undefined !== sampled) {
+    let str2 = "-0";
+    if (sampled) {
+      str2 = "-1";
+    }
+    str = str2;
+  }
+  return "" + traceId + "-" + spanId + str;
+};
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
+  let tmp;
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
+      }
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      tmp = obj;
+    }
+  }
+  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
+  if (tmp) {
+    if (tmp.traceId) {
+      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
+      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
+      obj3.spanId = generatePropagationContext.generateSpanId();
+      obj3.sampled = parentSampled;
+      if (!result) {
+        result = {};
+      }
+      obj3.dsc = result;
+      return obj3;
+    }
+  }
+  const obj4 = { traceId: null, spanId: null };
+  obj4.traceId = generatePropagationContext.generateTraceId();
+  const tmp4Result3 = generatePropagationContext;
+  obj4.spanId = generatePropagationContext.generateSpanId();
+  return obj4;
 };

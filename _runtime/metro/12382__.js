@@ -1,45 +1,34 @@
 // === Module 12382: ? ===
 
 // Module 12382
+import _mod12383 from "module_12383" /* 12383 */;
+import setupIntegration from "module_12360" /* 12360 */;
 
-export const parseCookie = function parseCookie(arr) {
-  const obj = {};
-  let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
-    while (-1 !== index) {
-      let length = arr.indexOf(";", num);
-      if (-1 === length) {
-        length = arr.length;
-      } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
-        num = sum;
-        if (sum >= arr.length) {
-          break;
-        }
-      }
-      let str = arr.slice(num, index);
-      let trimmed = str.trim();
-      if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
-        let trimmed1 = str2.trim();
-        index = trimmed1;
-        if (34 === trimmed1.charCodeAt(0)) {
-          index = trimmed1.slice(1, -1);
-        }
-        try {
-          let decodeURIComponentResult = index;
-          if (-1 !== index.indexOf("%")) {
-            let _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(index);
+
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
           }
-          obj[trimmed] = decodeURIComponentResult;
-        } catch (err) {
-          obj[trimmed] = index;
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
         }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod12383.addMetadataToStackFrames(options.getOptions().stackParser, type);
       }
-      let sum1 = length + 1;
-    }
+    });
   }
-  return obj;
-};
+}));

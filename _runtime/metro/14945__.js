@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "bc4f103d29d98767eb7ae693f67ae198", name: "NitroGem2", type: "lottie" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "e6321d3eee6babc8e6acf553c6eec250", name: "ServerTab", type: "lottie" });
