@@ -6,7 +6,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import LurkingStore from "../LurkingStore.tsx";
 
 const require = fn;
-const JoinGuildSources = fn(1085).JoinGuildSources;
+const JoinGuildSources = fn(1087).JoinGuildSources;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx");

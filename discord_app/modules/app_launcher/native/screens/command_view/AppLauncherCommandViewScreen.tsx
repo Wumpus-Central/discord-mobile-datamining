@@ -22,14 +22,14 @@ import AppLauncherContext from "../../AppLauncherContext.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
-import _modDef11841 from "../../../../../../_runtime/metro/11841__.js";
-import _modDef11842 from "../../../../../../_runtime/metro/11842__.js";
+import _modDef11865 from "../../../../../../_runtime/metro/11865__.js";
+import _modDef11866 from "../../../../../../_runtime/metro/11866__.js";
 import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader.tsx";
 import ApplicationCommandValidationUtils from "../../../../application_commands/ApplicationCommandValidationUtils.tsx";
 import application_commands_ApplicationCommandValidationUtils from "../../../../application_commands/native/ApplicationCommandValidationUtils.tsx";
 import CommandOptionViewDefault from "CommandOptionView.tsx";
-import _modDef11941 from "../../../../../../_runtime/metro/11941__.js";
-import _modDef11942 from "../../../../../../_runtime/metro/11942__.js";
+import _modDef11965 from "../../../../../../_runtime/metro/11965__.js";
+import _modDef11966 from "../../../../../../_runtime/metro/11966__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -1184,20 +1184,20 @@ function AppLauncherCommandViewInner(command) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9468);
+const ApplicationCommandIndexStore = fn(9484);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1502);
+const AppLauncherNativeConstants = fn(1504);
 ({
   AppLauncherOptionAutoFocusType: closure_14,
   useAppLauncherNavigation: closure_15,
   DEFAULT_CONTENT_PADDING,
 } = AppLauncherNativeConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_16, NOOP: closure_17, VerticalGradient: closure_18 } = Constants);
-const MediaKeyboardTarget = fn(1627).MediaKeyboardTarget;
+const MediaKeyboardTarget = fn(1629).MediaKeyboardTarget;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
   optionsContainer: null,
@@ -1221,7 +1221,7 @@ let obj2 = {
 };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.optionsContainer = {
-  paddingTop: fn(11882).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(11906).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1242,7 +1242,7 @@ obj2.submitButton = { flex: 1, overflow: "hidden" };
 obj2.optionalOptionsSectionTitle = { marginTop: 36 };
 obj2.optionalOptionList = { marginTop: 12 };
 let obj4 = {
-  paddingTop: fn(11882).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(11906).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1275,11 +1275,11 @@ let obj6 = {
   borderRadius: nativeDefault.radii.lg,
 };
 obj2.emptyStateContainer = {
-  paddingTop: fn(11882).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(11906).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   flex: 1,
 };
 obj2.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj7 = { paddingTop: fn(11882).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj7 = { paddingTop: fn(11906).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj2.failureStateButtonPill = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
 obj2.commandNameContainer = { alignItems: "center", justifyContent: "center", textAlign: "center" };
 let obj8 = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
@@ -1344,9 +1344,9 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
               tmp14 = closure_0;
               tmp15 = closure_3;
               fn = function e() {
-                const obj = onHeightChange(4906);
-                return onHeightChange(4906).runOnJS(onHeightChange(5116).triggerHapticFeedback)(
-                  onHeightChange(5116).HapticFeedbackTypes.IMPACT_LIGHT,
+                const obj = onHeightChange(4909);
+                return onHeightChange(4909).runOnJS(onHeightChange(5119).triggerHapticFeedback)(
+                  onHeightChange(5119).HapticFeedbackTypes.IMPACT_LIGHT,
                 );
               };
               obj13 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
@@ -1607,9 +1607,9 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { translateX: null };
           const obj9 = timing;
           const fn = function e() {
-            const obj = closure_1_0(4906);
-            return closure_1_0(4906).runOnJS(closure_1_0(5116).triggerHapticFeedback)(
-              closure_1_0(5116).HapticFeedbackTypes.IMPACT_LIGHT,
+            const obj = closure_1_0(4909);
+            return closure_1_0(4909).runOnJS(closure_1_0(5119).triggerHapticFeedback)(
+              closure_1_0(5119).HapticFeedbackTypes.IMPACT_LIGHT,
             );
           };
           const obj7 = {
@@ -2392,8 +2392,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {
             style: emptyState,
-            lightSource: _modDef11941,
-            darkSource: _modDef11942,
+            lightSource: _modDef11965,
+            darkSource: _modDef11966,
             title: tmp6,
             body: tmp7,
             children: tmp12,
@@ -2428,8 +2428,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.emptyStateContainer, children: null };
       const obj3 = {
         style: tmp.emptyState,
-        lightSource: _modDef11941,
-        darkSource: _modDef11942,
+        lightSource: _modDef11965,
+        darkSource: _modDef11966,
         title: null,
         body: null,
         children: null,
@@ -2538,8 +2538,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj6 = {
                 style: tmp4.emptyState,
-                lightSource: _modDef11841,
-                darkSource: _modDef11842,
+                lightSource: _modDef11865,
+                darkSource: _modDef11866,
                 title: tmp15,
                 body: tmp16,
                 children: tmp21,
@@ -2602,8 +2602,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [guild(React5, obj3)];
       const obj6 = {
         style: tmp.emptyState,
-        lightSource: _modDef11841,
-        darkSource: _modDef11842,
+        lightSource: _modDef11865,
+        darkSource: _modDef11866,
         title: null,
         body: null,
         children: null,

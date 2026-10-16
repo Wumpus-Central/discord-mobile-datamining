@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05451_LinearGradient.js";
-import _modDef6463 from "../../../../../_runtime/metro/06463__.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
+import _modDef6465 from "../../../../../_runtime/metro/06465__.js";
 import conjureChatTurns from "../conjureChatTurns.tsx";
 import conjurePublishCard from "../../publish/conjurePublishCard.tsx";
 import ConjureTodoState from "../../agent_activity/ConjureTodoState.tsx";
@@ -30,7 +30,7 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(10886);
+let ConjureConnectionStore = fn(10901);
 ({
   ensureConnection: closure_7,
   interruptTurn: closure_8,
@@ -50,7 +50,7 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1 },
   transcript: { flex: 1 },
@@ -144,7 +144,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj7 = { style: transcript, maskElement: tmp23, children };
-              const tmp30 = value2(_modDef6463, obj7);
+              const tmp30 = value2(_modDef6465, obj7);
               cResult[11] = children;
               cResult[12] = tmp3.transcript;
               cResult[13] = tmp23;
@@ -188,7 +188,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = items;
         obj2.maskElement = value3(View, obj3);
         obj2.children = children;
-        tmp3 = value2(_modDef6463, obj2);
+        tmp3 = value2(_modDef6465, obj2);
       }
       return tmp3;
     };
@@ -908,9 +908,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[41] !== projectId) {
-            class Re {
+            class J {
               constructor() {
-                return closure_11.getConnState(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
             const items17 = [projectId];
@@ -920,24 +928,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[41] = projectId;
-            cResult[42] = Re;
+            cResult[42] = tmp69;
             cResult[43] = items17;
             let tmp68 = items17;
           } else {
-            class Re {
+            class J {
               constructor() {
-                return closure_11.getConnState(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
             tmp68 = cResult[43];
           }
           const tmpResult21 = tmp(tmp2[14]);
-          const stateFromStores8 = tmp(tmp2[14]).useStateFromStores(tmp66, Re, tmp68);
+          const stateFromStores8 = tmp(tmp2[14]).useStateFromStores(tmp66, tmp69, tmp68);
           const _Symbol9 = Symbol;
           if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
-            class Re {
+            class J {
               constructor() {
-                return closure_11.getConnState(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
             const items18 = [ConjureChatStore];
@@ -947,11 +971,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[44] = items18;
-            const tmp70 = items18;
+            const tmp71 = items18;
           } else {
-            class Re {
+            class J {
               constructor() {
-                return closure_11.getConnState(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
           }
@@ -970,17 +1002,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[45] = projectId;
             cResult[46] = Fe;
             cResult[47] = items19;
-            let tmp72 = items19;
+            let tmp73 = items19;
           } else {
             class Fe {
               constructor() {
                 return closure_14.hasLoadedHistory(projectId);
               }
             }
-            tmp72 = cResult[47];
+            tmp73 = cResult[47];
           }
           const tmpResult22 = tmp(tmp2[14]);
-          stateFromStores9 = tmp(tmp2[14]).useStateFromStores(tmp70, Fe, tmp72);
+          stateFromStores9 = tmp(tmp2[14]).useStateFromStores(tmp71, Fe, tmp73);
           const _Symbol10 = Symbol;
           if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
             class Fe {
@@ -995,7 +1027,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[48] = items20;
-            const tmp74 = items20;
+            const tmp75 = items20;
           } else {
             class Fe {
               constructor() {
@@ -1018,17 +1050,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[49] = projectId;
             cResult[50] = Be;
             cResult[51] = items21;
-            let tmp76 = items21;
+            let tmp77 = items21;
           } else {
             class Be {
               constructor() {
                 return closure_14.isHistoryUnavailable(projectId);
               }
             }
-            tmp76 = cResult[51];
+            tmp77 = cResult[51];
           }
           const tmpResult23 = tmp(tmp2[14]);
-          const stateFromStores10 = tmp(tmp2[14]).useStateFromStores(tmp74, Be, tmp76);
+          const stateFromStores10 = tmp(tmp2[14]).useStateFromStores(tmp75, Be, tmp77);
           if (cResult[52] === stateFromStores8) {
             class Be {
               constructor() {
@@ -1370,7 +1402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items30 = [projectId];
       closure_21 = obj3.useCallback(() => {
         const intl = util.intl;
-        conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3862.EMgIuY));
+        conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3865.EMgIuY));
       }, items30);
       const items31 = [projectId];
       onPickIdea = obj3.useCallback((implementation_prompt) => {
@@ -1385,7 +1417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items33 = [projectId];
       const callback1 = obj3.useCallback(() => {
         const intl = util.intl;
-        collapsed(projectId, intl.string(_modDef3862["t5CN3+"]));
+        collapsed(projectId, intl.string(_modDef3865["t5CN3+"]));
       }, items32);
       closure_23 = obj3.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
         conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt, {
@@ -2014,32 +2046,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp94Result8 = null;
         if (null != tmp7) {
           const obj27 = { style: tmp.notice, children: null };
-          ({ message: obj45.message, retry: obj45.action } = tmp7);
-          obj27.children = tmp94(tmp2(tmp3[46]).NewInlineNotice, {
-            type: "critical",
-            role: "alert",
-            message: null,
-            action: null,
-          });
+          const obj28 = { type: "critical", role: "alert", message: tmp7.message, action: null };
+          const obj29 = { text: tmp7.retry.text, onPress: tmp7.retry.onClick };
+          obj28.action = obj29;
+          obj27.children = tmp94(tmp2(tmp3[46]).NewInlineNotice, obj28);
           tmp94Result8 = tmp94(tmp93, obj27);
-          const obj28 = { type: "critical", role: "alert", message: null, action: null };
         }
         items57[1] = tmp94Result8;
         let tmp94Result9 = null;
         if (null != tmp6) {
-          const obj29 = { style: tmp.notice, children: null };
-          ({ message: obj47.message, onDismiss: obj47.onDismiss } = tmp6);
-          obj29.children = tmp94(tmp2(tmp3[46]).NewInlineNotice, {
+          const obj30 = { style: tmp.notice, children: null };
+          ({ message: obj48.message, onDismiss: obj48.onDismiss } = tmp6);
+          obj30.children = tmp94(tmp2(tmp3[46]).NewInlineNotice, {
             type: "warning",
             role: "status",
             message: null,
             onDismiss: null,
           });
-          tmp94Result9 = tmp94(tmp93, obj29);
-          const obj30 = { type: "warning", role: "status", message: null, onDismiss: null };
+          tmp94Result9 = tmp94(tmp93, obj30);
+          const obj31 = { type: "warning", role: "status", message: null, onDismiss: null };
         }
         items57[2] = tmp94Result9;
-        const obj31 = {
+        const obj32 = {
           projectId,
           canSend: tmp45,
           running: stateFromStores3,
@@ -2053,25 +2081,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores3) {
           tmp112 = callback14;
         }
-        obj31.onInterrupt = tmp112;
-        obj31.onDraftHasTextChange = tmp39;
-        obj31.hidden = hidden;
-        items57[3] = tmp94(require("ConjureNativeComposer"), obj31);
+        obj32.onInterrupt = tmp112;
+        obj32.onDraftHasTextChange = tmp39;
+        obj32.hidden = hidden;
+        items57[3] = tmp94(require("ConjureNativeComposer"), obj32);
         obj25.children = items57;
         items53[2] = tmp92(tmp93, obj25);
         obj12.children = items53;
         return tmp92(tmp93, obj12);
       } else {
-        const obj32 = { style: tmp.placeholder, children: null };
+        const obj33 = { style: tmp.placeholder, children: null };
         const intl4 = tmp2(tmp3[26]).intl;
         if ("unavailable" === chatEmptyStateResult) {
           let AyiQEp = require("../../intl/ConjureUntranslated.messages.js").Td4Sf4;
         } else {
           AyiQEp = require("../../intl/ConjureUntranslated.messages.js").AyiQEp;
         }
-        const obj33 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
-        obj32.children = tmp94(tmp2(tmp3[40]).Text, obj33);
-        tmp94(tmp93, obj32);
+        const obj34 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
+        obj33.children = tmp94(tmp2(tmp3[40]).Text, obj34);
+        tmp94(tmp93, obj33);
       }
       const tmp5Result = require("ConjureTipsHost");
     };

@@ -9,10 +9,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandsCategoriesConstants = fn(12954);
+const ApplicationCommandsCategoriesConstants = fn(12980);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, categoryImage: null, fadedItem: { opacity: 0.5 }, activeItem: null, item: null };
 let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj.categoryImage = size;
@@ -167,9 +167,9 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
     accessibilityLabel: null,
     children: null
   };
-  const intl = tmp2(1126).intl;
+  const intl = tmp2(1128).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1126).t;
+  const t = tmp2(1128).t;
   if (active) {
     const obj4 = { applicationName: section.name };
     let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj4);
@@ -180,7 +180,7 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(6405).PressableOpacity, {
+  return jsx(section(6407).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },

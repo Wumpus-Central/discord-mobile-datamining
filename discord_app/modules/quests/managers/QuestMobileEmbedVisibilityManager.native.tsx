@@ -1,7 +1,7 @@
 // discord_app/modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import privDefault from "../../../../_runtime/01457_priv.js";
+import privDefault from "../../../../_runtime/01459_priv.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import useAlertStore2 from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
@@ -22,11 +22,11 @@ import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ChannelDetailsStore = fn(9531);
+const ChannelDetailsStore = fn(9547);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(2069).isTextChannel;
-let closure_16 = fn(9398).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
-const MessageStates = fn(1085).MessageStates;
+const isTextChannel = fn(2072).isTextChannel;
+let closure_16 = fn(9414).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const MessageStates = fn(1087).MessageStates;
 function log() {
   if (questLogger == null) {
     questLogger = getQuestLogger.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
@@ -80,7 +80,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(5136).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(5139).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -215,8 +215,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6294).isChannelFocused();
-      applyArgumentsResult(5032);
+      let isChannelFocusedResult = applyArgumentsResult(6296).isChannelFocused();
+      applyArgumentsResult(5035);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

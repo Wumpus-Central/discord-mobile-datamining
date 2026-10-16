@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef1355 from "../../../../_runtime/metro/01355__.js";
+import _modDef1357 from "../../../../_runtime/metro/01357__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const VoiceCallOverlayType = fn(10588).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(10603).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
@@ -15,7 +15,7 @@ let size = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8669).OrientationType.PORTRAIT,
+  screenOrientation: fn(8677).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -26,7 +26,7 @@ const size1 = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8669).OrientationType.PORTRAIT,
+  screenOrientation: fn(8677).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,

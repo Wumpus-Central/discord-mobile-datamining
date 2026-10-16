@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings/GuildRoleMemberActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
+import privDefault from "../../../_runtime/01459_priv.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore.tsx";
@@ -100,7 +100,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 let closure_8 = new privDefault({ maxAge: 10000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");

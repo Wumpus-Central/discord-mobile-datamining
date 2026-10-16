@@ -27,8 +27,8 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7706).SettingMode;
-const Constants = fn(1085);
+const SettingMode = fn(7709).SettingMode;
+const Constants = fn(1087);
 ({
   ChannelTypes: closure_18,
   Permissions: closure_19,
@@ -39,7 +39,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { marginTop: 16, flex: 1 },
@@ -189,13 +189,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_1 = tmp5;
                 closure_128_0 = undefined;
                 accessPermissions = accessPermissions.accessPermissions;
-                const result = v2(8822).isPrivateGuildChannel(accessPermissions);
-                const obj9 = v2(8822);
+                const result = v2(8830).isPrivateGuildChannel(accessPermissions);
+                const obj9 = v2(8830);
                 const tmp21 = v2;
-                closure_128_0 = v2(8822).flipEveryonePermission(accessPermissions, accessPermissions, result);
+                closure_128_0 = v2(8830).flipEveryonePermission(accessPermissions, accessPermissions, result);
                 currentUser = currentUser.getCurrentUser();
                 let tmp7 = ChannelSettingsPermissionsStore;
-                const obj10 = v2(8822);
+                const obj10 = v2(8830);
                 if (!ChannelSettingsPermissionsStore) {
                   tmp7 = null == currentUser;
                 }
@@ -206,7 +206,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                   v2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp21(8822).grantUserChannelAccess(accessPermissions, accessPermissions),
+                    value: tmp21(8830).grantUserChannelAccess(accessPermissions, accessPermissions),
                     done: false,
                   };
                   return obj4;
@@ -236,7 +236,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const items = [closure_128_0];
             v2 = 2;
             dependencyMap = 1;
-            const obj7 = { value: tmp2(8823).savePermissionUpdates(closure_129_0.id, items), done: false };
+            const obj7 = { value: tmp2(8831).savePermissionUpdates(closure_129_0.id, items), done: false };
             return obj7;
           } catch (tmp16) {
             dependencyMap = tmp;
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                     c2 = 1;
                     dependencyMap = 1;
                     const obj6 = {
-                      value: tmp5(8824).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                      value: tmp5(8832).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                         guild_id,
                         constants.VIEW_CHANNEL,
                       ),
@@ -298,19 +298,19 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 3;
               return { value: "IconComponent", done: null };
             }
-            const intl = tmp5(1126).intl;
+            const intl = tmp5(1128).intl;
             const string = intl.string;
-            const t = tmp5(1126).t;
+            const t = tmp5(1128).t;
             if (closure_129_1) {
               let stringResult = string(t.vw48TT);
             } else {
               stringResult = string(t["47gQYL"]);
             }
             closure_128_0 = stringResult;
-            closure_128_1 = tmp5(5481).computeChannelName(closure_129_0, UserStore, RelationshipStore);
-            let intl2 = tmp5(1126).intl;
+            closure_128_1 = tmp5(5483).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+            let intl2 = tmp5(1128).intl;
             let onCancel = intl2.format;
-            let show = tmp5(1126).t;
+            let show = tmp5(1128).t;
             if (closure_129_1) {
               const obj7 = { channelName: closure_128_1 };
               let onCancelResult = onCancel(show.hGzPnx, obj7);
@@ -320,8 +320,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             }
             closure_128_2 = onCancelResult;
             closure_129_2(!closure_129_1);
-            const obj4 = tmp5(5481);
-            show = tmp2(5359).show;
+            const obj4 = tmp5(5483);
+            show = tmp2(5361).show;
             const obj9 = {
               title: closure_128_0,
               body: closure_128_2,
@@ -332,10 +332,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               onCancel: null,
               isDismissable: false,
             };
-            const intl3 = tmp5(1126).intl;
-            obj9.cancelText = intl3.string(tmp5(1126).t["ETE/oC"]);
-            const intl4 = tmp5(1126).intl;
-            obj9.confirmText = intl4.string(tmp5(1126).t.p89ACt);
+            const intl3 = tmp5(1128).intl;
+            obj9.cancelText = intl3.string(tmp5(1128).t["ETE/oC"]);
+            const intl4 = tmp5(1128).intl;
+            obj9.confirmText = intl4.string(tmp5(1128).t.p89ACt);
             intl2 = closure_129_6;
             obj9.onConfirm = closure_129_6;
             onCancel = function onCancel() {
@@ -344,7 +344,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             obj9.onCancel = onCancel;
             show(obj9);
             dependencyMap = 3;
-            const tmp42 = tmp2(5359);
+            const tmp42 = tmp2(5361);
           } catch (tmp54) {
             dependencyMap = tmp;
             throw tmp54;

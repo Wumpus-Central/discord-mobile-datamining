@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
-import _modDef8882 from "../../../../../../_runtime/metro/08882__.js";
+import _modDef8890 from "../../../../../../_runtime/metro/08890__.js";
 import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -40,8 +40,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = HeaderIconButton(1126).intl;
-          const stringResult = intl.string(HeaderIconButton(1126).t["UKOtz+"]);
+          const intl = HeaderIconButton(1128).intl;
+          const stringResult = intl.string(HeaderIconButton(1128).t["UKOtz+"]);
           cResult[2] = stringResult;
           let tmp6 = stringResult;
         } else {
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== tmp3) {
           let obj2 = { children: null };
-          HeaderIconButton = HeaderIconButton(9518).HeaderIconButton;
+          HeaderIconButton = HeaderIconButton(9534).HeaderIconButton;
           const obj3 = { accessibilityLabel: tmp6, source: null, onPress: null };
-          tmp = _modDef8882;
+          tmp = _modDef8890;
           obj3.source = tmp;
           obj3.onPress = tmp3;
           obj2.children = <HeaderIconButton accessibilityLabel={tmp6} source={null} onPress={null} />;
@@ -70,11 +70,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (channel.isDM()) {
           const obj = { children: null };
           let obj2 = { accessibilityLabel: null, source: null, onPress: null };
-          const intl = channel(1126).intl;
-          obj2.accessibilityLabel = intl.string(channel(1126).t["UKOtz+"]);
-          obj2.source = _modDef8882;
+          const intl = channel(1128).intl;
+          obj2.accessibilityLabel = intl.string(channel(1128).t["UKOtz+"]);
+          obj2.source = _modDef8890;
           obj2.onPress = tmp;
-          obj.children = jsx(channel(9518).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+          obj.children = jsx(channel(9534).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
           tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
         } else {
           tmp2 = null;

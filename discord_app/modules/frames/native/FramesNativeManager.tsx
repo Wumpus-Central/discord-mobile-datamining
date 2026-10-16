@@ -7,7 +7,7 @@ import FramesStore from "../FramesStore.tsx";
 import FramesManager from "../FramesManager.tsx";
 
 require = fn;
-const PlatformUtils = fn(1383);
+const PlatformUtils = fn(1385);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

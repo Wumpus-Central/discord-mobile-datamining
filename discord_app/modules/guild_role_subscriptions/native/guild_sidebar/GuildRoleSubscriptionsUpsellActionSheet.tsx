@@ -5,16 +5,16 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef17263 from "../../../../../_runtime/metro/17263__.js";
+import _modDef17297 from "../../../../../_runtime/metro/17297__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const GuildSettingsSections = fn(1087).GuildSettingsSections;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({
   title: { marginTop: 24, textAlign: "center" },
   description: { marginTop: 8, marginBottom: 24, textAlign: "center" },
@@ -48,18 +48,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: markAsDismissed(17263) };
-          const tmp12 = closure_6(markAsDismissed(5088), obj2);
+          const obj2 = { source: markAsDismissed(17297) };
+          const tmp12 = closure_6(markAsDismissed(5091), obj2);
           cResult[5] = tmp12;
           let tmp8 = tmp12;
-          const tmp11 = markAsDismissed(5088);
+          const tmp11 = markAsDismissed(5091);
         } else {
           tmp8 = cResult[5];
         }
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.C0m4rQ);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t.C0m4rQ);
           cResult[6] = stringResult;
           let tmp13 = stringResult;
         } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp13,
           };
-          const tmp17 = closure_6(tmp(5147).Text, obj3);
+          const tmp17 = closure_6(tmp(5149).Text, obj3);
           cResult[7] = tmp4.title;
           cResult[8] = tmp17;
           let tmp15 = tmp17;
@@ -82,8 +82,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol3 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(tmp(1126).t.zOHfEX);
+          const intl2 = tmp(1128).intl;
+          const stringResult1 = intl2.string(tmp(1128).t.zOHfEX);
           cResult[9] = stringResult1;
           let tmp18 = stringResult1;
         } else {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp4.description) {
           const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-          const tmp22 = closure_6(tmp(5147).Text, obj4);
+          const tmp22 = closure_6(tmp(5149).Text, obj4);
           cResult[10] = tmp4.description;
           cResult[11] = tmp22;
           let tmp20 = tmp22;
@@ -100,8 +100,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol4 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = tmp(1126).intl;
-          const stringResult2 = intl3.string(tmp(1126).t.OgQQbG);
+          const intl3 = tmp(1128).intl;
+          const stringResult2 = intl3.string(tmp(1128).t.OgQQbG);
           cResult[12] = stringResult2;
           let tmp23 = stringResult2;
         } else {
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp5) {
           const obj5 = { onPress: tmp5, text: tmp23 };
-          const tmp27 = closure_6(tmp(5439).Button, obj5);
+          const tmp27 = closure_6(tmp(5441).Button, obj5);
           cResult[13] = tmp5;
           cResult[14] = tmp27;
           let tmp25 = tmp27;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const stringResult3 = obj6.string(tmp(1126).t.WAI6xu);
+          const stringResult3 = obj6.string(tmp(1128).t.WAI6xu);
           cResult[17] = stringResult3;
           const tmp29 = stringResult3;
         } else {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { onPress: T, text: tmp29, variant: "secondary" };
-          const tmp32 = closure_6(tmp(5439).Button, obj7);
+          const tmp32 = closure_6(tmp(5441).Button, obj7);
           cResult[18] = T;
           cResult[19] = tmp32;
         } else {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
           const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
           obj8.children = items;
-          const tmp39 = closure_7(tmp(7061).BottomSheet, obj8);
+          const tmp39 = closure_7(tmp(7063).BottomSheet, obj8);
           cResult[23] = tmp25;
           cResult[24] = tmp33;
           cResult[25] = tmp6;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         children: null,
       };
-      const obj2 = { source: _modDef17263 };
+      const obj2 = { source: _modDef17297 };
       const items = [closure_6(FastImageDefault, obj2), , , ,];
       const obj3 = {
         style: tmp.title,

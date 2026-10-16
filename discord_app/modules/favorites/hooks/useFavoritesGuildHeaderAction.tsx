@@ -2,12 +2,12 @@
 import c from "../../../../_runtime/00576_c.js";
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3444 from "../intl/FavoritesGuild.messages.js";
+import _modDef3447 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Routes = fn(1085).Routes;
+const Routes = fn(1087).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== hasAccess) {
         const intl = util.intl;
         if (hasAccess) {
-          tmp2 = _modDef3444;
+          tmp2 = _modDef3447;
           let ojM1xJ = tmp2.G9fGlP;
         } else {
           ojM1xJ = util.t.ojM1xJ;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const intl = util.intl;
       if (hasAccess) {
-        let ojM1xJ = _modDef3444.G9fGlP;
+        let ojM1xJ = _modDef3447.G9fGlP;
       } else {
         ojM1xJ = util.t.ojM1xJ;
       }

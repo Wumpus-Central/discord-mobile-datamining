@@ -3,7 +3,7 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes, Permissions } = Constants);
 let items = [, , , , , ,];
 ({

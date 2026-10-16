@@ -11,11 +11,11 @@ import TextStyles from "../../rebrand/native/TextStyles.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(
-  TextStyles(fn(1085).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+  TextStyles(fn(1087).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
 obj3.textAlign = "center";
 obj3.marginVertical = 12;

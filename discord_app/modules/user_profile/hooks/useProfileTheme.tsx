@@ -11,8 +11,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const useEffectiveThemeOverride = fn(8573).useEffectiveThemeOverride;
-const ThemeTypes = fn(1085).ThemeTypes;
+const useEffectiveThemeOverride = fn(8581).useEffectiveThemeOverride;
+const ThemeTypes = fn(1087).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");

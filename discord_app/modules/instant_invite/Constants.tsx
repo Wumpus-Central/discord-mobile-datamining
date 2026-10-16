@@ -1,4 +1,5 @@
 // discord_app/modules/instant_invite/Constants.tsx
+import Constants from "../../../discord_common/js/shared/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = { GUILD: 0, [0]: "GUILD", GROUP_DM: 1, [1]: "GROUP_DM", FRIEND: 2, [2]: "FRIEND" };
@@ -9,12 +10,5 @@ const result = size.fileFinishedImporting("modules/instant_invite/Constants.tsx"
 export const InviteSendStates = { SENDING: "sending", SENT: "sent", ERROR: "error" };
 export const InviteTypes = obj;
 export const DESKTOP_APP_REDIRECTABLE_INVITE_TYPES = new Set(items);
-export const InviteTargetTypes = {
-  STREAM: 1,
-  [1]: "STREAM",
-  EMBEDDED_APPLICATION: 2,
-  [2]: "EMBEDDED_APPLICATION",
-  ROLE_SUBSCRIPTIONS_PURCHASE: 3,
-  [3]: "ROLE_SUBSCRIPTIONS_PURCHASE",
-};
+export const InviteTargetTypes = Constants.InviteTargetTypes;
 export const InstantInviteModalPages = { MAIN: "main", SETTINGS: "settings" };

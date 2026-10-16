@@ -259,7 +259,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   HermesBuiltin.arraySpread(items9, 8);
   return items10;
 }
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 let items = [, , ,];
 ({ FRIEND: arr[0], SUGGESTION: arr[1], PENDING_INCOMING: arr[2], PENDING_OUTGOING: arr[3] } = RelationshipTypes);
 const set = new Set(items);

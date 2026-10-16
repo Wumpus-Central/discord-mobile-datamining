@@ -25,7 +25,7 @@ let closure_3 = [
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({
   trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" },
 });

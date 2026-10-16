@@ -26,14 +26,14 @@ import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const THREADED_CHANNEL_TYPES = fn(2069).THREADED_CHANNEL_TYPES;
-let closure_8 = fn(9531).setIsChannelDetailsSearchActive;
-const Constants = fn(1085);
+const THREADED_CHANNEL_TYPES = fn(2072).THREADED_CHANNEL_TYPES;
+let closure_8 = fn(9547).setIsChannelDetailsSearchActive;
+const Constants = fn(1087);
 ({ ChannelTypes: closure_9, ChannelTypesSets: c10, ComponentActions: closure_11 } = Constants);
-let closure_12 = fn(9532).SearchEntrypointAnalyticsLocations;
+let closure_12 = fn(9548).SearchEntrypointAnalyticsLocations;
 const jsx = fn(21).jsx;
 const createElement = fn(19).createElement;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_15 = createStyles.createStyles({
   actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
 });
@@ -64,9 +64,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = hasUnread;
         }
         if (isAppChannelChatOpen) {
-          let ChatIcon = tmp(8451).AppsIcon;
+          let ChatIcon = tmp(8459).AppsIcon;
         } else {
-          ChatIcon = tmp(8416).ChatIcon;
+          ChatIcon = tmp(8424).ChatIcon;
         }
         if (cResult[0] === type.guild_id) {
           if (cResult[1] === type.id) {
@@ -83,8 +83,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[7] !== isAppChannelChatOpen) {
-          const intl = tmp(1126).intl;
-          const t = tmp(1126).t;
+          const intl = tmp(1128).intl;
+          const t = tmp(1128).t;
           const stringResult = intl.string(isAppChannelChatOpen ? t["5MstTl"] : t.kkKapG);
           cResult[7] = isAppChannelChatOpen;
           cResult[8] = stringResult;
@@ -150,9 +150,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = hasUnread;
         }
         if (isAppChannelChatOpen) {
-          let ChatIcon = tmp2(8451).AppsIcon;
+          let ChatIcon = tmp2(8459).AppsIcon;
         } else {
-          ChatIcon = tmp2(8416).ChatIcon;
+          ChatIcon = tmp2(8424).ChatIcon;
         }
         const obj2 = {
           source: null,
@@ -170,8 +170,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           badgePosition: "right",
           buttonText: null,
         };
-        const intl = tmp2(1126).intl;
-        const t = tmp2(1126).t;
+        const intl = tmp2(1128).intl;
+        const t = tmp2(1128).t;
         obj2.accessibilityLabel = intl.string(isAppChannelChatOpen ? t["5MstTl"] : t.kkKapG);
         obj2.badge = tmp8;
         let StringResult;
@@ -838,7 +838,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channelId(576);
       const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
-      channelId(6140);
+      channelId(6142);
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -862,7 +862,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       ({ screenIndex, showCreateThread } = channelId);
       const items = [ChannelStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-      channelId(6140);
+      channelId(6142);
       let tmp4 = null;
       if (null != stateFromStores) {
         tmp4 = null;
@@ -924,7 +924,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const result = ForumChannelCloseSearchButton(504);
       const stateFromStoresObject = result.useStateFromStoresObject(first, tmp4);
       ({ isMultiUserDM, isDM } = stateFromStoresObject);
-      const result1 = ForumChannelCloseSearchButton(9547);
+      const result1 = ForumChannelCloseSearchButton(9563);
       const hasForumSearchQuery = result1.useHasForumSearchQuery(channelId);
       if (cResult[3] === channelId) {
         if (cResult[4] === hasForumSearchQuery) {
@@ -951,7 +951,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (hasForumSearchQuery) {
-        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13674).ForumChannelCloseSearchButton;
+        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13700).ForumChannelCloseSearchButton;
         const obj = { channelId };
         let tmp10 = <ForumChannelCloseSearchButton channelId={channelId} />;
       } else {
@@ -1005,7 +1005,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: containerStyle, children: null };
       if (obj2.useHasForumSearchQuery(channelId)) {
         const obj4 = { channelId };
-        let tmp4Result = jsx(tmp(13674).ForumChannelCloseSearchButton, { channelId });
+        let tmp4Result = jsx(tmp(13700).ForumChannelCloseSearchButton, { channelId });
       } else {
         if (!isDM) {
           if (!isMultiUserDM) {

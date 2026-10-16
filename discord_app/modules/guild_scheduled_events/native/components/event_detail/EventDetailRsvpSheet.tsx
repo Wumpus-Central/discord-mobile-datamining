@@ -4,11 +4,11 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import BottomSheetModal from "../../../../../../_runtime/06527_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/06529_BottomSheetModal.js";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
-import _modDef9000 from "../../../../../../_runtime/metro/09000__.js";
+import _modDef9008 from "../../../../../../_runtime/metro/09008__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -25,10 +25,10 @@ function keyExtractor(count) {
   return user_id;
 }
 const View = fn(17).View;
-const Fonts = fn(1096).Fonts;
+const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   staticMessageContentContainer: { flex: 1, padding: 16 },
   userList: { paddingTop: 16 },
@@ -70,7 +70,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { icon: _modDef9000 };
+          const obj2 = { icon: _modDef9008 };
           const tmp10 = React5(StageSparkleDefault, obj2);
           cResult[3] = tmp10;
           let tmp6 = tmp10;
@@ -103,7 +103,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, children: null };
       const items = [closure_9().emptyDisplayContainer, style];
       obj.style = items;
-      const obj2 = { icon: _modDef9000 };
+      const obj2 = { icon: _modDef9008 };
       const items1 = [React5(StageSparkleDefault, obj2), children];
       obj.children = items1;
       return closure_1_8(View, obj);
@@ -221,7 +221,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       remainingUsersGroup = remainingUsersGroup.remainingUsersGroup;
       const tmp4 = closure_9();
       if (cResult[0] !== tmp4.remainingUsersIcon) {
-        const obj2 = { source: _modDef9000, style: tmp4.remainingUsersIcon };
+        const obj2 = { source: _modDef9008, style: tmp4.remainingUsersIcon };
         const tmp9 = React5(FastImageDefault, obj2);
         cResult[0] = tmp4.remainingUsersIcon;
         cResult[1] = tmp9;
@@ -270,7 +270,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_9();
       const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
       const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-      const obj3 = { source: _modDef9000, style: tmp.remainingUsersIcon };
+      const obj3 = { source: _modDef9008, style: tmp.remainingUsersIcon };
       obj2.children = React5(FastImageDefault, obj3);
       obj.leading = React5(View, obj2);
       const intl = util.intl;
@@ -287,7 +287,7 @@ const memoResult = noop.memo(
         eventUser = eventUser.eventUser;
         const guildId = eventUser.guildId;
         closure_9();
-        analyticsLocations = analyticsLocations(7073)().analyticsLocations;
+        analyticsLocations = analyticsLocations(7075)().analyticsLocations;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [UserStore];
           cResult[0] = items;
@@ -376,10 +376,10 @@ const memoResult = noop.memo(
             isMobileOnline,
             isVROnline,
             status,
-            size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32,
+            size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32,
             autoStatusCutout: true,
           };
-          tmp14 = closure_7(tmp(1200).Avatar, obj2);
+          tmp14 = closure_7(tmp(1202).Avatar, obj2);
         }
         cResult[7] = guildId;
         cResult[8] = isMobileOnline;
@@ -393,7 +393,7 @@ const memoResult = noop.memo(
         eventUser = eventUser.eventUser;
         let analyticsLocations;
         const tmp = closure_9();
-        analyticsLocations = analyticsLocations(7073)().analyticsLocations;
+        analyticsLocations = analyticsLocations(7075)().analyticsLocations;
         const items = [UserStore];
         const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
         const obj = eventUser(504);
@@ -418,10 +418,10 @@ const memoResult = noop.memo(
             isMobileOnline,
             isVROnline,
             status,
-            size: tmp4(1200).AvatarSizes.REFRESH_MEDIUM_32,
+            size: tmp4(1202).AvatarSizes.REFRESH_MEDIUM_32,
             autoStatusCutout: true,
           };
-          tmp7Result = closure_7(tmp4(1200).Avatar, obj4);
+          tmp7Result = closure_7(tmp4(1202).Avatar, obj4);
         }
         obj3.leading = tmp7Result;
         const obj6 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
@@ -432,19 +432,19 @@ const memoResult = noop.memo(
           nick = member.nick;
         }
         if (nick == null) {
-          nick = tmp2(5018).getName(eventUser.user);
-          const tmp2Result2 = tmp2(5018);
+          nick = tmp2(5021).getName(eventUser.user);
+          const tmp2Result2 = tmp2(5021);
         }
         obj6.nick = nick;
         ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-        obj3.label = closure_7(analyticsLocations(8983), obj6);
+        obj3.label = closure_7(analyticsLocations(8991), obj6);
         obj3.onPress = function onPress() {
           showUserProfileActionSheetDefault({
             userId: eventUser.user_id,
             sourceAnalyticsLocations: analyticsLocations,
           });
         };
-        return closure_7(eventUser(8800).FormRow, obj3, eventUser.user_id);
+        return closure_7(eventUser(8808).FormRow, obj3, eventUser.user_id);
       },
 );
 size = fn(2);
@@ -504,7 +504,7 @@ export default function EventDetailRsvpSheet(arg0) {
       }
       items1[1] = { paddingBottom: safeBottomPadding };
       obj3.style = items1;
-      obj2.children = closure_7(guildId(6376).ActivityIndicator, obj3);
+      obj2.children = closure_7(guildId(6378).ActivityIndicator, obj3);
       let tmp8 = closure_7(StaticMessageContainer, obj2);
     }
     return tmp8;
@@ -579,9 +579,9 @@ export default function EventDetailRsvpSheet(arg0) {
     obj.contentContainerStyle = items4;
     obj.data = userListItems;
     obj.renderItem = callback;
-    obj.ItemSeparatorComponent = guildId(8800).FormDivider;
+    obj.ItemSeparatorComponent = guildId(8808).FormDivider;
     obj.keyExtractor = keyExtractor;
-    tmp8 = closure_7(guildId(7034).BottomSheetFlashList, obj);
+    tmp8 = closure_7(guildId(7036).BottomSheetFlashList, obj);
   }
 }
 export const UserRow = memoResult;

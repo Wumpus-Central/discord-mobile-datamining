@@ -94,7 +94,7 @@ function canForwardMessage(state) {
     }
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({
   GuildFeatures: metroRequire,
   MessageFlags,

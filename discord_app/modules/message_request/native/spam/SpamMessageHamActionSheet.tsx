@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   container: null,
@@ -148,8 +148,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         user: stateFromStores,
         onError: function handleRequestError() {
           const obj2 = { text: null, variant: "critical" };
-          const intl = recipientId(1126).intl;
-          obj2.text = intl.string(recipientId(1126).t["EDYbS+"]);
+          const intl = recipientId(1128).intl;
+          obj2.text = intl.string(recipientId(1128).t["EDYbS+"]);
           ToastActionCreatorsDefault.open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
         },
         onAcceptSuccess: function handleAcceptSuccess() {

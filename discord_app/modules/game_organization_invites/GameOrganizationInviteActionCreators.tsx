@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const obj = {
   resolveGameOrganizationInvite(arg0) {
     closure_0 = arg0;

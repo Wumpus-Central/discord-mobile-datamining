@@ -344,7 +344,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 let closure_6 = new LoggerDefault("VirtualCurrencyActionCreators");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");

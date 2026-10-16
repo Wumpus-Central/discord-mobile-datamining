@@ -9,17 +9,17 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerConstants = fn(1241);
+const ExpressionPickerConstants = fn(1243);
 ({
   ExpressionPickerViewType: hasOwnProperty,
   ExpressionPickerOrder: metroRequire,
   PADDING_HORIZONTAL,
 } = ExpressionPickerConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const EmojiIntention = fn(1393).EmojiIntention;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   expressionPickerContainer: {
     flex: 1,
@@ -75,7 +75,7 @@ export default noop.memo(
           if (cResult[1] === visibleTabs) {
             let tmp5 = cResult[2];
           }
-          const tmp7 = expressionPickerViewType(9949)(tmp5);
+          const tmp7 = expressionPickerViewType(9965)(tmp5);
           ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp7);
           const prop = tmp7.expressionPickerTabStrings;
           if (cResult[3] !== channel) {
@@ -183,7 +183,7 @@ export default noop.memo(
                   return obj;
                 }
               }
-              const segmentedControlState = tmp(8750).useSegmentedControlState(tmp19);
+              const segmentedControlState = tmp(8758).useSegmentedControlState(tmp19);
               if (cResult[15] !== expressionPickerViewType) {
                 class Z {
                   constructor() {
@@ -367,9 +367,9 @@ export default noop.memo(
                   }
                 }
               }
-              const tmp28 = expressionPickerViewType(9950)(tmp27);
-              const tmpResult = tmp(8750);
-              const isScreenReaderEnabled = tmp(5422).useIsScreenReaderEnabled();
+              const tmp28 = expressionPickerViewType(9966)(tmp27);
+              const tmpResult = tmp(8758);
+              const isScreenReaderEnabled = tmp(5424).useIsScreenReaderEnabled();
               if (cResult[20] === tmp28) {
                 class Z {
                   constructor() {
@@ -502,7 +502,7 @@ export default noop.memo(
               cResult[20] = tmp28;
               cResult[21] = isScreenReaderEnabled;
               cResult[22] = tmp31;
-              const tmpResult2 = tmp(5422);
+              const tmpResult2 = tmp(5424);
             }
             let obj3 = { pageWidth: 0, defaultIndex: expressionPickerSelectedIndex, onSetActiveIndex: L, items: tmp15 };
             cResult[12] = expressionPickerSelectedIndex;

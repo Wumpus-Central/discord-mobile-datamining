@@ -9,7 +9,7 @@ let result = size.fileFinishedImporting("modules/conjure/projects/openConjurePro
 export default function openConjureProjectInBuilder(id) {
   let result = ConjureActivity.conjureProjectGuildId(id);
   if (result == null) {
-    result = ConjureUtils.resolveConjureWorkspaceGuildId("openVibegrationsProjectInBuilder");
+    result = ConjureUtils.resolveConjureWorkspaceGuildId("openConjureProjectInBuilder");
     const tmpResult = ConjureUtils;
   }
   let flag = null != result;

@@ -7,16 +7,17 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
-let context = noop.createContext({ isForm: false });
+const context = noop.createContext({ isForm: false });
+const value = { isForm: true };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/Form.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function Form(arg0) {
-      const cResult = c.c(21);
+      const cResult = c.c(20);
       ({
         style,
         children,
@@ -33,54 +34,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = keyboardShouldPersistTaps;
       }
       const tmp5 = closure_6();
-      context = noop.useContext(RedesignCompat.RedesignCompatContext);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { isForm: true };
-        cResult[0] = obj2;
-        let first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      let redesign = context;
-      if (context) {
-        redesign = tmp5.redesign;
-      }
-      if (cResult[1] === style) {
-        if (cResult[2] === tmp5.form) {
-          if (cResult[3] === redesign) {
-            let tmp8 = cResult[4];
+      const tmp6 = noop.useContext(RedesignCompat.RedesignCompatContext) && tmp5.redesign;
+      if (cResult[0] === style) {
+        if (cResult[1] === tmp5.form) {
+          if (cResult[2] === tmp6) {
+            let tmp7 = cResult[3];
           }
           const sum = 38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom;
-          if (cResult[5] !== sum) {
-            const obj3 = { paddingBottom: sum };
-            cResult[5] = sum;
-            cResult[6] = obj3;
-            let tmp10 = obj3;
+          if (cResult[4] !== sum) {
+            const obj2 = { paddingBottom: sum };
+            cResult[4] = sum;
+            cResult[5] = obj2;
+            let tmp9 = obj2;
           } else {
-            tmp10 = cResult[6];
+            tmp9 = cResult[5];
           }
-          if (cResult[7] === contentContainerStyle) {
-            if (cResult[8] === tmp10) {
-              let tmp11 = cResult[9];
+          if (cResult[6] === contentContainerStyle) {
+            if (cResult[7] === tmp9) {
+              let tmp10 = cResult[8];
             }
             const _Symbol = Symbol;
-            if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj4 = { top: 0 };
-              cResult[10] = obj4;
-              let tmp12 = obj4;
+            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+              const obj3 = { top: 0 };
+              cResult[9] = obj3;
+              let tmp12 = obj3;
             } else {
-              tmp12 = cResult[10];
+              tmp12 = cResult[9];
             }
-            if (cResult[11] === tmp4) {
-              if (cResult[12] === children) {
-                if (cResult[13] === str) {
-                  if (cResult[14] === onLayout) {
-                    if (cResult[15] === onScroll) {
-                      if (cResult[16] === ref) {
-                        if (cResult[17] === scrollsToTop) {
-                          if (cResult[18] === tmp8) {
-                            if (cResult[19] === tmp11) {
-                              let tmp13 = cResult[20];
+            if (cResult[10] === tmp4) {
+              if (cResult[11] === children) {
+                if (cResult[12] === str) {
+                  if (cResult[13] === onLayout) {
+                    if (cResult[14] === onScroll) {
+                      if (cResult[15] === ref) {
+                        if (cResult[16] === scrollsToTop) {
+                          if (cResult[17] === tmp7) {
+                            if (cResult[18] === tmp10) {
+                              let tmp13 = cResult[19];
                             }
                             return tmp13;
                           }
@@ -91,13 +81,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const obj5 = { value: first, children: null };
-            const obj6 = {
+            const obj4 = { value, children: null };
+            const obj5 = {
               ref,
               onLayout,
               scrollsToTop,
-              style: tmp8,
-              contentContainerStyle: tmp11,
+              style: tmp7,
+              contentContainerStyle: tmp10,
               contentInset: tmp12,
               automaticallyAdjustContentInsets: false,
               keyboardShouldPersistTaps: str,
@@ -105,13 +95,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onScroll,
               children,
             };
-            obj5.children = (
+            obj4.children = (
               <ScrollView
                 ref={ref}
                 onLayout={onLayout}
                 scrollsToTop={scrollsToTop}
-                style={tmp8}
-                contentContainerStyle={tmp11}
+                style={tmp7}
+                contentContainerStyle={tmp10}
                 contentInset={tmp12}
                 automaticallyAdjustContentInsets={false}
                 keyboardShouldPersistTaps={str}
@@ -121,32 +111,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 {children}
               </ScrollView>
             );
-            const tmp17 = <context.Provider value={first}>{null}</context.Provider>;
-            cResult[11] = tmp4;
-            cResult[12] = children;
-            cResult[13] = str;
-            cResult[14] = onLayout;
-            cResult[15] = onScroll;
-            cResult[16] = ref;
-            cResult[17] = scrollsToTop;
-            cResult[18] = tmp8;
-            cResult[19] = tmp11;
-            cResult[20] = tmp17;
-            tmp13 = tmp17;
+            const tmp18 = <context.Provider value={value}>{null}</context.Provider>;
+            cResult[10] = tmp4;
+            cResult[11] = children;
+            cResult[12] = str;
+            cResult[13] = onLayout;
+            cResult[14] = onScroll;
+            cResult[15] = ref;
+            cResult[16] = scrollsToTop;
+            cResult[17] = tmp7;
+            cResult[18] = tmp10;
+            cResult[19] = tmp18;
+            tmp13 = tmp18;
           }
-          const items = [tmp10, contentContainerStyle];
-          cResult[7] = contentContainerStyle;
-          cResult[8] = tmp10;
-          cResult[9] = items;
-          tmp11 = items;
+          const items = [tmp9, contentContainerStyle];
+          cResult[6] = contentContainerStyle;
+          cResult[7] = tmp9;
+          cResult[8] = items;
+          tmp10 = items;
         }
       }
-      const items1 = [tmp5.form, style, redesign];
-      cResult[1] = style;
-      cResult[2] = tmp5.form;
-      cResult[3] = redesign;
-      cResult[4] = items1;
-      tmp8 = items1;
+      const items1 = [tmp5.form, style, tmp6];
+      cResult[0] = style;
+      cResult[1] = tmp5.form;
+      cResult[2] = tmp6;
+      cResult[3] = items1;
+      tmp7 = items1;
     }
   : function Form(keyboardShouldPersistTaps) {
       let str = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
@@ -161,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ contentContainerStyle, onScroll, scrollsToTop, onLayout, ref } = keyboardShouldPersistTaps);
       const tmp = closure_6();
       let redesign = noop.useContext(RedesignCompat.RedesignCompatContext);
-      const obj = { value: { isForm: true }, children: null };
+      const obj = { value, children: null };
       const obj2 = {
         ref,
         onLayout,
@@ -207,6 +197,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           {null}
         </ScrollView>
       );
-      return <context.Provider value={{ isForm: true }}>{null}</context.Provider>;
+      return <context.Provider value={value}>{null}</context.Provider>;
     };
 export const FormContext = context;

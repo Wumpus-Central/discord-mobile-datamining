@@ -57,7 +57,7 @@ function syncFavoriteCategoryCollapse() {
     return flag2;
   }
 }
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = fn(1087).ChannelTypes;
 const dependencyMap = {};
 let closure_8 = 0;
 const PersistedStore = initializeDefault.PersistedStore;

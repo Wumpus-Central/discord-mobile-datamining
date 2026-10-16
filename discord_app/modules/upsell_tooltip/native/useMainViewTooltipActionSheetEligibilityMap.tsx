@@ -29,15 +29,15 @@ import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx
 const require = globalThis.__r;
 
 require = fn;
-let PlatformTypes = fn(1085).PlatformTypes;
-const PremiumConstants = fn(1392);
+let PlatformTypes = fn(1087).PlatformTypes;
+const PremiumConstants = fn(1394);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID,
 } = PremiumConstants);
-const UserSettingsTypes = fn(1095).UserSettingsTypes;
+const UserSettingsTypes = fn(1097).UserSettingsTypes;
 const MainViewTooltipActionSheets = "MainViewTooltipActionSheets";
 let items = [
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,

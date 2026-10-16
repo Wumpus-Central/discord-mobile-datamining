@@ -22,8 +22,8 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
     return null;
   }
 }
-let closure_3 = fn(7484).transformSKUToCollectiblesItem;
-const SKUProductLines = fn(1085).SKUProductLines;
+let closure_3 = fn(7486).transformSKUToCollectiblesItem;
+const SKUProductLines = fn(1087).SKUProductLines;
 const prototype = function CollectiblesWishlistItemRecord(bundle_items) {
   const tmp2 = new prototype(bundle_items, tmp);
   tmp2.skuProductLine = SKUProductLines.COLLECTIBLES;

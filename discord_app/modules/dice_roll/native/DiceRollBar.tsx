@@ -8,11 +8,11 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(12709).useDiceRollState;
+const useDiceRollState = fn(12735).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 300;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   animatedContainer: { overflow: "hidden" },
   container: {

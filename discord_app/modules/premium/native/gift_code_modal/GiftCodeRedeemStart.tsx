@@ -8,7 +8,7 @@ import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
-import _mod5961 from "module_5961" /* 5961 */;
+import _mod5963 from "module_5963" /* 5963 */;
 import GameIcon from "../../../game_detection/native/GameIcon.tsx";
 import SlayerStorefrontUtils from "../../../slayer_storefront/SlayerStorefrontUtils.tsx";
 import SoundboardActionCreators from "../../../soundboard/SoundboardActionCreators.tsx";
@@ -38,69 +38,69 @@ function getGiftCodeHeaderText(isSubscription) {
       if (sku != null) {
         name = sku.name;
       }
-      let subscriptionGiftStartHeaderText = sender(5849).getSubscriptionGiftStartHeaderText(
+      let subscriptionGiftStartHeaderText = sender(5851).getSubscriptionGiftStartHeaderText(
         subscriptionPlan,
         sender,
         name,
       );
-      const obj24 = sender(5849);
+      const obj24 = sender(5851);
     }
     return subscriptionGiftStartHeaderText;
   }
   if (obj.isGameItemSKU(sku)) {
-    let intl = sender(1126).intl;
-    subscriptionGiftStartHeaderText = intl.string(sender(1126).t["Bn1J+a"]);
+    let intl = sender(1128).intl;
+    subscriptionGiftStartHeaderText = intl.string(sender(1128).t["Bn1J+a"]);
   } else {
     const obj2 = { type: itemType, isBundle, sender };
-    const match = sender(5961).match(obj2);
+    const match = sender(5963).match(obj2);
     const obj3 = { isBundle: true, sender: null };
-    const P = sender(5961).P;
-    obj3.sender = P.not(sender(5961).P.nullish);
-    const str = sender(5961);
-    const obj4 = { isBundle: true, sender: sender(5961).P.nullish };
+    const P = sender(5963).P;
+    obj3.sender = P.not(sender(5963).P.nullish);
+    const str = sender(5963);
+    const obj4 = { isBundle: true, sender: sender(5963).P.nullish };
     const withResult = match.with(obj3, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.JUV1tL, { sender });
     });
-    const obj5 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: null };
-    const P2 = sender(5961).P;
-    obj5.sender = P2.not(sender(5961).P.nullish);
+    const obj5 = { type: sender(1995).CollectiblesItemType.AVATAR_DECORATION, sender: null };
+    const P2 = sender(5963).P;
+    obj5.sender = P2.not(sender(5963).P.nullish);
     const withResult1 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       });
-    const obj6 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: null };
-    const P3 = sender(5961).P;
-    obj6.sender = P3.not(sender(5961).P.nullish);
+    const obj6 = { type: sender(1995).CollectiblesItemType.PROFILE_EFFECT, sender: null };
+    const P3 = sender(5963).P;
+    obj6.sender = P3.not(sender(5963).P.nullish);
     const withResult2 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.SKduyh, { sender });
       });
-    const obj7 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: null };
-    const P4 = sender(5961).P;
-    obj7.sender = P4.not(sender(5961).P.nullish);
+    const obj7 = { type: sender(1995).CollectiblesItemType.NAMEPLATE, sender: null };
+    const P4 = sender(5963).P;
+    obj7.sender = P4.not(sender(5963).P.nullish);
     const withResult3 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -110,17 +110,17 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["1w42T2"], { sender });
       });
-    const obj8 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: null };
-    const P5 = sender(5961).P;
-    obj8.sender = P5.not(sender(5961).P.nullish);
+    const obj8 = { type: sender(1995).CollectiblesItemType.PROFILE_FRAME, sender: null };
+    const P5 = sender(5963).P;
+    obj8.sender = P5.not(sender(5963).P.nullish);
     const withResult4 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -134,15 +134,15 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.vFiQlU, { sender });
       });
-    const obj9 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5961).P.nullish };
+    const obj9 = { type: sender(1995).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5963).P.nullish };
     const withResult5 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -160,15 +160,15 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       });
-    const obj10 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5961).P.nullish };
+    const obj10 = { type: sender(1995).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5963).P.nullish };
     const withResult6 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -187,18 +187,18 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       })
       .with(obj9, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2ZO6CC"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2ZO6CC"]);
       });
-    const obj11 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: sender(5961).P.nullish };
+    const obj11 = { type: sender(1995).CollectiblesItemType.NAMEPLATE, sender: sender(5963).P.nullish };
     const withResult7 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -217,22 +217,22 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       })
       .with(obj9, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2ZO6CC"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2ZO6CC"]);
       })
       .with(obj10, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2NxdjX"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2NxdjX"]);
       });
-    const obj12 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: sender(5961).P.nullish };
+    const obj12 = { type: sender(1995).CollectiblesItemType.PROFILE_FRAME, sender: sender(5963).P.nullish };
     const withResult8 = match
       .with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -251,16 +251,16 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       })
       .with(obj9, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2ZO6CC"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2ZO6CC"]);
       })
       .with(obj10, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2NxdjX"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2NxdjX"]);
       })
       .with(obj11, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.v7F232);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.v7F232);
       });
     subscriptionGiftStartHeaderText = match
       .with(obj3, () => {
@@ -268,8 +268,8 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -288,24 +288,24 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       })
       .with(obj9, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2ZO6CC"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2ZO6CC"]);
       })
       .with(obj10, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2NxdjX"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2NxdjX"]);
       })
       .with(obj11, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.v7F232);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.v7F232);
       })
       .with(obj12, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["1+tgC0"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["1+tgC0"]);
       })
       .otherwise(() => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2BWscv"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2BWscv"]);
       });
     const withResult9 = match
       .with(obj3, () => {
@@ -313,8 +313,8 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t.JUV1tL, { sender });
       })
       .with(obj4, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.iJ8823);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.iJ8823);
       })
       .with(obj5, () => {
         const intl = util.intl;
@@ -333,31 +333,31 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       })
       .with(obj9, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2ZO6CC"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2ZO6CC"]);
       })
       .with(obj10, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["2NxdjX"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["2NxdjX"]);
       })
       .with(obj11, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t.v7F232);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t.v7F232);
       })
       .with(obj12, () => {
-        const intl = sender(1126).intl;
-        return intl.string(sender(1126).t["1+tgC0"]);
+        const intl = sender(1128).intl;
+        return intl.string(sender(1128).t["1+tgC0"]);
       });
   }
-  obj = sender(7150);
+  obj = sender(7152);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: c10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 },

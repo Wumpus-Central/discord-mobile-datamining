@@ -6,8 +6,8 @@ import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const MAX_GROUP_DM_PARTICIPANTS = fn(1085).MAX_GROUP_DM_PARTICIPANTS;
-const PremiumTypes = fn(1392).PremiumTypes;
+const MAX_GROUP_DM_PARTICIPANTS = fn(1087).MAX_GROUP_DM_PARTICIPANTS;
+const PremiumTypes = fn(1394).PremiumTypes;
 const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
 let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
 const ReactCompilerGating = fn(558);

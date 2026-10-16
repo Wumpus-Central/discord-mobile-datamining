@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserApplicationIdentityStore from "UserApplicationIdentityStore.tsx";
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 const Endpoints = Constants.Endpoints;
 let obj = {
   fetchUserApplicationIdentitiesWithProfiles(arg0, arg1) {

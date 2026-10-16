@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/shared/conjurePageVisibility.native.tsx
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
-const AppStates = fn(1085).AppStates;
+const AppStates = fn(1087).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/conjurePageVisibility.native.tsx");
 

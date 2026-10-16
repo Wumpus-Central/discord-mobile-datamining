@@ -7,7 +7,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const MAX_USER_GUILDS = fn(1085).MAX_USER_GUILDS;
+const MAX_USER_GUILDS = fn(1087).MAX_USER_GUILDS;
 const ReactCompilerGating = fn(558);
 function hasIncreasedGuildCap(currentUser) {
   let result = PremiumUtilsDefault.canUseIncreasedGuildCap(currentUser);

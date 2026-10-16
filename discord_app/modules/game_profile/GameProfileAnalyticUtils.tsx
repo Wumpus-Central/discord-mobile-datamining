@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01279_v1.js";
+import v1 from "../../../_runtime/01281_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8688).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8696).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -98,6 +98,10 @@ export const GameProfileTrackActionActions = {
   [41]: "Communities",
   CommunityClicked: 42,
   [42]: "CommunityClicked",
+  AppStoreReviews: 43,
+  [43]: "AppStoreReviews",
+  GooglePlayReviews: 44,
+  [44]: "GooglePlayReviews",
 };
 export const GameProfileSources = {
   ActivityCard: "activity_card",

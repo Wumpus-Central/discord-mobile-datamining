@@ -10,10 +10,10 @@ import FavoriteStore from "../../FavoriteStore.tsx";
 
 require = fn;
 let ScrollView = fn(17).ScrollView;
-let maxLength = fn(2078).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+let maxLength = fn(2081).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -303,10 +303,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FavoritesGuildCategorySettingsModal(categoryId) {
       const cResult = categoryId(576).c(4);
       categoryId = categoryId.categoryId;
-      onGoBack = onGoBack(9853)().onGoBack;
+      onGoBack = onGoBack(9869)().onGoBack;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t["/uELTj"]);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t["/uELTj"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = closure_8(onGoBack(9854), {
+      const tmp8 = closure_8(onGoBack(9870), {
         screenKey: "favoritesGuildCategorySettings",
         title: first,
         render() {
@@ -341,12 +341,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildCategorySettingsModal(categoryId) {
       categoryId = categoryId.categoryId;
       let onGoBack;
-      onGoBack = onGoBack(9853)().onGoBack;
+      onGoBack = onGoBack(9869)().onGoBack;
       const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
-      const intl = categoryId(1126).intl;
-      obj.title = intl.string(categoryId(1126).t["/uELTj"]);
+      const intl = categoryId(1128).intl;
+      obj.title = intl.string(categoryId(1128).t["/uELTj"]);
       obj.render = function render() {
         return closure_2_8(closure_11, { categoryId, onGoBack });
       };
-      return closure_8(onGoBack(9854), obj);
+      return closure_8(onGoBack(9870), obj);
     };

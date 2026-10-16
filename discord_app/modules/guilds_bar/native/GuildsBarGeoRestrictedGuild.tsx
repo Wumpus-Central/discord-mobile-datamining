@@ -15,9 +15,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(17320).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(17354).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -51,7 +51,7 @@ export default noop.memo(
           first = cResult[0];
         }
         let obj = restrictedGuild(576);
-        const guildsBarAnimatedWrapperStyles = restrictedGuild(17332).useGuildsBarAnimatedWrapperStyles(first);
+        const guildsBarAnimatedWrapperStyles = restrictedGuild(17366).useGuildsBarAnimatedWrapperStyles(first);
         if (cResult[1] === restrictedGuild.icon) {
           if (cResult[2] === restrictedGuild.id) {
             let tmp6 = cResult[3];
@@ -142,13 +142,13 @@ export default noop.memo(
                 value: restrictedGuild.name,
                 selected: false,
                 animate: false,
-                size: tmp(6379).GuildIconSizes.LARGE,
+                size: tmp(6381).GuildIconSizes.LARGE,
               };
               tmp23 = jsx(GuildIconDefault, {
                 value: restrictedGuild.name,
                 selected: false,
                 animate: false,
-                size: tmp(6379).GuildIconSizes.LARGE,
+                size: tmp(6381).GuildIconSizes.LARGE,
               });
             }
             cResult[11] = tmp6;
@@ -193,13 +193,13 @@ export default noop.memo(
         cResult[2] = restrictedGuild.id;
         cResult[3] = animatableSourceWithFallback;
         tmp6 = animatableSourceWithFallback;
-        const tmpResult = restrictedGuild(17332);
+        const tmpResult = restrictedGuild(17366);
       }
     : function GuildsBarGeoRestrictedGuild(restrictedGuild) {
         restrictedGuild = restrictedGuild.restrictedGuild;
         const tmp = closure_5();
         let animatableSourceWithFallback = null;
-        let obj = restrictedGuild(17332);
+        let obj = restrictedGuild(17366);
         const tmp2 = restrictedGuild;
         if (null != restrictedGuild.icon) {
           animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -218,12 +218,12 @@ export default noop.memo(
           () => ({
             onPress() {
               const obj2 = { title: null, body: null, cancelText: null, onCancel: null, isDismissable: false };
-              const intl = restrictedGuild(1126).intl;
-              obj2.title = intl.string(restrictedGuild(1126).t.aCAiGl);
-              const intl2 = restrictedGuild(1126).intl;
-              obj2.body = intl2.format(restrictedGuild(1126).t["4cJV9S"], { serverName: name.name });
-              const intl3 = restrictedGuild(1126).intl;
-              obj2.cancelText = intl3.string(restrictedGuild(1126).t.J2TBi3);
+              const intl = restrictedGuild(1128).intl;
+              obj2.title = intl.string(restrictedGuild(1128).t.aCAiGl);
+              const intl2 = restrictedGuild(1128).intl;
+              obj2.body = intl2.format(restrictedGuild(1128).t["4cJV9S"], { serverName: name.name });
+              const intl3 = restrictedGuild(1128).intl;
+              obj2.cancelText = intl3.string(restrictedGuild(1128).t.J2TBi3);
               obj2.onCancel = function onCancel() {
                 closure_2_1(dependencyMap[13]).leaveGuild(id.id);
               };
@@ -236,7 +236,7 @@ export default noop.memo(
           selected: false,
           unread: false,
           circle: false,
-          styles: restrictedGuild(17332).useGuildsBarAnimatedWrapperStyles({
+          styles: restrictedGuild(17366).useGuildsBarAnimatedWrapperStyles({
             disableSelectedColor: true,
             disableBGColor: true,
           }),
@@ -245,11 +245,11 @@ export default noop.memo(
           config: memo,
           cutouts: items,
           overState: "a",
-          externalChildren: "POST_CONNECTION_OPEN",
-          expandedChildren: "ONBOARDING_START",
-          children: "USER_REQUIRED_ACTION_UPDATE",
+          externalChildren: "CHANNEL_DELETE",
+          expandedChildren: "GUILD_DELETE",
+          children: "LOAD_MESSAGES_SUCCESS",
         };
-        const guildsBarAnimatedWrapperStyles = restrictedGuild(17332).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = restrictedGuild(17366).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: true,
         });
@@ -267,13 +267,13 @@ export default noop.memo(
             value: restrictedGuild.name,
             selected: false,
             animate: false,
-            size: tmp2(6379).GuildIconSizes.LARGE,
+            size: tmp2(6381).GuildIconSizes.LARGE,
           };
           tmp8Result = jsx(GuildIconDefault, {
             value: restrictedGuild.name,
             selected: false,
             animate: false,
-            size: tmp2(6379).GuildIconSizes.LARGE,
+            size: tmp2(6381).GuildIconSizes.LARGE,
           });
           const tmp9Result = GuildIconDefault;
         }
@@ -282,7 +282,7 @@ export default noop.memo(
           selected: false,
           unread: false,
           circle: false,
-          styles: restrictedGuild(17332).useGuildsBarAnimatedWrapperStyles({
+          styles: restrictedGuild(17366).useGuildsBarAnimatedWrapperStyles({
             disableSelectedColor: true,
             disableBGColor: true,
           }),
@@ -291,9 +291,9 @@ export default noop.memo(
           config: memo,
           cutouts: items,
           overState: "a",
-          externalChildren: "POST_CONNECTION_OPEN",
-          expandedChildren: "ONBOARDING_START",
-          children: "USER_REQUIRED_ACTION_UPDATE",
+          externalChildren: "CHANNEL_DELETE",
+          expandedChildren: "GUILD_DELETE",
+          children: "LOAD_MESSAGES_SUCCESS",
         });
       },
 );

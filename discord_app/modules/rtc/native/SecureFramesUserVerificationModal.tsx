@@ -15,19 +15,19 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9047);
+const SecureFramesConstants = fn(9055);
 ({
   USER_VERIFICATION_CHUNK_SIZE: closure_9,
   USER_VERIFICATION_LENGTH: c10,
   USER_VERIFICATION_NUM_COLUMNS: closure_11,
   USER_VERIFIED_TOAST_KEY: closure_12,
 } = SecureFramesConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = Constants);
-const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     flex: 1,
@@ -289,15 +289,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = { userId, channelId };
             const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
             if (enabled) {
-              let userVerificationDeeplink = showShareActionSheet(9046).getUserVerificationDeeplink(userId, tmp);
-              const showShareActionSheetResult = showShareActionSheet(9046);
+              let userVerificationDeeplink = showShareActionSheet(9054).getUserVerificationDeeplink(userId, tmp);
+              const showShareActionSheetResult = showShareActionSheet(9054);
             } else {
               userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
             }
-            showShareActionSheet = showShareActionSheet(8700).showShareActionSheet;
+            showShareActionSheet = showShareActionSheet(8708).showShareActionSheet;
             obj2 = { message: userVerificationDeeplink };
             showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-            const showShareActionSheetResult1 = showShareActionSheet(8700);
+            const showShareActionSheetResult1 = showShareActionSheet(8708);
           }
         }
       }, items4);

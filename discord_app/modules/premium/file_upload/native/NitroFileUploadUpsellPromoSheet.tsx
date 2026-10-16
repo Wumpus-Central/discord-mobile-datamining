@@ -8,11 +8,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticsPages: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = markAsDismissed(576);
-      const unmountEffect = markAsDismissed(5456).useUnmountEffect(tmp7);
+      const unmountEffect = markAsDismissed(5458).useUnmountEffect(tmp7);
       if (cResult[4] !== U) {
         class A {
           constructor() {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = markAsDismissed(5456);
+      const tmpResult = markAsDismissed(5458);
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, A, constants.PREMIUM_UPSELL_FILE_UPLOAD));
       if (cResult[6] !== onPress) {
         class M {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp16 = jsx(tmp(18000).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp16 = jsx(tmp(18034).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[10] = tmp16;
         const tmp15 = tmp16;
       } else {
@@ -200,9 +200,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult = obj5.string(tmp10(2670)["Uty2/X"]);
-        const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(tmp10(2670).VAgI8Q);
+        const stringResult = obj5.string(tmp10(2673)["Uty2/X"]);
+        const intl = tmp(1128).intl;
+        const stringResult1 = intl.string(tmp10(2673).VAgI8Q);
         cResult[13] = stringResult;
         cResult[14] = stringResult1;
         let tmp21 = stringResult1;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult2 = obj6.string(tmp10(2670).mRy6sO);
+        const stringResult2 = obj6.string(tmp10(2673).mRy6sO);
         cResult[15] = stringResult2;
         const tmp24 = stringResult2;
       } else {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 };
-        const tmp31 = jsx(tmp(10557).PromoSheet, {
+        const tmp31 = jsx(tmp(10572).PromoSheet, {
           illustration: tmp17,
           title: tmp20,
           description: tmp21,
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp17;
         cResult[22] = tmp31;
       }
-      const tmp28 = jsx(markAsDismissed(5439).Button, {
+      const tmp28 = jsx(markAsDismissed(5441).Button, {
         grow: true,
         size: "lg",
         variant: "primary",

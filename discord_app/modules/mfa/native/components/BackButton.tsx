@@ -13,10 +13,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = props(576).c(4);
       props = props.props;
       const obj = props(576);
-      const navigation = props(1503).useNavigation();
+      const navigation = props(1505).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.Tot4EC);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.Tot4EC);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = jsx(navigation(16625), {
+      const tmp8 = jsx(navigation(16658), {
         variant: "secondary",
         text: first,
         onPress() {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = props;
       cResult[3] = tmp8;
       tmp7 = tmp8;
-      const obj2 = props(1503);
+      const obj2 = props(1505);
       const obj3 = {
         variant: "secondary",
         text: first,
@@ -50,11 +50,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function BackButton(props) {
       props = props.props;
-      importDefault = props(1503).useNavigation();
+      importDefault = props(1505).useNavigation();
       const obj2 = { variant: "secondary", text: null, onPress: null };
-      const obj = props(1503);
-      const intl = props(1126).intl;
-      obj2.text = intl.string(props(1126).t.Tot4EC);
+      const obj = props(1505);
+      const intl = props(1128).intl;
+      obj2.text = intl.string(props(1128).t.Tot4EC);
       obj2.onPress = function onPress() {
         closure_1.push(MfaStepsTypes.MfaScreens.SELECT, props);
       };

@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6183).UnreadSetting;
+const UnreadSetting = fn(6185).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -49,16 +49,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp4;
       if (cResult[0] !== unreadSetting.unreadSetting) {
         let obj2 = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };
-        const intl = tmp(1126).intl;
-        obj2.name = intl.string(tmp(1126).t.EjLobP);
+        const intl = tmp(1128).intl;
+        obj2.name = intl.string(tmp(1128).t.EjLobP);
         let items = [obj2, ,];
         const obj3 = { badged: false, unread: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-        const intl2 = tmp(1126).intl;
-        obj3.name = intl2.string(tmp(1126).t.Wgpwpp);
+        const intl2 = tmp(1128).intl;
+        obj3.name = intl2.string(tmp(1128).t.Wgpwpp);
         items[1] = obj3;
         let obj4 = { badged: false, unread: false, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-        const intl3 = tmp(1126).intl;
-        obj4.name = intl3.string(tmp(1126).t.g9VImh);
+        const intl3 = tmp(1128).intl;
+        obj4.name = intl3.string(tmp(1128).t.g9VImh);
         items[2] = obj4;
         if (unreadSetting.unreadSetting === UnreadSetting.ALL_MESSAGES) {
           items[1].resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;

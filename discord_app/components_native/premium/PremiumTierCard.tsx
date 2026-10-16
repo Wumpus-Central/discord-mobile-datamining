@@ -3,23 +3,23 @@ import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import ConstantsIOS from "../../ConstantsIOS.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
-import LinearGradientDefault from "../../../_runtime/05451_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05453_LinearGradient.js";
 import Card from "../../design/components/Card/native/Card.native.tsx";
-import _modDef7377 from "../../../_runtime/metro/07377__.js";
-import _modDef7378 from "../../../_runtime/metro/07378__.js";
-import _modDef8314 from "../../../_runtime/metro/08314__.js";
-import _modDef10295 from "../../../_runtime/metro/10295__.js";
-import _modDef14530 from "../../../_runtime/metro/14530__.js";
-import _modDef14531 from "../../../_runtime/metro/14531__.js";
+import _modDef7379 from "../../../_runtime/metro/07379__.js";
+import _modDef7380 from "../../../_runtime/metro/07380__.js";
+import _modDef8319 from "../../../_runtime/metro/08319__.js";
+import _modDef10311 from "../../../_runtime/metro/10311__.js";
+import _modDef14562 from "../../../_runtime/metro/14562__.js";
+import _modDef14563 from "../../../_runtime/metro/14563__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const getPremiumGradientColor = fn(7373).getPremiumGradientColor;
-const PremiumTypes = fn(1392).PremiumTypes;
+const getPremiumGradientColor = fn(7375).getPremiumGradientColor;
+const PremiumTypes = fn(1394).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   header: { marginTop: 24, padding: 16 },
   textLogoTier0: { width: 158, height: 32 },
@@ -55,11 +55,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== premiumType) {
         function getTextLogo() {
           if (PremiumTypes.TIER_0 === premiumType) {
-            return _modDef14530;
+            return _modDef14562;
           } else if (PremiumTypes.TIER_1 === premiumType) {
-            return _modDef14531;
+            return _modDef14563;
           } else if (PremiumTypes.TIER_2 === premiumType) {
-            return _modDef8314;
+            return _modDef8319;
           }
         }
         cResult[0] = premiumType;
@@ -71,11 +71,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== premiumType) {
         function getWumpus() {
           if (PremiumTypes.TIER_0 === premiumType) {
-            return _modDef7377;
+            return _modDef7379;
           } else if (PremiumTypes.TIER_1 === premiumType) {
-            return _modDef7378;
+            return _modDef7380;
           } else if (PremiumTypes.TIER_2 === premiumType) {
-            return _modDef10295;
+            return _modDef10311;
           }
         }
         cResult[2] = premiumType;
@@ -105,11 +105,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp9 = cResult[15];
                   }
                   if (cResult[16] !== premiumType) {
-                    const premiumTypeDisplayName = tmp(4825).getPremiumTypeDisplayName(premiumType);
+                    const premiumTypeDisplayName = tmp(4828).getPremiumTypeDisplayName(premiumType);
                     cResult[16] = premiumType;
                     cResult[17] = premiumTypeDisplayName;
                     let tmp12 = premiumTypeDisplayName;
-                    const tmpResult = tmp(4825);
+                    const tmpResult = tmp(4828);
                   } else {
                     tmp12 = cResult[17];
                   }
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       return tmp44;
                                     }
                                     const obj2 = { variant: "surface-high", style, children: tmp40 };
-                                    const tmp46 = closure_6(tmp(6402).Card, obj2);
+                                    const tmp46 = closure_6(tmp(6404).Card, obj2);
                                     cResult[47] = tmp40;
                                     cResult[48] = style;
                                     cResult[49] = tmp46;
@@ -224,8 +224,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const obj6 = {
                         style: tmp4.header,
-                        start: tmp(1105).HorizontalGradient.START,
-                        end: tmp(1105).HorizontalGradient.END,
+                        start: tmp(1107).HorizontalGradient.START,
+                        end: tmp(1107).HorizontalGradient.END,
                         colors: tmp9,
                         children: tmp18,
                       };
@@ -318,11 +318,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.style = textLogoTier2;
       if (PremiumTypes.TIER_0 === premiumType) {
-        let tmp5Result = _modDef14530;
+        let tmp5Result = _modDef14562;
       } else if (PremiumTypes.TIER_1 === premiumType) {
-        tmp5Result = _modDef14531;
+        tmp5Result = _modDef14563;
       } else if (PremiumTypes.TIER_2 === premiumType) {
-        tmp5Result = _modDef8314;
+        tmp5Result = _modDef8319;
       }
       obj2.source = tmp5Result;
       obj.children = timestampProducer(tmp9, obj2);
@@ -338,11 +338,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
       items1[1] = wumpusLogoTier2;
       if (PremiumTypes.TIER_0 === premiumType) {
-        let tmp5Result4 = _modDef7377;
+        let tmp5Result4 = _modDef7379;
       } else if (PremiumTypes.TIER_1 === premiumType) {
-        tmp5Result4 = _modDef7378;
+        tmp5Result4 = _modDef7380;
       } else if (PremiumTypes.TIER_2 === premiumType) {
-        tmp5Result4 = _modDef10295;
+        tmp5Result4 = _modDef10311;
       }
       const obj5 = { children: null };
       obj4.source = tmp5Result4;

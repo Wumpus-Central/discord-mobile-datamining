@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14407 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-1x.png.js";
-import _modDef14408 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-2x.png.js";
-import _modDef14409 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-3x.png.js";
+import _modDef14439 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-1x.png.js";
+import _modDef14440 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-2x.png.js";
+import _modDef14441 from "../../../../../../discord_assets/assets/mana/asset-library/generated/FistBumpSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14407 }, 3: null };
-let obj2 = { uri: _modDef14407 };
-obj[2] = { uri: _modDef14408 };
-const obj3 = { uri: _modDef14408 };
-obj[3] = { uri: _modDef14409 };
+let obj = { 1: null, 2: { uri: _modDef14439 }, 3: null };
+let obj2 = { uri: _modDef14439 };
+obj[2] = { uri: _modDef14440 };
+const obj3 = { uri: _modDef14440 };
+obj[3] = { uri: _modDef14441 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14409 };
+const obj4 = { uri: _modDef14441 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx",

@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import NetworkStore from "../../../../stores/NetworkStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 let closure_8 = [25, 50, 75];
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx");
@@ -125,7 +125,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               closure_129_3 = undefined;
               let impressionId;
               closure_129_5 = undefined;
-              VIDEO_MODAL_MOBILE = closure_0(6193).QuestContent.VIDEO_MODAL_MOBILE;
+              VIDEO_MODAL_MOBILE = closure_0(6195).QuestContent.VIDEO_MODAL_MOBILE;
               ({ bountyId: closure_129_2, sourceQuestContent: closure_129_3 } = ref.current);
               c4 = 1;
               const current = ref.current;
@@ -138,7 +138,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(7614).getQuestLogger();
+            const questLogger = closure_0(7616).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -153,15 +153,15 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             closure_129_5 = value;
             const obj8 = {
               adContentId: closure_129_2,
-              adCreativeType: closure_0(6195).AdCreativeType.BOUNTY,
+              adCreativeType: closure_0(6197).AdCreativeType.BOUNTY,
               event: constants.QUEST_CONTENT_ENGAGED_VIEWED,
               properties: null,
               sourceQuestContent: null,
             };
             const obj10 = {};
-            const obj9 = closure_0(7623);
-            const merged = Object.assign(closure_0(7632).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(7581)());
+            const obj9 = closure_0(7625);
+            const merged = Object.assign(closure_0(7634).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(7583)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;
@@ -172,7 +172,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               if (obj.isIOS()) {
                 advertisingId = closure_129_5.advertisingId;
               }
-              obj = closure_0(1382);
+              obj = closure_0(1384);
             }
             obj10.apple_advertising_id = advertisingId;
             let advertisingId1 = null;
@@ -181,7 +181,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               if (obj2.isAndroid()) {
                 advertisingId1 = closure_129_5.advertisingId;
               }
-              obj2 = closure_0(1382);
+              obj2 = closure_0(1384);
             }
             obj10.android_advertising_id = advertisingId1;
             obj8.properties = obj10;

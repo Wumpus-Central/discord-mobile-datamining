@@ -8,8 +8,8 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const constants = fn(1095).GuildNotificationSettingsFlags;
+const UserNotificationSettings = fn(1087).UserNotificationSettings;
+const constants = fn(1097).GuildNotificationSettingsFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx");

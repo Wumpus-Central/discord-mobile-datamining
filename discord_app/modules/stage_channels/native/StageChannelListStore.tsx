@@ -1,21 +1,21 @@
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4789 from "../../../../_runtime/metro/04789__.js";
+import _mod4792 from "../../../../_runtime/metro/04792__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const identity = fn(1267);
+const identity = fn(1269);
 let closure_4 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(showActiveSpeakerPill) {
-      return showActiveSpeakerPill(1272).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
+      return showActiveSpeakerPill(1274).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
     },
     listRef: null,
     setListRef(listRef) {
-      return listRef(1272).batchUpdates(() => listRef({ listRef }));
+      return listRef(1274).batchUpdates(() => listRef({ listRef }));
     },
   };
 });
@@ -35,7 +35,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp5 = _slicedToArray(closure_4(first, _mod4789.shallow), 2);
+      const tmp5 = _slicedToArray(closure_4(first, _mod4792.shallow), 2);
       const first1 = tmp5[0];
       closure_1 = tmp7;
       if (cResult[1] !== tmp5[1]) {
@@ -78,7 +78,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ listRef: arr[0], setListRef: arr[1] } = arg0);
           return items;
-        }, _mod4789.shallow),
+        }, _mod4792.shallow),
         2,
       );
       const first = tmp[0];
@@ -115,12 +115,12 @@ export const useActiveSpeakerPillState = ReactCompilerGating.isReactCompilerEnab
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4789.shallow);
+      return closure_4(first, _mod4792.shallow);
     }
   : function useActiveSpeakerPillState() {
       return closure_4((arg0) => {
         const items = [,];
         ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
         return items;
-      }, _mod4789.shallow);
+      }, _mod4792.shallow);
     };

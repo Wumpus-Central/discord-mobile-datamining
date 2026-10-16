@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1355 from "../../../_runtime/metro/01355__.js";
+import _modDef1357 from "../../../_runtime/metro/01357__.js";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import StageMediaHooks from "StageMediaHooks.tsx";
@@ -117,7 +117,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = _modDef1355(tmp2, obj);
+  const tmp30 = _modDef1357(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
     obj = tmp2;
@@ -125,8 +125,8 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6108).STAGE_APPLICATION_ID;
-const Constants = fn(1085);
+const STAGE_APPLICATION_ID = fn(6110).STAGE_APPLICATION_ID;
+const Constants = fn(1087);
 ({
   ActivityTypes: map1,
   GuildFeatures: closure_14,

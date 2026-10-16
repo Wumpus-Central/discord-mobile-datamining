@@ -3,7 +3,7 @@ import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()

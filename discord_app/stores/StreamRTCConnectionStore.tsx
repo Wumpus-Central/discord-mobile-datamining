@@ -18,9 +18,9 @@ import Dispatcher from "../Dispatcher.tsx";
 const StreamRTCConnectionDefault = StreamRTCConnection;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6114).StreamTypes;
+const StreamTypes = fn(6116).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};

@@ -8,8 +8,8 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(12968).PermissionStateType;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const PermissionStateType = fn(12994).PermissionStateType;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
 

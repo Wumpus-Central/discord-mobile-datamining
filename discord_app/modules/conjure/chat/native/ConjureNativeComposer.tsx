@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -10,7 +10,7 @@ import WarningIcon from "../../../../design/components/Icon/native/redesign/gene
 import ImageCarousel from "../../../../components_native/chat/ImageCarousel.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import PlusLargeIcon from "../../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
-import keepLocalCopy from "../../../../../_runtime/11507_keepLocalCopy.js";
+import keepLocalCopy from "../../../../../_runtime/11528_keepLocalCopy.js";
 import ConjureAttachmentTypes from "../ConjureAttachmentTypes.tsx";
 import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelSettingsSheet.tsx";
@@ -42,11 +42,11 @@ function draftAccessibilityLabel(draft) {
   if ("uploading" === draft.status) {
     const intl3 = util.intl;
     const obj3 = { name: draft.name };
-    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3862.MWTYwv, obj3);
+    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3865.MWTYwv, obj3);
   } else if (null != draft.errorText) {
     const intl2 = util.intl;
     ({ name: obj2.name, errorText: obj2.error } = draft);
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3862.U2WbGx, { name: null, error: null });
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3865.U2WbGx, { name: null, error: null });
     const obj5 = { name: null, error: null };
   } else {
     const intl = util.intl;
@@ -61,7 +61,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
@@ -790,9 +790,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             ConjureAttachmentTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE -
             conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
           if (arr.length > diff) {
-            const intl = obj2(1126).intl;
-            let obj = { count: obj2(11518).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
-            _undefined3(intl.formatToPlainString(_modDef3862.Q0aCVZ, obj));
+            const intl = obj2(1128).intl;
+            let obj = { count: obj2(11539).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+            _undefined3(intl.formatToPlainString(_modDef3865.Q0aCVZ, obj));
             const _Math = Math;
             const substr = arr.slice(0, Math.max(0, diff));
             arr = substr;
@@ -823,7 +823,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             obj3 = obj5;
           });
-          obj2 = obj2(12031);
+          obj2 = obj2(12055);
           result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
         }
       }, items9);
@@ -863,9 +863,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c1 = 1;
                   dependencyMap = 1;
                   const obj5 = {
-                    value: projectId(12185).pickConjurePhotos(
+                    value: projectId(12209).pickConjurePhotos(
                       "mixed",
-                      projectId(11518).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                      projectId(11539).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                     ),
                     done: false,
                   };
@@ -998,13 +998,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo2 = obj.useMemo(() => {
         const obj = { label: null, IconComponent: null, action: null };
         const intl = util.intl;
-        obj.label = intl.string(_modDef3862["51+9lc"]);
+        obj.label = intl.string(_modDef3865["51+9lc"]);
         obj.IconComponent = ImagesIcon.ImagesIcon;
         obj.action = callback5;
         let items = [obj, ,];
         const obj2 = { label: null, IconComponent: null, action: null };
         const intl2 = util.intl;
-        obj2.label = intl2.string(_modDef3862["10ljr2"]);
+        obj2.label = intl2.string(_modDef3865["10ljr2"]);
         obj2.IconComponent = MusicIcon.MusicIcon;
         obj2.action = function action() {
           const items = [closure_0(running[28]).types.audio];
@@ -1013,7 +1013,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items[1] = obj2;
         const obj3 = { label: null, IconComponent: null, action: null };
         const intl3 = util.intl;
-        obj3.label = intl3.string(_modDef3862.aotDee);
+        obj3.label = intl3.string(_modDef3865.aotDee);
         obj3.IconComponent = FileUpIcon.FileUpIcon;
         obj3.action = function action() {
           return callback7();
@@ -1099,7 +1099,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: null,
           };
           const intl2 = util.intl;
-          obj2.accessibilityLabel = intl2.string(_modDef3862.wiguT0);
+          obj2.accessibilityLabel = intl2.string(_modDef3865.wiguT0);
           let tmp14 = closure_2_11(ChatInputActionButtonDefault, obj2);
         } else if ("models" === key.key) {
           const obj = {
@@ -1110,7 +1110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: null,
           };
           const intl = util.intl;
-          obj.accessibilityLabel = intl.string(_modDef3862["3E7Yc0"]);
+          obj.accessibilityLabel = intl.string(_modDef3865["3E7Yc0"]);
           tmp14 = closure_2_11(ChatInputActionButtonDefault, obj);
         } else {
           const obj5 = {
@@ -1200,7 +1200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onAccessibilityAction: null,
             };
             const intl = util.intl;
-            obj.accessibilityLabel = intl.string(_modDef3862.hFS71Z);
+            obj.accessibilityLabel = intl.string(_modDef3865.hFS71Z);
             obj.accessibilityActions = accessibilityActions;
             obj.onAccessibilityAction = onAccessibilityAction;
             return closure_2_11(ChatInputActionButtonDefault, obj);
@@ -1240,7 +1240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onAccessibilityAction: null,
           };
           const intl = util.intl;
-          obj.accessibilityLabel = intl.string(_modDef3862.hFS71Z);
+          obj.accessibilityLabel = intl.string(_modDef3865.hFS71Z);
           obj.accessibilityActions = accessibilityActions;
           obj.onAccessibilityAction = onAccessibilityAction;
           return closure_2_11(ChatInputActionButtonDefault, obj);

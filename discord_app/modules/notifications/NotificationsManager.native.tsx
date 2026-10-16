@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/NotificationsManager.native.tsx
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
-import _modDef4758 from "../../../_runtime/metro/04758__.js";
+import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
+import _modDef4761 from "../../../_runtime/metro/04761__.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import NativePermissionManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
 import PushNotificationActionCreators from "../../actions/native/PushNotificationActionCreators.tsx";
@@ -20,8 +20,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = _modDef4758().diff(tmp, "days") >= 1;
-      const obj = _modDef4758();
+      tmp4 = _modDef4761().diff(tmp, "days") >= 1;
+      const obj = _modDef4761();
     }
     tmp2 = tmp4;
   }
@@ -87,7 +87,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(18492, dependencyMap.paths), closure_2_14, obj3);
+    obj2.openLazy(asyncRequireImpl(18534, dependencyMap.paths), closure_2_14, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -170,11 +170,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(12968).PermissionPromptType;
-const Constants = fn(1085);
+const PermissionPromptType = fn(12994).PermissionPromptType;
+const Constants = fn(1087);
 ({ RelationshipTypes: c10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(7699).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12969);
+let closure_13 = fn(7702).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(12995);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } =
   NotificationPermissionConstants);
 const items = [,];
@@ -604,8 +604,8 @@ class NotificationsManager extends tmp4 {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                closure_129_1 = closure_130_1.previousAppState === applyArgumentsResult(1105).AppStates.BACKGROUND;
-                closure_129_2 = state === applyArgumentsResult(1105).AppStates.ACTIVE;
+                closure_129_1 = closure_130_1.previousAppState === applyArgumentsResult(1107).AppStates.BACKGROUND;
+                closure_129_2 = state === applyArgumentsResult(1107).AppStates.ACTIVE;
                 closure_130_1.previousAppState = state;
                 let tmp7 = closure_129_1;
                 if (closure_129_1) {
@@ -639,7 +639,7 @@ class NotificationsManager extends tmp4 {
               c4 = 3;
               return { value: "IconComponent", done: null };
             }
-            if (state === applyArgumentsResult(1105).AppStates.ACTIVE) {
+            if (state === applyArgumentsResult(1107).AppStates.ACTIVE) {
               c3 = 3;
               c4 = 1;
               const obj7 = { value: _logNotificationPermissionStatus(), done: false };
@@ -690,7 +690,7 @@ class NotificationsManager extends tmp4 {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(7722).getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(7725).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -702,7 +702,7 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(12971).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(12997).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }

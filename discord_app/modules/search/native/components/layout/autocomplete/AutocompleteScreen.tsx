@@ -16,9 +16,9 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9533);
+const SearchConstants = fn(9549);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 let closure_16 = [];
@@ -93,7 +93,7 @@ export default noop.memo(
           tmp16 = cResult[8];
         }
         const tmpResult5 = searchContext(504);
-        const fullscreenPlaceholderCount = searchContext(17673).useFullscreenPlaceholderCount(tmp16);
+        const fullscreenPlaceholderCount = searchContext(17707).useFullscreenPlaceholderCount(tmp16);
         if (cResult[9] !== searchContext) {
           class P {
             constructor() {
@@ -786,10 +786,10 @@ export default noop.memo(
                     return;
                   }
                 }
-                const tmpResult7 = tmp(17770);
+                const tmpResult7 = tmp(17804);
                 const _Set = Set;
-                const set = new Set(tmp(17770).getSearchQueryUserIds(searchContext));
-                set1 = new Set(tmp(17770).getSearchQueryChannelIds(searchContext));
+                const set = new Set(tmp(17804).getSearchQueryUserIds(searchContext));
+                set1 = new Set(tmp(17804).getSearchQueryChannelIds(searchContext));
                 maybeAddUserItem = function maybeAddUserItem(arg0, arg1) {};
                 function maybeAddChannelItem(arg0, arg1) {}
                 ({ autocompletes, tokens, mode } = stateFromStores);
@@ -1033,7 +1033,7 @@ export default noop.memo(
                     }
                   }
                 }
-                const tmpResult8 = tmp(17770);
+                const tmpResult8 = tmp(17804);
               }
               cResult[26] = stateFromStores;
               cResult[27] = tmp23;
@@ -1140,7 +1140,7 @@ export default noop.memo(
         cResult[11] = searchContext;
         cResult[12] = P;
         cResult[13] = Q;
-        const tmpResult6 = searchContext(17673);
+        const tmpResult6 = searchContext(17707);
       }
     : function AutocompleteScreen(searchContext) {
         searchContext = searchContext.searchContext;

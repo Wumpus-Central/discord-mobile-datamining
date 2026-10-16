@@ -52,10 +52,10 @@ let closure_3 = [
   "ref",
 ];
 const View = fn(17).View;
-let closure_6 = fn(5426).useVisualEffectViewOverrides;
-const ThemeTypes = fn(1085).ThemeTypes;
+let closure_6 = fn(5428).useVisualEffectViewOverrides;
+const ThemeTypes = fn(1087).ThemeTypes;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 let closure_9 = PlatformUtils.isAndroid();
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()

@@ -85,7 +85,7 @@ function handleSavedGuildTheme(guildId) {
   }
   return tmp;
 }
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 let c6 = null;
 let c7 = null;
 const Store = initializeDefault.Store;

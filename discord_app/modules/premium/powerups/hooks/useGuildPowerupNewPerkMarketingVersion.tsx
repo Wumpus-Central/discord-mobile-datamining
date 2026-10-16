@@ -8,12 +8,12 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5064);
+const GuildPowerupsConstants = fn(5067);
 ({
   GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
   NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,
 } = GuildPowerupsConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: closure_7, Permissions: closure_8 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

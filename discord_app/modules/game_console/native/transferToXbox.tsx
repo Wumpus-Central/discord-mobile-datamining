@@ -123,7 +123,7 @@ let closure_8 = async function _transferToXbox(arg0) {
   }
 };
 const Linking = fn(17).Linking;
-const PlatformTypes = fn(1085).PlatformTypes;
+const PlatformTypes = fn(1087).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");

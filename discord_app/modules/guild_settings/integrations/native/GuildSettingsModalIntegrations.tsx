@@ -7,13 +7,13 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildSettingsSections: hasOwnProperty, PlatformTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let items = [,];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   screenContent: null,

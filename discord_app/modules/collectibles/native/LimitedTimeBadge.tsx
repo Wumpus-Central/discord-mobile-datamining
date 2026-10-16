@@ -37,7 +37,7 @@ function getBadgeString(hasItem, days, hours) {
     if (days <= 1) {
       if (days > 1) {
         const intl3 = util.intl;
-        sum1 = `0${tmp5(tmp(1126).t["1LyF1h"])}`;
+        sum1 = `0${tmp5(tmp(1128).t["1LyF1h"])}`;
       }
       sum = sum1;
     }
@@ -46,7 +46,7 @@ function getBadgeString(hasItem, days, hours) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 },
   backgroundDarkMode: null,

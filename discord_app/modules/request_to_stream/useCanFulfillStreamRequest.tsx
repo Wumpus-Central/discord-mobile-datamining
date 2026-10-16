@@ -32,55 +32,55 @@ function canFulfillStreamRequest(channel_id) {
     obj4 = RTCConnectionStore;
   }
   let id;
-  let DESKTOP;
+  dependencyMap = undefined;
   const channel = obj2.getChannel(channel_id.channel_id);
   if (null == channel) {
     const items = [false, obj.NOT_IN_VOICE_CHANNEL];
     return items;
   } else {
     const channelId = obj4.getChannelId();
-    const tmp15 = null != obj.getCurrentUserActiveStream();
-    const tmp16 = flag;
-    const tmp17 = id;
+    const tmp18 = null != obj.getCurrentUserActiveStream();
+    const tmp19 = flag;
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(id[9]).getVideoPermission(channel);
+    const videoPermission = flag(11361).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    const obj6 = flag(id[9]);
-    DESKTOP = tmp16(tmp17[10]).isAndroid() ? constants.ANDROID : constants.IOS;
+    const obj8 = flag(11361);
+    dependencyMap = tmp19(1384).isAndroid() ? constants.ANDROID : constants.IOS;
+    const tmp19Result = tmp19(1384);
+    const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
+    const tmp5 = id(11129).getConfig(obj5).enabled && null == id;
     if (null == id) {
-      const items1 = [false, obj.NOT_RUNNING_GAME];
-      return items1;
-    } else {
-      const activities = obj3.getActivities(AuthenticationStore.getId(), channel.guild_id);
-      if (tmp15) {
-        const items2 = [false, obj.ALREADY_STREAMING];
-        let items4 = items2;
-      } else if (channelId === channel_id.channel_id) {
-        const items3 = [,];
-        if (!videoPermission) {
-          items3[0] = false;
-          items3[1] = obj.NO_PERMISSION;
-        }
-        if (tmp21) {
-          items3[0] = true;
-          items3[1] = null;
-        } else {
-          items3[0] = false;
-          items3[1] = obj.NOT_RUNNING_GAME;
-        }
-      } else {
-        items4 = [false, obj.NOT_IN_VOICE_CHANNEL];
+      if (!tmp5) {
+        const items1 = [false, obj.NOT_RUNNING_GAME];
+        return items1;
       }
-      return items4;
     }
-    const tmp16Result = tmp16(tmp17[10]);
+    const activities = obj3.getActivities(AuthenticationStore.getId(), channel.guild_id);
+    if (tmp18) {
+      const items2 = [false, obj.ALREADY_STREAMING];
+      let items6 = items2;
+    } else if (channelId === channel_id.channel_id) {
+      if (!videoPermission) {
+        const items3 = [false, obj.NO_PERMISSION];
+      }
+      if (!tmp9) {
+        if (!tmp5) {
+          let items4 = [false, obj.NOT_RUNNING_GAME];
+        }
+      }
+      const items5 = [true, null];
+      items4 = items5;
+    } else {
+      items6 = [false, obj.NOT_IN_VOICE_CHANNEL];
+    }
+    return items6;
   }
 }
-const Constants = fn(1085);
-({ ActivityGamePlatforms: c10, ActivityTypes: closure_11 } = Constants);
+const Constants = fn(1087);
+({ ActivityGamePlatforms: closure_11, ActivityTypes: closure_12 } = Constants);
 const StreamRequestUnfulfillableReason = {
   NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL",
   NOT_RUNNING_GAME: "NOT_RUNNING_GAME",
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useCanFulfillStreamRequest(arg0, arg1) {
       _require = arg0;
       const cResult = require("c").c(4);
-      dependencyMap = tmp4;
+      closure_1 = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [
           ApplicationStreamingStore,
@@ -109,9 +109,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           PermissionStore,
         ];
         cResult[0] = items;
-        let first = items;
+        class R {
+          constructor() {
+            return canFulfillStreamRequest(
+              closure_0,
+              closure_1,
+              closure_4,
+              closure_6,
+              closure_9,
+              closure_3,
+              closure_10,
+              closure_7,
+              closure_8,
+            );
+          }
+        }
       } else {
-        first = cResult[0];
+        const first = cResult[0];
       }
       if (cResult[1] === (undefined !== arg1 && arg1)) {
         if (cResult[2] === arg0) {
@@ -119,23 +133,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp(504).useStateFromStores(first, tmp13);
       }
-      const fn = function o() {
-        return canFulfillStreamRequest(
-          closure_0,
-          closure_1,
-          ApplicationStreamingStore,
-          ChannelStore,
-          PresenceStore,
-          RunningGameStore,
-          RTCConnectionStore,
-          GuildStore,
-          PermissionStore,
-        );
-      };
+      class R {
+        constructor() {
+          return canFulfillStreamRequest(
+            closure_0,
+            closure_1,
+            closure_4,
+            closure_6,
+            closure_9,
+            closure_3,
+            closure_10,
+            closure_7,
+            closure_8,
+          );
+        }
+      }
       cResult[1] = undefined !== arg1 && arg1;
       cResult[2] = arg0;
-      cResult[3] = fn;
-      tmp13 = fn;
+      cResult[3] = R;
+      tmp13 = R;
       const obj = require("c");
       tmp = _require;
     }

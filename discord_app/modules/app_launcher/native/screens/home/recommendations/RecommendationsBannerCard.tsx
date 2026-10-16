@@ -9,10 +9,10 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.lg,
@@ -91,11 +91,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp4 = cResult[2];
         }
         if (cResult[3] !== application) {
-          const shelfBadgeTypeIfActive = BaseAppRow(9467).getShelfBadgeTypeIfActive(application);
+          const shelfBadgeTypeIfActive = BaseAppRow(9483).getShelfBadgeTypeIfActive(application);
           cResult[3] = application;
           cResult[4] = shelfBadgeTypeIfActive;
           let tmp6 = shelfBadgeTypeIfActive;
-          const BaseAppRowResult = BaseAppRow(9467);
+          const BaseAppRowResult = BaseAppRow(9483);
         } else {
           tmp6 = cResult[4];
         }
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (isLandscape) {
-              BaseAppRow = BaseAppRow(11794).BaseAppRow;
+              BaseAppRow = BaseAppRow(11818).BaseAppRow;
               obj = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
               class T {
                 constructor() {
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 overrideImageUrl: null,
               };
               const tmp23 = RecommendationsBannerDefault;
-              obj8.isActivity = BaseAppRow(9467).isActivityApp(application);
+              obj8.isActivity = BaseAppRow(9483).isActivityApp(application);
               ({ id: obj10.applicationId, icon } = application);
               obj8.applicationIcon = icon;
               obj8.overrideImageUrl = overrideImageUrl;
@@ -291,8 +291,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const intl = BaseAppRow(1126).intl;
-                  obj13.children = intl.string(BaseAppRow(1126).t["/eVltv"]);
+                  const intl = BaseAppRow(1128).intl;
+                  obj13.children = intl.string(BaseAppRow(1128).t["/eVltv"]);
                   obj12.children = closure_6(tmp26, obj13);
                   tmp21Result = closure_6(View, obj12);
                 }
@@ -332,22 +332,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 lineClamp: 1,
                 children: application.name,
               };
-              const items6 = [closure_6(BaseAppRow(5147).Text, obj17)];
+              const items6 = [closure_6(BaseAppRow(5149).Text, obj17)];
               const obj18 = {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 lineClamp: 1,
                 children: application.description,
               };
-              items6[1] = closure_6(BaseAppRow(5147).Text, obj18);
+              items6[1] = closure_6(BaseAppRow(5149).Text, obj18);
               obj16.children = items6;
               items5[1] = closure_7(View, obj16);
-              items5[2] = closure_6(BaseAppRow(6409).TableRowArrow, {});
+              items5[2] = closure_6(BaseAppRow(6411).TableRowArrow, {});
               obj14.children = items5;
               items4[1] = closure_7(View, obj14);
               obj4.children = items4;
-              tmp19Result2 = closure_7(BaseAppRow(6405).PressableOpacity, obj4);
-              const BaseAppRowResult1 = BaseAppRow(9467);
+              tmp19Result2 = closure_7(BaseAppRow(6407).PressableOpacity, obj4);
+              const BaseAppRowResult1 = BaseAppRow(9483);
             }
             class T {
               constructor() {
@@ -394,8 +394,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let result = tmp2;
       if (!(undefined !== showsPromoted && showsPromoted)) {
-        result = BaseAppRow(9467).isPromotedApplication(application);
-        const BaseAppRowResult2 = BaseAppRow(9467);
+        result = BaseAppRow(9483).isPromotedApplication(application);
+        const BaseAppRowResult2 = BaseAppRow(9483);
       }
       cResult[0] = application;
       cResult[1] = undefined !== showsPromoted && showsPromoted;
@@ -412,10 +412,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_8();
       if (!showsPromoted) {
-        showsPromoted = application(9467).isPromotedApplication(application);
-        const obj = application(9467);
+        showsPromoted = application(9483).isPromotedApplication(application);
+        const obj = application(9483);
       }
-      const shelfBadgeTypeIfActive = application(9467).getShelfBadgeTypeIfActive(application);
+      const shelfBadgeTypeIfActive = application(9483).getShelfBadgeTypeIfActive(application);
       let bot = application.bot;
       let id;
       if (bot != null) {
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         maybeFetchUserProfileDefault(id);
       }, items);
-      const obj2 = application(9467);
+      const obj2 = application(9483);
       const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({
         id: application.id,
         icon: application.icon,
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           isFirstRow: isFirst,
           isLastRow: isLast,
         };
-        let tmp12Result2 = closure_6(tmp4(11794).BaseAppRow, obj5);
+        let tmp12Result2 = closure_6(tmp4(11818).BaseAppRow, obj5);
       } else {
         const items1 = [tmp.container, ,];
         let num = 8;
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           overrideImageUrl: null,
         };
         const tmp10Result = RecommendationsBannerDefault;
-        obj10.isActivity = tmp4(9467).isActivityApp(application);
+        obj10.isActivity = tmp4(9483).isActivityApp(application);
         ({ id: obj8.applicationId, icon } = application);
         obj10.applicationIcon = icon;
         obj10.overrideImageUrl = application.overrideImageUrl;
@@ -487,9 +487,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (showsPromoted) {
             const obj13 = { style: tmp.promotedLabelWrapper, children: null };
             const obj14 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
-            const intl = tmp4(1126).intl;
-            obj14.children = intl.string(tmp4(1126).t["/eVltv"]);
-            obj13.children = closure_6(tmp4(5147).Text, obj14);
+            const intl = tmp4(1128).intl;
+            obj14.children = intl.string(tmp4(1128).t["/eVltv"]);
+            obj13.children = closure_6(tmp4(5149).Text, obj14);
             showsPromoted = closure_6(View, obj13);
           }
           items3[1] = showsPromoted;
@@ -515,22 +515,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 1,
           children: application.name,
         };
-        const items6 = [closure_6(tmp4(5147).Text, obj18)];
+        const items6 = [closure_6(tmp4(5149).Text, obj18)];
         const obj19 = {
           variant: "text-sm/normal",
           color: "text-subtle",
           lineClamp: 1,
           children: application.description,
         };
-        items6[1] = closure_6(tmp4(5147).Text, obj19);
+        items6[1] = closure_6(tmp4(5149).Text, obj19);
         obj17.children = items6;
         items5[1] = closure_7(View, obj17);
-        items5[2] = closure_6(tmp4(6409).TableRowArrow, {});
+        items5[2] = closure_6(tmp4(6411).TableRowArrow, {});
         obj15.children = items5;
         items4[1] = closure_7(View, obj15);
         obj7.children = items4;
-        tmp12Result2 = closure_7(tmp4(6405).PressableOpacity, obj7);
-        const tmp4Result = tmp4(9467);
+        tmp12Result2 = closure_7(tmp4(6407).PressableOpacity, obj7);
+        const tmp4Result = tmp4(9483);
       }
       return tmp12Result2;
     };

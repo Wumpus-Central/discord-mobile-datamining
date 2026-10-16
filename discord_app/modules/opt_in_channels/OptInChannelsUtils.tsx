@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4758 from "../../../_runtime/metro/04758__.js";
+import _modDef4761 from "../../../_runtime/metro/04761__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/06317_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06319_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -21,12 +21,12 @@ require = fn;
 function setIndex(arg0, index) {
   arg0.index = index;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(2072);
+const ChannelConstants = fn(2075);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7473).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6183).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7475).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6185).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -394,7 +394,7 @@ export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompiler
     };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef4758;
+  const tmp = _modDef4761;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

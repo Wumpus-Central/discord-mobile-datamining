@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05451_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
 import FirstPartyQuestTaskTypes from "../../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   card: { padding: 0 },
   cardWatchTask: { justifyContent: "flex-end", height: 210 },
@@ -135,7 +135,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp19 = cResult[4];
         }
         _require = tmp19;
-        tmp(7627).isSponsoredPlayQuest(quest);
+        tmp(7629).isSponsoredPlayQuest(quest);
         if (tmp8) {
           if (!tmp10) {
             if (cResult[8] !== tmp19) {
@@ -155,9 +155,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const intl = tmp(1126).intl;
+            const intl = tmp(1128).intl;
             const obj4 = { rewardHook: E, date: questFormattedDate };
-            const formatResult = intl.format(tmp(1126).t.e3OlfB, obj4);
+            const formatResult = intl.format(tmp(1128).t.e3OlfB, obj4);
             cResult[5] = questFormattedDate;
             cResult[6] = tmp19;
             cResult[7] = formatResult;
@@ -216,9 +216,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const intl2 = tmp(1126).intl;
+          const intl2 = tmp(1128).intl;
           const obj6 = { minutesLeft: rounded, minutesHook: tmp28 };
-          const formatResult1 = intl2.format(tmp(1126).t.aFaRso, obj6);
+          const formatResult1 = intl2.format(tmp(1128).t.aFaRso, obj6);
           cResult[10] = rounded;
           cResult[11] = formatResult1;
         } else {
@@ -229,7 +229,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult7 = tmp(7627);
+        const tmpResult7 = tmp(7629);
       }
       const tmpResult6 = require("initialize");
       const defaultRewardName = require("QuestRewardUtils").getDefaultRewardName(quest.config, stateFromStores);
@@ -250,9 +250,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let defaultRewardName;
       c8 = undefined;
       const tmp = closure_9();
-      questTaskDetails = questTaskDetails(9392).useQuestTaskDetails(quest);
-      let obj = questTaskDetails(9392);
-      let isQuestProgressing = questTaskDetails(9392).useIsQuestProgressing(quest);
+      questTaskDetails = questTaskDetails(9408).useQuestTaskDetails(quest);
+      let obj = questTaskDetails(9408);
+      let isQuestProgressing = questTaskDetails(9408).useIsQuestProgressing(quest);
       const userStatus = quest.userStatus;
       let completedAt;
       if (userStatus != null) {
@@ -266,19 +266,19 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         claimedAt = userStatus2.claimedAt;
       }
       noop = tmp9;
-      let obj2 = questTaskDetails(9392);
-      const result = questTaskDetails(9425).supportedTaskPlatforms(quest);
+      let obj2 = questTaskDetails(9408);
+      const result = questTaskDetails(9441).supportedTaskPlatforms(quest);
       c4 = result;
-      const tmp2Result = questTaskDetails(9425);
-      questFormattedDate = questTaskDetails(9392).useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
+      const tmp2Result = questTaskDetails(9441);
+      questFormattedDate = questTaskDetails(9408).useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
       gameTitle = quest.config.messages.gameTitle;
-      const tmp2Result5 = questTaskDetails(9392);
+      const tmp2Result5 = questTaskDetails(9408);
       const items = [gameTitle];
       const stateFromStores = questTaskDetails(504).useStateFromStores(items, () => gameTitle.getCurrentUser());
       const tmp2Result6 = questTaskDetails(504);
-      defaultRewardName = questTaskDetails(9411).getDefaultRewardName(quest.config, stateFromStores);
-      const tmp2Result7 = questTaskDetails(9411);
-      const isSponsoredPlayQuestResult = questTaskDetails(7627).isSponsoredPlayQuest(quest);
+      defaultRewardName = questTaskDetails(9427).getDefaultRewardName(quest.config, stateFromStores);
+      const tmp2Result7 = questTaskDetails(9427);
+      const isSponsoredPlayQuestResult = questTaskDetails(7629).isSponsoredPlayQuest(quest);
       c8 = isSponsoredPlayQuestResult;
       const items1 = [
         questTaskDetails,
@@ -297,7 +297,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             const intl = util.intl;
             const obj = {
               rewardHook() {
-                return defaultRewardName(questTaskDetails(5147).Text, {
+                return defaultRewardName(questTaskDetails(5149).Text, {
                   variant: "text-sm/semibold",
                   color: "text-strong",
                   children,
@@ -315,7 +315,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             minutesLeft: rounded,
             minutesHook(children) {
-              return children(questTaskDetails(5147).Text, {
+              return children(questTaskDetails(5149).Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
                 children,
@@ -356,16 +356,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = { style: tmp.card, border: "subtle", children: null };
       let obj4 = { style: tmp.content, children: null };
       let obj5 = { quest, size: "lg", progress: questTaskDetails.percentComplete, loading: null, hasConfetti: true };
-      const tmp2Result8 = questTaskDetails(7627);
+      const tmp2Result8 = questTaskDetails(7629);
       if (!tmp7) {
         tmp7 = isQuestProgressing;
       }
       obj5.loading = !tmp7;
-      const items2 = [defaultRewardName(isQuestProgressing(16058), obj5)];
+      const items2 = [defaultRewardName(isQuestProgressing(16091), obj5)];
       let tmp18Result = null != memo;
       if (tmp18Result) {
         let obj6 = { style: tmp.instructionsText, variant: "text-sm/semibold", color: "text-subtle", children: memo };
-        tmp18Result = tmp18(tmp2(5147).Text, obj6);
+        tmp18Result = tmp18(tmp2(5149).Text, obj6);
       }
       items2[1] = tmp18Result;
       obj4.children = items2;
@@ -373,15 +373,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (isQuestProgressing) {
         const obj7 = { style: tmp.footer, children: null };
         const obj8 = { color: "text-feedback-positive", variant: "text-sm/semibold", children: null };
-        let intl = tmp2(1126).intl;
+        let intl = tmp2(1128).intl;
         const obj9 = { gameName: quest.config.messages.gameTitle };
-        obj8.children = intl.format(tmp2(1126).t.lIFg6I, obj9);
-        obj7.children = tmp18(tmp2(5147).Text, obj8);
+        obj8.children = intl.format(tmp2(1128).t.lIFg6I, obj9);
+        obj7.children = tmp18(tmp2(5149).Text, obj8);
         isQuestProgressing = tmp18(tmp17, obj7);
       }
       items3[1] = isQuestProgressing;
       obj3.children = items3;
-      return c8(questTaskDetails(6402).Card, obj3);
+      return c8(questTaskDetails(6404).Card, obj3);
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -683,7 +683,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       quest = quest.quest;
       const tmp = closure_9();
       const items = [quest];
-      const questTaskDetails = quest(9392).useQuestTaskDetails(quest);
+      const questTaskDetails = quest(9408).useQuestTaskDetails(quest);
       const memo = noop.useMemo(
         () => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.QUEST_BAR_HERO_VIDEO),
         items,
@@ -698,13 +698,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         () => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.QUEST_BAR_HERO_IMAGE),
         items2,
       );
-      const obj = quest(9392);
+      const obj = quest(9408);
       let isHeroVideoSupportedResult = null != memo;
-      const obj2 = quest(16050);
+      const obj2 = quest(16083);
       const obj3 = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
       if (isHeroVideoSupportedResult) {
-        isHeroVideoSupportedResult = tmp2(9389).isHeroVideoSupported(memo.mimetype);
-        const tmp2Result = tmp2(9389);
+        isHeroVideoSupportedResult = tmp2(9405).isHeroVideoSupported(memo.mimetype);
+        const tmp2Result = tmp2(9405);
       }
       const userStatus = quest.userStatus;
       let completedAt;
@@ -712,11 +712,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         completedAt = userStatus.completedAt;
       }
       if (null != completedAt) {
-        let YsCuyF = tmp2(1126).t.YsCuyF;
+        let YsCuyF = tmp2(1128).t.YsCuyF;
       } else {
-        YsCuyF = tmp2(1126).t["74KqrR"];
+        YsCuyF = tmp2(1128).t["74KqrR"];
       }
-      const watchTaskPressHandler = quest(16050).useWatchTaskPressHandler({
+      const watchTaskPressHandler = quest(16083).useWatchTaskPressHandler({
         questId: quest.id,
         sourceQuestContent: quest.sourceQuestContent,
       });
@@ -725,7 +725,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = openQuestAccessSuspendedBottomSheetDefault;
       }
       const obj4 = { onPress: tmp12, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      const intl = tmp2(1126).intl;
+      const intl = tmp2(1128).intl;
       obj4.accessibilityLabel = intl.string(YsCuyF);
       const obj5 = { style: null, border: "subtle", children: null };
       const items3 = [,];
@@ -751,7 +751,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         obj7.poster = url;
         const obj8 = { uri: memo.url };
         obj7.source = obj8;
-        const items4 = [closure_7(tmp2(8644).VideoComponent, obj7)];
+        const items4 = [closure_7(tmp2(8652).VideoComponent, obj7)];
         const obj9 = {
           start: { x: 0.5, y: 0.5 },
           end: { x: 1, y: 1 },
@@ -786,8 +786,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       items5[1] = tmp15Result2;
       const obj14 = { style: tmp.playVideoIconWrapper, children: null };
       const items7 = [closure_7(QuestDockBlurredContentBackgroundDefault, { blurTheme: "light" })];
-      tmp2Result2 = quest(9392);
-      items7[1] = closure_7(quest(8619).PlayIcon, { color: nativeDefault.colors.WHITE });
+      tmp2Result2 = quest(9408);
+      items7[1] = closure_7(quest(8627).PlayIcon, { color: nativeDefault.colors.WHITE });
       obj14.children = items7;
       items5[2] = closure_8(closure_4, obj14);
       const obj16 = {
@@ -804,8 +804,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       obj16.style = items8;
       items5[3] = closure_7(closure_4, obj16);
       obj5.children = items5;
-      obj4.children = closure_8(quest(6402).Card, obj5);
-      return closure_7(quest(6405).PressableOpacity, obj4);
+      obj4.children = closure_8(quest(6404).Card, obj5);
+      return closure_7(quest(6407).PressableOpacity, obj4);
     };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx");

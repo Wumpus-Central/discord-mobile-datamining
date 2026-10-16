@@ -5,20 +5,20 @@ import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05451_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef7935 from "../../../../../_runtime/metro/07935__.js";
-import _modDef8781 from "../../../../../_runtime/metro/08781__.js";
+import _modDef7938 from "../../../../../_runtime/metro/07938__.js";
+import _modDef8789 from "../../../../../_runtime/metro/08789__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef11439 from "../../../../../_runtime/metro/11439__.js";
-import _modDef11440 from "../../../../../_runtime/metro/11440__.js";
-import _modDef11441 from "../../../../../_runtime/metro/11441__.js";
+import _modDef11459 from "../../../../../_runtime/metro/11459__.js";
+import _modDef11460 from "../../../../../_runtime/metro/11460__.js";
+import _modDef11461 from "../../../../../_runtime/metro/11461__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -31,14 +31,14 @@ import StageMusicStore from "../../StageMusicStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   header: {
-    height: fn(6479).NAV_BAR_HEIGHT,
+    height: fn(6481).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
@@ -55,16 +55,16 @@ let obj = {
   icon: null,
 };
 let obj4 = { backgroundColor: null };
-let ColorUtils = fn(5023);
+let ColorUtils = fn(5026);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
 let obj5 = { backgroundColor: null };
-ColorUtils = fn(5023);
+ColorUtils = fn(5026);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(6479).NAV_BAR_HEIGHT,
+  height: fn(6481).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -113,8 +113,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.cpT0Cq);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.cpT0Cq);
         cResult[4] = stringResult;
         let tmp10 = stringResult;
       } else {
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== stateFromStores) {
         let obj3 = { value: stateFromStores, maskStyle: tmp12 };
-        const tmp15 = closure_12(tmp(1200).MaskedBadge, obj3);
+        const tmp15 = closure_12(tmp(1202).MaskedBadge, obj3);
         cResult[6] = stateFromStores;
         cResult[7] = tmp15;
         let tmp13 = tmp15;
@@ -153,7 +153,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const tmpResult = channel(504);
-      obj4.source = _modDef11439;
+      obj4.source = _modDef11459;
       obj4.accessibilityLabel = tmp10;
       obj4.onPress = tmp9;
       obj4.containerStyle = tmp4.iconContainer;
@@ -179,9 +179,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       let obj = channel(504);
-      obj2.source = _modDef11439;
-      const intl = channel(1126).intl;
-      obj2.accessibilityLabel = intl.string(channel(1126).t.cpT0Cq);
+      obj2.source = _modDef11459;
+      const intl = channel(1128).intl;
+      obj2.accessibilityLabel = intl.string(channel(1128).t.cpT0Cq);
       obj2.onPress = function handleClose() {
         const obj = AnalyticsUtilsDefault;
         const obj2 = { video_layout: "pop out" };
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };
       obj2.containerStyle = tmp.iconContainer;
-      obj2.children = closure_12(channel(1200).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+      obj2.children = closure_12(channel(1202).MaskedBadge, { value: stateFromStores, maskStyle: {} });
       return closure_12(ChannelCallNavigatorIconDefault, obj2);
     };
 let closure_15 = tmp4;
@@ -228,12 +228,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(576);
       const stateFromStores = channel(504).useStateFromStores(first, tmp9, tmp10);
       const tmpResult = channel(504);
-      const stageParticipantsCount = channel(6172).useStageParticipantsCount(
+      const stageParticipantsCount = channel(6174).useStageParticipantsCount(
         channel.id,
-        tmp(6166).StageChannelParticipantNamedIndex.AUDIENCE,
+        tmp(6168).StageChannelParticipantNamedIndex.AUDIENCE,
       );
-      const tmpResult4 = channel(6172);
-      const actualStageSpeakerCount = channel(6172).useActualStageSpeakerCount(channel.id);
+      const tmpResult4 = channel(6174);
+      const actualStageSpeakerCount = channel(6174).useActualStageSpeakerCount(channel.id);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ChannelRTCStore];
         cResult[4] = items2;
@@ -251,7 +251,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp16 = cResult[6];
       }
-      const tmpResult5 = channel(6172);
+      const tmpResult5 = channel(6174);
       const stateFromStores1 = channel(504).useStateFromStores(tmp14, tmp16);
       if (cResult[7] === stateFromStores1) {
         if (cResult[8] === tmp4.linearGradient) {
@@ -266,7 +266,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== topic) {
           const obj2 = { color: "text-overlay-light", variant: "text-md/semibold", children: topic };
-          const tmp25 = closure_12(tmp(5147).Text, obj2);
+          const tmp25 = closure_12(tmp(5149).Text, obj2);
           cResult[10] = topic;
           cResult[11] = tmp25;
           let tmp23 = tmp25;
@@ -313,18 +313,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp31 = null != stateFromStores;
             if (tmp31) {
               const obj4 = { style: tmp4.stageInfo, children: null };
-              const obj5 = { source: _modDef8781, size: tmp(1200).Icon.Sizes.SMALL, disableColor: true };
-              const items4 = [closure_12(tmp(1200).Icon, obj5), , , , ,];
+              const obj5 = { source: _modDef8789, size: tmp(1202).Icon.Sizes.SMALL, disableColor: true };
+              const items4 = [closure_12(tmp(1202).Icon, obj5), , , , ,];
               const obj6 = { variant: "text-xs/normal", style: tmp4.stageInfoTopic, children: tmp6 };
-              items4[1] = closure_12(tmp(5147).Text, obj6);
-              const obj7 = { source: _modDef7935, size: tmp(1200).Icon.Sizes.SMALL, style: tmp4.icon };
-              items4[2] = closure_12(tmp(1200).Icon, obj7);
+              items4[1] = closure_12(tmp(5149).Text, obj6);
+              const obj7 = { source: _modDef7938, size: tmp(1202).Icon.Sizes.SMALL, style: tmp4.icon };
+              items4[2] = closure_12(tmp(1202).Icon, obj7);
               const obj8 = { variant: "text-xs/normal", children: actualStageSpeakerCount };
-              items4[3] = closure_12(tmp(5147).Text, obj8);
-              const obj9 = { source: _modDef11440, size: tmp(1200).Icon.Sizes.SMALL, style: tmp4.icon };
-              items4[4] = closure_12(tmp(1200).Icon, obj9);
+              items4[3] = closure_12(tmp(5149).Text, obj8);
+              const obj9 = { source: _modDef11460, size: tmp(1202).Icon.Sizes.SMALL, style: tmp4.icon };
+              items4[4] = closure_12(tmp(1202).Icon, obj9);
               const obj10 = { variant: "text-xs/normal", children: stageParticipantsCount };
-              items4[5] = closure_12(tmp(5147).Text, obj10);
+              items4[5] = closure_12(tmp(5149).Text, obj10);
               obj4.children = items4;
               tmp31 = closure_13(View, obj4);
             }
@@ -377,13 +377,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channel(504);
-      const stageParticipantsCount = channel(6172).useStageParticipantsCount(
+      const stageParticipantsCount = channel(6174).useStageParticipantsCount(
         channel.id,
-        channel(6166).StageChannelParticipantNamedIndex.AUDIENCE,
+        channel(6168).StageChannelParticipantNamedIndex.AUDIENCE,
       );
-      const obj2 = channel(6172);
-      const actualStageSpeakerCount = channel(6172).useActualStageSpeakerCount(channel.id);
-      const obj3 = channel(6172);
+      const obj2 = channel(6174);
+      const actualStageSpeakerCount = channel(6174).useActualStageSpeakerCount(channel.id);
+      const obj3 = channel(6174);
       const items2 = [ChannelRTCStore];
       const obj5 = { pointerEvents: "none", style: tmp.leftTitleContainer, children: null };
       const obj6 = { style: tmp.titleWrapper, children: null };
@@ -406,7 +406,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (topic == null) {
         topic = tmp4;
       }
-      items3[1] = closure_12(channel(5147).Text, {
+      items3[1] = closure_12(channel(5149).Text, {
         color: "text-overlay-light",
         variant: "text-md/semibold",
         children: topic,
@@ -416,18 +416,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9Result = null != stateFromStores;
       if (tmp9Result) {
         const obj8 = { style: tmp.stageInfo, children: null };
-        const obj9 = { source: _modDef8781, size: tmp5(1200).Icon.Sizes.SMALL, disableColor: true };
-        const items5 = [closure_12(tmp5(1200).Icon, obj9), , , , ,];
+        const obj9 = { source: _modDef8789, size: tmp5(1202).Icon.Sizes.SMALL, disableColor: true };
+        const items5 = [closure_12(tmp5(1202).Icon, obj9), , , , ,];
         const obj10 = { variant: "text-xs/normal", style: tmp.stageInfoTopic, children: tmp4 };
-        items5[1] = closure_12(tmp5(5147).Text, obj10);
-        const obj11 = { source: _modDef7935, size: tmp5(1200).Icon.Sizes.SMALL, style: tmp.icon };
-        items5[2] = closure_12(tmp5(1200).Icon, obj11);
+        items5[1] = closure_12(tmp5(5149).Text, obj10);
+        const obj11 = { source: _modDef7938, size: tmp5(1202).Icon.Sizes.SMALL, style: tmp.icon };
+        items5[2] = closure_12(tmp5(1202).Icon, obj11);
         const obj12 = { variant: "text-xs/normal", children: actualStageSpeakerCount };
-        items5[3] = closure_12(tmp5(5147).Text, obj12);
-        const obj13 = { source: _modDef11440, size: tmp5(1200).Icon.Sizes.SMALL, style: tmp.icon };
-        items5[4] = closure_12(tmp5(1200).Icon, obj13);
+        items5[3] = closure_12(tmp5(5149).Text, obj12);
+        const obj13 = { source: _modDef11460, size: tmp5(1202).Icon.Sizes.SMALL, style: tmp.icon };
+        items5[4] = closure_12(tmp5(1202).Icon, obj13);
         const obj14 = { variant: "text-xs/normal", children: stageParticipantsCount };
-        items5[5] = closure_12(tmp5(5147).Text, obj14);
+        items5[5] = closure_12(tmp5(5149).Text, obj14);
         obj8.children = items5;
         tmp9Result = closure_13(View, obj8);
       }
@@ -446,8 +446,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const onOpenRTCDebugOverlay = channelId.onOpenRTCDebugOverlay;
       const tmp4 = closure_14();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t["lIx5+G"]);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t["lIx5+G"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -470,16 +470,16 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             accessibilityLabel: first,
             containerStyle: tmp7,
-            source: onOpenRTCDebugOverlay(11441),
+            source: onOpenRTCDebugOverlay(11461),
             onPress: tmp8,
             disableBackground: true,
           };
-          const tmp13 = closure_12(onOpenRTCDebugOverlay(11301), obj2);
+          const tmp13 = closure_12(onOpenRTCDebugOverlay(11321), obj2);
           cResult[7] = tmp7;
           cResult[8] = tmp8;
           cResult[9] = tmp13;
           tmp9 = tmp13;
-          const tmp12 = onOpenRTCDebugOverlay(11301);
+          const tmp12 = onOpenRTCDebugOverlay(11321);
         }
         const fn = function l() {
           return StageChannelActionCreatorExtras.openStageSettingsSheet(channelId, onOpenRTCDebugOverlay);
@@ -512,7 +512,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [,];
       ({ iconBackground: arr[0], settingsButton: arr[1] } = tmp);
       obj.containerStyle = items;
-      obj.source = _modDef11441;
+      obj.source = _modDef11461;
       obj.onPress = function onPress() {
         return StageChannelActionCreatorExtras.openStageSettingsSheet(_require, importDefault);
       };
@@ -761,9 +761,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = stateFromStores(504);
       if (tmpResult2.useShowStageMusicMuteButton(channelId.channelId)) {
         if (cResult[2] !== stateFromStores) {
-          const intl = tmp(1126).intl;
+          const intl = tmp(1128).intl;
           const string = intl.string;
-          let ScHlfl = tmp(1126).t;
+          let ScHlfl = tmp(1128).t;
           if (stateFromStores) {
             ScHlfl = ScHlfl.ScHlfl;
             let stringResult = string(ScHlfl);
@@ -773,7 +773,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[2] = stateFromStores;
           cResult[3] = stringResult;
         } else {
-          const tmp12Result = importDefault(stateFromStores ? 11283 : 11284);
+          const tmp12Result = importDefault(stateFromStores ? 11303 : 11304);
           if (cResult[4] !== stateFromStores) {
             class C {
               constructor() {
@@ -822,7 +822,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return null;
       }
-      tmpResult2 = stateFromStores(11277);
+      tmpResult2 = stateFromStores(11297);
     }
   : function MusicMuteButton(channelId) {
       let stateFromStores;
@@ -833,9 +833,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       if (!obj2.useShowStageMusicMuteButton(channelId.channelId)) {
         return null;
       } else {
-        const intl = tmp2(1126).intl;
+        const intl = tmp2(1128).intl;
         const string = intl.string;
-        const t = tmp2(1126).t;
+        const t = tmp2(1128).t;
         if (stateFromStores) {
           let stringResult = string(t.ScHlfl);
         } else {
@@ -844,7 +844,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           accessibilityLabel: stringResult,
           containerStyle: tmp.iconBackground,
-          source: importDefault(stateFromStores ? 11283 : 11284),
+          source: importDefault(stateFromStores ? 11303 : 11304),
           onPress() {
             return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
           },
@@ -852,7 +852,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         };
         closure_12(ChannelCallNavigatorIconDefault, obj3);
       }
-      obj2 = stateFromStores(11277);
+      obj2 = stateFromStores(11297);
     };
 let closure_19 = tmp9;
 ReactCompilerGating = fn(558);
@@ -902,8 +902,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.cpT0Cq);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.cpT0Cq);
         cResult[4] = stringResult;
         let tmp10 = stringResult;
       } else {
@@ -918,7 +918,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== stateFromStores) {
         let obj3 = { value: stateFromStores, maskStyle: tmp12 };
-        const tmp15 = closure_12(tmp(1200).MaskedBadge, obj3);
+        const tmp15 = closure_12(tmp(1202).MaskedBadge, obj3);
         cResult[6] = stateFromStores;
         cResult[7] = tmp15;
         let tmp13 = tmp15;
@@ -942,7 +942,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const tmpResult = channel(504);
-      obj4.source = _modDef11439;
+      obj4.source = _modDef11459;
       obj4.accessibilityLabel = tmp10;
       obj4.onPress = tmp9;
       obj4.containerStyle = tmp4.iconContainer;
@@ -968,9 +968,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       let obj = channel(504);
-      obj2.source = _modDef11439;
-      const intl = channel(1126).intl;
-      obj2.accessibilityLabel = intl.string(channel(1126).t.cpT0Cq);
+      obj2.source = _modDef11459;
+      const intl = channel(1128).intl;
+      obj2.accessibilityLabel = intl.string(channel(1128).t.cpT0Cq);
       obj2.onPress = function handleClose() {
         const obj = AnalyticsUtilsDefault;
         const obj2 = { video_layout: "pop out" };
@@ -982,7 +982,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };
       obj2.containerStyle = tmp.iconContainer;
-      obj2.children = closure_12(channel(1200).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+      obj2.children = closure_12(channel(1202).MaskedBadge, { value: stateFromStores, maskStyle: {} });
       return closure_12(ChannelCallNavigatorIconDefault, obj2);
     };
 const size = fn(2);

@@ -31,12 +31,12 @@ import QuestUtmStore from "../QuestUtmStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6188).QuestsExperimentLocations;
-const Constants = fn(1085);
+const QuestsExperimentLocations = fn(6190).QuestsExperimentLocations;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   container: { flex: 1 },
   loadingContainer: null,
@@ -92,51 +92,189 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = scrollToIndex(ref[14]);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function _(arg0) {
-          const keys = Object.keys(ref1.current.children);
-          const iter = keys[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let tmp3 = nextResult;
-            let tmp4 = null != arg0;
-            if (tmp4) {
-              tmp4 = tmp3 !== arg0;
-            }
-            if (!tmp4) {
-              let tmp8 = ref1.current.children[tmp3];
-              if (tmp8 != null) {
-                let calculateVisibility = tmp8.calculateVisibility;
-                if (calculateVisibility != null) {
-                  let calculateVisibilityResult = calculateVisibility();
+        class C {
+          constructor(arg0) {
+            keys = Object.keys(closure_3.current.children);
+            iter = keys[Symbol.iterator]();
+            nextResult = iter.next();
+            while (iter !== undefined) {
+              tmp3 = nextResult;
+              tmp4 = null != scrollToIndex;
+              if (tmp4) {
+                tmp5 = nextResult;
+                tmp4 = tmp3 !== scrollToIndex;
+              }
+              if (!tmp4) {
+                tmp6 = closure_3;
+                tmp7 = nextResult;
+                tmp8 = closure_3.current.children[tmp3];
+                if (tmp8 != null) {
+                  calculateVisibility = tmp8.calculateVisibility;
+                  if (calculateVisibility != null) {
+                    calculateVisibilityResult = calculateVisibility();
+                  }
                 }
               }
+              continue;
             }
-            continue;
+            return;
           }
-        };
-        cResult[3] = fn2;
-        let tmp11 = fn2;
+        }
+        cResult[3] = C;
       } else {
-        tmp11 = cResult[3];
+        class C {
+          constructor(arg0) {
+            keys = Object.keys(closure_3.current.children);
+            iter = keys[Symbol.iterator]();
+            nextResult = iter.next();
+            while (iter !== undefined) {
+              tmp3 = nextResult;
+              tmp4 = null != scrollToIndex;
+              if (tmp4) {
+                tmp5 = nextResult;
+                tmp4 = tmp3 !== scrollToIndex;
+              }
+              if (!tmp4) {
+                tmp6 = closure_3;
+                tmp7 = nextResult;
+                tmp8 = closure_3.current.children[tmp3];
+                if (tmp8 != null) {
+                  calculateVisibility = tmp8.calculateVisibility;
+                  if (calculateVisibility != null) {
+                    calculateVisibilityResult = calculateVisibility();
+                  }
+                }
+              }
+              continue;
+            }
+            return;
+          }
+        }
       }
-      noop = tmp11;
+      noop = C;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function p(nativeEvent) {
-          ref1.current.parent.scrollY = nativeEvent.nativeEvent.contentOffset.y;
-          closure_4();
-        };
-        cResult[4] = fn3;
+        class C {
+          constructor(arg0) {
+            keys = Object.keys(closure_3.current.children);
+            iter = keys[Symbol.iterator]();
+            nextResult = iter.next();
+            while (iter !== undefined) {
+              tmp3 = nextResult;
+              tmp4 = null != scrollToIndex;
+              if (tmp4) {
+                tmp5 = nextResult;
+                tmp4 = tmp3 !== scrollToIndex;
+              }
+              if (!tmp4) {
+                tmp6 = closure_3;
+                tmp7 = nextResult;
+                tmp8 = closure_3.current.children[tmp3];
+                if (tmp8 != null) {
+                  calculateVisibility = tmp8.calculateVisibility;
+                  if (calculateVisibility != null) {
+                    calculateVisibilityResult = calculateVisibility();
+                  }
+                }
+              }
+              continue;
+            }
+            return;
+          }
+        }
+        cResult[4] = tmp13;
+      } else {
+        class C {
+          constructor(arg0) {
+            keys = Object.keys(closure_3.current.children);
+            iter = keys[Symbol.iterator]();
+            nextResult = iter.next();
+            while (iter !== undefined) {
+              tmp3 = nextResult;
+              tmp4 = null != scrollToIndex;
+              if (tmp4) {
+                tmp5 = nextResult;
+                tmp4 = tmp3 !== scrollToIndex;
+              }
+              if (!tmp4) {
+                tmp6 = closure_3;
+                tmp7 = nextResult;
+                tmp8 = closure_3.current.children[tmp3];
+                if (tmp8 != null) {
+                  calculateVisibility = tmp8.calculateVisibility;
+                  if (calculateVisibility != null) {
+                    calculateVisibilityResult = calculateVisibility();
+                  }
+                }
+              }
+              continue;
+            }
+            return;
+          }
+        }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn4 = function y(nativeEvent) {
-          ref1.current.parent.layout = nativeEvent.nativeEvent.layout;
-          closure_4();
-        };
-        cResult[5] = fn4;
+        class C {
+          constructor(arg0) {
+            keys = Object.keys(closure_3.current.children);
+            iter = keys[Symbol.iterator]();
+            nextResult = iter.next();
+            while (iter !== undefined) {
+              tmp3 = nextResult;
+              tmp4 = null != scrollToIndex;
+              if (tmp4) {
+                tmp5 = nextResult;
+                tmp4 = tmp3 !== scrollToIndex;
+              }
+              if (!tmp4) {
+                tmp6 = closure_3;
+                tmp7 = nextResult;
+                tmp8 = closure_3.current.children[tmp3];
+                if (tmp8 != null) {
+                  calculateVisibility = tmp8.calculateVisibility;
+                  if (calculateVisibility != null) {
+                    calculateVisibilityResult = calculateVisibility();
+                  }
+                }
+              }
+              continue;
+            }
+            return;
+          }
+        }
+        cResult[5] = tmp15;
+      } else {
+        class C {
+          constructor(arg0) {
+            keys = Object.keys(closure_3.current.children);
+            iter = keys[Symbol.iterator]();
+            nextResult = iter.next();
+            while (iter !== undefined) {
+              tmp3 = nextResult;
+              tmp4 = null != scrollToIndex;
+              if (tmp4) {
+                tmp5 = nextResult;
+                tmp4 = tmp3 !== scrollToIndex;
+              }
+              if (!tmp4) {
+                tmp6 = closure_3;
+                tmp7 = nextResult;
+                tmp8 = closure_3.current.children[tmp3];
+                if (tmp8 != null) {
+                  calculateVisibility = tmp8.calculateVisibility;
+                  if (calculateVisibility != null) {
+                    calculateVisibilityResult = calculateVisibility();
+                  }
+                }
+              }
+              continue;
+            }
+            return;
+          }
+        }
       }
-      const tmp14 = noop.useRef(tmp9)(noop.useState(false), 2);
-      const first = tmp14[0];
-      closure_6 = tmp14[1];
+      const tmp16 = noop.useRef(tmp9)(noop.useState(false), 2);
+      const first = tmp16[0];
+      closure_6 = tmp16[1];
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class L {
           constructor() {
@@ -216,7 +354,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      P = tmp18;
+      P = tmp20;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class P {
           constructor(arg0) {
@@ -235,7 +373,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        cResult[10] = tmp20;
+        cResult[10] = tmp22;
       } else {
         class P {
           constructor(arg0) {
@@ -274,7 +412,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn5 = function x() {
+      const fn2 = function x() {
         let tmp2 = null != scrollToIndex;
         if (tmp2) {
           tmp2 = -1 !== scrollToIndex;
@@ -288,9 +426,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       cResult[11] = first;
-      cResult[12] = tmp18;
+      cResult[12] = tmp20;
       cResult[13] = scrollToIndex;
-      cResult[14] = fn5;
+      cResult[14] = fn2;
       const ref1 = noop.useRef(tmp9);
     }
   : function useScrollAndLayoutCallbacks(scrollToIndex) {
@@ -394,7 +532,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = bountiesAvailable(576).c(10);
       bountiesAvailable = bountiesAvailable.bountiesAvailable;
       let obj = bountiesAvailable(576);
-      const navigation = bountiesAvailable(1503).useNavigation();
+      const navigation = bountiesAvailable(1505).useNavigation();
       dependencyMap = noop.useRef(false);
       closure_3 = noop.useRef(false);
       noop = noop.useRef(false);
@@ -494,7 +632,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   : function useSurveyActions(bountiesAvailable) {
       bountiesAvailable = bountiesAvailable.bountiesAvailable;
       noop = undefined;
-      const navigation = bountiesAvailable(1503).useNavigation();
+      const navigation = bountiesAvailable(1505).useNavigation();
       dependencyMap = noop.useRef(false);
       closure_3 = noop.useRef(false);
       noop = noop.useRef(false);
@@ -715,13 +853,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
   ? function HeaderWithBounties(arg0) {
-      const cResult = c.c(15);
+      const cResult = c.c(6);
       ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
-      const tmp4 = closure_17();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = closure_1_14(closure_22, {});
-        cResult[0] = tmp8;
-        let first = tmp8;
+        const tmp6 = closure_1_14(closure_22, {});
+        cResult[0] = tmp6;
+        let first = tmp6;
       } else {
         first = cResult[0];
       }
@@ -729,72 +866,34 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === orbShopProducts) {
           if (cResult[3] === shopCarouselConfig) {
             if (cResult[4] === showOrbShopPlaceholderCarousel) {
-              let tmp9 = cResult[5];
+              let tmp7 = cResult[5];
             }
-            if (cResult[6] === tmp4.sectionHeader) {
-              if (cResult[7] === tmp4.sectionHeaderWithTag) {
-                let tmp11 = cResult[8];
-              }
-              const _Symbol = Symbol;
-              if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-                const intl = util.intl;
-                obj2.children = intl.string(util.t.JALI2K);
-                const tmp14 = closure_1_14(Text_Text.Text, obj2);
-                cResult[9] = tmp14;
-                let tmp12 = tmp14;
-              } else {
-                tmp12 = cResult[9];
-              }
-              if (cResult[10] !== tmp11) {
-                const obj3 = { style: tmp11, children: tmp12 };
-                const tmp18 = closure_1_14(hasOwnProperty, obj3);
-                cResult[10] = tmp11;
-                cResult[11] = tmp18;
-                let tmp15 = tmp18;
-              } else {
-                tmp15 = cResult[11];
-              }
-              if (cResult[12] === tmp9) {
-                if (cResult[13] === tmp15) {
-                  let tmp19 = cResult[14];
-                }
-                return tmp19;
-              }
-              const obj4 = { children: null };
-              const items = [first, tmp9, tmp15];
-              obj4.children = items;
-              const tmp22 = value3(value2, obj4);
-              cResult[12] = tmp9;
-              cResult[13] = tmp15;
-              cResult[14] = tmp22;
-              tmp19 = tmp22;
-            }
-            const items1 = [,];
-            ({ sectionHeader: arr[0], sectionHeaderWithTag: arr[1] } = tmp4);
-            cResult[6] = tmp4.sectionHeader;
-            cResult[7] = tmp4.sectionHeaderWithTag;
-            cResult[8] = items1;
-            tmp11 = items1;
+            return tmp7;
           }
         }
       }
-      const tmp10 = closure_1_14(QuestHomeBountiesDefault, {
-        shopCarouselConfig,
-        orbShopProducts,
-        obtainableOrbRewards,
-        showOrbShopPlaceholderCarousel,
-      });
+      const obj2 = { children: null };
+      const items = [
+        first,
+        closure_1_14(QuestHomeBountiesDefault, {
+          shopCarouselConfig,
+          orbShopProducts,
+          obtainableOrbRewards,
+          showOrbShopPlaceholderCarousel,
+        }),
+      ];
+      obj2.children = items;
+      const tmp8 = value3(value2, obj2);
       cResult[1] = obtainableOrbRewards;
       cResult[2] = orbShopProducts;
       cResult[3] = shopCarouselConfig;
       cResult[4] = showOrbShopPlaceholderCarousel;
-      cResult[5] = tmp10;
-      tmp9 = tmp10;
+      cResult[5] = tmp8;
+      tmp7 = tmp8;
     }
   : function HeaderWithBounties(arg0) {
-      ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
       const obj = { children: null };
+      ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
       const items = [
         closure_1_14(closure_22, {}),
         closure_1_14(QuestHomeBountiesDefault, {
@@ -804,23 +903,63 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           showOrbShopPlaceholderCarousel,
         }),
       ];
-      const obj2 = { style: null, children: null };
-      const items1 = [,];
-      ({ sectionHeader: arr2[0], sectionHeaderWithTag: arr2[1] } = closure_17());
-      obj2.style = items1;
-      const obj3 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-      const intl = util.intl;
-      obj3.children = intl.string(util.t.JALI2K);
-      obj2.children = closure_1_14(Text_Text.Text, obj3);
-      items[2] = closure_1_14(hasOwnProperty, obj2);
       obj.children = items;
       return value3(value2, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_24 = noop.memo(
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function QuestsSectionHeader() {
+      const cResult = c.c(6);
+      const tmp4 = closure_17();
+      if (cResult[0] === tmp4.sectionHeader) {
+        if (cResult[1] === tmp4.sectionHeaderWithTag) {
+          let tmp5 = cResult[2];
+        }
+        const _Symbol = Symbol;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
+          const intl = util.intl;
+          obj2.children = intl.string(util.t.JALI2K);
+          const tmp9 = closure_1_14(Text_Text.Text, obj2);
+          cResult[3] = tmp9;
+          let tmp7 = tmp9;
+        } else {
+          tmp7 = cResult[3];
+        }
+        if (cResult[4] !== tmp5) {
+          const obj3 = { style: tmp5, children: tmp7 };
+          const tmp13 = closure_1_14(hasOwnProperty, obj3);
+          cResult[4] = tmp5;
+          cResult[5] = tmp13;
+          let tmp10 = tmp13;
+        } else {
+          tmp10 = cResult[5];
+        }
+        return tmp10;
+      }
+      const items = [,];
+      ({ sectionHeader: arr[0], sectionHeaderWithTag: arr[1] } = tmp4);
+      cResult[0] = tmp4.sectionHeader;
+      cResult[1] = tmp4.sectionHeaderWithTag;
+      cResult[2] = items;
+      tmp5 = items;
+    }
+  : function QuestsSectionHeader() {
+      const obj = { style: null, children: null };
+      const items = [,];
+      ({ sectionHeader: arr[0], sectionHeaderWithTag: arr[1] } = closure_17());
+      obj.style = items;
+      const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
+      const intl = util.intl;
+      obj2.children = intl.string(util.t.JALI2K);
+      obj.children = closure_1_14(Text_Text.Text, obj2);
+      return closure_1_14(hasOwnProperty, obj);
+    };
+ReactCompilerGating = fn(558);
+let closure_25 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function MeasuredHeader(arg0) {
-        const cResult = c.c(9);
+        const cResult = c.c(10);
         ({
           shouldShowBounties,
           onLayout,
@@ -834,18 +973,28 @@ let closure_24 = noop.memo(
             if (cResult[2] === shopCarouselConfig) {
               if (cResult[3] === shouldShowBounties) {
                 if (cResult[4] === showOrbShopPlaceholderCarousel) {
-                  if (cResult[6] === onLayout) {
-                    if (cResult[7] === tmp2) {
-                      let tmp7 = cResult[8];
-                    }
-                    return tmp7;
+                  const _Symbol = Symbol;
+                  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+                    const tmp11 = closure_1_14(closure_24, {});
+                    cResult[6] = tmp11;
+                    let tmp8 = tmp11;
+                  } else {
+                    tmp8 = cResult[6];
                   }
-                  const obj2 = { onLayout, children: cResult[5] };
-                  const tmp10 = closure_1_14(hasOwnProperty, obj2);
-                  cResult[6] = onLayout;
-                  cResult[7] = cResult[5];
-                  cResult[8] = tmp10;
-                  tmp7 = tmp10;
+                  if (cResult[7] === onLayout) {
+                    if (cResult[8] === tmp2) {
+                      let tmp12 = cResult[9];
+                    }
+                    return tmp12;
+                  }
+                  const obj2 = { onLayout, children: null };
+                  const items = [cResult[5], tmp8];
+                  obj2.children = items;
+                  const tmp15 = value3(hasOwnProperty, obj2);
+                  cResult[7] = onLayout;
+                  cResult[8] = cResult[5];
+                  cResult[9] = tmp15;
+                  tmp12 = tmp15;
                 }
               }
             }
@@ -873,12 +1022,15 @@ let closure_24 = noop.memo(
             obtainableOrbRewards: tmp2,
             showOrbShopPlaceholderCarousel: tmp3,
           };
-          let tmp5Result = closure_1_14(closure_23, obj2);
+          let tmp7Result = closure_1_14(closure_23, obj2);
+          let tmp10 = closure_1_14;
         } else {
-          tmp5Result = closure_1_14(closure_22, {});
+          tmp7Result = closure_1_14(closure_22, {});
+          tmp10 = closure_1_14;
         }
-        obj.children = tmp5Result;
-        return closure_1_14(hasOwnProperty, obj);
+        const items = [tmp7Result, tmp10(closure_24, {})];
+        obj.children = items;
+        return value3(hasOwnProperty, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -1262,7 +1414,7 @@ export default noop.memo(
         const items9 = [visibilityRef];
         const callback = obj3.useCallback(
           () =>
-            closure_2_14(closure_24, {
+            closure_2_14(closure_25, {
               shouldShowBounties: enabled,
               onLayout: handleHeaderLayout,
               shopCarouselConfig: config,
@@ -1380,9 +1532,10 @@ export default noop.memo(
             onLoad: null,
             scrollEventThrottle: 16,
           };
-          let num4 = 0;
-          if (tmp37) {
-            num4 = tmp5(tmp2[11]).space.PX_16;
+          if (!enabled) {
+            let num4 = tmp5(tmp2[11]).space.PX_16;
+          } else {
+            num4 = 0;
           }
           const obj18 = { paddingTop: num4, paddingBottom: filters(sortMethod[29])().bottom };
           obj17.contentContainerStyle = obj18;

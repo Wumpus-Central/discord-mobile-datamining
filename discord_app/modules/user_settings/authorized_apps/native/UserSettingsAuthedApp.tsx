@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01504_Link.js";
+import Link from "../../../../../_runtime/01506_Link.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -26,13 +26,13 @@ import LocaleStore from "../../LocaleStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(9848).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10648).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(9864).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10663).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   section: { marginBottom: 24 },
@@ -106,7 +106,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(7);
       application = application.application;
       const obj = navigation(576);
-      navigation = navigation(1503).useNavigation();
+      navigation = navigation(1505).useNavigation();
       if (cResult[0] !== navigation) {
         const fn = function t() {
           const CommonActions = Link.CommonActions;
@@ -133,8 +133,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const intl = tmp(1126).intl;
-      const formatResult = intl.format(navigation(1126).t.jUhnwb, {
+      const intl = tmp(1128).intl;
+      const formatResult = intl.format(navigation(1128).t.jUhnwb, {
         applicationName: application.name,
         onConnectionPress: tmp5,
       });
@@ -142,20 +142,20 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = formatResult;
       tmp6 = formatResult;
-      const obj2 = navigation(1503);
+      const obj2 = navigation(1505);
       const obj4 = { applicationName: application.name, onConnectionPress: tmp5 };
     }
   : function AuthorizedAppTwoWay(application) {
       let navigation;
-      navigation = navigation(1503).useNavigation();
+      navigation = navigation(1505).useNavigation();
       const items = [navigation];
       const obj2 = { text: null };
       const callback = noop.useCallback(() => {
         const CommonActions = Link.CommonActions;
         navigation.dispatch(CommonActions.navigate(constants.CONNECTIONS));
       }, items);
-      const intl = navigation(1126).intl;
-      obj2.text = intl.format(navigation(1126).t.jUhnwb, {
+      const intl = navigation(1128).intl;
+      obj2.text = intl.format(navigation(1128).t.jUhnwb, {
         applicationName: application.application.name,
         onConnectionPress: callback,
       });

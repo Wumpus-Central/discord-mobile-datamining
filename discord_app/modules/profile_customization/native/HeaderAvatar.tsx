@@ -25,9 +25,9 @@ let closure_3 = [
   "ref",
 ];
 const View = fn(17).View;
-const ActivityTypes = fn(1085).ActivityTypes;
+const ActivityTypes = fn(1087).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         dependencyMap = cResult[12];
       }
       if (undefined === XXLARGE) {
-        XXLARGE = tmp(1200).AvatarSizes.XXLARGE;
+        XXLARGE = tmp(1202).AvatarSizes.XXLARGE;
       }
       closure_11();
       id = tmp14.id;
@@ -242,13 +242,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult5 = tmp(504);
         let obj2 = { pendingValue: tmp8, userValue: undefined, guildValue: undefined, guildId: tmp6 };
-        const profilePreviewValue = tmp(8509).getProfilePreviewValue(obj2);
+        const profilePreviewValue = tmp(8517).getProfilePreviewValue(obj2);
         cResult[23] = tmp6;
         cResult[24] = tmp8;
         cResult[25] = undefined;
         cResult[26] = undefined;
         cResult[27] = profilePreviewValue;
-        const tmpResult6 = tmp(8509);
+        const tmpResult6 = tmp(8517);
       }
       fn = function w() {
         let member = null;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ pendingAvatarSrc, style, onPress, size } = animate);
       ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
       if (size === undefined) {
-        size = guildId(1200).AvatarSizes.XXLARGE;
+        size = guildId(1202).AvatarSizes.XXLARGE;
       }
       let flag = animate.animate;
       if (flag === undefined) {
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       const obj4 = guildId(504);
       const tmp9 = id;
-      const tmp10 = id(8602);
+      const tmp10 = id(8610);
       const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
       let avatarDecoration;
       if (user != null) {
@@ -345,19 +345,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         avatarDecoration: null,
       };
       let tmp14 = null;
-      const obj5 = guildId(8509);
+      const obj5 = guildId(8517);
       if (!disableStatus) {
         tmp14 = status;
       }
       obj7.status = tmp14;
       const items4 = [tmp4.avatarStatusStyle, statusStyle];
       obj7.statusStyle = items4;
-      obj7.streaming = tmp9(8603)(activities);
+      obj7.streaming = tmp9(8611)(activities);
       if (flag) {
         flag = !stateFromStores;
       }
       obj7.animate = flag;
-      obj7.avatarDecoration = tmp10(guildId(8509).getProfilePreviewValue(obj6));
+      obj7.avatarDecoration = tmp10(guildId(8517).getProfilePreviewValue(obj6));
       if (null != onPress) {
         const obj8 = {
           ref,
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const merged1 = Object.assign(merged);
         if (undefined !== pendingAvatarSrc) {
           const obj9 = { source: null };
-          obj = obj(8592);
+          obj = obj(8600);
           avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
           obj9.source = avatarSource;
           obj7 = Object.assign(obj7);
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj10 = { user, guildId };
           const merged2 = Object.assign(obj7);
         }
-        obj8.children = jsx(obj(1200).Avatar, obj10);
-        jsx(obj(6405).PressableOpacity, {
+        obj8.children = jsx(obj(1202).Avatar, obj10);
+        jsx(obj(6407).PressableOpacity, {
           ref,
           onPress,
           onLongPress: onPress,
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const merged3 = Object.assign(merged);
         if (undefined !== pendingAvatarSrc) {
           const obj12 = { source: null };
-          const objResult = obj(8592);
+          const objResult = obj(8600);
           obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
           const merged4 = Object.assign(obj7);
           let obj13 = obj12;
@@ -401,8 +401,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj13 = { user, guildId };
           const merged5 = Object.assign(obj7);
         }
-        obj11.children = jsx(obj(1200).Avatar, obj13);
+        obj11.children = jsx(obj(1202).Avatar, obj13);
         return <View ref={ref} style={style} accessibilityRole="image" accessible />;
       }
-      const tmp10Result = tmp10(guildId(8509).getProfilePreviewValue(obj6));
+      const tmp10Result = tmp10(guildId(8517).getProfilePreviewValue(obj6));
     };

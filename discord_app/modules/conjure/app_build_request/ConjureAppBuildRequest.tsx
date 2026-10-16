@@ -220,11 +220,11 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
                     promise = sendAppBuildRequest(closure_0, closure_5.projectId, closure_6);
                     nextPromise = promise.then(
                       () => {
-                        const intl = closure_0(1126).intl;
-                        return closure_0(12031).sendConjureCardReply(
+                        const intl = closure_0(1128).intl;
+                        return closure_0(12055).sendConjureCardReply(
                           closure_1_0,
                           "" +
-                            intl.formatToPlainString(closure_1(3862).jZlNst, {
+                            intl.formatToPlainString(closure_1(3865).jZlNst, {
                               name: projectId.name,
                               projectId: projectId.projectId,
                             }) +
@@ -276,11 +276,11 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
               promise = sendAppBuildRequest(closure_0, closure_5.projectId, closure_6);
               nextPromise = promise.then(
                 () => {
-                  const intl = closure_0(1126).intl;
-                  return closure_0(12031).sendConjureCardReply(
+                  const intl = closure_0(1128).intl;
+                  return closure_0(12055).sendConjureCardReply(
                     closure_1_0,
                     "" +
-                      intl.formatToPlainString(closure_1(3862).jZlNst, {
+                      intl.formatToPlainString(closure_1(3865).jZlNst, {
                         name: projectId.name,
                         projectId: projectId.projectId,
                       }) +
@@ -372,11 +372,11 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
             _slicedToArray(false);
             sendAppBuildRequest(closure_0, found.projectId, trimmed).then(
               () => {
-                const intl = closure_0(1126).intl;
-                return closure_0(12031).sendConjureCardReply(
+                const intl = closure_0(1128).intl;
+                return closure_0(12055).sendConjureCardReply(
                   closure_1_0,
                   "" +
-                    intl.formatToPlainString(closure_1(3862).jZlNst, { name: found.name, projectId: found.projectId }) +
+                    intl.formatToPlainString(closure_1(3865).jZlNst, { name: found.name, projectId: found.projectId }) +
                     "\n\n" +
                     trimmed,
                 );

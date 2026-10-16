@@ -12,7 +12,7 @@ function setUseEntranceAnimationState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj5.setState(closure_0));
 }
-let obj = { duration: 300, easing: fn(1200).STANDARD_EASING };
+let obj = { duration: 300, easing: fn(1202).STANDARD_EASING };
 const module_570 = fn(570);
 const obj5 = module_570.create(() => ({ isComplete: false }));
 let closure_7 = {
@@ -78,9 +78,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
               obj3 = closure_0(closure_1[7]);
               tmp6 = closure_4;
               fn = function t() {
-                closure_0(4906).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-                obj = closure_0(4906);
-                closure_0(4906).runOnJS(incrementLoads)();
+                closure_0(4909).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+                obj = closure_0(4909);
+                closure_0(4909).runOnJS(incrementLoads)();
               };
               obj1 = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
               obj1.runOnJS = closure_0(closure_1[8]).runOnJS;
@@ -119,9 +119,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
               obj3 = closure_0(closure_1[7]);
               tmp6 = closure_4;
               fn = function t() {
-                closure_0(4906).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-                obj = closure_0(4906);
-                closure_0(4906).runOnJS(incrementLoads)();
+                closure_0(4909).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+                obj = closure_0(4909);
+                closure_0(4909).runOnJS(incrementLoads)();
               };
               obj1 = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
               obj1.runOnJS = closure_0(closure_1[8]).runOnJS;
@@ -159,9 +159,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
               obj3 = closure_0(closure_1[7]);
               tmp6 = closure_4;
               fn = function t() {
-                closure_0(4906).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-                obj = closure_0(4906);
-                closure_0(4906).runOnJS(incrementLoads)();
+                closure_0(4909).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+                obj = closure_0(4909);
+                closure_0(4909).runOnJS(incrementLoads)();
               };
               obj1 = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
               obj1.runOnJS = closure_0(closure_1[8]).runOnJS;
@@ -219,9 +219,9 @@ export const useEntranceAnimation = ReactCompilerGating.isReactCompilerEnabled()
           ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
           const obj3 = timing;
           const fn = function t() {
-            closure_0(4906).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-            obj = closure_0(4906);
-            closure_0(4906).runOnJS(incrementLoads)();
+            closure_0(4909).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+            obj = closure_0(4909);
+            closure_0(4909).runOnJS(incrementLoads)();
           };
           const obj4 = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState, incrementLoads };
           fn.__closure = obj4;

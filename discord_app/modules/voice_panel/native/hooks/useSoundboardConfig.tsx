@@ -7,7 +7,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = globalThis.__r;
 
-const canChannelUseSoundboardDefault = tmp4(7308);
+const canChannelUseSoundboardDefault = tmp4(7310);
 require = fn;
 const SoundboardButtonLocation = {
   VOICE_CONTROLS: "call control drawer",
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== stateFromStores) {
             if (stateFromStores) {
-              const string = tmp(1126).intl.string;
+              const string = tmp(1128).intl.string;
               class C {
                 constructor() {
                   channel = closure_4.getChannel(closure_0);
@@ -210,8 +210,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.disabled = tmp7;
       let stringResult;
       if (stateFromStores) {
-        const intl = tmp3(1126).intl;
-        stringResult = intl.string(tmp3(1126).t.X1lQli);
+        const intl = tmp3(1128).intl;
+        stringResult = intl.string(tmp3(1128).t.X1lQli);
       }
       obj2.disabledAccessibilityHint = stringResult;
       return obj2;

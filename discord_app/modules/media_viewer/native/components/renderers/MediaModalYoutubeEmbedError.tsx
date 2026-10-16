@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
@@ -42,8 +42,8 @@ export default noop.memo(
         const tmp4 = closure_6();
         ({ container, text } = tmp4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.u7vKPs);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t.u7vKPs);
           cResult[0] = stringResult;
           let first = stringResult;
         } else {
@@ -51,7 +51,7 @@ export default noop.memo(
         }
         if (cResult[1] !== tmp4.text) {
           const obj2 = { style: text, variant: "text-md/semibold", color: "text-overlay-light", children: first };
-          const tmp9 = closure_4(tmp(5147).Text, obj2);
+          const tmp9 = closure_4(tmp(5149).Text, obj2);
           cResult[1] = tmp4.text;
           cResult[2] = tmp9;
           let tmp7 = tmp9;
@@ -59,8 +59,8 @@ export default noop.memo(
           tmp7 = cResult[2];
         }
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(tmp(1126).t.LLpxJ5);
+          const intl2 = tmp(1128).intl;
+          const stringResult1 = intl2.string(tmp(1128).t.LLpxJ5);
           cResult[3] = stringResult1;
           let tmp10 = stringResult1;
         } else {
@@ -77,7 +77,7 @@ export default noop.memo(
               LinkingDefault.openURL("https://youtube.com/watch?v=" + videoId);
             },
           };
-          const tmp14 = closure_4(tmp(5439).Button, obj3);
+          const tmp14 = closure_4(tmp(5441).Button, obj3);
           cResult[4] = videoId;
           cResult[5] = tmp14;
           let tmp12 = tmp14;
@@ -108,16 +108,16 @@ export default noop.memo(
         const tmp = closure_6();
         const obj = { style: tmp.container, children: null };
         const obj2 = { style: tmp.text, variant: "text-md/semibold", color: "text-overlay-light", children: null };
-        const intl = videoId(1126).intl;
-        obj2.children = intl.string(videoId(1126).t.u7vKPs);
-        const items = [closure_4(videoId(5147).Text, obj2)];
+        const intl = videoId(1128).intl;
+        obj2.children = intl.string(videoId(1128).t.u7vKPs);
+        const items = [closure_4(videoId(5149).Text, obj2)];
         const obj3 = { text: null, variant: "secondary", size: "md", shrink: true, grow: false, onPress: null };
-        const intl2 = videoId(1126).intl;
-        obj3.text = intl2.string(videoId(1126).t.LLpxJ5);
+        const intl2 = videoId(1128).intl;
+        obj3.text = intl2.string(videoId(1128).t.LLpxJ5);
         obj3.onPress = function onPress() {
           LinkingDefault.openURL("https://youtube.com/watch?v=" + videoId);
         };
-        items[1] = closure_4(videoId(5439).Button, obj3);
+        items[1] = closure_4(videoId(5441).Button, obj3);
         obj.children = items;
         return closure_5(View, obj);
       },

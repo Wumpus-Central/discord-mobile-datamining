@@ -201,8 +201,8 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6270).isGuildEventEnded;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const isGuildEventEnded = fn(6272).isGuildEventEnded;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 let obj = {
   loading: false,
   initialized: false,
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6275);
+        obj = id(6277);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,

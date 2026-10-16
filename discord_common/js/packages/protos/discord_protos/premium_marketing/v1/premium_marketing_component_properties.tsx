@@ -1,5 +1,5 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx
-import _mod1210 from "../../../../../../../_runtime/metro/01210__.js";
+import _mod1212 from "../../../../../../../_runtime/metro/01212__.js";
 import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties.tsx";
 import premium_tab from "premium_tab.tsx";
 import marketing_page_banner from "marketing_page_banner.tsx";
@@ -24,13 +24,16 @@ import guild_boost_checkout_banner from "guild_boost_checkout_banner.tsx";
 import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner.tsx";
 import guild_boost_tab_banner from "guild_boost_tab_banner.tsx";
 import shop_tab_tooltip from "shop_tab_tooltip.tsx";
+import premium_home_perk_card from "premium_home_perk_card.tsx";
+import marketing_page_bento_box from "marketing_page_bento_box.tsx";
+import outbound_promotion_popover from "outbound_promotion_popover.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1210).MessageType;
+const MessageType = fn(1212).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -230,14 +233,15 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("guild_boost_marketing_page_banner").GuildBoostMarketingPageBanner;
       },
     };
-    obj = { no: 26, name: "guild_boost_tab_banner", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[24]).GuildBoostTabBanner;
-      }
-    }
-    obj.T = T;
-    items[23] = obj;
+    items[23] = {
+      no: 26,
+      name: "guild_boost_tab_banner",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("guild_boost_tab_banner").GuildBoostTabBanner;
+      },
+    };
     items[24] = {
       no: 27,
       name: "shop_tab_tooltip",
@@ -247,8 +251,34 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("shop_tab_tooltip").ShopTabTooltip;
       },
     };
-    items[25] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[26] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    items[25] = {
+      no: 28,
+      name: "premium_home_rewards_perk_card",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("premium_home_perk_card").PremiumHomePerkCard;
+      },
+    };
+    obj = { no: 29, name: "marketing_page_rewards_bento_box", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[27]).MarketingPageBentoBox;
+      }
+    }
+    obj.T = T;
+    items[26] = obj;
+    items[27] = {
+      no: 30,
+      name: "outbound_promotion_popover",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("outbound_promotion_popover").OutboundPromotionPopover;
+      },
+    };
+    items[28] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[29] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
@@ -257,10 +287,10 @@ const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
   const obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1210.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1210;
+    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1212;
   }
   return obj;
 };
@@ -278,358 +308,400 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag, writeUnknownFields) {
   if ("placeholder" === properties.properties.oneofKind) {
-    tag.tag(1, _mod1210.WireType.LengthDelimited).string(properties.properties.placeholder);
-    const tagResult = tag.tag(1, _mod1210.WireType.LengthDelimited);
+    tag.tag(1, _mod1212.WireType.LengthDelimited).string(properties.properties.placeholder);
+    const tagResult = tag.tag(1, _mod1212.WireType.LengthDelimited);
   }
   if ("announcementModalVariant1" === properties.properties.oneofKind) {
     const AnnouncementModalVariant1Properties =
       announcement_modal_variant_1_properties.AnnouncementModalVariant1Properties;
-    const tagResult1 = tag.tag(2, _mod1210.WireType.LengthDelimited);
+    const tagResult1 = tag.tag(2, _mod1212.WireType.LengthDelimited);
     const joined = AnnouncementModalVariant1Properties.internalBinaryWrite(
       properties.properties.announcementModalVariant1,
-      tag.tag(2, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = AnnouncementModalVariant1Properties.internalBinaryWrite(
       properties.properties.announcementModalVariant1,
-      tag.tag(2, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("premiumTab" === properties.properties.oneofKind) {
     const PremiumTab = premium_tab.PremiumTab;
-    const tagResult2 = tag.tag(4, _mod1210.WireType.LengthDelimited);
+    const tagResult2 = tag.tag(4, _mod1212.WireType.LengthDelimited);
     const joined1 = PremiumTab.internalBinaryWrite(
       properties.properties.premiumTab,
-      tag.tag(4, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = PremiumTab.internalBinaryWrite(
       properties.properties.premiumTab,
-      tag.tag(4, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("marketingPageBanner" === properties.properties.oneofKind) {
     const MarketingPageBanner = marketing_page_banner.MarketingPageBanner;
-    const tagResult3 = tag.tag(5, _mod1210.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(5, _mod1212.WireType.LengthDelimited);
     const joined2 = MarketingPageBanner.internalBinaryWrite(
       properties.properties.marketingPageBanner,
-      tag.tag(5, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult2 = MarketingPageBanner.internalBinaryWrite(
       properties.properties.marketingPageBanner,
-      tag.tag(5, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("paymentModalBanner" === properties.properties.oneofKind) {
     const PaymentModalBanner = payment_modal_banner.PaymentModalBanner;
-    const tagResult4 = tag.tag(6, _mod1210.WireType.LengthDelimited);
+    const tagResult4 = tag.tag(6, _mod1212.WireType.LengthDelimited);
     const joined3 = PaymentModalBanner.internalBinaryWrite(
       properties.properties.paymentModalBanner,
-      tag.tag(6, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(6, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult3 = PaymentModalBanner.internalBinaryWrite(
       properties.properties.paymentModalBanner,
-      tag.tag(6, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(6, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("mobileBottomSheet" === properties.properties.oneofKind) {
     const MobileBottomSheet = mobile_bottom_sheet.MobileBottomSheet;
-    const tagResult5 = tag.tag(7, _mod1210.WireType.LengthDelimited);
+    const tagResult5 = tag.tag(7, _mod1212.WireType.LengthDelimited);
     const joined4 = MobileBottomSheet.internalBinaryWrite(
       properties.properties.mobileBottomSheet,
-      tag.tag(7, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(7, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult4 = MobileBottomSheet.internalBinaryWrite(
       properties.properties.mobileBottomSheet,
-      tag.tag(7, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(7, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("giftIcon" === properties.properties.oneofKind) {
     const GiftIcon = gift_icon.GiftIcon;
-    const tagResult6 = tag.tag(8, _mod1210.WireType.LengthDelimited);
+    const tagResult6 = tag.tag(8, _mod1212.WireType.LengthDelimited);
     const joined5 = GiftIcon.internalBinaryWrite(
       properties.properties.giftIcon,
-      tag.tag(8, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(8, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult5 = GiftIcon.internalBinaryWrite(
       properties.properties.giftIcon,
-      tag.tag(8, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(8, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("giftIconCoachmark" === properties.properties.oneofKind) {
     const GiftIconCoachmark = gift_icon_coachmark.GiftIconCoachmark;
-    const tagResult7 = tag.tag(9, _mod1210.WireType.LengthDelimited);
+    const tagResult7 = tag.tag(9, _mod1212.WireType.LengthDelimited);
     const joined6 = GiftIconCoachmark.internalBinaryWrite(
       properties.properties.giftIconCoachmark,
-      tag.tag(9, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(9, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult6 = GiftIconCoachmark.internalBinaryWrite(
       properties.properties.giftIconCoachmark,
-      tag.tag(9, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(9, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("giftPlanSelectionCardBanner" === properties.properties.oneofKind) {
     const GiftPlanSelectionCardBanner = gift_plan_selection_card_banner.GiftPlanSelectionCardBanner;
-    const tagResult8 = tag.tag(10, _mod1210.WireType.LengthDelimited);
+    const tagResult8 = tag.tag(10, _mod1212.WireType.LengthDelimited);
     const joined7 = GiftPlanSelectionCardBanner.internalBinaryWrite(
       properties.properties.giftPlanSelectionCardBanner,
-      tag.tag(10, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(10, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult7 = GiftPlanSelectionCardBanner.internalBinaryWrite(
       properties.properties.giftPlanSelectionCardBanner,
-      tag.tag(10, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(10, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("giftCustomizationBanner" === properties.properties.oneofKind) {
     const GiftCustomizationBanner = gift_customization_banner.GiftCustomizationBanner;
-    const tagResult9 = tag.tag(11, _mod1210.WireType.LengthDelimited);
+    const tagResult9 = tag.tag(11, _mod1212.WireType.LengthDelimited);
     const joined8 = GiftCustomizationBanner.internalBinaryWrite(
       properties.properties.giftCustomizationBanner,
-      tag.tag(11, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(11, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult8 = GiftCustomizationBanner.internalBinaryWrite(
       properties.properties.giftCustomizationBanner,
-      tag.tag(11, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(11, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("billingSettingsNitroGiftBanner" === properties.properties.oneofKind) {
     const BillingSettingsNitroGiftBanner = billing_settings_nitro_gift_banner.BillingSettingsNitroGiftBanner;
-    const tagResult10 = tag.tag(12, _mod1210.WireType.LengthDelimited);
+    const tagResult10 = tag.tag(12, _mod1212.WireType.LengthDelimited);
     const joined9 = BillingSettingsNitroGiftBanner.internalBinaryWrite(
       properties.properties.billingSettingsNitroGiftBanner,
-      tag.tag(12, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(12, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult9 = BillingSettingsNitroGiftBanner.internalBinaryWrite(
       properties.properties.billingSettingsNitroGiftBanner,
-      tag.tag(12, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(12, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("giftReminderNagbar" === properties.properties.oneofKind) {
     const GiftReminderNagbar = gift_reminder_nagbar.GiftReminderNagbar;
-    const tagResult11 = tag.tag(13, _mod1210.WireType.LengthDelimited);
+    const tagResult11 = tag.tag(13, _mod1212.WireType.LengthDelimited);
     const joined10 = GiftReminderNagbar.internalBinaryWrite(
       properties.properties.giftReminderNagbar,
-      tag.tag(13, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(13, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult10 = GiftReminderNagbar.internalBinaryWrite(
       properties.properties.giftReminderNagbar,
-      tag.tag(13, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(13, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("giftReminderCoachmark" === properties.properties.oneofKind) {
     const GiftReminderCoachmark = gift_reminder_coachmark.GiftReminderCoachmark;
-    const tagResult12 = tag.tag(14, _mod1210.WireType.LengthDelimited);
+    const tagResult12 = tag.tag(14, _mod1212.WireType.LengthDelimited);
     const joined11 = GiftReminderCoachmark.internalBinaryWrite(
       properties.properties.giftReminderCoachmark,
-      tag.tag(14, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(14, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult11 = GiftReminderCoachmark.internalBinaryWrite(
       properties.properties.giftReminderCoachmark,
-      tag.tag(14, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(14, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("premiumTabTooltip" === properties.properties.oneofKind) {
     const PremiumTabTooltip = premium_tab_tooltip.PremiumTabTooltip;
-    const tagResult13 = tag.tag(15, _mod1210.WireType.LengthDelimited);
+    const tagResult13 = tag.tag(15, _mod1212.WireType.LengthDelimited);
     const joined12 = PremiumTabTooltip.internalBinaryWrite(
       properties.properties.premiumTabTooltip,
-      tag.tag(15, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(15, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult12 = PremiumTabTooltip.internalBinaryWrite(
       properties.properties.premiumTabTooltip,
-      tag.tag(15, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(15, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("premiumTabPopover" === properties.properties.oneofKind) {
     const PremiumTabPopover = premium_tab_popover.PremiumTabPopover;
-    const tagResult14 = tag.tag(16, _mod1210.WireType.LengthDelimited);
+    const tagResult14 = tag.tag(16, _mod1212.WireType.LengthDelimited);
     const joined13 = PremiumTabPopover.internalBinaryWrite(
       properties.properties.premiumTabPopover,
-      tag.tag(16, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(16, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult13 = PremiumTabPopover.internalBinaryWrite(
       properties.properties.premiumTabPopover,
-      tag.tag(16, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(16, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("nagbar" === properties.properties.oneofKind) {
     const Nagbar = nagbar.Nagbar;
-    const tagResult15 = tag.tag(17, _mod1210.WireType.LengthDelimited);
+    const tagResult15 = tag.tag(17, _mod1212.WireType.LengthDelimited);
     const joined14 = Nagbar.internalBinaryWrite(
       properties.properties.nagbar,
-      tag.tag(17, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(17, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult14 = Nagbar.internalBinaryWrite(
       properties.properties.nagbar,
-      tag.tag(17, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(17, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("planSelectCardBanner" === properties.properties.oneofKind) {
     const PlanSelectCardBanner = plan_select_card_banner.PlanSelectCardBanner;
-    const tagResult16 = tag.tag(19, _mod1210.WireType.LengthDelimited);
+    const tagResult16 = tag.tag(19, _mod1212.WireType.LengthDelimited);
     const joined15 = PlanSelectCardBanner.internalBinaryWrite(
       properties.properties.planSelectCardBanner,
-      tag.tag(19, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(19, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult15 = PlanSelectCardBanner.internalBinaryWrite(
       properties.properties.planSelectCardBanner,
-      tag.tag(19, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(19, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("billingSettingsBanner" === properties.properties.oneofKind) {
     const BillingSettingsBanner = billing_settings_banner.BillingSettingsBanner;
-    const tagResult17 = tag.tag(20, _mod1210.WireType.LengthDelimited);
+    const tagResult17 = tag.tag(20, _mod1212.WireType.LengthDelimited);
     const joined16 = BillingSettingsBanner.internalBinaryWrite(
       properties.properties.billingSettingsBanner,
-      tag.tag(20, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(20, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult16 = BillingSettingsBanner.internalBinaryWrite(
       properties.properties.billingSettingsBanner,
-      tag.tag(20, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(20, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("shopNagbar" === properties.properties.oneofKind) {
     const ShopNagbar = shop_nagbar.ShopNagbar;
-    const tagResult18 = tag.tag(21, _mod1210.WireType.LengthDelimited);
+    const tagResult18 = tag.tag(21, _mod1212.WireType.LengthDelimited);
     const joined17 = ShopNagbar.internalBinaryWrite(
       properties.properties.shopNagbar,
-      tag.tag(21, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(21, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult17 = ShopNagbar.internalBinaryWrite(
       properties.properties.shopNagbar,
-      tag.tag(21, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(21, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("adminEditorTestComponent" === properties.properties.oneofKind) {
     const AdminEditorTestComponent = admin_editor_test_component.AdminEditorTestComponent;
-    const tagResult19 = tag.tag(22, _mod1210.WireType.LengthDelimited);
+    const tagResult19 = tag.tag(22, _mod1212.WireType.LengthDelimited);
     const joined18 = AdminEditorTestComponent.internalBinaryWrite(
       properties.properties.adminEditorTestComponent,
-      tag.tag(22, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(22, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult18 = AdminEditorTestComponent.internalBinaryWrite(
       properties.properties.adminEditorTestComponent,
-      tag.tag(22, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(22, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("guildHeaderCoachmark" === properties.properties.oneofKind) {
     const GuildHeaderCoachmark = guild_header_coachmark.GuildHeaderCoachmark;
-    const tagResult20 = tag.tag(23, _mod1210.WireType.LengthDelimited);
+    const tagResult20 = tag.tag(23, _mod1212.WireType.LengthDelimited);
     const joined19 = GuildHeaderCoachmark.internalBinaryWrite(
       properties.properties.guildHeaderCoachmark,
-      tag.tag(23, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(23, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult19 = GuildHeaderCoachmark.internalBinaryWrite(
       properties.properties.guildHeaderCoachmark,
-      tag.tag(23, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(23, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("guildBoostCheckoutBanner" === properties.properties.oneofKind) {
     const GuildBoostCheckoutBanner = guild_boost_checkout_banner.GuildBoostCheckoutBanner;
-    const tagResult21 = tag.tag(24, _mod1210.WireType.LengthDelimited);
+    const tagResult21 = tag.tag(24, _mod1212.WireType.LengthDelimited);
     const joined20 = GuildBoostCheckoutBanner.internalBinaryWrite(
       properties.properties.guildBoostCheckoutBanner,
-      tag.tag(24, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(24, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult20 = GuildBoostCheckoutBanner.internalBinaryWrite(
       properties.properties.guildBoostCheckoutBanner,
-      tag.tag(24, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(24, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("guildBoostMarketingPageBanner" === properties.properties.oneofKind) {
     const GuildBoostMarketingPageBanner = guild_boost_marketing_page_banner.GuildBoostMarketingPageBanner;
-    const tagResult22 = tag.tag(25, _mod1210.WireType.LengthDelimited);
+    const tagResult22 = tag.tag(25, _mod1212.WireType.LengthDelimited);
     const joined21 = GuildBoostMarketingPageBanner.internalBinaryWrite(
       properties.properties.guildBoostMarketingPageBanner,
-      tag.tag(25, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(25, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult21 = GuildBoostMarketingPageBanner.internalBinaryWrite(
       properties.properties.guildBoostMarketingPageBanner,
-      tag.tag(25, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(25, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("guildBoostTabBanner" === properties.properties.oneofKind) {
     const GuildBoostTabBanner = guild_boost_tab_banner.GuildBoostTabBanner;
-    const tagResult23 = tag.tag(26, _mod1210.WireType.LengthDelimited);
+    const tagResult23 = tag.tag(26, _mod1212.WireType.LengthDelimited);
     const joined22 = GuildBoostTabBanner.internalBinaryWrite(
       properties.properties.guildBoostTabBanner,
-      tag.tag(26, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(26, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult22 = GuildBoostTabBanner.internalBinaryWrite(
       properties.properties.guildBoostTabBanner,
-      tag.tag(26, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(26, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("shopTabTooltip" === properties.properties.oneofKind) {
     const ShopTabTooltip = shop_tab_tooltip.ShopTabTooltip;
-    const tagResult24 = tag.tag(27, _mod1210.WireType.LengthDelimited);
+    const tagResult24 = tag.tag(27, _mod1212.WireType.LengthDelimited);
     const joined23 = ShopTabTooltip.internalBinaryWrite(
       properties.properties.shopTabTooltip,
-      tag.tag(27, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(27, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult23 = ShopTabTooltip.internalBinaryWrite(
       properties.properties.shopTabTooltip,
-      tag.tag(27, _mod1210.WireType.LengthDelimited).fork(),
+      tag.tag(27, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if ("premiumHomeRewardsPerkCard" === properties.properties.oneofKind) {
+    const PremiumHomePerkCard = premium_home_perk_card.PremiumHomePerkCard;
+    const tagResult25 = tag.tag(28, _mod1212.WireType.LengthDelimited);
+    const joined24 = PremiumHomePerkCard.internalBinaryWrite(
+      properties.properties.premiumHomeRewardsPerkCard,
+      tag.tag(28, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult24 = PremiumHomePerkCard.internalBinaryWrite(
+      properties.properties.premiumHomeRewardsPerkCard,
+      tag.tag(28, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if ("marketingPageRewardsBentoBox" === properties.properties.oneofKind) {
+    const MarketingPageBentoBox = marketing_page_bento_box.MarketingPageBentoBox;
+    const tagResult26 = tag.tag(29, _mod1212.WireType.LengthDelimited);
+    const joined25 = MarketingPageBentoBox.internalBinaryWrite(
+      properties.properties.marketingPageRewardsBentoBox,
+      tag.tag(29, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult25 = MarketingPageBentoBox.internalBinaryWrite(
+      properties.properties.marketingPageRewardsBentoBox,
+      tag.tag(29, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if ("outboundPromotionPopover" === properties.properties.oneofKind) {
+    const OutboundPromotionPopover = outbound_promotion_popover.OutboundPromotionPopover;
+    const tagResult27 = tag.tag(30, _mod1212.WireType.LengthDelimited);
+    const joined26 = OutboundPromotionPopover.internalBinaryWrite(
+      properties.properties.outboundPromotionPopover,
+      tag.tag(30, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult26 = OutboundPromotionPopover.internalBinaryWrite(
+      properties.properties.outboundPromotionPopover,
+      tag.tag(30, _mod1212.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("" !== properties.contentIdentifier) {
-    tag.tag(3, _mod1210.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult25 = tag.tag(3, _mod1210.WireType.LengthDelimited);
+    tag.tag(3, _mod1212.WireType.LengthDelimited).string(properties.contentIdentifier);
+    const tagResult28 = tag.tag(3, _mod1212.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
-    tag.tag(18, _mod1210.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult26 = tag.tag(18, _mod1210.WireType.Varint);
+    tag.tag(18, _mod1212.WireType.Varint).bool(properties.isDefaultBase);
+    const tagResult29 = tag.tag(18, _mod1212.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1210.UnknownFieldHandler.onWrite;
+      onWrite = _mod1212.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, properties, tag);

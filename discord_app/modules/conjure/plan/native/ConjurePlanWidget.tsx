@@ -2,10 +2,6 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import UserProfileApplicationWidgetTypes from "../../../user_profile/UserProfileApplicationWidgetTypes.tsx";
 import UserProfileSharedStylesDefault from "../../../user_profile/native/UserProfileSharedStyles.tsx";
 import UserProfileApplicationWidgetCardDefault from "../../../user_profile/native/UserProfileApplicationWidgetCard.tsx";
@@ -13,11 +9,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const jsx = fn(21).jsx;
+const createStyles = fn(5153);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
-let closure_7 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
@@ -25,13 +20,13 @@ const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePl
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjurePlanWidget(arg0) {
-      const cResult = c.c(13);
+      const cResult = c.c(12);
       ({ applicationId, rendererProps } = arg0);
-      const tmp4 = closure_7();
+      const tmp4 = closure_6();
       const tmp6 = UserProfileSharedStylesDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
-        const fn = function p() {
+        const fn = function s() {
           return id.getId();
         };
         cResult[0] = items;
@@ -51,53 +46,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[3];
       }
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-        const intl = util.intl;
-        obj3.children = intl.string(_modDef3862.ove4zH);
-        const tmp19 = hasOwnProperty(Text_Text.Text, obj3);
-        cResult[4] = tmp19;
-        let tmp17 = tmp19;
-      } else {
-        tmp17 = cResult[4];
-      }
-      if (cResult[5] === tmp6.card) {
-        if (cResult[6] === tmp4.card) {
-          let tmp20 = cResult[7];
+      if (cResult[4] === tmp6.card) {
+        if (cResult[5] === tmp4.card) {
+          let tmp17 = cResult[6];
         }
-        if (cResult[8] === rendererProps) {
-          if (cResult[9] === tmp20) {
-            if (cResult[10] === stateFromStores) {
-              if (cResult[11] === tmp11) {
-                let tmp21 = cResult[12];
+        if (cResult[7] === rendererProps) {
+          if (cResult[8] === tmp17) {
+            if (cResult[9] === stateFromStores) {
+              if (cResult[10] === tmp11) {
+                let tmp18 = cResult[11];
               }
-              return tmp21;
+              return tmp18;
             }
           }
         }
-        const obj4 = { direction: "vertical", spacing: 4, children: null };
-        const items1 = [tmp17];
-        const obj5 = { userId: stateFromStores, widget: tmp11, rendererProps, cardStyle: tmp20 };
-        items1[1] = hasOwnProperty(UserProfileApplicationWidgetCardDefault, obj5);
-        obj4.children = items1;
-        const tmp24 = timestampProducer(Stack_Stack.Stack, obj4);
-        cResult[8] = rendererProps;
-        cResult[9] = tmp20;
-        cResult[10] = stateFromStores;
-        cResult[11] = tmp11;
-        cResult[12] = tmp24;
-        tmp21 = tmp24;
+        const obj3 = { userId: stateFromStores, widget: tmp11, rendererProps, cardStyle: tmp17 };
+        const tmp20 = jsx(UserProfileApplicationWidgetCardDefault, {
+          userId: stateFromStores,
+          widget: tmp11,
+          rendererProps,
+          cardStyle: tmp17,
+        });
+        cResult[7] = rendererProps;
+        cResult[8] = tmp17;
+        cResult[9] = stateFromStores;
+        cResult[10] = tmp11;
+        cResult[11] = tmp20;
+        tmp18 = tmp20;
       }
-      const items2 = [tmp6.card, tmp4.card];
-      cResult[5] = tmp6.card;
-      cResult[6] = tmp4.card;
-      cResult[7] = items2;
-      tmp20 = items2;
+      const items1 = [tmp6.card, tmp4.card];
+      cResult[4] = tmp6.card;
+      cResult[5] = tmp4.card;
+      cResult[6] = items1;
+      tmp17 = items1;
       const tmpResult = initialize;
     }
   : function ConjurePlanWidget(applicationId) {
       applicationId = applicationId.applicationId;
-      const tmp = closure_7();
+      const tmp = closure_6();
       const tmp2 = UserProfileSharedStylesDefault();
       const items = [AuthenticationStore];
       const items1 = [applicationId];
@@ -106,20 +92,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const applicationWidget = new UserProfileApplicationWidgetTypes.ApplicationWidget({ applicationId });
         return applicationWidget;
       }, items1);
-      const obj2 = { direction: "vertical", spacing: 4, children: null };
-      const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-      const intl = applicationId(1126).intl;
-      obj3.children = intl.string(_modDef3862.ove4zH);
-      const items2 = [closure_5(applicationId(5147).Text, obj3)];
-      const obj4 = {
+      const obj2 = {
         userId: stateFromStores,
         widget: memo,
         rendererProps: applicationId.rendererProps,
         cardStyle: null,
       };
-      const items3 = [tmp2.card, tmp.card];
-      obj4.cardStyle = items3;
-      items2[1] = closure_5(UserProfileApplicationWidgetCardDefault, obj4);
-      obj2.children = items2;
-      return closure_6(applicationId(5437).Stack, obj2);
+      const items2 = [tmp2.card, tmp.card];
+      obj2.cardStyle = items2;
+      return jsx(UserProfileApplicationWidgetCardDefault, {
+        userId: stateFromStores,
+        widget: memo,
+        rendererProps: applicationId.rendererProps,
+        cardStyle: null,
+      });
     };

@@ -407,8 +407,8 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(6355).addPostConnectionCallback;
-let PlatformUtils = fn(1382);
+fn(6357).addPostConnectionCallback;
+let PlatformUtils = fn(1384);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
   const importDefaultResult = DiscordNativeDefault;

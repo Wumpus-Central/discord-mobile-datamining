@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 },
   spinnerContainer: { padding: 32 },
@@ -135,8 +135,8 @@ let closure_12 = noop.memo(
               tmp5 = cResult[3];
             }
             if (cResult[4] !== tmp5) {
-              const obj3 = { source: tmp5, size: tmp(1200).AvatarSizes.SMALL };
-              const tmp10 = closure_7(tmp(1200).Avatar, obj3);
+              const obj3 = { source: tmp5, size: tmp(1202).AvatarSizes.SMALL };
+              const tmp10 = closure_7(tmp(1202).Avatar, obj3);
               cResult[4] = tmp5;
               cResult[5] = tmp10;
               let tmp8 = tmp10;
@@ -165,7 +165,7 @@ let closure_12 = noop.memo(
               }
             }
             const obj5 = { arrow: true, icon: tmp8, label: tmp11, onPress: tmp4, start, end };
-            const tmp17 = closure_7(tmp(6400).TableRow, obj5);
+            const tmp17 = closure_7(tmp(6402).TableRow, obj5);
             cResult[8] = end;
             cResult[9] = tmp4;
             cResult[10] = start;
@@ -193,14 +193,14 @@ let closure_12 = noop.memo(
               userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(user);
             }
             const obj2 = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
-            const obj3 = { source: userAvatarSource, size: joinRequest(1200).AvatarSizes.SMALL };
-            obj2.icon = closure_7(joinRequest(1200).Avatar, obj3);
+            const obj3 = { source: userAvatarSource, size: joinRequest(1202).AvatarSizes.SMALL };
+            obj2.icon = closure_7(joinRequest(1202).Avatar, obj3);
             const obj4 = { user };
             obj2.label = closure_7(closure_11, obj4);
             obj2.onPress = tmp;
             obj2.start = start;
             obj2.end = end;
-            return closure_7(joinRequest(6400).TableRow, obj2);
+            return closure_7(joinRequest(6402).TableRow, obj2);
           }
         }
       },

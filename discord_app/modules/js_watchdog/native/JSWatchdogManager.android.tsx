@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AppStates: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 const logger = new LoggerDefault("JSWatchdogManager");
 const HALF_SECOND = DurationsDefault.Millis.HALF_SECOND;
@@ -227,7 +227,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(18435)) {
+              if (null != tmp2(18477)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: self.getCurrentSessionId(), done: false };
@@ -247,7 +247,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                const obj = tmp2(18435);
+                const obj = tmp2(18477);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -326,11 +326,11 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
                 const uuid = closure_129_0._cachedSession.uuid;
                 c3 = 3;
               }
-              obj2 = tmp2(7410);
+              obj2 = tmp2(7412);
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp2(7400).getSession(), done: false };
+            const obj6 = { value: tmp2(7402).getSession(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

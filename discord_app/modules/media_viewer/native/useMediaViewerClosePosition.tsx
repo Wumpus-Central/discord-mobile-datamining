@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const NOOP = fn(1085).NOOP;
+const NOOP = fn(1087).NOOP;
 let __initData = {
   code: "function useMediaViewerClosePositionTsx1(){const{index}=this.__closure;return index.get();}",
 };

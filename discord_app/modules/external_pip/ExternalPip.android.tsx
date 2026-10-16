@@ -41,6 +41,9 @@ prototype["setEnabled"] = function setEnabled(_enabled) {
   this._enabled = _enabled;
   ExternalPip.setEnabled(this._enabled);
 };
+prototype["setAutoEnterEnabled"] = function setAutoEnterEnabled(arg0) {
+  ExternalPip.setAutoEnterEnabled(arg0);
+};
 prototype["setActive"] = function setActive(arg0) {
   return ExternalPip.setActive(arg0);
 };

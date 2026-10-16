@@ -15,8 +15,8 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isMultiUserDM = fn(2069).isMultiUserDM;
-const Constants = fn(1085);
+const isMultiUserDM = fn(2072).isMultiUserDM;
+const Constants = fn(1087);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -185,7 +185,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4) {
             const obj2 = { screens: tmp4, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" };
-            const tmp7 = closure_11(tmp(6908).Navigator, obj2);
+            const tmp7 = closure_11(tmp(6910).Navigator, obj2);
             cResult[3] = tmp4;
             cResult[4] = tmp7;
             let tmp5 = tmp7;
@@ -199,15 +199,15 @@ export default noop.memo(
         const obj4 = {
           headerTitle() {
             const obj = { title: null, subtitle: null };
-            const intl = channelId(1126).intl;
-            obj.title = intl.string(channelId(1126).t.h850Ss);
+            const intl = channelId(1128).intl;
+            obj.title = intl.string(channelId(1128).t.h850Ss);
             let channelName = null;
             if (null != closure_0) {
-              const tmp3Result = channelId(5481);
+              const tmp3Result = channelId(5483);
               channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
             }
             obj.subtitle = channelName;
-            return closure_2_11(channelId(6421).NavigatorHeader, obj);
+            return closure_2_11(channelId(6423).NavigatorHeader, obj);
           },
           headerLeft: null,
           render: null,
@@ -234,15 +234,15 @@ export default noop.memo(
           const obj2 = {
             headerTitle() {
               const obj = { title: null, subtitle: null };
-              const intl = channelId(1126).intl;
-              obj.title = intl.string(channelId(1126).t.h850Ss);
+              const intl = channelId(1128).intl;
+              obj.title = intl.string(channelId(1128).t.h850Ss);
               let channelName = null;
               if (null != closure_0) {
-                const tmp3Result = channelId(5481);
+                const tmp3Result = channelId(5483);
                 channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
               }
               obj.subtitle = channelName;
-              return closure_2_11(channelId(6421).NavigatorHeader, obj);
+              return closure_2_11(channelId(6423).NavigatorHeader, obj);
             },
             headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
             render() {
@@ -252,6 +252,6 @@ export default noop.memo(
           obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
           return obj;
         }, items);
-        return closure_11(channelId(6908).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+        return closure_11(channelId(6910).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
       },
 );

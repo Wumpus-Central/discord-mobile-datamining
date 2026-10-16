@@ -182,10 +182,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.OGiMXJ);
-        const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(tmp(1126).t.vephiL);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.OGiMXJ);
+        const intl2 = tmp(1128).intl;
+        const stringResult1 = intl2.string(tmp(1128).t.vephiL);
         cResult[6] = stringResult;
         cResult[7] = stringResult1;
         let tmp12 = stringResult1;
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp16 = jsx(stateFromStores(18614), {
+      const tmp16 = jsx(stateFromStores(18656), {
         title: tmp11,
         searchPlaceholder: tmp12,
         listId: "automod-exempt-channels",
@@ -269,10 +269,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onSave: null,
       };
       const tmp2 = closure_11(guildId);
-      const intl = guildId(1126).intl;
-      obj2.title = intl.string(guildId(1126).t.OGiMXJ);
-      const intl2 = guildId(1126).intl;
-      obj2.searchPlaceholder = intl2.string(guildId(1126).t.vephiL);
+      const intl = guildId(1128).intl;
+      obj2.title = intl.string(guildId(1128).t.OGiMXJ);
+      const intl2 = guildId(1128).intl;
+      obj2.searchPlaceholder = intl2.string(guildId(1128).t.vephiL);
       obj2.items = tmp2;
       obj2.initialSelected = exemptChannels;
       obj2.getId = getChannelOptionId;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.renderLabel = getChannelOptionName;
       obj2.renderIcon = callback;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(18614), {
+      return jsx(stateFromStores(18656), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-channels",

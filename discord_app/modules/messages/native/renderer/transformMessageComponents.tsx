@@ -6,14 +6,14 @@ import InteractionComponentUtils from "../../../interaction_components/Interacti
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import RowGeneratorTypes from "RowGeneratorTypes.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import priv from "../../../../../_runtime/01457_priv.js";
+import priv from "../../../../../_runtime/01459_priv.js";
 
-const util = tmp4(1126);
-const FlagUtils = tmp4(1403);
-const MediaTypes = tmp4(5504);
-const AgeVerificationUtils = tmp4(6125);
-const sanitizeMediaDimension = tmp4(8462);
-const ExplicitMediaUtils = tmp4(8480);
+const util = tmp4(1128);
+const FlagUtils = tmp4(1405);
+const MediaTypes = tmp4(5506);
+const AgeVerificationUtils = tmp4(6127);
+const sanitizeMediaDimension = tmp4(8470);
+const ExplicitMediaUtils = tmp4(8488);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -64,15 +64,15 @@ function transformToRowGeneratedComponent(message, accessory) {
     const found1 = mapped1.filter((item) => -1 !== item);
     const obj4 = {};
     const merged2 = Object.assign(accessory);
-    const tmpResult29 = tmp(tmp2[10]);
+    const tmpResult30 = tmp(tmp2[10]);
     obj4.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
     obj4.selectedOptions = found1;
-    const tmpResult30 = tmp(tmp2[9]);
+    const tmpResult31 = tmp(tmp2[9]);
     obj4.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     closure_130_0 = accessory;
     closure_130_1 = found1;
     closure_130_2 = (arg0) => accessory.options[arg0].label;
-    const tmpResult31 = tmp(tmp2[7]);
+    const tmpResult32 = tmp(tmp2[7]);
     const obj5 = {
       expensive() {
         if (null != accessory) {
@@ -89,9 +89,9 @@ function transformToRowGeneratedComponent(message, accessory) {
       },
       cheap: null,
     };
-    const tmpResult32 = tmp(tmp2[19]);
+    const tmpResult33 = tmp(tmp2[20]);
     obj5.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    obj4.accessibilityLabel = tmpResult32.getAccessibilityLabelOrCheapFallbackUnsafe(obj5);
+    obj4.accessibilityLabel = tmpResult33.getAccessibilityLabelOrCheapFallbackUnsafe(obj5);
     return obj4;
   } else {
     if (tmp(tmp2[6]).ComponentType.USER_SELECT !== type) {
@@ -121,7 +121,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                 obj6.accessory = tmp66;
                 obj6.errorText = tmp(tmp2[7]).getLayoutComponentErrorText(interaction, message, accessory);
                 tmp67 = obj6;
-                const tmpResult34 = tmp(tmp2[7]);
+                const tmpResult35 = tmp(tmp2[7]);
               }
               return tmp67;
             } else if (tmp(tmp2[6]).ComponentType.TEXT_DISPLAY === type) {
@@ -138,7 +138,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                 const parseToASTResult = require("MarkupUtils").parseToAST(content, true, obj8);
                 let result = importDefaultResult1.set(combined, parseToASTResult);
                 value = parseToASTResult;
-                const obj31 = require("MarkupUtils");
+                const obj32 = require("MarkupUtils");
               }
               obj7.content = value;
               return obj7;
@@ -148,15 +148,15 @@ function transformToRowGeneratedComponent(message, accessory) {
                 if (width > 0) {
                   if (null != height) {
                     if (height > 0) {
-                      if (tmpResult35.isImageContentType(contentType)) {
+                      if (tmpResult36.isImageContentType(contentType)) {
                         let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
                       } else {
-                        if (tmpResult36.isVideoContentType(contentType)) {
+                        if (tmpResult37.isVideoContentType(contentType)) {
                           VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VIDEO;
                         }
-                        tmpResult36 = tmp(tmp2[20]);
+                        tmpResult37 = tmp(tmp2[21]);
                       }
-                      tmpResult35 = tmp(tmp2[20]);
+                      tmpResult36 = tmp(tmp2[21]);
                     }
                     let str = "generic";
                     if (VISUAL_PLACEHOLDER === tmp(tmp2[14]).MediaGalleryItemType.IMAGE) {
@@ -171,7 +171,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                       shouldAgeVerify: null,
                       enabledContentHarmTypeFlags: null,
                     };
-                    ({ media: obj25.mediaItem, spoiler: spoiler2 } = accessory);
+                    ({ media: obj26.mediaItem, spoiler: spoiler2 } = accessory);
                     if (spoiler2 == null) {
                       spoiler2 = false;
                     }
@@ -191,7 +191,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                     } = unfurledMediaItemObscurityProps);
                     if (isObscured2) {
                       isVerifiedTeenResult = tmp(tmp2[15]).isVerifiedTeen();
-                      const tmpResult38 = tmp(tmp2[15]);
+                      const tmpResult39 = tmp(tmp2[15]);
                     }
                     const obj10 = {};
                     const merged6 = Object.assign(accessory);
@@ -340,7 +340,7 @@ function transformToRowGeneratedComponent(message, accessory) {
               }
               return tmp38;
             } else if (tmp(tmp2[6]).ComponentType.FILE === type) {
-              const obj13 = {
+              const obj12 = {
                 type: "file",
                 mediaItem: null,
                 isSpoilered: null,
@@ -349,23 +349,23 @@ function transformToRowGeneratedComponent(message, accessory) {
                 shouldAgeVerify: null,
                 enabledContentHarmTypeFlags: null,
               };
-              ({ file: obj16.mediaItem, spoiler } = accessory);
+              ({ file: obj17.mediaItem, spoiler } = accessory);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj13.isSpoilered = spoiler;
-              obj13.isAuthorBot = message.author.bot;
-              obj13.shouldObscureSpoiler = shouldObscureSpoiler;
-              obj13.shouldAgeVerify = shouldAgeVerify;
-              obj13.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
-              const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj13);
+              obj12.isSpoilered = spoiler;
+              obj12.isAuthorBot = message.author.bot;
+              obj12.shouldObscureSpoiler = shouldObscureSpoiler;
+              obj12.shouldAgeVerify = shouldAgeVerify;
+              obj12.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
+              const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj12);
               let isObscured = unfurledMediaItemObscurityProps1.isObscured;
               let isVerifiedTeenResult1 = isObscured;
               ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } =
                 unfurledMediaItemObscurityProps1);
               if (isObscured) {
                 isVerifiedTeenResult1 = tmp(tmp2[15]).isVerifiedTeen();
-                const tmpResult40 = tmp(tmp2[15]);
+                const tmpResult41 = tmp(tmp2[15]);
               }
               const obj14 = {};
               const merged8 = Object.assign(accessory);
@@ -376,13 +376,13 @@ function transformToRowGeneratedComponent(message, accessory) {
                 name = intl2.string(tmp(tmp2[8]).t.GnuJ5u);
               }
               obj14.name = name;
-              const tmpResult39 = tmp(tmp2[13]);
+              const tmpResult40 = tmp(tmp2[13]);
               let num2 = accessory.size;
               if (num2 == null) {
                 num2 = 0;
               }
               obj14.size = require("noConflict").filesize(num2);
-              const obj19 = require("noConflict");
+              const obj20 = require("noConflict");
               obj14.isSuspiciousDownload = null != tmp(tmp2[17]).isSuspiciousDownload(accessory.file.url);
               obj14.isSpoiler = isSpoiler;
               obj14.spoilerDescription = spoilerDescription;
@@ -403,9 +403,9 @@ function transformToRowGeneratedComponent(message, accessory) {
               return null;
             } else if (tmp(tmp2[6]).ComponentType.CONTENT_INVENTORY_ENTRY === type) {
               const obj15 = { type: null, id: null, contentInventoryEntry: null };
-              ({ type: obj12.type, id: obj12.id } = accessory);
-              const obj17 = { component: accessory, message };
-              obj15.contentInventoryEntry = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj17);
+              ({ type: obj13.type, id: obj13.id } = accessory);
+              const obj16 = { component: accessory, message };
+              obj15.contentInventoryEntry = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj16);
               return obj15;
             } else if (tmp(tmp2[6]).ComponentType.CONTAINER === type) {
               const obj18 = {};
@@ -422,7 +422,8 @@ function transformToRowGeneratedComponent(message, accessory) {
               obj18.components = mapped4.filter(tmp(tmp2[5]).isNotNullish);
               let tmp24 = null;
               if (null != accessory.accentColor) {
-                tmp24 = processColor(accessory.accentColor);
+                tmp24 = processColor(tmp(tmp2[19]).int2hsl(accessory.accentColor));
+                const tmpResult44 = tmp(tmp2[19]);
               }
               obj18.accentColor = tmp24;
               obj18.isSpoiler = accessory.spoiler && shouldObscureSpoiler;
@@ -446,29 +447,29 @@ function transformToRowGeneratedComponent(message, accessory) {
                     const tmp6 = enabledContentHarmTypeFlags(accessory, shouldObscureSpoiler);
                     const version = checkpointData.version;
                     if (shouldAgeVerify.V2025 === version) {
-                      const obj20 = {};
+                      const obj19 = {};
                       const merged10 = Object.assign(tmp6);
-                      obj20.checkpointData = tmp(tmp2[29]).transformCheckpoint2025CardToRowGeneratedComponent(
+                      obj19.checkpointData = tmp(tmp2[30]).transformCheckpoint2025CardToRowGeneratedComponent(
                         checkpointData,
                         message,
                       );
-                      let obj = obj20;
-                      const tmpResult43 = tmp(tmp2[29]);
+                      let obj = obj19;
+                      const tmpResult45 = tmp(tmp2[30]);
                     } else if (tmp7.V2026 === version) {
-                      const cardColors = tmp(tmp2[30]).getCardColors(checkpointData.character);
-                      const tmpResult44 = tmp(tmp2[30]);
-                      const tmpResult45 = tmp(tmp2[31]);
-                      const processColorOrThrowResult = tmp(tmp2[31]).processColorOrThrow(
+                      const cardColors = tmp(tmp2[31]).getCardColors(checkpointData.character);
+                      const tmpResult46 = tmp(tmp2[31]);
+                      const tmpResult47 = tmp(tmp2[32]);
+                      const processColorOrThrowResult = tmp(tmp2[32]).processColorOrThrow(
                         cardColors.primaryBackgroundColor,
                       );
-                      const tmpResult46 = tmp(tmp2[31]);
-                      const processColorOrThrowResult1 = tmp(tmp2[31]).processColorOrThrow(
+                      const tmpResult48 = tmp(tmp2[32]);
+                      const processColorOrThrowResult1 = tmp(tmp2[32]).processColorOrThrow(
                         cardColors.secondaryBackgroundColor,
                       );
                       const obj21 = {};
-                      const tmpResult47 = tmp(tmp2[31]);
+                      const tmpResult49 = tmp(tmp2[32]);
                       const merged11 = Object.assign(tmp6);
-                      const processColorOrThrowResult2 = tmp(tmp2[31]).processColorOrThrow(
+                      const processColorOrThrowResult2 = tmp(tmp2[32]).processColorOrThrow(
                         cardColors.tertiaryBackgroundColor,
                       );
                       const obj22 = {
@@ -478,9 +479,9 @@ function transformToRowGeneratedComponent(message, accessory) {
                         secondaryBackgroundColor: processColorOrThrowResult1,
                         tertiaryBackgroundColor: processColorOrThrowResult2,
                       };
-                      obj21.checkpointData = tmp(tmp2[32]).transformCheckpoint2026CardToRowGeneratedComponent(obj22);
+                      obj21.checkpointData = tmp(tmp2[33]).transformCheckpoint2026CardToRowGeneratedComponent(obj22);
                       obj = obj21;
-                      const tmpResult48 = tmp(tmp2[32]);
+                      const tmpResult50 = tmp(tmp2[33]);
                     } else {
                       obj = { type: tmp(tmp2[6]).ComponentType.UNKNOWN, id: accessory.id };
                     }
@@ -508,16 +509,16 @@ function transformToRowGeneratedComponent(message, accessory) {
     );
     const obj23 = {};
     const merged12 = Object.assign(accessory);
-    const tmpResult49 = tmp(tmp2[11]);
+    const tmpResult51 = tmp(tmp2[11]);
     obj23.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
-    const tmpResult50 = tmp(tmp2[9]);
+    const tmpResult52 = tmp(tmp2[9]);
     obj23.selectedOptions = tmp(tmp2[12]).transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId);
-    const tmpResult51 = tmp(tmp2[12]);
+    const tmpResult53 = tmp(tmp2[12]);
     obj23.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     closure_129_0 = accessory;
     closure_129_1 = initialSnowflakeSelectOptions;
     closure_129_2 = (label) => label.label;
-    const tmpResult52 = tmp(tmp2[7]);
+    const tmpResult54 = tmp(tmp2[7]);
     const obj24 = {
       expensive() {
         if (null != accessory) {
@@ -534,9 +535,9 @@ function transformToRowGeneratedComponent(message, accessory) {
       },
       cheap: null,
     };
-    const tmpResult53 = tmp(tmp2[19]);
+    const tmpResult55 = tmp(tmp2[20]);
     obj24.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    obj23.accessibilityLabel = tmpResult53.getAccessibilityLabelOrCheapFallbackUnsafe(obj24);
+    obj23.accessibilityLabel = tmpResult55.getAccessibilityLabelOrCheapFallbackUnsafe(obj24);
     return obj23;
   }
 }
@@ -587,8 +588,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(5497).CheckpointVersions;
-let closure_7 = fn(8466).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(5499).CheckpointVersions;
+let closure_7 = fn(8474).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -598,13 +599,13 @@ let result = size.fileFinishedImporting("modules/messages/native/renderer/transf
 export default function transformMessageComponents(message, arr) {
   const obj = {
     type: "textDisplayComponent",
-    parserState: obj3(8356).getInitialParserStateFromMessage(message.message, closure_7),
+    parserState: obj3(8363).getInitialParserStateFromMessage(message.message, closure_7),
   };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));
-  return mapped.filter(obj3(1386).isNotNullish);
+  return mapped.filter(obj3(1388).isNotNullish);
 }
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(media) {
   ({ width, height, contentType } = media);

@@ -2,17 +2,17 @@
 import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef5111 from "../../../../../_runtime/metro/05111__.js";
+import _modDef5114 from "../../../../../_runtime/metro/05114__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7003 from "../../../../../_runtime/metro/07003__.js";
-import _modDef8202 from "../../../../../_runtime/metro/08202__.js";
-import _modDef11040 from "../../../../../_runtime/metro/11040__.js";
-import _modDef11045 from "../../../../../_runtime/metro/11045__.js";
-import _modDef13383 from "../../../../../_runtime/metro/13383__.js";
-import _modDef16741 from "../../../../../_runtime/metro/16741__.js";
-import _modDef16742 from "../../../../../_runtime/metro/16742__.js";
+import _modDef7005 from "../../../../../_runtime/metro/07005__.js";
+import _modDef8205 from "../../../../../_runtime/metro/08205__.js";
+import _modDef11055 from "../../../../../_runtime/metro/11055__.js";
+import _modDef11060 from "../../../../../_runtime/metro/11060__.js";
+import _modDef13409 from "../../../../../_runtime/metro/13409__.js";
+import _modDef16774 from "../../../../../_runtime/metro/16774__.js";
+import _modDef16775 from "../../../../../_runtime/metro/16775__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,14 +23,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef13383,
-  _modDef7003,
-  _modDef8202,
-  _modDef11045,
-  _modDef5111,
-  _modDef16741,
-  _modDef16742,
-  _modDef11040,
+  _modDef13409,
+  _modDef7005,
+  _modDef8205,
+  _modDef11060,
+  _modDef5114,
+  _modDef16774,
+  _modDef16775,
+  _modDef11055,
 ];
 let closure_10 = [
   "Launch Probe!",
@@ -45,7 +45,7 @@ let closure_10 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },
@@ -95,10 +95,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant:
-                -1057705723495850500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-              action:
-                -1454778631689679300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+              variant: "levelUpProgress",
+              action: "Label",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -126,10 +124,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant:
-                -1057705723495850500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-              action:
-                -1454778631689679300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+              variant: "levelUpProgress",
+              action: "Label",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -189,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { triggerOnLongPress: tmp4, items: tmp5, align, title: "Sample title", children: C };
-        const tmp19 = closure_7(tmp(9583).ContextMenu, obj5);
+        const tmp19 = closure_7(tmp(9599).ContextMenu, obj5);
         cResult[11] = align;
         cResult[12] = tmp5;
         cResult[13] = C;
@@ -233,10 +229,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 label: length[index % length.length],
                 IconComponent: "a",
                 iconSource: length2[index % length2.length],
-                variant:
-                  -1057705723495850500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-                action:
-                  -1454778631689679300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+                variant: "levelUpProgress",
+                action: "Label",
               };
               let str = "default";
               if (index === closure_0 - 1) {
@@ -259,10 +253,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant:
-                -1057705723495850500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-              action:
-                -1454778631689679300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+              variant: "levelUpProgress",
+              action: "Label",
             };
             let str = "default";
             if (index === closure_0 - 1) {

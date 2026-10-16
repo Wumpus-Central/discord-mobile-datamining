@@ -131,7 +131,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
             proxyTicketRefreshing: false,
             orientationLock: null,
             pipOrientationLock: null,
-            prefersPictureInPictureOnNavigateAway: false,
+            runsInBackground: false,
             iframeId: null,
             hostWindowKey: null,
             launch: null,
@@ -268,9 +268,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     }
     return flag;
   },
-  FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function handleSetPrefersPictureInPictureOnNavigateAway(
-    frameId,
-  ) {
+  FRAME_SET_RUNS_IN_BACKGROUND: function handleSetRunsInBackground(frameId) {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
@@ -283,7 +281,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const merged = Object.assign(value);
           const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj3.prefersPictureInPictureOnNavigateAway = tmp;
+          obj3.runsInBackground = tmp;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -357,8 +355,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(data);
           obj3.iframeId = iframeId;
-          obj3.prefersPictureInPictureOnNavigateAway =
-            data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
+          obj3.runsInBackground = data.iframeId === iframeId && data.runsInBackground;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -383,7 +380,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const obj3 = {};
           const merged1 = Object.assign(value.data);
           obj3.iframeId = null;
-          obj3.prefersPictureInPictureOnNavigateAway = false;
+          obj3.runsInBackground = false;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;

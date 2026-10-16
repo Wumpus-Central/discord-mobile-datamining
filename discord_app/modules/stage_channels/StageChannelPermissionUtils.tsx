@@ -12,8 +12,8 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(2083).isGuildOwner;
-const Constants = fn(1085);
+const isGuildOwner = fn(2086).isGuildOwner;
+const Constants = fn(1087);
 ({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);

@@ -8,7 +8,7 @@ import NativePermissionManagerModuleDefault from "../../../../discord_common/js/
 import NativeShareManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
 import ShareScreenDefault from "ShareScreen.tsx";
 import AccessibilityManagerDefault from "../../a11y/native/AccessibilityManager.tsx";
-import _modDef15477 from "../../../../_runtime/metro/15477__.js";
+import _modDef15513 from "../../../../_runtime/metro/15513__.js";
 import AppToastContainerDefault from "../../toast/native/AppToastContainer.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -18,10 +18,10 @@ const require = globalThis.__r;
 
 require = fn;
 fn(17).BackHandler;
-const AnalyticsTrackingStore = fn(7399);
-const ShareStore = fn(15305);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_8 = fn(12973).MultiAccountSwitchLocation;
+const AnalyticsTrackingStore = fn(7401);
+const ShareStore = fn(15340);
+const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_8 = fn(12999).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -280,9 +280,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
               let obj2 = { appEntryKey: share };
-              const tmp27 = closure_9(tmp(17951).ActionSheetContainer, obj2);
+              const tmp27 = closure_9(tmp(17985).ActionSheetContainer, obj2);
               const tmp28 = closure_9(AppToastContainerDefault, { appChrome: false });
-              const tmp29 = closure_9(tmp(5365).AlertModalContainer, {});
+              const tmp29 = closure_9(tmp(5367).AlertModalContainer, {});
               cResult[9] = tmp27;
               cResult[10] = tmp28;
               cResult[11] = tmp29;
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { appEntryKey: share, children: null };
               const items = [tmp13, tmp22, tmp23, tmp24];
               obj3.children = items;
-              const tmp33 = closure_10(_modDef15477, obj3);
+              const tmp33 = closure_10(_modDef15513, obj3);
               cResult[12] = tmp13;
               cResult[13] = tmp33;
               let tmp30 = tmp33;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (!tmp4) {
-          const tmp14Result = closure_9(tmp(6947).SceneLoadingIndicator, {});
+          const tmp14Result = closure_9(tmp(6949).SceneLoadingIndicator, {});
           cResult[6] = tmp4;
           cResult[7] = attachments;
           cResult[8] = tmp14Result;
@@ -323,7 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj4.onClose = exitApp;
         closure_9(tmp11Result, obj4);
-        tmpResult = tmp(1628);
+        tmpResult = tmp(1630);
       }
       const fn = function c() {
         let tmp2 = null != attachments.text;

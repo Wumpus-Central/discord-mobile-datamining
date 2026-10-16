@@ -7,8 +7,8 @@ import UserProfileSettingsStore from "../../UserProfileSettingsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(8526).TrackUserProfileEditActions;
-const UserSettingsSections = fn(1085).UserSettingsSections;
+let closure_5 = fn(8534).TrackUserProfileEditActions;
+const UserSettingsSections = fn(1087).UserSettingsSections;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useNavigateToPremiumTryItOut.tsx");
@@ -49,8 +49,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavig
     closure_0 = arg0;
     let obj = {
       hasEdits: UserProfileSettingsStore.showNotice(),
-      resetPending: closure_0(6891).resetAllPending,
-      onHasEdits: closure_0(5041).dismissKeyboard,
+      resetPending: closure_0(6893).resetAllPending,
+      onHasEdits: closure_0(5044).dismissKeyboard,
       onConfirm() {
         const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: initialTarget, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW });
         const obj2 = { userId: initialTarget, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW };
@@ -58,6 +58,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavig
         navigation.push(UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT, { initialTarget });
       }
     };
-    navigation(9852)(obj);
+    navigation(9868)(obj);
   }, items);
 });

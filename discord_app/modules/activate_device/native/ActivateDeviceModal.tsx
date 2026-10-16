@@ -1,5 +1,5 @@
 // discord_app/modules/activate_device/native/ActivateDeviceModal.tsx
-import _modDef7945 from "../../../../_runtime/metro/07945__.js";
+import _modDef7948 from "../../../../_runtime/metro/07948__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -24,11 +24,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           headerLeft() {
-            const obj = { source: _modDef7945, onPress: onClose, accessibilityLabel: null };
-            const intl = userCode(1126).intl;
-            obj.accessibilityLabel = intl.string(userCode(1126).t.cpT0Cq);
-            return jsx(userCode(7310).HeaderActionButton, {
-              source: _modDef7945,
+            const obj = { source: _modDef7948, onPress: onClose, accessibilityLabel: null };
+            const intl = userCode(1128).intl;
+            obj.accessibilityLabel = intl.string(userCode(1128).t.cpT0Cq);
+            return jsx(userCode(7312).HeaderActionButton, {
+              source: _modDef7948,
               onPress: onClose,
               accessibilityLabel: null,
             });
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return jsx(userCode(14773).ActivateDevice, { onClose, prefilledUserCode });
+            return jsx(userCode(14806).ActivateDevice, { onClose, prefilledUserCode });
           },
         };
         obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -48,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t["13/7kX"]);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t["13/7kX"]);
         cResult[2] = stringResult;
         let tmp6 = stringResult;
       } else {
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4) {
         const obj4 = { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 };
-        const tmp11 = jsx(tmp(6908).Navigator, {
+        const tmp11 = jsx(tmp(6910).Navigator, {
           screens: tmp4,
           initialRouteName: constants.ACTIVATE_DEVICE,
           headerBackTitle: tmp6,
@@ -85,11 +85,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             headerLeft() {
-              const obj = { source: _modDef7945, onPress: onClose, accessibilityLabel: null };
-              const intl = userCode(1126).intl;
-              obj.accessibilityLabel = intl.string(userCode(1126).t.cpT0Cq);
-              return jsx(userCode(7310).HeaderActionButton, {
-                source: _modDef7945,
+              const obj = { source: _modDef7948, onPress: onClose, accessibilityLabel: null };
+              const intl = userCode(1128).intl;
+              obj.accessibilityLabel = intl.string(userCode(1128).t.cpT0Cq);
+              return jsx(userCode(7312).HeaderActionButton, {
+                source: _modDef7948,
                 onPress: onClose,
                 accessibilityLabel: null,
               });
@@ -98,15 +98,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return jsx(userCode(14773).ActivateDevice, { onClose, prefilledUserCode });
+              return jsx(userCode(14806).ActivateDevice, { onClose, prefilledUserCode });
             },
           },
         };
       }, items);
       let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
-      let intl = userCode(1126).intl;
-      obj.headerBackTitle = intl.string(userCode(1126).t["13/7kX"]);
-      return jsx(userCode(6908).Navigator, {
+      let intl = userCode(1128).intl;
+      obj.headerBackTitle = intl.string(userCode(1128).t["13/7kX"]);
+      return jsx(userCode(6910).Navigator, {
         screens: memo,
         initialRouteName: constants.ACTIVATE_DEVICE,
         headerBackTitle: null,

@@ -2,9 +2,9 @@
 import GuildRoleSubscriptionsStore from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
-const FetchState = fn(4799).FetchState;
-const constants = fn(4800).CreatorMonetizationRestrictions;
-const GuildFeatures = fn(1085).GuildFeatures;
+const FetchState = fn(4802).FetchState;
+const constants = fn(4803).CreatorMonetizationRestrictions;
+const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx",

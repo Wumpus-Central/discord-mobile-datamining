@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ImagePickerUtils from "ImagePickerUtils.tsx";
 import AndroidPhotoPickerExperiment from "AndroidPhotoPickerExperiment.tsx";
-import launchCameraAll from "../../../../_runtime/07989_launchCamera.js";
-import openPickerDefault from "../../../../_runtime/07991_openPicker.js";
+import launchCameraAll from "../../../../_runtime/07992_launchCamera.js";
+import openPickerDefault from "../../../../_runtime/07994_openPicker.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
@@ -43,7 +43,7 @@ function getNativeLibraryOptions(mediaType) {
   obj3.enableAndroidPhotoPicker = enabled;
   return obj3;
 }
-const ThemeTypes = fn(1096).ThemeTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/image/native/ImagePicker.tsx");
 

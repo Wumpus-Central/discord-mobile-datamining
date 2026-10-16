@@ -9,11 +9,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
+const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   row: { flexDirection: "row", gap: 4, alignItems: "center" },
   everyone: {
@@ -29,7 +29,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(5147).TextStyleSheet["text-md/semibold"];
+let prop = fn(5149).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -1020,7 +1020,7 @@ export default noop.memo(
                       c1 = 1;
                       c2 = 1;
                       const obj6 = {
-                        value: tmp2(11051).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                        value: tmp2(11066).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                         done: false,
                       };
                       return obj6;
@@ -1033,7 +1033,7 @@ export default noop.memo(
                     const obj = { value, done: true };
                     return obj;
                   }
-                  onPress(6320).deleteRole(guildId, tmp2.id);
+                  onPress(6322).deleteRole(guildId, tmp2.id);
                   c2 = 3;
                   return { value: "IconComponent", done: null };
                 } catch (tmp16) {
@@ -1182,7 +1182,7 @@ export default noop.memo(
                           c1 = 1;
                           c2 = 1;
                           const obj6 = {
-                            value: tmp2(11051).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                            value: tmp2(11066).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                             done: false,
                           };
                           return obj6;
@@ -1329,7 +1329,7 @@ export default noop.memo(
           if (null != prop) {
             const obj23 = {
               size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16,
-              source: require("../../../../../_runtime/metro/09686__.js"),
+              source: require("../../../../../_runtime/metro/09702__.js"),
               "aria-label": null,
               style: null,
             };

@@ -45,7 +45,7 @@ function handleReaction(optimistic) {
   }
   obj = ReactionUtils;
 }
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = fn(1087).ChannelTypes;
 class SearchState {
   constructor() {
     merged = Object.assign({

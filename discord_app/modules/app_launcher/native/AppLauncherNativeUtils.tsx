@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1988 from "../../../../_runtime/metro/01988__.js";
+import _modDef1990 from "../../../../_runtime/metro/01990__.js";
 import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -14,10 +14,10 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const AppLauncherNativeConstants = fn(1502);
+const AppLauncherNativeConstants = fn(1504);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const BuiltInSectionId = fn(5463).BuiltInSectionId;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const BuiltInSectionId = fn(5465).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -296,7 +296,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1988;
+    let applicationIconSource = _modDef1990;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {

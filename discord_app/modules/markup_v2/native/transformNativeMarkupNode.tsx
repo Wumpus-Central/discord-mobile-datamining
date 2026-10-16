@@ -58,7 +58,7 @@ function transformNode(type, channelId) {
       const replaced = type.value.content.replace(/^\n+|\n+$/g, "");
       let replaced1 = replaced;
       if ("ansi" === str3.toLowerCase()) {
-        replaced1 = replaced.replaceAll(regExp, "");
+        replaced1 = replaced.replaceAll(require("HighlightJsAnsiLanguage").ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
       }
       if (true === channelId.formatInline) {
         const obj13 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: replaced1 };
@@ -101,13 +101,13 @@ function transformNode(type, channelId) {
         obj18.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj19 = { type: tmp51(5460).AST_KEY.TEXT, content: " " };
+          const obj19 = { type: tmp52(5462).AST_KEY.TEXT, content: " " };
           const items1 = [obj19];
           arr2 = items1;
         }
         obj17.content = arr2;
         obj17.channelId = channelId.channelId;
-        tmp51 = _require;
+        tmp52 = _require;
       }
       return obj17;
     case "small":
@@ -216,7 +216,6 @@ function transformNativeBlocks(value, channelId, quote) {
   return items;
 }
 const set = new Set(["paragraph", "quote"]);
-const regExp = new RegExp(fn(5146).ANSI_CONTROL_SEQUENCE_RE, "g");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupNode.tsx");
 

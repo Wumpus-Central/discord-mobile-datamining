@@ -5,7 +5,7 @@ import CollectiblesProductUtils from "../../collectibles/utils/CollectiblesProdu
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
-import v1 from "../../../../_runtime/01279_v1.js";
+import v1 from "../../../../_runtime/01281_v1.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import "ReactCompilerGating";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -404,33 +404,61 @@ export const OrbCheckoutModalContextProvider = ReactCompilerGating.isReactCompil
       cResult[3] = obj4;
       tmp2 = obj4;
     }
-  : function OrbCheckoutModalContextProvider(onCheckoutSuccess) {
-      ({ skuId, loadId, analyticsLocations } = onCheckoutSuccess);
-      ({ analyticsSourceLocation, children } = onCheckoutSuccess);
-      const tmp = closure_10({ skuId, loadId, onCheckoutSuccess: onCheckoutSuccess.onCheckoutSuccess });
-      const obj2 = {
+  : function OrbCheckoutModalContextProvider(children) {
+      const skuId = children.skuId;
+      const loadId = children.loadId;
+      const analyticsSourceLocation = children.analyticsSourceLocation;
+      const analyticsLocations = children.analyticsLocations;
+      const tmp = closure_10({ skuId, loadId, onCheckoutSuccess: children.onCheckoutSuccess });
+      const orbProductContext = tmp.orbProductContext;
+      const onRedeemVirtualCurrency = tmp.onRedeemVirtualCurrency;
+      const isRedeeming = tmp.isRedeeming;
+      const orbRedemptionError = tmp.orbRedemptionError;
+      const skuProductLine = tmp.skuProductLine;
+      const skuApplicationId = tmp.skuApplicationId;
+      let items = [
         skuId,
-        skuProductLine: tmp.skuProductLine,
-        skuApplicationId: tmp.skuApplicationId,
+        skuProductLine,
+        skuApplicationId,
         loadId,
-        analyticsLocations: null,
-        analyticsSourceLocation: null,
-        orbProductContext: null,
-        onRedeemVirtualCurrency: null,
-        isRedeeming: null,
-        orbRedemptionError: null,
-      };
-      ({ orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError } = tmp);
-      if (analyticsLocations == null) {
-        analyticsLocations = [];
-      }
-      obj2.analyticsLocations = analyticsLocations;
-      obj2.analyticsSourceLocation = analyticsSourceLocation;
-      obj2.orbProductContext = orbProductContext;
-      obj2.onRedeemVirtualCurrency = onRedeemVirtualCurrency;
-      obj2.isRedeeming = isRedeeming;
-      obj2.orbRedemptionError = orbRedemptionError;
-      return <redux.Provider value={obj2}>{children}</redux.Provider>;
+        analyticsLocations,
+        analyticsSourceLocation,
+        orbProductContext,
+        onRedeemVirtualCurrency,
+        isRedeeming,
+        orbRedemptionError,
+      ];
+      return (
+        <redux.Provider
+          value={hasOwnProperty(() => {
+            const obj = {
+              skuId,
+              skuProductLine,
+              skuApplicationId,
+              loadId,
+              analyticsLocations: null,
+              analyticsSourceLocation: null,
+              orbProductContext: null,
+              onRedeemVirtualCurrency: null,
+              isRedeeming: null,
+              orbRedemptionError: null,
+            };
+            let items = analyticsLocations;
+            if (analyticsLocations == null) {
+              items = [];
+            }
+            obj.analyticsLocations = items;
+            obj.analyticsSourceLocation = analyticsSourceLocation;
+            obj.orbProductContext = orbProductContext;
+            obj.onRedeemVirtualCurrency = onRedeemVirtualCurrency;
+            obj.isRedeeming = isRedeeming;
+            obj.orbRedemptionError = orbRedemptionError;
+            return obj;
+          }, items)}
+        >
+          {children.children}
+        </redux.Provider>
+      );
     };
 export const useOrbCheckoutModalContext = function useOrbCheckoutModalContext() {
   return React3(closure_9);

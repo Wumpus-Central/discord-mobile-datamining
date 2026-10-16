@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../_runtime/06555_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06557_LegacyBaseButton.js";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,11 +12,11 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = {
     swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical },
@@ -100,7 +100,7 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
   const emojiSuggestionBarState = onPress(lockedEmojis[11]).useEmojiSuggestionBarState(
     merged,
     onPress(lockedEmojis[11]).MAX_SUGGESTIONS_LARGE,
-    1,
+    0,
     ref,
   );
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
@@ -196,6 +196,7 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
     gesture2 = context1.gesture;
   }
   const items3 = [first, callback1, gesture, gesture1, gesture2];
+  const items4 = [onPress, unlockedEmojis, lockedEmojis];
   const memo = obj6.useMemo(() => {
     const items = [gesture, gesture1, gesture2];
     const found = items.filter((item) => null != item);
@@ -229,29 +230,32 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
     fn.__initData = __initData2;
     return failOffsetYResult.onStart(fn);
   }, items3);
+  const callback2 = obj6.useCallback((arg0) => {
+    onPress(arg0, { unlocked: unlockedEmojis, locked: lockedEmojis });
+  }, items4);
   const obj5 = { gesture: memo, children: null };
   const obj7 = { style: tmp7.swipeArea, children: null };
   const obj8 = { ref: ref1, collapsable: false, style: null, children: null };
-  const items4 = [tmp7.wrapper, style];
-  obj8.style = items4;
+  const items5 = [tmp7.wrapper, style];
+  obj8.style = items5;
   const obj9 = { style: animatedStyle1, pointerEvents: null, children: null };
   let str = "auto";
   if (null != tmp12) {
     str = "none";
   }
   obj9.pointerEvents = str;
-  obj9.children = gesture1(unlockedEmojis(tmp4Result2Result[18]), { active, showKeyboardIcon, onPress });
-  const items5 = [gesture1(unlockedEmojis(tmp4Result2Result[13]).View, obj9)];
+  obj9.children = gesture1(unlockedEmojis(tmp4Result2Result[18]), { active, showKeyboardIcon, onPress: callback2 });
+  const items6 = [gesture1(unlockedEmojis(tmp4Result2Result[13]).View, obj9)];
   if (null == tmp12) {
-    items5[1] = tmp28;
-    obj8.children = items5;
-    obj7.children = gesture2(tmp26, obj8);
-    obj5.children = tmp25(tmp26, obj7);
-    return tmp25(tmp2(tmp4Result2Result[17]).GestureDetector, obj5);
+    items6[1] = tmp29;
+    obj8.children = items6;
+    obj7.children = gesture2(tmp27, obj8);
+    obj5.children = tmp26(tmp27, obj7);
+    return tmp26(tmp2(tmp4Result2Result[17]).GestureDetector, obj5);
   } else {
     const obj10 = { style: null, pointerEvents: null, children: null };
-    const items6 = [tmp7.glyphOverlay, animatedStyle];
-    obj10.style = items6;
+    const items7 = [tmp7.glyphOverlay, animatedStyle];
+    obj10.style = items7;
     let str2 = "none";
     if (null != first) {
       str2 = "auto";
@@ -269,9 +273,9 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
     obj11.onPress = callback;
     if (null == tmp12.id) {
       const obj12 = { allowFontScaling: false, style: tmp7.surrogates, children: tmp12.surrogates };
-      obj11.children = tmp25(tmp2(tmp4Result2Result[26]).LegacyText, obj12);
-      obj10.children = tmp25(tmp2(tmp4Result2Result[19]).PressableOpacity, obj11);
-      tmp25(tmp4(tmp4Result2Result[13]).View, obj10);
+      obj11.children = tmp26(tmp2(tmp4Result2Result[26]).LegacyText, obj12);
+      obj10.children = tmp26(tmp2(tmp4Result2Result[19]).PressableOpacity, obj11);
+      tmp26(tmp4(tmp4Result2Result[13]).View, obj10);
     }
     const obj13 = { resizeMode: "contain", style: tmp7.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp4Result = tmp4(tmp4Result2Result[21]);
@@ -286,7 +290,7 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
     tmp4Result2Result = tmp4(tmp4Result2Result[25])(tmp12, false, token - tmp4(tmp4Result2Result[8]).space.PX_8);
     obj14.uri = tmp4Result2Result;
     obj13.source = obj14;
-    tmp25(tmp4Result, obj13);
+    tmp26(tmp4Result, obj13);
     const tmp4Result4 = tmp4(tmp4Result2Result[25]);
   }
 };

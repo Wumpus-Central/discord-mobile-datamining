@@ -14,13 +14,13 @@ const BaseChannelItemDefault = BaseChannelItem;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSources = fn(1085).InstantInviteSources;
+const InstantInviteSources = fn(1087).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
-    marginVertical: fn(11797).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11821).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -129,19 +129,19 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         channelInfo: null,
       };
       const tmp = closure_9();
-      obj.name = React5(tmp5(12932).BaseChannelName, { name: label, mode: DEFAULT });
-      obj.icon = React5(tmp5(12932).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+      obj.name = React5(tmp5(12958).BaseChannelName, { name: label, mode: DEFAULT });
+      obj.icon = React5(tmp5(12958).BaseChannelIcon, { mode: DEFAULT, IconComponent });
       let tmp6Result = null;
       if (null != unreadCount) {
         const obj2 = { value: unreadCount };
-        tmp6Result = React5(tmp5(1200).Badge, obj2);
+        tmp6Result = React5(tmp5(1202).Badge, obj2);
       }
       obj.channelInfo = tmp6Result;
       return React5(BaseChannelItemDefault, obj);
     };
 ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11797).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11821).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       });
-      guild(17229);
+      guild(17263);
       let tmp9Result = null;
       if (null != stateFromStores) {
         let row = null;
@@ -393,24 +393,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { style: row, children: null };
         const obj5 = { guild };
-        const items4 = [closure_7(stateFromStores(17230), obj5), , ,];
+        const items4 = [closure_7(stateFromStores(17264), obj5), , ,];
         const obj6 = {
           active: stateFromStores1,
-          IconComponent: tmp(16545).CompassIcon,
+          IconComponent: tmp(16578).CompassIcon,
           label: null,
           handleItemClick: null,
           unreadCount: null,
         };
-        const intl = tmp(1126).intl;
-        obj6.label = intl.string(tmp(1126).t.K50GHd);
+        const intl = tmp(1128).intl;
+        obj6.label = intl.string(tmp(1128).t.K50GHd);
         obj6.handleItemClick = function handleItemClick() {
           transitionToChannel.transitionToChannel(stateFromStores.id);
         };
         obj6.unreadCount = tmp7;
         items4[1] = closure_7(closure_10, obj6);
-        const obj7 = { IconComponent: tmp(10838).PlusMediumIcon, label: null, handleItemClick: null };
-        const intl2 = tmp(1126).intl;
-        obj7.label = intl2.string(tmp(1126).t.emRpdS);
+        const obj7 = { IconComponent: tmp(10853).PlusMediumIcon, label: null, handleItemClick: null };
+        const intl2 = tmp(1128).intl;
+        obj7.label = intl2.string(tmp(1128).t.emRpdS);
         obj7.handleItemClick = function handleItemClick() {
           return GuildDirectoryAddModalActionCreatorsDefault.open({
             directoryGuildName: guild.name,
@@ -419,9 +419,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           });
         };
         items4[2] = closure_7(closure_10, obj7);
-        const obj8 = { IconComponent: tmp(5091).UserPlusIcon, label: null, handleItemClick: null };
-        const intl3 = tmp(1126).intl;
-        obj8.label = intl3.string(tmp(1126).t.MJQOuJ);
+        const obj8 = { IconComponent: tmp(5094).UserPlusIcon, label: null, handleItemClick: null };
+        const intl3 = tmp(1128).intl;
+        obj8.label = intl3.string(tmp(1128).t.MJQOuJ);
         obj8.handleItemClick = function handleItemClick() {
           const result = instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(
             guild,

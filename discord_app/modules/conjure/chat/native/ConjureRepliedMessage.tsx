@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureDesignFeedback from "../../design_feedback/ConjureDesignFeedback.tsx";
@@ -18,12 +18,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(12057).MESSAGE_EDGE_INSET + fn(12057).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(12057).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(5151);
+const diff = fn(12081).MESSAGE_EDGE_INSET + fn(12081).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(12081).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(5153);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(12057).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(12081).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -52,7 +52,7 @@ obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginLeft: diff - fn(12057).MESSAGE_CONTENT_INSET,
+  marginLeft: diff - fn(12081).MESSAGE_CONTENT_INSET,
   paddingLeft: diff1 + 4,
   height: 20,
   flexDirection: "row",
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20 = tmp21;
       }
       const intl = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3862.K0046m, {
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3865.K0046m, {
         name: str,
         content: conjureMentionNames,
       });
@@ -245,15 +245,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       replied = replied.replied;
       const onJump = replied.onJump;
       const tmp = closure_8();
-      const messageAuthorUser = replied(12069).useMessageAuthorUser(replied.userId);
-      const obj = replied(12069);
-      let str = replied(5018).useName(messageAuthorUser);
+      const messageAuthorUser = replied(12093).useMessageAuthorUser(replied.userId);
+      const obj = replied(12093);
+      let str = replied(5021).useName(messageAuthorUser);
       if (str == null) {
         str = "";
       }
       const items = [replied.content];
       const memo = noop.useMemo(() => ConjureDesignFeedback.parseConjureDesignRemark(replied.content), items);
-      const obj2 = replied(5018);
+      const obj2 = replied(5021);
       let body;
       if (memo != null) {
         body = memo.body;
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         body = replied.content;
       }
-      const tmp2Result = replied(12070);
+      const tmp2Result = replied(12094);
       const conjureMentionNames = tmp2Result.useConjureMentionNames(body.replace(/\s+/g, " ").trim());
       const obj3 = {
         style: tmp.root,
@@ -271,8 +271,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         children: null,
       };
-      const intl = tmp2(1126).intl;
-      obj3.accessibilityLabel = intl.formatToPlainString(_modDef3862.K0046m, {
+      const intl = tmp2(1128).intl;
+      obj3.accessibilityLabel = intl.formatToPlainString(_modDef3865.K0046m, {
         name: str,
         content: conjureMentionNames,
       });
@@ -280,12 +280,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp11Result = null;
       if (null != messageAuthorUser) {
         const obj5 = { style: tmp.avatar, children: null };
-        const obj6 = { userId: replied.userId, size: tmp2(1200).AvatarSizes.SIZE_16 };
-        obj5.children = closure_6(tmp2(12071).ConjureUserAvatar, obj6);
+        const obj6 = { userId: replied.userId, size: tmp2(1202).AvatarSizes.SIZE_16 };
+        obj5.children = closure_6(tmp2(12095).ConjureUserAvatar, obj6);
         tmp11Result = closure_6(closure_5, obj5);
       }
       items1[1] = tmp11Result;
-      items1[2] = closure_6(replied(5147).Text, {
+      items1[2] = closure_6(replied(5149).Text, {
         variant: "text-xs/semibold",
         color: "text-default",
         style: tmp.name,
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items2[1] = str3;
       items2[2] = conjureMentionNames;
       obj8.children = items2;
-      items1[3] = closure_7(replied(5147).Text, obj8);
+      items1[3] = closure_7(replied(5149).Text, obj8);
       obj3.children = items1;
       return closure_7(closure_4, obj3);
     };

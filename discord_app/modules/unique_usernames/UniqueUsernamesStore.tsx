@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
+import privDefault from "../../../_runtime/01459_priv.js";
 
 let closure_2 = { taken: null, error: "IconComponent", rateLimited: null };
 let obj = {

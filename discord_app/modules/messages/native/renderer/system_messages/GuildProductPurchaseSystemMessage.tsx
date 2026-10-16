@@ -11,7 +11,7 @@ import MessageRecord from "../../../../../records/MessageRecord.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const MessageTypes = fn(1085).MessageTypes;
+const MessageTypes = fn(1087).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx",

@@ -5,7 +5,7 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ActivityTypes = fn(1085).ActivityTypes;
+const ActivityTypes = fn(1087).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");

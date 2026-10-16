@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (undefined !== polite) {
             str = polite;
           }
-          const AccessibilityAnnouncer = ref(5025).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = ref(5028).AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(intl, str);
           if (obj.isIOS()) {
             if (tmpResult.getIsScreenReaderEnabled()) {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return resolved;
           }
           resolved = Promise.resolve();
-          obj = intl(1382);
+          obj = intl(1384);
         };
         cResult[2] = fn2;
         let tmp5 = fn2;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (polite === undefined) {
           str = "assertive";
         }
-        const AccessibilityAnnouncer = ref(5025).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = ref(5028).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl, str);
         if (obj.isIOS()) {
           if (tmpResult.getIsScreenReaderEnabled()) {
@@ -136,6 +136,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return resolved;
         }
         resolved = Promise.resolve();
-        obj = intl(1382);
+        obj = intl(1384);
       }, []);
     };

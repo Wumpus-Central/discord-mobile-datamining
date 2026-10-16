@@ -1,6 +1,6 @@
 // discord_app/modules/activities/ActivitySessionAnalytics.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01279_v1.js";
+import v1 from "../../../_runtime/01281_v1.js";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ThermalUtilsDefault from "../device/ThermalUtils.native.tsx";
 import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
@@ -215,7 +215,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
     }
   }
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ApplicationFlags: map1 } = Constants);
 const activeSessionIds = {};
 let obj2 = {};

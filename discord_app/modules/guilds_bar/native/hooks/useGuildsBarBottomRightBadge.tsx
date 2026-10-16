@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_6 = createStyles.createStyles({
   bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
 });
@@ -39,10 +39,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       [first, dependencyMap] = noop.useState(tmp5);
       const obj = mentionCount(576);
-      const token = mentionCount(4874).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-      const tmpResult = mentionCount(4874);
-      const token1 = mentionCount(4874).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-      const diff = token1 - tmp(1200).BADGE_PADDING;
+      const token = mentionCount(4877).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+      const tmpResult = mentionCount(4877);
+      const token1 = mentionCount(4877).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+      const diff = token1 - tmp(1202).BADGE_PADDING;
       if (cResult[2] !== diff) {
         const obj2 = { bottom: diff };
         cResult[2] = diff;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp13 = cResult[6];
         }
         if (mentionCount > 0) {
-          const diff1 = first - 2 * tmp(1200).BADGE_PADDING;
+          const diff1 = first - 2 * tmp(1202).BADGE_PADDING;
           if (cResult[7] === token) {
             if (cResult[10] !== first) {
               class L {
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               importantForAccessibility: "no-hide-descendants",
               onLayout: L,
             };
-            const tmp27 = jsx(tmp(1200).MaskedBadge, {
+            const tmp27 = jsx(tmp(1202).MaskedBadge, {
               maskStyle: tmp13,
               value: mentionCount,
               isMentionLowImportance,
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[16] = tmp27;
           }
           const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-          const tmp23 = tmp8(17336)(obj4);
+          const tmp23 = tmp8(17370)(obj4);
           cResult[7] = token;
           cResult[8] = diff1;
           cResult[9] = tmp23;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const tmp20 = obj5;
             }
             const obj6 = { style: tmp13, joinRequestState };
-            const tmp17 = jsx(tmp8(17337), { style: tmp13, joinRequestState });
+            const tmp17 = jsx(tmp8(17371), { style: tmp13, joinRequestState });
             cResult[25] = tmp13;
             cResult[26] = joinRequestState;
             cResult[27] = tmp17;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp12;
       cResult[6] = items;
       tmp13 = items;
-      const tmpResult2 = mentionCount(4874);
+      const tmpResult2 = mentionCount(4877);
     }
   : function useGuildsBarBottomRightBadge(mentionCount) {
       mentionCount = mentionCount.mentionCount;

@@ -61,10 +61,10 @@ function _addSectionForPotentialSoundIds(sectionType) {
     sections.push(obj2);
   }
 }
-function addTopSoundsSection(items, stateFromStores3, arg2) {
+function addTopSoundsSection(items, id, arg2) {
   ({ allSounds, topSoundIds } = arg2);
   const obj = {};
-  let items1 = allSounds.get(stateFromStores3.id);
+  let items1 = allSounds.get(id.id);
   if (items1 == null) {
     items1 = [];
   }
@@ -82,7 +82,7 @@ function addTopSoundsSection(items, stateFromStores3, arg2) {
   }
   if (0 !== items.length) {
     const obj2 = { key: SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS, categoryInfo: null, items: null };
-    const obj3 = { type: SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS, guild: stateFromStores3 };
+    const obj3 = { type: SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS, guild: id };
     obj2.categoryInfo = obj3;
     obj2.items = createSoundItems(items);
     items.push(obj2);
@@ -159,15 +159,15 @@ function addCurrentGuildSection(items, stateFromStores1, arg2) {
     items.push(obj3);
   }
 }
-const SoundboardConstants = fn(5490);
+const SoundboardConstants = fn(5492);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
-const PremiumTypes = fn(1392).PremiumTypes;
+const PremiumTypes = fn(1394).PremiumTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSoundGrid(guild_id, arg1, arg2) {
       _require = guild_id;
-      const cResult = require("c").c(64);
+      const cResult = require("c").c(63);
       if (cResult[0] !== arg1) {
         let obj2 = arg1;
         if (undefined === arg1) {
@@ -182,24 +182,30 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const filterOutEmptyCurrentGuild = tmp4.filterOutEmptyCurrentGuild;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [UserStore];
-        const fn = function b() {
-          return currentUser.getCurrentUser();
-        };
+        class G {
+          constructor() {
+            return closure_1_9.getCurrentUser();
+          }
+        }
         cResult[2] = items;
-        cResult[3] = fn;
-        let tmp6 = fn;
+        cResult[3] = G;
+        let tmp6 = G;
         let tmp5 = items;
       } else {
         tmp5 = cResult[2];
         tmp6 = cResult[3];
       }
-      let obj = require("c");
+      const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
       if (cResult[4] !== stateFromStores) {
-        const isPremiumResult = require("PremiumUtils").isPremium(stateFromStores, PremiumTypes.TIER_2);
+        require("PremiumUtils");
+        class G {
+          constructor() {
+            return closure_1_9.getCurrentUser();
+          }
+        }
         cResult[4] = stateFromStores;
-        cResult[5] = isPremiumResult;
-        const obj4 = require("PremiumUtils");
+        cResult[5] = tmp13;
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SoundboardStore];
@@ -215,16 +221,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[6] = items1;
         cResult[7] = A;
-        let tmp14 = A;
-        let tmp13 = items1;
+        let tmp15 = A;
+        let tmp14 = items1;
       } else {
-        tmp13 = cResult[6];
-        tmp14 = cResult[7];
+        tmp14 = cResult[6];
+        tmp15 = cResult[7];
       }
       const tmpResult = require("initialize");
-      const tmp16 = stateFromStores1(require("initialize").useStateFromStoresArray(tmp13, tmp14), 4);
-      [r10065, tmp17] = tmp16;
-      importDefault = tmp17;
+      const tmp17 = stateFromStores1(require("initialize").useStateFromStoresArray(tmp14, tmp15), 4);
+      [r10065, tmp18] = tmp17;
+      importDefault = tmp18;
       const tmpResult7 = require("initialize");
       const soundOrganizer = require("useSoundOrganizer").useSoundOrganizer();
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -241,10 +247,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = { location: "useSoundGrid" };
       } else {
-        const tmp19 = cResult[8];
+        const tmp20 = cResult[8];
       }
       const SoundboardFavoritesExperiment = tmp(tmp2[17]).SoundboardFavoritesExperiment;
-      const sortOrder = SoundboardFavoritesExperiment.useConfig(tmp19).sortOrder;
+      const sortOrder = SoundboardFavoritesExperiment.useConfig(tmp20).sortOrder;
       const tmpResult8 = require("useSoundOrganizer");
       sortedGuildIdsForSoundboard = require("useSortedGuildIdsForSoundboard").useSortedGuildIdsForSoundboard(
         guild_id,
@@ -263,12 +269,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[9] = items2;
-        let tmp21 = items2;
+        let tmp22 = items2;
       } else {
-        tmp21 = cResult[9];
+        tmp22 = cResult[9];
       }
       if (cResult[10] !== sortedGuildIdsForSoundboard) {
-        const fn2 = function z() {
+        const fn = function z() {
           const items = [];
           const item = sortedGuildIdsForSoundboard.forEach((item) => {
             guild = guild.getGuild(item);
@@ -289,13 +295,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return items;
           }
         }
-        cResult[11] = fn2;
-        let tmp23 = fn2;
+        cResult[11] = fn;
+        let tmp24 = fn;
       } else {
-        tmp23 = cResult[11];
+        tmp24 = cResult[11];
       }
       const tmpResult9 = require("useSortedGuildIdsForSoundboard");
-      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp21, tmp23);
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp22, tmp24);
       if (cResult[12] !== stateFromStores) {
         let result = require("PremiumUtils").canUseSoundboardEverywhere(stateFromStores);
         class A {
@@ -310,7 +316,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[12] = stateFromStores;
         cResult[13] = result;
-        const obj10 = require("PremiumUtils");
+        const obj9 = require("PremiumUtils");
       }
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         const items3 = [GuildStore];
@@ -325,9 +331,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[14] = items3;
-        let tmp28 = items3;
+        let tmp29 = items3;
       } else {
-        tmp28 = cResult[14];
+        tmp29 = cResult[14];
       }
       guild_id = undefined;
       if (guild_id != null) {
@@ -360,12 +366,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[15] = guild_id1;
         cResult[16] = J;
-        let tmp31 = J;
+        let tmp32 = J;
       } else {
-        tmp31 = cResult[16];
+        tmp32 = cResult[16];
       }
       const tmpResult10 = require("initialize");
-      stateFromStores1 = require("initialize").useStateFromStores(tmp28, tmp31);
+      stateFromStores1 = require("initialize").useStateFromStores(tmp29, tmp32);
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         const items4 = [];
         class J {
@@ -389,9 +395,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[17] = items4;
-        let tmp34 = items4;
+        let tmp35 = items4;
       } else {
-        tmp34 = cResult[17];
+        tmp35 = cResult[17];
       }
       if (cResult[18] !== stateFromStores1) {
         class W {
@@ -424,7 +430,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[18] = stateFromStores1;
         cResult[19] = W;
         cResult[20] = items5;
-        let tmp37 = items5;
+        let tmp38 = items5;
       } else {
         class W {
           constructor() {
@@ -432,11 +438,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return obj.getManageResourcePermissions(closure_3).canCreateExpressions;
           }
         }
-        tmp37 = cResult[20];
+        tmp38 = cResult[20];
       }
       const tmpResult11 = require("initialize");
-      const stateFromStores2 = require("initialize").useStateFromStores(tmp34, W, tmp37);
-      if (cResult[21] === tmp17) {
+      const stateFromStores2 = require("initialize").useStateFromStores(tmp35, W, tmp38);
+      if (cResult[21] === tmp18) {
         class W {
           constructor() {
             obj = closure_0(closure_2[19]);
@@ -444,7 +450,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (cResult[24] !== tmp17) {
+      if (cResult[24] !== tmp18) {
         class W {
           constructor() {
             obj = closure_0(closure_2[19]);
@@ -471,7 +477,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return items;
           }
         }
-        cResult[25] = tmp40;
+        cResult[25] = tmp41;
       } else {
         class W {
           constructor() {
@@ -480,10 +486,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const found = arr3.filter(tmp40);
+      const found = arr3.filter(tmp41);
       const substr = found.slice(0, 3);
-      cResult[21] = tmp17;
-      cResult[22] = tmp16[2];
+      cResult[21] = tmp18;
+      cResult[22] = tmp17[2];
       cResult[23] = substr;
       const tmpResult12 = require("initialize");
     }
@@ -591,19 +597,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return guild;
       });
-      const TopSoundboardSoundsMobileExperiment =
-        require("TopSoundboardSoundsExperiment").TopSoundboardSoundsMobileExperiment;
-      const config = TopSoundboardSoundsMobileExperiment.getConfig({ location: "useSoundGrid" });
-      const enabled = config.enabled;
-      const topSoundsFirst = config.topSoundsFirst;
-      flag(flag2[22])(() => {
-        if (enabled) {
-          let id;
-          if (stateFromStores3 != null) {
-            id = stateFromStores3.id;
-          }
-          const result = TopSoundboardSoundsActionCreators.maybeFetchTopSoundboardSoundsByGuild(id);
+      flag(flag2[21])(() => {
+        let id;
+        if (stateFromStores3 != null) {
+          id = stateFromStores3.id;
         }
+        const result = TopSoundboardSoundsActionCreators.maybeFetchTopSoundboardSoundsByGuild(id);
       });
       let obj11 = require("initialize");
       const items8 = [sortedGuildIdsForSoundboard];
@@ -633,8 +632,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         memo,
         stateFromStores3,
         memo1,
-        enabled,
-        topSoundsFirst,
         sortOrder,
       ];
       return allSounds.useMemo(() => {
@@ -674,24 +671,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.soundCounts = { favoriteSoundCount: 0, unlockedCustomSoundCount: 0, lockedCustomSoundCount: 0 };
           return obj5;
         } else {
-          let tmp = enabled;
-          let tmp2 = enabled;
-          if (enabled) {
-            tmp2 = null != stateFromStores3;
-          }
-          if (tmp2) {
-            tmp2 = topSoundsFirst;
-          }
-          if (tmp2) {
+          if (null != stateFromStores3) {
             const obj = { allSounds, topSoundIds: memo1 };
-            addTopSoundsSection(items, stateFromStores3, obj);
+            addTopSoundsSection(items, tmp, obj);
           }
           if ("favorite-date" === sortOrder) {
             let sortSoundsOldestToNewestCreationDate = useSoundOrganizer.sortSoundsOldestToNewestFavoriteDate;
-            let tmp13 = require;
+            let tmp8 = require;
           } else {
+            tmp8 = require;
             sortSoundsOldestToNewestCreationDate = useSoundOrganizer.sortSoundsOldestToNewestCreationDate;
-            tmp13 = require;
           }
           const obj6 = {
             sections: items,
@@ -703,49 +692,39 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const _Array = Array;
           obj6.potentialSoundIdsForSection = Array.from(size);
-          obj6.sectionType = tmp13(7270).SoundboardSoundGridSectionType.FAVORITES;
+          obj6.sectionType = tmp8(7272).SoundboardSoundGridSectionType.FAVORITES;
           obj6.sortSoundsFn = sortSoundsOldestToNewestCreationDate;
           _addSectionForPotentialSoundIds(obj6);
-          if (tmp) {
-            tmp = null != stateFromStores3;
-          }
-          if (tmp) {
-            tmp = !topSoundsFirst;
-          }
-          if (tmp) {
-            const obj7 = { allSounds, topSoundIds: memo1 };
-            addTopSoundsSection(items, stateFromStores3, obj7);
-          }
           if (undefined !== stateFromStores1) {
-            const obj8 = {
+            const obj7 = {
               currentGuildHasAddPermissions: stateFromStores2,
               allSounds,
               filterOutEmptyCurrentGuild: flag,
               sortSoundsFn: soundOrganizer,
             };
-            addCurrentGuildSection(items, stateFromStores1, obj8);
+            addCurrentGuildSection(items, stateFromStores1, obj7);
           }
           if (!c12) {
             let value5 = allSounds.get(closure_2_11);
             if (value5 == null) {
               value5 = __initData;
             }
-            const obj9 = { key: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-            const obj10 = { type: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS };
-            obj9.categoryInfo = obj10;
-            const sortSoundsOldestToNewestCreationDate2 = tmp13(18102).sortSoundsOldestToNewestCreationDate;
+            const obj8 = { key: tmp8(7272).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+            const obj9 = { type: tmp8(7272).SoundboardSoundGridSectionType.DEFAULTS };
+            obj8.categoryInfo = obj9;
+            const sortSoundsOldestToNewestCreationDate2 = tmp8(18137).sortSoundsOldestToNewestCreationDate;
             let result1 = value5;
             if (null != sortSoundsOldestToNewestCreationDate2) {
               result1 = sortSoundsOldestToNewestCreationDate2(value5);
             }
-            obj9.items = result1.map((sound, index) => ({
+            obj8.items = result1.map((sound, index) => ({
               type: closure_1_0(length[10]).SoundboardSoundItemType.SOUND,
               sound,
               index,
             }));
-            items.push(obj9);
+            items.push(obj8);
           }
-          const obj11 = {
+          const obj10 = {
             sections: items,
             guilds: stateFromStoresArray,
             currentGuildId: null,
@@ -757,30 +736,30 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (stateFromStores1 != null) {
             id = stateFromStores1.id;
           }
-          obj11.currentGuildId = id;
-          obj11.allSounds = allSounds;
-          obj11.hasNitro = hasNitro;
-          obj11.sortSoundsFn = soundOrganizer;
-          addGuildsSections(obj11);
+          obj10.currentGuildId = id;
+          obj10.allSounds = allSounds;
+          obj10.hasNitro = hasNitro;
+          obj10.sortSoundsFn = soundOrganizer;
+          addGuildsSections(obj10);
           if (c12) {
             let value6 = allSounds.get(closure_2_11);
             if (value6 == null) {
               value6 = __initData;
             }
-            const obj12 = { key: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-            const obj13 = { type: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS };
-            obj12.categoryInfo = obj13;
-            const sortSoundsOldestToNewestCreationDate3 = tmp13(18102).sortSoundsOldestToNewestCreationDate;
+            const obj11 = { key: tmp8(7272).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+            const obj12 = { type: tmp8(7272).SoundboardSoundGridSectionType.DEFAULTS };
+            obj11.categoryInfo = obj12;
+            const sortSoundsOldestToNewestCreationDate3 = tmp8(18137).sortSoundsOldestToNewestCreationDate;
             let result2 = value6;
             if (null != sortSoundsOldestToNewestCreationDate3) {
               result2 = sortSoundsOldestToNewestCreationDate3(value6);
             }
-            obj12.items = result2.map((sound, index) => ({
+            obj11.items = result2.map((sound, index) => ({
               type: closure_1_0(length[10]).SoundboardSoundItemType.SOUND,
               sound,
               index,
             }));
-            items.push(obj12);
+            items.push(obj11);
           }
           const item = items.forEach((categoryInfo) => {
             if (categoryInfo.categoryInfo.type === closure_0(flag2[10]).SoundboardSoundGridSectionType.GUILD) {
@@ -791,13 +770,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           });
-          const obj15 = { categories: items, availableSounds: null, isFetching: null, soundCounts: null };
+          const obj14 = { categories: items, availableSounds: null, isFetching: null, soundCounts: null };
           const _Array2 = Array;
-          obj15.availableSounds = Array.from(allSounds.values()).flat();
-          obj15.isFetching = isFetching;
-          const obj16 = { favoriteSoundCount: size.size, unlockedCustomSoundCount, lockedCustomSoundCount };
-          obj15.soundCounts = obj16;
-          return obj15;
+          obj14.availableSounds = Array.from(allSounds.values()).flat();
+          obj14.isFetching = isFetching;
+          const obj15 = { favoriteSoundCount: size.size, unlockedCustomSoundCount, lockedCustomSoundCount };
+          obj14.soundCounts = obj15;
+          return obj14;
         }
       }, items10);
     };

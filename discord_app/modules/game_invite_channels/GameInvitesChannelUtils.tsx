@@ -14,10 +14,10 @@ require = fn;
 let closure_3 = ["data"];
 let closure_4 = ["data"];
 const useMemo = fn(19).useMemo;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ActivityFlags: closure_8, ActivityTypes: closure_9, MAX_CHANNEL_NAME_LENGTH: c10 } = Constants);
-const ChannelFlags = fn(2072).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7201).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(2075).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(7203).MAX_FORUM_POST_TAGS;
 let c13 = "No Mic";
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -189,7 +189,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         gameId = stateFromStores.gameId;
       }
-      const data = tmp(7229).useGame(gameId).data;
+      const data = tmp(7231).useGame(gameId).data;
       let officialApplicationId;
       if (data != null) {
         officialApplicationId = data.getOfficialApplicationId();
@@ -246,7 +246,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useGameInvitesChannelOfficialApplication(arg0) {
       const tmp = closure_15(arg0);
-      application = application(6284).useApplication(tmp);
+      application = application(6286).useApplication(tmp);
       const items = [application];
       return useMemo(() => {
         const merged = Object.assign(_objectWithoutProperties(application, closure_4));
@@ -299,8 +299,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp11 = cResult[7];
           }
-          const subscribeGuildMembers = tmp(7231).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
-          const tmpResult2 = tmp(7231);
+          const subscribeGuildMembers = tmp(7233).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
+          const tmpResult2 = tmp(7233);
         }
         const tmpResult = tmp(504);
       }

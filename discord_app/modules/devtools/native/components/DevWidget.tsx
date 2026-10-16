@@ -16,7 +16,7 @@ require = fn;
 const DEV_WIDGET_SIZE = fn(585).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,

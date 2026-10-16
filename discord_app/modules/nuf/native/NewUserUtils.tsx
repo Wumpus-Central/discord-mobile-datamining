@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01504_Link.js";
+import Link from "../../../../_runtime/01506_Link.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NativePermissionManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
 import NewUserAnalyticsUtils from "NewUserAnalyticsUtils.tsx";
@@ -228,10 +228,10 @@ let closure_17 = async function _getNextOnboardingStep() {
     }
   }
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ PlatformTypes: closure_7, Routes: closure_8 } = Constants);
-const ContactPermissions = fn(13243).ContactPermissions;
-let closure_10 = fn(7699).NotificationAuthorizationStatus;
+const ContactPermissions = fn(13269).ContactPermissions;
+let closure_10 = fn(7702).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_12 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
@@ -398,7 +398,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(8900).hasDeferredInvite,
+    shouldShowStep: fn(8908).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

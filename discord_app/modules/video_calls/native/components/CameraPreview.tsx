@@ -2,7 +2,7 @@
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06555_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06557_LegacyBaseButton.js";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
 import PictureInPicture from "PictureInPicture.tsx";
 import usePipVideoOrStreamDefault from "../usePipVideoOrStream.tsx";
@@ -17,24 +17,24 @@ import ChannelCallLifecycleStore from "../ChannelCallLifecycleStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(9604).useBestActiveChatInputContainerHeight;
-const useChannelCallStore = fn(10587).useChannelCallStore;
-const ChannelCallConstants = fn(10588);
+let closure_9 = fn(9620).useBestActiveChatInputContainerHeight;
+const useChannelCallStore = fn(10602).useChannelCallStore;
+const ChannelCallConstants = fn(10603);
 ({
   VoiceChatDrawerState: closure_14,
   VOICE_CALL_OVERLAY_HORIZONTAL_MARGIN: closure_15,
   VOICE_CALL_OVERLAY_VERTICAL_MARGIN: closure_16,
   VoiceCallOverlayType: closure_17,
 } = ChannelCallConstants);
-const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
-const CallConstants = fn(5174);
+const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
+const CallConstants = fn(5176);
 ({ ParticipantTypes: closure_19, isStreamParticipant: closure_20 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 let closure_24 = {
   code: "function CameraPreviewTsx1(){const{closeFunc,runOnJS}=this.__closure;if(closeFunc!=null){runOnJS(closeFunc)();}}",
 };
-let obj = { duration: 250, easing: fn(1200).STANDARD_EASING };
+let obj = { duration: 250, easing: fn(1202).STANDARD_EASING };
 const constants4 = { HIDE_PIP: "HIDE_PIP", HANDLE_THERMAL_EVENT: "HANDLE_THERMAL_EVENT" };
 const __initData = {
   code: "function CameraPreviewTsx2(){const{withTiming,marginTopState,TIMING_CONFIG,marginBottomState}=this.__closure;return{marginTop:withTiming(marginTopState,TIMING_CONFIG),marginBottom:withTiming(marginBottomState,TIMING_CONFIG)};}",
@@ -62,18 +62,18 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const stateFromStores = participantScreenIsFocused(504).useStateFromStores(tmp4, tmp5);
       const tmpResult = participantScreenIsFocused(504);
-      [r10037, tmp11] = reveal(stateFromStores(11136)(), 2);
+      [r10037, tmp11] = reveal(stateFromStores(11152)(), 2);
       dependencyMap = tmp11;
-      reveal = noop.useContext(participantScreenIsFocused(11131).RevealContext).reveal;
-      const tmp12 = stateFromStores(11144)();
+      reveal = noop.useContext(participantScreenIsFocused(11147).RevealContext).reveal;
+      const tmp12 = stateFromStores(11160)();
       noop = tmp12;
       const tmp13 = closure_9();
       closure_5 = tmp13;
-      const tmp14 = stateFromStores(11132)(channel.id);
+      const tmp14 = stateFromStores(11148)(channel.id);
       closure_6 = tmp14;
-      const tmp10 = reveal(stateFromStores(11136)(), 2);
-      const isScreenLandscape = participantScreenIsFocused(8545).useIsScreenLandscape();
-      const rect = stateFromStores(1631)();
+      const tmp10 = reveal(stateFromStores(11152)(), 2);
+      const isScreenLandscape = participantScreenIsFocused(8553).useIsScreenLandscape();
+      const rect = stateFromStores(1633)();
       const bottom = rect.bottom;
       const top = rect.top;
       ({ left, right } = rect);
@@ -85,8 +85,8 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp16 = cResult[3];
       }
-      const tmpResult5 = participantScreenIsFocused(8545);
-      let isViewingActivity = participantScreenIsFocused(11142).useIsViewingActivity(tmp16);
+      const tmpResult5 = participantScreenIsFocused(8553);
+      let isViewingActivity = participantScreenIsFocused(11158).useIsViewingActivity(tmp16);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelCallLifecycleStore];
         class Z {
@@ -102,14 +102,14 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         tmp18 = cResult[4];
         tmp19 = cResult[5];
       }
-      const tmpResult6 = participantScreenIsFocused(11142);
+      const tmpResult6 = participantScreenIsFocused(11158);
       const tmp21 = participantScreenIsFocused(504).useStateFromStores(tmp18, tmp19)[
         constants2.CAMERA_PREVIEW_PICTURE_IN_PICTURE
       ];
-      const OrientationType = participantScreenIsFocused(8669).OrientationType;
+      const OrientationType = participantScreenIsFocused(8677).OrientationType;
       const tmp22 = isScreenLandscape ? OrientationType.LANDSCAPE : OrientationType.PORTRAIT;
       closure_9 = tmp22;
-      let tmp23 = tmp8(6138)(tmp22);
+      let tmp23 = tmp8(6140)(tmp22);
       if (tmp23 == null) {
         let screenOrientation;
         if (tmp21 != null) {
@@ -152,7 +152,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj4 = {
-                        withTiming: participantScreenIsFocused(5152).withTiming,
+                        withTiming: participantScreenIsFocused(5154).withTiming,
                         marginTopState,
                         TIMING_CONFIG,
                         marginBottomState: first1,
@@ -160,7 +160,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp36.__closure = obj4;
                       tmp36.__workletHash = 17411027531876;
                       tmp36.__initData = __initData;
-                      const animatedStyle = participantScreenIsFocused(4906).useAnimatedStyle(tmp36);
+                      const animatedStyle = participantScreenIsFocused(4909).useAnimatedStyle(tmp36);
                       const _Symbol = Symbol;
                       if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
                         function handleHidePip() {
@@ -177,14 +177,14 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                       } else {
                         let items2 = cResult[20];
                       }
-                      const tmpResult8 = participantScreenIsFocused(4906);
+                      const tmpResult8 = participantScreenIsFocused(4909);
                       const ref = obj3.useRef(null);
                       [tmp42, closure_15] = tmp9(obj3.useState(null), 2);
                       if (constants4.HIDE_PIP === tmp42) {
                         const _Symbol4 = Symbol;
                         if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                           const obj6 = { text: null, onClick: null };
-                          const string2 = participantScreenIsFocused(1126).intl.string;
+                          const string2 = participantScreenIsFocused(1128).intl.string;
                           class Z {
                             constructor() {
                               return closure_12.getVoiceCallOverlayLayoutStates();
@@ -204,13 +204,13 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                           const _Symbol3 = Symbol;
                           if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                             const obj7 = { text: null, onClick: null };
-                            const string = participantScreenIsFocused(1126).intl.string;
+                            const string = participantScreenIsFocused(1128).intl.string;
                             class Z {
                               constructor() {
                                 return closure_12.getVoiceCallOverlayLayoutStates();
                               }
                             }
-                            obj7.onClick = participantScreenIsFocused(11155).openIgnoreThermalStateAlert;
+                            obj7.onClick = participantScreenIsFocused(11171).openIgnoreThermalStateAlert;
                             const items3 = [obj7];
                             cResult[22] = items3;
                           }
@@ -279,7 +279,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                               const obj8 = { channel, selfParticipant, pipParticipant: nonSelfPipParticipant };
-                              const tmp59 = closure_21(tmp8(11178), obj8);
+                              const tmp59 = closure_21(tmp8(11194), obj8);
                               cResult[33] = channel;
                               cResult[34] = nonSelfPipParticipant;
                               cResult[35] = selfParticipant;
@@ -312,7 +312,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                           const obj11 = { style: closure_5.absoluteFill };
                           obj10.children = closure_21(closure_6, obj11);
-                          tmp49 = closure_21(participantScreenIsFocused(6555).GestureDetector, obj10);
+                          tmp49 = closure_21(participantScreenIsFocused(6557).GestureDetector, obj10);
                         }
                         cResult[24] = memo;
                         cResult[25] = tmp42;
@@ -395,32 +395,32 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       const TIMING_CONFIG = participantScreenIsFocused(504);
       const items = [closure_12];
       const stateFromStores = TIMING_CONFIG.useStateFromStores(items, () => closure_12.isReactingToThermalState());
-      const tmp6 = reveal(stateFromStores(11136)(), 2);
+      const tmp6 = reveal(stateFromStores(11152)(), 2);
       dependencyMap = tmp7;
-      reveal = noop.useContext(participantScreenIsFocused(11131).RevealContext).reveal;
-      const tmp8 = stateFromStores(11144)();
+      reveal = noop.useContext(participantScreenIsFocused(11147).RevealContext).reveal;
+      const tmp8 = stateFromStores(11160)();
       noop = tmp8;
       const tmp9 = closure_9();
       closure_5 = tmp9;
-      const tmp10 = stateFromStores(11132)(channel.id);
+      const tmp10 = stateFromStores(11148)(channel.id);
       closure_6 = tmp10;
-      const isScreenLandscape = participantScreenIsFocused(8545).useIsScreenLandscape();
-      const rect = stateFromStores(1631)();
+      const isScreenLandscape = participantScreenIsFocused(8553).useIsScreenLandscape();
+      const rect = stateFromStores(1633)();
       const bottom = rect.bottom;
       const top = rect.top;
       ({ left, right } = rect);
-      const obj3 = participantScreenIsFocused(8545);
-      let isViewingActivity = participantScreenIsFocused(11142).useIsViewingActivity({ channelId: channel.id });
-      const obj4 = participantScreenIsFocused(11142);
+      const obj3 = participantScreenIsFocused(8553);
+      let isViewingActivity = participantScreenIsFocused(11158).useIsViewingActivity({ channelId: channel.id });
+      const obj4 = participantScreenIsFocused(11158);
       const obj5 = { channelId: channel.id };
       const items1 = [closure_12];
       const tmp13 = participantScreenIsFocused(504).useStateFromStores(items1, () =>
         closure_12.getVoiceCallOverlayLayoutStates(),
       )[constants2.CAMERA_PREVIEW_PICTURE_IN_PICTURE];
-      const OrientationType = participantScreenIsFocused(8669).OrientationType;
+      const OrientationType = participantScreenIsFocused(8677).OrientationType;
       const tmp14 = isScreenLandscape ? OrientationType.LANDSCAPE : OrientationType.PORTRAIT;
       closure_9 = tmp14;
-      const tmp15 = stateFromStores(6138)(tmp14);
+      const tmp15 = stateFromStores(6140)(tmp14);
       let tmp16 = tmp15;
       if (tmp15 == null) {
         screenOrientation = undefined;
@@ -475,9 +475,9 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         obj.marginBottom = timing.withTiming(first1, obj);
         return obj;
       };
-      const tmpResult = participantScreenIsFocused(4906);
+      const tmpResult = participantScreenIsFocused(4909);
       fn.__closure = {
-        withTiming: participantScreenIsFocused(5152).withTiming,
+        withTiming: participantScreenIsFocused(5154).withTiming,
         marginTopState: marginTop,
         TIMING_CONFIG,
         marginBottomState: first1,
@@ -487,7 +487,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = tmpResult.useAnimatedStyle(fn);
       const ref = noop.useRef(null);
       const obj7 = {
-        withTiming: participantScreenIsFocused(5152).withTiming,
+        withTiming: participantScreenIsFocused(5154).withTiming,
         marginTopState: marginTop,
         TIMING_CONFIG,
         marginBottomState: first1,
@@ -496,18 +496,18 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       if (constants4.HIDE_PIP === tmp27) {
         const obj8 = { text: null, onClick: null };
         function handleHidePip() {
-          const result = participantScreenIsFocused(11154).setPipEnabledWhileFocusedOnActivityOrStream(false);
+          const result = participantScreenIsFocused(11170).setPipEnabledWhileFocusedOnActivityOrStream(false);
         }
-        const intl2 = participantScreenIsFocused(1126).intl;
-        obj8.text = intl2.string(participantScreenIsFocused(1126).t.L3I0Jr);
+        const intl2 = participantScreenIsFocused(1128).intl;
+        obj8.text = intl2.string(participantScreenIsFocused(1128).t.L3I0Jr);
         obj8.onClick = handleHidePip;
         const items4 = [obj8];
         let items6 = items4;
       } else if (tmp28.HANDLE_THERMAL_EVENT === tmp27) {
         const obj9 = { text: null, onClick: null };
-        const intl = participantScreenIsFocused(1126).intl;
-        obj9.text = intl.string(participantScreenIsFocused(1126).t["1fRDnT"]);
-        obj9.onClick = participantScreenIsFocused(11155).openIgnoreThermalStateAlert;
+        const intl = participantScreenIsFocused(1128).intl;
+        obj9.text = intl.string(participantScreenIsFocused(1128).t["1fRDnT"]);
+        obj9.onClick = participantScreenIsFocused(11171).openIgnoreThermalStateAlert;
         const items5 = [obj9];
         items6 = items5;
       } else {
@@ -520,7 +520,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { gesture: tmp29, children: null };
         const obj11 = { style: closure_5.absoluteFill };
         obj10.children = closure_21(closure_6, obj11);
-        tmp32 = closure_21(participantScreenIsFocused(6555).GestureDetector, obj10);
+        tmp32 = closure_21(participantScreenIsFocused(6557).GestureDetector, obj10);
       }
       const items7 = [tmp32];
       const obj12 = { style: closure_5.absoluteFill, pointerEvents: "box-none", children: null };
@@ -540,12 +540,12 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp37 = closure_6;
       const tmp5Result4 = reveal(noop.useState(null), 2);
       const obj16 = { ref, disabled: null, trigger: null, rows: null, onOpen: null, onClose: null };
-      const tmp4Result = stateFromStores(11137);
+      const tmp4Result = stateFromStores(11153);
       if (isViewingActivity) {
         isViewingActivity = stateFromStores;
       }
       obj16.disabled = !isViewingActivity;
-      obj16.trigger = closure_21(stateFromStores(11178), {
+      obj16.trigger = closure_21(stateFromStores(11194), {
         channel,
         selfParticipant,
         pipParticipant: nonSelfPipParticipant,
@@ -557,14 +557,14 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       obj16.onClose = function onClose() {
         _undefined(null);
       };
-      obj15.children = closure_21(stateFromStores(11262), obj16);
+      obj15.children = closure_21(stateFromStores(11282), obj16);
       obj13.children = closure_21(tmp4Result, obj15);
       let str = "portrait";
       if (isScreenLandscape) {
         str = "landscape";
       }
       const obj17 = { children: null };
-      obj12.children = closure_21(stateFromStores(4906).View, obj13, str);
+      obj12.children = closure_21(stateFromStores(4909).View, obj13, str);
       items7[1] = closure_21(tmp37, obj12);
       obj17.children = items7;
       return closure_23(closure_22, obj17);
@@ -801,7 +801,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const tmpResult4 = tmp(504);
-          const isStreamFocused = tmp(11263).useIsStreamFocused(channel.id);
+          const isStreamFocused = tmp(11283).useIsStreamFocused(channel.id);
           if (cResult[9] !== channel.id) {
             class A {
               constructor(arg0) {
@@ -822,9 +822,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const tmpResult5 = tmp(11263);
+          const tmpResult5 = tmp(11283);
           const _Symbol3 = Symbol;
-          const isViewingActivity = tmp(11142).useIsViewingActivity(tmp27);
+          const isViewingActivity = tmp(11158).useIsViewingActivity(tmp27);
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             class A {
               constructor(arg0) {
@@ -916,7 +916,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp4;
           cResult[15] = tmp5;
           cResult[16] = U;
-          const tmpResult6 = tmp(11142);
+          const tmpResult6 = tmp(11158);
         }
       }
       const fn = function l() {
@@ -958,7 +958,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       closure_3 = undefined;
       let id;
-      const tmp3 = flag(10590)(channel);
+      const tmp3 = flag(10605)(channel);
       dependencyMap = tmp3;
       const items = [ChannelRTCStore, AuthenticationStore, ApplicationStreamingStore];
       const stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -1025,11 +1025,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = stateFromStores1;
       }
       const obj2 = channel(504);
-      const isStreamFocused = channel(11263).useIsStreamFocused(channel.id);
-      const tmp4Result = channel(11263);
-      const isViewingActivity = channel(11142).useIsViewingActivity({ channelId: channel.id });
+      const isStreamFocused = channel(11283).useIsStreamFocused(channel.id);
+      const tmp4Result = channel(11283);
+      const isViewingActivity = channel(11158).useIsViewingActivity({ channelId: channel.id });
       const obj3 = { channelId: channel.id };
-      const tmp4Result6 = channel(11142);
+      const tmp4Result6 = channel(11158);
       const items2 = [ChannelRTCStore, AuthenticationStore];
       const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
         id = AuthenticationStore.getId();
@@ -1165,7 +1165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag2) {
         flag2 = flag;
       }
-      tmp(11264)(channel);
+      tmp(11284)(channel);
       if (tmp10) {
         if (!stateFromStores4) {
           let tmp22 = null;

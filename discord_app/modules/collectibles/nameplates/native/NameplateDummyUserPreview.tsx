@@ -13,23 +13,23 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1200).AvatarSizes.XSMALL_20] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1202).AvatarSizes.XSMALL_20] = {
   padding: nativeDefault.space.PX_4,
   avatarMarginRight: nativeDefault.space.PX_4,
   placeholderBarHeight: 6,
 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1200).AvatarSizes.XSMALL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1202).AvatarSizes.XSMALL] = {
   padding: 6,
   avatarMarginRight: 6,
   placeholderBarHeight: 8,
 };
 let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1200).AvatarSizes.NORMAL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1202).AvatarSizes.NORMAL] = {
   padding: nativeDefault.space.PX_8,
   avatarMarginRight: nativeDefault.space.PX_8,
   placeholderBarHeight: 14,
 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = {
     container: {
@@ -118,7 +118,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
             if (cResult[7] === tmp6.nameplate) {
               let tmp13 = cResult[8];
             }
-            const tmp17 = importDefault(tmp11 ? 9241 : 9242);
+            const tmp17 = importDefault(tmp11 ? 9254 : 9255);
             if (cResult[9] === avatarSize) {
               if (cResult[10] === tmp6.avatar) {
                 if (cResult[11] === tmp17) {
@@ -228,7 +228,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
       const obj4 = { style: tmp3.avatarContainer, children: null };
       const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
       obj4.children = hasOwnProperty(native.Avatar, {
-        source: importDefault(stateFromStores ? 9241 : 9242),
+        source: importDefault(stateFromStores ? 9254 : 9255),
         size: NORMAL,
         "aria-hidden": true,
         style: tmp3.avatar,

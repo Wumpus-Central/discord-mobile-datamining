@@ -5,7 +5,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 const ReactCompilerGating = fn(558);
 function getHasAllocateBoostPermission(PermissionStore, guild) {
   let canResult = null;

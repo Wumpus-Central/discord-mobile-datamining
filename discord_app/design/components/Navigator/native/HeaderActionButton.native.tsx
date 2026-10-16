@@ -8,10 +8,10 @@ import Pressables from "../../../void/Pressables/native/Pressables.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" },
   text: { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" },

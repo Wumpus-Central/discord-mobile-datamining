@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanCommandText.tsx
 import c from "../../../../_runtime/00576_c.js";
-import escapeRegExpDefault from "../../../../_runtime/05015_escapeRegExp.js";
+import escapeRegExpDefault from "../../../../_runtime/05018_escapeRegExp.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,8 +28,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return found.map((name) => name.name);
       }, items);
     };
-function conjurePlanSlashCommandNames(dependencyMap) {
-  const found = dependencyMap.filter((item) => "/" === closure_1_0(closure_1_2[1]).conjurePlanCommandPrefix(item));
+function conjurePlanSlashCommandNames(arr) {
+  const found = arr.filter((item) => "/" === closure_1_0(closure_1_2[1]).conjurePlanCommandPrefix(item));
   return found.map((name) => name.name);
 }
 function conjurePlanCommandPattern(size) {
@@ -52,6 +52,17 @@ const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanComma
 export { conjurePlanSlashCommandNames };
 export const useConjurePlanSlashCommandNames = tmp2;
 export { conjurePlanCommandPattern };
+export const conjurePlanTextMentionsCommand = function conjurePlanTextMentionsCommand(item, arr) {
+  if (0 === arr.length) {
+    return false;
+  } else {
+    const mapped = arr.map(escapeRegExpDefault);
+    const _RegExp = RegExp;
+    const _HermesInternal = HermesInternal;
+    const regExp = new RegExp("(?<![\\p{L}\\p{N}/.:])/(?:" + mapped.join("|") + ")(?![\\p{L}\\p{N}_-])", "iu");
+    return regExp.test(item);
+  }
+};
 export const useConjurePlanCommandPattern = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjurePlanCommandPattern(arg0) {
       const cResult = c.c(2);

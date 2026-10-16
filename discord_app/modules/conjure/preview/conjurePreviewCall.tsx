@@ -1,6 +1,7 @@
 // discord_app/modules/conjure/preview/conjurePreviewCall.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
+let closure_0 = ["conjure-", "vibegrations-"];
 const prototype = function PreviewFrameCallTimeout(c0, timeoutMs) {
   const tmp2 = new tmp("preview frame did not answer " + c0 + " within " + timeoutMs + "ms", " within ");
   tmp2.name = "PreviewFrameCallTimeout";
@@ -10,17 +11,26 @@ class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewCall.tsx");
 
 export const previewCallTypes = function previewCallTypes(control) {
-  const combined = "vibegrations-" + control;
-  return { request: combined, result: "" + combined + "-result", ack: "" + combined + "-ack" };
+  closure_0 = control;
+  const mapped = closure_0.map((item) => "" + item + closure_0);
+  return {
+    requests: mapped,
+    results: mapped.map((item) => "" + item + "-result"),
+    acks: mapped.map((item) => "" + item + "-ack"),
+  };
 };
-export const isResultEnvelope = function isResultEnvelope(parsed, ack, id) {
+export const isResultEnvelope = function isResultEnvelope(parsed, acks, id) {
   if (typeof parsed === "object") {
     if (null != parsed) {
-      let tmp2 = parsed.type === ack;
-      if (tmp2) {
-        tmp2 = parsed.id === id;
+      const type = parsed.type;
+      let hasItem = typeof type === "string";
+      if (typeof type === "string") {
+        hasItem = acks.includes(parsed.type);
       }
-      return tmp2;
+      if (hasItem) {
+        hasItem = parsed.id === id;
+      }
+      return hasItem;
     }
   }
   return false;

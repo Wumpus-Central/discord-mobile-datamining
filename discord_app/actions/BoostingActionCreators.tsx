@@ -524,7 +524,7 @@ let closure_16 = async function _uncancelGuildBoostSlot() {
   closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: closure_129_1 });
   return closure_129_1;
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/BoostingActionCreators.tsx");
 

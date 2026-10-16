@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 function trackAppEmbedViewed(arg0) {
   ({ appId, linkType, referrerId, customId, guildId, channelId, messageId, appEmbedState } = arg0);
@@ -54,11 +54,11 @@ export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled
   ? function useTrackAppEmbedViewed(id) {
       const cResult = require("c").c(4);
       if (cResult[0] !== id) {
-        const result = tmp(7599).trackingConfigWithDefaults(id);
+        const result = tmp(7601).trackingConfigWithDefaults(id);
         cResult[0] = id;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(7599);
+        const tmpResult = tmp(7601);
       } else {
         tmp4 = cResult[1];
       }

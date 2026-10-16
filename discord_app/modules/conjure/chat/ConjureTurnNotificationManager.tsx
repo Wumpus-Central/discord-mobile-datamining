@@ -75,7 +75,7 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
       }
       let conjureWorkspaceGuildId = guildId;
       if (guildId == null) {
-        conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(VibegrationsChatStore);
+        conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(ConjureChatStore);
         const tmp8Result3 = ConjureUtils;
       }
       const obj4 = {
@@ -106,9 +106,9 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
     obj3 = conjureProjectMute;
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Routes: c10, StatusTypes: closure_11 } = Constants);
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const prototype = function ConjureTurnNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -121,7 +121,7 @@ const prototype = function ConjureTurnNotificationManager() {
 class prototype extends tmp3 {}
 const bit_message1 = "bit_message1";
 const message1 = "message1";
-const VibegrationsChatStore = "VibegrationsChatStore";
+const ConjureChatStore = "ConjureChatStore";
 let c20 = 0.4;
 const prototype1 = new prototype();
 const map = new Map();

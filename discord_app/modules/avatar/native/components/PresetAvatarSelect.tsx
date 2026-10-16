@@ -144,7 +144,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   },
 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 const obj10 = {
   container: { display: "flex", alignItems: "center", flex: 1 },
   buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" },
@@ -299,9 +299,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
-        let intl = tmp(1126).intl;
-        obj2.children = intl.string(tmp(1126).t.yP28YL);
-        const tmp7 = closure_4(tmp(5147).Text, obj2);
+        let intl = tmp(1128).intl;
+        obj2.children = intl.string(tmp(1128).t.yP28YL);
+        const tmp7 = closure_4(tmp(5149).Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -373,8 +373,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               selected: selectedAvatar === item,
               accessibilityLabel: null,
             };
-            const intl = onAvatarSelect(1126).intl;
-            obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1126).t["1K8jaQ"], {
+            const intl = onAvatarSelect(1128).intl;
+            obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1128).t["1K8jaQ"], {
               index: item + 1,
               description: dependencyMap2[item].label(),
             });
@@ -402,8 +402,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           selected: selectedAvatar === item,
           accessibilityLabel: null,
         };
-        const intl = onAvatarSelect(1126).intl;
-        obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1126).t["1K8jaQ"], {
+        const intl = onAvatarSelect(1128).intl;
+        obj2.accessibilityLabel = intl.formatToPlainString(onAvatarSelect(1128).t["1K8jaQ"], {
           index: item + 1,
           description: dependencyMap2[item].label(),
         });

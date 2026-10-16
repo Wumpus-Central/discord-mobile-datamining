@@ -343,11 +343,21 @@ export const previewFrameHandlers = {
   },
 };
 export const previewStepHandlers = {
-  preview_ready(turnId, projectId) {
+  preview_ready(integration_installed, projectId) {
     projectId = projectId.projectId;
-    conjureChatConnection.appendTurnStep(projectId, turnId);
-    const result = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true });
+    conjureChatConnection.appendTurnStep(projectId, integration_installed);
+    let tmp4;
+    if (null != integration_installed.integration_installed) {
+      if (null != integration_installed.bot_permissions_changed) {
+        ({ integration_installed: obj2.integrationInstalled, bot_permissions_changed: obj2.botPermissionsChanged } =
+          integration_installed);
+        tmp4 = { integrationInstalled: null, botPermissionsChanged: null };
+        const obj3 = { integrationInstalled: null, botPermissionsChanged: null };
+      }
+    }
+    const result = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true, install: tmp4 });
     result.catch(() => {});
+    const tmpResult = ConjurePublishActionCreators;
   },
 };
 export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(projectId, arg1) {

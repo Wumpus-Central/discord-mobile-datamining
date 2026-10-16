@@ -1,6 +1,6 @@
 // discord_app/modules/channel/native/openStaticChannelRoute.tsx
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import safeTransitionToDefault from "../../links/safeTransitionTo.native.tsx";
@@ -9,11 +9,11 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
-const Constants = fn(1085);
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
+const Constants = fn(1087);
 ({ GuildFeatures: closure_7, Routes: closure_8 } = Constants);
-const GuildOnboardingTab = fn(7010).GuildOnboardingTab;
-let closure_10 = fn(7006).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(7012).GuildOnboardingTab;
+let closure_10 = fn(7008).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/openStaticChannelRoute.tsx");
 
@@ -29,13 +29,13 @@ export default function openStaticChannelRoute(arg0) {
         const features3 = guild.features;
         if (features3.has(constants.COMMUNITY)) {
           const obj3 = { guildId, defaultTab: GuildOnboardingTab.BROWSE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11025, dependencyMap.paths), obj3, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11040, dependencyMap.paths), obj3, closure_10);
         }
       } else if ("customize" === staticRoute) {
         const features2 = guild.features;
         if (features2.has(constants.COMMUNITY)) {
           const obj5 = { guildId, defaultTab: GuildOnboardingTab.CUSTOMIZE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11025, dependencyMap.paths), obj5, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11040, dependencyMap.paths), obj5, closure_10);
         }
       } else {
         if ("home" !== staticRoute) {
@@ -52,17 +52,17 @@ export default function openStaticChannelRoute(arg0) {
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj6 = { role, guildId };
                       obj2.openLazy(
-                        asyncRequireImpl(11038, dependencyMap.paths),
+                        asyncRequireImpl(11053, dependencyMap.paths),
                         "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id,
                         obj6,
                       );
-                      const tmp9 = asyncRequireImpl(11038, dependencyMap.paths);
+                      const tmp9 = asyncRequireImpl(11053, dependencyMap.paths);
                     }
                   }
                 }
               }
               const obj8 = { guildId };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11047, dependencyMap.paths), obj8);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11062, dependencyMap.paths), obj8);
             } else {
               GlobalUtils.assertNever(staticRoute);
             }

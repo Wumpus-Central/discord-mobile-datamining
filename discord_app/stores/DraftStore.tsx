@@ -134,7 +134,7 @@ function handleChannelDelete(arg0) {
   }
   return false;
 }
-let closure_7 = fn(1085).MAX_MESSAGE_LENGTH_PREMIUM + 500;
+let closure_7 = fn(1087).MAX_MESSAGE_LENGTH_PREMIUM + 500;
 const DraftType = {
   ChannelMessage: 0,
   [0]: "ChannelMessage",

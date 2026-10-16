@@ -8,19 +8,19 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
-import BottomSheetModal from "../../../../_runtime/06527_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06529_BottomSheetModal.js";
 import completeAppLauncherOnboardingDefault from "onboarding/utils/completeAppLauncherOnboarding.tsx";
 import AppLauncherOnboardingLayerDefault from "onboarding/banner/AppLauncherOnboardingLayer.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(11748).KEYBOARD_ANIMATION_CONFIG;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const KEYBOARD_ANIMATION_CONFIG = fn(11772).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm },
   onboardingHeader: null,
@@ -419,20 +419,20 @@ export default noop.memo(
               let trackWithMetadata = require;
               let APP_LAUNCHER_EXPANDED = dependencyMap;
               if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-                let current = trackWithMetadata(10855).AppLauncherBottomSheetExpandReason.KEYBOARD;
-              } else if (arg2 === trackWithMetadata(6527).ANIMATION_SOURCE.GESTURE) {
-                current = trackWithMetadata(10855).AppLauncherBottomSheetExpandReason.GESTURE;
-              } else if (arg2 !== trackWithMetadata(6527).ANIMATION_SOURCE.USER) {
-                current = trackWithMetadata(10855).AppLauncherBottomSheetExpandReason.OTHER;
+                let current = trackWithMetadata(10870).AppLauncherBottomSheetExpandReason.KEYBOARD;
+              } else if (arg2 === trackWithMetadata(6529).ANIMATION_SOURCE.GESTURE) {
+                current = trackWithMetadata(10870).AppLauncherBottomSheetExpandReason.GESTURE;
+              } else if (arg2 !== trackWithMetadata(6529).ANIMATION_SOURCE.USER) {
+                current = trackWithMetadata(10870).AppLauncherBottomSheetExpandReason.OTHER;
               } else {
                 current = ref1.current;
               }
-              trackWithMetadata = trackWithMetadata(5166).trackWithMetadata;
+              trackWithMetadata = trackWithMetadata(5168).trackWithMetadata;
               APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
               const obj = { reason: current };
               trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
               ref1.current = undefined;
-              const trackWithMetadataResult = trackWithMetadata(5166);
+              const trackWithMetadataResult = trackWithMetadata(5168);
             }
           }
         }, items4);

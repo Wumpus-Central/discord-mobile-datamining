@@ -23,7 +23,7 @@ function areDestinationsEqual(arr, arg1) {
     )
   );
 }
-const NULL_STRING_CHANNEL_ID = fn(1085).NULL_STRING_CHANNEL_ID;
+const NULL_STRING_CHANNEL_ID = fn(1087).NULL_STRING_CHANNEL_ID;
 let closure_12 = [];
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -45,11 +45,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
-        const isFavoritesGuildIdResult = tmp(2090).isFavoritesGuildId(stateFromStores);
+        const isFavoritesGuildIdResult = tmp(2093).isFavoritesGuildId(stateFromStores);
         cResult[2] = stateFromStores;
         cResult[3] = isFavoritesGuildIdResult;
         let tmp8 = isFavoritesGuildIdResult;
-        const tmpResult3 = tmp(2090);
+        const tmpResult3 = tmp(2093);
       } else {
         tmp8 = cResult[3];
       }

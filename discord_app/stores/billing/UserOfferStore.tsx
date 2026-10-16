@@ -68,7 +68,7 @@ function handleSubscriptionStoreUpdate() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({
   ANNUAL_DISCOUNT_IDS: c10,
   CHURN_DISCOUNT_IDS: closure_11,
@@ -77,16 +77,16 @@ const PremiumConstants = fn(1392);
   SubscriptionTrials: closure_14,
   TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15,
 } = PremiumConstants);
-const OfferTriggerTypes = fn(1096).OfferTriggerTypes;
+const OfferTriggerTypes = fn(1098).OfferTriggerTypes;
 let closure_17 = performance.now();
 let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F918}\u{1F3FB}",
+  userDiscounts: "\u{1FAF7}\u{1F3FF}",
   isFetching: true,
   lastFetchSuccessful: null,
-  shouldTriggerOffer: 8,
+  shouldTriggerOffer: 15,
   cooldownExpirationTimestamps: {
     [OfferTriggerTypes.CHANNEL_OPENED]: 0,
     [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0,

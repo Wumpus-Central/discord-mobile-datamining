@@ -7,7 +7,7 @@ import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
 import CustomThemeMobileStore from "CustomThemeMobileStore.tsx";
 
 require = fn;
-const ThemeConstants = fn(1208);
+const ThemeConstants = fn(1210);
 ({ SystemThemeState: metroRequire, ActiveThemeType: closure_7 } = ThemeConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

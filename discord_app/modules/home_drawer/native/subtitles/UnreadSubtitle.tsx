@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subtitleStyles(576).c(16);
       ({ guild, channel, channelName, count } = arg0);
       const obj = subtitleStyles(576);
-      subtitleStyles = subtitleStyles(17363).useSubtitleStyles();
+      subtitleStyles = subtitleStyles(17397).useSubtitleStyles();
       if (cResult[0] === channel) {
         if (cResult[1] === guild) {
           let tmp5 = cResult[2];
@@ -55,13 +55,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const intl2 = tmp(1126).intl;
+          const intl2 = tmp(1128).intl;
           const obj4 = {
             channelName,
             count: diff,
             labelHook(children, id) {
               return jsx(
-                subtitleStyles(5147).Text,
+                subtitleStyles(5149).Text,
                 { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
                 id,
               );
@@ -83,10 +83,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               );
             },
             overflowHook(children, id) {
-              return jsx(subtitleStyles(5147).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
+              return jsx(subtitleStyles(5149).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
             },
           };
-          const formatResult = intl2.format(tmp(1126).t.OqlmU6, obj4);
+          const formatResult = intl2.format(tmp(1128).t.OqlmU6, obj4);
           cResult[6] = tmp5;
           cResult[7] = channelName;
           cResult[8] = subtitleStyles.subtitleText;
@@ -95,9 +95,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = formatResult;
           tmp11 = formatResult;
         }
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         const obj5 = { channelName, count: diff };
-        const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.gxD5I6, obj5);
+        const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.gxD5I6, obj5);
         cResult[3] = channelName;
         cResult[4] = diff;
         cResult[5] = formatToPlainStringResult;
@@ -105,17 +105,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let channelIconComponentWithGuild;
       if (null != channel) {
-        channelIconComponentWithGuild = tmp(8376).getChannelIconComponentWithGuild(channel, guild);
-        const tmpResult = tmp(8376);
+        channelIconComponentWithGuild = tmp(8384).getChannelIconComponentWithGuild(channel, guild);
+        const tmpResult = tmp(8384);
       }
       if (channelIconComponentWithGuild == null) {
-        channelIconComponentWithGuild = tmp(8425).TextIcon;
+        channelIconComponentWithGuild = tmp(8433).TextIcon;
       }
       cResult[0] = channel;
       cResult[1] = guild;
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
-      const obj2 = subtitleStyles(17363);
+      const obj2 = subtitleStyles(17397);
     }
   : function UnreadSubtitle(arg0) {
       ({ channel, channelName } = arg0);

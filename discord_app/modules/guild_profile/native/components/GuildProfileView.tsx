@@ -10,7 +10,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05451_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
 import guild_profile_GuildProfileUtils from "../GuildProfileUtils.tsx";
 import GuildProfileHeaderDefault from "GuildProfileHeader.tsx";
@@ -21,10 +21,10 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   colorBanner: { height: 140, width: "100%" },
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp5Result) {
         const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-        tmp5Result = closure_7(guildProfile(5147).Text, obj3);
+        tmp5Result = closure_7(guildProfile(5149).Text, obj3);
       }
       const items2 = [
         tmp5Result,

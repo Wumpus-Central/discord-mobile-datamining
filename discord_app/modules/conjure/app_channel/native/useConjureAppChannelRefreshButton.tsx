@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/app_channel/native/useConjureAppChannelRefreshButton.tsx
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
 import restartConjureAppFramesDefault from "../../preview/native/restartConjureAppFrames.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -39,8 +39,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = tmp(1126).intl;
-            const stringResult = intl.string(_modDef3862["p4B/7M"]);
+            const intl = tmp(1128).intl;
+            const stringResult = intl.string(_modDef3865["p4B/7M"]);
             cResult[2] = stringResult;
             let tmp9 = stringResult;
           } else {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[3] !== tmp7) {
             const obj3 = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-            RetryIcon = tmp(11537).RetryIcon;
+            RetryIcon = tmp(11560).RetryIcon;
             obj3.IconComponent = RetryIcon;
             obj3.onPress = tmp7;
             obj3.accessibilityLabel = tmp9;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp5) {
           const obj2 = {
             source: null,
-            IconComponent: tmp(11537).RetryIcon,
+            IconComponent: tmp(11560).RetryIcon,
             onPress() {
               application_id = application_id.application_id;
               if (application_id == null) {
@@ -79,8 +79,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
             accessibilityLabel: null,
           };
-          const intl = tmp(1126).intl;
-          obj2.accessibilityLabel = intl.string(_modDef3862["p4B/7M"]);
+          const intl = tmp(1128).intl;
+          obj2.accessibilityLabel = intl.string(_modDef3865["p4B/7M"]);
           tmp6 = obj2;
         }
       }

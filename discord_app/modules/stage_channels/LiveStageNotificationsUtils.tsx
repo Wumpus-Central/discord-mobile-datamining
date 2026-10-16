@@ -3,7 +3,7 @@ import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()

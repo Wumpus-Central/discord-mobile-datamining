@@ -81,11 +81,11 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
   return "test";
 };
 let View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const MessageSendLocation = fn(5144).MessageSendLocation;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageContainer: null,

@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const require = fn;
 let closure_3 = ["onCloseCallback"];
-const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
+const MEDIA_MODAL_KEY = fn(1087).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

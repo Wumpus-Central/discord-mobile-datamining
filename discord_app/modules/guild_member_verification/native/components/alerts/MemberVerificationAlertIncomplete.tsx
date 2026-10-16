@@ -82,20 +82,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           name = stateFromStores.name;
         }
         if (null != name) {
-          let intl2 = tmp(1126).intl;
+          let intl2 = tmp(1128).intl;
           let obj2 = { guildName: stateFromStores.name };
-          let formatToPlainStringResult = intl2.formatToPlainString(tmp(1126).t.f5Jaw7, obj2);
+          let formatToPlainStringResult = intl2.formatToPlainString(tmp(1128).t.f5Jaw7, obj2);
         } else {
-          let intl = tmp(1126).intl;
-          formatToPlainStringResult = intl.string(tmp(1126).t["0sTyEb"]);
+          let intl = tmp(1128).intl;
+          formatToPlainStringResult = intl.string(tmp(1128).t["0sTyEb"]);
         }
         cResult[14] = stateFromStores;
         cResult[15] = formatToPlainStringResult;
       } else {
         const _Symbol = Symbol;
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = tmp(1126).intl;
-          const stringResult = intl3.string(tmp(1126).t.h3aGmv);
+          const intl3 = tmp(1128).intl;
+          const stringResult = intl3.string(tmp(1128).t.h3aGmv);
           cResult[16] = stringResult;
           let tmp22 = stringResult;
         } else {
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         }
         if (cResult[17] !== tmp15) {
           const obj3 = { variant: "secondary", text: tmp22, onPress: tmp15 };
-          const tmp26 = closure_7(tmp(5439).Button, obj3);
+          const tmp26 = closure_7(tmp(5441).Button, obj3);
           cResult[17] = tmp15;
           cResult[18] = tmp26;
           let tmp24 = tmp26;
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         }
         const _Symbol2 = Symbol;
         if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl4 = tmp(1126).intl;
-          const stringResult1 = intl4.string(tmp(1126).t.OQFlFD);
+          const intl4 = tmp(1128).intl;
+          const stringResult1 = intl4.string(tmp(1128).t.OQFlFD);
           cResult[19] = stringResult1;
           let tmp27 = stringResult1;
         } else {
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         }
         if (cResult[20] !== tmp16) {
           const obj4 = { text: tmp27, variant: "destructive", onPress: tmp16 };
-          const tmp31 = closure_7(tmp(5439).Button, obj4);
+          const tmp31 = closure_7(tmp(5441).Button, obj4);
           cResult[20] = tmp16;
           cResult[21] = tmp31;
           let tmp29 = tmp31;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           }
           const obj5 = {};
           const merged = Object.assign(tmp6);
-          obj5.icon = tmp(7002).ListViewIcon;
+          obj5.icon = tmp(7004).ListViewIcon;
           obj5.header = tmp17;
           obj5.buttons = tmp32;
           const tmp43 = closure_7(MemberVerificationAlertDefault, obj5);
@@ -243,30 +243,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     name = stateFromStores.name;
   }
   if (null != name) {
-    let intl2 = tmp2(1126).intl;
+    let intl2 = tmp2(1128).intl;
     let obj2 = { guildName: stateFromStores.name };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1126).t.f5Jaw7, obj2);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1128).t.f5Jaw7, obj2);
   } else {
-    let intl = tmp2(1126).intl;
-    formatToPlainStringResult = intl.string(tmp2(1126).t["0sTyEb"]);
+    let intl = tmp2(1128).intl;
+    formatToPlainStringResult = intl.string(tmp2(1128).t["0sTyEb"]);
   }
   const obj3 = {};
   const obj = guildId(573);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7002).ListViewIcon;
+  obj3.icon = guildId(7004).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = tmp2(1126).intl;
-  obj5.text = intl3.string(guildId(1126).t.h3aGmv);
+  const intl3 = tmp2(1128).intl;
+  obj5.text = intl3.string(guildId(1128).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_7(guildId(5439).Button, obj5), ];
+  const items4 = [closure_7(guildId(5441).Button, obj5), ];
   const obj6 = { text: null, variant: "destructive", onPress: null };
-  const intl4 = tmp2(1126).intl;
-  obj6.text = intl4.string(guildId(1126).t.OQFlFD);
+  const intl4 = tmp2(1128).intl;
+  obj6.text = intl4.string(guildId(1128).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_7(guildId(5439).Button, obj6);
+  items4[1] = closure_7(guildId(5441).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_9(closure_8, obj4);
-  return closure_7(onClose(6335), obj3);
+  return closure_7(onClose(6337), obj3);
 });

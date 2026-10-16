@@ -7,8 +7,8 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
 require = fn;
-const FetchState = fn(4799).FetchState;
-const jsx = fn(21).jsx;
+const FetchState = fn(4802).FetchState;
+let jsx = fn(21).jsx;
 const redux = noop.createContext(undefined);
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -205,8 +205,7 @@ export const GroupListingsFetchContextProvider = ReactCompilerGating.isReactComp
       first = tmp3[0];
       closure_6 = tmp3[1];
       const items2 = [stateFromStores, guildId, includeSoftDeleted, countryCode, dontFetchWhileTrue, first];
-      let tmp6 = stateFromStores1 === FetchState.FETCHED;
-      const callback = stateFromStores.useCallback(() => {
+      const fetchGroupListingsForGuild = stateFromStores.useCallback(() => {
         if (null != guildId) {
           if (stateFromStores) {
             if (true !== dontFetchWhileTrue) {
@@ -224,11 +223,11 @@ export const GroupListingsFetchContextProvider = ReactCompilerGating.isReactComp
           }
         }
       }, items2);
-      if (tmp6) {
-        tmp6 = !first;
-      }
+      jsx = tmp6;
+      const items3 = [stateFromStores1 === fetchGroupListingsForGuild.FETCHED && !first, fetchGroupListingsForGuild];
+      let obj2 = guildId(countryCode[7]);
       return (
-        <redux.Provider value={{ listingsLoaded: tmp6, fetchGroupListingsForGuild: callback }}>
+        <redux.Provider value={stateFromStores.useMemo(() => ({ listingsLoaded, fetchGroupListingsForGuild }), items3)}>
           {children}
         </redux.Provider>
       );

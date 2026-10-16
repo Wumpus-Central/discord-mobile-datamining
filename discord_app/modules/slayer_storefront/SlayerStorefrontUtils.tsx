@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06200_keysSorter.js";
+import keysSorter from "../../../_runtime/06202_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -156,18 +156,18 @@ function getSKUShareURL(guildId, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7151).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7153);
+let closure_4 = fn(7153).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7155);
 ({
   getChannelsGameShopPrefix: closure_9,
   STOREFRONT_MARKETING_GUILD_ID: c10,
   STOREFRONT_MARKETING_GUILD_ID_TEST: closure_11,
 } = SocialLayerStorefrontConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: closure_12, Routes: map1, SKUProductLines: closure_14 } = Constants);
-const CollectibleShopTab = fn(1087).CollectibleShopTab;
+const CollectibleShopTab = fn(1089).CollectibleShopTab;
 let str = "jpg";
-if (fn(5860).SUPPORTS_WEBP) {
+if (fn(5862).SUPPORTS_WEBP) {
   str = "webp";
 }
 fn(558);
@@ -627,8 +627,8 @@ export const getForwardedStorefrontEmbedShareURL = function getForwardedStorefro
   }
   GAME_SHOPResult = map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId);
 };
-export const canSeeGameShop = function canSeeGameShop(guildId) {
-  guild = GuildStore.getGuild(guildId);
+export const canSeeGameShop = function canSeeGameShop(id) {
+  guild = GuildStore.getGuild(id);
   let tmp2 = null != guild;
   if (tmp2) {
     tmp2 = hasSocialLayerStorefront(guild);

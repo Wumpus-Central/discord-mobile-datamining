@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
@@ -25,7 +25,7 @@ let obj2 = {
   titleSection: null,
 };
 const merged = Object.assign(
-  TextStyles(fn(1085).Fonts.PRIMARY_MEDIUM, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+  TextStyles(fn(1087).Fonts.PRIMARY_MEDIUM, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
 obj2.data = {};
 obj2.titleSection = { flexDirection: "row", alignItems: "center", marginBottom: 16 };

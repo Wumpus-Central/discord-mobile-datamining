@@ -10,7 +10,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: metroRequire, Permissions: closure_7, RPCErrors: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");
@@ -57,9 +57,9 @@ export const canBotScopeReadMessages = function canBotScopeReadMessages(socket, 
     );
   }
 };
-export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(context, arg1) {
+export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(context, guild_id) {
   if (isPostMessageSocketDefault(context)) {
-    if (arg1 !== getGuildIdForEmbeddedSurfaceDefault(context.context.surface)) {
+    if (guild_id !== getGuildIdForEmbeddedSurfaceDefault(context.context.surface)) {
       const obj2 = { errorCode: constants3.INVALID_PERMISSIONS };
       const tmp14 = new RPCErrorDefault(obj2, "Guild not in embedded context");
       throw tmp14;

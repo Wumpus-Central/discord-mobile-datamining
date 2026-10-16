@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
 const CTATypes = {
   IS_MEMBER: 0,

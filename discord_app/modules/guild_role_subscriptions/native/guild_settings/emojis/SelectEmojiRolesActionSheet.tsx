@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const Fonts = fn(1096).Fonts;
+const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const itemSize = fn(1204).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(5151);
+const itemSize = fn(1206).FORM_ROW_VERTICAL_PADDING + 22;
+const createStyles = fn(5153);
 let obj2 = {
   list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   label: { flex: 1, flexDirection: "row", alignItems: "center" },
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[2];
       }
       let obj = onSave(576);
-      const subscriptionListingsForGuild = onSave(16153).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
+      const subscriptionListingsForGuild = onSave(16186).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         function toggleRole(arg0) {
           closure_0 = arg0;
@@ -154,9 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         let tmp17 = cResult[17];
                       }
                       if (cResult[18] !== tmp5) {
-                        let intl = tmp(1126).intl;
+                        let intl = tmp(1128).intl;
                         const string = intl.string;
-                        let t = tmp(1126).t;
+                        let t = tmp(1128).t;
                         if (tmp5) {
                           t = t["3UB9ad"];
                           let stringResult = string(t);
@@ -177,10 +177,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const _Symbol = Symbol;
                               if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                                const intl2 = tmp(1126).intl;
-                                const stringResult1 = intl2.string(tmp(1126).t.JPU0EF);
-                                const intl3 = tmp(1126).intl;
-                                const stringResult2 = intl3.string(tmp(1126).t.MZusPv);
+                                const intl2 = tmp(1128).intl;
+                                const stringResult1 = intl2.string(tmp(1128).t.JPU0EF);
+                                const intl3 = tmp(1128).intl;
+                                const stringResult2 = intl3.string(tmp(1128).t.MZusPv);
                                 cResult[27] = stringResult1;
                                 cResult[28] = stringResult2;
                                 let tmp29 = stringResult2;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                               if (cResult[29] !== tmp25) {
                                 let obj3 = { title: tmp28, subtitle: tmp29, trailing: tmp25 };
-                                const tmp34 = closure_6(tmp(7060).BottomSheetTitleHeader, obj3);
+                                const tmp34 = closure_6(tmp(7062).BottomSheetTitleHeader, obj3);
                                 cResult[29] = tmp25;
                                 cResult[30] = tmp34;
                                 let tmp32 = tmp34;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     onDismiss: onCancel,
                                     children: tmp36,
                                   };
-                                  const tmp43 = closure_6(tmp(7118).ActionSheet, obj4);
+                                  const tmp43 = closure_6(tmp(7120).ActionSheet, obj4);
                                   cResult[37] = tmp32;
                                   cResult[38] = onCancel;
                                   cResult[39] = tmp36;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 sections: tmp35,
                                 renderItem: tmp15,
                               };
-                              const tmp40 = closure_6(emoji(6981), obj5);
+                              const tmp40 = closure_6(emoji(6983), obj5);
                               cResult[33] = tmp15;
                               cResult[34] = tmp4.list;
                               cResult[35] = tmp35;
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             accessibilityRole: "button",
                             children: tmp22,
                           };
-                          const tmp27 = closure_6(tmp(6405).PressableOpacity, obj6);
+                          const tmp27 = closure_6(tmp(6407).PressableOpacity, obj6);
                           cResult[23] = tmp14;
                           cResult[24] = tmp22;
                           cResult[25] = tmp16;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp25 = tmp27;
                         }
                         let obj7 = { style: tmp17, children: cResult[19] };
-                        const tmp24 = closure_6(tmp(1200).LegacyText, obj7);
+                        const tmp24 = closure_6(tmp(1202).LegacyText, obj7);
                         cResult[20] = tmp17;
                         cResult[21] = cResult[19];
                         cResult[22] = tmp24;
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = first;
       cResult[6] = handleSave;
       tmp14 = handleSave;
-      const tmpResult = onSave(16153);
+      const tmpResult = onSave(16186);
     }
   : function SelectEmojiRolesActionSheet(arg0) {
       ({ onSave: require, emoji } = arg0);
@@ -476,6 +476,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const items1 = [subscriptionListingsForGuild.length];
       obj6.sections = items1;
-      obj5.children = closure_6(emoji(6981), obj6);
+      obj5.children = closure_6(emoji(6983), obj6);
       return closure_6(ActionSheet.ActionSheet, obj5);
     };

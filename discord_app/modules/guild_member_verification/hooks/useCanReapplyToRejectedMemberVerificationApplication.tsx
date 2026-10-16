@@ -8,7 +8,7 @@ import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx",

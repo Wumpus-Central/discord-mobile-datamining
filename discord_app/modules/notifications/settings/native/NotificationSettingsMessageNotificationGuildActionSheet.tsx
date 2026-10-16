@@ -8,9 +8,9 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(6183).UnreadSetting;
-let closure_6 = fn(1095).GuildNotificationSettingsFlags;
+const UserNotificationSettings = fn(1087).UserNotificationSettings;
+const UnreadSetting = fn(6185).UnreadSetting;
+let closure_6 = fn(1097).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-          const tmp12 = jsx(unread(13447), {
+          const tmp12 = jsx(unread(13473), {
             context: "guild",
             value: notification,
             allMessagesSubLabel: tmp5,
@@ -82,8 +82,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stringResult;
       if (notification !== UserNotificationSettings.ALL_MESSAGES) {
         if (unread !== UnreadSetting.ALL_MESSAGES) {
-          const intl = tmp(1126).intl;
-          stringResult = intl.string(tmp(1126).t.eP8yWU);
+          const intl = tmp(1128).intl;
+          stringResult = intl.string(tmp(1128).t.eP8yWU);
         }
       }
       cResult[0] = notification;
@@ -102,8 +102,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("notificationSettingsGuildFlagUtils");
       if (notification !== UserNotificationSettings.ALL_MESSAGES) {
         if (unread !== UnreadSetting.ALL_MESSAGES) {
-          const intl = tmp(1126).intl;
-          stringResult = intl.string(tmp(1126).t.eP8yWU);
+          const intl = tmp(1128).intl;
+          stringResult = intl.string(tmp(1128).t.eP8yWU);
         }
       }
       obj2.allMessagesSubLabel = stringResult;
@@ -126,5 +126,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           NotificationLabel.notifications(message_notifications),
         );
       };
-      return jsx(unread(13447), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+      return jsx(unread(13473), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
     };

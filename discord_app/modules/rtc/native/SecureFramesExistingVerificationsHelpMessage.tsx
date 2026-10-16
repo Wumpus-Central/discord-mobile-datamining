@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = cResult[7];
             }
             if (cResult[8] !== tmp9) {
-              const obj3 = { type: "info", message: tmp9, role: "static" };
-              const tmp13 = jsx(InlineNotice.InlineNotice, { type: "info", message: tmp9, role: "static" });
+              const obj3 = { type: "info", message: tmp9, role: "none" };
+              const tmp13 = jsx(InlineNotice.InlineNotice, { type: "info", message: tmp9, role: "none" });
               cResult[8] = tmp9;
               cResult[9] = tmp13;
               let tmp11 = tmp13;
@@ -83,11 +83,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { style: null, children: null };
         const items = [tmp.container, style];
         obj2.style = items;
-        const obj3 = { type: "info", message: null, role: "static" };
+        const obj3 = { type: "info", message: null, role: "none" };
         const intl = util.intl;
         const obj4 = { count: secureFramesUserVerifiedKeysCount };
         obj3.message = intl.format(util.t.uZDkz0, obj4);
-        obj2.children = jsx(InlineNotice.InlineNotice, { type: "info", message: null, role: "static" });
+        obj2.children = jsx(InlineNotice.InlineNotice, { type: "info", message: null, role: "none" });
         tmp5 = <View style={null}>{null}</View>;
       }
       return tmp5;

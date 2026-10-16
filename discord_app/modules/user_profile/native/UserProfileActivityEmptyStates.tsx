@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1085).UserSettingsSections;
+const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
@@ -83,7 +83,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -271,7 +271,7 @@ const memoResult = noop.memo(
                   return;
                 }
               }
-              const stringResult = obj3.string(tmp(1126).t["g33r/P"]);
+              const stringResult = obj3.string(tmp(1128).t["g33r/P"]);
               cResult[9] = stringResult;
               const tmp15 = stringResult;
             } else {
@@ -298,7 +298,7 @@ const memoResult = noop.memo(
                 }
               }
               const obj4 = { size: "sm", variant: "secondary", text: tmp15, onPress: A };
-              const tmp18 = closure_7(tmp(5439).Button, obj4);
+              const tmp18 = closure_7(tmp(5441).Button, obj4);
               cResult[10] = A;
               cResult[11] = tmp18;
             } else {
@@ -351,28 +351,28 @@ const memoResult = noop.memo(
           }
         }
         let obj = name(576);
-        name = user(5469).getName(guildId, channelId, user);
-        const intl = tmp(1126).intl;
-        const formatToPlainStringResult = intl.formatToPlainString(name(1126).t.sjSitP, { name });
+        name = user(5471).getName(guildId, channelId, user);
+        const intl = tmp(1128).intl;
+        const formatToPlainStringResult = intl.formatToPlainString(name(1128).t.sjSitP, { name });
         cResult[0] = channelId;
         cResult[1] = guildId;
         cResult[2] = user;
         cResult[3] = name;
         cResult[4] = formatToPlainStringResult;
         tmp6 = formatToPlainStringResult;
-        let obj2 = user(5469);
+        let obj2 = user(5471);
       }
     : function UserProfileActivityEmptyOtherUser(user) {
         user = user.user;
         let name;
         ({ guildId, channelId } = user);
         const tmp = closure_10();
-        name = name(5469).getName(guildId, channelId, user);
-        const intl = user(1126).intl;
-        let obj = name(5469);
+        name = name(5471).getName(guildId, channelId, user);
+        const intl = user(1128).intl;
+        let obj = name(5471);
         items = [user.id];
         let obj2 = {
-          heading: intl.formatToPlainString(user(1126).t.sjSitP, { name }),
+          heading: intl.formatToPlainString(user(1128).t.sjSitP, { name }),
           bodyText: _slicedToArray(
             noop.useState(() => {
               let sampleResult = _mod12.sample(items);
@@ -392,10 +392,10 @@ const memoResult = noop.memo(
           ActionSheetActionCreatorsDefault.hideAllActionSheets();
         }, items);
         const obj4 = { size: "sm", variant: "secondary", text: null, onPress: null };
-        const intl2 = user(1126).intl;
-        obj4.text = intl2.string(user(1126).t["g33r/P"]);
+        const intl2 = user(1128).intl;
+        obj4.text = intl2.string(user(1128).t["g33r/P"]);
         obj4.onPress = callback;
-        obj3.children = closure_7(user(5439).Button, obj4);
+        obj3.children = closure_7(user(5441).Button, obj4);
         obj2.children = closure_7(View, obj3);
         return closure_7(closure_11, obj2);
       },

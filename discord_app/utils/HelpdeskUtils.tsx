@@ -4,7 +4,7 @@ import getLocalizedLinkDefault from "../modules/links/getLocalizedLink.tsx";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 const LocalizedLinks = Constants.LocalizedLinks;
 let combined = "https://" + Constants.SUPPORT_DOMAIN;
 let closure_6 = "https://" + Constants.SUPPORT_DEV_DOMAIN;

@@ -11,12 +11,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7365).useNativeCheckoutStore;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const GiftingOrigin = fn(1392).GiftingOrigin;
+let useNativeCheckoutStore = fn(7367).useNativeCheckoutStore;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const GiftingOrigin = fn(1394).GiftingOrigin;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: null, legalCopy: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);

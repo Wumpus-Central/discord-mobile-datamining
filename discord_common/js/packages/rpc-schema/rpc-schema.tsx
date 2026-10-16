@@ -9,8 +9,8 @@ export const CONTEXT_MENU_ICON_NAMES = contextMenuIcons.CONTEXT_MENU_ICON_NAMES;
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
-  let obj = { scope: scope.scope, handler: scope.handler };
-  const tmp = request(15392).RPCCommandSchemas[AUTHENTICATE];
+  let obj = { scope: scope.scope, validateAccess: scope.validateAccess, handler: scope.handler };
+  const tmp = request(15423).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;

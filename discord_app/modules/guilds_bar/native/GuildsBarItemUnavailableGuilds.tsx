@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef17377 from "../../../../_runtime/metro/17377__.js";
+import _modDef17411 from "../../../../_runtime/metro/17411__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -57,9 +57,9 @@ export default noop.memo(
           return null;
         } else {
           if (cResult[2] !== stateFromStores) {
-            let intl = tmp(1126).intl;
+            let intl = tmp(1128).intl;
             let obj2 = { count: stateFromStores };
-            const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t["MEpX+2"], obj2);
+            const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t["MEpX+2"], obj2);
             cResult[2] = stateFromStores;
             cResult[3] = formatToPlainStringResult;
             let tmp8 = formatToPlainStringResult;
@@ -111,10 +111,10 @@ export default noop.memo(
                 return;
               }
             }
-            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17377 };
+            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17411 };
             const tmp14 = jsx(FastImageDefault, {
               style: unavailableGuilds.unavailableGuildsIcon,
-              source: _modDef17377,
+              source: _modDef17411,
             });
             cResult[6] = unavailableGuilds.unavailableGuildsIcon;
             cResult[7] = tmp14;
@@ -190,9 +190,9 @@ export default noop.memo(
             style: null,
             children: null,
           };
-          let intl = tmp2(1126).intl;
+          let intl = tmp2(1128).intl;
           const obj3 = { count: stateFromStores };
-          obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1126).t["MEpX+2"], obj3);
+          obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1128).t["MEpX+2"], obj3);
           obj2.onPress = function onPress() {
             const obj2 = { title: null, body: null };
             const intl = util.intl;
@@ -202,8 +202,8 @@ export default noop.memo(
             AlertActionCreatorsDefault.show(obj2);
           };
           obj2.style = tmp.unavailableGuilds;
-          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17377 };
-          obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17377 });
+          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17411 };
+          obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17411 });
           tmp5 = (
             <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
               {null}

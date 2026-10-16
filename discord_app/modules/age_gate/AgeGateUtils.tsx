@@ -37,9 +37,9 @@ function getLargeGuildUnderageContent(isAgeVerified) {
     tmp5 = require;
   }
   const obj = { description: stringResult, agreement: null };
-  const intl2 = tmp5(1126).intl;
+  const intl2 = tmp5(1128).intl;
   const string2 = intl2.string;
-  const t2 = tmp5(1126).t;
+  const t2 = tmp5(1128).t;
   if (isAgeVerified) {
     let string2Result = string2(t2.Zt4Mf4);
   } else {
@@ -571,7 +571,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
       const tmpResult4 = require("initialize");
       let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-        tmp(6136).AgeGatedFeature.AGE_GATED_SPACES,
+        tmp(6138).AgeGatedFeature.AGE_GATED_SPACES,
       );
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];

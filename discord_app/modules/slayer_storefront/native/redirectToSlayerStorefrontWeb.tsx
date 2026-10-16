@@ -108,7 +108,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
     }
   }
 };
-const Routes = fn(1085).Routes;
+const Routes = fn(1087).Routes;
 let closure_5 = new LoggerDefault("redirectToSlayerStorefrontWeb");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/redirectToSlayerStorefrontWeb.tsx");

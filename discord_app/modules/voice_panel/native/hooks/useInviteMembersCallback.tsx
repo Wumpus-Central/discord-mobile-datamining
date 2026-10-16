@@ -7,7 +7,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticsPages: hasOwnProperty, InstantInviteSources: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

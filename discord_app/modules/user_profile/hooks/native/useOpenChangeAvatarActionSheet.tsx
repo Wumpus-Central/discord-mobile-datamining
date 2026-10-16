@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/native/useOpenChangeAvatarActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ProfileCustomizationUtils from "../../../profile_customization/ProfileCustomizationUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -74,7 +74,7 @@ export default function useOpenChangeAvatarActionSheet(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = editAvatarDecoration;
-    const tmp3 = asyncRequireImpl(15520, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(15556, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;

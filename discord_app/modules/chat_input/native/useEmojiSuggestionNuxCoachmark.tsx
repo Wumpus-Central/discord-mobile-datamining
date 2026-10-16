@@ -5,7 +5,7 @@ import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01645_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01647_KeyboardChatScrollView.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import useCustomKeyboardHeightDefault from "../../keyboard/native/useCustomKeyboardHeight.tsx";
@@ -16,7 +16,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const EmojiSuggestionNuxCoachmark = "EmojiSuggestionNuxCoachmark";
 let ReactCompilerGating = fn(558);
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] !== tmp7) {
         if (tmp7) {
-          const items = [tmp2(2049).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+          const items = [tmp2(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
           let items1 = items;
         } else {
           items1 = [];
@@ -93,11 +93,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = tmp7;
         cResult[1] = items1;
       } else {
-        const tmp5Result = _slicedToArray(tmp2(7321).useSelectedDismissibleContent(cResult[1]), 2);
+        const tmp5Result = _slicedToArray(tmp2(7323).useSelectedDismissibleContent(cResult[1]), 2);
         _require = tmp12;
-        const tmp13 = tmp5Result[0] === tmp2(2049).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
+        const tmp13 = tmp5Result[0] === tmp2(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
         closure_1 = tmp13;
-        const tmp2Result = tmp2(7321);
+        const tmp2Result = tmp2(7323);
         if (cResult[2] !== tmp13) {
           const fn = function f() {
             if (closure_1) {
@@ -119,10 +119,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === tmp5Result[1]) {
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = tmp2(1126).intl;
-            const stringResult = intl.string(tmp2(1126).t.l8nVB9);
-            const intl2 = tmp2(1126).intl;
-            const stringResult1 = intl2.string(tmp2(1126).t.ujfS5V);
+            const intl = tmp2(1128).intl;
+            const stringResult = intl.string(tmp2(1128).t.l8nVB9);
+            const intl2 = tmp2(1128).intl;
+            const stringResult1 = intl2.string(tmp2(1128).t.ujfS5V);
             cResult[8] = stringResult;
             cResult[9] = stringResult1;
             let tmp22 = stringResult1;
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_0(ContentDismissActionType.USER_DISMISS);
               }
             }
-            const stringResult2 = obj4.string(tmp2(1126).t["NX+WJN"]);
+            const stringResult2 = obj4.string(tmp2(1128).t["NX+WJN"]);
             cResult[13] = stringResult2;
             const tmp28 = stringResult2;
           } else {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp3 = _slicedToArray(noop.useState(arg1), 2);
       if (tmp4) {
-        const items = [tmp7(2049).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+        const items = [tmp7(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
         let items1 = items;
       } else {
         items1 = [];

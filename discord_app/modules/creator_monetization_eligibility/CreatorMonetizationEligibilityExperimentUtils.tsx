@@ -5,7 +5,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import BillingInfoStore from "../../stores/billing/BillingInfoStore.tsx";
 
 require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const set = new Set(["US"]);
 fn(558);
 const ReactCompilerGating = fn(558);

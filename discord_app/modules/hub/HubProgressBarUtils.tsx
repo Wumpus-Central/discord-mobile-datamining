@@ -21,8 +21,8 @@ function convertHubProgressFlagSetToSet(stateFromStores) {
   }
   return set;
 }
-const HUB_PROGRESS_STEP_ORDER = fn(8913).HUB_PROGRESS_STEP_ORDER;
-const PlatformTypes = fn(1085).PlatformTypes;
+const HUB_PROGRESS_STEP_ORDER = fn(8921).HUB_PROGRESS_STEP_ORDER;
+const PlatformTypes = fn(1087).PlatformTypes;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useContactSyncEverEnabled() {

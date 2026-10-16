@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/options/user/AppLauncherUserOption.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherSelectOptionFormRowDefault from "../../base_components/AppLauncherSelectOptionFormRow.tsx";
 import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
@@ -13,7 +13,7 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -78,7 +78,7 @@ export default function AppLauncherUserOption(option) {
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
     obj2.openLazy(
-      asyncRequireImpl(11933, dependencyMap.paths),
+      asyncRequireImpl(11957, dependencyMap.paths),
       AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY,
       {
         option,
@@ -102,12 +102,12 @@ export default function AppLauncherUserOption(option) {
       user: tmp8,
       guildId: guild_id,
       animate: !stateFromStores,
-      size: tmp2(1200).AvatarSizes.REFRESH_MEDIUM_32,
+      size: tmp2(1202).AvatarSizes.REFRESH_MEDIUM_32,
     };
-    let tmp9Result = tmp9(tmp2(1200).Avatar, obj3);
+    let tmp9Result = tmp9(tmp2(1202).Avatar, obj3);
   } else {
     const obj4 = {
-      icon: tmp9(tmp2(10519).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
+      icon: tmp9(tmp2(10534).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
       wrapperStyle: tmp.iconWrapper,
     };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj4);
@@ -121,7 +121,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(5147).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(5149).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

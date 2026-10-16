@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/secrets/ConjureSecretRequestState.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,17 +10,48 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3862.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3865.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3862.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3865.sMQt5O);
   }
   return tmp5;
 }
+function isSavedMcpCard(secretRequest) {
+  secretRequest = secretRequest.secretRequest;
+  let over_mcp;
+  if (secretRequest != null) {
+    over_mcp = secretRequest.over_mcp;
+  }
+  let tmp2 = true === over_mcp;
+  if (tmp2) {
+    let tmp3 = true !== secretRequest.finished;
+    if (!tmp3) {
+      let hasItem = null != secretRequest.request_id;
+      if (hasItem) {
+        hasItem = set.has(secretRequest.request_id);
+      }
+      tmp3 = hasItem;
+    }
+    tmp2 = tmp3;
+  }
+  return tmp2;
+}
+let set = new Set();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
 
+export const markMcpSecretRequestSaved = function markMcpSecretRequestSaved(request_id) {
+  if (null != request_id) {
+    set.add(request_id);
+  }
+};
+export const unmarkMcpSecretRequestSaved = function unmarkMcpSecretRequestSaved(request_id) {
+  if (null != request_id) {
+    set.delete(request_id);
+  }
+};
 export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores11) {
   let set1 = null;
   if (null != stateFromStores11) {
@@ -36,7 +67,7 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
   if (0 <= diff) {
     while (true) {
       let tmp7 = memo[diff];
-      let render_id = flag;
+      set = flag;
       let tmp10 = flag;
       let tmp11 = flag2;
       if (null != tmp7) {
@@ -49,14 +80,18 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
           if (fields == null) {
             fields = [];
           }
-          tmp10 = render_id;
+          tmp10 = set;
           tmp11 = flag2;
           if (0 !== fields.length) {
             let obj2 = conjureChatTurns;
-            let set = obj2.turnSettled(tmp7);
-            tmp10 = render_id;
+            tmp10 = set;
             tmp11 = flag2;
-            if (set) {
+            if (obj2.turnSettled(tmp7)) {
+              let render_id = set;
+              if (!set) {
+                set = isSavedMcpCard;
+                render_id = isSavedMcpCard(tmp7);
+              }
               if (render_id) {
                 if (null == set1) {
                   let result = map.set(tmp7.render_id, "pending");
@@ -83,8 +118,8 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
             }
           }
         } else {
-          let tmp12 = render_id;
-          if (!render_id) {
+          let tmp12 = set;
+          if (!set) {
             tmp12 = isSecretsSavedMessage(tmp7);
           }
           tmp10 = tmp12;

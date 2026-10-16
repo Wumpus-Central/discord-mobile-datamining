@@ -14,7 +14,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
 require = fn;
-const ME = fn(1085).ME;
+const ME = fn(1087).ME;
 const jsx = fn(21).jsx;
 const config = {
   onPress() {
@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "critical-primary",
-          externalChildren: "sm",
+          label: "onload",
+          externalChildren: null,
           expandedChildren: null,
-          children: null,
+          children: "half a minute",
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "critical-primary",
-          externalChildren: "sm",
+          label: "onload",
+          externalChildren: null,
           expandedChildren: null,
-          children: null,
+          children: "half a minute",
         });
       },
 );

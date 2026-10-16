@@ -5,9 +5,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import GuildBoostSlotStore from "../../../../stores/billing/GuildBoostSlotStore.tsx";
 
-const GuildBoostingSubscribeButtonDefault = tmp13(7339);
+const GuildBoostingSubscribeButtonDefault = tmp13(7341);
 const require = fn;
-const AnalyticsSections = fn(1085).AnalyticsSections;
+const AnalyticsSections = fn(1087).AnalyticsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -204,13 +204,13 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
       const stateFromStores1 = guildId(504).useStateFromStores(items1, () => boostSlots.boostSlots);
       let obj2 = guildId(504);
       const tmp5 = stateFromStores1;
-      const tmp6 = stateFromStores1(7330)({ forceFetch: true });
+      const tmp6 = stateFromStores1(7332)({ forceFetch: true });
       const items2 = [UserStore];
       const stateFromStores2 = guildId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
       if (null != stateFromStores2) {
         let UNSPECIFIED = stateFromStores2.premiumGroupRole;
       } else {
-        UNSPECIFIED = tmp(1398).PremiumSubscriptionGroupRole.UNSPECIFIED;
+        UNSPECIFIED = tmp(1400).PremiumSubscriptionGroupRole.UNSPECIFIED;
       }
       const items3 = [stateFromStores1];
       const memo = noop.useMemo(() => {
@@ -227,7 +227,7 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
           onAvailableSlotPress: tmp9,
           premiumGroupRole: UNSPECIFIED,
         };
-        tmp10 = jsx(tmp5(7339), {
+        tmp10 = jsx(tmp5(7341), {
           guild: stateFromStores,
           previousGuildSubscriptionSlot: memo,
           analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR,

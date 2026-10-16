@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import RoleSubscriptionEmojiUtils from "../../../RoleSubscriptionEmojiUtils.tsx";
 import GuildSettingsRoleSubscriptionContainerDefault from "../GuildSettingsRoleSubscriptionContainer.tsx";
@@ -12,18 +12,18 @@ import apply from "../../../../../../_runtime/metro/00012__.js";
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  const roleSubscriptionSettingsDisabled = guildId(18827).useRoleSubscriptionSettingsDisabled();
-  let obj = guildId(18827);
+  const roleSubscriptionSettingsDisabled = guildId(18869).useRoleSubscriptionSettingsDisabled();
+  let obj = guildId(18869);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
-    const intl = tmp(1126).intl;
-    const obj3 = { maxSlots: stateFromStores(18881)(stateFromStores) };
+    const intl = tmp(1128).intl;
+    const obj3 = { maxSlots: stateFromStores(18923)(stateFromStores) };
     const obj4 = {
       guild: stateFromStores,
-      headerDescription: intl.formatToPlainString(tmp(1126).t.H9Jxp6, obj3),
+      headerDescription: intl.formatToPlainString(tmp(1128).t.H9Jxp6, obj3),
       computeEmojiItems,
       onSelectRolesForEmoji(emoji) {
         if (null == stateFromStores) {
@@ -36,17 +36,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(18882, dependencyMap.paths),
+              asyncRequireImpl(18924, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji,
                 onSave(arg0) {
-                  stateFromStores(5115).hideActionSheet();
+                  stateFromStores(5118).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(5115).hideActionSheet();
+                  stateFromStores(5118).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },
@@ -58,9 +58,9 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       },
       disabled: roleSubscriptionSettingsDisabled,
     };
-    return jsx(tmp(18637).ManageEmojisModal, {
+    return jsx(tmp(18679).ManageEmojisModal, {
       guild: stateFromStores,
-      headerDescription: intl.formatToPlainString(tmp(1126).t.H9Jxp6, obj3),
+      headerDescription: intl.formatToPlainString(tmp(1128).t.H9Jxp6, obj3),
       computeEmojiItems,
       onSelectRolesForEmoji(emoji) {
         if (null == stateFromStores) {
@@ -73,17 +73,17 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(18882, dependencyMap.paths),
+              asyncRequireImpl(18924, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
                 emoji,
                 onSave(arg0) {
-                  stateFromStores(5115).hideActionSheet();
+                  stateFromStores(5118).hideActionSheet();
                   closure_0(arg0);
                 },
                 onCancel() {
-                  stateFromStores(5115).hideActionSheet();
+                  stateFromStores(5118).hideActionSheet();
                   const error = new Error("User cancelled");
                   closure_1(error);
                 },

@@ -10,6 +10,7 @@ export const ServerHubSettingType = {
   ALL_SYSTEM_MESSAGES: "all_system_messages",
   LEADERBOARD_SYSTEM_MESSAGES: "leaderboard_system_messages",
   WHITEBOARD_SYSTEM_MESSAGES: "whiteboard_system_messages",
+  MUSIC_SYSTEM_MESSAGES: "music_system_messages",
 };
 export const ServerHubVisitSource = {
   WINNER_BADGE: "winner_badge",

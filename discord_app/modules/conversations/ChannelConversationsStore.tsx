@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
+import privDefault from "../../../_runtime/01459_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ConversationMessageCacheUtils from "ConversationMessageCacheUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -217,7 +217,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7532);
+const ConversationConstants = fn(7534);
 ({
   CONVERSATION_COLORS: closure_9,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
@@ -536,8 +536,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7534).mapConversation);
-      const found = mapped.filter(set(1386).isNotNullish);
+      const mapped = rawConversations.map(set(7536).mapConversation);
+      const found = mapped.filter(set(1388).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let tmp5 = null;

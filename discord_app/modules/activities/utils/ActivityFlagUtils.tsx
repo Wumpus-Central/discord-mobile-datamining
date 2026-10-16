@@ -9,8 +9,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
-export const computeActivityFlags = function computeActivityFlags(activity) {
-  if (flag === undefined) {
+export const computeActivityFlags = function computeActivityFlags(secrets) {
+  let flag = hasFlagResult;
+  if (hasFlagResult === undefined) {
     flag = false;
   }
   let flag2 = arg2;
@@ -25,7 +26,7 @@ export const computeActivityFlags = function computeActivityFlags(activity) {
   if (privacy === undefined) {
     PRIVATE = constants2.PRIVATE;
   }
-  const secrets = activity.secrets;
+  secrets = secrets.secrets;
   let num = 0;
   if (flag) {
     num = constants.INSTANCE | 0;

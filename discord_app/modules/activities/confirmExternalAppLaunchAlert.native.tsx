@@ -6,15 +6,15 @@ import FastImageDefault from "../../components_native/common/FastImage.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import _modDef11174 from "../../../_runtime/metro/11174__.js";
+import _modDef11190 from "../../../_runtime/metro/11190__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PRIVATE_APPS_HELP_ARTICLE = fn(2024).PRIVATE_APPS_HELP_ARTICLE;
+const PRIVATE_APPS_HELP_ARTICLE = fn(2026).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_7 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertEyebrowText: { marginTop: 40, textAlign: "center" },
@@ -30,7 +30,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       application = application.application;
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.announcementBirb) {
-        const obj2 = { source: _modDef11174, style: tmp4.announcementBirb };
+        const obj2 = { source: _modDef11190, style: tmp4.announcementBirb };
         const tmp9 = hasOwnProperty(FastImageDefault, obj2);
         cResult[0] = tmp4.announcementBirb;
         cResult[1] = tmp9;
@@ -124,7 +124,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   : function ConfirmActivityGateContent(activityName) {
       const tmp = closure_7();
       const obj = { style: tmp.alertContainer, children: null };
-      const obj2 = { source: _modDef11174, style: tmp.announcementBirb };
+      const obj2 = { source: _modDef11190, style: tmp.announcementBirb };
       const items = [hasOwnProperty(FastImageDefault, obj2), , ,];
       const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
       const intl = util.intl;

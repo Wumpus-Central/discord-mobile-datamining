@@ -24,7 +24,7 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       } else {
         tmp4 = cResult[1];
       }
-      const MediaViewerSourcesStore = tmp(8606).MediaViewerSourcesStore;
+      const MediaViewerSourcesStore = tmp(8614).MediaViewerSourcesStore;
       const state = MediaViewerSourcesStore.useState(tmp4);
       if (cResult[2] !== arg0) {
         const fn2 = function o(userRevealedIndexes) {
@@ -37,13 +37,13 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       } else {
         tmp6 = cResult[3];
       }
-      const MediaViewerSourcesStore2 = tmp(8606).MediaViewerSourcesStore;
+      const MediaViewerSourcesStore2 = tmp(8614).MediaViewerSourcesStore;
       const state1 = MediaViewerSourcesStore2.useState(tmp6);
       if (cResult[4] !== state) {
         let flattenSourceResult;
         if (null != state) {
-          flattenSourceResult = tmp(8611).flattenSource(state);
-          const tmpResult = tmp(8611);
+          flattenSourceResult = tmp(8619).flattenSource(state);
+          const tmpResult = tmp(8619);
         }
         cResult[4] = state;
         cResult[5] = flattenSourceResult;
@@ -70,7 +70,7 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
           let tmp15 = cResult[9];
         }
         const stateFromStores = tmp(573).useStateFromStores(tmp13, tmp15);
-        tmp(8617);
+        tmp(8625);
         let tmp19 = !state1;
         if (!state1) {
           let obscure;

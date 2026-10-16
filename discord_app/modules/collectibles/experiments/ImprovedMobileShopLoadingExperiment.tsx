@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ApexExperiment = fn(1453);
+const ApexExperiment = fn(1455);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-09-improved-mobile-shop-loading",
   kind: "user",

@@ -5,10 +5,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-const NOTE_MAX_LENGTH = fn(1085).NOTE_MAX_LENGTH;
+const NOTE_MAX_LENGTH = fn(1087).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -201,10 +201,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(9852);
+        const tmp2 = closure_1_1(9868);
         tmp2({
           hasEdits: str !== closure_6,
-          onHasEdits: closure_1_0(5041).dismissKeyboard,
+          onHasEdits: closure_1_0(5044).dismissKeyboard,
           resetPending() {
             let str = closure_1_5;
             if (closure_1_5 == null) {
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         });
         const obj = {
           hasEdits: str !== closure_6,
-          onHasEdits: closure_1_0(5041).dismissKeyboard,
+          onHasEdits: closure_1_0(5044).dismissKeyboard,
           resetPending() {
             let str = closure_1_5;
             if (closure_1_5 == null) {

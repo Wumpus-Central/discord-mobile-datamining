@@ -42,8 +42,8 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9199).getWishlistSkuIds;
-const Constants = fn(1085);
+const getWishlistSkuIds = fn(9212).getWishlistSkuIds;
+const Constants = fn(1087);
 ({ AnalyticEvents: c10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/WishlistActionCreators.tsx");

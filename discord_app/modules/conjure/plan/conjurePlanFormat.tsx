@@ -4,17 +4,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanFormat.tsx");
 
-export const formatConjurePlanRequirementName = function formatConjurePlanRequirementName(str) {
+export const formatConjurePlanRequirementLabel = function formatConjurePlanRequirementLabel(str) {
   const parts = str.split("_");
-  const mapped = parts.map((arr) => {
-    let sum = arr;
-    if (0 !== arr.length) {
-      sum = arr[0] + arr.slice(1).toLowerCase();
-      const str = arr.slice(1);
-    }
-    return sum;
-  });
-  return mapped.join(" ");
+  str = parts.join(" ");
+  const formatted = str.toLowerCase();
+  let sum = formatted;
+  if (0 !== formatted.length) {
+    const formatted1 = formatted[0].toUpperCase();
+    sum = formatted1 + formatted.slice(1);
+  }
+  return sum;
 };
 export const conjurePlanCommandPrefix = function conjurePlanCommandPrefix(type) {
   let str = "\u21EA /";

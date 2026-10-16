@@ -10,8 +10,8 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 import LiveChannelNoticesStore from "LiveChannelNoticesStore.tsx";
 
 require = fn;
-let closure_11 = fn(2071).GuildScheduledEventEntityTypes;
-const Permissions = fn(1096).Permissions;
+let closure_11 = fn(2074).GuildScheduledEventEntityTypes;
+const Permissions = fn(1098).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -212,7 +212,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
       const cResult = activeEventOrStageInstanceChannel(576).c(29);
       const obj = activeEventOrStageInstanceChannel(576);
       activeEventOrStageInstanceChannel =
-        activeEventOrStageInstanceChannel(17204).useActiveEventOrStageInstanceChannel(arg0);
+        activeEventOrStageInstanceChannel(17238).useActiveEventOrStageInstanceChannel(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
@@ -247,10 +247,10 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
           }
         }
       }
-      const obj2 = activeEventOrStageInstanceChannel(17204);
+      const obj2 = activeEventOrStageInstanceChannel(17238);
       const stateFromStores = activeEventOrStageInstanceChannel(504).useStateFromStores(first, S);
       const tmpResult = activeEventOrStageInstanceChannel(504);
-      const guildActiveEvent = activeEventOrStageInstanceChannel(8872).useGuildActiveEvent(arg0);
+      const guildActiveEvent = activeEventOrStageInstanceChannel(8880).useGuildActiveEvent(arg0);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
@@ -368,7 +368,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
           }
         }
       }
-      const tmpResult5 = activeEventOrStageInstanceChannel(8872);
+      const tmpResult5 = activeEventOrStageInstanceChannel(8880);
       const stateFromStores1 = activeEventOrStageInstanceChannel(504).useStateFromStores(tmp10, tmp11, tmp14);
       const tmpResult6 = activeEventOrStageInstanceChannel(504);
       if (activeEventOrStageInstanceChannel != null) {
@@ -384,7 +384,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
           }
         }
       }
-      const tmpResult7 = activeEventOrStageInstanceChannel(6172);
+      const tmpResult7 = activeEventOrStageInstanceChannel(6174);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
@@ -440,7 +440,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
           }
         }
       }
-      const tmp16 = activeEventOrStageInstanceChannel(6172).useActualStageSpeakerCount(undefined) > 0;
+      const tmp16 = activeEventOrStageInstanceChannel(6174).useActualStageSpeakerCount(undefined) > 0;
       const stateFromStores2 = activeEventOrStageInstanceChannel(504).useStateFromStores(tmp17, I);
       if (cResult[11] === activeEventOrStageInstanceChannel) {
         class I {

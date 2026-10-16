@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
 import c from "../../../../../../_runtime/00576_c.js";
-import _mod4789 from "../../../../../../_runtime/metro/04789__.js";
+import _mod4792 from "../../../../../../_runtime/metro/04792__.js";
 import PushNotificationDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -125,11 +125,11 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
     }
   }
 };
-const identity = fn(1267);
+const identity = fn(1269);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "ix",
-  isVibrationsEnabled: "isReactCompilerEnabled",
-  isSoundsEnabled: "section",
+  isLightsEnabled: "unicodeVersion",
+  isVibrationsEnabled: "marginTop",
+  isSoundsEnabled: "shapes",
   isNotifyEveryTime: "Array",
 }));
 fn(558);
@@ -146,10 +146,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4789.shallow);
+      return closure_4(first, _mod4792.shallow);
     }
   : function useAndroidNotificationLightsEnabled() {
-      return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4789.shallow);
+      return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4792.shallow);
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -164,10 +164,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4789.shallow);
+      return closure_4(first, _mod4792.shallow);
     }
   : function useAndroidNotificationVibrationsEnabled() {
-      return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4789.shallow);
+      return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4792.shallow);
     };
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -182,10 +182,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4789.shallow);
+      return closure_4(first, _mod4792.shallow);
     }
   : function useAndroidNotificationSoundsEnabled() {
-      return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4789.shallow);
+      return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4792.shallow);
     };
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -237,10 +237,10 @@ export const useAndroidMessageNotificationsEnabled = ReactCompilerGating.isReact
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4789.shallow);
+      return closure_4(first, _mod4792.shallow);
     }
   : function useAndroidMessageNotificationsEnabled() {
-      return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4789.shallow);
+      return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4792.shallow);
     };
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(isNotifyEveryTime) {
   _require = isNotifyEveryTime;

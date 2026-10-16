@@ -14,10 +14,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = UserProfileSharedStylesDefault();
       importDefault = tmp6;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [tmp(2049).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+        let items = [tmp(2052).DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
         cResult[0] = items;
         let first = items;
       } else {

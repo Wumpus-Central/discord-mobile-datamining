@@ -6,9 +6,9 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const UserSettingsDelay = fn(1095).UserSettingsDelay;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const UserSettingsDelay = fn(1097).UserSettingsDelay;
 const ReactCompilerGating = fn(558);
 function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
   const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(guildId);
@@ -92,7 +92,7 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   );
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(2049).DismissibleGuildContent[dc], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(2052).DismissibleGuildContent[dc], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

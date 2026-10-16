@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef18863 from "../../../../../_runtime/metro/18863__.js";
-import _modDef18864 from "../../../../../_runtime/metro/18864__.js";
+import _modDef18905 from "../../../../../_runtime/metro/18905__.js";
+import _modDef18906 from "../../../../../_runtime/metro/18906__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
 
@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(16169).AllChannelAccessOptions;
-const Fonts = fn(1085).Fonts;
+const AllChannelAccessOptions = fn(16202).AllChannelAccessOptions;
+const Fonts = fn(1087).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm },
   row: { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 },
@@ -215,8 +215,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = setChannelAccessFormat(1126).intl;
-          const stringResult = intl.string(setChannelAccessFormat(1126).t["vs2T+B"]);
+          const intl = setChannelAccessFormat(1128).intl;
+          const stringResult = intl.string(setChannelAccessFormat(1128).t["vs2T+B"]);
           cResult[5] = stringResult;
           let tmp9 = stringResult;
         } else {
@@ -248,8 +248,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = setChannelAccessFormat(1126).intl;
-              const stringResult1 = intl2.string(setChannelAccessFormat(1126).t.l4Tr7X);
+              const intl2 = setChannelAccessFormat(1128).intl;
+              const stringResult1 = intl2.string(setChannelAccessFormat(1128).t.l4Tr7X);
               cResult[14] = stringResult1;
               let tmp23 = stringResult1;
             } else {
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = {
-              icon: _modDef18864,
+              icon: _modDef18906,
               label: tmp23,
               selected: channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
               onPress: tmp25,
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj6 = {
-          icon: _modDef18863,
+          icon: _modDef18905,
           label: tmp9,
           selected: channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS,
           onPress: tmp12,
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
       const items = [tmp.container, style.style];
       obj.style = items;
-      const obj2 = { icon: _modDef18863, label: null, selected: null, onPress: null, disabled: null };
+      const obj2 = { icon: _modDef18905, label: null, selected: null, onPress: null, disabled: null };
       const intl = util.intl;
       obj2.label = intl.string(util.t["vs2T+B"]);
       obj2.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -349,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj2.disabled = disabled;
       const items1 = [closure_5(closure_8, obj2), closure_5(View, { style: tmp.separator })];
-      const obj4 = { icon: _modDef18864, label: null, selected: null, onPress: null, disabled: null };
+      const obj4 = { icon: _modDef18906, label: null, selected: null, onPress: null, disabled: null };
       const intl2 = util.intl;
       obj4.label = intl2.string(util.t.l4Tr7X);
       obj4.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

@@ -7,8 +7,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const PremiumTypes = fn(1392).PremiumTypes;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const PremiumTypes = fn(1394).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");
 

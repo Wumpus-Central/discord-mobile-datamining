@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Routes = fn(1085).Routes;
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const Routes = fn(1087).Routes;
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -25,12 +25,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.rBw4cE);
-          const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(tmp(1126).t.mKHibc);
-          const intl3 = tmp(1126).intl;
-          const stringResult2 = intl3.string(tmp(1126).t.RzWDqY);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t.rBw4cE);
+          const intl2 = tmp(1128).intl;
+          const stringResult1 = intl2.string(tmp(1128).t.mKHibc);
+          const intl3 = tmp(1128).intl;
+          const stringResult2 = intl3.string(tmp(1128).t.RzWDqY);
           cResult[3] = stringResult;
           cResult[4] = stringResult1;
           cResult[5] = stringResult2;
@@ -49,15 +49,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
         const obj2 = {
-          imageSource: markAsDismissed(17266),
+          imageSource: markAsDismissed(17300),
           header: tmp6,
           body: tmp7,
           cta: tmp8,
           onCTAPress: tmp4,
           markAsDismissed,
         };
-        const tmp16 = jsx(markAsDismissed(17265), {
-          imageSource: markAsDismissed(17266),
+        const tmp16 = jsx(markAsDismissed(17299), {
+          imageSource: markAsDismissed(17300),
           header: tmp6,
           body: tmp7,
           cta: tmp8,
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = markAsDismissed;
         cResult[8] = tmp16;
         tmp12 = tmp16;
-        const tmp15 = markAsDismissed(17265);
+        const tmp15 = markAsDismissed(17299);
       }
       function handleCTAPress() {
         router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function IAPUpsellActionSheet(arg0) {
       ({ guildId: require, markAsDismissed } = arg0);
       const obj = {
-        imageSource: markAsDismissed(17266),
+        imageSource: markAsDismissed(17300),
         header: null,
         body: null,
         cta: null,
@@ -101,8 +101,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         markAsDismissed(ContentDismissActionType.UNKNOWN);
       };
       obj.markAsDismissed = markAsDismissed;
-      return jsx(markAsDismissed(17265), {
-        imageSource: markAsDismissed(17266),
+      return jsx(markAsDismissed(17299), {
+        imageSource: markAsDismissed(17300),
         header: null,
         body: null,
         cta: null,

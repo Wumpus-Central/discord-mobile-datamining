@@ -67,4 +67,13 @@ export const projectStepHandlers = {
       }
     }
   },
+  app_cover_set(cover_image, arg1) {
+    if (undefined !== cover_image.cover_image) {
+      const setProjectCoverResult = ConjureActionCreators.setProjectCover(tmp, cover_image.cover_image);
+      ConjureActionCreators.setProjectCover(tmp, cover_image.cover_image)
+        .then((result) => {})
+        .catch(() => {});
+      const nextPromise = ConjureActionCreators.setProjectCover(tmp, cover_image.cover_image).then((result) => {});
+    }
+  },
 };

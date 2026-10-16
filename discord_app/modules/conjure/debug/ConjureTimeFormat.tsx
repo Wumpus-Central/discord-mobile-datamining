@@ -3,22 +3,22 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTimeFormat.tsx");
 
-export const formatClockTime = function formatClockTime(date) {
+export const formatClockTime = function formatClockTime(ts) {
   let str = arg1;
   if (arg1 === undefined) {
     str = "seconds";
   }
-  if (date.length > 64) {
+  if (ts.length > 64) {
     return null;
   } else {
     const _Date2 = Date;
-    const parsed = Date.parse(date);
+    const parsed = Date.parse(ts);
     const _Number = Number;
     if (Number.isNaN(parsed)) {
       return null;
     } else {
       const _Date = Date;
-      date = new Date(parsed);
+      const date = new Date(parsed);
       const _String = String;
       const padStartResult = String(date.getHours()).padStart(2, "0");
       const _String2 = String;

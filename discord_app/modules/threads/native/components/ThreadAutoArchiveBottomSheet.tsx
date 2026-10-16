@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(2072).ChannelFlags;
+const ChannelFlags = fn(2075).ChannelFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -87,8 +87,8 @@ export const AutoArchiveDurationOptions = noop.memo(
         }
         _require = tmp12;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.H4mGfI);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t.H4mGfI);
           cResult[15] = stringResult;
           let tmp16 = stringResult;
         } else {
@@ -146,7 +146,7 @@ export const AutoArchiveDurationOptions = noop.memo(
           hasIcons: false,
           children: null,
         };
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         obj2.accessibilityLabel = intl.string(require("util").t.H4mGfI);
         obj2.onChange = onSelectDuration;
         obj2.children = autoArchiveOptions.map((value) =>

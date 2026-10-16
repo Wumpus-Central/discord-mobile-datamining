@@ -5,7 +5,7 @@ import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators.tsx"
 import CreateInviteModalStore from "../stores/CreateInviteModalStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");
 
@@ -76,8 +76,8 @@ export default {
           DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId });
         },
         (message) => {
-          const intl = channelId(1126).intl;
-          message = intl.string(channelId(1126).t.WB1ip6);
+          const intl = channelId(1128).intl;
+          message = intl.string(channelId(1128).t.WB1ip6);
           let message1;
           if (message != null) {
             message1 = message.message;

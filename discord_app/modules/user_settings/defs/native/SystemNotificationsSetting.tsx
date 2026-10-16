@@ -87,17 +87,17 @@ let closure_8 = async function _handleEnableSystemNotification() {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_5 = fn(7699).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12969);
+const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_5 = fn(7702).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(12995);
 ({ EventActionType: metroRequire, EventActionLocation: closure_7 } = NotificationPermissionConstants);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8210).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8213).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;

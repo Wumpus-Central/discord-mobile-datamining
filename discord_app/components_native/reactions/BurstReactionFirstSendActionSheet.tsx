@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
-import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../modules/dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 },
   fill: null,
@@ -260,7 +260,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(8182, dependencyMap.paths),
+      asyncRequireImpl(8185, dependencyMap.paths),
       "BurstReactionFirstSendActionSheet",
       obj4,
     );

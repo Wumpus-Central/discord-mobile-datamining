@@ -42,7 +42,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             listeners: set,
             valueListener(arg0) {
               closure_0 = arg0;
-              set(1272).batchUpdates(() => {
+              set(1274).batchUpdates(() => {
                 for (const item10005 of set) {
                   let item10005Result = item10005(closure_0);
                   continue;
@@ -64,12 +64,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             closure_0 = arg1;
             addListener.addListener(arg0, (arg0) => set(dependencyMap[5]).runOnJS(closure_0)(arg0));
           };
-          const obj4 = { runOnJS: closure_0(4906).runOnJS };
+          const obj4 = { runOnJS: closure_0(4909).runOnJS };
           fn.__closure = obj4;
           fn.__workletHash = 580393174787;
           fn.__initData = __initData;
-          closure_0(4906).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-          const obj3 = closure_0(4906);
+          closure_0(4909).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+          const obj3 = closure_0(4909);
         }
         return () => {
           const listeners = set.listeners;
@@ -109,7 +109,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             listeners: set,
             valueListener(arg0) {
               closure_0 = arg0;
-              set(1272).batchUpdates(() => {
+              set(1274).batchUpdates(() => {
                 for (const item10005 of set) {
                   let item10005Result = item10005(closure_0);
                   continue;
@@ -129,14 +129,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const result = map.set(tmp, value);
           let fn = function n(arg0, arg1, addListener) {
             closure_0 = arg1;
-            addListener.addListener(arg0, (arg0) => set(4906).runOnJS(closure_0)(arg0));
+            addListener.addListener(arg0, (arg0) => set(4909).runOnJS(closure_0)(arg0));
           };
-          const obj4 = { runOnJS: closure_0(4906).runOnJS };
+          const obj4 = { runOnJS: closure_0(4909).runOnJS };
           fn.__closure = obj4;
           fn.__workletHash = 4734743082561;
           fn.__initData = __initData;
-          closure_0(4906).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-          const obj3 = closure_0(4906);
+          closure_0(4909).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+          const obj3 = closure_0(4909);
         }
         return () => {
           const listeners = set.listeners;

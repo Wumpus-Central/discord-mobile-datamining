@@ -17,7 +17,7 @@ function createPollCreationImageForMedia(mediaURL, status) {
   const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "toCharArray$esjava$1" };
   return obj;
 }
-const PollsConstants = fn(8188);
+const PollsConstants = fn(8191);
 ({ MAX_NUMBER_OF_ANSWERS_PER_POLL: closure_7, MIN_NUMBER_OF_ANSWERS_PER_POLL: closure_8, PollDurations: closure_9 } = PollsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
       let intl = util.intl;
       obj.question = intl.string(util.t.gPX3oI);
     }
-    if (first.filter((item) => c0(8115).isAnswerFilled(item)).length < closure_2_8) {
+    if (first.filter((item) => c0(8118).isAnswerFilled(item)).length < closure_2_8) {
       c0 = false;
       let _HermesInternal = HermesInternal;
       let combined = "answer-" + first[0].localCreationAnswerId;
@@ -438,13 +438,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
       obj[combined] = intl2.string(util.t.fYvzEX);
     }
     const item = first.forEach((localCreationAnswerId) => {
-      obj = closure_0(8115);
+      obj = closure_0(8118);
       if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         c0 = false;
         const _HermesInternal = HermesInternal;
         const combined = "answer-" + localCreationAnswerId.localCreationAnswerId;
-        const intl = closure_0(1126).intl;
-        obj[combined] = intl.string(closure_0(1126).t["8Qqkc+"]);
+        const intl = closure_0(1128).intl;
+        obj[combined] = intl.string(closure_0(1128).t["8Qqkc+"]);
       }
     });
     closure_1_12(obj);

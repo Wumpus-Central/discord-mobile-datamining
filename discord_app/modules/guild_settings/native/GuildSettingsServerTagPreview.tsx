@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8105).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8108).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
   notice: null,
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = Card(504).useStateFromStores(tmp3, tmp4);
       const CardResult = Card(504);
-      const name = onAdopted(5469).useName(guildId, null, stateFromStores);
+      const name = onAdopted(5471).useName(guildId, null, stateFromStores);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === guildId) {
           let tmp8 = cResult[4];
@@ -95,9 +95,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp17 = cResult[7];
           }
           if (cResult[8] !== isDirty) {
-            const intl = Card(1126).intl;
+            const intl = Card(1128).intl;
             const string = intl.string;
-            let hRsJ7T = Card(1126).t;
+            let hRsJ7T = Card(1128).t;
             if (isDirty) {
               hRsJ7T = hRsJ7T.hRsJ7T;
               let stringResult = string(hRsJ7T);
@@ -116,18 +116,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp25 = cResult[15];
                 }
                 if (cResult[16] !== card.avatar) {
-                  const obj2 = { source: onAdopted(13445), style: card.avatar, importantForAccessibility: "no" };
-                  const tmp29 = closure_9(onAdopted(5088), obj2);
+                  const obj2 = { source: onAdopted(13471), style: card.avatar, importantForAccessibility: "no" };
+                  const tmp29 = closure_9(onAdopted(5091), obj2);
                   cResult[16] = card.avatar;
                   cResult[17] = tmp29;
                   let tmp26 = tmp29;
-                  const tmp6Result = onAdopted(5088);
+                  const tmp6Result = onAdopted(5091);
                 } else {
                   tmp26 = cResult[17];
                 }
                 const _Symbol = Symbol;
                 if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp32 = closure_9(Card(5147).Text, {
+                  const tmp32 = closure_9(Card(5149).Text, {
                     variant: "text-md/semibold",
                     color: "text-default",
                     children: "Locke",
@@ -140,9 +140,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol2 = Symbol;
                 if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
                   let obj3 = { variant: "text-md/normal", color: "text-default", children: null };
-                  const intl2 = Card(1126).intl;
-                  obj3.children = intl2.string(Card(1126).t.KZQ4mF);
-                  const tmp35 = closure_9(Card(5147).Text, obj3);
+                  const intl2 = Card(1128).intl;
+                  obj3.children = intl2.string(Card(1128).t.KZQ4mF);
+                  const tmp35 = closure_9(Card(5149).Text, obj3);
                   cResult[19] = tmp35;
                   let tmp33 = tmp35;
                 } else {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[29] !== name) {
                         const obj6 = { variant: "text-md/semibold", color: "text-default", children: name };
-                        const tmp49 = closure_9(Card(5147).Text, obj6);
+                        const tmp49 = closure_9(Card(5149).Text, obj6);
                         cResult[29] = name;
                         cResult[30] = tmp49;
                         let tmp47 = tmp49;
@@ -191,9 +191,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 const _Symbol3 = Symbol;
                                 if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                                   const obj7 = { variant: "text-md/normal", color: "text-default", children: null };
-                                  const intl3 = Card(1126).intl;
-                                  obj7.children = intl3.string(Card(1126).t.LKsPRe);
-                                  const tmp63 = closure_9(Card(5147).Text, obj7);
+                                  const intl3 = Card(1128).intl;
+                                  obj7.children = intl3.string(Card(1128).t.LKsPRe);
+                                  const tmp63 = closure_9(Card(5149).Text, obj7);
                                   cResult[40] = tmp63;
                                   let tmp61 = tmp63;
                                 } else {
@@ -214,21 +214,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                         if (cResult[51] !== card.avatar) {
                                           const obj8 = {
-                                            source: onAdopted(14858),
+                                            source: onAdopted(14891),
                                             style: card.avatar,
                                             importantForAccessibility: "no",
                                           };
-                                          const tmp76 = closure_9(onAdopted(5088), obj8);
+                                          const tmp76 = closure_9(onAdopted(5091), obj8);
                                           cResult[51] = card.avatar;
                                           cResult[52] = tmp76;
                                           let tmp73 = tmp76;
-                                          const tmp6Result3 = onAdopted(5088);
+                                          const tmp6Result3 = onAdopted(5091);
                                         } else {
                                           tmp73 = cResult[52];
                                         }
                                         const _Symbol4 = Symbol;
                                         if (cResult[53] === Symbol.for("react.memo_cache_sentinel")) {
-                                          const tmp79 = closure_9(Card(5147).Text, {
+                                          const tmp79 = closure_9(Card(5149).Text, {
                                             variant: "text-md/semibold",
                                             color: "text-default",
                                             children: "Phibi",
@@ -245,9 +245,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             color: "text-default",
                                             children: null,
                                           };
-                                          const intl4 = Card(1126).intl;
-                                          obj9.children = intl4.string(Card(1126).t.vtCg11);
-                                          const tmp82 = closure_9(Card(5147).Text, obj9);
+                                          const intl4 = Card(1128).intl;
+                                          obj9.children = intl4.string(Card(1128).t.vtCg11);
+                                          const tmp82 = closure_9(Card(5149).Text, obj9);
                                           cResult[54] = tmp82;
                                           let tmp80 = tmp82;
                                         } else {
@@ -271,8 +271,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                             const _Symbol6 = Symbol;
                                             if (cResult[61] === Symbol.for("react.memo_cache_sentinel")) {
-                                              const intl5 = Card(1126).intl;
-                                              const stringResult1 = intl5.string(Card(1126).t.cQDYRu);
+                                              const intl5 = Card(1128).intl;
+                                              const stringResult1 = intl5.string(Card(1128).t.cQDYRu);
                                               cResult[61] = stringResult1;
                                               let tmp91 = stringResult1;
                                             } else {
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         } else {
                                                           if (cResult[74] === tmp99) {
                                                           }
-                                                          Card = Card(6402).Card;
+                                                          Card = Card(6404).Card;
                                                           const obj11 = {
                                                             variant: "secondary",
                                                             radius: 16,
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 const obj13 = { spacing: onAdopted(587).space.PX_12, children: null };
                                                 const items4 = [tmp40, tmp68, tmp87, tmp93];
                                                 obj13.children = items4;
-                                                const tmp98 = closure_10(Card(5437).Stack, obj13);
+                                                const tmp98 = closure_10(Card(5439).Stack, obj13);
                                                 cResult[66] = tmp40;
                                                 cResult[67] = tmp68;
                                                 cResult[68] = tmp87;
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               disabled: isDirty,
                                               onPress: tmp17,
                                             };
-                                            const tmp95 = closure_9(Card(5439).Button, obj15);
+                                            const tmp95 = closure_9(Card(5441).Button, obj15);
                                             cResult[62] = tmp16;
                                             cResult[63] = tmp17;
                                             cResult[64] = isDirty;
@@ -428,10 +428,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             height: null,
                           };
                           ({ SIZE_12: obj14.width, SIZE_12: obj14.height } = GuildTagBadgeSize);
-                          tmp52Result = closure_9(Card(14814).GuildBadge, size);
+                          tmp52Result = closure_9(Card(14847).GuildBadge, size);
                         }
                         obj20.guildBadge = tmp52Result;
-                        tmp52Result2 = closure_9(Card(9075).BaseGuildTagChiplet, obj20);
+                        tmp52Result2 = closure_9(Card(9083).BaseGuildTagChiplet, obj20);
                       }
                       cResult[31] = badge;
                       cResult[32] = primaryColor;
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp50 = tmp52Result2;
                     }
                     const obj21 = { source: tmp8, style: card.avatar, importantForAccessibility: "no" };
-                    const tmp46 = closure_9(onAdopted(5088), obj21);
+                    const tmp46 = closure_9(onAdopted(5091), obj21);
                     cResult[26] = tmp8;
                     cResult[27] = card.avatar;
                     cResult[28] = tmp46;
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp25 = items11;
             }
             const obj23 = { variant: "text-sm/medium", color: "text-muted", style: card.notice, children: cResult[9] };
-            const tmp24 = closure_9(Card(5147).Text, obj23);
+            const tmp24 = closure_9(Card(5149).Text, obj23);
             cResult[10] = card.notice;
             cResult[11] = cResult[9];
             cResult[12] = tmp24;
@@ -545,17 +545,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = t5;
         const tmp15 = _slicedToArray(noop.useState(false), 2);
       }
-      let obj4 = onAdopted(5469);
+      let obj4 = onAdopted(5471);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
       }
-      const source = onAdopted(1415).makeSource(avatarURL);
+      const source = onAdopted(1417).makeSource(avatarURL);
       cResult[2] = stateFromStores;
       cResult[3] = guildId;
       cResult[4] = source;
       tmp8 = source;
-      const tmp6Result4 = onAdopted(1415);
+      const tmp6Result4 = onAdopted(1417);
     }
   : function GuildSettingsServerTagPreview(guildId) {
       guildId = guildId.guildId;
@@ -569,14 +569,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       let obj = guildId(504);
-      const name = onAdopted(5469).useName(guildId, null, stateFromStores);
-      let obj3 = onAdopted(5469);
+      const name = onAdopted(5471).useName(guildId, null, stateFromStores);
+      let obj3 = onAdopted(5471);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
       }
       let identityGuildId;
-      const source = onAdopted(1415).makeSource(avatarURL);
+      const source = onAdopted(1417).makeSource(avatarURL);
       if (stateFromStores != null) {
         const primaryGuild = stateFromStores.primaryGuild;
         if (primaryGuild != null) {
@@ -594,7 +594,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         isDirty = true === identityEnabled;
       }
-      let obj4 = onAdopted(1415);
+      let obj4 = onAdopted(1417);
       [tmp11, c2] = noop.useState(false);
       const items1 = [guildId, onAdopted];
       const callback = noop.useCallback(
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap(true);
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(14813).adoptGuildIdentity(guildId, true), done: false };
+                  const obj5 = { value: tmp2(14846).adoptGuildIdentity(guildId, true), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -658,16 +658,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj2 = { variant: "text-sm/medium", color: "text-muted", style: tmp.notice, children: null };
-      const intl = tmp2(1126).intl;
+      const intl = tmp2(1128).intl;
       const string = intl.string;
-      const t = tmp2(1126).t;
+      const t = tmp2(1128).t;
       if (isDirty) {
         let stringResult = string(t.hRsJ7T);
       } else {
         stringResult = string(t.OVvzY0);
       }
       obj2.children = stringResult;
-      const items2 = [closure_9(guildId(5147).Text, obj2)];
+      const items2 = [closure_9(guildId(5149).Text, obj2)];
       let obj5 = { spacing: onAdopted(587).space.PX_12, children: null };
       const obj6 = { style: null, children: null };
       const items3 = [,];
@@ -675,27 +675,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.style = items3;
       const obj7 = { source: null, style: null, importantForAccessibility: "no" };
       const tmp10 = _slicedToArray(noop.useState(false), 2);
-      obj7.source = onAdopted(13445);
+      obj7.source = onAdopted(13471);
       obj7.style = tmp.avatar;
-      const items4 = [closure_9(onAdopted(5088), obj7)];
+      const items4 = [closure_9(onAdopted(5091), obj7)];
       const obj8 = { style: tmp.messageBody, children: null };
       const items5 = [
-        closure_9(guildId(5147).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }),
+        closure_9(guildId(5149).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }),
       ];
       const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
-      const intl2 = tmp2(1126).intl;
-      obj9.children = intl2.string(guildId(1126).t.KZQ4mF);
-      items5[1] = closure_9(guildId(5147).Text, obj9);
+      const intl2 = tmp2(1128).intl;
+      obj9.children = intl2.string(guildId(1128).t.KZQ4mF);
+      items5[1] = closure_9(guildId(5149).Text, obj9);
       obj8.children = items5;
       items4[1] = closure_10(View, obj8);
       obj6.children = items4;
       const items6 = [closure_10(View, obj6), , ,];
       const obj10 = { style: tmp.message, children: null };
-      const items7 = [closure_9(onAdopted(5088), { source, style: tmp.avatar, importantForAccessibility: "no" })];
+      const items7 = [closure_9(onAdopted(5091), { source, style: tmp.avatar, importantForAccessibility: "no" })];
       const obj12 = { style: tmp.messageBody, children: null };
       const obj13 = { style: tmp.usernameRow, children: null };
       const items8 = [
-        closure_9(guildId(5147).Text, { variant: "text-md/semibold", color: "text-default", children: name }),
+        closure_9(guildId(5149).Text, { variant: "text-md/semibold", color: "text-default", children: name }),
       ];
       let tmp15Result3 = null != tag;
       if (tmp15Result3) {
@@ -713,18 +713,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             height: null,
           };
           ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-          tmp15Result = closure_9(tmp2(14814).GuildBadge, size);
+          tmp15Result = closure_9(tmp2(14847).GuildBadge, size);
         }
         obj14.guildBadge = tmp15Result;
-        tmp15Result3 = closure_9(tmp2(9075).BaseGuildTagChiplet, obj14);
+        tmp15Result3 = closure_9(tmp2(9083).BaseGuildTagChiplet, obj14);
       }
       items8[1] = tmp15Result3;
       obj13.children = items8;
       const items9 = [closure_10(View, obj13)];
       const obj15 = { variant: "text-md/normal", color: "text-default", children: null };
-      const intl3 = tmp2(1126).intl;
-      obj15.children = intl3.string(guildId(1126).t.LKsPRe);
-      items9[1] = closure_9(guildId(5147).Text, obj15);
+      const intl3 = tmp2(1128).intl;
+      obj15.children = intl3.string(guildId(1128).t.LKsPRe);
+      items9[1] = closure_9(guildId(5149).Text, obj15);
       obj12.children = items9;
       items7[1] = closure_10(View, obj12);
       obj10.children = items7;
@@ -735,25 +735,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj17.style = items10;
       const obj18 = { source: null, style: null, importantForAccessibility: "no" };
       const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
-      const tmp4Result = onAdopted(5088);
-      obj18.source = onAdopted(14858);
+      const tmp4Result = onAdopted(5091);
+      obj18.source = onAdopted(14891);
       obj18.style = tmp.avatar;
-      const items11 = [closure_9(onAdopted(5088), obj18)];
+      const items11 = [closure_9(onAdopted(5091), obj18)];
       const obj19 = { style: tmp.messageBody, children: null };
       const items12 = [
-        closure_9(guildId(5147).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
+        closure_9(guildId(5149).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
       ];
       const obj20 = { variant: "text-md/normal", color: "text-default", children: null };
-      const intl4 = tmp2(1126).intl;
-      obj20.children = intl4.string(guildId(1126).t.vtCg11);
-      items12[1] = closure_9(guildId(5147).Text, obj20);
+      const intl4 = tmp2(1128).intl;
+      obj20.children = intl4.string(guildId(1128).t.vtCg11);
+      items12[1] = closure_9(guildId(5149).Text, obj20);
       obj19.children = items12;
       items11[1] = closure_10(View, obj19);
       obj17.children = items11;
       items6[2] = closure_10(View, obj17);
       const obj21 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
-      const intl5 = tmp2(1126).intl;
-      obj21.text = intl5.string(guildId(1126).t.cQDYRu);
+      const intl5 = tmp2(1128).intl;
+      obj21.text = intl5.string(guildId(1128).t.cQDYRu);
       obj21.loading = tmp11;
       if (!isDirty) {
         isDirty = tmp11;
@@ -770,15 +770,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj22 = { children: null };
       obj21.disabled = isDirty;
       obj21.onPress = callback;
-      items6[3] = closure_9(guildId(5439).Button, obj21);
+      items6[3] = closure_9(guildId(5441).Button, obj21);
       obj5.children = items6;
-      items2[1] = closure_10(guildId(5437).Stack, obj5);
+      items2[1] = closure_10(guildId(5439).Stack, obj5);
       obj22.children = items2;
       const tmp13Result = closure_10(closure_11, obj22);
       let tmp15Result4 = tmp13Result;
       if ("plain" !== variant) {
         const obj23 = { variant: "secondary", radius: 16, style: tmp.card, children: tmp13Result };
-        tmp15Result4 = closure_9(tmp2(6402).Card, obj23);
+        tmp15Result4 = closure_9(tmp2(6404).Card, obj23);
       }
       return tmp15Result4;
     };

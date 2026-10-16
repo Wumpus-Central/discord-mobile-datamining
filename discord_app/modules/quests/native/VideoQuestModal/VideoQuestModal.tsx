@@ -15,15 +15,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(16020).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+let closure_6 = fn(16053).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = -100;
 let c11 = 0.5625;
 let top = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM },
   pillarboxed: { alignSelf: "center" },
@@ -698,11 +698,10 @@ let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/V
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VideoQuestModal(questContentPosition) {
-        const cResult = questContentPosition(videoSessionId[9]).c(14);
+        const cResult = questContentPosition(initialStep[9]).c(17);
         questContentPosition = questContentPosition.questContentPosition;
         const onClose = questContentPosition.onClose;
-        videoSessionId = questContentPosition.videoSessionId;
-        const initialStep = questContentPosition.initialStep;
+        ({ videoSessionId, initialStep } = questContentPosition);
         const sourceQuestContent = questContentPosition.sourceQuestContent;
         if (cResult[0] !== onClose) {
           const fn = function o() {
@@ -715,124 +714,135 @@ export default noop.memo(
         } else {
           tmp4 = cResult[1];
         }
-        let obj = questContentPosition(videoSessionId[9]);
-        const nonNullableQuest = questContentPosition(videoSessionId[24]).useNonNullableQuest(
+        let obj = questContentPosition(initialStep[9]);
+        const nonNullableQuest = questContentPosition(initialStep[24]).useNonNullableQuest(
           questContentPosition.questId,
           tmp4,
         );
-        if (null == nonNullableQuest) {
+        if (cResult[2] === nonNullableQuest) {
+          if (cResult[3] === videoSessionId) {
+            let tmp6 = cResult[4];
+          }
+          value = tmp6;
+          let tmp10 = null;
+          if (null != nonNullableQuest) {
+            tmp10 = null;
+            if (null != tmp6) {
+              const _Symbol = Symbol;
+              if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+                const fn2 = function h() {
+                  return null;
+                };
+                cResult[5] = fn2;
+                let tmp12 = fn2;
+              } else {
+                tmp12 = cResult[5];
+              }
+              if (cResult[6] === initialStep) {
+                if (cResult[7] === onClose) {
+                  if (cResult[8] === nonNullableQuest) {
+                    if (cResult[9] === questContentPosition) {
+                      if (cResult[10] === sourceQuestContent) {
+                      }
+                    }
+                  }
+                }
+              }
+              let obj2 = {};
+              const obj3 = {
+                fullscreen: true,
+                headerLeft: tmp12,
+                render() {
+                  const obj = { value, children: null };
+                  const obj2 = {
+                    expandedHeight,
+                    children: closure_2_8(QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative, {
+                      overrideVisibility: true,
+                      questContent: QuestTypes.QuestContent.VIDEO_MODAL_MOBILE,
+                      questOrQuests: nonNullableQuest,
+                      questContentPosition,
+                      sourceQuestContent,
+                      children: function renderVideoQuestModal() {
+                        return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
+                      },
+                    }),
+                  };
+                  obj.children = closure_2_8(QuestDockGestureContext.QuestDockGestureContextProvider, obj2);
+                  return closure_2_8(VideoQuestModalContextDefault.Provider, obj);
+                },
+              };
+              obj2[watch_mobile_video_quest] = obj3;
+              cResult[6] = initialStep;
+              cResult[7] = onClose;
+              cResult[8] = nonNullableQuest;
+              cResult[9] = questContentPosition;
+              cResult[10] = sourceQuestContent;
+              cResult[11] = tmp6;
+              cResult[12] = obj2;
+            }
+          }
           const _Symbol2 = Symbol;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class T {
+          if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+            class G {
               constructor() {
-                obj = questContentPosition(videoSessionId[11]);
+                obj = questContentPosition(initialStep[11]);
                 applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
+                return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
               }
             }
             const items = [];
-            cResult[10] = T;
-            cResult[11] = items;
-            let tmp11 = items;
+            cResult[13] = G;
+            cResult[14] = items;
+            let tmp18 = items;
           } else {
-            class T {
+            class G {
               constructor() {
-                obj = questContentPosition(videoSessionId[11]);
+                obj = questContentPosition(initialStep[11]);
                 applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
+                return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
               }
             }
-            tmp11 = cResult[11];
+            tmp18 = cResult[14];
           }
-          const layoutEffect = sourceQuestContent.useLayoutEffect(T, tmp11);
+          const layoutEffect = nonNullableQuest.useLayoutEffect(G, tmp18);
           if (null != nonNullableQuest) {
-            class T {
+            class G {
               constructor() {
-                obj = questContentPosition(videoSessionId[11]);
+                obj = questContentPosition(initialStep[11]);
                 applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
+                return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
               }
             }
-            if (null != null) {
-              class T {
+            if (null != tmp10) {
+              class G {
                 constructor() {
-                  obj = questContentPosition(videoSessionId[11]);
+                  obj = questContentPosition(initialStep[11]);
                   applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                  return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
+                  return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
                 }
               }
             }
           }
           return null;
-        } else {
-          class T {
-            constructor() {
-              obj = questContentPosition(videoSessionId[11]);
-              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-              return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
-            }
-          }
-          const _Symbol = Symbol;
-          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            class T {
-              constructor() {
-                obj = questContentPosition(videoSessionId[11]);
-                applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
-              }
-            }
-            cResult[2] = S;
-          } else {
-            class T {
-              constructor() {
-                obj = questContentPosition(videoSessionId[11]);
-                applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
-              }
-            }
-          }
-          if (cResult[3] === initialStep) {
-            class T {
-              constructor() {
-                obj = questContentPosition(videoSessionId[11]);
-                applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-                return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
-              }
-            }
-          }
-          const obj2 = {};
-          let obj3 = {
-            fullscreen: true,
-            headerLeft: S,
-            render() {
-              const obj = { value: { quest: nonNullableQuest, videoSessionId }, children: null };
-              const obj3 = {
-                expandedHeight,
-                children: closure_2_8(QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative, {
-                  overrideVisibility: true,
-                  questContent: QuestTypes.QuestContent.VIDEO_MODAL_MOBILE,
-                  questOrQuests: nonNullableQuest,
-                  questContentPosition,
-                  sourceQuestContent,
-                  children: function renderVideoQuestModal() {
-                    return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
-                  },
-                }),
-              };
-              obj.children = closure_2_8(QuestDockGestureContext.QuestDockGestureContextProvider, obj3);
-              return closure_2_8(VideoQuestModalContextDefault.Provider, obj);
-            },
-          };
-          obj2[watch_mobile_video_quest] = obj3;
-          cResult[3] = initialStep;
-          cResult[4] = onClose;
-          cResult[5] = nonNullableQuest;
-          cResult[6] = questContentPosition;
-          cResult[7] = sourceQuestContent;
-          cResult[8] = videoSessionId;
-          cResult[9] = obj2;
         }
-        const tmpResult = questContentPosition(videoSessionId[24]);
+        let tmp7 = null;
+        if (null != nonNullableQuest) {
+          class G {
+            constructor() {
+              obj = questContentPosition(initialStep[11]);
+              applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
+              return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
+            }
+          }
+          tmp8[0] = nonNullableQuest;
+          tmp8[1] = videoSessionId;
+          tmp7 = tmp8;
+        }
+        cResult[2] = nonNullableQuest;
+        cResult[3] = videoSessionId;
+        cResult[4] = tmp7;
+        tmp6 = tmp7;
+        const tmpResult = questContentPosition(initialStep[24]);
       }
     : function VideoQuestModal(questContentPosition) {
         questContentPosition = questContentPosition.questContentPosition;
@@ -849,66 +859,71 @@ export default noop.memo(
           questContentPosition.questId,
           callback,
         );
-        const items1 = [
-          onClose,
-          nonNullableQuest,
-          videoSessionId,
-          questContentPosition,
-          initialStep,
-          sourceQuestContent,
-        ];
+        const items1 = [nonNullableQuest, videoSessionId];
         const memo = sourceQuestContent.useMemo(() => {
+          let tmp2 = null;
+          if (null != nonNullableQuest) {
+            const obj = { quest: tmp, videoSessionId };
+            tmp2 = obj;
+          }
+          return tmp2;
+        }, items1);
+        const items2 = [onClose, nonNullableQuest, memo, questContentPosition, initialStep, sourceQuestContent];
+        const memo1 = sourceQuestContent.useMemo(() => {
           let tmp = null;
           if (null != nonNullableQuest) {
-            let obj = {};
-            const obj2 = {
-              fullscreen: true,
-              headerLeft() {
-                return null;
-              },
-              render() {
-                const obj = { value: { quest: questOrQuests, videoSessionId }, children: null };
-                const obj3 = {
-                  expandedHeight,
-                  children: closure_2_8(
-                    questContentPosition(videoSessionId[25]).BillableAdPlacementImpressionTrackerNative,
-                    {
-                      overrideVisibility: true,
-                      questContent: questContentPosition(videoSessionId[26]).QuestContent.VIDEO_MODAL_MOBILE,
-                      questOrQuests,
-                      questContentPosition,
-                      sourceQuestContent,
-                      children: function renderVideoQuestModal() {
-                        return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
+            tmp = null;
+            if (null != memo) {
+              let obj = {};
+              let obj2 = {
+                fullscreen: true,
+                headerLeft() {
+                  return null;
+                },
+                render() {
+                  const obj = { value, children: null };
+                  const obj2 = {
+                    expandedHeight: memo,
+                    children: closure_2_8(
+                      questContentPosition(videoSessionId[25]).BillableAdPlacementImpressionTrackerNative,
+                      {
+                        overrideVisibility: true,
+                        questContent: questContentPosition(videoSessionId[26]).QuestContent.VIDEO_MODAL_MOBILE,
+                        questOrQuests,
+                        questContentPosition,
+                        sourceQuestContent,
+                        children: function renderVideoQuestModal() {
+                          return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
+                        },
                       },
-                    },
-                  ),
-                };
-                obj.children = closure_2_8(
-                  questContentPosition(videoSessionId[13]).QuestDockGestureContextProvider,
-                  obj3,
-                );
-                return closure_2_8(onClose(videoSessionId[10]).Provider, obj);
-              },
-            };
-            obj[watch_mobile_video_quest] = obj2;
-            tmp = obj;
+                    ),
+                  };
+                  obj.children = closure_2_8(
+                    questContentPosition(videoSessionId[13]).QuestDockGestureContextProvider,
+                    obj2,
+                  );
+                  return closure_2_8(onClose(videoSessionId[10]).Provider, obj);
+                },
+              };
+              obj[watch_mobile_video_quest] = obj2;
+              tmp = obj;
+            }
           }
           return tmp;
-        }, items1);
+        }, items2);
         const layoutEffect = sourceQuestContent.useLayoutEffect(() => {
           questContentPosition(videoSessionId[11]).applyOrientationLock("PORTRAIT");
           return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
         }, []);
-        let tmp7 = null;
+        let tmp8 = null;
         if (null != nonNullableQuest) {
-          tmp7 = null;
-          if (null != memo) {
-            let obj2 = { hideTitle: true, initialRouteName: watch_mobile_video_quest, screens: memo };
-            tmp7 = closure_8(questContentPosition(videoSessionId[27]).Modal, obj2);
+          tmp8 = null;
+          if (null != memo1) {
+            let obj2 = { hideTitle: true, initialRouteName: watch_mobile_video_quest, screens: memo1 };
+            tmp8 = closure_8(questContentPosition(videoSessionId[27]).Modal, obj2);
           }
         }
-        return tmp7;
+        return tmp8;
       },
 );
 export { VideoQuestModalSteps };

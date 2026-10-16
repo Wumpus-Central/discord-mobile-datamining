@@ -217,13 +217,13 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6179).GuildsNodeType;
-const GuildsBarConstants = fn(17320);
+const GuildsNodeType = fn(6181).GuildsNodeType;
+const GuildsBarConstants = fn(17354);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16023);
+const YouBarConstants = fn(16056);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
@@ -319,7 +319,7 @@ export default noop.memo(
     ? function GuildsBarUnreadBars(fastList) {
         const cResult = fastList(576).c(22);
         fastList = fastList.fastList;
-        top = top(1631)().top;
+        top = top(1633)().top;
         const result = closure_11() / 2;
         dependencyMap = result;
         if (cResult[0] === fastList) {
@@ -393,11 +393,11 @@ export default noop.memo(
                     ReanimatedRexport.runOnJS(closure_4)();
                   }
                 };
-                const obj4 = { runOnJS: tmp(4906).runOnJS, debouncedUpdate: tmp10 };
+                const obj4 = { runOnJS: tmp(4909).runOnJS, debouncedUpdate: tmp10 };
                 fn2.__closure = obj4;
                 fn2.__workletHash = 13727289405147;
                 fn2.__initData = __initData2;
-                const animatedReaction = tmp(4906).useAnimatedReaction(C, fn2);
+                const animatedReaction = tmp(4909).useAnimatedReaction(C, fn2);
                 const tmp19 = closure_20();
                 ({ style, paddingStart } = tmp19);
                 const paddingEnd = tmp19.paddingEnd;
@@ -429,7 +429,7 @@ export default noop.memo(
                 cResult[12] = paddingEnd;
                 cResult[13] = paddingStart;
                 cResult[14] = fn3;
-                const tmpResult = tmp(4906);
+                const tmpResult = tmp(4909);
               }
             }
             const tmp11 = tmp4(551)(() => {
@@ -494,7 +494,7 @@ export default noop.memo(
         let memo;
         let paddingStart;
         let paddingEnd;
-        top = top(1631)().top;
+        top = top(1633)().top;
         const result = closure_11() / 2;
         dependencyMap = result;
         [tmp3, c3] = memo.useState(() => {
@@ -587,8 +587,8 @@ export default noop.memo(
             return;
           }
         }
-        let obj = fastList(4906);
-        T.__closure = { runOnJS: fastList(4906).runOnJS, debouncedUpdate: memo };
+        let obj = fastList(4909);
+        T.__closure = { runOnJS: fastList(4909).runOnJS, debouncedUpdate: memo };
         T.__workletHash = 3399641848221;
         T.__initData = __initData4;
         const animatedReaction = obj.useAnimatedReaction(B, T);
@@ -611,7 +611,7 @@ export default noop.memo(
           obj.orientation = "visible";
           fastList.scrollToLocation(obj);
         }, items2);
-        obj3.children = jsx(top(17391), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
+        obj3.children = jsx(top(17425), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
         return (
           <scrollPosValue
             style={tmp7.style}

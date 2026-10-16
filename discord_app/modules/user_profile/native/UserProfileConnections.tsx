@@ -15,8 +15,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11058 from "../../../../_runtime/metro/11058__.js";
-import _modDef11059 from "../../../../_runtime/metro/11059__.js";
+import _modDef11073 from "../../../../_runtime/metro/11073__.js";
+import _modDef11074 from "../../../../_runtime/metro/11074__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -49,25 +49,25 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(7124);
+let Constants = fn(7126);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
-Constants = fn(1085);
+Constants = fn(1087);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(7096).MetadataFields;
+const MetadataFields = fn(7098).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const REFRESH_SMALL_16 = fn(1200).Icon.Sizes.REFRESH_SMALL_16;
-let native = fn(1200);
+const REFRESH_SMALL_16 = fn(1202).Icon.Sizes.REFRESH_SMALL_16;
+let native = fn(1202);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { cardContainer: { paddingBottom: CARD_PADDING - 12 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
 let obj4 = { paddingBottom: CARD_PADDING - 12 };
 let obj5 = { marginBottom: nativeDefault.space.PX_8 };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.poweredByContainer = { flexDirection: "row", alignItems: "center", marginTop: 6 };
 let obj7 = { borderRadius: null };
-native = fn(1200);
-obj7.borderRadius = native.getIconSize(fn(1200).Icon.Sizes.MEDIUM);
+native = fn(1202);
+obj7.borderRadius = native.getIconSize(fn(1202).Icon.Sizes.MEDIUM);
 obj.applicationIcon = obj7;
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -118,7 +118,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11059, color: WHITE };
+      const obj4 = { source: _modDef11074, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -126,7 +126,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11058, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11073, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -152,10 +152,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11058, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11073, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11059, color: WHITE };
+    const obj5 = { source: _modDef11074, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -840,7 +840,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8533).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8541).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -867,9 +867,9 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
       const joined = obj3.join(", ");
       if (cResult[8] !== application.name) {
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         const obj4 = { name: application.name };
-        const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.OKzaN3, obj4);
+        const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.OKzaN3, obj4);
         cResult[8] = application.name;
         cResult[9] = formatToPlainStringResult;
         let tmp12 = formatToPlainStringResult;
@@ -910,13 +910,13 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             return;
           }
         }
-        tmp18 = closure_12(tmp(6400).TableRow, obj5);
-        const tmp20 = closure_12(tmp(6400).TableRow, obj5);
+        tmp18 = closure_12(tmp(6402).TableRow, obj5);
+        const tmp20 = closure_12(tmp(6402).TableRow, obj5);
       }
       let tmp15;
       if (null != tmp5) {
         const obj6 = { size, source: tmp5, style: tmp4.applicationIcon };
-        tmp15 = closure_12(tmp(4873).BaseIconImage, obj6);
+        tmp15 = closure_12(tmp(4876).BaseIconImage, obj6);
       }
       cResult[10] = tmp5;
       cResult[11] = tmp4;
@@ -947,7 +947,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[3] = trackUserProfileAction;
   cResult[4] = C;
   tmp8 = C;
-  let obj2 = trackUserProfileAction(8533);
+  let obj2 = trackUserProfileAction(8541);
 }) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
@@ -1310,8 +1310,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
 }) : (function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(4883).useThemeContext().theme;
-  const obj = userId(4883);
+  const theme = userId(4886).useThemeContext().theme;
+  const obj = userId(4886);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -1319,7 +1319,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14069)(userId));
+  ({ connections, appIdentities } = theme(14101)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -1330,12 +1330,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
     const items3 = [tmp.cardContainer, userId.style];
     obj4.style = items3;
     const arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => __initData(closure_19, { account, theme, locale, userId }, account.id)), 0);
-    const intl = tmp2(1126).intl;
-    obj4.title = intl.string(tmp2(1126).t["3fe7U5"]);
+    const intl = tmp2(1128).intl;
+    obj4.title = intl.string(tmp2(1128).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(6485).TableRowGroup, obj5);
-    return closure_12(tmp5(7123), obj4);
+    obj4.children = closure_12(tmp2(6487).TableRowGroup, obj5);
+    return closure_12(tmp5(7125), obj4);
   }
   return null;
 });

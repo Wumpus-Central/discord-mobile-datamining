@@ -85,9 +85,9 @@ prototype["markFailed"] = function markFailed(arg0) {
     continue;
   }
 };
-prototype["try"] = function try(nextWantsResult, objectResult4) {
+prototype["try"] = function try(nextWantsResult, arrayResult) {
   closure_0 = nextWantsResult;
-  closure_1 = objectResult4;
+  closure_1 = arrayResult;
   const self = this;
   return (async () => {
     if (c5 === 2) {

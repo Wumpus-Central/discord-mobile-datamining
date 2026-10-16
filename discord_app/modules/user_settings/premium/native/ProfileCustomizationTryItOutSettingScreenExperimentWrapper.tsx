@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           UserProfilePremiumTryItOutMobileRefreshExperiment.useTryItOutMobileRefreshConfig(
             "ProfileCustomizationTryItOutSettingScreenExperimentWrapper",
           ).enabled
-            ? 16777
-            : 16780,
+            ? 16810
+            : 16813,
         ),
         {},
       );

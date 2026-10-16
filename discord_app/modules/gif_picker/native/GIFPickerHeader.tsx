@@ -6,18 +6,18 @@ import timingPresets from "../../../design/animation/reanimated/timing/timingPre
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const util = SearchField(1126);
-const Text_Text = SearchField(5147);
-const Pressables = SearchField(6405);
-const SearchField2 = SearchField(6959);
-const GifProvider = SearchField(9955);
-const ChevronLargeLeftIcon = SearchField(9964);
+const util = SearchField(1128);
+const Text_Text = SearchField(5149);
+const Pressables = SearchField(6407);
+const SearchField2 = SearchField(6961);
+const GifProvider = SearchField(9971);
+const ChevronLargeLeftIcon = SearchField(9980);
 require = fn;
 const View = fn(17).View;
-fn(1085).GIFPickerResultTypes;
+fn(1087).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_8 },
   headerContainer: null,
@@ -28,14 +28,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(9957).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(9973).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(9957).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(9973).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6522).InputHeights.MD,
+  height: fn(6524).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -404,7 +404,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6522).InputHeights.MD,
+  height: fn(6524).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,

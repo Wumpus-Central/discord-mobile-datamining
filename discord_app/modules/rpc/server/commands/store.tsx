@@ -5,9 +5,29 @@ import validateTransportType from "../../helpers/validateTransportType.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
+function isRPCCompatibleSku(name) {
+  return null != name.name && null != name.price;
+}
+function transformSku(id) {
+  const obj = {
+    id: id.id,
+    name: id.name,
+    type: id.type,
+    price: id.price,
+    application_id: id.application_id,
+    flags: id.flags,
+    release_date: null,
+  };
+  let release_date = id.release_date;
+  if (release_date == null) {
+    release_date = null;
+  }
+  obj.release_date = release_date;
+  return obj;
+}
 function getSubscriptionSkusViaListings() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -15,11 +35,11 @@ function getSubscriptionSkusViaListings() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _getSubscriptionSkusViaListings() {
+let closure_11 = async function _getSubscriptionSkusViaListings() {
   closure_2 = tmp2;
   closure_130_0 = closure_0;
   closure_130_1 = importDefault;
-  let found = importDefault.filter((type) => type.type === constants.SUBSCRIPTION_GROUP);
+  let found = importDefault.filter((type) => type.type === constants2.SUBSCRIPTION_GROUP);
   await Promise.all(
     found.map(
       (() => {
@@ -50,18 +70,18 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
       if (null == prop) {
         return null;
       } else {
-        const items = [];
         let item = prop.forEach((subscription_plans) => {
           closure_0 = subscription_plans;
           subscription_plans = subscription_plans.subscription_plans;
-          const item = subscription_plans.forEach((price) => {
-            if (price != null) {
-              price = price.price;
+          const item = subscription_plans.forEach((sku_id) => {
+            const found = closure_2_1.find((id) => id.id === sku_id.sku_id);
+            let name;
+            if (found != null) {
+              name = found.name;
             }
-            const found = closure_3_1.find((id) => id.id === price.sku_id);
-            if (null != found) {
+            if (null != name) {
               const obj = {
-                id: price.sku_id,
+                id: sku_id.sku_id,
                 name: null,
                 type: null,
                 price: null,
@@ -70,26 +90,18 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
                 release_date: null,
               };
               ({ name: obj.name, type: obj.type } = found);
-              const obj2 = { amount: price, currency: constants.USD };
+              const obj2 = { amount: sku_id.price, currency: constants.USD };
               obj.price = obj2;
-              ({ application_id: obj.application_id, sku_flags: obj.flags } = price);
+              ({ application_id: obj.application_id, sku_flags: obj.flags } = sku_id);
               let release_date = found.release_date;
               if (release_date == null) {
                 release_date = null;
               }
               obj.release_date = release_date;
-              items.push(obj);
+              closure_2_3.push(obj);
             }
           });
         });
-        let found = items.filter((price) => {
-          price = undefined;
-          if (price != null) {
-            price = price.price;
-          }
-          return null != price;
-        });
-        const item1 = found.forEach((item) => closure_1_3.push(item));
       }
     }
   });
@@ -97,7 +109,7 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
 };
 function getSkusHandler() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -105,13 +117,13 @@ function getSkusHandler() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _getSkusHandler(arg0) {
+let closure_13 = async function _getSkusHandler(arg0) {
   let socket = arg0;
+  c5 = 0;
   c6 = 0;
-  c7 = 0;
   let iter = (async (arg0) => {
-    if (c7 === 2) {
-      c7 = 3;
+    if (c6 === 2) {
+      c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
@@ -124,104 +136,100 @@ let closure_11 = async function _getSkusHandler(arg0) {
       }
     } else {
       try {
-        c7 = 2;
-        if (0 === c6) {
+        c6 = 2;
+        if (0 === c5) {
           if (arg0 === 1) {
-            c7 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c6 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_5 = tmp2;
-            closure_4 = tmp5;
+            closure_4 = tmp2;
+            closure_3 = tmp5;
             let socket2;
             socket2 = socket.socket;
             let id;
-            closure_132_2 = undefined;
-            closure_132_3 = undefined;
-            closure_132_4 = undefined;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            closure_131_6 = undefined;
+            c5 = 1;
             c6 = 1;
-            c7 = 1;
             return { value: "test", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
-            c7 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c6 = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const result = closure_133_0(closure_133_3[4]).validateTransportType(socket2.transport);
+            const result = closure_132_0(closure_132_3[4]).validateTransportType(socket2.transport);
             id = socket2.application.id;
             if (null == id) {
-              const obj5 = { errorCode: closure_133_6.INVALID_COMMAND };
-              const tmp32 = new closure_133_1(closure_133_3[5])(obj5, "No application.");
-              throw tmp32;
+              const obj5 = { errorCode: closure_132_6.INVALID_COMMAND };
+              const tmp42 = new closure_132_1(closure_132_3[5])(obj5, "No application.");
+              throw tmp42;
             } else {
               if (obj18.isTestModeForApplication(id)) {
-                c6 = 2;
-                c7 = 1;
+                c5 = 2;
+                c6 = 1;
                 const obj6 = {
-                  value: closure_133_2(closure_133_3[7]).fetchTestSKUsForApplication(id, false),
+                  value: closure_132_2(closure_132_3[7]).fetchTestSKUsForApplication(id, false),
                   done: false,
                 };
                 return obj6;
               } else {
-                c6 = 3;
-                c7 = 1;
+                c5 = 3;
+                c6 = 1;
                 const obj7 = {
-                  value: closure_133_2(closure_133_3[8]).fetchAllStoreListingsForApplication(id),
+                  value: closure_132_2(closure_132_3[8]).fetchAllStoreListingsForApplication(id),
                   done: false,
                 };
                 return obj7;
               }
-              obj18 = closure_133_0(closure_133_3[6]);
+              obj18 = closure_132_0(closure_132_3[6]);
             }
-            const obj17 = closure_133_0(closure_133_3[4]);
+            const obj17 = closure_132_0(closure_132_3[4]);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
-            c7 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c6 = 3;
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            closure_132_2 = value;
-            c6 = 4;
-            c7 = 1;
-            const obj9 = { value: closure_133_8(id, closure_132_2), done: false };
+            closure_131_2 = value;
+            c5 = 4;
+            c6 = 1;
+            const obj9 = { value: closure_132_10(id, closure_131_2), done: false };
             return obj9;
           }
         } else if (3 === tmp5) {
           if (arg0 === 1) {
-            c7 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c6 = 3;
             const obj10 = { value, done: true };
             return obj10;
           } else {
-            closure_132_4 = value;
-            closure_2 = 0;
-            const found = closure_132_4.filter((sku) => sku.sku.type !== constants.SUBSCRIPTION_GROUP);
-            const mapped = found.map((sku) => sku.sku);
-            items = [];
-            closure_2 = HermesBuiltin.arraySpread(
-              mapped.filter((price) => null != price.price),
-              closure_2,
-            );
-            c6 = 5;
-            c7 = 1;
+            closure_131_4 = value;
+            const found = closure_131_4.filter((sku) => sku.sku.type !== constants.SUBSCRIPTION_GROUP);
+            closure_131_5 = found.map((sku) => sku.sku);
+            c5 = 5;
+            c6 = 1;
             const obj11 = {
-              value: closure_133_8(
+              value: closure_132_10(
                 id,
-                closure_132_4.map((sku) => sku.sku),
+                closure_131_4.map((sku) => sku.sku),
               ),
               done: false,
             };
@@ -229,42 +237,46 @@ let closure_11 = async function _getSkusHandler(arg0) {
           }
         } else if (4 === tmp5) {
           if (arg0 === 1) {
-            c7 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c6 = 3;
             const obj12 = { value, done: true };
             return obj12;
           } else {
-            closure_132_3 = value;
+            closure_131_3 = value;
             closure_1 = 0;
-            const items1 = [];
-            const arraySpreadResult = HermesBuiltin.arraySpread(
-              closure_132_2.filter((price) => null != price.price),
-              closure_1,
-            );
+            const found1 = closure_131_2.filter(closure_132_8);
+            const items = [];
+            const arraySpreadResult = HermesBuiltin.arraySpread(found1.map(closure_132_9), closure_1);
             closure_1 = arraySpreadResult;
-            closure_1 = HermesBuiltin.arraySpread(closure_132_3, arraySpreadResult);
-            c7 = 3;
-            const obj13 = { value: items1, done: true };
+            closure_1 = HermesBuiltin.arraySpread(closure_131_3, arraySpreadResult);
+            c6 = 3;
+            const obj13 = { value: items, done: true };
             return obj13;
           }
         } else if (arg0 === 1) {
-          c7 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c7 = 3;
+          c6 = 3;
           const obj14 = { value, done: true };
           return obj14;
         } else {
-          closure_2 = HermesBuiltin.arraySpread(value, closure_2);
-          c7 = 3;
-          const obj = { value: items, done: true };
+          closure_131_6 = value;
+          closure_2 = 0;
+          const found2 = closure_131_5.filter(closure_132_8);
+          const items1 = [];
+          const arraySpreadResult2 = HermesBuiltin.arraySpread(found2.map(closure_132_9), closure_2);
+          closure_2 = arraySpreadResult2;
+          closure_2 = HermesBuiltin.arraySpread(closure_131_6, arraySpreadResult2);
+          c6 = 3;
+          const obj = { value: items1, done: true };
           return obj;
         }
-      } catch (tmp35) {
-        c7 = tmp;
-        throw tmp35;
+      } catch (tmp45) {
+        c6 = tmp;
+        throw tmp45;
       }
     }
   })();
@@ -283,42 +295,53 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(5855);
+let Constants = fn(5857);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-Constants = fn(1085);
+Constants = fn(1087);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
+let obj = { [RPCCommands.GET_SKUS]: obj2, [RPCCommands.GET_ENTITLEMENTS]: obj3 };
+obj2 = { scope: null, handler: getSkusHandler };
 let items = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
+obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
+let CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj5 = {
+  scope: null,
+  handler(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      value = {};
+      await closure_1_12(value);
+      value.skus = value;
+      return value;
+    })();
+  },
+};
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
+obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
+CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj7 = {
+  scope: null,
+  handler(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      value = {};
+      await closure_1_14(value);
+      value.entitlements = value;
+      return value;
+    })();
+  },
+};
 const items3 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj7.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
+obj[RPCCommands.GET_ENTITLEMENTS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
+  RPCCommands.GET_ENTITLEMENTS_EMBEDDED,
+  obj7,
+);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/store.tsx");
 
-export default {
-  [RPCCommands.GET_SKUS]: { [RPC_SCOPE_CONFIG.ANY]: items, handler: getSkusHandler },
-  [RPCCommands.GET_ENTITLEMENTS]: { [RPC_SCOPE_CONFIG.ANY]: items1, handler: getEntitlementsHandler },
-  [RPCCommands.GET_SKUS_EMBEDDED]: {
-    [RPC_SCOPE_CONFIG.ANY]: items2,
-    handler(arg0) {
-      closure_0 = arg0;
-      return (async () => {
-        value = {};
-        await closure_1_10(value);
-        value.skus = value;
-        return value;
-      })();
-    },
-  },
-  [RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
-    [RPC_SCOPE_CONFIG.ANY]: items3,
-    handler(arg0) {
-      closure_0 = arg0;
-      return (async () => {
-        value = {};
-        await closure_1_12(value);
-        value.entitlements = value;
-        return value;
-      })();
-    },
-  },
-};
+export default obj;

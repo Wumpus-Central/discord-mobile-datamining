@@ -209,11 +209,11 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     return obj;
   });
   if (null == tmp2) {
-    const intl = tmp3(1126).intl;
+    const intl = tmp3(1128).intl;
     const obj2 = { username: messageAuthor.nick, usernameOnClick: tmp3(12).identity };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1126).t.HzBfIN, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1128).t.HzBfIN, obj2);
   } else {
-    const intl2 = tmp3(1126).intl;
+    const intl2 = tmp3(1128).intl;
     const obj3 = {
       userCount: mapped.length + 1,
       username: messageAuthor.nick,
@@ -240,7 +240,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     obj3.username3OnClick = tmp3(12).identity;
     obj3.otherCount = mapped.length - 1;
     obj3.duration = tmp2;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1126).t.atbXuX, obj3);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1128).t.atbXuX, obj3);
   }
   return formatToPlainStringResult;
 };

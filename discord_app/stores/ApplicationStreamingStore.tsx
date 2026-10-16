@@ -2,7 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import asyncRequireImpl from "../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02002_asyncRequireImpl.js";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import windowSourceMatchesDefault from "../modules/go_live/utils/windowSourceMatches.tsx";
 import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
@@ -45,7 +45,7 @@ function handleStreamUpdate(streamKey) {
   const result = map.set(streamKey, obj);
   closure_5[streamKey] = { streamKey, region, viewerIds };
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({
   ApplicationStreamStates: closure_18,
   RTCConnectionStates: closure_19,
@@ -53,7 +53,7 @@ const Constants = fn(1085);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(6114).StreamTypes;
+const StreamTypes = fn(6116).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -700,7 +700,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6116);
+    const obj = sourceId(6118);
     const encodeStreamKeyResult = obj.encodeStreamKey({
       streamType,
       guildId,
@@ -792,11 +792,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6119, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6121, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6119, dependencyMap.paths);
+        const promise = asyncRequireImpl(6121, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

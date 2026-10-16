@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06555_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06557_LegacyBaseButton.js";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -21,7 +21,7 @@ import MessagePreviewStore from "../../../../../stores/native/MessagePreviewStor
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ findNodeHandle: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let ThemeTypes = fn(1085).ThemeTypes;
+let ThemeTypes = fn(1087).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = new RowGeneratorDefault();
@@ -44,7 +44,7 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
@@ -227,7 +227,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = items1;
       return closure_15(closure_14, obj2);
     };
-createStyles = fn(5151);
+createStyles = fn(5153);
 let closure_19 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -236,7 +236,7 @@ let closure_19 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(5151);
+createStyles = fn(5153);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,

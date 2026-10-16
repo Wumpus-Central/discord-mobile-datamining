@@ -15,11 +15,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function u() {
           const obj = { validatedText: "", hint: null };
-          const intl = sourcePage(1126).intl;
-          obj.hint = intl.string(sourcePage(1126).t["6p7Mhh"]);
+          const intl = sourcePage(1128).intl;
+          obj.hint = intl.string(sourcePage(1128).t["6p7Mhh"]);
           return obj;
         };
         cResult[0] = fn;
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                             }
                                                           }
                                                           if (cResult[56] === Symbol.for("react.memo_cache_sentinel")) {
-                                                            const string = sourcePage(1126).intl.string;
+                                                            const string = sourcePage(1128).intl.string;
                                                             class Q {
                                                               constructor(arg0) {
                                                                 tmp = closure_8(ref.replace(/\n/g, ""));
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                             loading: first2.status === constants.LOADING,
                                                             grow: false,
                                                           };
-                                                          const tmp60 = closure_9(sourcePage(5439).Button, obj7);
+                                                          const tmp60 = closure_9(sourcePage(5441).Button, obj7);
                                                           cResult[57] = tmp21;
                                                           cResult[58] = tmp28 <= 0;
                                                           cResult[59] = first2.status === constants.LOADING;
@@ -706,9 +706,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   ({ messageLabel: arr4[0], inputHeaderText: arr4[1] } = tmp4);
                                   items4[2] = headerTextStyle;
                                   obj10.style = items4;
-                                  let intl = sourcePage(1126).intl;
-                                  obj10.children = intl.string(sourcePage(1126).t.Yi6Mpu);
-                                  const items5 = [closure_9(sourcePage(5147).Text, obj10), ,];
+                                  let intl = sourcePage(1128).intl;
+                                  obj10.children = intl.string(sourcePage(1128).t.Yi6Mpu);
+                                  const items5 = [closure_9(sourcePage(5149).Text, obj10), ,];
                                   const obj11 = {
                                     returnKeyType: "done",
                                     submitBehavior: "submit",
@@ -739,7 +739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                   }
                                   obj11.status = undefined;
-                                  items5[1] = tmp36(sourcePage(6994).TextArea, obj11);
+                                  items5[1] = tmp36(sourcePage(6996).TextArea, obj11);
                                   if (first2.status !== constants.ERROR) {
                                     const obj12 = {
                                       style: tmp4.messageFooterText,
@@ -765,8 +765,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         return;
                                       }
                                     }
-                                    let intl2 = sourcePage(1126).intl;
-                                    obj12.children = intl2.string(sourcePage(1126).t.UtfQNw);
+                                    let intl2 = sourcePage(1128).intl;
+                                    obj12.children = intl2.string(sourcePage(1128).t.UtfQNw);
                                     let tmp36Result = tmp36(tmp41, obj12);
                                     items5[2] = tmp36Result;
                                     obj9.children = items5;
@@ -854,8 +854,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const trimmed1 = first3.trim();
             if (trimmed.length <= 0) {
               let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
-              let intl = sourcePage(1126).intl;
-              obj2.message = intl.string(sourcePage(1126).t.mxnceg);
+              let intl = sourcePage(1128).intl;
+              obj2.message = intl.string(sourcePage(1128).t.mxnceg);
               closure_6(obj2);
             } else {
               const hasItem = trimmed.includes("#");
@@ -868,7 +868,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 substr = trimmed.substring(1);
                 tmp2 = substr;
               }
-              const validateDiscordTagResult = sourcePage(7242).validateDiscordTag(tmp2);
+              const validateDiscordTagResult = sourcePage(7244).validateDiscordTag(tmp2);
               if (null != validateDiscordTagResult) {
                 let obj3 = {
                   status: constants.ERROR,
@@ -882,7 +882,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj6 = {
                   discordTag: tmp2,
                   context: { location: "Search - Add Friend Search" },
-                  errorUxConfig: sourcePage(7237).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+                  errorUxConfig: sourcePage(7239).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
                   note: null,
                 };
                 let tmp9;
@@ -890,8 +890,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp9 = trimmed1;
                 }
                 obj6.note = tmp9;
-                const obj5 = ref(7237);
-                ref(7237)
+                const obj5 = ref(7239);
+                ref(7239)
                   .sendRequest(obj6)
                   .then(
                     () => {
@@ -960,9 +960,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       closure_6(obj3);
                     },
                   );
-                const sendRequestResult = ref(7237).sendRequest(obj6);
+                const sendRequestResult = ref(7239).sendRequest(obj6);
               }
-              let obj = sourcePage(7242);
+              let obj = sourcePage(7244);
             }
           }
           cResult[11] = first3;
@@ -1054,8 +1054,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const trimmed1 = first2.trim();
         if (trimmed.length <= 0) {
           let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
-          let intl = sourcePage(1126).intl;
-          obj2.message = intl.string(sourcePage(1126).t.mxnceg);
+          let intl = sourcePage(1128).intl;
+          obj2.message = intl.string(sourcePage(1128).t.mxnceg);
           closure_6(obj2);
         } else {
           const hasItem = trimmed.includes("#");
@@ -1068,7 +1068,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             substr = trimmed.substring(1);
             tmp2 = substr;
           }
-          const validateDiscordTagResult = sourcePage(7242).validateDiscordTag(tmp2);
+          const validateDiscordTagResult = sourcePage(7244).validateDiscordTag(tmp2);
           if (null != validateDiscordTagResult) {
             let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
             closure_6(obj3);
@@ -1078,7 +1078,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               discordTag: tmp2,
               context: { location: "Search - Add Friend Search" },
-              errorUxConfig: sourcePage(7237).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+              errorUxConfig: sourcePage(7239).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
               note: null,
             };
             let tmp9;
@@ -1086,8 +1086,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = trimmed1;
             }
             obj6.note = tmp9;
-            const obj5 = ref(7237);
-            ref(7237)
+            const obj5 = ref(7239);
+            ref(7239)
               .sendRequest(obj6)
               .then(
                 () => {
@@ -1151,9 +1151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_6(obj3);
                 },
               );
-            const sendRequestResult = ref(7237).sendRequest(obj6);
+            const sendRequestResult = ref(7239).sendRequest(obj6);
           }
-          let obj = sourcePage(7242);
+          let obj = sourcePage(7244);
         }
       }
       ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -1163,8 +1163,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp2 = textState(
         noop.useState(() => {
           const obj = { validatedText: "", hint: null };
-          const intl = sourcePage(1126).intl;
-          obj.hint = intl.string(sourcePage(1126).t["6p7Mhh"]);
+          const intl = sourcePage(1128).intl;
+          obj.hint = intl.string(sourcePage(1128).t["6p7Mhh"]);
           return obj;
         }),
         2,
@@ -1267,12 +1267,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj6 = { style: tmp.redesignGrow };
         items6[1] = closure_9(tmp16, obj6);
         const obj7 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-        const intl3 = sourcePage(1126).intl;
-        obj7.text = intl3.string(sourcePage(1126).t["PMsq/b"]);
+        const intl3 = sourcePage(1128).intl;
+        obj7.text = intl3.string(sourcePage(1128).t["PMsq/b"]);
         obj7.disabled = str.trim().length <= 0;
         obj7.onPress = handleSubmitEditing;
         obj7.loading = first1.status === constants.LOADING;
-        items6[2] = closure_9(sourcePage(5439).Button, obj7);
+        items6[2] = closure_9(sourcePage(5441).Button, obj7);
         obj5.children = items6;
         return closure_10(closure_11, obj5);
       } else {
@@ -1282,9 +1282,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
         items7[2] = headerTextStyle;
         obj9.style = items7;
-        let intl = sourcePage(1126).intl;
-        obj9.children = intl.string(sourcePage(1126).t.Yi6Mpu);
-        const items8 = [closure_9(sourcePage(5147).Text, obj9), ,];
+        let intl = sourcePage(1128).intl;
+        obj9.children = intl.string(sourcePage(1128).t.Yi6Mpu);
+        const items8 = [closure_9(sourcePage(5149).Text, obj9), ,];
         const obj10 = {
           returnKeyType: "done",
           submitBehavior: "submit",
@@ -1301,7 +1301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         obj10.status = str2;
-        items8[1] = closure_9(sourcePage(6994).TextArea, obj10);
+        items8[1] = closure_9(sourcePage(6996).TextArea, obj10);
         if (first1.status !== constants.ERROR) {
           const obj11 = {
             style: tmp.messageFooterText,
@@ -1309,9 +1309,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-muted",
             children: null,
           };
-          let intl2 = sourcePage(1126).intl;
-          obj11.children = intl2.string(sourcePage(1126).t.UtfQNw);
-          let tmp17Result = closure_9(sourcePage(5147).Text, obj11);
+          let intl2 = sourcePage(1128).intl;
+          obj11.children = intl2.string(sourcePage(1128).t.UtfQNw);
+          let tmp17Result = closure_9(sourcePage(5149).Text, obj11);
           items8[2] = tmp17Result;
           obj8.children = items8;
           closure_10(tmp16, obj8);

@@ -80,7 +80,7 @@ function getAutomodErrorMessageFromMessageData(message) {
   }
   return stringResult;
 }
-const AbortCodes = fn(1085).AbortCodes;
+const AbortCodes = fn(1087).AbortCodes;
 class InvalidKeywordError extends Error {}
 const prototype = function InvalidRegexPatternError() {
   return HermesBuiltin.applyArguments(new.target, new.target);

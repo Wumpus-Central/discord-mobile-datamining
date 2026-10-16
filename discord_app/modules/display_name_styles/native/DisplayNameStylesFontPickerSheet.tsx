@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFontPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2960 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2963 from "../intl/DisplayNameStyles.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader.tsx";
@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const Fonts = fn(1096).Fonts;
+const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" },
@@ -153,16 +153,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_5 = undefined;
       const tmp = closure_10();
       importDefault = tmp;
-      let obj = onSelectFont(8513);
-      const visibleFontOrder = onSelectFont(16280).useVisibleFontOrder();
-      let obj2 = onSelectFont(16280);
-      const displayNameStylesNewFonts = onSelectFont(16282).useDisplayNameStylesNewFonts(visibleFontOrder);
+      let obj = onSelectFont(8521);
+      const visibleFontOrder = onSelectFont(16313).useVisibleFontOrder();
+      let obj2 = onSelectFont(16313);
+      const displayNameStylesNewFonts = onSelectFont(16315).useDisplayNameStylesNewFonts(visibleFontOrder);
       ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
       [first, closure_5] = first.useState(selectedFontId);
-      let tmp15Result = first !== onSelectFont(1410).DisplayNameFont.DEFAULT;
-      let obj3 = onSelectFont(16282);
+      let tmp15Result = first !== onSelectFont(1412).DisplayNameFont.DEFAULT;
+      let obj3 = onSelectFont(16315);
       closure_6 = tmp9;
-      let obj4 = onSelectFont(1407);
+      let obj4 = onSelectFont(1409);
       constants = first.useCallback((arg0) => {
         closure_5(arg0);
       }, []);
@@ -176,19 +176,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj5 = { ref: obj.useBottomSheetRef().bottomSheetRef, header: null, children: null };
       const obj6 = { title: null, trailing: null };
-      const hasNonLatinLettersResult = onSelectFont(1407).hasNonLatinLetters(displayName.displayName);
-      let intl = onSelectFont(1126).intl;
-      obj6.title = intl.string(_modDef2960["0JCuGm"]);
+      const hasNonLatinLettersResult = onSelectFont(1409).hasNonLatinLetters(displayName.displayName);
+      let intl = onSelectFont(1128).intl;
+      obj6.title = intl.string(_modDef2963["0JCuGm"]);
       const obj7 = { text: null, onPress: null, variant: "primary", size: "sm" };
-      const intl2 = onSelectFont(1126).intl;
-      obj7.text = intl2.string(onSelectFont(1126).t.XqMe3N);
+      const intl2 = onSelectFont(1128).intl;
+      obj7.text = intl2.string(onSelectFont(1128).t.XqMe3N);
       obj7.onPress = callback;
-      obj6.trailing = closure_8(onSelectFont(5439).Button, obj7);
+      obj6.trailing = closure_8(onSelectFont(5441).Button, obj7);
       obj5.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj6);
       const obj8 = { style: tmp.container, children: null };
       const obj9 = { style: tmp.contentContainer, children: null };
       let items1 = [
-        closure_8(onSelectFont(5437).Stack, {
+        closure_8(onSelectFont(5439).Stack, {
           direction: "horizontal",
           align: "center",
           justify: "center",
@@ -249,11 +249,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp15Result) {
         const obj11 = { style: tmp.nonLatinDisclaimer, children: null };
-        let items2 = [closure_8(onSelectFont(5105).CircleInformationIcon, { size: "sm" })];
+        let items2 = [closure_8(onSelectFont(5108).CircleInformationIcon, { size: "sm" })];
         const obj12 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
-        const intl3 = onSelectFont(1126).intl;
-        obj12.children = intl3.string(_modDef2960["+O1xL2"]);
-        items2[1] = closure_8(onSelectFont(5147).Text, obj12);
+        const intl3 = onSelectFont(1128).intl;
+        obj12.children = intl3.string(_modDef2963["+O1xL2"]);
+        items2[1] = closure_8(onSelectFont(5149).Text, obj12);
         obj11.children = items2;
         tmp15Result = closure_9(tmp14, obj11);
       }
@@ -261,5 +261,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj9.children = items1;
       obj8.children = closure_9(closure_5, obj9);
       obj5.children = closure_8(closure_5, obj8);
-      return closure_8(onSelectFont(7061).BottomSheet, obj5);
+      return closure_8(onSelectFont(7063).BottomSheet, obj5);
     };

@@ -21,13 +21,13 @@ export default noop.memo(
             }
             const _Symbol = Symbol;
             if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = channel(1126).intl;
-              const stringResult = intl.string(channel(1126).t["9mysCh"]);
-              const intl2 = channel(1126).intl;
-              const stringResult1 = intl2.string(channel(1126).t.PDUCIN);
-              const obj2 = { IconComponent: channel(14735).ChannelListMagnifyingGlassIcon };
-              const tmp12 = jsx(channel(6408).TableRowIcon, {
-                IconComponent: channel(14735).ChannelListMagnifyingGlassIcon,
+              const intl = channel(1128).intl;
+              const stringResult = intl.string(channel(1128).t["9mysCh"]);
+              const intl2 = channel(1128).intl;
+              const stringResult1 = intl2.string(channel(1128).t.PDUCIN);
+              const obj2 = { IconComponent: channel(14768).ChannelListMagnifyingGlassIcon };
+              const tmp12 = jsx(channel(6410).TableRowIcon, {
+                IconComponent: channel(14768).ChannelListMagnifyingGlassIcon,
               });
               cResult[4] = stringResult;
               cResult[5] = stringResult1;
@@ -50,7 +50,7 @@ export default noop.memo(
                 end: true,
                 arrow: true,
               };
-              const tmp15 = jsx(channel(6400).TableRow, {
+              const tmp15 = jsx(channel(6402).TableRow, {
                 label: tmp6,
                 subLabel: tmp7,
                 icon: tmp8,
@@ -72,7 +72,7 @@ export default noop.memo(
               return tmp16;
             }
             const obj4 = { style, children: tmp13 };
-            const tmp19 = jsx(analyticsSection(6382), { style, children: tmp13 });
+            const tmp19 = jsx(analyticsSection(6384), { style, children: tmp13 });
             cResult[9] = style;
             cResult[10] = tmp13;
             cResult[11] = tmp19;
@@ -102,14 +102,14 @@ export default noop.memo(
         }, items);
         const obj = { style: channel.style, children: null };
         const obj2 = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
-        const intl = channel(1126).intl;
-        obj2.label = intl.string(channel(1126).t["9mysCh"]);
-        const intl2 = channel(1126).intl;
-        obj2.subLabel = intl2.string(channel(1126).t.PDUCIN);
-        const tmp2 = analyticsSection(6382);
-        obj2.icon = jsx(channel(6408).TableRowIcon, { IconComponent: channel(14735).ChannelListMagnifyingGlassIcon });
+        const intl = channel(1128).intl;
+        obj2.label = intl.string(channel(1128).t["9mysCh"]);
+        const intl2 = channel(1128).intl;
+        obj2.subLabel = intl2.string(channel(1128).t.PDUCIN);
+        const tmp2 = analyticsSection(6384);
+        obj2.icon = jsx(channel(6410).TableRowIcon, { IconComponent: channel(14768).ChannelListMagnifyingGlassIcon });
         obj2.onPress = callback;
-        obj.children = jsx(channel(6400).TableRow, {
+        obj.children = jsx(channel(6402).TableRow, {
           label: null,
           subLabel: null,
           icon: null,

@@ -8,7 +8,7 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PaymentGateways = fn(1096).PaymentGateways;
+const PaymentGateways = fn(1098).PaymentGateways;
 const PremiumPlanPriceSource = { IAP: "IAP", API: "API" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
                         if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
                           const obj = SubscriptionPlanActionCreators;
                           const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
-                          premiumSubscriptionPlans.catch(/* F155426 */ function() { ... });
+                          premiumSubscriptionPlans.catch(/* F155900 */ function() { ... });
                         }
                       });
                       return () => {

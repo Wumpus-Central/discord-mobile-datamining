@@ -4,8 +4,8 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
-import _modDef3186 from "../../age_assurance/ManualReview.messages.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import _modDef3189 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
@@ -21,7 +21,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(15674);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(15707);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -34,8 +34,8 @@ function handleManualReviewClick() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7729).AgeCheckStatus;
-const Constants = fn(1085);
+const AgeCheckStatus = fn(7732).AgeCheckStatus;
+const Constants = fn(1087);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -53,10 +53,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { type: "critical", message: first, role: "alert", action: null };
-        const obj3 = { text: null, onClick: null };
+        const obj3 = { text: null, onPress: null };
         const intl2 = util.intl;
         obj3.text = intl2.string(util.t.IcA9iD);
-        obj3.onClick = handleRetryClick;
+        obj3.onPress = handleRetryClick;
         obj2.action = obj3;
         const tmp9 = __initData(InlineNotice.InlineNotice, obj2);
         cResult[1] = tmp9;
@@ -70,10 +70,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { type: "critical", message: null, role: "alert", action: null };
       const intl = util.intl;
       obj.message = intl.string(util.t.dqbMbn);
-      const obj2 = { text: null, onClick: null };
+      const obj2 = { text: null, onPress: null };
       const intl2 = util.intl;
       obj2.text = intl2.string(util.t.IcA9iD);
-      obj2.onClick = handleRetryClick;
+      obj2.onPress = handleRetryClick;
       obj.action = obj2;
       return __initData(InlineNotice.InlineNotice, obj);
     };
@@ -134,7 +134,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_22();
       _require = tmp4;
       if (cResult[0] !== tmp4) {
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         const obj2 = {
           manualReviewHook(children, arg1) {
             return __initData(
@@ -150,7 +150,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             );
           },
         };
-        const formatResult = intl.format(_modDef3186.vPoM8y, obj2);
+        const formatResult = intl.format(_modDef3189.vPoM8y, obj2);
         cResult[0] = tmp4;
         cResult[1] = formatResult;
         let tmp5 = formatResult;
@@ -158,10 +158,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { text: null, onClick: null };
-        const intl2 = tmp(1126).intl;
-        obj3.text = intl2.string(tmp(1126).t.IcA9iD);
-        obj3.onClick = handleRetryClick;
+        const obj3 = { text: null, onPress: null };
+        const intl2 = tmp(1128).intl;
+        obj3.text = intl2.string(tmp(1128).t.IcA9iD);
+        obj3.onPress = handleRetryClick;
         cResult[2] = obj3;
         let tmp8 = obj3;
       } else {
@@ -169,7 +169,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp5) {
         const obj4 = { type: "critical", message: tmp5, role: "alert", action: tmp8 };
-        const tmp12 = closure_12(tmp(7784).InlineNotice, obj4);
+        const tmp12 = closure_12(tmp(7787).InlineNotice, obj4);
         cResult[3] = tmp5;
         cResult[4] = tmp12;
         let tmp10 = tmp12;
@@ -182,7 +182,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       _require = closure_22();
       const obj = { type: "critical", message: null, role: "alert", action: null };
       const intl = require("util").intl;
-      obj.message = intl.format(_modDef3186.vPoM8y, {
+      obj.message = intl.format(_modDef3189.vPoM8y, {
         manualReviewHook(children, arg1) {
           return __initData(
             Text_Text.Text,
@@ -197,10 +197,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       });
-      const obj3 = { text: null, onClick: null };
+      const obj3 = { text: null, onPress: null };
       const intl2 = require("util").intl;
       obj3.text = intl2.string(require("util").t.IcA9iD);
-      obj3.onClick = handleRetryClick;
+      obj3.onPress = handleRetryClick;
       obj.action = obj3;
       return closure_12(require("InlineNotice").InlineNotice, obj);
     };
@@ -253,10 +253,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol4 = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { type: "critical", message: obj4, role: "alert", action: null };
-          obj4 = { text: null, onClick: null };
+          obj4 = { text: null, onPress: null };
           const intl2 = util.intl;
           obj4.text = intl2.string(util.t.NkTGsC);
-          obj4.onClick = handleManualReviewClick;
+          obj4.onPress = handleManualReviewClick;
           obj3.action = obj4;
           const tmp21 = __initData(InlineNotice.InlineNotice, obj3);
           cResult[2] = tmp21;
@@ -281,10 +281,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { type: "critical", message: null, role: "alert", action: null };
         const intl = util.intl;
         obj2.message = intl.string(util.t.VTgFYh);
-        const obj3 = { text: null, onClick: null };
+        const obj3 = { text: null, onPress: null };
         const intl2 = util.intl;
         obj3.text = intl2.string(util.t.NkTGsC);
-        obj3.onClick = handleManualReviewClick;
+        obj3.onPress = handleManualReviewClick;
         obj2.action = obj3;
         tmp5Result = __initData(InlineNotice.InlineNotice, obj2);
       }
@@ -357,10 +357,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol8 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { type: "positive", message: obj5, role: "status", action: null };
-          obj5 = { text: null, onClick: null };
+          obj5 = { text: null, onPress: null };
           const intl5 = util.intl;
           obj5.text = intl5.string(util.t["2jvQ6K"]);
-          obj5.onClick = handleLogInClick;
+          obj5.onPress = handleLogInClick;
           obj4.action = obj5;
           const tmp39 = __initData(InlineNotice.InlineNotice, obj4);
           cResult[6] = tmp39;
@@ -448,10 +448,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { type: "positive", message: null, role: "status", action: null };
         const intl4 = util.intl;
         obj4.message = intl4.string(util.t["2Qe65J"]);
-        const obj5 = { text: null, onClick: null };
+        const obj5 = { text: null, onPress: null };
         const intl5 = util.intl;
         obj5.text = intl5.string(util.t["2jvQ6K"]);
-        obj5.onClick = handleLogInClick;
+        obj5.onPress = handleLogInClick;
         obj4.action = obj5;
         tmp9 = __initData(InlineNotice.InlineNotice, obj4);
       } else if (stateFromStores === AgeCheckStatus.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
@@ -478,7 +478,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj7 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -519,7 +519,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15676, dependencyMap.paths),
+          asyncRequireImpl(15709, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

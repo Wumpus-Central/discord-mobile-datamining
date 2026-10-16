@@ -7,7 +7,7 @@ import postConnectionCallback from "../modules/connections/postConnectionCallbac
 import ConnectedAccountRecord from "../records/ConnectedAccountRecord.tsx";
 
 require = fn;
-const items = [fn(1085).PlatformTypes.CONTACTS];
+const items = [fn(1087).PlatformTypes.CONTACTS];
 const set = new Set(items);
 let c5 = true;
 let closure_6 = [];

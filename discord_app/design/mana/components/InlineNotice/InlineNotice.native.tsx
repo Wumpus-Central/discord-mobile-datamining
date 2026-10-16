@@ -12,10 +12,10 @@ const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const InlineNotice = "InlineNotice";
 let obj = {
-  critical: fn(7785).HelpMessageTypes.ERROR,
-  warning: fn(7785).HelpMessageTypes.WARNING,
-  info: fn(7785).HelpMessageTypes.INFO,
-  positive: fn(7785).HelpMessageTypes.SUCCESS,
+  critical: fn(7788).HelpMessageTypes.ERROR,
+  warning: fn(7788).HelpMessageTypes.WARNING,
+  info: fn(7788).HelpMessageTypes.INFO,
+  positive: fn(7788).HelpMessageTypes.SUCCESS,
 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -45,14 +45,15 @@ export const InlineNotice = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] !== action) {
             let tmp7;
             if (null != action) {
-              ({ text: obj3.text, onClick: obj3.onPress } = action);
+              ({ text: obj3.text, onPress: obj3.onPress, loading: obj3.loading } = action);
               tmp7 = React3(components_Button_Button.Button, {
                 variant: "secondary",
                 size: "sm",
                 text: null,
                 onPress: null,
+                loading: null,
               });
-              const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
+              const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null, loading: null };
             }
             cResult[2] = action;
             cResult[3] = tmp7;
@@ -109,14 +110,15 @@ export const InlineNotice = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { messageType: obj[tmp3], button: null, children: null };
           let tmp14Result;
           if (null != action) {
-            ({ text: obj2.text, onClick: obj2.onPress } = action);
+            ({ text: obj2.text, onPress: obj2.onPress, loading: obj2.loading } = action);
             tmp14Result = React3(components_Button_Button.Button, {
               variant: "secondary",
               size: "sm",
               text: null,
               onPress: null,
+              loading: null,
             });
-            const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
+            const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null, loading: null };
           }
           obj4.button = tmp14Result;
           let tmp7 = message;

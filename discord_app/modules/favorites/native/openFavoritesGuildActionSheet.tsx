@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/native/openFavoritesGuildActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
 const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildActionSheet.tsx");
 
 export default function openFavoritesGuildActionSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17155, dependencyMap.paths), FavoritesGuildActionSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17189, dependencyMap.paths), FavoritesGuildActionSheet, {
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildActionSheet);
     },

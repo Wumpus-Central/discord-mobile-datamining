@@ -25,21 +25,21 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12817);
+const VoicePanelConstants = fn(12843);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12820).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12815).VoicePanelControlsModes;
-const ParticipantTypes = fn(5174).ParticipantTypes;
-const ThemeTypes = fn(1096).ThemeTypes;
+const EDGE_GUTTER = fn(12846).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12841).VoicePanelControlsModes;
+const ParticipantTypes = fn(5176).ParticipantTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   headerWrapper: {
     zIndex: 1,
@@ -510,7 +510,7 @@ let closure_40 = noop.memo(
         derivedValue = id(controlsSpecs[22]).useDerivedValue(fn);
         const obj2 = id(controlsSpecs[22]);
         const obj3 = { focused, controlsSpecs, VoicePanelControlsModes, speaking: sharedValue };
-        const fn2 = function h() {
+        const fn2 = function _() {
           let opacity = 0;
           if (derivedValue.get()) {
             opacity = 1;
@@ -556,9 +556,9 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmpResult2.useShowStageMusicMuteButton(channelId)) {
         if (speaker) {
           if (cResult[2] !== stateFromStores) {
-            const intl = tmp(1126).intl;
+            const intl = tmp(1128).intl;
             const string = intl.string;
-            let ScHlfl = tmp(1126).t;
+            let ScHlfl = tmp(1128).t;
             if (stateFromStores) {
               ScHlfl = ScHlfl.ScHlfl;
               let stringResult = string(ScHlfl);
@@ -568,7 +568,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[2] = stateFromStores;
             cResult[3] = stringResult;
           } else {
-            const tmp4Result = importDefault(stateFromStores ? 11286 : 10472);
+            const tmp4Result = importDefault(stateFromStores ? 11306 : 8342);
             if (cResult[4] !== stateFromStores) {
               const fn2 = function p() {
                 return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -613,9 +613,9 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       if (obj2.useShowStageMusicMuteButton(channelId)) {
         tmp6 = null;
         if (speaker) {
-          const intl = tmp4(1126).intl;
+          const intl = tmp4(1128).intl;
           const string = intl.string;
-          const t = tmp4(1126).t;
+          const t = tmp4(1128).t;
           if (stateFromStores) {
             let stringResult = string(t.ScHlfl);
           } else {
@@ -623,7 +623,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 11286 : 10472),
+            icon: importDefault(stateFromStores ? 11306 : 8342),
             onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             },
@@ -683,7 +683,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/header/Voice
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelHeader(wrapperOffset) {
-        const cResult = wrapperOffset(channelId[21]).c(99);
+        const cResult = wrapperOffset(channelId[21]).c(107);
         wrapperOffset = wrapperOffset.wrapperOffset;
         const gestureState = wrapperOffset.gestureState;
         const tmp4 = closure_26();
@@ -697,25 +697,48 @@ export default noop.memo(
         ({ scrollPosition, guildId } = context);
         let obj = wrapperOffset(channelId[21]);
         const isScreenReaderEnabled = wrapperOffset(channelId[36]).useIsScreenReaderEnabled();
-        let tmp8 = gestureState(channelId[37])(channelId);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          obj4 = { location: "VoicePanelHeader" };
-          cResult[0] = obj4;
-          let first = obj4;
+          let items = [ChannelStore];
+          cResult[0] = items;
+          let first = items;
         } else {
           first = cResult[0];
         }
-        let obj3 = wrapperOffset(channelId[36]);
-        const treatment = gestureState(channelId[38]).useConfig(first).treatment;
-        if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          let items = [derivedValue1, token, ChannelStore, connected];
-          cResult[1] = items;
-          let tmp10 = items;
+        if (cResult[1] !== channelId) {
+          const fn = function c() {
+            return ChannelStore.getChannel(channelId);
+          };
+          const items1 = [channelId];
+          cResult[1] = channelId;
+          cResult[2] = fn;
+          cResult[3] = items1;
+          let tmp11 = items1;
+          let tmp10 = fn;
         } else {
-          tmp10 = cResult[1];
+          tmp10 = cResult[2];
+          tmp11 = cResult[3];
         }
-        if (cResult[2] !== channelId) {
-          function re() {
+        let obj3 = wrapperOffset(channelId[36]);
+        const stateFromStores = wrapperOffset(channelId[29]).useStateFromStores(first, tmp10, tmp11);
+        let tmp13 = gestureState(channelId[37])(channelId);
+        if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+          obj4 = { location: "VoicePanelHeader" };
+          cResult[4] = obj4;
+          let tmp14 = obj4;
+        } else {
+          tmp14 = cResult[4];
+        }
+        const tmpResult = wrapperOffset(channelId[29]);
+        const treatment = gestureState(channelId[38]).useConfig(tmp14).treatment;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const items2 = [derivedValue1, token, ChannelStore, connected];
+          cResult[5] = items2;
+          let tmp15 = items2;
+        } else {
+          tmp15 = cResult[5];
+        }
+        if (cResult[6] !== channelId) {
+          function ce() {
             const channel = ChannelStore.getChannel(channelId);
             let channelName;
             if (null != channel) {
@@ -727,22 +750,22 @@ export default noop.memo(
             }
             return channelName;
           }
-          const items1 = [channelId];
-          cResult[2] = channelId;
-          cResult[3] = re;
-          cResult[4] = items1;
-          let tmp16 = items1;
-          let tmp15 = re;
+          const items3 = [channelId];
+          cResult[6] = channelId;
+          cResult[7] = ce;
+          cResult[8] = items3;
+          let tmp21 = items3;
+          let tmp20 = ce;
         } else {
-          tmp15 = cResult[3];
-          tmp16 = cResult[4];
+          tmp20 = cResult[7];
+          tmp21 = cResult[8];
         }
         const tmp5Result = gestureState(channelId[38]);
-        const stateFromStores = wrapperOffset(channelId[29]).useStateFromStores(tmp10, tmp15, tmp16);
-        const tmpResult = wrapperOffset(channelId[29]);
-        [tmp19, AuthenticationStore] = focused(controlsSpecs.useState(undefined), 2);
-        const tmp18 = focused(controlsSpecs.useState(undefined), 2);
-        [tmp21, ChannelStore] = focused(controlsSpecs.useState(null), 2);
+        const stateFromStores1 = wrapperOffset(channelId[29]).useStateFromStores(tmp15, tmp20, tmp21);
+        const tmpResult16 = wrapperOffset(channelId[29]);
+        [tmp24, AuthenticationStore] = focused(controlsSpecs.useState(undefined), 2);
+        const tmp23 = focused(controlsSpecs.useState(undefined), 2);
+        [tmp26, ChannelStore] = focused(controlsSpecs.useState(null), 2);
         function handleFocusChange(Dispatcher) {
           let tmp3 = null;
           if (null != Dispatcher) {
@@ -756,8 +779,8 @@ export default noop.memo(
           ChannelStore(tmp3);
           AuthenticationStore(Dispatcher);
         }
-        const tmp20 = focused(controlsSpecs.useState(null), 2);
-        function ce() {
+        const tmp25 = focused(controlsSpecs.useState(null), 2);
+        function ge() {
           value = focused.get();
           let id;
           if (value != null) {
@@ -765,48 +788,35 @@ export default noop.memo(
           }
           return id;
         }
-        ce.__closure = { focused };
-        ce.__workletHash = 8016082904457;
-        ce.__initData = __initData11;
-        function se(arg0, arg1) {
+        ge.__closure = { focused };
+        ge.__workletHash = 8016082904457;
+        ge.__initData = __initData11;
+        function ue(arg0, arg1) {
           if (arg0 !== arg1) {
             ReanimatedRexport.runOnJS(handleFocusChange)(arg0);
           }
         }
-        const tmpResult15 = wrapperOffset(channelId[22]);
-        se.__closure = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
-        se.__workletHash = 9918394343352;
-        se.__initData = __initData12;
-        const animatedReaction = tmpResult15.useAnimatedReaction(ce, se);
+        const tmpResult17 = wrapperOffset(channelId[22]);
+        ue.__closure = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
+        ue.__workletHash = 9918394343352;
+        ue.__initData = __initData12;
+        const animatedReaction = tmpResult17.useAnimatedReaction(ge, ue);
         let obj5 = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
         token = wrapperOffset(channelId[40]).useToken(tmp5(tmp2[19]).modules.mobile.VOICE_PANEL_GUTTER);
-        const tmpResult16 = wrapperOffset(channelId[40]);
-        class He {
-          constructor() {
-            tmp = closure_1(closure_2[41]);
-            obj = mode;
-            tmpResult = tmp(safeArea.get(), closure_12);
-            if (mode.get() === VoicePanelModes.PIP) {
-              tmp6 = EDGE_GUTTER;
-              num = -tmpResult.height + EDGE_GUTTER;
-            } else {
-              obj2 = gestureState;
-              if (gestureState.get().active) {
-                if (!obj2.get().requiresPop) {
-                  tmp4 = connected;
-                }
-              }
+        const tmpResult18 = wrapperOffset(channelId[40]);
+        function me() {
+          if (mode.get() === VoicePanelModes.PIP) {
+            let num = -tmpResult.height + EDGE_GUTTER;
+          } else {
+            num = 0;
+            if (mode.get() === tmp3.DISMISSED) {
               num = 0;
-              if (obj.get() === tmp3.DISMISSED) {
-                tmp5 = connected;
-                num = 0;
-              }
             }
-            return num;
           }
+          return num;
         }
-        const tmpResult17 = wrapperOffset(channelId[22]);
-        He.__closure = {
+        const tmpResult19 = wrapperOffset(channelId[22]);
+        me.__closure = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
           edgeGutter: token,
@@ -816,9 +826,9 @@ export default noop.memo(
           connected,
           EDGE_GUTTER,
         };
-        He.__workletHash = 2737204369147;
-        He.__initData = __initData13;
-        const derivedValue = tmpResult17.useDerivedValue(He);
+        me.__workletHash = 2737204369147;
+        me.__initData = __initData13;
+        const derivedValue = tmpResult19.useDerivedValue(me);
         const obj6 = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
@@ -829,7 +839,7 @@ export default noop.memo(
           connected,
           EDGE_GUTTER,
         };
-        class Ee {
+        class Te {
           constructor() {
             tmp = closure_2;
             tmp2 = closure_1(closure_2[41]);
@@ -886,8 +896,8 @@ export default noop.memo(
             return;
           }
         }
-        const tmpResult18 = wrapperOffset(channelId[22]);
-        Ee.__closure = {
+        const tmpResult20 = wrapperOffset(channelId[22]);
+        Te.__closure = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
           edgeGutter: token,
@@ -903,9 +913,9 @@ export default noop.memo(
           DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,
           UI_SHOW_HIDE_PHYSICS,
         };
-        Ee.__workletHash = 9971353242678;
-        Ee.__initData = __initData14;
-        const animatedStyle = tmpResult18.useAnimatedStyle(Ee);
+        Te.__workletHash = 9971353242678;
+        Te.__initData = __initData14;
+        const animatedStyle = tmpResult20.useAnimatedStyle(Te);
         const obj7 = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
@@ -922,7 +932,7 @@ export default noop.memo(
           DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,
           UI_SHOW_HIDE_PHYSICS,
         };
-        class Ie {
+        class Ce {
           constructor() {
             tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
             if (tmp) {
@@ -932,13 +942,13 @@ export default noop.memo(
             return tmp;
           }
         }
-        Ie.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-        Ie.__workletHash = 12045427211815;
-        Ie.__initData = __initData15;
-        derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(Ie);
+        Ce.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+        Ce.__workletHash = 12045427211815;
+        Ce.__initData = __initData15;
+        derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(Ce);
         const obj8 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-        const tmpResult19 = wrapperOffset(channelId[22]);
-        class Pe {
+        const tmpResult21 = wrapperOffset(channelId[22]);
+        class De {
           constructor() {
             tmp = closure_2;
             tmp2 = closure_1(closure_2[41]);
@@ -962,8 +972,8 @@ export default noop.memo(
             return obj1;
           }
         }
-        const tmpResult20 = wrapperOffset(channelId[22]);
-        Pe.__closure = {
+        const tmpResult22 = wrapperOffset(channelId[22]);
+        De.__closure = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
           edgeGutter: token,
@@ -973,9 +983,9 @@ export default noop.memo(
           withSpring: wrapperOffset(channelId[23]).withSpring,
           MODE_CHANGE_PHYSICS,
         };
-        Pe.__workletHash = 11509667866329;
-        Pe.__initData = __initData16;
-        const animatedStyle1 = tmpResult20.useAnimatedStyle(Pe);
+        De.__workletHash = 11509667866329;
+        De.__initData = __initData16;
+        const animatedStyle1 = tmpResult22.useAnimatedStyle(De);
         const obj9 = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
@@ -986,7 +996,7 @@ export default noop.memo(
           withSpring: wrapperOffset(channelId[23]).withSpring,
           MODE_CHANGE_PHYSICS,
         };
-        function me() {
+        function be() {
           let str = "box-none";
           if (derivedValue1.get()) {
             str = "none";
@@ -1000,107 +1010,185 @@ export default noop.memo(
           obj2.accessibilityElementsHidden = derivedValue1.get();
           return obj2;
         }
-        me.__closure = { isHeaderHidden: derivedValue1 };
-        me.__workletHash = 13251177319922;
-        me.__initData = __initData17;
-        const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(me);
-        const tmpResult21 = wrapperOffset(channelId[22]);
+        be.__closure = { isHeaderHidden: derivedValue1 };
+        be.__workletHash = 13251177319922;
+        be.__initData = __initData17;
+        const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(be);
+        const tmpResult23 = wrapperOffset(channelId[22]);
         const canInviteMembers = wrapperOffset(channelId[43]).useCanInviteMembers(channelId);
-        const tmpResult22 = wrapperOffset(channelId[43]);
+        const tmpResult24 = wrapperOffset(channelId[43]);
         wrapperOffset(channelId[44]).useInviteMembersCallback(channelId);
-        const tmpResult23 = wrapperOffset(channelId[44]);
-        const tmp31 = gestureState(channelId[45])();
-        wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp31);
-        if (null != tmp21) {
+        const tmpResult25 = wrapperOffset(channelId[44]);
+        const tmp36 = gestureState(channelId[45])();
+        wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp36);
+        if (null != tmp26) {
           let DOWN = constants.LEFT;
-          let tmp33 = constants;
+          let tmp38 = constants;
         } else {
-          tmp33 = constants;
+          tmp38 = constants;
           DOWN = constants.DOWN;
         }
-        if (cResult[5] === tmp8) {
-          if (cResult[6] === DOWN) {
+        if (cResult[9] === tmp13) {
+          if (cResult[10] === DOWN) {
             const _Symbol = Symbol;
-            if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+            if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
               let id = AuthenticationStore.getId();
-              cResult[8] = id;
-              let tmp38 = id;
+              cResult[12] = id;
+              let tmp43 = id;
             } else {
-              tmp38 = cResult[8];
+              tmp43 = cResult[12];
             }
-            const tmp41 = tmp5(tmp2[47])(tmp38, channelId, guildId);
-            MODE_CHANGE_PHYSICS = tmp41;
+            const tmp46 = tmp5(tmp2[47])(tmp43, channelId, guildId);
+            MODE_CHANGE_PHYSICS = tmp46;
             const _Symbol2 = Symbol;
-            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-              const items2 = [handleFocusChange];
-              cResult[9] = items2;
-              let tmp42 = items2;
+            if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+              const items4 = [handleFocusChange];
+              cResult[13] = items4;
+              let tmp47 = items4;
             } else {
-              tmp42 = cResult[9];
+              tmp47 = cResult[13];
             }
-            if (cResult[10] !== tmp41) {
-              function xe() {
-                if (null != closure_15) {
-                  if (obj3.isStableUserParticipant(closure_15)) {
-                    if (tmp10Result.stableParticipantHasVideo(closure_15)) {
-                      const videoDevices = MediaEngineStore.getVideoDevices();
-                      const _Object = Object;
-                      const keys = Object.keys(videoDevices);
-                      if (keys.length >= 2) {
-                        const videoDeviceId = MediaEngineStore.getVideoDeviceId();
-                        let facing;
-                        if (videoDevices[videoDeviceId] != null) {
-                          facing = tmp13.facing;
-                        }
-                        const found = keys.find((item) => item !== videoDeviceId);
-                        if (null != found) {
-                          let facing1;
-                          if (videoDevices[found] != null) {
-                            facing1 = tmp7.facing;
+            if (cResult[14] !== tmp46) {
+              class Le {
+                constructor() {
+                  tmp = closure_15;
+                  if (null != closure_15) {
+                    tmp10 = closure_0;
+                    tmp11 = closure_2;
+                    obj3 = closure_0(closure_2[47]);
+                    if (obj3.isStableUserParticipant(tmp)) {
+                      tmp10Result = tmp10(tmp11[47]);
+                      if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                        obj2 = closure_11;
+                        videoDevices = closure_11.getVideoDevices();
+                        tmp3 = globalThis;
+                        _Object = Object;
+                        keys = Object.keys(videoDevices);
+                        num = 2;
+                        if (keys.length >= 2) {
+                          videoDeviceId = obj2.getVideoDeviceId();
+                          closure_0 = videoDeviceId;
+                          tmp13 = videoDevices[videoDeviceId];
+                          facing = undefined;
+                          if (tmp13 != null) {
+                            facing = tmp13.facing;
                           }
-                        }
-                        if (null != facing) {
-                          if (null != tmp6) {
-                            if ("back" === facing) {
-                              if ("front" === tmp6) {
-                                const intl3 = util.intl;
-                                let stringResult = intl3.string(util.t["/R1SBx"]);
-                              }
+                          found = keys.find((item) => item !== videoDeviceId);
+                          if (null != found) {
+                            tmp7 = videoDevices[found];
+                            facing1 = undefined;
+                            if (tmp7 != null) {
+                              facing1 = tmp7.facing;
                             }
-                            if ("front" === facing) {
-                              if ("back" === tmp6) {
-                                const intl2 = util.intl;
-                                stringResult = intl2.string(util.t["7YZ/Si"]);
-                              }
-                            }
-                            const intl = util.intl;
-                            stringResult = intl.string(util.t["t9eQ/g"]);
+                            tmp6 = facing1;
                           }
-                          return stringResult;
+                          if (null != facing) {
+                            if (null != tmp6) {
+                              str3 = "back";
+                              if ("back" === facing) {
+                                str = "front";
+                                if ("front" === tmp6) {
+                                  intl3 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                                }
+                              }
+                              str2 = "front";
+                              if ("front" === facing) {
+                                if ("back" === tmp6) {
+                                  intl2 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                                }
+                              }
+                              intl = tmp10(tmp11[31]).intl;
+                              stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                            }
+                            return stringResult;
+                          }
+                          intl4 = tmp10(tmp11[31]).intl;
+                          stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
                         }
-                        const intl4 = util.intl;
-                        stringResult = intl4.string(util.t["t9eQ/g"]);
                       }
                     }
-                    tmp10Result = useStableParticipant;
                   }
-                  obj3 = useStableParticipant;
+                  return;
                 }
               }
-              const items3 = [tmp41];
-              cResult[10] = tmp41;
-              cResult[11] = xe;
-              cResult[12] = items3;
-              let tmp45 = items3;
-              let tmp44 = xe;
+              const items5 = [tmp46];
+              cResult[14] = tmp46;
+              cResult[15] = Le;
+              cResult[16] = items5;
+              let tmp50 = items5;
             } else {
-              tmp44 = cResult[11];
-              tmp45 = cResult[12];
+              class Le {
+                constructor() {
+                  tmp = closure_15;
+                  if (null != closure_15) {
+                    tmp10 = closure_0;
+                    tmp11 = closure_2;
+                    obj3 = closure_0(closure_2[47]);
+                    if (obj3.isStableUserParticipant(tmp)) {
+                      tmp10Result = tmp10(tmp11[47]);
+                      if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                        obj2 = closure_11;
+                        videoDevices = closure_11.getVideoDevices();
+                        tmp3 = globalThis;
+                        _Object = Object;
+                        keys = Object.keys(videoDevices);
+                        num = 2;
+                        if (keys.length >= 2) {
+                          videoDeviceId = obj2.getVideoDeviceId();
+                          closure_0 = videoDeviceId;
+                          tmp13 = videoDevices[videoDeviceId];
+                          facing = undefined;
+                          if (tmp13 != null) {
+                            facing = tmp13.facing;
+                          }
+                          found = keys.find((item) => item !== videoDeviceId);
+                          if (null != found) {
+                            tmp7 = videoDevices[found];
+                            facing1 = undefined;
+                            if (tmp7 != null) {
+                              facing1 = tmp7.facing;
+                            }
+                            tmp6 = facing1;
+                          }
+                          if (null != facing) {
+                            if (null != tmp6) {
+                              str3 = "back";
+                              if ("back" === facing) {
+                                str = "front";
+                                if ("front" === tmp6) {
+                                  intl3 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                                }
+                              }
+                              str2 = "front";
+                              if ("front" === facing) {
+                                if ("back" === tmp6) {
+                                  intl2 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                                }
+                              }
+                              intl = tmp10(tmp11[31]).intl;
+                              stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                            }
+                            return stringResult;
+                          }
+                          intl4 = tmp10(tmp11[31]).intl;
+                          stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                        }
+                      }
+                    }
+                  }
+                  return;
+                }
+              }
+              tmp50 = cResult[16];
             }
-            const stateFromStores1 = tmp(tmp2[29]).useStateFromStores(tmp42, tmp44, tmp45);
+            const stateFromStores2 = tmp(tmp2[29]).useStateFromStores(tmp47, Le, tmp50);
             const _Symbol3 = Symbol;
-            if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              class Ue {
+            if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1114,9 +1202,9 @@ export default noop.memo(
                   return;
                 }
               }
-              cResult[13] = Ue;
+              cResult[17] = Be;
             } else {
-              class Ue {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1131,8 +1219,8 @@ export default noop.memo(
                 }
               }
             }
-            if (DOWN === tmp33.LEFT) {
-              class Ue {
+            if (DOWN === tmp38.LEFT) {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1147,8 +1235,8 @@ export default noop.memo(
                 }
               }
             }
-            if (cResult[14] !== "0deg") {
-              class Ue {
+            if (cResult[18] !== "0deg") {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1163,12 +1251,12 @@ export default noop.memo(
                 }
               }
               const obj10 = { rotateZ: str };
-              const items4 = [obj10];
-              tmp49[0] = items4;
-              cResult[14] = str;
-              cResult[15] = tmp49;
+              const items6 = [obj10];
+              tmp54[0] = items6;
+              cResult[18] = str;
+              cResult[19] = tmp54;
             } else {
-              class Ue {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1183,8 +1271,8 @@ export default noop.memo(
                 }
               }
             }
-            if (cResult[16] !== channelId) {
-              class Ue {
+            if (cResult[20] !== channelId) {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1198,11 +1286,11 @@ export default noop.memo(
                   return;
                 }
               }
-              tmp51[0] = channelId;
-              cResult[16] = channelId;
-              cResult[17] = tmp51;
+              tmp56[0] = channelId;
+              cResult[20] = channelId;
+              cResult[21] = tmp56;
             } else {
-              class Ue {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1217,10 +1305,10 @@ export default noop.memo(
                 }
               }
             }
-            const tmpResult25 = tmp(tmp2[29]);
-            const isSecureFramesUIEnabled = tmp(tmp2[49]).useIsSecureFramesUIEnabled(tmp51);
-            if (tmp21 === ParticipantTypes.USER) {
-              class Ue {
+            const tmpResult27 = tmp(tmp2[29]);
+            const isSecureFramesUIEnabled = tmp(tmp2[49]).useIsSecureFramesUIEnabled(tmp56);
+            if (tmp26 === ParticipantTypes.USER) {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1234,8 +1322,8 @@ export default noop.memo(
                   return;
                 }
               }
-              if (null != tmp19) {
-                class Ue {
+              if (null != tmp24) {
+                class Be {
                   constructor() {
                     closure_0 = handleFocusChange.getVideoDeviceId();
                     keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1251,8 +1339,8 @@ export default noop.memo(
                 }
               }
             }
-            if (cResult[18] === channelId) {
-              class Ue {
+            if (cResult[22] === channelId) {
+              class Be {
                 constructor() {
                   closure_0 = handleFocusChange.getVideoDeviceId();
                   keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1266,9 +1354,9 @@ export default noop.memo(
                   return;
                 }
               }
-              const isUserSecureFramesVerified = tmp(tmp2[50]).useIsUserSecureFramesVerified(tmp55);
-              if (tmp21 === ParticipantTypes.STREAM) {
-                class Ue {
+              const isUserSecureFramesVerified = tmp(tmp2[50]).useIsUserSecureFramesVerified(tmp60);
+              if (tmp26 === ParticipantTypes.STREAM) {
+                class Be {
                   constructor() {
                     closure_0 = handleFocusChange.getVideoDeviceId();
                     keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1282,8 +1370,8 @@ export default noop.memo(
                     return;
                   }
                 }
-                if (null != tmp19) {
-                  class Ue {
+                if (null != tmp24) {
+                  class Be {
                     constructor() {
                       closure_0 = handleFocusChange.getVideoDeviceId();
                       keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1299,8 +1387,8 @@ export default noop.memo(
                   }
                 }
               }
-              if (cResult[21] === channelId) {
-                class Ue {
+              if (cResult[25] === channelId) {
+                class Be {
                   constructor() {
                     closure_0 = handleFocusChange.getVideoDeviceId();
                     keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1314,9 +1402,9 @@ export default noop.memo(
                     return;
                   }
                 }
-                const isStreamSecureFramesVerified = tmp(tmp2[50]).useIsStreamSecureFramesVerified(tmp58);
-                if (ParticipantTypes.STREAM !== tmp21) {
-                  class Ue {
+                const isStreamSecureFramesVerified = tmp(tmp2[50]).useIsStreamSecureFramesVerified(tmp63);
+                if (ParticipantTypes.STREAM !== tmp26) {
+                  class Be {
                     constructor() {
                       closure_0 = handleFocusChange.getVideoDeviceId();
                       keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1330,8 +1418,8 @@ export default noop.memo(
                       return;
                     }
                   }
-                  if (ParticipantTypes.USER !== tmp21) {
-                    class Ue {
+                  if (ParticipantTypes.USER !== tmp26) {
+                    class Be {
                       constructor() {
                         closure_0 = handleFocusChange.getVideoDeviceId();
                         keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1347,8 +1435,8 @@ export default noop.memo(
                     }
                   }
                 }
-                if (tmp8) {
-                  class Ue {
+                if (tmp13) {
+                  class Be {
                     constructor() {
                       closure_0 = handleFocusChange.getVideoDeviceId();
                       keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1364,8 +1452,8 @@ export default noop.memo(
                   }
                   const ONYX = ThemeTypes.ONYX;
                 }
-                if (cResult[24] === animatedStyle) {
-                  class Ue {
+                if (cResult[28] === animatedStyle) {
+                  class Be {
                     constructor() {
                       closure_0 = handleFocusChange.getVideoDeviceId();
                       keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1379,8 +1467,8 @@ export default noop.memo(
                       return;
                     }
                   }
-                  if (cResult[27] === focused) {
-                    class Ue {
+                  if (cResult[31] === focused) {
+                    class Be {
                       constructor() {
                         closure_0 = handleFocusChange.getVideoDeviceId();
                         keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1396,35 +1484,35 @@ export default noop.memo(
                     }
                   }
                   const obj11 = { isHeaderHidden: derivedValue1, scrollPosition, focused };
-                  const tmp64 = closure_23(closure_35, obj11);
-                  cResult[27] = focused;
-                  cResult[28] = derivedValue1;
-                  cResult[29] = scrollPosition;
-                  cResult[30] = tmp64;
+                  const tmp69 = closure_23(closure_35, obj11);
+                  cResult[31] = focused;
+                  cResult[32] = derivedValue1;
+                  cResult[33] = scrollPosition;
+                  cResult[34] = tmp69;
                 }
-                const items5 = [tmp4.headerWrapper, animatedStyle];
-                cResult[24] = animatedStyle;
-                cResult[25] = tmp4.headerWrapper;
-                cResult[26] = items5;
-                const tmpResult28 = tmp(tmp2[50]);
+                const items7 = [tmp4.headerWrapper, animatedStyle];
+                cResult[28] = animatedStyle;
+                cResult[29] = tmp4.headerWrapper;
+                cResult[30] = items7;
+                const tmpResult30 = tmp(tmp2[50]);
               }
               const obj12 = { streamKey: null, channelId };
-              cResult[21] = channelId;
-              cResult[22] = null;
-              cResult[23] = obj12;
-              tmp58 = obj12;
-              const tmpResult27 = tmp(tmp2[50]);
+              cResult[25] = channelId;
+              cResult[26] = null;
+              cResult[27] = obj12;
+              tmp63 = obj12;
+              const tmpResult29 = tmp(tmp2[50]);
             }
             const obj13 = { userId: null, channelId };
-            cResult[18] = channelId;
-            cResult[19] = null;
-            cResult[20] = obj13;
-            tmp55 = obj13;
-            const tmpResult26 = tmp(tmp2[49]);
+            cResult[22] = channelId;
+            cResult[23] = null;
+            cResult[24] = obj13;
+            tmp60 = obj13;
+            const tmpResult28 = tmp(tmp2[49]);
           }
         }
-        if (DOWN === tmp33.LEFT) {
-          class Ue {
+        if (DOWN === tmp38.LEFT) {
+          class Be {
             constructor() {
               closure_0 = handleFocusChange.getVideoDeviceId();
               keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1438,9 +1526,9 @@ export default noop.memo(
               return;
             }
           }
-          let stringResult = obj22.string(tmp(tmp2[31]).t["9M6OdC"]);
+          let stringResult = obj23.string(tmp(tmp2[31]).t["9M6OdC"]);
         } else {
-          class Ue {
+          class Be {
             constructor() {
               closure_0 = handleFocusChange.getVideoDeviceId();
               keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1454,10 +1542,10 @@ export default noop.memo(
               return;
             }
           }
-          const string = tmp36.string;
+          const string = tmp41.string;
           const t = tmp(tmp2[31]).t;
-          if (tmp8) {
-            class Ue {
+          if (tmp13) {
+            class Be {
               constructor() {
                 closure_0 = handleFocusChange.getVideoDeviceId();
                 keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1472,7 +1560,7 @@ export default noop.memo(
               }
             }
           } else {
-            class Ue {
+            class Be {
               constructor() {
                 closure_0 = handleFocusChange.getVideoDeviceId();
                 keys = Object.keys(handleFocusChange.getVideoDevices());
@@ -1488,10 +1576,10 @@ export default noop.memo(
             }
           }
         }
-        cResult[5] = tmp8;
-        cResult[6] = DOWN;
-        cResult[7] = stringResult;
-        const tmpResult24 = wrapperOffset(channelId[46]);
+        cResult[9] = tmp13;
+        cResult[10] = DOWN;
+        cResult[11] = stringResult;
+        const tmpResult26 = wrapperOffset(channelId[46]);
       }
     : function VoicePanelHeader(wrapperOffset) {
         wrapperOffset = wrapperOffset.wrapperOffset;
@@ -1515,13 +1603,21 @@ export default noop.memo(
         const connected = context.connected;
         ({ guildId, channelType, scrollPosition } = context);
         const isScreenReaderEnabled = wrapperOffset(channelId[36]).useIsScreenReaderEnabled();
-        let tmp38Result10 = gestureState(channelId[37])(channelId);
         let obj2 = wrapperOffset(channelId[36]);
-        let obj3 = gestureState(channelId[38]);
-        let items = [derivedValue1, token, c10, connected];
+        let items = [c10];
         const items1 = [channelId];
         const stateFromStores = wrapperOffset(channelId[29]).useStateFromStores(
           items,
+          () => ChannelStore.getChannel(channelId),
+          items1,
+        );
+        let tmp39Result12 = gestureState(channelId[37])(channelId);
+        let obj3 = wrapperOffset(channelId[29]);
+        obj4 = gestureState(channelId[38]);
+        const items2 = [derivedValue1, token, c10, connected];
+        const items3 = [channelId];
+        const stateFromStores1 = wrapperOffset(channelId[29]).useStateFromStores(
+          items2,
           () => {
             const channel = ChannelStore.getChannel(channelId);
             let channelName;
@@ -1534,13 +1630,13 @@ export default noop.memo(
             }
             return channelName;
           },
-          items1,
+          items3,
         );
-        obj4 = wrapperOffset(channelId[29]);
-        [tmp10, c9] = focused(controlsSpecs.useState(undefined), 2);
-        const tmp9 = focused(controlsSpecs.useState(undefined), 2);
-        [tmp12, c10] = focused(controlsSpecs.useState(null), 2);
-        const items2 = [channelId];
+        let obj5 = wrapperOffset(channelId[29]);
+        [tmp11, c9] = focused(controlsSpecs.useState(undefined), 2);
+        const tmp10 = focused(controlsSpecs.useState(undefined), 2);
+        [tmp13, c10] = focused(controlsSpecs.useState(null), 2);
+        const items4 = [channelId];
         const handleFocusChange = controlsSpecs.useCallback((arg0) => {
           let tmp3 = null;
           if (null != arg0) {
@@ -1553,8 +1649,8 @@ export default noop.memo(
           }
           _undefined(tmp3);
           _undefined(arg0);
-        }, items2);
-        const tmp11 = focused(controlsSpecs.useState(null), 2);
+        }, items4);
+        const tmp12 = focused(controlsSpecs.useState(null), 2);
         const fn = function f() {
           value = focused.get();
           let id;
@@ -1571,14 +1667,14 @@ export default noop.memo(
             ReanimatedRexport.runOnJS(callback)(arg0);
           }
         };
-        let obj5 = wrapperOffset(channelId[22]);
+        const obj6 = wrapperOffset(channelId[22]);
         fn2.__closure = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
         fn2.__workletHash = 3195747765779;
         fn2.__initData = __initData19;
-        const animatedReaction = obj5.useAnimatedReaction(fn, fn2);
-        const obj6 = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
+        const animatedReaction = obj6.useAnimatedReaction(fn, fn2);
+        const obj7 = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
         token = wrapperOffset(channelId[40]).useToken(gestureState(channelId[19]).modules.mobile.VOICE_PANEL_GUTTER);
-        const obj7 = wrapperOffset(channelId[40]);
+        const obj8 = wrapperOffset(channelId[40]);
         function _e() {
           if (mode.get() === VoicePanelModes.PIP) {
             let num = -tmpResult.height + EDGE_GUTTER;
@@ -1590,7 +1686,7 @@ export default noop.memo(
           }
           return num;
         }
-        const obj8 = wrapperOffset(channelId[22]);
+        const obj9 = wrapperOffset(channelId[22]);
         _e.__closure = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
@@ -1603,8 +1699,8 @@ export default noop.memo(
         };
         _e.__workletHash = 11122710925211;
         _e.__initData = __initData20;
-        const derivedValue = obj8.useDerivedValue(_e);
-        const obj9 = {
+        const derivedValue = obj9.useDerivedValue(_e);
+        const obj10 = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
           edgeGutter: token,
@@ -1614,7 +1710,7 @@ export default noop.memo(
           connected,
           EDGE_GUTTER,
         };
-        function he() {
+        function pe() {
           const tmp2Result = calculateVoicePanelHeaderSpecsDefault(safeArea.get(), token);
           value = mode.get();
           const height = tmp2Result.height;
@@ -1657,8 +1753,8 @@ export default noop.memo(
           tmp13 = UI_SHOW_HIDE_PHYSICS;
           tmp10Result = spring;
         }
-        const obj10 = wrapperOffset(channelId[22]);
-        he.__closure = {
+        const obj11 = wrapperOffset(channelId[22]);
+        pe.__closure = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
           edgeGutter: token,
@@ -1674,10 +1770,10 @@ export default noop.memo(
           DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,
           UI_SHOW_HIDE_PHYSICS,
         };
-        he.__workletHash = 13938557240528;
-        he.__initData = __initData21;
-        const animatedStyle = obj10.useAnimatedStyle(he);
-        const obj11 = {
+        pe.__workletHash = 13938557240528;
+        pe.__initData = __initData21;
+        const animatedStyle = obj11.useAnimatedStyle(pe);
+        const obj12 = {
           calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
           safeArea,
           edgeGutter: token,
@@ -1693,120 +1789,118 @@ export default noop.memo(
           DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,
           UI_SHOW_HIDE_PHYSICS,
         };
-        function pe() {
-          let tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
-          if (tmp) {
-            tmp = !isScreenReaderEnabled;
-          }
-          return tmp;
-        }
-        pe.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-        pe.__workletHash = 5927654807363;
-        pe.__initData = __initData22;
-        derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(pe);
-        const obj12 = wrapperOffset(channelId[22]);
-        const obj13 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
         class Se {
           constructor() {
-            tmp = closure_2;
-            tmp2 = closure_1(closure_2[41]);
-            tmp3 = closure_0;
-            obj = closure_0(closure_2[42]);
-            obj2 = closure_14;
-            num = 1;
+            tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
+            if (tmp) {
+              tmp2 = closure_8;
+              tmp = !closure_8;
+            }
+            return tmp;
+          }
+        }
+        Se.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+        Se.__workletHash = 5927654807363;
+        Se.__initData = __initData22;
+        derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(Se);
+        const obj13 = wrapperOffset(channelId[22]);
+        const obj14 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+        function fe() {
+          const tmp2 = calculateVoicePanelHeaderSpecsDefault;
+          let num = 1;
+          if (derivedValue1.get()) {
+            num = 0;
+          }
+          const obj3 = { opacity: timing.withTiming(num, closure_25), transform: null };
+          let num2 = 0;
+          if (derivedValue1.get()) {
+            num2 = -tmp2(safeArea.get(), token).height;
+          }
+          const tmp3Result = spring;
+          const items = [{ translateY: spring.withSpring(num2, MODE_CHANGE_PHYSICS) }];
+          obj3.transform = items;
+          return obj3;
+        }
+        const obj15 = wrapperOffset(channelId[22]);
+        fe.__closure = {
+          calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
+          safeArea,
+          edgeGutter: token,
+          withTiming: wrapperOffset(channelId[42]).withTiming,
+          isHeaderHidden: derivedValue1,
+          OPACITY_TIMING,
+          withSpring: wrapperOffset(channelId[23]).withSpring,
+          MODE_CHANGE_PHYSICS: DOWN,
+        };
+        fe.__workletHash = 11151013494207;
+        fe.__initData = __initData23;
+        const animatedStyle1 = obj15.useAnimatedStyle(fe);
+        const obj16 = {
+          calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
+          safeArea,
+          edgeGutter: token,
+          withTiming: wrapperOffset(channelId[42]).withTiming,
+          isHeaderHidden: derivedValue1,
+          OPACITY_TIMING,
+          withSpring: wrapperOffset(channelId[23]).withSpring,
+          MODE_CHANGE_PHYSICS: DOWN,
+        };
+        class He {
+          constructor() {
+            obj = closure_14;
+            str = "box-none";
             if (closure_14.get()) {
-              num = 0;
+              str = "none";
             }
-            obj1 = { opacity: obj.withTiming(num, closure_25), transform: null };
-            tmp3Result = tmp3(tmp[23]);
-            num2 = 0;
-            if (obj2.get()) {
-              num2 = -tmp2(safeArea.get(), closure_12).height;
+            obj1 = { pointerEvents: str, importantForAccessibility: null, accessibilityElementsHidden: null };
+            str2 = "auto";
+            if (obj.get()) {
+              str2 = "no-hide-descendants";
             }
-            obj6 = { translateY: tmp3Result.withSpring(num2, MODE_CHANGE_PHYSICS) };
-            items = [];
-            items[0] = obj6;
-            obj1.transform = items;
+            obj1.importantForAccessibility = str2;
+            obj1.accessibilityElementsHidden = obj.get();
             return obj1;
           }
         }
-        const obj14 = wrapperOffset(channelId[22]);
-        Se.__closure = {
-          calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
-          safeArea,
-          edgeGutter: token,
-          withTiming: wrapperOffset(channelId[42]).withTiming,
-          isHeaderHidden: derivedValue1,
-          OPACITY_TIMING,
-          withSpring: wrapperOffset(channelId[23]).withSpring,
-          MODE_CHANGE_PHYSICS: DOWN,
-        };
-        Se.__workletHash = 11151013494207;
-        Se.__initData = __initData23;
-        const animatedStyle1 = obj14.useAnimatedStyle(Se);
-        const obj15 = {
-          calculateVoicePanelHeaderSpecs: gestureState(channelId[41]),
-          safeArea,
-          edgeGutter: token,
-          withTiming: wrapperOffset(channelId[42]).withTiming,
-          isHeaderHidden: derivedValue1,
-          OPACITY_TIMING,
-          withSpring: wrapperOffset(channelId[23]).withSpring,
-          MODE_CHANGE_PHYSICS: DOWN,
-        };
-        function fe() {
-          let str = "box-none";
-          if (derivedValue1.get()) {
-            str = "none";
-          }
-          const obj2 = { pointerEvents: str, importantForAccessibility: null, accessibilityElementsHidden: null };
-          let str2 = "auto";
-          if (derivedValue1.get()) {
-            str2 = "no-hide-descendants";
-          }
-          obj2.importantForAccessibility = str2;
-          obj2.accessibilityElementsHidden = derivedValue1.get();
-          return obj2;
-        }
-        fe.__closure = { isHeaderHidden: derivedValue1 };
-        fe.__workletHash = 9531590342194;
-        fe.__initData = __initData24;
-        const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(fe);
-        const obj16 = wrapperOffset(channelId[22]);
+        He.__closure = { isHeaderHidden: derivedValue1 };
+        He.__workletHash = 9531590342194;
+        He.__initData = __initData24;
+        const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(He);
+        const obj17 = wrapperOffset(channelId[22]);
         let canInviteMembers = wrapperOffset(channelId[43]).useCanInviteMembers(channelId);
-        const obj17 = wrapperOffset(channelId[43]);
-        const obj18 = wrapperOffset(channelId[44]);
-        const tmp23 = gestureState(channelId[45])();
+        const obj18 = wrapperOffset(channelId[43]);
+        const obj19 = wrapperOffset(channelId[44]);
+        const tmp24 = gestureState(channelId[45])();
         const inviteMembersCallback = wrapperOffset(channelId[44]).useInviteMembersCallback(channelId);
-        wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp23);
-        if (null != tmp12) {
+        wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp24);
+        if (null != tmp13) {
           DOWN = constants.LEFT;
-          let tmp25 = constants;
+          let tmp26 = constants;
         } else {
-          tmp25 = constants;
+          tmp26 = constants;
           DOWN = constants.DOWN;
         }
-        if (DOWN === tmp25.LEFT) {
+        if (DOWN === tmp26.LEFT) {
           let intl2 = tmp5(tmp3[31]).intl;
           let stringResult = intl2.string(tmp5(tmp3[31]).t["9M6OdC"]);
         } else {
           let intl = tmp5(tmp3[31]).intl;
           const string = intl.string;
           const t = tmp5(tmp3[31]).t;
-          if (tmp38Result10) {
+          if (tmp39Result12) {
             stringResult = string(t.RLCTQG);
           } else {
             stringResult = string(t["5lPjGj"]);
           }
         }
-        const obj19 = wrapperOffset(channelId[46]);
+        const obj20 = wrapperOffset(channelId[46]);
         const tmp2ResultResult = gestureState(channelId[47])(AuthenticationStore.getId(), channelId, guildId);
         UI_SHOW_HIDE_PHYSICS = tmp2ResultResult;
         let tmp2Result = gestureState(channelId[47]);
-        const items3 = [handleFocusChange];
-        const items4 = [tmp2ResultResult];
-        const stateFromStores1 = wrapperOffset(channelId[29]).useStateFromStores(
-          items3,
+        const items5 = [handleFocusChange];
+        const items6 = [tmp2ResultResult];
+        const stateFromStores2 = wrapperOffset(channelId[29]).useStateFromStores(
+          items5,
           () => {
             if (null != closure_16) {
               if (obj3.isStableUserParticipant(closure_16)) {
@@ -1855,9 +1949,9 @@ export default noop.memo(
               obj3 = useStableParticipant;
             }
           },
-          items4,
+          items6,
         );
-        const items5 = [DOWN];
+        const items7 = [DOWN];
         const callback1 = obj.useCallback(() => {
           const videoDeviceId = callback.getVideoDeviceId();
           const keys = Object.keys(callback.getVideoDevices());
@@ -1876,135 +1970,141 @@ export default noop.memo(
           const items = [{ rotateZ: str }];
           obj.transform = items;
           return obj;
-        }, items5);
+        }, items7);
         const tmp5Result = wrapperOffset(channelId[29]);
         const isSecureFramesUIEnabled = wrapperOffset(channelId[49]).useIsSecureFramesUIEnabled({ channelId });
         const tmp5Result4 = wrapperOffset(channelId[49]);
-        let tmp35 = null;
-        if (tmp12 === ParticipantTypes.USER) {
-          tmp35 = null;
-          if (null != tmp10) {
-            tmp35 = tmp10;
+        let tmp36 = null;
+        if (tmp13 === ParticipantTypes.USER) {
+          tmp36 = null;
+          if (null != tmp11) {
+            tmp36 = tmp11;
           }
         }
         const isUserSecureFramesVerified = wrapperOffset(channelId[50]).useIsUserSecureFramesVerified({
-          userId: tmp35,
+          userId: tmp36,
           channelId,
         });
         const tmp5Result5 = wrapperOffset(channelId[50]);
-        let tmp37 = null;
-        if (tmp12 === ParticipantTypes.STREAM) {
-          tmp37 = null;
-          if (null != tmp10) {
-            tmp37 = tmp10;
+        let tmp38 = null;
+        if (tmp13 === ParticipantTypes.STREAM) {
+          tmp38 = null;
+          if (null != tmp11) {
+            tmp38 = tmp11;
           }
         }
-        let flag = wrapperOffset(channelId[50]).useIsStreamSecureFramesVerified({ streamKey: tmp37, channelId });
-        if (ParticipantTypes.STREAM !== tmp12) {
+        let flag = wrapperOffset(channelId[50]).useIsStreamSecureFramesVerified({ streamKey: tmp38, channelId });
+        if (ParticipantTypes.STREAM !== tmp13) {
           flag = false;
-          if (ParticipantTypes.USER === tmp12) {
+          if (ParticipantTypes.USER === tmp13) {
             flag = isUserSecureFramesVerified;
           }
         }
         let ONYX;
-        if (tmp38Result10) {
+        if (tmp39Result12) {
           ONYX = ThemeTypes.ONYX;
         }
-        const obj20 = { theme: ONYX, children: null };
-        const obj21 = { style: null, pointerEvents: "box-none", layout, children: null };
-        const items6 = [tmp.headerWrapper, animatedStyle];
-        obj21.style = items6;
+        const obj21 = { theme: ONYX, children: null };
+        const obj22 = { style: null, pointerEvents: "box-none", layout, children: null };
+        const items8 = [tmp.headerWrapper, animatedStyle];
+        obj22.style = items8;
         const tmp5Result6 = wrapperOffset(channelId[50]);
-        const items7 = [closure_23(closure_35, { isHeaderHidden: derivedValue1, scrollPosition, focused }), ,];
-        let tmp38Result = tmp38Result10;
-        if (tmp38Result10) {
-          const obj22 = { baseColor: tmp2(tmp3[19]).colors.BLACK, minHeight: 0 };
-          tmp38Result = closure_23(tmp2(tmp3[51]), obj22);
+        const items9 = [closure_23(closure_35, { isHeaderHidden: derivedValue1, scrollPosition, focused }), ,];
+        let tmp39Result = tmp39Result12;
+        if (tmp39Result12) {
+          const obj23 = { baseColor: tmp2(tmp3[19]).colors.BLACK, minHeight: 0 };
+          tmp39Result = closure_23(tmp2(tmp3[51]), obj23);
           const tmp2Result12 = tmp2(tmp3[51]);
         }
-        items7[1] = tmp38Result;
-        const obj23 = { style: tmp.headerContentWrapper, pointerEvents: "box-none", layout, children: null };
-        let tmp38Result6 = null;
+        items9[1] = tmp39Result;
+        const obj24 = { style: tmp.headerContentWrapper, pointerEvents: "box-none", layout, children: null };
+        let tmp39Result7 = null;
         const tmp2Result11 = gestureState(channelId[26]);
-        if (tmp12 === ParticipantTypes.USER) {
-          const obj24 = { isHeaderHidden: derivedValue1 };
-          tmp38Result6 = closure_23(tmp2(tmp3[52]), obj24);
+        if (tmp13 === ParticipantTypes.USER) {
+          const obj25 = { isHeaderHidden: derivedValue1 };
+          tmp39Result7 = closure_23(tmp2(tmp3[52]), obj25);
         }
-        const items8 = [tmp38Result6];
-        const obj25 = { style: null, animatedProps, children: null };
-        const items9 = [tmp.headerOuter, animatedStyle1];
-        obj25.style = items9;
+        const items10 = [tmp39Result7];
+        const obj26 = { style: null, animatedProps, children: null };
+        const items11 = [tmp.headerOuter, animatedStyle1];
+        obj26.style = items11;
         const tmp2Result13 = gestureState(channelId[26]);
-        const obj26 = { style: tmp.leftWrapper, pointerEvents: "box-none", children: null };
+        const obj27 = { style: tmp.leftWrapper, pointerEvents: "box-none", children: null };
         const tmp2Result14 = gestureState(channelId[26]);
-        const obj27 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
+        const obj28 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
         const tmp2Result15 = gestureState(channelId[25]);
-        obj27.icon = gestureState(channelId[53]);
-        obj27.accessibilityLabel = stringResult;
-        obj27.onPress = tmp23;
-        obj27.style = memo;
-        const items10 = [closure_23(gestureState(channelId[35]), obj27)];
-        const obj28 = { style: tmp.headerInner, children: null };
+        obj28.icon = gestureState(channelId[53]);
+        obj28.accessibilityLabel = stringResult;
+        obj28.onPress = tmp24;
+        obj28.style = memo;
+        const items12 = [closure_23(gestureState(channelId[35]), obj28)];
+        const obj29 = { style: tmp.headerInner, children: null };
         const tmp2Result16 = gestureState(channelId[35]);
-        const items11 = [closure_23(gestureState(channelId[54]), {})];
-        let tmp38Result7 = null;
+        const items13 = [closure_23(gestureState(channelId[54]), {})];
+        let tmp39Result8 = null;
         if (isSecureFramesUIEnabled) {
-          tmp38Result7 = null;
+          tmp39Result8 = null;
           if (flag) {
-            const obj29 = { size: "xs", color: tmp2(tmp3[19]).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-            tmp38Result7 = closure_23(tmp5(tmp3[55]).ShieldLockIcon, obj29);
+            const obj30 = { size: "xs", color: tmp2(tmp3[19]).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
+            tmp39Result8 = closure_23(tmp5(tmp3[55]).ShieldLockIcon, obj30);
           }
         }
-        items11[1] = tmp38Result7;
-        obj28.children = items11;
-        items10[1] = closure_24(gestureState(channelId[26]), obj28);
-        obj26.children = items10;
-        const items12 = [closure_24(tmp2Result15, obj26)];
-        const obj30 = { style: tmp.rightWrapper, layout, children: null };
+        items13[1] = tmp39Result8;
+        obj29.children = items13;
+        items12[1] = closure_24(gestureState(channelId[26]), obj29);
+        obj27.children = items12;
+        const items14 = [closure_24(tmp2Result15, obj27)];
+        const obj31 = { style: tmp.rightWrapper, layout, children: null };
         const tmp2Result17 = gestureState(channelId[26]);
-        const items13 = [closure_23(closure_40, {}), , , , ,];
-        let tmp38Result8 = channelType === tmp5(tmp3[56]).ChannelTypes.GUILD_STAGE_VOICE;
-        if (tmp38Result8) {
-          const obj31 = { channelId };
-          tmp38Result8 = closure_23(closure_41, obj31);
+        const items15 = [closure_23(closure_40, {}), , , , , ,];
+        let tmp39Result9 = channelType === tmp5(tmp3[56]).ChannelTypes.GUILD_STAGE_VOICE;
+        if (tmp39Result9) {
+          const obj32 = { channelId };
+          tmp39Result9 = closure_23(closure_41, obj32);
         }
-        items13[1] = tmp38Result8;
-        items13[2] = closure_23(gestureState(channelId[57]), { isConnectedToVoiceChannel: tmp38Result10, channelId });
+        items15[1] = tmp39Result9;
+        items15[2] = closure_23(gestureState(channelId[57]), { isConnectedToVoiceChannel: tmp39Result12, channelId });
+        let tmp39Result10 = null;
+        if (null != stateFromStores) {
+          const obj33 = { channel: stateFromStores, inCall: tmp39Result12 };
+          tmp39Result10 = closure_23(tmp2(tmp3[58]), obj33);
+        }
+        items15[3] = tmp39Result10;
         if (canInviteMembers) {
-          const obj32 = { icon: tmp2(tmp3[58]), accessibilityLabel: null, onPress: null };
+          const obj34 = { icon: tmp2(tmp3[59]), accessibilityLabel: null, onPress: null };
           let intl3 = tmp5(tmp3[31]).intl;
-          const obj33 = { channelName: stateFromStores };
-          obj32.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp3[31]).t["dHHb/2"], obj33);
-          obj32.onPress = inviteMembersCallback;
-          canInviteMembers = closure_23(tmp2(tmp3[35]), obj32);
+          const obj35 = { channelName: stateFromStores1 };
+          obj34.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp3[31]).t["dHHb/2"], obj35);
+          obj34.onPress = inviteMembersCallback;
+          canInviteMembers = closure_23(tmp2(tmp3[35]), obj34);
           const tmp2Result19 = tmp2(tmp3[35]);
         }
-        items13[3] = canInviteMembers;
-        let tmp38Result9 = null;
-        if (null != stateFromStores1) {
-          const obj34 = { icon: tmp2(tmp3[59]), onPress: callback1, accessibilityLabel: stateFromStores1 };
-          tmp38Result9 = closure_23(tmp2(tmp3[35]), obj34);
+        items15[4] = canInviteMembers;
+        let tmp39Result11 = null;
+        if (null != stateFromStores2) {
+          const obj36 = { icon: tmp2(tmp3[60]), onPress: callback1, accessibilityLabel: stateFromStores2 };
+          tmp39Result11 = closure_23(tmp2(tmp3[35]), obj36);
           const tmp2Result20 = tmp2(tmp3[35]);
         }
-        items13[4] = tmp38Result9;
-        if (tmp38Result10) {
-          tmp38Result10 =
-            obj3.useConfig({ location: "VoicePanelHeader" }).treatment ===
+        items15[5] = tmp39Result11;
+        if (tmp39Result12) {
+          tmp39Result12 =
+            obj4.useConfig({ location: "VoicePanelHeader" }).treatment ===
             tmp5(tmp3[38]).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
         }
-        if (tmp38Result10) {
-          const obj35 = { channelId };
-          tmp38Result10 = closure_23(tmp2(tmp3[60]), obj35);
+        if (tmp39Result12) {
+          const obj37 = { channelId };
+          tmp39Result12 = closure_23(tmp2(tmp3[61]), obj37);
         }
-        items13[5] = tmp38Result10;
-        obj30.children = items13;
-        items12[1] = closure_24(gestureState(channelId[26]), obj30);
-        obj25.children = items12;
-        items8[1] = closure_24(tmp2Result14, obj25);
-        obj23.children = items8;
-        items7[2] = closure_24(tmp2Result13, obj23);
-        obj21.children = items7;
-        obj20.children = closure_24(tmp2Result11, obj21);
-        return closure_23(wrapperOffset(channelId[61]).ThemeContextProvider, obj20);
+        items15[6] = tmp39Result12;
+        obj31.children = items15;
+        items14[1] = closure_24(gestureState(channelId[26]), obj31);
+        obj26.children = items14;
+        items10[1] = closure_24(tmp2Result14, obj26);
+        obj24.children = items10;
+        items9[2] = closure_24(tmp2Result13, obj24);
+        obj22.children = items9;
+        obj21.children = closure_24(tmp2Result11, obj22);
+        return closure_23(wrapperOffset(channelId[62]).ThemeContextProvider, obj21);
       },
 );

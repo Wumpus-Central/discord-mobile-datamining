@@ -58,7 +58,7 @@ let closure_4 = async function _testCaptcha() {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 

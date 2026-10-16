@@ -1,14 +1,14 @@
 // discord_app/i18n/native/updateRules.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
-import _modDef1949 from "../../../_runtime/metro/01949__.js";
+import _modDef1951 from "../../../_runtime/metro/01951__.js";
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
 let paragraph = {
-  strong: { fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD },
+  strong: { fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD },
   italic: { fontStyle: "italic" },
   underline: { textDecorationLine: "underline" },
 };
@@ -20,9 +20,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       ({ output, state } = node);
       let obj = node(576);
       const tmp = node;
-      const token = node(4874).useToken(nativeDefault.colors.TEXT_LINK);
+      const token = node(4877).useToken(nativeDefault.colors.TEXT_LINK);
       let str = "none";
-      if (noop.useContext(node(4890).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
+      if (noop.useContext(node(4893).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
         str = "underline";
       }
       if (cResult[0] === token) {
@@ -45,7 +45,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp10 = cResult[8];
               }
               const obj4 = { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 };
-              return jsx(tmp(1200).LegacyText, {
+              return jsx(tmp(1202).LegacyText, {
                 accessible: true,
                 accessibilityRole: "link",
                 onPress: tmp9,
@@ -64,7 +64,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] !== node.target) {
             const fn = function f() {
               const obj = LinkingDefault;
-              return obj.openURL(_modDef1949.sanitizeUrl(node.target));
+              return obj.openURL(_modDef1951.sanitizeUrl(node.target));
             };
             cResult[3] = node.target;
             cResult[4] = fn;
@@ -80,7 +80,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = str;
       cResult[2] = obj5;
       tmp5 = obj5;
-      const obj2 = node(4874);
+      const obj2 = node(4877);
     }
   : function I18nLink(node) {
       node = node.node;
@@ -112,7 +112,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == obj.onClick) {
         obj.onClick = () => {
           const obj = LinkingDefault;
-          return obj.openURL(_modDef1949.sanitizeUrl(node.target));
+          return obj.openURL(_modDef1951.sanitizeUrl(node.target));
         };
       }
       const obj2 = node(token[6]);

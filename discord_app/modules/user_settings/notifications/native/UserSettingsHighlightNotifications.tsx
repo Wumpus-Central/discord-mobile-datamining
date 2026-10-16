@@ -8,7 +8,7 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const HighlightSettings = fn(1085).HighlightSettings;
+const HighlightSettings = fn(1087).HighlightSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd };
-        const tmp20 = jsx(tmp(7115).TableSwitchRow, {
+        const tmp20 = jsx(tmp(7117).TableSwitchRow, {
           label: name,
           icon: tmp14,
           value: !muted,
@@ -158,7 +158,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           start: isStart,
           end: isEnd,
         };
-        return jsx(tmp2(7115).TableSwitchRow, {
+        return jsx(tmp2(7117).TableSwitchRow, {
           label: guild.name,
           icon: jsx(GuildIconDefault, { guild }),
           value: !muted,
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (0 === stateFromStoresArray.length) {
         return null;
       } else if (cResult[6] !== tmp6) {
-        Form = Form(8800).Form;
+        Form = Form(8808).Form;
         const obj2 = { children: tmp6 };
         tmp = <Form>{tmp6}</Form>;
         cResult[6] = tmp6;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null;
       if (0 !== stateFromStoresArray.length) {
         const obj2 = { children: tmp3 };
-        tmp4 = jsx(stateFromStoresArray(8800).Form, { children: tmp3 });
+        tmp4 = jsx(stateFromStoresArray(8808).Form, { children: tmp3 });
       }
       return tmp4;
     };

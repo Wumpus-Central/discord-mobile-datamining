@@ -13,18 +13,18 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
 
-const util = obj(1126);
-const InteractionComponentUtils = obj(5496);
-const FileSizeUtils = obj(5856);
-const TableRow = obj(6400);
-const FileUpIcon = obj(11541);
+const util = obj(1128);
+const InteractionComponentUtils = obj(5498);
+const FileSizeUtils = obj(5858);
+const TableRow = obj(6402);
+const FileUpIcon = obj(11564);
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7460).DraftType;
-const NOOP = fn(1085).NOOP;
+const DraftType = fn(7462).DraftType;
+const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
@@ -772,7 +772,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           extensions: allowedExtensions,
           uploadLimit: InteractionModal,
           onDismissKeyboard() {
-            return InteractionModal(10242).hideMediaKeyboardActionSheet();
+            return InteractionModal(10258).hideMediaKeyboardActionSheet();
           },
           onRestoreKeyboard: effectiveUploadLimit,
           onSelectFiles(arg0) {
@@ -805,7 +805,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const result = InteractionModal(customId[31]).hideMediaKeyboardActionSheet();
               if (item.isIncluded) {
                 const found = currentUploads.find((item) =>
-                  InteractionModal(7983).doesImageMatchUpload(item.node.image, item),
+                  InteractionModal(7986).doesImageMatchUpload(item.node.image, item),
                 );
                 if (null != found) {
                   callback1(found.id);
@@ -826,9 +826,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj.handleViewAllDialog(obj2);
             },
             onManageLimited() {
-              obj = InteractionModal(10241);
+              obj = InteractionModal(10257);
               const result = obj.handleLimitedPickerDialog({
-                onDismissKeyboard: InteractionModal(10242).hideMediaKeyboardActionSheet,
+                onDismissKeyboard: InteractionModal(10258).hideMediaKeyboardActionSheet,
                 onRestoreKeyboard,
               });
             },

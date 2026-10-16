@@ -24,7 +24,7 @@ function getUserWishlistKey(userId, arg1) {
   return combined;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(9199).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9212).getWishlistSkuIds;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -874,7 +874,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp17 = cResult[11];
         }
         const wishlist = closure_12(tmp17).wishlist;
-        giftRecipient(9217);
+        giftRecipient(9230);
         let flag2 = false;
         if (true === isGift) {
           flag2 = false;

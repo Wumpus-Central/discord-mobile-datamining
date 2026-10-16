@@ -6,7 +6,7 @@ import openCheckpointModalDefault from "components/openCheckpointModal.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");
 

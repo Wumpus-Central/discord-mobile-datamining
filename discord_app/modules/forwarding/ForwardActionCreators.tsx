@@ -1,13 +1,13 @@
 // discord_app/modules/forwarding/ForwardActionCreators.tsx
-import allSettledDefault from "../../../_runtime/05861_allSettled.js";
+import allSettledDefault from "../../../_runtime/05863_allSettled.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = fn;
-const MessageFlags = fn(1085).MessageFlags;
-const MessageSendLocation = fn(5144).MessageSendLocation;
+const MessageFlags = fn(1087).MessageFlags;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 let obj = {
   sendForward(arg0, item, arg2) {
     closure_0 = arg0;
@@ -49,7 +49,7 @@ let obj = {
                 prop = dependencyMap.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = tmp2(8685).GAME_CONTENT_GUILD_ID;
+                let guild_id = tmp2(8693).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -65,10 +65,10 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = item(7586).parse(channel, "");
+                const parsed = item(7588).parse(channel, "");
                 const obj7 = { guild_id, channel_id: null, message_id: null, type: null, forward_only: null };
                 ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp2);
-                obj7.type = tmp2(1108).MessageReferenceTypes.FORWARD;
+                obj7.type = tmp2(1110).MessageReferenceTypes.FORWARD;
                 let onlyAttachmentIds;
                 if (dependencyMap != null) {
                   onlyAttachmentIds = dependencyMap.onlyAttachmentIds;
@@ -92,17 +92,17 @@ let obj = {
                 closure_128_2 = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v3(item(7588)(withMessage), 2);
+                  const tmp39 = v3(item(7590)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     closure_128_2 = tmp39[1];
-                    const addFlagResult = tmp2(1403).addFlag(0, constants.SUPPRESS_NOTIFICATIONS);
+                    const addFlagResult = tmp2(1405).addFlag(0, constants.SUPPRESS_NOTIFICATIONS);
                     closure_128_1 = addFlagResult;
                     num9 = addFlagResult;
-                    const obj9 = tmp2(1403);
+                    const obj9 = tmp2(1405);
                   }
                 }
-                const obj10 = item(7395);
+                const obj10 = item(7397);
                 const obj12 = {
                   messageReference: obj7,
                   location: constants2.FORWARDING,
@@ -130,17 +130,17 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  result = tmp2(12584).isRatelimitedInChannel(closure_128_0, PermissionStore);
-                  const obj2 = tmp2(12584);
+                  result = tmp2(12607).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(12607);
                 }
                 if (!result) {
-                  const obj3 = item(7395);
+                  const obj3 = item(7397);
                   const id = closure_128_0.id;
                   const obj25 = { location: constants2.FORWARDING, flags: closure_128_1 };
                   dependencyMap = 2;
                   v3 = 1;
                   const obj26 = {
-                    value: obj3.sendMessage(id, item(7586).parse(closure_128_0, closure_128_2), false, obj25),
+                    value: obj3.sendMessage(id, item(7588).parse(closure_128_0, closure_128_2), false, obj25),
                     done: false,
                   };
                   return obj26;

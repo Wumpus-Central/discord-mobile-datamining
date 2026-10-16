@@ -4,10 +4,10 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 
 require = fn;
-let GuildChannelStore = fn(4804);
+let GuildChannelStore = fn(4807);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = fn(1087).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_sorting/getChannelListRecord.tsx");
 

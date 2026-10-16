@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   tips: {
     gap: nativeDefault.space.PX_8,
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_6();
       const obj = onShow(576);
       const tmp3Result = useConjureTipsDefault(
-        onShow(12053).CONJURE_TIPS,
+        onShow(12077).CONJURE_TIPS,
         projectId,
         messages,
         draftHasText,
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let joined;
       ({ projectId, messages, draftHasText, onAskForIdeas } = onShow);
       const tmp = closure_6();
-      const tmp2Result = joined(12043)(onShow(12053).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
+      const tmp2Result = joined(12067)(onShow(12077).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
       const mapped = tmp2Result.map((tip) => "" + tip.tip.id + ":" + tip.presentation);
       joined = mapped.join(",");
       const items = [joined, onShow];

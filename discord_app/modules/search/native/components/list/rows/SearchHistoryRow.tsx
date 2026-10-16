@@ -15,10 +15,10 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 require = fn;
 let closure_3 = ["searchHistoryItem"];
 const View = fn(17).View;
-const SearchHistoryItemTypes = fn(9533).SearchHistoryItemTypes;
+const SearchHistoryItemTypes = fn(9549).SearchHistoryItemTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { iconContainer: null, text: null, textContainer: null, textIconContainer: null, tag: null };
 let size = {
   height: 48,
@@ -57,7 +57,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { marginLeft: 16 };
           const rect = { bottom: 16, left: 16, right: 16, top: 16 };
-          const tmp10 = closure_12(tmp(6428).XSmallIcon, { size: "sm", color: "interactive-text-default" });
+          const tmp10 = closure_12(tmp(6430).XSmallIcon, { size: "sm", color: "interactive-text-default" });
           cResult[3] = obj2;
           cResult[4] = rect;
           cResult[5] = tmp10;
@@ -78,7 +78,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             hitSlop: tmp7,
             children: tmp8,
           };
-          const tmp13 = closure_12(tmp(6405).PressableHighlight, obj3);
+          const tmp13 = closure_12(tmp(6407).PressableHighlight, obj3);
           cResult[6] = tmp4;
           cResult[7] = tmp13;
           let tmp11 = tmp13;
@@ -103,13 +103,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         const result = SearchPlatformActionCreatorsDefault.removeSearchHistoryItem(searchContext, searchHistoryItem);
       }, items);
-      return closure_12(searchContext(6405).PressableHighlight, {
+      return closure_12(searchContext(6407).PressableHighlight, {
         onPress: callback,
         accessibilityRole: "button",
         unstable_pressDelay: 130,
         style: { marginLeft: 16 },
         hitSlop: { bottom: 16, left: 16, right: 16, top: 16 },
-        children: closure_12(searchContext(6428).XSmallIcon, { size: "sm", color: "interactive-text-default" }),
+        children: closure_12(searchContext(6430).XSmallIcon, { size: "sm", color: "interactive-text-default" }),
       });
     };
 ReactCompilerGating = fn(558);
@@ -129,7 +129,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       let obj = searchContext(576);
-      const onPressSearchHistoryText = searchContext(17669).useOnPressSearchHistoryText(tmp5);
+      const onPressSearchHistoryText = searchContext(17703).useOnPressSearchHistoryText(tmp5);
       if (cResult[2] === onPressSearchHistoryText) {
         if (cResult[3] === searchContext) {
           if (cResult[4] === searchHistoryItem.tags) {
@@ -156,7 +156,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol = Symbol;
                         if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp25 = closure_12(tmp(6960).MagnifyingGlassIcon, {
+                          const tmp25 = closure_12(tmp(6962).MagnifyingGlassIcon, {
                             size: "sm",
                             color: "interactive-text-default",
                           });
@@ -193,7 +193,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                           iconContainerStyle: tmp4.textIconContainer,
                           icon: tmp26,
                         };
-                        const tmp32 = closure_12(tmp(17664).SearchListRow, obj4);
+                        const tmp32 = closure_12(tmp(17698).SearchListRow, obj4);
                         cResult[24] = tmp7;
                         cResult[25] = tmp4.textIconContainer;
                         cResult[26] = tmp14;
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   style: tmp4.text,
                   children: searchHistoryItem.text,
                 };
-                const tmp13 = closure_12(tmp(5147).Text, obj7);
+                const tmp13 = closure_12(tmp(5149).Text, obj7);
                 cResult[11] = searchHistoryItem.text;
                 cResult[12] = tmp4.text;
                 cResult[13] = tmp13;
@@ -272,14 +272,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = searchHistoryItem.type;
       cResult[7] = fn;
       tmp7 = fn;
-      const tmpResult = searchContext(17669);
+      const tmpResult = searchContext(17703);
     }
   : function SearchHistoryTextRow(searchContext) {
       searchContext = searchContext.searchContext;
       const searchHistoryItem = searchContext.searchHistoryItem;
       const tmp = closure_14();
       dependencyMap = tmp;
-      const onPressSearchHistoryText = searchContext(17669).useOnPressSearchHistoryText({ searchContext });
+      const onPressSearchHistoryText = searchContext(17703).useOnPressSearchHistoryText({ searchContext });
       const items = [onPressSearchHistoryText, searchContext, , ,];
       ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
       const callback = noop.useCallback(() => {
@@ -310,7 +310,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
       const items1 = [
         mapped,
-        closure_12(searchContext(5147).Text, {
+        closure_12(searchContext(5149).Text, {
           lineClamp: 1,
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
@@ -323,7 +323,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.onPress = callback;
       obj3.trailing = closure_12(closure_15, { searchContext, searchHistoryItem });
       obj3.iconContainerStyle = tmp.textIconContainer;
-      let obj = searchContext(17669);
+      let obj = searchContext(17703);
       const obj4 = {
         lineClamp: 1,
         variant: "text-md/semibold",
@@ -333,12 +333,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj3.icon = closure_12(View, {
         style: tmp.iconContainer,
-        children: closure_12(searchContext(6960).MagnifyingGlassIcon, {
+        children: closure_12(searchContext(6962).MagnifyingGlassIcon, {
           size: "sm",
           color: "interactive-text-default",
         }),
       });
-      return closure_12(searchContext(17664).SearchListRow, obj3);
+      return closure_12(searchContext(17698).SearchListRow, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1164,8 +1164,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { name: "remove", label: null };
-        const intl = tmp(1126).intl;
-        obj2.label = intl.string(tmp(1126).t.Ov3VO7);
+        const intl = tmp(1128).intl;
+        obj2.label = intl.string(tmp(1128).t.Ov3VO7);
         const items = [obj2];
         cResult[0] = items;
         let first = items;
@@ -1215,8 +1215,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = {
         accessibilityActions: noop.useMemo(() => {
           const obj = { name: "remove", label: null };
-          const intl = searchContext(1126).intl;
-          obj.label = intl.string(searchContext(1126).t.Ov3VO7);
+          const intl = searchContext(1128).intl;
+          obj.label = intl.string(searchContext(1128).t.Ov3VO7);
           const items = [obj];
           return items;
         }, []),

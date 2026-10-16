@@ -2,7 +2,7 @@
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import useChatLayout from "../../chat/native/useChatLayout.tsx";
 import getJankScreenName from "getJankScreenName.tsx";
-import NativeJankStatsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import NativeJankSessionModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankSessionModule.tsx";
 import getJankSurfaceName from "getJankSurfaceName.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -10,11 +10,7 @@ const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({
-      _isAttached: false,
-      _routeKeyAtDispatch: "Boolean",
-      _screensBeforeDispatch: "applicationId",
-    });
+    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "k" });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -54,28 +50,19 @@ prototype["handleDispatch"] = function handleDispatch(noop) {
       }
     }
     self._routeKeyAtDispatch = key;
-    const obj3 = NativeJankStatsModuleDefault;
-    if (obj3 != null) {
-      const result = obj3.beginScreenTransition();
-    }
+    const result = NativeJankSessionModuleDefault.beginScreenTransition();
   }
 };
 prototype["handleStateSettled"] = function handleStateSettled() {
-  const self = this;
   this._screensBeforeDispatch = undefined;
   const tmp3 = getJankScreenNameDefault();
   ({ screen: require, expectedScreenIds } = tmp3);
   ({ focusedRoute, chatScreens } = tmp3);
   const result = getJankSurfaceName.composeJankSurfaceName(() => require);
-  const obj2 = NativeJankStatsModuleDefault;
-  if (obj2 != null) {
-    obj2.nameCurrentScreen(result, expectedScreenIds);
-  }
-  if (self.shouldSettleInJS(focusedRoute, this._screensBeforeDispatch, { expectedScreenIds, chatScreens })) {
-    const tmpResult = NativeJankStatsModuleDefault;
-    if (tmpResult != null) {
-      tmpResult.settleCurrentScreen();
-    }
+  NativeJankSessionModuleDefault.nameCurrentScreen(result, expectedScreenIds);
+  if (this.shouldSettleInJS(focusedRoute, this._screensBeforeDispatch, { expectedScreenIds, chatScreens })) {
+    NativeJankSessionModuleDefault.settleCurrentScreen();
+    const tmpResult = NativeJankSessionModuleDefault;
   }
 };
 prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute, _screensBeforeDispatch, chatScreens2) {
@@ -119,8 +106,4 @@ prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute, _screens
 };
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.android.tsx");
 
-export default Object.assign({
-  _isAttached: false,
-  _routeKeyAtDispatch: "Boolean",
-  _screensBeforeDispatch: "applicationId",
-});
+export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "k" });

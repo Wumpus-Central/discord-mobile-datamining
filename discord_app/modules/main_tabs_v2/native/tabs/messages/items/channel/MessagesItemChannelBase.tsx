@@ -13,10 +13,10 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ActivityTypes = fn(1085).ActivityTypes;
+const ActivityTypes = fn(1087).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_14 = createStyles.createStyles(() => {
   const obj = {
     pressable: {
@@ -325,7 +325,7 @@ export default noop.memo(
           const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp15, tmp17);
           ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
           const tmpResult9 = tmp(504);
-          ({ isIncomingCall, isOngoingCall } = setIsPressed(17050)(channel.id));
+          ({ isIncomingCall, isOngoingCall } = setIsPressed(17084)(channel.id));
           const _Symbol3 = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             class B {
@@ -396,7 +396,7 @@ export default noop.memo(
               }
             }
           }
-          const tmp20 = setIsPressed(17050)(channel.id);
+          const tmp20 = setIsPressed(17084)(channel.id);
           const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
           ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
           const _Symbol4 = Symbol;
@@ -599,7 +599,7 @@ export default noop.memo(
             }
           }
           const tmpResult12 = tmp(504);
-          const nameplate = tmp(8561).useNameplate(tmp32);
+          const nameplate = tmp(8569).useNameplate(tmp32);
           let tmp35 = null != nameplate;
           if (tmp35) {
             class Z {
@@ -642,7 +642,7 @@ export default noop.memo(
             }
             tmp35 = tmp36;
           }
-          const tmpResult13 = tmp(8561);
+          const tmpResult13 = tmp(8569);
           if (tmpResult14.isIOS()) {
             class Z {
               constructor() {
@@ -730,7 +730,7 @@ export default noop.memo(
           cResult[26] = channel.id;
           cResult[27] = setIsPressed;
           cResult[28] = re;
-          tmpResult14 = tmp(1382);
+          tmpResult14 = tmp(1384);
         }
         const items6 = [tmp8.pressable, undefined];
         cResult[5] = tmp8.pressable;

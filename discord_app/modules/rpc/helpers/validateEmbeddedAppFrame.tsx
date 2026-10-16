@@ -21,7 +21,7 @@ function validateEmbeddedAppFrame(transport) {
         if (tmp18.applicationId === transport.application.id) {
           const tmp21 =
             tmp18.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId() ||
-            tmp18.data.prefersPictureInPictureOnNavigateAway;
+            tmp18.data.runsInBackground;
           const type = tmp18.surface.type;
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
@@ -74,7 +74,7 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = EmbeddedSurfaceUtils;
 }
-const RPCErrors = fn(1085).RPCErrors;
+const RPCErrors = fn(1087).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

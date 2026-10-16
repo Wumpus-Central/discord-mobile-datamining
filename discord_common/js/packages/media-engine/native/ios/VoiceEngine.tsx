@@ -492,13 +492,32 @@ VoiceEngineModule.VoiceEngine.setBroadcastBlockedCallback = (arg0) => {
   global = arg0;
   return arg0;
 };
-let closure_139_0 = (mode) => {
-  const items = [mode.mode];
+let closure_139_0 = (isVisible) => {
+  const items = [isVisible.isVisible];
   return items;
 };
 let closure_139_1 = null;
 const VoiceEngineEmitter11 = VoiceEngineModule.VoiceEngineEmitter;
-VoiceEngineEmitter11.addListener("system-microphone-mode-change", (arg0) => {
+VoiceEngineEmitter11.addListener("on-broadcast-visibility-changed", (arg0) => {
+  let applyResult;
+  if (global != null) {
+    const items = [];
+    HermesBuiltin.arraySpread(require(arg0), 0);
+    applyResult = HermesBuiltin.apply(items, undefined);
+  }
+  return applyResult;
+});
+VoiceEngineModule.VoiceEngine.setBroadcastVisibilityChangedCallback = (arg0) => {
+  global = arg0;
+  return arg0;
+};
+let closure_140_0 = (mode) => {
+  const items = [mode.mode];
+  return items;
+};
+let closure_140_1 = null;
+const VoiceEngineEmitter12 = VoiceEngineModule.VoiceEngineEmitter;
+VoiceEngineEmitter12.addListener("system-microphone-mode-change", (arg0) => {
   let applyResult;
   if (global != null) {
     const items = [];
@@ -511,13 +530,13 @@ VoiceEngineModule.VoiceEngine.setSystemMicrophoneModeChangeCallback = (arg0) => 
   global = arg0;
   return arg0;
 };
-let closure_140_0 = (error) => {
+let closure_141_0 = (error) => {
   const items = [error.error];
   return items;
 };
-let closure_140_1 = null;
-const VoiceEngineEmitter12 = VoiceEngineModule.VoiceEngineEmitter;
-VoiceEngineEmitter12.addListener("voice-processing-error-callback", (arg0) => {
+let closure_141_1 = null;
+const VoiceEngineEmitter13 = VoiceEngineModule.VoiceEngineEmitter;
+VoiceEngineEmitter13.addListener("voice-processing-error-callback", (arg0) => {
   let applyResult;
   if (global != null) {
     const items = [];
@@ -530,13 +549,13 @@ VoiceEngineModule.VoiceEngine.setVoiceProcessingErrorCallback = (arg0) => {
   global = arg0;
   return arg0;
 };
-let closure_141_0 = (imgdata) => {
+let closure_142_0 = (imgdata) => {
   const items = [imgdata.imgdata];
   return items;
 };
-let closure_141_1 = null;
-const VoiceEngineEmitter13 = VoiceEngineModule.VoiceEngineEmitter;
-VoiceEngineEmitter13.addListener("on-broadcast-thumbnail", (arg0) => {
+let closure_142_1 = null;
+const VoiceEngineEmitter14 = VoiceEngineModule.VoiceEngineEmitter;
+VoiceEngineEmitter14.addListener("on-broadcast-thumbnail", (arg0) => {
   let applyResult;
   if (global != null) {
     const items = [];
@@ -558,13 +577,13 @@ VoiceEngineModule.VoiceEngine.setBroadcastThumbnailCallback = (arg0, arg1, arg2,
     throw new TypeError("Trying to call a non-function");
   }
 };
-let closure_142_0 = (arg0) => {
+let closure_143_0 = (arg0) => {
   const items = [arg0];
   return items;
 };
-let closure_142_1 = null;
-const VoiceEngineEmitter14 = VoiceEngineModule.VoiceEngineEmitter;
-VoiceEngineEmitter14.addListener("audio-input-initialized", (arg0) => {
+let closure_143_1 = null;
+const VoiceEngineEmitter15 = VoiceEngineModule.VoiceEngineEmitter;
+VoiceEngineEmitter15.addListener("audio-input-initialized", (arg0) => {
   let applyResult;
   if (global != null) {
     const items = [];

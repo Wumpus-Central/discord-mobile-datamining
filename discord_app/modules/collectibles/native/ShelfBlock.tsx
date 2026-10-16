@@ -10,12 +10,12 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(1087).CollectiblesMobileShopScreen;
-const UserSettingsSections = fn(1085).UserSettingsSections;
+const constants = fn(1089).CollectiblesMobileShopScreen;
+const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "#ffffff";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   containerWithBackground: null,

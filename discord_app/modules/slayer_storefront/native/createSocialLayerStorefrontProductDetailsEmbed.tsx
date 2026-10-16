@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3732 from "../intl/SlayerStorefront.messages.js";
+import _modDef3735 from "../intl/SlayerStorefront.messages.js";
 import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
@@ -14,7 +14,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7640).InviteTypes;
+const InviteTypes = fn(7642).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -80,7 +80,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3732.BKf0MM);
+              stringResult = string(_modDef3735.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -215,5 +215,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
         },
         items2,
       );
-      memo(7077)(stateFromStoresArray);
+      memo(7079)(stateFromStoresArray);
     };

@@ -6,17 +6,17 @@ import MemberVerificationAlertActionCreators from "../../../guild_member_verific
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import _modDef13038 from "../../../../../_runtime/metro/13038__.js";
-import _modDef13039 from "../../../../../_runtime/metro/13039__.js";
-import _mod13040 from "../../../../../_runtime/metro/13040__.js";
+import _modDef13064 from "../../../../../_runtime/metro/13064__.js";
+import _modDef13065 from "../../../../../_runtime/metro/13065__.js";
+import _mod13066 from "../../../../../_runtime/metro/13066__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(12228).TextAreaCta;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const TextAreaCta = fn(12251).TextAreaCta;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_7 = createStyles.createStyles({
   noticeIcon: { height: 36, width: 36, resizeMode: "contain" },
   lottieAnimation: { height: 36, width: 36 },
@@ -306,10 +306,10 @@ export default noop.memo(
             cResult[18] = tmp34;
           }
           function renderAnimation() {
-            const obj = { style: noticeIcon.lottieAnimation, source: _mod13040, autoPlay: !stateFromStores };
+            const obj = { style: noticeIcon.lottieAnimation, source: _mod13066, autoPlay: !stateFromStores };
             return jsx(LottieAnimationViewDefault, {
               style: noticeIcon.lottieAnimation,
-              source: _mod13040,
+              source: _mod13066,
               autoPlay: !stateFromStores,
             });
           }
@@ -324,15 +324,15 @@ export default noop.memo(
     : function ChatInputGuardGuildMemberVerification(guildId) {
         guildId = guildId.guildId;
         const tmp = closure_7();
-        const currentUserGuildJoinRequest = guildId(6343).useCurrentUserGuildJoinRequest(guildId);
+        const currentUserGuildJoinRequest = guildId(6345).useCurrentUserGuildJoinRequest(guildId);
         let applicationStatus;
         if (currentUserGuildJoinRequest != null) {
           applicationStatus = currentUserGuildJoinRequest.applicationStatus;
         }
-        if (guildId(4998).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-          let tmp8 = _modDef13038;
-          const intl3 = tmp2(1126).intl;
-          let stringResult = intl3.string(tmp2(1126).t.lk30cY);
+        if (guildId(5001).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+          let tmp8 = _modDef13064;
+          const intl3 = tmp2(1128).intl;
+          let stringResult = intl3.string(tmp2(1128).t.lk30cY);
           let fn = function _() {
             AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, {
               cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED,
@@ -343,10 +343,10 @@ export default noop.memo(
               canWithdraw: false,
             });
           };
-        } else if (tmp2(4998).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-          tmp8 = _modDef13039;
-          const intl2 = tmp2(1126).intl;
-          stringResult = intl2.string(tmp2(1126).t["5iLvSx"]);
+        } else if (tmp2(5001).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+          tmp8 = _modDef13065;
+          const intl2 = tmp2(1128).intl;
+          stringResult = intl2.string(tmp2(1128).t["5iLvSx"]);
           fn = function _() {
             AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, {
               cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED,
@@ -357,10 +357,10 @@ export default noop.memo(
             obj4.subtitleText = intl.string(util.t["13tjTU"]);
             const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj4);
           };
-          const tmp7 = jsx(tmp2(6428).XSmallIcon, {});
+          const tmp7 = jsx(tmp2(6430).XSmallIcon, {});
         } else {
-          let intl = tmp2(1126).intl;
-          stringResult = intl.string(tmp2(1126).t.rEBKvg);
+          let intl = tmp2(1128).intl;
+          stringResult = intl.string(tmp2(1128).t.rEBKvg);
           fn = function _() {
             AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, {
               cta_type: TextAreaCta.MEMBER_VERIFICATION,
@@ -369,7 +369,7 @@ export default noop.memo(
             const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
           };
         }
-        let obj = guildId(6343);
+        let obj = guildId(6345);
         const items = [AccessibilityStore];
         const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
         const tmp2Result = guildId(504);
@@ -377,10 +377,10 @@ export default noop.memo(
           let obj2 = { style: tmp.noticeIcon, source: tmp8 };
           let tmp13Result = jsx(FastImageDefault, { style: tmp.noticeIcon, source: tmp8 });
         } else {
-          const obj3 = { style: tmp.lottieAnimation, source: tmp2(13040), autoPlay: !stateFromStores };
+          const obj3 = { style: tmp.lottieAnimation, source: tmp2(13066), autoPlay: !stateFromStores };
           tmp13Result = jsx(LottieAnimationViewDefault, {
             style: tmp.lottieAnimation,
-            source: tmp2(13040),
+            source: tmp2(13066),
             autoPlay: !stateFromStores,
           });
           const tmp14Result = LottieAnimationViewDefault;
@@ -393,8 +393,8 @@ export default noop.memo(
           actionLabel: null,
           actionOnPress: null,
         };
-        const intl4 = tmp2(1126).intl;
-        obj4.actionLabel = intl4.string(guildId(1126).t["r8/DT+"]);
+        const intl4 = tmp2(1128).intl;
+        obj4.actionLabel = intl4.string(guildId(1128).t["r8/DT+"]);
         obj4.actionOnPress = fn;
         return jsx(ChatInputGuardDefault, {
           type: "simple-action",

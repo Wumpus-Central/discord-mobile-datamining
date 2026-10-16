@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14870);
+const GuildReportRaidModalConstants = fn(14903);
 ({
   getReportRaidHelpArticleURL: closure_7,
   getReportRaidTypeLabel: closure_8,
@@ -23,7 +23,7 @@ const GuildReportRaidModalConstants = fn(14870);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     flex: 1,
@@ -86,9 +86,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ container, headerSubtitle } = tmp4);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         const obj2 = { onClick: tmp6 };
-        const formatResult = intl.format(tmp(1126).t.Hg8Ee7, obj2);
+        const formatResult = intl.format(tmp(1128).t.Hg8Ee7, obj2);
         cResult[3] = formatResult;
         let tmp7 = formatResult;
       } else {
@@ -96,7 +96,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4.headerSubtitle) {
         const obj3 = { style: headerSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp7 };
-        const tmp11 = closure_10(tmp(5147).Text, obj3);
+        const tmp11 = closure_10(tmp(5149).Text, obj3);
         cResult[4] = tmp4.headerSubtitle;
         cResult[5] = tmp11;
         let tmp9 = tmp11;
@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp13) {
             const obj4 = { hasIcons: false, children: tmp13 };
-            const tmp17 = closure_10(tmp(6485).TableRowGroup, obj4);
+            const tmp17 = closure_10(tmp(6487).TableRowGroup, obj4);
             cResult[10] = tmp13;
             cResult[11] = tmp17;
             let tmp15 = tmp17;
@@ -121,7 +121,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[13] === tmp15) {
               let tmp18 = cResult[14];
             }
-            const sum = onChange(1631)().bottom + 16;
+            const sum = onChange(1633)().bottom + 16;
             if (cResult[15] !== sum) {
               const obj5 = { paddingBottom: sum };
               cResult[15] = sum;
@@ -136,8 +136,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl2 = tmp(1126).intl;
-                const stringResult = intl2.string(tmp(1126).t.geKm7t);
+                const intl2 = tmp(1128).intl;
+                const stringResult = intl2.string(tmp(1128).t.geKm7t);
                 cResult[20] = stringResult;
                 let tmp25 = stringResult;
               } else {
@@ -145,7 +145,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[21] !== onSubmit) {
                 const obj6 = { size: "md", text: tmp25, onPress: onSubmit };
-                const tmp29 = closure_10(tmp(5439).Button, obj6);
+                const tmp29 = closure_10(tmp(5441).Button, obj6);
                 cResult[21] = onSubmit;
                 cResult[22] = tmp29;
                 let tmp27 = tmp29;
@@ -504,13 +504,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap = 3;
                 } else {
                   tmp21.current = true;
-                  const result = tmp2(12451).trackReportRaidViewed(guildId, first);
-                  const obj2 = tmp2(12451);
-                  tmp2(12451).handleReportRaid(guildId);
-                  const intl = tmp2(1126).intl;
+                  const result = tmp2(12474).trackReportRaidViewed(guildId, first);
+                  const obj2 = tmp2(12474);
+                  tmp2(12474).handleReportRaid(guildId);
+                  const intl = tmp2(1128).intl;
                   c1 = 1;
                   dependencyMap = 1;
-                  const obj6 = { value: closure_4(intl.string(tmp2(1126).t["54qByS"])), done: false };
+                  const obj6 = { value: closure_4(intl.string(tmp2(1128).t["54qByS"])), done: false };
                   return obj6;
                 }
               } else if (arg0 === 1) {

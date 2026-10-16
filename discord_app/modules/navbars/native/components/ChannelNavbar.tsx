@@ -24,15 +24,15 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(2069).THREAD_CHANNEL_TYPES;
-const Constants = fn(1085);
+const THREAD_CHANNEL_TYPES = fn(2072).THREAD_CHANNEL_TYPES;
+const Constants = fn(1087);
 ({ ChannelTypes: closure_12, Fonts } = Constants);
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
-const DismissibleContentConstants = fn(2062);
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
+const DismissibleContentConstants = fn(2065);
 ({ ContentDismissActionType: closure_14, DismissibleContentGroupName: closure_15 } = DismissibleContentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" },
   navbarTitlePrimaryText: null,
@@ -109,8 +109,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channelId(504);
       const stateFromStores1 = channelId(504).useStateFromStores(tmp8, tmp9);
       if (cResult[5] !== stateFromStores1) {
-        const string = channelId(1126).intl.string;
-        const t = channelId(1126).t;
+        const string = channelId(1128).intl.string;
+        const t = channelId(1128).t;
         class C {
           constructor() {
             return closure_1_5.isConnected();
@@ -122,8 +122,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] !== stateFromStores) {
           let channelIcon = null;
           if (null != stateFromStores) {
-            channelIcon = channelId(8376).getChannelIcon(stateFromStores);
-            const tmpResult5 = channelId(8376);
+            channelIcon = channelId(8384).getChannelIcon(stateFromStores);
+            const tmpResult5 = channelId(8384);
           }
           class C {
             constructor() {
@@ -137,7 +137,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] !== stateFromStores) {
           if (null != stateFromStores) {
-            channelId(5481);
+            channelId(5483);
             class C {
               constructor() {
                 return closure_1_5.isConnected();
@@ -732,9 +732,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = userId(576);
       const stateFromStores = userId(504).useStateFromStores(first, tmp7, tmp8);
       if (cResult[4] !== stateFromStores) {
-        const intl = tmp(1126).intl;
+        const intl = tmp(1128).intl;
         const obj2 = { channelName: stateFromStores };
-        const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.fYqXVY, obj2);
+        const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.fYqXVY, obj2);
         cResult[4] = stateFromStores;
         cResult[5] = formatToPlainStringResult;
         let tmp10 = formatToPlainStringResult;
@@ -749,7 +749,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
       }
-      const tmp13 = closure_16(userId(1200).LegacyText, {
+      const tmp13 = closure_16(userId(1202).LegacyText, {
         numberOfLines: 1,
         style,
         accessibilityLabel: tmp10,
@@ -790,10 +790,10 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: null,
       };
-      const intl = userId(1126).intl;
-      obj2.accessibilityLabel = intl.formatToPlainString(userId(1126).t.fYqXVY, { channelName: stateFromStores });
+      const intl = userId(1128).intl;
+      obj2.accessibilityLabel = intl.formatToPlainString(userId(1128).t.fYqXVY, { channelName: stateFromStores });
       obj2.children = stateFromStores;
-      return closure_16(userId(1200).LegacyText, obj2);
+      return closure_16(userId(1202).LegacyText, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
@@ -839,12 +839,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = userId(504);
-      const tmp9 = closure_16(userId(1200).Status, {
+      const tmp9 = closure_16(userId(1202).Status, {
         isMobileOnline,
         isVROnline,
         status,
         streaming,
-        size: userId(1200).StatusSizes.SMALL,
+        size: userId(1202).StatusSizes.SMALL,
         style,
       });
       cResult[3] = isMobileOnline;
@@ -854,7 +854,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = style;
       cResult[8] = tmp9;
       tmp8 = tmp9;
-      const obj2 = { isMobileOnline, isVROnline, status, streaming, size: userId(1200).StatusSizes.SMALL, style };
+      const obj2 = { isMobileOnline, isVROnline, status, streaming, size: userId(1202).StatusSizes.SMALL, style };
     }
   : function ConnectedStatus(style) {
       const userId = style.userId;
@@ -870,12 +870,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       });
       ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
       let obj = userId(504);
-      return closure_16(userId(1200).Status, {
+      return closure_16(userId(1202).Status, {
         isMobileOnline,
         isVROnline,
         status,
         streaming,
-        size: userId(1200).StatusSizes.SMALL,
+        size: userId(1202).StatusSizes.SMALL,
         style: style.style,
       });
     };
@@ -1491,11 +1491,11 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
             obj.disabled = disabled;
             obj.style = style;
             obj.children = children;
-            const children1 = [closure_16(closure_1(8891), obj)];
+            const children1 = [closure_16(closure_1(8899), obj)];
             let tmp3Result = null;
             if (hasActivitiesPrivateChannelTooltip) {
               const obj2 = { contentTypes: null, groupName: null, children: null };
-              const items1 = [onPress(2049).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
+              const items1 = [onPress(2052).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
               obj2.contentTypes = items1;
               obj2.groupName = constants2.CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS;
               obj2.children = function children(markAsDismissed) {
@@ -1514,8 +1514,8 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 return tmp2;
               };
-              tmp3Result = closure_16(closure_1(10231), obj2);
-              const tmp4Result = closure_1(10231);
+              tmp3Result = closure_16(closure_1(10247), obj2);
+              const tmp4Result = closure_1(10247);
             }
             children1[1] = tmp3Result;
             return closure_17(closure_4, { children: children1 }, index);
@@ -1575,11 +1575,11 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
           obj.disabled = disabled;
           obj.style = style;
           obj.children = children;
-          const children1 = [closure_16(closure_1(8891), obj)];
+          const children1 = [closure_16(closure_1(8899), obj)];
           let tmp3Result = null;
           if (hasActivitiesPrivateChannelTooltip) {
             const obj2 = { contentTypes: null, groupName: null, children: null };
-            const items1 = [onPress(2049).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
+            const items1 = [onPress(2052).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
             obj2.contentTypes = items1;
             obj2.groupName = constants2.CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS;
             obj2.children = function children(markAsDismissed) {
@@ -1598,8 +1598,8 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp2;
             };
-            tmp3Result = closure_16(closure_1(10231), obj2);
-            const tmp4Result = closure_1(10231);
+            tmp3Result = closure_16(closure_1(10247), obj2);
+            const tmp4Result = closure_1(10247);
           }
           children1[1] = tmp3Result;
           return closure_17(closure_4, { children: children1 }, index);

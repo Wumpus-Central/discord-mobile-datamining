@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const useConjurePatchNotesLinkDefault = useConjurePatchNotesLink;
 const ConjurePublishNotesSheetDefault = ConjurePublishNotesSheet;
 
-const _modDef3862 = v35VEu5(3862);
+const _modDef3865 = v35VEu5(3865);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
@@ -44,8 +44,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if ("sent" === tmp3.state) {
-          intl = intl(1126).intl;
-          v35VEu5 = _modDef3862["35VEu5"];
+          intl = intl(1128).intl;
+          v35VEu5 = _modDef3865["35VEu5"];
           obj = {
             sentHook(children, arg1) {
               return React3(
@@ -65,7 +65,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           };
           let formatResult = intl.format(v35VEu5, obj);
         } else {
-          const intl2 = intl(1126).intl;
+          const intl2 = intl(1128).intl;
           const obj4 = {
             onSend() {
               const result = useConjurePatchNotesLink.conjurePatchNotesEditorProps(projectId, closure_1);
@@ -80,7 +80,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          formatResult = intl2.format(_modDef3862["6/zJpD"], obj4);
+          formatResult = intl2.format(_modDef3865["6/zJpD"], obj4);
         }
         cResult[0] = tmp3;
         cResult[1] = projectId;
@@ -99,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         if ("sent" === tmp.state) {
-          const intl2 = projectId(1126).intl;
+          const intl2 = projectId(1128).intl;
           let obj2 = {
             sentHook(children, arg1) {
               return React3(
@@ -117,9 +117,9 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               );
             },
           };
-          let formatResult = intl2.format(_modDef3862["35VEu5"], obj2);
+          let formatResult = intl2.format(_modDef3865["35VEu5"], obj2);
         } else {
-          const intl = projectId(1126).intl;
+          const intl = projectId(1128).intl;
           let obj3 = {
             onSend() {
               const result = useConjurePatchNotesLink.conjurePatchNotesEditorProps(projectId, closure_1);
@@ -134,7 +134,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          formatResult = intl.format(_modDef3862["6/zJpD"], obj3);
+          formatResult = intl.format(_modDef3865["6/zJpD"], obj3);
         }
         obj = { children: null };
         items = [" ", formatResult];

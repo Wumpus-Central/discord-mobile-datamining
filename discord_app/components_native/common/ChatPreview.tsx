@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7964);
+const RowGeneratorConstants = fn(7967);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Set",
           shouldInitialScroll: "Array",
-          animated: 20,
-          scrollPosition: 1,
-          focusTargetId: "row",
+          animated: "2026-09-invite-accept-age-group-errors",
+          scrollPosition: "user",
+          focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,11 +319,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9558).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9574).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9558);
-          applyArgumentsResult(5162).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9574);
+          applyArgumentsResult(5164).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -356,14 +356,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5162).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5162);
+            applyArgumentsResult(5164).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5164);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "FRIEND_SUGGESTION_DELETE",
+        messageChannel: 267.310546875,
         selectedChannelId: null,
-        tapLinkData: "sm",
+        tapLinkData: "\u{1F9D3}\u{1F3FC}",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -641,7 +641,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4883).ThemeContext;
+ChatPreviewBase.contextType = fn(4886).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const ReactCompilerGating = fn(558);
 let obj5 = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -652,11 +652,11 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
   ? function ChatPreview(channelId) {
       const cResult = channelId(576).c(19);
       channelId = channelId.channelId;
-      const InlineAttachmentMedia = channelId(2041).InlineAttachmentMedia;
+      const InlineAttachmentMedia = channelId(2044).InlineAttachmentMedia;
       const setting = InlineAttachmentMedia.useSetting();
-      const InlineEmbedMedia = channelId(2041).InlineEmbedMedia;
+      const InlineEmbedMedia = channelId(2044).InlineEmbedMedia;
       const setting1 = InlineEmbedMedia.useSetting();
-      const RenderEmbeds = channelId(2041).RenderEmbeds;
+      const RenderEmbeds = channelId(2044).RenderEmbeds;
       const setting2 = RenderEmbeds.useSetting();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -698,9 +698,9 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = channelId(504).useStateFromStores(tmp11, C);
       const width = useWindowDimensionsDefault().width;
       const tmpResult5 = channelId(504);
-      const isChannelSpoilerGated = channelId(6160).useIsChannelSpoilerGated(stateFromStores1);
-      const tmpResult6 = channelId(6160);
-      const isChannelContentGated = channelId(6140).useIsChannelContentGated(stateFromStores1);
+      const isChannelSpoilerGated = channelId(6162).useIsChannelSpoilerGated(stateFromStores1);
+      const tmpResult6 = channelId(6162);
+      const isChannelContentGated = channelId(6142).useIsChannelContentGated(stateFromStores1);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor() {
@@ -723,7 +723,7 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp18 = cResult[6];
       }
-      const tmpResult7 = channelId(6140);
+      const tmpResult7 = channelId(6142);
       const stateFromStores2 = channelId(504).useStateFromStores(tmp17, tmp18);
       if (!isChannelSpoilerGated) {
         class C {
@@ -768,11 +768,11 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ChatPreview(channelId) {
       channelId = channelId.channelId;
-      const InlineAttachmentMedia = channelId(2041).InlineAttachmentMedia;
+      const InlineAttachmentMedia = channelId(2044).InlineAttachmentMedia;
       const setting = InlineAttachmentMedia.useSetting();
-      const InlineEmbedMedia = channelId(2041).InlineEmbedMedia;
+      const InlineEmbedMedia = channelId(2044).InlineEmbedMedia;
       const setting1 = InlineEmbedMedia.useSetting();
-      const RenderEmbeds = channelId(2041).RenderEmbeds;
+      const RenderEmbeds = channelId(2044).RenderEmbeds;
       const setting2 = RenderEmbeds.useSetting();
       const items = [AccessibilityStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
@@ -780,10 +780,10 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelStore];
       const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
       const obj2 = channelId(504);
-      const isChannelSpoilerGated = channelId(6160).useIsChannelSpoilerGated(stateFromStores1);
-      const obj3 = channelId(6160);
-      const isChannelContentGated = channelId(6140).useIsChannelContentGated(stateFromStores1);
-      const obj4 = channelId(6140);
+      const isChannelSpoilerGated = channelId(6162).useIsChannelSpoilerGated(stateFromStores1);
+      const obj3 = channelId(6162);
+      const isChannelContentGated = channelId(6142).useIsChannelContentGated(stateFromStores1);
+      const obj4 = channelId(6142);
       const items2 = [ActionSheetStore];
       const obj6 = {};
       const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

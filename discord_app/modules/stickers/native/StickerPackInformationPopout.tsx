@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   informationContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -73,8 +73,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = informationHeader(576);
       if (tmpResult.isStickerPackAnimated(stickerPack)) {
         const obj2 = { key: "animated", description: null };
-        const intl = tmp(1126).intl;
-        obj2.description = intl.string(tmp(1126).t.W11rMa);
+        const intl = tmp(1128).intl;
+        obj2.description = intl.string(tmp(1128).t.W11rMa);
         items.push(obj2);
       }
       if (cResult[10] === informationHeader.informationContent) {
@@ -88,9 +88,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             ({ headerContainer, informationHeader: informationHeader2 } = informationHeader);
             if (cResult[17] !== stickerPack.name) {
-              const intl2 = tmp(1126).intl;
+              const intl2 = tmp(1128).intl;
               let obj3 = { stickerPackName: stickerPack.name };
-              const formatResult = intl2.format(tmp(1126).t.XDm6yN, obj3);
+              const formatResult = intl2.format(tmp(1128).t.XDm6yN, obj3);
               cResult[17] = stickerPack.name;
               cResult[18] = formatResult;
               let tmp6 = formatResult;
@@ -103,8 +103,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl3 = tmp(1126).intl;
-                const stringResult = intl3.string(tmp(1126).t.cpT0Cq);
+                const intl3 = tmp(1128).intl;
+                const stringResult = intl3.string(tmp(1128).t.cpT0Cq);
                 cResult[22] = stringResult;
                 let tmp12 = stringResult;
               } else {
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj4 = { variant: "text-md/bold", color: "text-brand", children: null };
-                const intl4 = tmp(1126).intl;
-                obj4.children = intl4.string(tmp(1126).t.cpT0Cq);
-                const tmp16 = closure_3(tmp(5147).Text, obj4);
+                const intl4 = tmp(1128).intl;
+                obj4.children = intl4.string(tmp(1128).t.cpT0Cq);
+                const tmp16 = closure_3(tmp(5149).Text, obj4);
                 cResult[23] = tmp16;
                 let tmp14 = tmp16;
               } else {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityLabel: tmp12,
                   children: tmp14,
                 };
-                const tmp19 = closure_3(tmp(6405).PressableOpacity, obj5);
+                const tmp19 = closure_3(tmp(6407).PressableOpacity, obj5);
                 cResult[24] = onClose;
                 cResult[25] = tmp19;
                 let tmp17 = tmp19;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: tmp6,
             };
-            const tmp10 = closure_3(tmp(5147).Text, obj8);
+            const tmp10 = closure_3(tmp(5149).Text, obj8);
             cResult[19] = informationHeader.informationHeader;
             cResult[20] = tmp6;
             cResult[21] = tmp10;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = informationHeader.informationContentDescription;
       cResult[13] = renderItem;
       tmp5 = renderItem;
-      tmpResult = informationHeader(5965);
+      tmpResult = informationHeader(5967);
     }
   : function StickerPackInformationPopout(stickerPack) {
       stickerPack = stickerPack.stickerPack;
@@ -220,8 +220,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items = [];
       if (obj.isStickerPackAnimated(stickerPack)) {
         const obj2 = { key: "animated", description: null };
-        const intl = tmp2(1126).intl;
-        obj2.description = intl.string(tmp2(1126).t.W11rMa);
+        const intl = tmp2(1128).intl;
+        obj2.description = intl.string(tmp2(1128).t.W11rMa);
         items.push(obj2);
       }
       let obj3 = { style: null, children: null };
@@ -234,14 +234,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl2 = tmp2(1126).intl;
+      const intl2 = tmp2(1128).intl;
       obj5.children = intl2.format(require("util").t.XDm6yN, { stickerPackName: stickerPack.name });
       const items2 = [closure_3(require("Text/Text").Text, obj5)];
       const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      const intl3 = tmp2(1126).intl;
+      const intl3 = tmp2(1128).intl;
       obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
       const obj8 = { variant: "text-md/bold", color: "text-brand", children: null };
-      const intl4 = tmp2(1126).intl;
+      const intl4 = tmp2(1128).intl;
       obj8.children = intl4.string(require("util").t.cpT0Cq);
       obj7.children = closure_3(require("Text/Text").Text, obj8);
       items2[1] = closure_3(require("Pressables").PressableOpacity, obj7);

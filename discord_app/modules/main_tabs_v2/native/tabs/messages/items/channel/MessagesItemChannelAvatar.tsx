@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11797).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11821).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -417,8 +417,8 @@ export default noop.memo(
                 style: false,
                 size: true,
                 animate: true,
-                typing: "done",
-                autoStatusCutout: false,
+                typing: 0.4,
+                autoStatusCutout: "man_police_officer_tone5",
               };
               if (!stateFromStores2.isSystemUser()) {
                 class H {
@@ -503,7 +503,7 @@ export default noop.memo(
           muted = !channelSelected;
         }
         const tmpResult = closure_10(muted);
-        const REFRESH_MEDIUM_32 = channel(1200).AvatarSizes.REFRESH_MEDIUM_32;
+        const REFRESH_MEDIUM_32 = channel(1202).AvatarSizes.REFRESH_MEDIUM_32;
         dependencyMap = AuthenticationStore.getId();
         const items = [TypingStore];
         stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -583,8 +583,8 @@ export default noop.memo(
               style: false,
               size: true,
               animate: true,
-              typing: "done",
-              autoStatusCutout: false,
+              typing: 0.4,
+              autoStatusCutout: "man_police_officer_tone5",
             };
             let tmp12 = null;
             if (!stateFromStores2.isSystemUser()) {
@@ -596,7 +596,7 @@ export default noop.memo(
             obj7.size = REFRESH_MEDIUM_32;
             obj7.animate = stateFromStores1;
             obj7.typing = stateFromStores;
-            tmp11Result = jsx(tmp3(1200).Avatar, {
+            tmp11Result = jsx(tmp3(1202).Avatar, {
               user: stateFromStores2,
               avatarDecoration: stateFromStores2.avatarDecoration,
               guildId: "e",
@@ -607,8 +607,8 @@ export default noop.memo(
               style: false,
               size: true,
               animate: true,
-              typing: "done",
-              autoStatusCutout: false,
+              typing: 0.4,
+              autoStatusCutout: "man_police_officer_tone5",
             });
           }
         }

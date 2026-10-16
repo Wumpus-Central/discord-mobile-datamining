@@ -1,12 +1,33 @@
 // discord_app/stores/GuildMemberRequesterStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
+import MessageTypes from "../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import GuildLeaderboardTypes from "../modules/guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import GuildMemberRequesterDefault from "../lib/guild/GuildMemberRequester.tsx";
 import ChannelStore from "ChannelStore.tsx";
 import GuildMemberStore from "GuildMemberStore.tsx";
+import SelectedChannelStore from "SelectedChannelStore.tsx";
 
+require = fn;
 function handleConnectionReset() {
   navigation.reset();
+}
+function requestMember(arg0, arg1) {
+  navigation.request(arg0, arg1);
+  return false;
+}
+function requestLeaderboardMembers(guildId, message) {
+  const guild_space_data = message.guild_space_data;
+  let leaderboard;
+  if (guild_space_data != null) {
+    leaderboard = guild_space_data.leaderboard;
+  }
+  const guildSpaceLeaderboardUserIds = GuildLeaderboardTypes.getGuildSpaceLeaderboardUserIds(leaderboard);
+  while (tmp3 !== undefined) {
+    let tmp6 = requestMember(guildId, tmp4);
+    continue;
+  }
+  tmp3 = guildSpaceLeaderboardUserIds[Symbol.iterator]();
 }
 function handleLoadMessages(messages) {
   messages = messages.messages;
@@ -14,16 +35,19 @@ function handleLoadMessages(messages) {
   let flag = null != channel && null != channel.guild_id;
   if (flag) {
     const guild_id = channel.guild_id;
-    const item = messages.forEach((item) => {
-      ({ author, mentions } = item);
+    const item = messages.forEach((type) => {
+      ({ author, mentions } = type);
       if (null != author) {
-        closure_4.request(guild_id, author.id);
+        closure_6.request(guild_id, author.id);
       }
       if (mentions != null) {
-        item = mentions.forEach((id) => {
+        const item = mentions.forEach((id) => {
           navigation.request(guild_id, id.id);
           return false;
         });
+      }
+      if (type.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+        requestLeaderboardMembers(guild_id, type);
       }
     });
     flag = false;
@@ -46,16 +70,19 @@ function handleLoadSearchResults(arg0) {
         });
       });
     });
-    const item1 = items.forEach((item) => {
-      ({ author, mentions } = item);
+    const item1 = items.forEach((type) => {
+      ({ author, mentions } = type);
       if (null != author) {
-        closure_4.request(guild_id, author.id);
+        closure_6.request(guild_id, author.id);
       }
       if (mentions != null) {
-        item = mentions.forEach((id) => {
+        const item = mentions.forEach((id) => {
           navigation.request(guild_id, id.id);
           return false;
         });
+      }
+      if (type.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+        requestLeaderboardMembers(guild_id, type);
       }
     });
     return false;
@@ -71,10 +98,10 @@ const Store = initializeDefault.Store;
 class GuildMemberRequesterStore extends Store {}
 const prototype = GuildMemberRequesterStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore, GuildMemberStore);
+  this.waitFor(ChannelStore, GuildMemberStore, SelectedChannelStore);
 };
-prototype["requestMember"] = function requestMember(guild_id, id) {
-  navigation.request(guild_id, id);
+prototype["requestMember"] = function requestMember(arg0, arg1) {
+  navigation.request(arg0, arg1);
 };
 prototype["getDebugState"] = function getDebugState(arg0) {
   return navigation.getDebugState(arg0);
@@ -109,16 +136,19 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
   SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(messages) {
     messages = messages.messages;
     const guildId = messages.smartSearchQuery.guildId;
-    const item = messages.forEach((item) => {
-      ({ author, mentions } = item);
+    const item = messages.forEach((type) => {
+      ({ author, mentions } = type);
       if (null != author) {
-        closure_4.request(guild_id, author.id);
+        closure_6.request(guild_id, author.id);
       }
       if (mentions != null) {
-        item = mentions.forEach((id) => {
+        const item = mentions.forEach((id) => {
           navigation.request(guild_id, id.id);
           return false;
         });
+      }
+      if (type.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+        requestLeaderboardMembers(guild_id, type);
       }
     });
     return false;
@@ -135,21 +165,45 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     if (flag) {
       const mapped = pins.map((message) => message.message);
       const guild_id = channel.guild_id;
-      const item = mapped.forEach((item) => {
-        ({ author, mentions } = item);
+      const item = mapped.forEach((type) => {
+        ({ author, mentions } = type);
         if (null != author) {
-          closure_4.request(guild_id, author.id);
+          closure_6.request(guild_id, author.id);
         }
         if (mentions != null) {
-          item = mentions.forEach((id) => {
+          const item = mentions.forEach((id) => {
             navigation.request(guild_id, id.id);
             return false;
           });
+        }
+        if (type.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+          requestLeaderboardMembers(guild_id, type);
         }
       });
       flag = false;
     }
     return flag;
+  },
+  MESSAGE_CREATE: function handleMessageCreate(arg0) {
+    ({ guildId, channelId, message } = arg0);
+    if (channelId !== SelectedChannelStore.getCurrentlySelectedChannelId()) {
+      return false;
+    } else {
+      if (guildId == null) {
+        const channel = ChannelStore.getChannel(channelId);
+        let guild_id;
+        if (channel != null) {
+          guild_id = channel.guild_id;
+        }
+        guildId = guild_id;
+      }
+      if (null != guildId) {
+        if (message.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+          requestLeaderboardMembers(guildId, message);
+        }
+      }
+      return false;
+    }
   },
   CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(messages) {
     messages = messages.messages;
@@ -158,16 +212,19 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     if (flag) {
       const combined = messages.concat(messages.messageReferences);
       const guild_id = channel.guild_id;
-      const item = combined.forEach((item) => {
-        ({ author, mentions } = item);
+      const item = combined.forEach((type) => {
+        ({ author, mentions } = type);
         if (null != author) {
-          closure_4.request(guild_id, author.id);
+          closure_6.request(guild_id, author.id);
         }
         if (mentions != null) {
-          item = mentions.forEach((id) => {
+          const item = mentions.forEach((id) => {
             navigation.request(guild_id, id.id);
             return false;
           });
+        }
+        if (type.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+          requestLeaderboardMembers(guild_id, type);
         }
       });
       flag = false;
@@ -187,16 +244,19 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
           return messages;
         });
         const guild_id = channel.guild_id;
-        let item = mapped.flat().forEach((item) => {
-          ({ author, mentions } = item);
+        let item = mapped.flat().forEach((type) => {
+          ({ author, mentions } = type);
           if (null != author) {
-            closure_4.request(guild_id, author.id);
+            closure_6.request(guild_id, author.id);
           }
           if (mentions != null) {
-            item = mentions.forEach((id) => {
+            const item = mentions.forEach((id) => {
               navigation.request(guild_id, id.id);
               return false;
             });
+          }
+          if (type.type === MessageTypes.MessageTypes.GUILD_SPACE_MESSAGE) {
+            requestLeaderboardMembers(guild_id, type);
           }
         });
         return false;

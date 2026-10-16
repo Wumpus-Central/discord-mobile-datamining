@@ -8,9 +8,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
 
 require = fn;
-const MessageRequestConstants = fn(13011);
+const MessageRequestConstants = fn(13037);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
 

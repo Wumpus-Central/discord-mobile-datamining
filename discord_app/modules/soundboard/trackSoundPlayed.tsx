@@ -7,9 +7,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5490).DEFAULT_SOUND_GUILD_ID;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const PremiumConstants = fn(1392);
+const DEFAULT_SOUND_GUILD_ID = fn(5492).DEFAULT_SOUND_GUILD_ID;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const PremiumConstants = fn(1394);
 ({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: c10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");

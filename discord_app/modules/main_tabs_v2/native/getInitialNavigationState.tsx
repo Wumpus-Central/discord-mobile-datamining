@@ -143,7 +143,7 @@ function computeInitialNavigationStateWithoutLogging() {
     return items3;
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
 const logger = new LoggerDefault("getInitialNavigationState");
 const size = fn(2);

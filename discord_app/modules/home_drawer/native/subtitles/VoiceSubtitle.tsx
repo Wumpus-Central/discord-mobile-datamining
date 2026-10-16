@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === voiceUsers) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 };
-            const tmp9 = jsx(tmp(5147).Text, {
+            const tmp9 = jsx(tmp(5149).Text, {
               variant: "text-xs/medium",
               color: "text-voice-connected",
               lineClamp: 1,
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[4];
       }
-      const intl = tmp(1126).intl;
+      const intl = tmp(1128).intl;
       const obj3 = { users: null, overflowCount: null };
       const substr = voiceUsers.slice(0, 2);
       const mapped = substr.map(tmp5);
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = guildId(576);
       cResult[0] = guildId;
       cResult[1] = voiceUsers;
-      cResult[2] = intl.format(guildId(1126).t.r1Vkoc, obj3);
-      const formatResult = intl.format(guildId(1126).t.r1Vkoc, obj3);
+      cResult[2] = intl.format(guildId(1128).t.r1Vkoc, obj3);
+      const formatResult = intl.format(guildId(1128).t.r1Vkoc, obj3);
     }
   : function VoiceSubtitle(arg0) {
       ({ guildId: require, voiceUsers } = arg0);

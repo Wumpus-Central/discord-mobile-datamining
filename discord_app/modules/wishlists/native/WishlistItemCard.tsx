@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId"];
-const SKUProductLines = fn(1085).SKUProductLines;
+const SKUProductLines = fn(1087).SKUProductLines;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,11 +1,11 @@
 // discord_app/modules/jank_stats/native/JankSlidingSurfaceReporter.native.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import NativeJankStatsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import NativeJankSessionModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankSessionModule.tsx";
 import getJankSurfaceName from "getJankSurfaceName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const JankScreenConstants = fn(17026);
+const JankScreenConstants = fn(17059);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let __initData = {
   code: "function JankSlidingSurfaceReporterNativeTsx1(){const{position}=this.__closure;return position.get();}",
@@ -51,13 +51,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (onCoveringChange != null) {
                   onCoveringChange(arg0);
                 }
-                const obj = NativeJankStatsModuleDefault;
-                if (obj != null) {
-                  if (arg0) {
-                    resolveClosedName = current.resolveOpenName;
-                  }
-                  obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
+                const obj = NativeJankSessionModuleDefault;
+                if (arg0) {
+                  resolveClosedName = current.resolveOpenName;
                 }
+                obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
               }
               class I {
                 constructor() {
@@ -159,13 +157,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (onCoveringChange != null) {
           onCoveringChange(arg0);
         }
-        const obj = NativeJankStatsModuleDefault;
-        if (obj != null) {
-          if (arg0) {
-            resolveClosedName = current.resolveOpenName;
-          }
-          obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
+        const obj = NativeJankSessionModuleDefault;
+        if (arg0) {
+          resolveClosedName = current.resolveOpenName;
         }
+        obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
       }, []);
       const sharedValue = position(closedAt[6]).useSharedValue(0);
       let obj = position(closedAt[6]);

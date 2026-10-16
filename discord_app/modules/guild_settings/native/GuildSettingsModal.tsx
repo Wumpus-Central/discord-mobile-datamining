@@ -558,7 +558,7 @@ function getScreens(guildId, arg1) {
   obj3[constants.GUILD_SPACE] = obj45;
   return obj3;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildSettingsSections: closure_7, WebhookTypes: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(20);
       let obj = require("c");
       const tmp4 = stateFromStores;
-      ({ bottom, left, right } = stateFromStores(1631)());
+      ({ bottom, left, right } = stateFromStores(1633)());
       if (cResult[0] === left) {
         if (cResult[1] === right) {
           let tmp6 = cResult[2];
@@ -585,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp8 = cResult[3];
         }
-        const tmp9 = tmp4(6390)(tmp8);
+        const tmp9 = tmp4(6392)(tmp8);
         _require = tmp9;
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj2.initialRouteState = undefined;
               obj2.screens = tmp14;
               obj2.viewStyle = tmp6;
-              tmp27Result = tmp27(tmp(6908).Navigator, obj2);
+              tmp27Result = tmp27(tmp(6910).Navigator, obj2);
             }
             cResult[16] = first;
             cResult[17] = tmp6;
@@ -819,7 +819,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = right;
       cResult[2] = rect;
       tmp6 = rect;
-      const tmp5 = stateFromStores(1631)();
+      const tmp5 = stateFromStores(1633)();
     }
   : function GuildSettingsModal() {
       let rect = left(right[56])();

@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const UpsellTypes = fn(1085).UpsellTypes;
+const UpsellTypes = fn(1087).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1200).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1202).STANDARD_EASING };
 let obj2 = { duration: 200, dampingRatio: 0.7 };
 const __initData = {
   code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}",

@@ -12,8 +12,8 @@ import AccessibilityStore from "../AccessibilityStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const SystemTheme = fn(1208).SystemTheme;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const SystemTheme = fn(1210).SystemTheme;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 

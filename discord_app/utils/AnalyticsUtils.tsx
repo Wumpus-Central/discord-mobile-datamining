@@ -3,7 +3,7 @@ import LogAggregatorAll from "../modules/debug/LogAggregator.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
-import v1 from "../../_runtime/01279_v1.js";
+import v1 from "../../_runtime/01281_v1.js";
 import CommonSentryInitUtils from "../modules/errors/CommonSentryInitUtils.tsx";
 import ProcessUtilsDefault from "ProcessUtils.native.tsx";
 import utils_AnalyticsSchemaAll from "AnalyticsSchema.tsx";
@@ -110,12 +110,12 @@ function expandEventProperties(arg0) {
 }
 let closure_4 = ["location"];
 let closure_5 = ["source"];
-const ImpressionStore = fn(1266);
+const ImpressionStore = fn(1268);
 ({ setDebugTrackedData: closure_7, getLocation: closure_8 } = ImpressionStore);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: closure_11 } = Constants);
-const AccessibilityFeatureFlags = fn(1372).AccessibilityFeatureFlags;
-const ApplicationTypes = fn(1373).ApplicationTypes;
+const AccessibilityFeatureFlags = fn(1374).AccessibilityFeatureFlags;
+const ApplicationTypes = fn(1375).ApplicationTypes;
 let global = {};
 let c15 = 1000;
 let c16 = 60000;
@@ -126,8 +126,8 @@ const shim = fn(562);
 let launchSignature = null;
 if (shim.isLibdiscoreInitialized()) {
   let obj3 = fn(562);
-  launchSignature = obj3.generateLaunchSignature(fn(1374).getGlobalObject());
-  let obj4 = fn(1374);
+  launchSignature = obj3.generateLaunchSignature(fn(1376).getGlobalObject());
+  let obj4 = fn(1376);
 }
 function addBreadcrumb(message) {
   const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = CommonSentryInitUtils.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
@@ -216,8 +216,8 @@ let obj = {
   [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj29,
   [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj30,
   [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj31,
-  [fn(1273).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj32,
-  [fn(1273).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj33,
+  [fn(1275).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj32,
+  [fn(1275).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj33,
   [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj34,
   [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj35,
   [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj36,
@@ -265,7 +265,7 @@ let obj = {
 global = function getAccessibilityFeatures() {
   return AccessibilityFeatureFlags.NONE;
 };
-AnalyticsUtils = fn(1273);
+AnalyticsUtils = fn(1275);
 let closure_22 = AnalyticsUtils.trackMaker({
   addBreadcrumb,
   analyticEventConfigs: obj,
@@ -274,7 +274,7 @@ let closure_22 = AnalyticsUtils.trackMaker({
 });
 let c24 = false;
 const dependencyMap = {};
-AnalyticsUtils = fn(1273);
+AnalyticsUtils = fn(1275);
 obj10 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
@@ -710,7 +710,7 @@ let closure_26 = AnalyticsUtils.trackMaker({
 });
 const obj66 = {};
 AnalyticsUtils = Object.assign(AnalyticsUtils);
-obj66.getCampaignParams = fn(1273).getCampaignParams;
+obj66.getCampaignParams = fn(1275).getCampaignParams;
 obj66.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
   global = getActiveFeatures;
 };

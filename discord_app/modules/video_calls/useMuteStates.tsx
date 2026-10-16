@@ -65,7 +65,7 @@ function getMuteStates(voiceStateStore) {
   obj.mute = flag;
   return obj;
 }
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");

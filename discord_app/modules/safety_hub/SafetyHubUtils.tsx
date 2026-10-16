@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
-import _modDef4758 from "../../../_runtime/metro/04758__.js";
+import _modDef4761 from "../../../_runtime/metro/04761__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -51,20 +51,20 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7729);
+const SafetyHubConstants = fn(7732);
 ({
   AppealIngestionSignal: closure_4,
   SafetySystemNotificationCtaType: hasOwnProperty,
   SafetySystemNotificationEmbedKeys: metroRequire,
 } = SafetyHubConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4758().to(_modDef4758(timestamp));
+  return _modDef4761().to(_modDef4761(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {

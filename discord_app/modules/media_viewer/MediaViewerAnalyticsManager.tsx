@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = {
   VIEWER_SWIPE: "number_viewer_swipes",
@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "done",
+  guildId: "duration",
   channelId: "toCharArray$esjava$1",
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
   hasMediaOptions: "applicationId",
-  source: "iconHidden",
-  incrementableActions: "NAME_INPUT",
+  source: false,
+  incrementableActions: false,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

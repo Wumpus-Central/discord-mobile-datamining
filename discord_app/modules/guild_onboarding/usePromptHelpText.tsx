@@ -6,7 +6,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 const require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -256,20 +256,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let str = "";
       if (!singleSelect) {
-        const intl = selectedRoleIds(1126).intl;
-        str = intl.string(selectedRoleIds(1126).t.JshhEl);
+        const intl = selectedRoleIds(1128).intl;
+        str = intl.string(selectedRoleIds(1128).t.JshhEl);
       }
       if (0 === stateFromStoresArray1.length) {
         if (mapped.length > 0) {
           let str6 = "";
           if (0 !== mapped.length) {
-            const intl4 = selectedRoleIds(1126).intl;
+            const intl4 = selectedRoleIds(1128).intl;
             const obj3 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
             const _Math3 = Math;
             obj3.extraCount = Math.max(mapped.length - 2, 0);
             [obj6.role1, obj6.role2] = mapped;
             obj3.itemHook = itemHook;
-            str6 = intl4.format(selectedRoleIds(1126).t.Kj5GIT, obj3);
+            str6 = intl4.format(selectedRoleIds(1128).t.Kj5GIT, obj3);
           }
           str = str6;
           let str2 = "";
@@ -281,7 +281,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStoresArray1.length > 0) {
         let str3 = "";
         if (0 !== stateFromStoresArray1.length) {
-          const intl2 = selectedRoleIds(1126).intl;
+          const intl2 = selectedRoleIds(1128).intl;
           const obj11 = {
             count: stateFromStoresArray1.length,
             extraCount: null,
@@ -293,19 +293,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           obj11.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
           [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
           obj11.itemHook = itemHook;
-          str3 = intl2.format(selectedRoleIds(1126).t.Rj841R, obj11);
+          str3 = intl2.format(selectedRoleIds(1128).t.Rj841R, obj11);
         }
         let str4 = "";
         if (mapped.length > 0) {
           let str5 = "";
           if (0 !== mapped.length) {
-            const intl3 = selectedRoleIds(1126).intl;
+            const intl3 = selectedRoleIds(1128).intl;
             const obj12 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
             const _Math2 = Math;
             obj12.extraCount = Math.max(mapped.length - 2, 0);
             [obj5.role1, obj5.role2] = mapped;
             obj12.itemHook = itemHook;
-            str5 = intl3.format(selectedRoleIds(1126).t.cJZxWf, obj12);
+            str5 = intl3.format(selectedRoleIds(1128).t.cJZxWf, obj12);
           }
           str4 = str5;
         }
@@ -578,25 +578,25 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
       }
       let str = "";
       if (!singleSelect) {
-        const intl = selectedRoleIds(1126).intl;
-        str = intl.string(selectedRoleIds(1126).t.JshhEl);
+        const intl = selectedRoleIds(1128).intl;
+        str = intl.string(selectedRoleIds(1128).t.JshhEl);
       }
       if (0 === stateFromStoresArray1.length) {
         if (mapped.length > 0) {
-          const intl4 = selectedRoleIds(1126).intl;
+          const intl4 = selectedRoleIds(1128).intl;
           const obj6 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
           const _Math4 = Math;
           obj6.extraCount = Math.max(mapped.length - 2, 0);
           [obj5.role1, obj5.role2] = mapped;
           obj6.itemHook = itemHook;
-          str = intl4.format(selectedRoleIds(1126).t.vdtNYa, obj6);
+          str = intl4.format(selectedRoleIds(1128).t.vdtNYa, obj6);
         }
         const obj10 = { helpText: str, helpTextAdditional: "" };
         return obj10;
       }
       if (stateFromStoresArray1.length > 0) {
         if (0 === mapped.length) {
-          const intl3 = selectedRoleIds(1126).intl;
+          const intl3 = selectedRoleIds(1128).intl;
           const obj11 = {
             count: stateFromStoresArray1.length,
             extraCount: null,
@@ -608,11 +608,11 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
           obj11.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
           [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
           obj11.itemHook = itemHook;
-          str = intl3.format(selectedRoleIds(1126).t.ZKywGU, obj11);
+          str = intl3.format(selectedRoleIds(1128).t.ZKywGU, obj11);
         }
       }
       if (tmp5) {
-        const intl2 = selectedRoleIds(1126).intl;
+        const intl2 = selectedRoleIds(1128).intl;
         const obj12 = {
           channelCount: stateFromStoresArray1.length,
           extraChannelCount: null,
@@ -632,7 +632,7 @@ export const useCustomizeCommunityPromptHelpText = ReactCompilerGating.isReactCo
         const _Math2 = Math;
         obj12.extraRoleCount = Math.max(mapped.length - 2, 0);
         [obj3.role1, obj3.role2] = mapped;
-        str = intl2.format(selectedRoleIds(1126).t.WewRHM, obj12);
+        str = intl2.format(selectedRoleIds(1128).t.WewRHM, obj12);
       }
       const obj2 = selectedRoleIds(504);
       tmp5 = stateFromStoresArray1.length > 0 && mapped.length > 0;

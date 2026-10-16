@@ -8,17 +8,17 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1408);
+const DisplayNameStylesConstants = fn(1410);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
   getColorPresetsForEffect: metroRequire,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1409).DisplayNameEffect.NEON,
-  fn(1409).DisplayNameEffect.TOON,
-  fn(1409).DisplayNameEffect.POP,
-  fn(1409).DisplayNameEffect.GUMMY,
+  fn(1411).DisplayNameEffect.NEON,
+  fn(1411).DisplayNameEffect.TOON,
+  fn(1411).DisplayNameEffect.POP,
+  fn(1411).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [

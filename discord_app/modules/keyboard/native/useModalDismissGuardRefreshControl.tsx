@@ -35,7 +35,7 @@ export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCom
       return tmp5;
     }
   : function useModalDismissGuardRefreshControl() {
-      isPortalKeyboardInModal = isPortalKeyboardInModal(9748).useIsPortalKeyboardInModal();
+      isPortalKeyboardInModal = isPortalKeyboardInModal(9764).useIsPortalKeyboardInModal();
       const items = [isPortalKeyboardInModal];
       return noop.useMemo(() => {
         let tmp;

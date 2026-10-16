@@ -153,19 +153,19 @@ let closure_11 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4856)(url);
+                  closure_1(4859)(url);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1265).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                  closure_1(1267).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
                     url,
                     opened: true,
                   });
                   closure_0({ opened: true });
-                  const obj = closure_1(1265);
+                  const obj = closure_1(1267);
                 },
                 onCancel() {
                   application = closure_2_0.application;
@@ -173,7 +173,7 @@ let closure_11 = async function _openExternalLink(arg0) {
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1265).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                  closure_1(1267).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
                     url,
                     opened: false,
@@ -204,25 +204,19 @@ let closure_11 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(5855);
+let Constants = fn(5857);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1085);
+Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
-Constants = fn(2024);
+Constants = fn(2026);
 const items = [,];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
 const weakMap = new WeakMap();
-let obj = { [RPCCommands.OPEN_EXTERNAL_LINK]: obj2, [RPCCommands.NAVIGATE_TO_CONNECTIONS]: obj3 };
-obj2 = {
+let obj = {};
+let CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj3 = {
   scope: null,
-  validation(string) {
-    const obj = createRpcJoiSchemaObjectDefault(string);
-    const obj2 = { url: null };
-    const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
-    obj2.url = string.string().required();
-    return requiredResult.keys(obj2);
-  },
   handler(socket) {
     socket = socket.socket;
     const url = socket.args.url;
@@ -328,8 +322,9 @@ obj2 = {
   },
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE];
-obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-obj3 = {
+obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
+obj[RPCCommands.OPEN_EXTERNAL_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_EXTERNAL_LINK, obj3);
+let obj4 = {
   validation(arg0) {
     return createRpcJoiSchemaObjectDefault(arg0);
   },
@@ -349,9 +344,10 @@ obj3 = {
   },
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
-obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(15391);
-let obj5 = {
+obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
+obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
+CONTEXT_MENU_ICON_NAMES = fn(15422);
+let obj6 = {
   scope: null,
   handler(arg0) {
     ({ socket, args } = arg0);
@@ -393,8 +389,8 @@ let obj5 = {
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];
-obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
-obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, obj5);
+obj6.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
+obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, obj6);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/links.tsx");
 

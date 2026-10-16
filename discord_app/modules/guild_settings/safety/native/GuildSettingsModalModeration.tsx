@@ -18,7 +18,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({
   GuildFeatures: metroRequire,
   HelpdeskArticles: closure_7,
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { stack: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createLegacyClassComponentStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -206,16 +206,16 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
   const self = this;
   guild = this.props.guild;
   let obj = { hasIcons: false, title: null, description: null, value: null, onChange: null, children: null };
-  const intl = self(1126).intl;
-  obj.title = intl.string(self(1126).t.DpRdYK);
-  const intl2 = self(1126).intl;
-  obj.description = intl2.format(self(1126).t.iuRk2j, {});
+  const intl = self(1128).intl;
+  obj.title = intl.string(self(1128).t.DpRdYK);
+  const intl2 = self(1128).intl;
+  obj.description = intl2.format(self(1128).t.iuRk2j, {});
   obj.value = guild.verificationLevel;
   obj.onChange = function onChange(verificationLevel) {
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(15770).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(15803).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -238,23 +238,23 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj.disabled = tmp5;
     return collapsed(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(6483).TableRadioGroup, obj, "level-section");
+  return closure_10(self(6485).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
   guild = this.props.guild;
   let obj = { hasIcons: false, title: null, description: null, value: null, onChange: null, children: null };
-  const intl = self(1126).intl;
-  obj.title = intl.string(self(1126).t.bPgfJz);
-  const intl2 = self(1126).intl;
+  const intl = self(1128).intl;
+  obj.title = intl.string(self(1128).t.bPgfJz);
+  const intl2 = self(1128).intl;
   const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants2.SAFE_DIRECT_MESSAGING) };
-  obj.description = intl2.format(self(1126).t.BI4ukC, obj2);
+  obj.description = intl2.format(self(1128).t.BI4ukC, obj2);
   obj.value = guild.explicitContentFilter;
   obj.onChange = function onChange(explicitContentFilter) {
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(15770).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(15803).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -267,7 +267,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj.disabled = tmp2;
     return collapsed(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(6483).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(6485).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -301,7 +301,7 @@ prototype["handleVerificationLevelChange"] = function handleVerificationLevelCha
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
   GuildSettingsActionCreatorsDefault.updateGuild({ explicitContentFilter });
 };
-GuildSettingsModalModeration.contextType = fn(4883).ThemeContext;
+GuildSettingsModalModeration.contextType = fn(4886).ThemeContext;
 ReactCompilerGating = fn(558);
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(12);
       contentContainerStyle = contentContainerStyle.contentContainerStyle;
       const obj = guild(576);
-      const navigation = guild(1503).useNavigation();
+      const navigation = guild(1505).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildSettingsStore];
         const fn = function s() {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj2 = guild(1503);
+      const obj2 = guild(1505);
       const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp5, tmp6);
       guild = stateFromStoresObject.guild;
       ({ submitting, hasChanges } = stateFromStoresObject);
@@ -389,8 +389,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConnectedGuildSettingsModalModeration(contentContainerStyle) {
       guild = undefined;
-      const navigation = guild(1503).useNavigation();
-      const obj = guild(1503);
+      const navigation = guild(1505).useNavigation();
+      const obj = guild(1505);
       const items = [GuildSettingsStore];
       const stateFromStoresObject = guild(504).useStateFromStoresObject(items, () => {
         props = props.getProps();

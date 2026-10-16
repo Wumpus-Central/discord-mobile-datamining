@@ -12,9 +12,9 @@ import InviteStore from "../../../../../../../stores/InviteStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(7640).InviteTypes;
+const InviteTypes = fn(7642).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx",

@@ -7,11 +7,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8188).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
+let closure_5 = fn(8191).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 40;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 },
   emojiIcon: { marginRight: 12, borderRadius: nativeDefault.radii.sm },

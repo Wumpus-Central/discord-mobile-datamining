@@ -59,8 +59,8 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-let closure_6 = fn(2024).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
-const Permissions = fn(1085).Permissions;
+let closure_6 = fn(2026).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+const Permissions = fn(1087).Permissions;
 const EmbeddedActivityLaunchability = {
   CAN_LAUNCH: 0,
   [0]: "CAN_LAUNCH",

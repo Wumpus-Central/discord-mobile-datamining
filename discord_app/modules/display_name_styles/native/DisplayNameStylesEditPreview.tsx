@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2960 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2963 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAvatarDecoration from "../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -174,7 +174,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               if (tmp42 === Symbol.for("react.memo_cache_sentinel")) {
                                 const intl = util.intl;
-                                const stringResult = intl.string(_modDef2960.h5Cuej);
+                                const stringResult = intl.string(_modDef2963.h5Cuej);
                                 class P {
                                   constructor() {
                                     return closure_1_5.useReducedMotion;
@@ -380,7 +380,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [closure_1_8(View, obj7)];
       const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
       const intl = util.intl;
-      obj10.children = intl.string(_modDef2960.h5Cuej);
+      obj10.children = intl.string(_modDef2963.h5Cuej);
       items3[1] = React5(Text_Text.Text, obj10);
       obj6.children = items3;
       items1[1] = closure_1_8(View, obj6);
@@ -399,14 +399,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const tmp5 = closure_9();
       const obj = user(576);
-      const guildMemberAndUserPendingNameplate = user(8509).useGuildMemberAndUserPendingNameplate(user, guildId);
+      const guildMemberAndUserPendingNameplate = user(8517).useGuildMemberAndUserPendingNameplate(user, guildId);
       ({ guildNameplate, pendingNameplate, userNameplate } = guildMemberAndUserPendingNameplate);
       if (cResult[0] !== guildNameplate) {
-        const nameplateData = tmp(1990).getNameplateData(guildNameplate);
+        const nameplateData = tmp(1992).getNameplateData(guildNameplate);
         cResult[0] = guildNameplate;
         cResult[1] = nameplateData;
         let tmp7 = nameplateData;
-        const tmpResult3 = tmp(1990);
+        const tmpResult3 = tmp(1992);
       } else {
         tmp7 = cResult[1];
       }
@@ -430,8 +430,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = tmp(1126).intl;
-                const stringResult = intl.string(guildId(2960).zoh6MT);
+                const intl = tmp(1128).intl;
+                const stringResult = intl.string(guildId(2963).zoh6MT);
                 cResult[11] = stringResult;
                 let tmp14 = stringResult;
               } else {
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     pendingDisplayNameStyles: tmp13,
                                     pendingGlobalName: displayName,
                                   };
-                                  const tmp33 = closure_7(tmp(10861).NameplatePreview, obj4);
+                                  const tmp33 = closure_7(tmp(10876).NameplatePreview, obj4);
                                   cResult[28] = stateFromStores;
                                   cResult[29] = displayName;
                                   cResult[30] = tmp13;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 maxWidth: 320,
                 accessibilityLabel: tmp14,
               };
-              const tmp20 = closure_7(guildId(10745), obj7);
+              const tmp20 = closure_7(guildId(10760), obj7);
               cResult[12] = displayName;
               cResult[13] = tmp13;
               cResult[14] = guildId;
@@ -604,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = user.id;
       cResult[6] = fn;
       tmp11 = fn;
-      const tmpResult = user(8509);
+      const tmpResult = user(8517);
     }
   : function DisplayNameStylesEditPreview(user) {
       user = user.user;

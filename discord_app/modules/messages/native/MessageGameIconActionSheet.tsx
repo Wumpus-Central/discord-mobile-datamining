@@ -6,11 +6,11 @@ import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
-const PlatformUtils = fn(1382);
+const createStyles = fn(5153);
+const PlatformUtils = fn(1384);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -91,9 +91,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp14 = cResult[12];
             }
             if (cResult[13] !== stateFromStores.name) {
-              const intl = tmp(1126).intl;
+              const intl = tmp(1128).intl;
               const obj3 = { applicationName: stateFromStores.name };
-              const formatResult = intl.format(tmp(1126).t.J3s8JP, obj3);
+              const formatResult = intl.format(tmp(1128).t.J3s8JP, obj3);
               cResult[13] = stateFromStores.name;
               cResult[14] = formatResult;
               let tmp17 = formatResult;
@@ -102,11 +102,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = tmp(1126).intl;
+              const intl2 = tmp(1128).intl;
               const obj4 = {
                 helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS),
               };
-              const formatResult1 = intl2.format(tmp(1126).t.BPDKoA, obj4);
+              const formatResult1 = intl2.format(tmp(1128).t.BPDKoA, obj4);
               cResult[15] = formatResult1;
               let tmp19 = formatResult1;
             } else {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj5 = { startExpanded: true, children: null };
                       const obj6 = { style: contentWrapper, children: tmp30 };
                       obj5.children = closure_6(View, obj6);
-                      const tmp37 = closure_6(tmp(7061).BottomSheet, obj5);
+                      const tmp37 = closure_6(tmp(7063).BottomSheet, obj5);
                       cResult[27] = tmp4.contentWrapper;
                       cResult[28] = tmp30;
                       cResult[29] = tmp37;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj10 = { variant: "text-sm/medium", children: null };
             const items3 = [tmp17, " ", tmp19];
             obj10.children = items3;
-            const tmp25 = closure_7(tmp(5147).Text, obj10);
+            const tmp25 = closure_7(tmp(5149).Text, obj10);
             cResult[16] = tmp17;
             cResult[17] = tmp19;
             cResult[18] = tmp25;
@@ -178,14 +178,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-muted",
             children: messageTimestamp,
           };
-          const tmp16 = closure_6(tmp(5147).Text, obj11);
+          const tmp16 = closure_6(tmp(5149).Text, obj11);
           cResult[10] = messageTimestamp;
           cResult[11] = tmp4.timestamp;
           cResult[12] = tmp16;
           tmp14 = tmp16;
         }
         const obj12 = { style: tmp4.gameIcon, resizeMode: "contain", source: tmp9, disableColor: true };
-        const tmp12 = closure_6(tmp(1200).Icon, obj12);
+        const tmp12 = closure_6(tmp(1202).Icon, obj12);
         cResult[7] = tmp4.gameIcon;
         cResult[8] = tmp9;
         cResult[9] = tmp12;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { startExpanded: true, children: null };
         const obj6 = { uri: str };
         obj4.source = obj6;
-        const items1 = [closure_6(tmp2(1200).Icon, obj4)];
+        const items1 = [closure_6(tmp2(1202).Icon, obj4)];
         const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
         const obj8 = {
           style: tmp.timestamp,
@@ -223,24 +223,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: applicationId.messageTimestamp,
         };
-        const items2 = [closure_6(tmp2(5147).Text, obj8)];
+        const items2 = [closure_6(tmp2(5149).Text, obj8)];
         const obj9 = { variant: "text-sm/medium", children: null };
-        const intl = tmp2(1126).intl;
+        const intl = tmp2(1128).intl;
         const obj10 = { applicationName: stateFromStores.name };
-        const items3 = [intl.format(tmp2(1126).t.J3s8JP, obj10), " "];
-        const intl2 = tmp2(1126).intl;
+        const items3 = [intl.format(tmp2(1128).t.J3s8JP, obj10), " "];
+        const intl2 = tmp2(1128).intl;
         const obj11 = {
           helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS),
         };
-        items3[2] = intl2.format(tmp2(1126).t.BPDKoA, obj11);
+        items3[2] = intl2.format(tmp2(1128).t.BPDKoA, obj11);
         obj9.children = items3;
-        items2[1] = closure_7(tmp2(5147).Text, obj9);
+        items2[1] = closure_7(tmp2(5149).Text, obj9);
         obj7.children = items2;
         items1[1] = closure_7(View, obj7);
         obj3.children = items1;
         obj2.children = closure_7(View, obj3);
         obj5.children = closure_6(View, obj2);
-        tmp5Result = closure_6(tmp2(7061).BottomSheet, obj5);
+        tmp5Result = closure_6(tmp2(7063).BottomSheet, obj5);
       }
       return tmp5Result;
     };

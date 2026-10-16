@@ -400,12 +400,12 @@ function MethodsScreen(onClose) {
           tmp29 = intl;
         }
         const obj20 = { type: "critical", message: string2(cR6336), role: "alert", action: null };
-        const obj21 = { text: null, onClick: null };
+        const obj21 = { text: null, onPress: null };
         intl = tmp2(tmp3[34]).intl;
         string = intl.string;
         string2 = string(tmp29(tmp3[35]).hDvmYP);
         obj21.text = string2;
-        obj21.onClick = refetch;
+        obj21.onPress = refetch;
         obj20.action = obj21;
         tmp19Result10 = tmp19(tmp2(tmp3[33]).InlineNotice, obj20);
         obj19.children = tmp19Result10;
@@ -436,11 +436,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6133).TRUSTED_PROVIDERS_URL;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const TRUSTED_PROVIDERS_URL = fn(6135).TRUSTED_PROVIDERS_URL;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" },
   container: { alignSelf: "stretch" },
@@ -472,10 +472,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onClose, onComplete } = entryPoint);
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const v4Result = tmp(1279).v4();
+        const v4Result = tmp(1281).v4();
         cResult[0] = v4Result;
         let first = v4Result;
-        const tmpResult = tmp(1279);
+        const tmpResult = tmp(1281);
       } else {
         first = cResult[0];
       }
@@ -530,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const stringResult = obj10.string(tmp(1126).t["13/7kX"]);
+              const stringResult = obj10.string(tmp(1128).t["13/7kX"]);
               cResult[9] = stringResult;
               const tmp12 = stringResult;
             } else {
@@ -559,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = { screens: tmp7, initialRouteName: constants.METHODS, headerBackTitle: tmp12 };
-              const tmp16 = closure_9(tmp(6908).Navigator, obj2);
+              const tmp16 = closure_9(tmp(6910).Navigator, obj2);
               cResult[10] = tmp7;
               cResult[11] = tmp16;
               const tmp14 = tmp16;
@@ -599,7 +599,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         render: null,
       };
       const obj = entryPoint(576);
-      obj4.headerLeft = entryPoint(6421).getHeaderCloseButton(closeModal);
+      obj4.headerLeft = entryPoint(6423).getHeaderCloseButton(closeModal);
       obj4.render = function render(arg0, navigation) {
         return closure_2_9(MethodsScreen, { entryPoint, navigation, onClose: closeModal, onComplete, modalSessionId });
       };
@@ -612,8 +612,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerLeft: null,
         render: null,
       };
-      const tmpResult4 = entryPoint(6421);
-      obj5.headerLeft = entryPoint(6421).getHeaderBackButton();
+      const tmpResult4 = entryPoint(6423);
+      obj5.headerLeft = entryPoint(6423).getHeaderBackButton();
       obj5.render = function render() {
         return closure_2_9(onClose(onComplete[43]), { onClose: closeModal, onComplete, modalSessionId });
       };
@@ -626,8 +626,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerLeft: null,
         render: null,
       };
-      const tmpResult5 = entryPoint(6421);
-      obj6.headerLeft = entryPoint(6421).getHeaderBackButton();
+      const tmpResult5 = entryPoint(6423);
+      obj6.headerLeft = entryPoint(6423).getHeaderBackButton();
       obj6.render = function render() {
         return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, modalSessionId });
       };
@@ -638,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4;
       cResult[5] = obj3;
       tmp7 = obj3;
-      const tmpResult6 = entryPoint(6421);
+      const tmpResult6 = entryPoint(6423);
     }
   : function AgeVerificationExpressiveV2Modal(entryPoint) {
       entryPoint = entryPoint.entryPoint;

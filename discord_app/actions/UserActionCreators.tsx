@@ -309,8 +309,8 @@ let closure_10 = async function _fetchMutualFriends() {
     }
   })();
 };
-const Endpoints = fn(1085).Endpoints;
-const PSEUDO_GUILD_IDS = fn(1086).PSEUDO_GUILD_IDS;
+const Endpoints = fn(1087).Endpoints;
+const PSEUDO_GUILD_IDS = fn(1088).PSEUDO_GUILD_IDS;
 let closure_8 = new LoggerDefault("UserProfileModalActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActionCreators.tsx");

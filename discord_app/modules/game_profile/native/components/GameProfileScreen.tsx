@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 56;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   loadingContainer: {
     flex: 1,
@@ -99,9 +99,6 @@ let closure_16 = {
 };
 let __initData2 = {
   code: "function GameProfileScreenTsx5(shouldShow,prevShouldShow){const{runOnJS,setShowGetButton}=this.__closure;if(shouldShow!==prevShouldShow){runOnJS(setShowGetButton)(shouldShow);}}",
-};
-let closure_18 = {
-  code: "function GameProfileScreenTsx6(){const{heroHeaderHeight,scrollY,STICKY_HEADER_HEIGHT}=this.__closure;return heroHeaderHeight.get()>0&&scrollY.get()>=heroHeaderHeight.get()-STICKY_HEADER_HEIGHT;}",
 };
 let __initData3 = {
   code: "function GameProfileScreenTsx7(isVisible,wasVisible){const{stickyHeaderVisible,withTiming}=this.__closure;if(isVisible!==wasVisible){stickyHeaderVisible.set(withTiming(isVisible?1:0,{duration:150}));}}",
@@ -244,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const result = sharedValue2.set(timing.withTiming(num, { duration: 150 }));
             }
           }
-          const obj4 = { stickyHeaderVisible: sharedValue2, withTiming: tmp(tmp2[20]).withTiming };
+          let obj4 = { stickyHeaderVisible: sharedValue2, withTiming: tmp(tmp2[20]).withTiming };
           re.__closure = obj4;
           re.__workletHash = 3161097061646;
           re.__initData = sharedValue3;
@@ -365,7 +362,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[13] = name;
               cResult[14] = items1;
               cResult[15] = Ee;
-              let tmp45 = Ee;
+              class Ge {
+                constructor(arg0, arg1) {
+                  obj = arg1;
+                  if (undefined === arg1) {
+                    obj = {};
+                  }
+                  communityGuildId = obj.communityGuildId;
+                  obj2 = closure_0(closure_2[14]);
+                  guildIdAndVerifiedFromInvite = obj2.getGuildIdAndVerifiedFromInvite(closure_18.current);
+                  obj3 = closure_0(closure_2[14]);
+                  str = closure_17.current;
+                  if (str == null) {
+                    str = "";
+                  }
+                  obj1 = {
+                    gameName: str,
+                    gameId,
+                    action: gameId,
+                    similarGameId: obj.similarGameId,
+                    viewId: closure_5,
+                    guildId: null,
+                    isVerified: null,
+                    source: null,
+                  };
+                  guildId = communityGuildId;
+                  if (communityGuildId == null) {
+                    guildId = guildIdAndVerifiedFromInvite.guildId;
+                  }
+                  obj1.guildId = guildId;
+                  obj1.isVerified = null == communityGuildId && guildIdAndVerifiedFromInvite.isVerified;
+                  obj1.source = source;
+                  result = obj3.trackGameProfileAction(obj1);
+                  return;
+                }
+              }
               const tmp44 = items1;
             } else {
               class Ee {
@@ -374,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              tmp45 = cResult[15];
+              const tmp45 = cResult[15];
             }
             const effect1 = obj3.useEffect(tmp45, tmp44);
             if (cResult[16] !== first2) {
@@ -388,7 +419,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[16] = first2;
               cResult[17] = tmp49;
               cResult[18] = items2;
-              let tmp48 = items2;
+              class Ge {
+                constructor(arg0, arg1) {
+                  obj = arg1;
+                  if (undefined === arg1) {
+                    obj = {};
+                  }
+                  communityGuildId = obj.communityGuildId;
+                  obj2 = closure_0(closure_2[14]);
+                  guildIdAndVerifiedFromInvite = obj2.getGuildIdAndVerifiedFromInvite(closure_18.current);
+                  obj3 = closure_0(closure_2[14]);
+                  str = closure_17.current;
+                  if (str == null) {
+                    str = "";
+                  }
+                  obj1 = {
+                    gameName: str,
+                    gameId,
+                    action: gameId,
+                    similarGameId: obj.similarGameId,
+                    viewId: closure_5,
+                    guildId: null,
+                    isVerified: null,
+                    source: null,
+                  };
+                  guildId = communityGuildId;
+                  if (communityGuildId == null) {
+                    guildId = guildIdAndVerifiedFromInvite.guildId;
+                  }
+                  obj1.guildId = guildId;
+                  obj1.isVerified = null == communityGuildId && guildIdAndVerifiedFromInvite.isVerified;
+                  obj1.source = source;
+                  result = obj3.trackGameProfileAction(obj1);
+                  return;
+                }
+              }
             } else {
               class Ee {
                 constructor() {
@@ -396,7 +461,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              tmp48 = cResult[18];
+              const tmp48 = cResult[18];
             }
             const effect2 = obj3.useEffect(tmp49, tmp48);
             if (cResult[19] === gameId) {
@@ -407,37 +472,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            function be(action, similarGameId, arg2) {
-              const guildIdAndVerifiedFromInvite = GameProfileAnalyticUtils.getGuildIdAndVerifiedFromInvite(
-                ref3.current,
-              );
-              let str = ref2.current;
-              if (str == null) {
-                str = "";
+            class Ge {
+              constructor(arg0, arg1) {
+                obj = arg1;
+                if (undefined === arg1) {
+                  obj = {};
+                }
+                communityGuildId = obj.communityGuildId;
+                obj2 = closure_0(closure_2[14]);
+                guildIdAndVerifiedFromInvite = obj2.getGuildIdAndVerifiedFromInvite(closure_18.current);
+                obj3 = closure_0(closure_2[14]);
+                str = closure_17.current;
+                if (str == null) {
+                  str = "";
+                }
+                obj1 = {
+                  gameName: str,
+                  gameId,
+                  action: gameId,
+                  similarGameId: obj.similarGameId,
+                  viewId: closure_5,
+                  guildId: null,
+                  isVerified: null,
+                  source: null,
+                };
+                guildId = communityGuildId;
+                if (communityGuildId == null) {
+                  guildId = guildIdAndVerifiedFromInvite.guildId;
+                }
+                obj1.guildId = guildId;
+                obj1.isVerified = null == communityGuildId && guildIdAndVerifiedFromInvite.isVerified;
+                obj1.source = source;
+                result = obj3.trackGameProfileAction(obj1);
+                return;
               }
-              const obj3 = {
-                gameName: str,
-                gameId,
-                action,
-                similarGameId,
-                viewId: first1,
-                guildId: null,
-                isVerified: null,
-                source: null,
-              };
-              let guildId = arg2;
-              if (arg2 == null) {
-                guildId = guildIdAndVerifiedFromInvite.guildId;
-              }
-              obj3.guildId = guildId;
-              obj3.isVerified = null == arg2 && guildIdAndVerifiedFromInvite.isVerified;
-              obj3.source = source;
-              const result = GameProfileAnalyticUtils.trackGameProfileAction(obj3);
             }
             cResult[19] = gameId;
             cResult[20] = source;
             cResult[21] = first1;
-            cResult[22] = be;
+            cResult[22] = Ge;
           }
           const tmpResult18 = tmp(tmp2[21]);
         }
@@ -509,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = gameId(sourceUserId[11]);
       const tmp6Result = source(sourceUserId[12])(source(sourceUserId[13]).openURL);
       noop = tmp6Result;
-      const viewId = num(
+      viewId = num(
         noop.useState(() => gameId(sourceUserId[14]).generateViewId()),
         1,
       )[0];
@@ -586,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = sharedValue2.set(timing.withTiming(num, { duration: 150 }));
         }
       };
-      const obj4 = { heroHeaderHeight: sharedValue1, scrollY: sharedValue, STICKY_HEADER_HEIGHT };
+      let obj4 = { heroHeaderHeight: sharedValue1, scrollY: sharedValue, STICKY_HEADER_HEIGHT };
       const tmp2Result10 = gameId(sourceUserId[17]);
       fn2.__closure = { stickyHeaderVisible: sharedValue2, withTiming: gameId(sourceUserId[20]).withTiming };
       fn2.__workletHash = 6249404580523;
@@ -659,30 +732,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_20.current = first1;
       }, items4);
       const items5 = [gameId, viewId, source];
-      callback1 = obj2.useCallback((action, similarGameId, arg2) => {
+      callback1 = obj2.useCallback((action) => {
+        let obj = arg1;
+        if (arg1 === undefined) {
+          obj = {};
+        }
+        const communityGuildId = obj.communityGuildId;
         const guildIdAndVerifiedFromInvite = GameProfileAnalyticUtils.getGuildIdAndVerifiedFromInvite(ref3.current);
         let str = ref2.current;
         if (str == null) {
           str = "";
         }
-        const obj3 = {
+        const obj4 = {
           gameName: str,
           gameId,
           action,
-          similarGameId,
+          similarGameId: obj.similarGameId,
           viewId,
           guildId: null,
           isVerified: null,
           source: null,
         };
-        let guildId = arg2;
-        if (arg2 == null) {
+        let guildId = communityGuildId;
+        if (communityGuildId == null) {
           guildId = guildIdAndVerifiedFromInvite.guildId;
         }
-        obj3.guildId = guildId;
-        obj3.isVerified = null == arg2 && guildIdAndVerifiedFromInvite.isVerified;
-        obj3.source = source;
-        const result = GameProfileAnalyticUtils.trackGameProfileAction(obj3);
+        obj4.guildId = guildId;
+        obj4.isVerified = null == communityGuildId && guildIdAndVerifiedFromInvite.isVerified;
+        obj4.source = source;
+        const result = GameProfileAnalyticUtils.trackGameProfileAction(obj4);
       }, items5);
       const tmp2Result14 = gameId(sourceUserId[21]);
       ({ navigation, selectionVersion } = source(sourceUserId[23])(callback1, gameId.initialTab));

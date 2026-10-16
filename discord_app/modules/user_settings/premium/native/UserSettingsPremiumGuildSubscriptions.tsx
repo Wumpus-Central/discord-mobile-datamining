@@ -25,16 +25,16 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ HelpdeskArticles: closure_11, UserSettingsSections: closure_12 } = Constants);
-const FractionalPremiumStates = fn(1392).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1394).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6185).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6187).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -152,9 +152,9 @@ prototype["render"] = function render() {
   obj3.children = items;
   return value2(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4883).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4886).ThemeContext;
 const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: fn(6185).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
+let obj3 = { flex: 1, backgroundColor: fn(6187).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -339,12 +339,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       let obj = require("useSubscriptionPlansLoaded");
-      ({ fractionalState: c2, endsAt } = flag(7330)({ forceFetch: true }));
-      const tmp3 = flag(7330)({ forceFetch: true });
+      ({ fractionalState: c2, endsAt } = flag(7332)({ forceFetch: true }));
+      const tmp3 = flag(7332)({ forceFetch: true });
       isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
       const tmpResult = require("ReverseTrialUtils");
-      fpDurationText = flag(14424)(endsAt, tmp(14424).CountDownMessageTypes.LONG_TIME_LEFT);
-      const tmp4 = flag(14424);
+      fpDurationText = flag(14456)(endsAt, tmp(14456).CountDownMessageTypes.LONG_TIME_LEFT);
+      const tmp4 = flag(14456);
       const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         const obj = {

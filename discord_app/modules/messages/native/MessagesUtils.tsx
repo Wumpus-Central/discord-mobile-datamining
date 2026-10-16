@@ -9,6 +9,7 @@ import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import Server from "../../../flow/Server.tsx";
 import CommunicationDisabledUtils from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import GuildLeaderboardTypes from "../../guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -31,6 +32,7 @@ import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import Tracking from "../../forums/tracking/Tracking.tsx";
+import PopularMusicSystemMessageTypes from "../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
 import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
@@ -215,10 +217,10 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9604).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7964);
+let closure_5 = fn(9620).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7967);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({
   AnalyticEvents: closure_17,
   MessageEmbedTypes: closure_18,
@@ -1127,7 +1129,7 @@ export const getMessageAuthorMemberUserIds = function getMessageAuthorMemberUser
   if (author != null) {
     id1 = author.id;
   }
-  const items = [id1, ,];
+  const items = [id1, , ,];
   const interaction = author.interaction;
   let id2;
   if (interaction != null) {
@@ -1138,5 +1140,26 @@ export const getMessageAuthorMemberUserIds = function getMessageAuthorMemberUser
   }
   items[1] = id2;
   items[2] = tmp5;
+  const guildSpaceData = author.guildSpaceData;
+  let leaderboard;
+  if (guildSpaceData != null) {
+    leaderboard = guildSpaceData.leaderboard;
+  }
+  const tmpResult = GuildLeaderboardTypes;
+  const arraySpreadResult = HermesBuiltin.arraySpread(
+    GuildLeaderboardTypes.getGuildSpaceLeaderboardUserIds(leaderboard),
+    3,
+  );
+  const guildSpaceData2 = author.guildSpaceData;
+  let music;
+  if (guildSpaceData2 != null) {
+    music = guildSpaceData2.music;
+  }
+  const result = PopularMusicSystemMessageTypes.parseGuildSpaceMusicMessageData(music);
+  let userId;
+  if (result != null) {
+    userId = result.userId;
+  }
+  items[arraySpreadResult] = userId;
   return items.filter((item) => null != item);
 };

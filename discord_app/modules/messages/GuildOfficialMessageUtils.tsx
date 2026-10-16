@@ -9,10 +9,10 @@ import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperim
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const ThreadHooks = tmp(7190);
+const ThreadHooks = tmp(7192);
 require = fn;
-let closure_5 = fn(5144).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
-const Constants = fn(1085);
+let closure_5 = fn(5147).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+const Constants = fn(1087);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()

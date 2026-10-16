@@ -18,11 +18,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(arg1);
       ({ hasAccess, isExperimentEnabled } = favoritesAccess);
       if (cResult[0] !== channelId) {
-        const isFavoritableChannelResult = tmp(2090).isFavoritableChannel(channelId);
+        const isFavoritableChannelResult = tmp(2093).isFavoritableChannel(channelId);
         cResult[0] = channelId;
         cResult[1] = isFavoritableChannelResult;
         let tmp5 = isFavoritableChannelResult;
-        const tmpResult = tmp(2090);
+        const tmpResult = tmp(2093);
       } else {
         tmp5 = cResult[1];
       }
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp7) {
         tmp7 = !isFavoritesGuildSelected;
       }
-      const favoritesBetaTagDismissibleContent = tmp(10562).useFavoritesBetaTagDismissibleContent(tmp7);
+      const favoritesBetaTagDismissibleContent = tmp(10577).useFavoritesBetaTagDismissibleContent(tmp7);
       return {
         isExperimentEnabled,
         hasFavoritesAccess: hasAccess,

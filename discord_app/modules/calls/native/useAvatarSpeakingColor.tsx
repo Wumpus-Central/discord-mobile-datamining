@@ -9,10 +9,10 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 const initialize = accessibleForegroundColor(504);
-const useToken = accessibleForegroundColor(4874);
-const ColorUtils = accessibleForegroundColor(5023);
+const useToken = accessibleForegroundColor(4877);
+const ColorUtils = accessibleForegroundColor(5026);
 require = fn;
-const ratio = fn(11207).VAD_COLOR_MIN_CONTRAST_RATIO;
+const ratio = fn(11223).VAD_COLOR_MIN_CONTRAST_RATIO;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/calls/native/useAvatarSpeakingColor.tsx");

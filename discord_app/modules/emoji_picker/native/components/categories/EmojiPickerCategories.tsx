@@ -8,18 +8,18 @@ import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6207).EmojiCategoryTypes;
-const Constants = fn(1085);
+const EmojiCategoryTypes = fn(6209).EmojiCategoryTypes;
+const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,
   AnalyticsPages: metroRequire,
   CATEGORY_ICON_SIZE,
   EXPRESSION_FOOTER_HEIGHT,
 } = Constants);
-let ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED },

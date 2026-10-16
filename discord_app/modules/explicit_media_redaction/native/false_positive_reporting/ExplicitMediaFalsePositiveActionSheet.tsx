@@ -8,7 +8,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
 import ExplicitMediaRedactionUtils from "../../ExplicitMediaRedactionUtils.tsx";
-import _modDef8645 from "../../../../../_runtime/metro/08645__.js";
+import _modDef8653 from "../../../../../_runtime/metro/08653__.js";
 import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -123,7 +123,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp7 = importDefault;
         if (image) {
-          tmp7 = tmp7(8645);
+          tmp7 = tmp7(8653);
           obj = {
             volume: 0,
             resizeMode: "cover",
@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.style = items;
           const obj6 = { uri: url };
           obj5.source = obj6;
-          tmp6Result = timestampProducer(tmp7(5088), obj5);
+          tmp6Result = timestampProducer(tmp7(5091), obj5);
         }
         cResult[5] = image;
         image = media.image;
@@ -179,7 +179,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj4 = { uri: url };
         obj3.source = obj4;
-        let tmp3Result = timestampProducer(_modDef8645, obj3);
+        let tmp3Result = timestampProducer(_modDef8653, obj3);
       } else {
         const obj5 = { style: null, source: null };
         const items1 = [,];
@@ -192,7 +192,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = tmp3Result;
       return timestampProducer(React4, obj2);
     };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj5 = {
   content: { padding: nativeDefault.space.PX_16 },
   contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" },
@@ -214,8 +214,8 @@ obj5.mediaContainer = {
   marginTop: nativeDefault.space.PX_8,
   aspectRatio: "4 / 3",
 };
-const native = fn(1200);
-obj5.elevationShadow = native.generateBoxShadowStyle(fn(1200).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1202);
+obj5.elevationShadow = native.generateBoxShadowStyle(fn(1202).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj5.image = { resizeMode: "contain" };
 let obj8 = {
   width: "100%",

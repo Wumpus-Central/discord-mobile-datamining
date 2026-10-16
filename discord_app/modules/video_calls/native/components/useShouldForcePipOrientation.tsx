@@ -6,8 +6,8 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const OrientationLockState = fn(2024).OrientationLockState;
-const CallConstants = fn(5174);
+const OrientationLockState = fn(2026).OrientationLockState;
+const CallConstants = fn(5176);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -386,17 +386,17 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
       if (null != focusedEmbeddedActivityParticipant) {
         if (closure_7(focusedEmbeddedActivityParticipant)) {
           if (null == stateFromStores) {
-            return tmp2(8669).OrientationType.LANDSCAPE;
+            return tmp2(8677).OrientationType.LANDSCAPE;
           }
         }
       }
       if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-        OrientationType = tmp2(8669).OrientationType;
+        OrientationType = tmp2(8677).OrientationType;
         let LANDSCAPE = OrientationType.LANDSCAPE;
       } else {
         LANDSCAPE = null;
         if (activityLockOrientation === tmp8.PORTRAIT) {
-          LANDSCAPE = tmp2(8669).OrientationType.PORTRAIT;
+          LANDSCAPE = tmp2(8677).OrientationType.PORTRAIT;
         }
       }
       const obj3 = channel(504);

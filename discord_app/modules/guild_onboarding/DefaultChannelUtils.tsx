@@ -7,7 +7,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

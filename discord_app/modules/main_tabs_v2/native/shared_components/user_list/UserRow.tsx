@@ -3,7 +3,7 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
 import utils_StringUtils from "../../../../../../discord_common/js/shared/utils/StringUtils.tsx";
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
@@ -34,8 +34,8 @@ const UserUtilsDefault = UserUtils;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10440).UserRowModes;
-const Constants = fn(1085);
+const UserRowModes = fn(10456).UserRowModes;
+const Constants = fn(1087);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
@@ -49,7 +49,7 @@ let closure_17 = {
   IGNORE_SUGGESTION: "ignore-suggestion",
   TOGGLE: "toggle",
 };
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let closure_18 = createStyles.createStyles({
   avatar: { flexShrink: 0, flexGrow: 0 },
   actions: { flexDirection: "row" },
@@ -60,7 +60,7 @@ let closure_18 = createStyles.createStyles({
   usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   usernameLabel: { display: "flex", flexShrink: 1 },
 });
-createStyles = fn(5151);
+createStyles = fn(5153);
 let obj = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
 let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
@@ -118,17 +118,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!isGameRelationship.isGameRelationship) {
         if (cResult[19] !== user) {
-          const userTag = applicationId(5018).getUserTag(user);
+          const userTag = applicationId(5021).getUserTag(user);
           cResult[19] = user;
           cResult[20] = userTag;
           let tmp12 = userTag;
-          const tmpResult2 = applicationId(5018);
+          const tmpResult2 = applicationId(5021);
         } else {
           tmp12 = cResult[20];
         }
         if (cResult[21] !== tmp12) {
           const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp12 };
-          const tmp16 = closure_14(applicationId(5147).Text, obj3);
+          const tmp16 = closure_14(applicationId(5149).Text, obj3);
           cResult[21] = tmp12;
           cResult[22] = tmp16;
         }
@@ -165,7 +165,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 color: "text-subtle",
                 children: stateFromStores.name,
               };
-              const tmp24 = closure_14(applicationId(5147).Text, obj5);
+              const tmp24 = closure_14(applicationId(5149).Text, obj5);
               cResult[13] = stateFromStores.name;
               cResult[14] = tmp24;
               let tmp22 = tmp24;
@@ -187,7 +187,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj7 = { style: gameIcon.gameIcon, resizeMode: "contain", source: tmp18, disableColor: true };
-        const tmp21 = closure_14(applicationId(1200).Icon, obj7, stateFromStores.id);
+        const tmp21 = closure_14(applicationId(1202).Icon, obj7, stateFromStores.id);
         cResult[9] = stateFromStores.id;
         cResult[10] = gameIcon.gameIcon;
         cResult[11] = tmp18;
@@ -443,11 +443,11 @@ export default noop.memo(function UserRow(type) {
             location: roleStyle,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(4864).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(4864);
+                const result = type(4867).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(4867);
               } else {
-                const result1 = type(4864).presentFriendRequestAcceptedToast();
-                const obj = type(4864);
+                const result1 = type(4867).presentFriendRequestAcceptedToast();
+                const obj = type(4867);
               }
             },
           });
@@ -556,14 +556,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10452)(channel, false);
+                const obj2 = user(10468)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 const obj = { recipientIds: current.id };
-                user(7234).openPrivateChannel(obj);
-                const tmpResult = user(7234);
+                user(7236).openPrivateChannel(obj);
+                const tmpResult = user(7236);
               }
             });
         };
@@ -612,14 +612,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10452)(channel, false);
+          const obj2 = user(10468)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           const obj = { recipientIds: current.id };
-          user(7234).openPrivateChannel(obj);
-          const tmpResult = user(7234);
+          user(7236).openPrivateChannel(obj);
+          const tmpResult = user(7236);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -637,11 +637,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(4864).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(4864);
+            const result = type(4867).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(4867);
           } else {
-            const result1 = type(4864).presentFriendRequestAcceptedToast();
-            const obj = type(4864);
+            const result1 = type(4867).presentFriendRequestAcceptedToast();
+            const obj = type(4867);
           }
         },
       };
@@ -673,10 +673,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8522, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8530, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8522, dependencyMap.paths);
+      const promise = asyncRequireImpl(8530, dependencyMap.paths);
     } else {
       tmp(user);
     }

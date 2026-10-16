@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   optionsParentContainer: { marginTop: 12 },
   optionsDescriptionContainer: { paddingTop: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 },
@@ -432,16 +432,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ echoCancellation, advancedVoiceActivitySupported, automaticGainControl, inputMode } = stateFromStoresObject);
       const vadUseKrisp = stateFromStoresObject.vadUseKrisp;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = inputMode(1126).intl;
-        const stringResult = intl.string(inputMode(1126).t["6I6GUv"]);
+        const intl = inputMode(1128).intl;
+        const stringResult = intl.string(inputMode(1128).t["6I6GUv"]);
         cResult[2] = stringResult;
         let tmp8 = stringResult;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = inputMode(1126).intl;
-        const stringResult1 = intl2.string(inputMode(1126).t.iWTwu6);
+        const intl2 = inputMode(1128).intl;
+        const stringResult1 = intl2.string(inputMode(1128).t.iWTwu6);
         cResult[3] = stringResult1;
         let tmp10 = stringResult1;
       } else {
@@ -452,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           label: tmp10,
           value: echoCancellation,
-          onValueChange: inputMode(11382).handleEchoCancellationChange,
+          onValueChange: inputMode(11402).handleEchoCancellationChange,
         };
-        obj2.children = closure_5(inputMode(7115).TableSwitchRow, obj3);
-        const tmp14 = closure_5(inputMode(11366).UserSettingsTableRowGroup, obj2);
+        obj2.children = closure_5(inputMode(7117).TableSwitchRow, obj3);
+        const tmp14 = closure_5(inputMode(11386).UserSettingsTableRowGroup, obj2);
         cResult[4] = echoCancellation;
         cResult[5] = tmp14;
         let tmp12 = tmp14;
@@ -470,10 +470,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = inputMode(1126).intl;
-        const stringResult2 = intl3.string(inputMode(1126).t.cUMdH0);
-        const intl4 = inputMode(1126).intl;
-        const stringResult3 = intl4.string(inputMode(1126).t["6EjbvA"]);
+        const intl3 = inputMode(1128).intl;
+        const stringResult2 = intl3.string(inputMode(1128).t.cUMdH0);
+        const intl4 = inputMode(1128).intl;
+        const stringResult3 = intl4.string(inputMode(1128).t["6EjbvA"]);
         cResult[7] = stringResult2;
         cResult[8] = stringResult3;
         let tmp20 = stringResult3;
@@ -487,9 +487,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           label: tmp19,
           subLabel: tmp20,
           value: automaticGainControl,
-          onValueChange: inputMode(11382).handleAutomaticGainControlChange,
+          onValueChange: inputMode(11402).handleAutomaticGainControlChange,
         };
-        const tmp25 = closure_5(inputMode(7115).TableSwitchRow, obj4);
+        const tmp25 = closure_5(inputMode(7117).TableSwitchRow, obj4);
         cResult[9] = automaticGainControl;
         cResult[10] = tmp25;
         let tmp23 = tmp25;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { hasIcons: false, children: null };
           const items2 = [tmp23, tmp26];
           obj6.children = items2;
-          const tmp31 = closure_6(inputMode(11366).UserSettingsTableRowGroup, obj6);
+          const tmp31 = closure_6(inputMode(11386).UserSettingsTableRowGroup, obj6);
           cResult[15] = tmp23;
           cResult[16] = tmp26;
           cResult[17] = tmp31;
@@ -533,15 +533,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp27 = advancedVoiceActivitySupported;
       if (advancedVoiceActivitySupported) {
         const obj7 = { label: null, subLabel: null, value: null, onValueChange: null };
-        const intl5 = inputMode(1126).intl;
-        obj7.label = intl5.string(inputMode(1126).t.BbESsg);
-        const intl6 = inputMode(1126).intl;
-        obj7.subLabel = intl6.string(inputMode(1126).t.LoOB1F);
+        const intl5 = inputMode(1128).intl;
+        obj7.label = intl5.string(inputMode(1128).t.BbESsg);
+        const intl6 = inputMode(1128).intl;
+        obj7.subLabel = intl6.string(inputMode(1128).t.LoOB1F);
         obj7.value = vadUseKrisp;
         obj7.onValueChange = function onValueChange(vadUseKrisp) {
           return AudioActionCreatorsDefault.setMode(inputMode, { vadUseKrisp });
         };
-        tmp27 = closure_5(inputMode(7115).TableSwitchRow, obj7);
+        tmp27 = closure_5(inputMode(7117).TableSwitchRow, obj7);
       }
       cResult[11] = advancedVoiceActivitySupported;
       cResult[12] = inputMode;

@@ -9,9 +9,9 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7591).SlowmodeType;
-const ActivityActionTypes = fn(1085).ActivityActionTypes;
-const ChannelFlags = fn(2072).ChannelFlags;
+const SlowmodeType = fn(7593).SlowmodeType;
+const ActivityActionTypes = fn(1087).ActivityActionTypes;
+const ChannelFlags = fn(2075).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");

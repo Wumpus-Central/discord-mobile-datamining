@@ -1,6 +1,6 @@
 // discord_app/modules/guild_action_sheet/native/openGuildActionSheet.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
@@ -21,7 +21,7 @@ export default function openGuildActionSheet(id) {
     if (tmpResult.shouldNSFWGateGuild(id.id)) {
       const obj4 = { guild: id };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14807, dependencyMap.paths),
+        asyncRequireImpl(14840, dependencyMap.paths),
         "NsfwGateGuildSettingsActionSheet",
         obj4,
       );
@@ -34,13 +34,13 @@ export default function openGuildActionSheet(id) {
       if (hasItem) {
         const _HermesInternal2 = HermesInternal;
         const obj5 = { guild: id, expanded: flag };
-        openLazy(tmpResult2(14871, dependencyMap.paths), "GuildActionSheet:" + id.id, obj5);
-        const tmpResult1Result = tmpResult2(14871, dependencyMap.paths);
+        openLazy(tmpResult2(14904, dependencyMap.paths), "GuildActionSheet:" + id.id, obj5);
+        const tmpResult1Result = tmpResult2(14904, dependencyMap.paths);
       } else {
         const _HermesInternal = HermesInternal;
         const obj6 = { guild: id, expanded: flag };
-        openLazy(tmpResult2(14877, dependencyMap.paths), "GuildActionSheet:" + id.id, obj6);
-        const tmpResult1Result1 = tmpResult2(14877, dependencyMap.paths);
+        openLazy(tmpResult2(14910, dependencyMap.paths), "GuildActionSheet:" + id.id, obj6);
+        const tmpResult1Result1 = tmpResult2(14910, dependencyMap.paths);
       }
       const tmp3Result2 = ActionSheetActionCreatorsDefault;
     }

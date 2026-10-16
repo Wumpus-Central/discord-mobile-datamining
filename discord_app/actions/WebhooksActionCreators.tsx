@@ -67,27 +67,27 @@ export default {
         if (null != body) {
           if (body.code === constants.TOO_MANY_WEBHOOKS) {
             const obj2 = { title: null, body: null };
-            const intl3 = guildId(1126).intl;
-            obj2.title = intl3.string(guildId(1126).t.cCqsca);
-            const intl4 = guildId(1126).intl;
-            obj2.body = intl4.string(guildId(1126).t["w+QZoX"]);
+            const intl3 = guildId(1128).intl;
+            obj2.title = intl3.string(guildId(1128).t.cCqsca);
+            const intl4 = guildId(1128).intl;
+            obj2.body = intl4.string(guildId(1128).t["w+QZoX"]);
             AlertActionCreatorsDefault.show(obj2);
           }
           return null;
         }
         if (429 === error.status) {
           const obj4 = { title: null, body: null };
-          const intl = guildId(1126).intl;
-          obj4.title = intl.string(guildId(1126).t.cCqsca);
-          const intl2 = guildId(1126).intl;
-          obj4.body = intl2.string(guildId(1126).t["YBM+UW"]);
+          const intl = guildId(1128).intl;
+          obj4.title = intl.string(guildId(1128).t.cCqsca);
+          const intl2 = guildId(1128).intl;
+          obj4.body = intl2.string(guildId(1128).t["YBM+UW"]);
           AlertActionCreatorsDefault.show(obj4);
         } else {
           const obj6 = { title: null, body: null };
-          const intl5 = guildId(1126).intl;
-          obj6.title = intl5.string(guildId(1126).t.cCqsca);
-          const intl6 = guildId(1126).intl;
-          obj6.body = intl6.string(guildId(1126).t["/4TwKf"]);
+          const intl5 = guildId(1128).intl;
+          obj6.title = intl5.string(guildId(1128).t.cCqsca);
+          const intl6 = guildId(1128).intl;
+          obj6.body = intl6.string(guildId(1128).t["/4TwKf"]);
           AlertActionCreatorsDefault.show(obj6);
         }
       });

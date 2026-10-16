@@ -29,8 +29,8 @@ function useSponsoredContentSettings() {
   items1[2] = obj7;
   return items1;
 }
-const MobileUserSettings = fn(8210).MobileUserSettings;
-const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const MobileUserSettings = fn(8213).MobileUserSettings;
+const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

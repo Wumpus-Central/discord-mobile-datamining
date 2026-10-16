@@ -9,13 +9,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_9, StatusTypes: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.REFRESH_MEDIUM_32];
+let closure_14 = fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.REFRESH_MEDIUM_32];
 let closure_15 = Object.freeze({ onlineCount: null, memberCount: null });
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   activityStatusText: { color: nativeDefault.colors.TEXT_MUTED },
   groupDMIconAnchor: { marginRight: 12, flexShrink: 0 },

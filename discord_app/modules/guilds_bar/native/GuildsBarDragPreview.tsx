@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4789 from "../../../../_runtime/metro/04789__.js";
+import _mod4792 from "../../../../_runtime/metro/04792__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -14,16 +14,16 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6179).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17320).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6181).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17354).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(5151);
+let createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(5151);
+createStyles = fn(5153);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -189,9 +189,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "test",
               name: "Array",
-              color: "apply",
-              expanded: "r",
-              children: "FAVORITES_GUILD_VIEWED",
+              color: "applicationId",
+              expanded: "Array",
+              children: "getShortDayLabels",
             };
             const items = [overNode];
             element.children = items;
@@ -379,9 +379,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "test",
               name: "Array",
-              color: "apply",
-              expanded: "r",
-              children: "FAVORITES_GUILD_VIEWED",
+              color: "applicationId",
+              expanded: "Array",
+              children: "getShortDayLabels",
             };
             const items = [tmp2];
             element.children = items;
@@ -891,13 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+                    gestureState: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET",
                     scrollPosition: null,
-                    dragRegion:
-                      "M17.649,17.649C16.176,19.129,14.173,20,12,20c-4.411,0-8-3.589-8-8H2c0,5.515,4.486,10,10,10\n\t\t\tc2.716,0,5.221-1.089,7.062-2.938L21,21v-6h-6L17.649,17.649z",
-                    windowSize: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE",
-                    dropComplete: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST",
-                    listInsets: "EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE",
+                    dragRegion: "Add Friend Modal",
+                    windowSize: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET",
+                    dropComplete: null,
+                    listInsets: "spinbutton",
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -923,7 +922,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp5 = GuildsBarDnDStore(first, _mod4789.shallow);
+        const tmp5 = GuildsBarDnDStore(first, _mod4792.shallow);
         if (cResult[1] !== tmp5) {
           let tmp7 = null;
           if (null != tmp5) {
@@ -992,13 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+                  gestureState: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET",
                   scrollPosition: null,
-                  dragRegion:
-                    "M17.649,17.649C16.176,19.129,14.173,20,12,20c-4.411,0-8-3.589-8-8H2c0,5.515,4.486,10,10,10\n\t\t\tc2.716,0,5.221-1.089,7.062-2.938L21,21v-6h-6L17.649,17.649z",
-                  windowSize: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE",
-                  dropComplete: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST",
-                  listInsets: "EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE",
+                  dragRegion: "Add Friend Modal",
+                  windowSize: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET",
+                  dropComplete: null,
+                  listInsets: "spinbutton",
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;
@@ -1018,7 +1016,7 @@ export default noop.memo(
             }
             return null;
           }
-        }, _mod4789.shallow);
+        }, _mod4792.shallow);
         let tmp2 = null;
         if (null != tmp) {
           let obj = {};

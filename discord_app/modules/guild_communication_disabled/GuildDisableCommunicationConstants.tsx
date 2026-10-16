@@ -38,7 +38,7 @@ const DisableCommunicationDuration = {
   DURATION_1_WEEK: 604800,
   [604800]: "DURATION_1_WEEK",
 };
-const articleURL = HelpdeskUtils.getArticleURL(fn(1085).HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
+const articleURL = HelpdeskUtils.getArticleURL(fn(1087).HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx",

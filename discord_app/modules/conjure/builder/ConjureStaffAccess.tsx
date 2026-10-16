@@ -7,7 +7,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 let c7 = "conjuring-help";
 let c8 = "https://i.dis.gd/conjuring-access";
 const ReactCompilerGating = fn(558);

@@ -2,8 +2,8 @@
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-const Endpoints = fn(1085).Endpoints;
-const promiseDeduper = new fn(10966).PromiseDeduper();
+const Endpoints = fn(1087).Endpoints;
+const promiseDeduper = new fn(10981).PromiseDeduper();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/refreshApplicationWidget.tsx");
 

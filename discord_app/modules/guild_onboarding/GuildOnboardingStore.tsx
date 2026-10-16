@@ -17,11 +17,11 @@ let closure_5 = {};
 const Store = initializeDefault.Store;
 class GuildOnboardingStore extends Store {}
 const prototype = GuildOnboardingStore.prototype;
-prototype["shouldShowOnboarding"] = function shouldShowOnboarding(guildId) {
-  let tmp = guildId !== ME;
+prototype["shouldShowOnboarding"] = function shouldShowOnboarding(id) {
+  let tmp = id !== ME;
   if (tmp) {
     const obj = FavoritesUtils;
-    tmp = !obj.isFavoritesGuildId(guildId);
+    tmp = !obj.isFavoritesGuildId(id);
   }
   if (tmp) {
     let hasItem = null != tmp5;

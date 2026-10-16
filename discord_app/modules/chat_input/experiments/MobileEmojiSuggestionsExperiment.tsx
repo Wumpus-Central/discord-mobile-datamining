@@ -10,7 +10,7 @@ let closure_2 = ApexExperiment.createApexExperiment({
   defaultConfig: { enabled: false },
   variations: {
     0: { enabled: false },
-    1: { enabled: true, style: "large" },
+    1: { enabled: true, style: "large", searchDebounceMs: 500 },
     2: { enabled: true, style: "small" },
     3: { enabled: true, style: "button" },
   },

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 let c4 = "13.2";
-let items = [fn(1085).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
+let items = [fn(1087).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
@@ -78,7 +78,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const str = tmp(6244).getSystemVersion();
+        const str = tmp(6246).getSystemVersion();
         let tmp6 = null != str;
         if (tmp6) {
           const parts = str.split(".");
@@ -123,15 +123,15 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
         }
         cResult[0] = tmp6;
         let first = tmp6;
-        const tmpResult = tmp(6244);
+        const tmpResult = tmp(6246);
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const isIOSResult = tmp(1382).isIOS();
+        const isIOSResult = tmp(1384).isIOS();
         cResult[1] = isIOSResult;
         let stateFromStores = isIOSResult;
-        const tmpResult3 = tmp(1382);
+        const tmpResult3 = tmp(1384);
       } else {
         stateFromStores = cResult[1];
       }
@@ -172,7 +172,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
   : function useCanUseRoleSubscriptionIAP(arg0) {
       _require = arg0;
       const memo = noop.useMemo(() => {
-        const str = closure_0(6244).getSystemVersion();
+        const str = closure_0(6246).getSystemVersion();
         let tmp = null != str;
         if (tmp) {
           const parts = str.split(".");
@@ -217,7 +217,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
         }
         return tmp;
       }, []);
-      let memo1 = noop.useMemo(() => closure_0(1382).isIOS(), []);
+      let memo1 = noop.useMemo(() => closure_0(1384).isIOS(), []);
       items = [GuildStore];
       if (memo1) {
         memo1 = obj.useStateFromStores(items, () => {

@@ -171,8 +171,8 @@ function handleGuildCreateOrDelete(guild) {
   });
   delete tmp2[tmp];
 }
-const ME = fn(1085).ME;
-const VoicePlatforms = fn(5174).VoicePlatforms;
+const ME = fn(1087).ME;
+const VoicePlatforms = fn(5176).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};

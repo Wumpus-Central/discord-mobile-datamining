@@ -617,7 +617,7 @@ let closure_18 = async function _fetchGuildRoom(arg0) {
   }
   return value;
 };
-let Endpoints = fn(1085).Endpoints;
+let Endpoints = fn(1087).Endpoints;
 let closure_7 = { x: 0, y: 0 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.shared.tsx");

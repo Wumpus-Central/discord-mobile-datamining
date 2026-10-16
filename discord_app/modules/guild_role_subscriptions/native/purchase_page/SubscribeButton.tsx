@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
@@ -119,39 +119,39 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(16168);
+  let obj = changeToListingId(16201);
   const obj3 = { children: null };
-  const obj2 = activeListingId(4758)(activeSubscription.currentPeriodEnd);
+  const obj2 = activeListingId(4761)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = activeSubscription(1126).intl;
-  const formatResult = activeListingId(4758)(activeSubscription.currentPeriodEnd).format("MMMM Do");
-  obj4.children = intl.format(activeSubscription(1126).t.lA7ztO, {
+  const intl = activeSubscription(1128).intl;
+  const formatResult = activeListingId(4761)(activeSubscription.currentPeriodEnd).format("MMMM Do");
+  obj4.children = intl.format(activeSubscription(1128).t.lA7ztO, {
     activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0],
-    billingEndDate: activeListingId(4758)(activeSubscription.currentPeriodEnd).format("MMMM Do"),
+    billingEndDate: activeListingId(4761)(activeSubscription.currentPeriodEnd).format("MMMM Do"),
     emphasisHook,
   });
   const items = [
-    closure_12(activeSubscription(5147).Text, obj4),
-    closure_12(activeSubscription(1200).Spacer, { size: 16 }),
+    closure_12(activeSubscription(5149).Text, obj4),
+    closure_12(activeSubscription(1202).Spacer, { size: 16 }),
   ];
   const obj6 = { text: null, onPress: null };
-  const intl2 = activeSubscription(1126).intl;
-  obj6.text = intl2.string(activeSubscription(1126).t.SACegK);
+  const intl2 = activeSubscription(1128).intl;
+  obj6.text = intl2.string(activeSubscription(1128).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(17592, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
+    obj.openLazy(asyncRequireImpl(17626, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
       activeSubscription,
       activeListingId,
       changeToListingId,
     });
   };
-  items[2] = closure_12(activeSubscription(17585).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(17619).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }
 const View = fn(17).View;
-const AnalyticsLocations = fn(1085).AnalyticsLocations;
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
+const AnalyticsLocations = fn(1087).AnalyticsLocations;
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ReactCompilerGating = fn(558);

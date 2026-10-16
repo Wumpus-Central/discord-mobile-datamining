@@ -1,8 +1,8 @@
 // discord_app/components_native/common/TabBar.tsx
 import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../_runtime/06555_LegacyBaseButton.js";
-import _mod7034 from "../../../discord_common/js/packages/flash-list/index.js";
+import LegacyBaseButton from "../../../_runtime/06557_LegacyBaseButton.js";
+import _mod7036 from "../../../discord_common/js/packages/flash-list/index.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ let closure_2 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, TouchableWithoutFeedback: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   tab: {
     flexBasis: "auto",
@@ -46,8 +46,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const tmpResult = _mod7034;
-      [tmp7, tmp8] = _mod7034.useRecyclingState(false, tmp5);
+      const tmpResult = _mod7036;
+      [tmp7, tmp8] = _mod7036.useRecyclingState(false, tmp5);
       if (cResult[2] !== tmp8) {
         const fn = function k() {
           return tmp8(true);
@@ -160,7 +160,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = onSelect;
       cResult[8] = E;
       tmp11 = E;
-      const tmp6 = _slicedToArray(_mod7034.useRecyclingState(false, tmp5), 2);
+      const tmp6 = _slicedToArray(_mod7036.useRecyclingState(false, tmp5), 2);
     }
   : function Tab(index) {
       index = index.index;
@@ -168,7 +168,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       ({ children, tabKey, tabStyle, tabStyleActive, tabStyleSelected } = index);
       const tmp = closure_10();
       const items = [tabKey];
-      [tmp3, tmp4] = _mod7034.useRecyclingState(false, items);
+      [tmp3, tmp4] = _mod7036.useRecyclingState(false, items);
       c2 = tmp4;
       const items1 = [tmp4];
       const items2 = [tmp4];

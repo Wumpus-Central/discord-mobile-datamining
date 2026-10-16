@@ -16,7 +16,7 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ActivityTypes: c10, StatusTypes: closure_11 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -185,7 +185,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   tmp21 = A;
   const tmpResult3 = name(gameMentionsAsPlainText[13]);
 }) : (function useYouBarAccessibilityLabel(id) {
-  _require = id(5018).useName(id);
+  _require = id(5021).useName(id);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -196,7 +196,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(5018);
+  let obj = id(5021);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;

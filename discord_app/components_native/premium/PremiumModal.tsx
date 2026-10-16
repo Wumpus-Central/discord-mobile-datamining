@@ -29,9 +29,9 @@ function getScreens(analyticsLocation) {
   let obj = {};
   const obj2 = { title: null, headerLeft: null, initialParams: null, render: null };
   ({ predicate, showCurrentPlan, isBoostPurchaseFlow } = analyticsLocation);
-  const intl = analyticsLocation(1126).intl;
-  obj2.title = intl.string(analyticsLocation(1126).t.lpNrPu);
-  obj2.headerLeft = analyticsLocation(6421).getHeaderCloseButton(onClose);
+  const intl = analyticsLocation(1128).intl;
+  obj2.title = intl.string(analyticsLocation(1128).t.lpNrPu);
+  obj2.headerLeft = analyticsLocation(6423).getHeaderCloseButton(onClose);
   obj2.initialParams = { analyticsLocation };
   obj2.render = function render() {
     return jsx(UserSettingsPremiumDefault, {
@@ -48,24 +48,24 @@ function getScreens(analyticsLocation) {
   };
   obj[UserSettingsSections.PREMIUM] = obj2;
   const obj4 = { title: null, render: null };
-  const intl2 = analyticsLocation(1126).intl;
-  obj4.title = intl2.string(analyticsLocation(1126).t["8jmdON"]);
+  const intl2 = analyticsLocation(1128).intl;
+  obj4.title = intl2.string(analyticsLocation(1128).t["8jmdON"]);
   obj4.render = function render() {
-    return planId(onClose(14458), {});
+    return planId(onClose(14490), {});
   };
   obj[UserSettingsSections.PREMIUM_MANAGE_PLAN] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
-  const intl3 = analyticsLocation(1126).intl;
-  obj5.title = intl3.string(analyticsLocation(1126).t["+CbP2v"]);
-  const obj3 = analyticsLocation(6421);
-  obj5.headerLeft = analyticsLocation(6421).getHeaderCloseButton(onClose);
+  const intl3 = analyticsLocation(1128).intl;
+  obj5.title = intl3.string(analyticsLocation(1128).t["+CbP2v"]);
+  const obj3 = analyticsLocation(6423);
+  obj5.headerLeft = analyticsLocation(6423).getHeaderCloseButton(onClose);
   obj5.render = function render() {
-    return planId(onClose(14461), {});
+    return planId(onClose(14493), {});
   };
   obj[UserSettingsSections.GUILD_BOOSTING] = obj5;
   const obj7 = { title: null, headerLeft: null, initialParams: null, render: null };
-  const intl4 = analyticsLocation(1126).intl;
-  obj7.title = intl4.string(analyticsLocation(1126).t.u95Dt4);
+  const intl4 = analyticsLocation(1128).intl;
+  obj7.title = intl4.string(analyticsLocation(1128).t.u95Dt4);
   obj7.headerLeft = function headerLeft(canGoBack) {
     const obj = NavigatorHeader;
     if (canGoBack.canGoBack) {
@@ -90,17 +90,17 @@ function getScreens(analyticsLocation) {
   };
   obj[UserSettingsSections.PREMIUM_PLAN_SELECT] = obj7;
   const obj8 = { title: null, headerLeft: null, render: null };
-  const intl5 = analyticsLocation(1126).intl;
-  obj8.title = intl5.string(analyticsLocation(1126).t.Oba8Sh);
-  const obj6 = analyticsLocation(6421);
-  obj8.headerLeft = analyticsLocation(6421).getHeaderCloseButton(onClose);
+  const intl5 = analyticsLocation(1128).intl;
+  obj8.title = intl5.string(analyticsLocation(1128).t.Oba8Sh);
+  const obj6 = analyticsLocation(6423);
+  obj8.headerLeft = analyticsLocation(6423).getHeaderCloseButton(onClose);
   obj8.render = function render() {
     return jsx(UserSettingsPremiumGiftingDefault, { recipientUserId, analyticsLocation });
   };
   obj[UserSettingsSections.PREMIUM_GIFTING] = obj8;
   return obj;
 }
-const UserSettingsSections = fn(1085).UserSettingsSections;
+const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

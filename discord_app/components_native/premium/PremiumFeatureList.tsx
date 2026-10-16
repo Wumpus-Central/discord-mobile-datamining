@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   item: {
     backgroundColor: "transparent",
@@ -20,7 +20,7 @@ let obj2 = {
   label: null,
   iconMargin: null,
 };
-const merged = Object.assign(TextStyles(fn(1085).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
+const merged = Object.assign(TextStyles(fn(1087).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
 obj2.label = {};
 obj2.iconMargin = { marginEnd: nativeDefault.space.PX_16 };
 let closure_6 = createStyles.createStyles(obj2);

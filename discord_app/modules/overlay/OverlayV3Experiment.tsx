@@ -64,6 +64,17 @@ function getOverlayChatConfig(location) {
 function getOverlayStreamerModeConfig(StreamerModeStore) {
   return apexExperiment2.getConfig({ location: StreamerModeStore });
 }
+let ApexExperiment = ApexExperiment_mod;
+const obj7 = {
+  name: "2026-10-overlay-native-window-rendering",
+  kind: "user",
+  defaultConfig: { enabled: false, enableNVOverlay: false },
+  variations: null,
+};
+const obj8 = { 1: null, 2: { enabled: true, enableNVOverlay: false } };
+obj8[2] = { enabled: true, enableNVOverlay: true };
+obj7.variations = obj8;
+const apexExperiment3 = ApexExperiment.createApexExperiment(obj7);
 const result = size.fileFinishedImporting("modules/overlay/OverlayV3Experiment.tsx");
 
 export const OverlayDefaultKeybindOverrideExperiment = apexExperiment;
@@ -94,4 +105,8 @@ export const useOverlayStreamerMode = ReactCompilerGating.isReactCompilerEnabled
 export const trackOverlayInitializedExperiments = function trackOverlayInitializedExperiments() {
   const config = apexExperiment1.getConfig({ location: "OVERLAY_INITIALIZED" });
   const config1 = apexExperiment2.getConfig({ location: "OVERLAY_INITIALIZED" });
+};
+export const OverlayNativeWindowRenderingExperiment = apexExperiment3;
+export const getOverlayNativeWindowRenderingConfig = function getOverlayNativeWindowRenderingConfig(location) {
+  return apexExperiment3.getConfig({ location });
 };

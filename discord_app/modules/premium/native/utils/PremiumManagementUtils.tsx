@@ -67,14 +67,14 @@ export const getExternalManagementMessage = function getExternalManagementMessag
             str = "Meta Quest";
           }
           str2 = str;
-          tmp13Result = tmp13(1628);
+          tmp13Result = tmp13(1630);
         }
         if (null === tmp12.IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY) {
           if (null != subscription) {
             if (null != subscription.paymentGateway) {
-              const intl4 = tmp13(1126).intl;
+              const intl4 = tmp13(1128).intl;
               obj = { mobilePlatform: str2, externalPaymentGateway: closure_4[subscription.paymentGateway] };
-              return intl4.formatToPlainString(tmp13(1126).t.cFZnqX, obj);
+              return intl4.formatToPlainString(tmp13(1128).t.cFZnqX, obj);
             }
           }
         }
@@ -82,7 +82,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
           if (null != tmp) {
             if (tmp.shouldAllowExternalManagement) {
               if ("iOS" !== str2) {
-                tmp13(1628);
+                tmp13(1630);
               }
               let status;
               if (subscription != null) {
@@ -114,10 +114,10 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                   text: null,
                   variant: "text-sm/semibold",
                 };
-                const intl3 = tmp13(1126).intl;
-                const t = tmp13(1126).t;
+                const intl3 = tmp13(1128).intl;
+                const t = tmp13(1128).t;
                 obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7346).LinkButton, {
+                jsx(tmp13(7348).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                     if (null != _null) {
@@ -163,9 +163,9 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                     );
                   }
                 }
-                const intl2 = tmp13(1126).intl;
+                const intl2 = tmp13(1128).intl;
                 const obj3 = { manageExternalNitroSubscription };
-                return intl2.format(tmp13(1126).t.IERwUb, obj3);
+                return intl2.format(tmp13(1128).t.IERwUb, obj3);
               }
               tmp8 =
                 status === SubscriptionStatusTypes.CANCELED ||
@@ -173,9 +173,9 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 status === SubscriptionStatusTypes.PAST_DUE;
             }
           }
-          const intl = tmp13(1126).intl;
+          const intl = tmp13(1128).intl;
           const obj4 = { mobilePlatform: str2 };
-          return intl.formatToPlainString(tmp13(1126).t.CnoyAN, obj4);
+          return intl.formatToPlainString(tmp13(1128).t.CnoyAN, obj4);
         } else {
           return null;
         }

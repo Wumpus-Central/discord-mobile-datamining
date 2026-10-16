@@ -9,9 +9,9 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(6183).UnreadSetting;
-let closure_6 = fn(1095).GuildNotificationSettingsFlags;
+const UserNotificationSettings = fn(1087).UserNotificationSettings;
+const UnreadSetting = fn(6185).UnreadSetting;
+let closure_6 = fn(1097).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -29,8 +29,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== notification) {
         let stringResult;
         if (notification === UserNotificationSettings.ALL_MESSAGES) {
-          const intl = tmp(1126).intl;
-          stringResult = intl.string(tmp(1126).t.eP8yWU);
+          const intl = tmp(1128).intl;
+          stringResult = intl.string(tmp(1128).t.eP8yWU);
         }
         cResult[0] = notification;
         cResult[1] = stringResult;
@@ -88,8 +88,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stringResult;
       let obj = require("notificationSettingsGuildFlagUtils");
       if (notification === UserNotificationSettings.ALL_MESSAGES) {
-        const intl = tmp(1126).intl;
-        stringResult = intl.string(tmp(1126).t.eP8yWU);
+        const intl = tmp(1128).intl;
+        stringResult = intl.string(tmp(1128).t.eP8yWU);
       }
       return jsx(NotificationSettingsMessageUnreadActionSheetDefault, {
         disabledMentionOnlyWithReason: stringResult,

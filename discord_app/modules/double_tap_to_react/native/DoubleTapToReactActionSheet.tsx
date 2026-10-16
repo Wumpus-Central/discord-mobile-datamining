@@ -51,11 +51,11 @@ function randomizeAnimationValues(leading) {
   );
 }
 const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -69,13 +69,13 @@ let obj2 = {
   emojiName: null,
   burstContainer: null,
 };
-let PlatformUtils = fn(1382);
+let PlatformUtils = fn(1384);
 let num = 36;
 if (PlatformUtils.isIOS()) {
   num = 48;
 }
 let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1382);
+PlatformUtils = fn(1384);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 56;
@@ -84,7 +84,7 @@ obj4.lineHeight = num2;
 obj4.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.selectedTextEmoji = obj4;
 let obj6 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
-PlatformUtils = fn(1382);
+PlatformUtils = fn(1384);
 let num3;
 if (PlatformUtils.isIOS()) {
   num3 = 56;
@@ -254,15 +254,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const top = children.top;
       ({ bottom, left } = children);
       ({ right, leading: dependencyMap } = children);
-      const sharedValue = top(4906).useSharedValue(0);
-      let obj = top(4906);
-      const sharedValue1 = top(4906).useSharedValue(0);
-      const obj2 = top(4906);
-      const sharedValue2 = top(4906).useSharedValue(0.2);
-      const obj3 = top(4906);
-      const sharedValue3 = top(4906).useSharedValue(0);
-      let obj4 = top(4906);
-      const mountLayoutEffect = top(5456).useMountLayoutEffect(() => {
+      const sharedValue = top(4909).useSharedValue(0);
+      let obj = top(4909);
+      const sharedValue1 = top(4909).useSharedValue(0);
+      const obj2 = top(4909);
+      const sharedValue2 = top(4909).useSharedValue(0.2);
+      const obj3 = top(4909);
+      const sharedValue3 = top(4909).useSharedValue(0);
+      let obj4 = top(4909);
+      const mountLayoutEffect = top(5458).useMountLayoutEffect(() => {
         randomizeAnimationValues({
           positionValue: sharedValue,
           rotationValue: sharedValue1,
@@ -271,7 +271,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           leading,
         });
       });
-      const obj5 = top(5456);
+      const obj5 = top(5458);
       class S {
         constructor() {
           obj = { scale: closure_5.get() };
@@ -316,8 +316,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       S.__workletHash = 17194622427708;
       S.__initData = __initData2;
-      const style = top(4906).useAnimatedStyle(S);
-      return closure_11(left(4906).View, { style, children: children.emojiComponent });
+      const style = top(4909).useAnimatedStyle(S);
+      return closure_11(left(4909).View, { style, children: children.emojiComponent });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1230,7 +1230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let tmp22 = tmp2;
                   if (memo) {
-                    const DoubleTapReactionEmoji = tmp2(2041).DoubleTapReactionEmoji;
+                    const DoubleTapReactionEmoji = tmp2(2044).DoubleTapReactionEmoji;
                     const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
                     tmp22 = first;
                     obj5.emojiName = first.name;
@@ -1254,9 +1254,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(7098).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(7100).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
-              tmp22(1265).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
+              tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
               c3 = 3;

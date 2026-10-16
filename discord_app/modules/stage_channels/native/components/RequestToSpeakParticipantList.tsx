@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 },
   listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 },
@@ -25,7 +25,7 @@ let obj2 = {
   participantNameplateContainer: { paddingHorizontal: 16, flex: 1 },
   participantNameplateText: {
     fontSize: 16,
-    fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD,
+    fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD,
     marginTop: 0,
     marginBottom: 0,
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
@@ -39,7 +39,7 @@ let obj2 = {
 };
 let obj3 = {
   fontSize: 16,
-  fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD,
   marginTop: 0,
   marginBottom: 0,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,

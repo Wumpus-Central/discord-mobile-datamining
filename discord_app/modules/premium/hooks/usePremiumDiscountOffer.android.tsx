@@ -6,7 +6,7 @@ import useDiscountOfferDefault from "useDiscountOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 require = fn;
-const PremiumConstants = fn(1392);
+const PremiumConstants = fn(1394);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_4,
   PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: hasOwnProperty,

@@ -73,9 +73,9 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
         if (mapped2.length > 0) {
           let joined = mapped2.join(", ");
         } else {
-          const intl2 = tmp25(1126).intl;
+          const intl2 = tmp25(1128).intl;
           const obj = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
-          joined = intl2.formatToPlainString(tmp25(1126).t["9Uk8PF"], obj);
+          joined = intl2.formatToPlainString(tmp25(1128).t["9Uk8PF"], obj);
         }
       }
     } else {
@@ -148,7 +148,7 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
     }
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_7, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -245,9 +245,9 @@ function computeDefaultGroupDmNameFromUserIds(arr, getUser, arg2) {
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
-    joined = intl.formatToPlainString(tmp(1126).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1128).t["9Uk8PF"], obj);
   }
   return joined;
 }
@@ -266,9 +266,9 @@ function computeDefaultGroupDmName(recipients, getUser, arg2) {
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1126).intl;
+    const intl = tmp(1128).intl;
     const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
-    joined = intl.formatToPlainString(tmp(1126).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1128).t["9Uk8PF"], obj);
   }
   return joined;
 }

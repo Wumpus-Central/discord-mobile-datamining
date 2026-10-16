@@ -15,7 +15,7 @@ import TableRowTrailingText from "../../../design/components/TableRow/native/Tab
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8479 from "../../../../_runtime/metro/08479__.js";
+import _modDef8487 from "../../../../_runtime/metro/08487__.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
@@ -29,14 +29,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   row: {
-    height: fn(9935).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(9951).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -54,7 +54,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(9935).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(9951).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -192,7 +192,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         leading: tmp17,
                         trailing: tmp21,
                       };
-                      const tmp27 = closure_9(tmp(8800).FormRow, obj4);
+                      const tmp27 = closure_9(tmp(8808).FormRow, obj4);
                       cResult[21] = onPress;
                       cResult[22] = tmp4.row;
                       cResult[23] = tmp13;
@@ -203,7 +203,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { user, usernameStyle: tmp20, discriminatorStyle: tmp4.trailing };
-                  const tmp24 = closure_9(guildId(8983), obj5);
+                  const tmp24 = closure_9(guildId(8991), obj5);
                   cResult[17] = tmp4.trailing;
                   cResult[18] = tmp20;
                   cResult[19] = user;
@@ -218,8 +218,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp20 = items1;
               }
             }
-            const obj6 = { status, user, size: tmp(1200).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-            const tmp19 = closure_9(tmp(1200).Avatar, obj6);
+            const obj6 = { status, user, size: tmp(1202).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+            const tmp19 = closure_9(tmp(1202).Avatar, obj6);
             cResult[10] = guildId;
             cResult[11] = status;
             cResult[12] = user;
@@ -232,8 +232,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           name = stateFromStores;
         }
         if (name == null) {
-          name = guildId(5018).getName(user);
-          const obj3 = guildId(5018);
+          name = guildId(5021).getName(user);
+          const obj3 = guildId(5021);
         }
         cResult[4] = stateFromStores;
         cResult[5] = nick;
@@ -280,15 +280,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         nick = stateFromStores;
       }
       if (nick == null) {
-        nick = guildId(5018).getName(user);
-        const obj3 = guildId(5018);
+        nick = guildId(5021).getName(user);
+        const obj3 = guildId(5021);
       }
       obj2.label = closure_9(closure_12, { text: nick });
       const obj = user(504);
-      obj2.leading = closure_9(user(1200).Avatar, {
+      obj2.leading = closure_9(user(1202).Avatar, {
         status,
         user,
-        size: user(1200).AvatarSizes.SMALL,
+        size: user(1202).AvatarSizes.SMALL,
         guildId,
         autoStatusCutout: true,
       });
@@ -296,8 +296,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [,];
       ({ trailing: arr2[0], username: arr2[1] } = tmp);
       obj5.usernameStyle = items1;
-      obj2.trailing = closure_9(guildId(8983), obj5);
-      return closure_9(user(8800).FormRow, obj2);
+      obj2.trailing = closure_9(guildId(8991), obj5);
+      return closure_9(user(8808).FormRow, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -476,7 +476,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== channel) {
         const getGuild = GuildStore.getGuild;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8479;
+          let channelIconWithGuild = _modDef8487;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp7);
           const tmpResult = utils_ChannelUtils;
@@ -553,7 +553,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, category } = onPress);
       const tmp = closure_11();
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef8479;
+        let channelIconWithGuild = _modDef8487;
       } else {
         channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
       }

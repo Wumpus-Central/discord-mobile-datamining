@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import conjurePresenceActivity from "conjurePresenceActivity.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -202,7 +202,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F106450 */ function() { ... });
+                        let found = prop.filter(/* F106755 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -311,9 +311,9 @@ let closure_18 = async function _resumeRunningProjects() {
     }
   }
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ActivityTypes: closure_8, Endpoints: closure_9 } = Constants);
-const StaticChannelRoute = fn(2072).StaticChannelRoute;
+const StaticChannelRoute = fn(2075).StaticChannelRoute;
 let c11 = 300000;
 let c12 = null;
 let c13 = null;

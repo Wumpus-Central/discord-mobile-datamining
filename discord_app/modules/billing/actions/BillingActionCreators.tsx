@@ -1,7 +1,7 @@
 // discord_app/modules/billing/actions/BillingActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4758 from "../../../../_runtime/metro/04758__.js";
+import _modDef4761 from "../../../../_runtime/metro/04761__.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
 import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators.tsx";
@@ -581,12 +581,12 @@ let closure_28 = async function _fetchSubscriptions() {
           closure_128_0 = lastLazyPerkSync;
           let tmp36 = null == lastLazyPerkSync;
           if (!tmp36) {
-            tmp36 = _modDef4758().diff(lastLazyPerkSync, "hours") >= 1;
-            const obj6 = _modDef4758();
+            tmp36 = _modDef4761().diff(lastLazyPerkSync, "hours") >= 1;
+            const obj6 = _modDef4761();
           }
           if (tmp36) {
             FULL_RESYNC = constants2.FULL_RESYNC;
-            closure_128_0 = _modDef4758();
+            closure_128_0 = _modDef4761();
           }
           const HTTP = HTTPUtils.HTTP;
           const request = {
@@ -1891,7 +1891,7 @@ let closure_42 = async function _redeemUserDiscountOffer(arg0) {
   })();
 };
 let closure_3 = ["line1", "line2", "postalCode"];
-let Constants = fn(1085);
+let Constants = fn(1087);
 ({
   AnalyticEvents: closure_9,
   Endpoints: c10,
@@ -1899,8 +1899,8 @@ let Constants = fn(1085);
   REDIRECTED_PAYMENT_SOURCES: closure_12,
   SubscriptionStatusTypes: map1,
 } = Constants);
-const UserLazyPerkSyncLevels = fn(4836).UserLazyPerkSyncLevels;
-Constants = fn(1096);
+const UserLazyPerkSyncLevels = fn(4839).UserLazyPerkSyncLevels;
+Constants = fn(1098);
 ({
   ADYEN_PAYMENT_SOURCES: closure_15,
   CurrencyCodes: closure_16,
@@ -2157,7 +2157,7 @@ export const popupBridgeCallback = function popupBridgeCallback(paymentSourceTyp
   paymentSourceType = paymentSourceType.paymentSourceType;
   ({ state, path, query, insecure } = paymentSourceType);
   DispatcherDefault.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_START", paymentSourceType });
-  const HTTP = paymentSourceType(1295).HTTP;
+  const HTTP = paymentSourceType(1297).HTTP;
   const request = {
     url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType),
     body: { state, path, query, insecure },

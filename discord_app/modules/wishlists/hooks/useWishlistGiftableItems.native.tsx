@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [, ,];
-({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1085).SKUProductLines);
+({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1087).SKUProductLines);
 const set = new Set(items);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

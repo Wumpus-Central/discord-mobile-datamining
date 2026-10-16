@@ -22,7 +22,7 @@ import StickersStore from "StickersStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -236,7 +236,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_9.getCurrentUser();
               }
             }
-            obj3.type = tmp45(5966).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+            obj3.type = tmp45(5968).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
             ({ id: obj6.id, name: obj6.name } = guild);
             obj3.stickers = [];
             tmp35(obj3);
@@ -843,15 +843,15 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = current(noop.useState(true), 2);
       [tmp12, asyncGeneratorStep] = current(noop.useState(false), 2);
       if (cResult[3] !== id) {
-        let isGuildStickerResult = tmp(5965).isGuildSticker(id);
+        let isGuildStickerResult = tmp(5967).isGuildSticker(id);
         if (!isGuildStickerResult) {
-          isGuildStickerResult = tmp(5965).isStandardSticker(id);
-          const tmpResult4 = tmp(5965);
+          isGuildStickerResult = tmp(5967).isStandardSticker(id);
+          const tmpResult4 = tmp(5967);
         }
         cResult[3] = id;
         cResult[4] = isGuildStickerResult;
         let tmp13 = isGuildStickerResult;
-        const tmpResult3 = tmp(5965);
+        const tmpResult3 = tmp(5967);
       } else {
         tmp13 = cResult[4];
       }
@@ -1400,8 +1400,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = obj4(noop.useState(false), 2);
       let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
       if (!isGuildStickerResult) {
-        isGuildStickerResult = tmp(5965).isStandardSticker(renderableSticker);
-        const tmpResult = tmp(5965);
+        isGuildStickerResult = tmp(5967).isStandardSticker(renderableSticker);
+        const tmpResult = tmp(5967);
       }
       obj4 = {
         hasFetched: tmp6,
@@ -1559,7 +1559,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         const tmpResult = collapsedStickersCategories(num[16]);
         let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex(
-          (type) => type.type === category(5966).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === category(5968).StickerCategoryTypes.FAVORITE,
         );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
@@ -1647,7 +1647,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         }
         gridSectionIndex = gridSectionIndex + 1;
         findIndexResult1 = visibleRowIndex.findIndex(
-          (type) => type.type === category(5966).StickerCategoryTypes.RECENT,
+          (type) => type.type === category(5968).StickerCategoryTypes.RECENT,
         );
       }
       if (null == items) {

@@ -9,9 +9,9 @@ import GuildTemplateTooltipActionCreatorsDefault from "../modules/guild_template
 import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
-let closure_7 = fn(1095).ChannelNotificationSettingsFlags;
+let closure_7 = fn(1097).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
 
@@ -87,9 +87,9 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    const tmpResult = permissionOverwrites(6154);
+    const tmpResult = permissionOverwrites(6156);
     request.trackedActionData = {
-      event: guildId(1273).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1275).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
@@ -112,7 +112,7 @@ export default {
       },
     };
     let obj3 = {
-      event: guildId(1273).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1275).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
@@ -134,8 +134,8 @@ export default {
         return TypeUtils.exact(obj2);
       },
     };
-    request.rejectWithError = guildId(1295).rejectWithMigratedError();
-    const obj6 = guildId(1295);
+    request.rejectWithError = guildId(1297).rejectWithMigratedError();
+    const obj6 = guildId(1297);
     return tmpResult.post(request).then(
       (body) => {
         if (UserGuildSettingsStore.isOptInEnabled(guildId)) {

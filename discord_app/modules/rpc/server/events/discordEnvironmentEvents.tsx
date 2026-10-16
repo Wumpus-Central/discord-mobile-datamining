@@ -4,11 +4,11 @@ import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objec
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 let closure_3 = ["uiDensity"];
-const Constants = fn(5855);
+const Constants = fn(5857);
 const RPC_AUTHENTICATED_SCOPE = Constants.RPC_AUTHENTICATED_SCOPE;
 const RPC_EMBEDDED_APP_SCOPE = Constants.RPC_EMBEDDED_APP_SCOPE;
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;
-const RPCEvents = fn(1085).RPCEvents;
+const RPCEvents = fn(1087).RPCEvents;
 let c0 = false;
 let obj = {
   scope: null,

@@ -6,7 +6,8 @@ let closure_1 = { 30: "black", 31: "red", 32: "green", 33: "yellow", 34: "blue",
 let closure_2 = { 40: "black", 41: "red", 42: "green", 43: "yellow", 44: "blue", 45: "magenta", 46: "cyan", 47: "white" };
 const tmp2 = /\x1B\[(\d+(?:[:;]\d+)*)m/;
 const re3 = tmp2;
-const regExp = new RegExp("(?=" + tmp2.source + ")");
+const regExp = new RegExp(tmp2, "g");
+const regExp1 = new RegExp("(?=" + tmp2.source + ")");
 const result = size.fileFinishedImporting("utils/HighlightJsAnsiLanguage.tsx");
 
 export default function highlightJsAnsiLanguage() {
@@ -27,7 +28,7 @@ export default function highlightJsAnsiLanguage() {
       return {
         className: "ansi-" + foreground + "-" + tmp2,
         endsParent: true,
-        begin: regExp,
+        begin: regExp1,
         (arg0, data) => {
           const parts = arg0[1].split(";");
           if (undefined === data.data.isOn) {
@@ -69,7 +70,7 @@ export default function highlightJsAnsiLanguage() {
     return {
       className: "ansi-" + foreground + "-" + tmp2,
       endsParent: true,
-      begin: regExp,
+      begin: regExp1,
       (arg0, data) => {
         const parts = arg0[1].split(";");
         if (undefined === data.data.isOn) {
@@ -97,7 +98,7 @@ export default function highlightJsAnsiLanguage() {
     return {
       className: "ansi-" + foreground + "-" + tmp2,
       endsParent: true,
-      begin: regExp,
+      begin: regExp1,
       (arg0, data) => {
         const parts = arg0[1].split(";");
         if (undefined === data.data.isOn) {
@@ -118,7 +119,7 @@ export default function highlightJsAnsiLanguage() {
         }
       }
     };
-  }), tmp3))] = { className: "ansi-control-sequence", begin, starts: { end: regExp, endsParent: true } };
+  }), tmp3))] = { className: "ansi-control-sequence", begin, starts: { end: regExp1, endsParent: true } };
   if (0 < items2.length) {
     do {
       sum = num + 1;
@@ -128,8 +129,9 @@ export default function highlightJsAnsiLanguage() {
     } while (sum < length);
   }
   const obj2 = { contains: null };
-  const items6 = [{ begin: regExp, contains: items2 }];
+  const items6 = [{ begin: regExp1, contains: items2 }];
   obj2.contains = items6;
   return obj2;
 };
 export const ANSI_CONTROL_SEQUENCE_RE = tmp2;
+export const ANSI_CONTROL_SEQUENCE_RE_GLOBAL = regExp;

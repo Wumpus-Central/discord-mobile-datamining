@@ -43,9 +43,9 @@ function updateImpersonating(guildId, type) {
   }
   tmp2 = null != data && data.type === type.type;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(2072).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2075).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 

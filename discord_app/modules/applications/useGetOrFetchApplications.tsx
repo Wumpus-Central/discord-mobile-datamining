@@ -8,6 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "ApplicationStore.tsx";
 
 require = fn;
+const NOOP = fn(1087).NOOP;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetOrFetchApplications(current, arg1) {
@@ -37,35 +38,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[5];
         }
         if (cResult[6] !== current) {
-          class A {
-            constructor() {
-              return closure_0.map((item) => {
-                application = undefined;
-                if (null != item) {
-                  application = application.getApplication(item);
-                }
-                return application;
-              });
-            }
-          }
+          const fn2 = function v() {
+            return current.map((item) => {
+              application = undefined;
+              if (null != item) {
+                application = application.getApplication(item);
+              }
+              return application;
+            });
+          };
           cResult[6] = current;
-          cResult[7] = A;
+          cResult[7] = fn2;
+          let tmp11 = fn2;
         } else {
-          class A {
-            constructor() {
-              return closure_0.map((item) => {
-                application = undefined;
-                if (null != item) {
-                  application = application.getApplication(item);
-                }
-                return application;
-              });
-            }
-          }
+          tmp11 = cResult[7];
         }
-        return tmp(504).useStateFromStoresArray(tmp9, A);
+        return tmp(504).useStateFromStoresArray(tmp9, tmp11);
       }
-      const fn = function p() {
+      const fn = function f() {
         let tmp = closure_1;
         if (closure_1) {
           tmp = !discord_common_shallowEqual.areArraysShallowEqual(current, ref.current);
@@ -75,6 +65,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const found = _modDef12(current).filter(GlobalUtils.isNotNullish);
           const arr = _modDef12(current);
           const applications = obj2.fetchApplications(found.uniq().value(), false);
+          applications.catch(NOOP);
           ref.current = current;
           const iter = found.uniq();
         }
@@ -107,6 +98,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const found = _modDef12(current).filter(GlobalUtils.isNotNullish);
           const arr = _modDef12(current);
           const applications = obj2.fetchApplications(found.uniq().value(), false);
+          applications.catch(NOOP);
           ref.current = current;
           const iter = found.uniq();
         }
@@ -122,7 +114,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       );
     };
-let closure_5 = tmp2;
+let closure_6 = tmp2;
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
@@ -141,7 +133,7 @@ export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabl
         cResult[0] = arg0;
         cResult[1] = items1;
       } else {
-        return closure_5(cResult[1], tmp2)[0];
+        return closure_6(cResult[1], tmp2)[0];
       }
       tmp2 = undefined === arg1 || arg1;
     }
@@ -156,5 +148,5 @@ export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabl
       } else {
         items1 = [];
       }
-      return closure_5(items1, flag)[0];
+      return closure_6(items1, flag)[0];
     };

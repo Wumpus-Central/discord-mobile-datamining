@@ -88,7 +88,7 @@ let closure_7 = async function _trackAndroidArtProfileSnapshotAsync(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const UNKNOWN_STATUS = "UNKNOWN_STATUS";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/ArtProfileAnalytics.android.tsx");

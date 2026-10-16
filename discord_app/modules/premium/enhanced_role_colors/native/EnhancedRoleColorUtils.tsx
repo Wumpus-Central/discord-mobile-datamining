@@ -53,7 +53,7 @@ function processColorStrings(colorStrings) {
   }
 }
 const processColor = fn(17).processColor;
-const ThemeTypes = fn(1096).ThemeTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);

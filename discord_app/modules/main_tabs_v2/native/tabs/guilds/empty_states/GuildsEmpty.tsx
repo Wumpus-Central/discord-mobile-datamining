@@ -24,11 +24,11 @@ function handleCreateGuild() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ME: c10, MOBILE_GUILD_UPSELL_LIST: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   scrollView: { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm },
   header: null,
@@ -79,7 +79,7 @@ let obj8 = {
 };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(5147).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(5149).TextStyleSheet["heading-md/bold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -337,7 +337,7 @@ export default noop.memo(
         style = style.style;
         const tmp4 = closure_14();
         const obj = navigation(576);
-        navigation = navigation(1504).useNavigation();
+        navigation = navigation(1506).useNavigation();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AuthenticationStore];
           const fn = function p() {
@@ -350,29 +350,29 @@ export default noop.memo(
         } else {
           [tmp6, tmp7] = cResult;
         }
-        const obj2 = navigation(1504);
+        const obj2 = navigation(1506);
         const stateFromStores = navigation(573).useStateFromStores(tmp6, tmp7);
         let selectedGuildId = null;
         if (stateFromStores) {
           selectedGuildId = style.selectedGuildId;
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          let obj3 = { type: tmp(1273).ImpressionTypes.VIEW, name: tmp(1273).ImpressionNames.GUILDS_EMPTY_NUX };
+          let obj3 = { type: tmp(1275).ImpressionTypes.VIEW, name: tmp(1275).ImpressionNames.GUILDS_EMPTY_NUX };
           cResult[2] = obj3;
           let tmp11 = obj3;
         } else {
           tmp11 = cResult[2];
         }
-        selectedGuildId(9189)(tmp11);
+        selectedGuildId(9202)(tmp11);
         if (cResult[3] === selectedGuildId) {
           if (cResult[4] === navigation) {
             let tmp13 = cResult[5];
             let tmp14 = cResult[6];
           }
           const effect = noop.useEffect(tmp13, tmp14);
-          const isScreenLandscape = tmp(8545).useIsScreenLandscape();
-          const tmpResult3 = tmp(8545);
-          const youBarTotalHeight = tmp(16025).useYouBarTotalHeight();
+          const isScreenLandscape = tmp(8553).useIsScreenLandscape();
+          const tmpResult3 = tmp(8553);
+          const youBarTotalHeight = tmp(16058).useYouBarTotalHeight();
           if (!stateFromStores) {
             return null;
           } else {
@@ -389,9 +389,9 @@ export default noop.memo(
                   accessibilityRole: "header",
                   children: null,
                 };
-                const intl = tmp(1126).intl;
-                obj4.children = intl.string(tmp(1126).t["7hB4kg"]);
-                const tmp23 = closure_12(tmp(5147).Text, obj4);
+                const intl = tmp(1128).intl;
+                obj4.children = intl.string(tmp(1128).t["7hB4kg"]);
+                const tmp23 = closure_12(tmp(5149).Text, obj4);
                 cResult[10] = tmp23;
                 let tmp21 = tmp23;
               } else {
@@ -459,7 +459,7 @@ export default noop.memo(
             cResult[9] = items2;
             tmp20 = items2;
           }
-          const tmpResult4 = tmp(16025);
+          const tmpResult4 = tmp(16058);
         }
         const fn2 = function w() {
           if (null != selectedGuildId) {
@@ -510,8 +510,8 @@ export default noop.memo(
         selectedGuildId = undefined;
         ({ selectedGuildId, style } = arg0);
         const tmp = closure_14();
-        navigation = navigation(1504).useNavigation();
-        const obj = navigation(1504);
+        navigation = navigation(1506).useNavigation();
+        const obj = navigation(1506);
         const items = [AuthenticationStore];
         const stateFromStores = navigation(573).useStateFromStores(items, () => null != sessionId.getSessionId());
         let tmp6 = null;
@@ -521,9 +521,9 @@ export default noop.memo(
         selectedGuildId = tmp6;
         let obj3 = { type: null, name: null };
         const obj2 = navigation(573);
-        obj3.type = navigation(1273).ImpressionTypes.VIEW;
-        obj3.name = navigation(1273).ImpressionNames.GUILDS_EMPTY_NUX;
-        selectedGuildId(9189)(obj3);
+        obj3.type = navigation(1275).ImpressionTypes.VIEW;
+        obj3.name = navigation(1275).ImpressionNames.GUILDS_EMPTY_NUX;
+        selectedGuildId(9202)(obj3);
         const items1 = [tmp6, navigation];
         const effect = noop.useEffect(() => {
           if (null != selectedGuildId) {
@@ -560,9 +560,9 @@ export default noop.memo(
             }
           }
         }, items1);
-        const tmp7 = selectedGuildId(9189);
-        const isScreenLandscape = navigation(8545).useIsScreenLandscape();
-        navigation(16025);
+        const tmp7 = selectedGuildId(9202);
+        const isScreenLandscape = navigation(8553).useIsScreenLandscape();
+        navigation(16058);
         let tmp14Result = null;
         if (stateFromStores) {
           const obj4 = { style: null, children: null };
@@ -577,9 +577,9 @@ export default noop.memo(
             accessibilityRole: "header",
             children: null,
           };
-          const intl = tmp2(1126).intl;
-          obj7.children = intl.string(tmp2(1126).t["7hB4kg"]);
-          obj6.children = closure_12(tmp2(5147).Text, obj7);
+          const intl = tmp2(1128).intl;
+          obj7.children = intl.string(tmp2(1128).t["7hB4kg"]);
+          obj6.children = closure_12(tmp2(5149).Text, obj7);
           obj5.children = closure_12(closure_5, obj6);
           const items3 = [closure_12(closure_5, obj5)];
           let tmp18;

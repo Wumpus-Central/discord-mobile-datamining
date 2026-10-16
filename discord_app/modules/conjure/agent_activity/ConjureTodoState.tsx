@@ -32,6 +32,9 @@ export const checklistLive = function checklistLive(memo) {
   }
   return tmp2;
 };
+export const todoProgress = function todoProgress(todos) {
+  return { completed: todos.filter((status) => "completed" === status.status).length, total: todos.length };
+};
 export const unfinishedTodoCount = function unfinishedTodoCount(arr) {
   return arr.filter((status) => "completed" !== status.status).length;
 };

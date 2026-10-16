@@ -17,10 +17,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const StatusTypes = fn(1096).StatusTypes;
+const StatusTypes = fn(1098).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: {
     borderWidth: 1,
@@ -236,9 +236,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.status = null;
         obj2.isMobileOnline = isMobileOnline;
         obj2.isVROnline = isVROnline;
-        obj2.size = tmp(1200).AvatarSizes.XSMALL;
+        obj2.size = tmp(1202).AvatarSizes.XSMALL;
         obj2.avatarDecoration = user.avatarDecoration;
-        const items2 = [closure_10(tmp(1200).Avatar, obj2)];
+        const items2 = [closure_10(tmp(1202).Avatar, obj2)];
         const obj3 = {
           style: tmp4.label,
           variant: "text-md/medium",
@@ -261,7 +261,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           name = UserUtilsDefault.getName(user);
         }
         obj3.children = name;
-        items2[1] = closure_10(tmp(5147).Text, obj3);
+        items2[1] = closure_10(tmp(5149).Text, obj3);
         tmp16[1] = items2;
         tmp14Result = closure_11(View, tmp16);
       }
@@ -307,9 +307,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj4.status = tmp13;
         obj4.isMobileOnline = tmp6;
         obj4.isVROnline = tmp7;
-        obj4.size = tmp2(1200).AvatarSizes.XSMALL;
+        obj4.size = tmp2(1202).AvatarSizes.XSMALL;
         obj4.avatarDecoration = user.avatarDecoration;
-        const items2 = [closure_10(tmp2(1200).Avatar, obj4)];
+        const items2 = [closure_10(tmp2(1202).Avatar, obj4)];
         const obj5 = {
           style: tmp.label,
           variant: "text-md/medium",
@@ -321,7 +321,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           stateFromStores = UserUtilsDefault.getName(user);
         }
         obj5.children = stateFromStores;
-        items2[1] = closure_10(tmp2(5147).Text, obj5);
+        items2[1] = closure_10(tmp2(5149).Text, obj5);
         obj3.children = items2;
         tmp9Result = closure_11(View, obj3);
       }
@@ -398,18 +398,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           ellipsizeMode: "tail",
           children: tmp11,
         };
-        const tmp16 = closure_10(tmp(5147).Text, obj3);
+        const tmp16 = closure_10(tmp(5149).Text, obj3);
         cResult[6] = tmp11;
         cResult[7] = tmp4.label;
         cResult[8] = tmp16;
         tmp14 = tmp16;
       }
       const tmpResult = channel(504);
-      const tmp13 = closure_10(channel(12618).GuildIconWithChannelType, {
+      const tmp13 = closure_10(channel(12641).GuildIconWithChannelType, {
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(12618).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(12641).GuildIconWithChannelTypeSizes.SMALL_32,
       });
       cResult[3] = channel;
       cResult[4] = stateFromStores;
@@ -419,7 +419,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(12618).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(12641).GuildIconWithChannelTypeSizes.SMALL_32,
       };
     }
   : function FailedChannelRow(channel) {
@@ -437,13 +437,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(504);
       const tmp3 = useChannelNameDefault(channel);
       const items1 = [
-        closure_10(channel(12618).GuildIconWithChannelType, {
+        closure_10(channel(12641).GuildIconWithChannelType, {
           "aria-label": "",
           guild: stateFromStores,
           channel,
-          size: channel(12618).GuildIconWithChannelTypeSizes.SMALL_32,
+          size: channel(12641).GuildIconWithChannelTypeSizes.SMALL_32,
         }),
-        closure_10(channel(5147).Text, {
+        closure_10(channel(5149).Text, {
           style: tmp.label,
           variant: "text-md/medium",
           lineClamp: 1,

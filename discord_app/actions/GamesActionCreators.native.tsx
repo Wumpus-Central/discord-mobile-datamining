@@ -35,15 +35,15 @@ function fetchJoinSecret(application, arg1) {
     },
   );
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({
   Endpoints: closure_4,
   DiscordConnectDeeplinks: hasOwnProperty,
   WebBrowserType: metroRequire,
   ActivityFlags: closure_7,
 } = Constants);
-const ActivityIntent = fn(2024).ActivityIntent;
-const MAIN_SURFACE = fn(10919).MAIN_SURFACE;
+const ActivityIntent = fn(2026).ActivityIntent;
+const MAIN_SURFACE = fn(10934).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -147,8 +147,8 @@ export default {
                     const join_url = body.body.join_url;
                     const secret = body.body.secret;
                     if (null != join_url) {
-                      activityChannelId(4862).openURL(join_url, constants2.SAFARI);
-                      const obj3 = activityChannelId(4862);
+                      activityChannelId(4865).openURL(join_url, constants2.SAFARI);
+                      const obj3 = activityChannelId(4865);
                       const obj2 = {
                         type: "ACTIVITY_JOIN",
                         applicationId: null,
@@ -176,8 +176,8 @@ export default {
                     } else {
                       const _HermesInternal = HermesInternal;
                       const combined = "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                      activityChannelId(4862).openURL(combined, constants2.SAFARI);
-                      const obj6 = activityChannelId(4862);
+                      activityChannelId(4865).openURL(combined, constants2.SAFARI);
+                      const obj6 = activityChannelId(4865);
                       const obj12 = {
                         type: "ACTIVITY_JOIN",
                         applicationId: null,

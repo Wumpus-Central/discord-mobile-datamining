@@ -304,9 +304,9 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
     }
   }
 };
-const isGuildVocalChannelType = fn(2069).isGuildVocalChannelType;
-const isGuildLurker = fn(2083).isGuildLurker;
-const Constants = fn(1085);
+const isGuildVocalChannelType = fn(2072).isGuildVocalChannelType;
+const isGuildLurker = fn(2086).isGuildLurker;
+const Constants = fn(1087);
 ({ ChannelTypes: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");

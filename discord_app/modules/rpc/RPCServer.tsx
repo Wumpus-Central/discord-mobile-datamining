@@ -8,8 +8,8 @@ import validateScopeDefault from "helpers/validateScope.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(5855).TransportTypes;
-const Constants = fn(1085);
+const TransportTypes = fn(5857).TransportTypes;
+const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,
   RPCCloseCodes: metroRequire,

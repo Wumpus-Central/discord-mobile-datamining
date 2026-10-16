@@ -264,7 +264,7 @@ function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
   }
   obj = require("PlatformUtils");
 }
-const NativeFeatures = fn(1085).NativeFeatures;
+const NativeFeatures = fn(1087).NativeFeatures;
 const set = new Set(["jpg", "jpeg", "jfif", "png"]);
 const set1 = new Set(["webp", "avif"]);
 const set2 = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]);
@@ -937,7 +937,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             closure_129_2 = undefined;
-            tmp2(38)(closure_0(1382).isPlatformEmbedded, "Copy image method called outside native app");
+            tmp2(38)(closure_0(1384).isPlatformEmbedded, "Copy image method called outside native app");
             tmp2(38)(typeof DiscordNative.clipboard.copyImage === "function", "Copy image not supported");
             c3 = 1;
             c4 = 1;
@@ -954,7 +954,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(6366).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(6368).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -991,7 +991,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj11 = closure_0(6366);
+            const obj11 = closure_0(6368);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -1160,10 +1160,10 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
             closure_133_3 = undefined;
             closure_133_4 = undefined;
             closure_133_5 = undefined;
-            png(38)(unknown(1382).isPlatformEmbedded, "Save image method called outside native app");
+            png(38)(unknown(1384).isPlatformEmbedded, "Save image method called outside native app");
             const tmp84 = png(38);
             let tmp54 = closure_0;
-            const toURLSafeResult = png(1384).toURLSafe(closure_0);
+            const toURLSafeResult = png(1386).toURLSafe(closure_0);
             if (null == toURLSafeResult) {
               c10 = 3;
               const obj4 = { value: constants.ERRORED, done: true };
@@ -1188,7 +1188,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(6366).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(6368).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1196,13 +1196,13 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(6366);
+                const obj9 = unknown(6368);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
               c10 = 1;
             }
-            const obj13 = png(1384);
+            const obj13 = png(1386);
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1412,8 +1412,8 @@ obj2.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1382).isPlatformEmbedded, "Download ML model file method called outside native app");
-    v1(38)(null != v1(1384).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
+    v1(38)(v3(1384).isPlatformEmbedded, "Download ML model file method called outside native app");
+    v1(38)(null != v1(1386).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadMLModelFile(closure_0, closure_1, closure_2);
     return value;
@@ -1447,8 +1447,8 @@ obj2.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1382).isPlatformEmbedded, "Download clips file method called outside native app");
-    v1(38)(null != v1(1384).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
+    v1(38)(v3(1384).isPlatformEmbedded, "Download clips file method called outside native app");
+    v1(38)(null != v1(1386).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadClipsFile(closure_0, closure_1, closure_2);
     return value;
@@ -1489,8 +1489,8 @@ obj2.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
   closure_2 = arg2;
   closure_3 = arg3;
   return (async () => {
-    v1(38)(v3(1382).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
-    v1(38)(null != v1(1384).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
+    v1(38)(v3(1384).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+    v1(38)(null != v1(1386).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadOpenH264(closure_0, closure_1, closure_2, closure_3);
     return value;

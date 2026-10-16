@@ -43,8 +43,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7073)().analyticsLocations;
-  closure_13 = context(11218)();
+  analyticsLocations = context(7075)().analyticsLocations;
+  closure_13 = context(11234)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -79,28 +79,45 @@ function useOnActivityItemSelected(arg0) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_0 = tmp5;
               closure_128_0 = undefined;
               if (closure_14) {
                 let id;
                 if ("channel" === context.type) {
                   id = context.channel.id;
                 }
-                tmp3(tmp50[20])(id);
-                c3 = 1;
-                const tmp39 = tmp3(tmp50[20]);
-                const obj4 = { applicationId: str, surface, analyticsContext: null };
-                const obj5 = { isStart: true, analyticsLocations, source, channelId: null };
-                let id1;
+                tmp3(tmp55[20])(id);
+                let guildId = null;
                 if ("channel" === context.type) {
-                  id1 = context.channel.id;
+                  const channel = context.channel;
+                  guildId = channel.getGuildId();
                 }
-                obj5.channelId = id1;
-                obj4.analyticsContext = obj5;
-                c4 = 2;
-                c5 = 1;
-                const obj7 = { value: tmp3(tmp50[21]).launchFrame(obj4), done: false };
-                return obj7;
+                c3 = 1;
+                tmp3(tmp55[21]);
+                const obj4 = { applicationId: str, surface: null, analyticsContext: null };
+                if ("channel" === context.type) {
+                  if (null != guildId) {
+                    const obj5 = {
+                      type: tmp5(tmp55[22]).EmbeddedSurfaceType.MAIN,
+                      channelId: context.channel.id,
+                      guildId,
+                    };
+                    let tmp49 = obj5;
+                  }
+                  obj4.surface = tmp49;
+                  const obj7 = { isStart: true, analyticsLocations, source, channelId: null };
+                  let id1;
+                  if ("channel" === context.type) {
+                    id1 = context.channel.id;
+                  }
+                  obj7.channelId = id1;
+                  obj4.analyticsContext = obj7;
+                  c4 = 2;
+                  c5 = 1;
+                  const obj8 = { value: tmp47(obj4), done: false };
+                  return obj8;
+                }
+                tmp49 = closure_1_7;
+                const tmp39 = tmp3(tmp55[20]);
               } else {
                 let id2;
                 if ("channel" === context.type) {
@@ -109,10 +126,10 @@ function useOnActivityItemSelected(arg0) {
                 closure_128_0 = id2;
                 if (null != require) {
                   c3 = 2;
-                  const obj8 = { recipientIds: tmp18, navigateToChannel: true };
+                  const obj9 = { recipientIds: tmp18, navigateToChannel: true };
                   c4 = 5;
                   c5 = 1;
-                  const obj10 = { value: tmp3(tmp50[22]).openPrivateChannel(obj8), done: false };
+                  const obj10 = { value: tmp3(tmp55[23]).openPrivateChannel(obj9), done: false };
                   return obj10;
                 } else {
                   const obj11 = {
@@ -128,7 +145,7 @@ function useOnActivityItemSelected(arg0) {
                     referrerId: closure_129_9,
                     onConfirmActivityLaunchChecksAlertOpen: closure_129_10,
                   };
-                  tmp3(tmp50[23])(obj11).then((result) => {
+                  tmp3(tmp55[24])(obj11).then((result) => {
                     let tmp = result;
                     if (result) {
                       let tmp2Result;
@@ -142,7 +159,7 @@ function useOnActivityItemSelected(arg0) {
                   });
                   c4 = 4;
                   c5 = 1;
-                  const promise = tmp3(tmp50[23])(obj11);
+                  const promise = tmp3(tmp55[24])(obj11);
                 }
               }
             }
@@ -194,11 +211,11 @@ function useOnActivityItemSelected(arg0) {
           c5 = 3;
           let obj = { value, done: true };
           return obj;
-        } catch (tmp50) {
+        } catch (tmp55) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp50;
-          } else if (tmp === tmp52) {
+            throw tmp55;
+          } else if (tmp === tmp57) {
             c4 = tmp;
           } else {
             c4 = tmp2;
@@ -255,11 +272,11 @@ function useOnActivityItemSelected(arg0) {
               obj4.source = source;
               obj4.customId = customId;
               obj4.referrerId = referrerId;
-              const tmp7 = v1(locationObject[24]);
+              const tmp7 = v1(locationObject[25]);
               v1 = 1;
               c0 = 1;
               const obj5 = {
-                value: v1(locationObject[24])(obj4).then((result) => {
+                value: v1(locationObject[25])(obj4).then((result) => {
                   let tmp = result;
                   if (result) {
                     let tmp2Result;
@@ -308,9 +325,9 @@ function useOnActivityItemSelected(arg0) {
       : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2024).STAFF_RELEASE_PHASES;
-const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(10919).MAIN_SURFACE;
+const STAFF_RELEASE_PHASES = fn(2026).STAFF_RELEASE_PHASES;
+const ApplicationFlags = fn(1087).ApplicationFlags;
+const MAIN_SURFACE = fn(10934).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);

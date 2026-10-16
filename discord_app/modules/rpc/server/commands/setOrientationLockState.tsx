@@ -1,62 +1,24 @@
 // discord_app/modules/rpc/server/commands/setOrientationLockState.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
-import Constants2 from "../../../activities/Constants.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
-import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import getSocketFrameDefault from "../../helpers/getSocketFrame.tsx";
 import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
+import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const OrientationLockState = Constants2.OrientationLockState;
-const RPCErrors = Constants.RPCErrors;
-const result = size.fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");
-
-export default {
-  [Constants.RPCCommands.SET_ORIENTATION_LOCK_STATE]: {
-    validation(number) {
-      const obj = createRpcJoiSchemaObjectDefault(number);
-      const obj2 = { lock_state: null, picture_in_picture_lock_state: null, grid_lock_state: null };
-      const requiredResult = createRpcJoiSchemaObjectDefault(number).required();
-      const numberResult = number.number();
-      obj2.lock_state = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE)
-        .required();
-      const validResult = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE);
-      const numberResult1 = number.number();
-      const validResult3 = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE);
-      obj2.picture_in_picture_lock_state = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE)
-        .allow(null)
-        .optional();
-      const allowResult = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE)
-        .allow(null);
-      const numberResult2 = number.number();
-      const validResult4 = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE);
-      obj2.grid_lock_state = number
-        .number()
-        .valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE)
-        .allow(null)
-        .optional();
-      return requiredResult.keys(obj2);
-    },
+({ RPCCommands, RPCErrors: c2 } = Constants);
+let obj = {};
+obj[RPCCommands.SET_ORIENTATION_LOCK_STATE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
+  RPCCommands.SET_ORIENTATION_LOCK_STATE,
+  {
     handler(arg0) {
       ({ socket, args } = arg0);
       ({ lock_state, picture_in_picture_lock_state } = args);
       if (isPostMessageSocketDefault(socket)) {
         const id = socket.application.id;
         if (null == id) {
-          const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
+          const obj2 = { errorCode: constants.INVALID_COMMAND };
           const tmp19 = new RPCErrorDefault(obj2, "No application.");
           throw tmp19;
         } else {
@@ -82,7 +44,7 @@ export default {
           const tmpResult3 = DispatcherDefault;
         }
       } else {
-        const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+        const obj = { errorCode: constants.INVALID_COMMAND };
         const _HermesInternal = HermesInternal;
         const tmpResult21 = new RPCErrorDefault(
           obj,
@@ -92,4 +54,7 @@ export default {
       }
     },
   },
-};
+);
+const result = size.fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");
+
+export default obj;

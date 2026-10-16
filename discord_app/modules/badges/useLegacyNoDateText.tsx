@@ -9,7 +9,7 @@ function chooseRandomLegacyNoDateText() {
   const intl = util.intl;
   return intl.string(items[rounded]);
 }
-const items = [fn(1126).t["6zFA/T"], fn(1126).t.wzZHKl, fn(1126).t["+ED/nf"]];
+const items = [fn(1128).t["6zFA/T"], fn(1128).t.wzZHKl, fn(1128).t["+ED/nf"]];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useLegacyNoDateText.tsx");

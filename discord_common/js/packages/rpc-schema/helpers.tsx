@@ -10,6 +10,3 @@ export const RPCEvent = RPCEvents;
 export const joiReqObj = function joiReqObj(required) {
   return required.required().unknown(true);
 };
-export const joiEnum = function joiEnum(ActivityPlatform) {
-  return Object.values(ActivityPlatform);
-};

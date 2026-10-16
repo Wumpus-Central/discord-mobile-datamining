@@ -129,7 +129,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     skuId: id.id,
     name: id.name,
     summary: id.description,
-    unpublishedAt: id.unpublishedAt,
+    unpublishedAt: id.willUnpublishAt,
     isOrbsExclusive: id.isOrbsExclusive,
     styles: id.styles,
     products: null,

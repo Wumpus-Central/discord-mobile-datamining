@@ -4,9 +4,9 @@ import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const KeyboardTypes = PlusLargeIcon(1629);
-const AppsIcon = PlusLargeIcon(8451);
-const PlusLargeIcon2 = PlusLargeIcon(10542);
+const KeyboardTypes = PlusLargeIcon(1631);
+const AppsIcon = PlusLargeIcon(8459);
+const PlusLargeIcon2 = PlusLargeIcon(10557);
 require = fn;
 let closure_3 = ["style"];
 const View = fn(17).View;

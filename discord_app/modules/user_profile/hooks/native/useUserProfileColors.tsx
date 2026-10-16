@@ -6,11 +6,11 @@ import useProfileThemeValues from "../../useProfileThemeValues.native.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 const initialize = obj(504);
-const utils_ColorUtils = obj(1103);
-const useToken = obj(4874);
-const UserProfileGradientUtils = obj(8574);
+const utils_ColorUtils = obj(1105);
+const useToken = obj(4877);
+const UserProfileGradientUtils = obj(8582);
 require = fn;
-const ThemeTypes = fn(1096).ThemeTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");

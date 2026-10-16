@@ -4,7 +4,7 @@ import ThreadHooks from "../threads/ThreadHooks.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isMessagePinnable.tsx");

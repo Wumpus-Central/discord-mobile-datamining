@@ -30,6 +30,7 @@ const frozen = Object.freeze({
   SUPPRESS_VOICE_SESSION_NOTIFICATIONS: 512,
   SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS: 1024,
   SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS: 2048,
+  SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS: 4096,
 });
 const items = [
   MessageTypes.MessageTypes.REPLY,
@@ -323,6 +324,7 @@ const frozen2 = Object.freeze({
   EMOJI_SOURCE_DATA(arg0) {
     return "/emojis/" + arg0 + "/source";
   },
+  EMOJI_PACKS: "/emoji-packs",
   TOP_EMOJIS_FOR_GUILD(guildId) {
     return "/guilds/" + guildId + "/top-emojis";
   },
@@ -1808,6 +1810,7 @@ const frozen2 = Object.freeze({
   CREATE_REFERRAL(arg0) {
     return "/users/@me/referrals/" + arg0;
   },
+  CONTEXTUAL_REFERRAL_UPSELL_DISMISSALS: "/users/@me/contextual-referral-upsell-dismissals",
   FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities) {
     return "/family-center/" + topUserActivities + "/activity";
   },
@@ -2102,6 +2105,9 @@ const frozen2 = Object.freeze({
   },
   CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
     return "/conjure/projects/" + arg0 + "/publish-preview";
+  },
+  CONJURE_APPLICATION_CHANNELS(arg0) {
+    return "/conjure/applications/" + arg0 + "/channels";
   },
   GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {
     return "/guild-space/" + arg0 + "/image-text-widget/" + arg1 + "/" + arg2 + "." + arg3;
@@ -2384,6 +2390,7 @@ const obj2 = {
   EMOJI_SOURCE_DATA(arg0) {
     return "/emojis/" + arg0 + "/source";
   },
+  EMOJI_PACKS: "/emoji-packs",
   TOP_EMOJIS_FOR_GUILD(guildId) {
     return "/guilds/" + guildId + "/top-emojis";
   },
@@ -3869,6 +3876,7 @@ const obj2 = {
   CREATE_REFERRAL(arg0) {
     return "/users/@me/referrals/" + arg0;
   },
+  CONTEXTUAL_REFERRAL_UPSELL_DISMISSALS: "/users/@me/contextual-referral-upsell-dismissals",
   FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities) {
     return "/family-center/" + topUserActivities + "/activity";
   },
@@ -4163,6 +4171,9 @@ const obj2 = {
   },
   CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
     return "/conjure/projects/" + arg0 + "/publish-preview";
+  },
+  CONJURE_APPLICATION_CHANNELS(arg0) {
+    return "/conjure/applications/" + arg0 + "/channels";
   },
   GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {
     return "/guild-space/" + arg0 + "/image-text-widget/" + arg1 + "/" + arg2 + "." + arg3;
@@ -5940,6 +5951,7 @@ export const GuildSettingsSubsections = {
   SAFETY_CAPTCHA_AND_RAID_PROTECTION: "SAFETY_CAPTCHA_AND_RAID_PROTECTION",
   SAFETY_PERMISSIONS: "SAFETY_PERMISSIONS",
   ACCESS_DISCOVERABLE: "ACCESS_DISCOVERABLE",
+  ENGAGEMENT_GUILD_SPACE: "ENGAGEMENT_GUILD_SPACE",
   PROFILE_VISIBILITY: "PROFILE_VISIBILITY",
   BOOST_PERKS_VANITY_URL: "BOOST_PERKS_VANITY_URL",
 };
@@ -6496,22 +6508,6 @@ export const ChannelStreamTypes = {
   DIVIDER_NEW_MESSAGES: "DIVIDER_NEW_MESSAGES",
 };
 export const ChannelModes = { VIDEO: "video", VOICE: "voice" };
-export const ActivityTypes = {
-  PLAYING: 0,
-  [0]: "PLAYING",
-  STREAMING: 1,
-  [1]: "STREAMING",
-  LISTENING: 2,
-  [2]: "LISTENING",
-  WATCHING: 3,
-  [3]: "WATCHING",
-  CUSTOM_STATUS: 4,
-  [4]: "CUSTOM_STATUS",
-  COMPETING: 5,
-  [5]: "COMPETING",
-  HANG_STATUS: 6,
-  [6]: "HANG_STATUS",
-};
 export const ActivityCardTypes = { GAME: "game", USER: "user", GROUP: "group" };
 export const ActivityActionStates = { LOADING: "LOADING", COMPLETE: "COMPLETE", FAILED: "FAILED" };
 export const GuildDiscoverySections = {
@@ -6682,8 +6678,8 @@ export const AbortCodes = {
   [30074]: "TOO_MANY_SAVED_MESSAGES",
   TOO_MANY_PENDING_OUTGOING: 30078,
   [30078]: "TOO_MANY_PENDING_OUTGOING",
-  TOO_MANY_VIBEGRATIONS_PROJECTS: 30081,
-  [30081]: "TOO_MANY_VIBEGRATIONS_PROJECTS",
+  TOO_MANY_CONJURE_PROJECTS: 30081,
+  [30081]: "TOO_MANY_CONJURE_PROJECTS",
   UNAUTHORIZED: 40001,
   [40001]: "UNAUTHORIZED",
   EMAIL_VERIFICATION_REQUIRED: 40002,
@@ -7341,19 +7337,7 @@ export const ComponentActionsKeyed = {
 };
 export const NAVIGATION_THROTTLE = 50;
 export const PlatformTypes = obj11;
-export const ActivityGamePlatforms = {
-  DESKTOP: "desktop",
-  XBOX: "xbox",
-  SAMSUNG: "samsung",
-  IOS: "ios",
-  ANDROID: "android",
-  EMBEDDED: "embedded",
-  PS4: "ps4",
-  PS5: "ps5",
-  META_QUEST: "meta_quest",
-};
 export const Platforms = { IOS: "iOS", ANDROID: "Android" };
-export const ActivityPartyPrivacy = { PRIVATE: 0, [0]: "PRIVATE", PUBLIC: 1, [1]: "PUBLIC" };
 export const DiscordConnectDeeplinks = frozen6;
 export const FRIEND_SYNC_PLATFORM_TYPES = set1;
 export const ACTIVITY_PLATFORM_TYPES = set2;
@@ -8324,7 +8308,6 @@ export const AnalyticEvents = {
   AUTOMATED_MESSAGE_DISMISSED: "automated_message_dismissed",
   ACTIVITY_REPORT_PROBLEM: "activity_report_problem",
   ACTIVITY_REPORT_DONT_SHOW: "activity_report_dont_show",
-  VIBEGRATIONS_FEEDBACK: "vibegrations_feedback",
   ACTIVITY_ENABLE_HARDWARE_ACCELERATION: "activity_enable_hardware_acceleration",
   ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED: "activities_center_control_tray_button_hovered",
   ACTIVITIES_MINI_SHELF_HOVERED: "activities_mini_shelf_hovered",
@@ -9270,10 +9253,9 @@ export const AnalyticEvents = {
   FAVORITES_GUILD_UPSELL_MODAL_OPENED: "favorites_guild_upsell_modal_opened",
   FAVORITES_GUILD_ADD_MODAL_OPENED: "favorites_guild_add_modal_opened",
   FRIEND_REQUEST_NOTE_VIEWED: "friend_request_note_viewed",
-  VIBEGRATION_TURN_RESULTED: "vibegration_turn_resulted",
-  VIBEGRATION_DEPLOYED: "vibegration_deployed",
-  VIBEGRATION_PUBLISH_ACTION_CLICKED: "vibegration_publish_action_clicked",
-  VIBEGRATION_ERRORED: "vibegration_errored",
+  CONJURE_TURN_RESULTED: "conjure_turn_resulted",
+  CONJURE_PUBLISH_ACTION_CLICKED: "conjure_publish_action_clicked",
+  CONJURE_ERRORED: "conjure_errored",
   SMART_SEARCH_ANSWER_RETURNED: "smart_search_answer_returned",
   SMART_SEARCH_ANSWER_SHOWN: "smart_search_answer_shown",
   SMART_SEARCH_ANSWER_DWELLED: "smart_search_answer_dwelled",
@@ -9925,34 +9907,6 @@ export const LibraryApplicationActions = {
 export const GameTableListKeys = { NAME: "name", PLATFORM: "platform", ACTIONS: "actions", LAST_PLAYED: "last_played" };
 export const TableSortDirections = { ASCENDING: "asc", DESCENDING: "desc" };
 export const OperatingSystems = { WINDOWS: "1", MACOS: "2", LINUX: "3" };
-export const EntitlementTypes = {
-  PURCHASE: 1,
-  [1]: "PURCHASE",
-  PREMIUM_SUBSCRIPTION: 2,
-  [2]: "PREMIUM_SUBSCRIPTION",
-  DEVELOPER_GIFT: 3,
-  [3]: "DEVELOPER_GIFT",
-  TEST_MODE_PURCHASE: 4,
-  [4]: "TEST_MODE_PURCHASE",
-  FREE_PURCHASE: 5,
-  [5]: "FREE_PURCHASE",
-  USER_GIFT: 6,
-  [6]: "USER_GIFT",
-  PREMIUM_PURCHASE: 7,
-  [7]: "PREMIUM_PURCHASE",
-  APPLICATION_SUBSCRIPTION: 8,
-  [8]: "APPLICATION_SUBSCRIPTION",
-  FREE_STAFF_PURCHASE: 9,
-  [9]: "FREE_STAFF_PURCHASE",
-  QUEST_REWARD: 10,
-  [10]: "QUEST_REWARD",
-  FRACTIONAL_REDEMPTION: 11,
-  [11]: "FRACTIONAL_REDEMPTION",
-  VIRTUAL_CURRENCY_REDEMPTION: 12,
-  [12]: "VIRTUAL_CURRENCY_REDEMPTION",
-  PURCHASE_REWARD: 16,
-  [16]: "PURCHASE_REWARD",
-};
 export const EntitlementSourceTypes = {
   QUEST_REWARD: 1,
   [1]: "QUEST_REWARD",

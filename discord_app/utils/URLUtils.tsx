@@ -3,8 +3,8 @@ import _modDef12 from "../../_runtime/metro/00012__.js";
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "URLUtils.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
-import UrlAll from "../../_runtime/01387_Url.js";
-import ip from "../../_runtime/01385_ip.js";
+import UrlAll from "../../_runtime/01389_Url.js";
+import ip from "../../_runtime/01387_ip.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function isDiscordDirectAssetUrl(shareURI) {
@@ -195,13 +195,13 @@ export default {
     }
     return tmp;
   },
-  isDiscordUrl(ctaLink, arg1) {
+  isDiscordUrl(customInstallUrl, arg1) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = false;
     }
-    if (null != ctaLink) {
-      const toURLSafeResult = URLUtilsDefault.toURLSafe(ctaLink);
+    if (null != customInstallUrl) {
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(customInstallUrl);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;

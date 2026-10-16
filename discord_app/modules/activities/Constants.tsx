@@ -1,10 +1,12 @@
 // discord_app/modules/activities/Constants.tsx
 import Constants from "../../Constants.tsx";
 import Server from "../../flow/Server.tsx";
+import Constants2 from "../../../discord_common/js/shared/activities/Constants.tsx";
 import ActivityApplications from "../../../discord_common/js/shared/shared-constants/ActivityApplications.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants.ChannelTypes;
+const OrientationLockState = Constants2.OrientationLockState;
 const items = [
   "1037680572660727838",
   "235088799074484224",
@@ -19,21 +21,20 @@ const items = [
   "1227719606223765687",
 ];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-const obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-const obj2 = {
+const obj = {
   label_type: Server.EmbeddedActivityLabelTypes.NONE,
   release_phase: "",
   label_from: null,
   label_until: null,
   omit_badge_from_surfaces: [],
 };
-const obj3 = {
+const obj2 = {
   application_id: "",
   requires_age_gate: false,
   legacy_responsive_aspect_ratio: false,
-  default_orientation_lock_state: obj.UNLOCKED,
-  tablet_default_orientation_lock_state: obj.UNLOCKED,
+  default_orientation_lock_state: OrientationLockState.UNLOCKED,
+  tablet_default_orientation_lock_state: OrientationLockState.UNLOCKED,
   supported_platforms: null,
   client_platform_config: null,
   has_csp_exception: false,
@@ -42,14 +43,14 @@ const obj3 = {
   supported_locales: null,
 };
 const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
-obj3.supported_platforms = items3;
-obj3.client_platform_config = {
-  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj2,
-  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj2,
-  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj2,
+obj2.supported_platforms = items3;
+obj2.client_platform_config = {
+  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj,
+  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj,
+  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj,
 };
-obj3.blocked_locales = [];
-obj3.supported_locales = [];
+obj2.blocked_locales = [];
+obj2.supported_locales = [];
 const items4 = [, , ,];
 ({ GUILD_TEXT: arr5[0], DM: arr5[1], GROUP_DM: arr5[2], GUILD_SPACE: arr5[3] } = ChannelTypes);
 const items5 = [];
@@ -124,7 +125,7 @@ export const ActivityTooltipName = {
   POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP",
   YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP",
 };
-export const OrientationLockState = obj;
+export { OrientationLockState };
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = {
   UNHANDLED: -1,
@@ -135,7 +136,7 @@ export const ActivityScreenOrientation = {
   [1]: "LANDSCAPE",
 };
 export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };
-export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj3;
+export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj2;
 export const SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES = items4;
 export const SUPPORTED_ACTIVITIES_CHANNEL_TYPES = items5;
 export function getAppIntentScheme(arg0) {

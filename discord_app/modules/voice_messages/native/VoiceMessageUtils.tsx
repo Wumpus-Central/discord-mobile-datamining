@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(12710);
+const VoiceMessagesUIStore = fn(12736);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: metroRequire,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(12710);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12711);
+const VoiceMessageConstants = fn(12737);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,
@@ -286,7 +286,7 @@ const VoiceMessageConstants = fn(12711);
   WAVEFORM_MAX_SAMPLES: closure_16,
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17,
 } = VoiceMessageConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 let c19 = null;
 let closure_20 = new LoggerDefault("VoiceMessages");
 let closure_21 = apply.throttle((arg0) => {

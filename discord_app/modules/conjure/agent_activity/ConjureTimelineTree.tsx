@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -549,10 +549,10 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef3862.iwOTgo,
-  preview_ready: _modDef3862.okkgSB,
-  working: _modDef3862.t8skVB,
-  error: _modDef3862.avt0ax,
+  healthcheck_failed: _modDef3865.iwOTgo,
+  preview_ready: _modDef3865.okkgSB,
+  working: _modDef3865.t8skVB,
+  error: _modDef3865.avt0ax,
 };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
@@ -571,26 +571,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3862.t8skVB;
+    t8skVB = _modDef3865.t8skVB;
   }
   return intl.string(t8skVB);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3862.jTwZFY);
+    return intl5.string(_modDef3865.jTwZFY);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3862.keYz9o);
+    return intl4.string(_modDef3865.keYz9o);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3862["RoY/lg"]);
+    return intl3.string(_modDef3865["RoY/lg"]);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3862["HZw/I/"]);
+    return intl2.string(_modDef3865["HZw/I/"]);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3862.sf2UHL);
+    return intl.string(_modDef3865.sf2UHL);
   }
 };
 export { buildTimelineTree };

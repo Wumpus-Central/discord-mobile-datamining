@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
 import Constants from "../../../Constants.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import UserSettingsUtils from "../../../utils/UserSettingsUtils.tsx";
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils.tsx";
 import PremiumModal from "../../../components_native/premium/PremiumModal.tsx";
@@ -69,9 +69,9 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    const obj3 = flag2(6150);
-    obj3.pushLazy(asyncRequireImpl(7351, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(7351, dependencyMap.paths);
+    const obj3 = flag2(6152);
+    obj3.pushLazy(asyncRequireImpl(7353, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(7353, dependencyMap.paths);
   }
   let result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

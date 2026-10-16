@@ -10,16 +10,16 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const MetaQuestUtils = fn(1628);
+const MetaQuestUtils = fn(1630);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13114).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13140).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18214).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18256).MobilePhoneShareIcon;
 }
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj3 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj3.circle = size;

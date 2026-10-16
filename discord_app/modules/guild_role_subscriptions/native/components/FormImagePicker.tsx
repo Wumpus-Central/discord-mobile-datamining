@@ -194,7 +194,7 @@ let closure_3 = ["description", "imageUploadSize", "image", "setImage", "disable
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -268,11 +268,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp7) {
           if (null == tmp7) {
-            const intl2 = tmp(1126).intl;
-            let stringResult = intl2.string(tmp(1126).t.bGPfSp);
+            const intl2 = tmp(1128).intl;
+            let stringResult = intl2.string(tmp(1128).t.bGPfSp);
           } else {
-            const intl = tmp(1126).intl;
-            stringResult = intl.string(tmp(1126).t["0KOido"]);
+            const intl = tmp(1128).intl;
+            stringResult = intl.string(tmp(1128).t["0KOido"]);
           }
           cResult[10] = tmp7;
           cResult[11] = stringResult;
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-            const tmp24 = closure_8(tmp(5439).Button, obj5);
+            const tmp24 = closure_8(tmp(5441).Button, obj5);
             cResult[15] = tmp15;
             cResult[16] = tmp5;
             cResult[17] = tmp14;
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp4,
           };
-          const tmp21 = closure_8(tmp(5147).Text, obj6);
+          const tmp21 = closure_8(tmp(5149).Text, obj6);
           cResult[12] = tmp4;
           cResult[13] = tmp13.imageDescription;
           cResult[14] = tmp21;
@@ -386,24 +386,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const tmp2 = closure_10();
       if (null == image) {
-        const intl2 = imageUploadSize(1126).intl;
-        let stringResult = intl2.string(imageUploadSize(1126).t.bGPfSp);
+        const intl2 = imageUploadSize(1128).intl;
+        let stringResult = intl2.string(imageUploadSize(1128).t.bGPfSp);
         let tmp6 = imageUploadSize;
       } else {
-        const intl = imageUploadSize(1126).intl;
-        stringResult = intl.string(imageUploadSize(1126).t["0KOido"]);
+        const intl = imageUploadSize(1128).intl;
+        stringResult = intl.string(imageUploadSize(1128).t["0KOido"]);
         tmp6 = imageUploadSize;
       }
       const obj = { style: tmp2.imageSelectionRow, children: null };
       const obj2 = { style: tmp2.buttonColumn, children: null };
       const items = [
-        closure_8(tmp6(5147).Text, {
+        closure_8(tmp6(5149).Text, {
           style: tmp2.imageDescription,
           variant: "text-sm/medium",
           color: "text-default",
           children: children.description,
         }),
-        closure_8(tmp6(5439).Button, {
+        closure_8(tmp6(5441).Button, {
           text: stringResult,
           variant: "secondary",
           onPress: function handleSelectImage() {

@@ -6,7 +6,7 @@ import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06527_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06529_BottomSheetModal.js";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   header: {
     gap: nativeDefault.space.PX_8,
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ header, headerText } = tmp4);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = trackAction(1126).intl;
-        const stringResult = intl.string(trackAction(1126).t["/4gj6r"]);
+        const intl = trackAction(1128).intl;
+        const stringResult = intl.string(trackAction(1128).t["/4gj6r"]);
         cResult[2] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: headerText,
           children: tmp9,
         };
-        const tmp13 = closure_4(trackAction(5147).Text, obj3);
+        const tmp13 = closure_4(trackAction(5149).Text, obj3);
         cResult[3] = tmp4.headerText;
         cResult[4] = tmp13;
         let tmp11 = tmp13;
@@ -84,9 +84,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[4];
       }
       if (cResult[5] !== gameName) {
-        const intl2 = trackAction(1126).intl;
+        const intl2 = trackAction(1128).intl;
         const obj4 = { gameName };
-        const formatResult = intl2.format(trackAction(1126).t["0acM2Y"], obj4);
+        const formatResult = intl2.format(trackAction(1128).t["0acM2Y"], obj4);
         cResult[5] = gameName;
         cResult[6] = formatResult;
         let tmp14 = formatResult;
@@ -121,8 +121,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = { contentContainerStyle: tmp8, children: null };
                     const items = [tmp18, tmp27];
                     obj6.children = items;
-                    obj5.children = closure_5(trackAction(6527).BottomSheetScrollView, obj6);
-                    const tmp34 = closure_4(trackAction(7118).ActionSheet, obj5);
+                    obj5.children = closure_5(trackAction(6529).BottomSheetScrollView, obj6);
+                    const tmp34 = closure_4(trackAction(7120).ActionSheet, obj5);
                     cResult[24] = tmp18;
                     cResult[25] = tmp27;
                     cResult[26] = tmp8;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp21;
         tmp18 = tmp21;
       }
-      const tmp17 = closure_4(trackAction(5147).Text, {
+      const tmp17 = closure_4(trackAction(5149).Text, {
         variant: "text-md/medium",
         color: "text-subtle",
         style: tmp4.headerText,

@@ -2,16 +2,16 @@
 import util from "../../../intl/index.native.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import getTimestampString from "../../notification_center/getTimestampString.tsx";
-import _modDef5509 from "../../../../discord_assets/assets/checkpoint/card-plant.png.js";
-import _modDef5510 from "../../../../discord_assets/assets/checkpoint/card-donut.png.js";
-import _modDef5511 from "../../../../discord_assets/assets/checkpoint/card-capybara.png.js";
-import _modDef5512 from "../../../../discord_assets/assets/checkpoint/card-disco.png.js";
-import _modDef5513 from "../../../../discord_assets/assets/checkpoint/card-origami.png.js";
-import _modDef5514 from "../../../../discord_assets/assets/checkpoint/card-snail.png.js";
-import _modDef5515 from "../../../../discord_assets/assets/checkpoint/card-duck.png.js";
-import _modDef5516 from "../../../../discord_assets/assets/checkpoint/card-banana.png.js";
-import _modDef5517 from "../../../../discord_assets/assets/checkpoint/card-cat.png.js";
-import _modDef5518 from "../../../../discord_assets/assets/checkpoint/card-cassette.png.js";
+import _modDef5511 from "../../../../discord_assets/assets/checkpoint/card-plant.png.js";
+import _modDef5512 from "../../../../discord_assets/assets/checkpoint/card-donut.png.js";
+import _modDef5513 from "../../../../discord_assets/assets/checkpoint/card-capybara.png.js";
+import _modDef5514 from "../../../../discord_assets/assets/checkpoint/card-disco.png.js";
+import _modDef5515 from "../../../../discord_assets/assets/checkpoint/card-origami.png.js";
+import _modDef5516 from "../../../../discord_assets/assets/checkpoint/card-snail.png.js";
+import _modDef5517 from "../../../../discord_assets/assets/checkpoint/card-duck.png.js";
+import _modDef5518 from "../../../../discord_assets/assets/checkpoint/card-banana.png.js";
+import _modDef5519 from "../../../../discord_assets/assets/checkpoint/card-cat.png.js";
+import _modDef5520 from "../../../../discord_assets/assets/checkpoint/card-cassette.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -41,25 +41,25 @@ export const getVoiceDurationString = function getVoiceDurationString(rounded) {
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef5509;
-  } else if (1 === cardId) {
-    return _modDef5510;
-  } else if (2 === cardId) {
     return _modDef5511;
-  } else if (3 === cardId) {
+  } else if (1 === cardId) {
     return _modDef5512;
-  } else if (4 === cardId) {
+  } else if (2 === cardId) {
     return _modDef5513;
-  } else if (5 === cardId) {
+  } else if (3 === cardId) {
     return _modDef5514;
-  } else if (6 === cardId) {
+  } else if (4 === cardId) {
     return _modDef5515;
-  } else if (7 === cardId) {
+  } else if (5 === cardId) {
     return _modDef5516;
-  } else if (8 === cardId) {
+  } else if (6 === cardId) {
     return _modDef5517;
-  } else {
+  } else if (7 === cardId) {
     return _modDef5518;
+  } else if (8 === cardId) {
+    return _modDef5519;
+  } else {
+    return _modDef5520;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(checkpointData) {

@@ -9,7 +9,7 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import inlineStyles from "../../../../../_runtime/07793_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07796_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,10 +21,10 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12710).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12711).VoiceMessageAnimationState;
-const ComponentActionsKeyed = fn(1085).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12228).CHAT_INPUT_HEIGHT;
+const useVoiceMessagesUIStore = fn(12736).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12737).VoiceMessageAnimationState;
+const ComponentActionsKeyed = fn(1087).ComponentActionsKeyed;
+const CHAT_INPUT_HEIGHT = fn(12251).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const VoiceMessageOverlay = "VoiceMessageOverlay";
@@ -32,13 +32,13 @@ let c17 = 250;
 let c18 = 100;
 let c19 = 500;
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_20 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
+let closure_20 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_21 = ReanimatedRexport.createAnimatedComponent(fn(5147).Text);
+let closure_21 = ReanimatedRexport.createAnimatedComponent(fn(5149).Text);
 let closure_22 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c23 = 68;
 let c24 = 56;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_25 = createStyles.createStyles(() => {
   const obj = {
     innerContainer: {

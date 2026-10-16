@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
-import _modDef2568 from "../FamilyCenter.messages.js";
+import _modDef2571 from "../FamilyCenter.messages.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
@@ -119,25 +119,25 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (readOnly === undefined) {
         readOnly = false;
       }
-      const scheduleRuleDateRange = rule(13409).getScheduleRuleDateRange(rule);
-      let obj = rule(13409);
-      const obj2 = rule(13409);
+      const scheduleRuleDateRange = rule(13435).getScheduleRuleDateRange(rule);
+      let obj = rule(13435);
+      const obj2 = rule(13435);
       const obj3 = {
         label: scheduleRuleDateRange,
-        subLabel: rule(13409).formatDays(rule.days),
+        subLabel: rule(13435).formatDays(rule.days),
         trailing: null,
         arrow: null,
         onPress: null,
       };
-      const intl = rule(1126).intl;
+      const intl = rule(1128).intl;
       const string = intl.string;
-      const tmp4 = _modDef2568;
+      const tmp4 = _modDef2571;
       if (rule.enabled) {
         let stringResult = string(tmp4["8vDHRq"]);
       } else {
         stringResult = string(tmp4["4z9fN+"]);
       }
-      obj3.trailing = closure_5(rule(5147).Text, {
+      obj3.trailing = closure_5(rule(5149).Text, {
         variant: "text-sm/medium",
         color: "text-subtle",
         children: stringResult,
@@ -153,7 +153,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }
       obj3.onPress = fn;
-      return closure_5(rule(6400).TableRow, obj3);
+      return closure_5(rule(6402).TableRow, obj3);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };

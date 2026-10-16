@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod6430 from "../../../../_runtime/metro/06430__.js";
+import _mod6432 from "../../../../_runtime/metro/06432__.js";
 import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       subtitleColor = subtitleColor.subtitleColor;
       ({ headerRight, headerStatusBarHeight, onClose } = subtitleColor);
       const tmp4 = closure_4();
-      const top = subtitleColor(1631)().top;
+      const top = subtitleColor(1633)().top;
       if (cResult[0] === subtitle) {
         if (cResult[1] === subtitleColor) {
           let tmp6 = cResult[2];
@@ -49,8 +49,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] !== onClose) {
           let headerCloseButton;
           if (null != onClose) {
-            headerCloseButton = subtitle(6421).getHeaderCloseButton(onClose);
-            const tmpResult = subtitle(6421);
+            headerCloseButton = subtitle(6423).getHeaderCloseButton(onClose);
+            const tmpResult = subtitle(6423);
           }
           cResult[3] = onClose;
           cResult[4] = headerCloseButton;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             headerRightContainer: obj5.headerRightContainerStyle,
           } = tmp4);
           obj2.headerStatusBarHeight = tmp10;
-          const tmp15 = jsx(subtitle(6430).Header, {
+          const tmp15 = jsx(subtitle(6432).Header, {
             headerStyle: tmp4.header,
             title,
             headerTitle: tmp6,
@@ -123,11 +123,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (!tmpResult3.isIOS()) {
             let num3 = top;
           } else {
-            subtitle(6847);
+            subtitle(6849);
             num3 = 0;
           }
           sum = num3 + tmp5(587).space.PX_8;
-          tmpResult3 = subtitle(1382);
+          tmpResult3 = subtitle(1384);
         }
         cResult[5] = headerStatusBarHeight;
         cResult[6] = top;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5Result3 = PlatformUtils;
       }
       obj.headerStatusBarHeight = headerStatusBarHeight;
-      return jsx(_mod6430.Header, {
+      return jsx(_mod6432.Header, {
         headerStyle: tmp.header,
         title,
         headerTitle(children) {

@@ -21,14 +21,14 @@ function compareUserItems(user, user2) {
   return compareResult;
 }
 const View = fn(17).View;
-const UserRowModes = fn(10440).UserRowModes;
-const Constants = fn(1085);
+const UserRowModes = fn(10456).UserRowModes;
+const Constants = fn(1087);
 ({ AnalyticEvents: c10, AnalyticsSections: closure_11, RelationshipTypes: closure_12 } = Constants);
-let closure_13 = fn(10456).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+let closure_13 = fn(10472).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let Outgoing = { Incoming: 0, [0]: "Incoming", Outgoing: 1, [1]: "Outgoing" };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1 },
   noResultsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
@@ -107,7 +107,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = stateFromStoresArray(576);
       stateFromStoresArray = stateFromStoresArray(573).useStateFromStoresArray(tmp4, tmp5);
-      const NotificationCenterAckedBeforeId = tmp(2041).NotificationCenterAckedBeforeId;
+      const NotificationCenterAckedBeforeId = tmp(2044).NotificationCenterAckedBeforeId;
       const setting = NotificationCenterAckedBeforeId.useSetting();
       if (cResult[2] === setting) {
         if (cResult[3] === stateFromStoresArray) {
@@ -153,7 +153,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp3;
         });
       });
-      const NotificationCenterAckedBeforeId = stateFromStoresArray(2041).NotificationCenterAckedBeforeId;
+      const NotificationCenterAckedBeforeId = stateFromStoresArray(2044).NotificationCenterAckedBeforeId;
       const setting = NotificationCenterAckedBeforeId.useSetting();
       const items1 = [stateFromStoresArray, setting];
       const effect = noop.useEffect(() => {
@@ -290,12 +290,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FriendRequestsScreen() {
       let tmp = onPress();
       let WumpusCouchSpotIllustration = dependencyMap;
-      const analyticsLocations = first(7073)(first(7098).FRIEND_REQUESTS).analyticsLocations;
+      const analyticsLocations = first(7075)(first(7100).FRIEND_REQUESTS).analyticsLocations;
       navigation();
       const effect = gameRelationshipsByType1.useEffect(() => {
-        first(1265).track(outgoing.FRIEND_ADD_VIEWED, { friend_add_type: spam.FRIENDS_REQUESTS_MODAL });
+        first(1267).track(outgoing.FRIEND_ADD_VIEWED, { friend_add_type: spam.FRIENDS_REQUESTS_MODAL });
       }, []);
-      const tmp3 = first(7073);
+      const tmp3 = first(7075);
       let items = [spamIds];
       const tmp7 = gameRelationshipsByType(
         analyticsLocations(573).useStateFromStoresArray(items, () => {
@@ -307,9 +307,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       first = tmp7[0];
       dependencyMap = tmp9;
       let obj = analyticsLocations(573);
-      gameRelationshipsByType = analyticsLocations(14004).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-      let obj2 = analyticsLocations(14004);
-      gameRelationshipsByType1 = analyticsLocations(14004).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+      gameRelationshipsByType = analyticsLocations(14036).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+      let obj2 = analyticsLocations(14036);
+      gameRelationshipsByType1 = analyticsLocations(14036).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
       let items1 = [gameRelationshipsByType, gameRelationshipsByType1];
       const memo = gameRelationshipsByType1.useMemo(() => {
         const set = new Set();
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
         return Array.from(set);
       }, items1);
-      first(7077)(memo);
+      first(7079)(memo);
       const items2 = [first, tmp7[1]];
       const memo1 = gameRelationshipsByType1.useMemo(
         () => getPendingRelationshipIds.getPendingRelationshipIds(first, closure_2),
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const pendingOutgoingIds = memo1.pendingOutgoingIds;
       spamIds = memo1.spamIds;
       const ignoredUserIds = memo1.ignoredUserIds;
-      let obj3 = analyticsLocations(14004);
+      let obj3 = analyticsLocations(14036);
       const items3 = [ignoredUserIds];
       const items4 = [
         ignoredUserIds,
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         },
         items4,
-        first(1355),
+        first(1357),
       );
       const incoming = stateFromStores.incoming;
       const outgoing = stateFromStores.outgoing;
@@ -433,14 +433,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (1 === arg0) {
           const element = { type: "section", props: null };
           const obj = { title: null };
-          const intl = analyticsLocations(1126).intl;
-          obj.title = intl.string(analyticsLocations(1126).t["NHpP/k"]);
+          const intl = analyticsLocations(1128).intl;
+          obj.title = intl.string(analyticsLocations(1128).t["NHpP/k"]);
           element.props = obj;
           return element;
         }
       }, []);
       let obj4 = analyticsLocations(573);
-      navigation = analyticsLocations(1503).useNavigation();
+      navigation = analyticsLocations(1505).useNavigation();
       const items7 = [first1, incomingData, outgoingData, onPress, spam.length, ignoredUsers.length, navigation];
       let tmp24 = first1 === Outgoing.Outgoing;
       const callback2 = gameRelationshipsByType1.useCallback((arg0, arg1) => {
@@ -526,7 +526,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp26) {
         tmp26 = incoming.length >= incomingData;
       }
-      const obj5 = analyticsLocations(1503);
+      const obj5 = analyticsLocations(1505);
       const obj6 = {
         pageWidth: 0,
         defaultIndex: first1,
@@ -541,23 +541,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items: null,
       };
       const obj7 = { id: Outgoing.Incoming.toString(), label: null, page: null };
-      let intl = tmp6(1126).intl;
-      obj7.label = intl.string(analyticsLocations(1126).t.bekioP);
+      let intl = tmp6(1128).intl;
+      obj7.label = intl.string(analyticsLocations(1128).t.bekioP);
       const items8 = [obj7];
       const obj8 = { id: Outgoing.Outgoing.toString(), label: null, page: null };
-      let intl2 = tmp6(1126).intl;
-      obj8.label = intl2.string(analyticsLocations(1126).t.tWqcIF);
+      let intl2 = tmp6(1128).intl;
+      obj8.label = intl2.string(analyticsLocations(1128).t.tWqcIF);
       items8[1] = obj8;
       obj6.items = items8;
-      const segmentedControlState = analyticsLocations(8750).useSegmentedControlState(obj6);
+      const segmentedControlState = analyticsLocations(8758).useSegmentedControlState(obj6);
       const obj9 = { value: analyticsLocations, children: null };
-      const items9 = [outgoingData(first(10449), { absolute: true })];
+      const items9 = [outgoingData(first(10465), { absolute: true })];
       const obj10 = { style: tmp.container, children: null };
-      const tmp6Result = analyticsLocations(8750);
+      const tmp6Result = analyticsLocations(8758);
       const items10 = [
         outgoingData(pendingIncomingIds, {
           style: tmp.tabs,
-          children: outgoingData(analyticsLocations(8996).SegmentedControl, { state: segmentedControlState }),
+          children: outgoingData(analyticsLocations(9004).SegmentedControl, { state: segmentedControlState }),
         }),
         ,
       ];
@@ -576,37 +576,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj14 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-        const intl3 = tmp6(1126).intl;
-        obj14.children = intl3.string(tmp6(1126).t.O8k7O4);
-        obj13.children = tmp30(tmp6(5147).Text, obj14);
-        obj12.children = tmp30(tmp6(6405).PressableOpacity, obj13);
+        const intl3 = tmp6(1128).intl;
+        obj14.children = intl3.string(tmp6(1128).t.O8k7O4);
+        obj13.children = tmp30(tmp6(5149).Text, obj14);
+        obj12.children = tmp30(tmp6(6407).PressableOpacity, obj13);
         tmp30Result = tmp30(tmp31, obj12);
       }
       items10[1] = tmp30Result;
       if (tmp24) {
         const obj15 = { style: tmp.noResultsContainer, children: null };
         if (first1 === tmp23.Incoming) {
-          const intl5 = tmp6(1126).intl;
-          let stringResult = intl5.string(tmp6(1126).t["7uvAKe"]);
+          const intl5 = tmp6(1128).intl;
+          let stringResult = intl5.string(tmp6(1128).t["7uvAKe"]);
         } else {
-          const intl4 = tmp6(1126).intl;
-          stringResult = intl4.string(tmp6(1126).t["yvzX/Z"]);
+          const intl4 = tmp6(1128).intl;
+          stringResult = intl4.string(tmp6(1128).t["yvzX/Z"]);
         }
         const obj16 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-        WumpusCouchSpotIllustration = tmp6(16039).WumpusCouchSpotIllustration;
+        WumpusCouchSpotIllustration = tmp6(16072).WumpusCouchSpotIllustration;
         obj16.illustration = WumpusCouchSpotIllustration;
-        obj15.children = tmp30(tmp2(12601), obj16);
+        obj15.children = tmp30(tmp2(12624), obj16);
         tmp30(tmp31, obj15);
-        const tmp2Result = tmp2(12601);
+        const tmp2Result = tmp2(12624);
       } else {
         if (first1 === tmp23.Incoming) {
           outgoingSection = incomingSection;
         }
         const obj17 = { sections: outgoingSection, getItemProps: callback2, getSectionProps: callback1 };
-        items10[2] = tmp30(tmp6(10446).UsersFastList, obj17);
+        items10[2] = tmp30(tmp6(10462).UsersFastList, obj17);
         obj10.children = items10;
         items9[1] = tmp29(tmp31, obj10);
         obj9.children = items9;
-        return tmp29(tmp6(7073).AnalyticsLocationProvider, obj9);
+        return tmp29(tmp6(7075).AnalyticsLocationProvider, obj9);
       }
     };

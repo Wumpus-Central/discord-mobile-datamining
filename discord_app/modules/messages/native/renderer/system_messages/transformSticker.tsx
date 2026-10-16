@@ -26,7 +26,7 @@ export const transformSticker = function transformSticker(tmp2Result4) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(8235).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(8240).NativeLottieRenderMode;
   obj.renderMode =
     setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
   const obj2 = { isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE };
@@ -38,11 +38,11 @@ export const transformSticker = function transformSticker(tmp2Result4) {
     },
     cheap: null,
   };
-  let intl = tmp(1126).intl;
+  let intl = tmp(1128).intl;
   obj3.cheap = intl.string(require("util").t["fT+Yjp"]);
   obj.accessibilityLabel =
     require("getAccessibilityLabelOrCheapFallbackUnsafe").getAccessibilityLabelOrCheapFallbackUnsafe(obj3);
-  const intl2 = tmp(1126).intl;
+  const intl2 = tmp(1128).intl;
   obj.accessibilityHint = intl2.string(require("util").t.GCEruV);
   return obj;
 };

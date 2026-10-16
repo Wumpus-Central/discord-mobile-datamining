@@ -5,8 +5,8 @@ import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useSelectedVariantIndex = fn(9249).useSelectedVariantIndex;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const useSelectedVariantIndex = fn(9262).useSelectedVariantIndex;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");

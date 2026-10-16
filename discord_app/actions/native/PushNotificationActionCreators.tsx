@@ -112,10 +112,10 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
     }
   })();
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12973).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6149);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12999).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6151);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -206,7 +206,7 @@ export default {
           closure_128_1 = value;
           if (closure_128_1.length >= 1) {
             if (null != closure_128_1[0]) {
-              const HTTP = tmp2(1295).HTTP;
+              const HTTP = tmp2(1297).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
                 let tmp9 = closure_1_12;
@@ -216,11 +216,11 @@ export default {
               const obj7 = {
                 provider: tmp9,
                 token: closure_129_0,
-                push_sync_tokens: closure_128_1.filter(tmp2(1386).isNotNullish),
+                push_sync_tokens: closure_128_1.filter(tmp2(1388).isNotNullish),
                 bypass_server_throttling_supported: null,
                 bundle_id: null,
               };
-              let isAndroidResult = tmp2(1382).isAndroid();
+              let isAndroidResult = tmp2(1384).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
@@ -240,8 +240,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12976).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12976);
+          const result = v2(13002).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(13002);
         }
       }
       return value;

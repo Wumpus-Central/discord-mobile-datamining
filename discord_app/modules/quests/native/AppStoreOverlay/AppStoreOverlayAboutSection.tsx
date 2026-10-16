@@ -17,7 +17,7 @@ const rect = {
   left: nativeDefault.space.PX_12,
   right: nativeDefault.space.PX_12,
 };
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   aboutSection: {
     borderRadius: nativeDefault.space.PX_16,

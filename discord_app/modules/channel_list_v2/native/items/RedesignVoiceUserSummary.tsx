@@ -118,17 +118,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             selectedVoiceChannelId: stateFromStores1,
             voiceStates: stateFromStores,
           };
-          summarizedVoiceUsers = summarizedVoiceUsers(5474).computeSummarizedVoiceUsers(obj3);
+          summarizedVoiceUsers = summarizedVoiceUsers(5476).computeSummarizedVoiceUsers(obj3);
           const found = summarizedVoiceUsers.filter(tmp16);
           cResult[10] = channels;
           cResult[11] = stateFromStores1;
           cResult[12] = stateFromStores;
           cResult[13] = found;
-          const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5474);
+          const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5476);
         }
       }
       const summarizedVoiceUsersResult1 = summarizedVoiceUsers(504);
-      const isAnyVoiceStateStageResult = summarizedVoiceUsers(5474).isAnyVoiceStateStage(
+      const isAnyVoiceStateStageResult = summarizedVoiceUsers(5476).isAnyVoiceStateStage(
         channels,
         stateFromStores1,
         stateFromStores,
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = stateFromStores;
       cResult[9] = isAnyVoiceStateStageResult;
       tmp12 = isAnyVoiceStateStageResult;
-      const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5474);
+      const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5476);
     }
   : function RedesignVoiceUserSummary(channels) {
       channels = channels.channels;

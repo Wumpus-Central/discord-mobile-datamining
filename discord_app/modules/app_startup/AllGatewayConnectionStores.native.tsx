@@ -95,6 +95,7 @@ import PhoneStore from "../phone/PhoneStore.tsx";
 import OverridePremiumTypeStore from "../premium/OverridePremiumTypeStore.tsx";
 import PremiumGiftingIntentStore from "../premium/gifting/PremiumGiftingIntentStore.tsx";
 import NoticeStore from "../premium/native/NoticeStore.tsx";
+import ContextualReferralDismissalsStore from "../premium/referral_program/contextual_referrals/ContextualReferralDismissalsStore.tsx";
 import PresenceSubscriptionsStore from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";
 import QuickSwitcherStore from "../quickswitcher/QuickSwitcherStore.tsx";
 import NewChannelsStore from "../recent_channels/NewChannelsStore.tsx";

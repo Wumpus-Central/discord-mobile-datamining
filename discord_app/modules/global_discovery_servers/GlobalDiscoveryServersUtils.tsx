@@ -1,6 +1,6 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01279_v1.js";
+import v1 from "../../../_runtime/01281_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "test";
 };
-const GlobalDiscoveryServersConstants = fn(8857);
+const GlobalDiscoveryServersConstants = fn(8865);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -40,7 +40,7 @@ const GlobalDiscoveryServersConstants = fn(8857);
   getLanguageOptions: c10,
   HUBS_CATEGORY_ID: closure_11,
 } = GlobalDiscoveryServersConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
@@ -217,8 +217,8 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003046024251525493,
-    emojis: -0.000000000000000000000049630905710433764,
+    discoverySplash: false,
+    emojis: false,
   };
   ({
     approximate_presence_count: obj.presenceCount,

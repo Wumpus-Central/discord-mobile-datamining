@@ -86,7 +86,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         value: closure_5().toString(),
       });
     };
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasExperimentOverrideActive() {
       const staffOrDeveloperSettingPredicate =
@@ -103,7 +103,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(16535).BeakerIcon,
+  IconComponent: fn(16568).BeakerIcon,
   useDescription: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useHasExperimentOverrideActive() {

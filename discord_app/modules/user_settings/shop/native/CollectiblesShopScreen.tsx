@@ -8,7 +8,7 @@ import CollectiblesShopV2 from "../../../collectibles/native/CollectiblesShopV2.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(1087).CollectiblesMobileShopScreen;
+const constants = fn(1089).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

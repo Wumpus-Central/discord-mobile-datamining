@@ -126,11 +126,11 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(10992);
+const SettingRendererConstants = fn(11007);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 },
   sliderTitle: { flexDirection: "row", justifyContent: "space-between" },
@@ -146,8 +146,8 @@ obj.defaultIcon = {
   alignItems: "center",
 };
 let size = {
-  width: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.REFRESH_MEDIUM_32],
-  height: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.REFRESH_MEDIUM_32],
+  width: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.REFRESH_MEDIUM_32],
+  height: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.REFRESH_MEDIUM_32],
   borderRadius: nativeDefault.radii.xl,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
@@ -280,8 +280,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg0 === closure_12) {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = tmp(1126).intl;
-          stringResult = intl2.string(tmp(1126).t["32u1Dx"]);
+          const intl2 = tmp(1128).intl;
+          stringResult = intl2.string(tmp(1128).t["32u1Dx"]);
           cResult[3] = stringResult;
         }
       } else {
@@ -295,8 +295,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             name1 = stateFromStores.name;
           }
           if (name1 == null) {
-            const intl = tmp(1126).intl;
-            name1 = intl.string(tmp(1126).t["XBwns+"]);
+            const intl = tmp(1128).intl;
+            name1 = intl.string(tmp(1128).t["XBwns+"]);
           }
           let name2;
           if (stateFromStores != null) {
@@ -317,16 +317,16 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [GuildStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
       if (arg0 === closure_12) {
-        const intl2 = tmp(1126).intl;
-        let stringResult = intl2.string(tmp(1126).t["32u1Dx"]);
+        const intl2 = tmp(1128).intl;
+        let stringResult = intl2.string(tmp(1128).t["32u1Dx"]);
       } else {
         stringResult = undefined;
         if (stateFromStores != null) {
           stringResult = stateFromStores.name;
         }
         if (stringResult == null) {
-          const intl = tmp(1126).intl;
-          stringResult = intl.string(tmp(1126).t["XBwns+"]);
+          const intl = tmp(1128).intl;
+          stringResult = intl.string(tmp(1128).t["XBwns+"]);
         }
       }
       return stringResult;
@@ -747,8 +747,8 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(15625).useHighlightSettingItem(setting);
-  let obj = trailing(15625);
+  let highlightSettingItem = trailing(15658).useHighlightSettingItem(setting);
+  let obj = trailing(15658);
   const items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => _undefined.locale);
   trailing = undefined;
@@ -792,18 +792,18 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(6400).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(6402).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(6400).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(6402).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(6400).TableRow, obj3)];
+  const children = [closure_14(trailing(6402).TableRow, obj3)];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);

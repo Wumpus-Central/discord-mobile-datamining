@@ -5,8 +5,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = fn(8857).DISCOVERY_ALL_CATEGORIES_ID;
-const Endpoints = fn(1085).Endpoints;
+let closure_6 = fn(8865).DISCOVERY_ALL_CATEGORIES_ID;
+const Endpoints = fn(1087).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

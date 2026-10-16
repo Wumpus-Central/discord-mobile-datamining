@@ -12,11 +12,11 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10588);
+const ChannelCallConstants = fn(10603);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const OrientationLockState = fn(2024).OrientationLockState;
-const ParticipantTypes = fn(5174).ParticipantTypes;
-const timeout = new fn(2060).Timeout();
+const OrientationLockState = fn(2026).OrientationLockState;
+const ParticipantTypes = fn(5176).ParticipantTypes;
+const timeout = new fn(2063).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -30,7 +30,7 @@ let size = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8669).OrientationType.PORTRAIT,
+  screenOrientation: fn(8677).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -41,7 +41,7 @@ const size1 = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8669).OrientationType.PORTRAIT,
+  screenOrientation: fn(8677).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -69,7 +69,7 @@ let closure_11 = tmp6;
 ReactCompilerGating = fn(558);
 const throttleResult = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1272).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1274).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 function resetFocusTimer() {
   timeout.stop();
@@ -87,7 +87,7 @@ export const setFocus = function setFocus(focus) {
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1272).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1274).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 };
 export { resetFocusTimer };
 export const resetFocus = function resetFocus() {
@@ -174,7 +174,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(10591);
+        tmpResult = tmp(10606);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

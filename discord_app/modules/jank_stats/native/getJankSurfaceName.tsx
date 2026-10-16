@@ -1,6 +1,6 @@
 // discord_app/modules/jank_stats/native/getJankSurfaceName.tsx
 import getJankScreenName from "getJankScreenName.tsx";
-import NativeJankStatsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import NativeJankSessionModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankSessionModule.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 
@@ -83,7 +83,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17026);
+const JankScreenConstants = fn(17059);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
@@ -129,11 +129,8 @@ export const setJankChannelDetailsOpen = function setJankChannelDetailsOpen(cons
     }
   }
   if (flag) {
-    const obj2 = NativeJankStatsModuleDefault;
-    if (obj2 != null) {
-      obj2.setScreenContext(tmp6, timestampProducer);
-    }
-    tmp6 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
+    const tmp6 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
+    NativeJankSessionModuleDefault.setScreenContext(tmp6, timestampProducer);
   }
 };
 export const setJankPanelOpen = function setJankPanelOpen(activity, arg1) {
@@ -145,12 +142,10 @@ export const setJankPanelOpen = function setJankPanelOpen(activity, arg1) {
       closure_11.splice(lastIndexOfResult, 1);
     }
     const tmp8 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
-    const obj = NativeJankStatsModuleDefault;
+    const obj = NativeJankSessionModuleDefault;
     if (arg1) {
-      if (obj != null) {
-        obj.setScreenContext(tmp8, timestampProducer);
-      }
-    } else if (obj != null) {
+      obj.setScreenContext(tmp8, timestampProducer);
+    } else {
       obj.surfaceClosed(tmp8);
     }
   }
@@ -167,12 +162,10 @@ export const setJankVoicePanelTab = function setJankVoicePanelTab(channelId, arg
       const result = map.set(channelId, arg1);
     }
     const tmp8 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
-    const obj2 = NativeJankStatsModuleDefault;
+    const obj2 = NativeJankSessionModuleDefault;
     if (tmp4) {
-      if (obj2 != null) {
-        obj2.surfaceClosed(tmp8);
-      }
-    } else if (obj2 != null) {
+      obj2.surfaceClosed(tmp8);
+    } else {
       obj2.setScreenContext(tmp8, timestampProducer);
     }
     tmp4 = null == arg1;
@@ -181,11 +174,8 @@ export const setJankVoicePanelTab = function setJankVoicePanelTab(channelId, arg
 export const setJankVoicePanelFocus = function setJankVoicePanelFocus(arg0) {
   if (arg0 !== global) {
     global = arg0;
-    const obj = NativeJankStatsModuleDefault;
-    if (obj != null) {
-      obj.setScreenContext(tmp4, timestampProducer);
-    }
-    tmp4 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
+    const tmp4 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
+    NativeJankSessionModuleDefault.setScreenContext(tmp4, timestampProducer);
   }
 };
 export const attachJankActionSheetReporter = function attachJankActionSheetReporter() {
@@ -196,17 +186,15 @@ export const attachJankActionSheetReporter = function attachJankActionSheetRepor
       ActionSheetStore.addChangeListener(() => {
         length = ActionSheetStore.getStack().length;
         const tmp2 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
-        const obj = NativeJankStatsModuleDefault;
+        const obj = NativeJankSessionModuleDefault;
         if (tmp) {
-          if (obj != null) {
-            obj.surfaceClosed(tmp2);
-          }
-        } else if (obj != null) {
+          obj.surfaceClosed(tmp2);
+        } else {
           obj.setScreenContext(tmp2, timestampProducer);
         }
         tmp = length < length;
       });
     }
-    obj = length(1382);
+    obj = length(1384);
   }
 };

@@ -10,14 +10,14 @@ import showDataPrivacyRateLimitAlert from "../../privacy_and_safety/native/showD
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const Consents = fn(1085).Consents;
+const Consents = fn(1087).Consents;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDataToCustomizeDiscordSettingValue() {
       const cResult = c.c(2);
@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8210).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8213).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useDataToCustomizeDiscordSettingValue() {
         const cResult = c.c(2);

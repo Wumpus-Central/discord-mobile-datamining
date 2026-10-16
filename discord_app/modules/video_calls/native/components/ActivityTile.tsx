@@ -13,14 +13,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(2024).ActivityLayoutMode;
+let ActivityLayoutMode = fn(2026).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const XSMALL = fn(1200).AvatarSizes.XSMALL;
-const androidRippleConfig = fn(1204).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(5151);
+const XSMALL = fn(1202).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1206).getThemedRippleConfig({ foreground: true });
+const createStyles = fn(5153);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,
@@ -62,7 +62,7 @@ let obj4 = {
   marginRight: 16,
 };
 obj2.overflow = {
-  height: fn(1200).AVATAR_SIZE_MAP[XSMALL],
+  height: fn(1202).AVATAR_SIZE_MAP[XSMALL],
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
 obj2.buttonWrapper = { marginTop: 8, alignSelf: "center" };
@@ -560,7 +560,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   v1 = 1;
                   dependencyMap = 1;
-                  const obj5 = { value: v1(11126)(obj4), done: false };
+                  const obj5 = { value: v1(11142)(obj4), done: false };
                   return obj5;
                 } else {
                   dependencyMap = 3;
@@ -570,8 +570,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const result = tmp2(11221).setOrientationLockState(closure_128_3);
-              const obj = tmp2(11221);
+              const result = tmp2(11237).setOrientationLockState(closure_128_3);
+              const obj = tmp2(11237);
             }
             dependencyMap = 3;
             const obj6 = { value, done: true };
@@ -764,7 +764,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp23Result;
     };
 ReactCompilerGating = fn(558);
-let obj5 = { height: fn(1200).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj5 = { height: fn(1202).AVATAR_SIZE_MAP[XSMALL], backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
 

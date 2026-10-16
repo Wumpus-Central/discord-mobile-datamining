@@ -15,7 +15,7 @@ import useIsViewingActivity from "../../../activities/native/useIsViewingActivit
 import VideoRenderer from "VideoRenderer.tsx";
 import UserTileDefault from "UserTile.tsx";
 import useAvatarSpeakingColor from "../../../calls/native/useAvatarSpeakingColor.tsx";
-import _modDef11209 from "../../../../../_runtime/metro/11209__.js";
+import _modDef11225 from "../../../../../_runtime/metro/11225__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -34,12 +34,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10587);
+const ChannelCallStore = fn(10602);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5174).ParticipantTypes;
+const ParticipantTypes = fn(5176).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -51,8 +51,8 @@ let obj = {
   thermalAlertIconContainer: null,
   thermalAlertIcon: null,
 };
-const native = fn(1200);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1200).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1202);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1202).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.background = {
   backgroundColor: nativeDefault.colors.BLACK,
   borderRadius: nativeDefault.radii.sm,
@@ -1019,7 +1019,7 @@ let closure_23 = noop.memo(
                               const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
                               const obj5 = {
                                 style: tmp4.thermalAlertIcon,
-                                source: _modDef11209,
+                                source: _modDef11225,
                                 color: tmp4.thermalAlertIcon.color,
                               };
                               obj4.children = value3(native2.Icon, obj5);
@@ -1165,7 +1165,7 @@ let closure_23 = noop.memo(
             let tmp18Result = null;
             if (tmp5) {
               const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11209, color: tmp.thermalAlertIcon.color };
+              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11225, color: tmp.thermalAlertIcon.color };
               obj8.children = tmp18(native2.Icon, obj9);
               tmp18Result = tmp18(hasOwnProperty, obj8);
             }

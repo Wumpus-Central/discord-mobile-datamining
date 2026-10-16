@@ -5,10 +5,10 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserSettingsSections = fn(1085).UserSettingsSections;
+const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { inputField: { marginBottom: nativeDefault.space.PX_16 }, form: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.form = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -22,11 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function WebAuthnEditStep() {
       const cResult = credential(576).c(21);
       let obj = credential(576);
-      credential = credential(6903).useSettingNavigationRoute().params.credential;
+      credential = credential(6905).useSettingNavigationRoute().params.credential;
       const tmp4 = closure_8();
-      let obj2 = credential(6903);
-      const navigation = credential(1503).useNavigation();
-      const obj3 = credential(1503);
+      let obj2 = credential(6905);
+      const navigation = credential(1505).useNavigation();
+      const obj3 = credential(1505);
       [tmp7, dependencyMap] = value(noop.useState(false), 2);
       const tmp8 = value(noop.useState(""), 2);
       value = tmp8[0];
@@ -40,8 +40,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           ({ form, inputField } = tmp4);
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            let intl = tmp(1126).intl;
-            const stringResult = intl.string(tmp(1126).t["Jzd+z/"]);
+            let intl = tmp(1128).intl;
+            const stringResult = intl.string(tmp(1128).t["Jzd+z/"]);
             cResult[4] = stringResult;
             let tmp14 = stringResult;
           } else {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Symbol2 = Symbol;
                   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-                    const tmp21 = closure_6(tmp(8800).FormDivider, {});
+                    const tmp21 = closure_6(tmp(8808).FormDivider, {});
                     cResult[11] = tmp21;
                     let tmp19 = tmp21;
                   } else {
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Symbol3 = Symbol;
                   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl2 = tmp(1126).intl;
-                    const stringResult1 = intl2.string(tmp(1126).t["7asiR3"]);
+                    const intl2 = tmp(1128).intl;
+                    const stringResult1 = intl2.string(tmp(1128).t["7asiR3"]);
                     cResult[12] = stringResult1;
                     let tmp23 = stringResult1;
                   } else {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj4 = { style: form, children: null };
                       const items = [tmp16, tmp19, tmp25];
                       obj4.children = items;
-                      const tmp30 = closure_7(tmp(8800).Form, obj4);
+                      const tmp30 = closure_7(tmp(8808).Form, obj4);
                       cResult[17] = tmp4.form;
                       cResult[18] = tmp16;
                       cResult[19] = tmp25;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { onPress: tmp12, disabled: tmp22, loading: tmp7, size: "lg", text: tmp23, grow: true };
-                  const tmp27 = closure_6(tmp(5439).Button, obj5);
+                  const tmp27 = closure_6(tmp(5441).Button, obj5);
                   cResult[13] = tmp7;
                   cResult[14] = tmp12;
                   cResult[15] = tmp22;
@@ -119,13 +119,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             title: tmp14,
             placeholder: credential.name,
             disabled: tmp7,
-            clearButtonVisibility: tmp(1200).ClearButtonVisibility.WITH_CONTENT,
+            clearButtonVisibility: tmp(1202).ClearButtonVisibility.WITH_CONTENT,
             autoFocus: true,
             showBorder: true,
             required: true,
             large: true,
           };
-          const tmp18 = closure_6(tmp(8800).FormInput, obj6);
+          const tmp18 = closure_6(tmp(8808).FormInput, obj6);
           cResult[5] = credential.name;
           cResult[6] = tmp11;
           cResult[7] = tmp7;
@@ -141,17 +141,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const result = WebAuthnActionCreators.editWebAuthnCredential(credential.id, first);
         const nextPromise = result.then(() => {
           const obj2 = { text: null, variant: "success" };
-          const intl = credential(1126).intl;
-          obj2.text = intl.string(credential(1126).t.IV13mH);
-          navigation(4865).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
+          const intl = credential(1128).intl;
+          obj2.text = intl.string(credential(1128).t.IV13mH);
+          navigation(4868).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
           closure_1_1.popTo(constants.WEBAUTHN_VIEW);
         });
         result
           .then(() => {
             const obj2 = { text: null, variant: "success" };
-            const intl = credential(1126).intl;
-            obj2.text = intl.string(credential(1126).t.IV13mH);
-            navigation(4865).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
+            const intl = credential(1128).intl;
+            obj2.text = intl.string(credential(1128).t.IV13mH);
+            navigation(4868).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
             closure_1_1.popTo(constants.WEBAUTHN_VIEW);
           })
           .catch((error) => {
@@ -169,11 +169,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp10 = value(noop.useState(null), 2);
     }
   : function WebAuthnEditStep() {
-      credential = credential(6903).useSettingNavigationRoute().params.credential;
+      credential = credential(6905).useSettingNavigationRoute().params.credential;
       const tmp3 = closure_8();
-      let obj = credential(6903);
-      closure_1 = credential(1503).useNavigation();
-      let obj2 = credential(1503);
+      let obj = credential(6905);
+      closure_1 = credential(1505).useNavigation();
+      let obj2 = credential(1505);
       [tmp5, dependencyMap] = value(noop.useState(false), 2);
       const tmp6 = value(noop.useState(""), 2);
       value = tmp6[0];
@@ -195,12 +195,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         required: true,
         large: true,
       };
-      let intl = credential(1126).intl;
-      obj4.title = intl.string(credential(1126).t["Jzd+z/"]);
+      let intl = credential(1128).intl;
+      obj4.title = intl.string(credential(1128).t["Jzd+z/"]);
       obj4.placeholder = credential.name;
       obj4.disabled = tmp5;
-      obj4.clearButtonVisibility = credential(1200).ClearButtonVisibility.WITH_CONTENT;
-      const items = [closure_6(credential(8800).FormInput, obj4), closure_6(credential(8800).FormDivider, {})];
+      obj4.clearButtonVisibility = credential(1202).ClearButtonVisibility.WITH_CONTENT;
+      const items = [closure_6(credential(8808).FormInput, obj4), closure_6(credential(8808).FormDivider, {})];
       const obj5 = {
         onPress() {
           dependencyMap(true);
@@ -208,17 +208,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = WebAuthnActionCreators.editWebAuthnCredential(credential.id, first);
           const nextPromise = result.then(() => {
             const obj2 = { text: null, variant: "success" };
-            const intl = credential(1126).intl;
-            obj2.text = intl.string(credential(1126).t.IV13mH);
-            closure_1(4865).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
+            const intl = credential(1128).intl;
+            obj2.text = intl.string(credential(1128).t.IV13mH);
+            closure_1(4868).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
             closure_1_1.popTo(constants.WEBAUTHN_VIEW);
           });
           result
             .then(() => {
               const obj2 = { text: null, variant: "success" };
-              const intl = credential(1126).intl;
-              obj2.text = intl.string(credential(1126).t.IV13mH);
-              closure_1(4865).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
+              const intl = credential(1128).intl;
+              obj2.text = intl.string(credential(1128).t.IV13mH);
+              closure_1(4868).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
               closure_1_1.popTo(constants.WEBAUTHN_VIEW);
             })
             .catch((error) => {
@@ -240,9 +240,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj5.disabled = tmp12;
       obj5.loading = tmp5;
-      const intl2 = tmp(1126).intl;
-      obj5.text = intl2.string(credential(1126).t["7asiR3"]);
-      items[2] = closure_6(credential(5439).Button, obj5);
+      const intl2 = tmp(1128).intl;
+      obj5.text = intl2.string(credential(1128).t["7asiR3"]);
+      items[2] = closure_6(credential(5441).Button, obj5);
       obj3.children = items;
-      return closure_7(credential(8800).Form, obj3);
+      return closure_7(credential(8808).Form, obj3);
     };

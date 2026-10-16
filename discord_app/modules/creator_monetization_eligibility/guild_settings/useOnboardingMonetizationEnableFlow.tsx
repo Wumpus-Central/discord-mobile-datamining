@@ -5,8 +5,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(2083).isGuildOwner;
-const Constants = fn(1085);
+const isGuildOwner = fn(2086).isGuildOwner;
+const Constants = fn(1087);
 ({ GuildFeatures: metroRequire, HelpdeskArticles: closure_7, MarketingURLs: closure_8 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -108,9 +108,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp20 = refresh(18814);
-      ({ error, loading, createEnableRequest, submittedRequest } = refresh(18814)(undefined));
-      const tmp20Result = refresh(18814)(undefined);
+      const tmp20 = refresh(18856);
+      ({ error, loading, createEnableRequest, submittedRequest } = refresh(18856)(undefined));
+      const tmp20Result = refresh(18856)(undefined);
       if (features != null) {
         class T {
           constructor() {
@@ -123,11 +123,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp19ResultResult = refresh(18815)(undefined);
+      const tmp19ResultResult = refresh(18857)(undefined);
       ({ loading: loading2, error: error2, refresh } = tmp19ResultResult);
       const eligibility = tmp19ResultResult.eligibility;
-      const tmp19Result = refresh(18815);
-      ({ isApplicationRejected, requestCooldownDuration } = refresh(18816)(eligibility));
+      const tmp19Result = refresh(18857);
+      ({ isApplicationRejected, requestCooldownDuration } = refresh(18858)(eligibility));
       if (features != null) {
         class T {
           constructor() {
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp24 = refresh(18816)(eligibility);
+      const tmp24 = refresh(18858)(eligibility);
       if (features != null) {
         class T {
           constructor() {
@@ -281,10 +281,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp3;
           }
         }
-        const obj3 = { faqUrl: refresh(2128).getArticleURL(constants2.CREATOR_FAQ) };
-        const formatResult = obj7.format(tmp(1126).t.aJUdOi, obj3);
+        const obj3 = { faqUrl: refresh(2131).getArticleURL(constants2.CREATOR_FAQ) };
+        const formatResult = obj7.format(tmp(1128).t.aJUdOi, obj3);
         cResult[9] = formatResult;
-        const tmp19Result2 = refresh(2128);
+        const tmp19Result2 = refresh(2131);
       } else {
         class T {
           constructor() {
@@ -456,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return tmp3;
               }
             }
-            formatResult1 = obj11.format(tmp(1126).t.wbVIUB, {});
+            formatResult1 = obj11.format(tmp(1128).t.wbVIUB, {});
           }
         }
       }
@@ -492,18 +492,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (features != null) {
         id = features.id;
       }
-      const tmp10 = refresh(18814);
-      ({ submittedRequest, error, loading, createEnableRequest } = refresh(18814)(id));
+      const tmp10 = refresh(18856);
+      ({ submittedRequest, error, loading, createEnableRequest } = refresh(18856)(id));
       let id1;
-      const tmp10Result = refresh(18814)(id);
+      const tmp10Result = refresh(18856)(id);
       if (features != null) {
         id1 = features.id;
       }
-      const tmp9ResultResult = refresh(18815)(id1);
+      const tmp9ResultResult = refresh(18857)(id1);
       refresh = tmp9ResultResult.refresh;
       ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-      const tmp9Result = refresh(18815);
-      ({ isApplicationRejected, requestCooldownDuration } = refresh(18816)(eligibility));
+      const tmp9Result = refresh(18857);
+      ({ isApplicationRejected, requestCooldownDuration } = refresh(18858)(eligibility));
       let hasItem2;
       if (features != null) {
         const features3 = features.features;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp19 = true === hasItem3;
       }
-      const tmp16 = refresh(18816)(eligibility);
+      const tmp16 = refresh(18858)(eligibility);
       let id2;
       if (features != null) {
         id2 = features.id;
@@ -535,21 +535,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (eligibility != null) {
         canApply = eligibility.canApply;
       }
-      const intl = tmp(1126).intl;
+      const intl = tmp(1128).intl;
       const obj2 = { faqUrl: null };
       const tmpResult3 = require("CreatorMonetizationRestrictionsHooks");
-      obj2.faqUrl = refresh(2128).getArticleURL(constants2.CREATOR_FAQ);
-      const tmp9Result3 = refresh(2128);
+      obj2.faqUrl = refresh(2131).getArticleURL(constants2.CREATOR_FAQ);
+      const tmp9Result3 = refresh(2131);
       if (isApplicationRejected) {
         if (tmpResult3.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
           if (true === hasItem) {
-            const intl4 = tmp(1126).intl;
+            const intl4 = tmp(1128).intl;
             const obj3 = { communityGuidelineUrl: constants3.GUIDELINES };
-            let formatResult1 = intl4.format(tmp(1126).t["0o1Q+t"], obj3);
+            let formatResult1 = intl4.format(tmp(1128).t["0o1Q+t"], obj3);
           } else {
-            const intl3 = tmp(1126).intl;
+            const intl3 = tmp(1128).intl;
             const obj4 = { communityGuidelineUrl: constants3.GUIDELINES };
-            formatResult1 = intl3.format(tmp(1126).t.b6h59n, obj4);
+            formatResult1 = intl3.format(tmp(1128).t.b6h59n, obj4);
           }
         }
       }
@@ -559,13 +559,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let formatResult2;
       if (tmp28) {
-        const intl2 = tmp(1126).intl;
+        const intl2 = tmp(1128).intl;
         const obj5 = {
           requestCooldownDuration,
-          creatorRevenuePolicyUrl: tmp9(2128).getArticleURL(constants2.CREATOR_POLICY),
+          creatorRevenuePolicyUrl: tmp9(2131).getArticleURL(constants2.CREATOR_POLICY),
         };
-        formatResult2 = intl2.format(tmp(1126).t.TvX207, obj5);
-        const tmp9Result4 = tmp9(2128);
+        formatResult2 = intl2.format(tmp(1128).t.TvX207, obj5);
+        const tmp9Result4 = tmp9(2131);
       }
       let tmp34 = isExpeditedOnboardingGuild;
       if (isExpeditedOnboardingGuild) {
@@ -585,8 +585,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (isApplicationRejected) {
         if (tmp35) {
           if (stateFromStores) {
-            const intl5 = tmp(1126).intl;
-            formatResult3 = intl5.format(tmp(1126).t.wbVIUB, {});
+            const intl5 = tmp(1128).intl;
+            formatResult3 = intl5.format(tmp(1128).t.wbVIUB, {});
           }
         }
       }

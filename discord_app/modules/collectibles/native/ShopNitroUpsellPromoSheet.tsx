@@ -14,7 +14,7 @@ import DiscountsMegaphoneSpotIllustration from "../../../design/components/mana-
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AnalyticsPages = fn(1085).AnalyticsPages;
+const AnalyticsPages = fn(1087).AnalyticsPages;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ReactCompilerGating = fn(558);

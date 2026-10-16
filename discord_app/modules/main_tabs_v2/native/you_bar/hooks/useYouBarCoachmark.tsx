@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01504_Link.js";
+import Link from "../../../../../../_runtime/01506_Link.js";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import useSelectedDismissibleContent from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -14,7 +14,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 let closure_6 = [];
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -22,10 +22,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = markAsDismissed(576).c(7);
       markAsDismissed = markAsDismissed.markAsDismissed;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.gMFchc);
-        const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(tmp(1126).t["V3j11+"]);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.gMFchc);
+        const intl2 = tmp(1128).intl;
+        const stringResult1 = intl2.string(tmp(1128).t["V3j11+"]);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       const tmp9 =
-        markAsDismissed.visibleContent === markAsDismissed(2049).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
+        markAsDismissed.visibleContent === markAsDismissed(2052).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
       if (cResult[4] === tmp9) {
         if (cResult[5] === tmp8) {
           let tmp10 = cResult[6];

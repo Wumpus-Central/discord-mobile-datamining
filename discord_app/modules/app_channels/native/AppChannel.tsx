@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_7 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;
@@ -23,8 +23,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AppChannel(arg0) {
       const cResult = id(576).c(31);
       ({ applicationId, channel, headerVisible } = arg0);
-      const tmp6 = closure_7(guild_id(1897)());
-      ({ top, bottom, left, right } = guild_id(6885)().insets);
+      const tmp6 = closure_7(guild_id(1899)());
+      ({ top, bottom, left, right } = guild_id(6887)().insets);
       if (cResult[0] === bottom) {
         if (cResult[1] === tmp4) {
           if (cResult[2] === left) {
@@ -40,24 +40,24 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[10] === tmp9) {
                     let tmp10 = cResult[11];
                   }
-                  ({ frame, state } = tmp5(17631)(tmp10));
-                  const tmp11 = tmp5(17631)(tmp10);
-                  tmp5(11612)(state === tmp(17631).FrameLifecycleState.Launched);
-                  const tmp5Result = tmp5(11612);
+                  ({ frame, state } = tmp5(17665)(tmp10));
+                  const tmp11 = tmp5(17665)(tmp10);
+                  tmp5(11636)(state === tmp(17665).FrameLifecycleState.Launched);
+                  const tmp5Result = tmp5(11636);
                   let tmp15 = null;
-                  if (state === tmp(17631).FrameLifecycleState.Launched) {
+                  if (state === tmp(17665).FrameLifecycleState.Launched) {
                     tmp15 = applicationId;
                   }
-                  tmp5(11616)(tmp15);
-                  const tmp5Result3 = tmp5(11616);
-                  const isConjureChannelCandidate = tmp(7165).useIsConjureChannelCandidate(channel, "AppChannel");
+                  tmp5(11640)(tmp15);
+                  const tmp5Result3 = tmp5(11640);
+                  const isConjureChannelCandidate = tmp(7167).useIsConjureChannelCandidate(channel, "AppChannel");
                   id = channel.id;
                   guild_id = channel.guild_id;
                   if (cResult[12] === id) {
                     if (cResult[13] === guild_id) {
                       let tmp18 = cResult[14];
                     }
-                    if (tmp(17631).FrameLifecycleState.Launched === state) {
+                    if (tmp(17665).FrameLifecycleState.Launched === state) {
                       if (cResult[15] === frame.id) {
                         if (cResult[16] === tmp7) {
                           let tmp39 = cResult[17];
@@ -89,7 +89,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                         let tmp44 = null;
                         if (isConjureChannelCandidate) {
                           const obj4 = { channelId: id, onOpenChat: tmp18 };
-                          tmp44 = closure_5(tmp5(17634), obj4);
+                          tmp44 = closure_5(tmp5(17668), obj4);
                         }
                         cResult[18] = id;
                         cResult[19] = tmp18;
@@ -99,63 +99,63 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const obj5 = {
                         frameId: frame.id,
-                        level: tmp(11622).FrameStackLevel.WithinAppContent,
+                        level: tmp(11646).FrameStackLevel.WithinAppContent,
                         presentation: tmp7,
                       };
-                      const tmp42 = closure_5(tmp5(11617), obj5);
+                      const tmp42 = closure_5(tmp5(11641), obj5);
                       cResult[15] = frame.id;
                       cResult[16] = tmp7;
                       cResult[17] = tmp42;
                       tmp39 = tmp42;
-                      const tmp5Result4 = tmp5(11617);
-                    } else if (tmp(17631).FrameLifecycleState.RenderingElsewhere === state) {
+                      const tmp5Result4 = tmp5(11641);
+                    } else if (tmp(17665).FrameLifecycleState.RenderingElsewhere === state) {
                       const _Symbol5 = Symbol;
                       if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
                         const obj6 = { description: null };
-                        const intl5 = tmp(1126).intl;
-                        obj6.description = intl5.string(tmp(1126).t["2KIDX+"]);
-                        const tmp38 = closure_5(tmp(17637).FrameSurfaceExplanation, obj6);
+                        const intl5 = tmp(1128).intl;
+                        obj6.description = intl5.string(tmp(1128).t["2KIDX+"]);
+                        const tmp38 = closure_5(tmp(17671).FrameSurfaceExplanation, obj6);
                         cResult[26] = tmp38;
                         let tmp36 = tmp38;
                       } else {
                         tmp36 = cResult[26];
                       }
                       return tmp36;
-                    } else if (tmp(17631).FrameLifecycleState.NoApplication === state) {
+                    } else if (tmp(17665).FrameLifecycleState.NoApplication === state) {
                       const _Symbol4 = Symbol;
                       if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
                         const obj7 = { description: null };
-                        const intl4 = tmp(1126).intl;
-                        obj7.description = intl4.string(tmp(1126).t.izggZO);
-                        const tmp34 = closure_5(tmp(17637).FrameSurfaceExplanation, obj7);
+                        const intl4 = tmp(1128).intl;
+                        obj7.description = intl4.string(tmp(1128).t.izggZO);
+                        const tmp34 = closure_5(tmp(17671).FrameSurfaceExplanation, obj7);
                         cResult[27] = tmp34;
                         let tmp32 = tmp34;
                       } else {
                         tmp32 = cResult[27];
                       }
                       return tmp32;
-                    } else if (tmp(17631).FrameLifecycleState.DoesNotSupportSurface === state) {
+                    } else if (tmp(17665).FrameLifecycleState.DoesNotSupportSurface === state) {
                       const _Symbol3 = Symbol;
                       if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
                         const obj8 = { description: null };
-                        const intl3 = tmp(1126).intl;
-                        obj8.description = intl3.string(tmp(1126).t["iUWcU/"]);
-                        const tmp30 = closure_5(tmp(17637).FrameSurfaceExplanation, obj8);
+                        const intl3 = tmp(1128).intl;
+                        obj8.description = intl3.string(tmp(1128).t["iUWcU/"]);
+                        const tmp30 = closure_5(tmp(17671).FrameSurfaceExplanation, obj8);
                         cResult[28] = tmp30;
                         let tmp28 = tmp30;
                       } else {
                         tmp28 = cResult[28];
                       }
                       return tmp28;
-                    } else if (tmp(17631).FrameLifecycleState.Error === state) {
+                    } else if (tmp(17665).FrameLifecycleState.Error === state) {
                       const _Symbol2 = Symbol;
                       if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
                         const obj9 = { heading: null, error: null };
-                        const intl = tmp(1126).intl;
-                        obj9.heading = intl.string(tmp(1126).t.VquUff);
-                        const intl2 = tmp(1126).intl;
-                        obj9.error = intl2.string(tmp(1126).t["Sd9D/R"]);
-                        const tmp26 = closure_5(tmp(17637).FrameSurfaceExplanation, obj9);
+                        const intl = tmp(1128).intl;
+                        obj9.heading = intl.string(tmp(1128).t.VquUff);
+                        const intl2 = tmp(1128).intl;
+                        obj9.error = intl2.string(tmp(1128).t["Sd9D/R"]);
+                        const tmp26 = closure_5(tmp(17671).FrameSurfaceExplanation, obj9);
                         cResult[29] = tmp26;
                         let tmp24 = tmp26;
                       } else {
@@ -165,7 +165,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                     } else {
                       const _Symbol = Symbol;
                       if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-                        const tmp22 = closure_5(tmp(17637).FrameSurfaceLoading, {});
+                        const tmp22 = closure_5(tmp(17671).FrameSurfaceLoading, {});
                         cResult[30] = tmp22;
                         let tmp20 = tmp22;
                       } else {
@@ -181,7 +181,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[13] = guild_id;
                   cResult[14] = fn;
                   tmp18 = fn;
-                  const tmpResult = tmp(7165);
+                  const tmpResult = tmp(7167);
                 }
                 const obj10 = { applicationId, surface: tmp9 };
                 cResult[9] = applicationId;
@@ -189,7 +189,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[11] = obj10;
                 tmp10 = obj10;
               }
-              const obj11 = { type: tmp(7259).EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
+              const obj11 = { type: tmp(7261).EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
               ({ id: obj2.channelId, guild_id: obj2.guildId } = channel);
               cResult[6] = channel.guild_id;
               cResult[7] = channel.id;
@@ -199,7 +199,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp8 = guild_id(11615)({ top, bottom, left, right }, undefined === headerVisible || headerVisible);
+      const tmp8 = guild_id(11639)({ top, bottom, left, right }, undefined === headerVisible || headerVisible);
       cResult[0] = bottom;
       cResult[1] = undefined === headerVisible || headerVisible;
       cResult[2] = left;

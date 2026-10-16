@@ -31,10 +31,10 @@ function handleInputModePress() {
   const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
 }
 const View = fn(17).View;
-const InputModes = fn(1085).InputModes;
+const InputModes = fn(1087).InputModes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_9 = createStyles.createStyles({ value: { textAlign: "right" }, slider: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       inputMode = stateFromStoresObject.inputMode;
       ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.LKCupB);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.LKCupB);
         class T {
           constructor() {
             obj = {
@@ -85,8 +85,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(tmp(1126).t["pS+K2L"]);
+        const intl2 = tmp(1128).intl;
+        const stringResult1 = intl2.string(tmp(1128).t["pS+K2L"]);
         class T {
           constructor() {
             obj = {
@@ -104,11 +104,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== inputMode) {
         if (inputMode === InputModes.PUSH_TO_TALK) {
-          const intl4 = tmp(1126).intl;
-          let stringResult2 = intl4.string(tmp(1126).t.Q8gkVL);
+          const intl4 = tmp(1128).intl;
+          let stringResult2 = intl4.string(tmp(1128).t.Q8gkVL);
         } else {
-          const intl3 = tmp(1126).intl;
-          stringResult2 = intl3.string(tmp(1126).t.cHCEOJ);
+          const intl3 = tmp(1128).intl;
+          stringResult2 = intl3.string(tmp(1128).t.cHCEOJ);
         }
         class T {
           constructor() {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp26[0] = tmp8;
                 const items1 = [tmp16, tmp21];
                 tmp26[2] = items1;
-                const tmp27 = closure_8(tmp(11366).UserSettingsTableRowGroup, tmp26);
+                const tmp27 = closure_8(tmp(11386).UserSettingsTableRowGroup, tmp26);
                 cResult[14] = tmp16;
                 cResult[15] = tmp21;
                 cResult[16] = tmp27;
@@ -182,16 +182,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { label: null, value: null, onValueChange: null };
-            const intl5 = tmp(1126).intl;
-            obj3.label = intl5.string(tmp(1126).t.Z4oaN0);
+            const intl5 = tmp(1128).intl;
+            obj3.label = intl5.string(tmp(1128).t.Z4oaN0);
             obj3.value = vadAutoThreshold;
             obj3.onValueChange = function onValueChange(autoThreshold) {
               return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
             };
-            const items2 = [closure_6(tmp(7115).TableSwitchRow, obj3)];
+            const items2 = [closure_6(tmp(7117).TableSwitchRow, obj3)];
             const obj4 = { label: null, subLabel: null };
-            const intl6 = tmp(1126).intl;
-            obj4.label = intl6.string(tmp(1126).t["o+2oMK"]);
+            const intl6 = tmp(1128).intl;
+            obj4.label = intl6.string(tmp(1128).t["o+2oMK"]);
             const obj5 = { style: iter.slider, children: null };
             const obj6 = {
               auto: vadAutoThreshold,
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             obj5.children = closure_6(VoiceSensitivityDefault, obj6);
             obj4.subLabel = closure_6(View, obj5);
-            items2[1] = closure_6(tmp(6400).TableRow, obj4);
+            items2[1] = closure_6(tmp(6402).TableRow, obj4);
             obj2.children = items2;
             const tmp23 = closure_8(closure_7, obj2);
           }
@@ -225,9 +225,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp18[0] = tmp10;
         const obj7 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: cResult[5] };
-        tmp18[1] = closure_6(tmp(5147).Text, obj7);
+        tmp18[1] = closure_6(tmp(5149).Text, obj7);
         tmp18[2] = handleInputModePress;
-        const tmp20 = closure_6(tmp(6400).TableRow, tmp18);
+        const tmp20 = closure_6(tmp(6402).TableRow, tmp18);
         cResult[6] = iter.value;
         cResult[7] = cResult[5];
         cResult[8] = tmp20;
@@ -246,37 +246,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       inputMode = stateFromStoresObject.inputMode;
       const vadAutoThreshold = stateFromStoresObject.vadAutoThreshold;
       const obj2 = { title: null, hasIcons: false, children: null };
-      const intl = inputMode(1126).intl;
-      obj2.title = intl.string(inputMode(1126).t.LKCupB);
+      const intl = inputMode(1128).intl;
+      obj2.title = intl.string(inputMode(1128).t.LKCupB);
       const obj3 = { label: null, trailing: null, onPress: null };
-      const intl2 = inputMode(1126).intl;
-      obj3.label = intl2.string(inputMode(1126).t["pS+K2L"]);
+      const intl2 = inputMode(1128).intl;
+      obj3.label = intl2.string(inputMode(1128).t["pS+K2L"]);
       const obj4 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: null };
       if (inputMode === InputModes.PUSH_TO_TALK) {
-        const intl4 = tmp(1126).intl;
-        let stringResult = intl4.string(tmp(1126).t.Q8gkVL);
+        const intl4 = tmp(1128).intl;
+        let stringResult = intl4.string(tmp(1128).t.Q8gkVL);
       } else {
-        const intl3 = tmp(1126).intl;
-        stringResult = intl3.string(tmp(1126).t.cHCEOJ);
+        const intl3 = tmp(1128).intl;
+        stringResult = intl3.string(tmp(1128).t.cHCEOJ);
       }
       obj4.children = stringResult;
-      obj3.trailing = closure_6(inputMode(5147).Text, obj4);
+      obj3.trailing = closure_6(inputMode(5149).Text, obj4);
       obj3.onPress = handleInputModePress;
-      const items1 = [closure_6(inputMode(6400).TableRow, obj3)];
+      const items1 = [closure_6(inputMode(6402).TableRow, obj3)];
       let tmp4Result = null;
       if (inputMode !== InputModes.PUSH_TO_TALK) {
         const obj5 = { children: null };
         const obj6 = { label: null, value: null, onValueChange: null };
-        const intl5 = tmp(1126).intl;
-        obj6.label = intl5.string(tmp(1126).t.Z4oaN0);
+        const intl5 = tmp(1128).intl;
+        obj6.label = intl5.string(tmp(1128).t.Z4oaN0);
         obj6.value = vadAutoThreshold;
         obj6.onValueChange = function onValueChange(autoThreshold) {
           return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
         };
-        const items2 = [closure_6(tmp(7115).TableSwitchRow, obj6)];
+        const items2 = [closure_6(tmp(7117).TableSwitchRow, obj6)];
         const obj7 = { label: null, subLabel: null };
-        const intl6 = tmp(1126).intl;
-        obj7.label = intl6.string(tmp(1126).t["o+2oMK"]);
+        const intl6 = tmp(1128).intl;
+        obj7.label = intl6.string(tmp(1128).t["o+2oMK"]);
         const obj8 = { style: iter.slider, children: null };
         const obj9 = {
           auto: vadAutoThreshold,
@@ -287,12 +287,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         obj8.children = closure_6(VoiceSensitivityDefault, obj9);
         obj7.subLabel = closure_6(View, obj8);
-        items2[1] = closure_6(tmp(6400).TableRow, obj7);
+        items2[1] = closure_6(tmp(6402).TableRow, obj7);
         obj5.children = items2;
         tmp4Result = closure_8(closure_7, obj5);
       }
       items1[1] = tmp4Result;
       obj2.children = items1;
-      return closure_8(inputMode(11366).UserSettingsTableRowGroup, obj2);
+      return closure_8(inputMode(11386).UserSettingsTableRowGroup, obj2);
     };
 export { handleInputModePress };

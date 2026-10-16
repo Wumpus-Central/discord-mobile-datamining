@@ -12,10 +12,10 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4792).GuildMemberFlags;
-const constants3 = fn(1095).ProfileCustomizationSubsection;
+const GuildMemberFlags = fn(4795).GuildMemberFlags;
+const constants3 = fn(1097).ProfileCustomizationSubsection;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()

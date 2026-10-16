@@ -146,7 +146,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const ME = fn(1085).ME;
+const ME = fn(1087).ME;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useRoutedActiveGuildThemeGuildId() {

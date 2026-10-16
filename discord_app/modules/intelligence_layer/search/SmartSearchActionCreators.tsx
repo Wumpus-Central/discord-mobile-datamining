@@ -173,18 +173,18 @@ let closure_8 = async function _fetchAnswer(arg0) {
           })(closure_129_10.body.message_citations);
           closure_129_12 = (function resolveSearchStatus(search_status, length) {
             if ("not_qualified" === search_status) {
-              return closure_1_0(12886).SmartSearchStatus.NOT_QUALIFIED;
+              return closure_1_0(12912).SmartSearchStatus.NOT_QUALIFIED;
             } else if ("no_results" === search_status) {
-              return closure_1_0(12886).SmartSearchStatus.EMPTY;
+              return closure_1_0(12912).SmartSearchStatus.EMPTY;
             } else if ("success" === search_status) {
               if (length > 0) {
-                let EMPTY = closure_1_0(12886).SmartSearchStatus.LOADED;
+                let EMPTY = closure_1_0(12912).SmartSearchStatus.LOADED;
               } else {
-                EMPTY = closure_1_0(12886).SmartSearchStatus.EMPTY;
+                EMPTY = closure_1_0(12912).SmartSearchStatus.EMPTY;
               }
               return EMPTY;
             } else {
-              return closure_1_0(12886).SmartSearchStatus.ERROR;
+              return closure_1_0(12912).SmartSearchStatus.ERROR;
             }
           })(closure_129_10.body.search_status, closure_129_11.length);
           const obj15 = {
@@ -236,7 +236,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
   }
 };
 SmartSearchResultsStoreDefault;
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchActionCreators.tsx");
 

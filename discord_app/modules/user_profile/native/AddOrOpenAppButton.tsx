@@ -11,9 +11,9 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const getSection = fn(9468).getSection;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
+const getSection = fn(9484).getSection;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -44,13 +44,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const customInstallUrl = application.customInstallUrl;
               if (null != customInstallUrl) {
                 if (!obj2.isDiscordUrl(customInstallUrl)) {
-                  let PlusSmallIcon = tmp(7922).LinkExternalSmallIcon;
+                  let PlusSmallIcon = tmp(7925).LinkExternalSmallIcon;
                 }
                 const _Symbol = Symbol;
                 if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
                   let obj3 = { name: "longpress", label: null };
-                  const intl = tmp(1126).intl;
-                  obj3.label = intl.string(tmp(1126).t.XWDihq);
+                  const intl = tmp(1128).intl;
+                  obj3.label = intl.string(tmp(1128).t.XWDihq);
                   const items = [obj3];
                   cResult[8] = items;
                   let tmp9 = items;
@@ -109,7 +109,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const stringResult = obj4.string(tmp(1126).t.NgXl3C);
+                  const stringResult = obj4.string(tmp(1128).t.NgXl3C);
                   cResult[11] = stringResult;
                   const tmp11 = stringResult;
                 } else {
@@ -191,7 +191,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   onAccessibilityAction: C,
                   icon: tmp13,
                 };
-                const tmp18 = jsx(tmp(5439).Button, {
+                const tmp18 = jsx(tmp(5441).Button, {
                   text: tmp11,
                   onPress: tmp4,
                   onLongPress: tmp5,
@@ -204,9 +204,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[16] = tmp4;
                 cResult[17] = tmp13;
                 cResult[18] = tmp18;
-                obj2 = guildId(1384);
+                obj2 = guildId(1386);
               }
-              PlusSmallIcon = tmp(9299).PlusSmallIcon;
+              PlusSmallIcon = tmp(9312).PlusSmallIcon;
             }
           }
         }
@@ -264,14 +264,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const customInstallUrl = application.customInstallUrl;
       if (null != customInstallUrl) {
         if (!obj2.isDiscordUrl(customInstallUrl)) {
-          let PlusSmallIcon = application(7922).LinkExternalSmallIcon;
+          let PlusSmallIcon = application(7925).LinkExternalSmallIcon;
           let tmp6 = application;
         }
         const items1 = [application];
         const memo = noop.useMemo(() => {
           const obj = { name: "longpress", label: null };
-          const intl = application(1126).intl;
-          obj.label = intl.string(application(1126).t.XWDihq);
+          const intl = application(1128).intl;
+          obj.label = intl.string(application(1128).t.XWDihq);
           const items = [obj];
           return items;
         }, []);
@@ -290,15 +290,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           onAccessibilityAction: null,
           icon: null,
         };
-        let intl = tmp6(1126).intl;
-        obj3.text = intl.string(tmp6(1126).t.NgXl3C);
+        let intl = tmp6(1128).intl;
+        obj3.text = intl.string(tmp6(1128).t.NgXl3C);
         obj3.onPress = callback;
         obj3.onLongPress = tmp2;
         obj3.accessibilityActions = memo;
         obj3.onAccessibilityAction = callback1;
         const obj4 = { size: "sm", color: guildId(587).colors.WHITE };
         obj3.icon = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
-        return jsx(tmp6(5439).Button, {
+        return jsx(tmp6(5441).Button, {
           text: null,
           onPress: null,
           onLongPress: null,
@@ -307,7 +307,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           icon: null,
         });
       }
-      PlusSmallIcon = application(9299).PlusSmallIcon;
+      PlusSmallIcon = application(9312).PlusSmallIcon;
       tmp6 = application;
     };
 ReactCompilerGating = fn(558);
@@ -539,18 +539,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   if (application1 == null) {
                     c3 = 1;
                     c4 = 1;
-                    const obj7 = { value: tmp2(6284).fetchApplication(profileApplication.id), done: false };
+                    const obj7 = { value: tmp2(6286).fetchApplication(profileApplication.id), done: false };
                     return obj7;
                   } else {
                     closure_129_1 = closure_0;
                     closure_130_3(false);
                     if (null != closure_129_0) {
-                      tmp2(5115).hideAllActionSheets();
-                      const obj5 = tmp2(5115);
+                      tmp2(5118).hideAllActionSheets();
+                      const obj5 = tmp2(5118);
                       const obj8 = { recipientIds: closure_130_1 };
                       c3 = 2;
                       c4 = 1;
-                      const obj10 = { value: tmp2(7234).openPrivateChannel(obj8), done: false };
+                      const obj10 = { value: tmp2(7236).openPrivateChannel(obj8), done: false };
                       return obj10;
                     } else {
                       c4 = 3;
@@ -595,8 +595,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = closure_0(dependencyMap[23]);
                 }, 0);
                 const obj12 = { application_id: closure_129_1.id };
-                tmp2(1265).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
-                let obj = tmp2(1265);
+                tmp2(1267).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
+                let obj = tmp2(1267);
               }
               c4 = 3;
               const obj13 = { value, done: true };

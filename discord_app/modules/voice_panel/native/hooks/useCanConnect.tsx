@@ -8,7 +8,7 @@ import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1096).Permissions;
+const Permissions = fn(1098).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");

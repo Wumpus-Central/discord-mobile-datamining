@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },
@@ -33,18 +33,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       const tmp4 = closure_7();
       if (cResult[0] !== item.url) {
-        const gifUrlKeyResult = tmp(9954).gifUrlKey(item.url);
+        const gifUrlKeyResult = tmp(9970).gifUrlKey(item.url);
         cResult[0] = item.url;
         cResult[1] = gifUrlKeyResult;
         let tmp5 = gifUrlKeyResult;
-        const tmpResult = tmp(9954);
+        const tmpResult = tmp(9970);
       } else {
         tmp5 = cResult[1];
       }
       let obj = item(576);
-      const isFavoriteGIF = item(9958).useIsFavoriteGIF(tmp5);
-      const tmpResult2 = item(9958);
-      ({ width, height } = isFavoriteGIF(1497)());
+      const isFavoriteGIF = item(9974).useIsFavoriteGIF(tmp5);
+      const tmpResult2 = item(9974);
+      ({ width, height } = isFavoriteGIF(1499)());
       const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, (0.5 * height) / item.height);
       const result = item.width * bound;
       const result1 = item.height * bound;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function w() {
-            isFavoriteGIF(5115).hideActionSheet();
+            isFavoriteGIF(5118).hideActionSheet();
           };
           cResult[5] = fn;
           let tmp13 = fn;
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let obj3 = { children: null };
                 const items1 = [tmp26, tmp30];
                 obj3.children = items1;
-                const tmp32 = closure_6(tmp(6174).ButtonGroup, obj3);
+                const tmp32 = closure_6(tmp(6176).ButtonGroup, obj3);
                 cResult[27] = tmp26;
                 cResult[28] = tmp30;
                 cResult[29] = tmp32;
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = result1;
       cResult[4] = size;
       tmp12 = size;
-      const tmp8 = isFavoriteGIF(1497)();
+      const tmp8 = isFavoriteGIF(1499)();
     }
   : function GIFPickerItemActionSheet(item) {
       item = item.item;

@@ -8,14 +8,14 @@ import ChannelStore from "../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({
   Endpoints: hasOwnProperty,
   ActivityTypes: metroRequire,
   AnalyticEvents: closure_7,
   LoggingInviteTypes: closure_8,
 } = Constants);
-const MessageSendLocation = fn(5144).MessageSendLocation;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -115,13 +115,21 @@ export default {
             channel_id: null,
             message_id: null,
           };
-          if (activity.type === constants2.LISTENING) {
+          let type;
+          if (activity != null) {
+            type = activity.type;
+          }
+          if (type === constants2.LISTENING) {
             let APPLICATION = constants4.SPOTIFY;
           } else {
             APPLICATION = constants4.APPLICATION;
           }
           obj2.invite_type = APPLICATION;
-          obj2.application_id = activity.application_id;
+          let application_id;
+          if (activity != null) {
+            application_id = activity.application_id;
+          }
+          obj2.application_id = application_id;
           obj2.guild_id = channel.getGuildId();
           obj2.channel_id = channel.id;
           let id = null;
@@ -157,12 +165,12 @@ export default {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1295).HTTP;
+      const HTTP = tmp4(1297).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2),
         retries: 3,
         query: obj4,
-        rejectWithError: tmp4(1295).rejectWithMigratedError(),
+        rejectWithError: tmp4(1297).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       closure_128_0 = value;
@@ -179,12 +187,12 @@ export default {
         message_id: userId.messageId,
         channel_id: userId.channelId,
       }));
-      const HTTP = v3(1295).HTTP;
+      const HTTP = v3(1297).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_SUBSCRIBE,
         body: { subscriptions: mapped },
         retries: 1,
-        rejectWithError: v3(1295).rejectWithMigratedError(),
+        rejectWithError: v3(1297).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       return value.body;

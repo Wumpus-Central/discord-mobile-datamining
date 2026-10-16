@@ -1356,8 +1356,8 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
-const PriceTierTypes = fn(1096).PriceTierTypes;
+const Endpoints = fn(1087).Endpoints;
+const PriceTierTypes = fn(1098).PriceTierTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx");
 

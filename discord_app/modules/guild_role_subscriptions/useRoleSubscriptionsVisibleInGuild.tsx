@@ -32,7 +32,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     return isViewingServerShopResult;
   }
 }
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useRoleSubscriptionsVisibleInGuild(arg0) {

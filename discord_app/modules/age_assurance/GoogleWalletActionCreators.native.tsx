@@ -232,7 +232,7 @@ let closure_9 = async function _getGoogleWalletCredential() {
   await NativeDigitalCredentialModuleDefault.getCredential(closure_0);
   return value;
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/GoogleWalletActionCreators.native.tsx");
 

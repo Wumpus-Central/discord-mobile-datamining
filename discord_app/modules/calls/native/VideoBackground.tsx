@@ -1,7 +1,7 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import c from "../../../../_runtime/00576_c.js";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05451_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05453_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -18,11 +18,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8594)();
+  const tmp5 = first(8602)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8595).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8603).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(587).unsafe_rawColors.PRIMARY_800);
@@ -41,11 +41,11 @@ function useDominantRGBFromImage(arg0, arg1) {
       let nextPromise = dependencyMap;
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1899);
+          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1901);
           getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
           let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(closure_2_8.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1899);
+          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1901);
           dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(
             closure_2_8.resolveAssetSource(first),
           );
@@ -55,13 +55,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = result[0];
             closure_1_3(obj);
-            first(8595).cachedDominantColors[closure_1_0] = obj;
+            first(8603).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = _slicedToArray(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(8595).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8603).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -70,10 +70,10 @@ function useDominantRGBFromImage(arg0, arg1) {
 let closure_3 = ["style", "url", "isStageCall", "avatarStyle", "user", "guildId", "renderVideoDetails"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Image: closure_8 } = get_ActivityIndicator);
-const NOOP = fn(1085).NOOP;
+const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_12 = createStyles.createStyles({
   videoBackground: { alignItems: "center" },
   videoDetailsSpacer: { paddingTop: 12 },
@@ -222,7 +222,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                   }
                                 }
-                                tmp23 = tmp23(5451);
+                                tmp23 = tmp23(5453);
                                 const obj2 = { colors: tmp24, start: tmp46, end: items, style: tmp31, children: null };
                                 items = [tmp35, tmp26];
                                 obj2.children = items;
@@ -383,12 +383,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp23;
       }
     };
-tmp6.AvatarSizes = fn(1200).AvatarSizes;
+tmp6.AvatarSizes = fn(1202).AvatarSizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default noop.memo(tmp6);
-export const AvatarSizes = fn(1200).AvatarSizes;
+export const AvatarSizes = fn(1202).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export const useDominantColorFromImage = tmp5;

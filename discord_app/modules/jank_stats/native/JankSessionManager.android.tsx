@@ -2,15 +2,15 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import clientLaunchId from "../../../../discord_common/js/packages/analytics-utils/clientLaunchId.tsx";
 import isJankScreenReportingEnabled from "isJankScreenReportingEnabled.tsx";
-import getJankSurfaceName from "getJankSurfaceName.tsx";
 import NativeJankSessionModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankSessionModule.tsx";
+import getJankSurfaceName from "getJankSurfaceName.tsx";
 import JankNavigationReporterDefault from "JankNavigationReporter.android.tsx";
 import attachJankPanelReportersDefault from "attachJankPanelReporters.native.tsx";
 import AnalyticsTrackingStore from "../../../stores/AnalyticsTrackingStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, AppStates: hasOwnProperty } = Constants);
 let closure_6 = new LoggerDefault("JankSessionManager");
 class JankSessionManager extends tmp4 {
@@ -55,15 +55,15 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
     tmp._isDelivering = true;
-    const pendingReports = self(18429).getPendingReports();
-    let obj = self(18429);
+    const pendingReports = self(17062).getPendingReports();
+    let obj = self(17062);
     const nextPromise = pendingReports.then((arr) => {
       closure_0 = arr;
       if (0 !== arr.length) {
         const result = AnalyticsTrackingStore.submitEventsImmediately(
           arr.flatMap((screens) => {
             obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            let merged = Object.assign(screens(7413).getDeviceMetadata());
+            let merged = Object.assign(screens(7415).getDeviceMetadata());
             ({
               schemaVersion: obj2.schema_version,
               sessionId: obj2.jank_session_id,
@@ -85,7 +85,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
             HermesBuiltin.arraySpread(
               screens.map((item) => {
                 obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
-                const merged = Object.assign(screens(7413).getDeviceMetadata());
+                const merged = Object.assign(screens(7415).getDeviceMetadata());
                 ({
                   schemaVersion: obj2.schema_version,
                   sessionId: obj2.jank_session_id,
@@ -124,7 +124,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           const result = AnalyticsTrackingStore.submitEventsImmediately(
             arr.flatMap((screens) => {
               obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-              let merged = Object.assign(screens(7413).getDeviceMetadata());
+              let merged = Object.assign(screens(7415).getDeviceMetadata());
               ({
                 schemaVersion: obj2.schema_version,
                 sessionId: obj2.jank_session_id,
@@ -146,7 +146,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
               HermesBuiltin.arraySpread(
                 screens.map((item) => {
                   obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
-                  const merged = Object.assign(screens(7413).getDeviceMetadata());
+                  const merged = Object.assign(screens(7415).getDeviceMetadata());
                   ({
                     schemaVersion: obj2.schema_version,
                     sessionId: obj2.jank_session_id,
@@ -191,7 +191,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           const result = AnalyticsTrackingStore.submitEventsImmediately(
             arr.flatMap((screens) => {
               obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-              let merged = Object.assign(screens(7413).getDeviceMetadata());
+              let merged = Object.assign(screens(7415).getDeviceMetadata());
               ({
                 schemaVersion: obj2.schema_version,
                 sessionId: obj2.jank_session_id,
@@ -213,7 +213,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
               HermesBuiltin.arraySpread(
                 screens.map((item) => {
                   obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
-                  const merged = Object.assign(screens(7413).getDeviceMetadata());
+                  const merged = Object.assign(screens(7415).getDeviceMetadata());
                   ({
                     schemaVersion: obj2.schema_version,
                     sessionId: obj2.jank_session_id,

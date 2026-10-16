@@ -4,7 +4,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import actions_BillingActionCreators from "../billing/actions/BillingActionCreators.tsx";
-import ServerTagUpsellOnProfileExperiment from "experiments/ServerTagUpsellOnProfileExperiment.tsx";
+import ServerTagUpsellOnProfileExperimentDefault from "experiments/ServerTagUpsellOnProfileExperiment.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
@@ -18,19 +18,23 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_tag/useGuildTagCreationUpsell.tsx");
 
 export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useGuildTagCreationUpsell(arg0) {
+  ? function useGuildTagCreationUpsell(arg0, arg1) {
+      let obj = arg1;
       const cResult = c.c(11);
+      if (undefined === arg1) {
+        obj = ServerTagUpsellOnProfileExperimentDefault;
+      }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore, PermissionStore];
-        const fn = function h() {
+        const fn = function b() {
           guildsArray = guildsArray.getGuildsArray();
           return _modDef12.sortBy(
             guildsArray.filter((item) => {
-              const guildSupportsTagsResult = closure_1_0(dependencyMap[9]).guildSupportsTags(item);
+              const guildSupportsTagsResult = closure_1_0(dependencyMap[10]).guildSupportsTags(item);
               let tmp4 = !guildSupportsTagsResult;
               if (!guildSupportsTagsResult) {
-                tmp4 = true === closure_1_0(dependencyMap[10]).getHasAllocateBoostPermission(closure_1_5, item);
-                const tmpResult = closure_1_0(dependencyMap[10]);
+                tmp4 = true === closure_1_0(dependencyMap[11]).getHasAllocateBoostPermission(closure_1_5, item);
+                const tmpResult = closure_1_0(dependencyMap[11]);
               }
               return tmp4;
             }),
@@ -39,15 +43,15 @@ export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnab
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
+        tmp5 = items;
+        tmp6 = fn;
       } else {
-        [tmp4, tmp5] = cResult;
+        [tmp5, tmp6] = cResult;
       }
-      const stateFromStoresArray = initialize.useStateFromStoresArray(tmp4, tmp5);
+      const stateFromStoresArray = initialize.useStateFromStoresArray(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore, SubscriptionStore];
-        const fn2 = function f() {
+        const fn2 = function y() {
           const isPremiumResult = PremiumTypeUtils.isPremium(authStore.getCurrentUser());
           let tmp2 = !isPremiumResult;
           if (isPremiumResult) {
@@ -65,16 +69,16 @@ export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnab
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        let tmp9 = fn2;
-        let tmp8 = items1;
+        let tmp10 = fn2;
+        let tmp9 = items1;
       } else {
-        tmp8 = cResult[2];
-        tmp9 = cResult[3];
+        tmp9 = cResult[2];
+        tmp10 = cResult[3];
       }
       let tmpResult = initialize;
-      let stateFromStores = initialize.useStateFromStores(tmp8, tmp9);
+      let stateFromStores = initialize.useStateFromStores(tmp9, tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function y() {
+        const fn3 = function v() {
           const isPremiumResult = PremiumTypeUtils.isPremium(authStore.getCurrentUser());
           let isSubscriptionFetching = !isPremiumResult;
           if (isPremiumResult) {
@@ -92,13 +96,13 @@ export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnab
         const items2 = [];
         cResult[4] = fn3;
         cResult[5] = items2;
-        let tmp14 = items2;
-        let tmp13 = fn3;
+        let tmp15 = items2;
+        let tmp14 = fn3;
       } else {
-        tmp13 = cResult[4];
-        tmp14 = cResult[5];
+        tmp14 = cResult[4];
+        tmp15 = cResult[5];
       }
-      const effect = noop.useEffect(tmp13, tmp14);
+      const effect = noop.useEffect(tmp14, tmp15);
       if (stateFromStoresArray.length <= 0) {
         const _HermesInternal = HermesInternal;
         let combined = "" + arg0 + "-Disabled";
@@ -106,19 +110,17 @@ export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnab
         combined = arg0;
       }
       if (cResult[6] !== combined) {
-        const obj2 = { location: combined };
+        const obj3 = { location: combined };
         cResult[6] = combined;
-        cResult[7] = obj2;
-        let tmp18 = obj2;
+        cResult[7] = obj3;
+        let tmp19 = obj3;
       } else {
-        tmp18 = cResult[7];
+        tmp19 = cResult[7];
       }
-      const tmpResult3 = initialize;
-      const serverTagUpsellOnProfileConfig =
-        ServerTagUpsellOnProfileExperiment.useServerTagUpsellOnProfileConfig(tmp18);
-      ({ enabled, ignoreSubscriptionPlatform } = serverTagUpsellOnProfileConfig);
+      const config = obj.useConfig(tmp19);
+      ({ enabled, ignoreSubscriptionPlatform } = config);
       if (enabled) {
-        enabled = tmp16;
+        enabled = tmp17;
       }
       if (enabled) {
         if (!stateFromStores) {
@@ -128,28 +130,32 @@ export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnab
       }
       if (cResult[8] === stateFromStoresArray) {
         if (cResult[9] === enabled) {
-          let tmp20 = cResult[10];
+          let tmp21 = cResult[10];
         }
-        return tmp20;
+        return tmp21;
       }
-      const obj3 = { creatableGuilds: stateFromStoresArray, isUpsellVisible: enabled };
+      const obj4 = { creatableGuilds: stateFromStoresArray, isUpsellVisible: enabled };
       cResult[8] = stateFromStoresArray;
       cResult[9] = enabled;
-      cResult[10] = obj3;
-      tmp20 = obj3;
-      const tmpResult4 = ServerTagUpsellOnProfileExperiment;
+      cResult[10] = obj4;
+      tmp21 = obj4;
+      const tmpResult2 = initialize;
     }
   : function useGuildTagCreationUpsell(arg0) {
+      let obj = arg1;
+      if (arg1 === undefined) {
+        obj = ServerTagUpsellOnProfileExperimentDefault;
+      }
       const items = [GuildStore, PermissionStore];
       const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
         guildsArray = guildsArray.getGuildsArray();
         return _modDef12.sortBy(
           guildsArray.filter((item) => {
-            const guildSupportsTagsResult = closure_1_0(dependencyMap[9]).guildSupportsTags(item);
+            const guildSupportsTagsResult = closure_1_0(dependencyMap[10]).guildSupportsTags(item);
             let tmp4 = !guildSupportsTagsResult;
             if (!guildSupportsTagsResult) {
-              tmp4 = true === closure_1_0(dependencyMap[10]).getHasAllocateBoostPermission(closure_1_5, item);
-              const tmpResult = closure_1_0(dependencyMap[10]);
+              tmp4 = true === closure_1_0(dependencyMap[11]).getHasAllocateBoostPermission(closure_1_5, item);
+              const tmpResult = closure_1_0(dependencyMap[11]);
             }
             return tmp4;
           }),
@@ -194,17 +200,15 @@ export const useGuildTagCreationUpsell = ReactCompilerGating.isReactCompilerEnab
       } else {
         combined = arg0;
       }
-      const serverTagUpsellOnProfileConfig = ServerTagUpsellOnProfileExperiment.useServerTagUpsellOnProfileConfig({
-        location: combined,
-      });
-      let enabled = serverTagUpsellOnProfileConfig.enabled;
+      const config = obj.useConfig({ location: combined });
+      let enabled = config.enabled;
       const obj4 = { creatableGuilds: stateFromStoresArray, isUpsellVisible: null };
       if (enabled) {
-        enabled = tmp2;
+        enabled = tmp4;
       }
       if (enabled) {
         if (!ignoreSubscriptionPlatform) {
-          ignoreSubscriptionPlatform = serverTagUpsellOnProfileConfig.ignoreSubscriptionPlatform;
+          ignoreSubscriptionPlatform = config.ignoreSubscriptionPlatform;
         }
         enabled = ignoreSubscriptionPlatform;
       }

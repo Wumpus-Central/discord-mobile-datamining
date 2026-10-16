@@ -51,10 +51,10 @@ function openLoadingIndicatorDebugBody() {
   }
 }
 const View = fn(17).View;
-const AppStates = fn(1085).AppStates;
+const AppStates = fn(1087).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -510,13 +510,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         }
         return tmp7;
       };
-      const PressableOpacityResult2 = PressableOpacity(4906);
+      const PressableOpacityResult2 = PressableOpacity(4909);
       fn3.__closure = {
         useReducedMotion: stateFromStores,
-        withRepeat: PressableOpacity(4906).withRepeat,
-        withSequence: PressableOpacity(4906).withSequence,
-        withTiming: PressableOpacity(5152).withTiming,
-        Easing: PressableOpacity(4906).Easing,
+        withRepeat: PressableOpacity(4909).withRepeat,
+        withSequence: PressableOpacity(4909).withSequence,
+        withTiming: PressableOpacity(5154).withTiming,
+        Easing: PressableOpacity(4909).Easing,
       };
       fn3.__workletHash = 17454673879926;
       fn3.__initData = __initData;
@@ -528,9 +528,9 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-          const intl = PressableOpacity(1126).intl;
-          obj3.children = intl.string(PressableOpacity(1126).t.JwIJMV);
-          const tmp17 = closure_13(PressableOpacity(5147).Text, obj3);
+          const intl = PressableOpacity(1128).intl;
+          obj3.children = intl.string(PressableOpacity(1128).t.JwIJMV);
+          const tmp17 = closure_13(PressableOpacity(5149).Text, obj3);
           cResult[7] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -543,7 +543,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
           if (!stateFromStores1) {
             return tmp18;
           } else if (cResult[11] !== tmp18) {
-            PressableOpacity = PressableOpacity(6405).PressableOpacity;
+            PressableOpacity = PressableOpacity(6407).PressableOpacity;
             let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
             tmp = closure_13(PressableOpacity, obj4);
             cResult[11] = tmp18;
@@ -569,10 +569,10 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       tmp13 = tmp14;
       let obj2 = {
         useReducedMotion: stateFromStores,
-        withRepeat: PressableOpacity(4906).withRepeat,
-        withSequence: PressableOpacity(4906).withSequence,
-        withTiming: PressableOpacity(5152).withTiming,
-        Easing: PressableOpacity(4906).Easing,
+        withRepeat: PressableOpacity(4909).withRepeat,
+        withSequence: PressableOpacity(4909).withSequence,
+        withTiming: PressableOpacity(5154).withTiming,
+        Easing: PressableOpacity(4909).Easing,
       };
     }
   : function ChannelHeaderLoadingIndicator() {
@@ -625,13 +625,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         }
         return tmp7;
       };
-      let obj3 = stateFromStores(4906);
+      let obj3 = stateFromStores(4909);
       fn.__closure = {
         useReducedMotion: stateFromStores,
-        withRepeat: stateFromStores(4906).withRepeat,
-        withSequence: stateFromStores(4906).withSequence,
-        withTiming: stateFromStores(5152).withTiming,
-        Easing: stateFromStores(4906).Easing,
+        withRepeat: stateFromStores(4909).withRepeat,
+        withSequence: stateFromStores(4909).withSequence,
+        withTiming: stateFromStores(5154).withTiming,
+        Easing: stateFromStores(4909).Easing,
       };
       fn.__workletHash = 9356373946997;
       fn.__initData = __initData2;
@@ -642,15 +642,15 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       obj6.style = items2;
       const items3 = [closure_13(ReanimatedRexportDefault.View, obj6)];
       let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
-      const intl = stateFromStores(1126).intl;
-      obj7.children = intl.string(stateFromStores(1126).t.JwIJMV);
-      items3[1] = closure_13(stateFromStores(5147).Text, obj7);
+      const intl = stateFromStores(1128).intl;
+      obj7.children = intl.string(stateFromStores(1128).t.JwIJMV);
+      items3[1] = closure_13(stateFromStores(5149).Text, obj7);
       obj5.children = items3;
       const tmp8 = closure_14(View, obj5);
       let tmp7Result = tmp8;
       if (stateFromStores1) {
         let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-        tmp7Result = closure_13(tmp2(6405).PressableOpacity, obj8);
+        tmp7Result = closure_13(tmp2(6407).PressableOpacity, obj8);
       }
       return tmp7Result;
     };

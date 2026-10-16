@@ -17,12 +17,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10440).UserRowModes;
-const MessageSendLocation = fn(5144).MessageSendLocation;
+const AbortCodes = fn(1087).AbortCodes;
+const UserRowModes = fn(10456).UserRowModes;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   footer: {
     display: "flex",
@@ -796,8 +796,8 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
       content = content.content;
       _require = content;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1126).intl;
-        let stringResult = intl.string(tmp(1126).t["59CWHK"]);
+        let intl = tmp(1128).intl;
+        let stringResult = intl.string(tmp(1128).t["59CWHK"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -845,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(17542).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(17576).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -856,9 +856,9 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   tmp12 = closure_129_0.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
                 }
                 closure_129_1 = tmp12;
-                const intl = entry(1126).intl;
+                const intl = entry(1128).intl;
                 const string = intl.string;
-                let t = entry(1126).t;
+                let t = entry(1128).t;
                 if (closure_129_1) {
                   let stringResult = string(t.BC5vfD);
                 } else {
@@ -953,7 +953,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(17542).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(17576).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {
@@ -964,9 +964,9 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 tmp12 = closure_129_1.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
               }
               closure_129_0 = tmp12;
-              const intl = entry(1126).intl;
+              const intl = entry(1128).intl;
               const string = intl.string;
-              let t = entry(1126).t;
+              let t = entry(1128).t;
               if (closure_129_0) {
                 let stringResult = string(t.BC5vfD);
               } else {

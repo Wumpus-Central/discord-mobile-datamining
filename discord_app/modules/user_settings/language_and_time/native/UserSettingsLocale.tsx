@@ -73,9 +73,9 @@ let closure_10 = async function _handleLanguageChange(arg0) {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const setAppLocale = fn(2130).setAppLocale;
+const setAppLocale = fn(2133).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -104,7 +104,7 @@ export default noop.memo(
         let obj = require("c");
         const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
         if (cResult[2] !== tmp4.flagImage) {
-          const availableLocales = tmp(1126).getAvailableLocales();
+          const availableLocales = tmp(1128).getAvailableLocales();
           const mapped = availableLocales.map((localizedName) => {
             ({ name, value } = localizedName);
             const obj = { value, label: name, subLabel: null, icon: null };
@@ -117,7 +117,7 @@ export default noop.memo(
           cResult[2] = tmp4.flagImage;
           cResult[3] = mapped;
           let tmp9 = mapped;
-          const tmpResult2 = tmp(1126);
+          const tmpResult2 = tmp(1128);
         } else {
           tmp9 = cResult[3];
         }

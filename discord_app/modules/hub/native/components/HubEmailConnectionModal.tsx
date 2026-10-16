@@ -29,7 +29,7 @@ function getScreens(pop, arg1) {
   }
   const obj2 = { [closure_1_3.STUDENT_PROMPT]: obj3 };
   obj2[HubEmailConnectionSteps.VERIFY_EMAIL] = {
-    impressionName: tmp5(1273).ImpressionNames.HUB_EMAIL_SIGNUP,
+    impressionName: tmp5(1275).ImpressionNames.HUB_EMAIL_SIGNUP,
     impressionProperties(invite) {
       return { has_invite: null != invite.invite };
     },
@@ -93,13 +93,13 @@ function getScreens(pop, arg1) {
   };
   return obj2;
 }
-const HubEmailConnectionSteps = fn(13323).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13349).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
-const createStyles = fn(5151);
-let obj2 = { safeArea: { marginTop: fn(6479).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5153);
+let obj2 = { safeArea: { marginTop: fn(6481).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6479).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6481).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function HubEmailConnectionScreen(children) {

@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -31,14 +31,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         channel.channel,
       );
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.h850Ss);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.h850Ss);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
         first = cResult[0];
       }
-      const tmp7 = first(5481)(channel.channel);
+      const tmp7 = first(5483)(channel.channel);
       dependencyMap = tmp7;
       let obj2 = require("notficationSettingsChannelFlagUtils");
       const navigation = require("useNavigation").useNavigation();
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[19] !== channel.channel) {
                       let obj3 = { channel: channel.channel };
-                      const tmp22 = closure_6(tmp(13440).NotificationSettingsChannelPresets, obj3);
+                      const tmp22 = closure_6(tmp(13466).NotificationSettingsChannelPresets, obj3);
                       class M {
                         constructor() {
                           obj = {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[25] !== channel.channel) {
                       const obj6 = { style: tmp25, channel: channel.channel };
-                      const tmp29 = closure_6(tmp(13449).NotificationSettingsChannelMessageUnread, obj6);
+                      const tmp29 = closure_6(tmp(13475).NotificationSettingsChannelMessageUnread, obj6);
                       class M {
                         constructor() {
                           obj = {
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let isForumLikeChannelResult = obj9.isForumLikeChannel();
                       if (isForumLikeChannelResult) {
                         const obj7 = { style: { marginTop: 24 }, channel: channel.channel };
-                        isForumLikeChannelResult = closure_6(tmp(13454).NotificationSettingsChannelPost, obj7);
+                        isForumLikeChannelResult = closure_6(tmp(13480).NotificationSettingsChannelPost, obj7);
                       }
                       cResult[25] = channel.channel;
                       cResult[26] = tmp29;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp37[4] = tmp27;
                       tmp37[5] = tmp31;
                       obj8.children = tmp37;
-                      const tmp38 = closure_7(tmp(8800).Form, obj8);
+                      const tmp38 = closure_7(tmp(8808).Form, obj8);
                       cResult[31] = tmp9.screenContainer;
                       cResult[32] = tmp26;
                       cResult[33] = tmp27;
@@ -230,9 +230,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return obj;
                         }
                       }
-                      const intl2 = tmp(1126).intl;
-                      obj11.text = intl2.string(tmp(1126).t["3PBFN6"]);
-                      obj10.children = closure_6(tmp(5439).Button, obj11);
+                      const intl2 = tmp(1128).intl;
+                      obj11.text = intl2.string(tmp(1128).t["3PBFN6"]);
+                      obj10.children = closure_6(tmp(5441).Button, obj11);
                       tmp32 = closure_6(View, obj10);
                     }
                     cResult[28] = channelPresetInheritance.inherited;
@@ -381,12 +381,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let muted = stateFromStoresObject.muted;
       if (muted) {
         const obj5 = { style: { marginBottom: 16 }, title: null, subtitle: null, onPressUnmute: null };
-        const intl2 = tmp(1126).intl;
-        obj5.title = intl2.string(tmp(1126).t["6MCxAy"]);
-        obj5.subtitle = tmp(13439).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+        const intl2 = tmp(1128).intl;
+        obj5.title = intl2.string(tmp(1128).t["6MCxAy"]);
+        obj5.subtitle = tmp(13465).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
         obj5.onPressUnmute = callback1;
-        muted = closure_6(tmp(13439).NotificationSettingsMuteBanner, obj5);
-        const tmpResult = tmp(13439);
+        muted = closure_6(tmp(13465).NotificationSettingsMuteBanner, obj5);
+        const tmpResult = tmp(13465);
       }
       const items3 = [
         muted,
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let isForumLikeChannelResult = channel.isForumLikeChannel();
       if (isForumLikeChannelResult) {
         const obj9 = { style: { marginTop: 24 }, channel: channel.channel };
-        isForumLikeChannelResult = closure_6(tmp(13454).NotificationSettingsChannelPost, obj9);
+        isForumLikeChannelResult = closure_6(tmp(13480).NotificationSettingsChannelPost, obj9);
       }
       items3[4] = isForumLikeChannelResult;
       const inherited = channelPresetInheritance.inherited;
@@ -415,9 +415,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!inherited) {
         const obj10 = { style: { marginTop: 24 }, children: null };
         const obj11 = { variant: "secondary", onPress: callback, text: null };
-        const intl3 = tmp(1126).intl;
-        obj11.text = intl3.string(tmp(1126).t["3PBFN6"]);
-        obj10.children = closure_6(tmp(5439).Button, obj11);
+        const intl3 = tmp(1128).intl;
+        obj11.text = intl3.string(tmp(1128).t["3PBFN6"]);
+        obj10.children = closure_6(tmp(5441).Button, obj11);
         tmp11Result = closure_6(View, obj10);
       }
       items3[5] = tmp11Result;

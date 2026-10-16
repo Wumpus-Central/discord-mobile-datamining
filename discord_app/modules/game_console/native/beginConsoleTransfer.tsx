@@ -102,7 +102,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
   }
 };
 const items = [,];
-({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1085).PlatformTypes);
+({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1087).PlatformTypes);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");

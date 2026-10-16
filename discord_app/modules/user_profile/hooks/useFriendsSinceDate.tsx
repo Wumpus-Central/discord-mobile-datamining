@@ -5,7 +5,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");

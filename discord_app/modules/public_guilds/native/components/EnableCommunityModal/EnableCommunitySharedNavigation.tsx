@@ -8,10 +8,10 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-let GuildFeatures = fn(1085).GuildFeatures;
+let GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_10 = createStyles.createStyles({
   container: { flex: 1, height: "100%" },
   modal: { height: "100%", flex: 1, justifyContent: "space-between" },

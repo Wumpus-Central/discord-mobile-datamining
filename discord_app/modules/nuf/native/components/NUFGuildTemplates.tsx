@@ -211,9 +211,9 @@ function getScreens() {
           return applyArgumentsResult;
         })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
       };
-      const intl = guildTemplate(1126).intl;
-      obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12876), obj);
+      const intl = guildTemplate(1128).intl;
+      obj.customTitle = intl.string(guildTemplate(1128).t["5HZu07"]);
+      return closure_14(closure_1(12902), obj);
     },
   };
   const obj5 = {
@@ -240,9 +240,9 @@ function getScreens() {
           return applyArgumentsResult;
         })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
       };
-      const intl = guildTemplate(1126).intl;
-      obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12876), obj);
+      const intl = guildTemplate(1128).intl;
+      obj.customTitle = intl.string(guildTemplate(1128).t["5HZu07"]);
+      return closure_14(closure_1(12902), obj);
     },
   };
   impressionProperties[constants.JOIN_SERVER] = {
@@ -336,9 +336,9 @@ function getScreens() {
         guildId,
         buttonText: null,
       };
-      const intl = guildId(1126).intl;
-      obj.buttonText = intl.string(guildId(1126).t["uHXB+F"]);
-      return closure_14(closure_1(13354), obj);
+      const intl = guildId(1128).intl;
+      obj.buttonText = intl.string(guildId(1128).t["uHXB+F"]);
+      return closure_14(closure_1(13380), obj);
     },
   };
   const obj9 = {
@@ -360,17 +360,17 @@ function getScreens() {
   return impressionProperties;
 }
 const Keyboard = fn(17).Keyboard;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(13273).GuildTemplateId;
-const CreateGuildConstants = fn(6882);
+const GuildTemplateId = fn(13299).GuildTemplateId;
+const CreateGuildConstants = fn(6884);
 ({
   CreateGuildModalStates: closure_11,
   GuildTemplateTriggers: closure_12,
   NUXGuildTemplatesAnalytics: map1,
 } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-let impressionProperties = { impression_group: fn(1273).ImpressionGroups.GUILD_ADD_FLOW };
+let impressionProperties = { impression_group: fn(1275).ImpressionGroups.GUILD_ADD_FLOW };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");

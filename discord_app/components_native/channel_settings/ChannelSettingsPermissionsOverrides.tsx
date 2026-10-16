@@ -22,12 +22,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const isGuildOwner = fn(2083).isGuildOwner;
-const Constants = fn(1085);
+const isGuildOwner = fn(2086).isGuildOwner;
+const Constants = fn(1087);
 ({ PermissionOverrideType: closure_16, HelpdeskArticles: closure_17, Permissions: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   containerContent: null,
@@ -189,8 +189,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             const intl4 = closure_0(tmp5[27]).intl;
             obj18.confirmText = intl4.string(closure_0(tmp5[27]).t.psXQHP);
             obj18.onConfirm = function onConfirm() {
-              const obj = closure_1_1(4862);
-              obj.openURL(closure_1_1(2128).getArticleURL(constants.PERMISSIONS_TUTORIAL));
+              const obj = closure_1_1(4865);
+              obj.openURL(closure_1_1(2131).getArticleURL(constants.PERMISSIONS_TUTORIAL));
             };
             id(tmp5[26]).show(obj18);
             const obj14 = id(tmp5[26]);
@@ -313,9 +313,9 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             },
             label: null,
           };
-          const intl = closure_0(1126).intl;
-          obj.label = intl.string(closure_0(1126).t.i4jeWR);
-          return closure_2_19(closure_0(9518).HeaderTextButton, obj);
+          const intl = closure_0(1128).intl;
+          obj.label = intl.string(closure_0(1128).t.i4jeWR);
+          return closure_2_19(closure_0(9534).HeaderTextButton, obj);
         },
       };
       navigation.setOptions(obj);
@@ -336,7 +336,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj5);
   if (fromCreate.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(10533), obj6);
+    let tmp12Result = closure_19(id(10548), obj6);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -347,20 +347,20 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     const obj7 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(tmp2(6400).TableRow, obj7);
+    tmp12Result = closure_19(tmp2(6402).TableRow, obj7);
   }
   let obj8 = { style: tmp.container, contentContainerStyle: null, children: null };
-  const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1631)().bottom }];
+  const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1633)().bottom }];
   obj8.contentContainerStyle = items5;
   const items6 = [closure_19(closure_7, { style: tmp.section, children: tmp12Result }), ,];
   let tmp12Result2 = null;
   if (null != tmp9) {
     let obj10 = { style: tmp.section, children: null };
-    let obj11 = { type: "info", message: null, role: "static" };
-    let intl = tmp2(1126).intl;
+    let obj11 = { type: "info", message: null, role: "none" };
+    let intl = tmp2(1128).intl;
     let obj12 = { appName: tmp9.name };
-    obj11.message = intl.format(tmp2(1126).t["Xq++FA"], obj12);
-    obj10.children = closure_19(tmp2(7784).InlineNotice, obj11);
+    obj11.message = intl.format(tmp2(1128).t["Xq++FA"], obj12);
+    obj10.children = closure_19(tmp2(7787).InlineNotice, obj11);
     tmp12Result2 = closure_19(closure_7, obj10);
   }
   items6[1] = tmp12Result2;
@@ -380,37 +380,37 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         const obj = {
           variant: "text-xs/medium",
           color: "text-subtle",
-          children: closure_1_0(17875).renderDescription(description.description),
+          children: closure_1_0(17909).renderDescription(description.description),
         };
-        const items = [closure_1_19(closure_1_0(5147).Text, obj)];
+        const items = [closure_1_19(closure_1_0(5149).Text, obj)];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             const obj3 = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_1_19(closure_1_0(5147).Text, obj3);
+            tmp5Result = closure_1_19(closure_1_0(5149).Text, obj3);
           }
         }
         items[1] = tmp5Result;
-        const obj2 = closure_1_0(17875);
+        const obj2 = closure_1_0(17909);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
-        const tmp6Result = closure_1_0(1382);
+        const tmp6Result = closure_1_0(1384);
         const obj4 = {
-          accessible: closure_1_0(1382).isAndroid() || undefined,
+          accessible: closure_1_0(1384).isAndroid() || undefined,
           disabled: false !== tmp,
           label: title,
           subLabel: tmp3Result,
           trailing: null,
         };
         const obj5 = { permissionTitle: title, value: null, disabled: null, onValueChange: null };
-        const tmp10 = closure_1_0(1382).isAndroid() || undefined;
+        const tmp10 = closure_1_0(1384).isAndroid() || undefined;
         obj5.value = closure_9(flag);
         obj5.disabled = false !== tmp;
         obj5.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj4.trailing = closure_1_19(id(17876), obj5);
-        return closure_1_19(closure_1_0(6400).TableRow, obj4, "row-" + index);
+        obj4.trailing = closure_1_19(id(17910), obj5);
+        return closure_1_19(closure_1_0(6402).TableRow, obj4, "row-" + index);
       }),
     });
     return closure_2_19(React5, obj, "section-" + index);

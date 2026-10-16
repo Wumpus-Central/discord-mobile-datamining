@@ -7,7 +7,7 @@ import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 

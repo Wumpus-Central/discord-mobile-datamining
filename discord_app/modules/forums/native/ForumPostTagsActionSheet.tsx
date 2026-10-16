@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(7201).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7203).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_9 = createStyles.createStyles({
   tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" },
   saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 },
@@ -215,8 +215,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ onSave: dependencyMap, title } = thread);
       if (title === undefined) {
-        const intl = thread(1126).intl;
-        title = intl.string(thread(1126).t["436ZFw"]);
+        const intl = thread(1128).intl;
+        title = intl.string(thread(1128).t["436ZFw"]);
       }
       ({ tags, onClose: _slicedToArray } = thread);
       first = undefined;
@@ -235,15 +235,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp3 = closure_9();
-      let appliedTags = thread(7203).useAppliedTags(thread);
+      let appliedTags = thread(7205).useAppliedTags(thread);
       if (null != tags) {
         appliedTags = tags;
       }
-      let obj = thread(7203);
+      let obj = thread(7205);
       [first, closure_5] = first.useState(new Set(appliedTags));
       closure_6 = first.size >= closure_6;
       let set = new Set(appliedTags);
-      const visibleForumTags = thread(7203).useVisibleForumTags(thread.parentChannel);
+      const visibleForumTags = thread(7205).useVisibleForumTags(thread.parentChannel);
       let obj2 = {
         onDismiss() {
           let tmp;
@@ -256,11 +256,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const obj3 = { title, subtitle: null, subtitleStyle: null };
-      const intl2 = tmp4(1126).intl;
-      obj3.subtitle = intl2.string(thread(1126).t["+HS9+m"]);
+      const intl2 = tmp4(1128).intl;
+      obj3.subtitle = intl2.string(thread(1128).t["+HS9+m"]);
       obj3.subtitleStyle = tmp3.subtitle;
-      obj2.header = toggleTag(thread(7060).BottomSheetTitleHeader, obj3);
-      const tmp4Result = thread(7203);
+      obj2.header = toggleTag(thread(7062).BottomSheetTitleHeader, obj3);
+      const tmp4Result = thread(7205);
       let items = [
         toggleTag(closure_5, {
           style: tmp3.tagsContainer,
@@ -284,8 +284,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj5 = { style: tmp3.saveButton, children: null };
       const obj6 = { text: null, onPress: null };
-      const intl3 = tmp4(1126).intl;
-      obj6.text = intl3.string(thread(1126).t["R3BPH+"]);
+      const intl3 = tmp4(1128).intl;
+      obj6.text = intl3.string(thread(1128).t["R3BPH+"]);
       obj6.onPress = function handleSave() {
         Array.from(first);
         if (null != dependencyMap) {
@@ -297,8 +297,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         ActionSheetActionCreatorsDefault.hideActionSheet();
       };
-      obj5.children = toggleTag(thread(5439).Button, obj6);
+      obj5.children = toggleTag(thread(5441).Button, obj6);
       items[1] = toggleTag(closure_5, obj5);
       obj2.children = items;
-      return closure_8(thread(7118).ActionSheet, obj2);
+      return closure_8(thread(7120).ActionSheet, obj2);
     };

@@ -32,7 +32,7 @@ function isUsableGameProfileInvite(state) {
   }
   return tmp;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ InviteStates: closure_7, QueryIds } = Constants);
 const initialize = fn(504);
 const obj2 = {

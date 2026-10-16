@@ -81,7 +81,7 @@ function presentUserTag(username, identifiable, tmpResult) {
     }
   }
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ NON_USER_BOT_DISCRIMINATOR: closure_4, StatusTypes: hasOwnProperty } = Constants);
 let c6 = 86400000;
 let c7 = "???";

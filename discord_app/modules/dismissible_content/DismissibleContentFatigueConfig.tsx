@@ -88,6 +88,7 @@ const items = [
   dismissible_content.DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
   dismissible_content.DismissibleContent.EMPTY_GAME_SERVER_TAB,
   dismissible_content.DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
+  dismissible_content.DismissibleContent.USER_PROFILE_WIDGET_SUGGESTIONS,
   dismissible_content.DismissibleContent.FIRST_BOOSTER_UPSELL_OVERSEER,
   dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE,
   dismissible_content.DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE,

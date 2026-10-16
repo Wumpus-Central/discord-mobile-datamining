@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishNotesSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -16,12 +16,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4804).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5144).MessageSendLocation;
+let closure_8 = fn(4807).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5147).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_16 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -196,7 +196,7 @@ export default function ConjurePublishNotesSheet(projectName) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3862.Gd63Fl);
+    obj4.title = intl.string(_modDef3865.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStoresArray;
@@ -261,8 +261,8 @@ export default function ConjurePublishNotesSheet(projectName) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp43;
                   }
-                  const parsed = tmp3(7586).parse(found, combined);
-                  const tmp40Result = tmp3(7395);
+                  const parsed = tmp3(7588).parse(found, combined);
+                  const tmp40Result = tmp3(7397);
                   const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -291,7 +291,7 @@ export default function ConjurePublishNotesSheet(projectName) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = projectId(12090).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
+                const result = projectId(12114).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
                 let id;
                 if (closure_128_0 != null) {
                   const body = closure_128_0.body;
@@ -307,12 +307,12 @@ export default function ConjurePublishNotesSheet(projectName) {
                     channelId: closure_129_18.id,
                     messageId: closure_128_1,
                   };
-                  projectId(10974).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
-                  const obj = projectId(10974);
+                  projectId(10989).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
+                  const obj = projectId(10989);
                 }
                 closure_129_21();
                 dependencyMap = 0;
-                const obj10 = projectId(12090);
+                const obj10 = projectId(12114);
               }
             }
             const _Error = Error;

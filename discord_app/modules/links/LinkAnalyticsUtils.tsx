@@ -88,9 +88,9 @@ export default {
     }
     UNKNOWN = constants.UNKNOWN;
   },
-  trackLinkClicked(ctaLink, arg1) {
-    if (null != ctaLink) {
-      let tmp3 = URLUtilsDefault.isDiscordUrl(ctaLink, true) || null != arg1;
+  trackLinkClicked(customInstallUrl, arg1) {
+    if (null != customInstallUrl) {
+      let tmp3 = URLUtilsDefault.isDiscordUrl(customInstallUrl, true) || null != arg1;
       AnalyticsUtilsDefault;
       const obj2 = { is_discord_link: tmp3, discord_link_type: null };
       if (!tmp3) {
@@ -99,17 +99,17 @@ export default {
       } else {
         if (null != arg1) {
           if (null == arg1) {
-            let UNKNOWN = (function getDiscordLinkTypeFromUrl(ctaLink) {
+            let UNKNOWN = (function getDiscordLinkTypeFromUrl(customInstallUrl) {
               const iter = dependencyMap[Symbol.iterator]();
               while (iter !== undefined) {
-                let tmp2 = iter.next()(ctaLink);
+                let tmp2 = iter.next()(customInstallUrl);
                 if (null != tmp2) {
                   iter.return();
                   return tmp2;
                 }
               }
               return constants.UNKNOWN;
-            })(ctaLink);
+            })(customInstallUrl);
           } else {
             if (null != arg1.guildId) {
               if (null != arg1.channelId) {

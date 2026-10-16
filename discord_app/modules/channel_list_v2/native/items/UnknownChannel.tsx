@@ -16,12 +16,12 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(6183).UnreadSetting;
+const UnreadSetting = fn(6185).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   container: {
-    marginVertical: fn(11797).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11821).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,7 +29,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11797).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11821).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -55,9 +55,9 @@ export default noop.memo(
           tmp7 = cResult[1];
         }
         if (cResult[2] !== tmp6) {
-          const intl = tmp(1126).intl;
+          const intl = tmp(1128).intl;
           const obj2 = { channelName: tmp6 };
-          const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.yjQ9P8, obj2);
+          const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.yjQ9P8, obj2);
           cResult[2] = tmp6;
           cResult[3] = formatToPlainStringResult;
           let tmp8 = formatToPlainStringResult;
@@ -138,8 +138,8 @@ export default noop.memo(
           resolvedUnreadSetting: null,
         };
         const tmp2 = useChannelNameDefault(channel);
-        const intl = channel(1126).intl;
-        obj.accessibilityLabel = intl.formatToPlainString(channel(1126).t.yjQ9P8, { channelName: tmp2 });
+        const intl = channel(1128).intl;
+        obj.accessibilityLabel = intl.formatToPlainString(channel(1128).t.yjQ9P8, { channelName: tmp2 });
         obj.accessibilityState = { selected };
         obj.channel = channel;
         obj.selected = selected;

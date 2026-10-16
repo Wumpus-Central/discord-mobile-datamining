@@ -339,7 +339,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
   closure_131_2 = num13;
   return "test";
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;

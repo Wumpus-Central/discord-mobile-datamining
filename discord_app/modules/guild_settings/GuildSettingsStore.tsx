@@ -9,7 +9,7 @@ import ChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import PlainRecord from "../../lib/PlainRecord.tsx";
 import GuildRecord from "../../records/GuildRecord.tsx";
-import _modDef4758 from "../../../_runtime/metro/04758__.js";
+import _modDef4761 from "../../../_runtime/metro/04761__.js";
 import GlobalDiscoveryServersConstants from "../global_discovery_servers/GlobalDiscoveryServersConstants.tsx";
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils.tsx";
 import GuildSettingsVanityURLActionCreators from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
@@ -70,15 +70,15 @@ function handleFormInit(type) {
       }
     }
     if (null != section) {
-      const obj3 = { key: "landing", name: constants.LANDING };
-      const items = [obj3];
+      obj2 = { key: "landing", name: constants.LANDING };
+      const items = [obj2];
       if (section === constants.TAG_CUSTOMIZE) {
-        ({ TAG: obj2.key, TAG: obj2.name } = constants);
+        ({ TAG: obj3.key, TAG: obj3.name } = constants);
         items.push({ key: null, name: null });
         const obj4 = { key: null, name: null };
       }
-      const obj6 = { key: section, name: section };
-      items.push(obj6);
+      const obj5 = { key: section, name: section };
+      items.push(obj5);
       const obj10 = { type: "stack", routes: items };
       c11 = obj10;
     }
@@ -112,7 +112,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef4758(created_at);
+  obj.createdAt = _modDef4761(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

@@ -12,13 +12,13 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let obj = { duration: 200, easing: null };
-let Easing = fn(4906).Easing;
-obj.easing = Easing.out(fn(4906).Easing.ease);
-const createStyles = fn(5151);
+let Easing = fn(4909).Easing;
+obj.easing = Easing.out(fn(4909).Easing.ease);
+const createStyles = fn(5153);
 let obj3 = {
   container: {
     borderRadius: nativeDefault.radii.md,
@@ -1464,19 +1464,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj7;
         }
       }
-      let obj3 = option(4906);
+      let obj3 = option(4909);
       S.__closure = {
         selected,
-        withTiming: option(5152).withTiming,
-        Easing: option(4906).Easing,
+        withTiming: option(5154).withTiming,
+        Easing: option(4909).Easing,
         useReducedMotion: stateFromStores1,
-        withSequence: option(4906).withSequence,
-        withSpring: option(5438).withSpring,
+        withSequence: option(4909).withSequence,
+        withSpring: option(5440).withSpring,
       };
       S.__workletHash = 8205438722579;
       S.__initData = derivedValue1;
       const animatedStyle = obj3.useAnimatedStyle(S);
-      const tmp8 = selected(7038)(option.guildId);
+      const tmp8 = selected(7040)(option.guildId);
       closure_5 = tmp8;
       num = 0;
       if (null != tmp8) {
@@ -1531,11 +1531,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       let obj4 = {
         selected,
-        withTiming: option(5152).withTiming,
-        Easing: option(4906).Easing,
+        withTiming: option(5154).withTiming,
+        Easing: option(4909).Easing,
         useReducedMotion: stateFromStores1,
-        withSequence: option(4906).withSequence,
-        withSpring: option(5438).withSpring,
+        withSequence: option(4909).withSequence,
+        withSpring: option(5440).withSpring,
       };
       let obj5 = stateFromStores1;
       class V {
@@ -1581,12 +1581,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj8;
         }
       }
-      let tmp2Result = option(4906);
+      let tmp2Result = option(4909);
       V.__closure = {
         showMemberCount,
-        withDelay: option(4906).withDelay,
-        withTiming: option(5152).withTiming,
-        Easing: option(4906).Easing,
+        withDelay: option(4909).withDelay,
+        withTiming: option(5154).withTiming,
+        Easing: option(4909).Easing,
         useReducedMotion: stateFromStores1,
       };
       V.__workletHash = 10755800239871;
@@ -1594,12 +1594,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle1 = tmp2Result.useAnimatedStyle(V);
       const obj6 = {
         showMemberCount,
-        withDelay: option(4906).withDelay,
-        withTiming: option(5152).withTiming,
-        Easing: option(4906).Easing,
+        withDelay: option(4909).withDelay,
+        withTiming: option(5154).withTiming,
+        Easing: option(4909).Easing,
         useReducedMotion: stateFromStores1,
       };
-      sharedValue = option(4906).useSharedValue(1);
+      sharedValue = option(4909).useSharedValue(1);
       isUnseen = canBeNew;
       if (canBeNew) {
         isUnseen = option.isUnseen;
@@ -1667,15 +1667,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           title = option.title;
         }
       }, items5);
-      const tmp2Result11 = option(4906);
-      token = option(4874).useToken(tmp7(587).colors.BORDER_SUBTLE);
-      const tmp2Result12 = option(4874);
-      token1 = option(4874).useToken(tmp7(587).colors.BACKGROUND_BRAND);
-      const tmp2Result13 = option(4874);
-      token2 = option(4874).useToken(tmp7(587).colors.BORDER_STRONG);
-      const tmp2Result14 = option(4874);
-      token3 = option(4874).useToken(tmp7(587).colors.BACKGROUND_BASE_LOWEST);
-      const tmp2Result15 = option(4874);
+      const tmp2Result11 = option(4909);
+      token = option(4877).useToken(tmp7(587).colors.BORDER_SUBTLE);
+      const tmp2Result12 = option(4877);
+      token1 = option(4877).useToken(tmp7(587).colors.BACKGROUND_BRAND);
+      const tmp2Result13 = option(4877);
+      token2 = option(4877).useToken(tmp7(587).colors.BORDER_STRONG);
+      const tmp2Result14 = option(4877);
+      token3 = option(4877).useToken(tmp7(587).colors.BACKGROUND_BASE_LOWEST);
+      const tmp2Result15 = option(4877);
       const fn = function q() {
         obj = timing;
         num = 0;
@@ -1684,12 +1684,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj.withTiming(num, obj);
       };
-      const tmp2Result16 = option(4906);
-      fn.__closure = { withTiming: option(5152).withTiming, selected, SELECTION_TIMING: sharedValue };
+      const tmp2Result16 = option(4909);
+      fn.__closure = { withTiming: option(5154).withTiming, selected, SELECTION_TIMING: sharedValue };
       fn.__workletHash = 12520862943769;
       fn.__initData = __initData4;
       derivedValue = tmp2Result16.useDerivedValue(fn);
-      const obj7 = { withTiming: option(5152).withTiming, selected, SELECTION_TIMING: sharedValue };
+      const obj7 = { withTiming: option(5154).withTiming, selected, SELECTION_TIMING: sharedValue };
       class W {
         constructor() {
           obj = closure_0(closure_2[13]);
@@ -1700,12 +1700,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj.withTiming(num, closure_11);
         }
       }
-      const tmp2Result17 = option(4906);
-      W.__closure = { withTiming: option(5152).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
+      const tmp2Result17 = option(4909);
+      W.__closure = { withTiming: option(5154).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
       W.__workletHash = 6695066984001;
       W.__initData = __initData5;
       derivedValue1 = tmp2Result17.useDerivedValue(W);
-      const obj8 = { withTiming: option(5152).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
+      const obj8 = { withTiming: option(5154).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
       class X {
         constructor() {
           obj = closure_0(closure_2[7]);
@@ -1726,9 +1726,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj1;
         }
       }
-      const tmp2Result18 = option(4906);
+      const tmp2Result18 = option(4909);
       X.__closure = {
-        interpolateColor: option(4906).interpolateColor,
+        interpolateColor: option(4909).interpolateColor,
         newProgress: derivedValue1,
         unselectedBorderColor: token,
         newBorderColor: token1,
@@ -1740,7 +1740,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       X.__initData = __initData6;
       const animatedStyle2 = tmp2Result18.useAnimatedStyle(X);
       const obj9 = {
-        interpolateColor: option(4906).interpolateColor,
+        interpolateColor: option(4909).interpolateColor,
         newProgress: derivedValue1,
         unselectedBorderColor: token,
         newBorderColor: token1,
@@ -1762,9 +1762,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { useReducedMotion: stateFromStores1, scale_0: sharedValue };
       fn2.__workletHash = 15537308682382;
       fn2.__initData = __initData7;
-      const animatedStyle3 = option(4906).useAnimatedStyle(fn2);
-      const tmp2Result19 = option(4906);
-      const checkboxA11yNative = option(4888).useCheckboxA11yNative({ checked: selected });
+      const animatedStyle3 = option(4909).useAnimatedStyle(fn2);
+      const tmp2Result19 = option(4909);
+      const checkboxA11yNative = option(4891).useCheckboxA11yNative({ checked: selected });
       ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
       const obj10 = { style: null, children: null };
       const items6 = [tmp.container, animatedStyle3, animatedStyle2];
@@ -1824,8 +1824,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj14 = { id: null, animated: null, size: null };
           ({ id: obj26.id, animated: obj26.animated } = stateFromStores);
           obj14.size = size;
-          emojiURL = tmp7(1415).getEmojiURL(obj14);
-          const tmp7Result2 = tmp7(1415);
+          emojiURL = tmp7(1417).getEmojiURL(obj14);
+          const tmp7Result2 = tmp7(1417);
         }
         obj13.src = emojiURL;
         let str;
@@ -1839,14 +1839,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           str = "";
         }
         obj13.name = str;
-        obj12.children = closure_9(tmp7(7041), obj13);
+        obj12.children = closure_9(tmp7(7043), obj13);
         tmp38Result = tmp38(closure_5, obj12);
-        const tmp7Result = tmp7(7041);
+        const tmp7Result = tmp7(7043);
       }
       const items7 = [tmp38Result];
       const obj15 = { style: tmp.optionText, children: null };
       const items8 = [
-        closure_9(option(5147).Text, {
+        closure_9(option(5149).Text, {
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           children: option.title,
@@ -1855,13 +1855,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp44Result = null != option.description && option.description.length > 0;
       if (tmp44Result) {
         const obj17 = { variant: "text-xs/medium", color: "text-default", children: option.description };
-        tmp44Result = tmp44(tmp2(5147).Text, obj17);
+        tmp44Result = tmp44(tmp2(5149).Text, obj17);
       }
       items8[1] = tmp44Result;
       obj15.children = items8;
       items7[1] = ref(closure_5, obj15);
       obj11.children = items7;
-      const items9 = [ref(option(6405).PressableOpacity, obj11), , ,];
+      const items9 = [ref(option(6407).PressableOpacity, obj11), , ,];
       let tmp44Result2 = null;
       if (num > 0) {
         const obj18 = {
@@ -1874,20 +1874,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items10 = [tmp.roleCount, animatedStyle1];
         obj18.style = items10;
         const obj19 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-        let intl = tmp2(1126).intl;
+        let intl = tmp2(1128).intl;
         const obj20 = { memberCount: num };
-        obj19.children = intl.format(tmp2(1126).t.EgKsZA, obj20);
-        obj18.children = tmp44(tmp2(5147).Text, obj19);
-        tmp44Result2 = tmp44(tmp7(4906).View, obj18);
+        obj19.children = intl.format(tmp2(1128).t.EgKsZA, obj20);
+        obj18.children = tmp44(tmp2(5149).Text, obj19);
+        tmp44Result2 = tmp44(tmp7(4909).View, obj18);
       }
       items9[1] = tmp44Result2;
       const obj21 = { style: null, children: null };
       const items11 = [tmp.checkIcon, animatedStyle];
       obj21.style = items11;
       const obj16 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title };
-      const tmp2Result20 = option(4888);
-      obj21.children = closure_9(option(7044).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
-      items9[2] = closure_9(selected(4906).View, obj21);
+      const tmp2Result20 = option(4891);
+      obj21.children = closure_9(option(7046).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
+      items9[2] = closure_9(selected(4909).View, obj21);
       if (canBeNew) {
         canBeNew = !selected;
       }
@@ -1895,13 +1895,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         canBeNew = option.isUnseen;
       }
       if (canBeNew) {
-        const obj23 = { color: tmp2(1200).BadgeColors.BRAND, text: null, style: null, textStyle: null };
-        let intl2 = tmp2(1126).intl;
-        obj23.text = intl2.string(tmp2(1126).t.y2b7CA);
+        const obj23 = { color: tmp2(1202).BadgeColors.BRAND, text: null, style: null, textStyle: null };
+        let intl2 = tmp2(1128).intl;
+        obj23.text = intl2.string(tmp2(1128).t.y2b7CA);
         ({ newBadgeWrapper: obj35.style, newBadge: obj35.textStyle } = tmp);
-        canBeNew = tmp44(tmp2(1200).TextBadge, obj23);
+        canBeNew = tmp44(tmp2(1202).TextBadge, obj23);
       }
       items9[3] = canBeNew;
       obj10.children = items9;
-      return ref(selected(4906).View, obj10);
+      return ref(selected(4909).View, obj10);
     };

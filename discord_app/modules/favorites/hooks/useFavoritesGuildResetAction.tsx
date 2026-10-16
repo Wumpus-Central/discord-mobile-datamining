@@ -4,13 +4,13 @@ import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3444 from "../intl/FavoritesGuild.messages.js";
+import _modDef3447 from "../intl/FavoritesGuild.messages.js";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Routes = fn(1085).Routes;
+const Routes = fn(1087).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
@@ -40,9 +40,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3444.YkET6R);
+        const stringResult = intl.string(_modDef3447.YkET6R);
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef3444.ZzcwNk);
+        const stringResult1 = intl2.string(_modDef3447.ZzcwNk);
         cResult[1] = stringResult;
         cResult[2] = stringResult1;
         let tmp6 = stringResult1;
@@ -78,9 +78,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
       const intl = util.intl;
-      obj2.label = intl.string(_modDef3444.YkET6R);
+      obj2.label = intl.string(_modDef3447.YkET6R);
       const intl2 = util.intl;
-      obj2.subLabel = intl2.string(_modDef3444.ZzcwNk);
+      obj2.subLabel = intl2.string(_modDef3447.ZzcwNk);
       obj2.perform = callback;
       return obj2;
     };

@@ -34,10 +34,10 @@ function onConfirmBackups(onSuccess) {
   obj.confirmColor = native.ButtonColors.BRAND;
   showUserSettingsInputAlertDefault(obj);
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOnViewBackups() {
       const cResult = c.c(1);
@@ -59,14 +59,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             confirmColor: null,
             useKeyboardAwareWrapper: true,
           };
-          const intl = closure_0(1126).intl;
-          obj.title = intl.string(closure_0(1126).t.PsQmzU);
-          const intl2 = closure_0(1126).intl;
-          obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-          const intl3 = closure_0(1126).intl;
-          obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-          obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-          closure_1(15703)(obj);
+          const intl = closure_0(1128).intl;
+          obj.title = intl.string(closure_0(1128).t.PsQmzU);
+          const intl2 = closure_0(1128).intl;
+          obj.inputLabel = intl2.string(closure_0(1128).t["CIGa+7"]);
+          const intl3 = closure_0(1128).intl;
+          obj.actionText = intl3.string(closure_0(1128).t.PDTjLN);
+          obj.confirmColor = closure_0(1202).ButtonColors.BRAND;
+          closure_1(15736)(obj);
           return false;
         };
         cResult[0] = fn;
@@ -94,14 +94,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           confirmColor: null,
           useKeyboardAwareWrapper: true,
         };
-        const intl = closure_0(1126).intl;
-        obj.title = intl.string(closure_0(1126).t.PsQmzU);
-        const intl2 = closure_0(1126).intl;
-        obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-        const intl3 = closure_0(1126).intl;
-        obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-        obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-        closure_1(15703)(obj);
+        const intl = closure_0(1128).intl;
+        obj.title = intl.string(closure_0(1128).t.PsQmzU);
+        const intl2 = closure_0(1128).intl;
+        obj.inputLabel = intl2.string(closure_0(1128).t["CIGa+7"]);
+        const intl3 = closure_0(1128).intl;
+        obj.actionText = intl3.string(closure_0(1128).t.PDTjLN);
+        obj.confirmColor = closure_0(1202).ButtonColors.BRAND;
+        closure_1(15736)(obj);
         return false;
       }, []);
     };
@@ -110,8 +110,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(8210).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(15614).useIs2FAEnabled,
+  parent: fn(8213).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(15647).useIs2FAEnabled,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
     ? function useOnViewBackups() {
         const cResult = c.c(1);
@@ -133,14 +133,14 @@ const route = SettingBuilders.createRoute({
               confirmColor: null,
               useKeyboardAwareWrapper: true,
             };
-            const intl = closure_0(1126).intl;
-            obj.title = intl.string(closure_0(1126).t.PsQmzU);
-            const intl2 = closure_0(1126).intl;
-            obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-            const intl3 = closure_0(1126).intl;
-            obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-            obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-            closure_1(15703)(obj);
+            const intl = closure_0(1128).intl;
+            obj.title = intl.string(closure_0(1128).t.PsQmzU);
+            const intl2 = closure_0(1128).intl;
+            obj.inputLabel = intl2.string(closure_0(1128).t["CIGa+7"]);
+            const intl3 = closure_0(1128).intl;
+            obj.actionText = intl3.string(closure_0(1128).t.PDTjLN);
+            obj.confirmColor = closure_0(1202).ButtonColors.BRAND;
+            closure_1(15736)(obj);
             return false;
           };
           cResult[0] = fn;
@@ -168,14 +168,14 @@ const route = SettingBuilders.createRoute({
             confirmColor: null,
             useKeyboardAwareWrapper: true,
           };
-          const intl = closure_0(1126).intl;
-          obj.title = intl.string(closure_0(1126).t.PsQmzU);
-          const intl2 = closure_0(1126).intl;
-          obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-          const intl3 = closure_0(1126).intl;
-          obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-          obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-          closure_1(15703)(obj);
+          const intl = closure_0(1128).intl;
+          obj.title = intl.string(closure_0(1128).t.PsQmzU);
+          const intl2 = closure_0(1128).intl;
+          obj.inputLabel = intl2.string(closure_0(1128).t["CIGa+7"]);
+          const intl3 = closure_0(1128).intl;
+          obj.actionText = intl3.string(closure_0(1128).t.PDTjLN);
+          obj.confirmColor = closure_0(1202).ButtonColors.BRAND;
+          closure_1(15736)(obj);
           return false;
         }, []);
       },

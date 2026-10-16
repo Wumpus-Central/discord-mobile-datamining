@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onGoBack: c1, ref: c2 } = useNavigatorConfirmChangesOnBackDefault());
       const obj = { screenKey: "kick", title: null, render: null };
       const tmp = useNavigatorConfirmChangesOnBackDefault();
-      const intl = channelId(1126).intl;
-      obj.title = intl.string(channelId(1126).t["1r5E+m"]);
+      const intl = channelId(1128).intl;
+      obj.title = intl.string(channelId(1128).t["1r5E+m"]);
       obj.render = function render() {
         return jsx(ChatGDMCustomizeDefault, { ref, onFinish, channelId });
       };

@@ -8,7 +8,7 @@ import ActionSheetStore from "../../../../modules/action_sheet/native/ActionShee
 
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const NOOP = fn(1085).NOOP;
+const NOOP = fn(1087).NOOP;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
@@ -166,7 +166,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { dialogKey: sheetKey, onDismiss: T, zIndex, children: content };
-          const tmp20 = jsx(tmp(5418).Dialog, { dialogKey: sheetKey, onDismiss: T, zIndex, children: content });
+          const tmp20 = jsx(tmp(5420).Dialog, { dialogKey: sheetKey, onDismiss: T, zIndex, children: content });
           cResult[14] = T;
           cResult[15] = content;
           cResult[16] = sheetKey;
@@ -178,7 +178,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp5;
         cResult[11] = obj4;
       }
-      obj5 = { type: sheetKey(1273).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+      obj5 = { type: sheetKey(1275).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
       cResult[2] = impressionName;
       cResult[3] = impressionProperties;
       cResult[4] = obj5;
@@ -202,11 +202,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         ref2.current();
       }, []);
       const obj = {
-        type: sheetKey(1273).ImpressionTypes.HALFSHEET,
+        type: sheetKey(1275).ImpressionTypes.HALFSHEET,
         name: impressionName,
         properties: impressionProperties,
       };
-      transitionState(9189)(obj);
+      transitionState(9202)(obj);
       const imperativeHandle = registerDismissHandler.useImperativeHandle(
         ref,
         () => ({
@@ -242,11 +242,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         callback2();
         return true;
       }, items2);
-      transitionState(5432)(callback3);
-      const tmp5 = transitionState(9189);
-      return jsx(transitionState(7063).Provider, {
+      transitionState(5434)(callback3);
+      const tmp5 = transitionState(9202);
+      return jsx(transitionState(7065).Provider, {
         value: memo,
-        children: jsx(sheetKey(5418).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
+        children: jsx(sheetKey(5420).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
       });
     };
 ReactCompilerGating = fn(558);
@@ -298,12 +298,12 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] !== cResult[8]) {
             const obj2 = {
               style: StyleSheet.absoluteFill,
-              component: tmp(5366).TransitionGroupOverlayView,
+              component: tmp(5368).TransitionGroupOverlayView,
               children: tmp11,
             };
-            const tmp17 = jsx(tmp(12982).TransitionGroup, {
+            const tmp17 = jsx(tmp(13008).TransitionGroup, {
               style: StyleSheet.absoluteFill,
-              component: tmp(5366).TransitionGroupOverlayView,
+              component: tmp(5368).TransitionGroupOverlayView,
               children: tmp11,
             });
             cResult[10] = tmp11;
@@ -375,9 +375,9 @@ export const ActionSheetPresenter = ReactCompilerGating.isReactCompilerEnabled()
         />
       ));
       const obj = appEntryKey(504);
-      return jsx(appEntryKey(12982).TransitionGroup, {
+      return jsx(appEntryKey(13008).TransitionGroup, {
         style: StyleSheet.absoluteFill,
-        component: appEntryKey(5366).TransitionGroupOverlayView,
+        component: appEntryKey(5368).TransitionGroupOverlayView,
         children: mapped,
       });
     };

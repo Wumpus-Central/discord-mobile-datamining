@@ -6,8 +6,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const module_4868 = fn(4868);
-const state = module_4868.create(() => ({ message: "done", version: false }));
+const module_4871 = fn(4871);
+const state = module_4871.create(() => ({ message: "duration", version: false }));
 const styles = StyleSheet.create({
   liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 },
 });

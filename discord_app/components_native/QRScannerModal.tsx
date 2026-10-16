@@ -4,11 +4,11 @@ import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import util from "../intl/index.native.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import useSafeAreaInsetsDefault from "../modules/safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/02002_asyncRequireImpl.js";
 import LinkingDefault from "../lib/native/Linking.tsx";
 import actions_AlertActionCreatorsDefault from "../actions/native/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../actions/ModalActionCreators.tsx";
-import _modDef6998 from "../../_runtime/metro/06998__.js";
+import _modDef7000 from "../../_runtime/metro/07000__.js";
 import openUserSettings from "../modules/user_settings/core/native/openUserSettings.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import FamilyCenterNativeUtils from "../modules/parent_tools/native/FamilyCenterNativeUtils.tsx";
@@ -20,11 +20,11 @@ import noop from "../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, requireNativeComponent } = get_ActivityIndicator);
-const UserSettingsSections = fn(1085).UserSettingsSections;
-let closure_7 = fn(7476).FAMILY_CENTER_LINK_REQUEST_REGEX;
+const UserSettingsSections = fn(1087).UserSettingsSections;
+let closure_7 = fn(7478).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1384);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = QRScannerNativeComponentDefault;
 } else {
@@ -128,7 +128,7 @@ export default function QRScannerModal(showHelp) {
             ModalActionCreatorsDefault.pop();
             const tmp21Result = ModalActionCreatorsDefault;
             const obj2 = { remoteAuthFingerprint: result };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14756, dependencyMap.paths), obj2);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14789, dependencyMap.paths), obj2);
             const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;
@@ -161,8 +161,8 @@ export default function QRScannerModal(showHelp) {
         actions_AlertActionCreatorsDefault.show(obj4);
         tmp9 = importDefault;
       }
-      tmp9(6150).pop();
-      const tmp9Result = tmp9(6150);
+      tmp9(6152).pop();
+      const tmp9Result = tmp9(6152);
     };
     tmp10Result = closure_8(closure_11, obj3);
     tmp14 = closure_8;
@@ -170,9 +170,9 @@ export default function QRScannerModal(showHelp) {
   const items1 = [tmp10Result, ,];
   let obj4 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp7 = useSafeAreaInsetsDefault();
-  let intl = onScanSuccess(1126).intl;
-  obj4.accessibilityLabel = intl.string(onScanSuccess(1126).t.cpT0Cq);
-  obj4.source = _modDef6998;
+  let intl = onScanSuccess(1128).intl;
+  obj4.accessibilityLabel = intl.string(onScanSuccess(1128).t.cpT0Cq);
+  obj4.source = _modDef7000;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj4.style = items2;
   obj4.onPress = ModalActionCreatorsDefault.pop;
@@ -187,9 +187,9 @@ export default function QRScannerModal(showHelp) {
       items3[1] = obj6;
       obj5.style = items3;
       const obj7 = { style: tmp12.text, children: null };
-      let intl2 = tmp17(1126).intl;
-      obj7.children = intl2.string(tmp17(1126).t.dklV0G);
-      obj5.children = tmp14(tmp17(1200).LegacyText, obj7);
+      let intl2 = tmp17(1128).intl;
+      obj7.children = intl2.string(tmp17(1128).t.dklV0G);
+      obj5.children = tmp14(tmp17(1202).LegacyText, obj7);
       tmp14Result = tmp14(closure_5, obj5);
     }
   }

@@ -6,8 +6,8 @@ import UploadTargets from "UploadTargets.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const AbortCodes = fn(1085).AbortCodes;
-const FileUploadErrorTypes = fn(5144).FileUploadErrorTypes;
+const AbortCodes = fn(1087).AbortCodes;
+const FileUploadErrorTypes = fn(5147).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(580).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "ix",
+      items: "unicodeVersion",
     };
     return tmp3;
   }

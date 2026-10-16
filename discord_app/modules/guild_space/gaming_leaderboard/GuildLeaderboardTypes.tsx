@@ -25,6 +25,16 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 
 export { GamingLeaderboardStat };
 export const GuildSpaceLeaderboardEvent = obj2;
+export const getGuildSpaceLeaderboardUserIds = function getGuildSpaceLeaderboardUserIds(leaderboard) {
+  if (null == leaderboard) {
+    let items = [];
+  } else {
+    const items1 = [,];
+    ({ user_id: arr[0], secondary_user_id: arr[1] } = leaderboard);
+    items = items1.filter((item) => null != item);
+  }
+  return items;
+};
 export const parseGuildSpaceLeaderboardMessageData = function parseGuildSpaceLeaderboardMessageData(leaderboard) {
   let tmp = null;
   if (null != leaderboard) {

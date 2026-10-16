@@ -9,8 +9,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-const GuildPrompts = fn(13387).GuildPrompts;
+const GuildFeatures = fn(1087).GuildFeatures;
+const GuildPrompts = fn(13413).GuildPrompts;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");

@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
   View: closure_7,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 },
   thumb: null,
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.openMediaModal({
               initialSources: mapped,
               initialIndex: Math.max(0, closure_1),
-              analyticsSource: "VibegrationsChat",
+              analyticsSource: "ConjureChat",
               shareable: false,
               disableDownload: true,
               disableMediaOverlayButton: true,
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.openMediaModal({
               initialSources: mapped,
               initialIndex: Math.max(0, closure_1),
-              analyticsSource: "VibegrationsChat",
+              analyticsSource: "ConjureChat",
               shareable: false,
               disableDownload: true,
               disableMediaOverlayButton: true,

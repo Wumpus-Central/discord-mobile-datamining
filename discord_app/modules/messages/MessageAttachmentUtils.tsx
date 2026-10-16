@@ -56,7 +56,7 @@ function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChanne
     }
   }
 }
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/MessageAttachmentUtils.tsx");
@@ -166,7 +166,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const obj = channel(576);
   const stateFromStores = channel(573).useStateFromStores(first, tmp6);
-  const RenderSpoilers = tmp(2041).RenderSpoilers;
+  const RenderSpoilers = tmp(2044).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === media) {
@@ -175,7 +175,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
     }
   }
-  channel(7210);
+  channel(7212);
   if (cResult[7] === stateFromStores) {
     if (cResult[8] === setting) {
       let tmp11 = cResult[9];
@@ -202,10 +202,10 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
     }
     return canResult;
   });
-  const RenderSpoilers = channel(2041).RenderSpoilers;
+  const RenderSpoilers = channel(2044).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(573);
-  const enabledHarmTypesBitmaskForChannelType = channel(7210).getEnabledHarmTypesBitmaskForChannelType(channel(7216).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(7212).getEnabledHarmTypesBitmaskForChannelType(channel(7218).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 });
 export const getObscuredAlt = function getObscuredAlt(arg0) {

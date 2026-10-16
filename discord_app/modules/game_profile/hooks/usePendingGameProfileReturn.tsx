@@ -7,7 +7,7 @@ import GameStore from "../../games/GameStore.tsx";
 import GameProfileStore from "../GameProfileStore.tsx";
 
 require = fn;
-const AVATAR_SIZE = fn(1085).AVATAR_SIZE;
+const AVATAR_SIZE = fn(1087).AVATAR_SIZE;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");

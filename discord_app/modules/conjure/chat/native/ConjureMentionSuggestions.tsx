@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/chat/native/ConjureMentionSuggestions.tsx
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -24,8 +24,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = onSelect(1126).intl;
-          const stringResult = intl.string(_modDef3862.Vb3sUg);
+          const intl = onSelect(1128).intl;
+          const stringResult = intl.string(_modDef3865.Vb3sUg);
           cResult[0] = stringResult;
           let first = stringResult;
         } else {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === users) {
             if (cResult[6] !== cResult[3]) {
               let obj2 = { title: first, hasIcons: true, children: tmp7 };
-              const tmp13 = jsx(onSelect(6485).TableRowGroup, { title: first, hasIcons: true, children: tmp7 });
+              const tmp13 = jsx(onSelect(6487).TableRowGroup, { title: first, hasIcons: true, children: tmp7 });
               cResult[6] = tmp7;
               cResult[7] = tmp13;
               let tmp11 = tmp13;
@@ -49,21 +49,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const fn = function l(user) {
             closure_0 = user;
             const obj = {
-              icon: jsx(onSelect(1200).Avatar, { user, size: onSelect(1200).AvatarSizes.XSMALL, guildId: "Array" }),
+              icon: jsx(onSelect(1202).Avatar, { user, size: onSelect(1202).AvatarSizes.XSMALL, guildId: "r" }),
               label: null,
               subLabel: null,
               onPress: null,
             };
-            const obj2 = { user, size: onSelect(1200).AvatarSizes.XSMALL, guildId: "Array" };
-            obj.label = onSelect(5018).getName(user);
+            const obj2 = { user, size: onSelect(1202).AvatarSizes.XSMALL, guildId: "r" };
+            obj.label = onSelect(5021).getName(user);
             obj.subLabel = user.username;
             obj.onPress = function onPress() {
               return onSelect(closure_0);
             };
             return jsx(
-              onSelect(6400).TableRow,
+              onSelect(6402).TableRow,
               {
-                icon: jsx(onSelect(1200).Avatar, { user, size: onSelect(1200).AvatarSizes.XSMALL, guildId: "Array" }),
+                icon: jsx(onSelect(1202).Avatar, { user, size: onSelect(1202).AvatarSizes.XSMALL, guildId: "r" }),
                 label: null,
                 subLabel: null,
                 onPress: null,
@@ -90,16 +90,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (0 !== users.length) {
         let obj = { title: null, hasIcons: true, children: null };
         const intl = util.intl;
-        obj.title = intl.string(_modDef3862.Vb3sUg);
+        obj.title = intl.string(_modDef3865.Vb3sUg);
         obj.children = users.map((user) => {
           closure_0 = user;
           const obj = {
-            icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "Array" }),
+            icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "r" }),
             label: null,
             subLabel: null,
             onPress: null,
           };
-          const obj2 = { user, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+          const obj2 = { user, size: native.AvatarSizes.XSMALL, guildId: "r" };
           obj.label = UserUtils.getName(user);
           obj.subLabel = user.username;
           obj.onPress = function onPress() {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return jsx(
             TableRow.TableRow,
             {
-              icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "Array" }),
+              icon: jsx(native.Avatar, { user, size: native.AvatarSizes.XSMALL, guildId: "r" }),
               label: null,
               subLabel: null,
               onPress: null,

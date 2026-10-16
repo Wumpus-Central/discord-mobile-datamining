@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: metroRequire, Permissions: closure_7 } = Constants);
 fn(558);
 const ReactCompilerGating = fn(558);

@@ -12,10 +12,10 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsSections = fn(1085).AnalyticsSections;
+const AnalyticsSections = fn(1087).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   actionBarContainer: {
     overflow: "hidden",
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = channel(576);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
       const tmpResult = channel(504);
-      const firstMessage = channel(7224).useFirstForumPostMessage(channel).firstMessage;
+      const firstMessage = channel(7226).useFirstForumPostMessage(channel).firstMessage;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [JoinedThreadsStore];
         cResult[3] = items1;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[5];
       }
-      const tmpResult5 = channel(7224);
+      const tmpResult5 = channel(7226);
       const stateFromStores1 = channel(504).useStateFromStores(tmp9, tmp11);
       if (cResult[6] !== channel) {
         let guildId = channel.getGuildId();
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult6 = channel(504);
       const stateFromStores2 = channel(504).useStateFromStores(tmp15, I);
-      const width = stateFromStores1(1497)().width;
+      const width = stateFromStores1(1499)().width;
       const tmpResult7 = channel(504);
       [tmp20, noop] = width(noop.useState(0), 2);
       if (cResult[11] !== width) {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const gradientTop = tmp(9527).useGradientTop();
+        const gradientTop = tmp(9543).useGradientTop();
         if (cResult[20] === gradientTop) {
           class S {
             constructor(arg0) {
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let obj2 = { style: tmp4.reactionRow, children: null };
             const obj3 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp20 };
-            obj2.children = closure_10(tmp(10683).ForumPostActionBarReactions, obj3);
+            obj2.children = closure_10(tmp(10698).ForumPostActionBarReactions, obj3);
             tmp30 = closure_10(View, obj2);
           }
           cResult[23] = channel;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[20] = gradientTop;
         cResult[21] = tmp4.actionBarContainer;
         cResult[22] = items3;
-        const tmpResult8 = tmp(9527);
+        const tmpResult8 = tmp(9543);
       }
       function handleFollow() {
         const result = messages_MessagesUtils.handleToggleFollowForumPost(channel, stateFromStores1);
@@ -284,8 +284,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
       let obj = channel(504);
-      const firstMessage = channel(7224).useFirstForumPostMessage(channel).firstMessage;
-      let obj2 = channel(7224);
+      const firstMessage = channel(7226).useFirstForumPostMessage(channel).firstMessage;
+      let obj2 = channel(7226);
       const items1 = [JoinedThreadsStore];
       const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
       dependencyMap = channel.getGuildId();
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return isLurkingResult;
       });
-      const width = stateFromStores1(1497)().width;
+      const width = stateFromStores1(1499)().width;
       const tmp7 = width(noop.useState(0), 2);
       noop = tmp7[1];
       const items3 = [width];
@@ -307,13 +307,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items3);
       const obj4 = channel(504);
       const obj6 = { style: null, children: null };
-      const items4 = [tmp.actionBarContainer, channel(9527).useGradientTop()];
+      const items4 = [tmp.actionBarContainer, channel(9543).useGradientTop()];
       obj6.style = items4;
       let tmp11 = null != firstMessage;
       if (tmp11) {
         const obj7 = { style: tmp.reactionRow, children: null };
         const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-        obj7.children = closure_10(tmp2(10683).ForumPostActionBarReactions, obj8);
+        obj7.children = closure_10(tmp2(10698).ForumPostActionBarReactions, obj8);
         tmp11 = closure_10(View, obj7);
       }
       const items5 = [tmp11];
@@ -324,8 +324,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores2) {
         const items7 = [tmp13, ,];
         const obj10 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-        const intl4 = tmp2(1126).intl;
-        obj10.accessibilityLabel = intl4.string(tmp2(1126).t.WqhZss);
+        const intl4 = tmp2(1128).intl;
+        obj10.accessibilityLabel = intl4.string(tmp2(1128).t.WqhZss);
         obj10.style = tmp.actionButton;
         obj10.onPress = function handleCopyLink() {
           const guildId = channel.getGuildId();
@@ -334,11 +334,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const result = messages_MessagesUtils.handleCopyLinkForumPost(guildId, channel.id, obj2);
           }
         };
-        obj10.children = closure_10(tmp2(5097).LinkIcon, { size: "xs" });
-        items7[1] = closure_10(tmp2(6405).PressableOpacity, obj10);
+        obj10.children = closure_10(tmp2(5100).LinkIcon, { size: "xs" });
+        items7[1] = closure_10(tmp2(6407).PressableOpacity, obj10);
         const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-        const intl5 = tmp2(1126).intl;
-        obj11.accessibilityLabel = intl5.string(tmp2(1126).t.nFP4oa);
+        const intl5 = tmp2(1128).intl;
+        obj11.accessibilityLabel = intl5.string(tmp2(1128).t.nFP4oa);
         const items8 = [,];
         ({ actionButton: arr11[0], lastActionButton: arr11[1] } = tmp);
         obj11.style = items8;
@@ -349,8 +349,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.jumpType = Client.JumpType.ANIMATED;
           obj.jumpToMessage(obj2);
         };
-        obj11.children = closure_10(tmp2(10705).ArrowLargeUpIcon, { size: "xs" });
-        items7[2] = closure_10(tmp2(6405).PressableOpacity, obj11);
+        obj11.children = closure_10(tmp2(10720).ArrowLargeUpIcon, { size: "xs" });
+        items7[2] = closure_10(tmp2(6407).PressableOpacity, obj11);
         obj9.children = items7;
         items5[1] = closure_11(View, obj9);
         obj6.children = items5;
@@ -360,19 +360,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = messages_MessagesUtils.handleToggleFollowForumPost(channel, stateFromStores1);
         };
         const obj12 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-        let intl = tmp2(1126).intl;
+        let intl = tmp2(1128).intl;
         let Text = intl.string;
-        let t = tmp2(1126).t;
+        let t = tmp2(1128).t;
         if (stateFromStores1) {
           obj12.accessibilityLabel = Text(t.G3ooHD);
           obj12.style = tmp.actionButton;
           obj12.onPress = items9;
           intl = closure_10;
-          items9 = [closure_10(tmp2(6416).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
-          Text = tmp2(5147).Text;
+          items9 = [closure_10(tmp2(6418).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
+          Text = tmp2(5149).Text;
           const obj13 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "text-brand", children: null };
-          const intl3 = tmp2(1126).intl;
-          obj13.children = intl3.string(tmp2(1126).t["OtF+lC"]);
+          const intl3 = tmp2(1128).intl;
+          obj13.children = intl3.string(tmp2(1128).t["OtF+lC"]);
           t = closure_10(Text, obj13);
           items9[1] = t;
           obj12.children = items9;
@@ -381,20 +381,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj12.accessibilityLabel = Text(t["DjZ+6E"]);
           obj12.style = tmp.actionButton;
           obj12.onPress = items9;
-          const items10 = [closure_10(tmp2(8990).BellIcon, { size: "xs" })];
+          const items10 = [closure_10(tmp2(8998).BellIcon, { size: "xs" })];
           const obj14 = {
             style: tmp.buttonText,
             variant: "text-sm/semibold",
             color: "interactive-text-default",
             children: null,
           };
-          const intl2 = tmp2(1126).intl;
-          obj14.children = intl2.string(tmp2(1126).t["0rQinA"]);
-          items10[1] = closure_10(tmp2(5147).Text, obj14);
+          const intl2 = tmp2(1128).intl;
+          obj14.children = intl2.string(tmp2(1128).t["0rQinA"]);
+          items10[1] = closure_10(tmp2(5149).Text, obj14);
           obj12.children = items10;
           tmp15 = obj12;
         }
-        closure_11(tmp2(6405).PressableOpacity, tmp15);
+        closure_11(tmp2(6407).PressableOpacity, tmp15);
       }
-      const obj5 = channel(9527);
+      const obj5 = channel(9543);
     };

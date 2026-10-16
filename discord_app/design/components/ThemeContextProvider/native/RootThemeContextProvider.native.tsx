@@ -4,7 +4,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ThemeTypes = fn(1096).ThemeTypes;
+const ThemeTypes = fn(1098).ThemeTypes;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -231,7 +231,7 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { value: tmp5, children: children.children };
     }
   : function DisableCustomTheme(children) {
-      themeContext = themeContext(4883).useThemeContext();
+      themeContext = themeContext(4886).useThemeContext();
       const items = [themeContext];
       const memo = noop.useMemo(() => {
         const obj2 = {};
@@ -241,5 +241,5 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
         obj2.gradient = null;
         return native.createThemedContext(obj2);
       }, items);
-      return jsx(themeContext(4883).ThemeContext.Provider, { value: memo, children: children.children });
+      return jsx(themeContext(4886).ThemeContext.Provider, { value: memo, children: children.children });
     };

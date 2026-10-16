@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef13760 from "../../../../../../../_runtime/metro/13760__.js";
+import _modDef13786 from "../../../../../../../_runtime/metro/13786__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(13758).CrunchyrollLinkModalScenes;
-const Constants = fn(1085);
+let closure_4 = fn(13784).CrunchyrollLinkModalScenes;
+const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,12 +21,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(9);
       const tmp4 = closure_8();
       const obj = navigation(576);
-      navigation = navigation(1503).useNavigation();
+      navigation = navigation(1505).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { label: null, icon: null };
-        const intl = tmp(1126).intl;
-        obj3.label = intl.string(tmp(1126).t["2TXHQd"]);
-        obj3.icon = tmp(8619).PlayIcon;
+        const intl = tmp(1128).intl;
+        obj3.label = intl.string(tmp(1128).t["2TXHQd"]);
+        obj3.icon = tmp(8627).PlayIcon;
         const items = [obj3];
         cResult[0] = items;
         let first = items;
@@ -44,10 +44,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(1126).intl;
-        const stringResult = intl2.string(tmp(1126).t["Da+3NJ"]);
-        const intl3 = tmp(1126).intl;
-        const stringResult1 = intl3.string(tmp(1126).t.MaPpPL);
+        const intl2 = tmp(1128).intl;
+        const stringResult = intl2.string(tmp(1128).t["Da+3NJ"]);
+        const intl3 = tmp(1128).intl;
+        const stringResult1 = intl3.string(tmp(1128).t.MaPpPL);
         const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
         cResult[3] = stringResult;
         cResult[4] = stringResult1;
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      const obj2 = navigation(1503);
-      const tmp17 = jsx(navigation(9435).TwoWayLinkLanding, {
+      const obj2 = navigation(1505);
+      const tmp17 = jsx(navigation(9451).TwoWayLinkLanding, {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13760,
+        img: _modDef13786,
         imgStyle: tmp4.image,
         headerConnect: tmp8,
         body: tmp9,
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = tmp17;
       const obj5 = {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13760,
+        img: _modDef13786,
         imgStyle: tmp4.image,
         headerConnect: tmp8,
         body: tmp9,
@@ -94,13 +94,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CrunchyrollLinkLanding() {
       const tmp = closure_8();
-      navigation = navigation(1503).useNavigation();
+      navigation = navigation(1505).useNavigation();
       let items = [navigation];
       const memo = noop.useMemo(() => {
         const obj = { label: null, icon: null };
-        const intl = navigation(1126).intl;
-        obj.label = intl.string(navigation(1126).t["2TXHQd"]);
-        obj.icon = navigation(8619).PlayIcon;
+        const intl = navigation(1128).intl;
+        obj.label = intl.string(navigation(1128).t["2TXHQd"]);
+        obj.icon = navigation(8627).PlayIcon;
         const items = [obj];
         return items;
       }, []);
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13760,
+        img: _modDef13786,
         imgStyle: tmp.image,
         headerConnect: null,
         body: null,
@@ -117,17 +117,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onNext: null,
         valueProps: null,
       };
-      let intl = navigation(1126).intl;
-      obj2.headerConnect = intl.string(navigation(1126).t["Da+3NJ"]);
-      const intl2 = navigation(1126).intl;
-      obj2.body = intl2.string(navigation(1126).t.MaPpPL);
-      let obj = navigation(1503);
+      let intl = navigation(1128).intl;
+      obj2.headerConnect = intl.string(navigation(1128).t["Da+3NJ"]);
+      const intl2 = navigation(1128).intl;
+      obj2.body = intl2.string(navigation(1128).t.MaPpPL);
+      let obj = navigation(1505);
       obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
       obj2.onNext = callback;
       obj2.valueProps = memo;
-      return jsx(navigation(9435).TwoWayLinkLanding, {
+      return jsx(navigation(9451).TwoWayLinkLanding, {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13760,
+        img: _modDef13786,
         imgStyle: tmp.image,
         headerConnect: null,
         body: null,

@@ -6,7 +6,7 @@ import useAppChannelApplication from "useAppChannelApplication.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 
 require = fn;
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = fn(1087).ChannelTypes;
 const ReactCompilerGating = fn(558);
 function getAppChannelBotUserIdFromApplication(type, bot) {
   if (type.type === ChannelTypes.GUILD_APP) {

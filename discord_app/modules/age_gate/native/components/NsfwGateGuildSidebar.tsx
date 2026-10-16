@@ -9,12 +9,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7135).NsfwGateSource;
-const Constants = fn(1085);
+const NsfwGateSource = fn(7137).NsfwGateSource;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
 let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[11] !== stateFromStores) {
               let obj2 = { guild: stateFromStores, showExtraButtons: false };
-              const tmp21 = closure_12(stateFromStores(17153), obj2);
+              const tmp21 = closure_12(stateFromStores(17187), obj2);
               cResult[11] = stateFromStores;
               cResult[12] = tmp21;
               let tmp18 = tmp21;
@@ -78,8 +78,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp26 = stateFromStores(6122)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
-              const tmp27 = stateFromStores(6122)(constants3.PRIMARY_NORMAL, undefined, 14);
+              const tmp26 = stateFromStores(6124)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
+              const tmp27 = stateFromStores(6124)(constants3.PRIMARY_NORMAL, undefined, 14);
               cResult[13] = tmp26;
               cResult[14] = tmp27;
               let tmp23 = tmp27;
@@ -90,16 +90,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = guildId(1126).intl;
-              const stringResult = intl.string(guildId(1126).t.bAVpRR);
-              const intl2 = guildId(1126).intl;
-              let obj3 = { helpURL: stateFromStores(2128).getArticleURL(constants2.NSFW_GUILD_GUIDELINES) };
-              const formatResult = intl2.format(guildId(1126).t.NQuXf0, obj3);
+              const intl = guildId(1128).intl;
+              const stringResult = intl.string(guildId(1128).t.bAVpRR);
+              const intl2 = guildId(1128).intl;
+              let obj3 = { helpURL: stateFromStores(2131).getArticleURL(constants2.NSFW_GUILD_GUIDELINES) };
+              const formatResult = intl2.format(guildId(1128).t.NQuXf0, obj3);
               cResult[15] = stringResult;
               cResult[16] = formatResult;
               let tmp29 = formatResult;
               let tmp28 = stringResult;
-              const obj5 = stateFromStores(2128);
+              const obj5 = stateFromStores(2131);
             } else {
               tmp28 = cResult[15];
               tmp29 = cResult[16];
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               title: tmp28,
               body: tmp29,
             };
-            const tmp36 = closure_12(guildId(1200).RefreshEmptyState, obj6);
+            const tmp36 = closure_12(guildId(1202).RefreshEmptyState, obj6);
             cResult[17] = tmp4.emptyStateContainer;
             cResult[18] = tmp29;
             cResult[19] = tmp36;

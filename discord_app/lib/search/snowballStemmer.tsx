@@ -1,8 +1,8 @@
 // discord_app/lib/search/snowballStemmer.tsx
-import 17724__ from "../../../_runtime/metro/17724__.js";
+import 17758__ from "../../../_runtime/metro/17758__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let closure_0 = module_17724.newStemmer("english");
+let closure_0 = module_17758.newStemmer("english");
 const result = size.fileFinishedImporting("lib/search/snowballStemmer.tsx");
 
 export const snowballStem = function snowballStem(arg0) {

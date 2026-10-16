@@ -400,9 +400,9 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(18287);
+const NativeAppStartup = fn(18329);
 ({ initHeadlessTask: closure_7, applicationReady: closure_8 } = NativeAppStartup);
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_startup/native/executeHeadlessTask.tsx");
 

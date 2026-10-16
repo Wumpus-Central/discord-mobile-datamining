@@ -131,26 +131,26 @@ export default noop.memo(
         channel = channel.channel;
         noop = undefined;
         c4 = undefined;
-        const navigation = channel(1503).useNavigation();
-        const obj = channel(1503);
+        const navigation = channel(1505).useNavigation();
+        const obj = channel(1505);
         const items = [c4];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj2 = channel(504);
-        dependencyMap = channel(13018).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+        dependencyMap = channel(13044).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
         const items1 = [navigation];
         const callback = noop.useCallback(() => {
           navigation.pop();
         }, items1);
-        const obj3 = channel(13018);
-        const messageRequestActions = channel(13010).useMessageRequestActions({
+        const obj3 = channel(13044);
+        const messageRequestActions = channel(13036).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { text: null, variant: "critical" };
-            const intl = channel(1126).intl;
-            obj2.text = intl.string(channel(1126).t["EDYbS+"]);
-            navigation(4865).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+            const intl = channel(1128).intl;
+            obj2.text = intl.string(channel(1128).t["EDYbS+"]);
+            navigation(4868).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
           },
           onRejectSuccess: callback,
         });
@@ -182,23 +182,23 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        const obj4 = channel(13010);
+        const obj4 = channel(13036);
         const obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { text: null, variant: "critical" };
-            const intl = channel(1126).intl;
-            obj2.text = intl.string(channel(1126).t["EDYbS+"]);
-            navigation(4865).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+            const intl = channel(1128).intl;
+            obj2.text = intl.string(channel(1128).t["EDYbS+"]);
+            navigation(4868).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
           },
           onRejectSuccess: callback,
         };
-        let intl = tmp(1126).intl;
-        obj6.message = intl.string(channel(1126).t.fS08qB);
-        const intl2 = tmp(1126).intl;
-        obj6.subtext = intl2.string(channel(1126).t["8U5OXE"]);
-        const intl3 = tmp(1126).intl;
-        obj6.buttonPrimaryText = intl3.string(channel(1126).t.cpT0Cq);
+        let intl = tmp(1128).intl;
+        obj6.message = intl.string(channel(1128).t.fS08qB);
+        const intl2 = tmp(1128).intl;
+        obj6.subtext = intl2.string(channel(1128).t["8U5OXE"]);
+        const intl3 = tmp(1128).intl;
+        obj6.buttonPrimaryText = intl3.string(channel(1128).t.cpT0Cq);
         obj6.buttonPrimaryOnPress = function handleRejectClick(stopPropagation) {
           stopPropagation.stopPropagation();
           _undefined(channel.id);
@@ -208,8 +208,8 @@ export default noop.memo(
           isRejectLoading = isOptimisticRejected;
         }
         obj6.buttonPrimaryLoading = isRejectLoading;
-        const intl4 = tmp(1126).intl;
-        obj6.buttonSecondaryText = intl4.string(channel(1126).t.olZgw5);
+        const intl4 = tmp(1128).intl;
+        obj6.buttonSecondaryText = intl4.string(channel(1128).t.olZgw5);
         obj6.buttonSecondaryOnPress = function handleAcceptClick(stopPropagation) {
           stopPropagation.stopPropagation();
           _undefined2(channel, closure_2, () =>
@@ -218,7 +218,7 @@ export default noop.memo(
         };
         obj6.buttonSecondaryDisabled = tmp7;
         obj6.buttonSecondaryLoading = isUserProfileLoading;
-        return jsx(navigation(13016), {
+        return jsx(navigation(13042), {
           type: "button-action",
           message: null,
           subtext: null,

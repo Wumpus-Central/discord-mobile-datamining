@@ -6,7 +6,7 @@ import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord.tsx";
 import PremiumWishlistItemRecord from "PremiumWishlistItemRecord.tsx";
 import SKUWishlistItemRecord from "SKUWishlistItemRecord.tsx";
 
-const SKUProductLines = fn(1085).SKUProductLines;
+const SKUProductLines = fn(1087).SKUProductLines;
 const prototype = function WishlistRecord(arg0) {
   const tmp = new prototype(new.target, new.target, arg0);
   ({ id: tmp.id, userId: tmp.userId, items: tmp.items, applications } = arg0);

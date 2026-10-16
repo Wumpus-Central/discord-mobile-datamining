@@ -11,15 +11,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1200).AvatarSizes.LARGE_48] = fn(1200).AvatarSizes.SMALL;
-obj[fn(1200).AvatarSizes.XLARGE] = fn(1200).AvatarSizes.NORMAL;
-obj[fn(1200).AvatarSizes.XXLARGE] = fn(1200).AvatarSizes.LARGE;
-obj[fn(1200).AvatarSizes.PROFILE] = fn(1200).AvatarSizes.XXLARGE;
-obj[fn(1200).AvatarSizes.REFRESH_MEDIUM_32] = fn(1200).AvatarSizes.XSMALL_20;
-obj[fn(1200).AvatarSizes.XSMALL] = fn(1200).AvatarSizes.SIZE_16;
-obj[fn(1200).AvatarSizes.SIZE_16] = fn(1200).AvatarSizes.XXSMALL_10;
-obj[fn(1200).AvatarSizes.NORMAL] = fn(1200).AvatarSizes.XSMALL;
-const createStyles = fn(5151);
+obj[fn(1202).AvatarSizes.LARGE_48] = fn(1202).AvatarSizes.SMALL;
+obj[fn(1202).AvatarSizes.XLARGE] = fn(1202).AvatarSizes.NORMAL;
+obj[fn(1202).AvatarSizes.XXLARGE] = fn(1202).AvatarSizes.LARGE;
+obj[fn(1202).AvatarSizes.PROFILE] = fn(1202).AvatarSizes.XXLARGE;
+obj[fn(1202).AvatarSizes.REFRESH_MEDIUM_32] = fn(1202).AvatarSizes.XSMALL_20;
+obj[fn(1202).AvatarSizes.XSMALL] = fn(1202).AvatarSizes.SIZE_16;
+obj[fn(1202).AvatarSizes.SIZE_16] = fn(1202).AvatarSizes.XXSMALL_10;
+obj[fn(1202).AvatarSizes.NORMAL] = fn(1202).AvatarSizes.XSMALL;
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      Avatar = Avatar(1200).Avatar;
+      Avatar = Avatar(1202).Avatar;
       tmp = closure_5(Avatar, {
         autoStatusCutout: true,
         status,
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      tmp5 = closure_5(channel(1200).Avatar, {
+      tmp5 = closure_5(channel(1202).Avatar, {
         autoStatusCutout: true,
         status,
         style,

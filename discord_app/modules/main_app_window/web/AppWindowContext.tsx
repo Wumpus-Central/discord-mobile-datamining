@@ -7,9 +7,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let componentDispatcher = new fn(1121).ComponentDispatcher();
-let obj = { appContext: fn(1085).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
-const WindowIdUtils = fn(6288);
+let componentDispatcher = new fn(1123).ComponentDispatcher();
+let obj = { appContext: fn(1087).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
+const WindowIdUtils = fn(6290);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();

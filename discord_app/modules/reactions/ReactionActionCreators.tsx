@@ -867,11 +867,11 @@ let closure_23 = async function _removeReaction(arg0) {
                     if (burst != null) {
                       burst = burst.burst;
                     }
-                    const AccessibilityAnnouncer = channelId(5025).AccessibilityAnnouncer;
-                    intl = channelId(1126).intl;
+                    const AccessibilityAnnouncer = channelId(5028).AccessibilityAnnouncer;
+                    intl = channelId(1128).intl;
                     if (!burst) {
                       const obj6 = { name: tmp2.name };
-                      AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1126).t["tD9+b+"], obj6));
+                      AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1128).t["tD9+b+"], obj6));
                     }
                   }
                   const obj7 = { name: tmp2.name };
@@ -981,7 +981,7 @@ function hasUserAlreadyReacted(arg0, arg1, arg2, arg3) {
   }
   return result;
 }
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AbortCodes: closure_7, AnalyticEvents: closure_8, ComponentActions: closure_9, Endpoints: c10 } = Constants);
 const ReactionLocations = {
   MESSAGE: "Message",

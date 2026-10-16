@@ -565,7 +565,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
 let closure_3 = ["subscriptionId"];
 const noop = fn(19);
 ({ useCallback: closure_7, useEffect: closure_8, useState: closure_9, useRef: c10 } = noop);
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFetchGenericInvoicePreview(preventFetch, arg1, arg2) {

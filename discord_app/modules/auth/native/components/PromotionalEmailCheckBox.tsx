@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6147);
+const PromoEmailConsentStore = fn(6149);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
       const tmpResult = require("useA11yRolesNative");
       const promoEmailOptInLabel = require("usePromoEmailOptInLabel").usePromoEmailOptInLabel(
-        tmp(1126).t.ylFCLt,
+        tmp(1128).t.ylFCLt,
         "REGISTER_PROMO_EMAIL_CHECKBOX_MOBILE",
       );
       if (!tmp7) {
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { checked: tmp6Result };
-          const tmp16 = closure_6(tmp(6398).FormCheckbox, obj2);
+          const tmp16 = closure_6(tmp(6400).FormCheckbox, obj2);
           cResult[6] = tmp6Result;
           cResult[7] = tmp16;
         } else {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.checkboxLabel,
           children: promoEmailOptInLabel,
         };
-        const tmp19 = closure_6(tmp(5147).Text, obj4);
+        const tmp19 = closure_6(tmp(5149).Text, obj4);
         cResult[8] = promoEmailOptInLabel;
         cResult[9] = tmp4.checkboxLabel;
         cResult[10] = tmp19;
@@ -174,14 +174,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj5 = { checked: tmp3 };
-        const items = [closure_6(tmp4(6398).FormCheckbox, obj5)];
+        const items = [closure_6(tmp4(6400).FormCheckbox, obj5)];
         const obj6 = {
           variant: "text-xs/medium",
           color: "text-muted",
           style: tmp.checkboxLabel,
           children: promoEmailOptInLabel,
         };
-        items[1] = closure_6(tmp4(5147).Text, obj6);
+        items[1] = closure_6(tmp4(5149).Text, obj6);
         obj4.children = items;
         obj3.children = closure_7(closure_3, obj4);
         tmp8 = closure_6(closure_2, obj3);

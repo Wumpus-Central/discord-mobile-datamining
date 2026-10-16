@@ -7,7 +7,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountEmailSettingTrailing() {
       const cResult = c.c(2);
@@ -46,7 +46,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
   },
-  parent: fn(8210).MobileUserSettings.ACCOUNT,
+  parent: fn(8213).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountEmailSettingTrailing() {
         const cResult = c.c(2);

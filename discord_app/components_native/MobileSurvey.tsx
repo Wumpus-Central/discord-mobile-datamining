@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef11420 from "../../_runtime/metro/11420__.js";
+import _modDef11440 from "../../_runtime/metro/11440__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -11,9 +11,9 @@ import SurveyStore from "../stores/SurveyStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         ({ prompt: _prompt, cta } = stateFromStores);
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t.f3Pet9);
+          const intl = tmp(1128).intl;
+          const stringResult = intl.string(tmp(1128).t.f3Pet9);
           cResult[5] = stringResult;
           let tmp12 = stringResult;
         } else {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onCancel: C,
             renderConfirmRightIcon: tmp17,
           };
-          const tmp21 = jsx(stateFromStores(5458), {
+          const tmp21 = jsx(stateFromStores(5460), {
             body: _prompt,
             confirmText: cta,
             cancelText: tmp12,
@@ -290,8 +290,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           renderConfirmRightIcon: null,
         };
         ({ prompt: obj2.body, cta: obj2.confirmText } = stateFromStores);
-        const intl = tmp(1126).intl;
-        obj3.cancelText = intl.string(tmp(1126).t.f3Pet9);
+        const intl = tmp(1128).intl;
+        obj3.cancelText = intl.string(tmp(1128).t.f3Pet9);
         obj3.onConfirm = function onConfirm() {
           LinkingDefault.openURL(stateFromStores.url);
           SurveyActionCreators.surveyHide(stateFromStores.key, false);
@@ -304,10 +304,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: confirmIcon.confirmIcon,
             color: nativeDefault.unsafe_rawColors.WHITE,
             size: native.Icon.Sizes.SMALL,
-            source: _modDef11420,
+            source: _modDef11440,
           });
         };
-        tmp5 = jsx(stateFromStores(5458), {
+        tmp5 = jsx(stateFromStores(5460), {
           body: null,
           confirmText: null,
           cancelText: null,
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onCancel: null,
           renderConfirmRightIcon: null,
         });
-        const tmp8 = stateFromStores(5458);
+        const tmp8 = stateFromStores(5460);
       }
       return tmp5;
     };

@@ -43,7 +43,7 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   }
   tmp15 = closure_5;
 }
-const ActivityGamePlatforms = fn(1085).ActivityGamePlatforms;
+const ActivityGamePlatforms = fn(1087).ActivityGamePlatforms;
 const IconKey = {
   DESKTOP: "desktop",
   MOBILE: "mobile",

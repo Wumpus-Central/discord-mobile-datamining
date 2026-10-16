@@ -3,7 +3,7 @@ import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -44,44 +44,44 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13373, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13399, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
       },
     });
   }, items);
-  const intl = id(1126).intl;
+  const intl = id(1128).intl;
   const string = intl.string;
-  const t = id(1126).t;
+  const t = id(1128).t;
   if (isMediaChannelResult) {
     let stringResult = string(t.JxU0wr);
   } else {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_14(id(5439).Button, {
+  return closure_14(id(5441).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(11879).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(11903).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
   channel = channel.channel;
   const obj = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
-  const intl = channel(1126).intl;
-  obj.text = intl.string(channel(1126).t["112vVE"]);
+  const intl = channel(1128).intl;
+  obj.text = intl.string(channel(1128).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13374, dependencyMap.paths),
+      asyncRequireImpl(13400, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_14(channel(9293).TagIcon, { size: "xxs" });
-  return closure_14(channel(5439).Button, obj);
+  obj.icon = closure_14(channel(9306).TagIcon, { size: "xxs" });
+  return closure_14(channel(5441).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -121,10 +121,10 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12749).useForumChannelStore;
-const Constants = fn(1085);
+const useForumChannelStore = fn(12775).useForumChannelStore;
+const Constants = fn(1087);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-const Fonts = fn(1096).Fonts;
+const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 const archived_section = "archived_section";
@@ -140,7 +140,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -1905,7 +1905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(tmp3[17]).intl;
       obj12.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-      obj12.icon = require("../../../../_runtime/metro/13383__.js");
+      obj12.icon = require("../../../../_runtime/metro/13409__.js");
       obj12.disabled = tmp15;
       obj12.positionBottom = insets.bottom + require("native").space.PX_16;
       obj12.onPress = callback1;

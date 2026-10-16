@@ -12,16 +12,16 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsx = fn(21).jsx;
-let closure_11 = Object.freeze({ direction: fn(1200).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5151);
+let closure_11 = Object.freeze({ direction: fn(1202).CutoutDirection.RIGHT, inset: -4 });
+const createStyles = fn(5153);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
 });
 const ReactCompilerGating = fn(558);
-let obj = { direction: fn(1200).CutoutDirection.RIGHT, inset: -4 };
+let obj = { direction: fn(1202).CutoutDirection.RIGHT, inset: -4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
 
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RelationshipTypes.FRIEND,
       );
       const effect = stateFromStoresArray1.useEffect(() => {
-        const userAffinitiesV2 = closure_0(8933).fetchUserAffinitiesV2();
+        const userAffinitiesV2 = closure_0(8941).fetchUserAffinitiesV2();
       }, []);
       const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
       const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -216,22 +216,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = {
-                  user,
-                  guildId: "r",
-                  size: closure_0(1200).AvatarSizes.XSMALL,
-                  cutout: 131160.78625679022,
-                };
+                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: false };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
                 }
                 obj4.cutout = tmp3;
-                obj.children = jsx(closure_0(1200).CutoutableAvatarImage, {
+                obj.children = jsx(closure_0(1202).CutoutableAvatarImage, {
                   user,
                   guildId: "r",
-                  size: closure_0(1200).AvatarSizes.XSMALL,
-                  cutout: 131160.78625679022,
+                  size: closure_0(1202).AvatarSizes.XSMALL,
+                  cutout: false,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>
@@ -251,22 +246,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = {
-                  user,
-                  guildId: "r",
-                  size: closure_0(1200).AvatarSizes.XSMALL,
-                  cutout: 131160.78625679022,
-                };
+                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: false };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
                 }
                 obj4.cutout = tmp3;
-                obj.children = jsx(closure_0(1200).CutoutableAvatarImage, {
+                obj.children = jsx(closure_0(1202).CutoutableAvatarImage, {
                   user,
                   guildId: "r",
-                  size: closure_0(1200).AvatarSizes.XSMALL,
-                  cutout: 131160.78625679022,
+                  size: closure_0(1202).AvatarSizes.XSMALL,
+                  cutout: false,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>

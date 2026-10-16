@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "format",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "format",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "format",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "format",
+              originalAsset: "formatToPlainString",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return I;
     }
   : function usePremiumTryItOutPresetShuffle() {
-      const tmp = callback(5087)();
+      const tmp = callback(5090)();
       const isThemeLightResult = shared.isThemeLight(tmp);
       const require = isThemeLightResult;
       const items = [isThemeLightResult];
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           imageUri: tryItOutPresetConfig.getBannerSrc(false),
           staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
           description: tryItOutPresetConfig.getBannerAltText(),
-          originalAsset: "format",
+          originalAsset: "formatToPlainString",
         });
         const themeColors = tryItOutPresetConfig.themeColors;
         obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

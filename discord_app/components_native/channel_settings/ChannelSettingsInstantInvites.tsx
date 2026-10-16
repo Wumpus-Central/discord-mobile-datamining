@@ -10,16 +10,16 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
-const FastestListDefault = tmp2(6964);
-const _modDef10540 = tmp2(10540);
-const _modDef10541 = tmp2(10541);
-const InstantInviteSelfMeasurerDefault = tmp2(17861);
+const FastestListDefault = tmp2(6966);
+const _modDef10555 = tmp2(10555);
+const _modDef10556 = tmp2(10556);
+const InstantInviteSelfMeasurerDefault = tmp2(17895);
 require = fn;
 const View = fn(17).View;
-const ChannelSettingsSections = fn(1085).ChannelSettingsSections;
+const ChannelSettingsSections = fn(1087).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -323,12 +323,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items7);
       if (!loading) {
         if (0 === memo1.length) {
-          const obj5 = { lightSource: _modDef10540, darkSource: _modDef10541, title: null, body: null };
-          const intl = tmpResult(1126).intl;
-          obj5.title = intl.string(tmpResult(1126).t["+nLJkZ"]);
-          const intl2 = tmpResult(1126).intl;
-          obj5.body = intl2.string(tmpResult(1126).t.F53CAc);
-          return closure_9(tmpResult(1200).EmptyState, obj5);
+          const obj5 = { lightSource: _modDef10555, darkSource: _modDef10556, title: null, body: null };
+          const intl = tmpResult(1128).intl;
+          obj5.title = intl.string(tmpResult(1128).t["+nLJkZ"]);
+          const intl2 = tmpResult(1128).intl;
+          obj5.body = intl2.string(tmpResult(1128).t.F53CAc);
+          return closure_9(tmpResult(1202).EmptyState, obj5);
         }
       }
       if (!loading) {
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj8 = { style: tmp.content, children: null };
       tmp = closure_9;
-      const items8 = [closure_9(tmpResult(6947).SceneLoadingIndicator, {})];
+      const items8 = [closure_9(tmpResult(6949).SceneLoadingIndicator, {})];
       tmpResult = null;
       if (memo1.length > 0) {
         tmp2 = InstantInviteSelfMeasurerDefault;

@@ -1,4 +1,5 @@
 // discord_app/modules/checkpoint/CheckpointStatsUtils.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 
@@ -58,9 +59,14 @@ export const statsFromServer = function statsFromServer(stats) {
   const games1 = games.games;
   obj3.games = games1.map((game) => {
     game = game.game;
-    const game2 = { id: game.id, name: game.name, iconHash: null, bannerHash: null, coverImageHash: null };
-    const icon_hash = game.icon_hash;
-    game2.iconHash = icon_hash;
+    const game2 = {
+      id: SnowflakeUtilsDefault.cast(game.id),
+      name: null,
+      iconHash: icon_hash,
+      bannerHash: null,
+      coverImageHash: null,
+    };
+    ({ name: obj.name, icon_hash } = game);
     const banner_hash = game.banner_hash;
     game2.bannerHash = banner_hash;
     const cover_image_hash = game.cover_image_hash;

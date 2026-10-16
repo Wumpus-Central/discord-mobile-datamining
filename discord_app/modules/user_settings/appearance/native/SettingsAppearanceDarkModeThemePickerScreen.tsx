@@ -5,7 +5,7 @@ import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemeP
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SystemTheme = fn(1208).SystemTheme;
+const SystemTheme = fn(1210).SystemTheme;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

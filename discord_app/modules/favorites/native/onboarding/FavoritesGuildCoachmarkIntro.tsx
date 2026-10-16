@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3444 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3447 from "../../intl/FavoritesGuild.messages.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import FavoritesGuildAnalytics from "../../analytics/FavoritesGuildAnalytics.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "../../../guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
@@ -9,8 +9,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx";
 
 require = fn;
-const FAVORITES = fn(1085).FAVORITES;
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const FAVORITES = fn(1087).FAVORITES;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}",
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ReanimatedRexport.runOnJS(closure_2)(arg0);
         }
       };
-      const tmpResult = markAsDismissed(4906);
-      fn2.__closure = { runOnJS: markAsDismissed(4906).runOnJS, setScrolledToTop: tmp10 };
+      const tmpResult = markAsDismissed(4909);
+      fn2.__closure = { runOnJS: markAsDismissed(4909).runOnJS, setScrolledToTop: tmp10 };
       fn2.__workletHash = 13648062364539;
       fn2.__initData = __initData2;
       const animatedReaction = tmpResult.useAnimatedReaction(C, fn2);
@@ -121,9 +121,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult = obj4.string(scrollPosition(3444)["bu/mLv"]);
-        const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(scrollPosition(3444).kxQJ7q);
+        const stringResult = obj4.string(scrollPosition(3447)["bu/mLv"]);
+        const intl = tmp(1128).intl;
+        const stringResult1 = intl.string(scrollPosition(3447).kxQJ7q);
         cResult[6] = stringResult;
         cResult[7] = stringResult1;
         let tmp15 = stringResult1;
@@ -146,8 +146,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_8(scrollPosition(closure_2[13]), {});
           }
         }
-        const intl2 = tmp(1126).intl;
-        const stringResult2 = intl2.string(scrollPosition(3444)["vN/KQ9"]);
+        const intl2 = tmp(1128).intl;
+        const stringResult2 = intl2.string(scrollPosition(3447)["vN/KQ9"]);
         cResult[8] = G;
         cResult[9] = stringResult2;
         let tmp20 = stringResult2;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         buttonLabel: tmp20,
         onButtonPress: D,
       };
-      const obj2 = { runOnJS: markAsDismissed(4906).runOnJS, setScrolledToTop: tmp10 };
+      const obj2 = { runOnJS: markAsDismissed(4909).runOnJS, setScrolledToTop: tmp10 };
       const obj3 = {
         visible: tmp9,
         position: "bottom",
@@ -242,15 +242,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onButtonPress: null,
         };
         const intl = util.intl;
-        obj.title = intl.string(_modDef3444["bu/mLv"]);
+        obj.title = intl.string(_modDef3447["bu/mLv"]);
         const intl2 = util.intl;
-        obj.description = intl2.string(_modDef3444.kxQJ7q);
+        obj.description = intl2.string(_modDef3447.kxQJ7q);
         obj.onDismiss = onDismiss;
         obj.renderImgComponent = function renderImgComponent() {
           return closure_1_8(scrollPosition(visible[13]), {});
         };
         const intl3 = util.intl;
-        obj.buttonLabel = intl3.string(_modDef3444["vN/KQ9"]);
+        obj.buttonLabel = intl3.string(_modDef3447["vN/KQ9"]);
         obj.onButtonPress = callback1;
         return obj;
       }, items2);

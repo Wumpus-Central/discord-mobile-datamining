@@ -4,7 +4,7 @@ import FrontierTuningExperimentDefault from "../FrontierTuningExperiment.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = fn;
-const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
+const BoostedGuildTiers = fn(1087).BoostedGuildTiers;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx");
 

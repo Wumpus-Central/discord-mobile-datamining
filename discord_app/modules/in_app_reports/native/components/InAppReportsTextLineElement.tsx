@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, Linking: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { marginBottom: 16, paddingHorizontal: 16 },
   header: { marginBottom: 8 },
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp8 = sms_body(6390)(first);
+      const tmp8 = sms_body(6392)(first);
       if (data.is_localized) {
         if (cResult[1] !== sms) {
           function handleCopyPress() {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 str2 = ";";
               }
               str = str2;
-              tmpResult = closure_0(5127);
+              tmpResult = closure_0(5130);
             }
             let str3 = "";
             const combined = "sms:" + arg0;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[22] !== sms) {
                         let obj2 = { variant: "text-sm/semibold", color: "interactive-text-active", children: sms };
-                        const tmp31 = closure_9(tmp(5147).Text, obj2);
+                        const tmp31 = closure_9(tmp(5149).Text, obj2);
                         cResult[22] = sms;
                         cResult[23] = tmp31;
                         let tmp29 = tmp31;
@@ -150,9 +150,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp29 = cResult[23];
                       }
                       if (cResult[24] !== tmp6) {
-                        const intl = tmp(1126).intl;
+                        const intl = tmp(1128).intl;
                         const string = intl.string;
-                        let t5VZ88 = tmp(1126).t;
+                        let t5VZ88 = tmp(1128).t;
                         if (tmp6) {
                           t5VZ88 = t5VZ88.t5VZ88;
                           let stringResult = string(t5VZ88);
@@ -177,8 +177,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 }
                                 const _Symbol2 = Symbol;
                                 if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
-                                  const intl2 = tmp(1126).intl;
-                                  const stringResult1 = intl2.string(tmp(1126).t.BDYHSe);
+                                  const intl2 = tmp(1128).intl;
+                                  const stringResult1 = intl2.string(tmp(1128).t.BDYHSe);
                                   cResult[36] = stringResult1;
                                   let tmp46 = stringResult1;
                                 } else {
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 }
                                 if (cResult[37] !== tmp12) {
                                   let obj3 = { text: tmp46, size: "md", onPress: tmp12 };
-                                  const tmp50 = closure_9(tmp(5439).Button, obj3);
+                                  const tmp50 = closure_9(tmp(5441).Button, obj3);
                                   cResult[37] = tmp12;
                                   cResult[38] = tmp50;
                                   let tmp48 = tmp50;
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp38 = tmp41;
                         }
                         const obj9 = { text: cResult[25], size: "sm", onPress: tmp10, variant: "secondary" };
-                        const tmp37 = closure_9(tmp(5439).Button, obj9);
+                        const tmp37 = closure_9(tmp(5441).Button, obj9);
                         cResult[26] = tmp10;
                         cResult[27] = cResult[25];
                         cResult[28] = tmp37;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp28 = items3;
                   }
                   const obj10 = { style: tmp21, variant: "text-md/medium", children: tmp22 };
-                  const tmp26 = closure_9(tmp(5147).Text, obj10);
+                  const tmp26 = closure_9(tmp(5149).Text, obj10);
                   cResult[16] = tmp4.description;
                   cResult[17] = tmp22;
                   cResult[18] = tmp26;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityRole: "header",
                 children: title,
               };
-              const tmp20 = closure_9(tmp(5147).Text, obj11);
+              const tmp20 = closure_9(tmp(5149).Text, obj11);
               cResult[10] = tmp4.header;
               cResult[11] = title;
               cResult[12] = tmp20;
@@ -349,8 +349,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj5;
               } else {
                 if (value) {
-                  sms_body(4862).openURL(closure_128_0);
-                  const obj = sms_body(4862);
+                  sms_body(4865).openURL(closure_128_0);
+                  const obj = sms_body(4865);
                 }
                 dependencyMap = 3;
                 return { value: "IconComponent", done: null };

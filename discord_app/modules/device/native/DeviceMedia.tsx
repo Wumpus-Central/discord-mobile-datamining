@@ -90,9 +90,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10253)(obj2);
+          lastAssetIndex(10269)(obj2);
         }
-        obj = assets(1382);
+        obj = assets(1384);
       }
     }
   },
@@ -149,7 +149,7 @@ export default {
           obj2.num_assets = length;
           AnalyticsUtilsDefault.track(constants.MEDIA_PICKER_ASSETS_DEBUG, obj2);
         }
-        batchSize(1272).batchUpdates(() => {
+        batchSize(1274).batchUpdates(() => {
           const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
           let end_cursor;
           if (assets != null) {
@@ -172,7 +172,7 @@ export default {
           obj.hasReachedEnd = !num;
           state.setState(obj);
         });
-        const obj3 = batchSize(1272);
+        const obj3 = batchSize(1274);
       }
     });
   },

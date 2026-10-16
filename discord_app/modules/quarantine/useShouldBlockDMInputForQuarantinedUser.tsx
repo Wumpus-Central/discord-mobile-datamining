@@ -4,7 +4,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const UserFlags = fn(1085).UserFlags;
+const UserFlags = fn(1087).UserFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");

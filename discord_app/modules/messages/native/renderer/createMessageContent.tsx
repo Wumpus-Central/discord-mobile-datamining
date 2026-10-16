@@ -10,7 +10,7 @@ import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8109 from "../../../../../_runtime/metro/08109__.js";
+import _modDef8112 from "../../../../../_runtime/metro/08112__.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -84,7 +84,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8109);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8112);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -1250,6 +1250,7 @@ function createMessageContent(message) {
                       activityRichPresenceInviteEmbed = tmp13(tmp3[82]).createActivityRichPresenceInviteEmbed(
                         message,
                         channel,
+                        forcedTheme,
                       );
                       const tmp13Result114 = tmp13(tmp3[82]);
                     }

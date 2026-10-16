@@ -218,10 +218,10 @@ export const encodeConjureMentions = function encodeConjureMentions(chat, arr) {
 export { splitConjureMentions };
 export const useRequestConjureMentionedUsers = tmp2;
 export const withConjureMentionNames = function withConjureMentionNames(body) {
-  const f111496 = (arg0) => user.getUser(arg0);
+  const f111828 = (arg0) => user.getUser(arg0);
   return body.replace(closure_4, (arg0, arg1) => {
     let combined = arg0;
-    const tmp2 = f145304(arg1);
+    const tmp2 = f145765(arg1);
     if (null != tmp2) {
       const _HermesInternal = HermesInternal;
       combined = "@" + closure_0(dependencyMap[2]).getName(tmp2);
@@ -243,10 +243,10 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
       }
       if (cResult[1] !== arg0) {
         const fn = function s() {
-          const f145303 = (arg0) => user.getUser(arg0);
+          const f145764 = (arg0) => user.getUser(arg0);
           return closure_0.replace(re4, (arg0, arg1) => {
             let combined = arg0;
-            const tmp2 = f145304(arg1);
+            const tmp2 = f145765(arg1);
             if (null != tmp2) {
               const _HermesInternal = HermesInternal;
               combined = "@" + closure_0(dependencyMap[2]).getName(tmp2);
@@ -275,10 +275,10 @@ export const useConjureMentionNames = ReactCompilerGating.isReactCompilerEnabled
       return require("initialize").useStateFromStores(
         items,
         () => {
-          const f145304 = (arg0) => user.getUser(arg0);
+          const f145765 = (arg0) => user.getUser(arg0);
           return closure_0.replace(re4, (arg0, arg1) => {
             let combined = arg0;
-            const tmp2 = f145304(arg1);
+            const tmp2 = f145765(arg1);
             if (null != tmp2) {
               const _HermesInternal = HermesInternal;
               combined = "@" + closure_0(dependencyMap[2]).getName(tmp2);

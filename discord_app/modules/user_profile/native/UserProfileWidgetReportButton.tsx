@@ -23,8 +23,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       userId = userId.userId;
       const widget = userId.widget;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.D4GvHE);
+        let intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.D4GvHE);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const merged = Object.assign(_objectWithoutProperties(ref, closure_1_3));
             obj.hitSlop = hitSlop;
             obj.accessibilityRole = "button";
-            const intl = userId(1126).intl;
-            obj.accessibilityLabel = intl.string(userId(1126).t.xpSHSk);
-            obj.children = jsx(userId(9462).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
+            const intl = userId(1128).intl;
+            obj.accessibilityLabel = intl.string(userId(1128).t.xpSHSk);
+            obj.children = jsx(userId(9478).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
             return <Pressable ref={ref.ref} />;
           };
           cResult[4] = fn;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== tmp6) {
           const obj2 = { items: tmp6, children: tmp7 };
-          const tmp10 = jsx(tmp(9583).ContextMenu, { items: tmp6, children: tmp7 });
+          const tmp10 = jsx(tmp(9599).ContextMenu, { items: tmp6, children: tmp7 });
           cResult[5] = tmp6;
           cResult[6] = tmp10;
           let tmp8 = tmp10;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         {
           label: first,
           variant: "destructive",
-          IconComponent: userId(9794).FlagIcon,
+          IconComponent: userId(9810).FlagIcon,
           action() {
             return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
           },
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         label: first,
         variant: "destructive",
-        IconComponent: userId(9794).FlagIcon,
+        IconComponent: userId(9810).FlagIcon,
         action() {
           return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
         },

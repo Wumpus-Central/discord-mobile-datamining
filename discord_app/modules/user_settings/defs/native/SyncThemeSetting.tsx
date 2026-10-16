@@ -10,7 +10,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [ThemeStore];
       return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
     };
-const SettingBuilders = fn(10991);
+const SettingBuilders = fn(11006);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncThemeAcrossClientsValue() {
       const cResult = c.c(2);
@@ -64,7 +64,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8210).MobileUserSettings.APPEARANCE,
+  parent: fn(8213).MobileUserSettings.APPEARANCE,
   useIsDisabled: tmp2,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSyncThemeAcrossClientsValue() {

@@ -59,24 +59,12 @@ prototype["scheduleReport"] = function scheduleReport() {
       self._timeoutId = null;
       self.sendReport("timer");
       self._isScheduledReportSent = true;
-      const obj = NativeJankStatsModuleDefault;
-      if (obj != null) {
-        obj.stopTracking();
-      }
+      NativeJankStatsModuleDefault.stopTracking();
     }, 300000);
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  const obj = NativeJankStatsModuleDefault;
-  let report;
-  if (obj != null) {
-    report = obj.requestReport();
-  }
-  let tmp4 = null == report;
-  if (!tmp4) {
-    tmp4 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
-    const tmp5 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
-  }
+  const report = NativeJankStatsModuleDefault.requestReport();
   if (!tmp4) {
     const obj2 = {};
     const tmpResult = AnalyticsUtilsDefault;
@@ -91,6 +79,7 @@ prototype["sendReport"] = function sendReport(background) {
     obj2.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj2);
   }
+  tmp4 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
 };
 const jankStatsManager = new JankStatsManager();
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");

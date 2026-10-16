@@ -20,15 +20,15 @@ const GameClaimCardStackDefault = GameClaimCardStack;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: metroRequire } = Constants);
-const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -65,28 +65,28 @@ export default noop.memo(
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
         let obj = markAsDismissed(576);
-        let first = markAsDismissed(17209).useUnclaimedGameIdsForGuild(guild.id)[0];
+        let first = markAsDismissed(17243).useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
         }
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = markAsDismissed(1126).intl;
-          const stringResult = intl.string(markAsDismissed(1126).t.VQq92a);
+          const intl = markAsDismissed(1128).intl;
+          const stringResult = intl.string(markAsDismissed(1128).t.VQq92a);
           cResult[0] = stringResult;
           let first1 = stringResult;
         } else {
           first1 = cResult[0];
         }
-        const obj2 = markAsDismissed(17209);
+        const obj2 = markAsDismissed(17243);
         ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
         if (null == coverImageUrl) {
           return null;
         } else if (cResult[1] !== guild.features) {
           const features = guild.features;
           const hasItem = features.has(constants.VERIFIED);
-          const intl2 = markAsDismissed(1126).intl;
+          const intl2 = markAsDismissed(1128).intl;
           const string = intl2.string;
-          let uUARXe = markAsDismissed(1126).t;
+          let uUARXe = markAsDismissed(1128).t;
           if (hasItem) {
             uUARXe = uUARXe.uUARXe;
             let stringResult1 = string(uUARXe);
@@ -109,7 +109,7 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp18 = closure_8(markAsDismissed(6428).XSmallIcon, { size: "sm", color: "text-default" });
+            const tmp18 = closure_8(markAsDismissed(6430).XSmallIcon, { size: "sm", color: "text-default" });
             cResult[5] = tmp18;
             let tmp16 = tmp18;
           } else {
@@ -129,9 +129,9 @@ export default noop.memo(
               tmp22 = cResult[10];
             }
             if (cResult[11] !== gameName) {
-              const intl3 = markAsDismissed(1126).intl;
+              const intl3 = markAsDismissed(1128).intl;
               let obj4 = { gameName };
-              const formatResult = intl3.format(markAsDismissed(1126).t.Q11WTQ, obj4);
+              const formatResult = intl3.format(markAsDismissed(1128).t.Q11WTQ, obj4);
               cResult[11] = gameName;
               cResult[12] = formatResult;
               let tmp25 = formatResult;
@@ -152,9 +152,9 @@ export default noop.memo(
                   }
                   const _Symbol2 = Symbol;
                   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl4 = markAsDismissed(1126).intl;
-                    const stringResult2 = intl4.string(markAsDismissed(1126).t["2u6ZlY"]);
-                    const tmp38 = closure_8(markAsDismissed(7922).LinkExternalSmallIcon, {
+                    const intl4 = markAsDismissed(1128).intl;
+                    const stringResult2 = intl4.string(markAsDismissed(1128).t["2u6ZlY"]);
+                    const tmp38 = closure_8(markAsDismissed(7925).LinkExternalSmallIcon, {
                       size: "xs",
                       color: "white",
                     });
@@ -202,9 +202,9 @@ export default noop.memo(
                                 v1 = 1;
                                 v3 = 1;
                                 const obj5 = {
-                                  value: v1(7253).redirectDeveloperPortalWithHandoffToken(
+                                  value: v1(7255).redirectDeveloperPortalWithHandoffToken(
                                     constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                                    v3(7257).LoginHandoffSource.GAME_CLAIM,
+                                    v3(7259).LoginHandoffSource.GAME_CLAIM,
                                   ),
                                   done: false,
                                 };
@@ -228,7 +228,7 @@ export default noop.memo(
                         }
                       }),
                     };
-                    const tmp42 = closure_8(markAsDismissed(5439).Button, obj5);
+                    const tmp42 = closure_8(markAsDismissed(5441).Button, obj5);
                     cResult[24] = markAsDismissed;
                     cResult[25] = tmp42;
                     let tmp39 = tmp42;
@@ -256,7 +256,7 @@ export default noop.memo(
                     const obj6 = { variant: "secondary", style: tmp4.card, children: null };
                     const items = [tmp19, tmp22, tmp27, tmp31, tmp43];
                     obj6.children = items;
-                    const tmp49 = closure_9(markAsDismissed(6402).Card, obj6);
+                    const tmp49 = closure_9(markAsDismissed(6404).Card, obj6);
                     cResult[29] = tmp4.card;
                     cResult[30] = tmp27;
                     cResult[31] = tmp31;
@@ -274,7 +274,7 @@ export default noop.memo(
                   tmp43 = tmp46;
                 }
                 const obj8 = { variant: "text-sm/normal", color: "text-overlay-light", style: tmp30, children: tmp10 };
-                const tmp33 = closure_8(markAsDismissed(5147).Text, obj8);
+                const tmp33 = closure_8(markAsDismissed(5149).Text, obj8);
                 cResult[19] = tmp10;
                 cResult[20] = tmp30;
                 cResult[21] = tmp33;
@@ -293,14 +293,14 @@ export default noop.memo(
               style: tmp4.centeredText,
               children: tmp25,
             };
-            const tmp29 = closure_8(markAsDismissed(5147).Text, obj9);
+            const tmp29 = closure_8(markAsDismissed(5149).Text, obj9);
             cResult[13] = tmp4.centeredText;
             cResult[14] = tmp25;
             cResult[15] = tmp29;
             tmp27 = tmp29;
           }
           const obj10 = { accessibilityRole: "button", onPress: tmp15, style: tmp4.closeButton, children: tmp16 };
-          const tmp21 = closure_8(markAsDismissed(6405).PressableOpacity, obj10);
+          const tmp21 = closure_8(markAsDismissed(6407).PressableOpacity, obj10);
           cResult[6] = tmp4.closeButton;
           cResult[7] = tmp15;
           cResult[8] = tmp21;
@@ -392,9 +392,9 @@ export default noop.memo(
                     v1 = 1;
                     v3 = 1;
                     const obj5 = {
-                      value: v1(7253).redirectDeveloperPortalWithHandoffToken(
+                      value: v1(7255).redirectDeveloperPortalWithHandoffToken(
                         constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                        v3(7257).LoginHandoffSource.GAME_CLAIM,
+                        v3(7259).LoginHandoffSource.GAME_CLAIM,
                       ),
                       done: false,
                     };

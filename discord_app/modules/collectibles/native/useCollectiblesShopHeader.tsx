@@ -32,11 +32,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj.label = intl.string(util.t["xNiB/O"]);
     obj.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7098).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
+      const items = [stateFromStores(7100).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(7098).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(7100).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
       obj2.screen = constants.FEATURED_PAGE;
-      const result = currentScreen(7479).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7481).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon;
     if (currentScreen === constants.FEATURED_PAGE) {
@@ -49,11 +49,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj2.label = intl2.string(util.t.RSyoZu);
     obj2.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7098).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
+      const items = [stateFromStores(7100).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(7098).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(7100).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
       obj2.screen = constants.SHOP_ALL;
-      const result = currentScreen(7479).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7481).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon1;
     if (currentScreen === constants.SHOP_ALL) {
@@ -66,11 +66,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj3.label = intl3.string(util.t.EBYkzk);
     obj3.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7098).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
+      const items = [stateFromStores(7100).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(7098).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(7100).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
       obj2.screen = constants.ORBS;
-      const result = currentScreen(7479).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7481).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon2;
     if (currentScreen === constants.ORBS) {
@@ -190,13 +190,13 @@ function CollectiblesShopHeaderRight(currentScreen) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-const constants = fn(1087).CollectiblesMobileShopScreen;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const RewardFilterTypes = fn(6188).RewardFilterTypes;
-const UserProfileSections = fn(8526).UserProfileSections;
+const constants = fn(1089).CollectiblesMobileShopScreen;
+const AnalyticEvents = fn(1087).AnalyticEvents;
+const RewardFilterTypes = fn(6190).RewardFilterTypes;
+const UserProfileSections = fn(8534).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   headerTitleContainer: {
     width: "100%",
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       currentScreen = tmp4.currentScreen;
       const obj = currentScreen(576);
-      const navigation = currentScreen(1503).useNavigation();
+      const navigation = currentScreen(1505).useNavigation();
       if (cResult[2] === currentScreen) {
         if (cResult[3] === navigation) {
           let tmp6 = cResult[4];
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items;
       tmp7 = items;
       tmp6 = fn;
-      const tmpResult = currentScreen(1503);
+      const tmpResult = currentScreen(1505);
     }
   : function useCollectiblesShopHeader() {
       let obj = arg0;
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj = {};
       }
       const currentScreen = obj.currentScreen;
-      const navigation = currentScreen(1503).useNavigation();
+      const navigation = currentScreen(1505).useNavigation();
       const items = [navigation, currentScreen];
       const layoutEffect = noop.useLayoutEffect(() => {
         navigation.setOptions({

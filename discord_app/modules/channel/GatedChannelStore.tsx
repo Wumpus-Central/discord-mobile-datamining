@@ -163,9 +163,9 @@ function handleChannelUpdate(channel) {
   }
   return tmp;
 }
-const THREAD_CHANNEL_TYPES = fn(2069).THREAD_CHANNEL_TYPES;
-const hasPermission = fn(2120).hasPermission;
-const Constants = fn(1085);
+const THREAD_CHANNEL_TYPES = fn(2072).THREAD_CHANNEL_TYPES;
+const hasPermission = fn(2123).hasPermission;
+const Constants = fn(1087);
 ({ Permissions: c10, GuildFeatures: closure_11 } = Constants);
 const dependencyMap = {};
 let set = new Set();

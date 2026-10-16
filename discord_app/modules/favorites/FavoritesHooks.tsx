@@ -14,8 +14,8 @@ import FavoriteStore from "FavoriteStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(2078).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1392).PremiumTypes;
+const MAX_FAVORITE_CHANNELS = fn(2081).MAX_FAVORITE_CHANNELS;
+const PremiumTypes = fn(1394).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesAccess(arg0) {

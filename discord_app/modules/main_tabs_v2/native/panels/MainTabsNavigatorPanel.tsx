@@ -14,12 +14,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -58,11 +58,11 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(17017);
+                obj = obj(17050);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
-                obj(5041).dismissKeyboard();
-                const objResult = obj(5041);
+                obj(5044).dismissKeyboard();
+                const objResult = obj(5044);
                 const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
               }
               closure_4.current = true;
@@ -522,11 +522,11 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(17017);
+              obj = obj(17050);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
-              obj(5041).dismissKeyboard();
-              const objResult = obj(5041);
+              obj(5044).dismissKeyboard();
+              const objResult = obj(5044);
               const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
             }
             closure_4.current = true;

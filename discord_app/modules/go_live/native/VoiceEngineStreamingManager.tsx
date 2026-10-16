@@ -4,10 +4,12 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
 import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import StreamKeyUtils from "../utils/StreamKeyUtils.tsx";
+import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment.tsx";
 import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import useScreenshareUtils from "../../video_calls/native/useScreenshareUtils.tsx";
@@ -116,13 +118,13 @@ let closure_18 = async function _handleThumbnailUpload() {
   })();
 };
 const Linking = fn(17).Linking;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ Base64JPEGPrefix: closure_8, Endpoints: closure_9, NOOP_NULL: c10, IOS_BUNDLE_ID: closure_11 } = Constants);
-const getAppIntentScheme = fn(2024).getAppIntentScheme;
+const getAppIntentScheme = fn(2026).getAppIntentScheme;
 let obj2 = new LoggerDefault("VoiceEngineStreamingManager");
 obj2.enableNativeLogger(true);
-const timeout = new fn(2060).Timeout();
-const timeout1 = new fn(2060).Timeout();
+const timeout = new fn(2063).Timeout();
+const timeout1 = new fn(2063).Timeout();
 let closure_16 = [];
 const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 class VoiceEngineStreamingManager extends tmp6 {
@@ -161,16 +163,16 @@ prototype["_initialize"] = function _initialize() {
     closure_1(38)(null != closure_19, "Voice Engine should be initialized in callback");
     closure_16 = [];
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
-    currentAppIntent = currentAppIntent.getCurrentAppIntent();
+    const currentAppIntent = authStore.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(7660).startStream(guildId, channel.id, { sourceId: "screen:0" });
-      currentUserActiveStream = obj2.getCurrentUserActiveStream();
+      currentUserActiveStream(7663).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream = authStore.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(5165);
+        const tmp2Result = closure_1(5167);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(6116).encodeStreamKey(currentUserActiveStream),
+          tmp9(6118).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
@@ -183,7 +185,7 @@ prototype["_initialize"] = function _initialize() {
               300,
               (arg0) => {
                 logger.log("Broadcast thumbnail of size:", arg0.length);
-                closure_2_17(currentUserActiveStream(dependencyMap[17]).encodeStreamKey(closure_1_0), arg0);
+                closure_2_17(currentUserActiveStream(dependencyMap[18]).encodeStreamKey(closure_1_0), arg0);
               },
             );
           });
@@ -191,20 +193,28 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(6116);
+        const tmp9Result = tmp9(6118);
       }
-      const obj3 = currentUserActiveStream(7660);
+      const obj3 = currentUserActiveStream(7663);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");
     }
-    obj2 = currentAppIntent;
   });
   const result1 = voiceEngine.setBroadcastFinishedCallback(() => {
     logger.log("Broadcast Finished");
+    if (obj.isAndroid()) {
+      if (obj2.getConfig({ location: "VoiceEngineStreamingManager" }).enabled) {
+        _modDef38(null != voiceEngine, "Voice Engine should be initialized in callback");
+        voiceEngine.stopBroadcast();
+      }
+      obj2 = AndroidStopAndPauseVideoExperimentDefault;
+    }
     timeout.stop();
     timeout1.stop();
+    obj = PlatformUtils;
     const result = useScreenshareUtils.handleCloseScreenshare();
+    const tmp2Result = useScreenshareUtils;
   });
   const result2 = voiceEngine.setBroadcastAnnotatedCallback((arg0) => {
     logger.log("Broadcast Annotated:", arg0);
@@ -216,7 +226,17 @@ prototype["_initialize"] = function _initialize() {
       closure_1_16.push(arg0);
     }
   });
-  const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
+  const result3 = voiceEngine.setBroadcastVisibilityChangedCallback((arg0) => {
+    logger.log("Broadcast Visibility Changed:", arg0);
+    if (obj.getConfig({ location: "VoiceEngineStreamingManager" }).enabled) {
+      const currentUserActiveStream = authStore.getCurrentUserActiveStream();
+      if (null != currentUserActiveStream) {
+        StreamActionCreators.setStreamPaused(currentUserActiveStream, !arg0);
+      }
+    }
+    obj = AndroidStopAndPauseVideoExperimentDefault;
+  });
+  const result4 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
     obj2 = { alertBody: null };
     const intl = util.intl;
@@ -232,6 +252,7 @@ prototype["_terminate"] = function _terminate() {
     const result1 = voiceEngine.setBroadcastFinishedCallback(collapsed);
     const result2 = voiceEngine.setBroadcastAnnotatedCallback(collapsed);
     const result3 = voiceEngine.setBroadcastBlockedCallback(collapsed);
+    const result4 = voiceEngine.setBroadcastVisibilityChangedCallback(collapsed);
   }
   timeout.stop();
   timeout1.stop();

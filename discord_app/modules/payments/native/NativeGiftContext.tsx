@@ -23,11 +23,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-fn(7354).GPlayBillingResult;
-const PremiumConstants = fn(1392);
+const AnalyticEvents = fn(1087).AnalyticEvents;
+fn(7356).GPlayBillingResult;
+const PremiumConstants = fn(1394);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
-let PaymentGateways = fn(1096).PaymentGateways;
+let PaymentGateways = fn(1098).PaymentGateways;
 let jsx = fn(21).jsx;
 let closure_17 = new LoggerDefault("NativeGiftContext");
 const tmp4 = new LoggerDefault("NativeGiftContext");
@@ -969,12 +969,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = externalGatewayFacet;
         let tmp6 = planId(externalGatewayFacet.useState(0), 2);
       }
-      let obj4 = {
-        orderId: "a",
-        planId: "_enabledPaymentMethods",
-        planSelection: { premiumType, planInterval },
-        giftInfo: "writeInt32LE",
-      };
+      let obj4 = { orderId: "a", planId: 11.5, planSelection: { premiumType, planInterval }, giftInfo: 0 };
       cResult[0] = planInterval;
       cResult[1] = premiumType;
       cResult[2] = obj4;
@@ -994,12 +989,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const setPremiumType = order.setPremiumType;
       const setPlanInterval = order.setPlanInterval;
       const setError = order.setError;
-      let obj = {
-        orderId: "a",
-        planId: "_enabledPaymentMethods",
-        planSelection: { premiumType, planInterval },
-        giftInfo: "writeInt32LE",
-      };
+      let obj = { orderId: "a", planId: 11.5, planSelection: { premiumType, planInterval }, giftInfo: 0 };
       closure_13 = externalGatewayFacet.useRef(obj);
       externalGatewayFacet.useRef(false);
       externalGatewayFacet.useRef(null);

@@ -12,10 +12,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8526).UserProfileSections;
+const UserProfileSections = fn(8534).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
   textContainer: null,
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = stateFromStores(576);
       stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6, tmp7);
-      if (product.type !== stateFromStores(1993).CollectiblesItemType.BUNDLE) {
+      if (product.type !== stateFromStores(1995).CollectiblesItemType.BUNDLE) {
         const first = _slicedToArray(product.items, 1)[0];
         if (cResult[6] !== first) {
           let tmp15;
@@ -227,9 +227,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               accessibilityRole: "header",
               children: null,
             };
-            const intl = tmp(1126).intl;
-            obj5.children = intl.string(tmp(1126).t["3T2jbf"]);
-            const tmp24 = closure_8(tmp(5147).Text, obj5);
+            const intl = tmp(1128).intl;
+            obj5.children = intl.string(tmp(1128).t["3T2jbf"]);
+            const tmp24 = closure_8(tmp(5149).Text, obj5);
             cResult[15] = tmp24;
             const tmp23 = tmp24;
           } else {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return tmp2;
               }
             }
-            const stringResult = obj7.string(tmp(1126).t.SXb73A);
+            const stringResult = obj7.string(tmp(1128).t.SXb73A);
             cResult[16] = stringResult;
             const tmp25 = stringResult;
           } else {
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp4.subtitle, children: tmp25 };
-            const tmp28 = closure_8(tmp(5147).Text, obj6);
+            const tmp28 = closure_8(tmp(5149).Text, obj6);
             cResult[17] = tmp4.subtitle;
             cResult[18] = tmp28;
           } else {
@@ -350,10 +350,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj8 = { text: null, onPress: null, size: "lg", variant: "primary", grow: true };
-              const intl2 = tmp(1126).intl;
-              obj8.text = intl2.string(tmp(1126).t.tM4PUv);
+              const intl2 = tmp(1128).intl;
+              obj8.text = intl2.string(tmp(1128).t.tM4PUv);
               obj8.onPress = P;
-              const tmp34 = closure_8(tmp(5439).Button, obj8);
+              const tmp34 = closure_8(tmp(5441).Button, obj8);
               cResult[22] = tmp34;
               const tmp33 = tmp34;
             } else {
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp2;
                 }
               }
-              const stringResult1 = obj11.string(tmp(1126).t.TxBQzD);
+              const stringResult1 = obj11.string(tmp(1128).t.TxBQzD);
               cResult[23] = stringResult1;
               const tmp35 = stringResult1;
             } else {
@@ -425,9 +425,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj9 = { direction: "horizontal", children: null };
               const items2 = [tmp33];
               const obj10 = { text: tmp35, onPress: B, variant: "secondary", size: "lg", grow: true };
-              items2[1] = closure_8(tmp(5439).Button, obj10);
+              items2[1] = closure_8(tmp(5441).Button, obj10);
               obj9.children = items2;
-              const tmp39 = closure_9(tmp(6174).ButtonGroup, obj9);
+              const tmp39 = closure_9(tmp(6176).ButtonGroup, obj9);
               cResult[24] = B;
               cResult[25] = tmp39;
             } else {
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const items3 = [tmp20, tmp29, tmp37];
             obj13.children = items3;
             obj12.children = closure_9(View, obj13);
-            const tmp44 = closure_8(tmp(7061).BottomSheet, obj12);
+            const tmp44 = closure_8(tmp(7063).BottomSheet, obj12);
             cResult[26] = tmp4.container;
             cResult[27] = tmp29;
             cResult[28] = tmp37;

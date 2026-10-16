@@ -56,8 +56,8 @@ function computeThreadNotificationSetting(channel) {
     obj6 = FlagUtils;
   }
 }
-const ThreadMemberFlags = fn(1125).ThreadMemberFlags;
-const UserNotificationSettings = fn(1085).UserNotificationSettings;
+const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
+const UserNotificationSettings = fn(1087).UserNotificationSettings;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");

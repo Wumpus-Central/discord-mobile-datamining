@@ -1,6 +1,6 @@
-// discord_app/modules/media_engine/experiments/DesktopGeneralPerfExperiment.tsx
-import ApexExperiment from "../../experiments/apex/index.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+// discord_app/modules/desktop_perf/DesktopGeneralPerfExperiment.tsx
+import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const config = ApexExperiment.createApexExperiment({
   name: "2026-10-desktop-general-perf",
@@ -11,7 +11,7 @@ const config = ApexExperiment.createApexExperiment({
     1: { skipSilentDelayEstimatorFfts: true, processPollingPerf: true, keepRendererLogFileOpen: true },
   },
 });
-const result = size.fileFinishedImporting("modules/media_engine/experiments/DesktopGeneralPerfExperiment.tsx");
+const result = size.fileFinishedImporting("modules/desktop_perf/DesktopGeneralPerfExperiment.tsx");
 
 export const getDesktopGeneralPerfExperimentConfig = function getDesktopGeneralPerfExperimentConfig(
   capture_processing_delay_estimator,

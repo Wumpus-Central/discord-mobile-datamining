@@ -40990,8 +40990,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(1379).isBuildOverrideLink(type.target);
-      const obj = closure_0(1379);
+      tmp = !closure_0(1381).isBuildOverrideLink(type.target);
+      const obj = closure_0(1381);
     }
     return tmp;
   });
@@ -41000,14 +41000,14 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(8359).isExperimentEmbedURL(type.target);
-      const obj = closure_0(8359);
+      tmp = !closure_0(8366).isExperimentEmbedURL(type.target);
+      const obj = closure_0(8366);
     }
     return tmp;
   });
 };
 export const removeRedundantLinks = function removeRedundantLinks(arr) {
-  obj = { onlyLinkContent: obj(8358).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
+  obj = { onlyLinkContent: obj(8365).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
   return arr.filter((type) => {
     let tmp = null;
     if ("link" === type.type) {
@@ -41132,12 +41132,12 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     }
     let items2 = tmp;
     if (obj3.hasOnlySimpleEmbed(tmp3.embeds)) {
-      const tmp4Result = tmp4(8358);
+      const tmp4Result = tmp4(8365);
       items2 = tmp;
       if (tmp4Result.isSingleLinkContent(tmp4Result2.readContentLinks(tmp, isLinkNode))) {
         items2 = [];
       }
-      tmp4Result2 = tmp4(8358);
+      tmp4Result2 = tmp4(8365);
     }
     arr3 = items2;
     obj3 = require("RedundantLinkUtils");
@@ -41234,16 +41234,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr3.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(1379).isBuildOverrideLink(type.target);
-        const obj = closure_0(1379);
+        tmp = !closure_0(1381).isBuildOverrideLink(type.target);
+        const obj = closure_0(1381);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(8359).isExperimentEmbedURL(type.target);
-        const obj = closure_0(8359);
+        tmp = !closure_0(8366).isExperimentEmbedURL(type.target);
+        const obj = closure_0(8366);
       }
       return tmp;
     });

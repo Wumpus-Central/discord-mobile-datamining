@@ -8,9 +8,9 @@ import FramesStore from "FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(10919);
+const FramesConstants = fn(10934);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const map = new Map();
 const size = fn(2);

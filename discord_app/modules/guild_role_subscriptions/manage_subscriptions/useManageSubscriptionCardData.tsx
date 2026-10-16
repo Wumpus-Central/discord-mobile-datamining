@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4758 from "../../../../_runtime/metro/04758__.js";
+import _modDef4761 from "../../../../_runtime/metro/04761__.js";
 import PriceUtils from "../../../utils/PriceUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,13 +13,13 @@ require = fn;
 function computeSubscriptionInfo(subscription) {
   subscription = subscription.subscription;
   let str = "";
-  const obj = _modDef4758(subscription.currentPeriodEnd);
+  const obj = _modDef4761(subscription.currentPeriodEnd);
   if (null != subscription.price) {
     str = PriceUtils.formatPrice(subscription.price, subscription.currency);
   }
-  const formatResult = _modDef4758(subscription.currentPeriodEnd).format("M/D/YY");
+  const formatResult = _modDef4761(subscription.currentPeriodEnd).format("M/D/YY");
   const obj4 = {
-    memberSince: _modDef4758(subscription.createdAt).format("M/D/YY"),
+    memberSince: _modDef4761(subscription.createdAt).format("M/D/YY"),
     nextRenewalDate: formatResult,
     nextRenewalLabel: null,
     subscriptionPrice: null,
@@ -42,7 +42,7 @@ function computeSubscriptionInfo(subscription) {
   obj4.isTrial = subscription.hasActiveTrial;
   return obj4;
 }
-const SubscriptionStatusTypes = fn(1085).SubscriptionStatusTypes;
+const SubscriptionStatusTypes = fn(1087).SubscriptionStatusTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

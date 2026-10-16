@@ -128,10 +128,10 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9621).setGPlayAnalytics;
-const Constants = fn(1085);
+const setGPlayAnalytics = fn(9637).setGPlayAnalytics;
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
-const PaymentGateways = fn(1096).PaymentGateways;
+const PaymentGateways = fn(1098).PaymentGateways;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/handlePremiumPurchase.android.tsx");
 
@@ -219,14 +219,14 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           }
           if (null != offerIds) {
             if (null != arg2) {
-              const tmp13 = premiumSubscription(7348).TrialIdToProductOfferId[arg2.trialId];
+              const tmp13 = premiumSubscription(7350).TrialIdToProductOfferId[arg2.trialId];
               let tmp14;
               if (tmp13 != null) {
                 tmp14 = tmp13[arg0];
               }
               return tmp14;
             } else if (null != dependencyMap) {
-              const tmp9 = premiumSubscription(7348).DiscountIdToProductOfferId[dependencyMap.discountId];
+              const tmp9 = premiumSubscription(7350).DiscountIdToProductOfferId[dependencyMap.discountId];
               let tmp10;
               if (tmp9 != null) {
                 tmp10 = tmp9[arg0];
@@ -237,8 +237,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           let BOGO_OFFER_ID = null;
           if (arg1) {
             BOGO_OFFER_ID = null;
-            if (arg0 === premiumSubscription(7348).ProductIds.PREMIUM_TIER_2_MONTHLY) {
-              BOGO_OFFER_ID = premiumSubscription(7348).BOGO_OFFER_ID;
+            if (arg0 === premiumSubscription(7350).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+              BOGO_OFFER_ID = premiumSubscription(7350).BOGO_OFFER_ID;
             }
           }
           return BOGO_OFFER_ID;
@@ -342,34 +342,34 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
       const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_23);
       (function showPurchaseErrorModal(message) {
         let billingError = message;
-        if (!(message instanceof premiumSubscription(5851).BillingError)) {
-          billingError = new premiumSubscription(5851).BillingError(message);
+        if (!(message instanceof premiumSubscription(5853).BillingError)) {
+          billingError = new premiumSubscription(5853).BillingError(message);
         }
         if (tmpResult.isSpendingLimitError(billingError)) {
-          const result = premiumSubscription(10280).showSpendingLimitReachedAlert();
-          const tmpResult2 = premiumSubscription(10280);
+          const result = premiumSubscription(10296).showSpendingLimitReachedAlert();
+          const tmpResult2 = premiumSubscription(10296);
         } else {
-          const intl = premiumSubscription(1126).intl;
-          let tmp8 = billingError.code !== premiumSubscription(4847).ErrorCodes.UNKNOWN;
+          const intl = premiumSubscription(1128).intl;
+          let tmp8 = billingError.code !== premiumSubscription(4850).ErrorCodes.UNKNOWN;
           if (tmp8) {
             tmp8 = -1 !== billingError.code;
           }
           if (tmp8) {
             tmp8 = null != billingError.message;
           }
-          message = intl.string(premiumSubscription(1126).t.LFFx5G);
+          message = intl.string(premiumSubscription(1128).t.LFFx5G);
           if (tmp8) {
             message = billingError.message;
           }
-          const stringResult = intl.string(premiumSubscription(1126).t.LFFx5G);
+          const stringResult = intl.string(premiumSubscription(1128).t.LFFx5G);
           const obj = { title: null, body: null, isDismissable: true };
-          const intl2 = premiumSubscription(1126).intl;
-          obj.title = intl2.string(premiumSubscription(1126).t["U+H+kd"]);
+          const intl2 = premiumSubscription(1128).intl;
+          obj.title = intl2.string(premiumSubscription(1128).t["U+H+kd"]);
           obj.body = message;
-          closure_1_1(5359).show(obj);
-          const obj2 = closure_1_1(5359);
+          closure_1_1(5361).show(obj);
+          const obj2 = closure_1_1(5361);
         }
-        tmpResult = premiumSubscription(10280);
+        tmpResult = premiumSubscription(10296);
       })(closure_130_23);
       if (closure_130_23 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
         throw closure_130_23;

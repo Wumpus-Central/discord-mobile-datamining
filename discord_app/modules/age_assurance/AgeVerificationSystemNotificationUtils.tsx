@@ -4,7 +4,7 @@ import FamilyCenterPendingConnectionStore from "../parent_tools/FamilyCenterPend
 import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
-const MessageEmbedTypes = fn(1085).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1087).MessageEmbedTypes;
 const obj = { CTAS: "ctas", CONTENT_TYPE: "content_type" };
 let obj2 = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", REQUEST_MANUAL_REVIEW: "request_manual_review" };
 const size = fn(2);

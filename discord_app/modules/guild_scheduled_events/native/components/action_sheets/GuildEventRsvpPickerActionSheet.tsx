@@ -8,10 +8,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(2071).GuildScheduledEventUserResponses;
+const constants = fn(2074).GuildScheduledEventUserResponses;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, buttonWrapper: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.buttonWrapper = { marginTop: nativeDefault.space.PX_24 };
@@ -185,9 +185,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let defaultValue;
       closure_5 = undefined;
       const tmp = closure_9();
-      const tmp4 = _slicedToArray(defaultValue.useState(event(8745).ResponseOptions.SERIES), 2);
+      const tmp4 = _slicedToArray(defaultValue.useState(event(8753).ResponseOptions.SERIES), 2);
       defaultValue = tmp4[0];
-      const existingRsvp = event(8745).getExistingRsvp(event.id, null);
+      const existingRsvp = event(8753).getExistingRsvp(event.id, null);
       let response;
       if (existingRsvp != null) {
         response = existingRsvp.response;
@@ -195,21 +195,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = response === constants.INTERESTED ? constants.UNINTERESTED : constants.INTERESTED;
       closure_5 = tmp9;
       if (tmp9 === constants.INTERESTED) {
-        const intl2 = tmp2(1126).intl;
-        let stringResult = intl2.string(tmp2(1126).t.WtORed);
+        const intl2 = tmp2(1128).intl;
+        let stringResult = intl2.string(tmp2(1128).t.WtORed);
       } else {
-        const intl = tmp2(1126).intl;
-        stringResult = intl.string(tmp2(1126).t["8MPCVr"]);
+        const intl = tmp2(1128).intl;
+        stringResult = intl.string(tmp2(1128).t["8MPCVr"]);
       }
-      let obj2 = { header: closure_7(event(7060).BottomSheetTitleHeader, { title: stringResult }), children: null };
+      let obj2 = { header: closure_7(event(7062).BottomSheetTitleHeader, { title: stringResult }), children: null };
       const obj3 = { bottom: true, style: tmp.container, children: null };
       const obj4 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
-      const obj = event(8745);
-      const responseOptions = event(8745).getResponseOptions();
+      const obj = event(8753);
+      const responseOptions = event(8753).getResponseOptions();
       obj4.children = responseOptions.map((value) =>
         closure_1_7(event(dependencyMap[14]).TableRadioRow, { value: value.value, label: value.name }, value.value),
       );
-      const items = [closure_7(event(6483).TableRadioGroup, obj4)];
+      const items = [closure_7(event(6485).TableRadioGroup, obj4)];
       const obj5 = { style: tmp.buttonWrapper, children: null };
       const obj6 = {
         onPress: function handleConfirm() {
@@ -231,11 +231,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         text: null,
       };
-      const intl3 = tmp2(1126).intl;
-      obj6.text = intl3.string(event(1126).t.TyCVIq);
-      obj5.children = closure_7(event(5439).Button, obj6);
+      const intl3 = tmp2(1128).intl;
+      obj6.text = intl3.string(event(1128).t.TyCVIq);
+      obj5.children = closure_7(event(5441).Button, obj6);
       items[1] = closure_7(closure_5, obj5);
       obj3.children = items;
-      obj2.children = closure_8(event(7035).SafeAreaPaddingView, obj3);
-      return closure_7(event(7061).BottomSheet, obj2);
+      obj2.children = closure_8(event(7037).SafeAreaPaddingView, obj3);
+      return closure_7(event(7063).BottomSheet, obj2);
     };

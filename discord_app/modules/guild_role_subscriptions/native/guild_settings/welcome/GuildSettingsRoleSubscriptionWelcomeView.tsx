@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import NavigatorConstants from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
@@ -37,7 +37,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(18789, dependencyMap.paths),
+      asyncRequireImpl(18831, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -107,7 +107,7 @@ function StartEarningButton(isTermsAccepted) {
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
     const obj10 = {
-      source: require("../../../../../../_runtime/metro/11209__.js"),
+      source: require("../../../../../../_runtime/metro/11225__.js"),
       color: require("native").unsafe_rawColors.WHITE,
       size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20,
     };
@@ -123,12 +123,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(16146).CREATOR_REVENUE_PORTAL_URL;
-const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(18785).CreatorMonetizationOnboardingMarketingSection;
+const creatorPortalUrl = fn(16179).CREATOR_REVENUE_PORTAL_URL;
+const GuildSettingsSections = fn(1087).GuildSettingsSections;
+const constants = fn(18827).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },
@@ -422,11 +422,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(16);
       ({ onboardingMarketing, onHowItWorksLayoutChange } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.R9rNIk);
-        const intl2 = tmp(1126).intl;
+        let intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.R9rNIk);
+        const intl2 = tmp(1128).intl;
         let obj2 = { creatorPortalUrl };
-        const formatResult = intl2.format(tmp(1126).t.oxW30N, obj2);
+        const formatResult = intl2.format(tmp(1128).t.oxW30N, obj2);
         cResult[0] = stringResult;
         cResult[1] = formatResult;
         tmp4 = stringResult;
@@ -452,8 +452,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = tmp13;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(1126).intl;
-        const stringResult1 = intl3.string(tmp(1126).t["1QHJaW"]);
+        const intl3 = tmp(1128).intl;
+        const stringResult1 = intl3.string(tmp(1128).t["1QHJaW"]);
         cResult[5] = stringResult1;
         let tmp18 = stringResult1;
       } else {

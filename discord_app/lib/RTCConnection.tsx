@@ -5,9 +5,9 @@ import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01264_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01266_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01279_v1.js";
+import v1 from "../../_runtime/01281_v1.js";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -22,7 +22,7 @@ import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager.tsx";
 import GoLiveQualityManagerDefault from "../modules/go_live/GoLiveQualityManager.tsx";
 import setShouldRecordNextConnectionDefault from "../modules/rtc_debug/setShouldRecordNextConnection.tsx";
 import RTCConnectionEvent from "RTCConnectionEvent.tsx";
-import DesktopGeneralPerfExperiment from "../modules/media_engine/experiments/DesktopGeneralPerfExperiment.tsx";
+import DesktopGeneralPerfExperiment from "../modules/desktop_perf/DesktopGeneralPerfExperiment.tsx";
 import ProportionalVadIndicatorExperimentDefault from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
 import BrowserTransceiverPaddingRemovalExperiment2 from "../modules/media_engine/BrowserTransceiverPaddingRemovalExperiment.tsx";
 import WebStreamingOptimizationsExperiment2 from "../modules/media_engine/WebStreamingOptimizationsExperiment.tsx";
@@ -76,7 +76,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-let Constants = fn(1085);
+let Constants = fn(1087);
 ({
   AnalyticEvents: closure_16,
   ChannelTypes: closure_17,
@@ -84,10 +84,10 @@ let Constants = fn(1085);
   RTCConnectionQuality: closure_19,
   BoostedGuildTiers: closure_20,
 } = Constants);
-const StreamSettingsConstants = fn(5271);
+const StreamSettingsConstants = fn(5273);
 ({ ApplicationStreamFPS: closure_21, ApplicationStreamResolutions: closure_22 } = StreamSettingsConstants);
-let closure_23 = fn(5272).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5176);
+let closure_23 = fn(5274).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5178);
 ({
   Features: closure_24,
   MediaEngineContextTypes: closure_25,
@@ -3670,7 +3670,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5180).now();
+  const commitReceivedTime = _connection(5182).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3710,7 +3710,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5180).now();
+  const welcomeReceivedTime = _connection(5182).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

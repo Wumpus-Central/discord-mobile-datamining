@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14023 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-1x.png.js";
-import _modDef14024 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-2x.png.js";
-import _modDef14025 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-3x.png.js";
+import _modDef14055 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-1x.png.js";
+import _modDef14056 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-2x.png.js";
+import _modDef14057 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14023 }, 3: null };
-let obj2 = { uri: _modDef14023 };
-obj[2] = { uri: _modDef14024 };
-const obj3 = { uri: _modDef14024 };
-obj[3] = { uri: _modDef14025 };
+let obj = { 1: null, 2: { uri: _modDef14055 }, 3: null };
+let obj2 = { uri: _modDef14055 };
+obj[2] = { uri: _modDef14056 };
+const obj3 = { uri: _modDef14056 };
+obj[3] = { uri: _modDef14057 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14025 };
+const obj4 = { uri: _modDef14057 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/GameDiversityTier9LargeBadge.native.tsx",

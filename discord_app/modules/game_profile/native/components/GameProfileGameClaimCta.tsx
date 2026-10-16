@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const RelativeMarketingURLs = fn(1085).RelativeMarketingURLs;
+const RelativeMarketingURLs = fn(1087).RelativeMarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -45,13 +45,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  v3(v3(9095).GameProfileTrackActionActions.ClaimGame);
+                  v3(v3(9103).GameProfileTrackActionActions.ClaimGame);
                   c1 = 1;
                   v3 = 1;
                   const obj4 = {
                     value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(7257).LoginHandoffSource.GAME_CLAIM,
+                      v3(7259).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const linkedApplications = trackAction.game.linkedApplications;
       let someResult;
       if (linkedApplications != null) {
-        someResult = linkedApplications.some((type) => type.type === closure_0(1998).GameLinkTypes.OFFICIAL);
+        someResult = linkedApplications.some((type) => type.type === closure_0(2000).GameLinkTypes.OFFICIAL);
       }
       if (someResult != null) {
         if (someResult) {
@@ -101,15 +101,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = Button(1126).intl;
-        const stringResult = intl.string(Button(1126).t["mqg+to"]);
+        const intl = Button(1128).intl;
+        const stringResult = intl.string(Button(1128).t["mqg+to"]);
         cResult[2] = stringResult;
         let tmp7 = stringResult;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] !== tmp3) {
-        Button = Button(5439).Button;
+        Button = Button(5441).Button;
         let obj2 = { variant: "secondary", size: "md", text: tmp7, onPress: tmp3 };
         tmp = <Button variant="secondary" size="md" text={tmp7} onPress={tmp3} />;
         cResult[3] = tmp3;
@@ -148,13 +148,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  trackAction(v3(9095).GameProfileTrackActionActions.ClaimGame);
+                  trackAction(v3(9103).GameProfileTrackActionActions.ClaimGame);
                   v1 = 1;
                   v3 = 1;
                   const obj4 = {
-                    value: v1(7253).redirectDeveloperPortalWithHandoffToken(
+                    value: v1(7255).redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(7257).LoginHandoffSource.GAME_CLAIM,
+                      v3(7259).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -186,10 +186,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (someResult == null) {
         let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-        const intl = trackAction(1126).intl;
-        obj.text = intl.string(trackAction(1126).t["mqg+to"]);
+        const intl = trackAction(1128).intl;
+        obj.text = intl.string(trackAction(1128).t["mqg+to"]);
         obj.onPress = callback;
-        let tmp3 = jsx(trackAction(5439).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+        let tmp3 = jsx(trackAction(5441).Button, { variant: "secondary", size: "md", text: null, onPress: null });
       } else {
         tmp3 = null;
       }

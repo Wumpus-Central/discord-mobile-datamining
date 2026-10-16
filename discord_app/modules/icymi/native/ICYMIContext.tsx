@@ -1,16 +1,17 @@
 // discord_app/modules/icymi/native/ICYMIContext.tsx
-import _mod19 from "../../../../_runtime/metro/00019__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+({ useMemo: c3, createContext } = noop);
 const jsx = jsxProd.jsx;
-const context = _mod19.createContext({ width: 0, margin: 0, inset: 0 });
+const context = createContext({ width: 0, margin: 0, inset: 0 });
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useICYMIContextConstructor() {
       const cResult = c.c(2);
       const bound = Math.min(useWindowDimensionsDefault().width, 480);
@@ -30,17 +31,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const PX_16 = nativeDefault.space.PX_16;
       return { width: bound, margin: PX_16, inset: PX_16 + 38 };
     };
-let closure_5 = tmp3;
+let closure_6 = tmp4;
 let ReactCompilerGating = ReactCompilerGating_mod;
 const result = size.fileFinishedImporting("modules/icymi/native/ICYMIContext.tsx");
 
 export const ICYMIContext = context;
-export const useICYMIContextConstructor = tmp3;
+export const useICYMIContextConstructor = tmp4;
 export const ICYMIContextProvider = ReactCompilerGating.isReactCompilerEnabled()
   ? function ICYMIContextProvider(children) {
       const cResult = c.c(7);
       children = children.children;
-      ({ width, margin, inset } = closure_5());
+      ({ width, margin, inset } = closure_6());
       if (cResult[0] === inset) {
         if (cResult[1] === margin) {
           if (cResult[2] === width) {
@@ -66,13 +67,15 @@ export const ICYMIContextProvider = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = width;
       cResult[3] = obj3;
       tmp3 = obj3;
-      const tmp2 = closure_5();
+      const tmp2 = closure_6();
     }
   : function ICYMIContextProvider(children) {
-      const tmp = closure_5();
+      const tmp = closure_6();
+      const width = tmp.width;
+      const margin = tmp.margin;
+      const inset = tmp.inset;
+      const items = [width, margin, inset];
       return (
-        <context.Provider value={{ width: tmp.width, margin: tmp.margin, inset: tmp.inset }}>
-          {children.children}
-        </context.Provider>
+        <context.Provider value={React3(() => ({ width, margin, inset }), items)}>{children.children}</context.Provider>
       );
     };

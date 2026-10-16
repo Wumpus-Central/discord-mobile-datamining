@@ -8,8 +8,8 @@ import FramesStore from "FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const getFrameSurfaceForChannel = fn(10919).getFrameSurfaceForChannel;
-const Permissions = fn(1085).Permissions;
+const getFrameSurfaceForChannel = fn(10934).getFrameSurfaceForChannel;
+const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");

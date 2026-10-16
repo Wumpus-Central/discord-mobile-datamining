@@ -1,14 +1,14 @@
 // discord_app/modules/guild/native/GuildBadge.tsx
 import c from "../../../../_runtime/00576_c.js";
 import GuildRecordUtils from "../../../utils/GuildRecordUtils.tsx";
-import _modDef6384 from "../../../../_runtime/metro/06384__.js";
-import _modDef6385 from "../../../../_runtime/metro/06385__.js";
 import _modDef6386 from "../../../../_runtime/metro/06386__.js";
 import _modDef6387 from "../../../../_runtime/metro/06387__.js";
+import _modDef6388 from "../../../../_runtime/metro/06388__.js";
+import _modDef6389 from "../../../../_runtime/metro/06389__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const native = Icon(1200);
+const native = Icon(1202);
 require = fn;
 function getGuildBadgeSource(guild, flag) {
   let has = guild;
@@ -66,7 +66,7 @@ function getGuildBadgeSource(guild, flag) {
   }
 }
 let closure_2 = ["guild", "monocolored", "size"];
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = fn(1087).GuildFeatures;
 const jsx = fn(21).jsx;
 let obj = {
   PARTNERED: 0,
@@ -81,10 +81,10 @@ let obj = {
   [4]: "NONE",
 };
 let obj2 = {
-  [VERIFIED]: _modDef6384,
-  [PARTNERED]: _modDef6385,
-  [VERIFIED_BLACK]: _modDef6386,
-  [PARTNERED_BLACK]: _modDef6387,
+  [VERIFIED]: _modDef6386,
+  [PARTNERED]: _modDef6387,
+  [VERIFIED_BLACK]: _modDef6388,
+  [PARTNERED_BLACK]: _modDef6389,
   [obj.NONE]: null,
 };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
@@ -252,7 +252,7 @@ if (ReactCompilerGating.isReactCompilerEnabled()) {
     }
   }
 }
-GuildBadge.Sizes = fn(1200).Icon.Sizes;
+GuildBadge.Sizes = fn(1202).Icon.Sizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
 

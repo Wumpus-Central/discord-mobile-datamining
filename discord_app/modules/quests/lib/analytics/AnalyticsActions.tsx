@@ -413,7 +413,7 @@ let closure_14 = async function _trackAdContentClicked() {
   } = closure_0);
   return "test";
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const AnalyticEvents = fn(1087).AnalyticEvents;
 const items = [, ,];
 ({
   QUEST_CONTENT_VIEWED: arr[0],

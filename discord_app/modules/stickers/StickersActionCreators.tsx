@@ -387,8 +387,8 @@ let closure_18 = async function _updateGuildSticker(arg0, arg1) {
     return value.body;
   })();
 };
-const Endpoints = fn(1085).Endpoints;
-const UserSettingsConstants = fn(1095);
+const Endpoints = fn(1087).Endpoints;
+const UserSettingsConstants = fn(1097);
 ({ MAX_FAVORITES: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/StickersActionCreators.tsx");

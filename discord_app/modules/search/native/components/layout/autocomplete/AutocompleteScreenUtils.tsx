@@ -20,8 +20,8 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(9533).SearchListItemTypes;
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const SearchListItemTypes = fn(9549).SearchListItemTypes;
+const RelationshipTypes = fn(1087).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx",

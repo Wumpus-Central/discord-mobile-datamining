@@ -160,11 +160,11 @@ function useQuestRewardClaimHandler(cResult) {
   return obj6;
 }
 const View = fn(17).View;
-let closure_9 = fn(7062).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(7064).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { display: "flex", flexGrow: 1, flexShrink: 1, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -589,7 +589,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = tmp5;
       const tmp7 = closure_13();
-      width = width(1497)().width;
+      width = width(1499)().width;
       const tmp8 = closure_24();
       dependencyMap = tmp8;
       let obj = require("c");
@@ -615,8 +615,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           fn2.__closure = obj2;
           fn2.__workletHash = 12824906142404;
           fn2.__initData = __initData;
-          const animatedStyle = tmp(4906).useAnimatedStyle(fn2);
-          const tmpResult3 = tmp(4906);
+          const animatedStyle = tmp(4909).useAnimatedStyle(fn2);
+          const tmpResult3 = tmp(4909);
           class N {
             constructor() {
               obj = { width: null, alignSelf: "flex-end" };
@@ -631,18 +631,18 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = {
-            interpolate: tmp(4906).interpolate,
+            interpolate: tmp(4909).interpolate,
             animation: sharedValue,
             windowWidth: width,
             H_PADDING_PX: PX_16,
-            ICON_SIZE_PX: tmp(5444).LARGE_BUTTON_HEIGHT,
+            ICON_SIZE_PX: tmp(5446).LARGE_BUTTON_HEIGHT,
           };
           N.__closure = obj3;
           N.__workletHash = 6037256479965;
           N.__initData = __initData2;
-          const animatedStyle1 = tmp(4906).useAnimatedStyle(N);
+          const animatedStyle1 = tmp(4909).useAnimatedStyle(N);
           const _Math = Math;
-          const bound = Math.max(width(1631)().bottom, closure_9);
+          const bound = Math.max(width(1633)().bottom, closure_9);
           if (cResult[5] === bound) {
             if (cResult[6] === tmp4) {
               let tmp22 = cResult[7];
@@ -695,14 +695,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp31 = tmp34;
                   }
                   const obj5 = { style: animatedStyle1, children: ctaButton };
-                  const tmp30 = closure_10(tmp6(4906).View, obj5);
+                  const tmp30 = closure_10(tmp6(4909).View, obj5);
                   cResult[15] = animatedStyle1;
                   cResult[16] = ctaButton;
                   cResult[17] = tmp30;
                   tmp28 = tmp30;
                 }
                 const obj6 = { style: animatedStyle, children: backButton };
-                const tmp27 = closure_10(tmp6(4906).View, obj6);
+                const tmp27 = closure_10(tmp6(4909).View, obj6);
                 cResult[12] = animatedStyle;
                 cResult[13] = backButton;
                 cResult[14] = tmp27;
@@ -725,7 +725,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[6] = tmp4;
           cResult[7] = tmp23;
           tmp22 = tmp23;
-          const tmpResult4 = tmp(4906);
+          const tmpResult4 = tmp(4909);
         }
       }
       const fn = function n() {
@@ -764,8 +764,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         tmp = false !== backButton;
       }
       _require = tmp;
-      const bottom = width(1631)().bottom;
-      width = width(1497)().width;
+      const bottom = width(1633)().bottom;
+      width = width(1499)().width;
       const tmp5 = closure_24();
       dependencyMap = tmp5;
       const tmp4 = closure_13();
@@ -832,8 +832,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = withSafeArea;
       items1[2] = style;
       const items2 = [
-        closure_10(width(4906).View, { style: animatedStyle, children: backButton }),
-        closure_10(width(4906).View, { style: animatedStyle1, children: ctaButton }),
+        closure_10(width(4909).View, { style: animatedStyle, children: backButton }),
+        closure_10(width(4909).View, { style: animatedStyle1, children: ctaButton }),
       ];
       obj5.children = items2;
       return closure_11(View, obj5);
@@ -1196,12 +1196,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onBack, sourceQuestContent } = quest);
       ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
       const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-      const questTaskDetails = quest(9392).useQuestTaskDetails(quest);
-      let obj = quest(9392);
-      const isQuestProgressing = quest(9392).useIsQuestProgressing(quest);
-      const obj2 = quest(9392);
-      const obj3 = quest(9392);
-      const xboxAndPlaystationAccounts = quest(9392).useConnectedAccounts().xboxAndPlaystationAccounts;
+      const questTaskDetails = quest(9408).useQuestTaskDetails(quest);
+      let obj = quest(9408);
+      const isQuestProgressing = quest(9408).useIsQuestProgressing(quest);
+      const obj2 = quest(9408);
+      const obj3 = quest(9408);
+      const xboxAndPlaystationAccounts = quest(9408).useConnectedAccounts().xboxAndPlaystationAccounts;
       const items = [quest, xboxAndPlaystationAccounts];
       const memo = noop.useMemo(
         () =>
@@ -1211,17 +1211,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }),
         items,
       );
-      const obj4 = quest(9392);
-      const hasWatchVideoOnMobileTasks = quest(16016).useHasWatchVideoOnMobileTasks(quest.config);
-      const obj5 = quest(16016);
-      const mobileActivityQuest = quest(16016).useMobileActivityQuest(quest);
+      const obj4 = quest(9408);
+      const hasWatchVideoOnMobileTasks = quest(16049).useHasWatchVideoOnMobileTasks(quest.config);
+      const obj5 = quest(16049);
+      const mobileActivityQuest = quest(16049).useMobileActivityQuest(quest);
       ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-      const obj6 = quest(16016);
-      const primaryCtaCopy = quest(13807).usePrimaryCtaCopy({ quest, application: questApplication });
-      const obj7 = quest(13807);
+      const obj6 = quest(16049);
+      const primaryCtaCopy = quest(13833).usePrimaryCtaCopy({ quest, application: questApplication });
+      const obj7 = quest(13833);
       const userStatus = quest.userStatus;
       let completedAt;
-      const obj8 = quest(16050);
+      const obj8 = quest(16083);
       const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
       if (userStatus != null) {
         completedAt = userStatus.completedAt;
@@ -1231,23 +1231,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (userStatus2 != null) {
         claimedAt = userStatus2.claimedAt;
       }
-      const mobileActivityPressHandler = quest(16050).useMobileActivityPressHandler({
+      const mobileActivityPressHandler = quest(16083).useMobileActivityPressHandler({
         questId: quest.id,
         sourceQuestContent,
         launchMobileActivity,
       });
       const tmp11 = null != completedAt;
-      const isQuestAccessSuspended = quest(9392).useIsQuestAccessSuspended();
-      const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16044) };
+      const isQuestAccessSuspended = quest(9408).useIsQuestAccessSuspended();
+      const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16077) };
       let tmp40Result6 = null;
-      if (step !== quest(16046).QuestBottomSheetStep.TASK_SELECT) {
+      if (step !== quest(16079).QuestBottomSheetStep.TASK_SELECT) {
         const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-        if (tmp2(16046).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+        if (tmp2(16079).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
           const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
           let tmp40Result = closure_10(closure_16, obj12);
         } else {
           tmp40Result = null;
-          if (tmp2(16046).QuestBottomSheetStep.TASK_STATUS === step) {
+          if (tmp2(16079).QuestBottomSheetStep.TASK_STATUS === step) {
             if (tmp11) {
               const obj13 = {
                 questId: quest.id,
@@ -1285,19 +1285,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 size: "lg",
                 onPress: mobileActivityPressHandler,
                 text: primaryCtaCopy,
-                icon: tmp2(9389).getPrimaryCtaIcon(quest),
+                icon: tmp2(9405).getPrimaryCtaIcon(quest),
               };
               let tmp23 = null;
               if (isQuestAccessSuspended) {
                 tmp23 = obj10;
               }
               const merged2 = Object.assign(tmp23);
-              tmp40Result4 = closure_10(tmp2(5439).Button, obj15);
-              const tmp2Result2 = tmp2(9389);
+              tmp40Result4 = closure_10(tmp2(5441).Button, obj15);
+              const tmp2Result2 = tmp2(9405);
             } else {
               if (
                 _slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] ===
-                tmp2(6191).TaskPlatformScreen.CONSOLE
+                tmp2(6193).TaskPlatformScreen.CONSOLE
               ) {
                 if (!isQuestProgressing) {
                   const obj16 = {
@@ -1325,11 +1325,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp40Result5 = null != onBack;
         if (tmp40Result5) {
           const obj18 = { accessibilityLabel: null, variant: "secondary", icon: null, onPress: null, size: "lg" };
-          const intl = tmp2(1126).intl;
-          obj18.accessibilityLabel = intl.string(tmp2(1126).t["13/7kX"]);
-          obj18.icon = closure_10(tmp2(6425).ArrowLargeLeftIcon, {});
+          const intl = tmp2(1128).intl;
+          obj18.accessibilityLabel = intl.string(tmp2(1128).t["13/7kX"]);
+          obj18.icon = closure_10(tmp2(6427).ArrowLargeLeftIcon, {});
           obj18.onPress = onBack;
-          tmp40Result5 = closure_10(tmp2(7790).IconButton, obj18);
+          tmp40Result5 = closure_10(tmp2(7793).IconButton, obj18);
         }
         obj11.backButton = tmp40Result5;
         obj11.style = style;

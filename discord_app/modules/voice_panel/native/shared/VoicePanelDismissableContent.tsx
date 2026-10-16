@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(18084, dependencyMap.paths);
+  return asyncRequireImpl(18119, dependencyMap.paths);
 }
-const VoicePanelModes = fn(12817).VoicePanelModes;
-const isActivityParticipant = fn(5174).isActivityParticipant;
+const VoicePanelModes = fn(12843).VoicePanelModes;
+const isActivityParticipant = fn(5176).isActivityParticipant;
 const jsx = fn(21).jsx;
 const VoiceControlToggleNuxActionSheet = "VoiceControlToggleNuxActionSheet";
 const __initData = {

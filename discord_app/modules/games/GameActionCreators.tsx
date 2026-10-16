@@ -86,7 +86,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (v3 === 2) {
     v3 = 3;
@@ -135,7 +135,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(2060).BatchInvocationManager(
+const batchInvocationManager = new fn(2063).BatchInvocationManager(
   function () {
     const self = this;
     const apply = closure_0.apply;

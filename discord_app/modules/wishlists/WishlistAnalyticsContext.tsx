@@ -52,12 +52,29 @@ export const WishlistAnalyticsProvider = ReactCompilerGating.isReactCompilerEnab
     }
   : function WishlistAnalyticsProvider(newValue) {
       newValue = newValue.newValue;
+      context = undefined;
       if (typeof useWishlistAnalyticsContext === "function") {
-        const obj = {};
-        const merged = Object.assign(noop.useContext(context));
-        const merged1 = Object.assign(newValue);
-        const obj2 = { value: obj, children: tmp };
-        return <context.Provider value={obj}>{tmp}</context.Provider>;
+        context = noop.useContext(context);
+        const items = [context, newValue];
+        const obj = {
+          value: noop.useMemo(() => {
+            const merged = Object.assign(context);
+            const merged1 = Object.assign(newValue);
+            return {};
+          }, items),
+          children: tmp,
+        };
+        return (
+          <context.Provider
+            value={noop.useMemo(() => {
+              const merged = Object.assign(context);
+              const merged1 = Object.assign(newValue);
+              return {};
+            }, items)}
+          >
+            {tmp}
+          </context.Provider>
+        );
       } else {
         throw new TypeError("Trying to call a non-function");
       }

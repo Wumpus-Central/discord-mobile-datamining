@@ -619,7 +619,7 @@ let closure_15 = async function _fetchPremiumGroupInvite() {
     return value;
   })();
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
 

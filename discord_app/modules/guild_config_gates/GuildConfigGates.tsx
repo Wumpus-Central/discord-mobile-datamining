@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildConfigGatesStore from "GuildConfigGatesStore.tsx";
 
 require = fn;
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0) {

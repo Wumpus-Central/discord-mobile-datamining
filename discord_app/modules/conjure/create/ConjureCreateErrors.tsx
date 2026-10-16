@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/create/ConjureCreateErrors.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
@@ -31,7 +31,7 @@ export const classifyCreateFailure = function classifyCreateFailure(obj) {
         let str2 = "unknown";
         if (409 === status) {
           str2 = "unknown";
-          if (code === AbortCodes.TOO_MANY_VIBEGRATIONS_PROJECTS) {
+          if (code === AbortCodes.TOO_MANY_CONJURE_PROJECTS) {
             str2 = "project_limit";
           }
         }
@@ -59,12 +59,12 @@ export const getConjureCreateErrorMessage = function getConjureCreateErrorMessag
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3862["lh+h/p"]);
+    return intl3.string(_modDef3865["lh+h/p"]);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3862.zBENJU);
+    return intl2.string(_modDef3865.zBENJU);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3862["9m86fn"]);
+    return intl.string(_modDef3865["9m86fn"]);
   }
 };

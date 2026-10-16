@@ -79,7 +79,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
     }
   })();
 };
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);

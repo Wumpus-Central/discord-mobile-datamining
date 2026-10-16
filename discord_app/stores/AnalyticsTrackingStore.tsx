@@ -6,7 +6,7 @@ import SessionHeartbeatScheduler from "../modules/analytics_sessions/SessionHear
 import AuthenticationStore from "AuthenticationStore.tsx";
 
 require = fn;
-const AnalyticsUtils = fn(1273);
+const AnalyticsUtils = fn(1275);
 const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {
@@ -32,7 +32,7 @@ const obj2 = {
       return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
     },
   },
-  TRACKING_URL: fn(1085).Endpoints.TRACK,
+  TRACKING_URL: fn(1087).Endpoints.TRACK,
   waitFor: null,
   getFingerprint: AuthenticationStore.getFingerprint,
   getSessionId() {
@@ -48,8 +48,8 @@ const obj2 = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(7411).requestSafeIdleCallback,
-  sendUnloadRequest: fn(7412).sendUnloadRequest,
+  scheduleWhenIdle: fn(7413).requestSafeIdleCallback,
+  sendUnloadRequest: fn(7414).sendUnloadRequest,
 };
 const items = [AuthenticationStore];
 obj2.waitFor = items;

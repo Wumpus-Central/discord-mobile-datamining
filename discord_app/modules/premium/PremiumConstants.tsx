@@ -1027,6 +1027,8 @@ export const PremiumUpsellTypes = {
   VIDEO_STAGE_LIMIT: "video_stage_limit",
   SOUND_PICKER_SOUND_CLICKED: "sound_picker_sound_clicked",
   SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED: "sound_quick_access_picker_sound_clicked",
+  SOUNDBOARD_QUICK_ACCESS_PICKER_UPSELL: "soundboard_quick_access_picker_upsell",
+  SOUNDBOARD_PICKER_FLOATING_UPSELL: "soundboard_picker_floating_upsell",
   SOUNDBOARD_ECHO_SOUND_DETAILS_UPSELL: "soundboard_echo_sound_details_upsell",
   APP_ICON_UPSELL: "app_icon_upsell",
   COLLECTIBLES_SHOP: "collectibles_shop",

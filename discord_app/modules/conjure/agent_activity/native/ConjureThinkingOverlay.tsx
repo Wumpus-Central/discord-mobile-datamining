@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { root: null, opaque: null, body: null, header: null, panel: null };
 const rect = {
   position: "absolute",
@@ -84,10 +84,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str2 == null) {
         str2 = "";
       }
-      const text = projectId(12097).useConjureRevealedText(str2, tmp12).text;
+      const text = projectId(12121).useConjureRevealedText(str2, tmp12).text;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
-        const tmp16 = closure_7(tmp(9784).LightbulbIcon, obj3);
+        const tmp16 = closure_7(tmp(9800).LightbulbIcon, obj3);
         cResult[6] = tmp16;
         let tmp13 = tmp16;
       } else {
@@ -95,9 +95,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { variant: "text-sm/semibold", color: "text-strong", children: null };
-        const intl = tmp(1126).intl;
-        obj4.children = intl.string(ref(3862).XXYIeI);
-        const tmp20 = closure_7(tmp(5147).Text, obj4);
+        const intl = tmp(1128).intl;
+        obj4.children = intl.string(ref(3865).XXYIeI);
+        const tmp20 = closure_7(tmp(5149).Text, obj4);
         cResult[7] = tmp20;
         let tmp17 = tmp20;
       } else {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items3 = [tmp21, cResult[12]];
           obj9.children = items3;
           obj8.children = closure_8(closure_5, obj9);
-          const tmp36 = closure_7(tmp(6402).Card, obj8);
+          const tmp36 = closure_7(tmp(6404).Card, obj8);
           cResult[13] = tmp4.body;
           cResult[14] = tmp21;
           cResult[15] = cResult[12];
@@ -174,20 +174,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
           children: null,
         };
-        ref = ref(12095);
+        ref = ref(12119);
         const obj11 = { source: text };
         obj10.children = closure_7(ref, obj11);
         let tmp28 = closure_7(closure_4, obj10);
       } else {
         const obj12 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl2 = tmp(1126).intl;
-        obj12.children = intl2.string(ref(3862).LfoD6c);
-        tmp28 = closure_7(tmp(5147).Text, obj12);
+        const intl2 = tmp(1128).intl;
+        obj12.children = intl2.string(ref(3865).LfoD6c);
+        tmp28 = closure_7(tmp(5149).Text, obj12);
       }
       cResult[10] = tmp4.panel;
       cResult[11] = text;
       cResult[12] = tmp28;
-      const tmpResult2 = projectId(12097);
+      const tmpResult2 = projectId(12121);
     }
   : function ConjureThinkingOverlay(projectId) {
       projectId = projectId.projectId;
@@ -212,17 +212,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp6) {
         tmp6 = "end" !== stateFromStores.phase;
       }
-      const text = projectId(12097).useConjureRevealedText(str, { streaming: tmp6 }).text;
+      const text = projectId(12121).useConjureRevealedText(str, { streaming: tmp6 }).text;
       const obj3 = { style: tmp.root, children: null };
       const obj4 = { style: tmp.opaque, children: null };
       const obj5 = { style: tmp.body, children: null };
       const obj6 = { style: tmp.header, children: null };
-      const obj2 = projectId(12097);
-      const items2 = [closure_7(projectId(9784).LightbulbIcon, { size: "xs", color: ref(587).colors.TEXT_BRAND })];
+      const obj2 = projectId(12121);
+      const items2 = [closure_7(projectId(9800).LightbulbIcon, { size: "xs", color: ref(587).colors.TEXT_BRAND })];
       const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
-      const intl = tmp3(1126).intl;
-      obj8.children = intl.string(ref(3862).XXYIeI);
-      items2[1] = closure_7(projectId(5147).Text, obj8);
+      const intl = tmp3(1128).intl;
+      obj8.children = intl.string(ref(3865).XXYIeI);
+      items2[1] = closure_7(projectId(5149).Text, obj8);
       obj6.children = items2;
       const items3 = [closure_8(closure_5, obj6)];
       if ("" !== text) {
@@ -241,18 +241,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj10 = { source: text };
-        obj9.children = closure_7(tmp10(12095), obj10);
+        obj9.children = closure_7(tmp10(12119), obj10);
         let tmp7Result = closure_7(closure_4, obj9);
       } else {
         const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl2 = tmp3(1126).intl;
-        obj11.children = intl2.string(tmp10(3862).LfoD6c);
-        tmp7Result = closure_7(tmp3(5147).Text, obj11);
+        const intl2 = tmp3(1128).intl;
+        obj11.children = intl2.string(tmp10(3865).LfoD6c);
+        tmp7Result = closure_7(tmp3(5149).Text, obj11);
       }
       const obj7 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
       items3[1] = tmp7Result;
       obj5.children = items3;
-      obj4.children = closure_7(projectId(6402).Card, {
+      obj4.children = closure_7(projectId(6404).Card, {
         variant: "primary",
         shadow: "high",
         children: closure_8(closure_5, obj5),

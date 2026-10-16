@@ -1,5 +1,5 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
-import privDefault from "../../../../../_runtime/01457_priv.js";
+import privDefault from "../../../../../_runtime/01459_priv.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _getEmojiCacheKey(name) {

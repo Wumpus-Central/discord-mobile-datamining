@@ -3,7 +3,7 @@ import useStateFromStores from "../../../../../../discord_common/js/packages/flu
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
@@ -722,7 +722,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7386).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7388).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -735,16 +735,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16646, dependencyMap.paths),
+          asyncRequireImpl(16679, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(6400).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(6402).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6400).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6402).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -756,7 +756,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16646, dependencyMap.paths),
+          asyncRequireImpl(16679, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -764,7 +764,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6485).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6487).TableRowGroup, obj3);
 }
 function PaymentFlowTest() {
   const obj = {
@@ -838,8 +838,8 @@ function GuildTagBadges() {
   return constants(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(5150).DevSettingsCategory;
-const PremiumConstants = fn(1392);
+const DevSettingsCategory = fn(5152).DevSettingsCategory;
+const PremiumConstants = fn(1394);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
@@ -855,7 +855,7 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };
@@ -894,7 +894,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp = closure_4(arg0, 3);
             const subLabel = tmp[0];
             return closure_17(
-              subLabel(7115).TableSwitchRow,
+              subLabel(7117).TableSwitchRow,
               {
                 label: tmp[2].label,
                 subLabel,
@@ -946,7 +946,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         children: stateFromStores.map((item) => {
           [tmp, tmp2] = item;
           return closure_17(
-            closure_0(7115).TableSwitchRow,
+            closure_0(7117).TableSwitchRow,
             {
               label: tmp3,
               subLabel: tmp,

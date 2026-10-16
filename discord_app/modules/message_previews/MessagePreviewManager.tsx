@@ -11,8 +11,8 @@ import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isThread = fn(2069).isThread;
-const Endpoints = fn(1085).Endpoints;
+const isThread = fn(2072).isThread;
+const Endpoints = fn(1087).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
   constructor() {
@@ -374,7 +374,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
                 closure_1_11.verbose(
                   "fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")",
                 );
-                const HTTP = tmp2(1295).HTTP;
+                const HTTP = tmp2(1297).HTTP;
                 const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
                 const obj4 = { channel_ids: nextWantsResult };
                 request.body = obj4;

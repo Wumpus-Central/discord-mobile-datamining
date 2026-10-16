@@ -230,7 +230,7 @@ let closure_9 = async function _fetchShelf(arg0) {
     }
   }
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/fetchShelf.tsx");
 

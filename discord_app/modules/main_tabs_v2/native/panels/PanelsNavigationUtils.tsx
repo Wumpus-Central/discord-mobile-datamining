@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
-import v1 from "../../../../../_runtime/01279_v1.js";
-import CommonActions2 from "../../../../../_runtime/01508_CommonActions.js";
+import v1 from "../../../../../_runtime/01281_v1.js";
+import CommonActions2 from "../../../../../_runtime/01510_CommonActions.js";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

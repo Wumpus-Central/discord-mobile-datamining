@@ -3,7 +3,7 @@ import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUti
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import NUFChannelsManagerDefault from "../NUFChannelsManager.tsx";
 import NUFTemplateDefault from "NUFTemplate.tsx";
-import _modDef14265 from "../../../../../_runtime/metro/14265__.js";
+import _modDef14297 from "../../../../../_runtime/metro/14297__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -17,10 +17,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(5);
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.w5HAll);
-        const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(tmp(1126).t.Ww4hhq);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(tmp(1128).t.w5HAll);
+        const intl2 = tmp(1128).intl;
+        const stringResult1 = intl2.string(tmp(1128).t.Ww4hhq);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -29,8 +29,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(1126).intl;
-        const stringResult2 = intl3.string(tmp(1126).t.eIi3Om);
+        const intl3 = tmp(1128).intl;
+        const stringResult2 = intl3.string(tmp(1128).t.eIi3Om);
         cResult[2] = stringResult2;
         let tmp8 = stringResult2;
       } else {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = {
           title: tmp4,
           description: tmp5,
-          imageSrc: _modDef14265,
+          imageSrc: _modDef14297,
           CTALabel: tmp8,
           onCTAPress() {
             const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp14 = jsx(NUFTemplateDefault, {
           title: tmp4,
           description: tmp5,
-          imageSrc: _modDef14265,
+          imageSrc: _modDef14297,
           CTALabel: tmp8,
           onCTAPress() {
             const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -70,13 +70,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function NUFVoiceChannelsTemplate(channel) {
       channel = channel.channel;
       let obj = { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null };
-      const intl = channel(1126).intl;
-      obj.title = intl.string(channel(1126).t.w5HAll);
-      const intl2 = channel(1126).intl;
-      obj.description = intl2.string(channel(1126).t.Ww4hhq);
-      obj.imageSrc = _modDef14265;
-      const intl3 = channel(1126).intl;
-      obj.CTALabel = intl3.string(channel(1126).t.eIi3Om);
+      const intl = channel(1128).intl;
+      obj.title = intl.string(channel(1128).t.w5HAll);
+      const intl2 = channel(1128).intl;
+      obj.description = intl2.string(channel(1128).t.Ww4hhq);
+      obj.imageSrc = _modDef14297;
+      const intl3 = channel(1128).intl;
+      obj.CTALabel = intl3.string(channel(1128).t.eIi3Om);
       obj.onCTAPress = function onCTAPress() {
         const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
         const result1 = KeyboardManagerUtilsAll.dismissGlobalKeyboard();

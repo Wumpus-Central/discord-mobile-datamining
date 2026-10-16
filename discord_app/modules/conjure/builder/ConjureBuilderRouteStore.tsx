@@ -32,8 +32,8 @@ prototype["getRoutedProjectId"] = function getRoutedProjectId(guildId) {
   }
   return projectId;
 };
-prototype["getLastProjectId"] = function getLastProjectId(guildId) {
-  let tmp = closure_3.lastProjectIdByGuildId[guildId];
+prototype["getLastProjectId"] = function getLastProjectId(id) {
+  let tmp = closure_3.lastProjectIdByGuildId[id];
   if (tmp == null) {
     tmp = null;
   }

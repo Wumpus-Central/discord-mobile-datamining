@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2568 from "../FamilyCenter.messages.js";
+import _modDef2571 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
@@ -18,18 +18,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(8416).ChatIcon,
-  [USER_CALLED]: fn(12560).PhoneIcon,
-  [USER_ADD]: fn(4871).FriendsIcon,
-  [GUILD_ADD]: fn(14551).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(8418).ThreadIcon,
-  [PURCHASES]: fn(7774).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(5110).ClockIcon,
-  [GIFTS]: fn(12562).GiftIcon,
+  [USER_INTERACTION]: fn(8424).ChatIcon,
+  [USER_CALLED]: fn(12583).PhoneIcon,
+  [USER_ADD]: fn(4874).FriendsIcon,
+  [GUILD_ADD]: fn(14583).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(8426).ThreadIcon,
+  [PURCHASES]: fn(7777).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(5113).ClockIcon,
+  [GIFTS]: fn(12585).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7476).TeenActionDisplayType);
-let createStyles = fn(5151);
+  fn(7478).TeenActionDisplayType);
+let createStyles = fn(5153);
 let obj3 = {
   row: {
     display: "flex",
@@ -182,7 +182,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items;
       return React5(View, obj);
     };
-createStyles = fn(5151);
+createStyles = fn(5153);
 let obj7 = { container: null, groupHeader: null };
 let obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
@@ -195,10 +195,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = container(576).c(29);
       let groupHeader = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef2568.n6LOrh);
-        const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(_modDef2568.JNLpDZ);
+        const intl = tmp(1128).intl;
+        const stringResult = intl.string(_modDef2571.n6LOrh);
+        const intl2 = tmp(1128).intl;
+        const stringResult1 = intl2.string(_modDef2571.JNLpDZ);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -207,7 +207,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       obj = container(576);
-      const ageSpecificText = container(12559).useAgeSpecificText(tmp4, tmp5);
+      const ageSpecificText = container(12582).useAgeSpecificText(tmp4, tmp5);
       container = useIsInAdultAgeGroupDefault();
       if (cResult[2] === ageSpecificText) {
         if (cResult[3] === container) {
@@ -227,11 +227,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
                         let obj2 = { children: null };
                         const obj3 = { variant: "primary", text: null, onPress: null };
-                        const intl3 = tmp(1126).intl;
-                        obj3.text = intl3.string(tmp(1126).t["NX+WJN"]);
+                        const intl3 = tmp(1128).intl;
+                        obj3.text = intl3.string(tmp(1128).t["NX+WJN"]);
                         obj3.onPress = ModalActionCreatorsDefault.pop;
-                        obj2.children = closure_6(tmp(5439).Button, obj3);
-                        const tmp36 = closure_6(tmp(12565).ModalFooter, obj2);
+                        obj2.children = closure_6(tmp(5441).Button, obj3);
+                        const tmp36 = closure_6(tmp(12588).ModalFooter, obj2);
                         cResult[25] = tmp36;
                         let tmp34 = tmp36;
                       } else {
@@ -275,10 +275,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = container(12559);
-      const sortedActivityTypeConfigs = container(7958).getSortedActivityTypeConfigs();
-      const ModalScreen = tmp(7731).ModalScreen;
-      const ModalContent = tmp(7732).ModalContent;
+      const tmpResult = container(12582);
+      const sortedActivityTypeConfigs = container(7961).getSortedActivityTypeConfigs();
+      const ModalScreen = tmp(7734).ModalScreen;
+      const ModalContent = tmp(7735).ModalContent;
       const container2 = groupHeader.container;
       if (cResult[12] === ageSpecificText) {
         if (cResult[13] === groupHeader.groupHeader) {
@@ -327,7 +327,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp18;
         cResult[11] = mapped;
       }
-      const tmp19 = closure_6(container(5147).Text, {
+      const tmp19 = closure_6(container(5149).Text, {
         style: groupHeader.groupHeader,
         variant: "text-lg/bold",
         color: "mobile-text-heading-primary",
@@ -343,16 +343,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: ageSpecificText,
       };
-      const tmpResult2 = container(7958);
+      const tmpResult2 = container(7961);
     }
   : function FamilyCenterModalDataTooltipScreen() {
       const tmp = closure_11();
       const intl = require("util").intl;
       obj = require("useAgeSpecificText");
       const intl2 = require("util").intl;
-      const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2568.n6LOrh), intl2.string(_modDef2568.JNLpDZ));
+      const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2571.n6LOrh), intl2.string(_modDef2571.JNLpDZ));
       _require = useIsInAdultAgeGroupDefault();
-      const stringResult = intl.string(_modDef2568.n6LOrh);
+      const stringResult = intl.string(_modDef2571.n6LOrh);
       const sortedActivityTypeConfigs = require("FamilyCenterUtils").getSortedActivityTypeConfigs();
       const obj3 = { children: null };
       const obj4 = { children: null };

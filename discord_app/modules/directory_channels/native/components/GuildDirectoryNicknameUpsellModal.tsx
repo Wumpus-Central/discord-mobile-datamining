@@ -23,12 +23,12 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(13387).GuildPrompts;
+const GuildPrompts = fn(13413).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let obj2 = {
-  container: { flex: 1, flexGrow: 2, marginTop: fn(6479).NAV_BAR_HEIGHT },
+  container: { flex: 1, flexGrow: 2, marginTop: fn(6481).NAV_BAR_HEIGHT },
   guildIcon: { alignSelf: "center", marginTop: 16 },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -38,7 +38,7 @@ let obj2 = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6479).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6481).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -72,7 +72,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
-      const insets = handleClose(6885)().insets;
+      const insets = handleClose(6887)().insets;
       const tmpResult = require("initialize");
       [obj3, dependencyMap] = ref(noop.useState(null), 2);
       const tmp11 = ref(noop.useState(""), 2);
@@ -93,13 +93,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   name = stateFromStores.name;
                 }
                 if (cResult[16] !== name) {
-                  const intl = tmp(1126).intl;
+                  const intl = tmp(1128).intl;
                   let name1;
                   if (stateFromStores != null) {
                     name1 = stateFromStores.name;
                   }
                   const obj2 = { guildName: name1 };
-                  const formatResult = intl.format(tmp(1126).t["d+6kzl"], obj2);
+                  const formatResult = intl.format(tmp(1128).t["d+6kzl"], obj2);
                   let name2;
                   if (stateFromStores != null) {
                     name2 = stateFromStores.name;
@@ -116,8 +116,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Symbol = Symbol;
                   if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl2 = tmp(1126).intl;
-                    const stringResult = intl2.string(tmp(1126).t.b3L8yx);
+                    const intl2 = tmp(1128).intl;
+                    const stringResult = intl2.string(tmp(1128).t.b3L8yx);
                     cResult[21] = stringResult;
                     let tmp30 = stringResult;
                   } else {
@@ -130,7 +130,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                       color: "text-default",
                       children: tmp30,
                     };
-                    const tmp34 = closure_10(tmp(5147).Text, obj4);
+                    const tmp34 = closure_10(tmp(5149).Text, obj4);
                     cResult[22] = tmp4.description;
                     cResult[23] = tmp34;
                     let tmp32 = tmp34;
@@ -141,10 +141,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[25] === tmp27) {
                       const _Symbol2 = Symbol;
                       if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-                        const intl3 = tmp(1126).intl;
-                        const stringResult1 = intl3.string(tmp(1126).t.ilDlmW);
-                        const intl4 = tmp(1126).intl;
-                        const stringResult2 = intl4.string(tmp(1126).t.RfWvWI);
+                        const intl3 = tmp(1128).intl;
+                        const stringResult1 = intl3.string(tmp(1128).t.ilDlmW);
+                        const intl4 = tmp(1128).intl;
+                        const stringResult2 = intl4.string(tmp(1128).t.RfWvWI);
                         cResult[28] = stringResult1;
                         cResult[29] = stringResult2;
                         let tmp40 = stringResult2;
@@ -240,17 +240,17 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         onBlur: null,
                       };
                       ({ input: obj10.style, redesignTextInput: obj10.textStyle } = tmp4);
-                      obj5.clearButtonVisibility = tmp(1200).ClearButtonVisibility.WITH_CONTENT;
+                      obj5.clearButtonVisibility = tmp(1202).ClearButtonVisibility.WITH_CONTENT;
                       obj5.error = tmp43;
                       obj5.onFocus = J;
                       obj5.onBlur = Q;
-                      const tmp50 = closure_10(tmp9(6505), obj5);
+                      const tmp50 = closure_10(tmp9(6507), obj5);
                       cResult[34] = first1;
                       cResult[35] = tmp4.input;
                       cResult[36] = tmp4.redesignTextInput;
                       cResult[37] = tmp43;
                       cResult[38] = tmp50;
-                      const tmp9Result = tmp9(6505);
+                      const tmp9Result = tmp9(6507);
                     }
                   }
                   const obj6 = { style: header, children: null };
@@ -269,18 +269,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "mobile-text-heading-primary",
                   children: tmp23,
                 };
-                const tmp29 = closure_10(tmp(5147).Text, obj7);
+                const tmp29 = closure_10(tmp(5149).Text, obj7);
                 cResult[18] = tmp4.title;
                 cResult[19] = tmp23;
                 cResult[20] = tmp29;
                 tmp27 = tmp29;
               }
-              const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6379).GuildIconSizes.XLARGE };
-              const tmp21 = closure_10(tmp9(6379), obj8);
+              const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6381).GuildIconSizes.XLARGE };
+              const tmp21 = closure_10(tmp9(6381), obj8);
               cResult[13] = stateFromStores;
               cResult[14] = tmp4.guildIcon;
               cResult[15] = tmp21;
-              const tmp9Result2 = tmp9(6379);
+              const tmp9Result2 = tmp9(6381);
             }
             const items2 = [tmp4.container, tmp16];
             cResult[10] = tmp4.container;
@@ -297,11 +297,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       _require = first1(function* () {
         tmp30(null);
         let nick = 1;
-        yield closure_0(7030).updateGuildSelfMember(closure_0, { nick });
+        yield closure_0(7032).updateGuildSelfMember(closure_0, { nick });
         if (1 === tmp7) {
           nick = 0;
           closure_128_0 = tmp30;
-          const aPIError = new closure_0(5851).APIError(closure_128_0);
+          const aPIError = new closure_0(5853).APIError(closure_128_0);
           tmp30(aPIError);
           c5 = 3;
         } else if (arg0 === 1) {

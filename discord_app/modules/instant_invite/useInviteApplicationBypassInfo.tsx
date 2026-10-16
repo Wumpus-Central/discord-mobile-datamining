@@ -4,7 +4,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1085);
+const Constants = fn(1087);
 ({ GuildFeatures: c3, Permissions: closure_4 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

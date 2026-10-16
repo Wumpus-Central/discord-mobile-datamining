@@ -13,7 +13,7 @@ require = fn;
 let closure_3 = ["arrow", "disabled", "variant", "icon", "onPress", "experimental_withBlurBackground"];
 let closure_4 = ["experimental_withBlurBackground", "onPress", "disabled", "children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5151);
+const createStyles = fn(5153);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = {
@@ -394,9 +394,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return jsx(Card.InternalCard, obj4);
     };
-tmp2.Icon = fn(6408).TableRowIcon;
+tmp2.Icon = fn(6410).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6408).TableRowIconProps;
+export const RowButtonIconProps = fn(6410).TableRowIconProps;
 export const RowButton = tmp2;
