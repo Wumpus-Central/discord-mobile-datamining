@@ -11,10 +11,10 @@ require = fn;
 const Routes = fn(1087).Routes;
 const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: {
-    marginVertical: fn(11821).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11818).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: nativeDefault.space.PX_8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -22,7 +22,7 @@ let obj2 = {
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11821).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11818).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = id(576);
       ({ hasUnread, badgeCount } = useConjureGuildUnreadSummaryDefault(id));
       if (true === selected) {
-        let SELECTED = tmp(12958).ChannelModes.SELECTED;
+        let SELECTED = tmp(12966).ChannelModes.SELECTED;
       } else {
-        const ChannelModes = tmp(12958).ChannelModes;
+        const ChannelModes = tmp(12966).ChannelModes;
         SELECTED = hasUnread ? ChannelModes.UNREAD_IMPORTANT : ChannelModes.DEFAULT;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,9 +79,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== SELECTED) {
         const obj3 = { name: tmp11, mode: SELECTED };
-        const tmp16 = jsx(tmp(12958).BaseChannelName, { name: tmp11, mode: SELECTED });
-        const obj4 = { mode: SELECTED, IconComponent: tmp(12082).MagicWandIcon };
-        const tmp17 = jsx(tmp(12958).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp(12082).MagicWandIcon });
+        const tmp16 = jsx(tmp(12966).BaseChannelName, { name: tmp11, mode: SELECTED });
+        const obj4 = { mode: SELECTED, IconComponent: tmp(12081).MagicWandIcon };
+        const tmp17 = jsx(tmp(12966).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp(12081).MagicWandIcon });
         cResult[6] = SELECTED;
         cResult[7] = tmp16;
         cResult[8] = tmp17;
@@ -152,10 +152,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = useConjureGuildUnreadSummaryDefault(id);
       const hasUnread = tmp5.hasUnread;
       if (true === selected) {
-        let DEFAULT = id(12958).ChannelModes.SELECTED;
+        let DEFAULT = id(12966).ChannelModes.SELECTED;
         let tmp7 = id;
       } else {
-        const ChannelModes = id(12958).ChannelModes;
+        const ChannelModes = id(12966).ChannelModes;
         if (hasUnread) {
           DEFAULT = ChannelModes.UNREAD_IMPORTANT;
           tmp7 = tmp6;
@@ -186,9 +186,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp7(1128).intl;
       obj2.name = intl2.string(_modDef3865.uk6jhJ);
       obj2.mode = DEFAULT;
-      obj.name = jsx(tmp7(12958).BaseChannelName, { name: null, mode: null });
+      obj.name = jsx(tmp7(12966).BaseChannelName, { name: null, mode: null });
       const tmp3Result = BaseChannelItemDefault;
-      obj.icon = jsx(tmp7(12958).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12082).MagicWandIcon });
+      obj.icon = jsx(tmp7(12966).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12081).MagicWandIcon });
       obj.channelInfo = jsx(ChannelBadgeDefault, { mentionCount: tmp5.badgeCount, isNewChannel: false });
       return (
         <tmp3Result

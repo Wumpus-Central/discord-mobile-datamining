@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
   View: closure_7,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 },
   thumb: null,

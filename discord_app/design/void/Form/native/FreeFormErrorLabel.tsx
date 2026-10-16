@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           AccessibilityAnnouncer.announce(nodeText);
         }
       }, items);
-      return jsx(nodeText(5149).Text, {
+      return jsx(nodeText(5150).Text, {
         style: style.style,
         variant: "text-xs/medium",
         color: "text-feedback-critical",

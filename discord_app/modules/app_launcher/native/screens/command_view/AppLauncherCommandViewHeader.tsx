@@ -15,9 +15,9 @@ const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(11883).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(11880).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   headerContainer: {
     alignItems: "center",
@@ -98,11 +98,11 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
         application = section.application;
       }
       if (cResult[0] !== application) {
-        const appLauncherIconSource = scrollOffsetY(11788).getAppLauncherIconSource(application);
+        const appLauncherIconSource = scrollOffsetY(11785).getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
         loadingIcon = appLauncherIconSource;
-        const tmpResult = scrollOffsetY(11788);
+        const tmpResult = scrollOffsetY(11785);
       } else {
         loadingIcon = cResult[1];
       }
@@ -320,7 +320,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
                           color: "text-overlay-light",
                           children: displayName,
                         };
-                        const tmp32 = closure_6(scrollOffsetY(5149).Text, obj8);
+                        const tmp32 = closure_6(scrollOffsetY(5150).Text, obj8);
                         cResult[21] = tmp28;
                         cResult[22] = displayName;
                         cResult[23] = tmp32;
@@ -482,7 +482,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
       if (str == null) {
         str = "";
       }
-      const tmp9 = section(8494);
+      const tmp9 = section(8495);
       if (null != memo) {
         const obj8 = { style: tmp.appIcon, source: memo };
         let tmp15 = closure_6(tmp8(5091), obj8);
@@ -506,7 +506,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
       const obj11 = { style: null };
       let items3 = [tmp.headerBannerOverlay, animatedStyle2];
       obj11.style = items3;
-      const items4 = [tmp16(section(4909).View, obj11), tmp16(section(11883), { onPress: onPress.onPressBack }), , ,];
+      const items4 = [tmp16(section(4909).View, obj11), tmp16(section(11880), { onPress: onPress.onPressBack }), , ,];
       const obj12 = {
         lineClamp: 1,
         animated: true,
@@ -522,7 +522,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
         displayName = command.displayName;
       }
       obj12.children = displayName;
-      items4[2] = tmp16(scrollOffsetY(5149).Text, obj12);
+      items4[2] = tmp16(scrollOffsetY(5150).Text, obj12);
       items4[3] = tmp16(scrollOffsetY(1202).Spacer, { size: 32 });
       const obj13 = { style: null, children: tmp15 };
       const items6 = [tmp.appIconMask, animatedStyle1];

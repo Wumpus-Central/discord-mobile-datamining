@@ -2,7 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import DOMUtils from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
 import fallbackLocalesDefault from "fallbackLocales.tsx";
-import _mod6361 from "../../../_runtime/metro/06361__.js";
+import _mod6363 from "../../../_runtime/metro/06363__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
@@ -57,7 +57,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod6361;
+      obj = _mod6363;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -220,7 +220,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod6361.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod6363.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {

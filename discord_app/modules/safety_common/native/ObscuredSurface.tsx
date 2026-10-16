@@ -4,14 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = tmp(1128);
-const Text_Text = tmp(5149);
-const ImageWarningIcon = tmp(8434);
-const ObscuredSurfaceContext = tmp(9142);
+const Text_Text = tmp(5150);
+const ImageWarningIcon = tmp(8435);
+const ObscuredSurfaceContext = tmp(9143);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { position: "relative", overflow: "hidden" },
   content: { pointerEvents: "none", userSelect: "none" },

@@ -8,7 +8,7 @@ import validateScopeDefault from "helpers/validateScope.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(5857).TransportTypes;
+const TransportTypes = fn(5858).TransportTypes;
 const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,

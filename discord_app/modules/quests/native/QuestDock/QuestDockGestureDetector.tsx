@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06557_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06559_LegacyBaseButton.js";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6190).QuestDockMode;
-const QuestDockConstants = fn(16053);
+const QuestDockMode = fn(6191).QuestDockMode;
+const QuestDockConstants = fn(16067);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,

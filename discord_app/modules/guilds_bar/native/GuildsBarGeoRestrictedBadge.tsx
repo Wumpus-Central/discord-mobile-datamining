@@ -2,13 +2,13 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef15918 from "../../../../_runtime/metro/15918__.js";
+import _modDef15928 from "../../../../_runtime/metro/15928__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { badgeImageContainer: null, badgeImage: null };
 let size = {
   position: "absolute",
@@ -25,7 +25,7 @@ let size = {
   overflow: "hidden",
 };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6187).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(6188).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -43,8 +43,8 @@ export default noop.memo(
             let tmp4 = cResult[2];
           }
           if (cResult[3] !== tmp3.badgeImage) {
-            const obj2 = { source: _modDef15918, style: tmp3.badgeImage };
-            const tmp9 = jsx(FastImageDefault, { source: _modDef15918, style: tmp3.badgeImage });
+            const obj2 = { source: _modDef15928, style: tmp3.badgeImage };
+            const tmp9 = jsx(FastImageDefault, { source: _modDef15928, style: tmp3.badgeImage });
             cResult[3] = tmp3.badgeImage;
             cResult[4] = tmp9;
             let tmp5 = tmp9;
@@ -79,8 +79,8 @@ export default noop.memo(
         const obj = { style: null, pointerEvents: "none", children: null };
         const items = [tmp.badgeImageContainer, style.style];
         obj.style = items;
-        const obj2 = { source: _modDef15918, style: tmp.badgeImage };
-        obj.children = jsx(FastImageDefault, { source: _modDef15918, style: tmp.badgeImage });
+        const obj2 = { source: _modDef15928, style: tmp.badgeImage };
+        obj.children = jsx(FastImageDefault, { source: _modDef15928, style: tmp.badgeImage });
         return (
           <View style={null} pointerEvents="none">
             {null}

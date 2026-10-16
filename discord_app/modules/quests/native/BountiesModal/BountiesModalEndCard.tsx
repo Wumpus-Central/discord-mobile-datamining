@@ -2,7 +2,7 @@
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05454_LinearGradient.js";
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
       };
       const obj2 = visible(4909);
-      fn.__closure = { withTiming: visible(5154).withTiming, visible, timingStandard: visible(5157).timingStandard };
+      fn.__closure = { withTiming: visible(5155).withTiming, visible, timingStandard: visible(5158).timingStandard };
       fn.__workletHash = 15062259404736;
       fn.__initData = __initData;
       const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = visible;
       cResult[5] = tmp6;
       tmp5 = tmp6;
-      const obj3 = { withTiming: visible(5154).withTiming, visible, timingStandard: visible(5157).timingStandard };
+      const obj3 = { withTiming: visible(5155).withTiming, visible, timingStandard: visible(5158).timingStandard };
     }
   : function BountiesModalEndCard(visible) {
       visible = visible.visible;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
       };
-      fn.__closure = { withTiming: visible(5154).withTiming, visible, timingStandard: visible(5157).timingStandard };
+      fn.__closure = { withTiming: visible(5155).withTiming, visible, timingStandard: visible(5158).timingStandard };
       fn.__workletHash = 8770295520643;
       fn.__initData = __initData2;
       if (visible) {

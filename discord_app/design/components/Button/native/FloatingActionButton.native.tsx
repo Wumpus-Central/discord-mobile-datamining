@@ -12,7 +12,7 @@ require = fn;
 let closure_3 = ["icon", "positionBottom", "positionRight", "accessibilityLabel"];
 const jsx = fn(21).jsx;
 let c7 = 16;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 const styles = createStyles.createStyles(() => {
   const obj = { button: null, iconButtonPill: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -225,7 +225,7 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = positionBottom(4909);
       F.__closure = {
-        withSpring: positionBottom(5440).withSpring,
+        withSpring: positionBottom(5441).withSpring,
         positionBottom,
         DEFAULT_POSITION_OFFSET,
         SPRING_CONFIG,
@@ -247,6 +247,6 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj6.icon = cloneElementResult;
       ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = tmp2);
-      obj3.children = jsx(positionBottom(7794).BaseIconButton, {});
+      obj3.children = jsx(positionBottom(7795).BaseIconButton, {});
       return jsx(positionRight(4909).View, { style: animatedStyle, children: null });
     };

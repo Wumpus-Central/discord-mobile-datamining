@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
-import ConjureNativeMarkdown from "../../chat/native/ConjureNativeMarkdown.tsx";
 import useConjureAttachmentImage from "../../chat/useConjureAttachmentImage.tsx";
+import ConjureNativeMarkdown from "../../chat/native/ConjureNativeMarkdown.tsx";
 import conjurePlanBot from "../conjurePlanBot.tsx";
 import conjurePlanDesign from "../conjurePlanDesign.tsx";
 import ConjurePlanWidgetDefault from "ConjurePlanWidget.tsx";
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   surface: { padding: 0, overflow: "hidden" },
   content: { padding: nativeDefault.space.PX_12 },

@@ -13,10 +13,10 @@ import StageChannelRoleStore from "../../StageChannelRoleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(6110).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(6111).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   header: { padding: 16 },
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj2 = { style: tmp4.iconContainer, children: null };
-                const obj3 = { style: tmp4.icon, source: user(7938), color: user(587).unsafe_rawColors.WHITE };
+                const obj3 = { style: tmp4.icon, source: user(7939), color: user(587).unsafe_rawColors.WHITE };
                 obj2.children = closure_9(channelId(1202).Icon, obj3);
                 tmp24 = closure_9(View, obj2);
               }
@@ -250,7 +250,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       if (speaker) {
         const obj6 = { style: tmp.iconContainer, children: null };
-        const obj7 = { style: tmp.icon, source: user(7938), color: user(587).unsafe_rawColors.WHITE };
+        const obj7 = { style: tmp.icon, source: user(7939), color: user(587).unsafe_rawColors.WHITE };
         obj6.children = closure_9(native.Icon, obj7);
         speaker = closure_9(View, obj6);
       }
@@ -598,9 +598,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === onAccept) {
           let tmp7 = cResult[3];
         }
-        const stageBlockedUsers = tmp(7939).useStageBlockedUsers(channel.id);
-        const tmpResult = tmp(7939);
-        const stageIgnoredUsers = tmp(7939).useStageIgnoredUsers(channel.id);
+        const stageBlockedUsers = tmp(7940).useStageBlockedUsers(channel.id);
+        const tmpResult = tmp(7940);
+        const stageIgnoredUsers = tmp(7940).useStageIgnoredUsers(channel.id);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
@@ -645,7 +645,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { text: tmp9, onPress: tmp7 };
-          const tmp12 = closure_9(tmp(5441).Button, obj2);
+          const tmp12 = closure_9(tmp(5442).Button, obj2);
           cResult[6] = tmp7;
           cResult[7] = tmp12;
         } else {
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = tmp(1128).intl;
           obj3.text = intl.string(tmp(1128).t.CZGqeT);
           obj3.onPress = onPress;
-          const tmp14 = closure_9(tmp(5441).Button, obj3);
+          const tmp14 = closure_9(tmp(5442).Button, obj3);
           cResult[8] = tmp14;
           const tmp13 = tmp14;
         } else {
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   renderItem: tmp25,
                   itemSize: tmp19,
                 };
-                const tmp37 = closure_9(onAccept(6983), obj5);
+                const tmp37 = closure_9(onAccept(6985), obj5);
                 cResult[25] = tmp25;
                 cResult[26] = tmp4.container;
                 cResult[27] = tmp33;
@@ -809,11 +809,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { bottom: true, style: tmp4.buttons, onLayout: E, children: null };
         const items1 = [tmp11, tmp13];
         obj7.children = items1;
-        const tmp17 = closure_10(tmp(7037).SafeAreaPaddingView, obj7);
+        const tmp17 = closure_10(tmp(7039).SafeAreaPaddingView, obj7);
         cResult[9] = tmp4.buttons;
         cResult[10] = tmp11;
         cResult[11] = tmp17;
-        const tmpResult2 = tmp(7939);
+        const tmpResult2 = tmp(7940);
       }
       function handleJoin() {
         onAccept(channel);
@@ -832,9 +832,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       const tmp2 = items1(noop.useState(0), 2);
       dependencyMap = tmp2[1];
-      const stageBlockedUsers = channel(7939).useStageBlockedUsers(channel.id);
-      const obj = channel(7939);
-      const stageIgnoredUsers = channel(7939).useStageIgnoredUsers(channel.id);
+      const stageBlockedUsers = channel(7940).useStageBlockedUsers(channel.id);
+      const obj = channel(7940);
+      const stageIgnoredUsers = channel(7940).useStageIgnoredUsers(channel.id);
       const callback = noop.useCallback((nativeEvent) => {
         dependencyMap(nativeEvent.nativeEvent.layout.height);
       }, []);
@@ -846,17 +846,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onAccept(channel);
         ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
       };
-      const items = [closure_9(channel(5441).Button, obj4)];
+      const items = [closure_9(channel(5442).Button, obj4)];
       const obj5 = { variant: "secondary", text: null, onPress: null };
       const intl2 = channel(1128).intl;
       obj5.text = intl2.string(channel(1128).t.CZGqeT);
       obj5.onPress = function handleDismiss() {
         onAccept(5118).hideActionSheet(closure_1_8);
       };
-      items[1] = closure_9(channel(5441).Button, obj5);
+      items[1] = closure_9(channel(5442).Button, obj5);
       obj3.children = items;
       items1 = [];
-      const obj2 = channel(7939);
+      const obj2 = channel(7940);
       HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
       const obj6 = {
         scrollable: true,
@@ -864,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           blockedUserCount: stageBlockedUsers.length,
           ignoredUserCount: stageIgnoredUsers.length,
         }),
-        footer: closure_10(channel(7037).SafeAreaPaddingView, obj3),
+        footer: closure_10(channel(7039).SafeAreaPaddingView, obj3),
         children: null,
       };
       const obj7 = {
@@ -875,7 +875,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         renderItem: null,
         itemSize: null,
       };
-      const tmp4 = closure_10(channel(7037).SafeAreaPaddingView, obj3);
+      const tmp4 = closure_10(channel(7039).SafeAreaPaddingView, obj3);
       const intl3 = channel(1128).intl;
       obj7.accessibilityLabel = intl3.string(channel(1128).t["3VoRLH"]);
       const items2 = [items1.length];
@@ -886,7 +886,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.itemSize = function getRowHeight() {
         return 48;
       };
-      const items3 = [closure_9(onAccept(6983), obj7), closure_9(View, { style: { height: tmp2[0] } })];
+      const items3 = [closure_9(onAccept(6985), obj7), closure_9(View, { style: { height: tmp2[0] } })];
       obj6.children = items3;
-      return closure_10(channel(7063).BottomSheet, obj6);
+      return closure_10(channel(7065).BottomSheet, obj6);
     };

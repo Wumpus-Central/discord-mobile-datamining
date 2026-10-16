@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = {
@@ -64,10 +64,10 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
           return { opacity: spring.withSpring(num, springPresets.springStandard) };
         };
         const obj2 = {
-          withSpring: tmp(5440).withSpring,
+          withSpring: tmp(5441).withSpring,
           scrollPosition: sharedValue,
           triggerScrollHeight: num,
-          springStandard: tmp(5444).springStandard,
+          springStandard: tmp(5445).springStandard,
         };
         fn3.__closure = obj2;
         fn3.__workletHash = 5466161440826;
@@ -139,10 +139,10 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
       };
       const obj2 = triggerScrollHeight(4909);
       fn.__closure = {
-        withSpring: triggerScrollHeight(5440).withSpring,
+        withSpring: triggerScrollHeight(5441).withSpring,
         scrollPosition: sharedValue,
         triggerScrollHeight,
-        springStandard: triggerScrollHeight(5444).springStandard,
+        springStandard: triggerScrollHeight(5445).springStandard,
       };
       fn.__workletHash = 17305021520857;
       fn.__initData = __initData2;

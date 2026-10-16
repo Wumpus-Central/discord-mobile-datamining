@@ -125,7 +125,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6110).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6111).STAGE_APPLICATION_ID;
 const Constants = fn(1087);
 ({
   ActivityTypes: map1,

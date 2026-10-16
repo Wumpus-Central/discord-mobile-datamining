@@ -74,7 +74,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -851,7 +851,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return __initData(closure_22, { item, transitionState, cleanUp }, arg0);
 }
-let closure_26 = Object.freeze({ renderAlert: "Array", renderKey: "unicodeVersion", props: "intl" });
+let closure_26 = Object.freeze({ renderAlert: "Array", renderKey: "unicodeVersion", props: "colors" });
 ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -889,7 +889,7 @@ export default noop.memo(
                   return <openModal.component />;
                 };
               } else {
-                return { renderAlert: "Array", renderKey: "unicodeVersion", props: "intl" };
+                return { renderAlert: "Array", renderKey: "unicodeVersion", props: "colors" };
               }
             }
           };
@@ -1000,7 +1000,7 @@ export default noop.memo(
                 return <openModal.component />;
               };
             } else {
-              return { renderAlert: "Array", renderKey: "unicodeVersion", props: "intl" };
+              return { renderAlert: "Array", renderKey: "unicodeVersion", props: "colors" };
             }
           }
         });

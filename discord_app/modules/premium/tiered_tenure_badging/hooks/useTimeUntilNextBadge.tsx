@@ -12,9 +12,9 @@ export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeD
   return Math.max(0, _modDef4761(arg0).add(arg1, "months").add(1, "day").diff(_modDef4761(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(14424).useNextTenureBadge();
-  let obj = nextTenureBadge(14424);
-  const premiumSince = nextTenureBadge(10812).usePremiumSince();
+  nextTenureBadge = nextTenureBadge(14434).useNextTenureBadge();
+  let obj = nextTenureBadge(14434);
+  const premiumSince = nextTenureBadge(10809).usePremiumSince();
   const items = [nextTenureBadge, premiumSince];
   return useMemo(() => {
     if (null != nextTenureBadge) {

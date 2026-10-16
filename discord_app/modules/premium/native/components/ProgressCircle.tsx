@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/components/ProgressCircle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../_runtime/07796_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07797_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createLegacyClassComponentStyles({
   progressCircle: { alignItems: "center", justifyContent: "center" },
   circle: { position: "absolute", width: "100%", height: "100%" },

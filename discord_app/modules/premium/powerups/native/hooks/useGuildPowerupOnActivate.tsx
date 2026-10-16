@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   analyticsLocations,
                   guildId: stateFromStores.id,
                   onBack() {
-                    return PERK(6152).popWithKey(diff(7353).PREMIUM_KEY);
+                    return PERK(6153).popWithKey(diff(7355).PREMIUM_KEY);
                   },
                   onPaymentSuccess() {
                     const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   },
                   onPaymentDismiss() {
-                    return PERK(6152).popWithKey(diff(7353).PREMIUM_KEY);
+                    return PERK(6153).popWithKey(diff(7355).PREMIUM_KEY);
                   },
                 };
                 const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/16154_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/16168_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6190).QuestDockMode;
-const QuestDockConstants = fn(16053);
+const QuestDockMode = fn(6191).QuestDockMode;
+const QuestDockConstants = fn(16067);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { imageContainer: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -38,7 +38,7 @@ export default noop.memo(
     ? function QuestDockBlurredHeaderPlaceholder(arg0) {
         const cResult = questDockWrapperSpecs(576).c(22);
         ({ layoutAnimation, layoutAnimatedStyle, opacityAnimatedStyle, placeholder } = arg0);
-        const context = noop.useContext(questDockWrapperSpecs(16054).QuestDockGestureContext);
+        const context = noop.useContext(questDockWrapperSpecs(16068).QuestDockGestureContext);
         const activeQuestDockMode = context.activeQuestDockMode;
         if (cResult[0] !== placeholder) {
           let thumbHashToDataURLResult = globalThis;
@@ -53,12 +53,12 @@ export default noop.memo(
             tmp6 = cResult[2];
           }
           const _Uint8Array = thumbHashToDataURLResult.Uint8Array;
-          thumbHashToDataURLResult = tmp(16154).thumbHashToDataURL(
+          thumbHashToDataURLResult = tmp(16168).thumbHashToDataURL(
             _Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6),
           );
           cResult[0] = placeholder;
           cResult[1] = thumbHashToDataURLResult;
-          const tmpResult = tmp(16154);
+          const tmpResult = tmp(16168);
         } else {
           if (cResult[3] !== cResult[1]) {
             const obj2 = { uri: tmp5 };
@@ -177,7 +177,7 @@ export default noop.memo(
                     tmp29[0] = tmp10.overlay;
                     tmp29[1] = opacityAnimatedStyle;
                     obj6.style = tmp29;
-                    const tmp30 = closure_7(activeQuestDockMode(6984), obj6);
+                    const tmp30 = closure_7(activeQuestDockMode(6986), obj6);
                     cResult[16] = opacityAnimatedStyle;
                     cResult[17] = tmp10.overlay;
                     cResult[18] = tmp30;
@@ -198,7 +198,7 @@ export default noop.memo(
                 tmp24[0] = tmp15;
                 tmp24[1] = layoutAnimation;
                 tmp24[2] = tmp16;
-                const tmp25 = closure_7(activeQuestDockMode(6984), tmp24);
+                const tmp25 = closure_7(activeQuestDockMode(6986), tmp24);
                 cResult[12] = layoutAnimation;
                 cResult[13] = tmp15;
                 cResult[14] = tmp16;

@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp(1128).intl;
       intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
       let obj5 = hasInputText(5021);
-      const showConvoStarterInDM = channel(12836).useShowConvoStarterInDM(channel);
+      const showConvoStarterInDM = channel(12842).useShowConvoStarterInDM(channel);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [StickersStore];
         cResult[6] = items2;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp20 = cResult[9];
       }
-      const tmpResult7 = channel(12836);
+      const tmpResult7 = channel(12842);
       const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
       if (cResult[10] !== showConvoStarterInDM) {
         class U {
@@ -562,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
         withDelay: channel(4909).withDelay,
-        withTiming: channel(5154).withTiming,
+        withTiming: channel(5155).withTiming,
         STANDARD_EASING: channel(1202).STANDARD_EASING,
       };
       fn3.__workletHash = 16992012801942;
@@ -577,10 +577,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
         withDelay: channel(4909).withDelay,
-        withTiming: channel(5154).withTiming,
+        withTiming: channel(5155).withTiming,
         STANDARD_EASING: channel(1202).STANDARD_EASING,
       };
-      const shouldAnimateSticker = channel(9992).useShouldAnimateSticker(false);
+      const shouldAnimateSticker = channel(9993).useShouldAnimateSticker(false);
       if (!showConvoStarterInDM) {
         class U {
           constructor() {
@@ -610,12 +610,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj4 = { style: tmp4.gradient, colors: tmp28 };
-        const tmp32 = closure_10(tmp13(5453), obj4);
+        const tmp32 = closure_10(tmp13(5454), obj4);
         cResult[13] = tmp28;
         cResult[14] = tmp4.gradient;
         cResult[15] = tmp32;
       }
-      const tmpResult10 = channel(9992);
+      const tmpResult10 = channel(9993);
     }
   : function DMMessageStickerGreeting(channel) {
       channel = channel.channel;

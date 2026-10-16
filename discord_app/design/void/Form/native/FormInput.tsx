@@ -39,7 +39,7 @@ let closure_2 = [
 ];
 const KeyboardThemes = fn(1087).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
   placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },

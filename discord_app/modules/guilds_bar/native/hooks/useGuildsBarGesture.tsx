@@ -6,7 +6,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06557_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06559_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -241,7 +241,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "duration", positionPercentage: false };
+    sectionItemFromPosition = { item: "done", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -273,8 +273,8 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6181).GuildsNodeType;
-const GuildsBarConstants = fn(17354);
+const GuildsNodeType = fn(6182).GuildsNodeType;
+const GuildsBarConstants = fn(17366);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -658,7 +658,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "test" });
+    state1.setStateShallow({ dragSpecs: "Symbol", overSpecs: "current" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -857,10 +857,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9600).ContextMenuStore;
+        const ContextMenuStore = tmp66(9599).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9600).hideContextMenu();
-          const tmp66Result = tmp66(9600);
+          tmp66(9599).hideContextMenu();
+          const tmp66Result = tmp66(9599);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -901,9 +901,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(6983).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(6985).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(6983).FastListItemTypes.SECTION === type) {
+                    if (tmp66(6985).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";

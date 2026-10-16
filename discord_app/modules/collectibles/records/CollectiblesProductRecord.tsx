@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7486);
+const CollectiblesItemRecord = fn(7488);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -33,6 +33,7 @@ class CollectiblesProductRecord extends tmp3 {
       isFirstParty: tmp.isFirstParty,
       baseVariantName: tmp.baseVariantName,
       variantLabel: tmp.variantLabel,
+      categoryWillUnpublishAt: tmp.categoryWillUnpublishAt,
     } = global);
     return tmp;
   }
@@ -112,6 +113,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
       isFirstParty: tmp17.isFirstParty,
       baseVariantName: tmp17.baseVariantName,
       variantLabel: tmp17.variantLabel,
+      categoryWillUnpublishAt: tmp17.categoryWillUnpublishAt,
     } = obj);
     return tmp42;
   } else {
@@ -168,6 +170,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           premiumType: null,
           items: null,
           categorySkuId: null,
+          categoryWillUnpublishAt: null,
           isCategoryReward: null,
           prices: null,
           badgeOverride: null,
@@ -219,6 +222,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           str2 = "";
         }
         obj4.categorySkuId = str2;
+        obj4.categoryWillUnpublishAt = skus.primaryCollectionWillUnpublishAt;
         obj4.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
         obj4.prices = first.prices;
         ({ badgeOverride: obj3.badgeOverride, hideBadge: obj3.hideBadge } = skus);
@@ -253,19 +257,20 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 skuId: null,
                 name: null,
                 summary: null,
-                styles: "Button",
+                styles: "t",
                 type: "Array",
-                premiumType: "IconComponent",
-                items: "/assets/images/platforms",
-                categorySkuId: 24,
-                isCategoryReward: 24,
-                prices: null,
-                previewAssets: "8ba3e8ee2991f198308400197cdb28bc",
-                googleSkuIds: "img_account_sync_youtube_white",
-                eligibleOffers: "svg",
-                variants: "embed",
-                bundledProducts: false,
-                isFirstParty: null,
+                premiumType: "code",
+                items: "gap",
+                categorySkuId: "toCharArray$esjava$1",
+                categoryWillUnpublishAt: "Array",
+                isCategoryReward: "unicodeVersion",
+                prices: "",
+                previewAssets: "values",
+                googleSkuIds: "IconComponent",
+                eligibleOffers: "Array",
+                variants: "done",
+                bundledProducts: "e",
+                isFirstParty: "toCharArray$esjava$1",
               };
               let str;
               if (first != null) {
@@ -294,7 +299,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 items = items1.filter(item);
               }
               obj3.items = items;
-              let str3 = skus.primaryCollectionId;
+              let str3 = tmp6.primaryCollectionId;
               if (str3 == null) {
                 str3 = collectibles.categorySkuId;
               }
@@ -302,6 +307,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 str3 = "";
               }
               obj3.categorySkuId = str3;
+              obj3.categoryWillUnpublishAt = skus.primaryCollectionWillUnpublishAt;
               obj3.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
               ({ prices: obj2.prices, previewAssetPaths } = tenantMetadata);
               obj3.previewAssets = previewAssetPaths;
@@ -396,6 +402,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             isFirstParty: tmp26.isFirstParty,
             baseVariantName: tmp26.baseVariantName,
             variantLabel: tmp26.variantLabel,
+            categoryWillUnpublishAt: tmp26.categoryWillUnpublishAt,
           } = obj4);
           return tmp26;
         } else {

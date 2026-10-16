@@ -8,7 +8,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12843).VoicePanelModes;
+const VoicePanelModes = fn(12849).VoicePanelModes;
 const Constants = fn(1087);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = {
@@ -125,10 +125,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp2 = matchPathResult.params.channelId === closure_0;
                       }
                       if (!tmp2) {
-                        closure_1(10965)();
+                        closure_1(10962)();
                       }
                     }
-                    obj3 = closure_0(11507);
+                    obj3 = closure_0(11504);
                   }
                 });
                 return () => {
@@ -283,14 +283,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items);
       const tmp3 = connected(
-        doCloseChannel.useState(() => closure_1(11514).getHistory().location.pathname),
+        doCloseChannel.useState(() => closure_1(11511).getHistory().location.pathname),
         2,
       );
       const first = tmp3[0];
       closure_6 = tmp3[1];
       const items1 = [arg0, first];
       const effect1 = doCloseChannel.useEffect(() => {
-        closure_0 = closure_1(11514).addRouteChangeListener((pathname) => {
+        closure_0 = closure_1(11511).addRouteChangeListener((pathname) => {
           if (first !== pathname.pathname) {
             closure_1_6(tmp);
             const obj2 = { path: null };
@@ -306,10 +306,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = matchPathResult.params.channelId === closure_0;
               }
               if (!tmp2) {
-                closure_1(10965)();
+                closure_1(10962)();
               }
             }
-            obj3 = closure_0(11507);
+            obj3 = closure_0(11504);
           }
         });
         return () => {

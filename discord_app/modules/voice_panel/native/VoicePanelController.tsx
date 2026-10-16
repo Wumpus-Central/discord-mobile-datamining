@@ -396,16 +396,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(12843);
+const VoicePanelConstants = fn(12849);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(12841);
+const VoicePanelControlsConstants = fn(12847);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2026).OrientationLockState;
-const ActivityPanelModes = fn(6291).ActivityPanelModes;
-const isActivityParticipant = fn(5176).isActivityParticipant;
-const MorphablePanelModes = fn(12844).MorphablePanelModes;
+const ActivityPanelModes = fn(6287).ActivityPanelModes;
+const isActivityParticipant = fn(5177).isActivityParticipant;
+const MorphablePanelModes = fn(12850).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {
@@ -2672,7 +2672,7 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     tmp3 = arg1;
   };
   let obj = mode(4909);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9815).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4909).runOnJS, dismissKeyboard: mode(5044).dismissKeyboard };
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9814).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4909).runOnJS, dismissKeyboard: mode(5044).dismissKeyboard };
   fn2.__workletHash = 9634019064864;
   fn2.__initData = __initData21;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -2709,7 +2709,7 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     tmp3 = arg1;
   };
   let obj = mode(4909);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9815).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4909).runOnJS, dismissKeyboard: mode(5044).dismissKeyboard };
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9814).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4909).runOnJS, dismissKeyboard: mode(5044).dismissKeyboard };
   fn2.__workletHash = 12442886667392;
   fn2.__initData = __initData23;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

@@ -9,8 +9,7 @@ import CheckpointServersStatsScreenDefault from "screens/stats/CheckpointServers
 import CheckpointEmojiStatsScreenDefault from "screens/stats/CheckpointEmojiStatsScreen.tsx";
 import CheckpointGamesStatsScreenDefault from "screens/stats/CheckpointGamesStatsScreen.tsx";
 import CheckpointGameTimeStatsScreenDefault from "screens/stats/CheckpointGameTimeStatsScreen.tsx";
-import CheckpointSquadStatsScreenDefault from "screens/stats/CheckpointSquadStatsScreen.tsx";
-import CheckpointSidekickStatsScreenDefault from "screens/stats/CheckpointSidekickStatsScreen.tsx";
+import CheckpointFriendsStatsScreenDefault from "screens/stats/CheckpointFriendsStatsScreen.tsx";
 import CheckpointSummaryStatsScreenDefault from "screens/stats/CheckpointSummaryStatsScreen.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -19,15 +18,15 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointOverlay.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function CheckpointOverlay(route) {
-      const cResult = c.c(10);
-      route = route.route;
+  ? function CheckpointOverlay(arg0) {
+      const cResult = c.c(12);
+      ({ route, onNextStep, onPreviousStep } = arg0);
       if (route === CheckpointNavigation.CheckpointRoute.HOME) {
-        const _Symbol10 = Symbol;
+        const _Symbol8 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp54 = jsx(CheckpointWelcomeScreenDefault, {});
-          cResult[0] = tmp54;
-          let first = tmp54;
+          const tmp48 = jsx(CheckpointWelcomeScreenDefault, {});
+          cResult[0] = tmp48;
+          let first = tmp48;
         } else {
           first = cResult[0];
         }
@@ -35,103 +34,105 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const statsScreen = CheckpointNavigation.getCheckpointRoutePresentation(route).statsScreen;
         if (CheckpointNavigation.CheckpointStatsScreen.VOICE === statsScreen) {
-          const _Symbol9 = Symbol;
-          if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp49 = jsx(CheckpointVoiceStatsScreenDefault, {});
-            cResult[1] = tmp49;
-            let tmp46 = tmp49;
-          } else {
-            tmp46 = cResult[1];
-          }
-          return tmp46;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.MESSAGES === statsScreen) {
-          const _Symbol8 = Symbol;
-          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp44 = jsx(CheckpointMessagesStatsScreenDefault, {});
-            cResult[2] = tmp44;
-            let tmp41 = tmp44;
-          } else {
-            tmp41 = cResult[2];
-          }
-          return tmp41;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SERVERS === statsScreen) {
           const _Symbol7 = Symbol;
-          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp39 = jsx(CheckpointServersStatsScreenDefault, {});
-            cResult[3] = tmp39;
-            let tmp36 = tmp39;
+          if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp43 = jsx(CheckpointVoiceStatsScreenDefault, {});
+            cResult[1] = tmp43;
+            let tmp40 = tmp43;
           } else {
-            tmp36 = cResult[3];
+            tmp40 = cResult[1];
           }
-          return tmp36;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.EMOJI === statsScreen) {
+          return tmp40;
+        } else if (CheckpointNavigation.CheckpointStatsScreen.MESSAGES === statsScreen) {
           const _Symbol6 = Symbol;
-          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp34 = jsx(CheckpointEmojiStatsScreenDefault, {});
-            cResult[4] = tmp34;
-            let tmp31 = tmp34;
+          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp38 = jsx(CheckpointMessagesStatsScreenDefault, {});
+            cResult[2] = tmp38;
+            let tmp35 = tmp38;
           } else {
-            tmp31 = cResult[4];
+            tmp35 = cResult[2];
           }
-          return tmp31;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.GAMES === statsScreen) {
+          return tmp35;
+        } else if (CheckpointNavigation.CheckpointStatsScreen.SERVERS === statsScreen) {
           const _Symbol5 = Symbol;
-          if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp29 = jsx(CheckpointGamesStatsScreenDefault, {});
-            cResult[5] = tmp29;
-            let tmp26 = tmp29;
+          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp33 = jsx(CheckpointServersStatsScreenDefault, {});
+            cResult[3] = tmp33;
+            let tmp30 = tmp33;
           } else {
-            tmp26 = cResult[5];
+            tmp30 = cResult[3];
           }
-          return tmp26;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.GAME_TIME === statsScreen) {
+          return tmp30;
+        } else if (CheckpointNavigation.CheckpointStatsScreen.EMOJI === statsScreen) {
           const _Symbol4 = Symbol;
-          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp24 = jsx(CheckpointGameTimeStatsScreenDefault, {});
-            cResult[6] = tmp24;
-            let tmp21 = tmp24;
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp28 = jsx(CheckpointEmojiStatsScreenDefault, {});
+            cResult[4] = tmp28;
+            let tmp25 = tmp28;
           } else {
-            tmp21 = cResult[6];
+            tmp25 = cResult[4];
           }
-          return tmp21;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SQUAD === statsScreen) {
+          return tmp25;
+        } else if (CheckpointNavigation.CheckpointStatsScreen.GAMES === statsScreen) {
           const _Symbol3 = Symbol;
-          if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp19 = jsx(CheckpointSquadStatsScreenDefault, {});
-            cResult[7] = tmp19;
-            let tmp16 = tmp19;
+          if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp23 = jsx(CheckpointGamesStatsScreenDefault, {});
+            cResult[5] = tmp23;
+            let tmp20 = tmp23;
           } else {
-            tmp16 = cResult[7];
+            tmp20 = cResult[5];
           }
-          return tmp16;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SIDEKICK === statsScreen) {
+          return tmp20;
+        } else if (CheckpointNavigation.CheckpointStatsScreen.GAME_TIME === statsScreen) {
           const _Symbol2 = Symbol;
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp14 = jsx(CheckpointSidekickStatsScreenDefault, {});
-            cResult[8] = tmp14;
-            let tmp11 = tmp14;
+          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+            const tmp18 = jsx(CheckpointGameTimeStatsScreenDefault, {});
+            cResult[6] = tmp18;
+            let tmp15 = tmp18;
           } else {
-            tmp11 = cResult[8];
+            tmp15 = cResult[6];
           }
-          return tmp11;
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SUMMARY === statsScreen) {
-          const _Symbol = Symbol;
-          if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp9 = jsx(CheckpointSummaryStatsScreenDefault, {});
-            cResult[9] = tmp9;
-            let tmp6 = tmp9;
-          } else {
-            tmp6 = cResult[9];
-          }
-          return tmp6;
+          return tmp15;
         } else {
-          return null;
+          if (CheckpointNavigation.CheckpointStatsScreen.SQUAD !== statsScreen) {
+            if (CheckpointNavigation.CheckpointStatsScreen.SIDEKICK !== statsScreen) {
+              if (CheckpointNavigation.CheckpointStatsScreen.SUMMARY === statsScreen) {
+                const _Symbol = Symbol;
+                if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+                  const tmp9 = jsx(CheckpointSummaryStatsScreenDefault, {});
+                  cResult[11] = tmp9;
+                  let tmp6 = tmp9;
+                } else {
+                  tmp6 = cResult[11];
+                }
+                return tmp6;
+              } else {
+                return null;
+              }
+            }
+          }
+          if (cResult[7] === onNextStep) {
+            if (cResult[8] === onPreviousStep) {
+              if (cResult[9] === route) {
+                let tmp10 = cResult[10];
+              }
+              return tmp10;
+            }
+          }
+          const obj2 = { route, onNextStep, onPreviousStep };
+          const tmp13 = jsx(CheckpointFriendsStatsScreenDefault, { route, onNextStep, onPreviousStep });
+          cResult[7] = onNextStep;
+          cResult[8] = onPreviousStep;
+          cResult[9] = route;
+          cResult[10] = tmp13;
+          tmp10 = tmp13;
         }
         const tmpResult = CheckpointNavigation;
       }
     }
   : function CheckpointOverlay(route) {
       route = route.route;
+      ({ onNextStep, onPreviousStep } = route);
       if (route === CheckpointNavigation.CheckpointRoute.HOME) {
         return jsx(CheckpointWelcomeScreenDefault, {});
       } else {
@@ -148,14 +149,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return jsx(CheckpointGamesStatsScreenDefault, {});
         } else if (CheckpointNavigation.CheckpointStatsScreen.GAME_TIME === statsScreen) {
           return jsx(CheckpointGameTimeStatsScreenDefault, {});
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SQUAD === statsScreen) {
-          return jsx(CheckpointSquadStatsScreenDefault, {});
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SIDEKICK === statsScreen) {
-          return jsx(CheckpointSidekickStatsScreenDefault, {});
-        } else if (CheckpointNavigation.CheckpointStatsScreen.SUMMARY === statsScreen) {
-          return jsx(CheckpointSummaryStatsScreenDefault, {});
         } else {
-          return null;
+          if (CheckpointNavigation.CheckpointStatsScreen.SQUAD !== statsScreen) {
+            if (CheckpointNavigation.CheckpointStatsScreen.SIDEKICK !== statsScreen) {
+              if (CheckpointNavigation.CheckpointStatsScreen.SUMMARY === statsScreen) {
+                return jsx(CheckpointSummaryStatsScreenDefault, {});
+              } else {
+                return null;
+              }
+            }
+          }
+          const obj = { route, onNextStep, onPreviousStep };
+          return jsx(CheckpointFriendsStatsScreenDefault, { route, onNextStep, onPreviousStep });
         }
         const tmpResult = CheckpointNavigation;
       }

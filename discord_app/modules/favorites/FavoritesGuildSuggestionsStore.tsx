@@ -9,7 +9,7 @@ const NOOP = fn(1087).NOOP;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 let items = [];
 const module_570 = fn(570);
-let closure_8 = module_570.create(() => ({ suggestions: items, dismiss: NOOP }));
+const state = module_570.create(() => ({ suggestions: items, dismiss: NOOP }));
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -24,10 +24,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_8(first);
+      return state(first);
     }
   : function useFavoritesGuildSuggestions() {
-      return closure_8((suggestions) => suggestions.suggestions);
+      return state((suggestions) => suggestions.suggestions);
     };
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -42,10 +42,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_8(first);
+      return state(first);
     }
   : function useFavoritesGuildSuggestionCount() {
-      return closure_8((suggestions) => suggestions.suggestions.length);
+      return state((suggestions) => suggestions.suggestions.length);
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -60,18 +60,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_8(first);
+      return state(first);
     }
   : function useHasFavoritesGuildSuggestions() {
-      return closure_8((suggestions) => suggestions.suggestions.length > 0);
+      return state((suggestions) => suggestions.suggestions.length > 0);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesGuildSuggestionsVisibility() {
       const cResult = require("c").c(11);
-      const obj = require("c");
-      const favoritesAccess = require("FavoritesHooks").useFavoritesAccess();
-      let isFreemium = favoritesAccess.hasAccess;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c(postConnectionOpen) {
           return postConnectionOpen.postConnectionOpen;
@@ -81,134 +78,98 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const obj2 = require("FavoritesHooks");
-      if (isFreemium) {
-        isFreemium = favoritesAccess.isFreemium;
-      }
-      if (isFreemium) {
-        isFreemium = tmp6;
-      }
-      if (cResult[1] !== isFreemium) {
-        if (isFreemium) {
+      const tmp5 = DismissibleContentShownStateStore(first);
+      if (cResult[1] !== tmp5) {
+        if (tmp5) {
           items = [tmp(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
           let items1 = items;
         } else {
           items1 = [];
         }
-        cResult[1] = isFreemium;
+        cResult[1] = tmp5;
         cResult[2] = items1;
       } else {
-        const tmp9 = _slicedToArray(tmp(7323).useSelectedDismissibleContent(cResult[2]), 2);
-        _require = tmp10;
-        if (cResult[3] !== tmp9[1]) {
-          class I {
-            constructor() {
-              obj = {
-                dismiss() {
-                  closure_1_0(constants.USER_DISMISS);
-                  closure_2_8.setState({ suggestions });
-                },
-              };
-              setStateResult = closure_8.setState(obj);
-              return;
-            }
-          }
-          const items2 = [tmp10];
-          cResult[3] = tmp10;
-          cResult[4] = I;
+        const tmp8 = _slicedToArray(tmp(7325).useSelectedDismissibleContent(cResult[2]), 2);
+        _require = tmp9;
+        if (cResult[3] !== tmp8[1]) {
+          const fn2 = function _() {
+            state.setState({
+              dismiss() {
+                closure_1_0(constants.USER_DISMISS);
+                state.setState({ suggestions });
+              },
+            });
+          };
+          const items2 = [tmp9];
+          cResult[3] = tmp9;
+          cResult[4] = fn2;
           cResult[5] = items2;
-          let tmp12 = items2;
+          let tmp11 = items2;
+          let tmp10 = fn2;
         } else {
-          class I {
-            constructor() {
-              obj = {
-                dismiss() {
-                  closure_1_0(constants.USER_DISMISS);
-                  closure_2_8.setState({ suggestions });
-                },
-              };
-              setStateResult = closure_8.setState(obj);
-              return;
-            }
-          }
-          tmp12 = cResult[5];
+          tmp10 = cResult[4];
+          tmp11 = cResult[5];
         }
-        const layoutEffect = noop.useLayoutEffect(I, tmp12);
+        const layoutEffect = noop.useLayoutEffect(tmp10, tmp11);
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
-            constructor() {
-              return () => state.setState({ dismiss });
-            }
-          }
+          const fn3 = function b() {
+            return () => state.setState({ dismiss });
+          };
           const items3 = [];
-          cResult[6] = D;
+          cResult[6] = fn3;
           cResult[7] = items3;
-          let tmp15 = items3;
+          let tmp14 = items3;
+          let tmp13 = fn3;
         } else {
-          class D {
-            constructor() {
-              return () => state.setState({ dismiss });
-            }
-          }
-          tmp15 = cResult[7];
+          tmp13 = cResult[6];
+          tmp14 = cResult[7];
         }
-        const tmp16 = tmp9[0] === tmp(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
-        const layoutEffect1 = noop.useLayoutEffect(D, tmp15);
-        if (cResult[8] === isFreemium) {
-          class D {
-            constructor() {
-              return () => state.setState({ dismiss });
-            }
+        const tmp15 = tmp8[0] === tmp(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
+        const layoutEffect1 = noop.useLayoutEffect(tmp13, tmp14);
+        if (cResult[8] === tmp5) {
+          if (cResult[9] === tmp15) {
+            let tmp17 = cResult[10];
           }
-          return tmp18;
+          return tmp17;
         }
-        const obj3 = { isEligible: isFreemium, isSelected: tmp16 };
-        cResult[8] = isFreemium;
-        cResult[9] = tmp16;
-        cResult[10] = obj3;
-        tmp18 = obj3;
-        const tmpResult = tmp(7323);
+        const obj2 = { isEligible: tmp5, isSelected: tmp15 };
+        cResult[8] = tmp5;
+        cResult[9] = tmp15;
+        cResult[10] = obj2;
+        tmp17 = obj2;
+        const tmpResult = tmp(7325);
       }
-      tmp6 = DismissibleContentShownStateStore(first);
+      const obj = require("c");
     }
   : function useFavoritesGuildSuggestionsVisibility() {
-      const favoritesAccess = require("FavoritesHooks").useFavoritesAccess();
-      let isFreemium = favoritesAccess.hasAccess;
-      const obj = require("FavoritesHooks");
-      if (isFreemium) {
-        isFreemium = favoritesAccess.isFreemium;
-      }
-      if (isFreemium) {
-        isFreemium = tmp4;
-      }
-      tmp4 = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
-      if (isFreemium) {
-        items = [tmp(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+      const tmp = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
+      if (tmp) {
+        items = [tmp2(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
         let items1 = items;
       } else {
         items1 = [];
       }
-      const tmp5 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items1), 2);
-      _require = tmp6;
-      const items2 = [tmp5[1]];
+      const tmp4 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items1), 2);
+      _require = tmp5;
+      const items2 = [tmp4[1]];
       const layoutEffect = noop.useLayoutEffect(() => {
-        closure_8.setState({
+        state.setState({
           dismiss() {
             closure_1_0(constants.USER_DISMISS);
-            closure_2_8.setState({ suggestions });
+            state.setState({ suggestions });
           },
         });
       }, items2);
       const layoutEffect1 = noop.useLayoutEffect(() => () => state.setState({ dismiss }), []);
-      const tmpResult = require("useSelectedDismissibleContent");
+      const obj = require("useSelectedDismissibleContent");
       return {
-        isEligible: isFreemium,
-        isSelected: tmp5[0] === require("dismissible_content").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
+        isEligible: tmp,
+        isSelected: tmp4[0] === require("dismissible_content").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
       };
     };
 function setFavoritesGuildSuggestions(suggestions) {
-  closure_8.setState({ suggestions });
+  state.setState({ suggestions });
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
@@ -231,8 +192,8 @@ export const useFavoritesGuildSuggestionsDismissal = ReactCompilerGating.isReact
       } else {
         first = cResult[0];
       }
-      return closure_8(first);
+      return state(first);
     }
   : function useFavoritesGuildSuggestionsDismissal() {
-      return closure_8((dismiss) => dismiss.dismiss);
+      return state((dismiss) => dismiss.dismiss);
     };

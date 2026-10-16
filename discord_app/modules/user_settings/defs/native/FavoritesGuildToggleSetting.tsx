@@ -3,7 +3,6 @@ import util from "../../../../intl/index.native.tsx";
 import _modDef3447 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FavoritesActionCreators from "../../../favorites/FavoritesActionCreators.tsx";
-import FavoritesHooks from "../../../favorites/FavoritesHooks.tsx";
 import useIsFavoritesGuildVisibleDefault from "../../../favorites/hooks/useIsFavoritesGuildVisible.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -14,9 +13,6 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(_modDef3447.OT1NK5);
   },
   parent: SettingsConstants.MobileUserSettings.APPEARANCE,
-  usePredicate() {
-    return FavoritesHooks.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
-  },
   useValue() {
     return useIsFavoritesGuildVisibleDefault(false);
   },

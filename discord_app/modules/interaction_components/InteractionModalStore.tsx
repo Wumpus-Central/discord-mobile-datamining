@@ -55,11 +55,11 @@ const interactionModalStore = new InteractionModalStore(DispatcherDefault, {
     ({ data, preflight } = nonce);
     let startTimeout;
     const interactionType = data.interactionType;
-    if (nonce(5504).InteractionTypes.APPLICATION_COMMAND === interactionType) {
+    if (nonce(5505).InteractionTypes.APPLICATION_COMMAND === interactionType) {
       const messageId = nonce.messageId;
       const channelId = data.channelId;
       return false;
-    } else if (tmp(5504).InteractionTypes.MODAL_SUBMIT === interactionType) {
+    } else if (tmp(5505).InteractionTypes.MODAL_SUBMIT === interactionType) {
       let tmp7 = null == nonce;
       if (!tmp7) {
         tmp7 = IN_FLIGHT === obj.ERRORED;

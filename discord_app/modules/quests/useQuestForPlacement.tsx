@@ -205,11 +205,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         creative = tmp9.creative;
       }
       if (cResult[4] !== creative) {
-        const deliveredQuestId = tmp(7607).getDeliveredQuestId(creative);
+        const deliveredQuestId = tmp(7608).getDeliveredQuestId(creative);
         cResult[4] = creative;
         cResult[5] = deliveredQuestId;
         let tmp11 = deliveredQuestId;
-        const tmpResult3 = tmp(7607);
+        const tmpResult3 = tmp(7608);
       } else {
         tmp11 = cResult[5];
       }
@@ -514,11 +514,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         creative = tmp5.creative;
       }
       if (cResult[0] !== creative) {
-        const deliveredQuestId = tmp(7607).getDeliveredQuestId(creative);
+        const deliveredQuestId = tmp(7608).getDeliveredQuestId(creative);
         cResult[0] = creative;
         cResult[1] = deliveredQuestId;
         let tmp7 = deliveredQuestId;
-        const tmpResult = tmp(7607);
+        const tmpResult = tmp(7608);
       } else {
         tmp7 = cResult[1];
       }
@@ -557,7 +557,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!tmpResult4.isQuestExpired(stateFromStores)) {
           tmp13 = stateFromStores;
         }
-        tmpResult4 = tmp(7615);
+        tmpResult4 = tmp(7616);
       }
       return tmp13;
     }
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp3Result2.isQuestExpired(stateFromStores)) {
           tmp7 = stateFromStores;
         }
-        tmp3Result2 = tmp3(7615);
+        tmp3Result2 = tmp3(7616);
       }
       return tmp7;
     };

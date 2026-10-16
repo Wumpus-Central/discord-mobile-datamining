@@ -8,9 +8,9 @@ import REAWorkaroundViewDefault from "../../../reanimated/native/REAWorkaroundVi
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import Suspender from "../../../../../_runtime/05392_Suspender.js";
+import Suspender from "../../../../../_runtime/05393_Suspender.js";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06557_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06559_LegacyBaseButton.js";
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
 import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture.tsx";
@@ -30,13 +30,13 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9535).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9536).ONYX_BORDER_WIDTH;
 const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
 let ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_14 = createStyles.createStyles({
   onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH },
 });

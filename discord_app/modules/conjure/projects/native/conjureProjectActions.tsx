@@ -86,7 +86,7 @@ let closure_10 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11526).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3865).Owerd3));
+          await tmp3(11523).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3865).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;
@@ -120,9 +120,9 @@ let closure_10 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10901);
+const ConjureConnectionStore = fn(10898);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(10900);
+const ConjureProjectStore = fn(10897);
 ({ canRemixProject: closure_7, isProjectOwner: closure_8 } = ConjureProjectStore);
 const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const size = fn(2);

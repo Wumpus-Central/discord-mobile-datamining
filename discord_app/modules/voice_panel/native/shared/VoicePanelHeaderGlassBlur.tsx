@@ -10,7 +10,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({
   blur: { position: "absolute", top: 0, left: 0, right: 0 },
   strokeContainer: {
@@ -75,7 +75,7 @@ export default noop.memo(
           return { blurAmount: spring.withSpring(num) };
         };
         const obj4 = shown(4909);
-        fn2.__closure = { withSpring: shown(5440).withSpring, shown };
+        fn2.__closure = { withSpring: shown(5441).withSpring, shown };
         fn2.__workletHash = 5642055202507;
         fn2.__initData = __initData2;
         const animatedProps = obj4.useAnimatedProps(fn2);
@@ -183,7 +183,7 @@ export default noop.memo(
         cResult[2] = tmp4.blur;
         cResult[3] = items3;
         tmp9 = items3;
-        const obj5 = { withSpring: shown(5440).withSpring, shown };
+        const obj5 = { withSpring: shown(5441).withSpring, shown };
       }
     : function HeaderGlassBlur(shown) {
         shown = shown.shown;
@@ -215,7 +215,7 @@ export default noop.memo(
           return { blurAmount: spring.withSpring(num) };
         };
         const obj3 = shown(4909);
-        fn2.__closure = { withSpring: shown(5440).withSpring, shown };
+        fn2.__closure = { withSpring: shown(5441).withSpring, shown };
         fn2.__workletHash = 10766437578125;
         fn2.__initData = __initData4;
         const animatedProps = obj3.useAnimatedProps(fn2);
@@ -223,7 +223,7 @@ export default noop.memo(
         const obj5 = { style: null, children: null };
         const items = [tmp.blur, style, animatedStyle];
         obj5.style = items;
-        const obj4 = { withSpring: shown(5440).withSpring, shown };
+        const obj4 = { withSpring: shown(5441).withSpring, shown };
         const tmp9 = ReanimatedNativeViewDefault;
         const tmp11 = VisualEffectViewAnimatedDefault;
         let str = "light";

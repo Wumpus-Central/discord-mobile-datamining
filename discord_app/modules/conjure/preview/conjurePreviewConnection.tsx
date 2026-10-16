@@ -2,6 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureChatConnection from "../chat/conjureChatConnection.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
+import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
 import conjurePreviewClaims from "conjurePreviewClaims.tsx";
@@ -355,9 +356,17 @@ export const previewStepHandlers = {
         const obj3 = { integrationInstalled: null, botPermissionsChanged: null };
       }
     }
-    const result = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true, install: tmp4 });
-    result.catch(() => {});
-    const tmpResult = ConjurePublishActionCreators;
+    if (tmp5) {
+      const obj5 = {};
+      const merged = Object.assign(tmp4);
+      ({ project: obj4.project, has_activity: obj4.hasActivity } = integration_installed);
+      const result = ConjureActionCreators.applyPublishedPreview(projectId, obj5);
+      const tmpResult = ConjureActionCreators;
+    }
+    tmp5 = null != tmp4 && null != integration_installed.project && null != integration_installed.has_activity;
+    const result1 = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true, install: tmp4 });
+    result1.catch(() => {});
+    const tmpResult2 = ConjurePublishActionCreators;
   },
 };
 export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(projectId, arg1) {

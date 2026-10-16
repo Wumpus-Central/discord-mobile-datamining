@@ -7,7 +7,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AgeCheckStatus = fn(7732).AgeCheckStatus;
+const AgeCheckStatus = fn(7733).AgeCheckStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useShouldShowInitialGoogleWalletBanner.tsx");
 
@@ -71,7 +71,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 c2 = 1;
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: _true(7763).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                const obj6 = { value: _true(7764).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
                 return obj6;
               }
             } else {
@@ -121,7 +121,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
               }
               c3 = 3;
               c4 = 1;
-              const obj8 = { value: _true(7766).checkGoogleWalletAvailable(), done: false };
+              const obj8 = { value: _true(7767).checkGoogleWalletAvailable(), done: false };
               return obj8;
             }
           } catch (tmp27) {

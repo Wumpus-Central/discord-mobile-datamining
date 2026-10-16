@@ -24,7 +24,7 @@ const pressable = SettingBuilders.createPressable({
       type: "Change Name",
       location: { page: "User Settings" },
     });
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15811, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15821, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

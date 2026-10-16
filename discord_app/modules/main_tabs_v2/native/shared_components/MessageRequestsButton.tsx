@@ -4,9 +4,9 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8978 from "../../../../../_runtime/metro/08978__.js";
+import _modDef8979 from "../../../../../_runtime/metro/08979__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod17081 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod17095 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
@@ -19,7 +19,7 @@ let closure_3 = ["alternateVariant"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_11 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
@@ -104,7 +104,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[3] !== color) {
         const obj3 = { ref, color, size: "sm", autoPlay: true };
-        const tmp10 = React6(_mod17081.MessageRequestLottie, obj3);
+        const tmp10 = React6(_mod17095.MessageRequestLottie, obj3);
         cResult[3] = color;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -127,7 +127,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      return React6(_mod17081.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+      return React6(_mod17095.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = {
-          source: _modDef8978,
+          source: _modDef8979,
           IconComponent,
           accessibilityLabel: tmp13,
           buttonText: tmp15,
@@ -309,12 +309,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged2 = Object.assign(merged);
           tmp24 = React6(IconButton.IconButton, obj4);
         }
-        const items = [tmp24, str > 0 && tmp27(tmp26(13699).ButtonBadge, { badgePosition: "right" })];
+        const items = [tmp24, str > 0 && tmp27(tmp26(13705).ButtonBadge, { badgePosition: "right" })];
         obj2.children = items;
         return collapsed(View, obj2);
       } else {
         const obj = {
-          source: _modDef8978,
+          source: _modDef8979,
           IconComponent,
           accessibilityLabel: null,
           buttonText: null,

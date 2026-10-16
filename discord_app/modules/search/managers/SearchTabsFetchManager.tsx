@@ -4,14 +4,14 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 
 require = fn;
 let closure_2 = ["include_nsfw", "channel_id", "search_session_id", "search_query_id"];
-const SearchConstants = fn(9549);
+const SearchConstants = fn(9550);
 ({
   SEARCH_FILTERS_BY_TAB: closure_4,
   SEARCH_QUERY_BY_SEARCH_FILTER: hasOwnProperty,
   SEARCH_QUERY_DEFAULT_FILTERS: metroRequire,
 } = SearchConstants);
 const SearchTypes = fn(1087).SearchTypes;
-const AbstractSearchFetchManager = fn(12943).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(12951).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {}
 const prototype = SearchTabsFetchManager.prototype;
 prototype["createRequestPayload"] = function createRequestPayload(trackExactTotalHits) {

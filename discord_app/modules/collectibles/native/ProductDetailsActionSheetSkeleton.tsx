@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flex: 1 },
   scrollArea: { flex: 1 },
@@ -63,7 +63,7 @@ let obj6 = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.purchaseButton = { height: fn(5446).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5447).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
@@ -120,7 +120,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       return sharedValue(4909).useAnimatedStyle(fn);
     };
 ReactCompilerGating = fn(558);
-let obj7 = { height: fn(5446).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+let obj7 = { height: fn(5447).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
 

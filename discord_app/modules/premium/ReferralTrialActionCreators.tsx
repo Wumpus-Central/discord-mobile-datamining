@@ -392,6 +392,7 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
         recipient_status: null,
         has_eligible_friends: null,
         reminder_state_id: null,
+        recurring_reminder_state_id: null,
       };
       if (null != body.body) {
         if (null != body.body.sent_user_ids) {
@@ -426,6 +427,15 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
           reminder_state_id = null;
         }
         obj.reminder_state_id = reminder_state_id;
+        const body4 = body.body;
+        let prop;
+        if (body4 != null) {
+          prop = body4.recurring_reminder_state_id;
+        }
+        if (prop == null) {
+          prop = null;
+        }
+        obj.recurring_reminder_state_id = prop;
         obj2.dispatch(obj);
       }
       obj2 = DispatcherDefault;

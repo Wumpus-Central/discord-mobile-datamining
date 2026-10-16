@@ -685,8 +685,8 @@ export const getDaysRemaining = function getDaysRemaining(date) {
     (Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
   );
 };
-export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(stateFromStores) {
-  let tmp = null != stateFromStores;
+export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
+  let tmp = null != categoryWillUnpublishAt;
   if (tmp) {
     const _Date = Date;
     const date = new Date();
@@ -694,12 +694,13 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(st
     const fullYear = date.getFullYear();
     const month = date.getMonth();
     const _Date3 = Date;
-    const fullYear1 = stateFromStores.getFullYear();
-    const month1 = stateFromStores.getMonth();
+    const fullYear1 = categoryWillUnpublishAt.getFullYear();
+    const month1 = categoryWillUnpublishAt.getMonth();
     const _Math = Math;
     tmp =
       Math.floor(
-        (Date.UTC(fullYear1, month1, stateFromStores.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
+        (Date.UTC(fullYear1, month1, categoryWillUnpublishAt.getDate()) - Date.UTC(fullYear, month, date.getDate())) /
+          86400000,
       ) <= React6;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }

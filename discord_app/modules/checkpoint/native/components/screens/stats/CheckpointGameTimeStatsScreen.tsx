@@ -9,7 +9,7 @@ import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
 import NumberAnimationDefault from "../../NumberAnimation.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12692 from "../../../../../../../discord_assets/assets/checkpoint/game-time.png.js";
+import _modDef12698 from "../../../../../../../discord_assets/assets/checkpoint/game-time.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -18,7 +18,7 @@ import size from "../../../../../../../_runtime/metro/00002__.js";
 
 const initialize = prop1(504);
 const util = prop1(1128);
-const CalendarIcon = prop1(8905);
+const CalendarIcon = prop1(8906);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp30Result = CheckpointScreenDefault;
       const container = tmp4.container;
       if (cResult[27] !== tmp4.image) {
-        const obj13 = { uri: _modDef12692, style: tmp4.image };
+        const obj13 = { uri: _modDef12698, style: tmp4.image };
         const tmp37 = timestampProducer(CheckpointApngPlayerDefault, obj13);
         cResult[27] = tmp4.image;
         cResult[28] = tmp37;
@@ -438,7 +438,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.imageContainer, children: null };
       const obj5 = { uri: null, style: null };
       const tmp8Result = CheckpointScreenDefault;
-      obj5.uri = _modDef12692;
+      obj5.uri = _modDef12698;
       obj5.style = tmp.image;
       obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
       const items1 = [timestampProducer(View, obj4)];

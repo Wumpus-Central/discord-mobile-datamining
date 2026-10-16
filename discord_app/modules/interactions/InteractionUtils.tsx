@@ -348,4 +348,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(5501).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(5502).interactionCallbackErrorReason;

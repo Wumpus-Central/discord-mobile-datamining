@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   highlight: {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return () => {
             closure_1_9.current = false;
             if (ref.current) {
-              first(5118).hideActionSheet(projectId(11648).CONJURE_DESIGN_REMARK_SHEET_KEY);
+              first(5118).hideActionSheet(projectId(11645).CONJURE_DESIGN_REMARK_SHEET_KEY);
               const obj = first(5118);
             }
           };
@@ -126,9 +126,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] !== projectId) {
         const fn3 = function y() {
           return () => {
-            const result = projectId(10933).inspectConjurePreviewPoint(
+            const result = projectId(10930).inspectConjurePreviewPoint(
               closure_1_0,
-              projectId(10957).CONJURE_INSPECT_CLEAR_POINT,
+              projectId(10954).CONJURE_INSPECT_CLEAR_POINT,
             );
           };
         };
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return () => {
           closure_1_9.current = false;
           if (ref.current) {
-            size(5118).hideActionSheet(projectId(11648).CONJURE_DESIGN_REMARK_SHEET_KEY);
+            size(5118).hideActionSheet(projectId(11645).CONJURE_DESIGN_REMARK_SHEET_KEY);
             const obj = size(5118);
           }
         };
@@ -361,9 +361,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [projectId];
       const effect2 = noop.useEffect(
         () => () => {
-          const result = projectId(10933).inspectConjurePreviewPoint(
+          const result = projectId(10930).inspectConjurePreviewPoint(
             closure_1_0,
-            projectId(10957).CONJURE_INSPECT_CLEAR_POINT,
+            projectId(10954).CONJURE_INSPECT_CLEAR_POINT,
           );
         },
         items1,
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             point.y = Math.round(nativeEvent.nativeEvent.locationY);
             closure_4(point);
             closure_8(false);
-            const result = projectId(10933).inspectConjurePreviewPoint(point, point);
+            const result = projectId(10930).inspectConjurePreviewPoint(point, point);
             result.then((status) => {
               if (ref.current) {
                 closure_4(null);
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_8(true);
               }
             });
-            const obj2 = projectId(10933);
+            const obj2 = projectId(10930);
           }
         }
       }, items4);
@@ -490,7 +490,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items6[1] = null;
         const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
         const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-        obj5.children = tmp24(tmp16(5149).Text, obj6);
+        obj5.children = tmp24(tmp16(5150).Text, obj6);
         items6[2] = tmp24(tmp27, obj5);
         obj2.children = items6;
         obj.children = closure_9(tmp27, obj2);

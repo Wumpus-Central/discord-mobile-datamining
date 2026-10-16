@@ -5,7 +5,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Text: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles({ container: { overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
@@ -19,10 +19,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(10507)();
+    const regex = colors(10508)();
     closure_1 = 0;
-    let obj = name(10508);
-    return name(10508)
+    let obj = name(10509);
+    return name(10509)
       .splitGraphemes(regex)
       .map((children, index) => {
         regex.lastIndex = 0;
@@ -61,6 +61,6 @@ export default function PerLetterEffect(name) {
   const items2 = [textStyle, { lineHeight: "r" }];
   obj2.style = items2;
   obj2.children = memo;
-  obj.children = jsx(name(5149).Text, {});
+  obj.children = jsx(name(5150).Text, {});
   return <closure_4 style={null}>{null}</closure_4>;
 }

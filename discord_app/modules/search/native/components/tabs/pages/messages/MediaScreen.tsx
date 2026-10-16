@@ -13,14 +13,14 @@ import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
-const SearchConstants = fn(9549);
+const SearchConstants = fn(9550);
 ({
   SearchListItemTypes: closure_8,
   MEDIA_NUM_COLUMNS: closure_9,
   MEDIA_ITEM_GAP_WIDTH: c10,
   SearchMediaTypes: closure_11,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12923).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12931).EMPTY_MEDIA_RESULTS;
 const MEDIA_MODAL_KEY = fn(1087).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_15 = [];
@@ -33,12 +33,12 @@ export default noop.memo(function MediaScreen(searchContext) {
   let placeholderCount;
   let memo;
   ({ isFocused, width } = searchContext);
-  const contentContainerStyles = searchContext(17769).useContentContainerStyles();
-  let tmp2 = tab(17706)(width);
+  const contentContainerStyles = searchContext(17779).useContentContainerStyles();
+  let tmp2 = tab(17716)(width);
   dependencyMap = tmp2;
-  let obj = searchContext(17769);
-  const searchMessages = searchContext(17776).useSearchMessages(searchContext, tab);
-  let obj2 = searchContext(17776);
+  let obj = searchContext(17779);
+  const searchMessages = searchContext(17786).useSearchMessages(searchContext, tab);
+  let obj2 = searchContext(17786);
   let items = [placeholderCount, memo];
   const items1 = [searchMessages];
   const stateFromStoresArray = searchContext(504).useStateFromStoresArray(
@@ -71,7 +71,7 @@ export default noop.memo(function MediaScreen(searchContext) {
     items1,
   );
   let obj3 = searchContext(504);
-  const searchMessagesLoadingState = searchContext(17777).useSearchMessagesLoadingState({
+  const searchMessagesLoadingState = searchContext(17787).useSearchMessagesLoadingState({
     searchContext,
     tab,
     placeholderHeight: tmp2,
@@ -115,9 +115,9 @@ export default noop.memo(function MediaScreen(searchContext) {
       obj = searchContext(dependencyMap[15]);
     });
   }, items3);
-  let obj4 = searchContext(17777);
+  let obj4 = searchContext(17787);
   let obj5 = { searchContext, tab, placeholderHeight: tmp2, numColumns };
-  const onPressMediaItem = searchContext(17703).useOnPressMediaItem({
+  const onPressMediaItem = searchContext(17713).useOnPressMediaItem({
     searchContext,
     allMediaResults: memo,
     onEndReached: callback,
@@ -194,12 +194,12 @@ export default noop.memo(function MediaScreen(searchContext) {
     isFirstPageLoading: null,
     isNextPageLoading: null,
   };
-  const obj6 = searchContext(17703);
-  obj7.ItemSeparatorComponent = searchContext(17710).MediaVerticalSeparator;
+  const obj6 = searchContext(17713);
+  obj7.ItemSeparatorComponent = searchContext(17720).MediaVerticalSeparator;
   obj7.numColumns = numColumns;
   obj7.isFirstPageLoading = isFirstPageLoading;
   obj7.isNextPageLoading = isNextPageLoading;
-  return jsx(tab(17778), {
+  return jsx(tab(17788), {
     data: memo1,
     searchContext,
     tab,

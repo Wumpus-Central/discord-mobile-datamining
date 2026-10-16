@@ -321,11 +321,10 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
         } else {
           closure_1 = tmp6;
           let body;
+          closure_129_1 = undefined;
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: null, oldFormErrors: true, rejectWithError: true };
-          const _String = String;
-          obj4.url = React6.GUILD_DISCOVERY_SLUG(String(closure_0));
+          const obj4 = { url: React6.GUILD_WEB_PAGE(closure_0), oldFormErrors: true, rejectWithError: true };
           c2 = 2;
           c4 = 1;
           const obj5 = { value: HTTP.get(obj4), done: false };
@@ -347,29 +346,39 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
         body = value.body;
         guild = undefined;
         if (body != null) {
-          guild = body.guild;
-        }
-        let tmp8 = null;
-        if (null != guild) {
-          let slug;
-          if (body != null) {
-            slug = body.slug;
+          const data = body.data;
+          if (data != null) {
+            guild = data.guild;
           }
-          tmp8 = null;
-          if (null != slug) {
-            const obj = { guild: body.guild, slug: body.slug };
-            tmp8 = obj;
+        }
+        if (null != guild) {
+          let canonical_url;
+          if (body != null) {
+            const seo = body.seo;
+            if (seo != null) {
+              canonical_url = seo.canonical_url;
+            }
+          }
+          if (null != canonical_url) {
+            const _URL = URL;
+            const uRL = new URL(body.seo.canonical_url);
+            const pathname = uRL.pathname;
+            closure_129_1 = pathname.slice(9);
+            const obj7 = { guild: body.data.guild, slug: closure_129_1 };
+            c3 = 0;
+            c4 = 3;
+            const obj = { value: obj7, done: true };
+            return obj;
           }
         }
         c3 = 0;
         c4 = 3;
-        const obj7 = { value: tmp8, done: true };
-        return obj7;
+        return { value: null, done: true };
       }
-    } catch (tmp14) {
+    } catch (tmp13) {
       if (tmp3 === c3) {
         c4 = tmp2;
-        throw tmp14;
+        throw tmp13;
       } else {
         c2 = tmp;
       }

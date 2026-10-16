@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef16028 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-1x.png.js";
-import _modDef16029 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-2x.png.js";
-import _modDef16030 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-3x.png.js";
+import _modDef16042 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-1x.png.js";
+import _modDef16043 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-2x.png.js";
+import _modDef16044 from "../../../../../../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16028 }, 3: null };
-let obj2 = { uri: _modDef16028 };
-obj[2] = { uri: _modDef16029 };
-const obj3 = { uri: _modDef16029 };
-obj[3] = { uri: _modDef16030 };
+let obj = { 1: null, 2: { uri: _modDef16042 }, 3: null };
+let obj2 = { uri: _modDef16042 };
+obj[2] = { uri: _modDef16043 };
+const obj3 = { uri: _modDef16043 };
+obj[3] = { uri: _modDef16044 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef16030 };
+const obj4 = { uri: _modDef16044 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx",

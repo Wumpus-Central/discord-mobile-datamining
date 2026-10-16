@@ -13,7 +13,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05453_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05454_LinearGradient.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
@@ -84,7 +84,7 @@ let closure_5 = ["overlayOpacity", "gradientOverride"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles({
   softenGradient: { flex: 1 },
   linearGradient: { flex: 1 },
@@ -980,8 +980,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         items2[3] = absolute;
         items2[4] = componentStyles;
         obj.style = items2;
-        tmp10Result = closure_10(reduced(5453), obj);
-        const tmp2Result = reduced(5453);
+        tmp10Result = closure_10(reduced(5454), obj);
+        const tmp2Result = reduced(5454);
       }
       return tmp10Result;
     };

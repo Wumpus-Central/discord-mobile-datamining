@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12068).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(12067).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp2 = null;

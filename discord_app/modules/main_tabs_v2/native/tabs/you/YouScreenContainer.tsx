@@ -8,12 +8,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useWindowDimensionsDefault = tmp4(1499);
 const useChatLayoutDefault = tmp4(5038);
-const YouScreenDefault = tmp4(17855);
+const YouScreenDefault = tmp4(17865);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(10885).RootNavigatorScreen;
+const RootNavigatorScreen = fn(10882).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   container: {
     flex: 1,

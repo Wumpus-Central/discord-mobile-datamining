@@ -32,7 +32,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   card: null,
   topRowOverlay: null,
@@ -328,15 +328,19 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const tmp2Result12 = require("initialize");
       const items5 = [trackShopCardClick];
+      const stateFromStores1 = require("initialize").useStateFromStores(items5, () => {
+        const category = CollectiblesCategoryStore.getCategory(product.categorySkuId);
+        let unpublishedAt;
+        if (category != null) {
+          unpublishedAt = category.unpublishedAt;
+        }
+        return unpublishedAt;
+      });
       if (unpublishedAt == null) {
-        unpublishedAt = tmp2Result13.useStateFromStores(items5, () => {
-          const category = CollectiblesCategoryStore.getCategory(product.categorySkuId);
-          let unpublishedAt;
-          if (category != null) {
-            unpublishedAt = category.unpublishedAt;
-          }
-          return unpublishedAt;
-        });
+        unpublishedAt = product.categoryWillUnpublishAt;
+      }
+      if (unpublishedAt == null) {
+        unpublishedAt = stateFromStores1;
       }
       const obj7 = {
         ref: trackShopCardImpression,
@@ -375,11 +379,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
           items7[1] = tmp19;
           obj9.children = items7;
-          let tmp25Result = closure_10(showWishlistNUXActionSheet, obj9);
+          let tmp26Result = closure_10(showWishlistNUXActionSheet, obj9);
         } else {
-          tmp25Result = null;
+          tmp26Result = null;
         }
-        const items8 = [tmp25Result, ,];
+        const items8 = [tmp26Result, ,];
         const obj11 = {
           solidBackground,
           product,
@@ -419,35 +423,35 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 1,
           children: badgeOverride,
         };
-        stateFromStores = tmp33(tmp2(tmp3[24]).Text, obj14);
+        stateFromStores = tmp34(tmp2(tmp3[24]).Text, obj14);
         obj13.children = stateFromStores;
-        let tmp33Result = tmp33(showWishlistNUXActionSheet, obj13);
+        let tmp34Result = tmp34(showWishlistNUXActionSheet, obj13);
       } else {
         if (tmp2Result15.isDynamicProduct(selectedProduct)) {
           const obj15 = { icon: tmp2(tmp3[26]).DiceIcon, accessibilityLabel: null, isDark: null };
           const intl3 = tmp2(tmp3[16]).intl;
           obj15.accessibilityLabel = intl3.string(tmp2(tmp3[16]).t["+drfVi"]);
           obj15.isDark = stateFromStores;
-          tmp33Result = closure_9(tmp2(tmp3[25]).IconBadgePill, obj15);
-        } else if (tmp27) {
+          tmp34Result = closure_9(tmp2(tmp3[25]).IconBadgePill, obj15);
+        } else if (tmp28) {
           const obj16 = { unpublishedAt, style: tmp.badge };
-          tmp33Result = closure_9(require("LimitedTimeBadge"), obj16);
+          tmp34Result = closure_9(require("LimitedTimeBadge"), obj16);
         } else if ("nitroClaim" === collectibleProductState) {
-          tmp33Result = closure_9(tmp2(tmp3[28]).NitroWheelIcon, { color: "mobile-text-heading-primary" });
+          tmp34Result = closure_9(tmp2(tmp3[28]).NitroWheelIcon, { color: "mobile-text-heading-primary" });
         } else {
-          tmp33Result = null;
+          tmp34Result = null;
           if (tmp2Result16.isOrbsExclusiveProduct(selectedProduct)) {
             const obj17 = { icon: tmp2(tmp3[29]).OrbsIcon, accessibilityLabel: null, isDark: null };
             const intl2 = tmp2(tmp3[16]).intl;
             obj17.accessibilityLabel = intl2.string(tmp2(tmp3[16]).t["0TmQRG"]);
             obj17.isDark = stateFromStores;
-            tmp33Result = closure_9(tmp2(tmp3[25]).IconBadgePill, obj17);
+            tmp34Result = closure_9(tmp2(tmp3[25]).IconBadgePill, obj17);
           }
           tmp2Result16 = tmp2(tmp3[11]);
         }
         tmp2Result15 = tmp2(tmp3[11]);
       }
-      tmp2Result13 = require("initialize");
+      const tmp2Result13 = require("initialize");
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()

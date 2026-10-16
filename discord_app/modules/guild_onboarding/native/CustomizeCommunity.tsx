@@ -78,7 +78,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[41])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7048, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7050, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect: function handleOptionSelected(arg0, arg1) {
@@ -143,13 +143,13 @@ function DropdownPrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7012);
+const GuildOnboardingPromptsConstants = fn(7014);
 ({ GuildOnboardingTab: closure_11, OnboardingPromptType: closure_12 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(6185).ReadStateTypes;
+const ReadStateTypes = fn(6186).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   sheetTitle: null,
@@ -308,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === setTab) {
           let tmp11 = cResult[4];
         }
-        const tmp5Result = tmp5(isThemeDarkResult ? 11042 : 11043);
+        const tmp5Result = tmp5(isThemeDarkResult ? 11039 : 11040);
         if (cResult[5] === tmp4.emptyContainerImage) {
           if (cResult[6] === tmp5Result) {
             let tmp13 = cResult[7];
@@ -343,7 +343,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[13] !== tmp21) {
             const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: tmp21 };
-            const tmp25 = closure_15(tmp(5149).Text, obj5);
+            const tmp25 = closure_15(tmp(5150).Text, obj5);
             cResult[13] = tmp21;
             cResult[14] = tmp25;
             let tmp23 = tmp25;
@@ -401,7 +401,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.emptyContainer, children: null };
       const obj4 = { style: tmp.emptyContainerImage, source: null };
       const obj2 = setTab(504);
-      obj4.source = tmp4(isThemeDarkResult ? 11042 : 11043);
+      obj4.source = tmp4(isThemeDarkResult ? 11039 : 11040);
       const items1 = [closure_15(FastImageDefault, obj4), ,];
       const obj5 = { style: tmp.emptyContainerHeader, children: null };
       const intl = tmp2(1128).intl;
@@ -416,7 +416,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         },
       });
-      items1[2] = closure_15(setTab(5149).Text, obj6);
+      items1[2] = closure_15(setTab(5150).Text, obj6);
       obj3.children = items1;
       return closure_16(closure_4, obj3);
     };
@@ -517,8 +517,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp10) {
           if (null != tmp10) {
-            let selectedRoleIds = tmp(7017).getSelectedRoleIds(tmp10);
-            const tmpResult3 = tmp(7017);
+            let selectedRoleIds = tmp(7019).getSelectedRoleIds(tmp10);
+            const tmpResult3 = tmp(7019);
           } else {
             const _Set = Set;
             selectedRoleIds = new Set();
@@ -527,8 +527,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = selectedRoleIds;
         } else if (cResult[8] !== tmp10) {
           if (null != tmp10) {
-            let selectedChannelIds = tmp(7017).getSelectedChannelIds(tmp10);
-            const tmpResult4 = tmp(7017);
+            let selectedChannelIds = tmp(7019).getSelectedChannelIds(tmp10);
+            const tmpResult4 = tmp(7019);
           } else {
             const _Set2 = Set;
             selectedChannelIds = new Set();
@@ -556,7 +556,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[14] === tmp13) {
                   let tmp24 = cResult[15];
                 }
-                ({ helpText, helpTextAdditional } = selectedOptionIds(7038)(tmp24));
+                ({ helpText, helpTextAdditional } = selectedOptionIds(7040)(tmp24));
                 if (cResult[16] === helpText) {
                   if (cResult[17] === helpTextAdditional) {
                     if (cResult[18] === tmp4) {
@@ -574,7 +574,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   const items1 = [helpText, " ", helpTextAdditional];
                   obj2.children = items1;
-                  let tmp28 = closure_16(tmp(5149).Text, obj2);
+                  let tmp28 = closure_16(tmp(5150).Text, obj2);
                 } else {
                   tmp28 = null;
                 }
@@ -583,7 +583,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp4;
                 cResult[19] = tmp28;
                 tmp27 = tmp28;
-                const tmp26 = selectedOptionIds(7038)(tmp24);
+                const tmp26 = selectedOptionIds(7040)(tmp24);
               }
             }
           }
@@ -733,7 +733,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp8,
           };
-          const tmp12 = closure_15(tmp(5149).Text, obj2);
+          const tmp12 = closure_15(tmp(5150).Text, obj2);
           cResult[4] = tmp4.connectionsTitle;
           cResult[5] = tmp12;
           let tmp10 = tmp12;
@@ -745,7 +745,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
           const intl2 = tmp(1128).intl;
           obj3.children = intl2.string(tmp(1128).t.BozOXu);
-          const tmp15 = closure_15(tmp(5149).Text, obj3);
+          const tmp15 = closure_15(tmp(5150).Text, obj3);
           cResult[6] = tmp15;
           let tmp13 = tmp15;
         } else {
@@ -829,11 +829,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl = tmp2(1128).intl;
         obj3.children = intl.string(tmp2(1128).t.eDVMrA);
-        const items1 = [closure_15(tmp2(5149).Text, obj3), ,];
+        const items1 = [closure_15(tmp2(5150).Text, obj3), ,];
         const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const intl2 = tmp2(1128).intl;
         obj4.children = intl2.string(tmp2(1128).t.BozOXu);
-        items1[1] = closure_15(tmp2(5149).Text, obj4);
+        items1[1] = closure_15(tmp2(5150).Text, obj4);
         const obj5 = {
           style: tmp.connectionsContainer,
           children: stateFromStores.map((connection, index) => {
@@ -927,7 +927,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[10] !== option.title) {
                   const obj2 = { variant: "text-md/semibold", children: option.title };
-                  const tmp26 = closure_15(tmp(5149).Text, obj2);
+                  const tmp26 = closure_15(tmp(5150).Text, obj2);
                   cResult[10] = option.title;
                   cResult[11] = tmp26;
                   let tmp24 = tmp26;
@@ -1060,7 +1060,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [
         tmp10Result,
-        closure_15(option(5149).Text, { variant: "text-md/semibold", children: option.title }),
+        closure_15(option(5150).Text, { variant: "text-md/semibold", children: option.title }),
       ];
       obj2.children = items1;
       return closure_16(closure_4, obj2);
@@ -1453,7 +1453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = guildId(504).useStateFromStores(tmp10, N);
       const tmpResult2 = guildId(504);
       ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, newAnswersCount, onboardingPrompts } =
-        tmp5(11044)(guildId));
+        tmp5(11041)(guildId));
       if (cResult[6] === guildId) {
         class N {
           constructor() {
@@ -1504,7 +1504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = guildId;
       cResult[7] = stateFromStores;
       cResult[8] = D;
-      const tmp14 = tmp5(11044)(guildId);
+      const tmp14 = tmp5(11041)(guildId);
     }
   : function CustomizeCommunity(guildId) {
       guildId = guildId.guildId;
@@ -1525,7 +1525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return prop;
       });
-      const tmp7 = stateFromStores(11044)(guildId);
+      const tmp7 = stateFromStores(11041)(guildId);
       ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
       const items2 = [guildId, stateFromStores, stateFromStores1];
       ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -1544,13 +1544,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () =>
           null != guildId
             ? () => {
-                guildId(7022).ackGuildFeature(
+                guildId(7024).ackGuildFeature(
                   closure_1_0,
                   constants.GUILD_ONBOARDING_QUESTION,
                   GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
                 );
-                const obj = guildId(7022);
-                const result = stateFromStores(7016).updateOnboardingResponses(closure_1_0);
+                const obj = guildId(7024);
+                const result = stateFromStores(7018).updateOnboardingResponses(closure_1_0);
               }
             : undefined,
         items3,
@@ -1590,7 +1590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj10 = { count: newOnboardingPrompts.length + newAnswersCount };
           obj9.children = intl.format(tmp4(1128).t.iB5Gqe, obj10);
           const items5 = [
-            closure_15(tmp4(5149).Text, obj9),
+            closure_15(tmp4(5150).Text, obj9),
             newOnboardingPrompts.map(callback),
             onboardingPromptsWithNewAnswers.map(callback),
           ];
@@ -1611,11 +1611,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl2 = tmp4(1128).intl;
           obj13.children = intl2.string(tmp4(1128).t.BGkaer);
-          const items7 = [closure_15(tmp4(5149).Text, obj13), ,];
+          const items7 = [closure_15(tmp4(5150).Text, obj13), ,];
           const obj14 = { variant: "text-xs/medium", color: "text-muted", children: null };
           const intl3 = tmp4(1128).intl;
           obj14.children = intl3.string(tmp4(1128).t.r6Vm8T);
-          items7[1] = closure_15(tmp4(5149).Text, obj14);
+          items7[1] = closure_15(tmp4(5150).Text, obj14);
           items7[2] = onboardingPrompts.map(callback);
           obj12.children = items7;
           tmp24Result3 = closure_16(closure_17, obj12);

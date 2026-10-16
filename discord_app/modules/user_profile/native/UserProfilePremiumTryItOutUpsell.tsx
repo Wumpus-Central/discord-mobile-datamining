@@ -8,11 +8,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7126).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7128).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let c5 = 0.9;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles((bottom) => {
   const obj = {
     container: { position: "absolute", bottom, start: 0, end: 0 },
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = isVisible(4909);
       fn.__closure = {
         isVisible,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj2.useAnimatedStyle(fn);
       let obj3 = {
         isVisible,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = isVisible(4909);
       fn.__closure = {
         isVisible,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       let obj2 = {
         isVisible,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,

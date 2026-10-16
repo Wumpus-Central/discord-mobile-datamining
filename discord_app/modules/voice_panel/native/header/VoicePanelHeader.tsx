@@ -25,21 +25,21 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12843);
+const VoicePanelConstants = fn(12849);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12846).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12841).VoicePanelControlsModes;
-const ParticipantTypes = fn(5176).ParticipantTypes;
+const EDGE_GUTTER = fn(12852).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12847).VoicePanelControlsModes;
+const ParticipantTypes = fn(5177).ParticipantTypes;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   headerWrapper: {
     zIndex: 1,
@@ -568,7 +568,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[2] = stateFromStores;
             cResult[3] = stringResult;
           } else {
-            const tmp4Result = importDefault(stateFromStores ? 11306 : 8342);
+            const tmp4Result = importDefault(stateFromStores ? 11303 : 8343);
             if (cResult[4] !== stateFromStores) {
               const fn2 = function p() {
                 return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -623,7 +623,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 11306 : 8342),
+            icon: importDefault(stateFromStores ? 11303 : 8343),
             onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             },

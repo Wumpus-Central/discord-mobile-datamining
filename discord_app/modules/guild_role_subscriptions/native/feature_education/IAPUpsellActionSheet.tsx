@@ -49,15 +49,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
         const obj2 = {
-          imageSource: markAsDismissed(17300),
+          imageSource: markAsDismissed(17312),
           header: tmp6,
           body: tmp7,
           cta: tmp8,
           onCTAPress: tmp4,
           markAsDismissed,
         };
-        const tmp16 = jsx(markAsDismissed(17299), {
-          imageSource: markAsDismissed(17300),
+        const tmp16 = jsx(markAsDismissed(17311), {
+          imageSource: markAsDismissed(17312),
           header: tmp6,
           body: tmp7,
           cta: tmp8,
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = markAsDismissed;
         cResult[8] = tmp16;
         tmp12 = tmp16;
-        const tmp15 = markAsDismissed(17299);
+        const tmp15 = markAsDismissed(17311);
       }
       function handleCTAPress() {
         router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function IAPUpsellActionSheet(arg0) {
       ({ guildId: require, markAsDismissed } = arg0);
       const obj = {
-        imageSource: markAsDismissed(17300),
+        imageSource: markAsDismissed(17312),
         header: null,
         body: null,
         cta: null,
@@ -101,8 +101,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         markAsDismissed(ContentDismissActionType.UNKNOWN);
       };
       obj.markAsDismissed = markAsDismissed;
-      return jsx(markAsDismissed(17299), {
-        imageSource: markAsDismissed(17300),
+      return jsx(markAsDismissed(17311), {
+        imageSource: markAsDismissed(17312),
         header: null,
         body: null,
         cta: null,

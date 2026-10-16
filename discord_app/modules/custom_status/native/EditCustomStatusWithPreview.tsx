@@ -12,7 +12,7 @@ import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.andro
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _modDef6843 from "../../../../_runtime/metro/06843__.js";
+import _modDef6845 from "../../../../_runtime/metro/06845__.js";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import maybeShowDiscardChangesAlertDefault from "../../user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx";
 import setCustomStatusDefault from "../setCustomStatus.tsx";
@@ -288,7 +288,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10855, dependencyMap.paths),
+        asyncRequireImpl(10852, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );
@@ -329,13 +329,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(10767).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(10764).STATUS_MAX_LENGTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flexGrow: 1, padding: 16, rowGap: 24 },
   statusSection: { rowGap: 8 },
@@ -431,7 +431,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp4.closeIcon) {
-        const obj3 = { source: _modDef6843, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+        const obj3 = { source: _modDef6845, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
         const tmp12 = map1(native.Icon, obj3);
         cResult[3] = tmp4.closeIcon;
         cResult[4] = tmp12;
@@ -473,7 +473,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj.hitSlop = { top: 8, bottom: 8, right: 8 };
       const tmp = closure_15();
       obj.children = map1(native.Icon, {
-        source: _modDef6843,
+        source: _modDef6845,
         style: closure_15().closeIcon,
         size: native.Icon.Sizes.SMALL,
       });
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           analyticsLocations(1385);
           obj3.headerStatusBarHeight = 12;
           obj3.headerStyle = tmp6;
-          const tmp8Result = closure_13(analyticsLocations(6910).Navigator, obj3);
+          const tmp8Result = closure_13(analyticsLocations(6912).Navigator, obj3);
           cResult[4] = tmp4;
           cResult[5] = tmp8Result;
           let tmp7 = tmp8Result;
@@ -526,10 +526,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { title: null };
         const intl = analyticsLocations(1128).intl;
         obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-        return closure_1_13(analyticsLocations(9534).GenericHeaderTitle, obj);
+        return closure_1_13(analyticsLocations(9535).GenericHeaderTitle, obj);
       };
       const obj = analyticsLocations(576);
-      obj5.headerLeft = analyticsLocations(6423).getHeaderCloseButton(_prompt(6152).pop);
+      obj5.headerLeft = analyticsLocations(6425).getHeaderCloseButton(_prompt(6153).pop);
       obj5.render = function render(arg0, navigation) {
         return closure_2_13(EditCustomStatusWithPreview, {
           navigation,
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = _prompt;
       cResult[2] = obj4;
       tmp4 = obj4;
-      const tmpResult4 = analyticsLocations(6423);
+      const tmpResult4 = analyticsLocations(6425);
     }
   : function EditCustomStatusWithPreviewModal(analyticsLocations) {
       analyticsLocations = analyticsLocations.analyticsLocations;
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { title: null };
           const intl = analyticsLocations(1128).intl;
           obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-          return closure_1_13(analyticsLocations(9534).GenericHeaderTitle, obj);
+          return closure_1_13(analyticsLocations(9535).GenericHeaderTitle, obj);
         };
         obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
         obj2.render = function render(arg0, navigation) {
@@ -580,5 +580,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3 = { height: 56 };
       }
       obj.headerStyle = obj3;
-      return closure_13(analyticsLocations(6910).Navigator, obj);
+      return closure_13(analyticsLocations(6912).Navigator, obj);
     };

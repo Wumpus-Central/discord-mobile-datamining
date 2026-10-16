@@ -19,7 +19,7 @@ const require = globalThis.__r;
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13593);
+const GiftingBadgeConstants = fn(13601);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
@@ -28,7 +28,7 @@ const GiftingBadgeConstants = fn(13593);
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },
@@ -132,7 +132,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp10 = closure_10(tmp(12585).GiftIcon, obj2);
+        const tmp10 = closure_10(tmp(12591).GiftIcon, obj2);
         const intl = tmp(1128).intl;
         const stringResult = intl.string(_modDef2667.g86YiI);
         cResult[3] = tmp10;
@@ -170,7 +170,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { grow: true, variant: "primary", icon: tmp8, text: tmp9, onPress: tmp6 };
-        const tmp13 = closure_10(tmp(5441).Button, obj3);
+        const tmp13 = closure_10(tmp(5442).Button, obj3);
         cResult[5] = tmp6;
         cResult[6] = tmp13;
       } else {
@@ -206,7 +206,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp(1128).intl;
         obj4.text = intl2.string(_modDef2667["sa/cfM"]);
         obj4.onPress = T;
-        const tmp15 = closure_10(tmp(5441).Button, obj4);
+        const tmp15 = closure_10(tmp(5442).Button, obj4);
         cResult[7] = tmp15;
         const tmp14 = tmp15;
       } else {
@@ -266,19 +266,19 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
       const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-      obj2.icon = closure_10(onSendGift(12585).GiftIcon, {
+      obj2.icon = closure_10(onSendGift(12591).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });
       const intl = onSendGift(1128).intl;
       obj2.text = intl.string(_modDef2667.g86YiI);
       obj2.onPress = callback;
-      const items1 = [closure_10(onSendGift(5441).Button, obj2)];
+      const items1 = [closure_10(onSendGift(5442).Button, obj2)];
       const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
       const intl2 = onSendGift(1128).intl;
       obj4.text = intl2.string(_modDef2667["sa/cfM"]);
       obj4.onPress = callback1;
-      items1[1] = closure_10(onSendGift(5441).Button, obj4);
+      items1[1] = closure_10(onSendGift(5442).Button, obj4);
       obj.children = items1;
       return closure_11(View, obj);
     };

@@ -12,10 +12,10 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10603);
+const ChannelCallConstants = fn(10600);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2026).OrientationLockState;
-const ParticipantTypes = fn(5176).ParticipantTypes;
+const ParticipantTypes = fn(5177).ParticipantTypes;
 const timeout = new fn(2063).Timeout();
 let obj = {
   focus: true,
@@ -30,7 +30,7 @@ let size = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8677).OrientationType.PORTRAIT,
+  screenOrientation: fn(8678).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -41,7 +41,7 @@ const size1 = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8677).OrientationType.PORTRAIT,
+  screenOrientation: fn(8678).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -174,7 +174,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(10606);
+        tmpResult = tmp(10603);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

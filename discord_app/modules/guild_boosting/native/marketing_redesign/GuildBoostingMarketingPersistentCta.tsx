@@ -11,7 +11,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 120;
 const SPRING_CONFIG = { stiffness: 70, damping: 10 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 },
   innerWraper: null,
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = {
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         isVisible,
         SPRING_CONFIG,
       };
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   useAngle: true,
                                   children: tmp34,
                                 };
-                                const tmp39 = closure_6(stateFromStores(5453), obj4);
+                                const tmp39 = closure_6(stateFromStores(5454), obj4);
                                 cResult[32] = tmp4.border;
                                 cResult[33] = tmp34;
                                 cResult[34] = tmp39;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     fractionalPremiumState,
                     premiumGroupRole,
                   };
-                  const tmp30 = closure_6(stateFromStores(7341), obj8);
+                  const tmp30 = closure_6(stateFromStores(7343), obj8);
                   cResult[19] = fractionalPremiumState;
                   cResult[20] = guild;
                   cResult[21] = premiumGroupRole;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp22[0] = tmp4.guildName;
             tmp22[3] = guild.name;
-            const tmp23 = closure_6(isVisible(5149).Text, tmp22);
+            const tmp23 = closure_6(isVisible(5150).Text, tmp22);
             cResult[12] = guild.name;
             cResult[13] = tmp4.guildName;
             cResult[14] = tmp23;
@@ -286,14 +286,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { style: null, textStyle: null, guild: null, size: null };
         ({ guildIcon: obj5.style, guildIconText: obj5.textStyle } = tmp4);
         obj10.guild = guild;
-        obj10.size = isVisible(6381).GuildIconSizes.LARGE;
-        const tmp19 = closure_6(stateFromStores(6381), obj10);
+        obj10.size = isVisible(6383).GuildIconSizes.LARGE;
+        const tmp19 = closure_6(stateFromStores(6383), obj10);
         cResult[8] = guild;
         cResult[9] = tmp4.guildIcon;
         cResult[10] = tmp4.guildIconText;
         cResult[11] = tmp19;
         tmp15 = tmp19;
-        const tmp18 = stateFromStores(6381);
+        const tmp18 = stateFromStores(6383);
       }
       const items3 = [tmp4.wrapper, animatedStyle];
       cResult[2] = animatedStyle;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = {
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         isVisible,
         SPRING_CONFIG,
       };
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = {
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         isVisible,
         SPRING_CONFIG,
       };
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5440).withSpring,
+        withSpring: isVisible(5441).withSpring,
         isVisible,
         SPRING_CONFIG,
       };
@@ -374,11 +374,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: tmp.innerWraper, children: null };
       const obj7 = { style: tmp.guildInfoContainer, children: null };
       const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-      const tmp4 = stateFromStores(5453);
-      obj8.size = isVisible(6381).GuildIconSizes.LARGE;
+      const tmp4 = stateFromStores(5454);
+      obj8.size = isVisible(6383).GuildIconSizes.LARGE;
       const items3 = [
-        closure_6(stateFromStores(6381), obj8),
-        closure_6(isVisible(5149).Text, {
+        closure_6(stateFromStores(6383), obj8),
+        closure_6(isVisible(5150).Text, {
           style: tmp.guildName,
           variant: "text-md/bold",
           lineClamp: 1,
@@ -389,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [closure_7(View, obj7)];
       const obj10 = {
         style: tmp.buttonContainer,
-        children: closure_6(stateFromStores(7341), {
+        children: closure_6(stateFromStores(7343), {
           guild,
           previousGuildSubscriptionSlot,
           useShortenedCTA: true,

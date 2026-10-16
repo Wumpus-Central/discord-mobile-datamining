@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Stack(1202);
-const Stack_Stack = Stack(5439);
-const DetailedGuildIdentityUserRow = Stack(10548);
+const Stack_Stack = Stack(5440);
+const DetailedGuildIdentityUserRow = Stack(10549);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ identity: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

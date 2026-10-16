@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channelId(504);
       const navigation = channelId(1505).useNavigation();
       const tmpResult3 = channelId(1505);
-      const appChannelBotUserId = channelId(11106).useAppChannelBotUserId(stateFromStores);
+      const appChannelBotUserId = channelId(11103).useAppChannelBotUserId(stateFromStores);
       _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       if (cResult[3] === appChannelBotUserId) {
         if (cResult[4] === stateFromStores) {
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = navigation;
       cResult[6] = tmp12;
       tmp11 = tmp12;
-      const tmpResult4 = channelId(11106);
+      const tmpResult4 = channelId(11103);
     }
   : function ConnectedChannelSettingsChangeCategory(channelId) {
       channelId = channelId.channelId;
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(504);
       const navigation = channelId(1505).useNavigation();
       const obj2 = channelId(1505);
-      const appChannelBotUserId = channelId(11106).useAppChannelBotUserId(channel);
+      const appChannelBotUserId = channelId(11103).useAppChannelBotUserId(channel);
       _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
     };

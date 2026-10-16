@@ -22,13 +22,17 @@ const regExp6 = new RegExp(
     ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?",
 );
 const regExp7 = new RegExp(
+  "" + regExp6.source + "(?:\\?" + fn(5132).CONVERSATION_QUERY_PARAM + "=(\\d+)(?![\\w=&%-]))?",
+);
+const regExp8 = new RegExp(
   "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
 );
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/LinkUtils.tsx");
 
 export const CHANNEL_OR_MESSAGES_URL_RE = regExp6;
-export const MEDIA_POST_URL_RE = regExp7;
+export const CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE = regExp7;
+export const MEDIA_POST_URL_RE = regExp8;
 export const tryParseChannelPath = function tryParseChannelPath(pathname) {
   if (null == pathname) {
     return null;

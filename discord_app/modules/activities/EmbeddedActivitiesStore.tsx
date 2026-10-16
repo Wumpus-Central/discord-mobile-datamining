@@ -14,7 +14,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const isVoiceEmbeddedActivityDefault = combined(10729);
+const isVoiceEmbeddedActivityDefault = combined(10726);
 require = fn;
 function participantFromServer(userId) {
   return { userId: userId.user_id, sessionId: userId.session_id, nonce: userId.nonce };
@@ -224,7 +224,7 @@ function updateEmbeddedActivities(content_classification) {
                 const ComponentDispatch2 = application_id(1123).ComponentDispatch;
                 const obj8 = { location: _location, applicationId: application_id, isFirstActivityInChannel: 0 === arr2.length, isStart: tmp78, participants: mapped, embeddedActivity: obj7, inviterUserId };
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj8);
-                application_id(11143);
+                application_id(11140);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -261,7 +261,7 @@ function updateEmbeddedActivities(content_classification) {
     const obj19 = application_id(4798);
   }
 }
-const ActivityPanelConstants = fn(6291);
+const ActivityPanelConstants = fn(6287);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const FocusedActivityLayouts = ActivityPanelConstants.FocusedActivityLayouts;
 const Constants = fn(1087);

@@ -5,8 +5,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let VoicePanelModes = fn(12843).VoicePanelModes;
-const VoicePanelControlsModes = fn(12841).VoicePanelControlsModes;
+let VoicePanelModes = fn(12849).VoicePanelModes;
+const VoicePanelControlsModes = fn(12847).VoicePanelControlsModes;
 const map = new Map();
 function isDrawerShown(drawerMode, arg1) {
   let tmp = drawerMode.drawerMode && !drawerMode.hidden;

@@ -19,7 +19,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -58,7 +58,7 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(17050);
+                obj = obj(17064);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
                 obj(5044).dismissKeyboard();
@@ -522,7 +522,7 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(17050);
+              obj = obj(17064);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
               obj(5044).dismissKeyboard();

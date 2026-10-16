@@ -6,7 +6,7 @@ import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(5149);
+const Text_Text = tmp(5150);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
@@ -244,7 +244,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         tmp26[1] = style;
                         tmp26[3] = tmp22;
-                        const tmp27 = jsx(tmp(5149).Text, tmp26);
+                        const tmp27 = jsx(tmp(5150).Text, tmp26);
                         cResult[20] = style;
                         cResult[21] = tmp22;
                         cResult[22] = tmp27;

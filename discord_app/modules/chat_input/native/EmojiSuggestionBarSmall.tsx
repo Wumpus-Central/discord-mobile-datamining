@@ -13,9 +13,9 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 let closure_3 = ["anchorTop", "onOccupiedHeightChange", "ref"];
 const jsx = fn(21).jsx;
-const sum = fn(9666).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9665).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = {
@@ -163,13 +163,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } = displayEmojis);
       ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
       const tmp = closure_9(displayEmojis.anchorTop);
-      const suggestionBarHeight = displayEmojis(13011).useSuggestionBarHeight(
+      const suggestionBarHeight = displayEmojis(13019).useSuggestionBarHeight(
         transitionState,
         cleanUp,
         CONTAINER_SMALL_WRAPPER_HEIGHT,
         onOccupiedHeightChange,
       );
-      let obj = displayEmojis(13011);
+      let obj = displayEmojis(13019);
       const fn = function j() {
         const obj = { opacity: null };
         const items = [0, closure_8];
@@ -287,7 +287,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
       let obj = require("c");
       const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(
         tmp6,
-        tmp(13011).MAX_SUGGESTIONS_LARGE,
+        tmp(13019).MAX_SUGGESTIONS_LARGE,
         1,
         tmp7,
       );

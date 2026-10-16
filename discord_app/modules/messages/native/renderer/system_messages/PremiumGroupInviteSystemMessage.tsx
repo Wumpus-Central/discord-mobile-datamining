@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import PremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
-import _modDef8303 from "../../../../../../_runtime/metro/08303__.js";
+import _modDef8304 from "../../../../../../_runtime/metro/08304__.js";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createNativeStyleProperties({
   iconTintColor: nativeDefault.colors.ICON_STRONG,
   iconDividerColor: nativeDefault.colors.ICON_STRONG,
@@ -30,7 +30,7 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     const merged = Object.assign(createCommonMessageDefault(message));
     obj3.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = closure_5(theme);
-    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8303);
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8304);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj3;
   }

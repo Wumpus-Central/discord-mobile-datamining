@@ -216,7 +216,7 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "addValue" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "Costa Rica" };
           let obj10 = obj9;
         } else {
           obj10 = {

@@ -16,18 +16,18 @@ import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
 import showAudioOutputSelector from "../../../voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx";
 import HeadphonesSlashIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
-import _modDef10648 from "../../../../../_runtime/metro/10648__.js";
+import _modDef10645 from "../../../../../_runtime/metro/10645__.js";
 import useIsVoiceChannelFullDefault from "../../../voice_calls/useIsVoiceChannelFull.tsx";
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
-import _modDef11414 from "../../../../../_runtime/metro/11414__.js";
+import _modDef11411 from "../../../../../_runtime/metro/11411__.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
-import _modDef14283 from "../../../../../_runtime/metro/14283__.js";
+import _modDef14293 from "../../../../../_runtime/metro/14293__.js";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
-import _modDef18161 from "../../../../../_runtime/metro/18161__.js";
-import _modDef18162 from "../../../../../_runtime/metro/18162__.js";
+import _modDef18171 from "../../../../../_runtime/metro/18171__.js";
+import _modDef18172 from "../../../../../_runtime/metro/18172__.js";
 import useSoundboardConfig from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -46,7 +46,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 
 const initialize = TableRow(504);
 const PlatformUtils = TableRow(1384);
-const TableRowGroup = TableRow(6487);
+const TableRowGroup = TableRow(6489);
 require = fn;
 function getGameConsoleLabel(connected, type) {
   if (type === constants2.XBOX) {
@@ -86,8 +86,8 @@ function toggleDeaf() {
 }
 const Constants = fn(1087);
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = Constants);
-let closure_15 = fn(18267).SelfStreamAndVideoAlertType;
-const MediaEngineContextTypes = fn(5178).MediaEngineContextTypes;
+let closure_15 = fn(18277).SelfStreamAndVideoAlertType;
+const MediaEngineContextTypes = fn(5179).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -350,7 +350,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(4);
       channel = channel.channel;
       const connected = channel.connected;
-      const arr = connected(11422)();
+      const arr = connected(11419)();
       if (channel.isGuildStageVoice()) {
         return null;
       } else {
@@ -367,7 +367,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = map((account) => (
             <closure_19 key={account.type} account={account} channel={channel} connected={connected} />
           ));
-          tmp4 = jsx(tmp(6487).TableRowGroup, { title: null, hasIcons: true, children: null });
+          tmp4 = jsx(tmp(6489).TableRowGroup, { title: null, hasIcons: true, children: null });
         }
         cResult[0] = channel;
         cResult[1] = connected;
@@ -379,7 +379,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   : function GameConsoles(channel) {
       channel = channel.channel;
       const connected = channel.connected;
-      const arr = connected(11422)();
+      const arr = connected(11419)();
       let tmp2 = null;
       if (!channel.isGuildStageVoice()) {
         let tmp3 = null;
@@ -390,7 +390,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           obj.children = arr.map((account) => (
             <closure_19 key={account.type} account={account} channel={channel} connected={connected} />
           ));
-          tmp3 = jsx(channel(6487).TableRowGroup, { title: null, hasIcons: true, children: null });
+          tmp3 = jsx(channel(6489).TableRowGroup, { title: null, hasIcons: true, children: null });
         }
         tmp2 = tmp3;
       }
@@ -401,15 +401,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ActivitiesButton(openTab) {
       const cResult = openTab(576).c(7);
       openTab = openTab.openTab;
-      dismissPanel = noop.useContext(dismissPanel(12842)).dismissPanel;
+      dismissPanel = noop.useContext(dismissPanel(12848)).dismissPanel;
       if (cResult[0] === dismissPanel) {
         if (cResult[1] === openTab) {
           let tmp4 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(8459).AppsIcon };
-          const tmp9 = jsx(tmp(6410).TableRowIcon, { IconComponent: tmp(8459).AppsIcon });
+          const obj2 = { IconComponent: tmp(8460).AppsIcon };
+          const tmp9 = jsx(tmp(6412).TableRowIcon, { IconComponent: tmp(8460).AppsIcon });
           const intl = tmp(1128).intl;
           const stringResult = intl.string(tmp(1128).t.aeuOoh);
           cResult[3] = tmp9;
@@ -422,7 +422,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== tmp4) {
           const obj3 = { onPress: tmp4, icon: tmp6, label: tmp7 };
-          const tmp13 = jsx(tmp(6402).TableRow, { onPress: tmp4, icon: tmp6, label: tmp7 });
+          const tmp13 = jsx(tmp(6404).TableRow, { onPress: tmp4, icon: tmp6, label: tmp7 });
           cResult[5] = tmp4;
           cResult[6] = tmp13;
           let tmp11 = tmp13;
@@ -449,7 +449,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   : function ActivitiesButton(openTab) {
       openTab = openTab.openTab;
       let dismissPanel;
-      dismissPanel = noop.useContext(dismissPanel(12842)).dismissPanel;
+      dismissPanel = noop.useContext(dismissPanel(12848)).dismissPanel;
       const items = [dismissPanel, openTab];
       const callback = noop.useCallback(() => {
         dismissPanel();
@@ -462,14 +462,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj = {
         onPress: callback,
-        icon: jsx(openTab(6410).TableRowIcon, { IconComponent: openTab(8459).AppsIcon }),
+        icon: jsx(openTab(6412).TableRowIcon, { IconComponent: openTab(8460).AppsIcon }),
         label: null,
       };
       const intl = openTab(1128).intl;
       obj.label = intl.string(openTab(1128).t.aeuOoh);
-      return jsx(openTab(6402).TableRow, {
+      return jsx(openTab(6404).TableRow, {
         onPress: callback,
-        icon: jsx(openTab(6410).TableRowIcon, { IconComponent: openTab(8459).AppsIcon }),
+        icon: jsx(openTab(6412).TableRowIcon, { IconComponent: openTab(8460).AppsIcon }),
         label: null,
       });
     };
@@ -478,15 +478,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ChatButton(openTab) {
       const cResult = openTab(576).c(7);
       openTab = openTab.openTab;
-      dismissPanel = noop.useContext(dismissPanel(12842)).dismissPanel;
+      dismissPanel = noop.useContext(dismissPanel(12848)).dismissPanel;
       if (cResult[0] === dismissPanel) {
         if (cResult[1] === openTab) {
           let tmp4 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(8424).ChatIcon };
-          const tmp9 = jsx(tmp(6410).TableRowIcon, { IconComponent: tmp(8424).ChatIcon });
+          const obj2 = { IconComponent: tmp(8425).ChatIcon };
+          const tmp9 = jsx(tmp(6412).TableRowIcon, { IconComponent: tmp(8425).ChatIcon });
           const intl = tmp(1128).intl;
           const stringResult = intl.string(tmp(1128).t["5KxXrK"]);
           cResult[3] = tmp9;
@@ -499,7 +499,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== tmp4) {
           const obj3 = { onPress: tmp4, icon: tmp6, label: tmp7 };
-          const tmp13 = jsx(tmp(6402).TableRow, { onPress: tmp4, icon: tmp6, label: tmp7 });
+          const tmp13 = jsx(tmp(6404).TableRow, { onPress: tmp4, icon: tmp6, label: tmp7 });
           cResult[5] = tmp4;
           cResult[6] = tmp13;
           let tmp11 = tmp13;
@@ -523,7 +523,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   : function ChatButton(openTab) {
       openTab = openTab.openTab;
       let dismissPanel;
-      dismissPanel = noop.useContext(dismissPanel(12842)).dismissPanel;
+      dismissPanel = noop.useContext(dismissPanel(12848)).dismissPanel;
       const items = [dismissPanel, openTab];
       const callback = noop.useCallback(() => {
         dismissPanel();
@@ -533,14 +533,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj = {
         onPress: callback,
-        icon: jsx(openTab(6410).TableRowIcon, { IconComponent: openTab(8424).ChatIcon }),
+        icon: jsx(openTab(6412).TableRowIcon, { IconComponent: openTab(8425).ChatIcon }),
         label: null,
       };
       const intl = openTab(1128).intl;
       obj.label = intl.string(openTab(1128).t["5KxXrK"]);
-      return jsx(openTab(6402).TableRow, {
+      return jsx(openTab(6404).TableRow, {
         onPress: callback,
-        icon: jsx(openTab(6410).TableRowIcon, { IconComponent: openTab(8424).ChatIcon }),
+        icon: jsx(openTab(6412).TableRowIcon, { IconComponent: openTab(8425).ChatIcon }),
         label: null,
       });
     };
@@ -616,7 +616,7 @@ ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ScreenshareButton(channel) {
       const cResult = onPress(576).c(10);
-      const tmp4 = isActive(11366)(channel.channel);
+      const tmp4 = isActive(11363)(channel.channel);
       onPress = tmp4.onPress;
       ({ imgSource, text, isActive } = tmp4);
       if (cResult[0] === isActive) {
@@ -625,7 +625,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== imgSource) {
           const obj2 = { source: imgSource };
-          const tmp10 = jsx(tmp(6410).TableRowIcon, { source: imgSource });
+          const tmp10 = jsx(tmp(6412).TableRowIcon, { source: imgSource });
           cResult[3] = imgSource;
           cResult[4] = tmp10;
           let tmp8 = tmp10;
@@ -643,7 +643,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { disabled: !tmp5, onPress: tmp6, icon: tmp8, label: text };
-        const tmp13 = jsx(tmp(6402).TableRow, { disabled: !tmp5, onPress: tmp6, icon: tmp8, label: text });
+        const tmp13 = jsx(tmp(6404).TableRow, { disabled: !tmp5, onPress: tmp6, icon: tmp8, label: text });
         cResult[5] = tmp6;
         cResult[6] = !tmp5;
         cResult[7] = tmp8;
@@ -666,7 +666,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ScreenshareButton(channel) {
       let isActive;
-      const tmp = isActive(11366)(channel.channel);
+      const tmp = isActive(11363)(channel.channel);
       const onPress = tmp.onPress;
       isActive = tmp.isActive;
       const items = [isActive, onPress];
@@ -678,10 +678,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         });
         onPress();
       }, items);
-      return jsx(onPress(6402).TableRow, {
+      return jsx(onPress(6404).TableRow, {
         disabled: !isFeatureEnabled,
         onPress: callback,
-        icon: jsx(onPress(6410).TableRowIcon, { source: imgSource }),
+        icon: jsx(onPress(6412).TableRowIcon, { source: imgSource }),
         label: text,
       });
     };
@@ -863,10 +863,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef18162 };
+        const obj2 = { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef18172 };
         const tmp12 = jsx(TableRowIcon.TableRowIcon, {
           IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-          source: _modDef18162,
+          source: _modDef18172,
         });
         const intl = util.intl;
         const stringResult = intl.string(util.t.wjcRFX);
@@ -929,7 +929,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj2.icon = jsx(TableRowIcon.TableRowIcon, {
         IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-        source: _modDef18162,
+        source: _modDef18172,
       });
       const intl = util.intl;
       obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -955,10 +955,10 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const connected = channel.connected;
       const obj = channel(576);
-      const routeSource = channel(9011).useMaskedSpeakerStates().routeSource;
+      const routeSource = channel(9012).useMaskedSpeakerStates().routeSource;
       if (cResult[0] !== routeSource) {
         const obj3 = { source: routeSource };
-        const tmp6 = jsx(tmp(6410).TableRowIcon, { source: routeSource });
+        const tmp6 = jsx(tmp(6412).TableRowIcon, { source: routeSource });
         cResult[0] = routeSource;
         cResult[1] = tmp6;
         let tmp4 = tmp6;
@@ -973,7 +973,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1128).intl;
           const stringResult = intl.string(tmp(1128).t["A/Ly/2"]);
-          const tmp13 = jsx(tmp(6411).TableRowArrow, {});
+          const tmp13 = jsx(tmp(6413).TableRowArrow, {});
           cResult[5] = stringResult;
           cResult[6] = tmp13;
           let tmp10 = tmp13;
@@ -989,7 +989,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp14;
         }
         const obj4 = { icon: tmp4, onPress: tmp7, label: tmp9, trailing: tmp10 };
-        const tmp16 = jsx(tmp(6402).TableRow, { icon: tmp4, onPress: tmp7, label: tmp9, trailing: tmp10 });
+        const tmp16 = jsx(tmp(6404).TableRow, { icon: tmp4, onPress: tmp7, label: tmp9, trailing: tmp10 });
         cResult[7] = tmp4;
         cResult[8] = tmp7;
         cResult[9] = tmp16;
@@ -1002,7 +1002,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = connected;
       cResult[4] = fn;
       tmp7 = fn;
-      const obj2 = channel(9011);
+      const obj2 = channel(9012);
     }
   : function AudioRouteButton(arg0) {
       ({ channel: require, connected: importDefault } = arg0);
@@ -1051,10 +1051,10 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = null;
           if (connected) {
             const obj4 = { onPress: inviteMembersCallback, icon: null, label: null, trailing: null };
-            const obj5 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11414 };
+            const obj5 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11411 };
             obj4.icon = jsx(TableRowIcon.TableRowIcon, {
               IconComponent: GroupPlusIcon.GroupPlusIcon,
-              source: _modDef11414,
+              source: _modDef11411,
             });
             const intl = util.intl;
             obj4.label = intl.string(util.t["f1+QIK"]);
@@ -1081,10 +1081,10 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = null;
           if (channel.connected) {
             const obj2 = { onPress: tmp7, icon: null, label: null, trailing: null };
-            const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11414 };
+            const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11411 };
             obj2.icon = jsx(TableRowIcon.TableRowIcon, {
               IconComponent: GroupPlusIcon.GroupPlusIcon,
-              source: _modDef11414,
+              source: _modDef11411,
             });
             const intl = util.intl;
             obj2.label = intl.string(util.t["f1+QIK"]);
@@ -1125,10 +1125,10 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(11108).VideoIcon, source: stateFromStores(11365) };
-          const tmp13 = jsx(tmp(6410).TableRowIcon, {
-            IconComponent: tmp(11108).VideoIcon,
-            source: stateFromStores(11365),
+          const obj2 = { IconComponent: tmp(11105).VideoIcon, source: stateFromStores(11362) };
+          const tmp13 = jsx(tmp(6412).TableRowIcon, {
+            IconComponent: tmp(11105).VideoIcon,
+            source: stateFromStores(11362),
           });
           const intl = tmp(1128).intl;
           const stringResult = intl.string(tmp(1128).t.ZMTRyc);
@@ -1168,7 +1168,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
           label: tmp15,
           subLabel: tmp16,
         };
-        const tmp21 = jsx(tmp(7117).TableSwitchRow, {
+        const tmp21 = jsx(tmp(7119).TableSwitchRow, {
           icon: tmp9,
           accessibilityHint: tmp10,
           value: stateFromStores,
@@ -1209,9 +1209,9 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
         subLabel: null,
       };
       const obj = channelId(504);
-      obj2.icon = jsx(channelId(6410).TableRowIcon, {
-        IconComponent: channelId(11108).VideoIcon,
-        source: stateFromStores(11365),
+      obj2.icon = jsx(channelId(6412).TableRowIcon, {
+        IconComponent: channelId(11105).VideoIcon,
+        source: stateFromStores(11362),
       });
       const intl = channelId(1128).intl;
       obj2.accessibilityHint = intl.string(channelId(1128).t.ZMTRyc);
@@ -1221,7 +1221,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.label = intl2.string(channelId(1128).t.ZMTRyc);
       const intl3 = channelId(1128).intl;
       obj2.subLabel = intl3.string(channelId(1128).t.MlpCFS);
-      return jsx(channelId(7117).TableSwitchRow, {
+      return jsx(channelId(7119).TableSwitchRow, {
         icon: null,
         accessibilityHint: null,
         value: null,
@@ -1295,7 +1295,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
         if (!stateFromStores) {
           if (!closure_0) {
             const VIDEO = constants.VIDEO;
-            const f152628 = () => f152628(!VIDEO);
+            const f152732 = () => f152732(!VIDEO);
             const obj2 = {
               importer() {
                 return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -1335,14 +1335,14 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6 = null;
       if (tmp3[0]) {
         let obj2 = { icon: null, value: null, onValueChange: null, label: null };
-        const obj3 = { IconComponent: tmp5(9648).UserSquareIcon };
-        obj2.icon = jsx(tmp5(6410).TableRowIcon, { IconComponent: tmp5(9648).UserSquareIcon });
+        const obj3 = { IconComponent: tmp5(9647).UserSquareIcon };
+        obj2.icon = jsx(tmp5(6412).TableRowIcon, { IconComponent: tmp5(9647).UserSquareIcon });
         obj2.value = !tmp4;
         obj2.onValueChange = function handleMaybeConfirmToggleSelfVideoHidden() {
           if (!paths) {
             if (!VIDEO) {
               VIDEO = constants.VIDEO;
-              const f152629 = () => f152629(!VIDEO);
+              const f152733 = () => f152733(!VIDEO);
               const obj2 = {
                 importer() {
                   return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -1365,7 +1365,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl = tmp5(1128).intl;
         obj2.label = intl.string(tmp5(1128).t.MH8ESU);
-        tmp6 = jsx(tmp5(7117).TableSwitchRow, { icon: null, value: null, onValueChange: null, label: null });
+        tmp6 = jsx(tmp5(7119).TableSwitchRow, { icon: null, value: null, onValueChange: null, label: null });
       }
       return tmp6;
     };
@@ -1395,8 +1395,8 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { icon: null, label: null, onPress: null };
-        const obj3 = { source: _modDef10648 };
-        obj2.icon = jsx(TableRowIcon.TableRowIcon, { source: _modDef10648 });
+        const obj3 = { source: _modDef10645 };
+        obj2.icon = jsx(TableRowIcon.TableRowIcon, { source: _modDef10645 });
         const intl = util.intl;
         obj2.label = intl.string(util.t["R/FK4A"]);
         obj2.onPress = first;
@@ -1409,7 +1409,7 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp5;
     }
   : function LeaveActivitiesButton() {
-      const obj = { icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef10648 }), label: null, onPress: null };
+      const obj = { icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef10645 }), label: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t["R/FK4A"]);
       obj.onPress = function onPress() {
@@ -1427,7 +1427,7 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
         const result = require("leaveEmbeddedActivity").leaveEmbeddedActivity(obj2);
       };
       return jsx(TableRow2.TableRow, {
-        icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef10648 }),
+        icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef10645 }),
         label: null,
         onPress: null,
       });
@@ -1499,8 +1499,8 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef14283 };
-        const tmp12 = jsx(TableRowIcon.TableRowIcon, { source: _modDef14283 });
+        const obj2 = { source: _modDef14293 };
+        const tmp12 = jsx(TableRowIcon.TableRowIcon, { source: _modDef14293 });
         cResult[3] = tmp12;
         let tmp9 = tmp12;
       } else {
@@ -1536,7 +1536,7 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
         showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
       );
       const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-      obj2.icon = jsx(TableRowIcon.TableRowIcon, { source: _modDef14283 });
+      obj2.icon = jsx(TableRowIcon.TableRowIcon, { source: _modDef14293 });
       obj2.value = stateFromStores;
       obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
         DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
@@ -1561,13 +1561,13 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { IconComponent: tmp(7315).SettingsIcon, source: _modDef18161 };
-        const tmp11 = jsx(tmp(6410).TableRowIcon, { IconComponent: tmp(7315).SettingsIcon, source: _modDef18161 });
+        const obj2 = { IconComponent: tmp(7317).SettingsIcon, source: _modDef18171 };
+        const tmp11 = jsx(tmp(6412).TableRowIcon, { IconComponent: tmp(7317).SettingsIcon, source: _modDef18171 });
         const intl = tmp(1128).intl;
         const stringResult = intl.string(tmp(1128).t.dsXapM);
         const intl2 = tmp(1128).intl;
         const stringResult1 = intl2.string(tmp(1128).t["16SG+O"]);
-        const tmp14 = jsx(tmp(6411).TableRowArrow, {});
+        const tmp14 = jsx(tmp(6413).TableRowArrow, {});
         cResult[2] = tmp11;
         cResult[3] = stringResult;
         cResult[4] = stringResult1;
@@ -1584,7 +1584,7 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp4) {
         const obj3 = { onPress: tmp4, icon: tmp5, label: tmp6, subLabel: tmp7, trailing: tmp8 };
-        const tmp17 = jsx(tmp(6402).TableRow, {
+        const tmp17 = jsx(tmp(6404).TableRow, {
           onPress: tmp4,
           icon: tmp5,
           label: tmp6,
@@ -1607,7 +1607,7 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj = {
         onPress: callback,
-        icon: jsx(guildId(6410).TableRowIcon, { IconComponent: guildId(7315).SettingsIcon, source: _modDef18161 }),
+        icon: jsx(guildId(6412).TableRowIcon, { IconComponent: guildId(7317).SettingsIcon, source: _modDef18171 }),
         label: null,
         subLabel: null,
         trailing: null,
@@ -1616,10 +1616,10 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
       obj.label = intl.string(guildId(1128).t.dsXapM);
       const intl2 = guildId(1128).intl;
       obj.subLabel = intl2.string(guildId(1128).t["16SG+O"]);
-      obj.trailing = jsx(guildId(6411).TableRowArrow, {});
-      return jsx(guildId(6402).TableRow, {
+      obj.trailing = jsx(guildId(6413).TableRowArrow, {});
+      return jsx(guildId(6404).TableRow, {
         onPress: callback,
-        icon: jsx(guildId(6410).TableRowIcon, { IconComponent: guildId(7315).SettingsIcon, source: _modDef18161 }),
+        icon: jsx(guildId(6412).TableRowIcon, { IconComponent: guildId(7317).SettingsIcon, source: _modDef18171 }),
         label: null,
         subLabel: null,
         trailing: null,

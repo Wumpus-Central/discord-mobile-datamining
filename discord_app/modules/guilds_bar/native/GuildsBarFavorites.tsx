@@ -1,42 +1,38 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFavorites.tsx
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import FavoritesHooks from "../../favorites/FavoritesHooks.tsx";
+import openFavoritesGuildActionSheetDefault from "../../favorites/native/openFavoritesGuildActionSheet.tsx";
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper.tsx";
+import useGuildsBarBottomRightBadgeDefault from "hooks/useGuildsBarBottomRightBadge.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
+import useFavoritesGuildUnreadsDefault from "../../favorites/hooks/useFavoritesGuildUnreads.tsx";
+import HomeDrawerFavoritesRow from "../../home_drawer/native/HomeDrawerFavoritesRow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../favorites/FavoriteStore.tsx";
 
-const require = fn;
-const View = fn(17).View;
+const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
+
+require = fn;
 const FAVORITES = fn(1087).FAVORITES;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let c10 = "more-options";
-const createStyles = fn(5153);
-let obj = { anchor: null };
-let size = {
-  position: "absolute",
-  top: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
-  left: 12,
-  width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
-  height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
-};
-obj.anchor = size;
-let closure_11 = createStyles.createStyles(obj);
+const jsx = fn(21).jsx;
+let c7 = "more-options";
 const ReactCompilerGating = fn(558);
-size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function GuildsBarFavorites() {
-        const cResult = shouldShowPopover(576).c(32);
-        const obj = shouldShowPopover(576);
-        const guildsBarAnimatedWrapperStyles = shouldShowPopover(17366).useGuildsBarAnimatedWrapperStyles();
-        const obj2 = shouldShowPopover(17366);
-        const isFavoritesGuildSelected = shouldShowPopover(10561).useIsFavoritesGuildSelected();
+        const cResult = c.c(17);
+        const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
+        const isFavoritesGuildSelected = FavoritesHooks.useIsFavoritesGuildSelected();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [FavoriteStore];
-          const fn = function _() {
+          const fn = function l() {
             return favoriteChannels.getFavoriteChannels();
           };
           cResult[0] = items;
@@ -46,10 +42,9 @@ export default noop.memo(
         } else {
           [tmp6, tmp7] = cResult;
         }
-        const obj3 = shouldShowPopover(10561);
-        const stateFromStores = shouldShowPopover(504).useStateFromStores(tmp6, tmp7);
-        const tmpResult = shouldShowPopover(504);
-        ({ badge, unread } = markPopoverAsDismissed(17384)(stateFromStores));
+        const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
+        const tmpResult = initialize;
+        ({ badge, unread } = useFavoritesGuildUnreadsDefault(stateFromStores));
         if (cResult[2] !== badge) {
           const obj4 = { mentionCount: badge };
           cResult[2] = badge;
@@ -58,252 +53,155 @@ export default noop.memo(
         } else {
           tmp12 = cResult[3];
         }
-        const tmp11 = markPopoverAsDismissed(17384)(stateFromStores);
-        ({ badge: badge2, cutouts } = markPopoverAsDismissed(17369)(tmp12));
-        noop.useRef(null);
-        closure_11();
-        const tmp13 = markPopoverAsDismissed(17369)(tmp12);
-        const favoritesIntroPopover = shouldShowPopover(10575).useFavoritesIntroPopover();
-        shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
-        markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
-        if (cResult[4] === markPopoverAsDismissed) {
-          if (cResult[5] === shouldShowPopover) {
-            let tmp17 = cResult[6];
-          }
-          const _Symbol = Symbol;
-          if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-            cResult[7] = F;
-          } else {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          if (cResult[8] !== tmp17) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-            tmp20[0] = tmp17;
-            tmp20[1] = F;
-            cResult[8] = tmp17;
-            cResult[9] = tmp20;
-          } else {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          const _Symbol2 = Symbol;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-            const obj5 = { name, label: null };
-            const intl = tmp(1128).intl;
-            obj5.label = intl.string(tmp(1128).t.PdRCRg);
-            const items1 = [obj5];
-            tmp22[0] = items1;
-            tmp22[1] = function onAccessibilityAction(nativeEvent) {
-              if (nativeEvent.nativeEvent.actionName === name) {
-                markPopoverAsDismissed(17188)();
-              }
-            };
-            cResult[10] = tmp22;
-          } else {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          const _Symbol3 = Symbol;
-          ({ accessibilityActions, onAccessibilityAction } = tmp22);
-          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-            const stringResult = obj8.string(tmp(1128).t.wMWyci);
-            cResult[11] = stringResult;
-            const tmp24 = stringResult;
-          } else {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          const _Symbol4 = Symbol;
-          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-            const tmp27 = closure_8(tmp(17385).HomeDrawerFavoritesRowExpandedChildren, {});
-            cResult[12] = tmp27;
-            const tmp26 = tmp27;
-          } else {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          const colors = tmp10(587).colors;
-          const tmp28 = isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-          if (cResult[13] !== tmp28) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-            const obj6 = { color: tmp28 };
-            const tmp30 = closure_8(tmp(9788).StarIcon, obj6);
-            cResult[13] = tmp28;
-            cResult[14] = tmp30;
-          } else {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          if (cResult[15] === badge2) {
-            class F {
-              constructor() {
-                tmp = markPopoverAsDismissed(closure_1_2[17])();
-                return;
-              }
-            }
-          }
-          const obj7 = {
-            selected: isFavoritesGuildSelected,
-            circle: false,
-            unread,
-            styles: guildsBarAnimatedWrapperStyles,
-            cutouts,
-            overState: "l",
-            config: tmp20,
-            accessibilityActions,
-            onAccessibilityAction,
-            label: tmp24,
-            externalChildren: badge2,
-            expandedChildren: tmp26,
-            children: tmp29,
+        const tmp11 = useFavoritesGuildUnreadsDefault(stateFromStores);
+        ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault(tmp12));
+        if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj5 = {
+            onPress() {
+              transitionGuildsBarToGuildOrOpenSelectedChannelDefault(FAVORITES);
+            },
+            onLongPress() {
+              openFavoritesGuildActionSheetDefault();
+            },
           };
-          const tmp33 = closure_8(tmp10(17366), obj7);
-          cResult[15] = badge2;
-          class R {
-            constructor() {
-              if (shouldShowPopover) {
-                tmp = markPopoverAsDismissed;
-                tmp2 = ContentDismissActionType;
-                tmp3 = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          cResult[4] = obj5;
+          let tmp14 = obj5;
+        } else {
+          tmp14 = cResult[4];
+        }
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj6 = { accessibilityActions: null, onAccessibilityAction: null };
+          const obj7 = { name, label: null };
+          const intl = util.intl;
+          obj7.label = intl.string(util.t.PdRCRg);
+          const items1 = [obj7];
+          obj6.accessibilityActions = items1;
+          obj6.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
+            if (nativeEvent.nativeEvent.actionName === name) {
+              openFavoritesGuildActionSheetDefault();
+            }
+          };
+          cResult[5] = obj6;
+          let tmp15 = obj6;
+        } else {
+          tmp15 = cResult[5];
+        }
+        ({ accessibilityActions, onAccessibilityAction } = tmp15);
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl2 = util.intl;
+          const stringResult = intl2.string(util.t.wMWyci);
+          cResult[6] = stringResult;
+          let tmp17 = stringResult;
+        } else {
+          tmp17 = cResult[6];
+        }
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp21 = jsx(HomeDrawerFavoritesRow.HomeDrawerFavoritesRowExpandedChildren, {});
+          cResult[7] = tmp21;
+          let tmp19 = tmp21;
+        } else {
+          tmp19 = cResult[7];
+        }
+        const colors = nativeDefault.colors;
+        const tmp22 = isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
+        if (cResult[8] !== tmp22) {
+          const obj8 = { color: tmp22 };
+          const tmp25 = jsx(StarIcon.StarIcon, { color: tmp22 });
+          cResult[8] = tmp22;
+          cResult[9] = tmp25;
+          let tmp23 = tmp25;
+        } else {
+          tmp23 = cResult[9];
+        }
+        if (cResult[10] === badge2) {
+          if (cResult[11] === cutouts) {
+            if (cResult[12] === isFavoritesGuildSelected) {
+              if (cResult[13] === guildsBarAnimatedWrapperStyles) {
+                if (cResult[14] === tmp23) {
+                  if (cResult[15] === unread) {
+                    let tmp26 = cResult[16];
+                  }
+                  return tmp26;
+                }
               }
-              tmp4 = closure_1(closure_2[16])(FAVORITES);
-              return;
             }
           }
-          cResult[17] = cutouts;
-          cResult[18] = isFavoritesGuildSelected;
-          cResult[19] = guildsBarAnimatedWrapperStyles;
-          cResult[20] = tmp29;
-          cResult[21] = unread;
-          cResult[22] = tmp33;
         }
-        class R {
-          constructor() {
-            if (shouldShowPopover) {
-              tmp = markPopoverAsDismissed;
-              tmp2 = ContentDismissActionType;
-              tmp3 = markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
-            }
-            tmp4 = closure_1(closure_2[16])(FAVORITES);
-            return;
-          }
-        }
-        cResult[4] = markPopoverAsDismissed;
-        cResult[5] = shouldShowPopover;
-        cResult[6] = R;
-        tmp17 = R;
-        const tmpResult2 = shouldShowPopover(10575);
+        const obj9 = {
+          selected: isFavoritesGuildSelected,
+          circle: false,
+          unread,
+          styles: guildsBarAnimatedWrapperStyles,
+          cutouts,
+          overState: "l",
+          config: tmp14,
+          accessibilityActions,
+          onAccessibilityAction,
+          label: tmp17,
+          externalChildren: badge2,
+          expandedChildren: tmp19,
+          children: tmp23,
+        };
+        const tmp27 = jsx(GuildsBarAnimatedItemWrapperDefault, {
+          selected: isFavoritesGuildSelected,
+          circle: false,
+          unread,
+          styles: guildsBarAnimatedWrapperStyles,
+          cutouts,
+          overState: "l",
+          config: tmp14,
+          accessibilityActions,
+          onAccessibilityAction,
+          label: tmp17,
+          externalChildren: badge2,
+          expandedChildren: tmp19,
+          children: tmp23,
+        });
+        cResult[10] = badge2;
+        cResult[11] = cutouts;
+        cResult[12] = isFavoritesGuildSelected;
+        cResult[13] = guildsBarAnimatedWrapperStyles;
+        cResult[14] = tmp23;
+        cResult[15] = unread;
+        cResult[16] = tmp27;
+        tmp26 = tmp27;
+        const tmp13 = useGuildsBarBottomRightBadgeDefault(tmp12);
       }
     : function GuildsBarFavorites() {
-        let obj = shouldShowPopover(17366);
-        const guildsBarAnimatedWrapperStyles = shouldShowPopover(17366).useGuildsBarAnimatedWrapperStyles();
-        const isFavoritesGuildSelected = shouldShowPopover(10561).useIsFavoritesGuildSelected();
-        let obj2 = shouldShowPopover(10561);
+        const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
+        const isFavoritesGuildSelected = FavoritesHooks.useIsFavoritesGuildSelected();
         let items = [FavoriteStore];
-        const stateFromStores = shouldShowPopover(504).useStateFromStores(items, () =>
-          favoriteChannels.getFavoriteChannels(),
-        );
-        const obj3 = shouldShowPopover(504);
-        const tmp5 = markPopoverAsDismissed;
-        ({ badge, unread } = markPopoverAsDismissed(17384)(stateFromStores));
-        const tmp6 = markPopoverAsDismissed(17384)(stateFromStores);
-        ({ badge: badge2, cutouts } = markPopoverAsDismissed(17369)({ mentionCount: badge }));
-        const ref = noop.useRef(null);
-        const tmp7 = markPopoverAsDismissed(17369)({ mentionCount: badge });
-        const tmp9 = closure_11();
-        const favoritesIntroPopover = shouldShowPopover(10575).useFavoritesIntroPopover();
-        shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
-        markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
-        const items1 = [shouldShowPopover, markPopoverAsDismissed];
+        const stateFromStores = initialize.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
+        ({ badge, unread } = useFavoritesGuildUnreadsDefault(stateFromStores));
+        const tmp4 = useFavoritesGuildUnreadsDefault(stateFromStores);
+        ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
         const memo = noop.useMemo(
           () => ({
             onPress() {
-              if (shouldShowPopover) {
-                closure_1_1(constants.TAKE_ACTION);
-              }
-              markPopoverAsDismissed(17381)(FAVORITES);
+              closure_1_1(17393)(closure_1_5);
             },
             onLongPress() {
-              markPopoverAsDismissed(dependencyMap[17])();
+              closure_1_1(17202)();
             },
           }),
-          items1,
+          [],
         );
         const memo1 = noop.useMemo(() => {
           const obj = { accessibilityActions: null, onAccessibilityAction: null };
           const obj2 = { name, label: null };
-          const intl = shouldShowPopover(1128).intl;
-          obj2.label = intl.string(shouldShowPopover(1128).t.PdRCRg);
+          const intl = util.intl;
+          obj2.label = intl.string(util.t.PdRCRg);
           const items = [obj2];
           obj.accessibilityActions = items;
           obj.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
             if (nativeEvent.nativeEvent.actionName === name) {
-              markPopoverAsDismissed(dependencyMap[17])();
+              closure_1_1(dependencyMap[12])();
             }
           };
           return obj;
         }, []);
         ({ accessibilityActions, onAccessibilityAction } = memo1);
-        const obj5 = {
+        const obj4 = {
           selected: isFavoritesGuildSelected,
           circle: false,
           unread,
@@ -313,29 +211,34 @@ export default noop.memo(
           config: memo,
           accessibilityActions,
           onAccessibilityAction,
-          label: 18940672,
-          externalChildren: 116,
-          expandedChildren: -256,
-          children: -1,
+          label: 0,
+          externalChildren: null,
+          expandedChildren: null,
+          children: null,
         };
-        const obj4 = shouldShowPopover(10575);
-        let intl = shouldShowPopover(1128).intl;
-        obj5.label = intl.string(shouldShowPopover(1128).t.wMWyci);
-        obj5.externalChildren = badge2;
-        obj5.expandedChildren = closure_8(shouldShowPopover(17385).HomeDrawerFavoritesRowExpandedChildren, {});
-        const colors = markPopoverAsDismissed(587).colors;
-        obj5.children = closure_8(shouldShowPopover(9788).StarIcon, {
+        const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
+        let intl = util.intl;
+        obj4.label = intl.string(util.t.wMWyci);
+        obj4.externalChildren = badge2;
+        obj4.expandedChildren = jsx(HomeDrawerFavoritesRow.HomeDrawerFavoritesRowExpandedChildren, {});
+        const colors = nativeDefault.colors;
+        obj4.children = jsx(StarIcon.StarIcon, {
           color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
         });
-        const children = [
-          closure_8(markPopoverAsDismissed(17366), obj5),
-          closure_8(View, { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false }),
-        ];
-        if (shouldShowPopover) {
-          const obj8 = { targetRef: ref, markAsDismissed: markPopoverAsDismissed };
-          shouldShowPopover = closure_8(tmp5(17386), obj8);
-        }
-        children[2] = shouldShowPopover;
-        return closure_9(View, { children });
+        return jsx(GuildsBarAnimatedItemWrapperDefault, {
+          selected: isFavoritesGuildSelected,
+          circle: false,
+          unread,
+          styles: guildsBarAnimatedWrapperStyles,
+          cutouts,
+          overState: "l",
+          config: memo,
+          accessibilityActions,
+          onAccessibilityAction,
+          label: 0,
+          externalChildren: null,
+          expandedChildren: null,
+          children: null,
+        });
       },
 );

@@ -931,6 +931,13 @@ export const popScreens = function popScreens(arg0) {
 };
 export { coerceMainRoute };
 export { coerceChannelRoute };
+export const coerceChannelSecondaryViewChatRoute = function coerceChannelSecondaryViewChatRoute(name) {
+  if (null != name) {
+    if ("channel-secondary-view-chat" === name.name) {
+      return name;
+    }
+  }
+};
 export const coerceSidebarRoute = function coerceSidebarRoute(name) {
   if (null != name) {
     if ("sidebar" === name.name) {

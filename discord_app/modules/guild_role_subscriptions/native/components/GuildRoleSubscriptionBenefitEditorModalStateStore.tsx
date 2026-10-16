@@ -10,9 +10,9 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let closure_2 = Object.freeze({
   name: "",
   emojiId: "unicodeVersion",
-  emojiName: "keys",
+  emojiName: "kind",
   description: "transform",
-  refId: "applicationId",
+  refId: "channel",
 });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;

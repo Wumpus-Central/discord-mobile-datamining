@@ -74,9 +74,12 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
   }
   const arr = require("../../_runtime/metro/01189__.js");
 };
-export const parseRuntimeIcuAsIntlMessage = function parseRuntimeIcuAsIntlMessage(arg0, defaultLocale) {
-  const parsed = _Parser.parse(arg0, { ignoreTag: true });
-  const internalIntlMessage = new _mod1167.InternalIntlMessage(parsed, defaultLocale);
+export const parseRuntimeIcuAsIntlMessage = function parseRuntimeIcuAsIntlMessage(
+  acknowledgedBadgeLabel,
+  currentLocale,
+) {
+  const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
+  const internalIntlMessage = new _mod1167.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 };
 export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled()

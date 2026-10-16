@@ -15,7 +15,7 @@ const src = {
   videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4",
 };
 let c11 = "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   videoContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   bottomSheetWrapper: { paddingHorizontal: 24 },

@@ -28,7 +28,7 @@ import n_mod from "../../../../_runtime/metro/00683__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10398).SlayerShopPDPCTAType;
+const SlayerShopPDPCTAType = fn(10399).SlayerShopPDPCTAType;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -40,7 +40,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
 const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 let closure_17 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0).hex();
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   container: { flex: 1 },
   header: null,
@@ -78,7 +78,7 @@ let obj = {
 };
 const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0);
 obj.header = {
-  height: fn(6481).NAV_BAR_HEIGHT,
+  height: fn(6483).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -88,7 +88,7 @@ obj.header = {
 };
 obj.headerTitle = { flexShrink: 1 };
 let obj2 = {
-  height: fn(6481).NAV_BAR_HEIGHT,
+  height: fn(6483).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -171,15 +171,15 @@ obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.s
 let obj19 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
 obj.hero = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10399).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10400).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "k" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "apply" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10399).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10400).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -1422,10 +1422,10 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_18();
       dependencyMap = tmp;
       const rect = analyticsLocations(1633)();
-      const isScreenLandscape = skuId(8553).useIsScreenLandscape();
-      let obj = skuId(8553);
-      const mobileStoreFront = analyticsLocations(9635).useMobileStoreFront();
-      let obj2 = analyticsLocations(9635);
+      const isScreenLandscape = skuId(8554).useIsScreenLandscape();
+      let obj = skuId(8554);
+      const mobileStoreFront = analyticsLocations(9634).useMobileStoreFront();
+      let obj2 = analyticsLocations(9634);
       let items = [trackPDPClick];
       const stateFromStores = skuId(504).useStateFromStores(items, () => SKUStore.get(skuId));
       let obj3 = skuId(504);
@@ -1439,13 +1439,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         applicationId1 = stateFromStores.applicationId;
       }
-      const getOrFetchApplication = skuId(7079).useGetOrFetchApplication(applicationId1);
+      const getOrFetchApplication = skuId(7081).useGetOrFetchApplication(applicationId1);
       let tmp12 = getOrFetchApplication;
-      const obj5 = skuId(7079);
+      const obj5 = skuId(7081);
       if (getOrFetchApplication == null) {
         tmp12 = null;
       }
-      const tmp2Result = analyticsLocations(7076);
+      const tmp2Result = analyticsLocations(7078);
       const items2 = [skuAssets];
       stateFromStores2 = skuId(504).useStateFromStores(items2, () => skuAssets.getSkuAssets());
       const items3 = [stateFromStores];
@@ -1461,7 +1461,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PDP];
         return items1;
       }, items4);
-      analyticsLocations(5458)(() => {
+      analyticsLocations(5459)(() => {
         const obj2 = {
           location_stack: memo1,
           type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY,
@@ -1698,7 +1698,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj = BillingPlatformUtils;
       }, items9);
-      const OTPACOMOrderExperiment = tmp4(9634).OTPACOMOrderExperiment;
+      const OTPACOMOrderExperiment = tmp4(9633).OTPACOMOrderExperiment;
       let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
       const tmp15Result6 = mobileStoreFront(stateFromStores.useState(0), 2);
       if (tmp4Result6.isIOS()) {
@@ -1727,7 +1727,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         obj6.orderRequired = enabled;
         const items10 = [skuId];
         obj6.skuIds = items10;
-        obj6.onOrderRetryCancellation = tmp4(10395).closeSocialLayerStorefrontProductDetailsModal;
+        obj6.onOrderRetryCancellation = tmp4(10396).closeSocialLayerStorefrontProductDetailsModal;
         const obj8 = {
           is_gift: false,
           location_stack: memo1,
@@ -1761,18 +1761,18 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           onPurchaseComplete: callback2,
           onPurchaseError: callback1,
         };
-        obj6.children = closure_14(tmp4(10406).HeadlessSlayerStorefrontPurchaseRunner, obj9);
-        tmp43Result = closure_14(tmp2(10402), obj6, skuId);
-        const tmp2Result2 = tmp2(10402);
+        obj6.children = closure_14(tmp4(10407).HeadlessSlayerStorefrontPurchaseRunner, obj9);
+        tmp43Result = closure_14(tmp2(10403), obj6, skuId);
+        const tmp2Result2 = tmp2(10403);
       }
       const items11 = [skuId, memo1, trackPDPClick];
       if (null == stateFromStores) {
         return null;
       } else {
-        let result = tmp4(7157).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+        let result = tmp4(7159).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
         const intl4 = tmp4(1128).intl;
         const stringResult = intl4.string(tmp4(1128).t.boqtTA);
-        const tmp4Result7 = tmp4(7157);
+        const tmp4Result7 = tmp4(7159);
         let result1 = tmp4(4841).isSocialLayerStorefrontGiftingSupported();
         if (null != tmp25) {
           const obj10 = { mediaItem: tmp25, landscape: isScreenLandscape };
@@ -1781,12 +1781,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           tmp49 = null;
           if (null != memo) {
             const obj11 = { sku: stateFromStores };
-            tmp49 = closure_14(tmp2(9259), obj11);
+            tmp49 = closure_14(tmp2(9260), obj11);
           }
         }
         let tmp53 = null;
         if (stateFromStores.exclusive) {
-          const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10410).ExclusiveBadge, {}) };
+          const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10411).ExclusiveBadge, {}) };
           tmp53 = closure_14(memo1, obj12);
         }
         let tmp56 = null;
@@ -1825,7 +1825,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = tmp4(1128).intl;
           obj18.children = intl.string(tmp2(3735).gndWN7);
-          tmp65Result = closure_14(tmp4(5149).Text, obj18);
+          tmp65Result = closure_14(tmp4(5150).Text, obj18);
         }
         items13[1] = tmp65Result;
         const obj19 = { style: tmp.footerButtonRow, children: null };
@@ -1844,11 +1844,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj21.disabled = tmp68;
         obj21.onPress = callback3;
-        obj20.children = closure_14(tmp4(5441).Button, obj21);
+        obj20.children = closure_14(tmp4(5442).Button, obj21);
         const items14 = [closure_14(memo1, obj20)];
         if (result1) {
           const obj22 = {
-            icon: tmp2(8333),
+            icon: tmp2(8334),
             variant: "primary",
             size: "lg",
             disabled: tmp28,
@@ -1858,7 +1858,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp4(1128).intl;
           obj22.accessibilityLabel = intl2.string(tmp4(1128).t.QAZA5f);
           obj22.onPress = tmp48;
-          result1 = closure_14(tmp4(7793).IconButton, obj22);
+          result1 = closure_14(tmp4(7794).IconButton, obj22);
         }
         items14[1] = result1;
         obj19.children = items14;
@@ -1866,7 +1866,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         if (result) {
           const obj23 = { style: tmp.legalCopy, children: null };
           const obj24 = { shouldAppendDisclaimer: false === tmp2Result(tmp12).hasAlreadyLinked };
-          const mobileFinePrintMessageForApplication = tmp4(10413).getMobileFinePrintMessageForApplication(
+          const mobileFinePrintMessageForApplication = tmp4(10414).getMobileFinePrintMessageForApplication(
             getOrFetchApplication,
             stringResult,
             obj24,
@@ -1879,7 +1879,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             ),
           );
           result = closure_14(tmp64, obj23);
-          const tmp4Result9 = tmp4(10413);
+          const tmp4Result9 = tmp4(10414);
         }
         items13[3] = result;
         obj15.children = items13;
@@ -1897,7 +1897,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const items16 = [tmp43Result, , ,];
         const obj27 = { style: tmp.header, children: null };
         const obj28 = {
-          onPress: tmp4(10395).closeSocialLayerStorefrontProductDetailsModal,
+          onPress: tmp4(10396).closeSocialLayerStorefrontProductDetailsModal,
           backImage() {
             return closure_2_14(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
           },
@@ -1906,7 +1906,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl3 = tmp4(1128).intl;
         obj28.accessibilityLabel = intl3.string(tmp4(1128).t.cpT0Cq);
-        const items17 = [closure_14(tmp4(6432).HeaderBackButton, obj28)];
+        const items17 = [closure_14(tmp4(6434).HeaderBackButton, obj28)];
         const obj29 = {
           variant: "heading-lg/bold",
           color: "mobile-text-heading-primary",
@@ -1918,7 +1918,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           name = getOrFetchApplication.name;
         }
         obj29.children = name;
-        items17[1] = closure_14(tmp4(5149).Heading, obj29);
+        items17[1] = closure_14(tmp4(5150).Heading, obj29);
         obj27.children = items17;
         items16[1] = closure_15(memo1, obj27);
         const obj30 = { style: tmp.scrollContainer, children: null };
@@ -1927,7 +1927,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           const obj31 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
           const items18 = [closure_16, closure_17];
           obj31.colors = items18;
-          exclusive = closure_14(tmp2(5453), obj31);
+          exclusive = closure_14(tmp2(5454), obj31);
         }
         const items19 = [exclusive];
         if (isScreenLandscape) {

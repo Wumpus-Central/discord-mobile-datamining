@@ -16,13 +16,13 @@ const CheckpointPressableDefault = CheckpointPressable;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5499);
+const CheckpointConstants = fn(5500);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [fn(12666).CheckpointCustomizationOption.BASE, fn(12666).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(12672).CheckpointCustomizationOption.BASE, fn(12672).CheckpointCustomizationOption.OUTFIT_COLOR];
 let closure_10 = items.length + 1;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 },
   row: null,
@@ -294,7 +294,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       closure_3 = tmp5;
       const tmp6 = closure_11();
-      const tmp7 = activeCustomizationOption(12666).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
+      const tmp7 = activeCustomizationOption(12672).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
       closure_4 = tmp7;
       if (cResult[0] === tmp7) {
         if (cResult[1] === tmp4) {
@@ -362,7 +362,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                     if (cResult[28] !== tmp15) {
                                       let obj2 = { color: tmp15, size: "xs" };
-                                      const tmp35 = closure_7(tmp(10781).ChevronSmallDownIcon, obj2);
+                                      const tmp35 = closure_7(tmp(10778).ChevronSmallDownIcon, obj2);
                                       cResult[28] = tmp15;
                                       cResult[29] = tmp35;
                                       let tmp33 = tmp35;
@@ -451,8 +451,8 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                                   const intl = tmp(1128).intl;
                                   let stringResult1 = intl.string(onSelectOption(3123)["iXpQc+"]);
                                 } else {
-                                  stringResult1 = tmp(12666).getCustomizationOptionName(activeCustomizationOption);
-                                  const tmpResult7 = tmp(12666);
+                                  stringResult1 = tmp(12672).getCustomizationOptionName(activeCustomizationOption);
+                                  const tmpResult7 = tmp(12672);
                                 }
                                 cResult[23] = activeCustomizationOption;
                                 cResult[24] = tmp13;
@@ -500,7 +500,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                     } else {
                       const obj = { selectedOption: activeCustomizationOption, onSelectOption };
                       ActionSheetActionCreatorsDefault.openLazy(
-                        asyncRequireImpl(12699, dependencyMap.paths),
+                        asyncRequireImpl(12706, dependencyMap.paths),
                         "CheckpointFinalizeTraitPicker",
                         obj,
                       );
@@ -538,8 +538,8 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
       let nitroLockedMessage;
       if (tmp4) {
         if (!tmp5) {
-          nitroLockedMessage = tmp(12701).getNitroLockedMessage(tmp7);
-          const tmpResult8 = tmp(12701);
+          nitroLockedMessage = tmp(12708).getNitroLockedMessage(tmp7);
+          const tmpResult8 = tmp(12708);
         }
       }
       cResult[0] = tmp7;
@@ -670,7 +670,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj = { selectedOption: activeCustomizationOption, onSelectOption };
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(12699, dependencyMap.paths),
+              asyncRequireImpl(12706, dependencyMap.paths),
               "CheckpointFinalizeTraitPicker",
               obj,
             );

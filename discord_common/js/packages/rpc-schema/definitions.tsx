@@ -2208,11 +2208,13 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "IconComponent", response: "Set" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "code", response: "" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
-      const obj = { url: string.string().required() };
+      const obj = { url: null };
+      const stringResult = string.string();
+      obj.url = string.string().max(8000).required();
       return obj;
     },
     response(boolean) {

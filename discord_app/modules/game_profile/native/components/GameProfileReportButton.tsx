@@ -20,11 +20,11 @@ export default function GameProfileReportButton(applicationId) {
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
     const obj2 = ModalActionCreatorsDefault;
     const obj3 = { applicationId };
-    obj2.pushLazy(asyncRequireImpl(9346, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
+    obj2.pushLazy(asyncRequireImpl(9347, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = applicationId(1128).intl;
   obj.text = intl.string(applicationId(1128).t.qP2cXd);
   obj.onPress = callback;
-  return jsx(applicationId(5441).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(5442).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 }

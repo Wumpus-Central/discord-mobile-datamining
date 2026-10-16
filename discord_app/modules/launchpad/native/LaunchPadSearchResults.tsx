@@ -61,11 +61,11 @@ function renderSearchResultsSection() {
   return React6(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6185).UnreadSetting;
+const UnreadSetting = fn(6186).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   listContainer: { minHeight: 16 },
   list: { flex: -1, marginTop: 8 },
@@ -156,7 +156,7 @@ let closure_14 = noop.memo(
         const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp9, tmp11);
         ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
         const tmpResult = guild(504);
-        const fontScale = guild(5448).useFontScale();
+        const fontScale = guild(5449).useFontScale();
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor() {
@@ -183,7 +183,7 @@ let closure_14 = noop.memo(
           }
           tmp15 = cResult[7];
         }
-        const tmpResult3 = guild(5448);
+        const tmpResult3 = guild(5449);
         const stateFromStores = guild(504).useStateFromStores(tmp14, tmp15);
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
@@ -317,8 +317,8 @@ let closure_14 = noop.memo(
         }));
         ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
         const obj = guild(504);
-        const fontScale = guild(5448).useFontScale();
-        const obj2 = guild(5448);
+        const fontScale = guild(5449).useFontScale();
+        const obj2 = guild(5449);
         const items2 = [LocaleStore];
         const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
         const obj3 = guild(504);
@@ -351,7 +351,7 @@ let closure_14 = noop.memo(
         items4[2] = renderChannelContentDefault(obj8);
         obj5.children = items4;
         obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-        return tmp7(closure_9(guild(6407).PressableHighlight, obj4));
+        return tmp7(closure_9(guild(6409).PressableHighlight, obj4));
       },
 );
 ReactCompilerGating = fn(558);

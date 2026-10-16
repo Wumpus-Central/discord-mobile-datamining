@@ -5,14 +5,14 @@ import _modDef4875 from "../../../../../../../_runtime/metro/04875__.js";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
-import _modDef8333 from "../../../../../../../_runtime/metro/08333__.js";
 import _modDef8334 from "../../../../../../../_runtime/metro/08334__.js";
+import _modDef8335 from "../../../../../../../_runtime/metro/08335__.js";
 import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const GiftIntentType = fn(1394).GiftIntentType;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createNativeStyleProperties({
   headerTextColor: nativeDefault.colors.TEXT_STRONG,
   subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE,
@@ -93,8 +93,8 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4875);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8333);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8334);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8334);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8335);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

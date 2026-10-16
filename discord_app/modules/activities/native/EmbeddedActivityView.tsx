@@ -74,7 +74,7 @@ const Constants = fn(2026);
 fn(1375).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const EmbeddedActivities = "EmbeddedActivities";
 let ReactCompilerGating = fn(558);
@@ -464,7 +464,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       applicationId = applicationId.applicationId;
       const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
       const merged1 = Object.assign(merged);
-      return closure_14(applicationId(11269).BaseEmbeddedAppWebView, {
+      return closure_14(applicationId(11266).BaseEmbeddedAppWebView, {
         iframeId: _slicedToArray(
           noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)),
           1,

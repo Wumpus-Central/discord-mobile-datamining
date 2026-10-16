@@ -3,6 +3,7 @@ import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../main_tabs_v2/native/getInitialNavigationState.tsx";
 import useChatLayout from "../chat/native/useChatLayout.tsx";
 import getChannelDetailsFromRouteDefault from "../navigation/native/getChannelDetailsFromRoute.tsx";
+import hasSecondaryViewChatDefault from "../app_channels/hasSecondaryViewChat.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
@@ -16,45 +17,56 @@ const NavigationRouteUtils = params(5035);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
-  let paramsResult1 = dependencyMap;
+  let paramsResult2 = dependencyMap;
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
   let tmp2 = null;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
-      return _slicedToArray(
-        getChannelDetailsFromRouteDefault(rootNavigationRef.getCurrentRoute(), isChatLockedOpen),
-        2,
-      )[1];
+      const rootState = rootNavigationRef.getRootState();
+      const result = NavigationRouteUtils.coerceChannelSecondaryViewChatRoute(rootState.routes[rootState.index]);
+      let channelId;
+      if (result != tmp2) {
+        channelId = result.params.channelId;
+      }
+      if (tmp2 != channelId) {
+        return channelId;
+      } else {
+        return _slicedToArray(
+          getChannelDetailsFromRouteDefault(rootNavigationRef.getCurrentRoute(), isChatLockedOpen),
+          2,
+        )[1];
+      }
+      const paramsResult = NavigationRouteUtils;
     }
   }
   if (tmp2 !== c9) {
     return c9;
   } else {
-    const tmp17 = getInitialNavigationStateDefault();
+    const tmp20 = getInitialNavigationStateDefault();
     let routes2 = NavigationRouteUtils;
-    let tmp6;
-    if (tmp17 != tmp2) {
-      const routes = tmp17.routes;
+    let tmp9;
+    if (tmp20 != tmp2) {
+      const routes = tmp20.routes;
       if (routes != tmp2) {
         let num2;
-        if (tmp17 != tmp2) {
-          num2 = tmp17.index;
+        if (tmp20 != tmp2) {
+          num2 = tmp20.index;
         }
         if (num2 == tmp2) {
           num2 = 0;
         }
-        tmp6 = routes[num2];
+        tmp9 = routes[num2];
       }
     }
-    let num3 = routes2.coerceMainRoute(tmp6);
+    let num3 = routes2.coerceMainRoute(tmp9);
     if (tmp2 == num3) {
-      c9 = tmp7;
+      c9 = tmp10;
     } else {
       routes2 = NavigationRouteUtils;
       if (!isChatLockedOpen) {
         const state = num3.state;
-        let tmp8;
+        let tmp11;
         if (state != tmp2) {
           const routes3 = state.routes;
           if (routes3 != tmp2) {
@@ -66,22 +78,22 @@ function getFocusedChannelId() {
             if (num4 == tmp2) {
               num4 = 0;
             }
-            tmp8 = routes3[num4];
+            tmp11 = routes3[num4];
           }
         }
-        const coerceChannelRouteResult = routes2.coerceChannelRoute(tmp8);
+        const coerceChannelRouteResult = routes2.coerceChannelRoute(tmp11);
         if (tmp2 != coerceChannelRouteResult) {
           const params2 = coerceChannelRouteResult.params;
-          let channelId;
+          let channelId1;
           if (params2 != tmp2) {
-            channelId = params2.channelId;
+            channelId1 = params2.channelId;
           }
-          tmp7 = channelId;
+          tmp10 = channelId1;
         }
       }
     }
     const state3 = num3.state;
-    let tmp11;
+    let tmp14;
     if (state3 != tmp2) {
       const routes4 = state3.routes;
       if (routes4 != tmp2) {
@@ -93,14 +105,14 @@ function getFocusedChannelId() {
         if (num3 == tmp2) {
           num3 = 0;
         }
-        tmp11 = routes4[num3];
+        tmp14 = routes4[num3];
       }
     }
-    const coerceTabsRouteResult = routes2.coerceTabsRoute(tmp11);
+    const coerceTabsRouteResult = routes2.coerceTabsRoute(tmp14);
     if (tmp2 != coerceTabsRouteResult) {
       params = NavigationRouteUtils.coerceGuildsRoute;
       routes2 = coerceTabsRouteResult.state;
-      let tmp14;
+      let tmp17;
       if (routes2 != tmp2) {
         routes2 = routes2.routes;
         if (routes2 != tmp2) {
@@ -112,31 +124,31 @@ function getFocusedChannelId() {
           if (num5 == tmp2) {
             num5 = 0;
           }
-          tmp14 = routes2[num5];
+          tmp17 = routes2[num5];
         }
       }
-      paramsResult1 = params(tmp14);
-      if (tmp2 != paramsResult1) {
-        params = paramsResult1.params;
+      paramsResult2 = params(tmp17);
+      if (tmp2 != paramsResult2) {
+        params = paramsResult2.params;
         tmp2 = params == tmp2;
-        paramsResult1 = undefined;
+        paramsResult2 = undefined;
         if (!tmp2) {
-          paramsResult1 = params.channelId;
+          paramsResult2 = params.channelId;
         }
-        tmp7 = paramsResult1;
+        tmp10 = paramsResult2;
       }
-      const paramsResult = NavigationRouteUtils;
+      const paramsResult1 = NavigationRouteUtils;
     }
   }
 }
-const CHANNEL_PREFIX = fn(6297).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6293).CHANNEL_PREFIX;
 let c9 = null;
 const ReactCompilerGating = fn(558);
 function isChannelFocused() {
   return null != getFocusedChannelId();
 }
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
+let result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
 
 export { getFocusedChannelId };
 export { isChannelFocused };
@@ -144,7 +156,7 @@ export const useIsChannelFocused = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsChannelFocused() {
       const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function s() {
+        const fn = function u() {
           return null != getFocusedChannelId();
         };
         cResult[0] = fn;
@@ -231,6 +243,20 @@ export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadS
     const state = VoicePanelStore.getState();
     if (state.isVoicePanelFullscreen()) {
       return false;
+    } else if (hasSecondaryViewChatDefault(channelId)) {
+      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+      let tmp12 = null != rootNavigationRef && rootNavigationRef.isReady();
+      if (tmp12) {
+        const rootState = rootNavigationRef.getRootState();
+        const result = NavigationRouteUtils.coerceChannelSecondaryViewChatRoute(rootState.routes[rootState.index]);
+        channelId = undefined;
+        if (result != null) {
+          channelId = result.params.channelId;
+        }
+        tmp12 = channelId === channelId;
+        const tmp10Result = NavigationRouteUtils;
+      }
+      return tmp12;
     } else if (getFocusedChannelId() === channelId) {
       return true;
     } else {

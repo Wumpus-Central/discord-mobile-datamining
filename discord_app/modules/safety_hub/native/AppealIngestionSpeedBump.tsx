@@ -9,12 +9,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7732);
+const SafetyHubConstants = fn(7733);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -43,9 +43,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores == null) {
         stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      const safetyHubClassification = emitAppealIngestionEvent(12533).useSafetyHubClassification(stateFromStores);
-      const tmpResult3 = emitAppealIngestionEvent(12533);
-      emitAppealIngestionEvent = emitAppealIngestionEvent(12541).useEmitAppealIngestionEvent();
+      const safetyHubClassification = emitAppealIngestionEvent(12539).useSafetyHubClassification(stateFromStores);
+      const tmpResult3 = emitAppealIngestionEvent(12539);
+      emitAppealIngestionEvent = emitAppealIngestionEvent(12547).useEmitAppealIngestionEvent();
       ({ isDsaEligible, classification } = safetyHubClassification);
       let str;
       if (classification != null) {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { headerText: tmp13, subHeaderText: tmp15 };
-        const tmp19 = closure_8(tmp(12539).AppealIngestionModalHeader, obj2);
+        const tmp19 = closure_8(tmp(12545).AppealIngestionModalHeader, obj2);
         cResult[6] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj5 = { variant: "text-xs/normal", children: null };
                       const intl7 = tmp(1128).intl;
                       obj5.children = intl7.format(tmp(1128).t.WMUgCX, {});
-                      tmp52 = closure_8(tmp(5149).Text, obj5);
+                      tmp52 = closure_8(tmp(5150).Text, obj5);
                     }
                     cResult[25] = isDsaEligible;
                     cResult[26] = tmp52;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj7.children = items2;
                   items1[1] = closure_9(View, obj7);
                   obj6.children = items1;
-                  const tmp57 = closure_9(tmp(12539).AppealIngestionModalScreen, obj6);
+                  const tmp57 = closure_9(tmp(12545).AppealIngestionModalScreen, obj6);
                   cResult[27] = tmp4.container;
                   cResult[28] = tmp34;
                   cResult[29] = tmp40;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = isCoppa;
       cResult[13] = tmp29;
       tmp28 = tmp29;
-      const tmpResult4 = emitAppealIngestionEvent(12541);
+      const tmpResult4 = emitAppealIngestionEvent(12547);
     }
   : function AppealIngestionSpeedBump(arg0) {
       ({ isCoppa, isSpam, isDeveloperClassification } = arg0);
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { variant: "text-xs/normal", children: null };
         const intl7 = tmp2(1128).intl;
         obj10.children = intl7.format(tmp2(1128).t.WMUgCX, {});
-        isDsaEligible = closure_8(tmp2(5149).Text, obj10);
+        isDsaEligible = closure_8(tmp2(5150).Text, obj10);
       }
       const obj11 = { children: null };
       items2[6] = isDsaEligible;

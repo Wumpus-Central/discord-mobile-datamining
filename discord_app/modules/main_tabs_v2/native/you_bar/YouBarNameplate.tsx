@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(16056).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(16070).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}",
@@ -24,7 +24,7 @@ export default noop.memo(
         ({ avatarSize, barWidth } = arg0);
         let obj = isQuestRendered(576);
         token = isQuestRendered(4877).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-        const tmp6 = token(16142)(token);
+        const tmp6 = token(16156)(token);
         dependencyMap = tmp6;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -56,7 +56,7 @@ export default noop.memo(
         }
         const tmpResult2 = isQuestRendered(4909);
         N.__closure = {
-          withSpring: isQuestRendered(5440).withSpring,
+          withSpring: isQuestRendered(5441).withSpring,
           isQuestRendered,
           questDockAnimatedBorderRadius: tmp6,
           borderRadius: token,
@@ -98,7 +98,7 @@ export default noop.memo(
                   tmp19 = tmp21;
                 }
                 const obj5 = { nameplate, isFocused: true, animate: stateFromStores && "always" };
-                const tmp18 = jsx(tmp4(9252), { nameplate, isFocused: true, animate: stateFromStores && "always" });
+                const tmp18 = jsx(tmp4(9253), { nameplate, isFocused: true, animate: stateFromStores && "always" });
                 cResult[10] = nameplate;
                 cResult[11] = stateFromStores && "always";
                 cResult[12] = tmp18;
@@ -132,7 +132,7 @@ export default noop.memo(
         cResult[6] = rect;
         tmp13 = rect;
         const obj3 = {
-          withSpring: isQuestRendered(5440).withSpring,
+          withSpring: isQuestRendered(5441).withSpring,
           isQuestRendered,
           questDockAnimatedBorderRadius: tmp6,
           borderRadius: token,
@@ -145,7 +145,7 @@ export default noop.memo(
         let token;
         ({ nameplate, barWidth } = isQuestRendered);
         token = isQuestRendered(4877).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-        const tmp4 = token(16142)(token);
+        const tmp4 = token(16156)(token);
         dependencyMap = tmp4;
         let obj = isQuestRendered(4877);
         const tmp2 = token;
@@ -165,7 +165,7 @@ export default noop.memo(
         };
         const obj3 = isQuestRendered(4909);
         fn.__closure = {
-          withSpring: isQuestRendered(5440).withSpring,
+          withSpring: isQuestRendered(5441).withSpring,
           isQuestRendered,
           questDockAnimatedBorderRadius: tmp4,
           borderRadius: token,
@@ -200,7 +200,7 @@ export default noop.memo(
         const obj6 = { nameplate, isFocused: true, animate: null };
         let str = stateFromStores;
         const obj4 = {
-          withSpring: isQuestRendered(5440).withSpring,
+          withSpring: isQuestRendered(5441).withSpring,
           isQuestRendered,
           questDockAnimatedBorderRadius: tmp4,
           borderRadius: token,
@@ -210,7 +210,7 @@ export default noop.memo(
           str = "always";
         }
         obj6.animate = str;
-        obj5.children = jsx(tmp2(9252), { nameplate, isFocused: true, animate: null });
+        obj5.children = jsx(tmp2(9253), { nameplate, isFocused: true, animate: null });
         return jsx(token(4909).View, { style: null, pointerEvents: "none", children: null });
       },
 );

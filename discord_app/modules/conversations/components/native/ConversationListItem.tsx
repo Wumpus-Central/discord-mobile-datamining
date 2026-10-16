@@ -11,13 +11,13 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7534).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(5132).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   card: {
     marginBottom: nativeDefault.space.PX_12,
@@ -97,7 +97,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           if (substr == null) {
             substr = null;
           }
-          cResult[5] = stateFromStores;
+          class T {
+            constructor() {
+              obj = closure_0(closure_2[12]);
+              result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                cacheType: "channel",
+                shouldJump: false,
+              });
+              obj1 = {
+                channelId: conversation.channelId,
+                guildId: conversation.guildId,
+                conversationId: conversation.id,
+                title: conversation.title,
+              };
+              navigateResult = closure_1.navigate(closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS, obj1);
+              ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+              obj4 = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
+              result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+              return;
+            }
+          }
           cResult[6] = substr;
           let arr4 = substr;
         } else {
@@ -112,30 +131,84 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[13] === conversation.title) {
                   if (cResult[14] === tmp4.title) {
-                    let tmp17 = cResult[15];
+                    let tmp16 = cResult[15];
                   }
                   if (cResult[16] !== conversation.messageCount) {
                     const intl = tmp(1128).intl;
                     const obj3 = { count: conversation.messageCount };
                     const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.poZZGL, obj3);
+                    class T {
+                      constructor() {
+                        obj = closure_0(closure_2[12]);
+                        result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                          cacheType: "channel",
+                          shouldJump: false,
+                        });
+                        obj1 = {
+                          channelId: conversation.channelId,
+                          guildId: conversation.guildId,
+                          conversationId: conversation.id,
+                          title: conversation.title,
+                        };
+                        navigateResult = closure_1.navigate(
+                          closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                          obj1,
+                        );
+                        ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                        obj4 = {
+                          channelId: conversation.channelId,
+                          conversationId: conversation.id,
+                          isFocusMode: false,
+                        };
+                        result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                        return;
+                      }
+                    }
                     cResult[16] = conversation.messageCount;
                     cResult[17] = formatToPlainStringResult;
-                    let tmp20 = formatToPlainStringResult;
+                    let tmp19 = formatToPlainStringResult;
                   } else {
-                    tmp20 = cResult[17];
+                    tmp19 = cResult[17];
                   }
                   if (cResult[18] === tmp4.timestamp) {
-                    if (cResult[19] === tmp20) {
-                      let tmp22 = cResult[20];
+                    if (cResult[19] === tmp19) {
+                      let tmp21 = cResult[20];
                     }
                     if (cResult[21] === tmp4.headerContainer) {
-                      if (cResult[22] === tmp22) {
-                        if (cResult[23] === tmp17) {
+                      if (cResult[22] === tmp21) {
+                        if (cResult[23] === tmp16) {
                           let tmp25 = cResult[24];
                         }
                         if (cResult[25] !== tmp4.maskOpaque) {
-                          const obj4 = { colors, style: tmp4.maskOpaque };
-                          const tmp33 = closure_8(navigation(5453), obj4);
+                          const obj4 = { colors, style: null };
+                          class T {
+                            constructor() {
+                              obj = closure_0(closure_2[12]);
+                              result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                                cacheType: "channel",
+                                shouldJump: false,
+                              });
+                              obj1 = {
+                                channelId: conversation.channelId,
+                                guildId: conversation.guildId,
+                                conversationId: conversation.id,
+                                title: conversation.title,
+                              };
+                              navigateResult = closure_1.navigate(
+                                closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                                obj1,
+                              );
+                              ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                              obj4 = {
+                                channelId: conversation.channelId,
+                                conversationId: conversation.id,
+                                isFocusMode: false,
+                              };
+                              result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                              return;
+                            }
+                          }
+                          const tmp33 = closure_8(navigation(5454), obj4);
                           cResult[25] = tmp4.maskOpaque;
                           cResult[26] = tmp33;
                           let tmp29 = tmp33;
@@ -144,81 +217,194 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (cResult[27] !== tmp4.maskFade) {
                           const obj5 = { colors: colors2, start: null, end: null, style: null };
-                          ({ START: obj9.start, END: obj9.end } = VerticalGradient);
+                          class T {
+                            constructor() {
+                              obj = closure_0(closure_2[12]);
+                              result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                                cacheType: "channel",
+                                shouldJump: false,
+                              });
+                              obj1 = {
+                                channelId: conversation.channelId,
+                                guildId: conversation.guildId,
+                                conversationId: conversation.id,
+                                title: conversation.title,
+                              };
+                              navigateResult = closure_1.navigate(
+                                closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                                obj1,
+                              );
+                              ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                              obj4 = {
+                                channelId: conversation.channelId,
+                                conversationId: conversation.id,
+                                isFocusMode: false,
+                              };
+                              result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                              return;
+                            }
+                          }
+                          ({ START: obj8.start, END: obj8.end } = VerticalGradient);
                           obj5.style = tmp4.maskFade;
-                          const tmp39 = closure_8(navigation(5453), obj5);
+                          const tmp38 = closure_8(navigation(5454), obj5);
                           cResult[27] = tmp4.maskFade;
-                          cResult[28] = tmp39;
-                          let tmp34 = tmp39;
+                          cResult[28] = tmp38;
+                          let tmp34 = tmp38;
                         } else {
                           tmp34 = cResult[28];
                         }
                         if (cResult[29] === tmp4.maskColumn) {
                           if (cResult[30] === tmp29) {
                             if (cResult[31] === tmp34) {
-                              let tmp40 = cResult[32];
+                              let tmp39 = cResult[32];
                             }
                             if (cResult[33] === conversation.channelId) {
                               if (cResult[34] === conversation.guildId) {
                                 if (cResult[35] === arr4) {
                                   if (cResult[37] === tmp4.previews) {
-                                    if (cResult[38] === tmp44) {
-                                      let tmp50 = cResult[39];
+                                    if (cResult[38] === tmp42) {
+                                      let tmp48 = cResult[39];
                                     }
                                     if (cResult[40] === tmp4.previewsMask) {
-                                      if (cResult[41] === tmp40) {
-                                        if (cResult[42] === tmp50) {
-                                          let tmp54 = cResult[43];
+                                      if (cResult[41] === tmp39) {
+                                        if (cResult[42] === tmp48) {
+                                          let tmp52 = cResult[43];
                                         }
                                         if (cResult[44] === conversation.title) {
                                           if (cResult[45] === tmp13) {
                                             if (cResult[46] === tmp4.card) {
                                               if (cResult[47] === tmp25) {
-                                                if (cResult[48] === tmp54) {
-                                                  let tmp58 = cResult[49];
+                                                if (cResult[48] === tmp52) {
+                                                  let tmp56 = cResult[49];
                                                 }
-                                                return tmp58;
+                                                return tmp56;
                                               }
                                             }
                                           }
                                         }
                                         const obj6 = {
                                           style: tmp14,
-                                          onPress: tmp13,
-                                          accessibilityLabel: tmp15,
+                                          onPress: null,
+                                          accessibilityLabel: null,
                                           children: null,
                                         };
-                                        const items1 = [tmp25, tmp54];
+                                        class T {
+                                          constructor() {
+                                            obj = closure_0(closure_2[12]);
+                                            result = obj.setSelectedConversation(
+                                              conversation.channelId,
+                                              conversation.id,
+                                              { cacheType: "channel", shouldJump: false },
+                                            );
+                                            obj1 = {
+                                              channelId: conversation.channelId,
+                                              guildId: conversation.guildId,
+                                              conversationId: conversation.id,
+                                              title: conversation.title,
+                                            };
+                                            navigateResult = closure_1.navigate(
+                                              closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                                              obj1,
+                                            );
+                                            ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                                            obj4 = {
+                                              channelId: conversation.channelId,
+                                              conversationId: conversation.id,
+                                              isFocusMode: false,
+                                            };
+                                            result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                                            return;
+                                          }
+                                        }
+                                        obj6.accessibilityLabel = tmp15;
+                                        const items1 = [tmp25, tmp52];
                                         obj6.children = items1;
-                                        const tmp60 = closure_9(tmp(6404).Card, obj6);
+                                        const tmp58 = closure_9(tmp(6406).Card, obj6);
                                         cResult[44] = conversation.title;
                                         cResult[45] = tmp13;
                                         cResult[46] = tmp4.card;
                                         cResult[47] = tmp25;
-                                        cResult[48] = tmp54;
-                                        cResult[49] = tmp60;
-                                        tmp58 = tmp60;
+                                        cResult[48] = tmp52;
+                                        cResult[49] = tmp58;
+                                        tmp56 = tmp58;
                                       }
                                     }
-                                    const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp50 };
-                                    const tmp57 = closure_8(navigation(6465), obj7);
+                                    const obj7 = { style: null, maskElement: null, children: null };
+                                    class T {
+                                      constructor() {
+                                        obj = closure_0(closure_2[12]);
+                                        result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                                          cacheType: "channel",
+                                          shouldJump: false,
+                                        });
+                                        obj1 = {
+                                          channelId: conversation.channelId,
+                                          guildId: conversation.guildId,
+                                          conversationId: conversation.id,
+                                          title: conversation.title,
+                                        };
+                                        navigateResult = closure_1.navigate(
+                                          closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                                          obj1,
+                                        );
+                                        ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                                        obj4 = {
+                                          channelId: conversation.channelId,
+                                          conversationId: conversation.id,
+                                          isFocusMode: false,
+                                        };
+                                        result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                                        return;
+                                      }
+                                    }
+                                    obj7.maskElement = tmp39;
+                                    obj7.children = tmp48;
+                                    const tmp55 = closure_8(navigation(6467), obj7);
                                     cResult[40] = tmp4.previewsMask;
-                                    cResult[41] = tmp40;
-                                    cResult[42] = tmp50;
-                                    cResult[43] = tmp57;
-                                    tmp54 = tmp57;
+                                    cResult[41] = tmp39;
+                                    cResult[42] = tmp48;
+                                    cResult[43] = tmp55;
+                                    tmp52 = tmp55;
                                   }
-                                  const obj8 = { style: tmp4.previews, children: cResult[36] };
-                                  const tmp53 = closure_8(closure_4, obj8);
+                                  const obj9 = { style: null, children: null };
+                                  class T {
+                                    constructor() {
+                                      obj = closure_0(closure_2[12]);
+                                      result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                                        cacheType: "channel",
+                                        shouldJump: false,
+                                      });
+                                      obj1 = {
+                                        channelId: conversation.channelId,
+                                        guildId: conversation.guildId,
+                                        conversationId: conversation.id,
+                                        title: conversation.title,
+                                      };
+                                      navigateResult = closure_1.navigate(
+                                        closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                                        obj1,
+                                      );
+                                      ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                                      obj4 = {
+                                        channelId: conversation.channelId,
+                                        conversationId: conversation.id,
+                                        isFocusMode: false,
+                                      };
+                                      result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                                      return;
+                                    }
+                                  }
+                                  obj9.children = cResult[36];
+                                  const tmp51 = closure_8(closure_4, obj9);
                                   cResult[37] = tmp4.previews;
                                   cResult[38] = cResult[36];
-                                  cResult[39] = tmp53;
-                                  tmp50 = tmp53;
+                                  cResult[39] = tmp51;
+                                  tmp48 = tmp51;
                                 }
                               }
                             }
                             if (null == arr4) {
-                              let mapped = closure_8(navigation(9606), {});
+                              let mapped = closure_8(navigation(9605), {});
                             } else {
                               mapped = arr4.map((blocked) => {
                                 if (!blocked.blocked) {
@@ -240,91 +426,213 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                 );
                               });
                             }
-                            cResult[33] = conversation.channelId;
+                            class T {
+                              constructor() {
+                                obj = closure_0(closure_2[12]);
+                                result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                                  cacheType: "channel",
+                                  shouldJump: false,
+                                });
+                                obj1 = {
+                                  channelId: conversation.channelId,
+                                  guildId: conversation.guildId,
+                                  conversationId: conversation.id,
+                                  title: conversation.title,
+                                };
+                                navigateResult = closure_1.navigate(
+                                  closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                                  obj1,
+                                );
+                                ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                                obj4 = {
+                                  channelId: conversation.channelId,
+                                  conversationId: conversation.id,
+                                  isFocusMode: false,
+                                };
+                                result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                                return;
+                              }
+                            }
                             cResult[34] = conversation.guildId;
                             cResult[35] = arr4;
                             cResult[36] = mapped;
                           }
                         }
+                        class T {
+                          constructor() {
+                            obj = closure_0(closure_2[12]);
+                            result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                              cacheType: "channel",
+                              shouldJump: false,
+                            });
+                            obj1 = {
+                              channelId: conversation.channelId,
+                              guildId: conversation.guildId,
+                              conversationId: conversation.id,
+                              title: conversation.title,
+                            };
+                            navigateResult = closure_1.navigate(
+                              closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                              obj1,
+                            );
+                            ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                            obj4 = {
+                              channelId: conversation.channelId,
+                              conversationId: conversation.id,
+                              isFocusMode: false,
+                            };
+                            result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                            return;
+                          }
+                        }
                         const obj10 = { style: tmp4.maskColumn, children: null };
                         const items2 = [tmp29, tmp34];
                         obj10.children = items2;
-                        const tmp43 = closure_9(closure_4, obj10);
+                        const tmp41 = closure_9(closure_4, obj10);
                         cResult[29] = tmp4.maskColumn;
                         cResult[30] = tmp29;
                         cResult[31] = tmp34;
-                        cResult[32] = tmp43;
-                        tmp40 = tmp43;
+                        cResult[32] = tmp41;
+                        tmp39 = tmp41;
                       }
                     }
-                    const obj11 = { style: tmp16, children: null };
-                    const items3 = [tmp17, tmp22];
+                    const obj11 = { style: null, children: null };
+                    class T {
+                      constructor() {
+                        obj = closure_0(closure_2[12]);
+                        result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                          cacheType: "channel",
+                          shouldJump: false,
+                        });
+                        obj1 = {
+                          channelId: conversation.channelId,
+                          guildId: conversation.guildId,
+                          conversationId: conversation.id,
+                          title: conversation.title,
+                        };
+                        navigateResult = closure_1.navigate(
+                          closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                          obj1,
+                        );
+                        ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                        obj4 = {
+                          channelId: conversation.channelId,
+                          conversationId: conversation.id,
+                          isFocusMode: false,
+                        };
+                        result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                        return;
+                      }
+                    }
+                    const items3 = [tmp16, tmp21];
                     obj11.children = items3;
                     const tmp28 = closure_9(closure_4, obj11);
                     cResult[21] = tmp4.headerContainer;
-                    cResult[22] = tmp22;
-                    cResult[23] = tmp17;
+                    cResult[22] = tmp21;
+                    cResult[23] = tmp16;
                     cResult[24] = tmp28;
                     tmp25 = tmp28;
                   }
-                  const obj12 = {
-                    variant: "text-sm/medium",
-                    color: "text-muted",
-                    lineClamp: 1,
-                    style: tmp4.timestamp,
-                    children: tmp20,
-                  };
-                  const tmp24 = closure_8(tmp(5149).Text, obj12);
+                  class T {
+                    constructor() {
+                      obj = closure_0(closure_2[12]);
+                      result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                        cacheType: "channel",
+                        shouldJump: false,
+                      });
+                      obj1 = {
+                        channelId: conversation.channelId,
+                        guildId: conversation.guildId,
+                        conversationId: conversation.id,
+                        title: conversation.title,
+                      };
+                      navigateResult = closure_1.navigate(
+                        closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                        obj1,
+                      );
+                      ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                      obj4 = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
+                      result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                      return;
+                    }
+                  }
+                  tmp23[3] = tmp4.timestamp;
+                  tmp23[4] = tmp19;
+                  const tmp24 = closure_8(tmp(5150).Text, tmp23);
                   cResult[18] = tmp4.timestamp;
-                  cResult[19] = tmp20;
+                  cResult[19] = tmp19;
                   cResult[20] = tmp24;
-                  tmp22 = tmp24;
+                  tmp21 = tmp24;
                 }
-                const obj13 = {
+                const obj12 = {
                   variant: "text-md/semibold",
                   color: "text-default",
                   lineClamp: 1,
                   style: tmp4.title,
-                  children: conversation.title,
+                  children: null,
                 };
-                const tmp19 = closure_8(tmp(5149).Text, obj13);
+                class T {
+                  constructor() {
+                    obj = closure_0(closure_2[12]);
+                    result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+                      cacheType: "channel",
+                      shouldJump: false,
+                    });
+                    obj1 = {
+                      channelId: conversation.channelId,
+                      guildId: conversation.guildId,
+                      conversationId: conversation.id,
+                      title: conversation.title,
+                    };
+                    navigateResult = closure_1.navigate(
+                      closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS,
+                      obj1,
+                    );
+                    ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+                    obj4 = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
+                    result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+                    return;
+                  }
+                }
+                const tmp18 = closure_8(tmp(5150).Text, obj12);
                 cResult[13] = conversation.title;
                 cResult[14] = tmp4.title;
-                cResult[15] = tmp19;
-                tmp17 = tmp19;
+                cResult[15] = tmp18;
+                tmp16 = tmp18;
               }
             }
           }
         }
-        const fn2 = function _() {
-          const conversationMessages = ConversationsActionCreators.fetchConversationMessages(
-            conversation.channelId,
-            conversation.id,
-            { includeReactions: true, includeMessageReferences: true },
-          );
-          navigation.navigate(ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS, {
-            channelId: conversation.channelId,
-            guildId: conversation.guildId,
-            conversationId: conversation.id,
-            title: conversation.title,
-          });
-          const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-          const result = ConversationsAnalytics.trackTopicsUnitClicked({
-            channelId: conversation.channelId,
-            conversationId: conversation.id,
-            isFocusMode: false,
-          });
-        };
+        class T {
+          constructor() {
+            obj = closure_0(closure_2[12]);
+            result = obj.setSelectedConversation(conversation.channelId, conversation.id, {
+              cacheType: "channel",
+              shouldJump: false,
+            });
+            obj1 = {
+              channelId: conversation.channelId,
+              guildId: conversation.guildId,
+              conversationId: conversation.id,
+              title: conversation.title,
+            };
+            navigateResult = closure_1.navigate(closure_0(closure_2[13]).ConversationNavigatorScreens.FOCUS, obj1);
+            ConversationsAnalytics = closure_0(closure_2[14]).ConversationsAnalytics;
+            obj4 = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
+            result1 = ConversationsAnalytics.trackTopicsUnitClicked(obj4);
+            return;
+          }
+        }
         cResult[7] = conversation.channelId;
         cResult[8] = conversation.guildId;
         cResult[9] = conversation.id;
         cResult[10] = conversation.title;
         cResult[11] = navigation;
-        cResult[12] = fn2;
-        tmp13 = fn2;
+        cResult[12] = T;
+        tmp13 = T;
         const tmpResult = tmp(504);
       }
-      const fn = function s() {
+      const fn = function l() {
         return ChannelConversationsStore.getHydratedMessages(conversation.channelId, conversation.id);
       };
       const items4 = [,];
@@ -366,11 +674,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [navigation, , , ,];
       ({ channelId: arr5[1], guildId: arr5[2], id: arr5[3], title: arr5[4] } = conversation);
       const callback = noop.useCallback(() => {
-        const conversationMessages = ConversationsActionCreators.fetchConversationMessages(
-          conversation.channelId,
-          conversation.id,
-          { includeReactions: true, includeMessageReferences: true },
-        );
+        const result = ConversationsActionCreators.setSelectedConversation(conversation.channelId, conversation.id, {
+          cacheType: "channel",
+          shouldJump: false,
+        });
         navigation.navigate(ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS, {
           channelId: conversation.channelId,
           guildId: conversation.guildId,
@@ -378,7 +685,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           title: conversation.title,
         });
         const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-        const result = ConversationsAnalytics.trackTopicsUnitClicked({
+        const result1 = ConversationsAnalytics.trackTopicsUnitClicked({
           channelId: conversation.channelId,
           conversationId: conversation.id,
           isFocusMode: false,
@@ -496,7 +803,7 @@ export default noop.memo(
           }
           return tmp9;
         }
-        const fn = function s() {
+        const fn = function l() {
           const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
           let conversation;
           if (conversationMetadata != null) {

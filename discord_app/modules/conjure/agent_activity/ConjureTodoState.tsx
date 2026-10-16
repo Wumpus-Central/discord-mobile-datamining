@@ -3,7 +3,7 @@ import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import ConjureTimelineTree from "ConjureTimelineTree.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
+const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
 
 export function todoMark(status, flag2) {
   if ("completed" === status) {
@@ -96,20 +96,4 @@ export const supersededChecklists = function supersededChecklists(memo) {
     } while (0 <= diff);
   }
   return set;
-};
-export const checklistExpanded = function checklistExpanded(c13, render_id, set) {
-  value = c13.get(render_id);
-  if (value == null) {
-    value = !set;
-  }
-  return value;
-};
-export const toggleChecklist = function toggleChecklist(get, arg1, arg2) {
-  const map = new Map(get);
-  value = get.get(arg1);
-  if (value == null) {
-    value = !arg2;
-  }
-  const result = map.set(arg1, !value);
-  return map;
 };

@@ -174,6 +174,12 @@ export const publishStepHandlers = {
     tmp = null != value && value.nonce === nonce.nonce;
   },
 };
+export const preparePublish = function preparePublish(projectId) {
+  const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
+  if (conjureSocket != null) {
+    conjureSocket.sendPreparePublish();
+  }
+};
 export const publishProject = function publishProject(id) {
   const projectId = id;
   c1 = false;

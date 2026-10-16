@@ -187,9 +187,9 @@ export default noop.memo(
     : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(17366);
+        let obj = id(17378);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(17366).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(17378).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -227,7 +227,7 @@ export default noop.memo(
             onPress() {
               const result = id(5119).triggerHapticFeedback(id(5119).HapticFeedbackTypes.IMPACT_LIGHT);
               const obj = id(5119);
-              const result1 = closure_1(6322).toggleGuildFolderExpand(closure_1_0);
+              const result1 = closure_1(6324).toggleGuildFolderExpand(closure_1_0);
             },
           }),
           items2,
@@ -244,10 +244,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "Error",
-          config: "OO.OO",
-          externalChildren: "error",
-          children: "interaction_failure",
+          preventClipping: "DELETE_PENDING_REPLY",
+          config: null,
+          externalChildren: "entity",
+          children: null,
         };
         const obj3 = id(4909);
         obj4.id = "" + id;
@@ -262,10 +262,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(17365).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(17377).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(11767).HourglassIcon, {});
+        obj4.children = jsx(id(11764).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,
@@ -278,10 +278,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "Error",
-          config: "OO.OO",
-          externalChildren: "error",
-          children: "interaction_failure",
+          preventClipping: "DELETE_PENDING_REPLY",
+          config: null,
+          externalChildren: "entity",
+          children: null,
         });
       },
 );

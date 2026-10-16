@@ -127,7 +127,7 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10901).sendUserMessage;
+const sendUserMessage = fn(10898).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
 const zustandStore = fn(5048).createZustandStore(() => ({ draftsByProject: {} }));
@@ -243,9 +243,9 @@ export const addConjureAttachmentDrafts = function addConjureAttachmentDrafts(pr
     const arraySpreadResult = HermesBuiltin.arraySpread(getConjureAttachmentDrafts(projectId, chat), 0);
   }
 };
-export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(projectId, chat, arg2) {
+export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(id, chat, arg2) {
   closure_0 = arg2;
-  const tmp = zustandStore.getState().draftsByProject[projectId];
+  const tmp = zustandStore.getState().draftsByProject[id];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[chat];
@@ -260,7 +260,7 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
       URL.revokeObjectURL(found.previewUrl);
     }
     if (null != found.ref) {
-      const result = conjureAttachmentRequests.deleteStagedAttachment(projectId, found.ref.id);
+      const result = conjureAttachmentRequests.deleteStagedAttachment(id, found.ref.id);
       result.catch(() => {});
     }
     const found1 = tmp2.filter((localId) => localId.localId !== closure_0);
@@ -269,9 +269,9 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
     const obj4 = {};
     const merged = Object.assign(draftsByProject);
     const obj5 = {};
-    const merged1 = Object.assign(draftsByProject[projectId]);
+    const merged1 = Object.assign(draftsByProject[id]);
     obj5[chat] = found1;
-    obj4[projectId] = obj5;
+    obj4[id] = obj5;
     obj3.draftsByProject = obj4;
     zustandStore.setState(obj3);
   }

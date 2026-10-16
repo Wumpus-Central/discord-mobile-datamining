@@ -21,8 +21,10 @@ const obj = {
   GAME_TIME_STATS: "game_time_stats",
   GAME_TIME_GENERAL: "game_time_general",
   GAME_TIME_AURA: "game_time_aura",
+  SQUAD_TRANSITION: "squad_transition",
   SQUAD: "squad",
   SIDEKICK: "sidekick",
+  SIDEKICK_LEAVE: "sidekick_leave",
   FINALIZE_CHARACTER: "finalize_character",
   SUMMARY: "summary",
   PROFILE_WIDGET: "profile_widget",
@@ -38,6 +40,7 @@ const items = [, , , , , ,];
   FINALIZE_CHARACTER: arr[6],
 } = obj);
 const set = new Set(items);
+const items1 = [obj.SIDEKICK_LEAVE];
 const obj2 = {
   IDLE: "idle",
   INTRODUCTION: "introduction",
@@ -83,8 +86,10 @@ let closure_1 = {
   [obj.GAME_TIME_STATS]: { characterStage: obj2.AURA, statsScreen: obj3.GAME_TIME },
   [obj.GAME_TIME_GENERAL]: { characterStage: obj2.AURA, statsScreen: obj3.GAME_TIME },
   [obj.GAME_TIME_AURA]: { characterStage: obj2.AURA },
+  [obj.SQUAD_TRANSITION]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SQUAD },
   [obj.SQUAD]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SQUAD },
   [obj.SIDEKICK]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SIDEKICK },
+  [obj.SIDEKICK_LEAVE]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SIDEKICK },
   [obj.FINALIZE_CHARACTER]: { characterStage: obj2.FINALIZE },
   [obj.SUMMARY]: { characterStage: obj2.SUMMARY, statsScreen: obj3.SUMMARY },
   [obj.PROFILE_WIDGET]: { characterStage: obj2.PROFILE_WIDGET },
@@ -96,6 +101,7 @@ export const CheckpointRoute = obj;
 export const isCheckpointCustomizationRoute = function isCheckpointCustomizationRoute(activeRoute) {
   return set.has(activeRoute);
 };
+export const SILENT_CHECKPOINT_ROUTES = new Set(items1);
 export const CheckpointCharacterStage = obj2;
 export const CheckpointStatsScreen = obj3;
 export const getCheckpointRoutePresentation = function getCheckpointRoutePresentation(route) {

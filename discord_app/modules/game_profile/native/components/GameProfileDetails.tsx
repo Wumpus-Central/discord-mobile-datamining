@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8696).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8697).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (platformsContainer != null) {
             const genres1 = platformsContainer.genres;
-            const mapped = genres1.map(trackAction(9147).getGenreText);
+            const mapped = genres1.map(trackAction(9148).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -636,7 +636,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: headerText,
               children: tmp64,
             };
-            const tmp67 = closure_8(trackAction(5149).Text, obj5);
+            const tmp67 = closure_8(trackAction(5150).Text, obj5);
             cResult[57] = tmp4.headerText;
             cResult[58] = tmp67;
           } else {
@@ -779,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const websites = game.websites;
                     if (websites != null) {
                       const mapped3 = websites.map((item) =>
-                        trackAction(9333)(item, trackAction(587).colors.ICON_SUBTLE),
+                        trackAction(9334)(item, trackAction(587).colors.ICON_SUBTLE),
                       );
                       found = mapped3.filter((item) => null != item);
                     }
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     style: closure_2.platformsContainer,
                     children: platforms.map((platform) =>
                       closure_1_8(
-                        game(9326).GameUpdatePlatformIcon,
+                        game(9327).GameUpdatePlatformIcon,
                         { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE },
                         platform,
                       ),

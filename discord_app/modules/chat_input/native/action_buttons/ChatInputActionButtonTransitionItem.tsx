@@ -10,7 +10,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12251).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12257).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({
   transitionItem: { position: "absolute" },

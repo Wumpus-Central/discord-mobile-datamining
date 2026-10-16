@@ -39,10 +39,11 @@ require = fn;
 let closure_3 = ["user"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+let closure_8 = fn(7128).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function EditableBanner(user) {
       const cResult = c.c(14);
       if (cResult[0] !== user) {
@@ -84,7 +85,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp23;
             }
             const obj2 = { value: analyticsLocations, children: tmp16 };
-            const tmp25 = closure_1_8(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
+            const tmp25 = React6(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
             cResult[11] = analyticsLocations;
             cResult[12] = tmp16;
             cResult[13] = tmp25;
@@ -98,7 +99,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.editButtonAccessibilityLabel = tmp14;
         obj3.bannerSafeArea = 12;
         obj3.isUserProfileEditingRefresh = true;
-        const tmp22 = closure_1_8(UserProfileEditBannerButtonDefault, obj3);
+        const tmp22 = React6(UserProfileEditBannerButtonDefault, obj3);
         cResult[7] = tmp12;
         cResult[8] = tmp4;
         cResult[9] = tmp5;
@@ -126,8 +127,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.editButtonAccessibilityLabel = intl.string(util.t.VqsHy0);
       obj2.bannerSafeArea = 12;
       obj2.isUserProfileEditingRefresh = true;
-      obj.children = closure_1_8(UserProfileEditBannerButtonDefault, obj2);
-      return closure_1_8(useAnalyticsLocations.AnalyticsLocationProvider, obj);
+      obj.children = React6(UserProfileEditBannerButtonDefault, obj2);
+      return React6(useAnalyticsLocations.AnalyticsLocationProvider, obj);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -135,7 +136,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserProfileTryItOutEditForm(arg0) {
-      const cResult = c.c(106);
+      const cResult = c.c(107);
       ({ currentUser, initialTarget } = arg0);
       const tmp5 = UserProfileSharedStylesDefault();
       const tmp6 = UserProfileEditFormSharedStylesDefault();
@@ -194,6 +195,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const userProfileColors = useUserProfileColors.useUserProfileColors(tmp23);
                 ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground, avatarBackground } =
                   userProfileColors);
+                let num11 = 0;
+                if (null == customStatusActivity) {
+                  num11 = closure_8;
+                }
                 const sum = tmp8.bottom + floatingUpsellHeight.height;
                 const sum1 = sum + nativeDefault.space.PX_16;
                 if (cResult[13] !== avatarBackground) {
@@ -229,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[20] !== tmp6.bounceOffset) {
                     const obj6 = { style: tmp6.bounceOffset };
-                    const tmp33 = closure_1_8(timestampProducer, obj6);
+                    const tmp33 = React6(timestampProducer, obj6);
                     cResult[20] = tmp6.bounceOffset;
                     cResult[21] = tmp33;
                     let tmp30 = tmp33;
@@ -265,373 +270,385 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     if (cResult[39] === tmp40) {
                                       let tmp43 = cResult[40];
                                     }
-                                    if (cResult[41] !== sum1) {
-                                      const obj8 = { paddingTop: 0, paddingBottom: sum1 };
-                                      cResult[41] = sum1;
-                                      cResult[42] = obj8;
-                                      let tmp47 = obj8;
-                                    } else {
-                                      tmp47 = cResult[42];
-                                    }
-                                    if (cResult[43] === tmp5.profileContent) {
-                                      if (cResult[44] === tmp5.profileContentWrapper) {
-                                        if (cResult[45] === tmp47) {
-                                          let tmp48 = cResult[46];
-                                        }
-                                        if (cResult[47] === customStatusActivity) {
-                                          if (cResult[48] === tmp22) {
-                                            if (cResult[49] === tmp5.customStatusBubble) {
-                                              if (cResult[50] === tmp5.emojiOnlyCustomStatusBubble) {
-                                                let tmp49 = cResult[51];
-                                              }
-                                              if (cResult[52] === tmp19) {
-                                                if (cResult[53] === containerBackground) {
-                                                  if (cResult[54] === str2) {
-                                                    if (cResult[55] === str3) {
-                                                      if (cResult[56] === currentUser) {
-                                                        if (cResult[57] === tryItOutDisplayNameStyles) {
-                                                          let tmp52 = cResult[58];
-                                                        }
-                                                        if (cResult[59] !== containerBackground) {
-                                                          const obj9 = { backgroundColor: containerBackground };
-                                                          cResult[59] = containerBackground;
-                                                          cResult[60] = obj9;
-                                                          let tmp55 = obj9;
-                                                        } else {
-                                                          tmp55 = cResult[60];
-                                                        }
-                                                        if (cResult[61] === tmp6.formContainer) {
-                                                          if (cResult[62] === tmp55) {
-                                                            let tmp56 = cResult[63];
+                                    if (cResult[41] === sum1) {
+                                      if (cResult[42] === num11) {
+                                        let tmp47 = cResult[43];
+                                      }
+                                      if (cResult[44] === tmp5.profileContent) {
+                                        if (cResult[45] === tmp5.profileContentWrapper) {
+                                          if (cResult[46] === tmp47) {
+                                            let tmp48 = cResult[47];
+                                          }
+                                          if (cResult[48] === customStatusActivity) {
+                                            if (cResult[49] === tmp22) {
+                                              if (cResult[50] === tmp5.customStatusBubble) {
+                                                if (cResult[51] === tmp5.emojiOnlyCustomStatusBubble) {
+                                                  let tmp49 = cResult[52];
+                                                }
+                                                if (cResult[53] === tmp19) {
+                                                  if (cResult[54] === containerBackground) {
+                                                    if (cResult[55] === str2) {
+                                                      if (cResult[56] === str3) {
+                                                        if (cResult[57] === currentUser) {
+                                                          if (cResult[58] === tryItOutDisplayNameStyles) {
+                                                            let tmp52 = cResult[59];
                                                           }
-                                                          if (cResult[64] === shuffleButtonLocation) {
-                                                            if (cResult[65] === tmp7) {
-                                                              let tmp57 = cResult[66];
+                                                          if (cResult[60] !== containerBackground) {
+                                                            const obj8 = { backgroundColor: containerBackground };
+                                                            cResult[60] = containerBackground;
+                                                            cResult[61] = obj8;
+                                                            let tmp55 = obj8;
+                                                          } else {
+                                                            tmp55 = cResult[61];
+                                                          }
+                                                          if (cResult[62] === tmp6.formContainer) {
+                                                            if (cResult[63] === tmp55) {
+                                                              let tmp56 = cResult[64];
                                                             }
-                                                            if (cResult[67] === currentUser) {
-                                                              if (cResult[68] === initialTarget) {
-                                                                let tmp60 = cResult[69];
+                                                            if (cResult[65] === shuffleButtonLocation) {
+                                                              if (cResult[66] === tmp7) {
+                                                                let tmp57 = cResult[67];
                                                               }
-                                                              if (cResult[70] === tmp56) {
-                                                                if (cResult[71] === tmp57) {
-                                                                  if (cResult[72] === tmp60) {
-                                                                    let tmp63 = cResult[73];
-                                                                  }
-                                                                  if (cResult[74] === gradientFallbackBackground) {
-                                                                    if (cResult[75] === primaryColor) {
-                                                                      if (cResult[76] === secondaryColor) {
-                                                                        if (cResult[77] === tmp48) {
-                                                                          if (cResult[78] === tmp49) {
-                                                                            if (cResult[79] === tmp52) {
-                                                                              if (cResult[80] === tmp63) {
-                                                                                let tmp67 = cResult[81];
-                                                                              }
-                                                                              if (cResult[82] === tmp43) {
-                                                                                if (cResult[83] === tmp67) {
-                                                                                  let tmp70 = cResult[84];
+                                                              if (cResult[68] === currentUser) {
+                                                                if (cResult[69] === initialTarget) {
+                                                                  let tmp60 = cResult[70];
+                                                                }
+                                                                if (cResult[71] === tmp56) {
+                                                                  if (cResult[72] === tmp57) {
+                                                                    if (cResult[73] === tmp60) {
+                                                                      let tmp63 = cResult[74];
+                                                                    }
+                                                                    if (cResult[75] === gradientFallbackBackground) {
+                                                                      if (cResult[76] === primaryColor) {
+                                                                        if (cResult[77] === secondaryColor) {
+                                                                          if (cResult[78] === tmp48) {
+                                                                            if (cResult[79] === tmp49) {
+                                                                              if (cResult[80] === tmp52) {
+                                                                                if (cResult[81] === tmp63) {
+                                                                                  let tmp67 = cResult[82];
                                                                                 }
-                                                                                if (
-                                                                                  cResult[85] ===
-                                                                                  gradientFallbackBackground
-                                                                                ) {
-                                                                                  if (cResult[86] === primaryColor) {
-                                                                                    if (
-                                                                                      cResult[87] === secondaryColor
-                                                                                    ) {
-                                                                                      if (cResult[88] === tmp34) {
-                                                                                        if (cResult[89] === tmp35) {
-                                                                                          if (cResult[90] === tmp70) {
-                                                                                            let tmp74 = cResult[91];
-                                                                                          }
-                                                                                          if (cResult[92] === tmp74) {
-                                                                                            if (cResult[93] === tmp30) {
-                                                                                              let tmp77 = cResult[94];
+                                                                                if (cResult[83] === tmp43) {
+                                                                                  if (cResult[84] === tmp67) {
+                                                                                    let tmp70 = cResult[85];
+                                                                                  }
+                                                                                  if (
+                                                                                    cResult[86] ===
+                                                                                    gradientFallbackBackground
+                                                                                  ) {
+                                                                                    if (cResult[87] === primaryColor) {
+                                                                                      if (
+                                                                                        cResult[88] === secondaryColor
+                                                                                      ) {
+                                                                                        if (cResult[89] === tmp34) {
+                                                                                          if (cResult[90] === tmp35) {
+                                                                                            if (cResult[91] === tmp70) {
+                                                                                              let tmp74 = cResult[92];
                                                                                             }
-                                                                                            if (
-                                                                                              cResult[95] !== onLayout
-                                                                                            ) {
-                                                                                              const obj10 = {
-                                                                                                children: null,
-                                                                                              };
-                                                                                              const obj11 = {
-                                                                                                onLayout,
-                                                                                              };
-                                                                                              obj10.children =
-                                                                                                closure_1_8(
-                                                                                                  UserProfileTryItOutGetPremiumUpsellDefault,
-                                                                                                  obj11,
-                                                                                                );
-                                                                                              const tmp83 = closure_1_8(
-                                                                                                ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme,
-                                                                                                obj10,
-                                                                                              );
-                                                                                              cResult[95] = onLayout;
-                                                                                              cResult[96] = tmp83;
-                                                                                              let tmp81 = tmp83;
-                                                                                            } else {
-                                                                                              tmp81 = cResult[96];
-                                                                                            }
-                                                                                            if (cResult[97] === tmp77) {
+                                                                                            if (cResult[93] === tmp74) {
                                                                                               if (
-                                                                                                cResult[98] === tmp81
+                                                                                                cResult[94] === tmp30
+                                                                                              ) {
+                                                                                                let tmp77 = cResult[95];
+                                                                                              }
+                                                                                              if (
+                                                                                                cResult[96] !== onLayout
+                                                                                              ) {
+                                                                                                const obj9 = {
+                                                                                                  children: null,
+                                                                                                };
+                                                                                                const obj10 = {
+                                                                                                  onLayout,
+                                                                                                };
+                                                                                                obj9.children = React6(
+                                                                                                  UserProfileTryItOutGetPremiumUpsellDefault,
+                                                                                                  obj10,
+                                                                                                );
+                                                                                                const tmp83 = React6(
+                                                                                                  ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme,
+                                                                                                  obj9,
+                                                                                                );
+                                                                                                cResult[96] = onLayout;
+                                                                                                cResult[97] = tmp83;
+                                                                                                let tmp81 = tmp83;
+                                                                                              } else {
+                                                                                                tmp81 = cResult[97];
+                                                                                              }
+                                                                                              if (
+                                                                                                cResult[98] === tmp77
                                                                                               ) {
                                                                                                 if (
-                                                                                                  cResult[99] === tmp29
-                                                                                                ) {
-                                                                                                  let tmp84 =
-                                                                                                    cResult[100];
-                                                                                                }
-                                                                                                if (
-                                                                                                  cResult[101] ===
-                                                                                                  primaryColor
+                                                                                                  cResult[99] === tmp81
                                                                                                 ) {
                                                                                                   if (
+                                                                                                    cResult[100] ===
+                                                                                                    tmp29
+                                                                                                  ) {
+                                                                                                    let tmp84 =
+                                                                                                      cResult[101];
+                                                                                                  }
+                                                                                                  if (
                                                                                                     cResult[102] ===
-                                                                                                    secondaryColor
+                                                                                                    primaryColor
                                                                                                   ) {
                                                                                                     if (
                                                                                                       cResult[103] ===
-                                                                                                      tmp84
+                                                                                                      secondaryColor
                                                                                                     ) {
                                                                                                       if (
                                                                                                         cResult[104] ===
-                                                                                                        theme
+                                                                                                        tmp84
                                                                                                       ) {
-                                                                                                        let tmp88 =
-                                                                                                          cResult[105];
+                                                                                                        if (
+                                                                                                          cResult[105] ===
+                                                                                                          theme
+                                                                                                        ) {
+                                                                                                          let tmp88 =
+                                                                                                            cResult[106];
+                                                                                                        }
+                                                                                                        return tmp88;
                                                                                                       }
-                                                                                                      return tmp88;
                                                                                                     }
                                                                                                   }
-                                                                                                }
-                                                                                                const obj12 = {
-                                                                                                  theme,
-                                                                                                  primaryColor,
-                                                                                                  secondaryColor,
-                                                                                                  children: tmp84,
-                                                                                                };
-                                                                                                const tmp90 =
-                                                                                                  closure_1_8(
+                                                                                                  const obj11 = {
+                                                                                                    theme,
+                                                                                                    primaryColor,
+                                                                                                    secondaryColor,
+                                                                                                    children: tmp84,
+                                                                                                  };
+                                                                                                  const tmp90 = React6(
                                                                                                     native.ThemeContextProvider,
-                                                                                                    obj12,
+                                                                                                    obj11,
                                                                                                   );
-                                                                                                cResult[101] =
-                                                                                                  primaryColor;
-                                                                                                cResult[102] =
-                                                                                                  secondaryColor;
-                                                                                                cResult[103] = tmp84;
-                                                                                                cResult[104] = theme;
-                                                                                                cResult[105] = tmp90;
-                                                                                                tmp88 = tmp90;
+                                                                                                  cResult[102] =
+                                                                                                    primaryColor;
+                                                                                                  cResult[103] =
+                                                                                                    secondaryColor;
+                                                                                                  cResult[104] = tmp84;
+                                                                                                  cResult[105] = theme;
+                                                                                                  cResult[106] = tmp90;
+                                                                                                  tmp88 = tmp90;
+                                                                                                }
                                                                                               }
+                                                                                              const obj12 = {
+                                                                                                style: tmp29,
+                                                                                                children: null,
+                                                                                              };
+                                                                                              const items1 = [
+                                                                                                tmp77,
+                                                                                                tmp81,
+                                                                                              ];
+                                                                                              obj12.children = items1;
+                                                                                              const tmp87 = collapsed(
+                                                                                                timestampProducer,
+                                                                                                obj12,
+                                                                                              );
+                                                                                              cResult[98] = tmp77;
+                                                                                              cResult[99] = tmp81;
+                                                                                              cResult[100] = tmp29;
+                                                                                              cResult[101] = tmp87;
+                                                                                              tmp84 = tmp87;
                                                                                             }
                                                                                             const obj13 = {
-                                                                                              style: tmp29,
                                                                                               children: null,
                                                                                             };
-                                                                                            const items1 = [
-                                                                                              tmp77,
-                                                                                              tmp81,
+                                                                                            const items2 = [
+                                                                                              tmp30,
+                                                                                              tmp74,
                                                                                             ];
-                                                                                            obj13.children = items1;
-                                                                                            const tmp87 = React6(
-                                                                                              timestampProducer,
+                                                                                            obj13.children = items2;
+                                                                                            const tmp80 = collapsed(
+                                                                                              hasOwnProperty,
                                                                                               obj13,
                                                                                             );
-                                                                                            cResult[97] = tmp77;
-                                                                                            cResult[98] = tmp81;
-                                                                                            cResult[99] = tmp29;
-                                                                                            cResult[100] = tmp87;
-                                                                                            tmp84 = tmp87;
+                                                                                            cResult[93] = tmp74;
+                                                                                            cResult[94] = tmp30;
+                                                                                            cResult[95] = tmp80;
+                                                                                            tmp77 = tmp80;
                                                                                           }
-                                                                                          const obj14 = {
-                                                                                            children: null,
-                                                                                          };
-                                                                                          const items2 = [tmp30, tmp74];
-                                                                                          obj14.children = items2;
-                                                                                          const tmp80 = React6(
-                                                                                            hasOwnProperty,
-                                                                                            obj14,
-                                                                                          );
-                                                                                          cResult[92] = tmp74;
-                                                                                          cResult[93] = tmp30;
-                                                                                          cResult[94] = tmp80;
-                                                                                          tmp77 = tmp80;
                                                                                         }
                                                                                       }
                                                                                     }
                                                                                   }
+                                                                                  const obj14 = {
+                                                                                    fallbackBackground:
+                                                                                      gradientFallbackBackground,
+                                                                                    primaryColor,
+                                                                                    secondaryColor,
+                                                                                    containerStyle: tmp34,
+                                                                                    children: null,
+                                                                                  };
+                                                                                  const items3 = [tmp35, tmp70];
+                                                                                  obj14.children = items3;
+                                                                                  const tmp76 = collapsed(
+                                                                                    UserProfileGradientContainerDefault,
+                                                                                    obj14,
+                                                                                  );
+                                                                                  cResult[86] =
+                                                                                    gradientFallbackBackground;
+                                                                                  cResult[87] = primaryColor;
+                                                                                  cResult[88] = secondaryColor;
+                                                                                  cResult[89] = tmp34;
+                                                                                  cResult[90] = tmp35;
+                                                                                  cResult[91] = tmp70;
+                                                                                  cResult[92] = tmp76;
+                                                                                  tmp74 = tmp76;
                                                                                 }
-                                                                                const obj15 = {
-                                                                                  fallbackBackground:
-                                                                                    gradientFallbackBackground,
-                                                                                  primaryColor,
-                                                                                  secondaryColor,
-                                                                                  containerStyle: tmp34,
-                                                                                  children: null,
-                                                                                };
-                                                                                const items3 = [tmp35, tmp70];
-                                                                                obj15.children = items3;
-                                                                                const tmp76 = React6(
-                                                                                  UserProfileGradientContainerDefault,
+                                                                                const obj15 = { children: null };
+                                                                                const items4 = [tmp43, tmp67];
+                                                                                obj15.children = items4;
+                                                                                const tmp73 = collapsed(
+                                                                                  timestampProducer,
                                                                                   obj15,
                                                                                 );
-                                                                                cResult[85] =
-                                                                                  gradientFallbackBackground;
-                                                                                cResult[86] = primaryColor;
-                                                                                cResult[87] = secondaryColor;
-                                                                                cResult[88] = tmp34;
-                                                                                cResult[89] = tmp35;
-                                                                                cResult[90] = tmp70;
-                                                                                cResult[91] = tmp76;
-                                                                                tmp74 = tmp76;
+                                                                                cResult[83] = tmp43;
+                                                                                cResult[84] = tmp67;
+                                                                                cResult[85] = tmp73;
+                                                                                tmp70 = tmp73;
                                                                               }
-                                                                              const obj16 = { children: null };
-                                                                              const items4 = [tmp43, tmp67];
-                                                                              obj16.children = items4;
-                                                                              const tmp73 = React6(
-                                                                                timestampProducer,
-                                                                                obj16,
-                                                                              );
-                                                                              cResult[82] = tmp43;
-                                                                              cResult[83] = tmp67;
-                                                                              cResult[84] = tmp73;
-                                                                              tmp70 = tmp73;
                                                                             }
                                                                           }
                                                                         }
                                                                       }
                                                                     }
+                                                                    const obj16 = {
+                                                                      fallbackBackground: gradientFallbackBackground,
+                                                                      primaryColor,
+                                                                      secondaryColor,
+                                                                      containerStyle: tmp48,
+                                                                      children: null,
+                                                                    };
+                                                                    const items5 = [tmp49, tmp52, tmp63];
+                                                                    obj16.children = items5;
+                                                                    const tmp69 = collapsed(
+                                                                      UserProfileGradientContainerDefault,
+                                                                      obj16,
+                                                                    );
+                                                                    cResult[75] = gradientFallbackBackground;
+                                                                    cResult[76] = primaryColor;
+                                                                    cResult[77] = secondaryColor;
+                                                                    cResult[78] = tmp48;
+                                                                    cResult[79] = tmp49;
+                                                                    cResult[80] = tmp52;
+                                                                    cResult[81] = tmp63;
+                                                                    cResult[82] = tmp69;
+                                                                    tmp67 = tmp69;
                                                                   }
-                                                                  const obj17 = {
-                                                                    fallbackBackground: gradientFallbackBackground,
-                                                                    primaryColor,
-                                                                    secondaryColor,
-                                                                    containerStyle: tmp48,
-                                                                    children: null,
-                                                                  };
-                                                                  const items5 = [tmp49, tmp52, tmp63];
-                                                                  obj17.children = items5;
-                                                                  const tmp69 = React6(
-                                                                    UserProfileGradientContainerDefault,
-                                                                    obj17,
-                                                                  );
-                                                                  cResult[74] = gradientFallbackBackground;
-                                                                  cResult[75] = primaryColor;
-                                                                  cResult[76] = secondaryColor;
-                                                                  cResult[77] = tmp48;
-                                                                  cResult[78] = tmp49;
-                                                                  cResult[79] = tmp52;
-                                                                  cResult[80] = tmp63;
-                                                                  cResult[81] = tmp69;
-                                                                  tmp67 = tmp69;
                                                                 }
+                                                                const obj17 = { style: tmp56, children: null };
+                                                                const items6 = [tmp57, tmp60];
+                                                                obj17.children = items6;
+                                                                const tmp66 = collapsed(timestampProducer, obj17);
+                                                                cResult[71] = tmp56;
+                                                                cResult[72] = tmp57;
+                                                                cResult[73] = tmp60;
+                                                                cResult[74] = tmp66;
+                                                                tmp63 = tmp66;
                                                               }
-                                                              const obj18 = { style: tmp56, children: null };
-                                                              const items6 = [tmp57, tmp60];
-                                                              obj18.children = items6;
-                                                              const tmp66 = React6(timestampProducer, obj18);
-                                                              cResult[70] = tmp56;
-                                                              cResult[71] = tmp57;
-                                                              cResult[72] = tmp60;
-                                                              cResult[73] = tmp66;
-                                                              tmp63 = tmp66;
+                                                              const obj18 = {
+                                                                currentUser,
+                                                                mode: "edit",
+                                                                initialTarget,
+                                                              };
+                                                              const tmp62 = React6(
+                                                                UserProfileTryItOutFieldsDefault,
+                                                                obj18,
+                                                              );
+                                                              cResult[68] = currentUser;
+                                                              cResult[69] = initialTarget;
+                                                              cResult[70] = tmp62;
+                                                              tmp60 = tmp62;
                                                             }
-                                                            const obj20 = { currentUser, mode: "edit", initialTarget };
-                                                            const tmp62 = closure_1_8(
-                                                              UserProfileTryItOutFieldsDefault,
-                                                              obj20,
-                                                            );
-                                                            cResult[67] = currentUser;
-                                                            cResult[68] = initialTarget;
-                                                            cResult[69] = tmp62;
-                                                            tmp60 = tmp62;
+                                                            let tmp58 = "inline" === shuffleButtonLocation;
+                                                            if (tmp58) {
+                                                              const obj20 = {
+                                                                icon: null,
+                                                                text: null,
+                                                                variant: "secondary",
+                                                                onPress: null,
+                                                              };
+                                                              const obj21 = {
+                                                                size: "sm",
+                                                                color:
+                                                                  nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
+                                                              };
+                                                              obj20.icon = React6(DiceIcon.DiceIcon, obj21);
+                                                              const intl = util.intl;
+                                                              obj20.text = intl.string(util.t.VzqqFC);
+                                                              obj20.onPress = tmp7;
+                                                              tmp58 = React6(components_Button_Button.Button, obj20);
+                                                            }
+                                                            cResult[65] = shuffleButtonLocation;
+                                                            cResult[66] = tmp7;
+                                                            cResult[67] = tmp58;
+                                                            tmp57 = tmp58;
                                                           }
-                                                          let tmp58 = "inline" === shuffleButtonLocation;
-                                                          if (tmp58) {
-                                                            const obj21 = {
-                                                              icon: null,
-                                                              text: null,
-                                                              variant: "secondary",
-                                                              onPress: null,
-                                                            };
-                                                            const obj22 = {
-                                                              size: "sm",
-                                                              color:
-                                                                nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
-                                                            };
-                                                            obj21.icon = closure_1_8(DiceIcon.DiceIcon, obj22);
-                                                            const intl = util.intl;
-                                                            obj21.text = intl.string(util.t.VzqqFC);
-                                                            obj21.onPress = tmp7;
-                                                            tmp58 = closure_1_8(components_Button_Button.Button, obj21);
-                                                          }
-                                                          cResult[64] = shuffleButtonLocation;
-                                                          cResult[65] = tmp7;
-                                                          cResult[66] = tmp58;
-                                                          tmp57 = tmp58;
+                                                          const items7 = [tmp6.formContainer, tmp55];
+                                                          cResult[62] = tmp6.formContainer;
+                                                          cResult[63] = tmp55;
+                                                          cResult[64] = items7;
+                                                          tmp56 = items7;
                                                         }
-                                                        const items7 = [tmp6.formContainer, tmp55];
-                                                        cResult[61] = tmp6.formContainer;
-                                                        cResult[62] = tmp55;
-                                                        cResult[63] = items7;
-                                                        tmp56 = items7;
                                                       }
                                                     }
                                                   }
                                                 }
+                                                const obj22 = {
+                                                  user: currentUser,
+                                                  displayName: str2,
+                                                  pronouns: str3,
+                                                  badges: tmp19,
+                                                  badgeContainerBackground: containerBackground,
+                                                  displayNameAccessibilityRole: "header",
+                                                  pendingDisplayNameStyles: tryItOutDisplayNameStyles,
+                                                };
+                                                const tmp54 = React6(UserProfilePrimaryInfoDefault, obj22);
+                                                cResult[53] = tmp19;
+                                                cResult[54] = containerBackground;
+                                                cResult[55] = str2;
+                                                cResult[56] = str3;
+                                                cResult[57] = currentUser;
+                                                cResult[58] = tryItOutDisplayNameStyles;
+                                                cResult[59] = tmp54;
+                                                tmp52 = tmp54;
                                               }
-                                              const obj23 = {
-                                                user: currentUser,
-                                                displayName: str2,
-                                                pronouns: str3,
-                                                badges: tmp19,
-                                                badgeContainerBackground: containerBackground,
-                                                displayNameAccessibilityRole: "header",
-                                                pendingDisplayNameStyles: tryItOutDisplayNameStyles,
-                                              };
-                                              const tmp54 = closure_1_8(UserProfilePrimaryInfoDefault, obj23);
-                                              cResult[52] = tmp19;
-                                              cResult[53] = containerBackground;
-                                              cResult[54] = str2;
-                                              cResult[55] = str3;
-                                              cResult[56] = currentUser;
-                                              cResult[57] = tryItOutDisplayNameStyles;
-                                              cResult[58] = tmp54;
-                                              tmp52 = tmp54;
                                             }
                                           }
+                                          const obj23 = {
+                                            customStatusActivity,
+                                            hasCustomProfileTheme: tmp22,
+                                            style: null,
+                                            emojiOnlyStyle: null,
+                                          };
+                                          ({
+                                            customStatusBubble: obj19.style,
+                                            emojiOnlyCustomStatusBubble: obj19.emojiOnlyStyle,
+                                          } = tmp5);
+                                          const tmp51 = React6(UserProfileCustomStatusBubbleDefault, obj23);
+                                          cResult[48] = customStatusActivity;
+                                          cResult[49] = tmp22;
+                                          cResult[50] = tmp5.customStatusBubble;
+                                          cResult[51] = tmp5.emojiOnlyCustomStatusBubble;
+                                          cResult[52] = tmp51;
+                                          tmp49 = tmp51;
                                         }
-                                        const obj24 = {
-                                          customStatusActivity,
-                                          hasCustomProfileTheme: tmp22,
-                                          style: null,
-                                          emojiOnlyStyle: null,
-                                        };
-                                        ({
-                                          customStatusBubble: obj19.style,
-                                          emojiOnlyCustomStatusBubble: obj19.emojiOnlyStyle,
-                                        } = tmp5);
-                                        const tmp51 = closure_1_8(UserProfileCustomStatusBubbleDefault, obj24);
-                                        cResult[47] = customStatusActivity;
-                                        cResult[48] = tmp22;
-                                        cResult[49] = tmp5.customStatusBubble;
-                                        cResult[50] = tmp5.emojiOnlyCustomStatusBubble;
-                                        cResult[51] = tmp51;
-                                        tmp49 = tmp51;
                                       }
+                                      const items8 = [, ,];
+                                      ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp5);
+                                      items8[2] = tmp47;
+                                      cResult[44] = tmp5.profileContent;
+                                      cResult[45] = tmp5.profileContentWrapper;
+                                      cResult[46] = tmp47;
+                                      cResult[47] = items8;
+                                      tmp48 = items8;
                                     }
-                                    const items8 = [, ,];
-                                    ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp5);
-                                    items8[2] = tmp47;
-                                    cResult[43] = tmp5.profileContent;
-                                    cResult[44] = tmp5.profileContentWrapper;
-                                    cResult[45] = tmp47;
-                                    cResult[46] = items8;
-                                    tmp48 = items8;
+                                    const obj24 = { paddingTop: num11, paddingBottom: sum1 };
+                                    cResult[41] = sum1;
+                                    cResult[42] = num11;
+                                    cResult[43] = obj24;
+                                    tmp47 = obj24;
                                   }
                                   const obj25 = { style: tmp39, children: tmp40 };
-                                  const tmp46 = closure_1_8(timestampProducer, obj25);
+                                  const tmp46 = React6(timestampProducer, obj25);
                                   cResult[38] = tmp39;
                                   cResult[39] = tmp40;
                                   cResult[40] = tmp46;
@@ -644,7 +661,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   isTryItOut: true,
                                   isUserProfileEditingRefresh: true,
                                 };
-                                const tmp42 = closure_1_8(EditUserProfileAvatarDefault, obj26);
+                                const tmp42 = React6(EditUserProfileAvatarDefault, obj26);
                                 cResult[35] = tmp27;
                                 cResult[36] = currentUser;
                                 cResult[37] = tmp42;
@@ -673,7 +690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     pendingBanner: tryItOutBanner,
                     pendingThemeColors: tryItOutThemeColors,
                   };
-                  const tmp38 = closure_1_8(closure_10, obj27);
+                  const tmp38 = React6(closure_11, obj27);
                   cResult[24] = currentUser;
                   cResult[25] = tmp4ResultResult;
                   cResult[26] = tmp17;
@@ -764,10 +781,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         isPreview: true,
       });
       const userProfileColors = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor });
-      ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground, avatarBackground } =
-        userProfileColors);
+      ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground } = userProfileColors);
+      let num = 0;
+      if (null == customStatusActivity) {
+        num = closure_8;
+      }
       const sum = tmp7.bottom + height;
-      const obj5 = { backgroundColor: avatarBackground };
+      const obj5 = { backgroundColor: userProfileColors.avatarBackground };
       let str2 = currentUser.globalName;
       const sum1 = sum + nativeDefault.space.PX_16;
       if (str2 == null) {
@@ -784,7 +804,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: null, children: null };
       const items1 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
       obj7.style = items1;
-      const items2 = [closure_1_8(timestampProducer, { style: tmp4.bounceOffset })];
+      const items2 = [React6(timestampProducer, { style: tmp4.bounceOffset })];
       const obj9 = {
         fallbackBackground: gradientFallbackBackground,
         primaryColor,
@@ -795,7 +815,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: tmp4.bounceOffset };
       const tmp5Result4 = useUserProfileColors;
       const items3 = [
-        closure_1_8(closure_10, {
+        React6(closure_11, {
           user: currentUser,
           displayProfile: tmp10Result,
           pendingAvatarSrc,
@@ -805,7 +825,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj10 = {
         style: null,
-        children: closure_1_8(EditUserProfileAvatarDefault, {
+        children: React6(EditUserProfileAvatarDefault, {
           user: currentUser,
           disableStatus: true,
           statusStyle: obj5,
@@ -818,7 +838,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items4[2] = tmp4.avatarContainer;
       items4[3] = obj5;
       obj10.style = items4;
-      const items5 = [closure_1_8(timestampProducer, obj10)];
+      const items5 = [React6(timestampProducer, obj10)];
       const obj11 = {
         fallbackBackground: gradientFallbackBackground,
         primaryColor,
@@ -828,17 +848,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const items6 = [, ,];
       ({ profileContentWrapper: arr7[0], profileContent: arr7[1] } = tmp3);
-      items6[2] = { paddingTop: 0, paddingBottom: sum1 };
+      items6[2] = { paddingTop: num, paddingBottom: sum1 };
       obj11.containerStyle = items6;
       const tmpResult = UserProfileGradientContainerDefault;
       const items7 = [
-        closure_1_8(UserProfileCustomStatusBubbleDefault, {
+        React6(UserProfileCustomStatusBubbleDefault, {
           customStatusActivity,
           hasCustomProfileTheme: null != primaryColor,
           style: tmp3.customStatusBubble,
           emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble,
         }),
-        closure_1_8(UserProfilePrimaryInfoDefault, {
+        React6(UserProfilePrimaryInfoDefault, {
           user: currentUser,
           displayName: str2,
           pronouns: str3,
@@ -856,32 +876,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp19Result) {
         const obj14 = { icon: null, text: null, variant: "secondary", onPress: null };
         const obj15 = { size: "sm", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-        obj14.icon = closure_1_8(DiceIcon.DiceIcon, obj15);
+        obj14.icon = React6(DiceIcon.DiceIcon, obj15);
         const intl = util.intl;
         obj14.text = intl.string(util.t.VzqqFC);
         obj14.onPress = tmp6;
-        tmp19Result = closure_1_8(components_Button_Button.Button, obj14);
+        tmp19Result = React6(components_Button_Button.Button, obj14);
       }
       const obj16 = { children: null };
       const obj17 = { children: null };
       const items9 = [
         tmp19Result,
-        closure_1_8(UserProfileTryItOutFieldsDefault, {
+        React6(UserProfileTryItOutFieldsDefault, {
           currentUser,
           mode: "edit",
           initialTarget: initialTarget.initialTarget,
         }),
       ];
       obj13.children = items9;
-      items7[2] = React6(timestampProducer, obj13);
+      items7[2] = collapsed(timestampProducer, obj13);
       obj11.children = items7;
-      items5[1] = React6(UserProfileGradientContainerDefault, obj11);
+      items5[1] = collapsed(UserProfileGradientContainerDefault, obj11);
       obj17.children = items5;
-      items3[1] = React6(timestampProducer, obj17);
+      items3[1] = collapsed(timestampProducer, obj17);
       obj9.children = items3;
-      items2[1] = React6(tmpResult, obj9);
+      items2[1] = collapsed(tmpResult, obj9);
       obj16.children = items2;
-      const items10 = [React6(hasOwnProperty, obj16)];
+      const items10 = [collapsed(hasOwnProperty, obj16)];
       const obj12 = {
         customStatusActivity,
         hasCustomProfileTheme: null != primaryColor,
@@ -889,10 +909,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble,
       };
       const tmpResult2 = UserProfileGradientContainerDefault;
-      items10[1] = closure_1_8(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, {
-        children: closure_1_8(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }),
+      items10[1] = React6(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, {
+        children: React6(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }),
       });
       obj7.children = items10;
-      obj6.children = React6(timestampProducer, obj7);
-      return closure_1_8(native.ThemeContextProvider, obj6);
+      obj6.children = collapsed(timestampProducer, obj7);
+      return React6(native.ThemeContextProvider, obj6);
     };

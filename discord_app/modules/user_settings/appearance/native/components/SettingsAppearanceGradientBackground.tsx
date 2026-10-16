@@ -17,7 +17,7 @@ if (num == null) {
   num = 0;
 }
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5453).LinearGradientNativeComponent);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5454).LinearGradientNativeComponent);
 let animatedLinearGradientLoadingProps = {
   colors: null,
   locations: [],

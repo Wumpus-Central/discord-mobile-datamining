@@ -11,9 +11,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = tmp14(4909);
 require = fn;
-let closure_4 = fn(9620).useChatInputContainerHeight;
+let closure_4 = fn(9619).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { placeholder: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

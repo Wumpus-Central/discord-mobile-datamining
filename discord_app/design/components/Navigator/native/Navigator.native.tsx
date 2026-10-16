@@ -6,9 +6,9 @@ import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.t
 import Link from "../../../../../_runtime/01506_Link.js";
 import BackPressTracking from "../../../../modules/routing/native/BackPressTracking.android.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod6432 from "../../../../../_runtime/metro/06432__.js";
+import _mod6434 from "../../../../../_runtime/metro/06434__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/06912_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/06914_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -21,7 +21,7 @@ let closure_4 = ["useContainer", "containerStyle"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -1026,7 +1026,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           onStateChange: tmp8,
           children: tmp20,
         });
-        obj2.children = jsx(tmp(6432).HeaderBackContext.Provider, { value: "Array", children: 0 });
+        obj2.children = jsx(tmp(6434).HeaderBackContext.Provider, { value: "Array", children: 0 });
         const tmp25 = jsx(tmp(1506).NavigationIndependentTree, { children: null });
         cResult[14] = navigationContainerRef;
         cResult[15] = tmp8;
@@ -1109,7 +1109,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         onStateChange: null,
         children: null,
       });
-      obj5.children = jsx(_mod6432.HeaderBackContext.Provider, { value: "Array", children: 0 });
+      obj5.children = jsx(_mod6434.HeaderBackContext.Provider, { value: "Array", children: 0 });
       return jsx(Link.NavigationIndependentTree, { children: null });
     };
 ReactCompilerGating = fn(558);

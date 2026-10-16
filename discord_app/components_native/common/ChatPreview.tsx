@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7967);
+const RowGeneratorConstants = fn(7968);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Set",
           shouldInitialScroll: "Array",
-          animated: "2026-09-invite-accept-age-group-errors",
-          scrollPosition: "user",
-          focusTargetId: null,
+          animated: 0,
+          scrollPosition: 0,
+          focusTargetId: 14,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,11 +319,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9574).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9573).setSelectedConversation(closure_1_0, roleStyle, {
+            cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9574);
-          applyArgumentsResult(5164).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9573);
+          applyArgumentsResult(5165).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -356,14 +357,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5164).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5164);
+            applyArgumentsResult(5165).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5165);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 267.310546875,
-        selectedChannelId: null,
-        tapLinkData: "\u{1F9D3}\u{1F3FC}",
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -698,9 +699,9 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = channelId(504).useStateFromStores(tmp11, C);
       const width = useWindowDimensionsDefault().width;
       const tmpResult5 = channelId(504);
-      const isChannelSpoilerGated = channelId(6162).useIsChannelSpoilerGated(stateFromStores1);
-      const tmpResult6 = channelId(6162);
-      const isChannelContentGated = channelId(6142).useIsChannelContentGated(stateFromStores1);
+      const isChannelSpoilerGated = channelId(6163).useIsChannelSpoilerGated(stateFromStores1);
+      const tmpResult6 = channelId(6163);
+      const isChannelContentGated = channelId(6143).useIsChannelContentGated(stateFromStores1);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor() {
@@ -723,7 +724,7 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp18 = cResult[6];
       }
-      const tmpResult7 = channelId(6142);
+      const tmpResult7 = channelId(6143);
       const stateFromStores2 = channelId(504).useStateFromStores(tmp17, tmp18);
       if (!isChannelSpoilerGated) {
         class C {
@@ -780,10 +781,10 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelStore];
       const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
       const obj2 = channelId(504);
-      const isChannelSpoilerGated = channelId(6162).useIsChannelSpoilerGated(stateFromStores1);
-      const obj3 = channelId(6162);
-      const isChannelContentGated = channelId(6142).useIsChannelContentGated(stateFromStores1);
-      const obj4 = channelId(6142);
+      const isChannelSpoilerGated = channelId(6163).useIsChannelSpoilerGated(stateFromStores1);
+      const obj3 = channelId(6163);
+      const isChannelContentGated = channelId(6143).useIsChannelContentGated(stateFromStores1);
+      const obj4 = channelId(6143);
       const items2 = [ActionSheetStore];
       const obj6 = {};
       const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

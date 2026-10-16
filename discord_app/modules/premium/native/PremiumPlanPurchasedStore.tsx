@@ -97,7 +97,7 @@ export const reset = function reset() {
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
       onPaymentSuccess: "unicodeVersion",
-      onPaymentDismiss: "shapes",
+      onPaymentDismiss: "alignItems",
     });
   });
 };

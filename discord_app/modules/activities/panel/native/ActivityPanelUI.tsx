@@ -10,9 +10,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 18076;
+    let tmp4 = 18086;
   } else {
-    tmp4 = 18082;
+    tmp4 = 18092;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -24,7 +24,7 @@ function wrapChildren(items3) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(6291).ActivityPanelModes;
+const ActivityPanelModes = fn(6287).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];
@@ -102,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items1;
-      return closure_8(mode(7069).LayerScope, obj);
+      return closure_8(mode(7071).LayerScope, obj);
     };
 let closure_15 = tmp4;
 ReactCompilerGating = fn(558);

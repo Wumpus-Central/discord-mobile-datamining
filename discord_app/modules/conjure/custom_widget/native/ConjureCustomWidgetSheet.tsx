@@ -7,14 +7,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10901);
+const ConjureConnectionStore = fn(10898);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = ConjureConnectionStore);
 const Routes = fn(1087).Routes;
 const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const ConjureCustomWidgetSheet = "ConjureCustomWidgetSheet";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function ConjureCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(7167).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(7169).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -151,7 +151,7 @@ export default function ConjureCustomWidgetSheet() {
   let obj2 = { title: null };
   let intl = value(1128).intl;
   obj2.title = intl.string(_modDef3865.yI85oV);
-  obj.header = closure_11(value(7062).BottomSheetTitleHeader, obj2);
+  obj.header = closure_11(value(7064).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   const obj4 = {
     label: null,
@@ -172,18 +172,18 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(14064).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(14074).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_11(value(6996).TextArea, obj4)];
+  const items1 = [closure_11(value(6998).TextArea, obj4)];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1128).intl;
   obj5.text = intl5.string(_modDef3865.MDZXiK);
   obj5.onPress = callback1;
   obj5.loading = tmp7;
   obj5.disabled = null == memo;
-  items1[1] = closure_11(value(5441).Button, obj5);
+  items1[1] = closure_11(value(5442).Button, obj5);
   obj3.children = items1;
   obj.children = closure_12(View, obj3);
-  return closure_11(value(7120).ActionSheet, obj);
+  return closure_11(value(7122).ActionSheet, obj);
 }
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "ConjureCustomWidgetSheet";

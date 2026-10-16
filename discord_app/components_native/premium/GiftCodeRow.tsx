@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1087).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   giftCodeRow: { paddingHorizontal: 16 },
   giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },

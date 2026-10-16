@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureFirstPublishSheet = "ConjureFirstPublishSheet";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -234,7 +234,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     dependencyMap = 1;
                     c3 = 1;
                     const obj7 = {
-                      value: tmp5(11614).saveConjureFirstPublishDetails(projectId, obj4, obj6),
+                      value: tmp5(11611).saveConjureFirstPublishDetails(projectId, obj4, obj6),
                       done: false,
                     };
                     return obj7;

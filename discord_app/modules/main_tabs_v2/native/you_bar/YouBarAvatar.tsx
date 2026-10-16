@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06557_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06559_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(16056);
+const YouBarConstants = fn(16070);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -32,7 +32,7 @@ const YouBarConstants = fn(16056);
 const StatusTypes = fn(1087).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -202,7 +202,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1_8.animateYouBarAvatarDeco;
                   }
                 }
-                rect.withSpring = tmp(5440).withSpring;
+                rect.withSpring = tmp(5441).withSpring;
                 rect.scale = sharedValue1;
                 rect.YOU_BAR_SPRING_CONFIG = YOU_BAR_SPRING_CONFIG;
                 rect.left = sharedValue2;
@@ -519,7 +519,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           status: null,
           statusSizeOverride: null,
           cutout: null,
-          statusStyle: 0,
+          statusStyle: "blond",
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;

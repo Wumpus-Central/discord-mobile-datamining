@@ -32,13 +32,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2963["2gFUEw"]);
   },
-  parent: fn(8213).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8214).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange,
 });

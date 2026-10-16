@@ -10,14 +10,14 @@ import DateUtils from "../../../../../utils/DateUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import useMessageAuthor from "../../../useMessageAuthor.tsx";
-import _modDef6514 from "../../../../../../_runtime/metro/06514__.js";
+import _modDef6516 from "../../../../../../_runtime/metro/06516__.js";
 import AutomodMessageUtils from "../../../../guild_automod/AutomodMessageUtils.tsx";
 import RowGeneratorStyleSheet from "../RowGeneratorStyleSheet.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../../../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx";
 import GuildAntiRaidUtils from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
-import _modDef8270 from "../../../../../../_runtime/metro/08270__.js";
+import _modDef8271 from "../../../../../../_runtime/metro/08271__.js";
 import getRoleIcon from "../getRoleIcon.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -94,7 +94,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL),
             );
             const tmpResult35 = RowGeneratorStyleSheet;
-            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6514)).uri;
+            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6516)).uri;
             const tmpResult36 = AvatarUtils;
             const internal4 = nativeDefault.internal;
             obj2.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
@@ -168,7 +168,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
                 internal.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE),
               );
               const tmpResult41 = RowGeneratorStyleSheet;
-              obj4.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef8270)).uri;
+              obj4.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef8271)).uri;
               const tmpResult42 = AvatarUtils;
               const internal2 = nativeDefault.internal;
               obj4.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
@@ -214,7 +214,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               internal7.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE),
             );
             const tmpResult44 = RowGeneratorStyleSheet;
-            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6514)).uri;
+            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6516)).uri;
             const tmpResult45 = AvatarUtils;
             const internal8 = nativeDefault.internal;
             obj5.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
@@ -280,7 +280,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = React4.resolveAssetSource;
       let internal6 = AvatarUtils;
       let intl9 = internal6.makeSource;
-      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8269 : 6514))).uri;
+      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8270 : 6516))).uri;
       const tmpResult47 = RowGeneratorStyleSheet;
       internal6 = nativeDefault.internal;
       obj8.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
@@ -423,7 +423,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj12.reasonDisplayText = formatToPlainStringResult1;
       const tmpResult56 = DateUtils;
       obj12.actionsIconURL = React4.resolveAssetSource(
-        AvatarUtils.makeSource(importDefault(result1 ? 8272 : 8273)),
+        AvatarUtils.makeSource(importDefault(result1 ? 8273 : 8274)),
       ).uri;
       const intl16 = util.intl;
       const string2 = intl16.string;

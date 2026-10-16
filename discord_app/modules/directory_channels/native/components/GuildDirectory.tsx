@@ -19,7 +19,7 @@ import GuildDirectoryRowDefault from "GuildDirectoryRow.tsx";
 import GuildDirectoryPlaceholderRowDefault from "GuildDirectoryPlaceholderRow.tsx";
 import HubProgressBarUtils from "../../../hub/HubProgressBarUtils.tsx";
 import GuildDirectoryRowGenerator from "../GuildDirectoryRowGenerator.tsx";
-import _mod13264 from "../../../../../_runtime/metro/13264__.js";
+import _mod13272 from "../../../../../_runtime/metro/13272__.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import GuildDirectoryCategorySelectorDefault from "GuildDirectoryCategorySelector.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -63,8 +63,8 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, SectionList: metroRequire, StyleSheet } = get_ActivityIndicator);
-const DirectoryEntryCategories = fn(12874).DirectoryEntryCategories;
-const GuildDirectoryConstants = fn(12879);
+const DirectoryEntryCategories = fn(12882).DirectoryEntryCategories;
+const GuildDirectoryConstants = fn(12887);
 const GUILD_DIRECTORY_BASE_HEADER_HEIGHT = GuildDirectoryConstants.GUILD_DIRECTORY_BASE_HEADER_HEIGHT;
 ({ GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT: closure_12, DirectoryChannelScrollBehavior: map1 } = GuildDirectoryConstants);
 const Constants = fn(1087);
@@ -77,7 +77,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let closure_21 = Array(20).fill(null);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   border: null,
   list: null,
@@ -186,7 +186,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod13264;
+        const tmpResult = _mod13272;
         cResult[2] = tmpResult;
         let tmp8 = tmpResult;
       } else {
@@ -347,7 +347,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const features = guild.features;
       const obj = { style: tmp.headerWrapper, children: null };
       const hasItem = features.has(constants2.HUB);
-      const obj2 = { source: _mod13264, style: tmp.backgroundImage };
+      const obj2 = { source: _mod13272, style: tmp.backgroundImage };
       const items = [collapsedCategories(FastImageDefault, obj2)];
       const obj3 = { style: tmp.textWrapper, children: null };
       const obj4 = {
@@ -421,7 +421,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol2 = Symbol;
               if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp11 = closure_18(PressableOpacity(10853).PlusMediumIcon, {});
+                const tmp11 = closure_18(PressableOpacity(10850).PlusMediumIcon, {});
                 cResult[5] = tmp11;
                 let tmp9 = tmp11;
               } else {
@@ -441,7 +441,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
                 const intl2 = PressableOpacity(1128).intl;
                 obj4.children = intl2.string(PressableOpacity(1128).t.H9jxS1);
-                const tmp18 = closure_18(PressableOpacity(5149).Text, obj4);
+                const tmp18 = closure_18(PressableOpacity(5150).Text, obj4);
                 cResult[8] = tmp18;
                 let tmp16 = tmp18;
               } else {
@@ -453,7 +453,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[12] === tmp8) {
                 }
-                PressableOpacity = PressableOpacity(6407).PressableOpacity;
+                PressableOpacity = PressableOpacity(6409).PressableOpacity;
                 const obj5 = { accessibilityRole: "button", accessibilityLabel: first, onPress: tmp8, children: tmp19 };
                 tmp = closure_18(PressableOpacity, obj5);
                 cResult[12] = tmp8;
@@ -1092,8 +1092,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { style: tmp.border };
             const items9 = [closure_18(currentCategoryId, obj8), ,];
             const obj9 = { guild: handleTapSearch, channel };
-            items9[1] = closure_18(tmp4(13392), obj9);
-            items9[2] = closure_18(tmp2(12554).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+            items9[1] = closure_18(tmp4(13400), obj9);
+            items9[2] = closure_18(tmp2(12560).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
             obj4.children = items9;
             let tmp19 = closure_19(currentCategoryId, obj4);
           }

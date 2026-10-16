@@ -360,14 +360,14 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6338).ClipboardListIcon,
+  IconComponent: fn(6340).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
   },

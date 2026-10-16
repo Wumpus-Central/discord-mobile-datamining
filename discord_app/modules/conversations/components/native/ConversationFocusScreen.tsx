@@ -1,6 +1,7 @@
 // discord_app/modules/conversations/components/native/ConversationFocusScreen.tsx
+import ConversationFocusViewDefault from "ConversationFocusView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
+import SelectedConversationStore from "../../SelectedConversationStore.tsx";
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -10,203 +11,149 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConversationFocusScreen() {
-      const cResult = channelId(576).c(17);
-      const obj = channelId(576);
+      const cResult = channelId(576).c(16);
+      let obj = channelId(576);
       const params = channelId(1508).useRoute().params;
       channelId = params.channelId;
-      const conversationId = params.conversationId;
+      ({ conversationId, messageId } = params);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ChannelConversationsStore];
+        const items = [SelectedConversationStore];
         cResult[0] = items;
         let first = items;
       } else {
         first = cResult[0];
       }
-      if (cResult[1] === channelId) {
-        if (cResult[2] === conversationId) {
-          let tmp6 = cResult[3];
-          let tmp7 = cResult[4];
-        }
-        const stateFromStores = tmp(504).useStateFromStores(first, tmp6, tmp7);
-        const _Symbol = Symbol;
-        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [ChannelConversationsStore];
-          cResult[5] = items1;
-          let tmp9 = items1;
-        } else {
-          tmp9 = cResult[5];
-        }
-        if (cResult[6] === channelId) {
-          if (cResult[7] === conversationId) {
-            let tmp11 = cResult[8];
-            let tmp12 = cResult[9];
-          }
-          const stateFromStoresObject = tmp(504).useStateFromStoresObject(tmp9, tmp11, tmp12);
-          ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-          if (cResult[10] === channelId) {
-            if (cResult[11] === conversationId) {
-              if (cResult[12] === fullyHydrated) {
-                if (cResult[13] === isFullFetchPending) {
-                  if (cResult[14] === stateFromStores) {
-                    if (cResult[15] === startMessageId) {
-                      let tmp14 = cResult[16];
-                    }
-                    return tmp14;
-                  }
-                }
-              }
-            }
-          }
-          class I {
-            constructor() {
-              obj = closure_3;
-              tmp = conversationId;
-              conversationMetadata = closure_3.getConversationMetadata(channelId, conversationId);
-              flag = undefined;
-              if (conversationMetadata != null) {
-                flag = conversationMetadata.fullyHydrated;
-              }
-              if (flag == null) {
-                flag = false;
-              }
-              obj1 = {
-                fullyHydrated: flag,
-                isFullFetchPending: obj.isConversationFetchPending(tmp, true),
-                startMessageId: null,
-              };
-              startMessageId = undefined;
-              if (conversationMetadata != null) {
-                startMessageId = conversationMetadata.conversation.startMessageId;
-              }
-              if (startMessageId == null) {
-                startMessageId = null;
-              }
-              obj1.startMessageId = startMessageId;
-              return obj1;
-            }
-          }
-          const obj3 = {
-            channelId,
-            conversationId,
-            messages: stateFromStores,
-            fullyHydrated,
-            isFullFetchPending,
-            startMessageId,
-          };
-          const tmp16 = jsx(conversationId(9615), {
-            channelId,
-            conversationId,
-            messages: stateFromStores,
-            fullyHydrated,
-            isFullFetchPending,
-            startMessageId,
-          });
-          cResult[10] = channelId;
-          cResult[11] = conversationId;
-          cResult[12] = fullyHydrated;
-          cResult[13] = isFullFetchPending;
-          cResult[14] = stateFromStores;
-          cResult[15] = startMessageId;
-          cResult[16] = tmp16;
-          tmp14 = tmp16;
-          const tmpResult2 = tmp(504);
-        }
-        class I {
-          constructor() {
-            obj = closure_3;
-            tmp = conversationId;
-            conversationMetadata = closure_3.getConversationMetadata(channelId, conversationId);
-            flag = undefined;
-            if (conversationMetadata != null) {
-              flag = conversationMetadata.fullyHydrated;
-            }
-            if (flag == null) {
-              flag = false;
-            }
-            obj1 = {
-              fullyHydrated: flag,
-              isFullFetchPending: obj.isConversationFetchPending(tmp, true),
-              startMessageId: null,
-            };
-            startMessageId = undefined;
-            if (conversationMetadata != null) {
-              startMessageId = conversationMetadata.conversation.startMessageId;
-            }
-            if (startMessageId == null) {
-              startMessageId = null;
-            }
-            obj1.startMessageId = startMessageId;
-            return obj1;
-          }
-        }
-        const items2 = [channelId, conversationId];
-        cResult[6] = channelId;
-        cResult[7] = conversationId;
-        cResult[8] = I;
-        cResult[9] = items2;
-        tmp12 = items2;
-        tmp11 = I;
-        const tmpResult = tmp(504);
+      if (cResult[1] !== channelId) {
+        const fn = function o() {
+          return SelectedConversationStore.getHydratedMessages(channelId);
+        };
+        const items1 = [channelId];
+        cResult[1] = channelId;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp7 = items1;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
       }
-      const fn = function o() {
-        return ChannelConversationsStore.getHydratedMessages(channelId, conversationId);
-      };
-      const items3 = [channelId, conversationId];
-      cResult[1] = channelId;
-      cResult[2] = conversationId;
-      cResult[3] = fn;
-      cResult[4] = items3;
-      tmp7 = items3;
-      tmp6 = fn;
-      let obj2 = channelId(1508);
-    }
-  : function ConversationFocusScreen() {
-      const params = channelId(1508).useRoute().params;
-      channelId = params.channelId;
-      const conversationId = params.conversationId;
-      const obj = channelId(1508);
-      const items = [ChannelConversationsStore];
-      const items1 = [channelId, conversationId];
-      const messages = channelId(504).useStateFromStores(
-        items,
-        () => ChannelConversationsStore.getHydratedMessages(channelId, conversationId),
-        items1,
-      );
-      let obj2 = channelId(504);
-      const items2 = [ChannelConversationsStore];
-      const items3 = [channelId, conversationId];
-      const stateFromStoresObject = channelId(504).useStateFromStoresObject(
-        items2,
-        () => {
-          const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
-          let flag;
-          if (conversationMetadata != null) {
-            flag = conversationMetadata.fullyHydrated;
-          }
-          if (flag == null) {
-            flag = false;
-          }
-          const obj2 = {
-            fullyHydrated: flag,
-            isFullFetchPending: ChannelConversationsStore.isConversationFetchPending(conversationId, true),
+      const obj2 = channelId(1508);
+      const stateFromStores = channelId(504).useStateFromStores(first, tmp6, tmp7);
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const items2 = [SelectedConversationStore];
+        cResult[4] = items2;
+        let tmp9 = items2;
+      } else {
+        tmp9 = cResult[4];
+      }
+      if (cResult[5] !== channelId) {
+        const fn2 = function h() {
+          const obj = {
+            fullyHydrated: SelectedConversationStore.isFullyHydrated(channelId),
+            isFullFetchPending: SelectedConversationStore.isConversationFetchPending(channelId, true),
             startMessageId: null,
           };
+          const conversation = SelectedConversationStore.getConversation(channelId);
           let startMessageId;
-          if (conversationMetadata != null) {
-            startMessageId = conversationMetadata.conversation.startMessageId;
+          if (conversation != null) {
+            startMessageId = conversation.startMessageId;
           }
           if (startMessageId == null) {
             startMessageId = null;
           }
-          obj2.startMessageId = startMessageId;
-          return obj2;
+          obj.startMessageId = startMessageId;
+          return obj;
+        };
+        const items3 = [channelId];
+        cResult[5] = channelId;
+        cResult[6] = fn2;
+        cResult[7] = items3;
+        let tmp12 = items3;
+        let tmp11 = fn2;
+      } else {
+        tmp11 = cResult[6];
+        tmp12 = cResult[7];
+      }
+      const tmpResult = channelId(504);
+      const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp9, tmp11, tmp12);
+      ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
+      if (cResult[8] === channelId) {
+        if (cResult[9] === conversationId) {
+          if (cResult[10] === fullyHydrated) {
+            if (cResult[11] === isFullFetchPending) {
+              if (cResult[12] === messageId) {
+                if (cResult[13] === stateFromStores) {
+                  if (cResult[14] === startMessageId) {
+                    let tmp14 = cResult[15];
+                  }
+                  return tmp14;
+                }
+              }
+            }
+          }
+        }
+      }
+      const tmp15 = jsx(ConversationFocusViewDefault, {
+        channelId,
+        conversationId,
+        jumpMessageId: messageId,
+        messages: stateFromStores,
+        fullyHydrated,
+        isFullFetchPending,
+        startMessageId,
+      });
+      cResult[8] = channelId;
+      cResult[9] = conversationId;
+      cResult[10] = fullyHydrated;
+      cResult[11] = isFullFetchPending;
+      cResult[12] = messageId;
+      cResult[13] = stateFromStores;
+      cResult[14] = startMessageId;
+      cResult[15] = tmp15;
+      tmp14 = tmp15;
+      const tmpResult2 = channelId(504);
+    }
+  : function ConversationFocusScreen() {
+      const params = channelId(1508).useRoute().params;
+      channelId = params.channelId;
+      ({ conversationId, messageId } = params);
+      let obj = channelId(1508);
+      const items = [SelectedConversationStore];
+      const items1 = [channelId];
+      const messages = channelId(504).useStateFromStores(
+        items,
+        () => SelectedConversationStore.getHydratedMessages(channelId),
+        items1,
+      );
+      const obj2 = channelId(504);
+      const items2 = [SelectedConversationStore];
+      const items3 = [channelId];
+      const stateFromStoresObject = channelId(504).useStateFromStoresObject(
+        items2,
+        () => {
+          const obj = {
+            fullyHydrated: SelectedConversationStore.isFullyHydrated(channelId),
+            isFullFetchPending: SelectedConversationStore.isConversationFetchPending(channelId, true),
+            startMessageId: null,
+          };
+          const conversation = SelectedConversationStore.getConversation(channelId);
+          let startMessageId;
+          if (conversation != null) {
+            startMessageId = conversation.startMessageId;
+          }
+          if (startMessageId == null) {
+            startMessageId = null;
+          }
+          obj.startMessageId = startMessageId;
+          return obj;
         },
         items3,
       );
       ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-      return jsx(conversationId(9615), {
+      return jsx(ConversationFocusViewDefault, {
         channelId,
         conversationId,
+        jumpMessageId,
         messages,
         fullyHydrated,
         isFullFetchPending,

@@ -206,7 +206,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                               lineClamp: 2,
                               children: name,
                             };
-                            const tmp38 = closure_7(tmp(5149).Text, obj6);
+                            const tmp38 = closure_7(tmp(5150).Text, obj6);
                             cResult[26] = name;
                             cResult[27] = tmp4.gameName;
                             cResult[28] = tmp38;
@@ -243,7 +243,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   const items4 = [,];
                   ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
                   obj11.style = items4;
-                  obj11.children = closure_7(tmp(7908).UnknownGameIcon, { size: "lg" });
+                  obj11.children = closure_7(tmp(7909).UnknownGameIcon, { size: "lg" });
                   tmp23 = closure_7(View, obj11);
                 }
                 cResult[15] = unknownCover;
@@ -329,7 +329,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
         obj7.style = items1;
-        obj7.children = closure_7(tmp2(7908).UnknownGameIcon, { size: "lg" });
+        obj7.children = closure_7(tmp2(7909).UnknownGameIcon, { size: "lg" });
         tmp11 = closure_7(View, obj7);
       }
       const items2 = [tmp11, tmp10(CheckpointRankTagDefault, { rank, style: tmp.rank })];
@@ -337,7 +337,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [closure_8(View, obj5)];
       const obj9 = { style: tmp.gameText, children: null };
       const items4 = [
-        tmp10(id(5149).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
+        tmp10(id(5150).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
         tmp10(CheckpointTextDefault, {
           variant: "experimental/mono-md/bold",
           style: tmp.gameSessions,

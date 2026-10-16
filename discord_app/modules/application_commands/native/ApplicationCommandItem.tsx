@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(9951).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9952).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     applicationCommandItem: {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ showIcon, highlighted } = guildId);
       let highlightedApplicationCommandItem = undefined !== highlighted && highlighted;
       const obj = section(576);
-      const tmp5 = closure_9(section(5448).useFontScale());
+      const tmp5 = closure_9(section(5449).useFontScale());
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildMemberStore];
         cResult[0] = items;
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             color: "mobile-text-heading-primary",
                             children: text,
                           };
-                          const tmp32 = closure_7(section(5149).Text, obj2);
+                          const tmp32 = closure_7(section(5150).Text, obj2);
                           cResult[21] = text;
                           cResult[22] = tmp32;
                           let tmp30 = tmp32;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             color: "text-default",
                             children: command.displayDescription,
                           };
-                          const tmp35 = closure_7(section(5149).Text, obj3);
+                          const tmp35 = closure_7(section(5150).Text, obj3);
                           cResult[23] = command.displayDescription;
                           cResult[24] = tmp35;
                           let tmp33 = tmp35;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               };
                               const items1 = [tmp25, tmp36, tmp40];
                               obj4.children = items1;
-                              const tmp45 = closure_8(section(6407).PressableOpacity, obj4);
+                              const tmp45 = closure_8(section(6409).PressableOpacity, obj4);
                               cResult[32] = onPress;
                               cResult[33] = tmp36;
                               cResult[34] = tmp40;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               color: "text-muted",
                               children: name,
                             };
-                            const tmp42 = closure_7(section(5149).Text, obj6);
+                            const tmp42 = closure_7(section(5150).Text, obj6);
                             cResult[29] = name;
                             cResult[30] = tmp5.applicationCommandSectionName;
                             cResult[31] = tmp42;
@@ -230,12 +230,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = formatToPlainStringResult;
         }
         const tmpResult3 = section(504);
-        const applicationCommandsIconSource = section(12805).getApplicationCommandsIconSource(section, stateFromStores);
+        const applicationCommandsIconSource = section(12811).getApplicationCommandsIconSource(section, stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = section;
         cResult[6] = applicationCommandsIconSource;
         tmp10 = applicationCommandsIconSource;
-        const tmpResult4 = section(12805);
+        const tmpResult4 = section(12811);
       }
       const fn = function c() {
         if (null != guildId) {
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = section;
       cResult[3] = fn;
       tmp8 = fn;
-      const tmpResult = section(5448);
+      const tmpResult = section(5449);
     }
   : function ApplicationCommandItem(highlighted) {
       ({ command, section } = highlighted);

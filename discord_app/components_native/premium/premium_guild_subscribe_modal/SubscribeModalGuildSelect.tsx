@@ -10,11 +10,11 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(6179).PremiumGuildSubscribeModalScenes;
+let closure_9 = fn(6180).PremiumGuildSubscribeModalScenes;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   safeArea: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 },
   guildList: { padding: 16 },
@@ -22,10 +22,10 @@ let obj2 = {
   guildName: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 };
-obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6187).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6188).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6187).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+let obj4 = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6188).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx",
@@ -416,7 +416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.onClose = BoostingActionCreatorsAll.closeApplyBoostModal;
       const items3 = [closure_11(SearchBarNavDefault, obj4)];
       const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-      obj5.children = closure_11(guildBoostSlots(7037).SafeAreaPaddingView, {
+      obj5.children = closure_11(guildBoostSlots(7039).SafeAreaPaddingView, {
         bottom: true,
         children: stateFromStoresArray.map((guild) => {
           const obj = {
@@ -446,5 +446,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       items3[1] = closure_11(memo, obj5);
       obj3.children = items3;
-      return closure_12(guildBoostSlots(7037).SafeAreaPaddingView, obj3);
+      return closure_12(guildBoostSlots(7039).SafeAreaPaddingView, obj3);
     };

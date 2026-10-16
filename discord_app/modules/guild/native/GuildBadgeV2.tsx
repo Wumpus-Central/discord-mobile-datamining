@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Icon(1202);
 const shared = Icon(5028);
-const GuildBadgeImageSource = Icon(9095);
+const GuildBadgeImageSource = Icon(9096);
 require = fn;
 let closure_2 = ["guild", "size"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

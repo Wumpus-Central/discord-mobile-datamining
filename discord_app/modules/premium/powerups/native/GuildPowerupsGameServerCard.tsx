@@ -6,12 +6,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GameServerStore from "../../../game_server/GameServerStore.tsx";
 
-const useGuildPowerupOnShowMoreDefault = description(13176);
-const GuildPowerupsPerkCardDefault = description(13181);
+const useGuildPowerupOnShowMoreDefault = description(13184);
+const GuildPowerupsPerkCardDefault = description(13189);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

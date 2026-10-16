@@ -6,9 +6,9 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05454_LinearGradient.js";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06529_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06531_BottomSheetModal.js";
 import NavScrim from "../../Navigator/native/NavScrim.android.tsx";
 import ActionSheetContextDefault from "../../../../modules/action_sheet/native/ActionSheetContext.tsx";
 import ActionSheetHeaderBar from "ActionSheetHeaderBar.native.tsx";
@@ -77,7 +77,7 @@ let closure_5 = [
 ];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_9, View: c10, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(7064);
+const ActionSheetConstants = fn(7066);
 ({
   ACTION_SHEET_START_HEIGHT_RATIO: closure_11,
   ACTION_SHEET_MAX_WIDTH: closure_12,
@@ -91,7 +91,7 @@ const ActionSheetConstants = fn(7064);
 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_22 = createStyles.createStyles((arg0) => {
   let num = arg1;
   if (arg1 === undefined) {
@@ -1047,7 +1047,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
           let tmp43 = cResult[29];
         }
         const layoutEffect = obj2.useLayoutEffect(tmp42, tmp43);
-        const bottomSheetImperativeHandle = tmp(7066).useBottomSheetImperativeHandle(tmp12, ref1);
+        const bottomSheetImperativeHandle = tmp(7068).useBottomSheetImperativeHandle(tmp12, ref1);
         if (cResult[30] === close) {
           if (cResult[31] === transitionState) {
             let tmp46 = cResult[32];
@@ -1058,7 +1058,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[35] === onLeave) {
               let tmp49 = cResult[36];
             }
-            const unmountEffect = tmp(5458).useUnmountEffect(tmp49);
+            const unmountEffect = tmp(5459).useUnmountEffect(tmp49);
             if (cResult[37] !== close) {
               function ie(arg0, arg1, arg2, arg3, arg4) {
                 if (arg4 !== BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
@@ -1108,7 +1108,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
             }
             const tmp54 = closure_28(tmp13.animatedIndex);
             closure_14 = tmp54;
-            const tmpResult4 = tmp(5458);
+            const tmpResult4 = tmp(5459);
             function ke() {
               return closure_14.get() <= -1;
             }
@@ -1438,7 +1438,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
                             let items = [tmp75, tmp79];
                             obj7.children = items;
                             obj6.children = closure_21(ref1, obj7);
-                            const tmp87 = closure_20(tmp(7069).LayerScope, obj6);
+                            const tmp87 = closure_20(tmp(7071).LayerScope, obj6);
                             cResult[67] = tmp74;
                             cResult[68] = tmp75;
                             class Be {
@@ -1577,7 +1577,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
         cResult[33] = items5;
         tmp47 = items5;
         tmp46 = re;
-        let tmpResult = tmp(7066);
+        let tmpResult = tmp(7068);
       }
       function te() {
         registerDismissHandler(closure_4);

@@ -2,6 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
+import ApplicationWidgetConfigActions from "../../application_widget/ApplicationWidgetConfigActions.tsx";
 import ConjurePreviewActionCreators from "../preview/ConjurePreviewActionCreators.tsx";
 import conjureLiveRelaunch from "../live_reload/conjureLiveRelaunch.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -311,12 +312,12 @@ let closure_13 = async function _refreshPublishedApplication() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp5 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -329,38 +330,23 @@ let closure_13 = async function _refreshPublishedApplication() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            closure_4 = tmp5;
-            closure_3 = tmp2;
+            closure_4 = tmp2;
+            closure_3 = tmp3;
             closure_131_0 = applicationId;
             closure_131_1 = closure_1;
             closure_131_2 = closure_2;
-            const obj5 = { type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId };
-            DispatcherDefault.dispatch(obj5);
+            const obj4 = { type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId };
+            DispatcherDefault.dispatch(obj4);
+            const items = [ApplicationActionCreators.fetchApplication(applicationId)];
+            const widgetConfigs = ApplicationWidgetConfigActions.fetchWidgetConfigs(applicationId, { force: true });
+            items[1] = widgetConfigs.catch(() => {});
             c5 = 1;
             c6 = 1;
-            const obj6 = { value: ApplicationActionCreators.fetchApplication(applicationId), done: false };
+            const obj6 = { value: Promise.all(items), done: false };
             return obj6;
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            const widgetConfigs = closure_132_0(closure_132_2[11]).fetchWidgetConfigs(closure_131_0, { force: true });
-            c5 = 2;
-            c6 = 1;
-            const obj9 = {
-              value: widgetConfigs.catch(() => {}),
-              done: false,
-            };
-            return obj9;
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -376,9 +362,9 @@ let closure_13 = async function _refreshPublishedApplication() {
           c6 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp20) {
+      } catch (tmp16) {
         c6 = tmp;
-        throw tmp20;
+        throw tmp16;
       }
     }
   })();

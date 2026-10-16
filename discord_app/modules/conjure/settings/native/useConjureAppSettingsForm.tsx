@@ -19,12 +19,12 @@ import ConjureSettingsStore from "../ConjureSettingsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(10901).sendUserMessage;
+const sendUserMessage = fn(10898).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
 const ConjureSettingsPickerSheet = "ConjureSettingsPickerSheet";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
@@ -338,8 +338,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, hint, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(11590).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(11590);
+  const conjureSettingsGuildId = def(11587).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(11587);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -351,7 +351,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }, items1);
   if (null != conjureSettingsGuildId) {
     if (null != stateFromStores) {
-      const result = tmp(7167).conjureSettingChannels(stateFromStores, def.channel_filter);
+      const result = tmp(7169).conjureSettingChannels(stateFromStores, def.channel_filter);
       c4 = result;
       found = result.find((id) => id.id === importDefault);
       if (found == null) {
@@ -359,7 +359,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       }
       let obj3 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
       if (null != found) {
-        const tmpResult2 = tmp(5483);
+        const tmpResult2 = tmp(5484);
         let channelName = tmpResult2.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
         let intl = tmp(1128).intl;
@@ -367,7 +367,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       }
       let obj4 = { hasIcons: false, children: null };
       const obj5 = { text: channelName };
-      obj3.trailing = closure_15(tmp(6413).TableRowTrailingText, obj5);
+      obj3.trailing = closure_15(tmp(6415).TableRowTrailingText, obj5);
       obj3.onPress = function onPress() {
         const obj2 = { content: null, key: null, stackingBehavior: "stack" };
         const obj3 = { header: { title: def.label }, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
@@ -392,8 +392,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj2.key = ConjureSettingsChannelSheet;
         obj.showActionSheet(obj2);
       };
-      obj4.children = closure_15(tmp(6402).TableRow, obj3);
-      return closure_15(tmp(6487).TableRowGroup, obj4);
+      obj4.children = closure_15(tmp(6404).TableRow, obj3);
+      return closure_15(tmp(6489).TableRowGroup, obj4);
     }
   }
   return fallback;
@@ -1168,8 +1168,8 @@ export default function useConjureAppSettingsForm(projectId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -1182,8 +1182,8 @@ export default function useConjureAppSettingsForm(projectId) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_3 = tmp4;
             dependencyMap = tmp8;
@@ -1196,8 +1196,8 @@ export default function useConjureAppSettingsForm(projectId) {
                 c5 = 2;
                 c6 = 3;
                 c7 = 1;
-                const obj6 = { value: _null(10991).submitProjectSettings(projectId, memo3), done: false };
-                return obj6;
+                const obj8 = { value: _null(10988).submitProjectSettings(projectId, memo3), done: false };
+                return obj8;
               }
             }
             c7 = 3;
@@ -1221,8 +1221,8 @@ export default function useConjureAppSettingsForm(projectId) {
           c5 = 0;
           closure_131_12(false);
           c7 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           rebuildRequired = value.rebuildRequired;
           if (!closure_131_1) {
@@ -1237,42 +1237,42 @@ export default function useConjureAppSettingsForm(projectId) {
                 if (application_id == null) {
                   _null = null;
                 }
-                _null2(10962)(_null);
+                _null(10959).restartAppFrames(_null);
                 let isPreviewlessProjectResult = null != project2;
                 if (isPreviewlessProjectResult) {
-                  isPreviewlessProjectResult = _null(7168).isPreviewlessProject(project2);
-                  const obj = _null(7168);
+                  isPreviewlessProjectResult = _null(7170).isPreviewlessProject(project2);
+                  const obj2 = _null(7170);
                 }
                 if (!isPreviewlessProjectResult) {
                   let prop;
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
-                  _null2 = prop;
+                  let _null2 = prop;
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(10962)(_null2);
-                  const tmp35 = _null2(10962);
+                  _null(10959).restartAppFrames(_null2);
+                  const obj3 = _null(10959);
                 }
-                const tmp19 = _null2(10962);
+                const obj = _null(10959);
               }
               c5 = 0;
               closure_131_12(false);
               c7 = 3;
             }
-            const projectRebuild = _null(10991).requestProjectRebuild(closure_131_0);
-            const obj2 = _null(10991);
+            const projectRebuild = _null(10988).requestProjectRebuild(closure_131_0);
+            const obj4 = _null(10988);
           }
           const intl = _null(1128).intl;
           closure_1_12(closure_131_0, intl.string(_null2(3865)["08bsJL"]));
         }
-      } catch (tmp77) {
-        closure_4 = tmp77;
+      } catch (tmp75) {
+        closure_4 = tmp75;
         if (tmp5 === c5) {
           c7 = tmp3;
-          throw tmp77;
-        } else if (tmp2 === tmp79) {
+          throw tmp75;
+        } else if (tmp2 === tmp77) {
           c6 = tmp2;
         } else {
           c6 = tmp;
@@ -1318,7 +1318,7 @@ export default function useConjureAppSettingsForm(projectId) {
       obj7.children = intl3.string(notifyAgent(tmp3[19]).dsHRPK);
       tmp32 = memo1(tmp2(tmp3[27]).Text, obj7);
     }
-    const obj8 = { children: null };
+    let obj8 = { children: null };
     const items7 = [
       tmp32,
       found1.map(function renderScoped(item) {
@@ -1341,7 +1341,7 @@ export default function useConjureAppSettingsForm(projectId) {
   } else {
     mapped = found.map(renderValueSetting);
   }
-  const obj9 = { fields: found(closure_6, obj4), secretFields: null, loaded: null, valueCount: null, secretCount: null, isScoped: null, canSave: null, saving: null, submit: null };
+  let obj9 = { fields: found(closure_6, obj4), secretFields: null, loaded: null, valueCount: null, secretCount: null, isScoped: null, canSave: null, saving: null, submit: null };
   items6[2] = mapped;
   items6[3] = tmp20;
   obj4.children = items6;

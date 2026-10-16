@@ -348,7 +348,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
         if (cResult[4] === guild_id2) {
           let tmp12 = cResult[5];
         }
-        const isConjureGuildEnabled = tmp(6285).useIsConjureGuildEnabled(tmp12);
+        const isConjureGuildEnabled = tmp(6298).useIsConjureGuildEnabled(tmp12);
         if (cResult[6] === appChannelApplication) {
           if (cResult[7] === guild_id) {
             if (cResult[8] === stateFromStores) {
@@ -388,7 +388,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
         cResult[9] = isConjureGuildEnabled;
         cResult[10] = tmp17;
         tmp14 = tmp17;
-        const tmpResult4 = tmp(6285);
+        const tmpResult4 = tmp(6298);
       }
       const obj2 = { guildId: guild_id2, location };
       cResult[3] = location;

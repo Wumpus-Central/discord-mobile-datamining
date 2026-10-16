@@ -2,46 +2,23 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import _modDef3447 from "../intl/FavoritesGuild.messages.js";
-import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import TextIcon from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import FavoritesHooks from "../FavoritesHooks.tsx";
-import openFavoritesGuildLimitUpsell from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
 import openFavoritesGuildAddChannelModalDefault from "../utils/openFavoritesGuildAddChannelModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function EmptyBody() {
-  const callback = noop.useCallback(() => {
-    if (obj.getFavoritesAccess().hasAccess) {
-      openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
-    } else {
-      const tmp3Result = ActionSheetActionCreatorsDefault;
-      tmp3Result.openLazy(
-        asyncRequireImpl(dependencyMap[9], dependencyMap.paths),
-        openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY,
-        { source: "favorites_empty_sidebar" },
-      );
-      const tmp4 = asyncRequireImpl(dependencyMap[9], dependencyMap.paths);
-    }
-    obj = FavoritesHooks;
-  }, []);
-  let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = util.intl;
-  obj.children = intl.format(_modDef3447.Z3Hdr5, { onClick: callback });
-  return timestampProducer(Text_Text.Text, obj);
-}
 const View = fn(17).View;
-let closure_5 = fn(17253).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17266).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5153);
+let c10 = "text-sm/medium";
+const createStyles = fn(5154);
 let obj2 = {
   copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   divider: null,
@@ -93,12 +70,47 @@ let obj7 = {
 obj2.placeholderBarShort = { width: nativeDefault.space.PX_80 };
 let obj8 = { width: nativeDefault.space.PX_80 };
 obj2.placeholderBarLong = { width: nativeDefault.space.PX_128 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function EmptyBody() {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function l() {
+          openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { variant: variant2, color: "text-muted", children: null };
+        const intl = util.intl;
+        const obj3 = { onClick: first };
+        obj2.children = intl.format(_modDef3447.Z3Hdr5, obj3);
+        const tmp9 = timestampProducer(Text_Text.Text, obj2);
+        cResult[1] = tmp9;
+        let tmp5 = tmp9;
+      } else {
+        tmp5 = cResult[1];
+      }
+      return tmp5;
+    }
+  : function EmptyBody() {
+      const callback = noop.useCallback(() => {
+        openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
+      }, []);
+      const obj = { variant: variant2, color: "text-muted", children: null };
+      const intl = util.intl;
+      obj.children = intl.format(_modDef3447.Z3Hdr5, { onClick: callback });
+      return timestampProducer(Text_Text.Text, obj);
+    };
+ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? function PlaceholderRows() {
       const cResult = c.c(26);
-      const tmp4 = closure_10();
+      const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
         const tmp8 = timestampProducer(TextIcon.TextIcon, obj2);
@@ -233,7 +245,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
     }
   : function PlaceholderRows() {
-      const tmp = closure_10();
+      const tmp = closure_11();
       const obj = {
         style: tmp.placeholderRows,
         accessibilityElementsHidden: true,
@@ -282,7 +294,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FavoritesGuildSidebarHeader() {
       const cResult = c.c(14);
-      const tmp4 = closure_10();
+      const tmp4 = closure_11();
       const tmp5 = closure_5();
       if (cResult[0] === tmp5) {
         if (cResult[1] === tmp4.divider) {
@@ -294,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = util.intl;
           obj2.children = intl.string(_modDef3447["1n0TGE"]);
           const tmp16 = timestampProducer(Text_Text.Heading, obj2);
-          const tmp18 = timestampProducer(EmptyBody, {});
+          const tmp18 = timestampProducer(closure_12, {});
           cResult[3] = tmp16;
           cResult[4] = tmp18;
           let tmp12 = tmp18;
@@ -340,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp5) {
           const obj5 = { children: null };
           const obj6 = { style: tmp4.divider };
-          const items2 = [timestampProducer(View, obj6), timestampProducer(closure_12, {})];
+          const items2 = [timestampProducer(View, obj6), timestampProducer(closure_13, {})];
           obj5.children = items2;
           tmp24 = React5(closure_1_8, obj5);
         }
@@ -360,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
     }
   : function FavoritesGuildSidebarHeader() {
-      const tmp = closure_10();
+      const tmp = closure_11();
       const tmp2 = closure_5();
       const obj = { spacing: nativeDefault.space.PX_8, children: null };
       let tmp7 = null;
@@ -373,14 +385,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj4.children = intl.string(_modDef3447["1n0TGE"]);
-      const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
+      const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(closure_12, {})];
       obj3.children = items1;
       items[1] = React5(Stack_Stack.Stack, obj3);
       let tmp3Result = null;
       if (!tmp2) {
         const obj5 = { children: null };
         const obj6 = { style: tmp.divider };
-        const items2 = [timestampProducer(View, obj6), timestampProducer(closure_12, {})];
+        const items2 = [timestampProducer(View, obj6), timestampProducer(closure_13, {})];
         obj5.children = items2;
         tmp3Result = React5(closure_1_8, obj5);
       }

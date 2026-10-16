@@ -193,17 +193,17 @@ export const clearNewMemberActions = function clearNewMemberActions() {
   }
   return applyArgumentsResult;
 };
-export const selectHomeResourceChannel = function selectHomeResourceChannel(guildId, channelId, arg2) {
+export const selectHomeResourceChannel = function selectHomeResourceChannel(guild_id, channelId) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
-    let isFullServerPreviewResult = null == guildId;
-    const resourceForChannel = GuildOnboardingHomeSettingsStore.getResourceForChannel(guildId, channelId);
+    let isFullServerPreviewResult = null == guild_id;
+    const resourceForChannel = GuildOnboardingHomeSettingsStore.getResourceForChannel(guild_id, channelId);
     if (!isFullServerPreviewResult) {
-      isFullServerPreviewResult = ImpersonateStore.isFullServerPreview(guildId);
+      isFullServerPreviewResult = ImpersonateStore.isFullServerPreview(guild_id);
     }
     if (!isFullServerPreviewResult) {
       isFullServerPreviewResult = null == channel;
@@ -212,12 +212,7 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(guil
       isFullServerPreviewResult = null == resourceForChannel;
     }
     if (!isFullServerPreviewResult) {
-      const obj2 = {
-        guild_id: guildId,
-        channel_id: channel.id,
-        server_guide_channel_type: "resource",
-        channel_action_type: -1,
-      };
+      const obj2 = { guild_id, channel_id: channel.id, server_guide_channel_type: "resource", channel_action_type: -1 };
       AnalyticsUtilsDefault.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj2);
     }
     if (flag) {

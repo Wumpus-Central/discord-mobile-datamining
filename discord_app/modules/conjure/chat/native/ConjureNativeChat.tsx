@@ -5,13 +5,14 @@ import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05453_LinearGradient.js";
-import _modDef6465 from "../../../../../_runtime/metro/06465__.js";
+import LinearGradientDefault from "../../../../../_runtime/05454_LinearGradient.js";
+import _modDef6467 from "../../../../../_runtime/metro/06467__.js";
 import conjureChatTurns from "../conjureChatTurns.tsx";
 import conjurePublishCard from "../../publish/conjurePublishCard.tsx";
 import ConjureTodoState from "../../agent_activity/ConjureTodoState.tsx";
 import ConjureTimelineTree from "../../agent_activity/ConjureTimelineTree.tsx";
 import ConjureSecretRequestState from "../../secrets/ConjureSecretRequestState.tsx";
+import conjureCardOverrides from "../conjureCardOverrides.tsx";
 import conjurePendingPlan from "../../plan/conjurePendingPlan.tsx";
 import ConjureChatGrouping from "../ConjureChatGrouping.tsx";
 import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";
@@ -30,7 +31,7 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(10901);
+let ConjureConnectionStore = fn(10898);
 ({
   ensureConnection: closure_7,
   interruptTurn: closure_8,
@@ -50,7 +51,7 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flex: 1 },
   transcript: { flex: 1 },
@@ -144,7 +145,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj7 = { style: transcript, maskElement: tmp23, children };
-              const tmp30 = value2(_modDef6465, obj7);
+              const tmp30 = value2(_modDef6467, obj7);
               cResult[11] = children;
               cResult[12] = tmp3.transcript;
               cResult[13] = tmp23;
@@ -188,7 +189,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = items;
         obj2.maskElement = value3(View, obj3);
         obj2.children = children;
-        tmp3 = value2(_modDef6465, obj2);
+        tmp3 = value2(_modDef6467, obj2);
       }
       return tmp3;
     };
@@ -988,9 +989,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[45] !== projectId) {
-            class Fe {
+            class J {
               constructor() {
-                return closure_14.hasLoadedHistory(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
             const items19 = [projectId];
@@ -1000,24 +1009,40 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[45] = projectId;
-            cResult[46] = Fe;
+            cResult[46] = tmp74;
             cResult[47] = items19;
             let tmp73 = items19;
           } else {
-            class Fe {
+            class J {
               constructor() {
-                return closure_14.hasLoadedHistory(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
             tmp73 = cResult[47];
           }
           const tmpResult22 = tmp(tmp2[14]);
-          stateFromStores9 = tmp(tmp2[14]).useStateFromStores(tmp71, Fe, tmp73);
+          stateFromStores9 = tmp(tmp2[14]).useStateFromStores(tmp71, tmp74, tmp73);
           const _Symbol10 = Symbol;
           if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
-            class Fe {
+            class J {
               constructor() {
-                return closure_14.hasLoadedHistory(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
             const items20 = [ConjureChatStore];
@@ -1027,11 +1052,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[48] = items20;
-            const tmp75 = items20;
+            const tmp76 = items20;
           } else {
-            class Fe {
+            class J {
               constructor() {
-                return closure_14.hasLoadedHistory(projectId);
+                publishStatus = closure_12.getPublishStatus(projectId);
+                state = undefined;
+                if (publishStatus != null) {
+                  state = publishStatus.state;
+                }
+                if (state == null) {
+                  state = null;
+                }
+                return state;
               }
             }
           }
@@ -1050,17 +1083,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[49] = projectId;
             cResult[50] = Be;
             cResult[51] = items21;
-            let tmp77 = items21;
+            let tmp78 = items21;
           } else {
             class Be {
               constructor() {
                 return closure_14.isHistoryUnavailable(projectId);
               }
             }
-            tmp77 = cResult[51];
+            tmp78 = cResult[51];
           }
           const tmpResult23 = tmp(tmp2[14]);
-          const stateFromStores10 = tmp(tmp2[14]).useStateFromStores(tmp75, Be, tmp77);
+          const stateFromStores10 = tmp(tmp2[14]).useStateFromStores(tmp76, Be, tmp78);
           if (cResult[52] === stateFromStores8) {
             class Be {
               constructor() {
@@ -1340,7 +1373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onToggleChecklist = obj3.useCallback((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
-        _undefined2((get) => projectId(stateFromStores[21]).toggleChecklist(get, closure_0, closure_1));
+        _undefined2((get) => projectId(stateFromStores[23]).toggleConjureCard(get, closure_0, closure_1));
       }, []);
       const items28 = [memo];
       closure_16 = obj3.useMemo(() => conjurePendingPlan.planVersions(memo), items28);
@@ -1355,7 +1388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onTogglePlan = obj3.useCallback((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
-        _undefined3((get) => projectId(stateFromStores[23]).togglePlanCard(get, closure_0, closure_1));
+        _undefined3((get) => projectId(stateFromStores[23]).toggleConjureCard(get, closure_0, closure_1));
       }, []);
       const items29 = [memo];
       closure_20 = obj3.useMemo(
@@ -1556,7 +1589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback6 = obj3.useCallback(() => {
         closure_39.current = false;
       }, []);
-      tmp2Result18 = projectId(stateFromStores[31]);
+      tmp2Result18 = projectId(stateFromStores[32]);
       [tmp68, c44] = stateFromStores1(obj3.useState(false), 2);
       obj3.useRef(null);
       obj3.useRef(0);
@@ -1629,7 +1662,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items43);
       const items44 = [callback7];
       const memo7 = obj3.useMemo(
-        () => ({ itemVisiblePercentThreshold: projectId(stateFromStores[32]).MIN_VISIBLE_PERCENT }),
+        () => ({ itemVisiblePercentThreshold: projectId(stateFromStores[33]).MIN_VISIBLE_PERCENT }),
         [],
       );
       const callback10 = obj3.useCallback((arg0) => {
@@ -1646,13 +1679,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         callback7();
       }, items44);
       if (stateFromStores5) {
-        const intl3 = tmp2(tmp3[26]).intl;
+        const intl3 = tmp2(tmp3[27]).intl;
         memo6 = intl3.string(require("../../intl/ConjureUntranslated.messages.js").mKK6wB);
       } else if (stateFromStores4) {
-        const intl2 = tmp2(tmp3[26]).intl;
+        const intl2 = tmp2(tmp3[27]).intl;
         memo6 = intl2.string(require("../../intl/ConjureUntranslated.messages.js").xnCAaP);
       } else if (memo6 == null) {
-        let intl = tmp2(tmp3[26]).intl;
+        let intl = tmp2(tmp3[27]).intl;
         memo6 = intl.string(require("../../intl/ConjureUntranslated.messages.js").L9EDub);
       }
       const items45 = [memo, memo4];
@@ -1686,8 +1719,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp2Result19 = tmp2(tmp3[21]);
       }
       if (null != tmp75) {
-        const tmp2Result20 = tmp2(tmp3[33]);
-        const conjureTurnStartedAtResult = tmp2(tmp3[33]).conjureTurnStartedAt(tmp75);
+        const tmp2Result20 = tmp2(tmp3[34]);
+        const conjureTurnStartedAtResult = tmp2(tmp3[34]).conjureTurnStartedAt(tmp75);
       }
       const items46 = [memo5];
       let tmp79;
@@ -1793,12 +1826,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_2_8(projectId);
       }, items52);
       if ("open" !== stateFromStores8) {
-        connectionLabelResult = tmp2(tmp3[36]).connectionLabel(stateFromStores8);
-        const tmp2Result21 = tmp2(tmp3[36]);
+        connectionLabelResult = tmp2(tmp3[37]).connectionLabel(stateFromStores8);
+        const tmp2Result21 = tmp2(tmp3[37]);
       }
       const tmp19Result14 = stateFromStores1(obj3.useState(false), 2);
       const obj12 = { style: tmp.container, children: null };
-      const conjureControlActive = projectId(stateFromStores[37]).useConjureControlActive(projectId);
+      const conjureControlActive = projectId(stateFromStores[38]).useConjureControlActive(projectId);
       const items53 = [
         onToggleChecklist(require("ConjureShellGlow"), {
           thinking: stateFromStores3,
@@ -1831,24 +1864,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ListEmptyComponent: null,
         renderItem: null,
       };
-      const tmp2Result22 = projectId(stateFromStores[37]);
+      const tmp2Result22 = projectId(stateFromStores[38]);
       const tmp95 = c24;
-      const tmp2Result23 = projectId(stateFromStores[31]);
-      obj15.removeClippedSubviews = projectId(stateFromStores[31]).isIOS() && undefined;
+      const tmp2Result23 = projectId(stateFromStores[32]);
+      obj15.removeClippedSubviews = projectId(stateFromStores[32]).isIOS() && undefined;
       obj15.viewabilityConfig = memo7;
       obj15.onViewableItemsChanged = callback10;
       obj15.onScroll = callback8;
       obj15.onScrollBeginDrag = callback6;
       obj15.onContentSizeChange = callback9;
       obj15.onStartReached = callback5;
-      const tmp96 = projectId(stateFromStores[31]).isIOS() && undefined;
+      const tmp96 = projectId(stateFromStores[32]).isIOS() && undefined;
       let tmp97;
       if (tmp2Result24.isIOS()) {
         const obj16 = { top: num };
         tmp97 = obj16;
       }
       obj15.contentInset = tmp97;
-      tmp2Result24 = projectId(stateFromStores[31]);
+      tmp2Result24 = projectId(stateFromStores[32]);
       let tmp94Result = null;
       if (!tmp2Result25.isIOS()) {
         tmp94Result = null;
@@ -1861,8 +1894,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj15.ListHeaderComponent = tmp94Result;
       const items54 = [tmp.transcript];
-      tmp2Result25 = projectId(stateFromStores[31]);
-      const isIOSResult = projectId(stateFromStores[31]).isIOS();
+      tmp2Result25 = projectId(stateFromStores[32]);
+      const isIOSResult = projectId(stateFromStores[32]).isIOS();
       let tmp100 = !isIOSResult;
       if (!isIOSResult) {
         const obj20 = { marginBottom: tmp56 - bound };
@@ -1871,7 +1904,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items54[1] = tmp100;
       obj15.style = items54;
       const items55 = [tmp.transcriptContent];
-      const tmp2Result26 = projectId(stateFromStores[31]);
+      const tmp2Result26 = projectId(stateFromStores[32]);
       items55[1] = { paddingBottom: bound + require("native").space.PX_8 };
       obj15.contentContainerStyle = items55;
       obj15.data = memo;
@@ -1934,7 +1967,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           obj.secretRequestStatus = str;
           const tmp3 = ConjureMessageRowDefault;
-          obj.checklistExpanded = ConjureTodoState.checklistExpanded(c13, item.render_id, set.has(item.render_id));
+          obj.checklistExpanded = conjureCardOverrides.conjureCardExpanded(
+            c13,
+            item.render_id,
+            set.has(item.render_id),
+          );
           obj.onToggleChecklist = onToggleChecklist;
           value = closure_16.get(item.render_id);
           let version;
@@ -1953,7 +1990,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (value4 != null) {
             superseded1 = value4.superseded;
           }
-          obj.planExpanded = conjurePendingPlan.planCardExpanded(c17, item.render_id, true === superseded1);
+          obj.planExpanded = conjureCardOverrides.conjureCardExpanded(c17, item.render_id, true === superseded1);
           obj.onTogglePlan = onTogglePlan;
           obj.replied = closure_48.get(item.render_id);
           obj.onJumpToReplied = onJumpToReplied;
@@ -1990,7 +2027,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj.onRestoreVersion = tmp20;
           return value2(tmp3, obj);
         };
-        obj14.children = tmp94(tmp2(tmp3[42]).FlashList, obj15);
+        obj14.children = tmp94(tmp2(tmp3[43]).FlashList, obj15);
         const items56 = [tmp94(tmp95, obj14), ,];
         let tmp94Result6 = null;
         if (tmp27) {
@@ -2049,7 +2086,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj28 = { type: "critical", role: "alert", message: tmp7.message, action: null };
           const obj29 = { text: tmp7.retry.text, onPress: tmp7.retry.onClick };
           obj28.action = obj29;
-          obj27.children = tmp94(tmp2(tmp3[46]).NewInlineNotice, obj28);
+          obj27.children = tmp94(tmp2(tmp3[47]).NewInlineNotice, obj28);
           tmp94Result8 = tmp94(tmp93, obj27);
         }
         items57[1] = tmp94Result8;
@@ -2057,7 +2094,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp6) {
           const obj30 = { style: tmp.notice, children: null };
           ({ message: obj48.message, onDismiss: obj48.onDismiss } = tmp6);
-          obj30.children = tmp94(tmp2(tmp3[46]).NewInlineNotice, {
+          obj30.children = tmp94(tmp2(tmp3[47]).NewInlineNotice, {
             type: "warning",
             role: "status",
             message: null,
@@ -2091,14 +2128,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp92(tmp93, obj12);
       } else {
         const obj33 = { style: tmp.placeholder, children: null };
-        const intl4 = tmp2(tmp3[26]).intl;
+        const intl4 = tmp2(tmp3[27]).intl;
         if ("unavailable" === chatEmptyStateResult) {
           let AyiQEp = require("../../intl/ConjureUntranslated.messages.js").Td4Sf4;
         } else {
           AyiQEp = require("../../intl/ConjureUntranslated.messages.js").AyiQEp;
         }
         const obj34 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
-        obj33.children = tmp94(tmp2(tmp3[40]).Text, obj34);
+        obj33.children = tmp94(tmp2(tmp3[41]).Text, obj34);
         tmp94(tmp93, obj33);
       }
       const tmp5Result = require("ConjureTipsHost");

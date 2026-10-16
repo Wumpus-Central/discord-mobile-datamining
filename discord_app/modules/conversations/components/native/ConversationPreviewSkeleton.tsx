@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7534).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_5 = fn(5132).MOBILE_PREVIEW_MESSAGE_COUNT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   row: {
     flexDirection: "row",

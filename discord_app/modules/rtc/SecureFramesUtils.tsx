@@ -8,7 +8,7 @@ import _modDef4761 from "../../../_runtime/metro/04761__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
-import _mod9039 from "../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9040 from "../../../discord_common/js/packages/libdave/index.tsx";
 import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators.tsx";
 import SecureFramesTracking from "SecureFramesTracking.tsx";
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils.native.tsx";
@@ -421,7 +421,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9055);
+const SecureFramesConstants = fn(9056);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
   SecureFramesConstants);
 const Constants = fn(1087);
@@ -458,7 +458,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9039.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9040.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);

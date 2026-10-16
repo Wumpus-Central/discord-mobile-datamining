@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9161 from "../../../../../../../_runtime/metro/09161__.js";
+import _mod9162 from "../../../../../../../_runtime/metro/09162__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const GooglePlayNeutralIcon = ReactCompilerGating.isReactCompilerEnabled(
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod9161;
+        const tmpResult = _mod9162;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const GooglePlayNeutralIcon = ReactCompilerGating.isReactCompilerEnabled(
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod9161,
+        source: _mod9162,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

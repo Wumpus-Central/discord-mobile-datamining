@@ -15,7 +15,7 @@ const BadgeDefault = Badge;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles(() => {
   const obj = {
     actionIconButtonPressable: {
@@ -184,7 +184,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function IconActionButton(noMargin) {
-      const cResult = c.c(32);
+      const cResult = c.c(35);
       ({
         source,
         IconComponent,
@@ -201,6 +201,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled,
         onPress,
         onLongPress,
+        accessibilityActions,
+        onAccessibilityAction,
+        ref,
       } = noMargin);
       let str = "filled";
       if (undefined !== variant) {
@@ -255,19 +258,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[19] === str2) {
                               let tmp22 = cResult[20];
                             }
-                            if (cResult[21] === accessibilityLabel) {
-                              if (cResult[22] === disabled) {
-                                if (cResult[23] === hitSlop) {
-                                  if (cResult[24] === onLongPress) {
-                                    if (cResult[25] === onPress) {
-                                      if (cResult[26] === tmp19) {
-                                        if (cResult[27] === tmp22) {
-                                          if (cResult[28] === tmp11) {
-                                            if (cResult[29] === tmp12) {
-                                              if (cResult[30] === tmp16) {
-                                                let tmp26 = cResult[31];
+                            if (cResult[21] === accessibilityActions) {
+                              if (cResult[22] === accessibilityLabel) {
+                                if (cResult[23] === disabled) {
+                                  if (cResult[24] === hitSlop) {
+                                    if (cResult[25] === onAccessibilityAction) {
+                                      if (cResult[26] === onLongPress) {
+                                        if (cResult[27] === onPress) {
+                                          if (cResult[28] === ref) {
+                                            if (cResult[29] === tmp19) {
+                                              if (cResult[30] === tmp22) {
+                                                if (cResult[31] === tmp11) {
+                                                  if (cResult[32] === tmp12) {
+                                                    if (cResult[33] === tmp16) {
+                                                      let tmp26 = cResult[34];
+                                                    }
+                                                    return tmp26;
+                                                  }
+                                                }
                                               }
-                                              return tmp26;
                                             }
                                           }
                                         }
@@ -278,29 +287,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             const obj2 = {
+                              ref,
                               hitSlop,
                               onPress,
                               onLongPress,
                               disabled,
                               accessibilityRole: "button",
                               accessibilityLabel,
+                              accessibilityActions,
+                              onAccessibilityAction,
                               style: tmp11,
                               children: null,
                             };
                             const items = [tmp12, tmp16, tmp19, tmp22];
                             obj2.children = items;
                             const tmp28 = hasOwnProperty(Pressables.PressableOpacity, obj2);
-                            cResult[21] = accessibilityLabel;
-                            cResult[22] = disabled;
-                            cResult[23] = hitSlop;
-                            cResult[24] = onLongPress;
-                            cResult[25] = onPress;
-                            cResult[26] = tmp19;
-                            cResult[27] = tmp22;
-                            cResult[28] = tmp11;
-                            cResult[29] = tmp12;
-                            cResult[30] = tmp16;
-                            cResult[31] = tmp28;
+                            cResult[21] = accessibilityActions;
+                            cResult[22] = accessibilityLabel;
+                            cResult[23] = disabled;
+                            cResult[24] = hitSlop;
+                            cResult[25] = onAccessibilityAction;
+                            cResult[26] = onLongPress;
+                            cResult[27] = onPress;
+                            cResult[28] = ref;
+                            cResult[29] = tmp19;
+                            cResult[30] = tmp22;
+                            cResult[31] = tmp11;
+                            cResult[32] = tmp12;
+                            cResult[33] = tmp16;
+                            cResult[34] = tmp28;
                             tmp26 = tmp28;
                           }
                           let tmp23 = badge;
@@ -377,7 +392,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (num === undefined) {
         num = 0;
       }
-      ({ noMargin, hitSlop, disabled, onPress, onLongPress } = variant);
+      ({ noMargin, hitSlop, disabled, onPress, onLongPress, accessibilityActions, onAccessibilityAction, ref } =
+        variant);
       const tmp = closure_6();
       useFontScale;
       let tmp10Result = null != buttonText;
@@ -385,12 +401,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10Result = tmp5 <= 1.2;
       }
       const obj = {
+        ref,
         hitSlop,
         onPress,
         onLongPress,
         disabled,
         accessibilityRole: "button",
         accessibilityLabel,
+        accessibilityActions,
+        onAccessibilityAction,
         style: null,
         children: null,
       };

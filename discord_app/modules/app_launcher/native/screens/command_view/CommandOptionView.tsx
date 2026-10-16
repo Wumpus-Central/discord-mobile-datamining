@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
-import _modDef10025 from "../../../../../../_runtime/metro/10025__.js";
+import _modDef10026 from "../../../../../../_runtime/metro/10026__.js";
 import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -22,7 +22,7 @@ let items = [
   fn(2000).ApplicationCommandOptionType.NUMBER,
 ];
 const set = new Set(items);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   optionDescription: { marginTop: 4 },
   optionErrorContainer: { flexDirection: "row", alignItems: "center", marginTop: 4 },
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ReduceMotion = option(4909).ReduceMotion;
       const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj = option(504);
-      const optionEnteringAnimation = option(11913).useOptionEnteringAnimation();
+      const optionEnteringAnimation = option(11910).useOptionEnteringAnimation();
       let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
       if (set.has(option.type)) {
         if (option.required || isPreSelectedOption) {
@@ -184,8 +184,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           collapsable: false,
           entering: optionEnteringAnimation.EnteringAnimation,
-          exiting: tmp2(11913).ExitingAnimation,
-          layout: tmp2(11913).LayoutAnimation,
+          exiting: tmp2(11910).ExitingAnimation,
+          layout: tmp2(11910).LayoutAnimation,
           onLayout(arg0) {
             importDefault(arg0, option);
           },
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-subtle",
             children: option.displayName,
           };
-          tmp17Result = closure_5(tmp2(5149).Text, obj7);
+          tmp17Result = closure_5(tmp2(5150).Text, obj7);
         }
         const items2 = [tmp17Result, , ,];
         const obj8 = {
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: option.displayDescription,
         };
-        items2[2] = closure_5(tmp2(5149).Text, obj9);
+        items2[2] = closure_5(tmp2(5150).Text, obj9);
         if (hasItem) {
           const obj10 = {
             collapsable: false,
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const obj11 = {
             style: tmp.optionErrorIcon,
-            source: _modDef10025,
+            source: _modDef10026,
             size: tmp2(1202).IconSizes.REFRESH_SMALL_16,
           };
           const items3 = [closure_5(tmp2(1202).Icon, obj11)];
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-feedback-critical",
             children: optionValidationResults[option.name].error,
           };
-          items3[1] = closure_5(tmp2(5149).Text, obj12);
+          items3[1] = closure_5(tmp2(5150).Text, obj12);
           obj10.children = items3;
           hasItem = closure_6(ReanimatedRexportDefault.View, obj10);
         }
@@ -259,10 +259,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items2;
         obj5.children = closure_6(View, obj6);
         obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-        obj3.children = closure_5(tmp2(11921).AwaitAnimationContext, obj4);
+        obj3.children = closure_5(tmp2(11918).AwaitAnimationContext, obj4);
         return closure_5(tmp2(4909).LayoutAnimationConfig, obj3);
       } else {
         return null;
       }
-      const tmp2Result = option(11913);
+      const tmp2Result = option(11910);
     };

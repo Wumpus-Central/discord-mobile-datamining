@@ -11,7 +11,7 @@ import UserUtilsDefault from "UserUtils.tsx";
 import RegexUtilsDefault from "RegexUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/06319_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/06321_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -436,7 +436,7 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(6189);
+const InAppNavigationRecord = fn(6190);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(2072);
 ({
@@ -456,18 +456,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(6317).AutocompleterResultTypes;
+fn(6319).AutocompleterResultTypes;
 const StaticChannelId = fn(2075).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(6318).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(6318).default.MENTION_HERE;
-const MENTION_GAME = fn(6318).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(6318).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(6318).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6320).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6320).default.MENTION_HERE;
+const MENTION_GAME = fn(6320).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6320).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6320).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -908,10 +908,10 @@ export default {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + closure_1_1(5138).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + closure_1_1(5139).escape(toLocaleLowerCaseResult), "i");
         obj.exactQuery = regExp;
-        const obj2 = closure_1_1(5138);
-        const regExp1 = new RegExp(closure_1_1(5138).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = closure_1_1(5139);
+        const regExp1 = new RegExp(closure_1_1(5139).escape(toLocaleLowerCaseResult), "i");
         obj.containQuery = regExp1;
         return obj;
       });
@@ -919,17 +919,17 @@ export default {
         let toLocaleLowerCaseResult = query.toLocaleLowerCase();
         let obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: true };
         const _RegExp = RegExp;
-        let obj2 = closure_1(5138);
+        let obj2 = closure_1(5139);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + closure_1(5138).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + closure_1(5139).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.exactQuery = regExp;
         const _RegExp2 = RegExp;
-        const str = closure_1(5138).escape(toLocaleLowerCaseResult);
-        const obj3 = closure_1(5138);
-        let regExp1 = new RegExp(closure_1(5138).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = closure_1(5139).escape(toLocaleLowerCaseResult);
+        const obj3 = closure_1(5139);
+        let regExp1 = new RegExp(closure_1(5139).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.containQuery = regExp1;
         mapped.unshift(obj);
-        const str6 = closure_1(5138).escape(toLocaleLowerCaseResult);
+        const str6 = closure_1(5139).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -1975,11 +1975,11 @@ export default {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(2034);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(5138).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(5139).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(5138);
+        const obj3 = nextResult(5139);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(5138).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(5139).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = StickersStore.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((item, index) => {
@@ -2002,12 +2002,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(5968).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(5969).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5968).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(5969).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5968).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(5969).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2045,11 +2045,11 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7270);
+              obj2 = flag(7272);
             }
           });
         });
-        const obj4 = nextResult(5138);
+        const obj4 = nextResult(5139);
       }
     }
     let iter2 = items[Symbol.iterator]();

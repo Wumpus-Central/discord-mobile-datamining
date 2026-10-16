@@ -11,8 +11,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10004 from "../../_runtime/metro/10004__.js";
-import _modDef16524 from "../../_runtime/metro/16524__.js";
+import _modDef10005 from "../../_runtime/metro/10005__.js";
+import _modDef16538 from "../../_runtime/metro/16538__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ const CHANGELOG_MODAL_KEY = fn(2118).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj2 = {
   video: { alignSelf: "center" },
   videoWrapper: { marginBottom: 8 },
@@ -50,7 +50,7 @@ obj2.playButton = size;
 obj2.playIcon = { width: 21, height: 21 };
 obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 let size1 = {
   width: 7,
@@ -198,7 +198,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef16524, obj4)];
+      const items = [closure_7(_modDef16538, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -248,14 +248,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10004,
+      source: _modDef10005,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1202).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(6407).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(6409).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;

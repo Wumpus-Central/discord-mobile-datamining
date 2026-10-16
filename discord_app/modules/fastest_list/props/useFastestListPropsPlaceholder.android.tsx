@@ -16,34 +16,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "default",
+    borderTopLeftRadius: "ddd",
     borderTopRightRadius: "unicodeVersion",
-    borderBottomLeftRadius: "cix",
-    borderBottomRightRadius: "concat",
-    divider: "i",
-    dividerColor: "displayName",
-    dividerPaddingLeft: "name",
+    borderBottomLeftRadius: "item",
+    borderBottomRightRadius: "header",
+    divider: "pos",
+    dividerColor: "withTiming",
+    dividerPaddingLeft: "intl",
     dividerPaddingRight: "state",
-    placeholderShape: "set",
-    placeholderShapeColor: "status",
-    placeholderShapeCount: "mode",
-    placeholderShapeGap: "state",
-    placeholderShapePaddingHorizontal: "size",
-    placeholderShapePaddingVertical: "runOnJS",
+    placeholderShape: "replace",
+    placeholderShapeColor: "max",
+    placeholderShapeCount: "useMemo",
+    placeholderShapeGap: "gap",
+    placeholderShapePaddingHorizontal: "index",
+    placeholderShapePaddingVertical: "state",
     placeholderFeedBackgroundColor: "unicodeVersion",
-    placeholderFeedColor: "displayName",
-    placeholderFeedLabelPadding: "add",
+    placeholderFeedColor: "r",
+    placeholderFeedLabelPadding: "filter",
     placeholderFeedLabelPaddingInnerRatio: "apply",
-    placeholderFeedLabelSize: "application",
-    placeholderFeedLabelSecondarySize: "getChannel",
+    placeholderFeedLabelSize: "for",
+    placeholderFeedLabelSecondarySize: "gap",
     placeholderFeedPadding: "Array",
     placeholderFeedShape: "toCharArray$esjava$1",
-    placeholderFeedShapeSize: "hasDiversityParent",
+    placeholderFeedShapeSize: "dispatch",
     placeholderType: NONE,
-    width: "unicodeVersion",
-    height: "result",
-    verticalAlignment: "v",
-    horizontalAlignment: "Array",
+    width: true,
+    height: true,
+    verticalAlignment: true,
+    horizontalAlignment: true,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +162,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6973).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(6975).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6973).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(6975).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

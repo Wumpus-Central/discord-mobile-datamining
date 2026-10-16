@@ -22,7 +22,7 @@ const UserSettingsSections = fn(1087).UserSettingsSections;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol3 = Symbol;
                         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp38 = closure_7(tmp(6430).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                          const tmp38 = closure_7(tmp(6432).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                           cResult[25] = tmp38;
                           let tmp36 = tmp38;
                         } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           style: tmp4.closeButton,
                           children: tmp36,
                         };
-                        const tmp41 = closure_7(tmp(6407).PressableOpacity, obj4);
+                        const tmp41 = closure_7(tmp(6409).PressableOpacity, obj4);
                         cResult[26] = tmp4.closeButton;
                         cResult[27] = tmp35;
                         cResult[28] = tmp41;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp20 = cResult[15];
         }
-        const Text = tmp(5149).Text;
+        const Text = tmp(5150).Text;
         const text = tmp4.text;
         const intl = tmp(1128).intl;
         const obj7 = { privacySettingsLink: first };

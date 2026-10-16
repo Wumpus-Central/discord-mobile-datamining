@@ -54,11 +54,11 @@ export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled
   ? function useTrackAppEmbedViewed(id) {
       const cResult = require("c").c(4);
       if (cResult[0] !== id) {
-        const result = tmp(7601).trackingConfigWithDefaults(id);
+        const result = tmp(7602).trackingConfigWithDefaults(id);
         cResult[0] = id;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(7601);
+        const tmpResult = tmp(7602);
       } else {
         tmp4 = cResult[1];
       }

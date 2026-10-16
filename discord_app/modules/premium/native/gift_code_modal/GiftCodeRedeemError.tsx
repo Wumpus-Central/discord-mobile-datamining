@@ -8,8 +8,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef10893 from "../../../../../_runtime/metro/10893__.js";
-import _modDef10894 from "../../../../../_runtime/metro/10894__.js";
+import _modDef10890 from "../../../../../_runtime/metro/10890__.js";
+import _modDef10891 from "../../../../../_runtime/metro/10891__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -45,10 +45,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef10893;
+        let tmp5Result = _modDef10890;
         let tmp7 = importDefault;
       } else {
-        tmp5Result = _modDef10894;
+        tmp5Result = _modDef10891;
         tmp7 = importDefault;
       }
       if (cResult[0] !== tmp5Result) {
@@ -169,9 +169,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp8Result = _modDef10893;
+        let tmp8Result = _modDef10890;
       } else {
-        tmp8Result = _modDef10894;
+        tmp8Result = _modDef10891;
       }
       const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

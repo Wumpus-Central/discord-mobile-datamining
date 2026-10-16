@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef14784 from "../../../../../_runtime/metro/14784__.js";
+import _modDef14794 from "../../../../../_runtime/metro/14794__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(13270).dismissUpsellCTA;
+const dismissUpsellCTA = fn(13278).dismissUpsellCTA;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   container: {
     padding: 12,
@@ -66,7 +66,7 @@ export default noop.memo(
             };
             const items = [obj3];
             obj2.options = items;
-            const result = _location(7112).showSimpleActionSheet(obj2);
+            const result = _location(7114).showSimpleActionSheet(obj2);
           }
           cResult[2] = openDismissOption;
           let tmp6 = openDismissOption;
@@ -101,15 +101,15 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: tmp6,
             style: tmp7,
-            iconSource: _modDef14784,
+            iconSource: _modDef14794,
             title: tmp8,
             subtitle: tmp9,
           };
-          const tmp15 = jsx(_location(8808).FormCTA, {
+          const tmp15 = jsx(_location(8809).FormCTA, {
             onPress: tmp5,
             onLongPress: tmp6,
             style: tmp7,
-            iconSource: _modDef14784,
+            iconSource: _modDef14794,
             title: tmp8,
             subtitle: tmp9,
           });
@@ -152,10 +152,10 @@ export default noop.memo(
             };
             const items = [obj3];
             obj2.options = items;
-            const result = location(7112).showSimpleActionSheet(obj2);
+            const result = location(7114).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef14784,
+          iconSource: _modDef14794,
           title: null,
           subtitle: null,
         };
@@ -165,7 +165,7 @@ export default noop.memo(
         obj.title = intl.string(location(1128).t.T6Rfd9);
         const intl2 = location(1128).intl;
         obj.subtitle = intl2.string(location(1128).t.c6KIpg);
-        return jsx(location(8808).FormCTA, {
+        return jsx(location(8809).FormCTA, {
           onPress: function handleOpen() {
             const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
             let str = location;
@@ -190,10 +190,10 @@ export default noop.memo(
             };
             const items = [obj3];
             obj2.options = items;
-            const result = location(7112).showSimpleActionSheet(obj2);
+            const result = location(7114).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef14784,
+          iconSource: _modDef14794,
           title: null,
           subtitle: null,
         });

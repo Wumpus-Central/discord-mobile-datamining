@@ -102,14 +102,14 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16336, dependencyMap.paths),
+      asyncRequireImpl(16350, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16337, dependencyMap.paths),
+      asyncRequireImpl(16351, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -396,7 +396,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   screen: { flex: 1 },
   container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 },

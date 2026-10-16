@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePremiumGiftingSettingTrailing() {
       const cResult = c.c(2);
@@ -69,7 +69,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(12585).GiftIcon,
+  IconComponent: fn(12591).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
@@ -93,7 +93,6 @@ const route = SettingBuilders.createRoute({
         const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
         return jsx(native.Badge, { value: unseenOutboundPromotions.length });
       },
-  unsearchable: true,
   screen: {
     route: fn(1087).UserSettingsSections.PREMIUM_GIFTING,
     getComponent() {

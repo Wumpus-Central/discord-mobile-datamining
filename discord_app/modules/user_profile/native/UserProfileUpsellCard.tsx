@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../_runtime/05453_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05454_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7375).Gradients;
+const Gradients = fn(7377).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   upsellButton: { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 },
   titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 },
@@ -22,8 +22,8 @@ let obj2 = {
   inner: null,
 };
 let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
-obj2.outer = { marginHorizontal: fn(7126).PROFILE_SIDE_PADDING - 1 };
-let obj4 = { marginHorizontal: fn(7126).PROFILE_SIDE_PADDING - 1 };
+obj2.outer = { marginHorizontal: fn(7128).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(7128).PROFILE_SIDE_PADDING - 1 };
 obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -128,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj3 = { style: tmp4.titleContainer, children: null };
               const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-              const items1 = [closure_6(tmp(9266).NitroWheelIcon, obj4)];
+              const items1 = [closure_6(tmp(9267).NitroWheelIcon, obj4)];
               const obj5 = { variant: "heading-sm/bold", children: headerText };
-              items1[1] = closure_6(tmp(5149).Text, obj5);
+              items1[1] = closure_6(tmp(5150).Text, obj5);
               obj3.children = items1;
               tmp9 = closure_7(closure_3, obj3);
             }
@@ -179,9 +179,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != headerText) {
         const obj3 = { style: tmp.titleContainer, children: null };
         const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-        const items3 = [closure_6(tmp3(9266).NitroWheelIcon, obj4)];
+        const items3 = [closure_6(tmp3(9267).NitroWheelIcon, obj4)];
         const obj5 = { variant: "heading-sm/bold", children: headerText };
-        items3[1] = closure_6(tmp3(5149).Text, obj5);
+        items3[1] = closure_6(tmp3(5150).Text, obj5);
         obj3.children = items3;
         tmp6Result = closure_7(closure_3, obj3);
       }

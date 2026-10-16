@@ -24,7 +24,7 @@ const View = fn(17).View;
 const isThread = fn(2072).isThread;
 const Constants = fn(1087);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6185).UnreadSetting;
+const UnreadSetting = fn(6186).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -35,7 +35,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -175,7 +175,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: guild.name,
           };
-          const tmp22 = closure_18(tmp(5149).Text, obj3);
+          const tmp22 = closure_18(tmp(5150).Text, obj3);
           cResult[12] = guild.name;
           cResult[13] = tmp4.guildNameText;
           cResult[14] = "text-default";
@@ -334,11 +334,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp = unreadChannel.getMutableGuildStates()[guild.id];
           guild = tmp;
           if (null == tmp) {
-            return {
-              mentionChannel: "duration",
-              mentionChannelName: "toCharArray$esjava$1",
-              mentionChannelCount: null,
-            };
+            return { mentionChannel: "done", mentionChannelName: "toCharArray$esjava$1", mentionChannelCount: null };
           } else {
             const keys = disableSubtitle(onActiveHookChange[27]).keys(tmp.mentionCounts);
             const found = keys.filter((item) => {

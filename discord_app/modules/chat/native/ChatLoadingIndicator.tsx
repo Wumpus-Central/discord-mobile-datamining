@@ -54,7 +54,7 @@ const View = fn(17).View;
 const AppStates = fn(1087).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -515,7 +515,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         useReducedMotion: stateFromStores,
         withRepeat: PressableOpacity(4909).withRepeat,
         withSequence: PressableOpacity(4909).withSequence,
-        withTiming: PressableOpacity(5154).withTiming,
+        withTiming: PressableOpacity(5155).withTiming,
         Easing: PressableOpacity(4909).Easing,
       };
       fn3.__workletHash = 17454673879926;
@@ -530,7 +530,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
           let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
           const intl = PressableOpacity(1128).intl;
           obj3.children = intl.string(PressableOpacity(1128).t.JwIJMV);
-          const tmp17 = closure_13(PressableOpacity(5149).Text, obj3);
+          const tmp17 = closure_13(PressableOpacity(5150).Text, obj3);
           cResult[7] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -543,7 +543,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
           if (!stateFromStores1) {
             return tmp18;
           } else if (cResult[11] !== tmp18) {
-            PressableOpacity = PressableOpacity(6407).PressableOpacity;
+            PressableOpacity = PressableOpacity(6409).PressableOpacity;
             let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
             tmp = closure_13(PressableOpacity, obj4);
             cResult[11] = tmp18;
@@ -571,7 +571,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         useReducedMotion: stateFromStores,
         withRepeat: PressableOpacity(4909).withRepeat,
         withSequence: PressableOpacity(4909).withSequence,
-        withTiming: PressableOpacity(5154).withTiming,
+        withTiming: PressableOpacity(5155).withTiming,
         Easing: PressableOpacity(4909).Easing,
       };
     }
@@ -630,7 +630,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         useReducedMotion: stateFromStores,
         withRepeat: stateFromStores(4909).withRepeat,
         withSequence: stateFromStores(4909).withSequence,
-        withTiming: stateFromStores(5154).withTiming,
+        withTiming: stateFromStores(5155).withTiming,
         Easing: stateFromStores(4909).Easing,
       };
       fn.__workletHash = 9356373946997;
@@ -644,13 +644,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = stateFromStores(1128).intl;
       obj7.children = intl.string(stateFromStores(1128).t.JwIJMV);
-      items3[1] = closure_13(stateFromStores(5149).Text, obj7);
+      items3[1] = closure_13(stateFromStores(5150).Text, obj7);
       obj5.children = items3;
       const tmp8 = closure_14(View, obj5);
       let tmp7Result = tmp8;
       if (stateFromStores1) {
         let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-        tmp7Result = closure_13(tmp2(6407).PressableOpacity, obj8);
+        tmp7Result = closure_13(tmp2(6409).PressableOpacity, obj8);
       }
       return tmp7Result;
     };

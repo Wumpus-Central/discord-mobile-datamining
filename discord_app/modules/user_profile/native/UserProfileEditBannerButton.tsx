@@ -7,13 +7,13 @@ import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBan
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileBannerDefault = tmp5(8599);
-const EditButtonDefault = tmp5(15546);
+const UserProfileBannerDefault = tmp5(8600);
+const EditButtonDefault = tmp5(15556);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

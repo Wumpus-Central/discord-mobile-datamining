@@ -376,8 +376,8 @@ obj.channelOrMessageUrl = {
   order: _modDef1951.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
-    const match = CHANNEL_OR_MESSAGES_URL_RE.exec(arg0);
+    const CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE;
+    const match = CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE.exec(arg0);
     if (null != match) {
       if (null != match[2]) {
         if (obj.test(match[2])) {
@@ -404,23 +404,30 @@ obj.channelOrMessageUrl = {
       obj.target = tmp;
       return obj;
     } else {
-      const tmp23 = getChannel(tmp3, null);
-      if (null == tmp23) {
+      const tmp28 = getChannel(tmp3, null);
+      if (null == tmp28) {
         const channel = ChannelStore.getChannel(channelId.channelId);
         guildId = undefined;
         if (channel != null) {
           guildId = channel.getGuildId();
         }
-        let tmp5Result = handleUnknownChannel(tmp2, tmp3, tmp4, guildId, tmp);
+        let tmp6Result = handleUnknownChannel(tmp2, tmp3, tmp4, guildId, tmp);
       } else {
         const channel1 = ChannelStore.getChannel(channelId.channelId);
         let guildId1;
         if (channel1 != null) {
           guildId1 = channel1.getGuildId();
         }
-        tmp5Result = parseChannel(tmp23, tmp4, guildId1, tmp);
+        tmp6Result = parseChannel(tmp28, tmp4, guildId1, tmp);
       }
-      return tmp5Result;
+      let tmp22 = tmp6Result;
+      if ("channelMention" === tmp6Result.type) {
+        const obj3 = {};
+        const merged = Object.assign(tmp6Result);
+        obj3.conversationId = tmp5;
+        tmp22 = obj3;
+      }
+      return tmp22;
     }
   },
 };
@@ -428,8 +435,8 @@ let obj3 = {
   order: _modDef1951.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
-    const match = CHANNEL_OR_MESSAGES_URL_RE.exec(arg0);
+    const CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE;
+    const match = CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE.exec(arg0);
     if (null != match) {
       if (null != match[2]) {
         if (obj.test(match[2])) {
@@ -456,23 +463,30 @@ let obj3 = {
       obj.target = tmp;
       return obj;
     } else {
-      const tmp23 = getChannel(tmp3, null);
-      if (null == tmp23) {
+      const tmp28 = getChannel(tmp3, null);
+      if (null == tmp28) {
         const channel = ChannelStore.getChannel(channelId.channelId);
         guildId = undefined;
         if (channel != null) {
           guildId = channel.getGuildId();
         }
-        let tmp5Result = handleUnknownChannel(tmp2, tmp3, tmp4, guildId, tmp);
+        let tmp6Result = handleUnknownChannel(tmp2, tmp3, tmp4, guildId, tmp);
       } else {
         const channel1 = ChannelStore.getChannel(channelId.channelId);
         let guildId1;
         if (channel1 != null) {
           guildId1 = channel1.getGuildId();
         }
-        tmp5Result = parseChannel(tmp23, tmp4, guildId1, tmp);
+        tmp6Result = parseChannel(tmp28, tmp4, guildId1, tmp);
       }
-      return tmp5Result;
+      let tmp22 = tmp6Result;
+      if ("channelMention" === tmp6Result.type) {
+        const obj3 = {};
+        const merged = Object.assign(tmp6Result);
+        obj3.conversationId = tmp5;
+        tmp22 = obj3;
+      }
+      return tmp22;
     }
   },
 };

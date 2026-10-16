@@ -5,10 +5,10 @@ import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef12444 from "../../../../_runtime/metro/12444__.js";
-import _modDef12445 from "../../../../_runtime/metro/12445__.js";
-import _modDef12446 from "../../../../_runtime/metro/12446__.js";
-import _modDef12447 from "../../../../_runtime/metro/12447__.js";
+import _modDef12450 from "../../../../_runtime/metro/12450__.js";
+import _modDef12451 from "../../../../_runtime/metro/12451__.js";
+import _modDef12452 from "../../../../_runtime/metro/12452__.js";
+import _modDef12453 from "../../../../_runtime/metro/12453__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { width: 82, height: 82, marginTop: 4 },
   guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -90,9 +90,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef12444;
+      let tmp10Result = _modDef12450;
     } else {
-      tmp10Result = _modDef12445;
+      tmp10Result = _modDef12451;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj)];
@@ -123,13 +123,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12446;
+    obj5.source = _modDef12452;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12447 };
+    const obj7 = { source: _modDef12453 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

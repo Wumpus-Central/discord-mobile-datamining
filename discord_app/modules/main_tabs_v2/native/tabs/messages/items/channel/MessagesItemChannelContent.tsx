@@ -6,14 +6,14 @@ import _modDef4761 from "../../../../../../../../_runtime/metro/04761__.js";
 import useThemeDefault from "../../../../../../../hooks/useTheme.tsx";
 import useChannelNameDefault from "../../../../../../channel/useChannelName.tsx";
 import isChangelogChannelDefault from "../../../../../../changelog/utils/isChangelogChannel.tsx";
-import _modDef6873 from "../../../../../../../../_runtime/metro/06873__.js";
-import _modDef8551 from "../../../../../../../../_runtime/metro/08551__.js";
+import _modDef6875 from "../../../../../../../../_runtime/metro/06875__.js";
+import _modDef8552 from "../../../../../../../../_runtime/metro/08552__.js";
 import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
 import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef10582 from "../../../../../../../../_runtime/metro/10582__.js";
-import _modDef10712 from "../../../../../../../../_runtime/metro/10712__.js";
+import _modDef10579 from "../../../../../../../../_runtime/metro/10579__.js";
+import _modDef10709 from "../../../../../../../../_runtime/metro/10709__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -23,10 +23,10 @@ import ReadStateStore from "../../../../../../../stores/ReadStateStore.tsx";
 const native = channelMutedIcon(1202);
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6185).UnreadSetting;
+const UnreadSetting = fn(6186).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj = {
   content: { flex: 1 },
   channelIcon: { alignSelf: "center" },
@@ -71,7 +71,7 @@ obj.botTag = { marginRight: nativeDefault.space.PX_4 };
 let obj6 = { marginRight: nativeDefault.space.PX_4 };
 obj.contentPadded = { paddingRight: nativeDefault.space.PX_40 };
 let closure_9 = createStyles.createStyles(obj);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   if (arg2) {
     let MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.TEXT_MUTED;
@@ -93,7 +93,7 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   };
   return obj;
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = {
     channelIcon: { marginRight: nativeDefault.space.PX_4 },
@@ -120,7 +120,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (blocked) {
         if (cResult[0] === channelMutedIcon2.channelIcon) {
         }
-        const obj2 = { source: _modDef8551, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj2 = { source: _modDef8552, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         items = [,];
         ({ channelIcon: arr[0], channelMutedIcon } = channelMutedIcon2);
         items[1] = channelMutedIcon;
@@ -132,7 +132,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (ignored) {
         if (cResult[3] === channelMutedIcon2.channelIcon) {
         }
-        const obj3 = { source: _modDef6873, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj3 = { source: _modDef6875, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items1 = [,];
         ({ channelIcon: arr4[0], channelIgnoredIcon: arr4[1] } = channelMutedIcon2);
         obj3.style = items1;
@@ -143,7 +143,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (muted) {
         if (cResult[6] === channelMutedIcon2.channelIcon) {
         }
-        const obj4 = { source: _modDef10712, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj4 = { source: _modDef10709, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items2 = [,];
         ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
         obj4.style = items2;
@@ -156,7 +156,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[9] === channelMutedIcon2.channelFavoriteIcon) {
         }
-        const obj5 = { source: _modDef10582, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj5 = { source: _modDef10579, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items3 = [,];
         ({ channelIcon: arr2[0], channelFavoriteIcon: arr2[1] } = channelMutedIcon2);
         obj5.style = items3;
@@ -170,19 +170,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ muted, favorite, ignored, blocked } = selected);
       const tmp = closure_11(selected.selected);
       if (blocked) {
-        const obj2 = { source: _modDef8551, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj2 = { source: _modDef8552, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items = [,];
         ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
         obj2.style = items;
         let tmp2 = timestampProducer(native.Icon, obj2);
       } else if (ignored) {
-        const obj3 = { source: _modDef6873, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj3 = { source: _modDef6875, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items1 = [,];
         ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
         obj3.style = items1;
         tmp2 = timestampProducer(native.Icon, obj3);
       } else if (muted) {
-        const obj4 = { source: _modDef10712, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj4 = { source: _modDef10709, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items2 = [,];
         ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
         obj4.style = items2;
@@ -190,7 +190,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp2 = null;
         if (favorite) {
-          const obj = { source: _modDef10582, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+          const obj = { source: _modDef10579, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
           const items3 = [,];
           ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
           obj.style = items3;
@@ -343,7 +343,7 @@ export default noop.memo(
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
         const tmpResult = channel(504);
-        const tmpResult3 = channel(17088);
+        const tmpResult3 = channel(17102);
         let id = stateFromStores;
         if (stateFromStores == null) {
           id = channel.id;
@@ -372,7 +372,7 @@ export default noop.memo(
           if (null != channel.recipients) {
             if (channel.recipients.length > 0) {
               const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-              const EffectDisplayType = tmp(10502).EffectDisplayType;
+              const EffectDisplayType = tmp(10503).EffectDisplayType;
               obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
               obj4 = Object.assign(obj4);
               closure_6(UsernameWithEffectsDefault, obj8);
@@ -383,7 +383,7 @@ export default noop.memo(
         const obj9 = {};
         const merged = Object.assign(obj4);
         obj9.children = tmp16;
-        const items2 = [closure_6(channel(5149).Text, obj9), ,];
+        const items2 = [closure_6(channel(5150).Text, obj9), ,];
         let tmp20Result = null;
         if (tmp15) {
           const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
@@ -430,7 +430,7 @@ export default noop.memo(
             ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
             obj17.style = items7;
             obj17.children = relativeTimestamp;
-            tmp20Result6 = closure_6(tmp(5149).Text, obj17);
+            tmp20Result6 = closure_6(tmp(5150).Text, obj17);
           }
           items6[1] = tmp20Result6;
           obj14.children = items6;
@@ -456,9 +456,9 @@ export default noop.memo(
               str7 = str6;
             }
             obj19.color = str7;
-            obj19.layout = tmp(9550).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+            obj19.layout = tmp(9551).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
             obj19.muted = muted;
-            let tmp20Result7 = closure_6(tmp(13455).ChannelRowPreview, obj19);
+            let tmp20Result7 = closure_6(tmp(13463).ChannelRowPreview, obj19);
           } else if (channel.isDM()) {
             const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
             let guild_id;
@@ -474,7 +474,7 @@ export default noop.memo(
               const obj21 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
               const intl = tmp(1128).intl;
               obj21.children = intl.string(tmp(1128).t.FL5T01);
-              tmp20Result7 = closure_6(tmp(5149).Text, obj21);
+              tmp20Result7 = closure_6(tmp(5150).Text, obj21);
             }
           }
           obj18.children = tmp20Result7;

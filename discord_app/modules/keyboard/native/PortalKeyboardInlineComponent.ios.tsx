@@ -25,7 +25,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp9 = id(6527)(first);
+        const tmp9 = id(6529)(first);
         noop = tmp9;
         let obj = messagesRef(576);
         let obj2 = noop;
@@ -73,7 +73,7 @@ export default noop.memo(
             }
           }
         }
-        id(5458)(K);
+        id(5459)(K);
         let PortalKeyboardUIStore = messagesRef(5047).PortalKeyboardUIStore;
         let field = PortalKeyboardUIStore.useField("keyboard");
         const PortalKeyboardUIStore2 = messagesRef(5047).PortalKeyboardUIStore;
@@ -119,11 +119,11 @@ export default noop.memo(
                       const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                       const result1 = DCDChatManager3.customKeyboardWillShow(
                         tmp38,
-                        messagesRef(10623).getKeyboardActionSheetHeight().minimum,
+                        messagesRef(10620).getKeyboardActionSheetHeight().minimum,
                         0.25,
                         7,
                       );
-                      const obj3 = messagesRef(10623);
+                      const obj3 = messagesRef(10620);
                     }
                   }
                 }
@@ -195,13 +195,13 @@ export default noop.memo(
         const id = noop.useId();
         const tmp2 = id(5046)();
         dependencyMap = tmp2;
-        let tmp4 = id(6527)({ includeCustomKeyboard: false });
+        let tmp4 = id(6529)({ includeCustomKeyboard: false });
         noop = tmp4;
         let tmp3 = id(1899)();
         const keyboardContextForType = messagesRef(5046).useKeyboardContextForType(
           messagesRef(1631).KeyboardTypes.SYSTEM,
         );
-        id(5458)(() => () => {
+        id(5459)(() => () => {
           const PortalKeyboardUIStore = messagesRef(dependencyMap[9]).PortalKeyboardUIStore;
           field = PortalKeyboardUIStore.getField("keyboard");
           let tmp4 = null != field;
@@ -241,11 +241,11 @@ export default noop.memo(
                       const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                       const result1 = DCDChatManager3.customKeyboardWillShow(
                         tmp38,
-                        messagesRef(10623).getKeyboardActionSheetHeight().minimum,
+                        messagesRef(10620).getKeyboardActionSheetHeight().minimum,
                         0.25,
                         7,
                       );
-                      const obj3 = messagesRef(10623);
+                      const obj3 = messagesRef(10620);
                     }
                   }
                 }

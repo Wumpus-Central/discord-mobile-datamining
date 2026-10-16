@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           }
         }
-        const coachmark = tmp(9679).useCoachmark(arg0, obj3);
+        const coachmark = tmp(9678).useCoachmark(arg0, obj3);
         return tmp8;
       }
       obj3 = {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useForLaterCoachmark(arg0) {
       const items = [closure_6];
-      const tmp = _slicedToArray(first(7323).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+      const tmp = _slicedToArray(first(7325).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
       first = tmp[0];
       dependencyMap = tmp3;
       const items1 = [tmp[1], first];
@@ -127,11 +127,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           dependencyMap(constants.USER_DISMISS);
         };
         obj.renderImgComponent = function renderImgComponent() {
-          return closure_1_5(first(13541).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+          return closure_1_5(first(13549).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
         };
         return obj;
       }, items1);
-      let obj = first(7323);
-      const coachmark = first(9679).useCoachmark(arg0, memo);
+      let obj = first(7325);
+      const coachmark = first(9678).useCoachmark(arg0, memo);
       return tmp[1];
     };

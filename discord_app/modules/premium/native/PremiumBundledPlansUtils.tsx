@@ -251,8 +251,8 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
   productId,
   subscription,
 ) {
-  if (productId in found(7350).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7350).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(7352).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(7352).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
         const itemsWithUpsertedPremiumPlanId = tmp(4828).getItemsWithUpsertedPremiumPlanId(

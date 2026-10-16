@@ -8,10 +8,10 @@ const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11821).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6185).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11818).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6186).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles({
   unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" },
   unreadBadgePanel: { marginLeft: -16 },

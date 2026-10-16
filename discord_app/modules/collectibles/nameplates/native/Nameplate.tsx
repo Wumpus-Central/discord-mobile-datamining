@@ -10,7 +10,7 @@ require = fn;
 let closure_3 = ["nameplate"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = { container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 }, gradient: null, img: null };
   let num = 1;
@@ -96,7 +96,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
         let tmp24 = cResult[8];
       }
       if (cResult[9] !== nameplate) {
-        const nameplateAssets = APNGPlayer(9253).getNameplateAssets(nameplate);
+        const nameplateAssets = APNGPlayer(9254).getNameplateAssets(nameplate);
         cResult[9] = nameplate;
         class B {
           constructor() {
@@ -106,7 +106,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
         }
         cResult[10] = nameplateAssets;
         let tmp26 = nameplateAssets;
-        const APNGPlayerResult3 = APNGPlayer(9253);
+        const APNGPlayerResult3 = APNGPlayer(9254);
       } else {
         tmp26 = cResult[10];
       }
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
                   return obj;
                 }
               }
-              APNGPlayer = APNGPlayer(9242).APNGPlayer;
+              APNGPlayer = APNGPlayer(9243).APNGPlayer;
               const obj6 = { url: str, style: img.img, autoplay: true };
               tmp37 = closure_7(APNGPlayer, obj6);
               APNGPlayerResult4 = APNGPlayer(1384);
@@ -338,7 +338,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
   const tmpResult = flag6(4909);
   const backgroundGradientColors = flag6(1992).getBackgroundGradientColors(nameplate.palette, tmp6);
   const tmpResult4 = flag6(1992);
-  const nameplateAssets = flag6(9253).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(9254).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -369,15 +369,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj4.colors = items3;
-    tmp15Result = closure_7(tmp5(5453), obj4);
-    const tmp5Result = tmp5(5453);
+    tmp15Result = closure_7(tmp5(5454), obj4);
+    const tmp5Result = tmp5(5454);
   }
   const items4 = [tmp15Result, ];
-  const tmpResult5 = flag6(9253);
+  const tmpResult5 = flag6(9254);
   if (tmpResult6.isAndroid()) {
     if (tmp12) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_7(tmp(9242).APNGPlayer, obj5);
+      let tmp17 = closure_7(tmp(9243).APNGPlayer, obj5);
     }
     items4[1] = tmp17;
     obj3.children = items4;

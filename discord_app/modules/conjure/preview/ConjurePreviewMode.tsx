@@ -10,9 +10,9 @@ const obj = {
   bot: _modDef3865.uE5z15,
 };
 const obj2 = {};
-obj2[fn(7261).EmbeddedSurfaceType.APP_CHANNEL] = _modDef3865.xI4N6Q;
-obj2[fn(7261).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef3865.oWMDh6;
-obj2[fn(7261).EmbeddedSurfaceType.MAIN] = _modDef3865["0ICBnS"];
+obj2[fn(7263).EmbeddedSurfaceType.APP_CHANNEL] = _modDef3865.xI4N6Q;
+obj2[fn(7263).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef3865.oWMDh6;
+obj2[fn(7263).EmbeddedSurfaceType.MAIN] = _modDef3865["0ICBnS"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewMode.tsx");
 

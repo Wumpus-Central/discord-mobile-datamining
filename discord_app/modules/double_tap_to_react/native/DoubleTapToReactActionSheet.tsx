@@ -55,7 +55,7 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -262,7 +262,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = top(4909);
       const sharedValue3 = top(4909).useSharedValue(0);
       let obj4 = top(4909);
-      const mountLayoutEffect = top(5458).useMountLayoutEffect(() => {
+      const mountLayoutEffect = top(5459).useMountLayoutEffect(() => {
         randomizeAnimationValues({
           positionValue: sharedValue,
           rotationValue: sharedValue1,
@@ -271,7 +271,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           leading,
         });
       });
-      const obj5 = top(5458);
+      const obj5 = top(5459);
       class S {
         constructor() {
           obj = { scale: closure_5.get() };
@@ -1254,7 +1254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(7100).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(7102).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
               tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;

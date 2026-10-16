@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11821).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11818).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -412,13 +412,13 @@ export default noop.memo(
                 guildId: "e",
                 isMobileOnline: stateFromStores3,
                 isVROnline: stateFromStores4,
-                status: true,
-                streaming: true,
-                style: false,
-                size: true,
-                animate: true,
-                typing: 0.4,
-                autoStatusCutout: "man_police_officer_tone5",
+                status: null,
+                streaming: "57b3286b2824f2c7cf84996c89963e3f",
+                style: "es-419.messages.57b3286b2824f2c7cf84996c89963e3f.compiled.messages",
+                size: "jsona",
+                animate: "VOICE_CATEGORY_EXPAND",
+                typing: null,
+                autoStatusCutout: true,
               };
               if (!stateFromStores2.isSystemUser()) {
                 class H {
@@ -578,13 +578,13 @@ export default noop.memo(
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
-              status: true,
-              streaming: true,
-              style: false,
-              size: true,
-              animate: true,
-              typing: 0.4,
-              autoStatusCutout: "man_police_officer_tone5",
+              status: null,
+              streaming: "57b3286b2824f2c7cf84996c89963e3f",
+              style: "es-419.messages.57b3286b2824f2c7cf84996c89963e3f.compiled.messages",
+              size: "jsona",
+              animate: "VOICE_CATEGORY_EXPAND",
+              typing: null,
+              autoStatusCutout: true,
             };
             let tmp12 = null;
             if (!stateFromStores2.isSystemUser()) {
@@ -602,13 +602,13 @@ export default noop.memo(
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
-              status: true,
-              streaming: true,
-              style: false,
-              size: true,
-              animate: true,
-              typing: 0.4,
-              autoStatusCutout: "man_police_officer_tone5",
+              status: null,
+              streaming: "57b3286b2824f2c7cf84996c89963e3f",
+              style: "es-419.messages.57b3286b2824f2c7cf84996c89963e3f.compiled.messages",
+              size: "jsona",
+              animate: "VOICE_CATEGORY_EXPAND",
+              typing: null,
+              autoStatusCutout: true,
             });
           }
         }

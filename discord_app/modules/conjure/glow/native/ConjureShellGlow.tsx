@@ -64,7 +64,7 @@ const start = { x: 0.5, y: 0 };
 const end = { x: 0.5, y: 1 };
 const start2 = { x: 0, y: 0.5 };
 const end2 = { x: 1, y: 0.5 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_27 = createStyles.createStyles({
   root: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", zIndex: 0 },
   band: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 },
@@ -508,7 +508,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             obj8.locations = locations;
                             obj8.start = start;
                             obj8.end = end;
-                            const tmp66 = sharedValue4(stateFromStores(5453), obj8);
+                            const tmp66 = sharedValue4(stateFromStores(5454), obj8);
                             cResult[33] = tmp4.fill;
                             cResult[34] = tmp66;
                             let tmp59 = tmp66;
@@ -1190,7 +1190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           }
                                         }
                                         const size = { width, height: v500, thinking, fill: tmp88, fillOpacity: 0.16 };
-                                        const tmp92 = sharedValue4(stateFromStores(12064), size);
+                                        const tmp92 = sharedValue4(stateFromStores(12063), size);
                                         cResult[56] = tmp88;
                                         cResult[57] = 0.16;
                                         class Se {
@@ -1377,7 +1377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj16 = { style: tmp4.fill, colors: tmp22.chroma, start: start2, end: end2 };
                                   cResult[47] = tmp22.chroma;
                                   cResult[48] = tmp4.fill;
-                                  cResult[49] = sharedValue4(stateFromStores(5453), obj16);
+                                  cResult[49] = sharedValue4(stateFromStores(5454), obj16);
                                   class Se {
                                     constructor() {
                                       obj = { opacity: (1 - closure_6.get()) * c2, transform: null };
@@ -1388,7 +1388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       return obj;
                                     }
                                   }
-                                  const tmp81 = sharedValue4(stateFromStores(5453), obj16);
+                                  const tmp81 = sharedValue4(stateFromStores(5454), obj16);
                                 }
                                 const items9 = [,];
                                 class Ee {
@@ -1557,7 +1557,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj18 = { style: tmp4.fill, colors: tmp22.base, start: start2, end: end2 };
                             cResult[38] = tmp22.base;
                             cResult[39] = tmp4.fill;
-                            cResult[40] = sharedValue4(stateFromStores(5453), obj18);
+                            cResult[40] = sharedValue4(stateFromStores(5454), obj18);
                             class Se {
                               constructor() {
                                 obj = { opacity: (1 - closure_6.get()) * c2, transform: null };
@@ -1568,7 +1568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 return obj;
                               }
                             }
-                            const tmp72 = sharedValue4(stateFromStores(5453), obj18);
+                            const tmp72 = sharedValue4(stateFromStores(5454), obj18);
                           }
                           const items10 = [tmp4.sweep, animatedStyle1];
                           cResult[35] = animatedStyle1;

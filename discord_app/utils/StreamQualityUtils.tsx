@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const StreamSettingsConstants = fn(5273);
+const StreamSettingsConstants = fn(5274);
 ({
   ApplicationStreamFPS: c10,
   ApplicationStreamResolutions: closure_11,
@@ -24,7 +24,7 @@ const StreamSettingsConstants = fn(5273);
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
 let closure_15 = fn(1394).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5178).ResolutionTypes;
+const ResolutionTypes = fn(5179).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;

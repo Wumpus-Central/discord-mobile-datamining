@@ -94,7 +94,7 @@ let closure_37 = async function _loadSavedEmojis() {
               const obj6 = {
                 value: React(2114).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(6211).getAsync(closure_1_0),
+                    closure_2_1(6212).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -149,7 +149,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(6245).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(6246).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -169,7 +169,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(6245);
+      obj = closure_0(6246);
     }
   }
 }
@@ -335,7 +335,7 @@ function handleRoleUpdate(guildId) {
 const EmojiConstants = fn(1395);
 ({ EmojiDisabledReasons: closure_17, EmojiIntention: closure_18 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1087).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(6209).EmojiCategories;
+const EmojiCategories = fn(6210).EmojiCategories;
 const UserSettingsTypes = fn(1097).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),
@@ -394,7 +394,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(6210).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(6211).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -403,7 +403,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(6210);
+        obj = emoji(6211);
       }
       tmp6 = someResult;
     }
@@ -1167,7 +1167,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(5138).escape(formatted);
+  const escapeResult = formatted(5139).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;

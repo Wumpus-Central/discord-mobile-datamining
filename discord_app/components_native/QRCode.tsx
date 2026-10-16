@@ -3,8 +3,8 @@ import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "common/FastImage.tsx";
 import VisualEffectViewDefault from "../modules/visual_effect_view/native/VisualEffectView.tsx";
 import VisualEffectViewThemedDefault from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
-import QRCodeDefault from "../../_runtime/08960_QRCode.js";
-import _mod8974 from "../../_runtime/metro/08974__.js";
+import QRCodeDefault from "../../_runtime/08961_QRCode.js";
+import _mod8975 from "../../_runtime/metro/08975__.js";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   qrCode: {
     display: "flex",
@@ -86,7 +86,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, timestampProducer.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod8974 };
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod8975 };
   obj3.children = React5(FastImageDefault, obj4);
   items[1] = React5(hasOwnProperty, obj3);
   let tmp6Result = null;

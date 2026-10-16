@@ -8,7 +8,7 @@ import FramesStore from "FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(10934);
+const FramesConstants = fn(10931);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1087);
 ({ ChannelTypes: closure_8, Permissions: closure_9 } = Constants);

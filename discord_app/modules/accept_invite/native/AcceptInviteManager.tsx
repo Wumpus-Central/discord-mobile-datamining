@@ -15,7 +15,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7578).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7579).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1087);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -150,7 +150,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(18358, dependencyMap.paths),
+            asyncRequireImpl(18368, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

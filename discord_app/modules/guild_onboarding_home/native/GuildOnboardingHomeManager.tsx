@@ -89,7 +89,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(18435, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(18445, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -183,11 +183,11 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = null != closure_129_5;
             }
             if (tmp13) {
-              tmp13 = closure_129_5.actionType === applyArgumentsResult(9557).NewMemberActionTypes.VIEW;
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(12862).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(9556).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(9556);
+              const result = applyArgumentsResult(12861).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(12861);
             }
             arr = memberActions;
           }

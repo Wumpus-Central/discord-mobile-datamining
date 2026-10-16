@@ -217,17 +217,17 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6181).GuildsNodeType;
-const GuildsBarConstants = fn(17354);
+const GuildsNodeType = fn(6182).GuildsNodeType;
+const GuildsBarConstants = fn(17366);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16056);
+const YouBarConstants = fn(16070);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "Array", afterItem: "test" };
+let closure_17 = { beforeItem: "Symbol", afterItem: "current" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
@@ -611,7 +611,7 @@ export default noop.memo(
           obj.orientation = "visible";
           fastList.scrollToLocation(obj);
         }, items2);
-        obj3.children = jsx(top(17425), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
+        obj3.children = jsx(top(17435), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
         return (
           <scrollPosValue
             style={tmp7.style}

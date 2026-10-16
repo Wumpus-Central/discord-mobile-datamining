@@ -14,7 +14,7 @@ import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import ReanimatedNativeViewDefault from "../../core/native/ReanimatedNativeView.tsx";
-import _modDef8387 from "../../../../_runtime/metro/08387__.js";
+import _modDef8388 from "../../../../_runtime/metro/08388__.js";
 import ListUtils from "../../../utils/ListUtils.tsx";
 import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -64,20 +64,20 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_17(closure_28, obj, arg0);
   }
 }
-const GuildsNodeType = fn(6181).GuildsNodeType;
-const GuildsBarDnDStore = fn(17357);
+const GuildsNodeType = fn(6182).GuildsNodeType;
+const GuildsBarDnDStore = fn(17369);
 ({ useItemDragState: c10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(17362);
+let GuildsBarConstants = fn(17374);
 ({
   DEFAULT_FOLDER_COLOR: closure_12,
   isDefaultFolderColor: map1,
   normalizeFolderColor: closure_14,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(17354);
+GuildsBarConstants = fn(17366);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_19 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -188,7 +188,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj3 = { style: tmp12, guild: stateFromStores, size: tmp(6381).GuildIconSizes.XXSMALL, selected };
+          const obj3 = { style: tmp12, guild: stateFromStores, size: tmp(6383).GuildIconSizes.XXSMALL, selected };
           const tmp16 = closure_17(GuildIconDefault, obj3, combined);
           cResult[7] = stateFromStores;
           cResult[8] = selected;
@@ -342,7 +342,7 @@ const memoResult = noop.memo(
           token,
           color(4877).useToken(token2(587).modules.mobile.GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET),
         );
-        obj4.withSpring = color(5440).withSpring;
+        obj4.withSpring = color(5441).withSpring;
         obj4.TRANSITION_PHYSICS = TRANSITION_PHYSICS;
         fn.__closure = obj4;
         fn.__workletHash = 15799331931829;
@@ -367,7 +367,7 @@ const memoResult = noop.memo(
           { height: token + token1 + (token + 2 * token1) * totalItems + tmp4 },
         ];
         obj6.style = items1;
-        return closure_17(token2(6984), obj6);
+        return closure_17(token2(6986), obj6);
       },
 );
 const __initData3 = {
@@ -459,7 +459,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult6 = cleanUp(4909);
       fn2.__closure = {
-        withSpring: cleanUp(5440).withSpring,
+        withSpring: cleanUp(5441).withSpring,
         visible: sharedValue,
         FOLDER_SPRING_PHYSICS,
         state,
@@ -491,7 +491,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp19;
               }
               const obj3 = { style: tmp18, children };
-              const tmp21 = closure_17(tmp5(6984), obj3);
+              const tmp21 = closure_17(tmp5(6986), obj3);
               cResult[11] = children;
               cResult[12] = tmp18;
               cResult[13] = tmp21;
@@ -536,7 +536,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = items2;
       tmp14 = T;
       let obj2 = {
-        withSpring: cleanUp(5440).withSpring,
+        withSpring: cleanUp(5441).withSpring,
         visible: sharedValue,
         FOLDER_SPRING_PHYSICS,
         state,
@@ -654,7 +654,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       if ("icon" !== tintStyle2.type) {
         return null;
       } else if (cResult[0] !== tintStyle2.tintStyle) {
-        const obj2 = { source: _modDef8387, style: null };
+        const obj2 = { source: _modDef8388, style: null };
         tintStyle = tintStyle2.tintStyle;
         obj2.style = tintStyle;
         const tmp6 = constants(FastImageDefault, obj2);
@@ -667,7 +667,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       let tmp = null;
       if ("icon" === item.type) {
-        const obj = { source: _modDef8387, style: item.tintStyle };
+        const obj = { source: _modDef8388, style: item.tintStyle };
         tmp = constants(FastImageDefault, obj);
       }
       return tmp;

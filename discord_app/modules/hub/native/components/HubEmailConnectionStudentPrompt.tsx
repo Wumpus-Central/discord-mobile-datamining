@@ -6,12 +6,12 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13349).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13357).HubEmailConnectionSteps;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 },
   header: null,
@@ -205,10 +205,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj = onClose(1505);
       const obj6 = { source: null };
-      const tmp2 = invite(7051);
-      obj6.source = invite(13360);
+      const tmp2 = invite(7053);
+      obj6.source = invite(13368);
       obj5.leading = closure_6(invite(5091), obj6);
-      obj5.trailing = invite(7051).Arrow;
+      obj5.trailing = invite(7053).Arrow;
       const intl2 = onClose(1128).intl;
       obj5.label = intl2.string(onClose(1128).t["a7a/D+"]);
       const intl3 = onClose(1128).intl;
@@ -221,15 +221,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
       const tmp3 = invite(5091);
       const obj8 = { source: null };
-      const tmp4 = invite(7051);
-      obj8.source = invite(13361);
+      const tmp4 = invite(7053);
+      obj8.source = invite(13369);
       obj7.leading = closure_6(invite(5091), obj8);
-      obj7.trailing = invite(7051).Arrow;
+      obj7.trailing = invite(7053).Arrow;
       const intl4 = onClose(1128).intl;
       obj7.label = intl4.string(onClose(1128).t.GLG9n4);
       obj7.onPress = onClose;
       items[2] = closure_6(tmp4, obj7);
       obj3.children = items;
       obj2.children = closure_7(View, obj3);
-      return closure_6(onClose(13358).HubEmailConnectionScreen, obj2);
+      return closure_6(onClose(13366).HubEmailConnectionScreen, obj2);
     };

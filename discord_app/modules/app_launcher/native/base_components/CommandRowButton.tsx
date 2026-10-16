@@ -6,8 +6,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = TableRowArrow(1128);
 const SendMessageIcon = TableRowArrow(5102);
-const components_Button_Button = TableRowArrow(5441);
-const TableRowArrow2 = TableRowArrow(6411);
+const components_Button_Button = TableRowArrow(5442);
+const TableRowArrow2 = TableRowArrow(6413);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -143,11 +143,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               }
               c3 = 1;
               const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-              const obj2 = tmp3(9483);
-              obj6.optionValues = tmp3(11857).parseOptionValuesForSend(commandContext.channel, command, {});
+              const obj2 = tmp3(9484);
+              obj6.optionValues = tmp3(11854).parseOptionValuesForSend(commandContext.channel, command, {});
               obj6.context = commandContext;
               obj6.sectionName = sectionName;
-              obj6.commandOrigin = tmp3(7465).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+              obj6.commandOrigin = tmp3(7467).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
               dependencyMap = 2;
               c4 = 1;
               const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };

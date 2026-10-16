@@ -1,7 +1,9 @@
 // discord_app/modules/favorites/native/FavoritesGuildHeaderActions.tsx
 import c from "../../../../_runtime/00576_c.js";
+import util from "../../../intl/index.native.tsx";
+import _modDef3447 from "../intl/FavoritesGuild.messages.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import useFavoritesGuildHeaderActionDefault from "../hooks/useFavoritesGuildHeaderAction.tsx";
+import _modDef10851 from "../../../../_runtime/metro/10851__.js";
 import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,55 +15,49 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 
 export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompilerEnabled()
   ? function FavoritesGuildHeaderActionButton() {
-      const cResult = c.c(4);
-      ({ isPreview, label, exitPreview } = useFavoritesGuildHeaderActionDefault());
-      const tmp4Result = importDefault(isPreview ? 6431 : 10854);
-      if (!isPreview) {
-        exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = {
+          variant: "secondary",
+          size: "sm",
+          icon: _modDef10851,
+          onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
+          accessibilityLabel: null,
+          maxFontSizeMultiplier: 1,
+        };
+        const intl = util.intl;
+        obj2.accessibilityLabel = intl.string(_modDef3447.G9fGlP);
+        const tmp7 = jsx(IconButton.IconButton, {
+          variant: "secondary",
+          size: "sm",
+          icon: _modDef10851,
+          onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
+          accessibilityLabel: null,
+          maxFontSizeMultiplier: 1,
+        });
+        cResult[0] = tmp7;
+        let first = tmp7;
+      } else {
+        first = cResult[0];
       }
-      if (cResult[0] === label) {
-        if (cResult[1] === tmp4Result) {
-          if (cResult[2] === exitPreview) {
-            let tmp7 = cResult[3];
-          }
-          return tmp7;
-        }
-      }
-      const tmp8 = jsx(IconButton.IconButton, {
-        variant: "secondary",
-        size: "sm",
-        icon: tmp4Result,
-        onPress: exitPreview,
-        accessibilityLabel: label,
-        maxFontSizeMultiplier: 1,
-      });
-      cResult[0] = label;
-      cResult[1] = tmp4Result;
-      cResult[2] = exitPreview;
-      cResult[3] = tmp8;
-      tmp7 = tmp8;
-      const tmp5 = useFavoritesGuildHeaderActionDefault();
+      return first;
     }
   : function FavoritesGuildHeaderActionButton() {
-      ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderActionDefault());
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: importDefault(isPreview ? 6431 : 10854),
-        onPress: null,
+        icon: _modDef10851,
+        onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,
       };
-      if (!isPreview) {
-        exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
-      }
-      obj.onPress = exitPreview;
-      obj.accessibilityLabel = label;
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(_modDef3447.G9fGlP);
       return jsx(IconButton.IconButton, {
         variant: "secondary",
         size: "sm",
-        icon: importDefault(isPreview ? 6431 : 10854),
-        onPress: null,
+        icon: _modDef10851,
+        onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,
       });

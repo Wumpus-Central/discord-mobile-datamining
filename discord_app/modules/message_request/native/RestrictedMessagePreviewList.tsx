@@ -79,10 +79,10 @@ let closure_9 = {
   useAlternateEmbedColors: false,
   restrictedPreview: true,
 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(17975).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(17985).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -94,11 +94,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(17975).RESTRICTED_CONTENT_INSET,
-  height: fn(17975).RESTRICTED_AVATAR_SIZE,
+  width: fn(17985).RESTRICTED_CONTENT_INSET,
+  height: fn(17985).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(17975).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(17985).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",
@@ -161,7 +161,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
             let intl = tmp(1128).intl;
             obj2.children = intl.string(tmp(1128).t["VGf+K3"]);
-            const tmp14 = closure_6(tmp(5149).Text, obj2);
+            const tmp14 = closure_6(tmp(5150).Text, obj2);
             cResult[6] = tmp14;
             let tmp12 = tmp14;
           } else {

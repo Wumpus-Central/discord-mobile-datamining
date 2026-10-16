@@ -8,9 +8,9 @@ import UploadAttachmentStore from "../../../../../stores/UploadAttachmentStore.t
 
 require = fn;
 let View = fn(17).View;
-const DraftType = fn(7462).DraftType;
+const DraftType = fn(7464).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = {
   justifyContent: "center",

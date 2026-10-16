@@ -28,16 +28,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8534).getBadgeName;
-let Constants = fn(7126);
+const getBadgeName = fn(8535).getBadgeName;
+let Constants = fn(7128);
 ({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: closure_9, UserProfileThemeTypes } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_11, UserSettingsSections: closure_12 } = Constants);
-const GuildTagBadgeSize = fn(8108).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8545).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8109).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8546).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -332,7 +332,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10502).EffectDisplayType.STATIC,
+          effectDisplayType: user(10503).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -358,7 +358,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10502).EffectDisplayType.STATIC,
+          effectDisplayType: user(10503).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -369,11 +369,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
         const items1 = [closure_14(UsernameWithEffectsDefault, obj8), renderBotTag()];
         if (showChevron) {
-          showChevron = closure_14(tmp13(10781).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+          showChevron = closure_14(tmp13(10778).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
         }
         items1[2] = showChevron;
         obj7.children = items1;
-        tmp12Result = closure_15(user(6407).PressableOpacity, obj7);
+        tmp12Result = closure_15(user(6409).PressableOpacity, obj7);
         tmp13 = user;
       }
       return tmp12Result;

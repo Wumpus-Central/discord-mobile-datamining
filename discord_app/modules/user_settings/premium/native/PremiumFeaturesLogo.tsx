@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import _modDef7378 from "../../../../../_runtime/metro/07378__.js";
-import _modDef9654 from "../../../../../_runtime/metro/09654__.js";
+import _modDef7380 from "../../../../../_runtime/metro/07380__.js";
+import _modDef9653 from "../../../../../_runtime/metro/09653__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,10 +17,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       ({ premiumType, style } = arg0);
       if (premiumType === PremiumTypes.TIER_0) {
-        let tmp5 = _modDef9654;
+        let tmp5 = _modDef9653;
         let tmp6 = importDefault;
       } else {
-        tmp5 = _modDef7378;
+        tmp5 = _modDef7380;
         tmp6 = importDefault;
       }
       if (cResult[0] !== premiumType) {
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function PremiumFeaturesLogo(premiumType) {
       premiumType = premiumType.premiumType;
       if (premiumType === PremiumTypes.TIER_0) {
-        let tmp3 = _modDef9654;
+        let tmp3 = _modDef9653;
         let tmp = importDefault;
       } else {
         tmp = importDefault;
-        tmp3 = _modDef7378;
+        tmp3 = _modDef7380;
       }
       const obj = {
         accessible: true,

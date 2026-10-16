@@ -18,12 +18,12 @@ const JoinGuildSources = fn(1087).JoinGuildSources;
 const isStaticChannelRoute = fn(2075).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9144).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9145).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -34,7 +34,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9144).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9145).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -613,7 +613,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = game(1128).intl;
       obj3.children = intl.string(game(1128).t.r6bvTh);
-      obj2.children = closure_11(game(5149).Heading, obj3);
+      obj2.children = closure_11(game(5150).Heading, obj3);
       const items = [closure_11(View, obj2)];
       const obj4 = { style: tmp.list, children: null };
       if (isLoading) {

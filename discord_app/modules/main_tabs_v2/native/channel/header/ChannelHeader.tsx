@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = undefined === pressable || pressable;
       const stateFromStores = channelId(573).useStateFromStores(first, tmp9);
       const tmpResult = channelId(573);
-      const isChannelContentGated = channelId(6142).useIsChannelContentGated(stateFromStores);
+      const isChannelContentGated = channelId(6143).useIsChannelContentGated(stateFromStores);
       let tmp11 = !isChannelContentGated;
       if (!isChannelContentGated) {
         tmp11 = tmp4;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = channelId(6142);
+      const tmpResult2 = channelId(6143);
     }
   : function ChannelHeader(channelId) {
       channelId = channelId.channelId;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
       const obj = channelId(573);
-      const isChannelContentGated = channelId(6142).useIsChannelContentGated(stateFromStores);
+      const isChannelContentGated = channelId(6143).useIsChannelContentGated(stateFromStores);
       let tmp4 = !isChannelContentGated;
       if (!isChannelContentGated) {
         tmp4 = pressable;
@@ -328,7 +328,7 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
     const tmpResult = ChatInputUtils;
   }
   obj = PlatformUtils;
-  if (tmpResult3.isSwipeToMemberListEnabled()) {
+  if (tmpResult3.isSwipeToMemberListEnabledForChannel(channelId)) {
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
     const obj2 = { source, channelId, screenIndex };
     ComponentDispatch.dispatch(ComponentActions.SHOW_CHANNEL_DETAILS, obj2);

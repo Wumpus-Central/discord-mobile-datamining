@@ -11,7 +11,7 @@ import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import showEmojiOverflowActionSheetDefault from "../showEmojiOverflowActionSheet.tsx";
-import _modDef18685 from "../../../../../_runtime/metro/18685__.js";
+import _modDef18698 from "../../../../../_runtime/metro/18698__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   flex: { flex: 1 },
   flexCenterRow: { flexDirection: "row", alignItems: "center" },

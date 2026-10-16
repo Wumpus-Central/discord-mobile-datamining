@@ -70,15 +70,15 @@ function handleFormInit(type) {
       }
     }
     if (null != section) {
-      obj2 = { key: "landing", name: constants.LANDING };
-      const items = [obj2];
+      const obj3 = { key: "landing", name: constants.LANDING };
+      const items = [obj3];
       if (section === constants.TAG_CUSTOMIZE) {
-        ({ TAG: obj3.key, TAG: obj3.name } = constants);
+        ({ TAG: obj2.key, TAG: obj2.name } = constants);
         items.push({ key: null, name: null });
         const obj4 = { key: null, name: null };
       }
-      const obj5 = { key: section, name: section };
-      items.push(obj5);
+      const obj6 = { key: section, name: section };
+      items.push(obj6);
       const obj10 = { type: "stack", routes: items };
       c11 = obj10;
     }

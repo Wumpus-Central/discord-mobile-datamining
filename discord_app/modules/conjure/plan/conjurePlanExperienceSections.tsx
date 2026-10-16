@@ -14,6 +14,13 @@ export const CONJURE_PLAN_EXPERIENCE_KIND_LABELS = {
   commands: _modDef3865.EbvC13,
   automod: _modDef3865.tiMvei,
 };
+export const conjurePlanExperienceIsApp = function conjurePlanExperienceIsApp(experience) {
+  let tmp = "frame" === experience.kind;
+  if (tmp) {
+    tmp = true !== experience.game;
+  }
+  return tmp;
+};
 export const conjurePlanDisplayedSections = function conjurePlanDisplayedSections(experiences, commandNames) {
   closure_0 = commandNames;
   const found = experiences.filter((kind) => "commands" === kind.kind);

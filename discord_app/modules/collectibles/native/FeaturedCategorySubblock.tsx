@@ -14,7 +14,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles({
   container: { position: "relative" },
   bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
@@ -128,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_9();
       importDefault = subblock(1505).useNavigation();
       let obj = subblock(1505);
-      dependencyMap = subblock(9201).useCollectiblesAnalyticsContext();
+      dependencyMap = subblock(9202).useCollectiblesAnalyticsContext();
       const assetUrl = subblock.assetUrl;
-      let obj2 = subblock(9201);
+      let obj2 = subblock(9202);
       let items = [stateFromStores];
       stateFromStores = subblock(504).useStateFromStores(items, () =>
         CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -150,14 +150,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         date = new Date(unpublishedAt);
       }
       let obj5 = {
-        onChange: subblock(16836).useTrackProductCardImpression(
+        onChange: subblock(16850).useTrackProductCardImpression(
           subblock.categoryStoreListingId,
           "mobile_home",
           "featured_block",
         ).handleCardVisibilityChange,
         children: null,
       };
-      let obj4 = subblock(16836);
+      let obj4 = subblock(16850);
       const obj6 = {
         accessibilityRole: "button",
         accessibilityLabel: null,
@@ -232,13 +232,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [tmp11Result];
       const obj8 = { radius: nativeDefault.radii.lg };
-      let result = subblock(7494).shouldShowLimitedTimeBadge(date);
+      let result = subblock(7496).shouldShowLimitedTimeBadge(date);
       if (result) {
         const obj11 = { style: tmp.limitedTimeBadge };
-        result = closure_7(tmp2(9264).LimitedTimeBadge, obj11);
+        result = closure_7(tmp2(9265).LimitedTimeBadge, obj11);
       }
       items1[1] = result;
       obj6.children = items1;
-      obj5.children = closure_8(subblock(6407).PressableOpacity, obj6);
+      obj5.children = closure_8(subblock(6409).PressableOpacity, obj6);
       return closure_7(tmp13, obj5);
     };

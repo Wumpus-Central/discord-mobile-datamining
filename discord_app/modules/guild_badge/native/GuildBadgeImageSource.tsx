@@ -1,38 +1,38 @@
 // discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 import shared from "../../../design/shared.tsx";
-import _modDef6386 from "../../../../_runtime/metro/06386__.js";
-import _modDef6387 from "../../../../_runtime/metro/06387__.js";
+import _modDef6388 from "../../../../_runtime/metro/06388__.js";
+import _modDef6389 from "../../../../_runtime/metro/06389__.js";
 import GuildTraits from "../GuildTraits.tsx";
 import BadgeCategory from "../BadgeCategory.tsx";
-import _modDef9096 from "../../../../_runtime/metro/09096__.js";
 import _modDef9097 from "../../../../_runtime/metro/09097__.js";
 import _modDef9098 from "../../../../_runtime/metro/09098__.js";
 import _modDef9099 from "../../../../_runtime/metro/09099__.js";
 import _modDef9100 from "../../../../_runtime/metro/09100__.js";
 import _modDef9101 from "../../../../_runtime/metro/09101__.js";
+import _modDef9102 from "../../../../_runtime/metro/09102__.js";
 
 require = fn;
 const badgeVariants = {};
-badgeVariants[fn(9093).BadgeCategory.STAFF] = { imageSource: _modDef6386 };
-let obj2 = { imageSource: _modDef6386 };
-badgeVariants[fn(9093).BadgeCategory.PARTNERED] = { imageSource: _modDef6387 };
-const obj3 = { imageSource: _modDef6387 };
-badgeVariants[fn(9093).BadgeCategory.VERIFIED] = { imageSource: _modDef6386 };
-const obj4 = { imageSource: _modDef6386 };
-badgeVariants[fn(9093).BadgeCategory.COMMUNITY] = {
-  imageSource: _modDef9096,
-  imageSourceLight: _modDef9097,
-  premiumImageSource: _modDef9098,
+badgeVariants[fn(9094).BadgeCategory.STAFF] = { imageSource: _modDef6388 };
+let obj2 = { imageSource: _modDef6388 };
+badgeVariants[fn(9094).BadgeCategory.PARTNERED] = { imageSource: _modDef6389 };
+const obj3 = { imageSource: _modDef6389 };
+badgeVariants[fn(9094).BadgeCategory.VERIFIED] = { imageSource: _modDef6388 };
+const obj4 = { imageSource: _modDef6388 };
+badgeVariants[fn(9094).BadgeCategory.COMMUNITY] = {
+  imageSource: _modDef9097,
+  imageSourceLight: _modDef9098,
+  premiumImageSource: _modDef9099,
 };
-const obj5 = { imageSource: _modDef9096, imageSourceLight: _modDef9097, premiumImageSource: _modDef9098 };
-badgeVariants[fn(9093).BadgeCategory.DISCOVERABLE] = {
-  imageSource: _modDef9099,
-  imageSourceLight: _modDef9100,
-  premiumImageSource: _modDef9101,
+const obj5 = { imageSource: _modDef9097, imageSourceLight: _modDef9098, premiumImageSource: _modDef9099 };
+badgeVariants[fn(9094).BadgeCategory.DISCOVERABLE] = {
+  imageSource: _modDef9100,
+  imageSourceLight: _modDef9101,
+  premiumImageSource: _modDef9102,
 };
-const obj6 = { imageSource: _modDef9099, imageSourceLight: _modDef9100, premiumImageSource: _modDef9101 };
-badgeVariants[fn(9093).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef6386 };
-badgeVariants[fn(9093).BadgeCategory.NONE] = {};
+const obj6 = { imageSource: _modDef9100, imageSourceLight: _modDef9101, premiumImageSource: _modDef9102 };
+badgeVariants[fn(9094).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef6388 };
+badgeVariants[fn(9094).BadgeCategory.NONE] = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");
 

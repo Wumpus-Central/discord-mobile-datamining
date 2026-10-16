@@ -14,11 +14,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(16987);
+const RegistrationUIStore = fn(17001);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_13 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
 const FadeIn = fn(4909).FadeIn;
@@ -330,7 +330,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
         }
-        if (undefined === setUsername(15670).NameValidationState.ERROR) {
+        if (undefined === setUsername(15680).NameValidationState.ERROR) {
           class H {
             constructor() {
               tmp = closure_1(true);
@@ -366,7 +366,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
           status: null,
           submitBehavior: null,
         };
-        const TextInput = setUsername(6508).TextInput;
+        const TextInput = setUsername(6510).TextInput;
         if (tmpResult.isAndroid()) {
           class H {
             constructor() {
@@ -498,14 +498,14 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         type = usernameStatus.type;
       }
       let str2;
-      if (type === tmp14(15670).NameValidationState.ERROR) {
+      if (type === tmp14(15680).NameValidationState.ERROR) {
         str2 = "error";
       }
       const obj6 = { children: null };
       obj3.status = str2;
       obj3.submitBehavior = submitBehavior;
       const items3 = [
-        closure_10(setUsername(6508).TextInput, obj3),
+        closure_10(setUsername(6510).TextInput, obj3),
         closure_10(closure_16, { usernameStatus, isUsernameFocused: tmp5[0] }),
       ];
       obj6.children = items3;

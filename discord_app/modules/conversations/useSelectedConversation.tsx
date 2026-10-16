@@ -21,8 +21,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== arg0) {
         const fn = function s() {
-          const selectedConversation = SelectedConversationStore.getSelectedConversation(closure_0);
-          return selectedConversation;
+          const conversation = SelectedConversationStore.getConversation(closure_0);
+          return conversation;
         };
         const items1 = [arg0];
         cResult[1] = arg0;
@@ -44,8 +44,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return require("initialize").useStateFromStores(
         items,
         () => {
-          const selectedConversation = SelectedConversationStore.getSelectedConversation(closure_0);
-          return selectedConversation;
+          const conversation = SelectedConversationStore.getConversation(closure_0);
+          return conversation;
         },
         items1,
       );

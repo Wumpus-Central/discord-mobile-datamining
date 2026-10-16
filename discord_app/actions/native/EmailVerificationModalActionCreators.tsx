@@ -19,7 +19,7 @@ export default {
       AnalyticsUtilsDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
     }
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(6421, dependencyMap.paths),
+      asyncRequireImpl(6423, dependencyMap.paths),
       { isChangeEmail: flag },
       EMAIL_VERIFICATION_MODAL_KEY,
     );

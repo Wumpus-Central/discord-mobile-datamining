@@ -25,7 +25,7 @@ const constants = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function useChannelSafeAreaBottomStyles(arg0) {
       const token = gradientBottom(4877).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
       let obj = gradientBottom(4877);
-      gradientBottom = gradientBottom(9543).useGradientBottom();
+      gradientBottom = gradientBottom(9544).useGradientBottom();
       let backgroundColor1;
       if (gradientBottom != null) {
         backgroundColor1 = gradientBottom.backgroundColor;

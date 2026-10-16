@@ -26,7 +26,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 },
   contentContainer: null,
@@ -625,9 +625,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
       multiplier = multiplier.multiplier;
       const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-      const result = multiplier(9401).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+      const result = multiplier(9402).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
       dependencyMap = result;
-      let obj = multiplier(9401);
+      let obj = multiplier(9402);
       const items = [orbMultiplierEligibility];
       const items1 = [result, orbMultiplierEligibility, multiplier];
       const memo = noop.useMemo(() => {
@@ -662,14 +662,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
       let obj3 = {
         visible:
-          orbMultiplierEligibility === multiplier(9401).QuestOrbMultiplierEligibilityType.NITRO ||
-          orbMultiplierEligibility === multiplier(9401).QuestOrbMultiplierEligibilityType.UPSELL,
+          orbMultiplierEligibility === multiplier(9402).QuestOrbMultiplierEligibilityType.NITRO ||
+          orbMultiplierEligibility === multiplier(9402).QuestOrbMultiplierEligibilityType.UPSELL,
         children: null,
       };
       const tmp4 =
-        orbMultiplierEligibility === multiplier(9401).QuestOrbMultiplierEligibilityType.NITRO ||
-        orbMultiplierEligibility === multiplier(9401).QuestOrbMultiplierEligibilityType.UPSELL;
+        orbMultiplierEligibility === multiplier(9402).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(9402).QuestOrbMultiplierEligibilityType.UPSELL;
       obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-      obj2.children = closure_8(orbMultiplierEligibility(16122), obj3);
-      return closure_8(multiplier(7063).BottomSheet, obj2);
+      obj2.children = closure_8(orbMultiplierEligibility(16136), obj3);
+      return closure_8(multiplier(7065).BottomSheet, obj2);
     };

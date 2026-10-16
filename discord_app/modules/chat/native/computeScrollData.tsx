@@ -4,7 +4,7 @@ import NativeChatUtils from "NativeChatUtils.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const RowGeneratorConstants = fn(7967);
+const RowGeneratorConstants = fn(7968);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");

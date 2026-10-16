@@ -8,13 +8,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 require = fn;
-const ForumChannelStore = fn(12775);
+const ForumChannelStore = fn(12781);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
 const jsx = fn(21).jsx;
 let c12 = 18;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_13 = createStyles.createStyles({
   emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
   imageEmoji: { height: 18, width: 18 },
@@ -194,71 +194,157 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp19 = cResult[11];
               }
               if (cResult[12] !== first.size) {
-                let str2 = " ";
                 if (first.size > 0) {
-                  const intl2 = tmp(tmp2[11]).intl;
+                  const intl3 = tmp(tmp2[11]).intl;
                   let obj2 = { count: first.size };
-                  str2 = intl2.formatToPlainString(tmp(tmp2[11]).t["/FzHJK"], obj2);
+                  let formatToPlainStringResult = intl3.formatToPlainString(tmp(tmp2[11]).t["/FzHJK"], obj2);
+                } else {
+                  const intl2 = tmp(tmp2[11]).intl;
+                  formatToPlainStringResult = intl2.string(tmp(tmp2[11]).t.sAYgZc);
                 }
                 cResult[12] = first.size;
-                cResult[13] = str2;
-                let tmp21 = str2;
+                cResult[13] = formatToPlainStringResult;
               } else {
-                tmp21 = cResult[13];
-              }
-              const _Symbol3 = Symbol;
-              class H {
-                constructor() {
-                  state = closure_1.getState();
-                  setTagFilterResult = state.setTagFilter(channel.id, closure_2);
-                  return;
-                }
-              }
-              if (tmp22 === Symbol.for("react.memo_cache_sentinel")) {
-                const obj3 = { onPress: tmp16, label: null };
-                const intl3 = tmp(tmp2[11]).intl;
-                obj3.label = intl3.string(tmp(tmp2[11]).t.VkKicb);
-                const tmp25 = jsx(tmp(tmp2[12]).ActionSheetHeaderPressableText, { onPress: tmp16, label: null });
-                class H {
-                  constructor() {
-                    state = closure_1.getState();
-                    setTagFilterResult = state.setTagFilter(channel.id, closure_2);
-                    return;
+                const _Symbol3 = Symbol;
+                if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+                  const obj3 = { onPress: tmp16, label: null };
+                  const ActionSheetHeaderPressableText = tmp(tmp2[12]).ActionSheetHeaderPressableText;
+                  const intl4 = tmp(tmp2[11]).intl;
+                  obj3.label = intl4.string(tmp(tmp2[11]).t.VkKicb);
+                  class L {
+                    constructor(arg0) {
+                      closure_0 = channel;
+                      obj = { icon: null, label: channel.name, accessibilityLabel: null, checked: null, onPress: null };
+                      obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                      obj.icon = closure_1_11(closure_1_14, obj1);
+                      intl = channel(closure_2[11]).intl;
+                      obj4 = { tagName: channel.name };
+                      obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                      obj.checked = closure_2.has(channel.id);
+                      obj.onPress = function onPress() {
+                        return closure_4(closure_0);
+                      };
+                      return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                    }
                   }
-                }
-                cResult[14] = tmp25;
-                let tmp23 = tmp25;
-              } else {
-                tmp23 = cResult[14];
-              }
-              if (cResult[15] !== tmp21) {
-                let obj4 = { title: tmp19, subtitle: tmp21, leading: tmp23 };
-                const tmp28 = jsx(tmp(tmp2[13]).BottomSheetTitleHeader, {
-                  title: tmp19,
-                  subtitle: tmp21,
-                  leading: tmp23,
-                });
-                cResult[15] = tmp21;
-                class H {
-                  constructor() {
-                    state = closure_1.getState();
-                    setTagFilterResult = state.setTagFilter(channel.id, closure_2);
-                    return;
+                  class H {
+                    constructor() {
+                      state = closure_1.getState();
+                      setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                      return;
+                    }
                   }
+                  cResult[14] = tmp26;
+                  let tmp24 = tmp26;
+                } else {
+                  tmp24 = cResult[14];
                 }
-                cResult[16] = tmp28;
-                let tmp26 = tmp28;
-              } else {
-                tmp26 = cResult[16];
-              }
-              if (cResult[17] === availableTags.availableTags) {
-                if (cResult[18] === first) {
-                  if (cResult[19] === tmp14) {
-                    if (cResult[24] !== cResult[20]) {
-                      const obj5 = { children: null };
-                      const obj6 = { hasIcons: true, children: tmp29 };
-                      obj5.children = jsx(tmp(tmp2[16]).TableRowGroup, { hasIcons: true, children: tmp29 });
-                      const tmp35 = jsx(tmp(tmp2[15]).BottomSheetScrollView, { children: null });
+                if (cResult[15] !== cResult[13]) {
+                  let obj4 = { title: tmp19, subtitle: tmp21, leading: tmp24 };
+                  const tmp29 = jsx(tmp(tmp2[13]).BottomSheetTitleHeader, {
+                    title: tmp19,
+                    subtitle: tmp21,
+                    leading: tmp24,
+                  });
+                  class L {
+                    constructor(arg0) {
+                      closure_0 = channel;
+                      obj = { icon: null, label: channel.name, accessibilityLabel: null, checked: null, onPress: null };
+                      obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                      obj.icon = closure_1_11(closure_1_14, obj1);
+                      intl = channel(closure_2[11]).intl;
+                      obj4 = { tagName: channel.name };
+                      obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                      obj.checked = closure_2.has(channel.id);
+                      obj.onPress = function onPress() {
+                        return closure_4(closure_0);
+                      };
+                      return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                    }
+                  }
+                  class H {
+                    constructor() {
+                      state = closure_1.getState();
+                      setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                      return;
+                    }
+                  }
+                  cResult[16] = tmp29;
+                  let tmp27 = tmp29;
+                } else {
+                  tmp27 = cResult[16];
+                }
+                if (cResult[17] === availableTags.availableTags) {
+                  if (cResult[18] === first) {
+                    if (cResult[19] === tmp14) {
+                      if (cResult[24] !== cResult[20]) {
+                        const obj5 = { children: null };
+                        const obj6 = { hasIcons: true, children: tmp30 };
+                        obj5.children = jsx(tmp(tmp2[16]).TableRowGroup, { hasIcons: true, children: tmp30 });
+                        const tmp36 = jsx(tmp(tmp2[15]).BottomSheetScrollView, { children: null });
+                        class L {
+                          constructor(arg0) {
+                            closure_0 = channel;
+                            obj = {
+                              icon: null,
+                              label: channel.name,
+                              accessibilityLabel: null,
+                              checked: null,
+                              onPress: null,
+                            };
+                            obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                            obj.icon = closure_1_11(closure_1_14, obj1);
+                            intl = channel(closure_2[11]).intl;
+                            obj4 = { tagName: channel.name };
+                            obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                            obj.checked = closure_2.has(channel.id);
+                            obj.onPress = function onPress() {
+                              return closure_4(closure_0);
+                            };
+                            return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                          }
+                        }
+                        class H {
+                          constructor() {
+                            state = closure_1.getState();
+                            setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                            return;
+                          }
+                        }
+                        cResult[25] = tmp36;
+                        let tmp34 = tmp36;
+                      } else {
+                        tmp34 = cResult[25];
+                      }
+                      if (cResult[26] === tmp34) {
+                        if (cResult[27] === tmp27) {
+                          let tmp37 = cResult[28];
+                        }
+                        return tmp37;
+                      }
+                      const obj7 = { scrollable: true, header: tmp27, children: tmp34 };
+                      class L {
+                        constructor(arg0) {
+                          closure_0 = channel;
+                          obj = {
+                            icon: null,
+                            label: channel.name,
+                            accessibilityLabel: null,
+                            checked: null,
+                            onPress: null,
+                          };
+                          obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                          obj.icon = closure_1_11(closure_1_14, obj1);
+                          intl = channel(closure_2[11]).intl;
+                          obj4 = { tagName: channel.name };
+                          obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                          obj.checked = closure_2.has(channel.id);
+                          obj.onPress = function onPress() {
+                            return closure_4(closure_0);
+                          };
+                          return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                        }
+                      }
                       class H {
                         constructor() {
                           state = closure_1.getState();
@@ -266,63 +352,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return;
                         }
                       }
-                      cResult[25] = tmp35;
-                      let tmp33 = tmp35;
-                    } else {
-                      tmp33 = cResult[25];
+                      cResult[26] = tmp34;
+                      cResult[27] = tmp27;
+                      cResult[28] = tmp39;
+                      tmp37 = tmp39;
                     }
-                    if (cResult[26] === tmp33) {
-                      if (cResult[27] === tmp26) {
-                        let tmp36 = cResult[28];
-                      }
-                      return tmp36;
-                    }
-                    const obj7 = { scrollable: true, header: tmp26, children: tmp33 };
-                    class H {
-                      constructor() {
-                        state = closure_1.getState();
-                        setTagFilterResult = state.setTagFilter(channel.id, closure_2);
-                        return;
-                      }
-                    }
-                    cResult[26] = tmp33;
-                    cResult[27] = tmp26;
-                    class L {
-                      constructor(arg0) {
-                        closure_0 = channel;
-                        obj = {
-                          icon: null,
-                          label: channel.name,
-                          accessibilityLabel: null,
-                          checked: null,
-                          onPress: null,
-                        };
-                        obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
-                        obj.icon = closure_1_11(closure_1_14, obj1);
-                        intl = channel(closure_2[11]).intl;
-                        obj4 = { tagName: channel.name };
-                        obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
-                        obj.checked = closure_2.has(channel.id);
-                        obj.onPress = function onPress() {
-                          return closure_4(closure_0);
-                        };
-                        return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
-                      }
-                    }
-                    tmp36 = jsx(tmp(tmp2[17]).ActionSheet, { scrollable: true, header: tmp26, children: tmp33 });
-                    const tmp38 = jsx(tmp(tmp2[17]).ActionSheet, { scrollable: true, header: tmp26, children: tmp33 });
                   }
                 }
-              }
-              if (cResult[21] === first) {
-                if (cResult[22] === tmp14) {
-                  let tmp30 = cResult[23];
+                if (cResult[21] === first) {
+                  if (cResult[22] === tmp14) {
+                    let tmp31 = cResult[23];
+                  }
+                  const availableTags1 = availableTags.availableTags;
+                  const mapped = availableTags1.map(tmp31);
+                  availableTags = availableTags.availableTags;
+                  cResult[17] = availableTags;
+                  class L {
+                    constructor(arg0) {
+                      closure_0 = channel;
+                      obj = { icon: null, label: channel.name, accessibilityLabel: null, checked: null, onPress: null };
+                      obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                      obj.icon = closure_1_11(closure_1_14, obj1);
+                      intl = channel(closure_2[11]).intl;
+                      obj4 = { tagName: channel.name };
+                      obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                      obj.checked = closure_2.has(channel.id);
+                      obj.onPress = function onPress() {
+                        return closure_4(closure_0);
+                      };
+                      return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                    }
+                  }
+                  class H {
+                    constructor() {
+                      state = closure_1.getState();
+                      setTagFilterResult = state.setTagFilter(channel.id, closure_2);
+                      return;
+                    }
+                  }
+                  cResult[19] = tmp14;
+                  cResult[20] = mapped;
                 }
-                const availableTags1 = availableTags.availableTags;
-                const mapped = availableTags1.map(tmp30);
-                availableTags = availableTags.availableTags;
-                cResult[17] = availableTags;
-                cResult[18] = first;
+                class L {
+                  constructor(arg0) {
+                    closure_0 = channel;
+                    obj = { icon: null, label: channel.name, accessibilityLabel: null, checked: null, onPress: null };
+                    obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
+                    obj.icon = closure_1_11(closure_1_14, obj1);
+                    intl = channel(closure_2[11]).intl;
+                    obj4 = { tagName: channel.name };
+                    obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
+                    obj.checked = closure_2.has(channel.id);
+                    obj.onPress = function onPress() {
+                      return closure_4(closure_0);
+                    };
+                    return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
+                  }
+                }
                 class H {
                   constructor() {
                     state = closure_1.getState();
@@ -330,29 +416,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                cResult[19] = tmp14;
-                cResult[20] = mapped;
+                cResult[21] = first;
+                cResult[22] = tmp14;
+                cResult[23] = L;
+                tmp31 = L;
               }
-              class L {
-                constructor(arg0) {
-                  closure_0 = channel;
-                  obj = { icon: null, label: channel.name, accessibilityLabel: null, checked: null, onPress: null };
-                  obj1 = { emojiId: channel.emojiId, emojiName: channel.emojiName };
-                  obj.icon = closure_1_11(closure_1_14, obj1);
-                  intl = channel(closure_2[11]).intl;
-                  obj4 = { tagName: channel.name };
-                  obj.accessibilityLabel = intl.formatToPlainString(channel(closure_2[11]).t.tXXD6v, obj4);
-                  obj.checked = closure_2.has(channel.id);
-                  obj.onPress = function onPress() {
-                    return closure_4(closure_0);
-                  };
-                  return closure_1_11(channel(closure_2[14]).TableCheckboxRow, obj, channel.id);
-                }
-              }
-              cResult[21] = first;
-              cResult[22] = tmp14;
-              cResult[23] = L;
-              tmp30 = L;
               const tmpResult = tmp(tmp2[10]);
             }
           }
@@ -417,22 +485,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { title: null, subtitle: null, leading: null };
       let intl = channel(first[11]).intl;
       obj2.title = intl.string(channel(first[11]).t.TdqRTh);
-      let str = " ";
       if (first.size > 0) {
-        const intl2 = tmp4(tmp5[11]).intl;
+        const intl3 = tmp4(tmp5[11]).intl;
         const obj3 = { count: first.size };
-        str = intl2.formatToPlainString(tmp4(tmp5[11]).t["/FzHJK"], obj3);
+        let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp5[11]).t["/FzHJK"], obj3);
+      } else {
+        const intl2 = tmp4(tmp5[11]).intl;
+        formatToPlainStringResult = intl2.string(tmp4(tmp5[11]).t.sAYgZc);
       }
       let obj4 = { scrollable: true, header: null, children: null };
-      obj2.subtitle = str;
+      obj2.subtitle = formatToPlainStringResult;
       const obj5 = {
         onPress: function handleClear() {
           closure_3(new Set());
         },
         label: null,
       };
-      const intl3 = tmp4(tmp5[11]).intl;
-      obj5.label = intl3.string(channel(first[11]).t.VkKicb);
+      const intl4 = tmp4(tmp5[11]).intl;
+      obj5.label = intl4.string(channel(first[11]).t.VkKicb);
       obj2.leading = jsx(channel(first[12]).ActionSheetHeaderPressableText, {
         onPress: function handleClear() {
           closure_3(new Set());

@@ -16,11 +16,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
 const native = GestureDetector(4886);
-const LegacyBaseButton = GestureDetector(6557);
+const LegacyBaseButton = GestureDetector(6559);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(6291);
+const ActivityPanelConstants = fn(6287);
 ({
   ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9,
@@ -29,7 +29,7 @@ const ActivityPanelConstants = fn(6291);
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -142,7 +142,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = {
-                  mode: setMode(18080).MorphablePanelModes.PANEL,
+                  mode: setMode(18090).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -236,7 +236,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
       const callback = noop.useCallback(fn, items2);
       const obj3 = {
-        mode: landscape(18080).MorphablePanelModes.PANEL,
+        mode: landscape(18090).MorphablePanelModes.PANEL,
         panGestureEnabled: true,
         pipState,
         swipeRequiresPop: true,
@@ -244,7 +244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPanMinimizeGestureEnd: callback,
         disableHorizontalSafeAreas: true,
       };
-      obj2.gesture = setMode(18080)(obj3);
+      obj2.gesture = setMode(18090)(obj3);
       obj2.headerWrapperStyles = memo;
       obj2.headerStyles = memo1;
       obj2.styles = tmp;
@@ -349,7 +349,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp3Result2;
     };
 let closure_18 = tmp7;
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj4 = {
   buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 },
   buttonContainerLandscape: { flexDirection: "column-reverse" },

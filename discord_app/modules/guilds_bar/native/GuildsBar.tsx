@@ -1,7 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBar.tsx
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import FastListDefault from "../../../lib/native/FastList.tsx";
-import FavoritesGuildIntroPopoverDefault from "../../favorites/onboarding/FavoritesGuildIntroPopover.tsx";
 import StartupProfilerDefault from "../../app_startup/StartupProfiler.tsx";
 import registerSidebarVisibilityMethods from "utils/registerSidebarVisibilityMethods.tsx";
 import useGuildsBarGestureDefault from "hooks/useGuildsBarGesture.tsx";
@@ -12,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -140,7 +139,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBar.tsx
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function GuildsBar(enableHome) {
-        const cResult = fastListRef(576).c(23);
+        const cResult = fastListRef(576).c(22);
         enableHome = enableHome.enableHome;
         const tmp5 = closure_6();
         const tmp7 = useGuildsBarGestureDefault();
@@ -188,34 +187,30 @@ export default noop.memo(
                         }
                         const _Symbol = Symbol;
                         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp23 = closure_4(GuildsBarDragPreviewDefault, {});
-                          const tmp24 = closure_4(FavoritesGuildIntroPopoverDefault, {});
-                          cResult[15] = tmp23;
-                          cResult[16] = tmp24;
-                          let tmp21 = tmp24;
-                          let tmp20 = tmp23;
+                          const tmp22 = closure_4(GuildsBarDragPreviewDefault, {});
+                          cResult[15] = tmp22;
+                          let tmp20 = tmp22;
                         } else {
                           tmp20 = cResult[15];
-                          tmp21 = cResult[16];
                         }
-                        if (cResult[17] === tmp5.wrapper) {
-                          if (cResult[18] === tmp14) {
-                            let tmp25 = cResult[19];
+                        if (cResult[16] === tmp5.wrapper) {
+                          if (cResult[17] === tmp14) {
+                            let tmp23 = cResult[18];
                           }
-                          if (cResult[20] === gesture) {
-                            if (cResult[21] === tmp25) {
-                              let tmp28 = cResult[22];
+                          if (cResult[19] === gesture) {
+                            if (cResult[20] === tmp23) {
+                              let tmp26 = cResult[21];
                             }
-                            return tmp28;
+                            return tmp26;
                           }
-                          const obj3 = { profile: fastListRef(12733).Profiles.Guilds, children: null };
-                          const obj4 = { gesture, children: tmp25 };
-                          obj3.children = closure_4(fastListRef(6557).GestureDetector, obj4);
-                          const tmp31 = closure_4(StartupProfilerDefault, obj3);
-                          cResult[20] = gesture;
-                          cResult[21] = tmp25;
-                          cResult[22] = tmp31;
-                          tmp28 = tmp31;
+                          const obj3 = { profile: fastListRef(12740).Profiles.Guilds, children: null };
+                          const obj4 = { gesture, children: tmp23 };
+                          obj3.children = closure_4(fastListRef(6559).GestureDetector, obj4);
+                          const tmp29 = closure_4(StartupProfilerDefault, obj3);
+                          cResult[19] = gesture;
+                          cResult[20] = tmp23;
+                          cResult[21] = tmp29;
+                          tmp26 = tmp29;
                           const tmp6Result = StartupProfilerDefault;
                         }
                         const obj5 = {
@@ -224,13 +219,13 @@ export default noop.memo(
                           nativeID: "guilds-bar-view",
                           children: null,
                         };
-                        const items1 = [tmp14, tmp20, tmp21];
+                        const items1 = [tmp14, tmp20];
                         obj5.children = items1;
-                        const tmp27 = closure_5(NativeViewDefault, obj5);
-                        cResult[17] = tmp5.wrapper;
-                        cResult[18] = tmp14;
-                        cResult[19] = tmp27;
-                        tmp25 = tmp27;
+                        const tmp25 = closure_5(NativeViewDefault, obj5);
+                        cResult[16] = tmp5.wrapper;
+                        cResult[17] = tmp14;
+                        cResult[18] = tmp25;
+                        tmp23 = tmp25;
                       }
                     }
                   }
@@ -286,7 +281,7 @@ export default noop.memo(
         closure_7(listProps, fastListRef);
         const obj = { profile: null, children: null };
         const tmp5 = useGuildsBarPropsDefault(fastListRef);
-        obj.profile = fastListRef(12733).Profiles.Guilds;
+        obj.profile = fastListRef(12740).Profiles.Guilds;
         const obj2 = { gesture, children: null };
         const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
         const tmp9 = StartupProfilerDefault;
@@ -310,14 +305,10 @@ export default noop.memo(
         }
         obj4.style = obj5;
         obj4.nativeID = "guilds-bar-fast-list";
-        const items1 = [
-          closure_4(FastListDefault, obj4),
-          closure_4(GuildsBarDragPreviewDefault, {}),
-          closure_4(FavoritesGuildIntroPopoverDefault, {}),
-        ];
+        const items1 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
         obj3.children = items1;
         obj2.children = closure_5(tmp11, obj3);
-        obj.children = closure_4(fastListRef(6557).GestureDetector, obj2);
+        obj.children = closure_4(fastListRef(6559).GestureDetector, obj2);
         return closure_4(tmp9, obj);
       },
 );

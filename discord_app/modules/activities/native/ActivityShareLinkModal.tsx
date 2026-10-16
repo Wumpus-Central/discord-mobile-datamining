@@ -17,11 +17,11 @@ import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10456).UserRowModes;
-const MessageSendLocation = fn(5147).MessageSendLocation;
+let UserRowModes = fn(10457).UserRowModes;
+const MessageSendLocation = fn(5148).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     dependencyMap = 1;
                     c3 = 1;
                     let obj4 = {
-                      value: Promise.all(first1.map(tmp2(12605).getOrResolveChannelIdFromDestinationId)),
+                      value: Promise.all(first1.map(tmp2(12611).getOrResolveChannelIdFromDestinationId)),
                       done: false,
                     };
                     return obj4;
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 !== 2) {
                 closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-                closure_128_1 = tmp2(15442).resolveActivityShareMessageContent(
+                closure_128_1 = tmp2(15452).resolveActivityShareMessageContent(
                   closure_129_3,
                   closure_129_14,
                   closure_129_12,
@@ -299,12 +299,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             } else {
                               channel = channel.getChannel(closure_0);
                               if (null != channel) {
-                                const obj2 = closure_2_1(7397);
+                                const obj2 = closure_2_1(7399);
                                 const obj6 = { location: constants.ACTIVITY_SHARE };
                                 c2 = 1;
                                 c1 = 1;
                                 const obj7 = {
-                                  value: obj2.sendMessage(closure_0, closure_2_1(7588).parse(channel, c1), false, obj6),
+                                  value: obj2.sendMessage(closure_0, closure_2_1(7589).parse(channel, c1), false, obj6),
                                   done: false,
                                 };
                                 return obj7;
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                   })(),
                 );
-                let obj5 = tmp2(15442);
+                let obj5 = tmp2(15452);
                 let obj7 = { text: null };
                 const intl = tmp2(1128).intl;
                 const obj8 = { applicationName: closure_129_14.name };
@@ -346,8 +346,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3(4868).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
                 closure_129_4(true, closure_129_7);
                 let obj6 = tmp3(4868);
-                const result = tmp2(15440).closeActivityShareLinkModal();
-                const obj9 = tmp2(15440);
+                const result = tmp2(15450).closeActivityShareLinkModal();
+                const obj9 = tmp2(15450);
               }
               c3 = 3;
               let obj = { value, done: true };

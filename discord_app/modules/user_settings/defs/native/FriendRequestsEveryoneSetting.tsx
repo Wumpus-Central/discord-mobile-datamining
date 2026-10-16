@@ -12,7 +12,7 @@ const Constants = fn(1087);
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFriendRequestsEveryoneSettingValue() {
       const cResult = c.c(2);
@@ -40,7 +40,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8213).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8214).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFriendRequestsEveryoneSettingValue() {
         const cResult = c.c(2);

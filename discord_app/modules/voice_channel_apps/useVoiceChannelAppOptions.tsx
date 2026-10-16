@@ -469,12 +469,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
             }
             const tmpResult5 = tmp(504);
             let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(17890).voiceChannelAppListState(obj3);
+            const result = tmp(17900).voiceChannelAppListState(obj3);
             cResult[31] = str;
             cResult[32] = "error" === stateFromStores || tmp35;
             cResult[33] = arr8.length > 0;
             cResult[34] = result;
-            const tmpResult6 = tmp(17890);
+            const tmpResult6 = tmp(17900);
           }
           closure_130_0 = tmp21;
           let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));

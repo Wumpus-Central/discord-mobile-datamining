@@ -8,7 +8,7 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1087).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(9868);
+        const tmp2 = closure_1_1(9867);
         tmp2({
           hasEdits: str !== closure_6,
           onHasEdits: closure_1_0(5044).dismissKeyboard,

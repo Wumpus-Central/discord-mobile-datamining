@@ -70,15 +70,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FadeInOu
     constructor() {
       obj = {
         componentDidAppear() {
-              const result = sharedValue.set(duration(5154).withTiming(1, { duration }));
+              const result = sharedValue.set(duration(5155).withTiming(1, { duration }));
             },
         componentDidEnter() {
-              const result = sharedValue.set(duration(5154).withTiming(1, { duration }));
+              const result = sharedValue.set(duration(5155).withTiming(1, { duration }));
             },
         componentWillLeave(current) {
               dependencyMap.current = current;
               const fn = function t() { ... };
-              let obj = duration(5154);
+              let obj = duration(5155);
               const obj2 = { duration };
               fn.__closure = { runOnJS: duration(4909).runOnJS, handleTransitionFinished };
               fn.__workletHash = 7644958904451;

@@ -8,7 +8,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   skeletonContainer: {
     height: 16,

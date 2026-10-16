@@ -5,7 +5,7 @@ import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef4761 from "../../../../_runtime/metro/04761__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
-import m from "../../../../_runtime/08749_m.js";
+import m from "../../../../_runtime/08750_m.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
@@ -98,42 +98,42 @@ function getValidWeekends(toDate) {
   }
   return tmp5;
 }
-const RecurrenceOptions = fn(8748).RecurrenceOptions;
+const RecurrenceOptions = fn(8749).RecurrenceOptions;
 const GuildScheduledEventsConstants = fn(2074);
 ({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: metroRequire } =
   GuildScheduledEventsConstants);
 let items = [
-  fn(8749).RRule.MO.weekday,
-  fn(8749).RRule.TU.weekday,
-  fn(8749).RRule.WE.weekday,
-  fn(8749).RRule.TH.weekday,
-  fn(8749).RRule.FR.weekday,
+  fn(8750).RRule.MO.weekday,
+  fn(8750).RRule.TU.weekday,
+  fn(8750).RRule.WE.weekday,
+  fn(8750).RRule.TH.weekday,
+  fn(8750).RRule.FR.weekday,
 ];
 let items1 = [
-  fn(8749).RRule.SU.weekday,
-  fn(8749).RRule.MO.weekday,
-  fn(8749).RRule.TU.weekday,
-  fn(8749).RRule.WE.weekday,
-  fn(8749).RRule.TH.weekday,
+  fn(8750).RRule.SU.weekday,
+  fn(8750).RRule.MO.weekday,
+  fn(8750).RRule.TU.weekday,
+  fn(8750).RRule.WE.weekday,
+  fn(8750).RRule.TH.weekday,
 ];
 let items2 = [
-  fn(8749).RRule.TU.weekday,
-  fn(8749).RRule.WE.weekday,
-  fn(8749).RRule.TH.weekday,
-  fn(8749).RRule.FR.weekday,
-  fn(8749).RRule.SA.weekday,
+  fn(8750).RRule.TU.weekday,
+  fn(8750).RRule.WE.weekday,
+  fn(8750).RRule.TH.weekday,
+  fn(8750).RRule.FR.weekday,
+  fn(8750).RRule.SA.weekday,
 ];
-let items3 = [fn(8749).RRule.SA.weekday, fn(8749).RRule.SU.weekday];
-const items4 = [fn(8749).RRule.FR.weekday, fn(8749).RRule.SA.weekday];
-const items5 = [fn(8749).RRule.SU.weekday, fn(8749).RRule.MO.weekday];
+let items3 = [fn(8750).RRule.SA.weekday, fn(8750).RRule.SU.weekday];
+const items4 = [fn(8750).RRule.FR.weekday, fn(8750).RRule.SA.weekday];
+const items5 = [fn(8750).RRule.SU.weekday, fn(8750).RRule.MO.weekday];
 const items6 = [
-  fn(8749).RRule.SU.weekday,
-  fn(8749).RRule.MO.weekday,
-  fn(8749).RRule.TU.weekday,
-  fn(8749).RRule.WE.weekday,
-  fn(8749).RRule.TH.weekday,
-  fn(8749).RRule.FR.weekday,
-  fn(8749).RRule.SA.weekday,
+  fn(8750).RRule.SU.weekday,
+  fn(8750).RRule.MO.weekday,
+  fn(8750).RRule.TU.weekday,
+  fn(8750).RRule.WE.weekday,
+  fn(8750).RRule.TH.weekday,
+  fn(8750).RRule.FR.weekday,
+  fn(8750).RRule.SA.weekday,
 ];
 const set = new Set([0, 6]);
 const size = fn(2);

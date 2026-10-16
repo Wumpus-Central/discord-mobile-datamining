@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const Sizes = { SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 let closure_6 = [16, 16, 14, 14, 12];
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 const obj3 = {
   icon: { justifyContent: "center", alignItems: "center", overflow: "hidden" },
   iconSmall: { width: 40, height: 40, borderRadius: 20 },

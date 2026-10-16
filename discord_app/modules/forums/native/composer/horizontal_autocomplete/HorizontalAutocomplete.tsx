@@ -11,7 +11,7 @@ import timing from "../../../../../design/animation/reanimated/timing/timing.tsx
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef8487 from "../../../../../../_runtime/metro/08487__.js";
+import _modDef8488 from "../../../../../../_runtime/metro/08488__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1087);
 ({ ChannelTypes: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   emoji: { width: 32, height: 32 },
   emojiImage: { resizeMode: "contain" },
@@ -348,8 +348,8 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] !== stateFromStores) {
           let roleIconData = null;
           if (null != stateFromStores) {
-            roleIconData = guildId(7105).getRoleIconData(stateFromStores, 30);
-            const tmpResult2 = guildId(7105);
+            roleIconData = guildId(7107).getRoleIconData(stateFromStores, 30);
+            const tmpResult2 = guildId(7107);
           }
           cResult[4] = stateFromStores;
           cResult[5] = roleIconData;
@@ -421,7 +421,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { style: tmp4.roleIcon, children: null };
           const obj7 = { name, src: null, unicodeEmoji: null, size: 24 };
           ({ customIconSrc: obj5.src, unicodeEmoji: obj5.unicodeEmoji } = tmp9);
-          obj6.children = closure_11(id(7123), obj7);
+          obj6.children = closure_11(id(7125), obj7);
           tmp12 = closure_11(closure_4, obj6);
         }
         cResult[6] = tmp9;
@@ -515,11 +515,11 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
             tmp13 = cResult[8];
           }
           if (cResult[9] !== channel) {
-            const channelName = tmp(5483).computeChannelName(channel, UserStore, RelationshipStore);
+            const channelName = tmp(5484).computeChannelName(channel, UserStore, RelationshipStore);
             cResult[9] = channel;
             cResult[10] = channelName;
             let tmp16 = channelName;
-            const tmpResult3 = tmp(5483);
+            const tmpResult3 = tmp(5484);
           } else {
             tmp16 = cResult[10];
           }
@@ -546,7 +546,7 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
             tmp23 = tmp26;
           }
           const obj4 = { style: tmp4.channelName, variant: "text-sm/semibold", children: tmp16 };
-          const tmp22 = closure_11(tmp(5149).Text, obj4);
+          const tmp22 = closure_11(tmp(5150).Text, obj4);
           cResult[11] = tmp16;
           cResult[12] = tmp4.channelName;
           cResult[13] = tmp22;
@@ -554,10 +554,10 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef8487;
+        let channelIconWithGuild = _modDef8488;
       } else {
-        channelIconWithGuild = tmp(8384).getChannelIconWithGuild(channel, stateFromStores);
-        const tmpResult4 = tmp(8384);
+        channelIconWithGuild = tmp(8385).getChannelIconWithGuild(channel, stateFromStores);
+        const tmpResult4 = tmp(8385);
       }
       cResult[4] = channel;
       cResult[5] = stateFromStores;
@@ -569,17 +569,17 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled()
       channel(504);
       [][0] = channel;
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef8487;
+        let channelIconWithGuild = _modDef8488;
       } else {
-        channelIconWithGuild = tmp2(8384).getChannelIconWithGuild(channel, tmp5);
-        const tmp2Result = tmp2(8384);
+        channelIconWithGuild = tmp2(8385).getChannelIconWithGuild(channel, tmp5);
+        const tmp2Result = tmp2(8385);
       }
       const tmp = closure_13();
       const tmp8 = closure_11(channel(1202).Icon, { source: channelIconWithGuild });
       const obj = { onPress: channel.onPress, children: null };
       const items = [tmp8];
-      const channelName = channel(5483).computeChannelName(channel, UserStore, RelationshipStore);
-      items[1] = closure_11(channel(5149).Text, {
+      const channelName = channel(5484).computeChannelName(channel, UserStore, RelationshipStore);
+      items[1] = closure_11(channel(5150).Text, {
         style: tmp.channelName,
         variant: "text-sm/semibold",
         children: channelName,

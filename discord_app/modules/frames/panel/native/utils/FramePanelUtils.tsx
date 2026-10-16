@@ -4,8 +4,8 @@ import c from "../../../../../../_runtime/00576_c.js";
 import FramesStore from "../../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(10934).asLaunched;
-const ActivityPanelModes = fn(6291).ActivityPanelModes;
+const asLaunched = fn(10931).asLaunched;
+const ActivityPanelModes = fn(6287).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");

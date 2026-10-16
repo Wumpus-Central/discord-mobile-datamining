@@ -11,7 +11,7 @@ import SettingsIcon from "../../../../design/components/Icon/native/redesign/gen
 import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
 import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
-import restartConjureAppFramesDefault from "../../preview/native/restartConjureAppFrames.tsx";
+import restartFrames from "../../../frames/native/restartFrames.tsx";
 import conjureStandaloneScenes from "conjureStandaloneScenes.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import conjureProjectActions from "../../projects/native/conjureProjectActions.tsx";
@@ -41,19 +41,19 @@ const ConjureHistorySheetDefault = ConjureHistorySheet;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Keyboard: closure_7, View: closure_8 } = get_ActivityIndicator);
-const closeConnection = fn(10901).closeConnection;
-const conjureDesignFeedbackStore = fn(11609);
+const closeConnection = fn(10898).closeConnection;
+const conjureDesignFeedbackStore = fn(11606);
 ({
   enterConjureDesignFeedback: closure_11,
   exitConjureDesignFeedback: closure_12,
   useConjureDesignFeedback: map1,
 } = conjureDesignFeedbackStore);
-const isLaunched = fn(10934).isLaunched;
+const isLaunched = fn(10931).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
-  promptFirstPublish: fn(11613).showConjureFirstPublishSheet,
+  promptFirstPublish: fn(11610).showConjureFirstPublishSheet,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });
   },
@@ -61,7 +61,7 @@ let obj = {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_SUCCEEDED", { text: intl, variant: "success" });
   },
 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -473,9 +473,9 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_131_24;
           obj7.onClose = function onClose() {
-            const result = c0(11615).repairConjureGuildHints(closure_1_7, closure_1_24);
-            obj = c0(11615);
-            result.finally(() => application(10922).getProject(closure_1_1)).catch(() => {});
+            const result = c0(11612).repairConjureGuildHints(closure_1_7, closure_1_24);
+            obj = c0(11612);
+            result.finally(() => application(10919).getProject(closure_1_1)).catch(() => {});
           };
           let result = application3(tmp2[31]).openConjureAppInstallModal(obj7);
           const obj2 = application3(tmp2[31]);
@@ -708,7 +708,7 @@ export default function ConjureChatScene(guildId) {
       let fn;
       if (closure_26) {
         if (closure_38) {
-          fn = (color) => activeMode(closure_1_0(10781).ChevronSmallDownIcon, { size: "xs", color });
+          fn = (color) => activeMode(closure_1_0(10778).ChevronSmallDownIcon, { size: "xs", color });
         }
       }
       preview.renderTrailingIcon = fn;
@@ -721,7 +721,7 @@ export default function ConjureChatScene(guildId) {
             targets,
             target,
             onChange(mode) {
-              const previewTarget = closure_2_0(11633).selectPreviewTarget(
+              const previewTarget = closure_2_0(11630).selectPreviewTarget(
                 mode,
                 closure_1_18,
                 closure_1_21,
@@ -957,7 +957,7 @@ export default function ConjureChatScene(guildId) {
   const items30 = [previewAppId];
   callback9 = obj2.useCallback(() => {
     if (null != previewAppId) {
-      restartConjureAppFramesDefault(tmp);
+      restartFrames.restartAppFrames(tmp);
     }
   }, items30);
   const items31 = [navigation, projectId];
@@ -1133,7 +1133,7 @@ export default function ConjureChatScene(guildId) {
                   ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
                   obj = {
                     ref,
-                    IconComponent: title(9478).MoreHorizontalIcon,
+                    IconComponent: title(9479).MoreHorizontalIcon,
                     onPress,
                     accessibilityLabel: null,
                     accessibilityActions: null,
@@ -1143,7 +1143,7 @@ export default function ConjureChatScene(guildId) {
                   obj.accessibilityLabel = intl.string(title(1128).t["UKOtz+"]);
                   obj.accessibilityActions = accessibilityActions;
                   obj.onAccessibilityAction = onAccessibilityAction;
-                  return closure_1_17(closure_1_1(11607), obj);
+                  return closure_1_17(closure_1_1(11604), obj);
                 },
               };
               items[1] = activeMode(title(navigation[69]).ContextMenu, obj2);
@@ -1279,8 +1279,10 @@ export default function ConjureChatScene(guildId) {
     items41[2] = animatedStyle1;
     obj23.style = items41;
     const obj24 = { value: memo4, children: null };
-    const obj25 = { projectId, transcriptTopInset: tmp8[0], onRestoreVersion: callback6, hidden: tmp53 };
-    obj24.children = activeMode(tmp4(tmp2[74]), obj25);
+    const obj25 = { value: projectId, children: null };
+    const obj26 = { projectId, transcriptTopInset: tmp8[0], onRestoreVersion: callback6, hidden: tmp53 };
+    obj25.children = activeMode(tmp4(tmp2[75]), obj26);
+    obj24.children = activeMode(tmp(tmp2[74]).ConjureFileMentionProjectContext.Provider, obj25);
     obj23.children = activeMode(tmp(tmp2[33]).ConjurePublishActionContext.Provider, obj24);
     items40[2] = activeMode(tmp4(tmp2[20]).View, obj23);
     obj17.children = items40;
@@ -1288,34 +1290,34 @@ export default function ConjureChatScene(guildId) {
     obj14.children = items39;
     let tmp111Result1 = tmp117(tmp4(tmp2[20]).View, obj14);
   } else {
-    const obj26 = { style: null, children: null };
+    const obj27 = { style: null, children: null };
     const items42 = [,];
     ({ content: arr40[0], centered: arr40[1] } = tmp5);
-    obj26.style = items42;
+    obj27.style = items42;
     if (stateFromStores1) {
       let tmp111Result = tmp111(closure_6, {});
     } else {
-      const obj27 = { style: tmp5.listError, children: null };
-      const obj28 = { variant: "heading-lg/semibold", color: "text-default", children: null };
+      const obj28 = { style: tmp5.listError, children: null };
+      const obj29 = { variant: "heading-lg/semibold", color: "text-default", children: null };
       let intl3 = tmp(tmp2[35]).intl;
-      obj28.children = intl3.string(tmp4(tmp2[36]).G1WwgK);
-      const items43 = [tmp111(tmp(tmp2[71]).Text, obj28), ,];
-      const obj29 = { variant: "text-md/normal", color: "text-muted", children: null };
+      obj29.children = intl3.string(tmp4(tmp2[36]).G1WwgK);
+      const items43 = [tmp111(tmp(tmp2[71]).Text, obj29), ,];
+      const obj30 = { variant: "text-md/normal", color: "text-muted", children: null };
       const intl4 = tmp(tmp2[35]).intl;
-      obj29.children = intl4.string(tmp4(tmp2[36]).fINulo);
-      items43[1] = tmp111(tmp(tmp2[71]).Text, obj29);
-      const obj30 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      obj30.children = intl4.string(tmp4(tmp2[36]).fINulo);
+      items43[1] = tmp111(tmp(tmp2[71]).Text, obj30);
+      const obj31 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl5 = tmp(tmp2[35]).intl;
-      obj30.text = intl5.string(tmp4(tmp2[36])["WFJ/vb"]);
-      obj30.onPress = function onPress() {
+      obj31.text = intl5.string(tmp4(tmp2[36])["WFJ/vb"]);
+      obj31.onPress = function onPress() {
         return ConjureActionCreators.listProjects(closure_0);
       };
-      items43[2] = tmp111(tmp(tmp2[72]).Button, obj30);
-      obj27.children = items43;
-      tmp111Result = setMode(tmp112, obj27);
+      items43[2] = tmp111(tmp(tmp2[72]).Button, obj31);
+      obj28.children = items43;
+      tmp111Result = setMode(tmp112, obj28);
     }
-    obj26.children = tmp111Result;
-    tmp111Result1 = tmp111(tmp112, obj26);
+    obj27.children = tmp111Result;
+    tmp111Result1 = tmp111(tmp112, obj27);
   }
   return tmp111Result1;
 }

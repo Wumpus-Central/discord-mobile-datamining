@@ -98,13 +98,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if ("role" === channel_filter.type) {
           tmp8 = arg0;
         }
-        const conjureGuildRoles = result(11591).useConjureGuildRoles(tmp8);
-        const resultResult1 = result(11591);
+        const conjureGuildRoles = result(11588).useConjureGuildRoles(tmp8);
+        const resultResult1 = result(11588);
         let tmp9 = null;
         if ("user" === channel_filter.type) {
           tmp9 = arg0;
         }
-        const conjureGuildMemberUsers = result(11591).useConjureGuildMemberUsers(tmp9);
+        const conjureGuildMemberUsers = result(11588).useConjureGuildMemberUsers(tmp9);
         class S {
           constructor() {
             channels = null;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[5];
           tmp12 = cResult[6];
         }
-        const resultResult2 = result(11591);
+        const resultResult2 = result(11588);
         const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
         const type = channel_filter.type;
         if ("channel" === type) {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           mapped = null;
           if (!tmp20) {
-            result = result(7167).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
+            result = result(7169).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
             map = result.map;
             mapped = map((id) => {
               const obj = {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               return obj;
             });
-            const resultResult4 = result(7167);
+            const resultResult4 = result(7169);
           }
           cResult[7] = stateFromStores;
           channel_filter = channel_filter.channel_filter;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             mapped = result.map((id) => {
               const obj = {
                 id: id.id,
-                label: closure_1_0(5483).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
+                label: closure_1_0(5484).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
               };
               return obj;
             });
@@ -286,10 +286,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
         } else if ("user" === type) {
           return conjureGuildMemberUsers.map((id) => {
-            const result = closure_0(11591).conjureMemberUsername(id, stateFromStores1);
+            const result = closure_0(11588).conjureMemberUsername(id, stateFromStores1);
             const obj2 = { id: id.id, label: null };
-            const obj = closure_0(11591);
-            obj2.label = closure_0(5471).getName(closure_1_0, null, id);
+            const obj = closure_0(11588);
+            obj2.label = closure_0(5472).getName(closure_1_0, null, id);
             if ("" === result) {
               let obj4 = {};
             } else {

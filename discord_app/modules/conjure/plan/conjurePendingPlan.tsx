@@ -65,19 +65,3 @@ export const planVersions = function planVersions(memo) {
   }
   return map;
 };
-export const planCardExpanded = function planCardExpanded(c17, render_id, arg2) {
-  value = c17.get(render_id);
-  if (value == null) {
-    value = !arg2;
-  }
-  return value;
-};
-export const togglePlanCard = function togglePlanCard(get, arg1, arg2) {
-  const map = new Map(get);
-  value = get.get(arg1);
-  if (value == null) {
-    value = !arg2;
-  }
-  const result = map.set(arg1, !value);
-  return map;
-};

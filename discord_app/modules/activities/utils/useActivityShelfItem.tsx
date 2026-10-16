@@ -43,8 +43,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7075)().analyticsLocations;
-  closure_13 = context(11234)();
+  analyticsLocations = context(7077)().analyticsLocations;
+  closure_13 = context(11231)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -327,7 +327,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2026).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1087).ApplicationFlags;
-const MAIN_SURFACE = fn(10934).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10931).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);

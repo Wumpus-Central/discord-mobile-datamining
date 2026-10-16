@@ -20,7 +20,7 @@ let closure_4 = ["guildActivityIndicatorSource"];
 const Constants = fn(1087);
 ({ GuildFeatures: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_16 = createStyles.createStyles({
   topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
 });
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult5 = tmp(504);
         const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-        const tmp20 = stateFromStores(17402)(arg0);
+        const tmp20 = stateFromStores(17412)(arg0);
         const tmpResult6 = tmp(504);
         const token = tmp(4877).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
         const tmpResult7 = tmp(4877);

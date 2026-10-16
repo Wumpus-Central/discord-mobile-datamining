@@ -97,13 +97,13 @@ let closure_18 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6135).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6136).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1112);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: c10 } = AgeGateConstants);
 let items = [
-  fn(6136).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(6136).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(6136).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(6137).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(6137).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(6137).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];

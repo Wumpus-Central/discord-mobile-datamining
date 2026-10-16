@@ -10,12 +10,19 @@ class ConjureWebSocket {
 const prototype = ConjureWebSocket.prototype;
 prototype["open"] = function open(ticket) {
   const self = this;
-  ({ url, onEvent: closure_1, onClose: closure_2, onError: closure_3 } = ticket);
+  ({ url, templateId, onEvent: closure_1, onClose: closure_2, onError: closure_3 } = ticket);
+  let webSocket;
   this.close();
   const replaced = url.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:");
-  const webSocket = new WebSocket(
-    "" + replaced + "/agent/ws?ticket=" + encodeURIComponent(ticket.ticket) + "&debug=on_demand",
-  );
+  if (null != templateId) {
+    const obj2 = { template: templateId };
+    let obj3 = obj2;
+  } else {
+    obj3 = {};
+  }
+  const merged = Object.assign(obj3);
+  const uRLSearchParams = new URLSearchParams({ ticket: ticket.ticket, debug: "on_demand" });
+  webSocket = new WebSocket("" + replaced + "/agent/ws?" + uRLSearchParams);
   this.socket = webSocket;
   const listener = webSocket.addEventListener("message", (event) => {
     if (self.socket === webSocket) {
@@ -134,6 +141,19 @@ prototype["sendPublish"] = function sendPublish() {
   }
   const error = new Error("WebSocket not open");
   throw error;
+};
+prototype["sendPreparePublish"] = function sendPreparePublish() {
+  const self = this;
+  let tmp = null != this.socket;
+  if (tmp) {
+    const _WebSocket = WebSocket;
+    tmp = self.socket.readyState === WebSocket.OPEN;
+  }
+  if (tmp) {
+    const socket = self.socket;
+    const _JSON = JSON;
+    socket.send(JSON.stringify({ type: "prepare_publish" }));
+  }
 };
 prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined, name) {
   const self = this;

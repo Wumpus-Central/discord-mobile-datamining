@@ -20,7 +20,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, code: { fontFamily: fn(1087).Fonts.CODE_BOLD }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.border = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -95,14 +95,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       closure_10 = Math.ceil(tmp5(9).renderLatestMessages.importTime);
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const lastTrackedAppUiViewed2Properties = tmp(7415).getLastTrackedAppUiViewed2Properties();
+        const lastTrackedAppUiViewed2Properties = tmp(7417).getLastTrackedAppUiViewed2Properties();
         class G {
           constructor() {
             return closure_7.alertStartupMetrics;
           }
         }
         let tmp20 = lastTrackedAppUiViewed2Properties;
-        const tmpResult2 = tmp(7415);
+        const tmpResult2 = tmp(7417);
       } else {
         tmp20 = cResult[6];
       }
@@ -157,9 +157,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(13498)(closure_128_0);
+                closure_128_1 = tmp5(13506)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
-                tmp2(8708).showShareActionSheet(obj7, "Startup Timing");
+                tmp2(8709).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               let obj4 = { contentContainerStyle: tmp28, ListHeaderComponent: tmp29, data: tmp11, renderItem: tmp31 };
-              const tmp34 = closure_8(tmp(7036).FlashList, obj4);
+              const tmp34 = closure_8(tmp(7038).FlashList, obj4);
               cResult[19] = tmp11;
               cResult[20] = tmp28;
               cResult[21] = tmp29;
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(13498)(useResult, !checked, first1).split("\n");
+  const parts = checked(13506)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(13498)(closure_128_0);
+          closure_128_1 = tmp5(13506)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8708).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8709).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -656,6 +656,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(7036).FlashList, obj5);
+  obj4.children = closure_8(tmp10(7038).FlashList, obj5);
   return closure_8(checked, obj4);
 });

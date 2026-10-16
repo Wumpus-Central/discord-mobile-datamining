@@ -632,7 +632,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == application_id) {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { largeImage: "Array", smallImage: "test" };
+          const obj3 = { largeImage: "Symbol", smallImage: "current" };
           cResult[2] = obj3;
           let tmp31 = obj3;
         } else {
@@ -803,7 +803,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const data = useGame.useGame(canonicalGameId).data;
       if (null == application_id) {
-        return { largeImage: "Array", smallImage: "test" };
+        return { largeImage: "Symbol", smallImage: "current" };
       } else {
         let large_image;
         if (application_id != null) {

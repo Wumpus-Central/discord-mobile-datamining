@@ -59,10 +59,10 @@ function shouldShowInviter(invite, isGuildMember) {
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(13349).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(13357).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   avatar: null,
   avatarContainer: null,
@@ -97,7 +97,7 @@ obj2.inviterIcon = size2;
 obj2.guildNameContainer = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj2.guildNameText = { textAlign: "center" };
 let obj3 = { borderRadius: nativeDefault.radii.none, marginRight: 8 };
-obj2.featureIcon = { flexGrow: 0, marginRight: 8, opacity: fn(6187).DARK_1_LIGHT_04 };
+obj2.featureIcon = { flexGrow: 0, marginRight: 8, opacity: fn(6188).DARK_1_LIGHT_04 };
 obj2.memberInfo = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj2.rolesList = { marginTop: 8, marginBottom: 8, alignItems: "center" };
 const size3 = {
@@ -117,7 +117,7 @@ const size4 = {
   backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400,
 };
 obj2.dotOffline = size4;
-let obj4 = { flexGrow: 0, marginRight: 8, opacity: fn(6187).DARK_1_LIGHT_04 };
+let obj4 = { flexGrow: 0, marginRight: 8, opacity: fn(6188).DARK_1_LIGHT_04 };
 obj2.embedDetailsCard = {
   width: "100%",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -164,7 +164,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != invite.inviter) {
             let tmp10 = null;
             if (null != invite.inviter) {
-              const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: true };
+              const obj2 = {
+                avatarStyle: user.avatar,
+                user: null,
+                guildId: "Array",
+                size: 1454200589627434700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+              };
               const tmp16 = new UserRecord(invite.inviter);
               obj2.user = tmp16;
               obj2.size = native.AvatarSizes.XLARGE;
@@ -200,7 +205,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != invite.inviter) {
           let tmp2Result = null;
           if (null != invite.inviter) {
-            const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
+            const obj3 = {
+              avatarStyle: tmp.avatar,
+              user: null,
+              guildId: "Array",
+              size: 1454200589627434700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+            };
             const tmp14 = new UserRecord(invite.inviter);
             obj3.user = tmp14;
             obj3.size = native.AvatarSizes.XLARGE;
@@ -621,9 +631,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = isGuildMember(5021);
             }
           }
-          tmp3Result3 = tmp3(7641);
+          tmp3Result3 = tmp3(7642);
         }
-        tmp3Result = tmp3(7641);
+        tmp3Result = tmp3(7642);
       }
       const obj8 = { style: tmp.inviteJoinContainer, children: null };
       let tmp22 = null;
@@ -635,11 +645,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           obj10.children = closure_12(isGuildMember(5091), obj12);
           tmp22 = closure_12(View, obj10);
         }
-        tmp3Result4 = tmp3(7641);
+        tmp3Result4 = tmp3(7642);
       }
       const items1 = [
         tmp22,
-        closure_12(invite(5149).Text, {
+        closure_12(invite(5150).Text, {
           style: tmp.inviteJoinText,
           variant: "text-sm/normal",
           color: "text-default",
@@ -1217,11 +1227,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp8Result) {
         const obj9 = { style: tmp.embedDetailsCard, children: null };
         const obj10 = { event: guild_scheduled_event };
-        const items3 = [closure_12(tmp4(8759).GuildEventCardHeader, obj10), ,];
+        const items3 = [closure_12(tmp4(8760).GuildEventCardHeader, obj10), ,];
         const obj11 = { event: guild_scheduled_event };
-        items3[1] = closure_12(tmp4(8759).GuildEventCardMetaInfo, obj11);
+        items3[1] = closure_12(tmp4(8760).GuildEventCardMetaInfo, obj11);
         const obj12 = { event: guild_scheduled_event };
-        items3[2] = closure_12(tmp4(8759).GuildEventCardGuildInfo, obj12);
+        items3[2] = closure_12(tmp4(8760).GuildEventCardGuildInfo, obj12);
         obj9.children = items3;
         tmp8Result = closure_13(View, obj9);
       }
@@ -1237,7 +1247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp10Result;
       if (null != userAvatarSource) {
         const obj13 = { source: userAvatarSource, variant: "entity" };
-        tmp10Result = closure_12(tmp4(5441).Button.Icon, obj13);
+        tmp10Result = closure_12(tmp4(5442).Button.Icon, obj13);
       }
       if (null != stateFromStores) {
         const intl = tmp4(1128).intl;
@@ -1274,7 +1284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         importDefault();
       }
       const items4 = [
-        closure_12(invite(5441).Button, {
+        closure_12(invite(5442).Button, {
           icon: tmp10Result,
           variant: "primary",
           size: "lg",
@@ -1295,7 +1305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj16 = { children: null };
       const obj17 = { children: null };
-      items4[1] = closure_12(invite(5441).Button, {
+      items4[1] = closure_12(invite(5442).Button, {
         variant: "secondary",
         size: "lg",
         text: stringResult1,
@@ -1315,7 +1325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled: tmp3 === constants3.DECLINE,
       });
       obj17.children = items4;
-      items2[6] = closure_13(invite(6176).ButtonGroup, obj17);
+      items2[6] = closure_13(invite(6177).ButtonGroup, obj17);
       obj16.children = items2;
       return closure_13(closure_14, obj16);
     };

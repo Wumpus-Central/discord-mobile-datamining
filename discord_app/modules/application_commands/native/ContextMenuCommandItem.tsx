@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(12805).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(12811).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.trailing = jsx(tmp5(5102).SendMessageIcon, {});
       obj2.start = start;
       obj2.end = end;
-      return jsx(item(6402).TableRow, {
+      return jsx(item(6404).TableRow, {
         accessibilityLabel: memo,
         onPress,
         label: item.displayName,

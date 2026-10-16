@@ -27,8 +27,8 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
       const cResult = mediaItemHasSpoiler(576).c(7);
       let obj = mediaItemHasSpoiler(576);
       const tmp = mediaItemHasSpoiler;
-      mediaItemHasSpoiler = mediaItemHasSpoiler(8618).useMediaItemHasSpoiler(arg0);
-      let obj2 = mediaItemHasSpoiler(8618);
+      mediaItemHasSpoiler = mediaItemHasSpoiler(8619).useMediaItemHasSpoiler(arg0);
+      let obj2 = mediaItemHasSpoiler(8619);
       [tmp6, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
       const tmp5 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
       let num = 0;
@@ -92,8 +92,8 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
       const obj4 = mediaItemHasSpoiler(4909);
     }
   : function useMediaItemSpoilerState(arg0) {
-      mediaItemHasSpoiler = mediaItemHasSpoiler(8618).useMediaItemHasSpoiler(arg0);
-      let obj = mediaItemHasSpoiler(8618);
+      mediaItemHasSpoiler = mediaItemHasSpoiler(8619).useMediaItemHasSpoiler(arg0);
+      let obj = mediaItemHasSpoiler(8619);
       const tmp = mediaItemHasSpoiler;
       [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
       const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);

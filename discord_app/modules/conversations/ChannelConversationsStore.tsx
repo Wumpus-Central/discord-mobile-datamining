@@ -217,7 +217,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7534);
+const ConversationConstants = fn(5132);
 ({
   CONVERSATION_COLORS: closure_9,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
@@ -232,8 +232,6 @@ const navigation = new privDefault({
 });
 let map = new Map();
 let map1 = new Map();
-let closure_16 = 0;
-let closure_17 = 0;
 const Store = initializeDefault.Store;
 class ChannelConversationsStore extends Store {}
 const prototype = ChannelConversationsStore.prototype;
@@ -328,14 +326,6 @@ prototype["isListFetchPending"] = function isListFetchPending(arg0, arg1) {
   }
   return flag;
 };
-prototype["consumeFocusRequest"] = function consumeFocusRequest() {
-  let flag = closure_16 !== closure_17;
-  if (flag) {
-    closure_17 = closure_16;
-    flag = true;
-  }
-  return flag;
-};
 prototype["getConversationColor"] = function getConversationColor(arg0, arg1) {
   const peekResult = navigation.peek(arg0);
   let tmp2 = null;
@@ -426,7 +416,7 @@ ChannelConversationsStore.displayName = "ChannelConversationsStore";
 const channelConversationsStore = new ChannelConversationsStore(DispatcherDefault, {
   CONVERSATION_MESSAGES_FETCH_START: function handleConversationMessagesFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
-    if (true === conversationId.isStandalone) {
+    if ("channel" !== conversationId.cacheType) {
       return false;
     } else {
       let str = "preview";
@@ -444,9 +434,9 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       }
     }
   },
-  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(isStandalone) {
-    ({ conversationId, messageReferences, fullyHydrated } = isStandalone);
-    if (true === isStandalone.isStandalone) {
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(cacheType) {
+    ({ conversationId, messageReferences, fullyHydrated } = cacheType);
+    if ("channel" !== cacheType.cacheType) {
       return false;
     } else {
       let str = "preview";
@@ -502,7 +492,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
   },
   CONVERSATION_MESSAGES_FETCH_FAILURE: function handleConversationMessagesFetchFailure(conversationId) {
     conversationId = conversationId.conversationId;
-    if (true === conversationId.isStandalone) {
+    if ("channel" !== conversationId.cacheType) {
       return false;
     } else {
       let str = "preview";
@@ -536,7 +526,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7536).mapConversation);
+      const mapped = rawConversations.map(set(7537).mapConversation);
       const found = mapped.filter(set(1388).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -986,10 +976,6 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       }
     }
     return false;
-  },
-  CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest() {
-    closure_16 = closure_16 + 1;
-    return true;
   },
   SET_CONVERSATION_FEEDBACK_RATING: function handleSetConversationFeedbackRating(channelId) {
     ({ conversationId, rating } = channelId);

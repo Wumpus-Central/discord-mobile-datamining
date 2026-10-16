@@ -13,10 +13,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1087).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(17354).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(17366).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = {
     container: { flex: 1 },
@@ -40,7 +40,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       offsetX = offsetX.offsetX;
       let obj = offsetX(576);
       const tmp = offsetX;
-      const guildsBarPullX = offsetX(17074).useHomeDrawerState().guildsBarPullX;
+      const guildsBarPullX = offsetX(17088).useHomeDrawerState().guildsBarPullX;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { ignoreKeyboard: true };
         cResult[0] = obj3;
@@ -49,7 +49,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       const height = guildsBarPullX(1499)(first).height;
-      let obj2 = offsetX(17074);
+      let obj2 = offsetX(17088);
       const fn = function c() {
         const obj = { transform: null };
         const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
@@ -58,7 +58,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       const tmpResult = tmp(4909);
-      fn.__closure = { roundToNearestPixel: guildsBarPullX(11832), offsetX, guildsBarPullX };
+      fn.__closure = { roundToNearestPixel: guildsBarPullX(11829), offsetX, guildsBarPullX };
       fn.__workletHash = 7539125302557;
       fn.__initData = __initData;
       const animatedStyle = tmpResult.useAnimatedStyle(fn);
@@ -74,7 +74,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { absolute: true, tall: true, wide: true, mix: true, componentStyles: null };
         const obj6 = { height };
         obj5.componentStyles = obj6;
-        const tmp11 = closure_9(tmp5(10465), obj5);
+        const tmp11 = closure_9(tmp5(10466), obj5);
         cResult[3] = height;
         cResult[4] = tmp11;
         let tmp9 = tmp11;
@@ -92,12 +92,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp9;
       cResult[7] = tmp13;
       tmp12 = tmp13;
-      const obj4 = { roundToNearestPixel: guildsBarPullX(11832), offsetX, guildsBarPullX };
+      const obj4 = { roundToNearestPixel: guildsBarPullX(11829), offsetX, guildsBarPullX };
     }
   : function ContentMaskGradient(offsetX) {
       offsetX = offsetX.offsetX;
-      const guildsBarPullX = offsetX(17074).useHomeDrawerState().guildsBarPullX;
-      let obj = offsetX(17074);
+      const guildsBarPullX = offsetX(17088).useHomeDrawerState().guildsBarPullX;
+      let obj = offsetX(17088);
       const fn = function n() {
         const obj = { transform: null };
         const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
@@ -106,15 +106,15 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       let obj2 = offsetX(4909);
-      fn.__closure = { roundToNearestPixel: guildsBarPullX(11832), offsetX, guildsBarPullX };
+      fn.__closure = { roundToNearestPixel: guildsBarPullX(11829), offsetX, guildsBarPullX };
       fn.__workletHash = 6557055008030;
       fn.__initData = __initData2;
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const obj4 = { pointerEvents: "none", style: null, children: null };
       let items = [closure_4.absoluteFill, animatedStyle];
       obj4.style = items;
-      const obj3 = { roundToNearestPixel: guildsBarPullX(11832), offsetX, guildsBarPullX };
-      obj4.children = closure_9(guildsBarPullX(10465), {
+      const obj3 = { roundToNearestPixel: guildsBarPullX(11829), offsetX, guildsBarPullX };
+      obj4.children = closure_9(guildsBarPullX(10466), {
         absolute: true,
         tall: true,
         wide: true,
@@ -141,20 +141,20 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = ref(576).c(28);
       const tmp4 = closure_11();
       let obj = ref(576);
-      const drawerOpen = ref(17077).useDrawerOpen();
-      let obj2 = ref(17077);
-      const doesLandOnHomeDrawer = ref(17074).useDoesLandOnHomeDrawer();
+      const drawerOpen = ref(17091).useDrawerOpen();
+      let obj2 = ref(17091);
+      const doesLandOnHomeDrawer = ref(17088).useDoesLandOnHomeDrawer();
       ref = isClientThemeOrCustomThemeActive.useRef(null);
-      let obj3 = ref(17074);
+      let obj3 = ref(17088);
       let obj4 = isClientThemeOrCustomThemeActive;
-      const homeDrawerState = ref(17074).useHomeDrawerState();
+      const homeDrawerState = ref(17088).useHomeDrawerState();
       const panelTranslateX = homeDrawerState.panelTranslateX;
       const guildsBarDrawerStyle = homeDrawerState.guildsBarDrawerStyle;
       const tmp9 = HomeDrawerStore((maxX) => maxX.maxX);
       dependencyMap = tmp9;
-      const obj5 = ref(17074);
-      isClientThemeOrCustomThemeActive = ref(9545).useIsClientThemeOrCustomThemeActive();
-      const obj6 = ref(9545);
+      const obj5 = ref(17088);
+      isClientThemeOrCustomThemeActive = ref(9546).useIsClientThemeOrCustomThemeActive();
+      const obj6 = ref(9546);
       const token = ref(4877).useToken(panelTranslateX(587).colors.BACKGROUND_BASE_LOWEST);
       const obj7 = ref(4877);
       const token1 = ref(4877).useToken(panelTranslateX(587).colors.PANEL_BG);
@@ -254,7 +254,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       N.__closure = {
         interpolate: ref(4909).interpolate,
         panelTranslateX,
-        INITIAL_OPEN_WIDTH: ref(17074).INITIAL_OPEN_WIDTH,
+        INITIAL_OPEN_WIDTH: ref(17088).INITIAL_OPEN_WIDTH,
         Extrapolation: ref(4909).Extrapolation,
         isGradientTheme: isClientThemeOrCustomThemeActive,
         interpolateColor: ref(4909).interpolateColor,
@@ -276,7 +276,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp24 = closure_9(tmp11(17355), { enableHome: true });
+            const tmp24 = closure_9(tmp11(17367), { enableHome: true });
             cResult[9] = tmp24;
             let tmp22 = tmp24;
           } else {
@@ -313,7 +313,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[19] !== doesLandOnHomeDrawer) {
                 let tmp37 = null;
                 if (doesLandOnHomeDrawer) {
-                  tmp37 = closure_9(tmp11(17431), {});
+                  tmp37 = closure_9(tmp11(17441), {});
                 }
                 cResult[19] = doesLandOnHomeDrawer;
                 cResult[20] = tmp37;
@@ -377,7 +377,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = {
         interpolate: ref(4909).interpolate,
         panelTranslateX,
-        INITIAL_OPEN_WIDTH: ref(17074).INITIAL_OPEN_WIDTH,
+        INITIAL_OPEN_WIDTH: ref(17088).INITIAL_OPEN_WIDTH,
         Extrapolation: ref(4909).Extrapolation,
         isGradientTheme: isClientThemeOrCustomThemeActive,
         interpolateColor: ref(4909).interpolateColor,
@@ -388,18 +388,18 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function HomeDrawerPanelContent() {
       const tmp2 = closure_11();
-      const drawerOpen = ref(17077).useDrawerOpen();
-      let obj = ref(17077);
-      const doesLandOnHomeDrawer = ref(17074).useDoesLandOnHomeDrawer();
+      const drawerOpen = ref(17091).useDrawerOpen();
+      let obj = ref(17091);
+      const doesLandOnHomeDrawer = ref(17088).useDoesLandOnHomeDrawer();
       ref = isClientThemeOrCustomThemeActive.useRef(null);
-      let obj2 = ref(17074);
-      const homeDrawerState = ref(17074).useHomeDrawerState();
+      let obj2 = ref(17088);
+      const homeDrawerState = ref(17088).useHomeDrawerState();
       const panelTranslateX = homeDrawerState.panelTranslateX;
       const tmp8 = HomeDrawerStore((maxX) => maxX.maxX);
       dependencyMap = tmp8;
-      let obj3 = ref(17074);
-      isClientThemeOrCustomThemeActive = ref(9545).useIsClientThemeOrCustomThemeActive();
-      let obj4 = ref(9545);
+      let obj3 = ref(17088);
+      isClientThemeOrCustomThemeActive = ref(9546).useIsClientThemeOrCustomThemeActive();
+      let obj4 = ref(9546);
       const token = ref(4877).useToken(panelTranslateX(587).colors.BACKGROUND_BASE_LOWEST);
       const obj5 = ref(4877);
       const token1 = ref(4877).useToken(panelTranslateX(587).colors.PANEL_BG);
@@ -476,7 +476,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = {
         interpolate: ref(4909).interpolate,
         panelTranslateX,
-        INITIAL_OPEN_WIDTH: ref(17074).INITIAL_OPEN_WIDTH,
+        INITIAL_OPEN_WIDTH: ref(17088).INITIAL_OPEN_WIDTH,
         Extrapolation: ref(4909).Extrapolation,
         isGradientTheme: isClientThemeOrCustomThemeActive,
         interpolateColor: ref(4909).interpolateColor,
@@ -496,7 +496,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         homeDrawerState.guildsBarDrawerStyle,
       ];
       obj12.style = items2;
-      const items3 = [closure_9(panelTranslateX(17355), { enableHome: true }), ,];
+      const items3 = [closure_9(panelTranslateX(17367), { enableHome: true }), ,];
       const obj13 = { style: null, pointerEvents: "none", collapsable: false, children: null };
       const items4 = [tmp2.contentMask, { left: GUILD_LIST_WIDTH }, animatedStyle1];
       obj13.style = items4;
@@ -509,7 +509,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       items3[1] = closure_9(panelTranslateX(4909).View, obj13);
       let tmp16Result2 = null;
       if (doesLandOnHomeDrawer) {
-        tmp16Result2 = closure_9(tmp10(17431), {});
+        tmp16Result2 = closure_9(tmp10(17441), {});
       }
       items3[2] = tmp16Result2;
       obj12.children = items3;

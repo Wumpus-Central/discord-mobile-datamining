@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx
-import flattenDefault from "../../../../_runtime/05253_flatten.js";
+import flattenDefault from "../../../../_runtime/05254_flatten.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function matchesDeep(item10014, item10021) {

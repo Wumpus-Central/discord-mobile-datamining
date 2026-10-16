@@ -4,20 +4,20 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import RobotIcon2 from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import _modDef18670 from "../../../../_runtime/metro/18670__.js";
-import _modDef18671 from "../../../../_runtime/metro/18671__.js";
-import _modDef18672 from "../../../../_runtime/metro/18672__.js";
+import _modDef18683 from "../../../../_runtime/metro/18683__.js";
+import _modDef18684 from "../../../../_runtime/metro/18684__.js";
+import _modDef18685 from "../../../../_runtime/metro/18685__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AuditLogRecord = fn(18660);
+const AuditLogRecord = fn(18673);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1087);
 ({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   actionImageContainer: { height: 24, width: 24 },
   actionImageOverlay: null,
@@ -37,32 +37,32 @@ obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
 let obj3 = {
-  [ALL]: fn(18666).ListBulletsIcon,
-  [CHANNEL]: fn(18603).ChannelListIcon,
-  [CHANNEL_OVERWRITE]: fn(18603).ChannelListIcon,
-  [EMOJI]: fn(9191).ReactionIcon,
+  [ALL]: fn(18679).ListBulletsIcon,
+  [CHANNEL]: fn(18613).ChannelListIcon,
+  [CHANNEL_OVERWRITE]: fn(18613).ChannelListIcon,
+  [EMOJI]: fn(9192).ReactionIcon,
   [GUILD]: fn(5108).CircleInformationIcon,
   [GUILD_PROFILE]: fn(5108).CircleInformationIcon,
-  [INTEGRATION]: fn(15923).PuzzlePieceIcon,
+  [INTEGRATION]: fn(15933).PuzzlePieceIcon,
   [INVITE]: fn(5100).LinkIcon,
-  [ROLE]: fn(9810).FlagIcon,
-  [USER]: fn(8442).GroupIcon,
-  [WEBHOOK]: fn(17805).WebhookIcon,
-  [STAGE_INSTANCE]: fn(8450).StageIcon,
-  [GUILD_SCHEDULED_EVENT]: fn(8905).CalendarIcon,
-  [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8905).CalendarIcon,
-  [THREAD]: fn(8426).ThreadIcon,
-  [STICKER]: fn(13141).StickerIcon,
-  [APPLICATION_COMMAND]: fn(10868).SlashBoxIcon,
-  [AUTO_MODERATION_RULE]: fn(17805).WebhookIcon,
-  [GUILD_SOUNDBOARD]: fn(13136).SoundboardIcon,
-  [ONBOARDING_PROMPT]: fn(8442).GroupIcon,
-  [GUILD_ONBOARDING]: fn(8442).GroupIcon,
-  [HOME_SETTINGS]: fn(8442).GroupIcon,
-  [GUILD_MEMBER_VERIFICATION]: fn(8442).GroupIcon,
-  [VOICE_CHANNEL_STATUS]: fn(18603).ChannelListIcon,
-  [GUILD_HOME]: fn(18668).HomeIcon,
-  [UNKNOWN]: fn(13660).CircleQuestionIcon,
+  [ROLE]: fn(9809).FlagIcon,
+  [USER]: fn(8443).GroupIcon,
+  [WEBHOOK]: fn(17815).WebhookIcon,
+  [STAGE_INSTANCE]: fn(8451).StageIcon,
+  [GUILD_SCHEDULED_EVENT]: fn(8906).CalendarIcon,
+  [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8906).CalendarIcon,
+  [THREAD]: fn(8427).ThreadIcon,
+  [STICKER]: fn(13149).StickerIcon,
+  [APPLICATION_COMMAND]: fn(10865).SlashBoxIcon,
+  [AUTO_MODERATION_RULE]: fn(17815).WebhookIcon,
+  [GUILD_SOUNDBOARD]: fn(13144).SoundboardIcon,
+  [ONBOARDING_PROMPT]: fn(8443).GroupIcon,
+  [GUILD_ONBOARDING]: fn(8443).GroupIcon,
+  [HOME_SETTINGS]: fn(8443).GroupIcon,
+  [GUILD_MEMBER_VERIFICATION]: fn(8443).GroupIcon,
+  [VOICE_CHANNEL_STATUS]: fn(18613).ChannelListIcon,
+  [GUILD_HOME]: fn(18681).HomeIcon,
+  [UNKNOWN]: fn(13668).CircleQuestionIcon,
 };
 ({
   ALL,
@@ -101,16 +101,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== action) {
         const tmp7 = hasOwnProperty(action);
         if (constants.CREATE === tmp7) {
-          let tmp9 = _modDef18670;
+          let tmp9 = _modDef18683;
           cResult[0] = action;
           cResult[1] = tmp9;
         } else if (constants.UPDATE !== tmp7) {
           tmp9 = null;
           if (constants.DELETE === tmp7) {
-            tmp9 = _modDef18672;
+            tmp9 = _modDef18685;
           }
         }
-        tmp9 = _modDef18671;
+        tmp9 = _modDef18684;
       } else if (cResult[2] !== action) {
         if (action === constants2.MESSAGE_DELETE) {
           let RobotIcon = ChatIcon.ChatIcon;
@@ -192,13 +192,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       const tmp2 = hasOwnProperty(action);
       if (constants.CREATE === tmp2) {
-        let tmp4 = _modDef18670;
+        let tmp4 = _modDef18683;
       } else if (constants.UPDATE === tmp2) {
-        tmp4 = _modDef18671;
+        tmp4 = _modDef18684;
       } else {
         tmp4 = null;
         if (constants.DELETE === tmp2) {
-          tmp4 = _modDef18672;
+          tmp4 = _modDef18685;
         }
       }
       if (action === constants2.MESSAGE_DELETE) {

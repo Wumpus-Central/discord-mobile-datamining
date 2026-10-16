@@ -22,6 +22,7 @@ const items = [
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA,
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER,
+  dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_USER_DM_SIDEBAR_EMBED,
 ];
 const items1 = [
   dismissible_content.DismissibleContent.GIFTING_INTENT_FRIENDS_TAB_BADGE,
@@ -42,16 +43,13 @@ const items1 = [
   dismissible_content.DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
   dismissible_content.DismissibleContent.FIRST_BOOSTER_UPSELL_OVERSEER,
   dismissible_content.DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE,
-  dismissible_content.DismissibleContent.RIOT_CONNECTION_DEPRECATION,
-  dismissible_content.DismissibleContent.RIOT_CONNECTION_DEPRECATION_ADMIN,
   dismissible_content.DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
+  dismissible_content.DismissibleContent.COD_RELINK_NOTICE,
   dismissible_content.DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING,
   dismissible_content.DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
   dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX,
-  dismissible_content.DismissibleContent.BATTLENET_CONNECTION_DEPRECATION,
-  dismissible_content.DismissibleContent.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
   dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST_EMBED,
   dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_SERVER_CHANNEL_MEMBER_LIST_EMBED,
 ];

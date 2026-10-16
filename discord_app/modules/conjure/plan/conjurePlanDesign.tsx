@@ -4,19 +4,19 @@ import conjurePlanTags from "conjurePlanTags.tsx";
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.APP_CHANNEL] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.ACTIVITY] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.OVERLAY] = _modDef3865["rPpf5/"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.PROFILE_WIDGET] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.AUTOMOD] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.BOT] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(7168).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.APP_CHANNEL] = _modDef3865["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3865["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.ACTIVITY] = _modDef3865["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.OVERLAY] = _modDef3865["rPpf5/"];
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.PROFILE_WIDGET] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.AUTOMOD] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.BOT] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
 const items = [
-  fn(7168).ConjureSupportedSurface.ACTIVITY,
-  fn(7168).ConjureSupportedSurface.APP_CHANNEL,
-  fn(7168).ConjureSupportedSurface.VOICE_CHANNEL,
-  fn(7168).ConjureSupportedSurface.OVERLAY,
+  fn(7170).ConjureSupportedSurface.ACTIVITY,
+  fn(7170).ConjureSupportedSurface.APP_CHANNEL,
+  fn(7170).ConjureSupportedSurface.VOICE_CHANNEL,
+  fn(7170).ConjureSupportedSurface.OVERLAY,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");

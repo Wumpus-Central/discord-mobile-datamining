@@ -1302,8 +1302,8 @@ const frozen2 = Object.freeze({
   MOBILE_GAME_COMMUNITIES: "/discoverable-guilds/mobile-game-communities",
   GUILD_DISCOVERY_SEARCH: "/discoverable-guilds/search",
   GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
-  GUILD_DISCOVERY_SLUG(arg0) {
-    return "/discovery/" + arg0;
+  GUILD_WEB_PAGE(arg0) {
+    return "/index/servers/" + arg0;
   },
   GUILD_DISCOVERY_METADATA(arg0) {
     return "/guilds/" + arg0 + "/discovery-metadata";
@@ -3368,8 +3368,8 @@ const obj2 = {
   MOBILE_GAME_COMMUNITIES: "/discoverable-guilds/mobile-game-communities",
   GUILD_DISCOVERY_SEARCH: "/discoverable-guilds/search",
   GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
-  GUILD_DISCOVERY_SLUG(arg0) {
-    return "/discovery/" + arg0;
+  GUILD_WEB_PAGE(arg0) {
+    return "/index/servers/" + arg0;
   },
   GUILD_DISCOVERY_METADATA(arg0) {
     return "/guilds/" + arg0 + "/discovery-metadata";
@@ -6076,12 +6076,9 @@ export const NoticeTypes = {
   E2EE_UPDATE_REQUIRED: "E2EE_UPDATE_REQUIRED",
   WINDOWS_MEDIA_PACK_REQUIRED: "WINDOWS_MEDIA_PACK_REQUIRED",
   PREMIUM_MARKETING_NAGBAR: "PREMIUM_MARKETING_NAGBAR",
-  RIOT_MIGRATION: "RIOT_MIGRATION",
-  RIOT_CONNECTION_DEPRECATION_ADMIN: "RIOT_CONNECTION_DEPRECATION_ADMIN",
   RESTRICTED_HOURS_WARNING: "RESTRICTED_HOURS_WARNING",
-  BATTLENET_MIGRATION: "BATTLENET_MIGRATION",
-  BATTLENET_LINKED_ROLE_DEPRECATION: "BATTLENET_LINKED_ROLE_DEPRECATION",
   YOUTUBE_3P_NAGBAR: "YOUTUBE_3P_NAGBAR",
+  COD_RELINK: "COD_RELINK",
 };
 export const InviteStates = {
   RESOLVING: "RESOLVING",
@@ -7714,6 +7711,7 @@ export const AnalyticEvents = {
   LEADERBOARD_HOVER: "leaderboard_hover",
   SERVER_HUB_TOGGLE_SETTING: "server_hub_toggle_setting",
   SERVER_HUB_VISIT: "server_hub_visit",
+  SERVER_HUB_WIDGET_EDIT_CLICKED: "server_hub_widget_edit_clicked",
   SWP_NOTICE_VIEWED: "swp_notice_viewed",
   SWP_NOTICE_ACTION: "swp_notice_action",
   SWP_SETTINGS_VIEWED: "swp_settings_viewed",

@@ -15,20 +15,20 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
   count: { marginLeft: nativeDefault.space.PX_8 },
 };
 let closure_11 = createStyles.createStyles(obj);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj4 = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
@@ -166,7 +166,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmpResult = sharedValue(4909);
       fn2.__closure = {
-        withSpring: sharedValue(5440).withSpring,
+        withSpring: sharedValue(5441).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
         interpolate: sharedValue(4909).interpolate,
@@ -203,7 +203,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp17 = tmp20;
               }
               const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
-              const tmp16 = closure_6(tmp(5149).Text, obj5);
+              const tmp16 = closure_6(tmp(5150).Text, obj5);
               cResult[11] = tmp12;
               cResult[12] = count;
               cResult[13] = tmp16;
@@ -225,7 +225,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = obj6;
       tmp10 = obj6;
       let obj3 = {
-        withSpring: sharedValue(5440).withSpring,
+        withSpring: sharedValue(5441).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
         interpolate: sharedValue(4909).interpolate,
@@ -258,7 +258,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj2 = sharedValue(4909);
       I.__closure = {
-        withSpring: sharedValue(5440).withSpring,
+        withSpring: sharedValue(5441).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
         interpolate: sharedValue(4909).interpolate,
@@ -267,14 +267,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       I.__initData = __initData4;
       const animatedStyle = obj2.useAnimatedStyle(I);
       let obj3 = {
-        withSpring: sharedValue(5440).withSpring,
+        withSpring: sharedValue(5441).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
         interpolate: sharedValue(4909).interpolate,
       };
       let obj4 = {
         style: null,
-        children: closure_6(sharedValue(5149).Text, {
+        children: closure_6(sharedValue(5150).Text, {
           animated: true,
           variant: "text-sm/medium",
           style: closure_16({ index, activeIndex, pressed, variant }),

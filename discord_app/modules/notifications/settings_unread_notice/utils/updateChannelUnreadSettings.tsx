@@ -6,7 +6,7 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const AnalyticsObjects = fn(1087).AnalyticsObjects;
-const UnreadSetting = fn(6185).UnreadSetting;
+const UnreadSetting = fn(6186).UnreadSetting;
 const constants = fn(1097).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting(

@@ -145,7 +145,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { nameRow: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16 }, tile: { padding: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" }, tileEmpty: { borderStyle: "dashed" }, tileImage: { width: "100%", height: "100%" }, editIcon: null, nameField: null };
 const rect = { position: "absolute", top: -nativeDefault.space.PX_4, right: -nativeDefault.space.PX_4, pointerEvents: "none" };
 obj2.editIcon = rect;
@@ -226,7 +226,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                             tmp22 = null;
                             if (!disabled) {
                               const obj3 = { style: tmp4.editIcon };
-                              tmp22 = closure_7(onError(11587), obj3);
+                              tmp22 = closure_7(onError(11584), obj3);
                             }
                           }
                           cResult[22] = disabled;
@@ -240,7 +240,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                   }
                 }
                 const obj4 = { variant: "secondary", border: str, radius: 16, style: tmp8, accessibilityLabel: tmp9, disabled, onPress: tmp6, children: cResult[14] };
-                const tmp20 = closure_7(onChange(6404).Card, obj4);
+                const tmp20 = closure_7(onChange(6406).Card, obj4);
                 cResult[15] = disabled;
                 cResult[16] = tmp6;
                 cResult[17] = str;
@@ -254,7 +254,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
           if (tmp5) {
             const obj5 = { size: "md", color: onError(587).colors.ICON_MUTED };
-            let tmp13Result = closure_7(onChange(11585).ImagePlusIcon, obj5);
+            let tmp13Result = closure_7(onChange(11582).ImagePlusIcon, obj5);
           } else {
             const obj6 = { source: null, style: null, resizeMode: "cover" };
             const obj7 = { uri: iconURL };
@@ -336,7 +336,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   obj.onPress = callback;
   if (null == iconURL) {
     const obj2 = { size: "md", color: onError(587).colors.ICON_MUTED };
-    let tmp6Result = closure_7(onChange(11585).ImagePlusIcon, obj2);
+    let tmp6Result = closure_7(onChange(11582).ImagePlusIcon, obj2);
     let tmp9 = onError;
   } else {
     tmp9 = onError;
@@ -347,13 +347,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     tmp6Result = closure_7(onError(5091), obj3);
   }
   obj.children = tmp6Result;
-  const children = [closure_7(onChange(6404).Card, obj), ];
+  const children = [closure_7(onChange(6406).Card, obj), ];
   let tmp6Result2 = null;
   if (null != iconURL) {
     tmp6Result2 = null;
     if (!disabled) {
       const obj5 = { style: tmp.editIcon };
-      tmp6Result2 = closure_7(tmp9(11587), obj5);
+      tmp6Result2 = closure_7(tmp9(11584), obj5);
     }
   }
   children[1] = tmp6Result2;
@@ -422,7 +422,7 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
                         if (null != first) {
                           const obj2 = { accessibilityLiveRegion: "polite", children: null };
                           const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: first };
-                          obj2.children = closure_7(nameError(5149).Text, obj3);
+                          obj2.children = closure_7(nameError(5150).Text, obj3);
                           tmp30 = closure_7(View, obj2);
                         }
                         cResult[21] = first;
@@ -470,8 +470,8 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
                             tmp45 = tmp48;
                           }
                         }
-                        const obj5 = { label: tmp37, placeholder: tmp38, value: description, onChange: onDescriptionChange, maxLength: nameError(7168).MAX_APP_DESCRIPTION_LENGTH, disabled: tmp4 };
-                        const tmp44 = closure_7(nameError(6996).TextArea, obj5);
+                        const obj5 = { label: tmp37, placeholder: tmp38, value: description, onChange: onDescriptionChange, maxLength: nameError(7170).MAX_APP_DESCRIPTION_LENGTH, disabled: tmp4 };
+                        const tmp44 = closure_7(nameError(6998).TextArea, obj5);
                         cResult[28] = description;
                         cResult[29] = tmp4;
                         cResult[30] = onDescriptionChange;
@@ -481,7 +481,7 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
                       const obj6 = { spacing: nativeDefault.space.PX_8, children: null };
                       const items1 = [tmp25, tmp29];
                       obj6.children = items1;
-                      const tmp36 = closure_8(nameError(5439).Stack, obj6);
+                      const tmp36 = closure_8(nameError(5440).Stack, obj6);
                       cResult[23] = tmp25;
                       cResult[24] = tmp29;
                       cResult[25] = tmp36;
@@ -509,8 +509,8 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
             }
           }
         }
-        const obj9 = { label: tmp15, value: name, onChange: onNameChange, maxLength: nameError(7168).MAX_PROJECT_NAME_LENGTH, disabled: tmp4, errorMessage: nameError };
-        const tmp20 = closure_7(nameError(6508).TextInput, obj9);
+        const obj9 = { label: tmp15, value: name, onChange: onNameChange, maxLength: nameError(7170).MAX_PROJECT_NAME_LENGTH, disabled: tmp4, errorMessage: nameError };
+        const tmp20 = closure_7(nameError(6510).TextInput, obj9);
         cResult[8] = tmp4;
         cResult[9] = name;
         cResult[10] = onNameChange;
@@ -556,10 +556,10 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
   obj4.label = intl.string(_modDef3865.GWBCF9);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  obj4.maxLength = nameError(7168).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = nameError(7170).MAX_PROJECT_NAME_LENGTH;
   obj4.disabled = flag;
   obj4.errorMessage = nameError;
-  obj3.children = closure_7(nameError(6508).TextInput, obj4);
+  obj3.children = closure_7(nameError(6510).TextInput, obj4);
   items1[1] = closure_7(View, obj3);
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
@@ -567,13 +567,13 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
   if (null != first) {
     const obj5 = { accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-xs/normal", color: "text-feedback-critical", children: first };
-    obj5.children = closure_7(tmp8(5149).Text, obj6);
+    obj5.children = closure_7(tmp8(5150).Text, obj6);
     tmp12Result = closure_7(View, obj5);
   }
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(5439).Stack, obj), ];
+  const items3 = [closure_8(nameError(5440).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1128).intl;
   obj8.label = intl2.string(_modDef3865.ynaGa1);
@@ -581,9 +581,9 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
   obj8.placeholder = intl3.string(_modDef3865["I+3UTL"]);
   obj8.value = description;
   obj8.onChange = onDescriptionChange;
-  obj8.maxLength = nameError(7168).MAX_APP_DESCRIPTION_LENGTH;
+  obj8.maxLength = nameError(7170).MAX_APP_DESCRIPTION_LENGTH;
   obj8.disabled = flag;
-  items3[1] = closure_7(nameError(6996).TextArea, obj8);
+  items3[1] = closure_7(nameError(6998).TextArea, obj8);
   obj7.children = items3;
   return closure_8(closure_9, obj7);
 });

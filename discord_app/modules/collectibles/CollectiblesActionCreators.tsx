@@ -964,15 +964,15 @@ let closure_31 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(7496).addDebugLog;
-let closure_11 = fn(7500).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7504);
+const addDebugLog = fn(7498).addDebugLog;
+let closure_11 = fn(7502).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(7506);
 ({ CollectiblesMarketingsRecord: closure_12, rehydratePersistedMarketings: map1 } = CollectiblesMarketingRecord);
-let closure_16 = fn(7511).CollectiblesShopHomeRecord;
+let closure_16 = fn(7513).CollectiblesShopHomeRecord;
 const constants = fn(1089).CollectiblesMobileShopScreen;
 const Constants = fn(1087);
 ({ Endpoints: closure_18, Routes, UserSettingsSections: closure_19 } = Constants);
-const CollectiblesShopHomeStore = fn(7524);
+const CollectiblesShopHomeStore = fn(7526);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 

@@ -9,8 +9,6 @@ const result = size.fileFinishedImporting("modules/favorites/utils/openFavorites
 export default function openFavoritesGuildLimitUpsell(limit) {
   ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10565, dependencyMap.paths), FavoritesGuildUpsellSheet, {
     limit,
-    variant: "limit_reached",
-    source: "limit_reached",
   });
 }
 export const FAVORITES_UPSELL_SHEET_KEY = "FavoritesGuildUpsellSheet";

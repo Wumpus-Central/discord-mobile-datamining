@@ -220,7 +220,7 @@ function useNullableMessageAuthor(message) {
                 return closure_6.getGuild(guild_id);
               }
             }
-            const tmp62 = tmp45(5846)(tmp61);
+            const tmp62 = tmp45(5847)(tmp61);
             if (null == author) {
               class F {
                 constructor() {

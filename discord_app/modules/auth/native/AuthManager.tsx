@@ -10,10 +10,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12994).PermissionStateType;
+const PermissionStateType = fn(13002).PermissionStateType;
 const ME = fn(1087).ME;
-let closure_8 = fn(7702).NotificationAuthorizationStatus;
-const NewUserTypes = fn(13297).NewUserTypes;
+let closure_8 = fn(7703).NotificationAuthorizationStatus;
+const NewUserTypes = fn(13305).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -61,7 +61,7 @@ class AuthManager extends tmp3 {
               } else {
                 c3 = 1;
                 c4 = 1;
-                const obj4 = { value: tmp2(7725).getNotificationAuthorizationStatus(), done: false };
+                const obj4 = { value: tmp2(7726).getNotificationAuthorizationStatus(), done: false };
                 return obj4;
               }
             }
@@ -76,8 +76,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(17041).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(17041);
+          const result = applyArgumentsResult(17055).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(17055);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -104,17 +104,17 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(13381).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(13381);
+        applyArgumentsResult(13389).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(13389);
       }
-      obj = applyArgumentsResult(8908);
-      applyArgumentsResult(13296).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(13296);
+      obj = applyArgumentsResult(8909);
+      applyArgumentsResult(13304).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(13304);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {
-        closure_1_0(7276).transitionToGuild(closure_1_7);
-        const obj = closure_1_0(7276);
+        closure_1_0(7278).transitionToGuild(closure_1_7);
+        const obj = closure_1_0(7278);
         closure_1_1(584).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };

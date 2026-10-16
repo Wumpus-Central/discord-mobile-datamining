@@ -43,7 +43,7 @@ const Constants = fn(1087);
   ActivityFlags: closure_7,
 } = Constants);
 const ActivityIntent = fn(2026).ActivityIntent;
-const MAIN_SURFACE = fn(10934).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10931).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 

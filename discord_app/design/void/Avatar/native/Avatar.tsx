@@ -4,8 +4,8 @@ import IconDefault from "../../Icon/native/Icon.tsx";
 import avatar_decorations_AvatarDecorationUtils from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
 import CutoutableAvatarDecorationDefault from "../../../../modules/collectibles/native/components/CutoutableAvatarDecoration.tsx";
 import ClipView from "../../../components/Icon/native/ClipView.tsx";
-import _modDef11227 from "../../../../../_runtime/metro/11227__.js";
-import _modDef11228 from "../../../../../_runtime/metro/11228__.js";
+import _modDef11224 from "../../../../../_runtime/metro/11224__.js";
+import _modDef11225 from "../../../../../_runtime/metro/11225__.js";
 import CutoutableAvatarImage from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import Status_StatusUtils from "../../Status/native/StatusUtils.tsx";
 import getStatusContainerStyleDefault from "../../Status/native/getStatusContainerStyle.tsx";
@@ -137,7 +137,7 @@ const StatusConstants = fn(1203);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = {
     status: { position: "absolute", right: -3, bottom: -3 },
@@ -483,7 +483,7 @@ export default noop.memo(
                                                                         obj2.style = items;
                                                                         const obj3 = {
                                                                           size: IconDefault.Sizes.REFRESH_SMALL_16,
-                                                                          source: _modDef11227,
+                                                                          source: _modDef11224,
                                                                           color: nativeDefault.unsafe_rawColors.WHITE,
                                                                         };
                                                                         obj2.children = closure_2_8(IconDefault, obj3);
@@ -496,7 +496,7 @@ export default noop.memo(
                                                                         obj.style = items1;
                                                                         const obj4 = {
                                                                           size: IconDefault.Sizes.REFRESH_SMALL_16,
-                                                                          source: _modDef11228,
+                                                                          source: _modDef11225,
                                                                           color: nativeDefault.unsafe_rawColors.WHITE,
                                                                         };
                                                                         obj.children = closure_2_8(IconDefault, obj4);
@@ -924,5 +924,5 @@ export default noop.memo(
         }
       },
 );
-export const AvatarSizes = fn(14001).AvatarSizes;
+export const AvatarSizes = fn(14011).AvatarSizes;
 export { getStatusSize };

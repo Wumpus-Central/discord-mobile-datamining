@@ -199,6 +199,7 @@ export default {
   CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST: "contextual referral gdm member list",
   CONTEXTUAL_REFERRAL_SERVER_CHANNEL_MEMBER_LIST: "contextual referral server channel member list",
   HD_STREAMING_CONTEXTUAL_UPSELL: "HD_STREAMING_CONTEXTUAL_UPSELL",
+  CONTEXTUAL_REFERRAL_USER_DM_SIDEBAR: "contextual referral user dm sidebar",
   USER_MENTION: "user mention",
   ROLE_MENTION: "role mention",
   CONNECTIONS_ROLE_POPOUT: "connections role popout",

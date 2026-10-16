@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   attachmentPills: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 },
   attachmentPill: null,
@@ -159,13 +159,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { name: id.name };
               obj.accessibilityLabel = intl.formatToPlainString(closure_1(3865).GtNukg, obj2);
               const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-              obj.children = jsx(projectId(5149).Text, {
+              obj.children = jsx(projectId(5150).Text, {
                 variant: "text-xs/medium",
                 color: "text-default",
                 children: id.name,
               });
               let tmp12 = jsx(
-                projectId(6404).Card,
+                projectId(6406).Card,
                 {
                   style: closure_1.attachmentPill,
                   onPress() {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl2 = projectId(1128).intl;
               const obj6 = { name: id.name };
               obj5.children = intl2.formatToPlainString(closure_1(3865).nd81jR, obj6);
-              obj4.children = jsx(projectId(5149).Text, {
+              obj4.children = jsx(projectId(5150).Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 children: null,

@@ -1,5 +1,5 @@
 // discord_app/modules/media/web/utils/DiscordImageFactory.tsx
-import detectFile from "../../../../../_runtime/08018_detectFile.js";
+import detectFile from "../../../../../_runtime/08019_detectFile.js";
 import DiscordImagePng2 from "DiscordImagePng.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

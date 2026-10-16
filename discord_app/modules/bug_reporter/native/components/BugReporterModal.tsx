@@ -519,7 +519,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(13492).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(13500).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -564,7 +564,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(13491).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(13499).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -918,7 +918,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13502, dependencyMap.paths),
+          asyncRequireImpl(13510, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );
@@ -942,7 +942,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = {
   container: { padding: 16 },
   attachmentCarousel: { justifyContent: "center", minWidth: "100%" },
@@ -1042,6 +1042,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.BUG_REPORT_CREATE = obj3;
         return obj2;
       }, items);
-      return closure_10(screenshotUri(6910).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+      return closure_10(screenshotUri(6912).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
     };
 export { BugCreateScreen };

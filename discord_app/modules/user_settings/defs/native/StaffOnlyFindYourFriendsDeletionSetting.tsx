@@ -121,7 +121,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsFindYourFriendsDeletionTrailing() {
       const cResult = c.c(2);
@@ -150,7 +150,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(8213).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8214).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -162,7 +162,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15808).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15818).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsFindYourFriendsDeletionTrailing() {
         const cResult = c.c(2);
