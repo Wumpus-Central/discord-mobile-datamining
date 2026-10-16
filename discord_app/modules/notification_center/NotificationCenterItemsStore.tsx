@@ -1,12 +1,12 @@
-// === Module 6275: NotificationCenterItemsStore ===
+// === Module 6276: NotificationCenterItemsStore ===
 
-// Module 6275 (NotificationCenterItemsStore)
+// Module 6276 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6276 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6277 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5497 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6277 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6278 */;
 import ExperimentStore from "ExperimentStore" /* 5075 */;
 import MessageRecord from "MessageRecord" /* 4820 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
@@ -195,9 +195,9 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6272).isGuildEventEnded;
+const isGuildEventEnded = fn(6273).isGuildEventEnded;
 const RelationshipTypes = fn(1087).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "onGestureHandlerStateChange", notifCenterTabFocused: "onContentSizeChange" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -369,7 +369,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "onGestureHandlerStateChange", notifCenterTabFocused: "onContentSizeChange" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -495,7 +495,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "onGestureHandlerStateChange", notifCenterTabFocused: "onContentSizeChange" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6277);
+        obj = id(6278);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -645,7 +645,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "none", notifCenterTabFocused: "URL" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "Set", notifCenterActive: "onGestureHandlerStateChange", notifCenterTabFocused: "onContentSizeChange" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

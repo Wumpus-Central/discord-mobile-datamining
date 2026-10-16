@@ -1,23 +1,23 @@
-// === Module 13280: FindFriendsSpotIllustration ===
+// === Module 13288: FindFriendsSpotIllustration ===
 
-// Module 13280 (FindFriendsSpotIllustration)
+// Module 13288 (FindFriendsSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6495 */;
-import _modDef13281 from "module_13281" /* 13281 */;
-import _modDef13282 from "module_13282" /* 13282 */;
-import _modDef13283 from "module_13283" /* 13283 */;
+import assetHelpers from "assetHelpers" /* 6497 */;
+import _modDef13289 from "module_13289" /* 13289 */;
+import _modDef13290 from "module_13290" /* 13290 */;
+import _modDef13291 from "module_13291" /* 13291 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13281 }, 3: null };
-let obj2 = { uri: _modDef13281 };
-obj[2] = { uri: _modDef13282 };
-const obj3 = { uri: _modDef13282 };
-obj[3] = { uri: _modDef13283 };
+let obj = { 1: null, 2: { uri: _modDef13289 }, 3: null };
+let obj2 = { uri: _modDef13289 };
+obj[2] = { uri: _modDef13290 };
+const obj3 = { uri: _modDef13290 };
+obj[3] = { uri: _modDef13291 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13283 };
+const obj4 = { uri: _modDef13291 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FindFriendsSpotIllustration.native.tsx");
 

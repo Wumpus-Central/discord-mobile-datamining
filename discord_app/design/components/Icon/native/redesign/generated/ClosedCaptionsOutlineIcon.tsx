@@ -1,10 +1,10 @@
-// === Module 15998: ClosedCaptionsOutlineIcon ===
+// === Module 16012: ClosedCaptionsOutlineIcon ===
 
-// Module 15998 (ClosedCaptionsOutlineIcon)
+// Module 16012 (ClosedCaptionsOutlineIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod15999 from "module_15999" /* 15999 */;
+import _mod16013 from "module_16013" /* 16013 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ClosedCaptionsOutlineIcon = ReactCompilerGating.isReactCompilerEnab
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15999;
+    const tmpResult = _mod16013;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ClosedCaptionsOutlineIcon = ReactCompilerGating.isReactCompilerEnab
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15999, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16013, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

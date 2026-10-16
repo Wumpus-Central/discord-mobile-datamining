@@ -1,20 +1,20 @@
-// === Module 12865: NewBadge ===
+// === Module 12873: NewBadge ===
 
-// Module 12865 (NewBadge)
+// Module 12873 (NewBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import shared from "shared" /* 5028 */;
 import useThemeDefault from "useTheme" /* 5090 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9544 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9545 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createStyles((arg0, arg1) => {
   let num = 0;
   if (obj.isIOS()) {

@@ -1,6 +1,6 @@
-// === Module 7034: GuildOnboardingPrompts ===
+// === Module 7036: GuildOnboardingPrompts ===
 
-// Module 7034 (GuildOnboardingPrompts)
+// Module 7036 (GuildOnboardingPrompts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
@@ -9,22 +9,22 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import ColorUtils from "ColorUtils" /* 5026 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import timing from "timing" /* 5154 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7016 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7017 */;
-import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 7035 */;
+import timing from "timing" /* 5155 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5169 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7018 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7019 */;
+import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 7037 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6373 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6375 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7011 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7013 */;
 
 require = fn;
 function getBackgroundGradientColor() {
@@ -50,15 +50,15 @@ let closure_24 = async function _getBackgroundGradientColor() {
 };
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7012).OnboardingPromptType;
-let closure_15 = fn(7008).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7014).OnboardingPromptType;
+let closure_15 = fn(7010).GuildOnboardingModalStates;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5153);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6481).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6481).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5154);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6483).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6483).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.subtitle = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
 obj2.onboardingTitle = { textAlign: "center" };
 let obj4 = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };

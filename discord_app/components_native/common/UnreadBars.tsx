@@ -1,16 +1,16 @@
-// === Module 17425: UnreadBars ===
+// === Module 17435: UnreadBars ===
 
-// Module 17425 (UnreadBars)
+// Module 17435 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import HapticUtils from "HapticUtils" /* 5119 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
-import TransitionGroup from "TransitionGroup" /* 13008 */;
+import TransitionGroup from "TransitionGroup" /* 13016 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import TextStyles from "TextStyles" /* 6124 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import TextStyles from "TextStyles" /* 6125 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const BEFORE = "BEFORE";
 const AFTER = "AFTER";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { unreadText: null, unread: null, mention: null };
 let merged = Object.assign(TextStyles(fn(1087).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.unreadText = {};
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadBa
                   tmp20[0] = noop.Fragment;
                   const items1 = [tmp11, tmp16];
                   tmp20[1] = items1;
-                  const tmp22 = closure_9(tmp(13008).TransitionGroup, tmp20);
+                  const tmp22 = closure_9(tmp(13016).TransitionGroup, tmp20);
                   cResult[18] = tmp11;
                   cResult[19] = tmp16;
                   cResult[20] = tmp22;

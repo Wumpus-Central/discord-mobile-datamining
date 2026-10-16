@@ -1,6 +1,6 @@
-// === Module 8227: MarkupASTUtils ===
+// === Module 8228: MarkupASTUtils ===
 
-// Module 8227 (MarkupASTUtils)
+// Module 8228 (MarkupASTUtils)
 import size from "module_2" /* 2 */;
 
 function collectAst(content) {

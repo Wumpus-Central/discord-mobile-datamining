@@ -1,6 +1,6 @@
-// === Module 9691: PortalKeyboardFooterIOS ===
+// === Module 9690: PortalKeyboardFooterIOS ===
 
-// Module 9691 (PortalKeyboardFooterIOS)
+// Module 9690 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { keyboardStickyFooter: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, flex: 1, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.keyboardStickyFooter = rect;

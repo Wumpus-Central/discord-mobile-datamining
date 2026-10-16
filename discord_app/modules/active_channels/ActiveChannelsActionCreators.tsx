@@ -1,6 +1,6 @@
-// === Module 17113: ActiveChannelsActionCreators ===
+// === Module 17127: ActiveChannelsActionCreators ===
 
-// Module 17113 (ActiveChannelsActionCreators)
+// Module 17127 (ActiveChannelsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

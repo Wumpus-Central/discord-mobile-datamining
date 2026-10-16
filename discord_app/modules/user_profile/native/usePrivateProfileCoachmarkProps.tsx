@@ -1,11 +1,11 @@
-// === Module 17435: usePrivateProfileCoachmarkProps ===
+// === Module 17445: usePrivateProfileCoachmarkProps ===
 
-// Module 17435 (usePrivateProfileCoachmarkProps)
+// Module 17445 (usePrivateProfileCoachmarkProps)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
-import openUserSettings from "openUserSettings" /* 7317 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17436 */;
+import openUserSettings from "openUserSettings" /* 7319 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivateProfileCoachmarkImage() {
@@ -47,7 +47,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
   const cResult = markAsDismissed(576).c(15);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const obj = markAsDismissed(576);
-  let userIsTeen = markAsDismissed(7957).useUserIsTeen();
+  let userIsTeen = markAsDismissed(7958).useUserIsTeen();
   const ProfileVisibility = markAsDismissed(2044).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
   if (userIsTeen) {
@@ -156,7 +156,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
     }
     obj4.string(tmp(1128).t["6hEfm1"]);
   }
-  const obj2 = markAsDismissed(7957);
+  const obj2 = markAsDismissed(7958);
 }) : (function usePrivateProfileCoachmarkProps(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;

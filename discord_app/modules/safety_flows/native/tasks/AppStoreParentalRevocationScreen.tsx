@@ -1,19 +1,19 @@
-// === Module 19029: AppStoreParentalRevocationScreen ===
+// === Module 19042: AppStoreParentalRevocationScreen ===
 
-// Module 19029 (AppStoreParentalRevocationScreen)
+// Module 19042 (AppStoreParentalRevocationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2867 from "module_2867" /* 2867 */;
 import LinkingDefault from "Linking" /* 4865 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import ModalScreen from "ModalScreen" /* 7734 */;
-import ModalContent from "ModalContent" /* 7735 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7925 */;
-import ModalFooter from "ModalFooter" /* 12588 */;
-import ModalActionButton from "ModalActionButton" /* 12638 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 19013 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import ModalScreen from "ModalScreen" /* 7735 */;
+import ModalContent from "ModalContent" /* 7736 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7926 */;
+import ModalFooter from "ModalFooter" /* 12594 */;
+import ModalActionButton from "ModalActionButton" /* 12644 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 19026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "https://support.discord.com/hc/en-us/articles/42855178312087";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

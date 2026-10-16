@@ -1,6 +1,6 @@
-// === Module 8864: GuildSettingsStore ===
+// === Module 8865: GuildSettingsStore ===
 
-// Module 8864 (GuildSettingsStore)
+// Module 8865 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -12,18 +12,18 @@ import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
 import PlainRecord from "PlainRecord" /* 2083 */;
 import GuildRecord from "GuildRecord" /* 2086 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8865 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8866 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8868 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8869 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8870 */;
-import GuildProfileStore from "GuildProfileStore" /* 8843 */;
-import InviteRecord from "InviteRecord" /* 8725 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8866 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8867 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8869 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8870 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8871 */;
+import GuildProfileStore from "GuildProfileStore" /* 8844 */;
+import InviteRecord from "InviteRecord" /* 8726 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserStore from "UserStore" /* 1392 */;
 import Constants from "Constants" /* 1087 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8287 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8288 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(type) {
@@ -72,15 +72,15 @@ function handleFormInit(type) {
       }
     }
     if (null != section) {
-      obj2 = { key: "landing", name: constants.LANDING };
-      const items = [obj2];
+      const obj3 = { key: "landing", name: constants.LANDING };
+      const items = [obj3];
       if (section === constants.TAG_CUSTOMIZE) {
-        ({ TAG: obj3.key, TAG: obj3.name } = constants);
+        ({ TAG: obj2.key, TAG: obj2.name } = constants);
         items.push({ key: null, name: null });
         const obj4 = { key: null, name: null };
       }
-      const obj5 = { key: section, name: section };
-      items.push(obj5);
+      const obj6 = { key: section, name: section };
+      items.push(obj6);
       const obj10 = { type: "stack", routes: items };
       c11 = obj10;
     }

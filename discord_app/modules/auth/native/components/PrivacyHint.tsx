@@ -1,24 +1,24 @@
-// === Module 17025: PrivacyHint ===
+// === Module 17039: PrivacyHint ===
 
-// Module 17025 (PrivacyHint)
+// Module 17039 (PrivacyHint)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4891 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import FormCheckbox from "FormCheckbox" /* 6400 */;
-import Form from "Form" /* 8808 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 17026 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import FormCheckbox from "FormCheckbox" /* 6402 */;
+import Form from "Form" /* 8809 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 17040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6149).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(16987).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(6150).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(17001).useRegistrationUIStore;
 const MarketingURLs = fn(1087).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles({ multiItem: { flexDirection: "column", gap: 16 }, checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, radio: { flexDirection: "row", alignItems: "center", gap: 8 }, checkboxLabel: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivacyPolicyDescription(style) {

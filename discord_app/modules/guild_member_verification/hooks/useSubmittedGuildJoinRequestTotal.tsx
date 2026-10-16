@@ -1,7 +1,7 @@
-// === Module 17266: useSubmittedGuildJoinRequestTotal ===
+// === Module 17279: useSubmittedGuildJoinRequestTotal ===
 
-// Module 17266 (useSubmittedGuildJoinRequestTotal)
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6342 */;
+// Module 17279 (useSubmittedGuildJoinRequestTotal)
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6344 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

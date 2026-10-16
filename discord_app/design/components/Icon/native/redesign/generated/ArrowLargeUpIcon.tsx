@@ -1,10 +1,10 @@
-// === Module 10720: ArrowLargeUpIcon ===
+// === Module 10717: ArrowLargeUpIcon ===
 
-// Module 10720 (ArrowLargeUpIcon)
+// Module 10717 (ArrowLargeUpIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod10721 from "module_10721" /* 10721 */;
+import _mod10718 from "module_10718" /* 10718 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ArrowLargeUpIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10721;
+    const tmpResult = _mod10718;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ArrowLargeUpIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10721, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10718, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

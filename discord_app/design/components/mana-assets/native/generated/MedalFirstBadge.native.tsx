@@ -1,23 +1,23 @@
-// === Module 10514: MedalFirstBadge ===
+// === Module 10515: MedalFirstBadge ===
 
-// Module 10514 (MedalFirstBadge)
+// Module 10515 (MedalFirstBadge)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6495 */;
-import _modDef10515 from "module_10515" /* 10515 */;
+import assetHelpers from "assetHelpers" /* 6497 */;
 import _modDef10516 from "module_10516" /* 10516 */;
 import _modDef10517 from "module_10517" /* 10517 */;
+import _modDef10518 from "module_10518" /* 10518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10515 }, 3: null };
-let obj2 = { uri: _modDef10515 };
-obj[2] = { uri: _modDef10516 };
-const obj3 = { uri: _modDef10516 };
-obj[3] = { uri: _modDef10517 };
+let obj = { 1: null, 2: { uri: _modDef10516 }, 3: null };
+let obj2 = { uri: _modDef10516 };
+obj[2] = { uri: _modDef10517 };
+const obj3 = { uri: _modDef10517 };
+obj[3] = { uri: _modDef10518 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10517 };
+const obj4 = { uri: _modDef10518 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx");
 

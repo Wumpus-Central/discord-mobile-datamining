@@ -1,8 +1,8 @@
-// === Module 9177: GameProfileSkeletonPulse ===
+// === Module 9178: GameProfileSkeletonPulse ===
 
-// Module 9177 (GameProfileSkeletonPulse)
+// Module 9178 (GameProfileSkeletonPulse)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = fn;
 let c4 = 0.1;

@@ -1,8 +1,8 @@
-// === Module 18621: AutomodStore ===
+// === Module 18634: AutomodStore ===
 
-// Module 18621 (AutomodStore)
+// Module 18634 (AutomodStore)
 import _mod4792 from "module_4792" /* 4792 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 18622 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 18635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12510).AutomodTriggerType;
+const AutomodTriggerType = fn(12516).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1269);

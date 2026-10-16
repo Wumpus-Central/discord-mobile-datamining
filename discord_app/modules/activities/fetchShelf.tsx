@@ -1,8 +1,8 @@
-// === Module 11168: fetchShelf ===
+// === Module 11165: fetchShelf ===
 
-// Module 11168 (fetchShelf)
+// Module 11165 (fetchShelf)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 

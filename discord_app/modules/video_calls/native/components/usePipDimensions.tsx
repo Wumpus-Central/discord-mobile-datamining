@@ -1,10 +1,10 @@
-// === Module 11157: usePipDimensions ===
+// === Module 11154: usePipDimensions ===
 
-// Module 11157 (usePipDimensions)
+// Module 11154 (usePipDimensions)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import DeviceOrientation from "DeviceOrientation" /* 8677 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11158 */;
+import DeviceOrientation from "DeviceOrientation" /* 8678 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

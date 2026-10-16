@@ -1,6 +1,6 @@
-// === Module 8782: ItemSelectorActionSheet ===
+// === Module 8783: ItemSelectorActionSheet ===
 
-// Module 8782 (ItemSelectorActionSheet)
+// Module 8783 (ItemSelectorActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import noop from "module_19" /* 19 */;
@@ -132,9 +132,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ItemSele
   let tmp6Result = null;
   if (null != onClose) {
     const obj3 = { onPress: onClose };
-    tmp6Result = closure_3(items(7115).ActionSheetCloseButton, obj3);
+    tmp6Result = closure_3(items(7117).ActionSheetCloseButton, obj3);
   }
-  const obj4 = { scrollable: true, header: closure_3(items(7062).BottomSheetTitleHeader, obj2), children: null };
+  const obj4 = { scrollable: true, header: closure_3(items(7064).BottomSheetTitleHeader, obj2), children: null };
   obj2.trailing = tmp6Result;
   const obj5 = { contentContainerStyle: null, children: null };
   const obj = items(4877);
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ItemSele
     num = findIndexResult;
   }
   const obj6 = { paddingHorizontal: token, paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16 };
-  items1[1] = closure_3(items(6485).TableRadioGroup, {
+  items1[1] = closure_3(items(6487).TableRadioGroup, {
     value: num,
     accessibilityLabel: title,
     hasIcons,
@@ -154,9 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ItemSele
         dependencyMap(iter.value);
       }
     },
-    children: items.map((label, value) => closure_1_3(items(6484).TableRadioRow, { label: label.label, value }, value))
+    children: items.map((label, value) => closure_1_3(items(6486).TableRadioRow, { label: label.label, value }, value))
   });
   obj5.children = items1;
-  obj4.children = closure_4(items(6529).BottomSheetScrollView, obj5);
-  return closure_3(items(7063).BottomSheet, obj4);
+  obj4.children = closure_4(items(6531).BottomSheetScrollView, obj5);
+  return closure_3(items(7065).BottomSheet, obj4);
 });

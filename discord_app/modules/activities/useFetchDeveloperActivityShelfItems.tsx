@@ -1,12 +1,12 @@
-// === Module 11869: useFetchDeveloperActivityShelfItems ===
+// === Module 11866: useFetchDeveloperActivityShelfItems ===
 
-// Module 11869 (useFetchDeveloperActivityShelfItems)
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10973 */;
+// Module 11866 (useFetchDeveloperActivityShelfItems)
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10970 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9296 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9297 */;
 
 require = fn;
-const DevShelfFetchState = fn(9296).DevShelfFetchState;
+const DevShelfFetchState = fn(9297).DevShelfFetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");

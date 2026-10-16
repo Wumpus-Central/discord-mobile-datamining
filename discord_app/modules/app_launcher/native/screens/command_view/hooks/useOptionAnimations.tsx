@@ -1,8 +1,8 @@
-// === Module 11913: useOptionAnimations ===
+// === Module 11910: useOptionAnimations ===
 
-// Module 11913 (useOptionAnimations)
+// Module 11910 (useOptionAnimations)
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ class LayoutAnimation {
     return obj5;
   }
 }
-LayoutAnimation.__closure = { withTiming: fn(5154).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+LayoutAnimation.__closure = { withTiming: fn(5155).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 LayoutAnimation.__workletHash = 16804895997501;
 LayoutAnimation.__initData = { code: "function LayoutAnimation_useOptionAnimationsTsx1(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};}" };
 class ExitingAnimation {
@@ -35,14 +35,14 @@ class ExitingAnimation {
     return obj8;
   }
 }
-let obj = { withTiming: fn(5154).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
-ExitingAnimation.__closure = { withTiming: fn(5154).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+let obj = { withTiming: fn(5155).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+ExitingAnimation.__closure = { withTiming: fn(5155).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 ExitingAnimation.__workletHash = 8977480282966;
 ExitingAnimation.__initData = { code: "function ExitingAnimation_useOptionAnimationsTsx2(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};}" };
 const __initData = { code: "function useOptionAnimationsTsx3(){const{withTiming,Easing,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION,withDelay,runOnJS,handleMountAnimationComplete}=this.__closure;const scaleAnimation=withTiming(1,{duration:250,easing:Easing.bezier(0.25,1.75,0.25,1.25)});const opacityAnimation=withTiming(1,{duration:200});const layoutShiftDelay=OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION-100;return{animations:{opacity:withDelay(layoutShiftDelay,opacityAnimation),transform:[{scale:withDelay(layoutShiftDelay,scaleAnimation)}]},initialValues:{opacity:0,transform:[{scale:0.92}]},callback:function(){runOnJS(handleMountAnimationComplete)();}};}" };
 let closure_6 = { code: "function useOptionAnimationsTsx4(){const{withTiming,Easing,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION,withDelay,runOnJS,handleMountAnimationComplete}=this.__closure;const scaleAnimation=withTiming(1,{duration:250,easing:Easing.bezier(0.25,1.75,0.25,1.25)});const opacityAnimation=withTiming(1,{duration:200});const layoutShiftDelay=OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION-100;return{animations:{opacity:withDelay(layoutShiftDelay,opacityAnimation),transform:[{scale:withDelay(layoutShiftDelay,scaleAnimation)}]},initialValues:{opacity:0,transform:[{scale:0.92}]},callback:function(){runOnJS(handleMountAnimationComplete)();}};}" };
 const ReactCompilerGating = fn(558);
-let obj2 = { withTiming: fn(5154).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+let obj2 = { withTiming: fn(5155).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/command_view/hooks/useOptionAnimations.tsx");
 
@@ -109,12 +109,12 @@ export const useOptionEnteringAnimation = ReactCompilerGating.isReactCompilerEna
           const obj2 = { duration: 250, easing: null };
           const Easing = sharedValue(4909).Easing;
           obj2.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-          const obj = sharedValue(5154);
-          const withTimingResult = sharedValue(5154).withTiming(1, obj2);
+          const obj = sharedValue(5155);
+          const withTimingResult = sharedValue(5155).withTiming(1, obj2);
           const obj4 = { animations: null, initialValues: null, callback: null };
           const obj5 = { opacity: null, transform: null };
-          const obj3 = sharedValue(5154);
-          const withTimingResult1 = sharedValue(5154).withTiming(1, { duration: 200 });
+          const obj3 = sharedValue(5155);
+          const withTimingResult1 = sharedValue(5155).withTiming(1, { duration: 200 });
           obj5.opacity = sharedValue(4909).withDelay(200, withTimingResult1);
           const obj7 = { scale: null };
           const obj6 = sharedValue(4909);
@@ -145,12 +145,12 @@ export const useOptionEnteringAnimation = ReactCompilerGating.isReactCompilerEna
           const obj2 = { duration: 250, easing: null };
           const Easing = sharedValue(4909).Easing;
           obj2.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-          const obj = sharedValue(5154);
-          const withTimingResult = sharedValue(5154).withTiming(1, obj2);
+          const obj = sharedValue(5155);
+          const withTimingResult = sharedValue(5155).withTiming(1, obj2);
           const obj4 = { animations: null, initialValues: null, callback: null };
           const obj5 = { opacity: null, transform: null };
-          const obj3 = sharedValue(5154);
-          const withTimingResult1 = sharedValue(5154).withTiming(1, { duration: 200 });
+          const obj3 = sharedValue(5155);
+          const withTimingResult1 = sharedValue(5155).withTiming(1, { duration: 200 });
           obj5.opacity = sharedValue(4909).withDelay(200, withTimingResult1);
           const obj7 = { scale: null };
           const obj6 = sharedValue(4909);
@@ -181,12 +181,12 @@ export const useOptionEnteringAnimation = ReactCompilerGating.isReactCompilerEna
           const obj2 = { duration: 250, easing: null };
           const Easing = sharedValue(4909).Easing;
           obj2.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-          const obj = sharedValue(5154);
-          const withTimingResult = sharedValue(5154).withTiming(1, obj2);
+          const obj = sharedValue(5155);
+          const withTimingResult = sharedValue(5155).withTiming(1, obj2);
           const obj4 = { animations: null, initialValues: null, callback: null };
           const obj5 = { opacity: null, transform: null };
-          const obj3 = sharedValue(5154);
-          const withTimingResult1 = sharedValue(5154).withTiming(1, { duration: 200 });
+          const obj3 = sharedValue(5155);
+          const withTimingResult1 = sharedValue(5155).withTiming(1, { duration: 200 });
           obj5.opacity = sharedValue(4909).withDelay(200, withTimingResult1);
           const obj7 = { scale: null };
           const obj6 = sharedValue(4909);
@@ -233,12 +233,12 @@ export const useOptionEnteringAnimation = ReactCompilerGating.isReactCompilerEna
         const obj2 = { duration: 250, easing: null };
         const Easing = sharedValue(4909).Easing;
         obj2.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-        const obj = sharedValue(5154);
-        const withTimingResult = sharedValue(5154).withTiming(1, obj2);
+        const obj = sharedValue(5155);
+        const withTimingResult = sharedValue(5155).withTiming(1, obj2);
         const obj4 = { animations: null, initialValues: null, callback: null };
         const obj5 = { opacity: null, transform: null };
-        const obj3 = sharedValue(5154);
-        const withTimingResult1 = sharedValue(5154).withTiming(1, { duration: 200 });
+        const obj3 = sharedValue(5155);
+        const withTimingResult1 = sharedValue(5155).withTiming(1, { duration: 200 });
         obj5.opacity = sharedValue(4909).withDelay(200, withTimingResult1);
         const obj7 = { scale: null };
         const obj6 = sharedValue(4909);

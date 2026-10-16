@@ -1,12 +1,12 @@
-// === Module 9212: WishlistRecord ===
+// === Module 9213: WishlistRecord ===
 
-// Module 9212 (WishlistRecord)
+// Module 9213 (WishlistRecord)
 import Record from "Record" /* 1407 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9213 */;
-import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 9214 */;
-import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 9215 */;
-import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 9216 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9214 */;
+import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 9215 */;
+import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 9216 */;
+import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 9217 */;
 
 const SKUProductLines = fn(1087).SKUProductLines;
 const prototype = function WishlistRecord(arg0) {

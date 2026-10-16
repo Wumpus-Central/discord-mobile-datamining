@@ -1,10 +1,10 @@
-// === Module 11890: ShopIcon ===
+// === Module 11887: ShopIcon ===
 
-// Module 11890 (ShopIcon)
+// Module 11887 (ShopIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod11891 from "module_11891" /* 11891 */;
+import _mod11888 from "module_11888" /* 11888 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ShopIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11891;
+    const tmpResult = _mod11888;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ShopIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11891, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11888, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

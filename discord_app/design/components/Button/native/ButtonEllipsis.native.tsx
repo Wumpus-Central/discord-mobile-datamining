@@ -1,10 +1,10 @@
-// === Module 5457: ButtonEllipsis ===
+// === Module 5458: ButtonEllipsis ===
 
-// Module 5457 (ButtonEllipsis)
+// Module 5458 (ButtonEllipsis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 const ELLIPSIS_APPEAR_TIMING = { duration: 500, easing: null };
 const Easing = fn(4909).Easing;
 ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4909).Easing.quad);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -47,7 +47,7 @@ function withEllipsisAnimation(arg0, value) {
   const obj2 = ReanimatedRexport;
   return obj.withDelay(result, obj2.withRepeat(timing.withTiming(value, obj, "animate-always"), -1, true));
 }
-withEllipsisAnimation.__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4909).withDelay, withRepeat: fn(4909).withRepeat, withTiming: fn(5154).withTiming, ELLIPSIS_APPEAR_TIMING };
+withEllipsisAnimation.__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4909).withDelay, withRepeat: fn(4909).withRepeat, withTiming: fn(5155).withTiming, ELLIPSIS_APPEAR_TIMING };
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
 const __initData = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
@@ -187,7 +187,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ellips
   return closure_4(sharedValue(sharedValue1[3]).View, obj6);
 });
 ReactCompilerGating = fn(558);
-let obj3 = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4909).withDelay, withRepeat: fn(4909).withRepeat, withTiming: fn(5154).withTiming, ELLIPSIS_APPEAR_TIMING };
+let obj3 = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4909).withDelay, withRepeat: fn(4909).withRepeat, withTiming: fn(5155).withTiming, ELLIPSIS_APPEAR_TIMING };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 

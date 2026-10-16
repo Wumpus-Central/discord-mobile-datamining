@@ -1,23 +1,23 @@
-// === Module 7736: ShieldSpotIllustration ===
+// === Module 7737: ShieldSpotIllustration ===
 
-// Module 7736 (ShieldSpotIllustration)
+// Module 7737 (ShieldSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6495 */;
-import _modDef7737 from "module_7737" /* 7737 */;
+import assetHelpers from "assetHelpers" /* 6497 */;
 import _modDef7738 from "module_7738" /* 7738 */;
 import _modDef7739 from "module_7739" /* 7739 */;
+import _modDef7740 from "module_7740" /* 7740 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7737 }, 3: null };
-let obj2 = { uri: _modDef7737 };
-obj[2] = { uri: _modDef7738 };
-const obj3 = { uri: _modDef7738 };
-obj[3] = { uri: _modDef7739 };
+let obj = { 1: null, 2: { uri: _modDef7738 }, 3: null };
+let obj2 = { uri: _modDef7738 };
+obj[2] = { uri: _modDef7739 };
+const obj3 = { uri: _modDef7739 };
+obj[3] = { uri: _modDef7740 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef7739 };
+const obj4 = { uri: _modDef7740 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx");
 

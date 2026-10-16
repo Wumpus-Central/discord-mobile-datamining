@@ -1,6 +1,6 @@
-// === Module 16601: toggleDismissibleContentDismissState ===
+// === Module 16615: toggleDismissibleContentDismissState ===
 
-// Module 16601 (toggleDismissibleContentDismissState)
+// Module 16615 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;

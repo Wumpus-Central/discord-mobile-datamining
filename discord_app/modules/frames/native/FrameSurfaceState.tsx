@@ -1,17 +1,17 @@
-// === Module 17671: FrameSurfaceState ===
+// === Module 17681: FrameSurfaceState ===
 
-// Module 17671 (FrameSurfaceState)
+// Module 17681 (FrameSurfaceState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6378 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);

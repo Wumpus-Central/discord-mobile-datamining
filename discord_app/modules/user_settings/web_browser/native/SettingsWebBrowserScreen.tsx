@@ -1,13 +1,13 @@
-// === Module 16457: SettingsWebBrowserScreen ===
+// === Module 16471: SettingsWebBrowserScreen ===
 
-// Module 16457 (SettingsWebBrowserScreen)
+// Module 16471 (SettingsWebBrowserScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11006 */;
-import SettingLayoutDefault from "SettingLayout" /* 15652 */;
+import SettingBuilders from "SettingBuilders" /* 11003 */;
+import SettingLayoutDefault from "SettingLayout" /* 15662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8213).MobileUserSettings;
+const MobileUserSettings = fn(8214).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

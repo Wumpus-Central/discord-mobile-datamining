@@ -1,15 +1,15 @@
-// === Module 8861: EditGuildEventStepHeader ===
+// === Module 8862: EditGuildEventStepHeader ===
 
-// Module 8861 (EditGuildEventStepHeader)
+// Module 8862 (EditGuildEventStepHeader)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5149 */;
+import Text_Text from "Text/Text" /* 5150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createStyles({ header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 8, marginBottom: 8 }, headerSubtitle: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 8106: useIsFirstMessageInMediaPost ===
+// === Module 8107: useIsFirstMessageInMediaPost ===
 
-// Module 8106 (useIsFirstMessageInMediaPost)
+// Module 8107 (useIsFirstMessageInMediaPost)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 

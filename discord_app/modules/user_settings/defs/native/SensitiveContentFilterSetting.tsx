@@ -1,11 +1,11 @@
-// === Module 15777: SensitiveContentFilterSetting ===
+// === Module 15787: SensitiveContentFilterSetting ===
 
-// Module 15777 (SensitiveContentFilterSetting)
+// Module 15787 (SensitiveContentFilterSetting)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import SettingsConstants from "SettingsConstants" /* 8213 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8434 */;
-import SettingBuilders from "SettingBuilders" /* 11006 */;
+import SettingsConstants from "SettingsConstants" /* 8214 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8435 */;
+import SettingBuilders from "SettingBuilders" /* 11003 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

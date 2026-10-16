@@ -1,16 +1,16 @@
-// === Module 16443: DataSavingModeSetting ===
+// === Module 16457: DataSavingModeSetting ===
 
-// Module 16443 (DataSavingModeSetting)
+// Module 16457 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import UserSettingsText from "UserSettingsText" /* 16441 */;
+import UserSettingsText from "UserSettingsText" /* 16455 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataSavingModeSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(8213).MobileUserSettings.CHAT,
+  parent: fn(8214).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataSavingModeSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

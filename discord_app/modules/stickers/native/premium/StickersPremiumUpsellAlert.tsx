@@ -1,19 +1,19 @@
-// === Module 10018: StickersPremiumUpsellAlert ===
+// === Module 10019: StickersPremiumUpsellAlert ===
 
-// Module 10018 (StickersPremiumUpsellAlert)
+// Module 10019 (StickersPremiumUpsellAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Pressables from "Pressables" /* 6407 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9630 */;
-import _modDef10019 from "module_10019" /* 10019 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Pressables from "Pressables" /* 6409 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9629 */;
 import _modDef10020 from "module_10020" /* 10020 */;
 import _modDef10021 from "module_10021" /* 10021 */;
+import _modDef10022 from "module_10022" /* 10022 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7355 */;
+import IAPStore from "IAPStore" /* 7357 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -26,7 +26,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef10019,
+    icon: _modDef10020,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -37,7 +37,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef10019,
+  icon: _modDef10020,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -45,31 +45,31 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef10020,
+  icon: _modDef10021,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef10020,
+  icon: _modDef10021,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef10021,
+  icon: _modDef10022,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN
 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef10021,
+  icon: _modDef10022,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -195,11 +195,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     [tmp5, tmp6] = cResult;
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  const tmp9 = analyticsLocations(9633)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp9 = analyticsLocations(9632)(closure_10.PREMIUM_MONTH_TIER_2);
   if (tmp9 != null) {
     const priceString = tmp9.priceString;
   }
-  analyticsLocations = tmp8(7075)().analyticsLocations;
+  analyticsLocations = tmp8(7077)().analyticsLocations;
   if (cResult[2] === analyticsLocation) {
     if (cResult[3] === analyticsLocations) {
       let tmp10 = cResult[4];
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       }
       const _Symbol3 = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: tmp8(7948) };
+        let obj2 = { source: tmp8(7949) };
         const tmp19 = closure_13(analyticsLocation(1202).Icon, obj2);
         cResult[10] = tmp19;
         let tmp17 = tmp19;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       }
       if (cResult[11] !== onClose) {
         let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: tmp17 };
-        const tmp22 = closure_13(analyticsLocation(6407).PressableOpacity, obj3);
+        const tmp22 = closure_13(analyticsLocation(6409).PressableOpacity, obj3);
         cResult[11] = onClose;
         cResult[12] = tmp22;
         let tmp20 = tmp22;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
           tmp27 = cResult[16];
         }
         if (cResult[17] !== tmp4.imageHeader) {
-          const obj4 = { source: tmp8(10022), style: tmp4.imageHeader };
+          const obj4 = { source: tmp8(10023), style: tmp4.imageHeader };
           const tmp31 = closure_13(tmp8(5091), obj4);
           cResult[17] = tmp4.imageHeader;
           cResult[18] = tmp31;
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
                 const obj7 = { cancelText: tmp11, confirmColor: analyticsLocation(1202).ButtonColors.GREEN, confirmText: tmp13, onConfirm: tmp10, onClose, onCancel: onClose, style: tmp16, children: null };
                 const items1 = [tmp23, tmp45];
                 obj7.children = items1;
-                const tmp54 = closure_14(tmp8(5460), obj7);
+                const tmp54 = closure_14(tmp8(5461), obj7);
                 cResult[32] = onClose;
                 cResult[33] = tmp10;
                 cResult[34] = tmp23;
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
                 cResult[36] = tmp16;
                 cResult[37] = tmp54;
                 tmp51 = tmp54;
-                const tmp8Result2 = tmp8(5460);
+                const tmp8Result2 = tmp8(5461);
               }
             }
           }
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
           tmp45 = tmp50;
         }
         const obj10 = { style: tmp4.description, variant: "text-md/medium", children: tmp32 };
-        const tmp37 = closure_13(analyticsLocation(5149).Text, obj10);
+        const tmp37 = closure_13(analyticsLocation(5150).Text, obj10);
         cResult[21] = tmp4.description;
         cResult[22] = tmp32;
         cResult[23] = tmp37;
@@ -398,12 +398,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       const obj = analyticsLocations(dependencyMap[16]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9633)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9632)(closure_10.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7075)().analyticsLocations;
+  analyticsLocations = tmp3(7077)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = util.intl;
   obj.cancelText = intl.string(util.t.f3Pet9);
@@ -431,8 +431,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5460);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(7948) });
+  const tmp3Result = analyticsLocations(5461);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(7949) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2), ];
   const obj5 = {
@@ -443,8 +443,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     children: null
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(7948) };
-  obj6.source = analyticsLocations(10022);
+  const obj4 = { source: analyticsLocations(7949) };
+  obj6.source = analyticsLocations(10023);
   obj6.style = tmp.imageHeader;
   const items2 = [closure_13(analyticsLocations(5091), obj6), , ];
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };

@@ -1,6 +1,6 @@
-// === Module 17320: GameServerTabAlwaysOnExperiment ===
+// === Module 17332: GameServerTabAlwaysOnExperiment ===
 
-// Module 17320 (GameServerTabAlwaysOnExperiment)
+// Module 17332 (GameServerTabAlwaysOnExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

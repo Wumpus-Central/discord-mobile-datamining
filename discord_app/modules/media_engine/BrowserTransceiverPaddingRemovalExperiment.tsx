@@ -1,6 +1,6 @@
-// === Module 5290: BrowserTransceiverPaddingRemovalExperiment ===
+// === Module 5291: BrowserTransceiverPaddingRemovalExperiment ===
 
-// Module 5290 (BrowserTransceiverPaddingRemovalExperiment)
+// Module 5291 (BrowserTransceiverPaddingRemovalExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

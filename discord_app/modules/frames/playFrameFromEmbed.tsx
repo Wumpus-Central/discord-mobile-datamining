@@ -1,8 +1,8 @@
-// === Module 12719: playFrameFromEmbed ===
+// === Module 12726: playFrameFromEmbed ===
 
-// Module 12719 (playFrameFromEmbed)
+// Module 12726 (playFrameFromEmbed)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 10950 */;
+import FramesStore from "FramesStore" /* 10947 */;
 
 const require = fn;
 let closure_8 = async function _playFrameFromEmbed(arg0) {
@@ -97,7 +97,7 @@ let closure_8 = async function _playFrameFromEmbed(arg0) {
     }
   }
 };
-const FramesConstants = fn(10934);
+const FramesConstants = fn(10931);
 ({ MAIN_SURFACE: hasOwnProperty, makeFrameId: metroRequire } = FramesConstants);
 const Routes = fn(1087).Routes;
 const size = fn(2);

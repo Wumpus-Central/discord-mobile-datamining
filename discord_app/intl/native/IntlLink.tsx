@@ -1,6 +1,6 @@
-// === Module 10975: IntlLink ===
+// === Module 10972: IntlLink ===
 
-// Module 10975 (IntlLink)
+// Module 10972 (IntlLink)
 import nativeDefault from "native" /* 587 */;
 import _modDef1951 from "module_1951" /* 1951 */;
 import LinkingDefault from "Linking" /* 4865 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";

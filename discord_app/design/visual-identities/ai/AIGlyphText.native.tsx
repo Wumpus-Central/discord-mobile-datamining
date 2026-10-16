@@ -1,9 +1,9 @@
-// === Module 11653: AIGlyphText ===
+// === Module 11650: AIGlyphText ===
 
-// Module 11653 (AIGlyphText)
+// Module 11650 (AIGlyphText)
 import c from "c" /* 576 */;
 import useToken from "useToken" /* 4877 */;
-import AIGlyphFont from "AIGlyphFont" /* 11654 */;
+import AIGlyphFont from "AIGlyphFont" /* 11651 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
 let closure_4 = ReanimatedRexport.createAnimatedComponent(Text);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;

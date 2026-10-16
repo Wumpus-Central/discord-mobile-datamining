@@ -1,17 +1,17 @@
-// === Module 14530: PremiumSubscriptionPricingUpsell ===
+// === Module 14540: PremiumSubscriptionPricingUpsell ===
 
-// Module 14530 (PremiumSubscriptionPricingUpsell)
+// Module 14540 (PremiumSubscriptionPricingUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14394 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14404 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4833 */;
 import SubscriptionStore from "SubscriptionStore" /* 4834 */;
-import IAPStore from "IAPStore" /* 7355 */;
+import IAPStore from "IAPStore" /* 7357 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,7 +20,7 @@ const PremiumConstants = fn(1394);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function PricingSubheadingCopy() {

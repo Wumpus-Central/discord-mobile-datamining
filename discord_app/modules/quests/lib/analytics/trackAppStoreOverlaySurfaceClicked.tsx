@@ -1,13 +1,13 @@
-// === Module 13814: trackAppStoreOverlaySurfaceClicked ===
+// === Module 13825: trackAppStoreOverlaySurfaceClicked ===
 
-// Module 13814 (trackAppStoreOverlaySurfaceClicked)
-import QuestTypes from "QuestTypes" /* 6193 */;
-import AdCreativeType from "AdCreativeType" /* 6197 */;
-import AnalyticsActions from "AnalyticsActions" /* 7625 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9411 */;
-import captureAdUserAction from "captureAdUserAction" /* 9412 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
+// Module 13825 (trackAppStoreOverlaySurfaceClicked)
+import QuestTypes from "QuestTypes" /* 6194 */;
+import AdCreativeType from "AdCreativeType" /* 6198 */;
+import AnalyticsActions from "AnalyticsActions" /* 7626 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7635 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9412 */;
+import captureAdUserAction from "captureAdUserAction" /* 9413 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9416 */;
 import size from "module_2" /* 2 */;
 
 function captureAppStoreOverlaySurfaceClickForMigration(overlaySurface, arg1, arg2) {

@@ -1,10 +1,10 @@
-// === Module 15897: UserSettingsFamilyCenterParentalControls ===
+// === Module 15907: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15897 (UserSettingsFamilyCenterParentalControls)
+// Module 15907 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2571 from "module_2571" /* 2571 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7479 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,10 +14,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const FamilyCenterSubPages = fn(7478).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7480).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
                 return;
               }
             }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
                   return;
                 }
               }
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
                   return;
                 }
               }
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
                   return;
                 }
               }
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
                   return;
                 }
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
                   return;
                 }
               }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+          setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
           return;
         }
       }
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "test" });
+    stackNavigation.setOptions({ title: "Symbol", headerRight: "current" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

@@ -1,12 +1,12 @@
-// === Module 14700: OnlineFriendsStore ===
+// === Module 14710: OnlineFriendsStore ===
 
-// Module 14700 (OnlineFriendsStore)
+// Module 14710 (OnlineFriendsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import SetUtils from "SetUtils" /* 2085 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6282 */;
-import PresenceStore from "PresenceStore" /* 5169 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6283 */;
+import PresenceStore from "PresenceStore" /* 5170 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 
 require = fn;

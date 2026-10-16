@@ -1,17 +1,17 @@
-// === Module 7144: PrivateChannelSortStore ===
+// === Module 7146: PrivateChannelSortStore ===
 
-// Module 7144 (PrivateChannelSortStore)
+// Module 7146 (PrivateChannelSortStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7145 */;
-import MessageRequestStore from "MessageRequestStore" /* 6273 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6274 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7147 */;
+import MessageRequestStore from "MessageRequestStore" /* 6274 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6275 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import ReadStateStore from "ReadStateStore" /* 6253 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import ReadStateStore from "ReadStateStore" /* 6254 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6185 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -76,7 +76,7 @@ const secondaryIndexMap = new fn(4804).SecondaryIndexMap(function indexBy(value)
 let values = [];
 let values2 = [];
 let closure_17 = [];
-const f40589 = () => {
+const f40608 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -89,7 +89,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f40589 === "function") {
+  if (typeof f40608 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

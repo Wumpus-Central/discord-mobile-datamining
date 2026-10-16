@@ -1,7 +1,7 @@
-// === Module 12854: getNextResourceChannel ===
+// === Module 12860: getNextResourceChannel ===
 
-// Module 12854 (getNextResourceChannel)
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7147 */;
+// Module 12860 (getNextResourceChannel)
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7149 */;
 
 const require = globalThis.__r;
 
@@ -10,9 +10,9 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");
 
-export default function getCurrentAndNextResourceChannel(guildId, arg1) {
+export default function getCurrentAndNextResourceChannel(guild_id, arg1) {
   closure_0 = arg1;
-  const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(guildId);
+  const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(guild_id);
   const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === closure_0);
   if (findIndexResult < 0) {
     let items = [null, null];

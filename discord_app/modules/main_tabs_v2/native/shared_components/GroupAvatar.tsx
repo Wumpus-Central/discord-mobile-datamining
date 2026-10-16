@@ -1,15 +1,15 @@
-// === Module 14012: GroupAvatar ===
+// === Module 14022: GroupAvatar ===
 
-// Module 14012 (GroupAvatar)
+// Module 14022 (GroupAvatar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import timing from "timing" /* 5154 */;
-import spring from "spring" /* 5440 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6886 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import timing from "timing" /* 5155 */;
+import spring from "spring" /* 5441 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6888 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 let View = fn(17).View;
@@ -19,7 +19,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 const SPRING_OPTIONS_SCALE = { damping: 30, stiffness: 400 };
 const SPRING_OPTIONS_POSITION = { damping: 30, stiffness: 400 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };

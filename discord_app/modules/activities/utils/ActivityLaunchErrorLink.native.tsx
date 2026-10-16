@@ -1,8 +1,8 @@
-// === Module 10974: ActivityLaunchErrorLink ===
+// === Module 10971: ActivityLaunchErrorLink ===
 
-// Module 10974 (ActivityLaunchErrorLink)
+// Module 10971 (ActivityLaunchErrorLink)
 import c from "c" /* 576 */;
-import IntlLink from "IntlLink" /* 10975 */;
+import IntlLink from "IntlLink" /* 10972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

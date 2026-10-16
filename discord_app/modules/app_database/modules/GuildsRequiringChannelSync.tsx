@@ -1,6 +1,6 @@
-// === Module 7559: GuildsRequiringChannelSync ===
+// === Module 7560: GuildsRequiringChannelSync ===
 
-// Module 7559 (GuildsRequiringChannelSync)
+// Module 7560 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1098 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;

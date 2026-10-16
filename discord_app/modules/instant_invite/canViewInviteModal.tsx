@@ -1,6 +1,6 @@
-// === Module 8761: canViewInviteModal ===
+// === Module 8762: canViewInviteModal ===
 
-// Module 8761 (canViewInviteModal)
+// Module 8762 (canViewInviteModal)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

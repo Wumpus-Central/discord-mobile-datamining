@@ -1,10 +1,10 @@
-// === Module 7170: safeTransitionTo ===
+// === Module 7172: safeTransitionTo ===
 
-// Module 7170 (safeTransitionTo)
+// Module 7172 (safeTransitionTo)
 import router_utils from "router_utils" /* 1114 */;
-import LinkUtils from "LinkUtils" /* 5484 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7171 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7172 */;
+import LinkUtils from "LinkUtils" /* 5485 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7173 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7174 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2090 */;
 

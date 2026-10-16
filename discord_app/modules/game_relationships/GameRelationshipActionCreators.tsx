@@ -1,10 +1,10 @@
-// === Module 10470: GameRelationshipActionCreators ===
+// === Module 10471: GameRelationshipActionCreators ===
 
-// Module 10470 (GameRelationshipActionCreators)
+// Module 10471 (GameRelationshipActionCreators)
 import util from "util" /* 1128 */;
 import shared from "shared" /* 5028 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5853 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5362 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -170,7 +170,7 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(5853).APIError(error);
+      const aPIError = new onSuccess(5854).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1128).intl;

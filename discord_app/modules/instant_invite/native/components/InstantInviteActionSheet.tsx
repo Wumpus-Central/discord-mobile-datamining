@@ -1,30 +1,30 @@
-// === Module 8917: InstantInviteActionSheet ===
+// === Module 8918: InstantInviteActionSheet ===
 
-// Module 8917 (InstantInviteActionSheet)
+// Module 8918 (InstantInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5136 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8908 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8918 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 8920 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5137 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8909 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8919 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 8921 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2073 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8909 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8910 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7642).InviteTargetTypes;
+const InviteTargetTypes = fn(7643).InviteTargetTypes;
 const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;

@@ -1,76 +1,98 @@
-// === Module 12671: CheckpointBackground ===
+// === Module 12677: CheckpointBackground ===
 
-// Module 12671 (CheckpointBackground)
+// Module 12677 (CheckpointBackground)
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1087 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
-import CheckpointConstants from "CheckpointConstants" /* 5499 */;
-import _modDef12672 from "module_12672" /* 12672 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
+import _modDef12678 from "module_12678" /* 12678 */;
+import noop from "module_19" /* 19 */;
 
-const colors = CheckpointConstants.CHECKPOINT_BACKGROUND_GRADIENT;
-const VerticalGradient = Constants.VerticalGradient;
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-let closure_8 = createStyles.createStyles({ background: { position: "absolute", width: "100%", height: "100%" } });
+require = fn;
+const dependencyMap = fn(5500).CHECKPOINT_BACKGROUND_GRADIENT;
+const VerticalGradient = fn(1087).VerticalGradient;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5154);
+let closure_9 = createStyles.createStyles({ background: { position: "absolute", width: "100%", height: "100%" } });
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointBackground() {
-  const cResult = c.c(8);
-  const tmp3 = closure_8();
-  if (cResult[0] !== tmp3.background) {
-    const obj3 = { colors, start: null, end: null, style: null };
-    ({ START: obj2.start, END: obj2.end } = VerticalGradient);
-    obj3.style = tmp3.background;
-    const tmp9 = hasOwnProperty(LinearGradientDefault, obj3);
-    cResult[0] = tmp3.background;
-    cResult[1] = tmp9;
-    let tmp4 = tmp9;
-  } else {
-    tmp4 = cResult[1];
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointBackground(gradientStartColor) {
+  const cResult = c.c(11);
+  gradientStartColor = gradientStartColor.gradientStartColor;
+  if (undefined === gradientStartColor) {
+    gradientStartColor = 19;
   }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { uri: _modDef12672 };
-    cResult[2] = obj4;
-    let tmp10 = obj4;
+  const tmp4 = closure_9();
+  if (cResult[0] !== gradientStartColor) {
+    const items = [gradientStartColor, 5500];
+    cResult[0] = gradientStartColor;
+    cResult[1] = items;
+    let tmp5 = items;
   } else {
-    tmp10 = cResult[2];
+    tmp5 = cResult[1];
   }
-  if (cResult[3] !== tmp3.background) {
-    const obj5 = { source: tmp10, style: tmp3.background, resizeMode: "cover" };
-    const tmp15 = hasOwnProperty(FastImageDefault, obj5);
-    cResult[3] = tmp3.background;
-    cResult[4] = tmp15;
-    let tmp12 = tmp15;
-  } else {
-    tmp12 = cResult[4];
-  }
-  if (cResult[5] === tmp4) {
-    if (cResult[6] === tmp12) {
-      let tmp16 = cResult[7];
+  if (cResult[2] === tmp5) {
+    if (cResult[3] === tmp4.background) {
+      let tmp7 = cResult[4];
     }
-    return tmp16;
+    const _Symbol = Symbol;
+    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj2 = { uri: _modDef12678 };
+      cResult[5] = obj2;
+      let tmp10 = obj2;
+    } else {
+      tmp10 = cResult[5];
+    }
+    if (cResult[6] !== tmp4.background) {
+      const obj3 = { source: tmp10, style: tmp4.background, resizeMode: "cover" };
+      const tmp15 = timestampProducer(FastImageDefault, obj3);
+      cResult[6] = tmp4.background;
+      cResult[7] = tmp15;
+      let tmp12 = tmp15;
+    } else {
+      tmp12 = cResult[7];
+    }
+    if (cResult[8] === tmp7) {
+      if (cResult[9] === tmp12) {
+        let tmp16 = cResult[10];
+      }
+      return tmp16;
+    }
+    const obj4 = { children: null };
+    const items1 = [tmp7, tmp12];
+    obj4.children = items1;
+    const tmp19 = closure_1_8(React5, obj4);
+    cResult[8] = tmp7;
+    cResult[9] = tmp12;
+    cResult[10] = tmp19;
+    tmp16 = tmp19;
   }
-  const obj9 = { children: null };
-  const items = [tmp4, tmp12];
-  obj9.children = items;
-  const tmp17 = React5(timestampProducer, obj9);
-  cResult[5] = tmp4;
-  cResult[6] = tmp12;
-  cResult[7] = tmp17;
-  tmp16 = tmp17;
-}) : (function CheckpointBackground() {
-  const tmp = closure_8();
+  const tmp8 = timestampProducer(LinearGradientDefault, { colors: tmp5, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp4.background });
+  cResult[2] = tmp5;
+  cResult[3] = tmp4.background;
+  cResult[4] = tmp8;
+  tmp7 = tmp8;
+  const obj5 = { colors: tmp5, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp4.background };
+}) : (function CheckpointBackground(gradientStartColor) {
+  gradientStartColor = gradientStartColor.gradientStartColor;
+  if (gradientStartColor === undefined) {
+    gradientStartColor = 19;
+  }
+  const tmp2 = closure_9();
+  let items = [gradientStartColor];
   const obj = { children: null };
-  const items = [hasOwnProperty(LinearGradientDefault, { colors, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.background }), ];
+  const memo = noop.useMemo(() => {
+    const items = [gradientStartColor, closure_4[1]];
+    return items;
+  }, items);
+  const items1 = [closure_6(LinearGradientDefault, { colors: memo, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp2.background }), ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: _modDef12672 };
+  const obj4 = { uri: _modDef12678 };
   obj3.source = obj4;
-  obj3.style = tmp.background;
-  items[1] = hasOwnProperty(FastImageDefault, obj3);
-  obj.children = items;
-  return React5(timestampProducer, obj);
+  obj3.style = tmp2.background;
+  items1[1] = closure_6(FastImageDefault, obj3);
+  obj.children = items1;
+  return closure_8(closure_7, obj);
 });

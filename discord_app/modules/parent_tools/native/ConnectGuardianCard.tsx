@@ -1,19 +1,19 @@
-// === Module 15847: ConnectGuardianCard ===
+// === Module 15857: ConnectGuardianCard ===
 
-// Module 15847 (ConnectGuardianCard)
+// Module 15857 (ConnectGuardianCard)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
-import ClipboardUtils from "ClipboardUtils" /* 7107 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15844 */;
+import ClipboardUtils from "ClipboardUtils" /* 7109 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15854 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7478).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(7480).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, compactContainer: null, card: null, countdown: null, divider: null, compactDividerFlush: null, dividerLine: null, dividerText: null, buttonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.compactContainer = { alignSelf: "center", gap: nativeDefault.space.PX_16 };

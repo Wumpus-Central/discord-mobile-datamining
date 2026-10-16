@@ -1,8 +1,8 @@
-// === Module 12023: conjureHistoryRestore ===
+// === Module 12020: conjureHistoryRestore ===
 
-// Module 12023 (conjureHistoryRestore)
-import conjureHistoryRequests from "conjureHistoryRequests" /* 12021 */;
-import conjureDatabaseLock from "conjureDatabaseLock" /* 12024 */;
+// Module 12020 (conjureHistoryRestore)
+import conjureHistoryRequests from "conjureHistoryRequests" /* 12018 */;
+import conjureDatabaseLock from "conjureDatabaseLock" /* 12021 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

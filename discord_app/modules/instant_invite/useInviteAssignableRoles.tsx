@@ -1,6 +1,6 @@
-// === Module 18941: useInviteAssignableRoles ===
+// === Module 18954: useInviteAssignableRoles ===
 
-// Module 18941 (useInviteAssignableRoles)
+// Module 18954 (useInviteAssignableRoles)
 import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;

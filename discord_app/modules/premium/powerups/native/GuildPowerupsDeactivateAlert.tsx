@@ -1,14 +1,14 @@
-// === Module 13150: GuildPowerupsDeactivateAlert ===
+// === Module 13158: GuildPowerupsDeactivateAlert ===
 
-// Module 13150 (GuildPowerupsDeactivateAlert)
+// Module 13158 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2603 from "module_2603" /* 2603 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 13151 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 13152 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 13159 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 13160 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
+import createStyles from "createStyles" /* 5154 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -31,15 +31,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   ({ guildId, powerup } = arg0);
   const tmp4 = closure_6();
   _require = tmp4;
-  const tmp6 = onDeactivate(13151)(guildId, powerup);
+  const tmp6 = onDeactivate(13159)(guildId, powerup);
   onDeactivate = tmp6.onDeactivate;
   const error = tmp6.error;
-  const arr = onDeactivate(13152)(guildId, powerup);
+  const arr = onDeactivate(13160)(guildId, powerup);
   let obj = require("c");
   const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(guildId, powerup, require("GuildPowerupAnalytics").ModalType.DEACTIVATE);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { color: tmp5(587).colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } };
-    const tmp10 = closure_4(tmp(6512).CircleErrorIcon, obj3);
+    const tmp10 = closure_4(tmp(6514).CircleErrorIcon, obj3);
     cResult[0] = tmp10;
     let first = tmp10;
   } else {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     }
     if (cResult[13] !== tmp22) {
       const obj7 = { variant: "destructive", onPress: tmp22, text: tmp23 };
-      const tmp27 = closure_4(tmp(5367).AlertActionButton, obj7, "deactivate");
+      const tmp27 = closure_4(tmp(5368).AlertActionButton, obj7, "deactivate");
       cResult[13] = tmp22;
       cResult[14] = tmp27;
       let tmp25 = tmp27;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       const obj8 = { onPress: tmp28, variant: "secondary", text: null };
       const intl4 = tmp(1128).intl;
       obj8.text = intl4.string(tmp(1128).t["ETE/oC"]);
-      const tmp31 = closure_4(tmp(5367).AlertActionButton, obj8, "cancel");
+      const tmp31 = closure_4(tmp(5368).AlertActionButton, obj8, "cancel");
       cResult[16] = tmp31;
       let tmp29 = tmp31;
     } else {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
               }
             }
             const obj9 = { header: tmp11, title: tmp15, content: tmp17, actions: tmp32, extraContent: tmp40 };
-            const tmp46 = closure_4(tmp(5367).AlertModal, obj9);
+            const tmp46 = closure_4(tmp(5368).AlertModal, obj9);
             cResult[28] = tmp32;
             cResult[29] = tmp40;
             cResult[30] = tmp11;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     const obj11 = { children: null };
     const items = [tmp19, tmp25, tmp29];
     obj11.children = items;
-    const tmp34 = closure_5(tmp(5367).AlertActions, obj11);
+    const tmp34 = closure_5(tmp(5368).AlertActions, obj11);
     cResult[17] = tmp19;
     cResult[18] = tmp25;
     cResult[19] = tmp34;
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   let tmp20 = null != error;
   if (tmp20) {
     const obj12 = { style: tmp4.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp20 = closure_4(tmp(5149).Text, obj12);
+    tmp20 = closure_4(tmp(5150).Text, obj12);
   }
   cResult[7] = error;
   cResult[8] = tmp4.warningText;
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj7 = { style: tmp.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp7Result = closure_4(tmp5(5149).Text, obj7);
+    tmp7Result = closure_4(tmp5(5150).Text, obj7);
   }
   const obj8 = { children: null };
   const items = [tmp7Result, , ];

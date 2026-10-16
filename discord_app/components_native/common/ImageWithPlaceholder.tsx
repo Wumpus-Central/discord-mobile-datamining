@@ -1,9 +1,9 @@
-// === Module 9189: ImageWithPlaceholder ===
+// === Module 9190: ImageWithPlaceholder ===
 
-// Module 9189 (ImageWithPlaceholder)
+// Module 9190 (ImageWithPlaceholder)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9190 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9191 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

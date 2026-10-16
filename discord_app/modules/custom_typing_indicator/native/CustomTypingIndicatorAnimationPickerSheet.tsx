@@ -1,11 +1,11 @@
-// === Module 16337: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 16351: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 16337 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 16351 (CustomTypingIndicatorAnimationPickerSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import Card from "Card" /* 6404 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import Card from "Card" /* 6406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, previewRow: null, optionCard: null, optionCardSelected: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const intl4 = map(1128).intl;
   obj7.label = intl4.string(content(3867)["8t5EiI"]);
   items1[3] = obj7;
-  const ActionSheet = map(7120).ActionSheet;
+  const ActionSheet = map(7122).ActionSheet;
   const content2 = previewRow.content;
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     const intl5 = map(1128).intl;
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
       if (cResult[17] === tmp13) {
         let tmp16 = cResult[18];
       }
-      Stack = map(5439).Stack;
+      Stack = map(5440).Stack;
       const items2 = [items1.slice(0, num), items1.slice(num, 4)];
       map = items2.map;
       const mapped = map((arr, arg1) => timestampProducer(Stack_Stack.Stack, {
@@ -240,12 +240,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const obj = onChange(576);
   obj10.typingSuggestion = map(1400).TypingSuggestion.UNSPECIFIED;
   obj9.config = obj10;
-  const tmp15 = closure_6(content(12757), obj9);
+  const tmp15 = closure_6(content(12764), obj9);
   cResult[13] = emojis;
   cResult[14] = content;
   cResult[15] = tmp15;
   tmp13 = tmp15;
-  const tmp10Result = content(12757);
+  const tmp10Result = content(12764);
 }) : (function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   onChange = onChange.onChange;
   animation = undefined;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1400).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(12757), obj7);
+  obj6.children = closure_6(animation(12764), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(5439).Stack, obj9);
+  items1[1] = closure_6(onChange(5440).Stack, obj9);
   obj5.children = items1;
-  return closure_7(onChange(7120).ActionSheet, obj5);
+  return closure_7(onChange(7122).ActionSheet, obj5);
 });

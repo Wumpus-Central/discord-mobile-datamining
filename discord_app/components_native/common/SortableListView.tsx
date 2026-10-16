@@ -1,9 +1,9 @@
-// === Module 17450: SortableListView ===
+// === Module 17460: SortableListView ===
 
-// Module 17450 (SortableListView)
+// Module 17460 (SortableListView)
 import c from "c" /* 576 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6889 */;
-import _mod7036 from "module_7036" /* 7036 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6891 */;
+import _mod7038 from "module_7038" /* 7038 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -596,7 +596,7 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7036.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7038.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return React5(React3, obj);
 };

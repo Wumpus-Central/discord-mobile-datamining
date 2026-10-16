@@ -1,9 +1,9 @@
-// === Module 16907: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 16921: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 16907 (useAllowFriendsFromMutualGuildsOnly)
+// Module 16921 (useAllowFriendsFromMutualGuildsOnly)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6906 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

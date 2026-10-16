@@ -1,11 +1,11 @@
-// === Module 12986: ApplicationCommandList ===
+// === Module 12994: ApplicationCommandList ===
 
-// Module 12986 (ApplicationCommandList)
+// Module 12994 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-let closure_6 = 3 * fn(9951).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_6 = 3 * fn(9952).AUTOCOMPLETE_ROW_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");

@@ -1,9 +1,9 @@
-// === Module 10047: TimestampSuggestionUtils ===
+// === Module 10048: TimestampSuggestionUtils ===
 
-// Module 10047 (TimestampSuggestionUtils)
+// Module 10048 (TimestampSuggestionUtils)
 import util from "util" /* 1128 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import _mod10048 from "module_10048" /* 10048 */;
+import _mod10049 from "module_10049" /* 10049 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10048;
+  _mod10049;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
@@ -216,7 +216,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     }
     return items1;
   } else {
-    const tmp6 = _mod10048;
+    const tmp6 = _mod10049;
     locale = LocaleStore.locale;
     if ("en-US" === locale) {
       let en = tmp6.en;

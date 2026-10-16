@@ -1,11 +1,11 @@
-// === Module 15622: UserProfileEditingAccessibilityUtils ===
+// === Module 15632: UserProfileEditingAccessibilityUtils ===
 
-// Module 15622 (UserProfileEditingAccessibilityUtils)
+// Module 15632 (UserProfileEditingAccessibilityUtils)
 import util from "util" /* 1128 */;
 import _modDef2963 from "module_2963" /* 2963 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6901 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10504 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15561 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6903 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10505 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15571 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileEditingAccessibilityUtils.tsx");

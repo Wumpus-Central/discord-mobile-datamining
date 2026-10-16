@@ -1,27 +1,27 @@
-// === Module 12259: ConjureDebugScene ===
+// === Module 12265: ConjureDebugScene ===
 
-// Module 12259 (ConjureDebugScene)
+// Module 12265 (ConjureDebugScene)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
 import CopyIcon from "CopyIcon" /* 5104 */;
-import ClipboardUtils from "ClipboardUtils" /* 7107 */;
-import conjureDebugConnection from "conjureDebugConnection" /* 10928 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 11631 */;
-import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12260 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12269 */;
+import ClipboardUtils from "ClipboardUtils" /* 7109 */;
+import conjureDebugConnection from "conjureDebugConnection" /* 10925 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 11628 */;
+import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12266 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10906 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10903 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(10901).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(10898).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabs: null, content: null, report: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabs = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_12 };

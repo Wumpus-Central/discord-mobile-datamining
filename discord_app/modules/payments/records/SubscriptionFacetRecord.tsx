@@ -1,6 +1,6 @@
-// === Module 7370: SubscriptionFacetRecord ===
+// === Module 7372: SubscriptionFacetRecord ===
 
-// Module 7370 (SubscriptionFacetRecord)
+// Module 7372 (SubscriptionFacetRecord)
 import Record from "Record" /* 1407 */;
 
 const prototype = function SubscriptionFacetRecord(subscriptionId) {

@@ -1,8 +1,8 @@
-// === Module 7369: CheckoutContextRecord ===
+// === Module 7371: CheckoutContextRecord ===
 
-// Module 7369 (CheckoutContextRecord)
-import PriceUtils from "PriceUtils" /* 7161 */;
-import addDefault from "add" /* 7163 */;
+// Module 7371 (CheckoutContextRecord)
+import PriceUtils from "PriceUtils" /* 7163 */;
+import addDefault from "add" /* 7165 */;
 import _slicedToArray from "module_32" /* 32 */;
 import Record from "Record" /* 1407 */;
 

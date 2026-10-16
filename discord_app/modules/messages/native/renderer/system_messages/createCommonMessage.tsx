@@ -1,18 +1,18 @@
-// === Module 8203: createCommonMessage ===
+// === Module 8204: createCommonMessage ===
 
-// Module 8203 (createCommonMessage)
+// Module 8204 (createCommonMessage)
 import nativeDefault from "native" /* 587 */;
 import DateUtils from "DateUtils" /* 4852 */;
 import ColorUtils from "ColorUtils" /* 5026 */;
 import shared from "shared" /* 5028 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
-import _modDef8204 from "module_8204" /* 8204 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8112 */;
 import _modDef8205 from "module_8205" /* 8205 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8206 */;
+import _modDef8206 from "module_8206" /* 8206 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8207 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 const result = createStyles.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
@@ -21,7 +21,7 @@ const result = createStyles.experimental_createToken((theme) => {
   }
   return str;
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_4 = createStyles.createNativeStyleProperties({ timestampColor: nativeDefault.colors.TEXT_MUTED, highlightColor: result });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
@@ -36,8 +36,8 @@ export default function createCommonMessage(reactions) {
   obj.dark = shared.isThemeDark(theme);
   obj.highlightColor = tmp.highlightColor;
   obj.reactions = reactions.reactions;
-  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8204);
-  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8205);
+  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8205);
+  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8206);
   obj.accessibilityActions = MessageAccessibilityActions.createMessageAccessibilityActions(message, channel);
   return obj;
 };

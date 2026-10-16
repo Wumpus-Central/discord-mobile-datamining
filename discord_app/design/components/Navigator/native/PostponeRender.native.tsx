@@ -1,18 +1,18 @@
-// === Module 6947: PostponeRender ===
+// === Module 6949: PostponeRender ===
 
-// Module 6947 (PostponeRender)
+// Module 6949 (PostponeRender)
 import nativeDefault from "native" /* 587 */;
-import useMountEffectDefault from "useMountEffect" /* 5458 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6948 */;
+import useMountEffectDefault from "useMountEffect" /* 5459 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const KeyboardAwareViewDefault = tmp8(6951);
+const KeyboardAwareViewDefault = tmp8(6953);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { view: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -88,7 +88,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   let tmp11 = children;
   if (first) {
-    tmp11 = jsx(tmp(6949).SceneLoadingIndicator, {});
+    tmp11 = jsx(tmp(6951).SceneLoadingIndicator, {});
   }
   cResult[2] = children;
   cResult[3] = first;
@@ -117,7 +117,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     }
   });
   if (first) {
-    children = jsx(first(6949).SceneLoadingIndicator, {});
+    children = jsx(first(6951).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

@@ -1,12 +1,12 @@
-// === Module 11748: ApplicationWidgetMarkupUtils ===
+// === Module 11745: ApplicationWidgetMarkupUtils ===
 
-// Module 11748 (ApplicationWidgetMarkupUtils)
-import MarkupReactRulesDefault from "MarkupReactRules" /* 5142 */;
-import MarkupRulesDefault from "MarkupRules" /* 5464 */;
-import MarkupLiteralImageRuleDefault from "MarkupLiteralImageRule" /* 11749 */;
-import combineMarkupRules from "combineMarkupRules" /* 5463 */;
+// Module 11745 (ApplicationWidgetMarkupUtils)
+import MarkupReactRulesDefault from "MarkupReactRules" /* 5143 */;
+import MarkupRulesDefault from "MarkupRules" /* 5465 */;
+import MarkupLiteralImageRuleDefault from "MarkupLiteralImageRule" /* 11746 */;
+import combineMarkupRules from "combineMarkupRules" /* 5464 */;
 import apply from "module_12" /* 12 */;
-import MarkupParser_mod from "MarkupParser" /* 8225 */;
+import MarkupParser_mod from "MarkupParser" /* 8226 */;
 
 const items = ["text", "link", "emoji"];
 const items1 = [apply.pick(MarkupRulesDefault.RULES, items), { image: MarkupLiteralImageRuleDefault }, MarkupReactRulesDefault()];

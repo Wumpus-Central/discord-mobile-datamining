@@ -1,13 +1,13 @@
-// === Module 17173: VoiceUserNameItem ===
+// === Module 17187: VoiceUserNameItem ===
 
-// Module 17173 (VoiceUserNameItem)
+// Module 17187 (VoiceUserNameItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 5846 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9079 */;
-import VoiceGuildTagDefault from "VoiceGuildTag" /* 17174 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 5847 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9080 */;
+import VoiceGuildTagDefault from "VoiceGuildTag" /* 17188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_8 = createStyles.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

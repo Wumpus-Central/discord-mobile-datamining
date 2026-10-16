@@ -1,14 +1,14 @@
-// === Module 19020: ParentalConsentConnectionHeader ===
+// === Module 19033: ParentalConsentConnectionHeader ===
 
-// Module 19020 (ParentalConsentConnectionHeader)
+// Module 19033 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef2867 from "module_2867" /* 2867 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6148 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6149 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -16,9 +16,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
-let obj2 = { row: { height: fn(6481).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
-let obj3 = { height: fn(6481).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+const createStyles = fn(5154);
+let obj2 = { row: { height: fn(6483).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
+let obj3 = { height: fn(6483).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 5301: ServerLadderExperiment ===
+// === Module 5302: ServerLadderExperiment ===
 
-// Module 5301 (ServerLadderExperiment)
+// Module 5302 (ServerLadderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

@@ -9,7 +9,7 @@ import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import router_utils from "router_utils" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7253 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7255 */;
 import GatedChannelStore from "GatedChannelStore" /* 2120 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

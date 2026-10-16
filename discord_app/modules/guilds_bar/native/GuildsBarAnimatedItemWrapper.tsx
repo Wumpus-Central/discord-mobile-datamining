@@ -1,26 +1,26 @@
-// === Module 17366: GuildsBarAnimatedItemWrapper ===
+// === Module 17378: GuildsBarAnimatedItemWrapper ===
 
-// Module 17366 (GuildsBarAnimatedItemWrapper)
+// Module 17378 (GuildsBarAnimatedItemWrapper)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useToken from "useToken" /* 4877 */;
 import native from "native" /* 4886 */;
-import spring from "spring" /* 5440 */;
+import spring from "spring" /* 5441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5450).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(17354);
+const IOS_POINTER_STYLE = fn(5451).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(17366);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const CORNER_SPRING_PHYSICS = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -33,7 +33,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };

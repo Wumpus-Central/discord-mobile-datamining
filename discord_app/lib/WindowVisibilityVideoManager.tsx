@@ -1,12 +1,12 @@
-// === Module 5281: WindowVisibilityVideoManager ===
+// === Module 5282: WindowVisibilityVideoManager ===
 
-// Module 5281 (WindowVisibilityVideoManager)
+// Module 5282 (WindowVisibilityVideoManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import ExternalPipDefault from "ExternalPip" /* 5282 */;
-import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 5283 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5201 */;
+import ExternalPipDefault from "ExternalPip" /* 5283 */;
+import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 5284 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5202 */;
 
 const require = fn;
 const WindowVisibilityEvent = { WindowVisibilityChanged: "window-visibility-changed", IncomingVideoEnabledChanged: "incoming-video-enabled-changed" };

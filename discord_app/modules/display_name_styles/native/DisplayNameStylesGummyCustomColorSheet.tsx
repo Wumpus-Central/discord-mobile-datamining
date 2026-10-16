@@ -1,6 +1,6 @@
-// === Module 16324: DisplayNameStylesGummyCustomColorSheet ===
+// === Module 16338: DisplayNameStylesGummyCustomColorSheet ===
 
-// Module 16324 (DisplayNameStylesGummyCustomColorSheet)
+// Module 16338 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 587 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1409 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
@@ -13,7 +13,7 @@ const DisplayNameStylesConstants = fn(1410);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: metroRequire } = DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" }, huePickerInset: null, previewWrapper: null, preview: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.huePickerInset = { paddingHorizontal: nativeDefault.space.PX_4 + 2, alignSelf: "stretch" };
@@ -68,18 +68,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     if (cResult[6] !== tmp7) {
       const obj5 = { title: tmp8, trailing: null };
       const obj6 = { variant: "primary", size: "sm", text: tmp10, onPress: tmp7 };
-      obj5.trailing = closure_7(tmp(5441).Button, obj6);
-      const tmp16 = closure_7(sharedValue(16319), obj5);
+      obj5.trailing = closure_7(tmp(5442).Button, obj6);
+      const tmp16 = closure_7(sharedValue(16333), obj5);
       cResult[6] = tmp7;
       cResult[7] = tmp16;
       let tmp12 = tmp16;
-      const tmp15 = sharedValue(16319);
+      const tmp15 = sharedValue(16333);
     } else {
       tmp12 = cResult[7];
     }
     if (cResult[8] !== sharedValue) {
       const obj7 = { hue: sharedValue };
-      const tmp20 = closure_7(sharedValue(16325), obj7);
+      const tmp20 = closure_7(sharedValue(16339), obj7);
       cResult[8] = sharedValue;
       cResult[9] = tmp20;
       let tmp17 = tmp20;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
         }
         if (cResult[16] !== sharedValue) {
           const obj8 = { hue: sharedValue, onPanFinalize: first, saturation, lightness, fullWidth: true };
-          const tmp34 = closure_7(sharedValue(15542), obj8);
+          const tmp34 = closure_7(sharedValue(15552), obj8);
           cResult[16] = sharedValue;
           cResult[17] = tmp34;
           let tmp29 = tmp34;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                 return tmp43;
               }
               const obj9 = { header: tmp12, children: tmp39 };
-              const tmp45 = closure_7(tmp(7063).BottomSheet, obj9);
+              const tmp45 = closure_7(tmp(7065).BottomSheet, obj9);
               cResult[25] = tmp39;
               cResult[26] = tmp12;
               cResult[27] = tmp45;
@@ -197,16 +197,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const intl2 = onSelect(1128).intl;
   obj6.text = intl2.string(onSelect(1128).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5441).Button, obj6);
-  obj4.header = closure_7(sharedValue(16319), obj5);
+  obj5.trailing = closure_7(onSelect(5442).Button, obj6);
+  obj4.header = closure_7(sharedValue(16333), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(16319);
-  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(16325), { hue: sharedValue }) });
+  const tmp5 = sharedValue(16333);
+  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(16339), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
-  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(15542), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(15552), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(7063).BottomSheet, obj4);
+  return closure_7(onSelect(7065).BottomSheet, obj4);
 });

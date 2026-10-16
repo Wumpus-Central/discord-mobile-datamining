@@ -1,6 +1,6 @@
-// === Module 18615: ServerHubAnalytics ===
+// === Module 18625: ServerHubAnalytics ===
 
-// Module 18615 (ServerHubAnalytics)
+// Module 18625 (ServerHubAnalytics)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import size from "module_2" /* 2 */;
@@ -15,4 +15,15 @@ export const trackServerHubToggleSetting = function trackServerHubToggleSetting(
 };
 export const trackServerHubVisit = function trackServerHubVisit(guild_id, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_VISIT, { guild_id, source });
+};
+export const trackServerHubWidgetEditClicked = function trackServerHubWidgetEditClicked(guild_id, widget_type, widget_id) {
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { guild_id, widget_type };
+  if (obj3.isDraftWidgetId(widget_id)) {
+    let obj4 = {};
+  } else {
+    obj4 = { widget_id };
+  }
+  const merged = Object.assign(obj4);
+  obj.track(AnalyticEvents.SERVER_HUB_WIDGET_EDIT_CLICKED, obj2);
 };

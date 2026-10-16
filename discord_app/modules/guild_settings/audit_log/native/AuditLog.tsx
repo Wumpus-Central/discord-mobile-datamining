@@ -1,6 +1,6 @@
-// === Module 18673: AuditLog ===
+// === Module 18686: AuditLog ===
 
-// Module 18673 (AuditLog)
+// Module 18686 (AuditLog)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,13 +10,13 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import PlatformsDefault from "Platforms" /* 5981 */;
-import EmojiDefault from "Emoji" /* 7043 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7079 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
-import AppliedForumTag from "AppliedForumTag" /* 10249 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 18661 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import PlatformsDefault from "Platforms" /* 5982 */;
+import EmojiDefault from "Emoji" /* 7045 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7081 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
+import AppliedForumTag from "AppliedForumTag" /* 10250 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 18674 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -30,7 +30,7 @@ const Constants = fn(1087);
 ({ AuditLogTargetTypes: c10, AuditLogActionTypes: closure_11, AuditLogActions: closure_12, Fonts, AuditLogChangeKeys: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 }, rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" }, titleContainer: { marginRight: 24, flex: 1 }, title: { marginHorizontal: 8 }, discriminator: { fontSize: 12, lineHeight: 30, color: nativeDefault.unsafe_rawColors.PRIMARY_400 }, avatar: { marginLeft: 10, height: 32, width: 32 }, timestamp: null, arrow: null, rotate90: null, changesContainer: null, changeRow: null, changeNumberText: null, changeItemText: null, colorHook: null, colorsHook: null, changeItemContent: null, changeItemRow: null, changeItemTextLine: null, forumTag: null, imageEmoji: null, textEmoji: null };
 let obj3 = { fontSize: 12, lineHeight: 30, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.timestamp = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
@@ -609,7 +609,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(18665), { action: log.action }), , , ];
+  const items2 = [closure_14(user(18678), { action: log.action }), , , ];
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1128).intl;
   obj7.accessibilityLabel = intl.string(tmp10(1128).t.iXAna6);
@@ -631,7 +631,7 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(5981).get(log.options.integration_type);
+            value = tmp18(5982).get(log.options.integration_type);
             if (null != value) {
               const icon = value.icon;
               const tmp9Result = tmp9(5028);
@@ -639,7 +639,7 @@ prototype["render"] = function render() {
               let source = tmp9(1417).makeSource(tmp25);
               const tmp9Result5 = tmp9(1417);
             }
-            const tmp18Result = tmp18(5981);
+            const tmp18Result = tmp18(5982);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -653,7 +653,7 @@ prototype["render"] = function render() {
         obj8.source = source;
         obj8.size = tmp10(1202).AvatarSizes.SMALL;
         obj7.children = closure_14(tmp20, obj8);
-        items2[1] = closure_14(tmp10(6407).PressableOpacity, obj7);
+        items2[1] = closure_14(tmp10(6409).PressableOpacity, obj7);
         obj9 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         const obj10 = { expanded, disabled: !checkChangesToRenderResult };
         obj9.accessibilityState = obj10;
@@ -662,14 +662,14 @@ prototype["render"] = function render() {
         obj9.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj9.children = items3;
-        items2[2] = closure_15(tmp10(6407).PressableOpacity, obj9);
+        items2[2] = closure_15(tmp10(6409).PressableOpacity, obj9);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1202).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(15543);
+          obj11.source = tmp18(15553);
           tmp17Result = closure_14(tmp10(1202).Icon, obj11);
         }
         items2[3] = tmp17Result;
@@ -681,7 +681,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj4.children = items5;
-        return closure_15(tmp10(6404).Card, obj4);
+        return closure_15(tmp10(6406).Card, obj4);
       }
     }
   }

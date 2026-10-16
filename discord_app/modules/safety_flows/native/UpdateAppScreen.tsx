@@ -1,15 +1,15 @@
-// === Module 19018: UpdateAppScreen ===
+// === Module 19031: UpdateAppScreen ===
 
-// Module 19018 (UpdateAppScreen)
+// Module 19031 (UpdateAppScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2867 from "module_2867" /* 2867 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
+import createStyles from "createStyles" /* 5154 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

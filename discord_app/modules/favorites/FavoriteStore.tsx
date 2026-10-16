@@ -28,27 +28,27 @@ function initializeFromUserSettings() {
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[tmp] !== undefined) {
-        let tmp24 = favoriteChannels[tmp7];
+        let tmp22 = favoriteChannels[tmp7];
         let sum = num4;
-        if (tmp24.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
+        if (tmp22.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
           sum = num4 + 1;
         }
         let obj5 = { id: tmp7, nickname: null, type: null, channelType: null, order: null, parentId: null };
         let nickname = null;
-        if ("" !== tmp24.nickname) {
-          nickname = tmp24.nickname;
+        if ("" !== tmp22.nickname) {
+          nickname = tmp22.nickname;
         }
         obj5.nickname = nickname;
-        ({ type: obj2.type, channelType } = tmp24);
+        ({ type: obj2.type, channelType } = tmp22);
         value = undefined;
         if (channelType != null) {
           value = channelType.value;
         }
         obj5.channelType = value;
-        obj5.order = tmp24.position;
+        obj5.order = tmp22.position;
         let parentId = null;
-        if (tmp24.parentId !== closure_5) {
-          parentId = tmp24.parentId;
+        if (tmp22.parentId !== closure_4) {
+          parentId = tmp22.parentId;
         }
         num5 = num5 + 1;
         obj5.parentId = parentId;
@@ -64,9 +64,8 @@ function initializeFromUserSettings() {
       value2 = iter.value;
     }
   }
-  let tmp14 = value2;
   if (value2 == null) {
-    tmp14 = !_mod12.isEmpty(obj);
+    value2 = !_mod12.isEmpty(obj);
   }
   flag2 = undefined;
   if (favorites != null) {
@@ -77,9 +76,6 @@ function initializeFromUserSettings() {
   }
   let flag3 = flag !== flag;
   if (!flag3) {
-    flag3 = closure_12 !== tmp14;
-  }
-  if (!flag3) {
     flag3 = value2 !== value2;
   }
   if (!flag3) {
@@ -89,16 +85,15 @@ function initializeFromUserSettings() {
     flag3 = !_mod12.isEqual(obj, obj);
   }
   if (flag3) {
-    closure_12 = tmp14;
     flag3 = true;
   }
   return flag3;
 }
 const createChannelRecord = fn(2072).createChannelRecord;
-let closure_5 = fn(2081).FAVORITES_UNCATEGORIZED_PARENT_ID;
+let closure_4 = fn(2081).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1087);
-({ ChannelTypes: metroRequire, FAVORITES: closure_7 } = Constants);
-let closure_12 = false;
+({ ChannelTypes: hasOwnProperty, FAVORITES: metroRequire } = Constants);
+let value2 = false;
 const Store = initializeDefault.Store;
 class FavoriteStore extends Store {
 }
@@ -120,12 +115,6 @@ Object.defineProperty(prototype, "favoriteGuildMuted", {
 });
 Object.defineProperty(prototype, "favoriteGuildEnabled", {
   get: function favoriteGuildEnabled() {
-    return closure_12;
-  },
-  set: undefined
-});
-Object.defineProperty(prototype, "favoriteGuildVisibleSetting", {
-  get: function favoriteGuildVisibleSetting() {
     return value2;
   },
   set: undefined
@@ -134,7 +123,7 @@ Object.defineProperty(prototype, "autoAddJoinedThreads", {
   get: function autoAddJoinedThreads() {
     let tmp = flag2;
     if (flag2) {
-      tmp = closure_12;
+      tmp = value2;
     }
     return tmp;
   },

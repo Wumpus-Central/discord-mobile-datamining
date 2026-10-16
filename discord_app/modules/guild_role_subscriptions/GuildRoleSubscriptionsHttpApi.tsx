@@ -1,6 +1,6 @@
-// === Module 7179: GuildRoleSubscriptionsHttpApi ===
+// === Module 7181: GuildRoleSubscriptionsHttpApi ===
 
-// Module 7179 (GuildRoleSubscriptionsHttpApi)
+// Module 7181 (GuildRoleSubscriptionsHttpApi)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -1249,7 +1249,7 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
           closure_130_0 = undefined;
           c5 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: Endpoints.GUILD_DISCOVERY_SLUG(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_WEB_PAGE(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c6 = 2;
           c7 = 1;
           const obj5 = { value: HTTP.get(obj4), done: false };
@@ -1271,21 +1271,21 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
       } else {
         closure_130_0 = value;
         const body = closure_130_0.body;
-        value = body;
+        let data = body;
         if (body == null) {
           const _JSON = JSON;
-          value = JSON.parse(closure_130_0.text);
+          data = JSON.parse(closure_130_0.text);
         }
         c5 = 0;
         c7 = 3;
-        const obj = { value, done: true };
+        const obj = { value: data.data, done: true };
         return obj;
       }
-    } catch (tmp23) {
-      closure_4 = tmp23;
+    } catch (tmp24) {
+      closure_4 = tmp24;
       if (tmp4 === c5) {
         c7 = tmp2;
-        throw tmp23;
+        throw tmp24;
       } else {
         c6 = tmp;
       }

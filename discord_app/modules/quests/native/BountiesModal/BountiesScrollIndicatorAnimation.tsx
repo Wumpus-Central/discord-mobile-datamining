@@ -1,6 +1,6 @@
-// === Module 16009: BountiesScrollIndicatorAnimation ===
+// === Module 16023: BountiesScrollIndicatorAnimation ===
 
-// Module 16009 (BountiesScrollIndicatorAnimation)
+// Module 16023 (BountiesScrollIndicatorAnimation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4877 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

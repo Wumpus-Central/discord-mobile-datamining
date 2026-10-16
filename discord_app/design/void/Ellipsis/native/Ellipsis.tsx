@@ -1,13 +1,13 @@
-// === Module 15088: Ellipsis ===
+// === Module 15098: Ellipsis ===
 
-// Module 15088 (Ellipsis)
+// Module 15098 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ let c8 = 233.33333333333334;
 let c9 = 116.66666666666667;
 let c10 = 0.4;
 let c11 = 0.75;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 }, typingIndicatorDot: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, marginRight: 2, height: 6, width: 6 };
 obj.typingIndicatorDot = size;

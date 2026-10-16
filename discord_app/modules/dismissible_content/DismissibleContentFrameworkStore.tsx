@@ -13,7 +13,7 @@ import size from "module_2" /* 2 */;
 const AnalyticEvents = Constants.AnalyticEvents;
 const logger = new LoggerDefault("DCF");
 let c5 = false;
-let obj = { numberOfDCsShownToday: 0, dailyCapPeriodStart: null, dismissibleContentSeenDuringSession: null, dailyCapOverridden: false, newUserMinAgeRequiredOverridden: false, renderedAtTimestamps: null, lastDismissed: null, seenForGuildId: null };
+let obj = { numberOfDCsShownToday: 0, dailyCapPeriodStart: null, dismissibleContentSeenDuringSession: null, dailyCapOverridden: false, newUserMinAgeRequiredOverridden: false, upsellBackoffOverridden: false, renderedAtTimestamps: null, lastDismissed: null, seenForGuildId: null };
 const tmp2 = new LoggerDefault("DCF");
 obj.dismissibleContentSeenDuringSession = new Set();
 let set = new Set();
@@ -41,6 +41,11 @@ prototype["initialize"] = function initialize(numberOfDCsShownToday) {
       flag = false;
     }
     obj.newUserMinAgeRequiredOverridden = flag;
+    let flag2 = numberOfDCsShownToday.upsellBackoffOverridden;
+    if (flag2 == null) {
+      flag2 = false;
+    }
+    obj.upsellBackoffOverridden = flag2;
   }
   obj.dismissibleContentSeenDuringSession = new Set();
   const set = new Set();
@@ -60,6 +65,12 @@ Object.defineProperty(prototype, "dailyCapOverridden", {
 Object.defineProperty(prototype, "newUserMinAgeRequiredOverridden", {
   get: function newUserMinAgeRequiredOverridden() {
     return obj.newUserMinAgeRequiredOverridden;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "upsellBackoffOverridden", {
+  get: function upsellBackoffOverridden() {
+    return obj.upsellBackoffOverridden;
   },
   set: undefined
 });
@@ -147,6 +158,9 @@ const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(Di
   },
   DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: function handleNewUserMinAgeRequiredOverride(value) {
     obj.newUserMinAgeRequiredOverridden = value.value;
+  },
+  DCF_UPSELL_BACKOFF_OVERRIDE: function handleUpsellBackoffOverride(value) {
+    obj.upsellBackoffOverridden = value.value;
   },
   DCF_HANDLE_DC_SHOWN: function handleDCShownToUser(arg0) {
     ({ dismissibleContent, guildId } = arg0);

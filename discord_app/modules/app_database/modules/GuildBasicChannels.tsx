@@ -1,13 +1,13 @@
-// === Module 7555: GuildBasicChannels ===
+// === Module 7556: GuildBasicChannels ===
 
-// Module 7555 (GuildBasicChannels)
+// Module 7556 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2094 */;
 import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4818 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5976 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;

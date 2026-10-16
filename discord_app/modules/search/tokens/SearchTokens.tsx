@@ -1,15 +1,15 @@
-// === Module 12915: SearchTokens ===
+// === Module 12923: SearchTokens ===
 
-// Module 12915 (SearchTokens)
+// Module 12923 (SearchTokens)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import _modDef4761 from "module_4761" /* 4761 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;
-import useChannelName from "useChannelName" /* 5483 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6188 */;
-import QueryTokenizer from "QueryTokenizer" /* 12913 */;
-import SearchTokensUtils from "SearchTokensUtils" /* 12919 */;
-import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12920 */;
+import useChannelName from "useChannelName" /* 5484 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6189 */;
+import QueryTokenizer from "QueryTokenizer" /* 12921 */;
+import SearchTokensUtils from "SearchTokensUtils" /* 12927 */;
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4807 */;
@@ -17,8 +17,8 @@ import RelationshipStore from "RelationshipStore" /* 4819 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import StreamerModeStore from "StreamerModeStore" /* 5022 */;
 import UserStore from "UserStore" /* 1392 */;
-import SearchRecentMessageStore from "SearchRecentMessageStore" /* 12916 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 12917 */;
+import SearchRecentMessageStore from "SearchRecentMessageStore" /* 12924 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 12925 */;
 
 require = fn;
 function getShortcuts() {
@@ -284,7 +284,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(12918);
+    obj2 = replaced(12926);
   }
   return flag;
 }
@@ -555,12 +555,12 @@ function getChannelAutocompletions(arg0) {
       let obj = { query: substr1, type, guildId, limit: Infinity, allowEmptyQueries: true, allowSnowflake: true, includeAllThreads: true, boosters: null };
       const obj12 = AutocompleteUtilsDefault;
       const tmp7 = importDefault;
-      obj.boosters = tmp(6188).getBoosterMap(tmp(8925).AutocompleterResultTypes.TEXT_CHANNEL);
-      const tmpResult = tmp(6188);
+      obj.boosters = tmp(6189).getBoosterMap(tmp(8926).AutocompleterResultTypes.TEXT_CHANNEL);
+      const tmpResult = tmp(6189);
       const queryChannelsResult = obj12.queryChannels(obj);
       obj2 = { query: substr1, type: type2, guildId, limit: Infinity, allowEmptyQueries: true, allowSnowflake: true, boosters: null };
       const obj16 = AutocompleteUtilsDefault;
-      obj2.boosters = tmp(6188).getBoosterMap(tmp(8925).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj2.boosters = tmp(6189).getBoosterMap(tmp(8926).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(obj16.queryChannels(obj2));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -572,7 +572,7 @@ function getChannelAutocompletions(arg0) {
         }
       }
       importDefault = GuildChannelStore.getTextChannelNameDisambiguations(guildId);
-      const tmpResult4 = tmp(6188);
+      const tmpResult4 = tmp(6189);
       const obj19 = tmp7(12)(mapped);
       const takeResult = tmp7(12)(mapped).take(maxResults);
       let substr3 = tmp7(12)(mapped).take(maxResults).map((channel) => {
@@ -600,15 +600,15 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj5 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj5.boosters = tmp(6188).getBoosterMap(tmp(8925).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult5 = tmp(6188);
+          obj5.boosters = tmp(6189).getBoosterMap(tmp(8926).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult5 = tmp(6189);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj5);
           const obj6 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj6.boosters = tmp(6188).getBoosterMap(tmp(8925).AutocompleterResultTypes.USER);
-          const tmpResult6 = tmp(6188);
+          obj6.boosters = tmp(6189).getBoosterMap(tmp(8926).AutocompleterResultTypes.USER);
+          const tmpResult6 = tmp(6189);
           const queryDMChannelsResult = obj8.queryDMChannels(obj6);
-          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(8925).sortByMatchScore);
+          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(8926).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             const obj = { text: record.comparator, channel: record, key: null };

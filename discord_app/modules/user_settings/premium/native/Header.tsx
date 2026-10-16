@@ -1,21 +1,21 @@
-// === Module 14461: premium/Header ===
+// === Module 14471: premium/Header ===
 
-// Module 14461 (premium/Header)
+// Module 14471 (premium/Header)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 5028 */;
 import useThemeDefault from "useTheme" /* 5090 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import _modDef14462 from "module_14462" /* 14462 */;
-import _modDef14463 from "module_14463" /* 14463 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import _modDef14472 from "module_14472" /* 14472 */;
+import _modDef14473 from "module_14473" /* 14473 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -39,9 +39,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(s
       tmp9 = cResult[3];
     }
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result = _modDef14462;
+      let tmp5Result = _modDef14472;
     } else {
-      tmp5Result = _modDef14463;
+      tmp5Result = _modDef14473;
     }
     if (cResult[4] !== tmp5Result) {
       const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -105,9 +105,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(s
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef14462;
+    let tmp2Result = _modDef14472;
   } else {
-    tmp2Result = _modDef14463;
+    tmp2Result = _modDef14473;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];

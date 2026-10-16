@@ -1,10 +1,10 @@
-// === Module 18687: EmptyServerSettingsEmoji ===
+// === Module 18700: EmptyServerSettingsEmoji ===
 
-// Module 18687 (EmptyServerSettingsEmoji)
+// Module 18700 (EmptyServerSettingsEmoji)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5028 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import _mod8586 from "module_8586" /* 8586 */;
+import _mod8587 from "module_8587" /* 8587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,50 +16,50 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmptyServ
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18688");
+          return require("module_18701");
         },
       darker() {
-          return require("module_18689");
+          return require("module_18702");
         },
       light() {
-          return require("module_18690");
+          return require("module_18703");
         }
     };
-    const illustrationSource = _mod8586.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8587.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8586;
+    const tmpResult = _mod8587;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useEmptyServerSettingsEmojiSource() {
   const obj = shared;
-  return _mod8586.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8587.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18688");
+      return require("module_18701");
     },
     darker() {
-      return require("module_18689");
+      return require("module_18702");
     },
     light() {
-      return require("module_18690");
+      return require("module_18703");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getEmptyServerSettingsEmojiSource(theme) {
-  return _mod8586.getIllustrationSource(theme, {
+  return _mod8587.getIllustrationSource(theme, {
     dark() {
-      return require("module_18688");
+      return require("module_18701");
     },
     darker() {
-      return require("module_18689");
+      return require("module_18702");
     },
     light() {
-      return require("module_18690");
+      return require("module_18703");
     }
   });
 }

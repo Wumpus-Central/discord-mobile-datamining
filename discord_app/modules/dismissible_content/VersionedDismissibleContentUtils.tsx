@@ -4,11 +4,11 @@
 import Server from "Server" /* 2000 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import TypeUtils from "TypeUtils" /* 2080 */;
-import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 13855 */;
-import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 14989 */;
-import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 14990 */;
+import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 13866 */;
+import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 14999 */;
+import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 15000 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7497 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7499 */;
 
 require = fn;
 const size = fn(2);
@@ -37,12 +37,13 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
           if (dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {
               if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA !== id) {
-                if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
-                  return 0;
-                } else {
-                  TypeUtils.assertUnreachable(id, { andFail: false });
-                  return 0;
+                if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER !== id) {
+                  if (dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_USER_DM_SIDEBAR_EMBED !== id) {
+                    TypeUtils.assertUnreachable(id, { andFail: false });
+                    return 0;
+                  }
                 }
+                return 0;
               }
             }
           }

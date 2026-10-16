@@ -1,12 +1,12 @@
-// === Module 11260: transformMessage ===
+// === Module 11257: transformMessage ===
 
-// Module 11260 (transformMessage)
+// Module 11257 (transformMessage)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Server from "Server" /* 2000 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5141 */;
-import useMessageAuthor from "useMessageAuthor" /* 5845 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 11261 */;
-import transformUserDefault from "transformUser" /* 11262 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5142 */;
+import useMessageAuthor from "useMessageAuthor" /* 5846 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 11258 */;
+import transformUserDefault from "transformUser" /* 11259 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;

@@ -1,12 +1,12 @@
-// === Module 12084: ConjureShimmer ===
+// === Module 12083: ConjureShimmer ===
 
-// Module 12084 (ConjureShimmer)
+// Module 12083 (ConjureShimmer)
 import _modDef683 from "module_683" /* 683 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_13 = createStyles.createStyles({ root: { position: "relative" }, band: { position: "absolute", top: 0, bottom: 0 }, fill: { flex: 1 } });
 const __initData = { code: "function ConjureShimmerTsx1(){const{bandWidth,progress,width}=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};}" };
 const __initData2 = { code: "function ConjureShimmerTsx2(){const{bandWidth,progress,width}=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};}" };
@@ -240,9 +240,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                 const obj10 = { style: tmp4.fill, start, end, colors: tmp22, locations };
                 obj8.children = closure_8(require("LinearGradient"), obj10);
                 obj6.children = closure_8(require("ReanimatedRexport").View, obj8);
-                obj4.children = closure_8(require("module_6465"), obj6);
+                obj4.children = closure_8(require("module_6467"), obj6);
                 tmp29 = closure_8(closure_6, obj4);
-                const tmp32 = require("module_6465");
+                const tmp32 = require("module_6467");
               }
               cResult[22] = live;
               cResult[23] = tmp22;
@@ -435,11 +435,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     items4[2] = animatedStyle;
     obj8.style = items4;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
-    obj8.children = closure_8(width(5453), obj10);
+    obj8.children = closure_8(width(5454), obj10);
     obj6.children = closure_8(width(4909).View, obj8);
-    obj5.children = closure_8(width(6465), obj6);
+    obj5.children = closure_8(width(6467), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(6465);
+    const tmp18 = width(6467);
   }
   items3[1] = tmp14;
   obj4.children = items3;

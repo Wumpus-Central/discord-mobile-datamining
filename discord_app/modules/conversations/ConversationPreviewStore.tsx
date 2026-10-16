@@ -1,12 +1,12 @@
-// === Module 7537: ConversationPreviewStore ===
+// === Module 7538: ConversationPreviewStore ===
 
-// Module 7537 (ConversationPreviewStore)
+// Module 7538 (ConversationPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import privDefault from "priv" /* 1459 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7535 */;
-import ConversationsUtils from "ConversationsUtils" /* 7536 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5497 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7536 */;
+import ConversationsUtils from "ConversationsUtils" /* 7537 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -109,8 +109,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(7534).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(7534).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5132).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5132).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -123,8 +123,8 @@ prototype["initialize"] = function initialize() {
 prototype["touchConversation"] = function touchConversation(arg0) {
   return null != navigation.get(arg0);
 };
-prototype["getConversation"] = function getConversation(conversationId) {
-  const peekResult = navigation.peek(conversationId);
+prototype["getConversation"] = function getConversation(arg0) {
+  const peekResult = navigation.peek(arg0);
   let conversation;
   if (peekResult != null) {
     conversation = peekResult.conversation;
@@ -207,10 +207,10 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
   },
   CONVERSATION_MESSAGES_FETCH_START: function handleConversationMessagesFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
-    if (true !== conversationId.isStandalone) {
+    let str = "preview";
+    if ("preview" !== conversationId.cacheType) {
       return false;
     } else {
-      let str = "preview";
       if (tmp) {
         str = "full";
       }
@@ -225,13 +225,13 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       }
     }
   },
-  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(isStandalone) {
-    ({ conversationId, fullyHydrated } = isStandalone);
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(cacheType) {
+    ({ conversationId, fullyHydrated } = cacheType);
     _require = undefined;
-    if (true !== isStandalone.isStandalone) {
+    let str = "preview";
+    if ("preview" !== cacheType.cacheType) {
       return false;
     } else {
-      let str = "preview";
       if (fullyHydrated) {
         str = "full";
       }
@@ -280,10 +280,10 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
   },
   CONVERSATION_MESSAGES_FETCH_FAILURE: function handleConversationMessagesFetchFailure(conversationId) {
     conversationId = conversationId.conversationId;
-    if (true !== conversationId.isStandalone) {
+    let str = "preview";
+    if ("preview" !== conversationId.cacheType) {
       return false;
     } else {
-      let str = "preview";
       if (tmp) {
         str = "full";
       }

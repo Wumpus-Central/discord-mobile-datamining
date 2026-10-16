@@ -1,13 +1,13 @@
-// === Module 16265: SettingsAppearanceChannelList ===
+// === Module 16279: SettingsAppearanceChannelList ===
 
-// Module 16265 (SettingsAppearanceChannelList)
+// Module 16279 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 16266 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 16267 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 16268 */;
-import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 16274 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 16277 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 16280 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 16281 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 16282 */;
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 16288 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 16291 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
               tmp23 = tmp26;
             }
             const obj5 = { contentContainerStyle: tmp16, data, renderItem: tmp5, keyExtractor: tmp18, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };
-            const tmp21 = closure_5(animatedStyles(7036).FlashList, obj5);
+            const tmp21 = closure_5(animatedStyles(7038).FlashList, obj5);
             cResult[14] = data;
             cResult[15] = tmp5;
             cResult[16] = tmp21;
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = closure_5(animatedStyles(7036).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(7038).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj.children = items2;
   return closure_6(ReanimatedRexportDefault.View, obj);

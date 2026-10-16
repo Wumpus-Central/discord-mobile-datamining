@@ -1,6 +1,6 @@
-// === Module 16177: NoFillQuestDock ===
+// === Module 16191: NoFillQuestDock ===
 
-// Module 16177 (NoFillQuestDock)
+// Module 16191 (NoFillQuestDock)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -8,10 +8,10 @@ const require = globalThis.__r;
 const require = fn;
 let View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
-let closure_4 = createStyles.createStyles({ placeholder: { position: "absolute", left: 0, right: 0, height: fn(16053).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 } });
+const createStyles = fn(5154);
+let closure_4 = createStyles.createStyles({ placeholder: { position: "absolute", left: 0, right: 0, height: fn(16067).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 } });
 const ReactCompilerGating = fn(558);
-let obj2 = { placeholder: { position: "absolute", left: 0, right: 0, height: fn(16053).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 } };
+let obj2 = { placeholder: { position: "absolute", left: 0, right: 0, height: fn(16067).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/NoFillQuestDock.tsx");
 
@@ -88,12 +88,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NoFillQu
   _require = tmp;
   youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   if (null == noFillDecision.adContentId) {
-    const obj2 = { ref: "IconComponent", accessibilityElementsHidden: "no-hide-descendants", importantForAccessibility: "none", pointerEvents: null, style: "1234" };
+    const obj2 = { ref: "IconComponent", accessibilityElementsHidden: "no-hide-descendants", importantForAccessibility: "none", pointerEvents: null, style: "flex" };
     let items = [tmp.placeholder, ];
     const obj3 = { bottom: youBarTotalHeight - 1 };
     items[1] = obj3;
     obj2.style = items;
-    let tmp7 = <View ref="IconComponent" accessibilityElementsHidden="no-hide-descendants" importantForAccessibility="none" pointerEvents={null} style="1234" />;
+    let tmp7 = <View ref="IconComponent" accessibilityElementsHidden="no-hide-descendants" importantForAccessibility="none" pointerEvents={null} style="flex" />;
   } else {
     const obj4 = {
       adContentId: noFillDecision.adContentId,

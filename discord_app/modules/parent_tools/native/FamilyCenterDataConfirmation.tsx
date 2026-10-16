@@ -1,25 +1,25 @@
-// === Module 12581: FamilyCenterDataConfirmation ===
+// === Module 12587: FamilyCenterDataConfirmation ===
 
-// Module 12581 (FamilyCenterDataConfirmation)
+// Module 12587 (FamilyCenterDataConfirmation)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2571 from "module_2571" /* 2571 */;
 import UserPlusIcon from "UserPlusIcon" /* 5094 */;
 import ClockIcon from "ClockIcon" /* 5113 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import TableRow from "TableRow" /* 6402 */;
-import XSmallIcon from "XSmallIcon" /* 6430 */;
-import TableRowGroup from "TableRowGroup" /* 6487 */;
-import SettingsIcon from "SettingsIcon" /* 7315 */;
-import CreditCardIcon from "CreditCardIcon" /* 7777 */;
-import ForumIcon from "ForumIcon" /* 8441 */;
-import ServerIcon from "ServerIcon" /* 9480 */;
-import FlagIcon from "FlagIcon" /* 9810 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12582 */;
-import PhoneIcon from "PhoneIcon" /* 12583 */;
-import GiftIcon from "GiftIcon" /* 12585 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 12586 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import TableRow from "TableRow" /* 6404 */;
+import XSmallIcon from "XSmallIcon" /* 6432 */;
+import TableRowGroup from "TableRowGroup" /* 6489 */;
+import SettingsIcon from "SettingsIcon" /* 7317 */;
+import CreditCardIcon from "CreditCardIcon" /* 7778 */;
+import ForumIcon from "ForumIcon" /* 8442 */;
+import ServerIcon from "ServerIcon" /* 9481 */;
+import FlagIcon from "FlagIcon" /* 9809 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12588 */;
+import PhoneIcon from "PhoneIcon" /* 12589 */;
+import GiftIcon from "GiftIcon" /* 12591 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

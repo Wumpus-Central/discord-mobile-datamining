@@ -1,12 +1,12 @@
-// === Module 13186: useGameServerPerk ===
+// === Module 13194: useGameServerPerk ===
 
-// Module 13186 (useGameServerPerk)
+// Module 13194 (useGameServerPerk)
 import util from "util" /* 1128 */;
 import _modDef3027 from "module_3027" /* 3027 */;
-import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 13187 */;
-import _modDef13188 from "module_13188" /* 13188 */;
+import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 13195 */;
+import _modDef13196 from "module_13196" /* 13196 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8253 */;
+import GameServerStore from "GameServerStore" /* 8254 */;
 
 const require = globalThis.__r;
 
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
         }
         if (cResult[8] === stateFromStores) {
         }
-        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef13188, staticImageUrl: null };
-        tmp9Result = _modDef13188;
+        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef13196, staticImageUrl: null };
+        tmp9Result = _modDef13196;
         obj3.staticImageUrl = tmp9Result;
         cResult[8] = stateFromStores;
         cResult[9] = tmp14;
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef13188;
-        obj.staticImageUrl = _modDef13188;
+        obj.animatedImageUrl = _modDef13196;
+        obj.staticImageUrl = _modDef13196;
         tmp = obj;
       }
     }

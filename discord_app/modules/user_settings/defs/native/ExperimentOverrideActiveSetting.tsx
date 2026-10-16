@@ -1,11 +1,11 @@
-// === Module 16740: ExperimentOverrideActiveSetting ===
+// === Module 16754: ExperimentOverrideActiveSetting ===
 
-// Module 16740 (ExperimentOverrideActiveSetting)
+// Module 16754 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15522 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15808 */;
-import DevToolsContent from "DevToolsContent" /* 16741 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15532 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15818 */;
+import DevToolsContent from "DevToolsContent" /* 16755 */;
 import ExperimentStore from "ExperimentStore" /* 5075 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
 
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperim
   const str = closure_5();
   return jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: closure_5().toString() });
 });
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return closure_5() > 0 && staffOrDeveloperSettingPredicate;
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(16568).BeakerIcon,
+  IconComponent: fn(16582).BeakerIcon,
   useDescription: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();

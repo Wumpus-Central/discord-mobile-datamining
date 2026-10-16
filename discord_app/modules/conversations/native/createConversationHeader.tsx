@@ -1,29 +1,22 @@
-// === Module 12726: createConversationHeader ===
+// === Module 12736: createConversationHeader ===
 
-// Module 12726 (createConversationHeader)
+// Module 12736 (createConversationHeader)
 import util from "util" /* 1128 */;
 import _modDef3767 from "module_3767" /* 3767 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
-import computeScrollData from "computeScrollData" /* 9833 */;
-import _modDef12208 from "module_12208" /* 12208 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7967 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8112 */;
+import computeScrollData from "computeScrollData" /* 9832 */;
+import _modDef12212 from "module_12212" /* 12212 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7968 */;
 import size from "module_2" /* 2 */;
 
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const result = size.fileFinishedImporting("modules/conversations/native/createConversationHeader.tsx");
 
 export default function createConversationHeader(conversationId) {
-  const obj = { conversationId: conversationId.id, channelId: conversationId.channelId, startMessageId: conversationId.startMessageId, title: conversationId.title, expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12208), expandAccessibilityLabel: null };
+  const obj = { conversationId: conversationId.id, channelId: conversationId.channelId, startMessageId: conversationId.startMessageId, title: conversationId.title, expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12212), expandAccessibilityLabel: null };
   const intl = util.intl;
   obj.expandAccessibilityLabel = intl.string(_modDef3767.pU5Dut);
   return obj;
-};
-export const isConversationStartMessage = function isConversationStartMessage(startMessageId, id) {
-  let tmp = startMessageId.startMessageId === id;
-  if (tmp) {
-    tmp = startMessageId.messageCount > 1;
-  }
-  return tmp;
 };
 export const findConversationHeaderRowIndex = function findConversationHeaderRowIndex(previousRows, startMessageId) {
   const findMessageRowIndexResult = computeScrollData.findMessageRowIndex(previousRows, startMessageId.startMessageId);

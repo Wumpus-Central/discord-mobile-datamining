@@ -1,6 +1,6 @@
-// === Module 12012: MediaKeyboardBottomSheet ===
+// === Module 12009: MediaKeyboardBottomSheet ===
 
-// Module 12012 (MediaKeyboardBottomSheet)
+// Module 12009 (MediaKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -23,7 +23,7 @@ const MetaQuestUtils = fn(1630);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1384);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

@@ -1,12 +1,12 @@
-// === Module 12937: NewMessageUserList ===
+// === Module 12945: NewMessageUserList ===
 
-// Module 12937 (NewMessageUserList)
+// Module 12945 (NewMessageUserList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useChannelName from "useChannelName" /* 5483 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6319 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useChannelName from "useChannelName" /* 5484 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6321 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -95,11 +95,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10456).UserRowModes;
+const UserRowModes = fn(10457).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

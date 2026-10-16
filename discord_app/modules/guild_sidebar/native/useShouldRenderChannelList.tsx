@@ -1,13 +1,13 @@
-// === Module 17314: useShouldRenderChannelList ===
+// === Module 17326: useShouldRenderChannelList ===
 
-// Module 17314 (useShouldRenderChannelList)
+// Module 17326 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
 import RootNavigationRef from "RootNavigationRef" /* 5036 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7416 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
+import CacheStore from "CacheStore" /* 7418 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5976 */;
 
 require = fn;
 const ComponentActions = fn(1087).ComponentActions;

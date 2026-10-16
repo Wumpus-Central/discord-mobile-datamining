@@ -1,6 +1,6 @@
-// === Module 6998: useCharacterLimitAnnouncement ===
+// === Module 7000: useCharacterLimitAnnouncement ===
 
-// Module 6998 (useCharacterLimitAnnouncement)
+// Module 7000 (useCharacterLimitAnnouncement)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
 import noop from "module_19" /* 19 */;
 

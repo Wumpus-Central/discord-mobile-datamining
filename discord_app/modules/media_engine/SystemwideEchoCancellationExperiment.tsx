@@ -1,6 +1,6 @@
-// === Module 15010: SystemwideEchoCancellationExperiment ===
+// === Module 15020: SystemwideEchoCancellationExperiment ===
 
-// Module 15010 (SystemwideEchoCancellationExperiment)
+// Module 15020 (SystemwideEchoCancellationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

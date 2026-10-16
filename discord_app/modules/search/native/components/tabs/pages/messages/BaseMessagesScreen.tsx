@@ -1,16 +1,16 @@
-// === Module 17778: BaseMessagesScreen ===
+// === Module 17788: BaseMessagesScreen ===
 
-// Module 17778 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12907 */;
-import SearchUtils from "SearchUtils" /* 12914 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12928 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 17780 */;
+// Module 17788 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12915 */;
+import SearchUtils from "SearchUtils" /* 12922 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12936 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 17790 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6280 */;
-import SearchQueryStore from "SearchQueryStore" /* 12921 */;
+import SearchMessageStore from "SearchMessageStore" /* 6281 */;
+import SearchQueryStore from "SearchQueryStore" /* 12929 */;
 
 require = fn;
-const constants = fn(9548).SearchResultContentEntityTypes;
+const constants = fn(9549).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

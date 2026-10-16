@@ -1,23 +1,23 @@
-// === Module 13323: PaintIllocon ===
+// === Module 13331: PaintIllocon ===
 
-// Module 13323 (PaintIllocon)
+// Module 13331 (PaintIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6495 */;
-import _modDef13324 from "module_13324" /* 13324 */;
-import _modDef13325 from "module_13325" /* 13325 */;
-import _modDef13326 from "module_13326" /* 13326 */;
+import assetHelpers from "assetHelpers" /* 6497 */;
+import _modDef13332 from "module_13332" /* 13332 */;
+import _modDef13333 from "module_13333" /* 13333 */;
+import _modDef13334 from "module_13334" /* 13334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13324 }, 3: null };
-const obj2 = { uri: _modDef13324 };
-obj[2] = { uri: _modDef13325 };
-const obj3 = { uri: _modDef13325 };
-obj[3] = { uri: _modDef13326 };
+let obj = { 1: null, 2: { uri: _modDef13332 }, 3: null };
+const obj2 = { uri: _modDef13332 };
+obj[2] = { uri: _modDef13333 };
+const obj3 = { uri: _modDef13333 };
+obj[3] = { uri: _modDef13334 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13326 };
+const obj4 = { uri: _modDef13334 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const PaintIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6495).getAssetSource(obj);
+  obj.source = num(6497).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

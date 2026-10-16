@@ -1,17 +1,17 @@
-// === Module 12562: AppealIngestionConfirmSubmission ===
+// === Module 12568: AppealIngestionConfirmSubmission ===
 
-// Module 12562 (AppealIngestionConfirmSubmission)
+// Module 12568 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7731 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12533 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12539 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12542 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12558 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12563 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7732 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12539 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12545 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12548 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12564 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12569 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7756 */;
+import SafetyHubStore from "SafetyHubStore" /* 7757 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 16 }, detailsAction: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx");

@@ -1,10 +1,10 @@
-// === Module 18766: InviteEmpty ===
+// === Module 18779: InviteEmpty ===
 
-// Module 18766 (InviteEmpty)
+// Module 18779 (InviteEmpty)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5028 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import _mod8586 from "module_8586" /* 8586 */;
+import _mod8587 from "module_8587" /* 8587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,50 +16,50 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_10556");
+          return require("module_10557");
         },
       darker() {
-          return require("module_18767");
+          return require("module_18780");
         },
       light() {
-          return require("module_10555");
+          return require("module_10556");
         }
     };
-    const illustrationSource = _mod8586.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8587.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8586;
+    const tmpResult = _mod8587;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useInviteEmptySource() {
   const obj = shared;
-  return _mod8586.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8587.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10556");
+      return require("module_10557");
     },
     darker() {
-      return require("module_18767");
+      return require("module_18780");
     },
     light() {
-      return require("module_10555");
+      return require("module_10556");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getInviteEmptySource(theme) {
-  return _mod8586.getIllustrationSource(theme, {
+  return _mod8587.getIllustrationSource(theme, {
     dark() {
-      return require("module_10556");
+      return require("module_10557");
     },
     darker() {
-      return require("module_18767");
+      return require("module_18780");
     },
     light() {
-      return require("module_10555");
+      return require("module_10556");
     }
   });
 }

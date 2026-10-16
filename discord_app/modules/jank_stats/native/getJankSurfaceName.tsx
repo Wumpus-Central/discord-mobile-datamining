@@ -1,8 +1,8 @@
-// === Module 17063: getJankSurfaceName ===
+// === Module 17077: getJankSurfaceName ===
 
-// Module 17063 (getJankSurfaceName)
-import getJankScreenName from "getJankScreenName" /* 17058 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17062 */;
+// Module 17077 (getJankSurfaceName)
+import getJankScreenName from "getJankScreenName" /* 17072 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17076 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4861 */;
 
@@ -85,7 +85,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17059);
+const JankScreenConstants = fn(17073);
 ({ CHANNEL_DETAILS_SCREEN: hasOwnProperty, INTERACTION_NONE: metroRequire, PANEL_SURFACE: closure_7, SHEET_SURFACE: closure_8 } = JankScreenConstants);
 const set = new Set(["SimpleActionSheet"]);
 const main = "main";

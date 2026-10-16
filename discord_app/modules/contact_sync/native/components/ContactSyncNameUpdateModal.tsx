@@ -1,10 +1,10 @@
-// === Module 15811: ContactSyncNameUpdateModal ===
+// === Module 15821: ContactSyncNameUpdateModal ===
 
-// Module 15811 (ContactSyncNameUpdateModal)
+// Module 15821 (ContactSyncNameUpdateModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import Navigator from "Navigator" /* 6910 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import Navigator from "Navigator" /* 6912 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,10 +14,10 @@ function onClose() {
   ModalActionCreatorsDefault.pop();
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(13269).ContactSyncScenes;
+const ContactSyncScenes = fn(13277).ContactSyncScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6481).NAV_BAR_HEIGHT + 32 } };
+const createStyles = fn(5154);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6483).NAV_BAR_HEIGHT + 32 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncNameInputScreen() {
@@ -31,7 +31,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     _require = asyncGeneratorStep(async (arg0) => {
       closure_1 = tmp3;
       closure_0(true);
-      await first(13275).updateName(closure_0);
+      await first(13283).updateName(closure_0);
       if (1 === tmp7) {
         c3 = 0;
         const obj7 = { text: null, variant: "critical" };
@@ -114,7 +114,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     cResult[7] = tmp16;
     tmp13 = tmp16;
   }
-  const tmp12 = jsx(onNext(13289), { onNext, onRemoveName: S, loading: tmp6, initialName: undefined });
+  const tmp12 = jsx(onNext(13297), { onNext, onRemoveName: S, loading: tmp6, initialName: undefined });
   cResult[2] = tmp6;
   cResult[3] = undefined;
   cResult[4] = tmp12;
@@ -132,7 +132,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
   }
   dependencyMap = async function _onNext2(arg0) {
     _require(true);
-    await tmp3(13275).updateName(closure_0);
+    await tmp3(13283).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { text: null, variant: "critical" };
@@ -174,7 +174,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(13289), {
+  obj2.children = jsx(onNext(13297), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -194,11 +194,11 @@ const obj6 = {
   headerLeft: null,
   title: ""
 };
-const NavigatorHeader = fn(6423);
+const NavigatorHeader = fn(6425);
 obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
 obj5[ContactSyncScenes.NAME_INPUT] = obj6;
 ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6481).NAV_BAR_HEIGHT + 32 };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6483).NAV_BAR_HEIGHT + 32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 

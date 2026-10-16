@@ -1,38 +1,38 @@
-// === Module 18076: ActivityPanelPIPView ===
+// === Module 18086: ActivityPanelPIPView ===
 
-// Module 18076 (ActivityPanelPIPView)
+// Module 18086 (ActivityPanelPIPView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import native2 from "native" /* 4886 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import spring from "spring" /* 5440 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10621 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11239 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18074 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 18078 */;
+import timing from "timing" /* 5155 */;
+import spring from "spring" /* 5441 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10618 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11236 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18084 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 18088 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11287 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11284 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 
 require = fn;
 const View = fn(17).View;
 const ActivityLayoutMode = fn(2026).ActivityLayoutMode;
-const ActivityPanelConstants = fn(6291);
+const ActivityPanelConstants = fn(6287);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_11, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(18077).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(18087).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1087).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(12844).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(12850).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1202);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1202).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -724,8 +724,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const obj2 = { transitionState, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: tmp16, context: applicationId(18074), children: tmp17 };
-    const tmp23 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={tmp16} context={applicationId(18074)}>{tmp17}</closure_28>;
+    const obj2 = { transitionState, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: tmp16, context: applicationId(18084), children: tmp17 };
+    const tmp23 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={tmp16} context={applicationId(18084)}>{tmp17}</closure_28>;
     cResult[11] = stateFromStores;
     cResult[12] = tmp16;
     cResult[13] = tmp17;
@@ -733,7 +733,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[15] = transitionState;
     cResult[16] = tmp23;
   }
-  const tmp18 = jsx(applicationId(11239), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
+  const tmp18 = jsx(applicationId(11236), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
   cResult[8] = stateFromStores1;
   cResult[9] = landscapeSafeAreasConfig;
   cResult[10] = tmp18;

@@ -1,7 +1,7 @@
-// === Module 14338: ErrorUtils ===
+// === Module 14348: ErrorUtils ===
 
-// Module 14338 (ErrorUtils)
-import _mod14339 from "module_14339" /* 14339 */;
+// Module 14348 (ErrorUtils)
+import _mod14349 from "module_14349" /* 14349 */;
 import size from "module_2" /* 2 */;
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -38,5 +38,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(_mod14339.normalizeToSize(error1));
+  return JSON.stringify(_mod14349.normalizeToSize(error1));
 };

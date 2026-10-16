@@ -1,17 +1,17 @@
-// === Module 9574: ConversationsActionCreators ===
+// === Module 9573: ConversationsActionCreators ===
 
-// Module 9574 (ConversationsActionCreators)
+// Module 9573 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7690 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 7697 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9577 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7399 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7691 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 7698 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7532 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7537 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 9575 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 9576 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7534 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7538 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9574 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 9575 */;
 
 require = fn;
 let closure_10 = async function _fetchChannelConversations(arg0) {
@@ -121,7 +121,17 @@ let closure_10 = async function _fetchChannelConversations(arg0) {
   iter.next();
   return iter;
 };
-let closure_11 = async function _fetchConversation(arg0) {
+function fetchConversation() {
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_12 = async function _fetchConversation(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -189,9 +199,64 @@ let closure_11 = async function _fetchConversation(arg0) {
     }
   }
 };
+let closure_13 = async function _hydrateSelectedConversation(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          closure_131_2 = closure_2;
+          if ("preview" === closure_2) {
+            c5 = 1;
+            c6 = 1;
+            const obj4 = { value: fetchConversation(tmp19, tmp20), done: false };
+            return obj4;
+          }
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+      const obj5 = { includeReactions: true, includeMessageReferences: true, cacheType: closure_131_2 };
+      closure_132_14(closure_131_0, closure_131_1, obj5);
+      c6 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp14) {
+      c6 = tmp;
+      throw tmp14;
+    }
+  }
+};
 function fetchConversationMessages() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -199,14 +264,14 @@ function fetchConversationMessages() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _fetchConversationMessages() {
+let closure_15 = async function _fetchConversationMessages() {
   closure_2 = arg2;
-  c7 = 0;
-  c8 = 0;
   c6 = 0;
+  c7 = 0;
+  c5 = 0;
   return (async (arg0, value, arg2) => {
-    if (c8 === 2) {
-      c8 = 3;
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
@@ -219,109 +284,101 @@ let closure_13 = async function _fetchConversationMessages() {
       }
     } else {
       try {
-        c8 = 2;
-        if (0 === c7) {
+        c7 = 2;
+        if (0 === c6) {
           if (arg0 === 1) {
-            c8 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c8 = 3;
+            c7 = 3;
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            closure_5 = tmp3;
-            closure_4 = tmp7;
-            closure_132_0 = channelId;
-            closure_132_1 = conversationId;
-            closure_132_2 = undefined;
-            closure_132_3 = undefined;
-            closure_132_4 = undefined;
-            closure_3 = closure_2;
-            if (closure_2 == null) {
-              closure_3 = {};
-            }
-            ({ previewLimit, isStandalone } = closure_3);
-            let tmp18 = undefined !== isStandalone;
-            ({ includeMessageReferences, includeReactions } = closure_3);
-            if (tmp18) {
-              tmp18 = isStandalone;
-            }
-            closure_132_2 = tmp18;
-            closure_132_3 = tmp19;
+            closure_4 = tmp3;
+            closure_3 = tmp7;
+            closure_131_0 = channelId;
+            closure_131_1 = conversationId;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            ({ previewLimit, cacheType } = closure_2);
+            closure_131_2 = cacheType;
+            closure_131_3 = tmp53;
+            ({ includeMessageReferences, includeReactions } = closure_2);
             if (null == previewLimit) {
-              if (tmp18) {
+              if ("preview" === cacheType) {
                 let isFullyHydratedResult = ConversationPreviewStore.isFullyHydrated(conversationId);
               } else {
                 isFullyHydratedResult = ChannelConversationsStore.isFullyHydrated(channelId, conversationId);
               }
               if (isFullyHydratedResult) {
-                c8 = 3;
+                c7 = 3;
                 return { value: "IconComponent", done: null };
               }
             } else {
-              if (tmp18) {
+              if ("preview" === cacheType) {
                 let hydratedMessages = ConversationPreviewStore.getHydratedMessages(conversationId);
               } else {
                 hydratedMessages = ChannelConversationsStore.getHydratedMessages(channelId, conversationId);
               }
               if (null != hydratedMessages) {
-                c8 = 3;
+                c7 = 3;
                 return { value: "IconComponent", done: null };
               }
             }
-            if (tmp18) {
-              let result = ConversationPreviewStore.isConversationFetchPending(conversationId, tmp19);
+            if ("preview" === cacheType) {
+              let result = ConversationPreviewStore.isConversationFetchPending(conversationId, tmp53);
             } else {
-              result = ChannelConversationsStore.isConversationFetchPending(conversationId, tmp19);
+              result = ChannelConversationsStore.isConversationFetchPending(conversationId, tmp53);
             }
             if (!result) {
-              const obj6 = { type: "CONVERSATION_MESSAGES_FETCH_START", channelId, conversationId, full: tmp19, isStandalone: tmp18 };
+              const obj6 = { type: "CONVERSATION_MESSAGES_FETCH_START", channelId, conversationId, full: tmp53, cacheType };
               DispatcherDefault.dispatch(obj6);
-              c6 = 1;
+              c5 = 1;
               const HTTP = HTTPUtils.HTTP;
               const request = { url: Endpoints.CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId), query: null, oldFormErrors: true, rejectWithError: true };
               const obj7 = { limit: previewLimit, include_message_references: includeMessageReferences, include_reactions: includeReactions };
               request.query = obj7;
-              c7 = 2;
-              c8 = 1;
+              c6 = 2;
+              c7 = 1;
               const obj8 = { value: HTTP.get(request), done: false };
               return obj8;
             }
           }
         } else {
           if (1 === tmp7) {
-            c6 = 0;
-            const obj9 = { type: "CONVERSATION_MESSAGES_FETCH_FAILURE", channelId: closure_132_0, conversationId: closure_132_1, full: closure_132_3, isStandalone: closure_132_2 };
-            closure_133_1(closure_133_2[8]).dispatch(obj9);
-            const obj2 = closure_133_1(closure_133_2[8]);
+            c5 = 0;
+            const obj9 = { type: "CONVERSATION_MESSAGES_FETCH_FAILURE", channelId: closure_131_0, conversationId: closure_131_1, full: closure_131_3, cacheType: closure_131_2 };
+            closure_132_1(closure_132_2[8]).dispatch(obj9);
+            const obj2 = closure_132_1(closure_132_2[8]);
           } else if (arg0 === 1) {
-            c8 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            closure_132_4 = value;
-            const obj10 = { type: "CONVERSATION_MESSAGES_FETCH_SUCCESS", channelId: closure_132_0, conversationId: closure_132_1, messages: closure_132_4.body.messages, messageReferences: closure_132_4.body.reference_messages, fullyHydrated: closure_132_3, isStandalone: closure_132_2 };
-            closure_133_1(closure_133_2[8]).dispatch(obj10);
-            c6 = 0;
-            const obj11 = closure_133_1(closure_133_2[8]);
+            closure_131_4 = value;
+            const obj10 = { type: "CONVERSATION_MESSAGES_FETCH_SUCCESS", channelId: closure_131_0, conversationId: closure_131_1, messages: closure_131_4.body.messages, messageReferences: closure_131_4.body.reference_messages, fullyHydrated: closure_131_3, cacheType: closure_131_2 };
+            closure_132_1(closure_132_2[8]).dispatch(obj10);
+            c5 = 0;
+            const obj11 = closure_132_1(closure_132_2[8]);
           }
-          c6 = 0;
-          c8 = 3;
+          c5 = 0;
+          c7 = 3;
           const obj = { value, done: true };
           return obj;
         }
-        c8 = 3;
-      } catch (tmp35) {
-        if (tmp4 === c6) {
-          c8 = tmp2;
-          throw tmp35;
+        c7 = 3;
+      } catch (tmp32) {
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp32;
         } else {
-          c7 = tmp;
+          c6 = tmp;
         }
       }
     }
   })();
 };
-const FETCH_LIMIT = fn(7534).FETCH_LIMIT;
+const FETCH_LIMIT = fn(5132).FETCH_LIMIT;
 const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -336,41 +393,37 @@ export const fetchChannelConversations = function fetchChannelConversations() {
   }
   return applyArgumentsResult;
 };
-export const fetchConversation = function fetchConversation() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
+export { fetchConversation };
 export const toggleConversationHighlighting = function toggleConversationHighlighting() {
   DispatcherDefault.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 };
-export const setSelectedConversation = function setSelectedConversation(channelId, conversationId, arg2) {
-  let obj = arg2;
-  if (arg2 === undefined) {
-    obj = {};
+export const setSelectedConversation = function setSelectedConversation(channelId, id, arg2) {
+  ({ cacheType, shouldJump } = arg2);
+  if (shouldJump === undefined) {
+    shouldJump = true;
   }
-  let flag = obj.shouldJump;
-  if (flag === undefined) {
-    flag = true;
-  }
-  if (null != conversationId) {
-    const obj2 = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
-    DispatcherDefault.dispatch(obj2);
-    fetchConversationMessages(channelId, conversationId, { includeReactions: true, includeMessageReferences: true });
-    if (flag) {
-      const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
+  if (null != id) {
+    const obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId: id, cacheType };
+    DispatcherDefault.dispatch(obj);
+    (function hydrateSelectedConversation() {
+      const self = this;
+      const apply = closure_1_13.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })(channelId, id, cacheType);
+    if (shouldJump) {
+      const conversation = SelectedConversationStore.getConversation(channelId);
       let startMessageId;
-      if (conversationMetadata != null) {
-        startMessageId = conversationMetadata.conversation.startMessageId;
+      if (conversation != null) {
+        startMessageId = conversation.startMessageId;
       }
       if (null != startMessageId) {
-        const obj3 = { channelId, messageId: startMessageId, flash: false };
-        MessageActionCreatorsDefault.jumpToMessage(obj3);
+        const obj2 = { channelId, messageId: startMessageId, flash: false };
+        MessageActionCreatorsDefault.jumpToMessage(obj2);
         const tmp6Result = MessageActionCreatorsDefault;
       }
     }

@@ -1,11 +1,11 @@
-// === Module 8010: UploadTargets ===
+// === Module 8011: UploadTargets ===
 
-// Module 8010 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 7979 */;
-import FileUtilsAll from "FileUtils" /* 7984 */;
-import UploadLimits from "UploadLimits" /* 8000 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 8011 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 8013 */;
+// Module 8011 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 7980 */;
+import FileUtilsAll from "FileUtils" /* 7985 */;
+import UploadLimits from "UploadLimits" /* 8001 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 8012 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 8014 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;

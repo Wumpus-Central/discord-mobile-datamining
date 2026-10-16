@@ -1,9 +1,9 @@
-// === Module 12242: useConjureMentionCandidates ===
+// === Module 12248: useConjureMentionCandidates ===
 
-// Module 12242 (useConjureMentionCandidates)
+// Module 12248 (useConjureMentionCandidates)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
 
 const require = globalThis.__r;
 

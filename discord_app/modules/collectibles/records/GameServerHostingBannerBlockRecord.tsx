@@ -1,7 +1,7 @@
-// === Module 7518: GameServerHostingBannerBlockRecord ===
+// === Module 7520: GameServerHostingBannerBlockRecord ===
 
-// Module 7518 (GameServerHostingBannerBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7513 */;
+// Module 7520 (GameServerHostingBannerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7515 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {

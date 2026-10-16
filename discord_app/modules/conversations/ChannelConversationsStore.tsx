@@ -1,18 +1,18 @@
-// === Module 7532: ChannelConversationsStore ===
+// === Module 7534: ChannelConversationsStore ===
 
-// Module 7532 (ChannelConversationsStore)
+// Module 7534 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import privDefault from "priv" /* 1459 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7535 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5497 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7536 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7533 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7535 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -219,7 +219,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7534);
+const ConversationConstants = fn(5132);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -229,8 +229,6 @@ const navigation = new privDefault({
 });
 let map = new Map();
 let map1 = new Map();
-let closure_16 = 0;
-let closure_17 = 0;
 const Store = initializeDefault.Store;
 class ChannelConversationsStore extends Store {
 }
@@ -316,14 +314,6 @@ prototype["isListFetchPending"] = function isListFetchPending(arg0, arg1) {
   }
   if (flag == null) {
     flag = false;
-  }
-  return flag;
-};
-prototype["consumeFocusRequest"] = function consumeFocusRequest() {
-  let flag = closure_16 !== closure_17;
-  if (flag) {
-    closure_17 = closure_16;
-    flag = true;
   }
   return flag;
 };
@@ -417,7 +407,7 @@ ChannelConversationsStore.displayName = "ChannelConversationsStore";
 const channelConversationsStore = new ChannelConversationsStore(DispatcherDefault, {
   CONVERSATION_MESSAGES_FETCH_START: function handleConversationMessagesFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
-    if (true === conversationId.isStandalone) {
+    if ("channel" !== conversationId.cacheType) {
       return false;
     } else {
       let str = "preview";
@@ -435,9 +425,9 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       }
     }
   },
-  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(isStandalone) {
-    ({ conversationId, messageReferences, fullyHydrated } = isStandalone);
-    if (true === isStandalone.isStandalone) {
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(cacheType) {
+    ({ conversationId, messageReferences, fullyHydrated } = cacheType);
+    if ("channel" !== cacheType.cacheType) {
       return false;
     } else {
       let str = "preview";
@@ -493,7 +483,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
   },
   CONVERSATION_MESSAGES_FETCH_FAILURE: function handleConversationMessagesFetchFailure(conversationId) {
     conversationId = conversationId.conversationId;
-    if (true === conversationId.isStandalone) {
+    if ("channel" !== conversationId.cacheType) {
       return false;
     } else {
       let str = "preview";
@@ -527,7 +517,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7536).mapConversation);
+      const mapped = rawConversations.map(set(7537).mapConversation);
       const found = mapped.filter(set(1388).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -964,10 +954,6 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       }
     }
     return false;
-  },
-  CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest() {
-    closure_16 = closure_16 + 1;
-    return true;
   },
   SET_CONVERSATION_FEEDBACK_RATING: function handleSetConversationFeedbackRating(channelId) {
     ({ conversationId, rating } = channelId);

@@ -1,12 +1,12 @@
-// === Module 18769: GuildTemplateSettingsUtils ===
+// === Module 18782: GuildTemplateSettingsUtils ===
 
-// Module 18769 (GuildTemplateSettingsUtils)
+// Module 18782 (GuildTemplateSettingsUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7398 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7400 */;
 
 const require = globalThis.__r;
 
@@ -75,11 +75,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (
         closure_0 = asyncGeneratorStep(async (arg0) => {
           closure_129_0 = closure_0;
           tmp3(null);
-          await closure_2_1(7250).loadTemplatesForGuild(closure_0);
+          await closure_2_1(7252).loadTemplatesForGuild(closure_0);
           if (1 === tmp7) {
             c4 = 0;
             closure_129_1 = closure_3;
-            const aPIError = new closure_0(5853).APIError(closure_129_1);
+            const aPIError = new closure_0(5854).APIError(closure_129_1);
             tmp3(aPIError);
             closure_1(closure_129_0);
             c6 = 3;
@@ -180,11 +180,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (
     closure_0 = async function _fetchGuildTemplate2(arg0) {
       closure_129_0 = closure_0;
       tmp3(null);
-      await closure_2_1(7250).loadTemplatesForGuild(closure_0);
+      await closure_2_1(7252).loadTemplatesForGuild(closure_0);
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new closure_2_0(5853).APIError(closure_129_1);
+        const aPIError = new closure_2_0(5854).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

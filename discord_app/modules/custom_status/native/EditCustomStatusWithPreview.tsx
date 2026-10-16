@@ -1,6 +1,6 @@
-// === Module 10766: EditCustomStatusWithPreview ===
+// === Module 10763: EditCustomStatusWithPreview ===
 
-// Module 10766 (EditCustomStatusWithPreview)
+// Module 10763 (EditCustomStatusWithPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,16 +10,16 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import shared from "shared" /* 5028 */;
 import ChatInputUtils from "ChatInputUtils" /* 5044 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5433 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import Pressables from "Pressables" /* 6407 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import _modDef6843 from "module_6843" /* 6843 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9663 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9868 */;
-import setCustomStatusDefault from "setCustomStatus" /* 10770 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 10772 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 10775 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5434 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import Pressables from "Pressables" /* 6409 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import _modDef6845 from "module_6845" /* 6845 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9662 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9867 */;
+import setCustomStatusDefault from "setCustomStatus" /* 10767 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 10769 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 10772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -255,7 +255,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[12]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10855, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10852, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[41])(first2) };
     obj18.trailing = ref1(tmp6(tmp7[33]).Text, obj19);
@@ -293,13 +293,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(10767).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(10764).STATUS_MAX_LENGTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 }, statusInputRow: { flexDirection: "row", alignItems: "center" }, emoji: { marginRight: 8 }, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
 let obj3 = { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 };
 obj2.status = { color: nativeDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
@@ -342,7 +342,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
     tmp8 = cResult[2];
   }
   if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef6843, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+    const obj3 = { source: _modDef6845, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
     const tmp12 = map1(native.Icon, obj3);
     cResult[3] = tmp4.closeIcon;
     cResult[4] = tmp12;
@@ -368,7 +368,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
-  obj.children = map1(native.Icon, { source: _modDef6843, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  obj.children = map1(native.Icon, { source: _modDef6845, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
   return map1(Pressables.PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       analyticsLocations(1385);
       obj3.headerStatusBarHeight = 12;
       obj3.headerStyle = tmp6;
-      const tmp8Result = closure_13(analyticsLocations(6910).Navigator, obj3);
+      const tmp8Result = closure_13(analyticsLocations(6912).Navigator, obj3);
       cResult[4] = tmp4;
       cResult[5] = tmp8Result;
       let tmp7 = tmp8Result;
@@ -417,10 +417,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     const obj = { title: null };
     const intl = analyticsLocations(1128).intl;
     obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-    return closure_1_13(analyticsLocations(9534).GenericHeaderTitle, obj);
+    return closure_1_13(analyticsLocations(9535).GenericHeaderTitle, obj);
   };
   const obj = analyticsLocations(576);
-  obj5.headerLeft = analyticsLocations(6423).getHeaderCloseButton(_prompt(6152).pop);
+  obj5.headerLeft = analyticsLocations(6425).getHeaderCloseButton(_prompt(6153).pop);
   obj5.render = function render(arg0, navigation) {
     return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[45]).pop, analyticsLocations, prompt: _prompt });
   };
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
   cResult[1] = _prompt;
   cResult[2] = obj4;
   tmp4 = obj4;
-  const tmpResult4 = analyticsLocations(6423);
+  const tmpResult4 = analyticsLocations(6425);
 }) : (function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const _prompt = analyticsLocations.prompt;
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       const obj = { title: null };
       const intl = analyticsLocations(1128).intl;
       obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9534).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(9535).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -460,5 +460,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(6910).Navigator, obj);
+  return closure_13(analyticsLocations(6912).Navigator, obj);
 });

@@ -1,6 +1,6 @@
-// === Module 5728: ? ===
+// === Module 5729: ? ===
 
-// Module 5728
+// Module 5729
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/face/chill.png.js");

@@ -1,6 +1,6 @@
-// === Module 18933: GuildSettingsModalOfficialMessages ===
+// === Module 18946: GuildSettingsModalOfficialMessages ===
 
-// Module 18933 (GuildSettingsModalOfficialMessages)
+// Module 18946 (GuildSettingsModalOfficialMessages)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -10,35 +10,35 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import DateUtils from "DateUtils" /* 4852 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7190 */;
-import HeaderActionButton from "HeaderActionButton" /* 7312 */;
-import _modDef16258 from "module_16258" /* 16258 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7192 */;
+import HeaderActionButton from "HeaderActionButton" /* 7314 */;
+import _modDef16272 from "module_16272" /* 16272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8865 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const MessageConstants = fn(5147);
+const MessageConstants = fn(5148);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MessageConstants);
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj2 = { container: { gap: nativeDefault.space.PX_8, height: "100%" }, segmentedControlContainer: null, trailingColorContainer: null, colorBlock: null, chatSection: null, chatContainer: null, chatContainerInner: null, chatContent: null, chatHeader: null, chatTimestamp: null };
 let obj3 = { gap: nativeDefault.space.PX_8, height: "100%" };
 obj2.segmentedControlContainer = { gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 obj2.trailingColorContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
 obj2.colorBlock = { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 };
 let obj4 = { gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
-obj2.chatSection = { paddingHorizontal: fn(6398).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj5 = { paddingHorizontal: fn(6398).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+obj2.chatSection = { paddingHorizontal: fn(6400).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj5 = { paddingHorizontal: fn(6400).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 obj2.chatContainer = { paddingVertical: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
 let obj6 = { paddingVertical: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
 obj2.chatContainerInner = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, gap: nativeDefault.space.PX_8 };
@@ -46,16 +46,16 @@ obj2.chatContent = { flex: 1 };
 obj2.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 obj2.chatTimestamp = { marginTop: -8 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj7 = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, gap: nativeDefault.space.PX_8 };
 let closure_15 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_16 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj11 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_17 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_DEFAULT });
-createStyles = fn(5153);
+createStyles = fn(5154);
 const obj13 = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_18 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED });
 const __initData = { code: "function GuildSettingsModalOfficialMessagesTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}" };
@@ -108,7 +108,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
           }
           const _Symbol = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { source: _modDef16258 };
+            const obj3 = { source: _modDef16272 };
             const tmp24 = __initData(native.Avatar, obj3);
             cResult[15] = tmp24;
             let tmp21 = tmp24;
@@ -285,7 +285,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef683(selectedColor).alpha(collapsed).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef683(selectedColor).alpha(collapsed).hex();
-  const items2 = [__initData(native.Avatar, { source: _modDef16258 }), ];
+  const items2 = [__initData(native.Avatar, { source: _modDef16272 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
@@ -385,7 +385,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(17363, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(17375, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

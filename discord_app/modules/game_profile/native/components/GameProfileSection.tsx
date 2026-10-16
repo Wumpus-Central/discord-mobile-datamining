@@ -1,13 +1,13 @@
-// === Module 9178: GameProfileSection ===
+// === Module 9179: GameProfileSection ===
 
-// Module 9178 (GameProfileSection)
+// Module 9179 (GameProfileSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7127 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9176 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7129 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9177 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, header: null, skeletonTitle: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };

@@ -1,16 +1,16 @@
-// === Module 9934: CloudUploader ===
+// === Module 9935: CloudUploader ===
 
-// Module 9934 (CloudUploader)
+// Module 9935 (CloudUploader)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import UploadPlatform from "UploadPlatform" /* 7978 */;
+import UploadPlatform from "UploadPlatform" /* 7979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploaderBase from "UploaderBase" /* 9935 */;
+import UploaderBase from "UploaderBase" /* 9936 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ AbortCodes: closure_4, NOOP: hasOwnProperty } = Constants);
-const FileUploadErrorTypes = fn(5147).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(5148).FileUploadErrorTypes;
 let closure_7 = new LoggerDefault("CloudUploader(Native).tsx");
 class CloudUploader extends tmp4 {
   constructor() {
@@ -64,7 +64,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
             closure_130_5 = undefined;
             closure_130_6 = undefined;
             let uploadTarget;
-            closure_130_0 = files(9936).backgroundTaskIdentifierInvalid;
+            closure_130_0 = files(9937).backgroundTaskIdentifierInvalid;
             self.once("start", tmp4(function*() {
               if (c2 === 2) {
                 c2 = 3;
@@ -97,7 +97,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                       const obj5 = { count: length.length };
                       obj4.content = intl2.formatToPlainString(closure_2_0(1128).t.D0noUt, obj5);
                       c2 = 1;
-                      const obj7 = { value: files(9936).startBackgroundTask(obj4), done: false };
+                      const obj7 = { value: files(9937).startBackgroundTask(obj4), done: false };
                       return obj7;
                     }
                   } else if (arg0 === 1) {
@@ -110,8 +110,8 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
                   } else {
                     closure_128_0 = value;
                     if (tmp2._aborted) {
-                      files(9936).endBackgroundTask(closure_128_0);
-                      const obj = files(9936);
+                      files(9937).endBackgroundTask(closure_128_0);
+                      const obj = files(9937);
                     }
                     c2 = 3;
                     return { value: "IconComponent", done: null };
@@ -156,7 +156,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
             }
             self._file.attachmentsCount = arr.length;
             self._handleStart(undefined);
-            obj8 = _self(9940);
+            obj8 = _self(9941);
             closure_130_3 = obj8.shouldCheckUploadSizeOnlyAfterCompression();
             closure_130_4 = 0;
             files = self.files;
@@ -195,7 +195,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
           closure_131_0._file.totalPreCompressionSize = closure_130_4;
           closure_131_0._file.currentSize = closure_130_4;
           if (!closure_130_3) {
-            uploadTarget = _self(8010).getUploadTarget(closure_130_5.item.target);
+            uploadTarget = _self(8011).getUploadTarget(closure_130_5.item.target);
             if (closure_130_6 > uploadTarget.getMaxFileSize(closure_130_5.channelId)) {
               const obj6 = { code: tmp63.ENTITY_TOO_LARGE, reason: null };
               let obj7 = { type: constants.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE };
@@ -219,13 +219,13 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
               const obj14 = { value: closure_130_2, done: true };
               return obj14;
             }
-            let obj = _self(8010);
+            let obj = _self(8011);
           }
           c5 = 1;
           if (_self === undefined) {
             const _HermesInternal2 = HermesInternal;
             logger.log("" + closure_131_0.id + " queued");
-            files(9942).enqueue(() => {
+            files(9943).enqueue(() => {
               closure_1_0.startUpload();
               return closure_1_0;
             });
@@ -238,7 +238,7 @@ prototype["uploadFiles"] = function uploadFiles(guildId) {
             closure_130_5 = tmp49;
             constants = 3;
             logger = 1;
-            const obj16 = { value: _self(9941).getPreCompressionFileSize(closure_130_5.item), done: false };
+            const obj16 = { value: _self(9942).getPreCompressionFileSize(closure_130_5.item), done: false };
             return obj16;
           }
         }

@@ -1,6 +1,6 @@
-// === Module 10762: UserProfileCustomStatusBubble ===
+// === Module 10759: UserProfileCustomStatusBubble ===
 
-// Module 10762 (UserProfileCustomStatusBubble)
+// Module 10759 (UserProfileCustomStatusBubble)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,11 +8,11 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import FastImageDefault from "FastImage" /* 5091 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import EmojiDefault from "Emoji" /* 7043 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
-import inlineStyles from "inlineStyles" /* 7796 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 10765 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import EmojiDefault from "Emoji" /* 7045 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
+import inlineStyles from "inlineStyles" /* 7797 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 10762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 let Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
   const colors = nativeDefault.colors;
@@ -103,7 +103,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status
   return __initData(inlineStylesDefault, size);
 });
 let closure_16 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-const dependencyMap = { [fn(7126).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+const dependencyMap = { [fn(7128).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiImage(arg0) {
   const cResult = c.c(14);
@@ -242,7 +242,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       let obj4 = { variant: textVariant, color: "text-default", lineClamp, onTextLayout, style: tmp10, children: null };
       let items = [tmp13, text];
       obj4.children = items;
-      const tmp17 = closure_12(emoji(5149).Text, obj4);
+      const tmp17 = closure_12(emoji(5150).Text, obj4);
       cResult[10] = lineClamp;
       cResult[11] = onTextLayout;
       cResult[12] = tmp13;
@@ -359,7 +359,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
     obj2 = PlatformUtils;
   }
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_20 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOnlyStatusContent(arg0) {

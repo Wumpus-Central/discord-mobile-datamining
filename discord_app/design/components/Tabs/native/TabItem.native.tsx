@@ -1,9 +1,9 @@
-// === Module 11601: TabItem ===
+// === Module 11598: TabItem ===
 
-// Module 11601 (TabItem)
+// Module 11598 (TabItem)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4909 */;
-import spring from "spring" /* 5440 */;
+import spring from "spring" /* 5441 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,13 +17,13 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 } };
 let closure_11 = createStyles.createStyles(obj);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj4 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
 let closure_13 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
 const __initData = { code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else{if(isPressActive){color=colors.inactive;}else{if(isActive){color=colors.active;}}}return{color:withSpring(color,TEXT_SPRING_CONFIG,\"animate-always\")};}" };
@@ -124,7 +124,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabIte
     return obj;
   };
   const tmpResult = sharedValue(4909);
-  fn2.__closure = { withSpring: sharedValue(5440).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
+  fn2.__closure = { withSpring: sharedValue(5441).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
   fn2.__workletHash = 5074862072194;
   fn2.__initData = __initData3;
   const animatedStyle = tmpResult.useAnimatedStyle(fn2);
@@ -157,7 +157,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabIte
             tmp17 = tmp20;
           }
           const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
-          const tmp16 = closure_6(tmp(5149).Text, obj5);
+          const tmp16 = closure_6(tmp(5150).Text, obj5);
           cResult[11] = tmp12;
           cResult[12] = count;
           cResult[13] = tmp16;
@@ -178,7 +178,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabIte
   cResult[6] = variant;
   cResult[7] = obj6;
   tmp10 = obj6;
-  let obj3 = { withSpring: sharedValue(5440).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
+  let obj3 = { withSpring: sharedValue(5441).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
 }) : (function TabItemCount(arg0) {
   let sharedValue;
   ({ count, index, activeIndex, pressed, variant } = arg0);
@@ -205,12 +205,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabIte
     }
   }
   let obj2 = sharedValue(4909);
-  I.__closure = { withSpring: sharedValue(5440).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
+  I.__closure = { withSpring: sharedValue(5441).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
   I.__workletHash = 8384757524453;
   I.__initData = __initData4;
   const animatedStyle = obj2.useAnimatedStyle(I);
-  let obj3 = { withSpring: sharedValue(5440).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
-  let obj4 = { style: null, children: closure_6(sharedValue(5149).Text, { animated: true, variant: "text-sm/medium", style: closure_16({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
+  let obj3 = { withSpring: sharedValue(5441).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4909).interpolate };
+  let obj4 = { style: null, children: closure_6(sharedValue(5150).Text, { animated: true, variant: "text-sm/medium", style: closure_16({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
   const items1 = [tmp.count, animatedStyle];
   obj4.style = items1;
   return closure_6(ReanimatedRexport.View, obj4);

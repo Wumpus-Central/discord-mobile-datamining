@@ -1,16 +1,16 @@
-// === Module 8009: CloudUploaderUtils ===
+// === Module 8010: CloudUploaderUtils ===
 
-// Module 8009 (CloudUploaderUtils)
+// Module 8010 (CloudUploaderUtils)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UploadUtils from "UploadUtils" /* 7979 */;
+import UploadUtils from "UploadUtils" /* 7980 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
 
 require = fn;
 function getUploadPayload(self) {
-  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "Array" };
+  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "a" };
   return obj;
 }
 const size = fn(2);

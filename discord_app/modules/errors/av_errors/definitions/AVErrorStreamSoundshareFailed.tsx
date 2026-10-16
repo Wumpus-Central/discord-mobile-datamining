@@ -1,11 +1,11 @@
-// === Module 18984: AVErrorStreamSoundshareFailed ===
+// === Module 18997: AVErrorStreamSoundshareFailed ===
 
-// Module 18984 (AVErrorStreamSoundshareFailed)
-import AVError from "AVError" /* 5351 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
-import AVErrorContext from "AVErrorContext" /* 18976 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
-import HookErrorStore from "HookErrorStore" /* 7650 */;
+// Module 18997 (AVErrorStreamSoundshareFailed)
+import AVError from "AVError" /* 5352 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6119 */;
+import AVErrorContext from "AVErrorContext" /* 18989 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
+import HookErrorStore from "HookErrorStore" /* 7651 */;
 
 require = fn;
 const MediaEngineHookTypes = fn(1087).MediaEngineHookTypes;

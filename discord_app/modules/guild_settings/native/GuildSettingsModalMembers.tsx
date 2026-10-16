@@ -1,14 +1,14 @@
-// === Module 17649: GuildSettingsModalMembers ===
+// === Module 17659: GuildSettingsModalMembers ===
 
-// Module 17649 (GuildSettingsModalMembers)
+// Module 17659 (GuildSettingsModalMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7188 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8830 */;
-import sortByMatchScore from "sortByMatchScore" /* 8925 */;
-import RolePillDefault from "RolePill" /* 10553 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6324 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7190 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8831 */;
+import sortByMatchScore from "sortByMatchScore" /* 8926 */;
+import RolePillDefault from "RolePill" /* 10554 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8865 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -29,8 +29,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let items = [fn(8925).AutocompleterResultTypes.USER];
-const createStyles = fn(5153);
+let items = [fn(8926).AutocompleterResultTypes.USER];
+const createStyles = fn(5154);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchFieldContainer: null, roleList: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.searchFieldContainer = { paddingVertical: nativeDefault.space.PX_12 };
@@ -272,7 +272,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(5471).getNickname(guild.id, undefined, user);
+      let str = guildMember(5472).getNickname(guild.id, undefined, user);
       if (str == null) {
         str = tmp9(5021).getGlobalName(user);
         const tmp9Result = tmp9(5021);
@@ -292,7 +292,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const intl = tmp2(1128).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1128).t["6eGpWx"], obj3);
-      const obj2 = guildMember(5471);
+      const obj2 = guildMember(5472);
       tmp9 = guildMember;
     }
     const obj4 = { userId: guildMember.userId, guildId: guild.id, accessibilityLabel: formatToPlainStringResult, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };
@@ -308,7 +308,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_17(guildMember(10548), obj4);
+    return closure_17(guildMember(10549), obj4);
   }
   const obj = guild(1505);
 }));
@@ -898,12 +898,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(8890), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(8891), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1128).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1128).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_17(closure_1_0(7312).HeaderActionButton, obj);
+            return closure_1_17(closure_1_0(7314).HeaderActionButton, obj);
           }
         });
       }

@@ -1,8 +1,8 @@
-// === Module 14734: SocialLayerStorefrontConfigManager ===
+// === Module 14744: SocialLayerStorefrontConfigManager ===
 
-// Module 14734 (SocialLayerStorefrontConfigManager)
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10396 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
+// Module 14744 (SocialLayerStorefrontConfigManager)
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10397 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7032 */;
 
 require = fn;
 class SocialLayerStorefrontConfigManager extends tmp2 {

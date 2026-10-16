@@ -1,11 +1,24 @@
-// === Module 11540: conjureAttachmentRequests ===
+// === Module 11537: conjureAttachmentRequests ===
 
-// Module 11540 (conjureAttachmentRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10987 */;
+// Module 11537 (conjureAttachmentRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _importAttachmentFromUrl(arg0) {
+let closure_3 = async function _listStoredAttachments() {
+  closure_1 = tmp2;
+  await conjureWorkerFetch.fetchConjureWorker(closure_0, attachmentPath());
+  closure_129_0 = value;
+  if (!closure_129_0.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("attachment list failed (" + closure_129_0.status + ")");
+    throw error;
+  }
+  await closure_129_0.json();
+  return value.attachments;
+};
+let closure_4 = async function _importAttachmentFromUrl(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -101,7 +114,7 @@ let closure_3 = async function _importAttachmentFromUrl(arg0) {
 };
 function uploadAttachmentBytes() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -109,7 +122,7 @@ function uploadAttachmentBytes() {
   }
   return applyArgumentsResult;
 }
-let closure_5 = async function _uploadAttachmentBytes(arg0) {
+let closure_6 = async function _uploadAttachmentBytes(arg0) {
   closure_0 = arg0;
   closure_3 = arg3;
   c5 = 0;
@@ -135,7 +148,7 @@ let closure_5 = async function _uploadAttachmentBytes(arg0) {
     return value;
   })();
 };
-let closure_6 = async function _deleteStagedAttachment(arg0) {
+let closure_7 = async function _deleteStagedAttachment(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -194,7 +207,7 @@ let closure_6 = async function _deleteStagedAttachment(arg0) {
 };
 function getAttachmentUrl() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -202,7 +215,7 @@ function getAttachmentUrl() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _getAttachmentUrl(arg0) {
+let closure_9 = async function _getAttachmentUrl(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -283,7 +296,7 @@ let closure_8 = async function _getAttachmentUrl(arg0) {
         }
         const _HermesInternal = HermesInternal;
         c6 = 3;
-        const obj = { value: "" + baseUrl + closure_132_10(closure_131_1) + "?" + closure_131_6, done: true };
+        const obj = { value: "" + baseUrl + closure_132_11(closure_131_1) + "?" + closure_131_6, done: true };
         return obj;
       }
     } catch (tmp23) {
@@ -292,7 +305,7 @@ let closure_8 = async function _getAttachmentUrl(arg0) {
     }
   }
 };
-let closure_9 = async function _isAttachmentAvailable(arg0) {
+let closure_10 = async function _isAttachmentAvailable(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -337,7 +350,7 @@ let closure_9 = async function _isAttachmentAvailable(arg0) {
             const self = this;
             const tmp = closure_2(function*() {
               const _fetch = fetch;
-              yield closure_1_7(closure_2_0, closure_2_1);
+              yield closure_1_8(closure_2_0, closure_2_1);
               return fetch(value, { method: "HEAD" });
             });
             closure_3 = tmp;
@@ -417,9 +430,19 @@ let result = size.fileFinishedImporting("modules/conjure/chat/conjureAttachmentR
 export const uploadAttachment = function uploadAttachment(arg0, name) {
   return uploadAttachmentBytes(arg0, name, name.name, name.type);
 };
-export const importAttachmentFromUrl = function importAttachmentFromUrl() {
+export const listStoredAttachments = function listStoredAttachments() {
   const self = this;
   const apply = closure_3.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const importAttachmentFromUrl = function importAttachmentFromUrl() {
+  const self = this;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -430,7 +453,7 @@ export const importAttachmentFromUrl = function importAttachmentFromUrl() {
 export { uploadAttachmentBytes };
 export const deleteStagedAttachment = function deleteStagedAttachment() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -441,7 +464,7 @@ export const deleteStagedAttachment = function deleteStagedAttachment() {
 export { getAttachmentUrl };
 export const isAttachmentAvailable = function isAttachmentAvailable() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

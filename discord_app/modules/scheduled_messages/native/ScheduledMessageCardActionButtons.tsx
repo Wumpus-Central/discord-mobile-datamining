@@ -1,15 +1,15 @@
-// === Module 13730: ScheduledMessageCardActionButtons ===
+// === Module 13741: ScheduledMessageCardActionButtons ===
 
-// Module 13730 (ScheduledMessageCardActionButtons)
+// Module 13741 (ScheduledMessageCardActionButtons)
 import util from "util" /* 1128 */;
 import SendMessageIcon from "SendMessageIcon" /* 5102 */;
 import ClockIcon from "ClockIcon" /* 5113 */;
-import CircleXIcon from "CircleXIcon" /* 6518 */;
-import IconButton from "IconButton" /* 7793 */;
-import _modDef8997 from "module_8997" /* 8997 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9529 */;
-import ContextMenu from "ContextMenu" /* 9599 */;
-import PencilIcon from "PencilIcon" /* 9958 */;
+import CircleXIcon from "CircleXIcon" /* 6520 */;
+import IconButton from "IconButton" /* 7794 */;
+import _modDef8998 from "module_8998" /* 8998 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9530 */;
+import ContextMenu from "ContextMenu" /* 9598 */;
+import PencilIcon from "PencilIcon" /* 9959 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
   if (cResult[4] !== scheduledMessage) {
     const obj3 = {
       label: tmp7,
-      IconComponent: tmp(9958).PencilIcon,
+      IconComponent: tmp(9959).PencilIcon,
       action() {
           return ScheduledMessagesUtils.openScheduledMessageEditContentModal(scheduledMessage);
         }
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
   if (cResult[10] !== scheduledMessage) {
     const obj5 = {
       label: tmp13,
-      IconComponent: tmp(6518).CircleXIcon,
+      IconComponent: tmp(6520).CircleXIcon,
       action() {
           return ScheduledMessagesUtils.cancelScheduledMessage(scheduledMessage.scheduledMessageId);
         },
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
             obj.accessibilityLabel = intl.string(util.t.sHmiIC);
             obj.size = "sm";
             obj.disabled = isPendingRemoval;
-            obj.icon = _modDef8997;
+            obj.icon = _modDef8998;
             return jsx(IconButton.IconButton, { ref: ref.ref });
           };
           cResult[17] = isPendingRemoval;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
           return tmp18;
         }
         const obj6 = { items: tmp16, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: tmp17 };
-        const tmp20 = jsx(tmp(9599).ContextMenu, { items: tmp16, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: tmp17 });
+        const tmp20 = jsx(tmp(9598).ContextMenu, { items: tmp16, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: tmp17 });
         cResult[19] = tmp16;
         cResult[20] = tmp17;
         cResult[21] = tmp20;
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
       obj.accessibilityLabel = intl.string(util.t.sHmiIC);
       obj.size = "sm";
       obj.disabled = disabled;
-      obj.icon = _modDef8997;
+      obj.icon = _modDef8998;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     }
   });

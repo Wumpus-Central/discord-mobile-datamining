@@ -1,22 +1,22 @@
-// === Module 18877: GuildSettingsRoleSubscriptionContainer ===
+// === Module 18890: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 18877 (GuildSettingsRoleSubscriptionContainer)
+// Module 18890 (GuildSettingsRoleSubscriptionContainer)
 import c from "c" /* 576 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16187 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 18855 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18869 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 16201 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 18868 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18882 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
-const ErrorBlockDefault = tmp13(12002);
-const WarningNoticeDefault = tmp13(18828);
+const ErrorBlockDefault = tmp13(11999);
+const WarningNoticeDefault = tmp13(18841);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationRejectedNotice(guildId) {

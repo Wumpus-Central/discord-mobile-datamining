@@ -1,11 +1,11 @@
-// === Module 10858: CirclePlusIcon ===
+// === Module 10855: CirclePlusIcon ===
 
-// Module 10858 (CirclePlusIcon)
+// Module 10855 (CirclePlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod10859 from "module_10859" /* 10859 */;
-import _mod10860 from "module_10860" /* 10860 */;
+import _mod10856 from "module_10856" /* 10856 */;
+import _mod10857 from "module_10857" /* 10857 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10859;
+    const tmpResult = _mod10856;
     cResult[5] = tmpResult;
     let tmp11 = tmpResult;
   } else {
@@ -59,7 +59,7 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult2 = _mod10860;
+        const tmpResult2 = _mod10857;
         cResult[10] = tmpResult2;
         let tmp16 = tmpResult2;
       } else {
@@ -132,8 +132,8 @@ export const CirclePlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod10859, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod10860, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod10856, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod10857, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

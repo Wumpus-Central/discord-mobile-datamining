@@ -1,22 +1,22 @@
-// === Module 17377: HomeDrawerFolderRow ===
+// === Module 17389: HomeDrawerFolderRow ===
 
-// Module 17377 (HomeDrawerFolderRow)
+// Module 17389 (HomeDrawerFolderRow)
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10594 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10591 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6302 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6304 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import SortedGuildStore from "SortedGuildStore" /* 6181 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import SortedGuildStore from "SortedGuildStore" /* 6182 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6185 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 require = fn;
 const View = fn(17).View;
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrapper(folder) {

@@ -1,9 +1,9 @@
-// === Module 11860: ExpandableList ===
+// === Module 11857: ExpandableList ===
 
-// Module 11860 (ExpandableList)
-import timing from "timing" /* 5154 */;
-import timingPresets from "timingPresets" /* 5157 */;
-import usePreviousDefault from "usePrevious" /* 6140 */;
+// Module 11857 (ExpandableList)
+import timing from "timing" /* 5155 */;
+import timingPresets from "timingPresets" /* 5158 */;
+import usePreviousDefault from "usePrevious" /* 6141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 const __initData = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
 const __initData2 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
     }
   }
   const obj6 = memo1(4909);
-  A.__closure = { collapsedListHeight: sharedValue, withTiming: memo1(5154).withTiming, containerHeight: derivedValue, timingStandard: memo1(5157).timingStandard };
+  A.__closure = { collapsedListHeight: sharedValue, withTiming: memo1(5155).withTiming, containerHeight: derivedValue, timingStandard: memo1(5158).timingStandard };
   A.__workletHash = 16625034396799;
   A.__initData = __initData4;
   const animatedStyle = obj6.useAnimatedStyle(A);
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
     }
     obj14 = { children: null };
     const obj15 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
-    obj13.children = tmp16(tmp9(5149).Text, obj15);
+    obj13.children = tmp16(tmp9(5150).Text, obj15);
     obj13 = tmp16(tmp17, obj13);
     obj12.label = obj13;
     obj12.onPress = function handleExpandCTAPress() {
@@ -600,11 +600,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
         tmp4(obj);
       }
     };
-    obj12 = tmp16(tmp9(6402).TableRow, obj12);
+    obj12 = tmp16(tmp9(6404).TableRow, obj12);
     obj14.children = obj12;
     tmp16(tmp17, obj14);
   }
-  let obj2 = { collapsedListHeight: sharedValue, withTiming: memo1(5154).withTiming, containerHeight: derivedValue, timingStandard: memo1(5157).timingStandard };
+  let obj2 = { collapsedListHeight: sharedValue, withTiming: memo1(5155).withTiming, containerHeight: derivedValue, timingStandard: memo1(5158).timingStandard };
   tmp15 = bound;
 });
 export const COLLAPSED_LIST_ITEM_MAX = 4;

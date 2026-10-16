@@ -1,10 +1,10 @@
-// === Module 18250: ScreenXIcon ===
+// === Module 18260: ScreenXIcon ===
 
-// Module 18250 (ScreenXIcon)
+// Module 18260 (ScreenXIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod11377 from "module_11377" /* 11377 */;
+import _mod11374 from "module_11374" /* 11374 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ScreenXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11377;
+    const tmpResult = _mod11374;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ScreenXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11377, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11374, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

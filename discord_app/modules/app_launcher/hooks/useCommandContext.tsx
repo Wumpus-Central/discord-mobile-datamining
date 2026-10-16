@@ -1,6 +1,6 @@
-// === Module 11856: useCommandContext ===
+// === Module 11853: useCommandContext ===
 
-// Module 11856 (useCommandContext)
+// Module 11853 (useCommandContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -9,7 +9,7 @@ require = fn;
 const ReactCompilerGating = fn(558);
 function getCommandContext(type) {
   if ("contextless" === type.type) {
-    let obj = { channel: "Array", guild: "test" };
+    let obj = { channel: "Symbol", guild: "current" };
   } else {
     obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
@@ -23,7 +23,7 @@ export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled() ? 
   const cResult = c.c(2);
   if (cResult[0] !== type) {
     if ("contextless" === type.type) {
-      let obj2 = { channel: "Array", guild: "test" };
+      let obj2 = { channel: "Symbol", guild: "current" };
     } else {
       obj2 = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }
@@ -37,7 +37,7 @@ export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled() ? 
   const items = [arg0];
   return noop.useMemo(() => {
     if ("contextless" === type.type) {
-      let obj = { channel: "Array", guild: "test" };
+      let obj = { channel: "Symbol", guild: "current" };
     } else {
       obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }

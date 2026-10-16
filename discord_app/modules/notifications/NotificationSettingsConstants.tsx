@@ -1,9 +1,9 @@
-// === Module 15389: NotificationSettingsConstants ===
+// === Module 15399: NotificationSettingsConstants ===
 
-// Module 15389 (NotificationSettingsConstants)
+// Module 15399 (NotificationSettingsConstants)
 import _modDef2899 from "module_2899" /* 2899 */;
-import NotifSettings from "NotifSettings" /* 15390 */;
-import NotifTypes from "NotifTypes" /* 15391 */;
+import NotifSettings from "NotifSettings" /* 15400 */;
+import NotifTypes from "NotifTypes" /* 15401 */;
 import size from "module_2" /* 2 */;
 
 const obj = { badge: true, visibility: "popup", vibrate: true, sound: true };

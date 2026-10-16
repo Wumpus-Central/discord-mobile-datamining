@@ -1,6 +1,6 @@
-// === Module 7021: useFlattenedChannels ===
+// === Module 7023: useFlattenedChannels ===
 
-// Module 7021 (useFlattenedChannels)
+// Module 7023 (useFlattenedChannels)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

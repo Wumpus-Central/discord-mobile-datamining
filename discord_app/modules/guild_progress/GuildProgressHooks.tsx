@@ -1,18 +1,18 @@
-// === Module 13079: GuildProgressHooks ===
+// === Module 13087: GuildProgressHooks ===
 
-// Module 13079 (GuildProgressHooks)
+// Module 13087 (GuildProgressHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import canViewInviteModal from "canViewInviteModal" /* 8761 */;
+import canViewInviteModal from "canViewInviteModal" /* 8762 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4807 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import LayerStore from "LayerStore" /* 13080 */;
-import MessageStore from "MessageStore" /* 5494 */;
+import LayerStore from "LayerStore" /* 13088 */;
+import MessageStore from "MessageStore" /* 5495 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 
 require = fn;

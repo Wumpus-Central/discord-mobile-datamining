@@ -1,12 +1,12 @@
-// === Module 6341: GuildJoinRequestActionCreators ===
+// === Module 6343: GuildJoinRequestActionCreators ===
 
-// Module 6341 (GuildJoinRequestActionCreators)
+// Module 6343 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5001 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6343 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6342 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6344 */;
 
 require = fn;
 let closure_9 = async function _fetchGuildJoinRequests(arg0) {
@@ -331,8 +331,8 @@ let closure_13 = async function _updateGuildJoinRequest() {
       obj2.title = intl.string(closure_1_0(1128).t.DxJj4e);
       const intl2 = closure_1_0(1128).intl;
       obj2.body = intl2.string(closure_1_0(1128).t.rSAOk9);
-      closure_1_1(5361).show(obj2);
-      const obj = closure_1_1(5361);
+      closure_1_1(5362).show(obj2);
+      const obj = closure_1_1(5362);
     }
     return Promise.reject(error);
   });

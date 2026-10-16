@@ -1,18 +1,18 @@
-// === Module 13181: GuildPowerupsPerkCard ===
+// === Module 13189: GuildPowerupsPerkCard ===
 
-// Module 13181 (GuildPowerupsPerkCard)
+// Module 13189 (GuildPowerupsPerkCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import shared from "shared" /* 5028 */;
 import useThemeDefault from "useTheme" /* 5090 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6886 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13131 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13132 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 13177 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6888 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13139 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13140 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 13185 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ let closure_3 = ["title", "description", "imageUrl", "isImageAnimated", "riveCom
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, card: { padding: 0, overflow: "hidden" }, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };

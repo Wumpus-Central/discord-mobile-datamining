@@ -1,18 +1,18 @@
-// === Module 11882: application_view/Header ===
+// === Module 11879: application_view/Header ===
 
-// Module 11882 (application_view/Header)
+// Module 11879 (application_view/Header)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import ClipboardUtils from "ClipboardUtils" /* 7107 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8494 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9483 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 11883 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11884 */;
+import ClipboardUtils from "ClipboardUtils" /* 7109 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8495 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9484 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 11880 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11881 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import AppLauncherStore from "AppLauncherStore" /* 11837 */;
+import AppLauncherStore from "AppLauncherStore" /* 11834 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -25,7 +25,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c10 = 105;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 }, expandedHeaderBanner: { height: 105 }, appIconMask: null, collapsedHeaderBanner: null, collapsedHeaderBannerOverlay: null, loadingIcon: null, actionsWrapper: null };
 const rect = { position: "absolute", padding: 4, bottom: -40, left: 16, backgroundColor: SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;
@@ -244,8 +244,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   if (cResult[2] !== application) {
     let appLauncherIconSource = null;
     if (null != application) {
-      appLauncherIconSource = tmp(11788).getAppLauncherIconSource(application);
-      const tmpResult6 = tmp(11788);
+      appLauncherIconSource = tmp(11785).getAppLauncherIconSource(application);
+      const tmpResult6 = tmp(11785);
     }
     cResult[2] = application;
     cResult[3] = appLauncherIconSource;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   if (str == null) {
     str = "";
   }
-  const tmp11Result = stateFromStores(8494)(tmp12, str);
+  const tmp11Result = stateFromStores(8495)(tmp12, str);
   if (cResult[4] === loadingIcon) {
     if (cResult[5] === tmp8.loadingIcon) {
       if (cResult[7] !== scrollOffsetY) {
@@ -300,8 +300,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
       if (cResult[13] !== application) {
         let str2 = "";
         if (null != application) {
-          str2 = tmp(9483).getSectionName(application);
-          const tmpResult8 = tmp(9483);
+          str2 = tmp(9484).getSectionName(application);
+          const tmpResult8 = tmp(9484);
         }
         cResult[13] = application;
         cResult[14] = str2;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
           result = "flags" in application;
         }
         if (result) {
-          result = tmp(2032).supportsEmbeddedSurface(application, tmp(7261).EmbeddedSurfaceType.MAIN);
+          result = tmp(2032).supportsEmbeddedSurface(application, tmp(7263).EmbeddedSurfaceType.MAIN);
           const tmpResult9 = tmp(2032);
         }
         cResult[15] = application;
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
                     }
                     if (cResult[41] !== onPressBack) {
                       const obj7 = { onPress: onPressBack };
-                      const tmp54 = closure_7(tmp10(11883), obj7);
+                      const tmp54 = closure_7(tmp10(11880), obj7);
                       cResult[41] = onPressBack;
                       cResult[42] = tmp54;
                       let tmp52 = tmp54;
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
                     }
                     if (cResult[43] !== tmp30) {
                       const obj8 = { variant: "heading-lg/bold", color: "text-overlay-light", children: tmp30 };
-                      const tmp57 = closure_7(tmp(5149).Heading, obj8);
+                      const tmp57 = closure_7(tmp(5150).Heading, obj8);
                       cResult[43] = tmp30;
                       cResult[44] = tmp57;
                       let tmp55 = tmp57;
@@ -478,13 +478,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
                                 };
                                 const intl = tmp(1128).intl;
                                 obj11.accessibilityLabel = intl.string(tmp(1128).t.XWDihq);
-                                const items2 = [closure_7(tmp(7793).IconButton, obj11), ];
+                                const items2 = [closure_7(tmp(7794).IconButton, obj11), ];
                                 const obj12 = { application, onAddAppMenuClick };
-                                items2[1] = closure_7(tmp10(11885), obj12);
+                                items2[1] = closure_7(tmp10(11882), obj12);
                                 obj10.children = items2;
                                 tmp68 = closure_8(id, obj10);
                               }
-                              tmpResult10 = tmp(9483);
+                              tmpResult10 = tmp(9484);
                             }
                             cResult[54] = application;
                             cResult[55] = stateFromStores;
@@ -560,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   }
   if (null != loadingIcon) {
     const obj18 = { iconSource: loadingIcon, iconBorderRadius: xl, iconSize: 72 };
-    let tmp18 = closure_7(tmp10(11793), obj18);
+    let tmp18 = closure_7(tmp10(11790), obj18);
   } else {
     const obj19 = { style: tmp8.loadingIcon };
     tmp18 = closure_7(id, obj19);
@@ -569,7 +569,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   loadingIcon = tmp8.loadingIcon;
   cResult[5] = loadingIcon;
   cResult[6] = tmp18;
-  const tmp11 = stateFromStores(8494);
+  const tmp11 = stateFromStores(8495);
 }) : (function Header(application) {
   application = application.application;
   const scrollOffsetY = application.scrollOffsetY;
@@ -581,8 +581,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(11788).getAppLauncherIconSource(application);
-    const tmpResult = tmp(11788);
+    appLauncherIconSource = tmp(11785).getAppLauncherIconSource(application);
+    const tmpResult = tmp(11785);
   }
   let obj = application(504);
   let str = application(4877).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -601,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(11793), obj2);
+    let tmp12 = closure_7(tmp5(11790), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -612,15 +612,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   let str2 = "";
   const tmp16 = closure_14({ scrollOffsetY });
   if (null != application) {
-    str2 = tmp(9483).getSectionName(application);
-    const tmpResult6 = tmp(9483);
+    str2 = tmp(9484).getSectionName(application);
+    const tmpResult6 = tmp(9484);
   }
   let result = null != application;
   if (result) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2032).supportsEmbeddedSurface(application, tmp(7261).EmbeddedSurfaceType.MAIN);
+    result = tmp(2032).supportsEmbeddedSurface(application, tmp(7263).EmbeddedSurfaceType.MAIN);
     const tmpResult7 = tmp(2032);
   }
   dependencyMap = result;
@@ -642,7 +642,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
   let obj6 = { style: tmp3.appIconMask, children: tmp12 };
   const tmp18 = closure_22({ scrollOffsetY });
   const tmp21 = id;
-  items6[2] = tmp13(ReanimatedRexportDefault.View, { style: tmp17.nameStyle, pointerEvents: "none", children: tmp13(application(5149).Heading, { variant: "heading-lg/bold", color: "text-overlay-light", children: str2 }) });
+  items6[2] = tmp13(ReanimatedRexportDefault.View, { style: tmp17.nameStyle, pointerEvents: "none", children: tmp13(application(5150).Heading, { variant: "heading-lg/bold", color: "text-overlay-light", children: str2 }) });
   items6[3] = tmp13(application(1202).Spacer, { size: 32, pointerEvents: "none" });
   obj7.children = items6;
   items3[1] = closure_8(ReanimatedRexportDefault.View, obj7);
@@ -682,13 +682,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(a
       };
       const intl = tmp(1128).intl;
       obj11.accessibilityLabel = intl.string(tmp(1128).t.XWDihq);
-      const items7 = [tmp13(tmp(7793).IconButton, obj11), ];
+      const items7 = [tmp13(tmp(7794).IconButton, obj11), ];
       const obj12 = { application, onAddAppMenuClick };
-      items7[1] = tmp13(tmp5(11885), obj12);
+      items7[1] = tmp13(tmp5(11882), obj12);
       obj10.children = items7;
       tmp20Result = closure_8(tmp21, obj10);
     }
-    tmpResult8 = tmp(9483);
+    tmpResult8 = tmp(9484);
   }
   items3[2] = tmp20Result;
   obj4.children = items3;

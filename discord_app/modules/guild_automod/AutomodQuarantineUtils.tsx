@@ -1,12 +1,12 @@
-// === Module 12519: AutomodQuarantineUtils ===
+// === Module 12525: AutomodQuarantineUtils ===
 
-// Module 12519 (AutomodQuarantineUtils)
+// Module 12525 (AutomodQuarantineUtils)
 import util from "util" /* 1128 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4815 */;
-import openUserSettings2 from "openUserSettings" /* 7317 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10891 */;
+import openUserSettings2 from "openUserSettings" /* 7319 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10888 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10826 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10823 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "Array", bio: "test" };
+      const obj = { nick: "Symbol", bio: "current" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "test" };
+    const obj = { nick: "Symbol", bio: "current" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

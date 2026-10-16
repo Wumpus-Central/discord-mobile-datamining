@@ -1,8 +1,8 @@
-// === Module 15456: subscriptions ===
+// === Module 15466: subscriptions ===
 
-// Module 15456 (subscriptions)
+// Module 15466 (subscriptions)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 11250 */;
+import RPCErrorDefault from "RPCError" /* 11247 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

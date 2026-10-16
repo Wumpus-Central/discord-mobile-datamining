@@ -1,17 +1,17 @@
-// === Module 11481: StageGridRow ===
+// === Module 11478: StageGridRow ===
 
-// Module 11481 (StageGridRow)
-import StageChannelParticipants from "StageChannelParticipants" /* 6168 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8553 */;
-import SpeakerTileDefault from "SpeakerTile" /* 11473 */;
-import StageTileTypes from "StageTileTypes" /* 11474 */;
-import MediaTileDefault from "MediaTile" /* 11482 */;
+// Module 11478 (StageGridRow)
+import StageChannelParticipants from "StageChannelParticipants" /* 6169 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8554 */;
+import SpeakerTileDefault from "SpeakerTile" /* 11470 */;
+import StageTileTypes from "StageTileTypes" /* 11471 */;
+import MediaTileDefault from "MediaTile" /* 11479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -24,21 +24,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const participants = channel.participants;
   const tmp3 = closure_5();
   let obj = channel(576);
-  const isScreenLandscape = channel(8553).useIsScreenLandscape();
+  const isScreenLandscape = channel(8554).useIsScreenLandscape();
   let num = 3;
   if (0 === channel.row) {
     num = participants.length;
   }
   if (cResult[0] !== num) {
     if (1 === num) {
-      StageTileSize = tmp(11474).StageTileSize;
+      StageTileSize = tmp(11471).StageTileSize;
       let HALF = StageTileSize.FULL;
       cResult[0] = num;
       cResult[1] = HALF;
     } else if (2 !== num) {
-      HALF = tmp(11474).StageTileSize.THIRD;
+      HALF = tmp(11471).StageTileSize.THIRD;
     }
-    HALF = tmp(11474).StageTileSize.HALF;
+    HALF = tmp(11471).StageTileSize.HALF;
   } else {
     const size = tmp5;
     let containerLandscape = isScreenLandscape;
@@ -115,7 +115,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[4] = items;
     tmp7 = items;
   }
-  let obj2 = channel(8553);
+  let obj2 = channel(8554);
 }) : (function StageGridRow(row) {
   ({ channel: require, participants } = row);
   let THIRD;

@@ -1,6 +1,6 @@
-// === Module 7234: hasFlag ===
+// === Module 7236: hasFlag ===
 
-// Module 7234 (hasFlag)
+// Module 7236 (hasFlag)
 import Constants from "Constants" /* 1087 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import size from "module_2" /* 2 */;

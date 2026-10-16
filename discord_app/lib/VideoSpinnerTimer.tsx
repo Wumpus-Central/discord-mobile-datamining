@@ -1,14 +1,14 @@
-// === Module 11208: VideoSpinnerTimer ===
+// === Module 11205: VideoSpinnerTimer ===
 
-// Module 11208 (VideoSpinnerTimer)
+// Module 11205 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import TimeUtils from "TimeUtils" /* 5182 */;
+import TimeUtils from "TimeUtils" /* 5183 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import NetworkStore from "NetworkStore" /* 5344 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import NetworkStore from "NetworkStore" /* 5345 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;

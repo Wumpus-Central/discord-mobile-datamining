@@ -1,15 +1,15 @@
-// === Module 10548: DetailedGuildIdentityUserRow ===
+// === Module 10549: DetailedGuildIdentityUserRow ===
 
-// Module 10548 (DetailedGuildIdentityUserRow)
+// Module 10549 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5471 */;
-import TableRow from "TableRow" /* 6402 */;
-import Form from "Form" /* 8808 */;
-import DiscordTagDefault from "DiscordTag" /* 8991 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5472 */;
+import TableRow from "TableRow" /* 6404 */;
+import Form from "Form" /* 8809 */;
+import DiscordTagDefault from "DiscordTag" /* 8992 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: { marginRight: nativeDefault.space.PX_4 }, mainTag: null };
 let obj3 = { marginRight: nativeDefault.space.PX_4 };
 obj.mainTag = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };
@@ -77,7 +77,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
           const obj5 = { style: tmp4.mainIdentity, children: null };
           let tmp19 = null;
           if (tmp8) {
-            const obj6 = { size: native.AvatarSizes.SIZE_16, style: tmp4.primaryAvatar, user, guildId: "Array" };
+            const obj6 = { size: native.AvatarSizes.SIZE_16, style: tmp4.primaryAvatar, user, guildId: "a" };
             tmp19 = hasOwnProperty(native.Avatar, obj6);
           }
           const items1 = [tmp19, ];
@@ -132,7 +132,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];
@@ -215,7 +215,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
               const obj2 = { accessibilityLabel, arrow, disabled, end, icon: tmp7, label: tmp10, onPress, start, subLabel, trailing, accessibilityRole, accessibilityState };
-              const tmp16 = closure_5(FormRow(6402).TableRow, obj2);
+              const tmp16 = closure_5(FormRow(6404).TableRow, obj2);
               cResult[29] = accessibilityLabel;
               cResult[30] = accessibilityRole;
               cResult[31] = accessibilityState;
@@ -277,7 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
             }
-            FormRow = FormRow(8808).FormRow;
+            FormRow = FormRow(8809).FormRow;
             const obj5 = { accessibilityLabel, disabled, leading: tmp17, label: tmp20, onPress, subLabel, trailing, accessibilityRole, accessibilityState };
             tmp = closure_5(FormRow, obj5);
             cResult[11] = accessibilityLabel;

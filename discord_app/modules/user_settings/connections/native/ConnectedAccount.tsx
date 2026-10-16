@@ -1,34 +1,34 @@
-// === Module 15932: ConnectedAccount ===
+// === Module 15942: ConnectedAccount ===
 
-// Module 15932 (ConnectedAccount)
+// Module 15942 (ConnectedAccount)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native2 from "native" /* 1202 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import _modDef3221 from "module_3221" /* 3221 */;
 import shared from "shared" /* 5028 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
-import common_AlertDefault from "common/Alert" /* 5460 */;
-import PlatformsDefault from "Platforms" /* 5981 */;
-import GuildIconDefault from "GuildIcon" /* 6381 */;
-import TableRowDivider from "TableRowDivider" /* 6397 */;
-import TableRow from "TableRow" /* 6402 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6403 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7096 */;
-import TableSwitchRow from "TableSwitchRow" /* 7117 */;
-import IconButton from "IconButton" /* 7793 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 9076 */;
-import InfoBoxDefault from "InfoBox" /* 10758 */;
-import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 15933 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 15934 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 15937 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5362 */;
+import common_AlertDefault from "common/Alert" /* 5461 */;
+import PlatformsDefault from "Platforms" /* 5982 */;
+import GuildIconDefault from "GuildIcon" /* 6383 */;
+import TableRowDivider from "TableRowDivider" /* 6399 */;
+import TableRow from "TableRow" /* 6404 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6405 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7098 */;
+import TableSwitchRow from "TableSwitchRow" /* 7119 */;
+import IconButton from "IconButton" /* 7794 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 9077 */;
+import InfoBoxDefault from "InfoBox" /* 10755 */;
+import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 15943 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 15944 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 15947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5980 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import TextStyles from "TextStyles" /* 6124 */;
+import TextStyles from "TextStyles" /* 6125 */;
 
 require = fn;
 function RowGroup(children) {
@@ -50,10 +50,10 @@ function RowGroup(children) {
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ FRIEND_SYNC_PLATFORM_TYPES: closure_9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: closure_11, HelpdeskArticles: closure_12, Fonts } = Constants);
-const MetadataFields = fn(7098).MetadataFields;
+const MetadataFields = fn(7100).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, container: null, connectedAccountItem: null, connectedAccountHeader: null, connectedAccountSection: null, integrationsSection: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, refreshButtonContainer: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
 let obj3 = { borderRadius: null, marginRight: 4 };
 const native = fn(1202);
@@ -96,8 +96,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
   const cResult = integration(576).c(40);
   integration = integration.integration;
   const obj = integration(576);
-  legacyClassComponentStyles = integration(5153).useLegacyClassComponentStyles(legacyClassComponentStyles);
-  const obj2 = integration(5153);
+  legacyClassComponentStyles = integration(5154).useLegacyClassComponentStyles(legacyClassComponentStyles);
+  const obj2 = integration(5154);
   [tmp6, importDefault] = noop.useState();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConnectedAccountsStore];
@@ -162,7 +162,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
               }
               if (cResult[20] !== integration.guild.name) {
                 const obj3 = { lineClamp: 1, variant: "text-sm/medium", children: integration.guild.name };
-                const tmp33 = closure_14(tmp(5149).Text, obj3);
+                const tmp33 = closure_14(tmp(5150).Text, obj3);
                 cResult[20] = integration.guild.name;
                 cResult[21] = tmp33;
                 let tmp31 = tmp33;
@@ -175,7 +175,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
                 }
                 if (cResult[25] !== tmp34) {
                   const obj4 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp34 };
-                  const tmp40 = closure_14(tmp(5149).Text, obj4);
+                  const tmp40 = closure_14(tmp(5150).Text, obj4);
                   cResult[25] = tmp34;
                   cResult[26] = tmp40;
                   let tmp38 = tmp40;
@@ -248,7 +248,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
               cResult[24] = platformUserUrl;
               tmp34 = platformUserUrl;
             }
-            const obj8 = { guild: integration.guild, size: tmp(6381).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
+            const obj8 = { guild: integration.guild, size: tmp(6383).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
             const tmp30 = closure_14(GuildIconDefault, obj8);
             cResult[17] = integration.guild;
             cResult[18] = legacyClassComponentStyles.integrationGuildIcon;
@@ -261,7 +261,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
           const obj9 = { style: legacyClassComponentStyles.integrationErrorText, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
           const intl2 = tmp(1128).intl;
           obj9.children = intl2.string(tmp(1128).t.fEptJP);
-          tmp24 = closure_14(tmp(5149).Text, obj9);
+          tmp24 = closure_14(tmp(5150).Text, obj9);
         }
         cResult[13] = tmp6;
         cResult[14] = integration.id;
@@ -301,7 +301,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
       stringResult = string(RXvQQu.XpeFYr);
     }
     obj12.text = stringResult;
-    obj12 = closure_14(tmp(5441).Button, obj12);
+    obj12 = closure_14(tmp(5442).Button, obj12);
     obj11.children = obj12;
     closure_14(View, obj11);
   }
@@ -309,8 +309,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
 }) : (function Integration(integration) {
   integration = integration.integration;
   importDefault = undefined;
-  legacyClassComponentStyles = integration(5153).useLegacyClassComponentStyles(legacyClassComponentStyles);
-  const obj = integration(5153);
+  legacyClassComponentStyles = integration(5154).useLegacyClassComponentStyles(legacyClassComponentStyles);
+  const obj = integration(5154);
   [tmp5, c1] = noop.useState();
   const tmp4 = _slicedToArray(noop.useState(), 2);
   const items = [ConnectedAccountsStore];
@@ -326,15 +326,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
       const obj4 = { style: legacyClassComponentStyles.integrationErrorText, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
       const intl2 = tmp(1128).intl;
       obj4.children = intl2.string(tmp(1128).t.fEptJP);
-      tmp12 = closure_14(tmp(5149).Text, obj4);
+      tmp12 = closure_14(tmp(5150).Text, obj4);
     }
     const obj5 = { style: legacyClassComponentStyles.integrationContainer, children: null };
     const obj6 = { style: legacyClassComponentStyles.integrationContainerInternal, children: null };
-    const obj7 = { guild: integration.guild, size: tmp(6381).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
+    const obj7 = { guild: integration.guild, size: tmp(6383).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
     const items4 = [closure_14(GuildIconDefault, obj7), , ];
     const obj8 = { style: legacyClassComponentStyles.integrationTextRowContainer, children: null };
     const obj9 = { lineClamp: 1, variant: "text-sm/medium", children: integration.guild.name };
-    const items5 = [closure_14(tmp(5149).Text, obj9), ];
+    const items5 = [closure_14(tmp(5150).Text, obj9), ];
     value = PlatformsDefault.get(integration.type);
     let platformUserUrl;
     if (value != null) {
@@ -344,7 +344,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
       }
     }
     const obj10 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: platformUserUrl };
-    items5[1] = closure_14(tmp(5149).Text, obj10);
+    items5[1] = closure_14(tmp(5150).Text, obj10);
     obj8.children = items5;
     items4[1] = closure_15(View, obj8);
     items4[2] = tmp7;
@@ -375,7 +375,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Integr
       stringResult = string(RXvQQu.XpeFYr);
     }
     obj13.text = stringResult;
-    obj13 = closure_14(tmp(5441).Button, obj13);
+    obj13 = closure_14(tmp(5442).Button, obj13);
     obj11.children = obj13;
     closure_14(View, obj11);
   }
@@ -665,43 +665,43 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  const createdAtDate = account(7097).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
+  const createdAtDate = account(7099).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let redditMetadataItems = tmp2(11068).generateRedditMetadataItems(metadata);
-    const tmp2Result = tmp2(11068);
+    let redditMetadataItems = tmp2(11065).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11065);
   } else if (constants.STEAM === type) {
-    redditMetadataItems = tmp2(11068).generateSteamMetadataItems(metadata);
-    const tmp2Result6 = tmp2(11068);
+    redditMetadataItems = tmp2(11065).generateSteamMetadataItems(metadata);
+    const tmp2Result6 = tmp2(11065);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11068).generateEbayMetadataItems(metadata);
-            const tmp2Result7 = tmp2(11068);
+            redditMetadataItems = tmp2(11065).generateEbayMetadataItems(metadata);
+            const tmp2Result7 = tmp2(11065);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11068).generatePaypalMetadataItems(metadata);
-            const tmp2Result8 = tmp2(11068);
+            redditMetadataItems = tmp2(11065).generatePaypalMetadataItems(metadata);
+            const tmp2Result8 = tmp2(11065);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11068).generateTikTokMetadataItems(metadata);
-              const tmp2Result9 = tmp2(11068);
+              redditMetadataItems = tmp2(11065).generateTikTokMetadataItems(metadata);
+              const tmp2Result9 = tmp2(11065);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11068).generateTwitterMetadataItems(metadata);
-    const tmp2Result10 = tmp2(11068);
+    redditMetadataItems = tmp2(11065).generateTwitterMetadataItems(metadata);
+    const tmp2Result10 = tmp2(11065);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
     const intl = tmp2(1128).intl;
     const obj3 = { date: createdAtDate };
     obj.children = intl.format(tmp2(1128).t["9rfonh"], obj3);
-    redditMetadataItems.push(closure_14(tmp2(5149).Text, obj, MetadataFields.CREATED_AT));
+    redditMetadataItems.push(closure_14(tmp2(5150).Text, obj, MetadataFields.CREATED_AT));
   }
   let intl2 = self.state.metadataRefreshing || self.state.metadataAlreadyRefreshed;
   function handleRefresh() {
@@ -713,7 +713,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    value = self(5981).get(account.type);
+    value = self(5982).get(account.type);
     let hasMetadata;
     if (value != null) {
       hasMetadata = value.hasMetadata;
@@ -733,11 +733,11 @@ prototype["renderMetadata"] = function renderMetadata() {
       const obj6 = { variant: "text-xs/normal", children: null };
       const intl5 = tmp2(1128).intl;
       obj6.children = intl5.string(tmp2(1128).t.eH16Gn);
-      items1[1] = closure_14(tmp2(5149).Text, obj6);
+      items1[1] = closure_14(tmp2(5150).Text, obj6);
       const obj7 = { style: tmp.rowDivider };
       items1[2] = closure_14(View, obj7);
       let obj8 = { style: tmp.addDetailsButton, children: null };
-      let string = tmp2(5441).Button;
+      let string = tmp2(5442).Button;
       const intl6 = tmp2(1128).intl;
       const string2 = intl6.string;
       let Button = tmp2(1128).t;
@@ -750,7 +750,7 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj8.children = closure_14(string, obj9);
       items1[3] = closure_14(View, obj8);
       const obj10 = { style: tmp.learnMoreButton, children: null };
-      Button = tmp2(5441).Button;
+      Button = tmp2(5442).Button;
       const obj11 = { text: null, variant: "secondary", size: "sm", onPress: null };
       intl2 = tmp2(1128).intl;
       string = intl2.string;
@@ -767,12 +767,12 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj4.children = items1;
       closure_15(View, obj4);
     }
-    const obj14 = self(5981);
+    const obj14 = self(5982);
   } else {
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp19Result = closure_14(tmp2(9074).CheckmarkLargeBoldIcon, { size: "sm" });
+      let tmp19Result = closure_14(tmp2(9075).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(11558).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(11555).RefreshIcon, { size: "sm" });
     }
     const obj12 = { size: "sm", variant: "icon-only", icon: tmp19Result, accessibilityLabel: null, onPress: null, disabled: null };
     const intl3 = tmp2(1128).intl;
@@ -782,12 +782,12 @@ prototype["renderMetadata"] = function renderMetadata() {
     const obj13 = { style: tmp.metadataContainer, children: null };
     const obj15 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
     const items2 = [closure_14(View, obj15), ];
-    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(7793).IconButton, obj12) };
+    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(7794).IconButton, obj12) };
     items2[1] = closure_14(View, obj16);
     obj13.children = items2;
     return closure_15(View, obj13);
   }
-  const obj2 = account(7097);
+  const obj2 = account(7099);
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   let tmp2 = null;

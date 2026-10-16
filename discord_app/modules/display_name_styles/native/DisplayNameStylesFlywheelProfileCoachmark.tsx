@@ -1,10 +1,10 @@
-// === Module 17865: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 17875: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 17865 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 17875 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
 import _modDef2963 from "module_2963" /* 2963 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17866 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17876 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -177,6 +177,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     }
   }), items2);
   const obj2 = markAsDismissed(4828);
-  const coachmark = visible(9679).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(9678).useCoachmark(visible.targetRef, memo);
   return null;
 });

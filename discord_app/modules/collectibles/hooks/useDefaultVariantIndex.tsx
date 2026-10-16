@@ -1,7 +1,7 @@
-// === Module 9199: useDefaultVariantIndex ===
+// === Module 9200: useDefaultVariantIndex ===
 
-// Module 9199 (useDefaultVariantIndex)
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7498 */;
+// Module 9200 (useDefaultVariantIndex)
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7500 */;
 
 const require = globalThis.__r;
 
@@ -52,7 +52,7 @@ export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled
       cResult[3] = stateFromStores;
       cResult[4] = findIndexResult;
     }
-    tmpResult2 = tmp(7493);
+    tmpResult2 = tmp(7495);
   }
   return 0;
 }) : (function useDefaultVariantIndex(variants) {

@@ -1,6 +1,6 @@
-// === Module 10465: ThemedGradient ===
+// === Module 10466: ThemedGradient ===
 
-// Module 10465 (ThemedGradient)
+// Module 10466 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,7 +15,7 @@ import GuildThemePresets from "GuildThemePresets" /* 5032 */;
 import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5034 */;
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5089 */;
 import useThemeDefault from "useTheme" /* 5090 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
@@ -86,7 +86,7 @@ let closure_5 = ["overlayOpacity", "gradientOverride"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c14 = 0.7;
@@ -941,8 +941,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_10(reduced(5453), obj);
-    const tmp2Result = reduced(5453);
+    tmp10Result = closure_10(reduced(5454), obj);
+    const tmp2Result = reduced(5454);
   }
   return tmp10Result;
 });

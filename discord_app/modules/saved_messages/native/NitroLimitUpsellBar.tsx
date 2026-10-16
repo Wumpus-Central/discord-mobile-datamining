@@ -1,18 +1,18 @@
-// === Module 13732: NitroLimitUpsellBar ===
+// === Module 13743: NitroLimitUpsellBar ===
 
-// Module 13732 (NitroLimitUpsellBar)
+// Module 13743 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import WarningIcon from "WarningIcon" /* 7791 */;
-import _modDef9773 from "module_9773" /* 9773 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10016 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import WarningIcon from "WarningIcon" /* 7792 */;
+import _modDef9772 from "module_9772" /* 9772 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10017 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
+import createStyles from "createStyles" /* 5154 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
     let tmp6Result = React4(WarningIcon.WarningIcon, obj6);
   } else {
-    const obj7 = { source: _modDef9773, style: tmp4.icon };
+    const obj7 = { source: _modDef9772, style: tmp4.icon };
     tmp6Result = React4(FastImageDefault, obj7);
   }
   cResult[0] = isAtLimit;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef9773, style: tmp.icon };
+    const obj3 = { source: _modDef9772, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }

@@ -1,12 +1,12 @@
-// === Module 8918: UserPlaceholderRow ===
+// === Module 8919: UserPlaceholderRow ===
 
-// Module 8918 (UserPlaceholderRow)
+// Module 8919 (UserPlaceholderRow)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import timingPresets from "timingPresets" /* 5157 */;
+import timing from "timing" /* 5155 */;
+import timingPresets from "timingPresets" /* 5158 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_8 = createStyles.createStyles((height) => {
   const obj = { row: { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height }, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
   const obj2 = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };

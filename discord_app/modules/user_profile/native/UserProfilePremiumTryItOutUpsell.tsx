@@ -1,20 +1,20 @@
-// === Module 15628: UserProfilePremiumTryItOutUpsell ===
+// === Module 15638: UserProfilePremiumTryItOutUpsell ===
 
-// Module 15628 (UserProfilePremiumTryItOutUpsell)
+// Module 15638 (UserProfilePremiumTryItOutUpsell)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
-import spring from "spring" /* 5440 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15627 */;
+import spring from "spring" /* 5441 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15637 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7126).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7128).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let c5 = 0.9;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 }, card: { marginHorizontal: PROFILE_SIDE_PADDING - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     return obj2;
   };
   let obj2 = isVisible(4909);
-  fn.__closure = { isVisible, withSpring: isVisible(5440).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
+  fn.__closure = { isVisible, withSpring: isVisible(5441).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
   fn.__workletHash = 7434922701119;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj3 = { isVisible, withSpring: isVisible(5440).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
+  let obj3 = { isVisible, withSpring: isVisible(5441).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
   const fn2 = function u() {
     value = isVisible.get();
     let str = "none";
@@ -158,11 +158,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     return obj2;
   };
   let obj = isVisible(4909);
-  fn.__closure = { isVisible, withSpring: isVisible(5440).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
+  fn.__closure = { isVisible, withSpring: isVisible(5441).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
   fn.__workletHash = 14790282051517;
   fn.__initData = __initData3;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { isVisible, withSpring: isVisible(5440).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
+  let obj2 = { isVisible, withSpring: isVisible(5441).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE };
   class I {
     constructor() {
       value = isVisible.get();

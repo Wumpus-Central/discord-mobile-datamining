@@ -1,11 +1,11 @@
-// === Module 13185: useGameServerPowerupStatus ===
+// === Module 13193: useGameServerPowerupStatus ===
 
-// Module 13185 (useGameServerPowerupStatus)
+// Module 13193 (useGameServerPowerupStatus)
 import util from "util" /* 1128 */;
 import _modDef2603 from "module_2603" /* 2603 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 13169 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 13177 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8253 */;
+import GameServerStore from "GameServerStore" /* 8254 */;
 
 const require = globalThis.__r;
 
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(13169)(arg0);
+  const tmp2 = stateFromStores(13177)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {

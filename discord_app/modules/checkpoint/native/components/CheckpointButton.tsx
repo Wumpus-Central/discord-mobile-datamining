@@ -1,32 +1,34 @@
-// === Module 12709: CheckpointButton ===
+// === Module 12716: CheckpointButton ===
 
-// Module 12709 (CheckpointButton)
+// Module 12716 (CheckpointButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4877 */;
-import CheckpointTextDefault from "CheckpointText" /* 12676 */;
-import CheckpointPressable from "CheckpointPressable" /* 12700 */;
-import CheckpointConstants from "CheckpointConstants" /* 5499 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import CheckpointTextDefault from "CheckpointText" /* 12682 */;
+import CheckpointPressable from "CheckpointPressable" /* 12707 */;
+import noop from "module_19" /* 19 */;
 
 const CheckpointPressableDefault = CheckpointPressable;
 
-({ CHECKPOINT_PRIMARY: c3, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { container: { justifyContent: "center", marginRight: -CheckpointPressable.SHADOW_OFFSET, marginBottom: -CheckpointPressable.SHADOW_OFFSET }, button: null, label: null };
-let obj2 = { justifyContent: "center", marginRight: -CheckpointPressable.SHADOW_OFFSET, marginBottom: -CheckpointPressable.SHADOW_OFFSET };
-obj.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, borderColor: CHECKPOINT_DARK_CYAN };
-obj.label = { textTransform: "uppercase" };
-let closure_6 = createStyles.createStyles(obj);
-let obj3 = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, borderColor: CHECKPOINT_DARK_CYAN };
+require = fn;
+const CheckpointConstants = fn(5500);
+({ CHECKPOINT_DARK_CYAN: closure_4, CHECKPOINT_PRIMARY: hasOwnProperty } = CheckpointConstants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5154);
+let obj2 = { container: { justifyContent: "center", marginRight: -fn(12707).SHADOW_OFFSET, marginBottom: -fn(12707).SHADOW_OFFSET }, button: null, label: null };
+let obj3 = { justifyContent: "center", marginRight: -fn(12707).SHADOW_OFFSET, marginBottom: -fn(12707).SHADOW_OFFSET };
+obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
+obj2.label = { textTransform: "uppercase" };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointButton(arg0) {
-  const cResult = c.c(26);
-  ({ onPress, Icon, label, accessibilityLabel, accessibilityHint, accessibilityState, disabled, iconPosition, iconSize } = arg0);
+  const cResult = c.c(28);
+  ({ onPress, Icon, label, accessibilityLabel, accessibilityHint, accessibilityState, disabled, iconPosition, iconSize, color, borderColor, shadowColor, style } = arg0);
   let str = "start";
   if (undefined !== iconPosition) {
     str = iconPosition;
@@ -35,49 +37,70 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (undefined !== iconSize) {
     str2 = iconSize;
   }
-  const tmp5 = closure_6();
+  if (undefined === color) {
+    color = hasOwnProperty;
+  }
+  if (undefined === borderColor) {
+    borderColor = React4;
+  }
+  const tmp5 = closure_8();
   const token = useToken.useToken("text-subtle");
   const tmpResult = useToken;
   const token1 = useToken.useToken("border-normal");
-  let tmp8 = token;
-  if (!(undefined !== disabled && disabled)) {
-    tmp8 = React3;
+  if (undefined !== disabled && disabled) {
+    color = token;
   }
-  if (cResult[0] === Icon) {
-    if (cResult[1] === str2) {
-      if (cResult[2] === tmp8) {
-        let tmp9 = cResult[3];
+  if (undefined !== disabled && disabled) {
+    borderColor = token1;
+  }
+  if (cResult[0] !== borderColor) {
+    const obj2 = { borderColor };
+    cResult[0] = borderColor;
+    cResult[1] = obj2;
+    let tmp8 = obj2;
+  } else {
+    tmp8 = cResult[1];
+  }
+  if (cResult[2] !== color) {
+    const obj3 = { color };
+    cResult[2] = color;
+    cResult[3] = obj3;
+    let tmp9 = obj3;
+  } else {
+    tmp9 = cResult[3];
+  }
+  if (cResult[4] === Icon) {
+    if (cResult[5] === color) {
+      if (cResult[6] === str2) {
+        let tmp10 = cResult[7];
       }
-      if (cResult[4] === token1) {
-        if (cResult[5] === tmp4) {
-          let tmp11 = cResult[6];
-        }
-        if (cResult[7] === tmp5.button) {
-          if (cResult[8] === tmp11) {
-            let tmp13 = cResult[9];
+      if (cResult[8] === tmp8) {
+        if (cResult[9] === style) {
+          if (cResult[10] === tmp5.button) {
+            let tmp13 = cResult[11];
           }
           if (accessibilityLabel == null) {
             accessibilityLabel = label;
           }
-          if (cResult[10] === tmp4) {
-            if (cResult[11] === label) {
-              if (cResult[12] === tmp5.label) {
-                if (cResult[13] === token) {
-                  let tmp16 = cResult[14];
-                }
-                if (cResult[15] === accessibilityHint) {
-                  if (cResult[16] === accessibilityState) {
-                    if (cResult[17] === tmp4) {
-                      if (cResult[18] === onPress) {
-                        if (cResult[19] === tmp5.container) {
-                          if (cResult[20] === tmp16) {
-                            if (cResult[21] === tmp22) {
-                              if (cResult[22] === tmp13) {
-                                if (cResult[23] === accessibilityLabel) {
-                                  if (cResult[24] === tmp15) {
-                                    let tmp23 = cResult[25];
+          if (cResult[12] === label) {
+            if (cResult[13] === tmp9) {
+              if (cResult[14] === tmp5.label) {
+                let tmp16 = cResult[15];
+              }
+              if (cResult[16] === accessibilityHint) {
+                if (cResult[17] === accessibilityState) {
+                  if (cResult[18] === tmp4) {
+                    if (cResult[19] === onPress) {
+                      if (cResult[20] === shadowColor) {
+                        if (cResult[21] === tmp5.container) {
+                          if (cResult[22] === tmp13) {
+                            if (cResult[23] === accessibilityLabel) {
+                              if (cResult[24] === tmp15) {
+                                if (cResult[25] === tmp16) {
+                                  if (cResult[26] === tmp21) {
+                                    let tmp22 = cResult[27];
                                   }
-                                  return tmp23;
+                                  return tmp22;
                                 }
                               }
                             }
@@ -87,73 +110,63 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     }
                   }
                 }
-                const obj2 = { size: "lg", containerStyle: tmp5.container, style: tmp13, onPress, disabled: tmp4, accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityState, children: null };
-                const items = [tmp15, tmp16, "end" === str && tmp9];
-                obj2.children = items;
-                const tmp26 = hasOwnProperty(CheckpointPressableDefault, obj2);
-                cResult[15] = accessibilityHint;
-                cResult[16] = accessibilityState;
-                cResult[17] = tmp4;
-                cResult[18] = onPress;
-                cResult[19] = tmp5.container;
-                cResult[20] = tmp16;
-                cResult[21] = "end" === str && tmp9;
-                cResult[22] = tmp13;
-                cResult[23] = accessibilityLabel;
-                cResult[24] = tmp15;
-                cResult[25] = tmp26;
-                tmp23 = tmp26;
               }
+              const obj4 = { size: "lg", containerStyle: tmp5.container, style: tmp13, shadowColor, onPress, disabled: tmp4, accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityState, children: null };
+              const items = [tmp15, tmp16, "end" === str && tmp10];
+              obj4.children = items;
+              const tmp25 = React5(CheckpointPressableDefault, obj4);
+              cResult[16] = accessibilityHint;
+              cResult[17] = accessibilityState;
+              cResult[18] = tmp4;
+              cResult[19] = onPress;
+              cResult[20] = shadowColor;
+              cResult[21] = tmp5.container;
+              cResult[22] = tmp13;
+              cResult[23] = accessibilityLabel;
+              cResult[24] = tmp15;
+              cResult[25] = tmp16;
+              cResult[26] = "end" === str && tmp10;
+              cResult[27] = tmp25;
+              tmp22 = tmp25;
             }
           }
-          let tmp18Result = null != label;
-          if (tmp18Result) {
-            const obj3 = { variant: CheckpointPressable.CHECKPOINT_PRESSABLE_SIZES.lg.textVariant, style: null, children: null };
-            const items1 = [tmp5.label, ];
-            let tmp21 = tmp4;
-            if (tmp4) {
-              const obj4 = { color: token };
-              tmp21 = obj4;
-            }
-            items1[1] = tmp21;
-            obj3.style = items1;
-            obj3.children = label;
-            tmp18Result = React4(CheckpointTextDefault, obj3);
+          let tmp17 = null != label;
+          if (tmp17) {
+            const obj5 = { variant: CheckpointPressable.CHECKPOINT_PRESSABLE_SIZES.lg.textVariant, style: null, children: null };
+            const items1 = [tmp5.label, tmp9];
+            obj5.style = items1;
+            obj5.children = label;
+            tmp17 = timestampProducer(CheckpointTextDefault, obj5);
           }
-          cResult[10] = tmp4;
-          cResult[11] = label;
-          cResult[12] = tmp5.label;
-          cResult[13] = token;
-          cResult[14] = tmp18Result;
-          tmp16 = tmp18Result;
+          cResult[12] = label;
+          cResult[13] = tmp9;
+          cResult[14] = tmp5.label;
+          cResult[15] = tmp17;
+          tmp16 = tmp17;
         }
-        const items2 = [tmp5.button, tmp11];
-        cResult[7] = tmp5.button;
-        cResult[8] = tmp11;
-        cResult[9] = items2;
-        tmp13 = items2;
       }
-      let tmp12 = tmp4;
-      if (tmp4) {
-        const obj5 = { borderColor: token1 };
-        tmp12 = obj5;
-      }
-      cResult[4] = token1;
-      cResult[5] = tmp4;
-      cResult[6] = tmp12;
-      tmp11 = tmp12;
+      const items2 = [tmp5.button, tmp8, style];
+      cResult[8] = tmp8;
+      cResult[9] = style;
+      cResult[10] = tmp5.button;
+      cResult[11] = items2;
+      tmp13 = items2;
     }
   }
-  const tmp10 = React4(Icon, { color: tmp8, size: str2 });
-  cResult[0] = Icon;
-  cResult[1] = str2;
-  cResult[2] = tmp8;
-  cResult[3] = tmp10;
-  tmp9 = tmp10;
+  let tmp11 = null;
+  if (null != Icon) {
+    const obj6 = { color, size: str2 };
+    tmp11 = timestampProducer(Icon, obj6);
+  }
+  cResult[4] = Icon;
+  cResult[5] = color;
+  cResult[6] = str2;
+  cResult[7] = tmp11;
+  tmp10 = tmp11;
   const tmpResult2 = useToken;
 }) : (function CheckpointButton(iconPosition) {
-  ({ label, accessibilityLabel, disabled } = iconPosition);
-  ({ onPress, Icon, accessibilityHint, accessibilityState } = iconPosition);
+  ({ Icon, label, accessibilityLabel, disabled } = iconPosition);
+  ({ onPress, accessibilityHint, accessibilityState } = iconPosition);
   if (disabled === undefined) {
     disabled = false;
   }
@@ -165,48 +178,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (str2 === undefined) {
     str2 = "sm";
   }
-  const tmp = closure_6();
+  let color = iconPosition.color;
+  if (color === undefined) {
+    color = hasOwnProperty;
+  }
+  let borderColor = iconPosition.borderColor;
+  if (borderColor === undefined) {
+    borderColor = React4;
+  }
+  color = undefined;
+  ({ shadowColor, style } = iconPosition);
+  const tmp = closure_8();
   const token = useToken.useToken("text-subtle");
-  let tmp7 = token;
   const token1 = useToken.useToken("border-normal");
-  if (!disabled) {
-    tmp7 = React3;
-  }
-  const tmp6Result = React4(Icon, { color: tmp7, size: str2 });
-  const obj3 = { size: "lg", containerStyle: tmp.container, style: null, onPress: null, disabled: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, children: null };
-  const items = [tmp.button, ];
-  let tmp12 = disabled;
   if (disabled) {
-    const obj4 = { borderColor: token1 };
-    tmp12 = obj4;
+    color = token;
   }
-  items[1] = tmp12;
-  obj3.style = items;
-  obj3.onPress = onPress;
-  obj3.disabled = disabled;
+  const items = [disabled, token1, borderColor];
+  const items1 = [color];
+  const memo = noop.useMemo(() => ({ borderColor: disabled ? token1 : borderColor }), items);
+  let tmp8 = null;
+  const memo1 = noop.useMemo(() => ({ color }), items1);
+  if (null != Icon) {
+    const obj3 = { color, size: str2 };
+    tmp8 = timestampProducer(Icon, obj3);
+  }
+  const obj4 = { size: "lg", containerStyle: tmp.container, style: null, shadowColor, onPress, disabled, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, children: null };
+  const items2 = [tmp.button, memo, style];
+  obj4.style = items2;
   if (accessibilityLabel == null) {
     accessibilityLabel = label;
   }
-  obj3.accessibilityLabel = accessibilityLabel;
-  obj3.accessibilityHint = accessibilityHint;
-  obj3.accessibilityState = accessibilityState;
-  const items1 = ["start" === str && tmp6Result, , ];
-  let tmp6Result2 = null != label;
-  if (tmp6Result2) {
+  obj4.accessibilityLabel = accessibilityLabel;
+  obj4.accessibilityHint = accessibilityHint;
+  obj4.accessibilityState = accessibilityState;
+  const items3 = ["start" === str && tmp8, , ];
+  let tmp14 = null != label;
+  if (tmp14) {
     const obj5 = { variant: CheckpointPressable.CHECKPOINT_PRESSABLE_SIZES.lg.textVariant, style: null, children: null };
-    const items2 = [tmp.label, ];
-    if (disabled) {
-      const obj6 = { color: token };
-      disabled = obj6;
-    }
-    items2[1] = disabled;
-    obj5.style = items2;
+    const items4 = [tmp.label, memo1];
+    obj5.style = items4;
     obj5.children = label;
-    tmp6Result2 = React4(CheckpointTextDefault, obj5);
-    const tmp10Result = CheckpointTextDefault;
+    tmp14 = timestampProducer(CheckpointTextDefault, obj5);
+    const tmp11Result = CheckpointTextDefault;
   }
-  items1[1] = tmp6Result2;
-  items1[2] = "end" === str && tmp6Result;
-  obj3.children = items1;
-  return hasOwnProperty(CheckpointPressableDefault, obj3);
+  items3[1] = tmp14;
+  items3[2] = "end" === str && tmp8;
+  obj4.children = items3;
+  return React5(CheckpointPressableDefault, obj4);
 });

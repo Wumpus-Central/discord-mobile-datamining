@@ -1,12 +1,12 @@
-// === Module 13454: useTruncatedGradientColors ===
+// === Module 13462: useTruncatedGradientColors ===
 
-// Module 13454 (useTruncatedGradientColors)
+// Module 13462 (useTruncatedGradientColors)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import useToken from "useToken" /* 4877 */;
-import createStyles from "createStyles" /* 5153 */;
+import createStyles from "createStyles" /* 5154 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

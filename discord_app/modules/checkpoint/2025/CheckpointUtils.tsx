@@ -1,10 +1,9 @@
-// === Module 5509: CheckpointUtils ===
+// === Module 5510: CheckpointUtils ===
 
-// Module 5509 (CheckpointUtils)
+// Module 5510 (CheckpointUtils)
 import util from "util" /* 1128 */;
-import TimeUtils from "TimeUtils" /* 5182 */;
-import getTimestampString from "getTimestampString" /* 5510 */;
-import _modDef5511 from "module_5511" /* 5511 */;
+import TimeUtils from "TimeUtils" /* 5183 */;
+import getTimestampString from "getTimestampString" /* 5511 */;
 import _modDef5512 from "module_5512" /* 5512 */;
 import _modDef5513 from "module_5513" /* 5513 */;
 import _modDef5514 from "module_5514" /* 5514 */;
@@ -14,6 +13,7 @@ import _modDef5517 from "module_5517" /* 5517 */;
 import _modDef5518 from "module_5518" /* 5518 */;
 import _modDef5519 from "module_5519" /* 5519 */;
 import _modDef5520 from "module_5520" /* 5520 */;
+import _modDef5521 from "module_5521" /* 5521 */;
 import size from "module_2" /* 2 */;
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -43,25 +43,25 @@ export const getVoiceDurationString = function getVoiceDurationString(rounded) {
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef5511;
-  } else if (1 === cardId) {
     return _modDef5512;
-  } else if (2 === cardId) {
+  } else if (1 === cardId) {
     return _modDef5513;
-  } else if (3 === cardId) {
+  } else if (2 === cardId) {
     return _modDef5514;
-  } else if (4 === cardId) {
+  } else if (3 === cardId) {
     return _modDef5515;
-  } else if (5 === cardId) {
+  } else if (4 === cardId) {
     return _modDef5516;
-  } else if (6 === cardId) {
+  } else if (5 === cardId) {
     return _modDef5517;
-  } else if (7 === cardId) {
+  } else if (6 === cardId) {
     return _modDef5518;
-  } else if (8 === cardId) {
+  } else if (7 === cardId) {
     return _modDef5519;
-  } else {
+  } else if (8 === cardId) {
     return _modDef5520;
+  } else {
+    return _modDef5521;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(checkpointData) {

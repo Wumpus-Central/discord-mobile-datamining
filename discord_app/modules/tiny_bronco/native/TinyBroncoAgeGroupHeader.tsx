@@ -1,15 +1,15 @@
-// === Module 15690: TinyBroncoAgeGroupHeader ===
+// === Module 15700: TinyBroncoAgeGroupHeader ===
 
-// Module 15690 (TinyBroncoAgeGroupHeader)
+// Module 15700 (TinyBroncoAgeGroupHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3157 from "module_3157" /* 3157 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7717 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9859 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15691 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7718 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9858 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15701 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,11 +18,11 @@ function handleOpenBlog() {
   AgeVerificationActionCreatorsDefault.openUrl(TINY_BRONCO_BLOG_URL);
 }
 const View = fn(17).View;
-const TINY_BRONCO_BLOG_URL = fn(6145).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(6146).TINY_BRONCO_BLOG_URL;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { header: { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 }, notice: null, noticeIcon: null, noticeBody: null, noticeDismiss: null, description: null };
 let obj3 = { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 };
 obj2.notice = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
@@ -35,9 +35,9 @@ let closure_10 = createStyles.createStyles(obj2);
 let items = [fn(2052).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(9859).AgeGroupState.ADULT] = _modDef3157["8TWztV"];
-obj6[fn(9859).AgeGroupState.TEEN] = _modDef3157.qSkhZH;
-obj6[fn(9859).AgeGroupState.UNVERIFIED] = _modDef3157.vGxRDB;
+obj6[fn(9858).AgeGroupState.ADULT] = _modDef3157["8TWztV"];
+obj6[fn(9858).AgeGroupState.TEEN] = _modDef3157.qSkhZH;
+obj6[fn(9858).AgeGroupState.UNVERIFIED] = _modDef3157.vGxRDB;
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusNotice(ageGroup) {
   const cResult = require("c").c(20);
@@ -102,7 +102,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
         }
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp28 = closure_8(tmp(6430).XSmallIcon, { size: "sm", color: "icon-strong" });
+          const tmp28 = closure_8(tmp(6432).XSmallIcon, { size: "sm", color: "icon-strong" });
           cResult[11] = tmp28;
           let tmp26 = tmp28;
         } else {
@@ -134,14 +134,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
           tmp32 = tmp35;
         }
         const obj7 = { style: tmp4.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: tmp24, hitSlop: 12, onPress: tmp8, children: tmp26 };
-        const tmp31 = closure_8(tmp(6407).PressableOpacity, obj7);
+        const tmp31 = closure_8(tmp(6409).PressableOpacity, obj7);
         cResult[12] = tmp8;
         cResult[13] = tmp4.noticeDismiss;
         cResult[14] = tmp31;
         tmp29 = tmp31;
       }
       obj8 = { style: tmp4.noticeBody, variant: "text-sm/normal", color: "text-default", children: tmp17 };
-      const tmp23 = closure_8(tmp(5149).Text, obj8);
+      const tmp23 = closure_8(tmp(5150).Text, obj8);
       cResult[7] = tmp4.noticeBody;
       cResult[8] = tmp17;
       cResult[9] = tmp23;
@@ -168,13 +168,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
       const intl = tmp2(1128).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-      items[1] = closure_8(tmp2(5149).Text, obj5);
+      items[1] = closure_8(tmp2(5150).Text, obj5);
       const obj7 = { style: tmp.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
       const intl2 = tmp2(1128).intl;
       obj7.accessibilityLabel = intl2.string(tmp2(1128).t.WAI6xu);
       obj7.onPress = tmp7;
-      obj7.children = closure_8(tmp2(6430).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_8(tmp2(6407).PressableOpacity, obj7);
+      obj7.children = closure_8(tmp2(6432).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_8(tmp2(6409).PressableOpacity, obj7);
       obj3.children = items;
       tmp8 = closure_9(View, obj3);
     }
@@ -182,9 +182,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   return tmp8;
 });
 let obj8 = {};
-obj8[fn(9859).AgeGroupState.ADULT] = _modDef3157.t5QjmQ;
-obj8[fn(9859).AgeGroupState.TEEN] = _modDef3157["41MDhK"];
-obj8[fn(9859).AgeGroupState.UNVERIFIED] = _modDef3157.m95jW8;
+obj8[fn(9858).AgeGroupState.ADULT] = _modDef3157.t5QjmQ;
+obj8[fn(9858).AgeGroupState.TEEN] = _modDef3157["41MDhK"];
+obj8[fn(9858).AgeGroupState.UNVERIFIED] = _modDef3157.m95jW8;
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGroupDescription(ageGroup) {
   const cResult = c.c(3);

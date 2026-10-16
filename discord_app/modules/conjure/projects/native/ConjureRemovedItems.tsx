@@ -1,20 +1,20 @@
-// === Module 11570: ConjureRemovedItems ===
+// === Module 11567: ConjureRemovedItems ===
 
-// Module 11570 (ConjureRemovedItems)
+// Module 11567 (ConjureRemovedItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4891 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6399 */;
-import FormCheckbox from "FormCheckbox" /* 6400 */;
-import TableRowGroup from "TableRowGroup" /* 6487 */;
-import FolderIcon from "FolderIcon" /* 8427 */;
-import AppsIcon from "AppsIcon" /* 8459 */;
-import BotTagDefault from "BotTag" /* 8992 */;
-import RobotIcon from "RobotIcon" /* 11571 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6401 */;
+import FormCheckbox from "FormCheckbox" /* 6402 */;
+import TableRowGroup from "TableRowGroup" /* 6489 */;
+import FolderIcon from "FolderIcon" /* 8428 */;
+import AppsIcon from "AppsIcon" /* 8460 */;
+import BotTagDefault from "BotTag" /* 8993 */;
+import RobotIcon from "RobotIcon" /* 11568 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 }, optionalLabel: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

@@ -1,25 +1,25 @@
-// === Module 13397: ThreadBrowserHooks ===
+// === Module 13405: ThreadBrowserHooks ===
 
-// Module 13397 (ThreadBrowserHooks)
+// Module 13405 (ThreadBrowserHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8122 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9565 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8123 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9564 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import ReadStateStore from "ReadStateStore" /* 6253 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6278 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8123 */;
+import ReadStateStore from "ReadStateStore" /* 6254 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6279 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8124 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(13398).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(13406).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1098).Permissions;
 fn(558);
 let ReactCompilerGating = fn(558);

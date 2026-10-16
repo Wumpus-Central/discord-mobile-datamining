@@ -1,22 +1,22 @@
-// === Module 11025: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11022: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11025 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11022 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef3735 from "module_3735" /* 3735 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7079 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7152 */;
-import StorefrontUtils from "StorefrontUtils" /* 7157 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8109 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11026 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7081 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7154 */;
+import StorefrontUtils from "StorefrontUtils" /* 7159 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8110 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11023 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
-import SKUStore from "SKUStore" /* 6312 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
+import SKUStore from "SKUStore" /* 6314 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7642).InviteTypes;
+const InviteTypes = fn(7643).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -201,5 +201,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(7079)(stateFromStoresArray);
+  memo(7081)(stateFromStoresArray);
 });

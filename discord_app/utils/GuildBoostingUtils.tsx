@@ -1,6 +1,6 @@
-// === Module 8247: GuildBoostingUtils ===
+// === Module 8248: GuildBoostingUtils ===
 
-// Module 8247 (GuildBoostingUtils)
+// Module 8248 (GuildBoostingUtils)
 import util from "util" /* 1128 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -8,14 +8,14 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
 import _modDef3285 from "module_3285" /* 3285 */;
 import _modDef4761 from "module_4761" /* 4761 */;
 import PremiumUtilsAll from "PremiumUtils" /* 4828 */;
-import FileSizeUtils from "FileSizeUtils" /* 5858 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8248 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8249 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8252 */;
+import FileSizeUtils from "FileSizeUtils" /* 5859 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8249 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8250 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7342 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7344 */;
 import SubscriptionStore from "SubscriptionStore" /* 4834 */;
 import apply from "module_12" /* 12 */;
 
@@ -758,7 +758,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8256).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8257).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

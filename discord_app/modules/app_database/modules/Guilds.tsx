@@ -1,6 +1,6 @@
-// === Module 7557: Guilds ===
+// === Module 7558: Guilds ===
 
-// Module 7557 (Guilds)
+// Module 7558 (Guilds)
 import LoggerDefault from "Logger" /* 3 */;
 import GuildRecordUtilsAll from "GuildRecordUtils" /* 2082 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2094 */;

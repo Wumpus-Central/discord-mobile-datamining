@@ -1,6 +1,6 @@
-// === Module 13000: isStaffFromRawUser ===
+// === Module 13008: isStaffFromRawUser ===
 
-// Module 13000 (isStaffFromRawUser)
+// Module 13008 (isStaffFromRawUser)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

@@ -1,27 +1,27 @@
-// === Module 12178: ConjurePlanProposalCard ===
+// === Module 12182: ConjurePlanProposalCard ===
 
-// Module 12178 (ConjurePlanProposalCard)
+// Module 12182 (ConjurePlanProposalCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5141 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12119 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12174 */;
-import conjurePlanBot from "conjurePlanBot" /* 12185 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 12188 */;
-import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12189 */;
-import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12190 */;
-import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12192 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5142 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12108 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12123 */;
+import conjurePlanBot from "conjurePlanBot" /* 12189 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 12192 */;
+import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12193 */;
+import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12194 */;
+import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12196 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { surface: { padding: 0, overflow: "hidden" }, content: { padding: nativeDefault.space.PX_12 }, whatChanged: null, footer: null, replyHint: null, design: null };
 let obj3 = { padding: nativeDefault.space.PX_12 };
 obj2.whatChanged = { gap: nativeDefault.space.PX_8 };

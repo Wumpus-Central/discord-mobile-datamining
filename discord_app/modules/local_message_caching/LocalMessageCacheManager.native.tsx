@@ -1,21 +1,21 @@
-// === Module 15511: LocalMessageCacheManager ===
+// === Module 15521: LocalMessageCacheManager ===
 
-// Module 15511 (LocalMessageCacheManager)
+// Module 15521 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import _modDef4761 from "module_4761" /* 4761 */;
 import DateUtils from "DateUtils" /* 4852 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
-import createMessageDefault from "createMessage" /* 10046 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 11121 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7399 */;
+import createMessageDefault from "createMessage" /* 10047 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 11118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 4820 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import MessageStore from "MessageStore" /* 5494 */;
+import MessageStore from "MessageStore" /* 5495 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 
 require = fn;
@@ -243,7 +243,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1087).MessageStates;
-const MutexUtils = fn(15512);
+const MutexUtils = fn(15522);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -964,7 +964,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(5970);
+                let obj9 = values(5971);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

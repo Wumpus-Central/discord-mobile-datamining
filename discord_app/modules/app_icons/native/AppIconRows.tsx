@@ -1,15 +1,15 @@
-// === Module 16508: AppIconRows ===
+// === Module 16522: AppIconRows ===
 
-// Module 16508 (AppIconRows)
+// Module 16522 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import AppIconTypes from "AppIconTypes" /* 9705 */;
-import AppIconUtils from "AppIconUtils" /* 14450 */;
-import AppIconRowDefault from "AppIconRow" /* 16509 */;
+import AppIconTypes from "AppIconTypes" /* 9704 */;
+import AppIconUtils from "AppIconUtils" /* 14460 */;
+import AppIconRowDefault from "AppIconRow" /* 16523 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 12813 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 12819 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
@@ -41,7 +41,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6487).TableRowGroup;
+  const TableRowGroup = tmp(6489).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t.N4YDao);
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(6487).TableRowGroup, obj2);
+    obj.children = closure_9(merged(6489).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 });

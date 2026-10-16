@@ -1,6 +1,6 @@
-// === Module 17354: GuildsBarConstants ===
+// === Module 17366: GuildsBarConstants ===
 
-// Module 17354 (GuildsBarConstants)
+// Module 17366 (GuildsBarConstants)
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4877 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

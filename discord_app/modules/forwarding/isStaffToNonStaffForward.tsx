@@ -1,6 +1,6 @@
-// === Module 12609: isStaffToNonStaffForward ===
+// === Module 12615: isStaffToNonStaffForward ===
 
-// Module 12609 (isStaffToNonStaffForward)
+// Module 12615 (isStaffToNonStaffForward)
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserStore from "UserStore" /* 1392 */;

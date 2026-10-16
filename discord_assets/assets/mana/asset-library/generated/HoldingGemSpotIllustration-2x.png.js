@@ -1,6 +1,6 @@
-// === Module 14626: ? ===
+// === Module 14636: ? ===
 
-// Module 14626
+// Module 14636
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HoldingGemSpotIllustration-2x.png.js");

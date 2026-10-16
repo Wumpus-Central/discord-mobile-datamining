@@ -1,6 +1,6 @@
-// === Module 16854: VisibilitySensor ===
+// === Module 16868: VisibilitySensor ===
 
-// Module 16854 (VisibilitySensor)
+// Module 16868 (VisibilitySensor)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;

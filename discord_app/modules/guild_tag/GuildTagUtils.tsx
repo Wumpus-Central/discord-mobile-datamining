@@ -1,6 +1,6 @@
-// === Module 8516: GuildTagUtils ===
+// === Module 8517: GuildTagUtils ===
 
-// Module 8516 (GuildTagUtils)
+// Module 8517 (GuildTagUtils)
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4815 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -9,7 +9,7 @@ import UserStore from "UserStore" /* 1392 */;
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(8108);
+const GuildTagConstants = fn(8109);
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
 const GuildFeatures = fn(1087).GuildFeatures;
 fn(558);

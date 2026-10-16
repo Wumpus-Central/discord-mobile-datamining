@@ -1,6 +1,6 @@
-// === Module 9282: ? ===
+// === Module 9283: ? ===
 
-// Module 9282
+// Module 9283
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-2x.png.js");

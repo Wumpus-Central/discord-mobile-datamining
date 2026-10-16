@@ -1,6 +1,6 @@
-// === Module 11124: SpotifyProtocolStore ===
+// === Module 11121: SpotifyProtocolStore ===
 
-// Module 11124 (SpotifyProtocolStore)
+// Module 11121 (SpotifyProtocolStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

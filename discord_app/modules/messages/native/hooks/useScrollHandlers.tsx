@@ -1,17 +1,17 @@
-// === Module 11034: useScrollHandlers ===
+// === Module 11031: useScrollHandlers ===
 
-// Module 11034 (useScrollHandlers)
+// Module 11031 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5424 */;
-import QuestTypes from "QuestTypes" /* 6193 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9834 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9836 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11020 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5425 */;
+import QuestTypes from "QuestTypes" /* 6194 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9833 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9835 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9620);
+const useChatBottomManagerUIStore = fn(9619);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const ReactCompilerGating = fn(558);

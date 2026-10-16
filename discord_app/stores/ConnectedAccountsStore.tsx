@@ -1,12 +1,12 @@
-// === Module 5979: ConnectedAccountsStore ===
+// === Module 5980: ConnectedAccountsStore ===
 
-// Module 5979 (ConnectedAccountsStore)
+// Module 5980 (ConnectedAccountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PlatformsDefault from "Platforms" /* 5981 */;
-import fetchConnectedAccounts from "fetchConnectedAccounts" /* 6104 */;
-import postConnectionCallback from "postConnectionCallback" /* 6105 */;
-import ConnectedAccountRecord from "ConnectedAccountRecord" /* 5980 */;
+import PlatformsDefault from "Platforms" /* 5982 */;
+import fetchConnectedAccounts from "fetchConnectedAccounts" /* 6105 */;
+import postConnectionCallback from "postConnectionCallback" /* 6106 */;
+import ConnectedAccountRecord from "ConnectedAccountRecord" /* 5981 */;
 
 require = fn;
 const items = [fn(1087).PlatformTypes.CONTACTS];

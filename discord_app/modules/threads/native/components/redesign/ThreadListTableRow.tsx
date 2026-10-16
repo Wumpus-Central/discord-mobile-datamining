@@ -1,16 +1,16 @@
-// === Module 17788: ThreadListTableRow ===
+// === Module 17798: ThreadListTableRow ===
 
-// Module 17788 (ThreadListTableRow)
+// Module 17798 (ThreadListTableRow)
 import c from "c" /* 576 */;
-import TableRow from "TableRow" /* 6402 */;
-import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 17789 */;
+import TableRow from "TableRow" /* 6404 */;
+import ThreadBrowserRowSubtext from "ThreadBrowserRowSubtext" /* 17799 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadListTableRow(thread) {

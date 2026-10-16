@@ -1,8 +1,8 @@
-// === Module 8568: useMaybeFetchEquippedCollectibleProducts ===
+// === Module 8569: useMaybeFetchEquippedCollectibleProducts ===
 
-// Module 8568 (useMaybeFetchEquippedCollectibleProducts)
-import useDisplayProfileDefault from "useDisplayProfile" /* 8537 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8570 */;
+// Module 8569 (useMaybeFetchEquippedCollectibleProducts)
+import useDisplayProfileDefault from "useDisplayProfile" /* 8538 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8571 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -43,7 +43,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEquippedC
     if (cResult[5] === stateFromStores) {
       let tmp11 = cResult[6];
     }
-    const nameplate = tmp(8569).useNameplate(tmp11);
+    const nameplate = tmp(8570).useNameplate(tmp11);
     let skuId;
     if (avatarDecoration != null) {
       skuId = avatarDecoration.skuId;
@@ -84,7 +84,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEquippedC
     cResult[10] = skuId3;
     cResult[11] = found;
     tmp18 = found;
-    const tmpResult4 = tmp(8569);
+    const tmpResult4 = tmp(8570);
   }
   const obj2 = { user: stateFromStores, guildId };
   cResult[4] = guildId;

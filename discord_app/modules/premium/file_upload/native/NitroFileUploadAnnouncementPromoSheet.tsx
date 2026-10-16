@@ -1,6 +1,6 @@
-// === Module 18033: NitroFileUploadAnnouncementPromoSheet ===
+// === Module 18043: NitroFileUploadAnnouncementPromoSheet ===
 
-// Module 18033 (NitroFileUploadAnnouncementPromoSheet)
+// Module 18043 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef2673 from "module_2673" /* 2673 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
     tmp6 = cResult[3];
   }
   const obj = markAsDismissed(576);
-  const unmountEffect = markAsDismissed(5458).useUnmountEffect(tmp6);
+  const unmountEffect = markAsDismissed(5459).useUnmountEffect(tmp6);
   if (cResult[4] !== tmp5) {
     class I {
       constructor() {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const tmp10 = jsx(tmp(18034).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+    const tmp10 = jsx(tmp(18044).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[6] = tmp10;
     const tmp9 = tmp10;
   } else {
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
     const obj3 = { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I };
-    const tmp22 = jsx(tmp(5441).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
+    const tmp22 = jsx(tmp(5442).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
     cResult[12] = I;
     cResult[13] = tmp22;
   } else {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
   }
-  const tmpResult = markAsDismissed(5458);
+  const tmpResult = markAsDismissed(5459);
   cResult[14] = I;
   cResult[15] = tmp11;
   cResult[16] = tmp21;

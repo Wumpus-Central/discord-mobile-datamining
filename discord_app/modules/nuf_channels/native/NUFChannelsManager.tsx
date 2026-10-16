@@ -1,6 +1,6 @@
-// === Module 14288: NUFChannelsManager ===
+// === Module 14298: NUFChannelsManager ===
 
-// Module 14288 (NUFChannelsManager)
+// Module 14298 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
@@ -12,7 +12,7 @@ import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 import UserStore from "UserStore" /* 1392 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7032 */;
 
 require = fn;
 const GuildFeatures = fn(1087).GuildFeatures;
@@ -84,7 +84,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14289, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14299, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }

@@ -1,16 +1,13 @@
-// === Module 14647: GatewayCompressionHandler ===
+// === Module 14657: GatewayCompressionHandler ===
 
-// Module 14647 (GatewayCompressionHandler)
+// Module 14657 (GatewayCompressionHandler)
 import LoggerDefault from "Logger" /* 3 */;
-import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ProcessArgs2 from "ProcessArgs" /* 7132 */;
-import GatewayZstdUtils from "GatewayZstdUtils" /* 14648 */;
-import NativeCompressionModule from "NativeCompressionModule" /* 14649 */;
-import _mod14650 from "module_14650" /* 14650 */;
+import ProcessArgs2 from "ProcessArgs" /* 7134 */;
+import GatewayZstdUtils from "GatewayZstdUtils" /* 14658 */;
+import NativeCompressionModule from "NativeCompressionModule" /* 14659 */;
+import _mod14660 from "module_14660" /* 14660 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = _mod17.NativeModules;
 const items = [];
 class BaseGatewayCompressionHandler {
   constructor(arg0) {
@@ -91,7 +88,7 @@ prototype2["close"] = function close() {
 items.push(fn);
 const fn2 = (arg0) => {
   const tmp2 = new tmp(arg0, new.target, tmp, new.target);
-  tmp2._pako = _mod14650;
+  tmp2._pako = _mod14660;
   tmp2._usesZstd = false;
   tmp2._zstdDecoder = null;
   tmp2._zstdStream = null;
@@ -219,7 +216,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod14650;
+  applyArgumentsResult._pako = _mod14660;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;
@@ -267,37 +264,19 @@ const prototype5 = fn4.prototype;
 class fn4 extends BaseGatewayCompressionHandler {
 }
 fn4["canUse"] = function canUse() {
-  if (obj.isAndroid()) {
-    let tmp5 = null != NativeCompressionModule.default;
-  } else {
-    tmp5 = null != NativeModules.DCDCompressionManager;
-  }
-  return tmp5;
+  return null != NativeCompressionModule.default;
 };
 prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const self = this;
   this.close();
   this._socketId = _socketId._socketId;
-  const supportsZstdResult = GatewayZstdUtils.supportsZstd();
-  const isAndroidResult = PlatformUtils.isAndroid();
+  const _default = NativeCompressionModule.default;
   if (supportsZstdResult) {
-    if (isAndroidResult) {
-      const _default2 = NativeCompressionModule.default;
-      if (_default2 != null) {
-        const result = _default2.enableZstdStreamSupport(self._socketId);
-      }
-    } else {
-      const DCDCompressionManager2 = NativeModules.DCDCompressionManager;
-      const result1 = DCDCompressionManager2.enableZstdStreamSupport(self._socketId, 0);
-    }
-  } else if (isAndroidResult) {
-    const _default = NativeCompressionModule.default;
     if (_default != null) {
-      const result2 = _default.enableZlibStreamSupport(self._socketId);
+      const result = _default.enableZstdStreamSupport(self._socketId);
     }
-  } else {
-    const DCDCompressionManager = NativeModules.DCDCompressionManager;
-    const result3 = DCDCompressionManager.enableZlibStreamSupport(self._socketId);
+  } else if (_default != null) {
+    const result1 = _default.enableZlibStreamSupport(self._socketId);
   }
 };
 prototype5["getAlgorithm"] = function getAlgorithm() {
@@ -324,16 +303,10 @@ prototype5["close"] = function close() {
   const _socketId = this._socketId;
   this._socketId = null;
   if (null !== _socketId) {
-    if (obj.isAndroid()) {
-      const _default = NativeCompressionModule.default;
-      if (_default != null) {
-        const result = _default.disableZlibStreamSupport(_socketId);
-      }
-    } else {
-      const DCDCompressionManager = NativeModules.DCDCompressionManager;
-      const result1 = DCDCompressionManager.disableZlibStreamSupport(_socketId);
+    const _default = NativeCompressionModule.default;
+    if (_default != null) {
+      const result = _default.disableZlibStreamSupport(_socketId);
     }
-    obj = PlatformUtils;
   }
 };
 items.push(fn4);

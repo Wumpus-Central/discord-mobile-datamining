@@ -1,13 +1,13 @@
-// === Module 7484: CollectiblesProductRecord ===
+// === Module 7486: CollectiblesProductRecord ===
 
-// Module 7484 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6315 */;
+// Module 7486 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 6317 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7485 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7491 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7487 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7493 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7486);
+const CollectiblesItemRecord = fn(7488);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1087);
@@ -16,7 +16,7 @@ let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
   constructor(arg0) {
     tmp = new CollectiblesProductRecord(global, new.target);
-    ({ summary: tmp.summary, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, previewAssets: tmp.previewAssets, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge, isFirstParty: tmp.isFirstParty, baseVariantName: tmp.baseVariantName, variantLabel: tmp.variantLabel } = global);
+    ({ summary: tmp.summary, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, previewAssets: tmp.previewAssets, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge, isFirstParty: tmp.isFirstParty, baseVariantName: tmp.baseVariantName, variantLabel: tmp.variantLabel, categoryWillUnpublishAt: tmp.categoryWillUnpublishAt } = global);
     return tmp;
   }
 }
@@ -61,7 +61,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.isFirstParty = is_first_party;
   if (typeof CollectiblesProductRecord === "function") {
     const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, closure_1_8);
-    ({ summary: tmp17.summary, type: tmp17.type, premiumType: tmp17.premiumType, items: tmp17.items, categorySkuId: tmp17.categorySkuId, isCategoryReward: tmp17.isCategoryReward, prices: tmp17.prices, bundledProducts: tmp17.bundledProducts, previewAssets: tmp17.previewAssets, googleSkuIds: tmp17.googleSkuIds, variants: tmp17.variants, eligibleOffers: tmp17.eligibleOffers, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge, isFirstParty: tmp17.isFirstParty, baseVariantName: tmp17.baseVariantName, variantLabel: tmp17.variantLabel } = obj);
+    ({ summary: tmp17.summary, type: tmp17.type, premiumType: tmp17.premiumType, items: tmp17.items, categorySkuId: tmp17.categorySkuId, isCategoryReward: tmp17.isCategoryReward, prices: tmp17.prices, bundledProducts: tmp17.bundledProducts, previewAssets: tmp17.previewAssets, googleSkuIds: tmp17.googleSkuIds, variants: tmp17.variants, eligibleOffers: tmp17.eligibleOffers, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge, isFirstParty: tmp17.isFirstParty, baseVariantName: tmp17.baseVariantName, variantLabel: tmp17.variantLabel, categoryWillUnpublishAt: tmp17.categoryWillUnpublishAt } = obj);
     return tmp42;
   } else {
     throw new TypeError("Trying to call a non-function");
@@ -105,7 +105,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         }
         let items = obj2.items;
         const first1 = _slicedToArray(first.selectedOptions, 1)[0];
-        const obj4 = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, baseVariantName: null, variantLabel: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
+        const obj4 = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, baseVariantName: null, variantLabel: null, premiumType: null, items: null, categorySkuId: null, categoryWillUnpublishAt: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
         ({ id: obj3.storeListingId, id: obj3.skuId } = first);
         ({ name: obj3.name, summary: obj3.summary, primaryCollectionStyles: obj3.styles } = skus);
         obj4.type = type;
@@ -146,6 +146,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           str2 = "";
         }
         obj4.categorySkuId = str2;
+        obj4.categoryWillUnpublishAt = skus.primaryCollectionWillUnpublishAt;
         obj4.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
         obj4.prices = first.prices;
         ({ badgeOverride: obj3.badgeOverride, hideBadge: obj3.hideBadge } = skus);
@@ -171,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 24, isCategoryReward: 24, prices: null, previewAssets: "8ba3e8ee2991f198308400197cdb28bc", googleSkuIds: "img_account_sync_youtube_white", eligibleOffers: "svg", variants: "embed", bundledProducts: false, isFirstParty: null };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "code", items: "gap", categorySkuId: "toCharArray$esjava$1", categoryWillUnpublishAt: "Array", isCategoryReward: "unicodeVersion", prices: "", previewAssets: "values", googleSkuIds: "IconComponent", eligibleOffers: "Array", variants: "done", bundledProducts: "e", isFirstParty: "toCharArray$esjava$1" };
               let str;
               if (first != null) {
                 str = first.optionValue;
@@ -199,7 +200,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 items = items1.filter(item);
               }
               obj3.items = items;
-              let str3 = skus.primaryCollectionId;
+              let str3 = tmp6.primaryCollectionId;
               if (str3 == null) {
                 str3 = collectibles.categorySkuId;
               }
@@ -207,6 +208,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 str3 = "";
               }
               obj3.categorySkuId = str3;
+              obj3.categoryWillUnpublishAt = skus.primaryCollectionWillUnpublishAt;
               obj3.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
               ({ prices: obj2.prices, previewAssetPaths } = tenantMetadata);
               obj3.previewAssets = previewAssetPaths;
@@ -271,7 +273,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         obj4.bundledProducts = found2;
         if (typeof CollectiblesProductRecord === "function") {
           const tmp26 = new CollectiblesProductRecord(obj4, tmp, premiumType, items1, closure_7, type, str3);
-          ({ summary: tmp26.summary, type: tmp26.type, premiumType: tmp26.premiumType, items: tmp26.items, categorySkuId: tmp26.categorySkuId, isCategoryReward: tmp26.isCategoryReward, prices: tmp26.prices, bundledProducts: tmp26.bundledProducts, previewAssets: tmp26.previewAssets, googleSkuIds: tmp26.googleSkuIds, variants: tmp26.variants, eligibleOffers: tmp26.eligibleOffers, badgeOverride: tmp26.badgeOverride, hideBadge: tmp26.hideBadge, isFirstParty: tmp26.isFirstParty, baseVariantName: tmp26.baseVariantName, variantLabel: tmp26.variantLabel } = obj4);
+          ({ summary: tmp26.summary, type: tmp26.type, premiumType: tmp26.premiumType, items: tmp26.items, categorySkuId: tmp26.categorySkuId, isCategoryReward: tmp26.isCategoryReward, prices: tmp26.prices, bundledProducts: tmp26.bundledProducts, previewAssets: tmp26.previewAssets, googleSkuIds: tmp26.googleSkuIds, variants: tmp26.variants, eligibleOffers: tmp26.eligibleOffers, badgeOverride: tmp26.badgeOverride, hideBadge: tmp26.hideBadge, isFirstParty: tmp26.isFirstParty, baseVariantName: tmp26.baseVariantName, variantLabel: tmp26.variantLabel, categoryWillUnpublishAt: tmp26.categoryWillUnpublishAt } = obj4);
           return tmp26;
         } else {
           throw new TypeError("Trying to call a non-function");

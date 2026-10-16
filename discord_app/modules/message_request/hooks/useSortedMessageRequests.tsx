@@ -1,10 +1,10 @@
-// === Module 17957: useSortedMessageRequests ===
+// === Module 17967: useSortedMessageRequests ===
 
-// Module 17957 (useSortedMessageRequests)
+// Module 17967 (useSortedMessageRequests)
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import UserStore from "UserStore" /* 1392 */;
-import MessageRequestStore from "MessageRequestStore" /* 6273 */;
+import MessageRequestStore from "MessageRequestStore" /* 6274 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,11 +1,11 @@
-// === Module 16087: QuestModalContentCloudBackground ===
+// === Module 16101: QuestModalContentCloudBackground ===
 
-// Module 16087 (QuestModalContentCloudBackground)
+// Module 16101 (QuestModalContentCloudBackground)
 import c from "c" /* 576 */;
 import themes from "themes" /* 4884 */;
 import useTheme from "useTheme" /* 5090 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
               if (cResult[11] === tmp16) {
                 let tmp17 = cResult[12];
               }
-              const tmp18Result = importDefault(tmp6 ? 16088 : 16089);
+              const tmp18Result = importDefault(tmp6 ? 16102 : 16103);
               if (cResult[13] === str) {
                 if (cResult[14] === tmp17) {
                   if (cResult[15] === tmp18Result) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 16088 : 16089);
+    obj6.source = importDefault(isThemeDarkResult ? 16102 : 16103);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

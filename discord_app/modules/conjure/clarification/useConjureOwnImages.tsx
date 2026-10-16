@@ -1,8 +1,8 @@
-// === Module 12203: useConjureOwnImages ===
+// === Module 12207: useConjureOwnImages ===
 
-// Module 12203 (useConjureOwnImages)
+// Module 12207 (useConjureOwnImages)
 import _modDef3865 from "module_3865" /* 3865 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11540 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11537 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -236,7 +236,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F159075 */ function() { ... });
+                  result.catch(/* F159180 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -300,7 +300,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F159075 */ function() { ... });
+                result.catch(/* F159180 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);

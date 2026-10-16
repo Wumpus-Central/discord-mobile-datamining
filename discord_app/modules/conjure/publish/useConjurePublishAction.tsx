@@ -1,27 +1,27 @@
-// === Module 11614: useConjurePublishAction ===
+// === Module 11611: useConjurePublishAction ===
 
-// Module 11614 (useConjurePublishAction)
+// Module 11611 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6286 */;
-import ConjureUtils from "ConjureUtils" /* 7167 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
-import UserActionCreators from "UserActionCreators" /* 8532 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10922 */;
-import conjureAppInServer from "conjureAppInServer" /* 10926 */;
-import conjurePublishFailureMessage from "conjurePublishFailureMessage" /* 11616 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 11617 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6299 */;
+import ConjureUtils from "ConjureUtils" /* 7169 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7170 */;
+import UserActionCreators from "UserActionCreators" /* 8533 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
+import conjureAppInServer from "conjureAppInServer" /* 10923 */;
+import conjurePublishFailureMessage from "conjurePublishFailureMessage" /* 11613 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 11614 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
-import UserProfileStore from "UserProfileStore" /* 7539 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
+import UserProfileStore from "UserProfileStore" /* 7540 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildChannelStore from "GuildChannelStore" /* 4807 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 10900 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10916 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 10897 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10913 */;
 
 const require = globalThis.__r;
 const conjurePublishFailureMessageDefault = conjurePublishFailureMessage;
@@ -716,6 +716,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                 busy = projectPublishing.isProjectPublishing(closure_0);
                 if (!busy) {
                   num2 = tmp5.input.status;
+                  guildId = undefined;
                   busy = undefined;
                   if (num2 != null) {
                     busy = num2.publishing;
@@ -724,8 +725,8 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                     num2 = _require;
                     flag = dependencyMap;
                     busy = require("conjurePublishAction").resolveConjurePublishAction(tmp5.input);
-                    const obj5 = require("conjurePublishAction");
-                    const obj4 = { entryPoint: tmp22, publishState: null, surface: null, installScope: null, action: null };
+                    const obj6 = require("conjurePublishAction");
+                    const obj4 = { entryPoint: tmp23, publishState: null, surface: null, installScope: null, action: null };
                     const status2 = tmp5.input.status;
                     let state;
                     if (status2 != null) {
@@ -749,16 +750,17 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                     obj4.action = busy.action;
                     const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj4);
                     if (null != busy.disabledReason) {
-                      platform.showPublishBlocked(num2(11612).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER, busy.disabledReason);
+                      platform.showPublishBlocked(num2(11609).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER, busy.disabledReason);
                     }
-                    const obj6 = require("ConjureAnalytics");
+                    const obj7 = require("ConjureAnalytics");
                   }
+                  num2(10986).preparePublish(closure_0);
                   if (null == busy.confirmReason) {
                     c5 = num3;
-                    const obj7 = { value: continuePublish(closure_0, busy, tmp23), done: false };
-                    return obj7;
+                    const obj5 = { value: continuePublish(closure_0, busy, tmp24), done: false };
+                    return obj5;
                   } else {
-                    num2 = num2(11612).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
+                    num2 = num2(11609).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
                     flag = busy.confirmReason;
                     platform.showPublishBlocked(num2, flag, () => {
                       closure_2_28(closure_0, busy, closure_1).catch(() => {
@@ -766,6 +768,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                       });
                     });
                   }
+                  const num2Result = num2(10986);
                 }
               }
             }
@@ -783,9 +786,9 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
         }
       }
       c5 = 3;
-    } catch (tmp16) {
+    } catch (tmp17) {
       c5 = tmp;
-      throw tmp16;
+      throw tmp17;
     }
   }
 };
@@ -985,13 +988,13 @@ let closure_29 = async function _continuePublish() {
           closure_139_25.add(closure_138_0);
           c12 = 2;
           const requestConsent = closure_138_4.requestConsent;
-          f156618 = requestConsent;
+          f156722 = requestConsent;
           if (requestConsent == null) {
-            f156618 = (arg0) => closure_2_18(arg0, closure_1_3);
+            f156722 = (arg0) => closure_2_18(arg0, closure_1_3);
           }
           c14 = 5;
           c15 = 1;
-          const obj11 = { value: f156618(closure_138_0), done: false };
+          const obj11 = { value: f156722(closure_138_0), done: false };
           return obj11;
         }
       } catch (tmp105) {
@@ -1008,7 +1011,7 @@ let closure_29 = async function _continuePublish() {
     }
   })();
 };
-let ConjureProjectStore = fn(10900);
+let ConjureProjectStore = fn(10897);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1087).Permissions;

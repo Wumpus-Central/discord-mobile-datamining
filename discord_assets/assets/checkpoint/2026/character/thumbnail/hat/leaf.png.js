@@ -1,6 +1,6 @@
-// === Module 5775: ? ===
+// === Module 5776: ? ===
 
-// Module 5775
+// Module 5776
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/hat/leaf.png.js");

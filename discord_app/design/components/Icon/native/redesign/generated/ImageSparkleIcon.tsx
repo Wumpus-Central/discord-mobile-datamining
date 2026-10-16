@@ -1,10 +1,10 @@
-// === Module 11375: ImageSparkleIcon ===
+// === Module 11372: ImageSparkleIcon ===
 
-// Module 11375 (ImageSparkleIcon)
+// Module 11372 (ImageSparkleIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod11376 from "module_11376" /* 11376 */;
+import _mod11373 from "module_11373" /* 11373 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ImageSparkleIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11376;
+    const tmpResult = _mod11373;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ImageSparkleIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11376, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11373, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

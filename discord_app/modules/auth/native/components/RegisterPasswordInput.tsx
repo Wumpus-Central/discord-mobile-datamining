@@ -1,17 +1,17 @@
-// === Module 17014: RegisterPasswordInput ===
+// === Module 17028: RegisterPasswordInput ===
 
-// Module 17014 (RegisterPasswordInput)
+// Module 17028 (RegisterPasswordInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import getErrorDefault from "getError" /* 6861 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14977 */;
-import usePasswordScore from "usePasswordScore" /* 17011 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import getErrorDefault from "getError" /* 6863 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14987 */;
+import usePasswordScore from "usePasswordScore" /* 17025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 6846 */;
+import PhoneStore from "PhoneStore" /* 6848 */;
 
 const require = globalThis.__r;
 
@@ -19,11 +19,11 @@ require = fn;
 let user = ["ref"];
 let closure_4 = ["password"];
 let closure_5 = ["password"];
-const RegistrationUIStore = fn(16987);
+const RegistrationUIStore = fn(17001);
 ({ setRegistrationErrors: c10, useRegistrationUIStore: closure_11 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_12, jsx: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { weak: { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL }, medium: null, strong: null, passwordStrength: null, inputHint: null };
 let obj3 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.medium = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
@@ -528,7 +528,7 @@ export const RegisterPasswordInput = ReactCompilerGating.isReactCompilerEnabled(
           }
         }
         const obj4 = { ref: tmp34, textContentType: "newPassword", autoComplete: "new-password", onChange: W, value: password, label: tmp36, accessibilityHint: tmp37, secureTextEntry: tmp40, returnKeyType, autoCapitalize: "none", onSubmitEditing, onFocus: tmp28, onBlur: tmp30, trailingIcon: tmp41, trailingPressableProps: tmp48, errorMessage: tmp20, status: undefined };
-        const tmp52 = closure_13(onPasswordChange(6508).TextInput, obj4);
+        const tmp52 = closure_13(onPasswordChange(6510).TextInput, obj4);
         cResult[27] = W;
         cResult[28] = onSubmitEditing;
         cResult[29] = password;

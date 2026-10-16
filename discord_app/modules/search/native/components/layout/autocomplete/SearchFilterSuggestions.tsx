@@ -1,16 +1,16 @@
-// === Module 17685: SearchFilterSuggestions ===
+// === Module 17695: SearchFilterSuggestions ===
 
-// Module 17685 (SearchFilterSuggestions)
+// Module 17695 (SearchFilterSuggestions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4886 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import spring from "spring" /* 5440 */;
-import springPresets from "springPresets" /* 5444 */;
-import TableRow from "TableRow" /* 6402 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12907 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 17686 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import spring from "spring" /* 5441 */;
+import springPresets from "springPresets" /* 5445 */;
+import TableRow from "TableRow" /* 6404 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12915 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 17696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -22,9 +22,9 @@ function getSuggestionsKey(arr) {
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9548).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9549).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
@@ -509,12 +509,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(17680).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(17690).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(17680);
-  const validFilterTokens = searchContext(17689).useValidFilterTokens(searchContext);
+  let obj = searchContext(17690);
+  const validFilterTokens = searchContext(17699).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -552,7 +552,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(17689);
+  let obj2 = searchContext(17699);
   const fn = function _() {
     return dismissed.get();
   };

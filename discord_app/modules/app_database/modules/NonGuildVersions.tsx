@@ -1,6 +1,6 @@
-// === Module 7563: NonGuildVersions ===
+// === Module 7564: NonGuildVersions ===
 
-// Module 7563 (NonGuildVersions)
+// Module 7564 (NonGuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1104 */;
@@ -159,7 +159,7 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   }
 };
-const isCacheEnabled = fn(7556);
+const isCacheEnabled = fn(7557);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(_modDef12.throttle(() => {
     const databaseResult = DatabaseDaosDefault.database();

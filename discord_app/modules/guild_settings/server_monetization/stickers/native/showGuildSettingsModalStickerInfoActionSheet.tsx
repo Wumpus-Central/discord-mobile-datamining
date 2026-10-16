@@ -1,6 +1,6 @@
-// === Module 18701: showGuildSettingsModalStickerInfoActionSheet ===
+// === Module 18714: showGuildSettingsModalStickerInfoActionSheet ===
 
-// Module 18701 (showGuildSettingsModalStickerInfoActionSheet)
+// Module 18714 (showGuildSettingsModalStickerInfoActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/server_monetiz
 
 export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSettingsModalStickerInfoActionSheet(arg0) {
   ({ guildId, stickerId } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18702, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18715, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, {
     guildId,
     stickerId,
     hideActionSheet() {

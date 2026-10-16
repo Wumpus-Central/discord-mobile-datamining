@@ -1,14 +1,14 @@
-// === Module 11847: SearchBarBottomBorder ===
+// === Module 11844: SearchBarBottomBorder ===
 
-// Module 11847 (SearchBarBottomBorder)
+// Module 11844 (SearchBarBottomBorder)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5440 */;
-import springPresets from "springPresets" /* 5444 */;
+import spring from "spring" /* 5441 */;
+import springPresets from "springPresets" /* 5445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
@@ -60,7 +60,7 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
       }
       return { opacity: spring.withSpring(num, springPresets.springStandard) };
     };
-    const obj2 = { withSpring: tmp(5440).withSpring, scrollPosition: sharedValue, triggerScrollHeight: num, springStandard: tmp(5444).springStandard };
+    const obj2 = { withSpring: tmp(5441).withSpring, scrollPosition: sharedValue, triggerScrollHeight: num, springStandard: tmp(5445).springStandard };
     fn3.__closure = obj2;
     fn3.__workletHash = 5466161440826;
     fn3.__initData = __initData;
@@ -129,7 +129,7 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
     return { opacity: spring.withSpring(num, springPresets.springStandard) };
   };
   const obj2 = triggerScrollHeight(4909);
-  fn.__closure = { withSpring: triggerScrollHeight(5440).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(5444).springStandard };
+  fn.__closure = { withSpring: triggerScrollHeight(5441).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(5445).springStandard };
   fn.__workletHash = 17305021520857;
   fn.__initData = __initData2;
   const obj4 = { scrollHandler: callback, bottomBorderComponent: null };

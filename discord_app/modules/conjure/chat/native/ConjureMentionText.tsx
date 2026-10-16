@@ -2,8 +2,9 @@
 
 // Module 12104 (ConjureMentionText)
 import UserUtils from "UserUtils" /* 5021 */;
-import conjureMentions from "conjureMentions" /* 12094 */;
+import conjureMentions from "conjureMentions" /* 12093 */;
 import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12100 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 12105 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -74,13 +75,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   const cResult = variant(576).c(9);
   ({ text, variant } = arg0);
   let obj = variant(576);
-  const requestConjureMentionedUsers = variant(12094).useRequestConjureMentionedUsers(text);
+  const requestConjureMentionedUsers = variant(12093).useRequestConjureMentionedUsers(text);
   if (cResult[0] !== text) {
-    const splitConjureMentionsResult = variant(12094).splitConjureMentions(text);
+    const splitConjureMentionsResult = variant(12093).splitConjureMentions(text);
     cResult[0] = text;
     cResult[1] = splitConjureMentionsResult;
     let arr = splitConjureMentionsResult;
-    const tmpResult = variant(12094);
+    const tmpResult = variant(12093);
   } else {
     arr = cResult[1];
   }
@@ -99,9 +100,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
     }
   }
   if (cResult[5] !== variant) {
-    const fn = function x(kind, arg1) {
+    const fn = function j(kind, arg1) {
       if ("text" === kind.kind) {
         let text = kind.text;
+      } else if ("file" === kind.kind) {
+        const obj2 = { attachmentId: kind.attachmentId, variant };
+        const _HermesInternal2 = HermesInternal;
+        text = hasOwnProperty(ConjureFileMentionDefault, obj2, "" + arg1 + "-" + kind.attachmentId);
       } else {
         const obj = { userId: kind.userId, variant };
         const _HermesInternal = HermesInternal;
@@ -119,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   cResult[2] = arr;
   cResult[3] = variant;
   cResult[4] = mapped;
-  const obj2 = variant(12094);
+  let obj2 = variant(12093);
 }) : (function ConjureMentionText(text) {
   text = text.text;
   require = text;
@@ -131,6 +136,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
     children: memo.map((kind, index) => {
       if ("text" === kind.kind) {
         text = kind.text;
+      } else if ("file" === kind.kind) {
+        const obj2 = { attachmentId: kind.attachmentId, variant };
+        const _HermesInternal2 = HermesInternal;
+        text = hasOwnProperty(ConjureFileMentionDefault, obj2, "" + index + "-" + kind.attachmentId);
       } else {
         const obj = { userId: kind.userId, variant };
         const _HermesInternal = HermesInternal;

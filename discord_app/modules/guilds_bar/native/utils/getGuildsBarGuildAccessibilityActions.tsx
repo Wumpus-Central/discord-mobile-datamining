@@ -1,10 +1,10 @@
-// === Module 17408: getGuildsBarGuildAccessibilityActions ===
+// === Module 17418: getGuildsBarGuildAccessibilityActions ===
 
-// Module 17408 (getGuildsBarGuildAccessibilityActions)
+// Module 17418 (getGuildsBarGuildAccessibilityActions)
 import shared from "shared" /* 5028 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 17409 */;
-import moveGuildNode from "moveGuildNode" /* 17410 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6324 */;
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 17419 */;
+import moveGuildNode from "moveGuildNode" /* 17420 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;

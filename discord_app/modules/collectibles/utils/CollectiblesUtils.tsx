@@ -1,12 +1,12 @@
-// === Module 7526: utils/CollectiblesUtils ===
+// === Module 7528: utils/CollectiblesUtils ===
 
-// Module 7526 (utils/CollectiblesUtils)
+// Module 7528 (utils/CollectiblesUtils)
 import c from "c" /* 576 */;
 import DateUtils from "DateUtils" /* 4852 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5198 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5273 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7332 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7527 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5199 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5274 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7334 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7529 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

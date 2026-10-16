@@ -1,19 +1,19 @@
-// === Module 7787: InlineNotice ===
+// === Module 7788: InlineNotice ===
 
-// Module 7787 (InlineNotice)
+// Module 7788 (InlineNotice)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import HelpMessageDefault from "HelpMessage" /* 7788 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 7789 */;
-import NewInlineNotice from "NewInlineNotice" /* 7790 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import HelpMessageDefault from "HelpMessage" /* 7789 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 7790 */;
+import NewInlineNotice from "NewInlineNotice" /* 7791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const InlineNotice = "InlineNotice";
-let obj = { critical: fn(7788).HelpMessageTypes.ERROR, warning: fn(7788).HelpMessageTypes.WARNING, info: fn(7788).HelpMessageTypes.INFO, positive: fn(7788).HelpMessageTypes.SUCCESS };
+let obj = { critical: fn(7789).HelpMessageTypes.ERROR, warning: fn(7789).HelpMessageTypes.WARNING, info: fn(7789).HelpMessageTypes.INFO, positive: fn(7789).HelpMessageTypes.SUCCESS };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/mana/components/InlineNotice/InlineNotice.native.tsx");

@@ -1,16 +1,16 @@
-// === Module 13678: ChannelPinsStore ===
+// === Module 13686: ChannelPinsStore ===
 
-// Module 13678 (ChannelPinsStore)
+// Module 13686 (ChannelPinsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7538 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5497 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7539 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import MessageStore from "MessageStore" /* 5494 */;
+import MessageStore from "MessageStore" /* 5495 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import UserStore from "UserStore" /* 1392 */;
 

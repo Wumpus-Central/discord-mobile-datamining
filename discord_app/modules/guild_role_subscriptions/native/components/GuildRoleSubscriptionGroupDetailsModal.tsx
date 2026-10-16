@@ -1,28 +1,28 @@
-// === Module 18873: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 18886: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 18873 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 18886 (GuildRoleSubscriptionGroupDetailsModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Form from "Form" /* 8808 */;
-import FormHeaderDefault from "FormHeader" /* 8902 */;
-import FormStylesDefault from "FormStyles" /* 14829 */;
-import FormSeparatorDefault from "FormSeparator" /* 16191 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18869 */;
-import FormImagePicker from "FormImagePicker" /* 18875 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18876 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Form from "Form" /* 8809 */;
+import FormHeaderDefault from "FormHeader" /* 8903 */;
+import FormStylesDefault from "FormStyles" /* 14839 */;
+import FormSeparatorDefault from "FormSeparator" /* 16205 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18882 */;
+import FormImagePicker from "FormImagePicker" /* 18888 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18889 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 18874 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18887 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16179);
+const GuildRoleSubscriptionsConstants = fn(16193);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1087).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0) {

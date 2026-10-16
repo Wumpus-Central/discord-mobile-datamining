@@ -1,9 +1,9 @@
-// === Module 6972: useFastestListPropsPlaceholder ===
+// === Module 6974: useFastestListPropsPlaceholder ===
 
-// Module 6972 (useFastestListPropsPlaceholder)
+// Module 6974 (useFastestListPropsPlaceholder)
 import c from "c" /* 576 */;
 import ColorUtils from "ColorUtils" /* 5026 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6973 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function createNativePlaceholderConfig(listFooter) {
   if (type == null) {
     NONE = FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE;
   }
-  const size = { borderRadius: "Array", borderTopLeftRadius: "default", borderTopRightRadius: "unicodeVersion", borderBottomLeftRadius: "cix", borderBottomRightRadius: "concat", divider: "i", dividerColor: "displayName", dividerPaddingLeft: "name", dividerPaddingRight: "state", placeholderShape: "set", placeholderShapeColor: "status", placeholderShapeCount: "mode", placeholderShapeGap: "state", placeholderShapePaddingHorizontal: "size", placeholderShapePaddingVertical: "runOnJS", placeholderFeedBackgroundColor: "unicodeVersion", placeholderFeedColor: "displayName", placeholderFeedLabelPadding: "add", placeholderFeedLabelPaddingInnerRatio: "apply", placeholderFeedLabelSize: "application", placeholderFeedLabelSecondarySize: "getChannel", placeholderFeedPadding: "Array", placeholderFeedShape: "toCharArray$esjava$1", placeholderFeedShapeSize: "hasDiversityParent", placeholderType: NONE, width: "unicodeVersion", height: "result", verticalAlignment: "v", horizontalAlignment: "Array" };
+  const size = { borderRadius: "Array", borderTopLeftRadius: "ddd", borderTopRightRadius: "unicodeVersion", borderBottomLeftRadius: "item", borderBottomRightRadius: "header", divider: "pos", dividerColor: "withTiming", dividerPaddingLeft: "intl", dividerPaddingRight: "state", placeholderShape: "replace", placeholderShapeColor: "max", placeholderShapeCount: "useMemo", placeholderShapeGap: "gap", placeholderShapePaddingHorizontal: "index", placeholderShapePaddingVertical: "state", placeholderFeedBackgroundColor: "unicodeVersion", placeholderFeedColor: "r", placeholderFeedLabelPadding: "filter", placeholderFeedLabelPaddingInnerRatio: "apply", placeholderFeedLabelSize: "for", placeholderFeedLabelSecondarySize: "gap", placeholderFeedPadding: "Array", placeholderFeedShape: "toCharArray$esjava$1", placeholderFeedShapeSize: "dispatch", placeholderType: NONE, width: true, height: true, verticalAlignment: true, horizontalAlignment: true };
   if (null == listFooter) {
     return size;
   } else {
@@ -134,9 +134,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6973).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(6975).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6973).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(6975).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 12623: useAutocompleter ===
+// === Module 12629: useAutocompleter ===
 
-// Module 12623 (useAutocompleter)
-import useInitialValueDefault from "useInitialValue" /* 6392 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 8925 */;
+// Module 12629 (useAutocompleter)
+import useInitialValueDefault from "useInitialValue" /* 6394 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 8926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

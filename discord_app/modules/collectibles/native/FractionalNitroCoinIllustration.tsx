@@ -1,9 +1,9 @@
-// === Module 9279: FractionalNitroCoinIllustration ===
+// === Module 9280: FractionalNitroCoinIllustration ===
 
-// Module 9279 (FractionalNitroCoinIllustration)
+// Module 9280 (FractionalNitroCoinIllustration)
 import c from "c" /* 576 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9280 */;
-import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9284 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9281 */;
+import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

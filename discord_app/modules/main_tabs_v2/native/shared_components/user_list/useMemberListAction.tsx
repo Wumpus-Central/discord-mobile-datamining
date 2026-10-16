@@ -1,13 +1,13 @@
-// === Module 11085: useMemberListAction ===
+// === Module 11082: useMemberListAction ===
 
-// Module 11085 (useMemberListAction)
+// Module 11082 (useMemberListAction)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4997 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8908 */;
-import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11086 */;
-import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11098 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11104 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8909 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11083 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11095 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -23,11 +23,11 @@ const View = fn(17).View;
 const Constants = fn(1087);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "test" };
-const createStyles = fn(5153);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10463).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "Symbol", listActionHeight: "current" };
+const createStyles = fn(5154);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10464).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
-let obj2 = { wrapper: { paddingTop: fn(10463).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let obj2 = { wrapper: { paddingTop: fn(10464).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMembe
     if (channel != null) {
       id = channel.id;
     }
-    id(6960)();
+    id(6962)();
     [r10096, dependencyMap] = noop.useState(undefined);
     const _Symbol = Symbol;
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {

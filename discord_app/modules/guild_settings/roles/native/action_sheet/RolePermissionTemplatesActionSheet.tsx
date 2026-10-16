@@ -1,15 +1,15 @@
-// === Module 18752: RolePermissionTemplatesActionSheet ===
+// === Module 18765: RolePermissionTemplatesActionSheet ===
 
-// Module 18752 (RolePermissionTemplatesActionSheet)
+// Module 18765 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7062 */;
-import ActionSheet from "ActionSheet" /* 7120 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 18730 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5362 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7064 */;
+import ActionSheet from "ActionSheet" /* 7122 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 18743 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { templateContainer: { paddingVertical: 16, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       let obj2 = { title: null };
       let intl = tmp(1128).intl;
       obj2.title = intl.string(tmp(1128).t.KgCkoQ);
-      const tmp12 = jsx(tmp(7062).BottomSheetTitleHeader, { title: null });
+      const tmp12 = jsx(tmp(7064).BottomSheetTitleHeader, { title: null });
       cResult[7] = tmp12;
       const tmp11 = tmp12;
     } else {
@@ -136,14 +136,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       const obj3 = { header: tmp11, startExpanded: true, children: null };
       const obj4 = { style: tmp4.templateContainer, children: tmp13 };
       obj3.children = <View style={tmp4.templateContainer}>{tmp13}</View>;
-      const tmp21 = jsx(tmp(7120).ActionSheet, { header: tmp11, startExpanded: true, children: null });
+      const tmp21 = jsx(tmp(7122).ActionSheet, { header: tmp11, startExpanded: true, children: null });
       cResult[11] = tmp4.templateContainer;
       cResult[12] = tmp13;
       cResult[13] = tmp21;
       tmp18 = tmp21;
     }
     const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-    const tmp17 = jsx(onPermissionsChanged(18730), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
+    const tmp17 = jsx(onPermissionsChanged(18743), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
     cResult[8] = guildId;
     cResult[9] = tmp10;
     cResult[10] = tmp17;

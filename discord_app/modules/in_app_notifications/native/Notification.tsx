@@ -1,12 +1,12 @@
-// === Module 13481: Notification ===
+// === Module 13489: Notification ===
 
-// Module 13481 (Notification)
+// Module 13489 (Notification)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5168 */;
-import spring from "spring" /* 5440 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13444 */;
+import timing from "timing" /* 5155 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5169 */;
+import spring from "spring" /* 5441 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13452 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,12 +14,12 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["notification", "icon", "children", "accessoryLabelNode", "rightAccessory", "header", "onPress", "onSettingsPress"];
-const InAppNotificationConstants = fn(13445);
+const InAppNotificationConstants = fn(13453);
 ({ MIN_SWIPE_VELOCITY: metroRequire, STARTED_SWIPE_THRESHOLD: closure_7, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -70,11 +70,11 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
   }
   panning();
   if (cResult[10] !== tmp9) {
-    let result = tmp(13444).extractMetadataFromNotification(tmp9);
+    let result = tmp(13452).extractMetadataFromNotification(tmp9);
     cResult[10] = tmp9;
     cResult[11] = result;
     let tmp17 = result;
-    const tmpResult = tmp(13444);
+    const tmpResult = tmp(13452);
   } else {
     tmp17 = cResult[11];
   }
@@ -86,13 +86,13 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
     channelId = tmp19.channelId;
     const messageId = tmp19.messageId;
     const type = tmp19.type;
-    const inAppNotificationContext = tmp(13461).useInAppNotificationContext();
+    const inAppNotificationContext = tmp(13469).useInAppNotificationContext();
     const notificationGestureY = inAppNotificationContext.notificationGestureY;
     const velocityY = inAppNotificationContext.velocityY;
     const handleDismissNotification = inAppNotificationContext.handleDismissNotification;
     const initialized = inAppNotificationContext.initialized;
     panning = inAppNotificationContext.panning;
-    const tmpResult5 = tmp(13461);
+    const tmpResult5 = tmp(13469);
     const sharedValue = tmp(4909).useSharedValue(1);
     if (cResult[15] !== sharedValue) {
       class L {
@@ -137,7 +137,7 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
         return obj;
       }
     }
-    let obj2 = { withSpring: tmp(5440).withSpring, scale: sharedValue, ON_PRESS_SPRING_CONFIG: sharedValue };
+    let obj2 = { withSpring: tmp(5441).withSpring, scale: sharedValue, ON_PRESS_SPRING_CONFIG: sharedValue };
     X.__closure = obj2;
     X.__workletHash = 5485274967370;
     X.__initData = sharedValue1;

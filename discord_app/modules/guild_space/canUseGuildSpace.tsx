@@ -1,6 +1,6 @@
-// === Module 7150: canUseGuildSpace ===
+// === Module 7152: canUseGuildSpace ===
 
-// Module 7150 (canUseGuildSpace)
+// Module 7152 (canUseGuildSpace)
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 

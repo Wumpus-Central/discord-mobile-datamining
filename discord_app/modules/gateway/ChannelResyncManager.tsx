@@ -1,19 +1,19 @@
-// === Module 18388: ChannelResyncManager ===
+// === Module 18398: ChannelResyncManager ===
 
-// Module 18388 (ChannelResyncManager)
+// Module 18398 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7559 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 14668 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7560 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 14678 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6183 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6184 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5975 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7030 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5976 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7032 */;
 
 require = fn;
 function handleGuildCreate(guild) {
@@ -381,7 +381,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                     let obj2 = closure_2_1(1267);
                   }
                 }
-                obj = closure_2_0(14668);
+                obj = closure_2_0(14678);
               }, Math.ceil(Math.random() * closure_2_12));
             }
             tmp2 = null != closure_1_0 && id.id !== tmp;

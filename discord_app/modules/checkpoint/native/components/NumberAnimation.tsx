@@ -1,16 +1,16 @@
-// === Module 12682: NumberAnimation ===
+// === Module 12688: NumberAnimation ===
 
-// Module 12682 (NumberAnimation)
+// Module 12688 (NumberAnimation)
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = fn;
 const noop = fn(19);
 ({ useEffect: closure_4, useState: hasOwnProperty } = noop);
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5499).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5500).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles({ animation: { height: 100, justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

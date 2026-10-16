@@ -1,20 +1,20 @@
-// === Module 17703: useOnPressSearchItem ===
+// === Module 17713: useOnPressSearchItem ===
 
-// Module 17703 (useOnPressSearchItem)
+// Module 17713 (useOnPressSearchItem)
 import util from "util" /* 1128 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import LinkingDefault from "Linking" /* 4865 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8717 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12907 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12928 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12932 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7238 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8718 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12915 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12936 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7537 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7538 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import SearchQueryStore from "SearchQueryStore" /* 12921 */;
+import SearchQueryStore from "SearchQueryStore" /* 12929 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
@@ -89,10 +89,10 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9549);
+const SearchConstants = fn(9550);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(17704).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9548).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(17714).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9549).SearchFilterAddLocations;
 const Constants = fn(1087);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
 const StaticChannelRoute = fn(2075).StaticChannelRoute;
@@ -286,7 +286,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
   searchContext = searchContext.searchContext;
   _require = searchContext;
   let obj = require("c");
-  const navigation = require("useNavigation").useNavigation();
+  let navigation = require("useNavigation").useNavigation();
   context = noop.useContext(require("SwipeForMemberListContext").SwipeForMemberListContext);
   if (cResult[0] === context) {
     if (cResult[1] === navigation) {
@@ -297,8 +297,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
     }
   }
   _require = asyncGeneratorStep(async (arg0) => {
-    if (c5 === 2) {
-      c5 = 3;
+    if (c4 === 2) {
+      c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
@@ -311,62 +311,55 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === c4) {
+        c4 = 2;
+        if (0 === c3) {
           if (arg0 === 1) {
-            c5 = 3;
+            c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
+            c4 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_3 = tmp2;
-            closure_2 = tmp3;
-            closure_130_0 = undefined;
-            closure_130_1 = undefined;
-            closure_130_2 = undefined;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
+            closure_2 = tmp2;
+            navigation = tmp3;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            closure_129_3 = undefined;
+            let conversation2;
+            closure_129_5 = undefined;
             const channelId = closure_0.channelId;
-            closure_130_0 = channelId;
-            ({ guildId: closure_130_1, messageId: closure_130_2 } = closure_0);
+            closure_129_0 = channelId;
+            ({ guildId: closure_129_1, messageId: closure_129_2 } = closure_0);
             const parseConversationIdResult = closure_0(context[22]).parseConversationId(closure_0.sourceId);
-            closure_130_3 = parseConversationIdResult;
+            closure_129_3 = parseConversationIdResult;
             addCurrentSearchQueryToSearchHistory(closure_0);
             const obj8 = closure_0(context[22]);
+            c3 = 1;
             c4 = 1;
-            c5 = 1;
             const obj4 = { value: closure_0(context[23]).fetchConversation(channelId, parseConversationIdResult), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
-          c5 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          c4 = 3;
+          let obj = { value, done: true };
+          return obj;
         } else {
-          const conversationMessages = closure_0(context[23]).fetchConversationMessages(closure_130_0, closure_130_3, { includeReactions: true, includeMessageReferences: true, isStandalone: true });
-          if (null == ConversationPreviewStore.getConversation(closure_130_3)) {
+          conversation2 = conversation.getConversation(closure_129_3);
+          if (null == conversation2) {
             const _Error = Error;
             const error = new Error("Conversation not found");
             throw error;
           } else {
-            const obj7 = { channelId: closure_130_0, guildId: closure_130_1, conversationId: closure_130_3, title: null, messageId: null };
-            const conversation = ConversationPreviewStore.getConversation(closure_130_3);
-            let title;
-            if (conversation != null) {
-              title = conversation.title;
-            }
-            if (title == null) {
-              title = "";
-            }
-            obj7.title = title;
-            obj7.messageId = closure_130_2;
-            closure_130_4 = obj7;
-            const result = closure_0(context[10]).performKeyboardAwareNavigation(() => {
+            const result = closure_0(context[23]).setSelectedConversation(closure_129_0, closure_129_3, { cacheType: "preview", shouldJump: false });
+            const obj6 = { channelId: closure_129_0, guildId: closure_129_1, conversationId: closure_129_3, title: conversation2.title, messageId: closure_129_2 };
+            closure_129_5 = obj6;
+            const obj5 = closure_0(context[23]);
+            const result1 = closure_0(context[10]).performKeyboardAwareNavigation(() => {
               if (null != closure_2) {
                 const obj = { screen: closure_0(context[24]).ConversationNavigatorScreens.FOCUS, params };
                 navigation.navigate("sidebar", obj);
@@ -374,14 +367,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
                 navigation.navigate(closure_0(context[24]).ConversationNavigatorScreens.FOCUS, params);
               }
             });
-            c5 = 3;
+            c4 = 3;
             return { value: "IconComponent", done: null };
           }
-          const obj6 = closure_0(context[23]);
         }
-      } catch (tmp20) {
-        c5 = tmp;
-        throw tmp20;
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
       }
     }
   });
@@ -404,11 +396,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
   searchContext = searchContext.searchContext;
   _require = searchContext;
   let context;
-  const navigation = require("useNavigation").useNavigation();
+  let navigation = require("useNavigation").useNavigation();
   context = noop.useContext(require("SwipeForMemberListContext").SwipeForMemberListContext);
   _require = asyncGeneratorStep(async (arg0) => {
-    if (c5 === 2) {
-      c5 = 3;
+    if (c4 === 2) {
+      c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
@@ -421,62 +413,55 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === c4) {
+        c4 = 2;
+        if (0 === c3) {
           if (arg0 === 1) {
-            c5 = 3;
+            c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
+            c4 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_3 = tmp2;
-            closure_2 = tmp3;
-            closure_130_0 = undefined;
-            closure_130_1 = undefined;
-            closure_130_2 = undefined;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
+            closure_2 = tmp2;
+            navigation = tmp3;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            closure_129_3 = undefined;
+            let conversation2;
+            closure_129_5 = undefined;
             const channelId = closure_0.channelId;
-            closure_130_0 = channelId;
-            ({ guildId: closure_130_1, messageId: closure_130_2 } = closure_0);
+            closure_129_0 = channelId;
+            ({ guildId: closure_129_1, messageId: closure_129_2 } = closure_0);
             const parseConversationIdResult = closure_0(context[22]).parseConversationId(closure_0.sourceId);
-            closure_130_3 = parseConversationIdResult;
+            closure_129_3 = parseConversationIdResult;
             addCurrentSearchQueryToSearchHistory(closure_0);
             const obj8 = closure_0(context[22]);
+            c3 = 1;
             c4 = 1;
-            c5 = 1;
             const obj4 = { value: closure_0(context[23]).fetchConversation(channelId, parseConversationIdResult), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
-          c5 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          c4 = 3;
+          let obj = { value, done: true };
+          return obj;
         } else {
-          const conversationMessages = closure_0(context[23]).fetchConversationMessages(closure_130_0, closure_130_3, { includeReactions: true, includeMessageReferences: true, isStandalone: true });
-          if (null == ConversationPreviewStore.getConversation(closure_130_3)) {
+          conversation2 = conversation.getConversation(closure_129_3);
+          if (null == conversation2) {
             const _Error = Error;
             const error = new Error("Conversation not found");
             throw error;
           } else {
-            const obj7 = { channelId: closure_130_0, guildId: closure_130_1, conversationId: closure_130_3, title: null, messageId: null };
-            const conversation = ConversationPreviewStore.getConversation(closure_130_3);
-            let title;
-            if (conversation != null) {
-              title = conversation.title;
-            }
-            if (title == null) {
-              title = "";
-            }
-            obj7.title = title;
-            obj7.messageId = closure_130_2;
-            closure_130_4 = obj7;
-            const result = closure_0(context[10]).performKeyboardAwareNavigation(() => {
+            const result = closure_0(context[23]).setSelectedConversation(closure_129_0, closure_129_3, { cacheType: "preview", shouldJump: false });
+            const obj6 = { channelId: closure_129_0, guildId: closure_129_1, conversationId: closure_129_3, title: conversation2.title, messageId: closure_129_2 };
+            closure_129_5 = obj6;
+            const obj5 = closure_0(context[23]);
+            const result1 = closure_0(context[10]).performKeyboardAwareNavigation(() => {
               if (null != closure_2) {
                 const obj = { screen: closure_0(context[24]).ConversationNavigatorScreens.FOCUS, params };
                 navigation.navigate("sidebar", obj);
@@ -484,14 +469,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
                 navigation.navigate(closure_0(context[24]).ConversationNavigatorScreens.FOCUS, params);
               }
             });
-            c5 = 3;
+            c4 = 3;
             return { value: "IconComponent", done: null };
           }
-          const obj6 = closure_0(context[23]);
         }
-      } catch (tmp20) {
-        c5 = tmp;
-        throw tmp20;
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
       }
     }
   });
@@ -935,8 +919,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(12907).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(12907);
+        const result = searchContext(12915).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(12915);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -968,8 +952,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(12907).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(12907);
+      const result = searchContext(12915).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(12915);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

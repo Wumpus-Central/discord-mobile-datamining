@@ -1,9 +1,9 @@
-// === Module 14301: JoinVoiceChannelButton ===
+// === Module 14311: JoinVoiceChannelButton ===
 
-// Module 14301 (JoinVoiceChannelButton)
+// Module 14311 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6107 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11334 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6108 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11331 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1087).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoic
         }
       }
       const obj2 = { disabled: flag, text: tmp10, onPress: N };
-      const tmp21 = jsx(tmp(5441).Button, { disabled: flag, text: tmp10, onPress: N });
+      const tmp21 = jsx(tmp(5442).Button, { disabled: flag, text: tmp10, onPress: N });
       cResult[11] = tmp10;
       cResult[12] = flag;
       cResult[13] = N;
@@ -157,6 +157,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoic
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5441).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5442).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 });

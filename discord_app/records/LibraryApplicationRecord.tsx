@@ -1,11 +1,11 @@
-// === Module 7337: LibraryApplicationRecord ===
+// === Module 7339: LibraryApplicationRecord ===
 
-// Module 7337 (LibraryApplicationRecord)
+// Module 7339 (LibraryApplicationRecord)
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
 import _modDef4761 from "module_4761" /* 4761 */;
 import Record from "Record" /* 1407 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
-import EntitlementRecord from "EntitlementRecord" /* 7334 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
+import EntitlementRecord from "EntitlementRecord" /* 7336 */;
 
 const Constants = fn(1087);
 ({ LibraryApplicationFlags: hasOwnProperty, Distributors: metroRequire, SKUTypes: closure_7 } = Constants);

@@ -1,13 +1,13 @@
-// === Module 18325: LaunchPadNotificationCenter ===
+// === Module 18335: LaunchPadNotificationCenter ===
 
-// Module 18325 (LaunchPadNotificationCenter)
+// Module 18335 (LaunchPadNotificationCenter)
 import c from "c" /* 576 */;
-import notifications_NotificationsDefault from "notifications/Notifications" /* 17473 */;
+import notifications_NotificationsDefault from "notifications/Notifications" /* 17483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_4 = createStyles.createStyles({ wrapper: { height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

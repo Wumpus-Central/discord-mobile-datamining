@@ -1,7 +1,7 @@
-// === Module 17010: usePasswordRegistrationStep ===
+// === Module 17024: usePasswordRegistrationStep ===
 
-// Module 17010 (usePasswordRegistrationStep)
-import getErrorDefault from "getError" /* 6861 */;
+// Module 17024 (usePasswordRegistrationStep)
+import getErrorDefault from "getError" /* 6863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(16987).useRegistrationUIStore;
+const useRegistrationUIStore = fn(17001).useRegistrationUIStore;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
@@ -127,7 +127,7 @@ export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEn
                   c3 = 1;
                   c1 = 2;
                   c4 = 1;
-                  const obj7 = { value: tmp3(16998).scorePassword(tmp3), done: false };
+                  const obj7 = { value: tmp3(17012).scorePassword(tmp3), done: false };
                   return obj7;
                 }
               }

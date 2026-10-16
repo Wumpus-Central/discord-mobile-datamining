@@ -1,16 +1,16 @@
-// === Module 7039: GuildOnboardingPromptOptionButton ===
+// === Module 7041: GuildOnboardingPromptOptionButton ===
 
-// Module 7039 (GuildOnboardingPromptOptionButton)
+// Module 7041 (GuildOnboardingPromptOptionButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import spring from "spring" /* 5440 */;
+import timing from "timing" /* 5155 */;
+import spring from "spring" /* 5441 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import EmojiStore from "EmojiStore" /* 6205 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import EmojiStore from "EmojiStore" /* 6206 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let obj = { duration: 200, easing: null };
 let Easing = fn(4909).Easing;
 obj.easing = Easing.out(fn(4909).Easing.ease);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj3 = { container: { borderRadius: nativeDefault.radii.md, borderWidth: 2, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 8 }, optionButton: { paddingVertical: 12, paddingHorizontal: 16, display: "flex", flexDirection: "row", alignItems: "center" }, optionTextEmoji: { fontSize: 24, lineHeight: 24, marginRight: 12, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24, marginRight: 12 }, optionText: { flexShrink: 1 }, checkIcon: null, newBadgeWrapper: null, newBadge: null, roleCount: null };
 let size = { position: "absolute", top: -6, right: -6, width: 20, height: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
 obj3.checkIcon = size;
@@ -1335,11 +1335,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     }
   }
   let obj3 = option(4909);
-  S.__closure = { selected, withTiming: option(5154).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1, withSequence: option(4909).withSequence, withSpring: option(5440).withSpring };
+  S.__closure = { selected, withTiming: option(5155).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1, withSequence: option(4909).withSequence, withSpring: option(5441).withSpring };
   S.__workletHash = 8205438722579;
   S.__initData = derivedValue1;
   const animatedStyle = obj3.useAnimatedStyle(S);
-  const tmp8 = selected(7040)(option.guildId);
+  const tmp8 = selected(7042)(option.guildId);
   closure_5 = tmp8;
   num = 0;
   if (null != tmp8) {
@@ -1389,7 +1389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       ref.current = false;
     }
   }, items4);
-  let obj4 = { selected, withTiming: option(5154).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1, withSequence: option(4909).withSequence, withSpring: option(5440).withSpring };
+  let obj4 = { selected, withTiming: option(5155).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1, withSequence: option(4909).withSequence, withSpring: option(5441).withSpring };
   let obj5 = stateFromStores1;
   class V {
     constructor() {
@@ -1435,11 +1435,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     }
   }
   let tmp2Result = option(4909);
-  V.__closure = { showMemberCount, withDelay: option(4909).withDelay, withTiming: option(5154).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1 };
+  V.__closure = { showMemberCount, withDelay: option(4909).withDelay, withTiming: option(5155).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1 };
   V.__workletHash = 10755800239871;
   V.__initData = __initData3;
   const animatedStyle1 = tmp2Result.useAnimatedStyle(V);
-  const obj6 = { showMemberCount, withDelay: option(4909).withDelay, withTiming: option(5154).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1 };
+  const obj6 = { showMemberCount, withDelay: option(4909).withDelay, withTiming: option(5155).withTiming, Easing: option(4909).Easing, useReducedMotion: stateFromStores1 };
   sharedValue = option(4909).useSharedValue(1);
   isUnseen = canBeNew;
   if (canBeNew) {
@@ -1526,11 +1526,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     return obj.withTiming(num, obj);
   };
   const tmp2Result16 = option(4909);
-  fn.__closure = { withTiming: option(5154).withTiming, selected, SELECTION_TIMING: sharedValue };
+  fn.__closure = { withTiming: option(5155).withTiming, selected, SELECTION_TIMING: sharedValue };
   fn.__workletHash = 12520862943769;
   fn.__initData = __initData4;
   derivedValue = tmp2Result16.useDerivedValue(fn);
-  const obj7 = { withTiming: option(5154).withTiming, selected, SELECTION_TIMING: sharedValue };
+  const obj7 = { withTiming: option(5155).withTiming, selected, SELECTION_TIMING: sharedValue };
   class W {
     constructor() {
       obj = closure_0(closure_2[13]);
@@ -1542,11 +1542,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     }
   }
   const tmp2Result17 = option(4909);
-  W.__closure = { withTiming: option(5154).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
+  W.__closure = { withTiming: option(5155).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
   W.__workletHash = 6695066984001;
   W.__initData = __initData5;
   derivedValue1 = tmp2Result17.useDerivedValue(W);
-  const obj8 = { withTiming: option(5154).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
+  const obj8 = { withTiming: option(5155).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
   class X {
     constructor() {
       obj = closure_0(closure_2[7]);
@@ -1664,23 +1664,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       str = "";
     }
     obj13.name = str;
-    obj12.children = closure_9(tmp7(7043), obj13);
+    obj12.children = closure_9(tmp7(7045), obj13);
     tmp38Result = tmp38(closure_5, obj12);
-    const tmp7Result = tmp7(7043);
+    const tmp7Result = tmp7(7045);
   }
   const items7 = [tmp38Result, ];
   const obj15 = { style: tmp.optionText, children: null };
-  const items8 = [closure_9(option(5149).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title }), ];
+  const items8 = [closure_9(option(5150).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title }), ];
   let tmp44Result = null != option.description && option.description.length > 0;
   if (tmp44Result) {
     const obj17 = { variant: "text-xs/medium", color: "text-default", children: option.description };
-    tmp44Result = tmp44(tmp2(5149).Text, obj17);
+    tmp44Result = tmp44(tmp2(5150).Text, obj17);
   }
   items8[1] = tmp44Result;
   obj15.children = items8;
   items7[1] = ref(closure_5, obj15);
   obj11.children = items7;
-  const items9 = [ref(option(6407).PressableOpacity, obj11), , , ];
+  const items9 = [ref(option(6409).PressableOpacity, obj11), , , ];
   let tmp44Result2 = null;
   if (num > 0) {
     const obj18 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: null, children: null };
@@ -1690,7 +1690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     let intl = tmp2(1128).intl;
     const obj20 = { memberCount: num };
     obj19.children = intl.format(tmp2(1128).t.EgKsZA, obj20);
-    obj18.children = tmp44(tmp2(5149).Text, obj19);
+    obj18.children = tmp44(tmp2(5150).Text, obj19);
     tmp44Result2 = tmp44(tmp7(4909).View, obj18);
   }
   items9[1] = tmp44Result2;
@@ -1699,7 +1699,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
   obj21.style = items11;
   const obj16 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title };
   const tmp2Result20 = option(4891);
-  obj21.children = closure_9(option(7046).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
+  obj21.children = closure_9(option(7048).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
   items9[2] = closure_9(selected(4909).View, obj21);
   if (canBeNew) {
     canBeNew = !selected;

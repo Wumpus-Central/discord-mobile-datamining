@@ -1,10 +1,10 @@
-// === Module 14123: UserClockIcon ===
+// === Module 14133: UserClockIcon ===
 
-// Module 14123 (UserClockIcon)
+// Module 14133 (UserClockIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod14124 from "module_14124" /* 14124 */;
+import _mod14134 from "module_14134" /* 14134 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const UserClockIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14124;
+    const tmpResult = _mod14134;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const UserClockIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14124, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14134, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

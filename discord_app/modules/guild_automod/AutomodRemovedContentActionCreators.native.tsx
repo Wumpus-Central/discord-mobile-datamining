@@ -1,6 +1,6 @@
-// === Module 18371: AutomodRemovedContentActionCreators ===
+// === Module 18381: AutomodRemovedContentActionCreators ===
 
-// Module 18371 (AutomodRemovedContentActionCreators)
+// Module 18381 (AutomodRemovedContentActionCreators)
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
@@ -30,5 +30,5 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
   }
 };
 export const openRemovedContentModal = function openRemovedContentModal(action) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18372, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18382, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
 };

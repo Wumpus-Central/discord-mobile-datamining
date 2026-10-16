@@ -1,9 +1,9 @@
-// === Module 11158: useIsViewingActivity ===
+// === Module 11155: useIsViewingActivity ===
 
-// Module 11158 (useIsViewingActivity)
-import ChannelCallModalDefault from "ChannelCallModal" /* 11145 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11148 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
+// Module 11155 (useIsViewingActivity)
+import ChannelCallModalDefault from "ChannelCallModal" /* 11142 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11145 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6255 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

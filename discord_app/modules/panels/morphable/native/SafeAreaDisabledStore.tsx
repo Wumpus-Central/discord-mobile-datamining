@@ -1,6 +1,6 @@
-// === Module 11287: SafeAreaDisabledStore ===
+// === Module 11284: SafeAreaDisabledStore ===
 
-// Module 11287 (SafeAreaDisabledStore)
+// Module 11284 (SafeAreaDisabledStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

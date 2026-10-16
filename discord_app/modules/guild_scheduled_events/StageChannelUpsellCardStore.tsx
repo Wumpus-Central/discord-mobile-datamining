@@ -1,6 +1,6 @@
-// === Module 8805: StageChannelUpsellCardStore ===
+// === Module 8806: StageChannelUpsellCardStore ===
 
-// Module 8805 (StageChannelUpsellCardStore)
+// Module 8806 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;

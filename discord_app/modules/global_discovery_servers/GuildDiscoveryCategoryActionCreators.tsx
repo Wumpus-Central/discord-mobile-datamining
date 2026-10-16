@@ -1,10 +1,10 @@
-// === Module 17544: GuildDiscoveryCategoryActionCreators ===
+// === Module 17554: GuildDiscoveryCategoryActionCreators ===
 
-// Module 17544 (GuildDiscoveryCategoryActionCreators)
+// Module 17554 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17545 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 17555 */;
 
 const require = globalThis.__r;
 
@@ -88,7 +88,7 @@ let closure_9 = async function _fetchSlugForGuild(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   const HTTP = require("HTTPUtils").HTTP;
-  await HTTP.get({ url: Endpoints.GUILD_DISCOVERY_SLUG(closure_0), rejectWithError: true });
+  await HTTP.get({ url: Endpoints.GUILD_WEB_PAGE(closure_0), rejectWithError: true });
   if (1 === tmp7) {
     c3 = 0;
     closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_FAIL", guildId: closure_129_0 });
@@ -98,8 +98,12 @@ let closure_9 = async function _fetchSlugForGuild(arg0) {
     c5 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    const slug = value.body.slug;
-    closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug });
+    closure_129_1 = value;
+    const _URL = URL;
+    const uRL = new URL(closure_129_1.body.seo.canonical_url);
+    const pathname = uRL.pathname;
+    closure_129_2 = pathname.slice(9);
+    closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug: closure_129_2 });
     c3 = 0;
     closure_130_1(closure_130_2[5]);
   }

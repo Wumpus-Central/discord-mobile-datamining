@@ -1,8 +1,8 @@
-// === Module 17099: useMessagesScrollToTop ===
+// === Module 17113: useMessagesScrollToTop ===
 
-// Module 17099 (useMessagesScrollToTop)
+// Module 17113 (useMessagesScrollToTop)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = fn;
 const size = fn(2);
@@ -15,7 +15,7 @@ export default function useMessagesScrollToTop(listRef) {
   const ref = noop.useRef(noop.useMemo(() => ({
     scrollToTopTimeout: -1,
     scrollToTop() {
-      if (null != obj.coerceGuildsRoute(listRefHappeningNow(10874)())) {
+      if (null != obj.coerceGuildsRoute(listRefHappeningNow(10871)())) {
         const self = this;
         if (-1 === this.scrollToTopTimeout) {
           const _setTimeout = setTimeout;

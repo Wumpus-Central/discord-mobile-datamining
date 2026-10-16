@@ -1,6 +1,6 @@
-// === Module 16231: EchoCancellationSetting ===
+// === Module 16245: EchoCancellationSetting ===
 
-// Module 16231 (EchoCancellationSetting)
+// Module 16245 (EchoCancellationSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEchoCancellationSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.iWTwu6);
   },
-  parent: fn(8213).MobileUserSettings.VOICE,
+  parent: fn(8214).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useEchoCancellationSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   }),
-  onValueChange: fn(11402).handleEchoCancellationChange
+  onValueChange: fn(11399).handleEchoCancellationChange
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

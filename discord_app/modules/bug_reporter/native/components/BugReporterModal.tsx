@@ -1,6 +1,6 @@
-// === Module 13490: BugReporterModal ===
+// === Module 13498: BugReporterModal ===
 
-// Module 13490 (BugReporterModal)
+// Module 13498 (BugReporterModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;
@@ -9,18 +9,18 @@ import AvatarUtils from "AvatarUtils" /* 1417 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import FastImageDefault from "FastImage" /* 5091 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import TableRadioRow from "TableRadioRow" /* 6484 */;
-import Navigator from "Navigator" /* 6910 */;
-import HeaderActionButton from "HeaderActionButton" /* 7312 */;
-import UploadDefault from "Upload" /* 7977 */;
-import UploadPlatform from "UploadPlatform" /* 7978 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import TableRadioRow from "TableRadioRow" /* 6486 */;
+import Navigator from "Navigator" /* 6912 */;
+import HeaderActionButton from "HeaderActionButton" /* 7314 */;
+import UploadDefault from "Upload" /* 7978 */;
+import UploadPlatform from "UploadPlatform" /* 7979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import BugReportStore from "BugReportStore" /* 13489 */;
+import BugReportStore from "BugReportStore" /* 13497 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
@@ -503,7 +503,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(13492).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(13500).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -546,7 +546,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(13491).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(13499).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -895,7 +895,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13502, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13510, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -916,7 +916,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { padding: 16 }, attachmentCarousel: { justifyContent: "center", minWidth: "100%" }, attachmentContainer: { marginHorizontal: 4, marginBottom: 16 }, closeContainer: null, priorityIcon: null, offButton: null, submittingOverlay: null, submittingText: null };
 let size = { position: "absolute", top: 6, right: 10, height: 20, width: 20, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: null };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
@@ -986,6 +986,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BugRepor
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6910).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6912).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 });
 export { BugCreateScreen };

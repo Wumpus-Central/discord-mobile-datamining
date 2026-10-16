@@ -1,11 +1,11 @@
-// === Module 17784: useFileOrLinkImageDimensions ===
+// === Module 17794: useFileOrLinkImageDimensions ===
 
-// Module 17784 (useFileOrLinkImageDimensions)
+// Module 17794 (useFileOrLinkImageDimensions)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SearchConstants = fn(9549);
+const SearchConstants = fn(9550);
 ({ FILES_OR_LINKS_GAP_WIDTH: c3, FILES_OR_LINKS_NUM_COLUMNS: closure_4, FILE_OR_LINK_IMAGE_RATIO: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING: metroRequire } = SearchConstants);
 const ReactCompilerGating = fn(558);
 let size = fn(2);

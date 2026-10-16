@@ -1,12 +1,12 @@
-// === Module 9463: Authorize ===
+// === Module 9464: Authorize ===
 
-// Module 9463 (Authorize)
+// Module 9464 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
-import QueryStringUtils from "QueryStringUtils" /* 5137 */;
-import keysSorter from "keysSorter" /* 6202 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8684 */;
-import scopes from "scopes" /* 9464 */;
+import QueryStringUtils from "QueryStringUtils" /* 5138 */;
+import keysSorter from "keysSorter" /* 6203 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8685 */;
+import scopes from "scopes" /* 9465 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 

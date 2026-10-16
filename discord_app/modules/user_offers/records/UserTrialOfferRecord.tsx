@@ -1,8 +1,8 @@
-// === Module 7395: UserTrialOfferRecord ===
+// === Module 7397: UserTrialOfferRecord ===
 
-// Module 7395 (UserTrialOfferRecord)
+// Module 7397 (UserTrialOfferRecord)
 import Record from "Record" /* 1407 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7396 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7398 */;
 
 let closure_1 = fn(1394).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 let UserTrialOfferRecord;

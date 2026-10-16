@@ -1,6 +1,6 @@
-// === Module 8853: TextInput/TextInput ===
+// === Module 8854: TextInput/TextInput ===
 
-// Module 8853 (TextInput/TextInput)
+// Module 8854 (TextInput/TextInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -15,7 +15,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1087);
 ({ KeyboardThemes: metroRequire, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
 let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };

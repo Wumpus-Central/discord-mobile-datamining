@@ -1,10 +1,12 @@
-// === Module 17190: useFavoritesGuildHideAction ===
+// === Module 17204: useFavoritesGuildHideAction ===
 
-// Module 17190 (useFavoritesGuildHideAction)
+// Module 17204 (useFavoritesGuildHideAction)
+import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1114 */;
+import util from "util" /* 1128 */;
 import FavoritesUtils from "FavoritesUtils" /* 2093 */;
 import _modDef3447 from "module_3447" /* 3447 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10560 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10561 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 
@@ -15,93 +17,48 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildHideAction() {
-  const cResult = hasAccess(576).c(11);
-  let obj = hasAccess(576);
-  hasAccess = hasAccess(10561).useFavoritesAccess().hasAccess;
-  if (cResult[0] !== hasAccess) {
-    const fn = function s() {
-      if (hasAccess) {
-        const result = FavoritesActionCreators.setFavoritesGuildVisibility(false, "server_context_menu");
-      }
-      if (obj2.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
-        router_utils.transitionTo(Routes.ME);
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t() {
+      const result = FavoritesActionCreators.setFavoritesGuildVisibility(false, "server_context_menu");
+      if (obj2.isFavoritesGuildId(guildId.getGuildId())) {
+        router_utils.transitionTo(constants.ME);
+        const tmpResult = router_utils;
       }
       obj2 = FavoritesUtils;
     };
-    cResult[0] = hasAccess;
-    cResult[1] = fn;
-    let tmp4 = fn;
+    cResult[0] = fn;
+    let first = fn;
   } else {
-    tmp4 = cResult[1];
+    first = cResult[0];
   }
-  if (cResult[2] !== hasAccess) {
-    const intl = tmp(1128).intl;
-    if (hasAccess) {
-      let ojM1xJ = _modDef3447["8FO0y9"];
-    } else {
-      ojM1xJ = tmp(1128).t.ojM1xJ;
-    }
-    const stringResult = intl.string(ojM1xJ);
-    cResult[2] = hasAccess;
-    cResult[3] = stringResult;
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj2 = { label: null, subLabel: null, perform: null };
+    const intl = util.intl;
+    obj2.label = intl.string(_modDef3447["8FO0y9"]);
+    const intl2 = util.intl;
+    obj2.subLabel = intl2.string(_modDef3447.FaHxWl);
+    obj2.perform = first;
+    cResult[1] = obj2;
+    let tmp5 = obj2;
   } else {
-    if (cResult[4] !== hasAccess) {
-      let stringResult1;
-      if (hasAccess) {
-        const intl2 = tmp(1128).intl;
-        stringResult1 = intl2.string(_modDef3447.FaHxWl);
-      }
-      cResult[4] = hasAccess;
-      cResult[5] = stringResult1;
-      let tmp10 = stringResult1;
-    } else {
-      tmp10 = cResult[5];
-    }
-    if (cResult[6] === tmp4) {
-      if (cResult[7] === tmp5) {
-        if (cResult[8] === tmp6) {
-          if (cResult[9] === tmp10) {
-            let tmp13 = cResult[10];
-          }
-          return tmp13;
-        }
-      }
-    }
-    let obj3 = { isPreview: tmp5, label: cResult[3], subLabel: tmp10, perform: tmp4 };
-    cResult[6] = tmp4;
-    cResult[7] = tmp5;
-    cResult[8] = cResult[3];
-    cResult[9] = tmp10;
-    cResult[10] = obj3;
-    tmp13 = obj3;
+    tmp5 = cResult[1];
   }
-  let obj2 = hasAccess(10561);
+  return tmp5;
 }) : (function useFavoritesGuildHideAction() {
-  hasAccess = hasAccess(10561).useFavoritesAccess().hasAccess;
-  const items = [hasAccess];
-  let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
+  let obj = { label: null, subLabel: null, perform: null };
   const callback = noop.useCallback(() => {
-    if (hasAccess) {
-      const result = FavoritesActionCreators.setFavoritesGuildVisibility(false, "server_context_menu");
-    }
-    if (obj2.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
-      router_utils.transitionTo(Routes.ME);
+    const result = FavoritesActionCreators.setFavoritesGuildVisibility(false, "server_context_menu");
+    if (obj2.isFavoritesGuildId(guildId.getGuildId())) {
+      router_utils.transitionTo(constants.ME);
+      const tmpResult = router_utils;
     }
     obj2 = FavoritesUtils;
-  }, items);
-  const intl = hasAccess(1128).intl;
-  if (hasAccess) {
-    let ojM1xJ = _modDef3447["8FO0y9"];
-  } else {
-    ojM1xJ = tmp(1128).t.ojM1xJ;
-  }
-  obj2.label = intl.string(ojM1xJ);
-  let stringResult;
-  if (hasAccess) {
-    const intl2 = tmp(1128).intl;
-    stringResult = intl2.string(_modDef3447.FaHxWl);
-  }
-  obj2.subLabel = stringResult;
-  obj2.perform = callback;
-  return obj2;
+  }, []);
+  const intl = util.intl;
+  obj.label = intl.string(_modDef3447["8FO0y9"]);
+  const intl2 = util.intl;
+  obj.subLabel = intl2.string(_modDef3447.FaHxWl);
+  obj.perform = callback;
+  return obj;
 });

@@ -1,6 +1,6 @@
-// === Module 10864: useFriendsSinceDate ===
+// === Module 10861: useFriendsSinceDate ===
 
-// Module 10864 (useFriendsSinceDate)
+// Module 10861 (useFriendsSinceDate)
 import LocaleStore from "LocaleStore" /* 2132 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 

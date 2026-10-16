@@ -1,8 +1,8 @@
-// === Module 9937: ForegroundServiceManager ===
+// === Module 9938: ForegroundServiceManager ===
 
-// Module 9937 (ForegroundServiceManager)
+// Module 9938 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9938 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9939 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 import size from "module_2" /* 2 */;
 

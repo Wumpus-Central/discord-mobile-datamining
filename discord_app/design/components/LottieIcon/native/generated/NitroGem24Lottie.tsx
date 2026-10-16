@@ -1,9 +1,9 @@
-// === Module 14958: NitroGem24Lottie ===
+// === Module 14968: NitroGem24Lottie ===
 
-// Module 14958 (NitroGem24Lottie)
+// Module 14968 (NitroGem24Lottie)
 import c from "c" /* 576 */;
-import LottieIcon from "LottieIcon" /* 11364 */;
-import _mod14959 from "module_14959" /* 14959 */;
+import LottieIcon from "LottieIcon" /* 11361 */;
+import _mod14969 from "module_14969" /* 14969 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const NitroGem24Lottie = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp5 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14959;
+    const tmpResult = _mod14969;
     cResult[3] = tmpResult;
     let tmp9 = tmpResult;
   } else {
@@ -52,5 +52,5 @@ export const NitroGem24Lottie = ReactCompilerGating.isReactCompilerEnabled() ? (
 }) : (function NitroGem24Lottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14959, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14969, animation: "all", ref: ref.ref, layers, markers: items });
 });

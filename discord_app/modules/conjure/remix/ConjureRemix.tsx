@@ -1,9 +1,9 @@
-// === Module 11556: ConjureRemix ===
+// === Module 11553: ConjureRemix ===
 
-// Module 11556 (ConjureRemix)
+// Module 11553 (ConjureRemix)
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10922 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -133,7 +133,7 @@ let closure_7 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10901);
+const ConjureConnectionStore = fn(10898);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let c6 = " (Remix)";
 const size = fn(2);

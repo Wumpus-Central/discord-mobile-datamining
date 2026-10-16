@@ -1,21 +1,21 @@
-// === Module 10996: StageChannelSelfRichPresenceStore ===
+// === Module 10993: StageChannelSelfRichPresenceStore ===
 
-// Module 10996 (StageChannelSelfRichPresenceStore)
+// Module 10993 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1357 from "module_1357" /* 1357 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
-import useChannelName from "useChannelName" /* 5483 */;
-import StageMediaHooks from "StageMediaHooks" /* 6113 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6168 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10492 */;
+import useChannelName from "useChannelName" /* 5484 */;
+import StageMediaHooks from "StageMediaHooks" /* 6114 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6169 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10493 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import UserStore from "UserStore" /* 1392 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6114 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6115 */;
 import StageInstanceStore from "StageInstanceStore" /* 2073 */;
 
 require = fn;
@@ -115,7 +115,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6110).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6111).STAGE_APPLICATION_ID;
 const Constants = fn(1087);
 ({ ActivityTypes: map1, GuildFeatures: closure_14, Permissions: closure_15, RTCConnectionStates: closure_16 } = Constants);
 let obj = null;

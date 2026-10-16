@@ -1,18 +1,18 @@
-// === Module 16538: CopyClientInfoSetting ===
+// === Module 16552: CopyClientInfoSetting ===
 
-// Module 16538 (CopyClientInfoSetting)
+// Module 16552 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
 import CopyIcon from "CopyIcon" /* 5104 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import DeviceUtils from "DeviceUtils" /* 5130 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7062 */;
-import ClipboardUtils from "ClipboardUtils" /* 7107 */;
-import ActionSheetRow from "ActionSheetRow" /* 7116 */;
-import ActionSheet from "ActionSheet" /* 7120 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12431 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10732 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7064 */;
+import ClipboardUtils from "ClipboardUtils" /* 7109 */;
+import ActionSheetRow from "ActionSheetRow" /* 7118 */;
+import ActionSheet from "ActionSheet" /* 7122 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12437 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10729 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1383 */;
 
 require = fn;
@@ -328,14 +328,14 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6338).ClipboardListIcon,
+  IconComponent: fn(6340).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
   },

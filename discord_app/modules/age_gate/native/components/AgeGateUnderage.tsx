@@ -1,9 +1,9 @@
-// === Module 17029: AgeGateUnderage ===
+// === Module 17043: AgeGateUnderage ===
 
-// Module 17029 (AgeGateUnderage)
+// Module 17043 (AgeGateUnderage)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6848 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
         } else {
           tmp15 = cResult[7];
         }
-        tmp(6429).useNavigatorBackPressHandler(tmp15);
+        tmp(6431).useNavigatorBackPressHandler(tmp15);
         if (cResult[8] !== tmp4) {
           const intl = tmp(1128).intl;
           const string = intl.string;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           if (cResult[10] !== tmp8) {
             let tmp22 = null;
             if (!tmp8) {
-              tmp22 = closure_6(tmp7(6879), {});
+              tmp22 = closure_6(tmp7(6881), {});
             }
             cResult[10] = tmp8;
             cResult[11] = tmp22;
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp7(6882), {});
-            const tmp29 = closure_6(tmp(7736).ShieldSpotIllustration, {});
+            const tmp28 = closure_6(tmp7(6884), {});
+            const tmp29 = closure_6(tmp(7737).ShieldSpotIllustration, {});
             cResult[12] = tmp29;
             cResult[13] = tmp28;
             let tmp26 = tmp28;
@@ -138,12 +138,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                     const obj4 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
                     const intl4 = tmp(1128).intl;
                     obj4.children = intl4.format(tmp(1128).t["3axQdB"], { days: 30 });
-                    const items1 = [closure_6(tmp(5149).Text, obj4), ];
+                    const items1 = [closure_6(tmp(5150).Text, obj4), ];
                     const obj5 = { style: tmp9.buttonWrapper, children: null };
                     const obj6 = { onPress: onClose, text: null, grow: true };
                     const intl5 = tmp(1128).intl;
                     obj6.text = intl5.string(tmp(1128).t.JhDw5o);
-                    obj5.children = closure_6(tmp(5441).Button, obj6);
+                    obj5.children = closure_6(tmp(5442).Button, obj6);
                     items1[1] = closure_6(View, obj5);
                     obj3.children = items1;
                     tmp43 = closure_8(closure_7, obj3);
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                   tmp42 = tmp43;
                 }
                 const obj7 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: cResult[19] };
-                const tmp41 = closure_6(tmp(5149).Text, obj7);
+                const tmp41 = closure_6(tmp(5150).Text, obj7);
                 cResult[20] = tmp9.body;
                 cResult[21] = cResult[19];
                 cResult[22] = tmp41;
@@ -181,13 +181,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
             cResult[19] = stringResult1;
           }
           const obj9 = { style: tmp9.header, children: cResult[9] };
-          const tmp32 = closure_6(tmp7(6878), obj9);
+          const tmp32 = closure_6(tmp7(6880), obj9);
           cResult[14] = cResult[9];
           cResult[15] = tmp9.header;
           cResult[16] = tmp32;
           tmp30 = tmp32;
         }
-        const tmpResult2 = tmp(6429);
+        const tmpResult2 = tmp(6431);
       }
     }
   }

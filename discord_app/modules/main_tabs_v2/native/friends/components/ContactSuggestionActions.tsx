@@ -1,11 +1,11 @@
-// === Module 17512: ContactSuggestionActions ===
+// === Module 17522: ContactSuggestionActions ===
 
-// Module 17512 (ContactSuggestionActions)
+// Module 17522 (ContactSuggestionActions)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import spring from "spring" /* 5440 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17095 */;
+import timing from "timing" /* 5155 */;
+import spring from "spring" /* 5441 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ let obj4 = { duration: 250, easing: null };
 const Easing4 = fn(4909).Easing;
 obj4.easing = Easing4.out(fn(4909).Easing.quad);
 const SPRING_CONFIG = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj6 = { icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
 let closure_12 = createStyles.createStyles(obj6);
 const __initData = { code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };

@@ -1,13 +1,13 @@
-// === Module 18115: useControlsHoverGesture ===
+// === Module 18125: useControlsHoverGesture ===
 
-// Module 18115 (useControlsHoverGesture)
+// Module 18125 (useControlsHoverGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6557 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6559 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VoicePanelModes = fn(12843).VoicePanelModes;
-const VoicePanelControlsModes = fn(12841).VoicePanelControlsModes;
+const VoicePanelModes = fn(12849).VoicePanelModes;
+const VoicePanelControlsModes = fn(12847).VoicePanelControlsModes;
 let c6 = 500;
 const __initData = { code: "function useControlsHoverGestureTsx1(){const{connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout}=this.__closure;if(!connected.get()){return;}if(mode.get()!==VoicePanelModes.PANEL){return;}const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){runOnJS(showControls)();return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS){return;}lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();}" };
 let closure_8 = { code: "function useControlsHoverGestureTsx2(){const{connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout}=this.__closure;if(!connected.get())return;if(mode.get()!==VoicePanelModes.PANEL)return;const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){runOnJS(showControls)();return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS)return;lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();}" };

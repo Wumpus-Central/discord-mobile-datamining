@@ -1,16 +1,16 @@
-// === Module 8591: useUserProfileColors ===
+// === Module 8592: useUserProfileColors ===
 
-// Module 8591 (useUserProfileColors)
+// Module 8592 (useUserProfileColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useThemeDefault from "useTheme" /* 5090 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7102 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7104 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const initialize = obj(504);
 const utils_ColorUtils = obj(1105);
 const useToken = obj(4877);
-const UserProfileGradientUtils = obj(8582);
+const UserProfileGradientUtils = obj(8583);
 require = fn;
 const ThemeTypes = fn(1098).ThemeTypes;
 const ReactCompilerGating = fn(558);

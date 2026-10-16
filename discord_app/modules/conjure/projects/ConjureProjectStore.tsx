@@ -1,9 +1,9 @@
-// === Module 10900: ConjureProjectStore ===
+// === Module 10897: ConjureProjectStore ===
 
-// Module 10900 (ConjureProjectStore)
+// Module 10897 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
 

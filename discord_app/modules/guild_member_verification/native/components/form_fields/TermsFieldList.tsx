@@ -1,19 +1,19 @@
-// === Module 6396: TermsFieldList ===
+// === Module 6398: TermsFieldList ===
 
-// Module 6396 (TermsFieldList)
+// Module 6398 (TermsFieldList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5141 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import TableRowDivider from "TableRowDivider" /* 6397 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5142 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import TableRowDivider from "TableRowDivider" /* 6399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TermsFie
   const intl = rules(1128).intl;
   obj2.children = intl.string(rules(1128).t.prJqwT);
   let items = [
-    closure_5(rules(5149).Text, obj2),
+    closure_5(rules(5150).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

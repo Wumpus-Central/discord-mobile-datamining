@@ -1,9 +1,9 @@
-// === Module 7177: useUnmountAbortSignal ===
+// === Module 7179: useUnmountAbortSignal ===
 
-// Module 7177 (useUnmountAbortSignal)
+// Module 7179 (useUnmountAbortSignal)
 import c from "c" /* 576 */;
-import useMountEffect from "useMountEffect" /* 5458 */;
-import useInitialValueDefault from "useInitialValue" /* 6392 */;
+import useMountEffect from "useMountEffect" /* 5459 */;
+import useInitialValueDefault from "useInitialValue" /* 6394 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

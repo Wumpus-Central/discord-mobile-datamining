@@ -1,8 +1,8 @@
-// === Module 8101: imageConversion ===
+// === Module 8102: imageConversion ===
 
-// Module 8101 (imageConversion)
+// Module 8102 (imageConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import MediaTypes from "MediaTypes" /* 5506 */;
+import MediaTypes from "MediaTypes" /* 5507 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -328,7 +328,7 @@ let closure_4 = new LoggerDefault("ImageConversion");
 const ImageConversionFailureReason = { NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable", PLATFORM_UNSUPPORTED: "platform_unsupported", SIZE_LIMIT_EXCEEDED: "size_limit_exceeded", CONVERSION_FAILED: "conversion_failed", UNKNOWN_ERROR: "unknown_error" };
 let obj2 = {
   label: "heic",
-  matches: fn(8008).isHeicFile,
+  matches: fn(8009).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
@@ -337,7 +337,7 @@ let obj2 = {
 };
 let obj3 = {
   label: "jxr",
-  matches: fn(8008).isJxrFile,
+  matches: fn(8009).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   },
@@ -348,7 +348,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export { ImageConversionFailureReason };
-export const renameToJpegExtension = fn(8008).renameToJpegExtension;
+export const renameToJpegExtension = fn(8009).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };
 export const convertFileToJpeg = function convertFileToJpeg() {

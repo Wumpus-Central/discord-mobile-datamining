@@ -1,24 +1,24 @@
-// === Module 18705: GuildSettingsModalServerTagCustomize ===
+// === Module 18718: GuildSettingsModalServerTagCustomize ===
 
-// Module 18705 (GuildSettingsModalServerTagCustomize)
+// Module 18718 (GuildSettingsModalServerTagCustomize)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8845 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8846 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8865 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(8843).GuildProfileFetchStatus;
-const BADGES = fn(8108).BADGES;
+let GuildProfileFetchStatus = fn(8844).GuildProfileFetchStatus;
+const BADGES = fn(8109).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: PX_16 }, warning: { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start", marginTop: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, warningText: { flex: 1 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

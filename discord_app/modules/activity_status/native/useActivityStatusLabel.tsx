@@ -1,19 +1,19 @@
-// === Module 13711: useActivityStatusLabel ===
+// === Module 13722: useActivityStatusLabel ===
 
-// Module 13711 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10476 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10477 */;
-import isGameActivityDefault from "isGameActivity" /* 10484 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10488 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+// Module 13722 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10477 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10478 */;
+import isGameActivityDefault from "isGameActivity" /* 10485 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10489 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import PresenceStore from "PresenceStore" /* 5169 */;
+import PresenceStore from "PresenceStore" /* 5170 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 const util = v0wJXSh(1128);
-const VoiceActivityStatus = v0wJXSh(10493);
+const VoiceActivityStatus = v0wJXSh(10494);
 require = fn;
 const ActivityTypes = fn(1087).ActivityTypes;
 const ReactCompilerGating = fn(558);

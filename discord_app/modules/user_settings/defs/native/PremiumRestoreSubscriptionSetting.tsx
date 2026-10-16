@@ -1,18 +1,18 @@
-// === Module 16217: PremiumRestoreSubscriptionSetting ===
+// === Module 16231: PremiumRestoreSubscriptionSetting ===
 
-// Module 16217 (PremiumRestoreSubscriptionSetting)
+// Module 16231 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5362 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 7362 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5363 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7364 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPremiumRestoreSubscriptionSetting() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(9266).NitroWheelIcon,
+  IconComponent: fn(9267).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {

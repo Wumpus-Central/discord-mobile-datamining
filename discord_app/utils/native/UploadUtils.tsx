@@ -1,24 +1,24 @@
-// === Module 7988: utils/UploadUtils ===
+// === Module 7989: utils/UploadUtils ===
 
-// Module 7988 (utils/UploadUtils)
+// Module 7989 (utils/UploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1164 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1447 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7719 */;
-import UploadPlatform from "UploadPlatform" /* 7978 */;
-import UploadUtils from "UploadUtils" /* 7979 */;
-import FileUtils from "FileUtils" /* 7984 */;
-import ImagePickerDefault from "ImagePicker" /* 7989 */;
-import ImageConversionDecision from "ImageConversionDecision" /* 7997 */;
-import VideoUploadUtils from "VideoUploadUtils" /* 7999 */;
-import UploadLimits from "UploadLimits" /* 8000 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 8007 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7720 */;
+import UploadPlatform from "UploadPlatform" /* 7979 */;
+import UploadUtils from "UploadUtils" /* 7980 */;
+import FileUtils from "FileUtils" /* 7985 */;
+import ImagePickerDefault from "ImagePicker" /* 7990 */;
+import ImageConversionDecision from "ImageConversionDecision" /* 7998 */;
+import VideoUploadUtils from "VideoUploadUtils" /* 8000 */;
+import UploadLimits from "UploadLimits" /* 8001 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 8008 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore_mod from "UnsyncedUserSettingsStore" /* 1209 */;
-import NetworkStore from "NetworkStore" /* 5344 */;
+import NetworkStore from "NetworkStore" /* 5345 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -1947,7 +1947,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(7997);
+                      tmpResult = closure_1_0(7998);
                     }
                     const obj = closure_1_0(1384);
                   })(closure_130_0, closure_130_1)) {
@@ -2596,7 +2596,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1087);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(7702).NativePermissionTypes;
+const NativePermissionTypes = fn(7703).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2665,8 +2665,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(7997).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(7997).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(7998).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(7998).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

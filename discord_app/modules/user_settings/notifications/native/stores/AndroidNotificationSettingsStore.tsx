@@ -1,9 +1,9 @@
-// === Module 16461: AndroidNotificationSettingsStore ===
+// === Module 16475: AndroidNotificationSettingsStore ===
 
-// Module 16461 (AndroidNotificationSettingsStore)
+// Module 16475 (AndroidNotificationSettingsStore)
 import c from "c" /* 576 */;
 import _mod4792 from "module_4792" /* 4792 */;
-import PushNotificationDefault from "PushNotification" /* 10945 */;
+import PushNotificationDefault from "PushNotification" /* 10942 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -128,7 +128,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
   }
 };
 const identity = fn(1269);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "unicodeVersion", isVibrationsEnabled: "marginTop", isSoundsEnabled: "shapes", isNotifyEveryTime: "Array" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "Symbol", isSoundsEnabled: "y", isNotifyEveryTime: "IconComponent" }));
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationLightsEnabled() {

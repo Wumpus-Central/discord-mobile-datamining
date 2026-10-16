@@ -1,13 +1,13 @@
-// === Module 14683: ConnectivityIndicatorStateStore ===
+// === Module 14693: ConnectivityIndicatorStateStore ===
 
-// Module 14683 (ConnectivityIndicatorStateStore)
+// Module 14693 (ConnectivityIndicatorStateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1483 */;
-import CacheStore from "CacheStore" /* 7416 */;
+import CacheStore from "CacheStore" /* 7418 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 5494 */;
+import MessageStore from "MessageStore" /* 5495 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
 
@@ -36,12 +36,12 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj4 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let num2 = state(14684).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num2 = state(14694).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
               }
               let tmp23 = num2;
-              const obj16 = state(14684);
+              const obj16 = state(14694);
             } else {
               tmp23 = delayMs2;
             }
@@ -64,12 +64,12 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj8 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let num = state(14684).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num = state(14694).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;
               }
               let tmp18 = num;
-              const obj11 = state(14684);
+              const obj11 = state(14694);
             } else {
               tmp18 = delayMs2;
             }

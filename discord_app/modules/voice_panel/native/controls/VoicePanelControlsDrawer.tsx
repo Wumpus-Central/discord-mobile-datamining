@@ -1,17 +1,17 @@
-// === Module 18264: VoicePanelControlsDrawer ===
+// === Module 18274: VoicePanelControlsDrawer ===
 
-// Module 18264 (VoicePanelControlsDrawer)
+// Module 18274 (VoicePanelControlsDrawer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import Suspender from "Suspender" /* 5392 */;
-import spring from "spring" /* 5440 */;
-import useRefValueDefault from "useRefValue" /* 6383 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9815 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12840 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12850 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 18265 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 18276 */;
+import Suspender from "Suspender" /* 5393 */;
+import spring from "spring" /* 5441 */;
+import useRefValueDefault from "useRefValue" /* 6385 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9814 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12846 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12856 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 18275 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 18286 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,12 +22,12 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12843);
+const VoicePanelConstants = fn(12849);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 200;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

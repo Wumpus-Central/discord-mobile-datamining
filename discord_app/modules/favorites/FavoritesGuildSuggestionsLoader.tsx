@@ -1,11 +1,11 @@
-// === Module 17345: FavoritesGuildSuggestionsLoader ===
+// === Module 17357: FavoritesGuildSuggestionsLoader ===
 
-// Module 17345 (FavoritesGuildSuggestionsLoader)
-import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 17346 */;
+// Module 17357 (FavoritesGuildSuggestionsLoader)
+import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 17358 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const FavoritesGuildSuggestionsStore = fn(17253);
+const FavoritesGuildSuggestionsStore = fn(17266);
 ({ NO_SUGGESTIONS: closure_4, setFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsVisibility: metroRequire } = FavoritesGuildSuggestionsStore);
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

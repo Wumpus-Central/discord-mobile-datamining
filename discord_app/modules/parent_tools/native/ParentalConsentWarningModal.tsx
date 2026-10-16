@@ -1,6 +1,6 @@
-// === Module 18539: ParentalConsentWarningModal ===
+// === Module 18549: ParentalConsentWarningModal ===
 
-// Module 18539 (ParentalConsentWarningModal)
+// Module 18549 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -8,18 +8,18 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2053 */;
 import RootNavigationRef from "RootNavigationRef" /* 5036 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6155 */;
-import openUserSettings from "openUserSettings" /* 7317 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7479 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6156 */;
+import openUserSettings from "openUserSettings" /* 7319 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7481 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7477 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7479 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7478);
+const FamilyCenterConstants = fn(7480);
 ({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
 let closure_15 = fn(2052).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, illustration: null, title: null, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18540, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18550, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

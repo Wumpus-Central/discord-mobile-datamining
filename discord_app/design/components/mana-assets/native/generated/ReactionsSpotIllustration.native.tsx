@@ -1,23 +1,23 @@
-// === Module 9519: ReactionsSpotIllustration ===
+// === Module 9520: ReactionsSpotIllustration ===
 
-// Module 9519 (ReactionsSpotIllustration)
+// Module 9520 (ReactionsSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6495 */;
-import _modDef9520 from "module_9520" /* 9520 */;
+import assetHelpers from "assetHelpers" /* 6497 */;
 import _modDef9521 from "module_9521" /* 9521 */;
 import _modDef9522 from "module_9522" /* 9522 */;
+import _modDef9523 from "module_9523" /* 9523 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9520 }, 3: null };
-let obj2 = { uri: _modDef9520 };
-obj[2] = { uri: _modDef9521 };
-const obj3 = { uri: _modDef9521 };
-obj[3] = { uri: _modDef9522 };
+let obj = { 1: null, 2: { uri: _modDef9521 }, 3: null };
+let obj2 = { uri: _modDef9521 };
+obj[2] = { uri: _modDef9522 };
+const obj3 = { uri: _modDef9522 };
+obj[3] = { uri: _modDef9523 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef9522 };
+const obj4 = { uri: _modDef9523 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx");
 

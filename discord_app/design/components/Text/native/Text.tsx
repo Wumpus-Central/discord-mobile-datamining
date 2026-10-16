@@ -1,16 +1,16 @@
-// === Module 5149: Text/Text ===
+// === Module 5150: Text/Text ===
 
-// Module 5149 (Text/Text)
+// Module 5150 (Text/Text)
 import _modDef12 from "module_12" /* 12 */;
 import NativeText2 from "NativeText" /* 299 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5151 */;
-import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5158 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5159 */;
-import PlainTextEligibility from "PlainTextEligibility" /* 5162 */;
-import _modDef5163 from "module_5163" /* 5163 */;
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5152 */;
+import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5159 */;
+import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5160 */;
+import PlainTextEligibility from "PlainTextEligibility" /* 5163 */;
+import _modDef5164 from "module_5164" /* 5164 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
@@ -44,7 +44,7 @@ obj18[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj7[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj7[900] } = Fonts);
 const dependencyMap = { headline: obj3, nitro: obj4, primary: { 400: null, 500: null, 600: null, 700: null, 800: null }, code: { 400: null, 700: null } };
 let closure_17 = { headline: obj18, nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5150).TextVariantsFlat;
+const TextVariantsFlat = fn(5151).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -84,9 +84,9 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5151);
+const useManaTextMigrationHighlight = fn(5152);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_19 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
@@ -158,7 +158,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Text(variant
     }
     obj4.ellipsizeMode = ellipsizeMode;
     const merged = Object.assign(tmp2);
-    return jsx(_modDef5163, { text: children, color: color2, fontSize, fontFamily, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true });
+    return jsx(_modDef5164, { text: children, color: color2, fontSize, fontFamily, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true });
   } else {
     if (tmp5) {
       let NativeText = NativeText2.NativeText;
@@ -247,7 +247,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Text(variant
     }
     obj4.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
-    return jsx(_modDef5163, { text: children, color: color2, fontSize, fontFamily, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true });
+    return jsx(_modDef5164, { text: children, color: color2, fontSize, fontFamily, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true });
   } else {
     if (flag2) {
       let NativeText = NativeText2.NativeText;

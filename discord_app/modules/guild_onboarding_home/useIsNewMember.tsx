@@ -1,6 +1,6 @@
-// === Module 7148: useIsNewMember ===
+// === Module 7150: useIsNewMember ===
 
-// Module 7148 (useIsNewMember)
+// Module 7150 (useIsNewMember)
 import DurationsDefault from "Durations" /* 1104 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import ImpersonateStore from "ImpersonateStore" /* 2121 */;

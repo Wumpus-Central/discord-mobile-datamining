@@ -1,14 +1,14 @@
-// === Module 11649: ConjureNativeControlOverlay ===
+// === Module 11646: ConjureNativeControlOverlay ===
 
-// Module 11649 (ConjureNativeControlOverlay)
+// Module 11646 (ConjureNativeControlOverlay)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import spring from "spring" /* 5440 */;
-import springPresets from "springPresets" /* 5444 */;
-import useConjureControlBar from "useConjureControlBar" /* 11650 */;
+import timing from "timing" /* 5155 */;
+import spring from "spring" /* 5441 */;
+import springPresets from "springPresets" /* 5445 */;
+import useConjureControlBar from "useConjureControlBar" /* 11647 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = 280;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { root: { flex: 1 }, content: { flex: 1 }, block: null, border: null, glow: null, barArea: null, bar: null, title: null, actions: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.block = {};
@@ -53,12 +53,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   ({ projectId, visible, children } = active);
   const tmp4 = closure_10();
   let obj = conjureControlPhase(576);
-  conjureControlPhase = conjureControlPhase(11650).useConjureControlPhase(active.active);
-  let obj2 = conjureControlPhase(11650);
-  const conjureControlStop = conjureControlPhase(11650).useConjureControlStop(projectId);
+  conjureControlPhase = conjureControlPhase(11647).useConjureControlPhase(active.active);
+  let obj2 = conjureControlPhase(11647);
+  const conjureControlStop = conjureControlPhase(11647).useConjureControlStop(projectId);
   ({ stop, stopping } = conjureControlStop);
-  let obj3 = conjureControlPhase(11650);
-  const conjureControlTuning = conjureControlPhase(10958).useConjureControlTuning(projectId);
+  let obj3 = conjureControlPhase(11647);
+  const conjureControlTuning = conjureControlPhase(10955).useConjureControlTuning(projectId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [sharedValue2];
     let fn = function c() {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   } else {
     [tmp8, tmp9] = cResult;
   }
-  let obj4 = conjureControlPhase(10958);
+  let obj4 = conjureControlPhase(10955);
   const stateFromStores = conjureControlPhase(504).useStateFromStores(tmp8, tmp9);
   let tmp12 = visible;
   if (visible) {
@@ -245,9 +245,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                   return sharedValue.set(nativeEvent.nativeEvent.layout.height);
                 };
                 if (tmp12) {
-                  const tmp37Result = closure_6(tmp(11651).AILoader, { size: 12, color: "text-overlay-light" });
+                  const tmp37Result = closure_6(tmp(11648).AILoader, { size: 12, color: "text-overlay-light" });
                 } else {
-                  const SparklesIcon = tmp(11655).SparklesIcon;
+                  const SparklesIcon = tmp(11652).SparklesIcon;
                   { size: "sm", color: null }.color = tmp38(587).colors.TEXT_OVERLAY_LIGHT;
                   class B {
                     constructor() {
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                     return obj;
                   }
                 }
-                items2[1] = closure_6(tmp(5149).Text, obj12);
+                items2[1] = closure_6(tmp(5150).Text, obj12);
                 let tmp37Result3 = null;
                 if (tmp33) {
                   const obj13 = { style: tmp4.actions, children: null };
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                     }
                   }
                   tmp45[4] = stop;
-                  obj13.children = closure_6(tmp(5441).Button, tmp45);
+                  obj13.children = closure_6(tmp(5442).Button, tmp45);
                   tmp37Result3 = closure_6(sharedValue1, obj13);
                 }
                 items2[2] = tmp37Result3;
@@ -588,13 +588,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   let sharedValue2;
   ({ active, children } = arg0);
   const tmp = closure_10();
-  conjureControlPhase = conjureControlPhase(11650).useConjureControlPhase(active);
-  let obj = conjureControlPhase(11650);
-  const conjureControlStop = conjureControlPhase(11650).useConjureControlStop(projectId);
+  conjureControlPhase = conjureControlPhase(11647).useConjureControlPhase(active);
+  let obj = conjureControlPhase(11647);
+  const conjureControlStop = conjureControlPhase(11647).useConjureControlStop(projectId);
   ({ stop, stopping } = conjureControlStop);
-  let obj2 = conjureControlPhase(11650);
-  const conjureControlTuning = conjureControlPhase(10958).useConjureControlTuning(projectId);
-  let obj3 = conjureControlPhase(10958);
+  let obj2 = conjureControlPhase(11647);
+  const conjureControlTuning = conjureControlPhase(10955).useConjureControlTuning(projectId);
+  let obj3 = conjureControlPhase(10955);
   let items = [sharedValue2];
   const stateFromStores = conjureControlPhase(504).useStateFromStores(items, () => sharedValue2.useReducedMotion);
   let tmp8 = visible;
@@ -714,10 +714,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp38Result = closure_6(tmp2(11651).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp38Result = closure_6(tmp2(11648).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp17(587).colors.TEXT_OVERLAY_LIGHT };
-          tmp38Result = closure_6(tmp2(11655).SparklesIcon, obj8);
+          tmp38Result = closure_6(tmp2(11652).SparklesIcon, obj8);
         }
         const items5 = [tmp38Result, , ];
         const obj9 = { variant: "text-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: tmp.title, accessibilityLabel: null, children: null };
@@ -729,7 +729,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items5[1] = closure_6(tmp2(5149).Text, obj9);
+        items5[1] = closure_6(tmp2(5150).Text, obj9);
         let tmp38Result3 = null;
         if (tmp8) {
           tmp38Result3 = null;
@@ -740,7 +740,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
             obj11.text = intl3.string(tmp17(3865).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5441).Button, obj11);
+            obj10.children = closure_6(tmp2(5442).Button, obj11);
             tmp38Result3 = closure_6(tmp26, obj10);
           }
         }

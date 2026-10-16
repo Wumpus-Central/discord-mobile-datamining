@@ -1,9 +1,9 @@
-// === Module 18435: NewMemberActionsCompletedModal ===
+// === Module 18445: NewMemberActionsCompletedModal ===
 
-// Module 18435 (NewMemberActionsCompletedModal)
+// Module 18445 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { screen: { flex: 1, position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0, 0, 0, 0.8)", display: "flex", alignItems: "center", justifyContent: "center" }, text: { marginBottom: 16 }, progressBackground: null, progressForeground: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: "60%" };
 obj2.progressBackground = size;
@@ -57,14 +57,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
     }
   }
   const tmpResult = sharedValue(4909);
-  T.__closure = { withDelay: sharedValue(4909).withDelay, withTiming: sharedValue(5154).withTiming, barWidth: sharedValue };
+  T.__closure = { withDelay: sharedValue(4909).withDelay, withTiming: sharedValue(5155).withTiming, barWidth: sharedValue };
   T.__workletHash = 7643178959760;
   T.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(T);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   } else {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   if (cResult[5] !== numActions) {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   } else {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
@@ -105,28 +105,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
   if (cResult[7] === tmp4.text) {
     class E {
       constructor() {
-        timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+        timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
         return;
       }
     }
     if (cResult[10] === animatedStyle) {
       class E {
         constructor() {
-          timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+          timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
           return;
         }
       }
       if (cResult[13] === tmp4.progressBackground) {
         class E {
           constructor() {
-            timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+            timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
             return;
           }
         }
         if (cResult[16] === tmp4.screen) {
           class E {
             constructor() {
-              timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+              timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
               return;
             }
           }
@@ -162,11 +162,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
     cResult[11] = tmp4.progressForeground;
     cResult[12] = tmp20;
   }
-  const tmp16 = closure_5(sharedValue(5149).Text, { style: text, variant: "heading-xl/semibold", color: "text-overlay-light", children: tmp13 });
+  const tmp16 = closure_5(sharedValue(5150).Text, { style: text, variant: "heading-xl/semibold", color: "text-overlay-light", children: tmp13 });
   cResult[7] = tmp4.text;
   cResult[8] = tmp13;
   cResult[9] = tmp16;
-  const obj4 = { withDelay: sharedValue(4909).withDelay, withTiming: sharedValue(5154).withTiming, barWidth: sharedValue };
+  const obj4 = { withDelay: sharedValue(4909).withDelay, withTiming: sharedValue(5155).withTiming, barWidth: sharedValue };
 }) : (function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
@@ -184,18 +184,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMembe
     return obj;
   };
   let obj2 = sharedValue(4909);
-  fn.__closure = { withDelay: sharedValue(4909).withDelay, withTiming: sharedValue(5154).withTiming, barWidth: sharedValue };
+  fn.__closure = { withDelay: sharedValue(4909).withDelay, withTiming: sharedValue(5155).withTiming, barWidth: sharedValue };
   fn.__workletHash = 8771000018451;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
-    const timerId = setTimeout(() => closure_1_1(6152).popWithKey(sharedValue(9557).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => closure_1_1(6153).popWithKey(sharedValue(12862).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
   const intl = sharedValue(1128).intl;
   obj5.children = intl.format(sharedValue(1128).t.pGj5u2, { count: numActions });
-  const items1 = [closure_5(sharedValue(5149).Text, obj5), ];
+  const items1 = [closure_5(sharedValue(5150).Text, obj5), ];
   const obj6 = { style: tmp.progressBackground, children: null };
   const obj7 = { style: null };
   const items2 = [tmp.progressForeground, animatedStyle];

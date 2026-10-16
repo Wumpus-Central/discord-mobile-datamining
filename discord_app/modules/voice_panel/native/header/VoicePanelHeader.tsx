@@ -1,43 +1,43 @@
-// === Module 18120: VoicePanelHeader ===
+// === Module 18130: VoicePanelHeader ===
 
-// Module 18120 (VoicePanelHeader)
+// Module 18130 (VoicePanelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import spring from "spring" /* 5440 */;
-import useChannelName from "useChannelName" /* 5483 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11307 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11462 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12847 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18094 */;
-import useStableParticipant from "useStableParticipant" /* 18125 */;
+import timing from "timing" /* 5155 */;
+import spring from "spring" /* 5441 */;
+import useChannelName from "useChannelName" /* 5484 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11304 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11459 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12853 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18104 */;
+import useStableParticipant from "useStableParticipant" /* 18135 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6255 */;
 import ExperimentStore from "ExperimentStore" /* 5075 */;
-import StageMusicStore from "StageMusicStore" /* 11295 */;
+import StageMusicStore from "StageMusicStore" /* 11292 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
-import SpeakingStore from "SpeakingStore" /* 6165 */;
+import SpeakingStore from "SpeakingStore" /* 6166 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12843);
+const VoicePanelConstants = fn(12849);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12846).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12841).VoicePanelControlsModes;
-const ParticipantTypes = fn(5176).ParticipantTypes;
+const EDGE_GUTTER = fn(12852).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12847).VoicePanelControlsModes;
+const ParticipantTypes = fn(5177).ParticipantTypes;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%", paddingBottom: EDGE_GUTTER, overflow: "hidden" }, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -477,7 +477,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
         cResult[2] = stateFromStores;
         cResult[3] = stringResult;
       } else {
-        const tmp4Result = importDefault(stateFromStores ? 11306 : 8342);
+        const tmp4Result = importDefault(stateFromStores ? 11303 : 8343);
         if (cResult[4] !== stateFromStores) {
           const fn2 = function p() {
             return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -531,7 +531,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 11306 : 8342),
+        icon: importDefault(stateFromStores ? 11303 : 8343),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }

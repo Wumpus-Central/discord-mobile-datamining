@@ -1,26 +1,26 @@
-// === Module 5332: StreamQualityUtils ===
+// === Module 5333: StreamQualityUtils ===
 
-// Module 5332 (StreamQualityUtils)
+// Module 5333 (StreamQualityUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5334 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5335 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5333 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5334 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const StreamSettingsConstants = fn(5273);
+const StreamSettingsConstants = fn(5274);
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: closure_11, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = StreamSettingsConstants);
 let closure_15 = fn(1394).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5178).ResolutionTypes;
+const ResolutionTypes = fn(5179).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;

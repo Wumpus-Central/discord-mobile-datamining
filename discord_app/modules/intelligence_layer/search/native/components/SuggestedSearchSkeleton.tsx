@@ -1,9 +1,9 @@
-// === Module 17764: SuggestedSearchSkeleton ===
+// === Module 17774: SuggestedSearchSkeleton ===
 
-// Module 17764 (SuggestedSearchSkeleton)
+// Module 17774 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -12,18 +12,18 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
-let obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9549).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
+const createStyles = fn(5154);
+let obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9550).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: nativeDefault.space.PX_12 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(12909).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(12917).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = { height: 16, width: "72%", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.line = size1;
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function SuggestedSearchSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function SuggestedSearchSkeletonTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9549).SEARCH_ROW_TAP_STATE_PADDING };
+let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9550).SEARCH_ROW_TAP_STATE_PADDING };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx");
 

@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
-import useChannelName from "useChannelName" /* 5483 */;
+import useChannelName from "useChannelName" /* 5484 */;
 import GatedChannelStore from "GatedChannelStore" /* 2120 */;
 import FavoriteStore from "FavoriteStore" /* 2071 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

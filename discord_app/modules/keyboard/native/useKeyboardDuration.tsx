@@ -1,6 +1,6 @@
-// === Module 6888: useKeyboardDuration ===
+// === Module 6890: useKeyboardDuration ===
 
-// Module 6888 (useKeyboardDuration)
+// Module 6890 (useKeyboardDuration)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1502 */;
 import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1503 */;
 import size from "module_2" /* 2 */;

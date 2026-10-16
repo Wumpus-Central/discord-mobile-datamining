@@ -1,22 +1,22 @@
-// === Module 12547: Chat ===
+// === Module 12553: Chat ===
 
-// Module 12547 (Chat)
+// Module 12553 (Chat)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6557 */;
-import ChatNativeComponentDefault from "ChatNativeComponent" /* 9835 */;
-import useNavigationTTIContentPainted from "useNavigationTTIContentPainted" /* 12548 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12554 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12557 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6559 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 9834 */;
+import useNavigationTTIContentPainted from "useNavigationTTIContentPainted" /* 12554 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12560 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12563 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles({ chatList: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DCDChatList() {
@@ -65,7 +65,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DCDCha
   const obj4 = { style: tmp4.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: tmp8, children: tmp9 };
 }) : (function DCDChatList() {
   const tmp = closure_9();
-  navigationTTIContentPainted = navigationTTIContentPainted(12548).useNavigationTTIContentPainted();
+  navigationTTIContentPainted = navigationTTIContentPainted(12554).useNavigationTTIContentPainted();
   const items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[8]).Gesture;
@@ -75,10 +75,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DCDCha
   const callback = noop.useCallback((nativeEvent) => navigationTTIContentPainted(nativeEvent.nativeEvent), items);
   const obj2 = { gesture: memo, children: null };
   const obj3 = { style: tmp.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: callback, children: null };
-  const obj = navigationTTIContentPainted(12548);
-  obj3.children = closure_7(navigationTTIContentPainted(12554).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(12554);
+  obj3.children = closure_7(navigationTTIContentPainted(12560).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_7(ChatListNativeComponentDefault, obj3);
-  return closure_7(navigationTTIContentPainted(6557).GestureDetector, obj2);
+  return closure_7(navigationTTIContentPainted(6559).GestureDetector, obj2);
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

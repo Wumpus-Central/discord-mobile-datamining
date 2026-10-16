@@ -1,15 +1,15 @@
-// === Module 18198: ActivityShelfItemSummary ===
+// === Module 18208: ActivityShelfItemSummary ===
 
-// Module 18198 (ActivityShelfItemSummary)
+// Module 18208 (ActivityShelfItemSummary)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import ButtonPill from "ButtonPill" /* 5451 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5457 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11065 */;
-import useActivityUsersDefault from "useActivityUsers" /* 18199 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import ButtonPill from "ButtonPill" /* 5452 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5458 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11062 */;
+import useActivityUsersDefault from "useActivityUsers" /* 18209 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
 const ColorUtils = fn(5026);

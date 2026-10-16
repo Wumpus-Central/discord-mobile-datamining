@@ -1,6 +1,6 @@
-// === Module 9741: Carousel ===
+// === Module 9740: Carousel ===
 
-// Module 9741 (Carousel)
+// Module 9740 (Carousel)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: { color: nativeDefault.colors.ICON_STRONG }, inactiveIndicator: null };
 let obj3 = { color: nativeDefault.colors.ICON_STRONG };
 obj2.inactiveIndicator = { color: nativeDefault.colors.ICON_SUBTLE };

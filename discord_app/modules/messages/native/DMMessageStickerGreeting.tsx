@@ -1,6 +1,6 @@
-// === Module 12834: DMMessageStickerGreeting ===
+// === Module 12840: DMMessageStickerGreeting ===
 
-// Module 12834 (DMMessageStickerGreeting)
+// Module 12840 (DMMessageStickerGreeting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -8,20 +8,20 @@ import useToken from "useToken" /* 4877 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4995 */;
 import ColorUtils from "ColorUtils" /* 5026 */;
-import timing from "timing" /* 5154 */;
-import StickersActionCreators from "StickersActionCreators" /* 9993 */;
+import timing from "timing" /* 5155 */;
+import StickersActionCreators from "StickersActionCreators" /* 9994 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6248 */;
-import MessageStore from "MessageStore" /* 5494 */;
+import StickersStore from "StickersStore" /* 6249 */;
+import MessageStore from "MessageStore" /* 5495 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   const intl2 = tmp(1128).intl;
   intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
   let obj5 = hasInputText(5021);
-  const showConvoStarterInDM = channel(12836).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = channel(12842).useShowConvoStarterInDM(channel);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [StickersStore];
     cResult[6] = items2;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     }
     tmp20 = cResult[9];
   }
-  const tmpResult7 = channel(12836);
+  const tmpResult7 = channel(12842);
   const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
   if (cResult[10] !== showConvoStarterInDM) {
     class U {
@@ -518,13 +518,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     return obj;
   };
   const tmpResult9 = channel(4909);
-  fn3.__closure = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4909).withDelay, withTiming: channel(5154).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
+  fn3.__closure = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4909).withDelay, withTiming: channel(5155).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
   fn3.__workletHash = 16992012801942;
   fn3.__initData = __initData;
   const animatedStyle = tmpResult9.useAnimatedStyle(fn3);
   const tmp28 = closure_19();
-  let obj3 = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4909).withDelay, withTiming: channel(5154).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
-  const shouldAnimateSticker = channel(9992).useShouldAnimateSticker(false);
+  let obj3 = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4909).withDelay, withTiming: channel(5155).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
+  const shouldAnimateSticker = channel(9993).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     class U {
       constructor() {
@@ -554,12 +554,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
       }
     }
     let obj4 = { style: tmp4.gradient, colors: tmp28 };
-    const tmp32 = closure_10(tmp13(5453), obj4);
+    const tmp32 = closure_10(tmp13(5454), obj4);
     cResult[13] = tmp28;
     cResult[14] = tmp4.gradient;
     cResult[15] = tmp32;
   }
-  const tmpResult10 = channel(9992);
+  const tmpResult10 = channel(9993);
 }) : (function DMMessageStickerGreeting(channel) {
   channel = channel.channel;
   const hasInputText = channel.hasInputText;

@@ -1,6 +1,6 @@
-// === Module 12712: createAppMessageEmbed ===
+// === Module 12719: createAppMessageEmbed ===
 
-// Module 12712 (createAppMessageEmbed)
+// Module 12719 (createAppMessageEmbed)
 import util from "util" /* 1128 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -8,31 +8,31 @@ import AvatarUtils from "AvatarUtils" /* 1417 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
 import ChatInputUtils from "ChatInputUtils" /* 5044 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6286 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
-import ClipboardUtils from "ClipboardUtils" /* 7107 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7465 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8109 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8500 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9483 */;
-import ApplicationUtils from "ApplicationUtils" /* 10936 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11141 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12713 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12714 */;
-import getPlayInContext from "getPlayInContext" /* 12715 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12716 */;
-import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 12717 */;
-import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 12718 */;
-import playFrameFromEmbedDefault from "playFrameFromEmbed" /* 12719 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6299 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
+import ClipboardUtils from "ClipboardUtils" /* 7109 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7467 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8110 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8501 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9484 */;
+import ApplicationUtils from "ApplicationUtils" /* 10933 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11138 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12720 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12721 */;
+import getPlayInContext from "getPlayInContext" /* 12722 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12723 */;
+import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 12724 */;
+import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 12725 */;
+import playFrameFromEmbedDefault from "playFrameFromEmbed" /* 12726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8501 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8502 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
 
 require = fn;
-const FetchState = fn(8501).FetchState;
+const FetchState = fn(8502).FetchState;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(9844).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(9843).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);

@@ -1,36 +1,36 @@
-// === Module 7703: StageChannelActionCreatorExtras ===
+// === Module 7704: StageChannelActionCreatorExtras ===
 
-// Module 7703 (StageChannelActionCreatorExtras)
+// Module 7704 (StageChannelActionCreatorExtras)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7701 */;
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 7939 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
-import VoicePanelStore from "VoicePanelStore" /* 6298 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7702 */;
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 7940 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
+import VoicePanelStore from "VoicePanelStore" /* 6294 */;
 
 require = fn;
-const setIsOnStartStageScreen = fn(7704).setIsOnStartStageScreen;
-const StageChannelsConstants = fn(6110);
+const setIsOnStartStageScreen = fn(7705).setIsOnStartStageScreen;
+const StageChannelsConstants = fn(6111);
 ({ START_STAGE_CHANNEL_EVENT_SHEET_KEY: hasOwnProperty, STAGE_BLOCKED_USERS_SHEET_KEY: metroRequire, STAGE_SETTINGS_SHEET_KEY: closure_7, EXPLICIT_END_STAGE_SHEET_KEY: closure_8 } = StageChannelsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export const openStageChannelSettings = function openStageChannelSettings(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7706, dependencyMap.paths), hasOwnProperty, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7707, dependencyMap.paths), hasOwnProperty, { channel });
 };
 export function openEndGuildEventConfirmationModal() {
 
 }
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7937, dependencyMap.paths), timestampProducer, { channel, onAccept });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7938, dependencyMap.paths), timestampProducer, { channel, onAccept });
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7940, dependencyMap.paths), React5, { channelId, onOpenRTCDebugOverlay });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7941, dependencyMap.paths), React5, { channelId, onOpenRTCDebugOverlay });
 };
 export const openEndStageModal = function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14285, dependencyMap.paths), closure_1_8, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14295, dependencyMap.paths), closure_1_8, { channel });
 };
 export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
@@ -39,7 +39,7 @@ export const openStageChannel = function openStageChannel(isGuildStageVoice) {
     const voiceChannelKey = PrivateChannelCallUtils.getVoiceChannelKey(isGuildStageVoice.id);
     if (!obj3.isModalOpen(voiceChannelKey)) {
       const obj = { channel: isGuildStageVoice };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11145, dependencyMap.paths), obj, voiceChannelKey);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11142, dependencyMap.paths), obj, voiceChannelKey);
     }
     obj3 = NavigationRouteUtils;
   }
@@ -64,7 +64,7 @@ export const navigateToStage = function navigateToStage(id, arg1) {
     const voiceChannelKey = PrivateChannelCallUtils.getVoiceChannelKey(id.id);
     if (!obj3.isModalOpen(voiceChannelKey)) {
       const obj = { channel: id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11145, dependencyMap.paths), obj, voiceChannelKey);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11142, dependencyMap.paths), obj, voiceChannelKey);
     }
     obj3 = NavigationRouteUtils;
   }

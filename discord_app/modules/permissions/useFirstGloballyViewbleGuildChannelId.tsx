@@ -1,6 +1,6 @@
-// === Module 17114: useFirstGloballyViewbleGuildChannelId ===
+// === Module 17128: useFirstGloballyViewbleGuildChannelId ===
 
-// Module 17114 (useFirstGloballyViewbleGuildChannelId)
+// Module 17128 (useFirstGloballyViewbleGuildChannelId)
 import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
 import GuildChannelStore from "GuildChannelStore" /* 4807 */;
 

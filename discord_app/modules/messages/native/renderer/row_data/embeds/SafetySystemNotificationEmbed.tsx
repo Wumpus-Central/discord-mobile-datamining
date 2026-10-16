@@ -1,12 +1,12 @@
-// === Module 14256: SafetySystemNotificationEmbed ===
+// === Module 14266: SafetySystemNotificationEmbed ===
 
-// Module 14256 (SafetySystemNotificationEmbed)
+// Module 14266 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7731 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8111 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7732 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8112 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -50,7 +50,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7792 : 8392))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7793 : 8393))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {

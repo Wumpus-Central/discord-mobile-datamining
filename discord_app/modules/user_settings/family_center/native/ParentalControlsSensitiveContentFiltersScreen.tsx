@@ -1,10 +1,10 @@
-// === Module 16922: ParentalControlsSensitiveContentFiltersScreen ===
+// === Module 16936: ParentalControlsSensitiveContentFiltersScreen ===
 
-// Module 16922 (ParentalControlsSensitiveContentFiltersScreen)
+// Module 16936 (ParentalControlsSensitiveContentFiltersScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import SettingBuilders from "SettingBuilders" /* 11006 */;
-import SettingLayoutDefault from "SettingLayout" /* 15652 */;
+import SettingBuilders from "SettingBuilders" /* 11003 */;
+import SettingLayoutDefault from "SettingLayout" /* 15662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(8213).MobileUserSettings;
+const MobileUserSettings = fn(8214).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

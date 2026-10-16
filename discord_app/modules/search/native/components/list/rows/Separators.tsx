@@ -1,15 +1,15 @@
-// === Module 17710: Separators ===
+// === Module 17720: Separators ===
 
-// Module 17710 (Separators)
+// Module 17720 (Separators)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9549);
+const SearchConstants = fn(9550);
 ({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_4 = createStyles.createStyles({ filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH }, mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH }, messageSeparator: { height: 4 } });
 fn(558);
 let ReactCompilerGating = fn(558);

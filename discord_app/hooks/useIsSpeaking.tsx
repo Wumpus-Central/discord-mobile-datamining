@@ -1,10 +1,10 @@
-// === Module 6257: useIsSpeaking ===
+// === Module 6258: useIsSpeaking ===
 
-// Module 6257 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 5490 */;
+// Module 6258 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 5491 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import SpeakingStore from "SpeakingStore" /* 6165 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import SpeakingStore from "SpeakingStore" /* 6166 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 const require = globalThis.__r;
 

@@ -1,16 +1,17 @@
-// === Module 10932: conjurePreviewConnection ===
+// === Module 10929: conjurePreviewConnection ===
 
-// Module 10932 (conjurePreviewConnection)
+// Module 10929 (conjurePreviewConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureChatConnection from "conjureChatConnection" /* 10919 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10921 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10933 */;
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10958 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 10977 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10978 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 10984 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10987 */;
-import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10988 */;
+import conjureChatConnection from "conjureChatConnection" /* 10916 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10918 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10930 */;
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10955 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 10974 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10975 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 10981 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10984 */;
+import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -340,11 +341,19 @@ export const previewStepHandlers = {
         const obj3 = { integrationInstalled: null, botPermissionsChanged: null };
       }
     }
-    const result = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true, install: tmp4 });
-    result.catch(() => {
+    if (tmp5) {
+      const obj5 = {};
+      const merged = Object.assign(tmp4);
+      ({ project: obj4.project, has_activity: obj4.hasActivity } = integration_installed);
+      const result = ConjureActionCreators.applyPublishedPreview(projectId, obj5);
+      const tmpResult = ConjureActionCreators;
+    }
+    tmp5 = null != tmp4 && null != integration_installed.project && null != integration_installed.has_activity;
+    const result1 = ConjurePublishActionCreators.refreshPublishedProject(projectId, { isPreview: true, install: tmp4 });
+    result1.catch(() => {
 
     });
-    const tmpResult = ConjurePublishActionCreators;
+    const tmpResult2 = ConjurePublishActionCreators;
   }
 };
 export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(projectId, arg1) {

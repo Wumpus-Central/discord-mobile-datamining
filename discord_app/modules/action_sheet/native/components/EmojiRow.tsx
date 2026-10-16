@@ -1,27 +1,27 @@
-// === Module 13684: EmojiRow ===
+// === Module 13692: EmojiRow ===
 
-// Module 13684 (EmojiRow)
+// Module 13692 (EmojiRow)
 import ReactionUtils from "ReactionUtils" /* 4821 */;
 import useToken from "useToken" /* 4877 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import HapticUtils from "HapticUtils" /* 5119 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7397 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8120 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9621 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9675 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 13685 */;
-import EmojiReactionRowButton from "EmojiReactionRowButton" /* 13686 */;
-import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 13687 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7399 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8121 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9620 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9674 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 13693 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 13694 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 13695 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7064).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7066).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles({ emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" }, emojiRow: { height: 52, alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 0, marginBottom: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiRow
       return reactions_ReactionUtils.handleAddNewReactions(channel, _require.id, ReactionActionCreators.ReactionLocations.MESSAGE);
     }
   };
-  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7100).MESSAGE_LONG_PRESS_MENU });
+  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7102).MESSAGE_LONG_PRESS_MENU });
   obj7.children = items1;
   return closure_6(emojiFontSize, obj7);
 });

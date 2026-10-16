@@ -1,22 +1,22 @@
-// === Module 6391: MemberVerificationForm ===
+// === Module 6393: MemberVerificationForm ===
 
-// Module 6391 (MemberVerificationForm)
+// Module 6393 (MemberVerificationForm)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5001 */;
-import useInitialValueDefault from "useInitialValue" /* 6392 */;
+import useInitialValueDefault from "useInitialValue" /* 6394 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6373 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6375 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6373).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6375).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1087).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredVerificationFields(id) {
@@ -32,7 +32,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReq
     if (cResult[1] === phone) {
       let tmp6 = cResult[2];
     }
-    return initialVerification(6392)(tmp6);
+    return initialVerification(6394)(tmp6);
   }
   cResult[0] = id.verificationLevel;
   let phone1;

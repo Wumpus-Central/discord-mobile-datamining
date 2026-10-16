@@ -1,6 +1,6 @@
-// === Module 14163: useHandleClaim ===
+// === Module 14173: useHandleClaim ===
 
-// Module 14163 (useHandleClaim)
+// Module 14173 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   _require = asyncGeneratorStep(async () => {
     const product = tmp3;
-    await product(7481).claimPremiumCollectiblesProduct(product.skuId);
+    await product(7483).claimPremiumCollectiblesProduct(product.skuId);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { text: null };
@@ -45,11 +45,11 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     } else if (arg0 !== 2) {
       stageCollectibleChangeForEditProfile(5118).hideAllActionSheets();
       stageCollectibleChangeForEditProfile(5118);
-      stageCollectibleChangeForEditProfile(13639).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
-      stageCollectibleChangeForEditProfile(13639);
-      const collectiblesPurchases = product(7481).fetchCollectiblesPurchases();
+      stageCollectibleChangeForEditProfile(13647).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
+      stageCollectibleChangeForEditProfile(13647);
+      const collectiblesPurchases = product(7483).fetchCollectiblesPurchases();
       c3 = 0;
-      product(7481);
+      product(7483);
     }
     return value;
   });

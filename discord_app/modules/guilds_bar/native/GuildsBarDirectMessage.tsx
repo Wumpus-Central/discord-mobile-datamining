@@ -1,23 +1,23 @@
-// === Module 17412: GuildsBarDirectMessage ===
+// === Module 17422: GuildsBarDirectMessage ===
 
-// Module 17412 (GuildsBarDirectMessage)
+// Module 17422 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import transitionToChannel from "transitionToChannel" /* 5164 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8876 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10531 */;
+import transitionToChannel from "transitionToChannel" /* 5165 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8877 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10532 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5976 */;
+import CallStore from "CallStore" /* 5977 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6302 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6304 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { dm: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.dm = size;

@@ -1,16 +1,16 @@
-// === Module 11160: useActionBarHeight ===
+// === Module 11157: useActionBarHeight ===
 
-// Module 11160 (useActionBarHeight)
+// Module 11157 (useActionBarHeight)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 11164 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11169 */;
+import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 11161 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11166 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
 const InputModes = fn(1087).InputModes;
-let closure_5 = fn(7064).ACTION_SHEET_HANDLE_SPACING;
-let sum = 2 * fn(11161).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
+let closure_5 = fn(7066).ACTION_SHEET_HANDLE_SPACING;
+let sum = 2 * fn(11158).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
 const metroRequire = sum;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

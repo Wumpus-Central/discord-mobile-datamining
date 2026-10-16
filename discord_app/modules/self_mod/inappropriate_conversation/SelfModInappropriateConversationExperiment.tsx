@@ -1,6 +1,6 @@
-// === Module 10637: SelfModInappropriateConversationExperiment ===
+// === Module 10634: SelfModInappropriateConversationExperiment ===
 
-// Module 10637 (SelfModInappropriateConversationExperiment)
+// Module 10634 (SelfModInappropriateConversationExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1456 */;
 

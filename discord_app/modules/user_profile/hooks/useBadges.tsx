@@ -1,6 +1,6 @@
-// === Module 8595: useBadges ===
+// === Module 8596: useBadges ===
 
-// Module 8595 (useBadges)
+// Module 8596 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2044 */;

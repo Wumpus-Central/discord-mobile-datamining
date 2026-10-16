@@ -1,8 +1,8 @@
-// === Module 11137: getSupportsRemoteJoin ===
+// === Module 11134: getSupportsRemoteJoin ===
 
-// Module 11137 (getSupportsRemoteJoin)
+// Module 11134 (getSupportsRemoteJoin)
 import Constants from "Constants" /* 1087 */;
-import hasFlagDefault from "hasFlag" /* 7234 */;
+import hasFlagDefault from "hasFlag" /* 7236 */;
 import size from "module_2" /* 2 */;
 
 const ActivityFlags = Constants.ActivityFlags;

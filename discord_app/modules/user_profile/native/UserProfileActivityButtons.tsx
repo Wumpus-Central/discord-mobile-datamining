@@ -1,6 +1,6 @@
-// === Module 14005: UserProfileActivityButtons ===
+// === Module 14015: UserProfileActivityButtons ===
 
-// Module 14005 (UserProfileActivityButtons)
+// Module 14015 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,31 +8,31 @@ import native from "native" /* 1202 */;
 import LinkingDefault from "Linking" /* 4865 */;
 import RootNavigationRef from "RootNavigationRef" /* 5036 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7701 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7712 */;
-import isStreamingDefault from "isStreaming" /* 8611 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9442 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11140 */;
-import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 11142 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 14006 */;
-import getActivityJoinability from "getActivityJoinability" /* 14007 */;
-import getStreamURLDefault from "getStreamURL" /* 14009 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7077 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7702 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7713 */;
+import isStreamingDefault from "isStreaming" /* 8612 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9443 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11137 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 11139 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 14016 */;
+import getActivityJoinability from "getActivityJoinability" /* 14017 */;
+import getStreamURLDefault from "getStreamURL" /* 14019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5979 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5980 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import LocalActivityStore from "LocalActivityStore" /* 10896 */;
+import LocalActivityStore from "LocalActivityStore" /* 10893 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5978 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 const require = globalThis.__r;
 const getActivityJoinabilityDefault = getActivityJoinability;
@@ -40,10 +40,10 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1087);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(8685);
+const SpotifyConstants = fn(8686);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { icon: { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT } };
 let closure_20 = createStyles.createStyles(obj2);
 fn(558);
@@ -437,7 +437,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
   const tmp3 = closure_20();
   const sync_id = activity.sync_id;
   let tmp5 = null;
-  if (sync_id(10491)(activity)) {
+  if (sync_id(10492)(activity)) {
     tmp5 = null;
     if (null != sync_id) {
       if (cResult[0] !== activity.name) {
@@ -451,8 +451,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
         tmp6 = cResult[1];
       }
       if (cResult[2] !== tmp3.icon) {
-        const obj3 = { size: Button(1202).Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp3.icon };
-        const tmp10 = jsx(Button(1202).Icon, { size: Button(1202).Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp3.icon });
+        const obj3 = { size: Button(1202).Icon.Sizes.SMALL, source: sync_id(8504), disableColor: true, style: tmp3.icon };
+        const tmp10 = jsx(Button(1202).Icon, { size: Button(1202).Icon.Sizes.SMALL, source: sync_id(8504), disableColor: true, style: tmp3.icon });
         cResult[2] = tmp3.icon;
         cResult[3] = tmp10;
         let tmp8 = tmp10;
@@ -467,7 +467,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
           if (cResult[8] === tmp8) {
           }
         }
-        Button = Button(5441).Button;
+        Button = Button(5442).Button;
         let obj4 = { text: tmp6, icon: tmp8, variant: "secondary", onPress: tmp11 };
         tmp = <Button text={tmp6} icon={tmp8} variant="secondary" onPress={tmp11} />;
         cResult[7] = tmp6;
@@ -507,7 +507,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(11122).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(11119).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
@@ -524,7 +524,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(11122);
+              const obj7 = closure_0(11119);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
               } else {
@@ -567,15 +567,15 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10491)(activity)) {
+  if (sync_id(10492)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp.icon };
-      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8503), disableColor: true, style: tmp.icon });
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8504), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8504), disableColor: true, style: tmp.icon });
       obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
@@ -680,7 +680,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function WatchActivit
       }
       if (cResult[3] === onAction) {
       }
-      Button = Button(5441).Button;
+      Button = Button(5442).Button;
       const obj2 = {
         text: tmp8,
         variant: "secondary",

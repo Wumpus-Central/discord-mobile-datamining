@@ -1,6 +1,6 @@
-// === Module 7310: canChannelUseSoundboard ===
+// === Module 7312: canChannelUseSoundboard ===
 
-// Module 7310 (canChannelUseSoundboard)
+// Module 7312 (canChannelUseSoundboard)
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;

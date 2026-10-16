@@ -1,24 +1,24 @@
-// === Module 15527: ProfileCustomizationSettingScreen ===
+// === Module 15537: ProfileCustomizationSettingScreen ===
 
-// Module 15527 (ProfileCustomizationSettingScreen)
+// Module 15537 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ChatInputUtils from "ChatInputUtils" /* 5044 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5168 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6893 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9868 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10891 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15528 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15548 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15631 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15632 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15641 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5169 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6895 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9867 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10888 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15538 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15558 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15641 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15642 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15651 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10826 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8511 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10823 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8512 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_19 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -76,7 +76,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj2 = obj5(4877);
   const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
   let obj3 = obj5(1505);
-  const params = obj5(6905).useSettingNavigationRoute().params;
+  const params = obj5(6907).useSettingNavigationRoute().params;
   let autoFocusElement;
   if (params != null) {
     autoFocusElement = params.autoFocusElement;
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  let obj4 = obj5(6905);
+  let obj4 = obj5(6907);
   const obj6 = { items: tmp13, pageWidth: tmp8[0], defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   if (field === ProfileCustomizationSubsection.GUILD) {
     class D {
@@ -141,7 +141,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj = { hasEdits: stateFromStores, resetPending: UserSettingsAccountActionCreators.resetAllPending, onHasEdits: ChatInputUtils.dismissKeyboard, onConfirm };
     return maybeShowDiscardChangesAlertDefault(obj);
   };
-  const segmentedControlState = obj5(8758).useSegmentedControlState(obj6);
+  const segmentedControlState = obj5(8759).useSegmentedControlState(obj6);
   const activeIndex = segmentedControlState.activeIndex;
   const tmp18 = items[activeIndex.get(activeIndex)];
   if (tmp18 == null) {
@@ -265,7 +265,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp35 = cResult[11];
   }
-  const tmpResult = obj5(8758);
+  const tmpResult = obj5(8759);
   stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
   closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
   if (cResult[12] === tmp29) {

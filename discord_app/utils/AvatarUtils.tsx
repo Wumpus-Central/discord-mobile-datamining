@@ -161,8 +161,8 @@ function getUserAvatarURLWithoutFallback(bot) {
   if (size === undefined) {
     tmp = size;
   }
-  let tmp2 = format;
-  if (format === undefined) {
+  let tmp2 = png;
+  if (png === undefined) {
     tmp2 = null;
   }
   let tmp3 = canUseWebpResult;
@@ -455,7 +455,7 @@ function getEmojiURL(dependencyMap) {
     str = "webp";
   }
 }
-function getUserAvatarURL(user) {
+function getUserAvatarURL(stateFromStores2) {
   if (flag === undefined) {
     flag = false;
   }
@@ -463,17 +463,17 @@ function getUserAvatarURL(user) {
   if (size === undefined) {
     tmp = size;
   }
-  let tmp2 = format;
-  if (format === undefined) {
+  let tmp2 = png;
+  if (png === undefined) {
     tmp2 = null;
   }
   let tmp3 = SUPPORTS_WEBP;
   if (SUPPORTS_WEBP === undefined) {
     tmp3 = canUseWebpResult;
   }
-  let tmp4 = getUserAvatarURLWithoutFallback(user, flag, tmp, tmp2, tmp3);
+  let tmp4 = getUserAvatarURLWithoutFallback(stateFromStores2, flag, tmp, tmp2, tmp3);
   if (tmp4 == null) {
-    tmp4 = getDefaultAvatarURL(user.id, user.discriminator, user.isProvisional, tmp);
+    tmp4 = getDefaultAvatarURL(stateFromStores2.id, stateFromStores2.discriminator, stateFromStores2.isProvisional, tmp);
   }
   return tmp4;
 }

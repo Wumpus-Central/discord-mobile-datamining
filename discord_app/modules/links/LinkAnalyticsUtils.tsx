@@ -1,10 +1,10 @@
-// === Module 8721: LinkAnalyticsUtils ===
+// === Module 8722: LinkAnalyticsUtils ===
 
-// Module 8721 (LinkAnalyticsUtils)
+// Module 8722 (LinkAnalyticsUtils)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import LinkUtils from "LinkUtils" /* 5484 */;
+import LinkUtils from "LinkUtils" /* 5485 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

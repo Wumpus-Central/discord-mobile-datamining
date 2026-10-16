@@ -1,10 +1,10 @@
-// === Module 8448: LockIcon ===
+// === Module 8449: LockIcon ===
 
-// Module 8448 (LockIcon)
+// Module 8449 (LockIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod8421 from "module_8421" /* 8421 */;
+import _mod8422 from "module_8422" /* 8422 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const LockIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8421;
+    const tmpResult = _mod8422;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const LockIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8421, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8422, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

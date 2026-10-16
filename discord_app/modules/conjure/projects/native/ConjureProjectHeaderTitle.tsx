@@ -1,13 +1,13 @@
-// === Module 12041: ConjureProjectHeaderTitle ===
+// === Module 12038: ConjureProjectHeaderTitle ===
 
-// Module 12041 (ConjureProjectHeaderTitle)
+// Module 12038 (ConjureProjectHeaderTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Pressables from "Pressables" /* 6407 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11604 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Pressables from "Pressables" /* 6409 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 }, title: { flexShrink: 1 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

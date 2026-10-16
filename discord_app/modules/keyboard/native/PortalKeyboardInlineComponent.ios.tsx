@@ -1,8 +1,8 @@
-// === Module 13247: PortalKeyboardInlineComponent ===
+// === Module 13255: PortalKeyboardInlineComponent ===
 
-// Module 13247 (PortalKeyboardInlineComponent)
+// Module 13255 (PortalKeyboardInlineComponent)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -25,7 +25,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first = cResult[0];
   }
-  const tmp9 = id(6527)(first);
+  const tmp9 = id(6529)(first);
   noop = tmp9;
   let obj = messagesRef(576);
   let obj2 = noop;
@@ -71,7 +71,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  id(5458)(K);
+  id(5459)(K);
   let PortalKeyboardUIStore = messagesRef(5047).PortalKeyboardUIStore;
   let field = PortalKeyboardUIStore.useField("keyboard");
   const PortalKeyboardUIStore2 = messagesRef(5047).PortalKeyboardUIStore;
@@ -115,8 +115,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 ref.current = true;
                 const obj2 = messagesRef(5047);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10623).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(10623);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10620).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(10620);
               }
             }
           }
@@ -187,11 +187,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const id = noop.useId();
   const tmp2 = id(5046)();
   dependencyMap = tmp2;
-  let tmp4 = id(6527)({ includeCustomKeyboard: false });
+  let tmp4 = id(6529)({ includeCustomKeyboard: false });
   noop = tmp4;
   let tmp3 = id(1899)();
   const keyboardContextForType = messagesRef(5046).useKeyboardContextForType(messagesRef(1631).KeyboardTypes.SYSTEM);
-  id(5458)(() => () => {
+  id(5459)(() => () => {
     const PortalKeyboardUIStore = messagesRef(dependencyMap[9]).PortalKeyboardUIStore;
     field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
@@ -229,8 +229,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 ref.current = true;
                 const obj2 = messagesRef(5047);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10623).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(10623);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10620).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(10620);
               }
             }
           }

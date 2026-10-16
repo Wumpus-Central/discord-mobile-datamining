@@ -1,28 +1,28 @@
-// === Module 15971: BountiesScrollPromptFooter ===
+// === Module 15983: BountiesScrollPromptFooter ===
 
-// Module 15971 (BountiesScrollPromptFooter)
+// Module 15983 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
 import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 4959 */;
-import timing from "timing" /* 5154 */;
-import timingPresets from "timingPresets" /* 5157 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9685 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15972 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15973 */;
+import timing from "timing" /* 5155 */;
+import timingPresets from "timingPresets" /* 5158 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9684 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15984 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15985 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 let closure_3 = ["visible"];
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(6190).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6191).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { root: { position: "absolute", bottom: 0, left: 0, right: 0 }, content: { flex: 1, minHeight: 97, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, gradient: null };
   const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -33,15 +33,15 @@ let entering = function n(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(5154).withTiming, timingStandard: fn(5157).timingStandard };
+entering.__closure = { withTiming: fn(5155).withTiming, timingStandard: fn(5158).timingStandard };
 entering.__workletHash = 11416950434629;
 entering.__initData = { code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 let fn2 = function o(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: fn(5154).withTiming, timingStandard: fn(5157).timingStandard };
-fn2.__closure = { withTiming: fn(5154).withTiming, timingStandard: fn(5157).timingStandard };
+let obj2 = { withTiming: fn(5155).withTiming, timingStandard: fn(5158).timingStandard };
+fn2.__closure = { withTiming: fn(5155).withTiming, timingStandard: fn(5158).timingStandard };
 fn2.__workletHash = 9928471408966;
 fn2.__initData = { code: "function BountiesScrollPromptFooterTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };
 let ReactCompilerGating = fn(558);
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   return closure_10(ReanimatedRexportDefault.View, obj2);
 });
 ReactCompilerGating = fn(558);
-let obj3 = { withTiming: fn(5154).withTiming, timingStandard: fn(5157).timingStandard };
+let obj3 = { withTiming: fn(5155).withTiming, timingStandard: fn(5158).timingStandard };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollPromptFooter.tsx");
 

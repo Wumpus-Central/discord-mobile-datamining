@@ -1,18 +1,18 @@
-// === Module 16832: CollectiblesShopFeaturedPage ===
+// === Module 16846: CollectiblesShopFeaturedPage ===
 
-// Module 16832 (CollectiblesShopFeaturedPage)
+// Module 16846 (CollectiblesShopFeaturedPage)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import generated_NoResults from "generated/NoResults" /* 8585 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 16833 */;
+import generated_NoResults from "generated/NoResults" /* 8586 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 16847 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const constants = fn(1089).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

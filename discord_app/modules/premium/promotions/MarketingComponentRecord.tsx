@@ -1,10 +1,10 @@
-// === Module 9358: MarketingComponentRecord ===
+// === Module 9359: MarketingComponentRecord ===
 
-// Module 9358 (MarketingComponentRecord)
+// Module 9359 (MarketingComponentRecord)
 import DurationsDefault from "Durations" /* 1104 */;
 import ProtoUtils from "ProtoUtils" /* 1249 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1266 */;
-import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9359 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9360 */;
 import Record from "Record" /* 1407 */;
 
 require = fn;
@@ -71,7 +71,7 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     throw new TypeError("Trying to call a non-function");
   }
 };
-prototype["getFormatVariableValues"] = function getFormatVariableValues(arg0) {
+prototype["getFormatVariableValues"] = function getFormatVariableValues(currentLocale) {
   const self = this;
   if (null == this.promotionEndDate) {
     let obj = {};
@@ -88,7 +88,7 @@ prototype["getFormatVariableValues"] = function getFormatVariableValues(arg0) {
     }
     obj = { days_left: num, promotion_end_date: null };
     const promotionEndDate = self.promotionEndDate;
-    obj.promotion_end_date = promotionEndDate.toLocaleDateString(arg0, closure_3);
+    obj.promotion_end_date = promotionEndDate.toLocaleDateString(currentLocale, closure_3);
   }
   return obj;
 };

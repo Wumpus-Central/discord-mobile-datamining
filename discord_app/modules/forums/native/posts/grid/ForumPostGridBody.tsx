@@ -1,16 +1,16 @@
-// === Module 12780: ForumPostGridBody ===
+// === Module 12786: ForumPostGridBody ===
 
-// Module 12780 (ForumPostGridBody)
+// Module 12786 (ForumPostGridBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8705 */;
-import _modDef12781 from "module_12781" /* 12781 */;
-import _modDef12782 from "module_12782" /* 12782 */;
-import _modDef12783 from "module_12783" /* 12783 */;
-import ForumPostMedia from "ForumPostMedia" /* 12784 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8706 */;
+import _modDef12787 from "module_12787" /* 12787 */;
+import _modDef12788 from "module_12788" /* 12788 */;
+import _modDef12789 from "module_12789" /* 12789 */;
+import ForumPostMedia from "ForumPostMedia" /* 12790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 225;
 let c9 = 192;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
 let size = { height: 20, width: 33, backgroundColor: "black", borderRadius: nativeDefault.radii.xs, resizeMode: "cover" };
 obj2.gifIcon = size;
@@ -47,7 +47,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIco
   const cResult = c.c(2);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.gifIcon) {
-    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef12781, disableColor: true, style: tmp4.gifIcon };
+    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef12787, disableColor: true, style: tmp4.gifIcon };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.gifIcon;
     cResult[1] = tmp8;
@@ -58,13 +58,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIco
   return tmp5;
 }) : (function GIFIcon() {
   const tmp = closure_10();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12781, disableColor: true, style: closure_10().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12787, disableColor: true, style: closure_10().gifIcon });
 });
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIcon() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef12782, disableColor: true };
+    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef12788, disableColor: true };
     const tmp7 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -73,14 +73,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIc
   }
   return first;
 }) : (function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12782, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12788, disableColor: true });
 });
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraMediaIcon(extraMediaCount) {
   const cResult = c.c(9);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.icon.color) {
-    const obj2 = { source: _modDef12783, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+    const obj2 = { source: _modDef12789, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.icon.color;
     cResult[1] = tmp8;
@@ -120,8 +120,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraM
 }) : (function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_10();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef12783, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef12783, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef12789, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef12789, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
@@ -339,8 +339,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   importDefault = tmp4;
   let obj = thread(576);
   const tmp = thread;
-  let obj2 = thread(7205);
-  [arr, tmp6] = thread(7205).useSomeAppliedTags(thread, 2);
+  let obj2 = thread(7207);
+  [arr, tmp6] = thread(7207).useSomeAppliedTags(thread, 2);
   if (cResult[0] !== media) {
     const substr = media.slice(0, 4);
     cResult[0] = media;
@@ -361,11 +361,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   let columnSpacer = closure_15(tmp8, tmp11);
   let wideAspectRatioGrid = tmp11;
   if (cResult[4] !== media) {
-    const result = tmp(8705).messageContainsGifOrVideo(media);
+    const result = tmp(8706).messageContainsGifOrVideo(media);
     cResult[4] = media;
     cResult[5] = result;
     let tmp13 = result;
-    const tmpResult = tmp(8705);
+    const tmpResult = tmp(8706);
   } else {
     tmp13 = cResult[5];
   }
@@ -723,20 +723,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   cResult[7] = wideAspectRatioContainer;
   cResult[8] = items2;
   tmp15 = items2;
-  const tmp5 = _slicedToArray(thread(7205).useSomeAppliedTags(thread, 2), 2);
+  const tmp5 = _slicedToArray(thread(7207).useSomeAppliedTags(thread, 2), 2);
 }) : (function ForumPostGridBody(thread) {
   thread = thread.thread;
   const media = thread.media;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(7205).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(7207).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp12Result = first.length > 0;
   items = [media];
   const memo = noop.useMemo(() => media.slice(0, 4), items);
   const bound = Math.max(0, media.length - 4);
   const isMediaPostResult = thread.isMediaPost();
-  let obj = thread(7205);
+  let obj = thread(7207);
   let tmp2 = thread;
   const items1 = [media];
   const memo1 = noop.useMemo(() => ForumPostMediaUtils.messageContainsGifOrVideo(media), items1);
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   if (tmp12Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12788).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12794).ForumPostAppliedTagPills, obj5);
     tmp12Result = closure_6(View, obj4);
   }
   items4[1] = tmp12Result;

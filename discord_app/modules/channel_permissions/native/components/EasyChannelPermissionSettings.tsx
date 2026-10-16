@@ -1,17 +1,17 @@
-// === Module 17896: EasyChannelPermissionSettings ===
+// === Module 17906: EasyChannelPermissionSettings ===
 
-// Module 17896 (EasyChannelPermissionSettings)
+// Module 17906 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5168 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5361 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8830 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8831 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8847 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11104 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5169 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5362 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8831 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8832 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8848 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17897 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17907 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;
@@ -29,13 +29,13 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7709).SettingMode;
+const SettingMode = fn(7710).SettingMode;
 const Constants = fn(1087);
 ({ ChannelTypes: closure_18, Permissions: closure_19, AnalyticEvents: closure_20, ChannelSettingsSections: closure_21, SettingsPaneTypes: closure_22 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { marginTop: 16, flex: 1 }, adminWarning: null };
 let obj3 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.adminWarning = { marginTop: nativeDefault.space.PX_12 };
@@ -179,13 +179,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(8830).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(8830);
+            const result = v2(8831).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(8831);
             const tmp21 = v2;
-            closure_128_0 = v2(8830).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(8831).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(8830);
+            const obj10 = v2(8831);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -195,7 +195,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             if (!tmp7) {
               v2 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp21(8830).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
+              const obj4 = { value: tmp21(8831).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
               return obj4;
             }
             canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
@@ -223,7 +223,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj7 = { value: tmp2(8831).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj7 = { value: tmp2(8832).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj7;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -263,7 +263,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               if (!privateToggleState) {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: tmp5(8832).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
+                const obj6 = { value: tmp5(8833).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
                 return obj6;
               }
             }
@@ -288,7 +288,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        closure_128_1 = tmp5(5483).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+        closure_128_1 = tmp5(5484).computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1128).intl;
         let onCancel = intl2.format;
         let show = tmp5(1128).t;
@@ -301,8 +301,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        const obj4 = tmp5(5483);
-        show = tmp2(5361).show;
+        const obj4 = tmp5(5484);
+        show = tmp2(5362).show;
         const obj9 = { title: closure_128_0, body: closure_128_2, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null, isDismissable: false };
         const intl3 = tmp5(1128).intl;
         obj9.cancelText = intl3.string(tmp5(1128).t["ETE/oC"]);
@@ -316,7 +316,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(5361);
+        const tmp42 = tmp2(5362);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;

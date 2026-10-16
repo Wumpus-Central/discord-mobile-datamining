@@ -1,9 +1,9 @@
-// === Module 12272: ConjureDebugLabels ===
+// === Module 12278: ConjureDebugLabels ===
 
-// Module 12272 (ConjureDebugLabels)
+// Module 12278 (ConjureDebugLabels)
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12273 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12279 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = {

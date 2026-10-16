@@ -1,6 +1,6 @@
-// === Module 6997: TextAreaField ===
+// === Module 6999: TextAreaField ===
 
-// Module 6997 (TextAreaField)
+// Module 6999 (TextAreaField)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -8,18 +8,18 @@ import noop from "module_19" /* 19 */;
 
 const util = prop(1128);
 const native = prop(4879);
-const Text_Text = prop(5149);
-const useTextField = prop(6516);
-const InputFieldContainer2 = prop(6523);
-const NativeTextInput = prop(6526);
-const propsForNativeTextInput = prop(6840);
-const useCharacterLimitAnnouncement = prop(6998);
+const Text_Text = prop(5150);
+const useTextField = prop(6518);
+const InputFieldContainer2 = prop(6525);
+const NativeTextInput = prop(6528);
+const propsForNativeTextInput = prop(6842);
+const useCharacterLimitAnnouncement = prop(7000);
 require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj2.maxLengthIndicator = rect;

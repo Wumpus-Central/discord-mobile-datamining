@@ -1,9 +1,9 @@
-// === Module 16213: GuildRoleSubscriptionEmojiGallery ===
+// === Module 16227: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 16213 (GuildRoleSubscriptionEmojiGallery)
-import chunkDefault from "chunk" /* 9794 */;
-import LayoutUtils from "LayoutUtils" /* 9796 */;
-import EmojiIconDefault from "EmojiIcon" /* 16214 */;
+// Module 16227 (GuildRoleSubscriptionEmojiGallery)
+import chunkDefault from "chunk" /* 9793 */;
+import LayoutUtils from "LayoutUtils" /* 9795 */;
+import EmojiIconDefault from "EmojiIcon" /* 16228 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGal
   cResult[0] = emojiIds;
   cResult[1] = guildId;
   cResult[2] = num;
-  cResult[3] = guildId(9796).GappedList;
+  cResult[3] = guildId(9795).GappedList;
   cResult[4] = View;
   cResult[5] = 8;
   cResult[6] = mapped;

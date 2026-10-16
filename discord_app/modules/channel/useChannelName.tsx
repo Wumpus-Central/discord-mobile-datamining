@@ -1,6 +1,6 @@
-// === Module 5483: useChannelName ===
+// === Module 5484: useChannelName ===
 
-// Module 5483 (useChannelName)
+// Module 5484 (useChannelName)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;

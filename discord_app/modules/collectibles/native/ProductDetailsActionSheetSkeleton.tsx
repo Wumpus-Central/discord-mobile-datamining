@@ -1,10 +1,10 @@
-// === Module 14169: ProductDetailsActionSheetSkeleton ===
+// === Module 14179: ProductDetailsActionSheetSkeleton ===
 
-// Module 14169 (ProductDetailsActionSheetSkeleton)
+// Module 14179 (ProductDetailsActionSheetSkeleton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1 }, scrollArea: { flex: 1 }, block: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, preview: null, info: null, title: null, description: null, price: null, purchaseSection: null, purchaseButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.preview = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, height: 280, borderRadius: nativeDefault.radii.md };
@@ -28,7 +28,7 @@ obj2.price = size2;
 let obj5 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.purchaseSection = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
-obj2.purchaseButton = { height: fn(5446).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5447).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function ProductDetailsActionSheetSkeletonTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
@@ -79,7 +79,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePul
   return sharedValue(4909).useAnimatedStyle(fn);
 });
 ReactCompilerGating = fn(558);
-let obj7 = { height: fn(5446).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+let obj7 = { height: fn(5447).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
 

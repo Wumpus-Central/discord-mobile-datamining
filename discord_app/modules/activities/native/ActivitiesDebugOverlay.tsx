@@ -1,11 +1,11 @@
-// === Module 18195: ActivitiesDebugOverlay ===
+// === Module 18205: ActivitiesDebugOverlay ===
 
-// Module 18195 (ActivitiesDebugOverlay)
+// Module 18205 (ActivitiesDebugOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useThermalState from "useThermalState" /* 15411 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useThermalState from "useThermalState" /* 15421 */;
 import noop from "module_19" /* 19 */;
 
 const useThermalStateDefault = useThermalState;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
 let c6 = 16;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: null, row: null };
 let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
 const ColorUtils = fn(5026);

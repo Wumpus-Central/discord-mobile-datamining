@@ -1,8 +1,8 @@
-// === Module 10954: conjurePreviewFrameSurfaces ===
+// === Module 10951: conjurePreviewFrameSurfaces ===
 
-// Module 10954 (conjurePreviewFrameSurfaces)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
+// Module 10951 (conjurePreviewFrameSurfaces)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7170 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7263 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, declaredBy: ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL }, , ];

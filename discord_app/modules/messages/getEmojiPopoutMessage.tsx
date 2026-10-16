@@ -1,11 +1,11 @@
-// === Module 9785: getEmojiPopoutMessage ===
+// === Module 9784: getEmojiPopoutMessage ===
 
-// Module 9785 (getEmojiPopoutMessage)
+// Module 9784 (getEmojiPopoutMessage)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
 import _modDef4123 from "module_4123" /* 4123 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 6382 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 6384 */;
 import size from "module_2" /* 2 */;
 
 const EmojiSourceDataTypes = ExpressionSourceRecord.EmojiSourceDataTypes;

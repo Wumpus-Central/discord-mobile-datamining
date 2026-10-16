@@ -1,6 +1,6 @@
-// === Module 7038: usePromptHelpText ===
+// === Module 7040: usePromptHelpText ===
 
-// Module 7038 (usePromptHelpText)
+// Module 7040 (usePromptHelpText)
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import PermissionStore from "PermissionStore" /* 4809 */;

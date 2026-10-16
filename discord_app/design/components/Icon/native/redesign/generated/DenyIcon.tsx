@@ -1,10 +1,10 @@
-// === Module 9608: DenyIcon ===
+// === Module 9607: DenyIcon ===
 
-// Module 9608 (DenyIcon)
+// Module 9607 (DenyIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod8551 from "module_8551" /* 8551 */;
+import _mod8552 from "module_8552" /* 8552 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const DenyIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8551;
+    const tmpResult = _mod8552;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const DenyIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8551, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8552, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

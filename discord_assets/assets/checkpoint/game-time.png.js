@@ -1,6 +1,6 @@
-// === Module 12692: ? ===
+// === Module 12698: ? ===
 
-// Module 12692
+// Module 12698
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/game-time.png.js");

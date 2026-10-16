@@ -1,16 +1,16 @@
-// === Module 8798: EditGuildEventModal ===
+// === Module 8799: EditGuildEventModal ===
 
-// Module 8798 (EditGuildEventModal)
+// Module 8799 (EditGuildEventModal)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8745 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8746 */;
-import EntityUtils from "EntityUtils" /* 8750 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8766 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8799 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8802 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8872 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8873 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8746 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8747 */;
+import EntityUtils from "EntityUtils" /* 8751 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8767 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8800 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8803 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8873 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 let closure_8 = fn(2074).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

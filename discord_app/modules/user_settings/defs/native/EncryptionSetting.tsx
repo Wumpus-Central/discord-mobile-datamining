@@ -1,11 +1,11 @@
-// === Module 16875: EncryptionSetting ===
+// === Module 16889: EncryptionSetting ===
 
-// Module 16875 (EncryptionSetting)
+// Module 16889 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16876 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5192 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16890 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5193 */;
 
 require = fn;
 fn(558);
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureF
   const items = [SecureFramesPersistedStore];
   return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
 });
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11003);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesEncryptionDescription() {
   const cResult = c.c(2);
   const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
@@ -73,7 +73,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
   }),
-  parent: fn(8213).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8214).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: tmp2,
   screen: {
     route: fn(1087).UserSettingsSections.SECURE_FRAMES,

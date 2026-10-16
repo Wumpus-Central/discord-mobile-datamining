@@ -1,7 +1,7 @@
-// === Module 9591: useSelectedConversation ===
+// === Module 9590: useSelectedConversation ===
 
-// Module 9591 (useSelectedConversation)
-import SelectedConversationStore from "SelectedConversationStore" /* 9575 */;
+// Module 9590 (useSelectedConversation)
+import SelectedConversationStore from "SelectedConversationStore" /* 9574 */;
 
 const require = globalThis.__r;
 
@@ -22,8 +22,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSelec
   }
   if (cResult[1] !== arg0) {
     const fn = function s() {
-      const selectedConversation = SelectedConversationStore.getSelectedConversation(closure_0);
-      return selectedConversation;
+      const conversation = SelectedConversationStore.getConversation(closure_0);
+      return conversation;
     };
     const items1 = [arg0];
     cResult[1] = arg0;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSelec
   const items = [SelectedConversationStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStores(items, () => {
-    const selectedConversation = SelectedConversationStore.getSelectedConversation(closure_0);
-    return selectedConversation;
+    const conversation = SelectedConversationStore.getConversation(closure_0);
+    return conversation;
   }, items1);
 });

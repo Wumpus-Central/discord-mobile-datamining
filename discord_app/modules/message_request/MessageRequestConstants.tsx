@@ -1,6 +1,6 @@
-// === Module 13037: MessageRequestConstants ===
+// === Module 13045: MessageRequestConstants ===
 
-// Module 13037 (MessageRequestConstants)
+// Module 13045 (MessageRequestConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");

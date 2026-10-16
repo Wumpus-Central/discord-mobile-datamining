@@ -1,6 +1,6 @@
-// === Module 11224: useVadColors ===
+// === Module 11221: useVadColors ===
 
-// Module 11224 (useVadColors)
+// Module 11221 (useVadColors)
 import initialize from "initialize" /* 504 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import UserStore from "UserStore" /* 1392 */;

@@ -1,6 +1,6 @@
-// === Module 8919: getInviteURL ===
+// === Module 8920: getInviteURL ===
 
-// Module 8919 (getInviteURL)
+// Module 8920 (getInviteURL)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");

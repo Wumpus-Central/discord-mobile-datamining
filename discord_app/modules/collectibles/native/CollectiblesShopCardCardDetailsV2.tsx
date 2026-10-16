@@ -1,25 +1,25 @@
-// === Module 9288: CollectiblesShopCardCardDetailsV2 ===
+// === Module 9289: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 9288 (CollectiblesShopCardCardDetailsV2)
+// Module 9289 (CollectiblesShopCardCardDetailsV2)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
-import useDefaultVariantIndex from "useDefaultVariantIndex" /* 9199 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
-import OrbsIcon from "OrbsIcon" /* 9270 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9289 */;
-import _mod9291 from "module_9291" /* 9291 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9305 */;
-import TagIcon from "TagIcon" /* 9306 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9310 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7495 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7496 */;
+import useDefaultVariantIndex from "useDefaultVariantIndex" /* 9200 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9267 */;
+import OrbsIcon from "OrbsIcon" /* 9271 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9290 */;
+import _mod9292 from "module_9292" /* 9292 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9306 */;
+import TagIcon from "TagIcon" /* 9307 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9311 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7355 */;
+import IAPStore from "IAPStore" /* 7357 */;
 
 require = fn;
 const View = fn(17).View;
@@ -27,7 +27,7 @@ const Constants = fn(1087);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { regularMetadataContainer: null, assetName: null, priceVariantsContainer: null, priceDescription: null, text: null, discountPercentage: null, wheelIcon: null, androidTextPadding: null };
 let size = { position: "absolute", height: "45%", width: "100%", padding: 10, flex: 1, bottom: 0, overflow: "hidden", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "flex-end" };
 obj.regularMetadataContainer = size;
@@ -64,7 +64,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ar
               let tmp13 = cResult[13];
             }
             const discountPercentage2 = tmp13.discountPercentage;
-            const balance = _mod9291.useFetchVirtualCurrencyBalance().balance;
+            const balance = _mod9292.useFetchVirtualCurrencyBalance().balance;
             let tmp17 = null;
             if (null != tmp9) {
               tmp17 = null;
@@ -477,7 +477,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ar
                 tmp21 = closure_1_8(NitroWheelIcon.NitroWheelIcon, obj23);
               }
             }
-            const tmpResult = _mod9291;
+            const tmpResult = _mod9292;
           }
           const productDiscount = CollectiblesUtils.getProductDiscount(tmp5, hasShopDiscount, constants.DISCORD_ORB);
           cResult[11] = hasShopDiscount;
@@ -687,19 +687,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ product, collectibleProductState, preferVCPrice, isDisabled, hidePrice } = arg0);
   closure_10();
   const obj = isInImprovedMobileShopLoading(576);
-  const currentUser = isInImprovedMobileShopLoading(8529).useCurrentUser();
+  const currentUser = isInImprovedMobileShopLoading(8530).useCurrentUser();
   if (cResult[0] !== currentUser) {
     const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
     cResult[0] = currentUser;
     cResult[1] = canUseShopDiscountsResult;
   }
   if (cResult[2] !== currentUser) {
-    const shopDiscountSource = tmp(7494).getShopDiscountSource(currentUser);
+    const shopDiscountSource = tmp(7496).getShopDiscountSource(currentUser);
     cResult[2] = currentUser;
     cResult[3] = shopDiscountSource;
-    const tmpResult = tmp(7494);
+    const tmpResult = tmp(7496);
   }
-  const obj2 = isInImprovedMobileShopLoading(8529);
+  const obj2 = isInImprovedMobileShopLoading(8530);
   const token = isInImprovedMobileShopLoading(4877).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   if (cResult[4] !== token) {
     const tmpResult10 = tmp(5026);
@@ -722,13 +722,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp14 = cResult[7];
   }
   if (cResult[8] !== product) {
-    const cardProductName = tmp(9308).getCardProductName(product);
+    const cardProductName = tmp(9309).getCardProductName(product);
     cResult[8] = product;
     cResult[9] = cardProductName;
-    const tmpResult14 = tmp(9308);
+    const tmpResult14 = tmp(9309);
   }
   const tmpResult9 = isInImprovedMobileShopLoading(4877);
-  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9309).useIsInImprovedMobileShopLoading();
+  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9310).useIsInImprovedMobileShopLoading();
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [IAPStore];
     cResult[10] = items;
@@ -765,7 +765,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp22 = cResult[13];
   }
-  const tmpResult15 = isInImprovedMobileShopLoading(9309);
+  const tmpResult15 = isInImprovedMobileShopLoading(9310);
   const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(tmp19, V, tmp22);
   if (cResult[14] === token) {
     class V {
@@ -790,11 +790,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let isInImprovedMobileShopLoading;
   ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
   const tmp = closure_10();
-  const currentUser = isInImprovedMobileShopLoading(8529).useCurrentUser();
-  const obj = isInImprovedMobileShopLoading(8529);
+  const currentUser = isInImprovedMobileShopLoading(8530).useCurrentUser();
+  const obj = isInImprovedMobileShopLoading(8530);
   const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
-  const shopDiscountSource = isInImprovedMobileShopLoading(7494).getShopDiscountSource(currentUser);
-  const obj3 = isInImprovedMobileShopLoading(7494);
+  const shopDiscountSource = isInImprovedMobileShopLoading(7496).getShopDiscountSource(currentUser);
+  const obj3 = isInImprovedMobileShopLoading(7496);
   const token = isInImprovedMobileShopLoading(4877).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   const obj4 = isInImprovedMobileShopLoading(4877);
   const obj5 = isInImprovedMobileShopLoading(5026);
@@ -803,10 +803,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj7 = isInImprovedMobileShopLoading(5026);
   const obj8 = isInImprovedMobileShopLoading(5026);
   const hexToRgbaStringResult1 = obj7.hexToRgbaString(isInImprovedMobileShopLoading(5026).hexWithOpacity(token, 0));
-  const cardProductName = isInImprovedMobileShopLoading(9308).getCardProductName(product);
-  const obj9 = isInImprovedMobileShopLoading(9308);
-  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9309).useIsInImprovedMobileShopLoading();
-  const obj10 = isInImprovedMobileShopLoading(9309);
+  const cardProductName = isInImprovedMobileShopLoading(9309).getCardProductName(product);
+  const obj9 = isInImprovedMobileShopLoading(9309);
+  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9310).useIsInImprovedMobileShopLoading();
+  const obj10 = isInImprovedMobileShopLoading(9310);
   const items = [IAPStore];
   const items1 = [isInImprovedMobileShopLoading];
   const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(items, () => {
@@ -820,7 +820,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
   obj12.colors = items2;
   const obj11 = isInImprovedMobileShopLoading(504);
-  const items3 = [closure_8(isInImprovedMobileShopLoading(5149).Text, { style: tmp.assetName, variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: cardProductName }), ];
+  const items3 = [closure_8(isInImprovedMobileShopLoading(5150).Text, { style: tmp.assetName, variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: cardProductName }), ];
   let tmp13Result = !hidePrice;
   if (!hidePrice) {
     const obj14 = { style: tmp.priceVariantsContainer, children: null };

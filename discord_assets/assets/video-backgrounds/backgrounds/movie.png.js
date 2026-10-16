@@ -1,6 +1,6 @@
-// === Module 5325: ? ===
+// === Module 5326: ? ===
 
-// Module 5325
+// Module 5326
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/movie.png.js");

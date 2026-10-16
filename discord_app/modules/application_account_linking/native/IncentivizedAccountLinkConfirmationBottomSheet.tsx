@@ -1,6 +1,6 @@
-// === Module 18025: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 18035: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 18025 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 18035 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,14 +11,14 @@ import _modDef3349 from "module_3349" /* 3349 */;
 import LinkingDefault from "Linking" /* 4865 */;
 import FastImageDefault from "FastImage" /* 5091 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9243 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9244 */;
 import PromoSheet from "PromoSheet" /* 10572 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13724 */;
-import _modDef16859 from "module_16859" /* 16859 */;
-import _modDef16860 from "module_16860" /* 16860 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13735 */;
+import _modDef16873 from "module_16873" /* 16873 */;
+import _modDef16874 from "module_16874" /* 16874 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
@@ -66,21 +66,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   if (cResult[4] !== stateFromStores) {
     if (stateFromStores) {
       let obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef16859 };
+      const obj3 = { uri: _modDef16873 };
       obj2.source = obj3;
       const size = { width: v150, height: v150 };
       obj2.style = size;
       let tmp11Result = jsx(FastImageDefault, { source: null, style: null });
     } else {
       if (tmpResult2.isAndroid()) {
-        const obj4 = { url: _modDef16860, style: null };
+        const obj4 = { url: _modDef16874, style: null };
         const size1 = { width: v150, height: v150 };
         obj4.style = size1;
-        tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16860, style: null });
+        tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16874, style: null });
         const tmp12Result = APNGDecorationNativeComponentDefault;
       } else {
         const obj5 = { source: null, resizeMode: "contain", style: null };
-        const obj6 = { uri: _modDef16860 };
+        const obj6 = { uri: _modDef16874 };
         obj5.source = obj6;
         const size2 = { width: v150, height: v150 };
         obj5.style = size2;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef16859 };
+    const obj3 = { uri: _modDef16873 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -145,16 +145,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef16860, style: null };
+      const obj4 = { url: _modDef16874, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16860, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16874, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef16860 };
+      const obj6 = { uri: _modDef16874 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;

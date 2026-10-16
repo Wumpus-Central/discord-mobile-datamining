@@ -1,24 +1,24 @@
-// === Module 11393: VoiceSensitivity ===
+// === Module 11390: VoiceSensitivity ===
 
-// Module 11393 (VoiceSensitivity)
+// Module 11390 (VoiceSensitivity)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5198 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import SpeakingStore from "SpeakingStore" /* 6165 */;
+import SpeakingStore from "SpeakingStore" /* 6166 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
 
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1087).AppStates;
-const NativePermissionTypes = fn(7702).NativePermissionTypes;
+const NativePermissionTypes = fn(7703).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { sensitivity: { position: "relative", height: 20 }, sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" }, sensitivityFill: null, sensitivityCommon: null, sensitivityMin: null, sensitivityMax: null, sensitivityDefault: null, sensitivitySpeaking: null, sensitivitySlider: null };
 const rect = { position: "absolute", backgroundColor: nativeDefault.unsafe_rawColors.WHITE, opacity: 0.5, top: 7, left: 0, right: 0, bottom: 7 };
 obj2.sensitivityFill = rect;
@@ -658,7 +658,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj4 = { value: onThresholdChange(7719).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
+              const obj4 = { value: onThresholdChange(7720).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -675,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(5198).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(5199).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
             return { value: "IconComponent", done: null };

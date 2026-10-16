@@ -1,10 +1,10 @@
-// === Module 18059: useExternalPipEnabler ===
+// === Module 18069: useExternalPipEnabler ===
 
-// Module 18059 (useExternalPipEnabler)
-import ExternalPipEnablerState from "ExternalPipEnablerState" /* 18060 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6254 */;
+// Module 18069 (useExternalPipEnabler)
+import ExternalPipEnablerState from "ExternalPipEnablerState" /* 18070 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6255 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

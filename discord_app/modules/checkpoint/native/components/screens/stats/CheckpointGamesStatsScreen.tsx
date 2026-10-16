@@ -1,6 +1,6 @@
-// === Module 12690: CheckpointGamesStatsScreen ===
+// === Module 12696: CheckpointGamesStatsScreen ===
 
-// Module 12690 (CheckpointGamesStatsScreen)
+// Module 12696 (CheckpointGamesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -9,16 +9,16 @@ import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3123 from "module_3123" /* 3123 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import GameControllerIcon from "GameControllerIcon" /* 9449 */;
-import CheckpointTextDefault from "CheckpointText" /* 12676 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12678 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12682 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12687 */;
+import GameControllerIcon from "GameControllerIcon" /* 9450 */;
+import CheckpointTextDefault from "CheckpointText" /* 12682 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12684 */;
+import NumberAnimationDefault from "NumberAnimation" /* 12688 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12693 */;
 import GameStore from "GameStore" /* 2022 */;
-import CheckpointStore from "CheckpointStore" /* 12654 */;
-import CheckpointConstants from "CheckpointConstants" /* 5499 */;
+import CheckpointStore from "CheckpointStore" /* 12660 */;
+import CheckpointConstants from "CheckpointConstants" /* 5500 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
+import createStyles from "createStyles" /* 5154 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -157,7 +157,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
                           tmp39 = tmp42;
                         }
                         const obj6 = { variant: "text-md/semibold", style: tmp4.gameName, lineClamp: 2, children: name };
-                        const tmp38 = closure_7(tmp(5149).Text, obj6);
+                        const tmp38 = closure_7(tmp(5150).Text, obj6);
                         cResult[26] = name;
                         cResult[27] = tmp4.gameName;
                         cResult[28] = tmp38;
@@ -194,7 +194,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
               const items4 = [, ];
               ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
               obj11.style = items4;
-              obj11.children = closure_7(tmp(7908).UnknownGameIcon, { size: "lg" });
+              obj11.children = closure_7(tmp(7909).UnknownGameIcon, { size: "lg" });
               tmp23 = closure_7(View, obj11);
             }
             cResult[15] = unknownCover;
@@ -275,14 +275,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameCa
     const items1 = [, ];
     ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
     obj7.style = items1;
-    obj7.children = closure_7(tmp2(7908).UnknownGameIcon, { size: "lg" });
+    obj7.children = closure_7(tmp2(7909).UnknownGameIcon, { size: "lg" });
     tmp11 = closure_7(View, obj7);
   }
   const items2 = [tmp11, tmp10(CheckpointRankTagDefault, { rank, style: tmp.rank })];
   obj5.children = items2;
   const items3 = [closure_8(View, obj5), ];
   const obj9 = { style: tmp.gameText, children: null };
-  const items4 = [tmp10(id(5149).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }), tmp10(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.gameSessions, children: rounded })];
+  const items4 = [tmp10(id(5150).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }), tmp10(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.gameSessions, children: rounded })];
   obj9.children = items4;
   items3[1] = closure_8(View, obj9);
   obj4.children = items3;

@@ -1,19 +1,19 @@
-// === Module 15659: SettingListItemHighlight ===
+// === Module 15669: SettingListItemHighlight ===
 
-// Module 15659 (SettingListItemHighlight)
+// Module 15669 (SettingListItemHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15654 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15664 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 const __initData = { code: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},\"respect-motion-settings\",function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}" };
@@ -81,7 +81,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return obj;
           }
         }
-        let obj2 = { withSequence: tmp(4909).withSequence, withDelay: tmp(4909).withDelay, withTiming: tmp(5154).withTiming, Easing: tmp(4909).Easing, runOnJS: tmp(4909).runOnJS, clearSelectedSearchResult };
+        let obj2 = { withSequence: tmp(4909).withSequence, withDelay: tmp(4909).withDelay, withTiming: tmp(5155).withTiming, Easing: tmp(4909).Easing, runOnJS: tmp(4909).runOnJS, clearSelectedSearchResult };
         O.__closure = obj2;
         O.__workletHash = 11780002409998;
         O.__initData = __initData;

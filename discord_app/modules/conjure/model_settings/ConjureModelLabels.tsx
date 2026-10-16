@@ -1,6 +1,6 @@
-// === Module 11543: ConjureModelLabels ===
+// === Module 11540: ConjureModelLabels ===
 
-// Module 11543 (ConjureModelLabels)
+// Module 11540 (ConjureModelLabels)
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
 import size from "module_2" /* 2 */;

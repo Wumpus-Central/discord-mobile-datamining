@@ -1,18 +1,18 @@
-// === Module 16771: UserSettingsDesignSystemTabs ===
+// === Module 16785: UserSettingsDesignSystemTabs ===
 
-// Module 16771 (UserSettingsDesignSystemTabs)
+// Module 16785 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4877 */;
 import ColorUtils from "ColorUtils" /* 5026 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import TableSwitchRow from "TableSwitchRow" /* 7117 */;
-import SegmentedControlState from "SegmentedControlState" /* 8758 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 10849 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 11600 */;
-import TabsGradientDefault from "TabsGradient" /* 13391 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import TableSwitchRow from "TableSwitchRow" /* 7119 */;
+import SegmentedControlState from "SegmentedControlState" /* 8759 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 10846 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11597 */;
+import TabsGradientDefault from "TabsGradient" /* 13399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 8900: LiveStageNotificationsUtils ===
+// === Module 8901: LiveStageNotificationsUtils ===
 
-// Module 8900 (LiveStageNotificationsUtils)
+// Module 8901 (LiveStageNotificationsUtils)
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 

@@ -1,22 +1,22 @@
-// === Module 16200: UserSettingsGuildRoleSubscriptionsCancel ===
+// === Module 16214: UserSettingsGuildRoleSubscriptionsCancel ===
 
-// Module 16200 (UserSettingsGuildRoleSubscriptionsCancel)
+// Module 16214 (UserSettingsGuildRoleSubscriptionsCancel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import _modDef4761 from "module_4761" /* 4761 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import GuildIconDefault from "GuildIcon" /* 6381 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6885 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16186 */;
-import FormSeparatorDefault from "FormSeparator" /* 16191 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16197 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16201 */;
-import _modDef16209 from "module_16209" /* 16209 */;
-import FastAssetImageDefault from "FastAssetImage" /* 16210 */;
-import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 16211 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import GuildIconDefault from "GuildIcon" /* 6383 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6887 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16200 */;
+import FormSeparatorDefault from "FormSeparator" /* 16205 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 16211 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16215 */;
+import _modDef16223 from "module_16223" /* 16223 */;
+import FastAssetImageDefault from "FastAssetImage" /* 16224 */;
+import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 16225 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -33,9 +33,9 @@ function CancelSubscriptionButtonFooter(guild) {
   const tmp = closure_13();
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp2 = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
-  const analyticsLocations = subscription(7075)(subscription(7100).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
-  const tmp5 = subscription(7075);
-  const cancelSubscription1 = subscription(9635).useCancelSubscription(subscription.id, subscription.isACOM);
+  const analyticsLocations = subscription(7077)(subscription(7102).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
+  const tmp5 = subscription(7077);
+  const cancelSubscription1 = subscription(9634).useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription1.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
   const items = [guild.name, , , , , , , ];
@@ -76,7 +76,7 @@ function CancelSubscriptionButtonFooter(guild) {
             const intl2 = guild(1128).intl;
             const obj9 = { guildName: guild.name };
             obj6.title = intl2.formatToPlainString(guild(1128).t.sBs7sh, obj9);
-            const obj15 = tmp3(5362);
+            const obj15 = tmp3(5363);
             const _HermesInternal = HermesInternal;
             obj6.body = "You can resubscribe any time before " + tmp3(4761)(subscription.currentPeriodEnd).format(closure_1_12) + ".";
             const intl3 = guild(1128).intl;
@@ -108,7 +108,7 @@ function CancelSubscriptionButtonFooter(guild) {
               } else if (closure_129_1.isPurchasedViaDesktop) {
                 c4 = 4;
                 c5 = 1;
-                const obj13 = { value: tmp63(5942).cancelSubscription(closure_129_1.id, closure_129_4), done: false };
+                const obj13 = { value: tmp63(5943).cancelSubscription(closure_129_1.id, closure_129_4), done: false };
                 return obj13;
               } else {
                 const _Error = Error;
@@ -152,7 +152,7 @@ function CancelSubscriptionButtonFooter(guild) {
                 } else {
                   c4 = 5;
                   c5 = 1;
-                  const obj16 = { value: tmp63(5942).fetchSubscriptions(), done: false };
+                  const obj16 = { value: tmp63(5943).fetchSubscriptions(), done: false };
                   return obj16;
                 }
               } else if (arg0 === 1) {
@@ -204,7 +204,7 @@ function CancelSubscriptionButtonFooter(guild) {
   let intl = tmp10(1128).intl;
   obj3.text = intl.string(guild(1128).t.cM1H0K);
   obj3.onPress = callback;
-  obj2.children = closure_10(guild(5441).Button, obj3);
+  obj2.children = closure_10(guild(5442).Button, obj3);
   return closure_10(closure_7, obj2);
 }
 get_ActivityIndicator = fn(17);
@@ -212,10 +212,10 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "M/DD/YY";
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj2 = { container: { flex: 1 }, body: { marginVertical: 24, marginHorizontal: 16 }, heroImage: { width: "100%", height: "__packager_asset", aspectRatio: "<string:2353406737>" }, footer: { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 } };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj5 = { container: null, header: null, cactus: null };
 let obj3 = { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 };
 obj5.container = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, paddingVertical: 12, paddingHorizontal: 16 };
@@ -345,7 +345,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function WhatYo
               tmp51 = cResult[27];
             }
             if (cResult[28] !== tmp4.cactus) {
-              const obj15 = { source: _modDef16209, style: tmp4.cactus };
+              const obj15 = { source: _modDef16223, style: tmp4.cactus };
               const tmp58 = collapsed(FastImageDefault, obj15);
               cResult[28] = tmp4.cactus;
               cResult[29] = tmp58;
@@ -441,7 +441,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function WhatYo
   const obj13 = { source: null, style: null };
   const formatToPlainStringResult = intl2.formatToPlainString(util.t.OVlNGT, { numEmojis: _slicedToArray(obj.useTierEmojiIds(listingId, guild.id), 1)[0].size, numChannels: _slicedToArray(obj2.useChannelBenefits(listingId), 1)[0].length, numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length });
   const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef16209;
+  obj13.source = _modDef16223;
   obj13.style = tmp.cactus;
   items2[6] = collapsed(FastImageDefault, obj13);
   obj7.children = items2;

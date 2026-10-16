@@ -1,6 +1,6 @@
-// === Module 7594: SlowmodeUtils ===
+// === Module 7595: SlowmodeUtils ===
 
-// Module 7594 (SlowmodeUtils)
+// Module 7595 (SlowmodeUtils)
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import _modDef4761 from "module_4761" /* 4761 */;

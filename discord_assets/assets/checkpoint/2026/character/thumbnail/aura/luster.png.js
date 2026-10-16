@@ -1,6 +1,6 @@
-// === Module 5827: ? ===
+// === Module 5828: ? ===
 
-// Module 5827
+// Module 5828
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/aura/luster.png.js");

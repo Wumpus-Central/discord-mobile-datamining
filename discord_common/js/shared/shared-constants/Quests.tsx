@@ -1,6 +1,6 @@
-// === Module 6192: Quests ===
+// === Module 6193: Quests ===
 
-// Module 6192 (Quests)
+// Module 6193 (Quests)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/Quests.tsx");

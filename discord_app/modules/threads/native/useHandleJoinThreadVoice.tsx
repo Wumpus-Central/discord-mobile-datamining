@@ -1,6 +1,6 @@
-// === Module 9570: useHandleJoinThreadVoice ===
+// === Module 9569: useHandleJoinThreadVoice ===
 
-// Module 9570 (useHandleJoinThreadVoice)
+// Module 9569 (useHandleJoinThreadVoice)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
 

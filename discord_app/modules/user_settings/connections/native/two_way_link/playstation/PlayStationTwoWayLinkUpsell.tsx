@@ -1,21 +1,21 @@
-// === Module 15937: PlayStationTwoWayLinkUpsell ===
+// === Module 15947: PlayStationTwoWayLinkUpsell ===
 
-// Module 15937 (PlayStationTwoWayLinkUpsell)
+// Module 15947 (PlayStationTwoWayLinkUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 13771 */;
-import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 15935 */;
-import _modDef15938 from "module_15938" /* 15938 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 13782 */;
+import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 15945 */;
+import _modDef15948 from "module_15948" /* 15948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_7 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -41,8 +41,8 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
     [tmp5, tmp6, tmp7] = cResult;
   }
   if (cResult[3] !== tmp4.upsellImage) {
-    const obj4 = { style: tmp4.upsellImage, source: _modDef15938, resizeMode: "contain" };
-    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15938, resizeMode: "contain" });
+    const obj4 = { style: tmp4.upsellImage, source: _modDef15948, resizeMode: "contain" };
+    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15948, resizeMode: "contain" });
     cResult[3] = tmp4.upsellImage;
     cResult[4] = tmp17;
     let tmp13 = tmp17;
@@ -103,7 +103,7 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef15938;
+  obj3.source = _modDef15948;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

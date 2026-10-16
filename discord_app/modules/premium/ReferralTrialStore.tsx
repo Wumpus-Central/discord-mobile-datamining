@@ -1,10 +1,10 @@
-// === Module 7393: ReferralTrialStore ===
+// === Module 7395: ReferralTrialStore ===
 
-// Module 7393 (ReferralTrialStore)
+// Module 7395 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageTypes from "MessageTypes" /* 1103 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7394 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7396 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -61,6 +61,7 @@ let c16 = false;
 let c17 = false;
 let c18 = null;
 let c19 = null;
+let c20 = null;
 const Store = initializeDefault.Store;
 class ReferralTrialStore extends Store {
 }
@@ -145,6 +146,9 @@ prototype["getRecipientStatus"] = function getRecipientStatus() {
 prototype["getReminderStateId"] = function getReminderStateId() {
   return c19;
 };
+prototype["getRecurringReminderStateId"] = function getRecurringReminderStateId() {
+  return c20;
+};
 ReferralTrialStore.displayName = "ReferralTrialStore";
 const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
@@ -171,10 +175,11 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     has_eligible_friends = has_eligible_friends.has_eligible_friends;
     c7 = false;
     const referrals_remaining = has_eligible_friends.referrals_remaining;
-    ({ refresh_at, recipient_status, reminder_state_id } = has_eligible_friends);
+    ({ refresh_at, recipient_status, reminder_state_id, recurring_reminder_state_id } = has_eligible_friends);
     new Set(has_eligible_friends.sent_user_ids);
     c18 = refresh_at;
     c19 = reminder_state_id;
+    c20 = recurring_reminder_state_id;
     if (0 === referrals_remaining) {
       const _Set = Set;
       set1 = new Set();
@@ -362,6 +367,7 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     c18 = null;
     map1 = new Map();
     c19 = null;
+    c20 = null;
   }
 });
 const size = fn(2);

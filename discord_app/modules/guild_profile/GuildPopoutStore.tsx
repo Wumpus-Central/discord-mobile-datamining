@@ -1,9 +1,9 @@
-// === Module 14906: GuildPopoutStore ===
+// === Module 14916: GuildPopoutStore ===
 
-// Module 14906 (GuildPopoutStore)
+// Module 14916 (GuildPopoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7275 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7277 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

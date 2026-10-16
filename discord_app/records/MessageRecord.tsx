@@ -3,9 +3,9 @@
 // Module 4820 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1405 */;
 import ReactionUtils from "ReactionUtils" /* 4821 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7224 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8121 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9471 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7226 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8122 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9472 */;
 import Record from "Record" /* 1407 */;
 
 require = fn;

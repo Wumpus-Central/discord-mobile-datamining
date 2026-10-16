@@ -1,6 +1,6 @@
-// === Module 17879: RegionStore ===
+// === Module 17889: RegionStore ===
 
-// Module 17879 (RegionStore)
+// Module 17889 (RegionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

@@ -1,8 +1,8 @@
-// === Module 8999: ThrottledButton ===
+// === Module 9000: ThrottledButton ===
 
-// Module 8999 (ThrottledButton)
+// Module 9000 (ThrottledButton)
 import c from "c" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

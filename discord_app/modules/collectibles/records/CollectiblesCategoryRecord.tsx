@@ -1,11 +1,11 @@
-// === Module 7483: CollectiblesCategoryRecord ===
+// === Module 7485: CollectiblesCategoryRecord ===
 
-// Module 7483 (CollectiblesCategoryRecord)
+// Module 7485 (CollectiblesCategoryRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7494 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7484 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7491 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7495 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7496 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7486 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7493 */;
 
 require = fn;
 const prototype = function CollectiblesCategoryRecord(products) {

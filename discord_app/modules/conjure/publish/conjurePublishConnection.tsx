@@ -1,11 +1,11 @@
-// === Module 10989: conjurePublishConnection ===
+// === Module 10986: conjurePublishConnection ===
 
-// Module 10989 (conjurePublishConnection)
+// Module 10986 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10921 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10978 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10916 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10918 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10975 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10913 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -137,6 +137,12 @@ export const publishStepHandlers = {
       value.resolve(nonce);
     }
     tmp = null != value && value.nonce === nonce.nonce;
+  }
+};
+export const preparePublish = function preparePublish(projectId) {
+  const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
+  if (conjureSocket != null) {
+    conjureSocket.sendPreparePublish();
   }
 };
 export const publishProject = function publishProject(id) {

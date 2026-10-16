@@ -1,9 +1,9 @@
-// === Module 16699: DevToolsGuildTagBadgesModal ===
+// === Module 16713: DevToolsGuildTagBadgesModal ===
 
-// Module 16699 (DevToolsGuildTagBadgesModal)
-import HeaderShared from "HeaderShared" /* 9534 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9871 */;
-import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 16700 */;
+// Module 16713 (DevToolsGuildTagBadgesModal)
+import HeaderShared from "HeaderShared" /* 9535 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9870 */;
+import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 16714 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(9581);
+const NativeStackNavigator = fn(9580);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsGuildTagBadgesModal() {
   const cResult = accessibilityNativeStackOptions(576).c(5);
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6910).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6912).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function o(navigation) {
       const obj = {

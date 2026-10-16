@@ -1,6 +1,6 @@
-// === Module 13420: WelcomeScreenConstants ===
+// === Module 13428: WelcomeScreenConstants ===
 
-// Module 13420 (WelcomeScreenConstants)
+// Module 13428 (WelcomeScreenConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenConstants.tsx");

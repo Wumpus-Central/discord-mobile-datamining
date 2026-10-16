@@ -1,30 +1,30 @@
-// === Module 11347: GlobalStatusContent ===
+// === Module 11344: GlobalStatusContent ===
 
-// Module 11347 (GlobalStatusContent)
+// Module 11344 (GlobalStatusContent)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useThemeDefault from "useTheme" /* 5090 */;
-import StatusBarDefault from "StatusBar" /* 10609 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11145 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11169 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11340 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11343 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11348 */;
+import StatusBarDefault from "StatusBar" /* 10606 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11142 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11166 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11337 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11340 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11345 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
-import SessionsStore from "SessionsStore" /* 5173 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
+import SessionsStore from "SessionsStore" /* 5174 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11342).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11339).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1087).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
               }
               tmp22 = tmp5ResultResult;
             }
-            const isScreenLandscape = tmp(8553).useIsScreenLandscape();
+            const isScreenLandscape = tmp(8554).useIsScreenLandscape();
             if (cResult[15] !== isScreenLandscape) {
               let isModalOpenResult = isScreenLandscape;
               if (isScreenLandscape) {
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
             cResult[18] = num11;
             cResult[19] = obj4;
             tmp33 = obj4;
-            const tmpResult6 = tmp(8553);
+            const tmpResult6 = tmp(8554);
           }
         }
       }

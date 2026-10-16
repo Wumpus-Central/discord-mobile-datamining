@@ -1,15 +1,15 @@
-// === Module 8133: getChannelOpenedMetadata ===
+// === Module 8134: getChannelOpenedMetadata ===
 
-// Module 8133 (getChannelOpenedMetadata)
+// Module 8134 (getChannelOpenedMetadata)
 import DurationsDefault from "Durations" /* 1104 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5168 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8134 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 8135 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5169 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8135 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 8136 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import ReadStateStore from "ReadStateStore" /* 6253 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import ReadStateStore from "ReadStateStore" /* 6254 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6185 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

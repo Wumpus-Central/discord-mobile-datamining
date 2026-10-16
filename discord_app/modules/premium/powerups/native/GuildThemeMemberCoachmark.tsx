@@ -1,21 +1,21 @@
-// === Module 17219: GuildThemeMemberCoachmark ===
+// === Module 17232: GuildThemeMemberCoachmark ===
 
-// Module 17219 (GuildThemeMemberCoachmark)
+// Module 17232 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2603 from "module_2603" /* 2603 */;
 import Powerups from "Powerups" /* 5070 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6177 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13131 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6178 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13139 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5066 */;
 
 require = fn;
 let closure_6 = fn(5067).GUILD_THEME_POWERUP_BOOST_PRICE;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { coachmarkImage: null };
 let size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
 obj2.coachmarkImage = size;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
       }
     }
     AccessibilityStore = tmp13;
-    const diff = closure_6 - markAsDismissed(8252)(guildId).available;
+    const diff = closure_6 - markAsDismissed(8253)(guildId).available;
     GuildPowerupsStore = diff;
     if (cResult[9] !== markAsDismissed) {
       class D {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     cResult[14] = U;
   }
   const tmpResult3 = guildId(504);
-  let guildPowerupBannerImage = guildId(13128).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  let guildPowerupBannerImage = guildId(13136).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
     class D {
       constructor() {
@@ -178,13 +178,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
         return;
       }
     }
-    guildPowerupBannerImage = markAsDismissed(17220);
+    guildPowerupBannerImage = markAsDismissed(17233);
   }
   cResult[6] = stateFromStores;
   cResult[7] = stateFromStores1;
   cResult[8] = guildPowerupBannerImage;
   tmp13 = guildPowerupBannerImage;
-  const tmpResult4 = guildId(13128);
+  const tmpResult4 = guildId(13136);
 }) : (function GuildThemeMemberCoachmark(guildId) {
   guildId = guildId.guildId;
   const markAsDismissed = guildId.markAsDismissed;
@@ -209,11 +209,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(13128).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(13136).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(17220);
+    guildPowerupBannerImage = markAsDismissed(17233);
   }
-  const diff = onDismiss - markAsDismissed(8252)(guildId).available;
+  const diff = onDismiss - markAsDismissed(8253)(guildId).available;
   c5 = diff;
   const items3 = [markAsDismissed];
   onDismiss = stateFromStores1.useCallback(() => {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(13128);
-  const coachmark = tmp2(9679).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(13136);
+  const coachmark = tmp2(9678).useCoachmark(guildId.targetRef, memo);
   return null;
 });

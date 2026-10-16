@@ -1,12 +1,12 @@
-// === Module 17926: IconLabelBlock ===
+// === Module 17936: IconLabelBlock ===
 
-// Module 17926 (IconLabelBlock)
+// Module 17936 (IconLabelBlock)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import shared from "shared" /* 5028 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import IconUploaderDefault from "IconUploader" /* 9874 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import IconUploaderDefault from "IconUploader" /* 9873 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, label: null, iconUploaderWrapper: null, text: null };
 let obj3 = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.label = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };

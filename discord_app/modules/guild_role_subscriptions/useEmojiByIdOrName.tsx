@@ -1,7 +1,7 @@
-// === Module 16215: useEmojiByIdOrName ===
+// === Module 16229: useEmojiByIdOrName ===
 
-// Module 16215 (useEmojiByIdOrName)
-import EmojiStore from "EmojiStore" /* 6205 */;
+// Module 16229 (useEmojiByIdOrName)
+import EmojiStore from "EmojiStore" /* 6206 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

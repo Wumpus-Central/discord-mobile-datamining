@@ -1,12 +1,12 @@
-// === Module 7067: ActionSheetHeaderBar ===
+// === Module 7069: ActionSheetHeaderBar ===
 
-// Module 7067 (ActionSheetHeaderBar)
+// Module 7069 (ActionSheetHeaderBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useToken from "useToken" /* 4877 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5424 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, TouchableWithoutFeedback: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };

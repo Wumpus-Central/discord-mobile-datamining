@@ -1,10 +1,10 @@
-// === Module 14101: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 14111: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 14101 (useVisibleUserProfileConnectionsAndAppIdentities)
-import PlatformsDefault from "Platforms" /* 5981 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7079 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14102 */;
-import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 14103 */;
+// Module 14111 (useVisibleUserProfileConnectionsAndAppIdentities)
+import PlatformsDefault from "Platforms" /* 5982 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7081 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14112 */;
+import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 14113 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

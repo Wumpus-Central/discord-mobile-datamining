@@ -1,6 +1,6 @@
-// === Module 11613: ConjureFirstPublishSheet ===
+// === Module 11610: ConjureFirstPublishSheet ===
 
-// Module 11613 (ConjureFirstPublishSheet)
+// Module 11610 (ConjureFirstPublishSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureFirstPublishSheet = "ConjureFirstPublishSheet";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -230,7 +230,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                 const obj6 = { name, description };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp5(11614).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
+                const obj7 = { value: tmp5(11611).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
                 return obj7;
               }
             }

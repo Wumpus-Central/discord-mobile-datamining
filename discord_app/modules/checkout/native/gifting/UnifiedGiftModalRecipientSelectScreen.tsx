@@ -1,16 +1,16 @@
-// === Module 10455: UnifiedGiftModalRecipientSelectScreen ===
+// === Module 10456: UnifiedGiftModalRecipientSelectScreen ===
 
-// Module 10455 (UnifiedGiftModalRecipientSelectScreen)
+// Module 10456 (UnifiedGiftModalRecipientSelectScreen)
 import nativeDefault from "native" /* 587 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10423 */;
-import SearchableUserListDefault from "SearchableUserList" /* 10457 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10424 */;
+import SearchableUserListDefault from "SearchableUserList" /* 10458 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10456).UserRowModes;
+const UserRowModes = fn(10457).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnifiedG
     cResult[5] = tmp10;
     tmp7 = tmp10;
   }
-  const tmp6 = jsx(navigation(10457), {
+  const tmp6 = jsx(navigation(10458), {
     onSelectUser(arg0) {
       setRecipientUser(arg0);
       navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL, undefined, { pop: true });

@@ -1,14 +1,14 @@
-// === Module 13653: BalanceCounter ===
+// === Module 13661: BalanceCounter ===
 
-// Module 13653 (BalanceCounter)
+// Module 13661 (BalanceCounter)
 import c from "c" /* 576 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4893 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import spring from "spring" /* 5440 */;
+import spring from "spring" /* 5441 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 
-const Text_Text = tmp(5149);
+const Text_Text = tmp(5150);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
@@ -230,7 +230,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
                     }
                     tmp26[1] = style;
                     tmp26[3] = tmp22;
-                    const tmp27 = jsx(tmp(5149).Text, tmp26);
+                    const tmp27 = jsx(tmp(5150).Text, tmp26);
                     cResult[20] = style;
                     cResult[21] = tmp22;
                     cResult[22] = tmp27;

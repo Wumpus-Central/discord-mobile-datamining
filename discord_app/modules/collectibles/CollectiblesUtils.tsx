@@ -1,6 +1,6 @@
-// === Module 7494: CollectiblesUtils ===
+// === Module 7496: CollectiblesUtils ===
 
-// Module 7494 (CollectiblesUtils)
+// Module 7496 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1098 */;
 import util from "util" /* 1128 */;
@@ -10,12 +10,12 @@ import user from "user" /* 1400 */;
 import NameplateRecord from "NameplateRecord" /* 1993 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import PriceUtils from "PriceUtils" /* 7161 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7487 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7488 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7489 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7493 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7495 */;
+import PriceUtils from "PriceUtils" /* 7163 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7489 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7490 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7491 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7495 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7497 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1089 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
@@ -631,8 +631,8 @@ export const getDaysRemaining = function getDaysRemaining(date) {
   const month1 = date.getMonth();
   return Math.floor((Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000);
 };
-export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(stateFromStores) {
-  let tmp = null != stateFromStores;
+export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
+  let tmp = null != categoryWillUnpublishAt;
   if (tmp) {
     const _Date = Date;
     const date = new Date();
@@ -640,10 +640,10 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(st
     const fullYear = date.getFullYear();
     const month = date.getMonth();
     const _Date3 = Date;
-    const fullYear1 = stateFromStores.getFullYear();
-    const month1 = stateFromStores.getMonth();
+    const fullYear1 = categoryWillUnpublishAt.getFullYear();
+    const month1 = categoryWillUnpublishAt.getMonth();
     const _Math = Math;
-    tmp = Math.floor((Date.UTC(fullYear1, month1, stateFromStores.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= React6;
+    tmp = Math.floor((Date.UTC(fullYear1, month1, categoryWillUnpublishAt.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= React6;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;

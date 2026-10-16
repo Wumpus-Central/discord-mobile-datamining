@@ -1,17 +1,17 @@
-// === Module 18217: VoiceChannelAppSurface ===
+// === Module 18227: VoiceChannelAppSurface ===
 
-// Module 18217 (VoiceChannelAppSurface)
+// Module 18227 (VoiceChannelAppSurface)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef3963 from "module_3963" /* 3963 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7261 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11639 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11640 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11641 */;
-import FrameStackLevel from "FrameStackLevel" /* 11646 */;
-import useFrameLifecycle from "useFrameLifecycle" /* 17665 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 17671 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7263 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11636 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11637 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11638 */;
+import FrameStackLevel from "FrameStackLevel" /* 11643 */;
+import useFrameLifecycle from "useFrameLifecycle" /* 17675 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 17681 */;
 import noop from "module_19" /* 19 */;
 
 const useFrameLifecycleDefault = useFrameLifecycle;

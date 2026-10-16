@@ -1,22 +1,22 @@
-// === Module 13908: MediaViewerThumbnails ===
+// === Module 13919: MediaViewerThumbnails ===
 
-// Module 13908 (MediaViewerThumbnails)
+// Module 13919 (MediaViewerThumbnails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useToken from "useToken" /* 4877 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4910 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13909 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13920 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = View(4909);
-const VisualEffectViewDefault = View(5427);
+const VisualEffectViewDefault = View(5428);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8645);
+const Constants = fn(8646);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -92,7 +92,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Obscur
   }
   return tmp10Result;
 });
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
 let closure_12 = noop.memo(function MediaThumbnail(source) {
   source = source.source;

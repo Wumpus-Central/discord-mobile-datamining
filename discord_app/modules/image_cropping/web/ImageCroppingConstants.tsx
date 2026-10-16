@@ -1,7 +1,7 @@
-// === Module 6899: ImageCroppingConstants ===
+// === Module 6901: ImageCroppingConstants ===
 
-// Module 6899 (ImageCroppingConstants)
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 5317 */;
+// Module 6901 (ImageCroppingConstants)
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 5318 */;
 import size from "module_2" /* 2 */;
 
 const BACKGROUND_REPLACEMENT_SIZE = VideoBackgroundConstants.BACKGROUND_REPLACEMENT_SIZE;

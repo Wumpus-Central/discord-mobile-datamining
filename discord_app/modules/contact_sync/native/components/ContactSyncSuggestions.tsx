@@ -1,6 +1,6 @@
-// === Module 13290: ContactSyncSuggestions ===
+// === Module 13298: ContactSyncSuggestions ===
 
-// Module 13290 (ContactSyncSuggestions)
+// Module 13298 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,22 +8,22 @@ import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserUtils from "UserUtils" /* 5021 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import useFontScale from "useFontScale" /* 5448 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6399 */;
-import Form from "Form" /* 8808 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import useFontScale from "useFontScale" /* 5449 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6401 */;
+import Form from "Form" /* 8809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const SuggestedFriendSource = fn(13291).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13299).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(6481).NAV_BAR_HEIGHT + 32, justifyContent: "center" }, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(6481).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
+const createStyles = fn(5154);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(6483).NAV_BAR_HEIGHT + 32, justifyContent: "center" }, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(6483).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.title = { marginBottom: 8, textAlign: "center" };
 obj2.subtitle = { lineHeight: 18, textAlign: "center" };
@@ -582,13 +582,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   obj6.contentContainerStyle = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
   obj6.data = memo;
   obj6.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(7036).FlashList, obj6), , ];
+  const items5 = [closure_8(friendSuggestions(7038).FlashList, obj6), , ];
   let obj8 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   let obj7 = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
   obj8.start = friendSuggestions(1107).VerticalGradient.START;
   obj8.end = friendSuggestions(1107).VerticalGradient.END;
   obj8.colors = items;
-  items5[1] = closure_8(onSubmit(5453), obj8);
+  items5[1] = closure_8(onSubmit(5454), obj8);
   const obj9 = { style: tmp.redesignButton, children: null };
   const obj10 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1128).intl;
@@ -602,7 +602,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     });
   };
   obj10.disabled = !someResult;
-  obj9.children = closure_8(friendSuggestions(5441).Button, obj10);
+  obj9.children = closure_8(friendSuggestions(5442).Button, obj10);
   items5[2] = closure_8(onSelect, obj9);
   obj5.children = items5;
   return closure_10(onSelect, obj5);

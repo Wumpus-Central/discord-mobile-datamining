@@ -1,12 +1,12 @@
-// === Module 11523: ConjureCreateSheet ===
+// === Module 11520: ConjureCreateSheet ===
 
-// Module 11523 (ConjureCreateSheet)
+// Module 11520 (ConjureCreateSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5118 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7113 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11524 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 11541 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11546 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7115 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11521 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 11538 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11543 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10901);
+const ConjureConnectionStore = fn(10898);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -68,13 +68,14 @@ export default function ConjureCreateSheet(guildId) {
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp12, c9] = _slicedToArray(noop.useState(null), 2);
   const tmp15 = onCreated(str[9])();
-  first((guild_id) => {
-    c5 = 0;
+  first((guild_id, arg1) => {
+    closure_1 = arg1;
     c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
+    c7 = 0;
+    c5 = 0;
+    return (function*(arg0, value) {
+      if (c7 === 2) {
+        c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -87,70 +88,72 @@ export default function ConjureCreateSheet(guildId) {
         }
       } else {
         try {
-          c6 = 2;
-          if (0 === c5) {
+          c7 = 2;
+          if (0 === c6) {
             if (arg0 === 1) {
-              c6 = 3;
+              c7 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c6 = 3;
+              c7 = 3;
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              closure_2 = tmp4;
-              closure_1 = tmp8;
-              closure_129_0 = guild_id;
-              closure_129_1 = undefined;
+              install_scope = tmp4;
+              closure_2 = tmp8;
+              closure_130_0 = guild_id;
+              closure_130_1 = closure_1;
+              closure_130_2 = undefined;
               closure_1_8(true);
               _undefined(null);
-              c4 = 2;
+              c5 = 2;
               const obj5 = { guild_id, install_scope };
-              c5 = 3;
-              c6 = 1;
-              const obj8 = { value: guild_id(str[10]).createProject(obj5), done: false };
-              return obj8;
+              c6 = 3;
+              c7 = 1;
+              const obj6 = { value: guild_id(str[10]).createProject(obj5), done: false };
+              return obj6;
             }
           } else if (1 === tmp8) {
-            c4 = 0;
+            c5 = 0;
             closure_1_8(false);
-            throw install_scope;
+            throw closure_4;
           } else {
             if (2 === tmp8) {
-              c4 = 1;
-              closure_129_2 = install_scope;
-              _undefined(guild_id(str[12]).getConjureCreateErrorMessage(closure_129_2));
-              c4 = 0;
+              c5 = 1;
+              closure_130_3 = closure_4;
+              _undefined(guild_id(str[12]).getConjureCreateErrorMessage(closure_130_3));
+              c5 = 0;
               closure_1_8(false);
-              c6 = 3;
+              c7 = 3;
               const obj2 = guild_id(str[12]);
             } else if (arg0 === 1) {
-              c6 = 3;
+              c7 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              closure_129_1 = value;
-              first1(closure_129_1);
-              c9(closure_129_1, c6);
-              closure_129_0(closure_129_1);
+              closure_130_2 = value;
+              const obj9 = { templateId: closure_130_1 };
+              first1(closure_130_2, obj9);
+              c9(closure_130_2, c6);
+              closure_130_0(closure_130_2);
               onCreated(str[11]).hideActionSheet(closure_12);
-              closure_1(closure_129_1, guild_id);
-              c4 = 1;
-              const obj6 = onCreated(str[11]);
+              closure_1(closure_130_2, guild_id);
+              c5 = 1;
+              const obj7 = onCreated(str[11]);
             }
-            c4 = 0;
+            c5 = 0;
             closure_1_8(false);
-            c6 = 3;
+            c7 = 3;
             const obj = { value, done: true };
             return obj;
           }
         } catch (tmp29) {
-          install_scope = tmp29;
-          if (tmp5 === c4) {
-            c6 = tmp3;
+          closure_4 = tmp29;
+          if (tmp5 === c5) {
+            c7 = tmp3;
             throw tmp29;
           } else if (tmp2 === tmp31) {
-            c5 = tmp2;
+            c6 = tmp2;
           } else {
-            c5 = tmp;
+            c6 = tmp;
           }
         }
       }
@@ -449,10 +452,10 @@ export default function ConjureCreateSheet(guildId) {
     guildId = wizard;
     if (null == wizard.wizard) {
       if (!first1) {
-        callback((arg0) => wizard(str[18]).startConjureTemplateProject(arg0, wizard)).catch(() => {
+        callback((arg0) => wizard(str[18]).startConjureTemplateProject(arg0, wizard), wizard.id).catch(() => {
 
         });
-        const promise = callback((arg0) => wizard(str[18]).startConjureTemplateProject(arg0, wizard));
+        const promise = callback((arg0) => wizard(str[18]).startConjureTemplateProject(arg0, wizard), wizard.id);
       }
     } else {
       const obj2 = { key: ConjureTemplateWizardSheet.CONJURE_TEMPLATE_WIZARD_SHEET_KEY, stackingBehavior: "stack", content: null };
@@ -480,7 +483,7 @@ export default function ConjureCreateSheet(guildId) {
   obj8.value = str;
   obj8.disabled = first1;
   const items8 = [callback(require("TextArea").TextArea, obj8), , , , , , ];
-  const obj9 = { hasIcons: false, children: null };
+  let obj9 = { hasIcons: false, children: null };
   let obj10 = { label: stringResult, trailing: callback(require("Text/Text").Text, { variant: "text-md/normal", color: "text-muted", children: memo[first] }), arrow: true, disabled: first1, onPress: callback1 };
   obj9.children = callback(require("TableRow").TableRow, obj10);
   items8[1] = callback(require("TableRowGroup").TableRowGroup, obj9);

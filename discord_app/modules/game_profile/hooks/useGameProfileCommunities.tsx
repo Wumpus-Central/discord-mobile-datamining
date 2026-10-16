@@ -1,11 +1,11 @@
-// === Module 9349: useGameProfileCommunities ===
+// === Module 9350: useGameProfileCommunities ===
 
-// Module 9349 (useGameProfileCommunities)
+// Module 9350 (useGameProfileCommunities)
 import DurationsDefault from "Durations" /* 1104 */;
-import DiscoverableGuildsActionCreators from "DiscoverableGuildsActionCreators" /* 9351 */;
+import DiscoverableGuildsActionCreators from "DiscoverableGuildsActionCreators" /* 9352 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2022 */;
-import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9350 */;
+import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9351 */;
 
 require = fn;
 function getCommunityGuildIds(gameId) {

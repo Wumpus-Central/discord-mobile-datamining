@@ -1,6 +1,6 @@
-// === Module 8621: useStateFromSharedValue ===
+// === Module 8622: useStateFromSharedValue ===
 
-// Module 8621 (useStateFromSharedValue)
+// Module 8622 (useStateFromSharedValue)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 15613: ? ===
+// === Module 15623: ? ===
 
-// Module 15613
+// Module 15623
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/upsells/profiles/headers/neon_space_header.png.js");

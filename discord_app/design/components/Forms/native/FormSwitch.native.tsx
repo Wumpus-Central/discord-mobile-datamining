@@ -1,13 +1,13 @@
-// === Module 7118: FormSwitch ===
+// === Module 7120: FormSwitch ===
 
-// Module 7118 (FormSwitch)
+// Module 7120 (FormSwitch)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4909 */;
 import HapticUtils from "HapticUtils" /* 5119 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
-import spring from "spring" /* 5440 */;
-import IconDefault from "Icon" /* 5443 */;
-import springPresets from "springPresets" /* 5444 */;
+import spring from "spring" /* 5441 */;
+import IconDefault from "Icon" /* 5444 */;
+import springPresets from "springPresets" /* 5445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;

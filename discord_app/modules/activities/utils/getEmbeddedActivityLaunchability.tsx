@@ -1,13 +1,13 @@
-// === Module 11191: getEmbeddedActivityLaunchability ===
+// === Module 11188: getEmbeddedActivityLaunchability ===
 
-// Module 11191 (getEmbeddedActivityLaunchability)
+// Module 11188 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1128 */;
-import AgeGateUtils from "AgeGateUtils" /* 6142 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11166 */;
+import AgeGateUtils from "AgeGateUtils" /* 6143 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11163 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 const require = globalThis.__r;
 

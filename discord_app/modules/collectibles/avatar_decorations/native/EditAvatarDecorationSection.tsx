@@ -1,24 +1,24 @@
-// === Module 14175: EditAvatarDecorationSection ===
+// === Module 14185: EditAvatarDecorationSection ===
 
-// Module 14175 (EditAvatarDecorationSection)
+// Module 14185 (EditAvatarDecorationSection)
 import c from "c" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9246 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 14170 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 14176 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14177 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9247 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 14180 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 14186 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7487).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7489).isAvatarDecorationRecord;
 const AVATAR_DECORATION_SIZE = fn(1418).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14176).GUTTER_SIZE }, rowSpacer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14176).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(14176).GUTTER_SIZE };
+const createStyles = fn(5154);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14186).GUTTER_SIZE }, rowSpacer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14186).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14186).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((setSelectedAvatarDecoration) => {

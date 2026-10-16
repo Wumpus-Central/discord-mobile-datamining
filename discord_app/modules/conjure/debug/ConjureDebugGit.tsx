@@ -1,11 +1,11 @@
-// === Module 12292: ConjureDebugGit ===
+// === Module 12298: ConjureDebugGit ===
 
-// Module 12292 (ConjureDebugGit)
-import conjureDebugConnection from "conjureDebugConnection" /* 10928 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12273 */;
+// Module 12298 (ConjureDebugGit)
+import conjureDebugConnection from "conjureDebugConnection" /* 10925 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12279 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10906 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10903 */;
 
 const require = globalThis.__r;
 

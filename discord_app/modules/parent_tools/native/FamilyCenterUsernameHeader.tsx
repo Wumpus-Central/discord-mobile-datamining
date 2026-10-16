@@ -1,16 +1,16 @@
-// === Module 15858: FamilyCenterUsernameHeader ===
+// === Module 15868: FamilyCenterUsernameHeader ===
 
-// Module 15858 (FamilyCenterUsernameHeader)
+// Module 15868 (FamilyCenterUsernameHeader)
 import c from "c" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 5021 */;
-import Text_Text from "Text/Text" /* 5149 */;
+import Text_Text from "Text/Text" /* 5150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

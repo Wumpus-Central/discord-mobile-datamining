@@ -1,6 +1,6 @@
-// === Module 9850: SummaryConstants ===
+// === Module 9849: SummaryConstants ===
 
-// Module 9850 (SummaryConstants)
+// Module 9849 (SummaryConstants)
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 

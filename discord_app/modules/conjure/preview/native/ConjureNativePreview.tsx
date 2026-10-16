@@ -1,44 +1,44 @@
-// === Module 11635: ConjureNativePreview ===
+// === Module 11632: ConjureNativePreview ===
 
-// Module 11635 (ConjureNativePreview)
+// Module 11632 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3865 from "module_3865" /* 3865 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import Card from "Card" /* 6404 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7022 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10933 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10949 */;
-import leaveFrame from "leaveFrame" /* 10963 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10964 */;
-import useDisallowSwipeExitDefault from "useDisallowSwipeExit" /* 11636 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11639 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11657 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import Card from "Card" /* 6406 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7024 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7238 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10930 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10946 */;
+import leaveFrame from "leaveFrame" /* 10960 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10961 */;
+import useDisallowSwipeExitDefault from "useDisallowSwipeExit" /* 11633 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11636 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 10950 */;
+import FramesStore from "FramesStore" /* 10947 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import ReadStateStore from "ReadStateStore" /* 6253 */;
+import ReadStateStore from "ReadStateStore" /* 6254 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7544);
+const UserProfileApplicationWidgetTypes = intl(7545);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11609);
+const conjureDesignFeedbackStore = fn(11606);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
-const isLaunched = fn(10934).isLaunched;
+const isLaunched = fn(10931).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -640,7 +640,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   const cResult = id(576).c(43);
   closure_24();
   let obj = id(576);
-  const application = id(6286).useApplication(previewApplicationId.previewApplicationId);
+  const application = id(6299).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -682,7 +682,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  let obj2 = id(6286);
+  let obj2 = id(6299);
   const stateFromStores = id(504).useStateFromStores(first, tmp9, tmp10);
   const tmp13 = _slicedToArray(noop.useState(null), 2);
   dependencyMap = tmp13[1];
@@ -940,7 +940,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   let stateFromStores1;
   let stateFromStores2;
   let tmp = closure_24();
-  const application = id(6286).useApplication(previewApplicationId.previewApplicationId);
+  const application = id(6299).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -952,7 +952,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   if (id == null) {
     id = null;
   }
-  let obj = id(6286);
+  let obj = id(6299);
   const items = [ChannelStore];
   const items1 = [id];
   stateFromStores = id(504).useStateFromStores(items, () => {
@@ -979,8 +979,8 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
         if (!closure_3) {
           c0 = false;
           const obj2 = { recipientIds: tmp, navigateToChannel: false };
-          const obj = stateFromStores(7236);
-          stateFromStores(7236).openPrivateChannel(obj2).catch(() => {
+          const obj = stateFromStores(7238);
+          stateFromStores(7238).openPrivateChannel(obj2).catch(() => {
             if (!c0) {
               closure_2(id);
             }
@@ -1049,7 +1049,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
       const intl3 = tmp2(1128).intl;
       obj4.text = intl3.string(tmp2(1128).t["5911Lb"]);
       obj4.onPress = callback;
-      tmp19Result = closure_22(tmp2(5441).Button, obj4);
+      tmp19Result = closure_22(tmp2(5442).Button, obj4);
     }
     obj2.children = tmp19Result;
     return closure_22(closure_25, obj2);
@@ -1062,10 +1062,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: ref, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(stateFromStores(10611), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(stateFromStores(10608), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_22(tmp2(11769).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_22(tmp2(11766).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;

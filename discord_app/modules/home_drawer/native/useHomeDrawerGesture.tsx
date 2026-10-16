@@ -1,21 +1,21 @@
-// === Module 17074: useHomeDrawerGesture ===
+// === Module 17088: useHomeDrawerGesture ===
 
-// Module 17074 (useHomeDrawerGesture)
+// Module 17088 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
 import HapticUtils from "HapticUtils" /* 5119 */;
-import timing from "timing" /* 5154 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5156 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17070 */;
+import timing from "timing" /* 5155 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5157 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17069 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17075 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17083 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17089 */;
 
 require = fn;
-const computeMaxX = fn(17069).computeMaxX;
+const computeMaxX = fn(17083).computeMaxX;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const LaunchPadTypes = fn(11002).LaunchPadTypes;
+const LaunchPadTypes = fn(10999).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;
@@ -67,17 +67,17 @@ let closure_57 = { code: "function useHomeDrawerGestureTsx39(event_0,manager){co
 let closure_58 = { code: "function useHomeDrawerGestureTsx40(event){const{isPanelTouchActive,dragOffsetX,activationOffsetX,didSettle,didSnapThisGesture,snappedByDrag,hasThrown,flingThrow,withTiming,HOME_DRAWER_FLING_RETURN_TIMING,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);dragOffsetX.set(0);activationOffsetX.set(0);didSettle.set(false);didSnapThisGesture.set(false);snappedByDrag.set(false);hasThrown.set(false);flingThrow.set(withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING));gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 fn(558);
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(6557).Gesture;
+let Gesture = fn(6559).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(6985);
+let ReanimatedHelperTypes = fn(6987);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(6985);
+ReanimatedHelperTypes = fn(6987);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(6985);
+ReanimatedHelperTypes = fn(6987);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(6985);
+ReanimatedHelperTypes = fn(6987);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 let ReactCompilerGating = fn(558);

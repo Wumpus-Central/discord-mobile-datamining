@@ -1,6 +1,6 @@
-// === Module 5447: ButtonHooks ===
+// === Module 5448: ButtonHooks ===
 
-// Module 5447 (ButtonHooks)
+// Module 5448 (ButtonHooks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,12 +8,12 @@ import useToken from "useToken" /* 4877 */;
 import native from "native" /* 4886 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import shared from "shared" /* 5028 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import spring from "spring" /* 5440 */;
-import Icon from "Icon" /* 5443 */;
-import springPresets from "springPresets" /* 5444 */;
-import ButtonConstants from "ButtonConstants" /* 5446 */;
-import useFontScale from "useFontScale" /* 5448 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import spring from "spring" /* 5441 */;
+import Icon from "Icon" /* 5444 */;
+import springPresets from "springPresets" /* 5445 */;
+import ButtonConstants from "ButtonConstants" /* 5447 */;
+import useFontScale from "useFontScale" /* 5449 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -136,9 +136,9 @@ function getButtonColorTokens(arg0) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(5153);
+createStyles = fn(5154);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileThemedButtonStyles(arg0) {
@@ -359,7 +359,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
 });
 let closure_7 = tmp2;
 fn(558);
-createStyles = fn(5153);
+createStyles = fn(5154);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonTextColorStyles(arg0) {

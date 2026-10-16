@@ -1,12 +1,12 @@
-// === Module 7185: useGuildShopVisibleInGuild ===
+// === Module 7187: useGuildShopVisibleInGuild ===
 
-// Module 7185 (useGuildShopVisibleInGuild)
+// Module 7187 (useGuildShopVisibleInGuild)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1087 */;
-import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7173 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7176 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 7181 */;
-import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7186 */;
+import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7175 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7178 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 7183 */;
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7188 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

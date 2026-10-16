@@ -1,7 +1,7 @@
-// === Module 12504: KickConfirmModal ===
+// === Module 12510: KickConfirmModal ===
 
-// Module 12504 (KickConfirmModal)
-import KickConfirmDefault from "KickConfirm" /* 12495 */;
+// Module 12510 (KickConfirmModal)
+import KickConfirmDefault from "KickConfirm" /* 12501 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

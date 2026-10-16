@@ -1,6 +1,6 @@
-// === Module 11140: GamesActionCreators ===
+// === Module 11137: GamesActionCreators ===
 
-// Module 11140 (GamesActionCreators)
+// Module 11137 (GamesActionCreators)
 import LinkingDefault from "Linking" /* 4865 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -31,7 +31,7 @@ function fetchJoinSecret(application, arg1) {
 const Constants = fn(1087);
 ({ Endpoints: closure_4, DiscordConnectDeeplinks: hasOwnProperty, WebBrowserType: metroRequire, ActivityFlags: closure_7 } = Constants);
 const ActivityIntent = fn(2026).ActivityIntent;
-const MAIN_SURFACE = fn(10934).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10931).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 

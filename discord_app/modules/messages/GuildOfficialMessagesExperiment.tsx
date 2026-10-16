@@ -1,6 +1,6 @@
-// === Module 7191: GuildOfficialMessagesExperiment ===
+// === Module 7193: GuildOfficialMessagesExperiment ===
 
-// Module 7191 (GuildOfficialMessagesExperiment)
+// Module 7193 (GuildOfficialMessagesExperiment)
 import createExperiment from "module_5073" /* 5073 */;
 import size from "module_2" /* 2 */;
 

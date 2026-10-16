@@ -1,6 +1,6 @@
-// === Module 9545: useActiveTheme ===
+// === Module 9546: useActiveTheme ===
 
-// Module 9545 (useActiveTheme)
+// Module 9546 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5034 */;

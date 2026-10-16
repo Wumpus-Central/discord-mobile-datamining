@@ -1,6 +1,6 @@
-// === Module 10467: UserRow ===
+// === Module 10468: UserRow ===
 
-// Module 10467 (UserRow)
+// Module 10468 (UserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,53 +9,57 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import utils_StringUtils from "utils/StringUtils" /* 2035 */;
 import ToastUtils from "ToastUtils" /* 4867 */;
 import UserUtils from "UserUtils" /* 5021 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6418 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7236 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7239 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7570 */;
-import ChatIcon from "ChatIcon" /* 8424 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9558 */;
-import BoostGemIcon from "BoostGemIcon" /* 9646 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10469 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10470 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10474 */;
-import ActionButtonDefault from "ActionButton" /* 10496 */;
-import XLargeIcon from "XLargeIcon" /* 10497 */;
-import CrownIcon from "CrownIcon" /* 10499 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6420 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7238 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7241 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7571 */;
+import ChatIcon from "ChatIcon" /* 8425 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9557 */;
+import BoostGemIcon from "BoostGemIcon" /* 9645 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10470 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10471 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10475 */;
+import ActionButtonDefault from "ActionButton" /* 10497 */;
+import XLargeIcon from "XLargeIcon" /* 10498 */;
+import CrownIcon from "CrownIcon" /* 10500 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7569 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7570 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import PresenceStore from "PresenceStore" /* 5169 */;
+import PresenceStore from "PresenceStore" /* 5170 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 
 const UserUtilsDefault = UserUtils;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10456).UserRowModes;
+const UserRowModes = fn(10457).UserRowModes;
 const Constants = fn(1087);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let closure_17 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
-let createStyles = fn(5153);
-let closure_18 = createStyles.createStyles({ avatar: { flexShrink: 0, flexGrow: 0 }, actions: { flexDirection: "row" }, action: { marginLeft: 12, alignSelf: "center" }, buttonWrapper: { marginLeft: 8 }, labelContainer: { flexDirection: "row", alignItems: "center" }, roleDot: { marginRight: 4, paddingTop: 0 }, usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, usernameLabel: { display: "flex", flexShrink: 1 } });
-createStyles = fn(5153);
-let obj = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
-let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
-obj.gameIcon = { width: 14, height: 14 };
-let closure_19 = createStyles.createStyles(obj);
+const PlatformUtils = fn(1385);
+if (PlatformUtils.isIOS()) {
+  let obj = { lineHeight: "r" };
+}
+let closure_18 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
+let createStyles = fn(5154);
+let closure_19 = createStyles.createStyles({ avatar: { flexShrink: 0, flexGrow: 0 }, actions: { flexDirection: "row" }, action: { marginLeft: 12, alignSelf: "center" }, buttonWrapper: { marginLeft: 8 }, labelContainer: { flexDirection: "row", alignItems: "center" }, roleDot: { marginRight: 4, paddingTop: 0 }, usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, usernameLabel: { display: "flex", flexShrink: 1 } });
+createStyles = fn(5154);
+let obj3 = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
+let obj6 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj3.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
+obj3.gameIcon = { width: 14, height: 14 };
+let closure_20 = createStyles.createStyles(obj3);
 const Friends_v2 = "Friends_v2";
 const ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRowSubLabel(isGameRelationship) {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRowSubLabel(isGameRelationship) {
   const cResult = applicationId(576).c(28);
   ({ user, type, animate, guildId, applicationId } = isGameRelationship);
-  let gameIcon = closure_19();
+  let gameIcon = closure_20();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ApplicationStore];
     cResult[0] = items;
@@ -73,7 +77,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
   } else {
     tmp6 = cResult[2];
   }
-  const obj = applicationId(576);
+  obj = applicationId(576);
   const stateFromStores = applicationId(504).useStateFromStores(first, tmp6);
   if (type !== constants.PENDING_INCOMING) {
     if (type !== constants.SUGGESTION) {
@@ -111,7 +115,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
     }
     if (cResult[21] !== tmp12) {
       const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp12 };
-      const tmp16 = closure_14(applicationId(5149).Text, obj3);
+      const tmp16 = closure_14(applicationId(5150).Text, obj3);
       cResult[21] = tmp12;
       cResult[22] = tmp16;
     }
@@ -143,7 +147,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
         }
         if (cResult[13] !== stateFromStores.name) {
           const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: stateFromStores.name };
-          const tmp24 = closure_14(applicationId(5149).Text, obj5);
+          const tmp24 = closure_14(applicationId(5150).Text, obj5);
           cResult[13] = stateFromStores.name;
           cResult[14] = tmp24;
           let tmp22 = tmp24;
@@ -183,7 +187,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
 }) : (function UserRowSubLabel(arg0) {
   ({ user, type, applicationId: require } = arg0);
   ({ animate, isGameRelationship, guildId } = arg0);
-  let gameIcon = closure_19();
+  let gameIcon = closure_20();
   const items = [ApplicationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ApplicationStore.getApplication(require));
   if (type !== constants.PENDING_INCOMING) {
@@ -220,7 +224,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
     closure_15(View, obj5);
   }
 });
-let obj5 = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
+let obj7 = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserRow.tsx");
 
@@ -270,23 +274,23 @@ export default noop.memo(function UserRow(type) {
     flag7 = false;
   }
   const merged = Object.assign(type, Object.assign({ type: 0, user: 0, mode: 0, selected: 0, disabled: 0, isOwner: 0, onPress: 0, onLongPress: 0, handleMessage: 0, nickname: 0, usernameColor: 0, roleColors: 0, premiumSince: 0, guildId: 0, trailing: 0, subLabel: 0, label: 0, accessibilityActions: 0, onAccessibilityAction: 0, applicationId: 0, isGameRelationship: 0, isNameplatedRow: 0, canShowDisplayNameStyles: 0, canShowDisplayNameStylesFont: 0 }));
-  let analyticsLocations;
-  let tmp3 = analyticsLocations();
+  let useReducedMotion;
+  let tmp3 = useReducedMotion();
   closure_17 = tmp3;
-  analyticsLocations = user(NONE[28])().analyticsLocations;
+  const analyticsLocations = user(NONE[29])().analyticsLocations;
   let items = [onPress];
-  const stateFromStoresObject = type(NONE[23]).useStateFromStoresObject(items, () => ({ useReducedMotion: onPress.useReducedMotion, roleStyle: onPress.roleStyle }));
-  const useReducedMotion = stateFromStoresObject.useReducedMotion;
+  const stateFromStoresObject = type(NONE[24]).useStateFromStoresObject(items, () => ({ useReducedMotion: onPress.useReducedMotion, roleStyle: onPress.roleStyle }));
+  useReducedMotion = stateFromStoresObject.useReducedMotion;
   const roleStyle = stateFromStoresObject.roleStyle;
-  let obj = type(NONE[23]);
+  obj = type(NONE[24]);
   let items1 = [usernameColor];
-  const stateFromStoresObject1 = type(NONE[23]).useStateFromStoresObject(items1, () => ({ isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id), status: PresenceStore.getStatus(user.id) }));
+  const stateFromStoresObject1 = type(NONE[24]).useStateFromStoresObject(items1, () => ({ isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id), status: PresenceStore.getStatus(user.id) }));
   const isMobileOnline = stateFromStoresObject1.isMobileOnline;
   const isVROnline = stateFromStoresObject1.isVROnline;
   const status = stateFromStoresObject1.status;
-  let obj2 = type(NONE[23]);
+  let obj2 = type(NONE[24]);
   let items2 = [premiumSince];
-  stateFromStores = type(NONE[23]).useStateFromStores(items2, () => {
+  stateFromStores = type(NONE[24]).useStateFromStores(items2, () => {
     let tmp = stateFromStores;
     if (stateFromStores == null) {
       let nickname = null;
@@ -297,11 +301,11 @@ export default noop.memo(function UserRow(type) {
     }
     return tmp;
   });
-  let obj3 = type(NONE[23]);
+  let obj3 = type(NONE[24]);
   const items3 = [handleMessage];
-  const stateFromStores1 = type(NONE[23]).useStateFromStores(items3, () => FriendSuggestionStore.getSuggestion(user.id));
-  let obj4 = type(NONE[23]);
-  const avatarDecoration = type(NONE[29]).useAvatarDecoration(user, guildId);
+  const stateFromStores1 = type(NONE[24]).useStateFromStores(items3, () => FriendSuggestionStore.getSuggestion(user.id));
+  let obj4 = type(NONE[24]);
+  const avatarDecoration = type(NONE[30]).useAvatarDecoration(user, guildId);
   const items4 = [user, onPress];
   const callback = flag2.useCallback(() => {
     if (onPress != null) {
@@ -321,11 +325,11 @@ export default noop.memo(function UserRow(type) {
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
-        let obj3 = { name: closure_17.DECLINE, label: null };
+        let obj3 = { name: analyticsLocations.DECLINE, label: null };
         const intl6 = util.intl;
         let obj4 = { name: UserUtilsDefault.getName(user) };
         obj3.label = intl6.formatToPlainString(util.t["C9Xe6+"], obj4);
-        let obj5 = { name: closure_17.ACCEPT, label: null };
+        let obj5 = { name: analyticsLocations.ACCEPT, label: null };
         const intl7 = util.intl;
         const obj7 = { name: null };
         obj7.name = UserUtilsDefault.getName(user);
@@ -338,16 +342,16 @@ export default noop.memo(function UserRow(type) {
           const current = closure_1_26.current;
           if (null != applicationId) {
             const obj2 = { userId: current.id, applicationId: tmp };
-            const result = user(NONE[18]).cancelGameFriendRequest(obj2);
-            const obj4 = user(NONE[18]);
-            const result1 = type(NONE[17]).presentGameFriendRequestIgnoredToast();
-            const obj6 = type(NONE[17]);
+            const result = user(NONE[19]).cancelGameFriendRequest(obj2);
+            const obj4 = user(NONE[19]);
+            const result1 = type(NONE[18]).presentGameFriendRequestIgnoredToast();
+            const obj6 = type(NONE[18]);
           } else {
-            const obj5 = { location: roleStyle };
-            user(NONE[19]).cancelFriendRequest(current.id, obj5);
-            const obj = user(NONE[19]);
-            const result2 = type(NONE[17]).presentFriendRequestIgnoredToast();
-            const obj3 = type(NONE[17]);
+            const obj5 = { location: isMobileOnline };
+            user(NONE[20]).cancelFriendRequest(current.id, obj5);
+            obj = user(NONE[20]);
+            const result2 = type(NONE[18]).presentFriendRequestIgnoredToast();
+            const obj3 = type(NONE[18]);
           }
         };
         const intl8 = util.intl;
@@ -360,17 +364,17 @@ export default noop.memo(function UserRow(type) {
         obj12.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
         obj12.onPress = function onPress() {
           closure_0 = applicationId;
-          let result = user(NONE[16]).maybeConfirmFriendRequestAccept({
+          let result = user(NONE[17]).maybeConfirmFriendRequestAccept({
             userId: closure_1_26.current.id,
             applicationId,
-            location: roleStyle,
+            location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
                 const result = type(4867).presentGameFriendRequestAcceptedToast();
                 const obj2 = type(4867);
               } else {
                 const result1 = type(4867).presentFriendRequestAcceptedToast();
-                const obj = type(4867);
+                obj = type(4867);
               }
             }
           });
@@ -384,7 +388,7 @@ export default noop.memo(function UserRow(type) {
         obj8.children = items1;
         let tmp8 = value2(View, obj8);
       } else if (constants.PENDING_OUTGOING === type) {
-        const obj15 = { name: closure_17.CANCEL, label: null };
+        const obj15 = { name: analyticsLocations.CANCEL, label: null };
         const intl4 = util.intl;
         const obj17 = { name: UserUtilsDefault.getName(user) };
         obj15.label = intl4.formatToPlainString(util.t.JFJ8Cg, obj17);
@@ -396,16 +400,16 @@ export default noop.memo(function UserRow(type) {
           const current = closure_1_26.current;
           if (null != applicationId) {
             const obj2 = { userId: current.id, applicationId: tmp };
-            const result = user(NONE[18]).cancelGameFriendRequest(obj2);
-            const obj4 = user(NONE[18]);
-            const result1 = type(NONE[17]).presentGameFriendRequestIgnoredToast();
-            const obj6 = type(NONE[17]);
+            const result = user(NONE[19]).cancelGameFriendRequest(obj2);
+            const obj4 = user(NONE[19]);
+            const result1 = type(NONE[18]).presentGameFriendRequestIgnoredToast();
+            const obj6 = type(NONE[18]);
           } else {
-            const obj5 = { location: roleStyle };
-            user(NONE[19]).cancelFriendRequest(current.id, obj5);
-            const obj = user(NONE[19]);
-            const result2 = type(NONE[17]).presentFriendRequestIgnoredToast();
-            const obj3 = type(NONE[17]);
+            const obj5 = { location: isMobileOnline };
+            user(NONE[20]).cancelFriendRequest(current.id, obj5);
+            obj = user(NONE[20]);
+            const result2 = type(NONE[18]).presentFriendRequestIgnoredToast();
+            const obj3 = type(NONE[18]);
           }
         };
         const intl5 = util.intl;
@@ -416,10 +420,10 @@ export default noop.memo(function UserRow(type) {
         obj18.children = closure_2_14(tmp18, obj20);
         tmp8 = closure_2_14(View, obj18);
       } else if (constants.SUGGESTION === type) {
-        let obj = { name: closure_17.ACCEPT_SUGGESTION, label: null };
+        obj = { name: analyticsLocations.ACCEPT_SUGGESTION, label: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["ed99+i"]);
-        const obj22 = { name: closure_17.IGNORE_SUGGESTION, label: null };
+        const obj22 = { name: analyticsLocations.IGNORE_SUGGESTION, label: null };
         const intl2 = util.intl;
         obj22.label = intl2.string(util.t["Tw3a/R"]);
         items.push(obj, obj22);
@@ -429,22 +433,22 @@ export default noop.memo(function UserRow(type) {
         const intl3 = util.intl;
         obj27.text = utils_StringUtils.truncateText(intl3.string(util.t.OYkgVk), 8);
         obj27.onPress = function onPress() {
-          const obj2 = { userId: closure_1_26.current.id, context: { location: roleStyle }, type: "IconComponent", fromFriendSuggestion: null };
-          user(NONE[19]).addRelationship(obj2);
-          const obj = user(NONE[19]);
-          const obj3 = { location: roleStyle };
-          const result = type(NONE[17]).presentAddedFriendToast();
+          const obj2 = { userId: closure_1_26.current.id, context: { location: isMobileOnline }, type: "IconComponent", fromFriendSuggestion: null };
+          user(NONE[20]).addRelationship(obj2);
+          obj = user(NONE[20]);
+          const obj3 = { location: isMobileOnline };
+          const result = type(NONE[18]).presentAddedFriendToast();
         };
         obj25.children = closure_2_14(components_Button_Button.Button, obj27);
         obj24.children = closure_2_14(View, obj25);
         tmp8 = closure_2_14(View, obj24);
       } else {
         const FRIEND = constants.FRIEND;
-        const obj28 = { name: closure_17.CALL, label: null };
+        const obj28 = { name: analyticsLocations.CALL, label: null };
         const intl10 = util.intl;
         const obj29 = { name: UserUtilsDefault.getName(user) };
         obj28.label = intl10.formatToPlainString(util.t.Q75ddl, obj29);
-        const obj30 = { name: closure_17.MESSAGE, label: null };
+        const obj30 = { name: analyticsLocations.MESSAGE, label: null };
         const intl11 = util.intl;
         const obj32 = { name: null };
         obj32.name = UserUtilsDefault.getName(user);
@@ -455,19 +459,19 @@ export default noop.memo(function UserRow(type) {
         obj35.IconComponent = PhoneCallIcon.PhoneCallIcon;
         obj35.onPress = function onPress() {
           const current = closure_1_26.current;
-          let obj = user(NONE[13]);
-          user(NONE[13]).ensurePrivateChannel(current.id).then((result) => {
+          obj = user(NONE[14]);
+          user(NONE[14]).ensurePrivateChannel(current.id).then((result) => {
             channel = channel.getChannel(result);
             if (null != channel) {
               user(38)(channel.isPrivate(), "must be a DM");
-              const obj2 = user(10468)(channel, false);
+              const obj2 = user(10469)(channel, false);
               if (!obj2.inCall) {
                 obj2.onPress();
               }
               const tmp3 = user(38);
-              const obj = { recipientIds: current.id };
-              user(7236).openPrivateChannel(obj);
-              const tmpResult = user(7236);
+              obj = { recipientIds: current.id };
+              user(7238).openPrivateChannel(obj);
+              const tmpResult = user(7238);
             }
           });
         };
@@ -504,30 +508,30 @@ export default noop.memo(function UserRow(type) {
   const items8 = [onLongPress, user, analyticsLocations];
   const callback1 = flag2.useCallback((nativeEvent) => {
     const actionName = nativeEvent.nativeEvent.actionName;
-    if (closure_17.CALL === actionName) {
+    if (analyticsLocations.CALL === actionName) {
       closure_0 = user;
       ChannelActionCreatorsDefault.ensurePrivateChannel(user.id).then((result) => {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10468)(channel, false);
+          const obj2 = user(10469)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
-          const obj = { recipientIds: current.id };
-          user(7236).openPrivateChannel(obj);
-          const tmpResult = user(7236);
+          obj = { recipientIds: current.id };
+          user(7238).openPrivateChannel(obj);
+          const tmpResult = user(7238);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
-    } else if (closure_17.MESSAGE === actionName) {
+    } else if (analyticsLocations.MESSAGE === actionName) {
       let tmp33Result;
       if (handleMessage != null) {
         tmp33Result = tmp33(user);
       }
       return tmp33Result;
-    } else if (closure_17.ACCEPT === actionName) {
+    } else if (analyticsLocations.ACCEPT === actionName) {
       closure_0 = applicationId;
       const obj3 = {
         userId: user.id,
@@ -539,21 +543,21 @@ export default noop.memo(function UserRow(type) {
               const obj2 = type(4867);
             } else {
               const result1 = type(4867).presentFriendRequestAcceptedToast();
-              const obj = type(4867);
+              obj = type(4867);
             }
           }
       };
       const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept(obj3);
     } else {
-      if (closure_17.DECLINE !== actionName) {
-        if (closure_17.CANCEL !== actionName) {
-          if (closure_17.ACCEPT_SUGGESTION === actionName) {
+      if (analyticsLocations.DECLINE !== actionName) {
+        if (analyticsLocations.CANCEL !== actionName) {
+          if (analyticsLocations.ACCEPT_SUGGESTION === actionName) {
             const obj4 = { userId: user.id, context: null, type: "IconComponent", fromFriendSuggestion: null };
             const obj7 = { location: Friends_v2 };
             obj4.context = obj7;
             RelationshipActionCreatorsDefault.addRelationship(obj4);
             const result1 = ToastUtils.presentAddedFriendToast();
-          } else if (closure_17.IGNORE_SUGGESTION === actionName) {
+          } else if (analyticsLocations.IGNORE_SUGGESTION === actionName) {
             FriendSuggestionActionCreatorsDefault.ignore(user.id);
           }
         }
@@ -571,20 +575,20 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8530, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8530, dependencyMap.paths);
+      asyncRequireImpl(8531, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8531, dependencyMap.paths);
     } else {
       tmp(user);
     }
   }, items8);
-  let obj5 = type(NONE[29]);
-  const nameplate = type(NONE[40]).useNameplate({ user, guildId });
+  let obj5 = type(NONE[30]);
+  const nameplate = type(NONE[41]).useNameplate({ user, guildId });
   const items9 = [usernameColor, roleStyle];
   const memo1 = flag2.useMemo(() => {
     let tmp2;
     if (null != usernameColor) {
       if ("username" === roleStyle) {
-        const obj = { color: tmp };
+        obj = { color: tmp };
         tmp2 = obj;
       }
     }
@@ -594,7 +598,7 @@ export default noop.memo(function UserRow(type) {
   const items11 = [label, type, , , ];
   let name;
   const memo2 = flag2.useMemo(() => {
-    const obj = { style: closure_17.avatar, user, guildId, status: null, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: true };
+    obj = { style: closure_17.avatar, user, guildId, status: null, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: true };
     let tmp4 = null;
     if (constants2.OFFLINE !== status) {
       tmp4 = status;
@@ -638,7 +642,7 @@ export default noop.memo(function UserRow(type) {
     if (undefined === label) {
       let tmp5 = null;
       if (flag3) {
-        const obj = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+        obj = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
         tmp5 = closure_2_14(CrownIcon.CrownIcon, obj);
       }
       const items = [tmp5, ];
@@ -657,8 +661,8 @@ export default noop.memo(function UserRow(type) {
   const memo5 = obj6.useMemo(() => {
     let tmp = subLabel;
     if (undefined === subLabel) {
-      const obj = { user, type, animate: !useReducedMotion, isGameRelationship: flag4, guildId, applicationId };
-      tmp = closure_2_14(closure_21, obj);
+      obj = { user, type, animate: !useReducedMotion, isGameRelationship: flag4, guildId, applicationId };
+      tmp = closure_2_14(closure_22, obj);
     }
     return tmp;
   }, items13);
@@ -677,27 +681,27 @@ export default noop.memo(function UserRow(type) {
     }
     return tmp;
   }, items14);
-  let tmp25 = tmp4(tmp5[43])(guildId, user.id);
-  let obj7 = type(NONE[40]);
-  const processColorStringsArray = type(NONE[44]).useProcessColorStringsArray(roleColors);
+  let tmp25 = tmp4(tmp5[44])(guildId, user.id);
+  let obj7 = type(NONE[41]);
+  const processColorStringsArray = type(NONE[45]).useProcessColorStringsArray(roleColors);
   if (tmp25) {
     tmp25 = "username" === roleStyle;
   }
   if (tmp25) {
     tmp25 = processColorStringsArray.length > 1;
   }
-  const tmp26 = user(NONE[45])({ userId: user.id, guildId });
+  const tmp26 = user(NONE[46])({ userId: user.id, guildId });
   let obj8 = { userId: user.id, guildId };
-  const tmp6Result = type(NONE[44]);
-  const displayNameStylesFont = type(NONE[46]).useDisplayNameStylesFont({ displayNameStyles: tmp26 });
-  const tmp6Result4 = type(NONE[46]);
-  const humanizeStatusResult = type(NONE[26]).humanizeStatus(status, { isMobile: isMobileOnline, isVR: isVROnline });
+  const tmp6Result = type(NONE[45]);
+  const displayNameStylesFont = type(NONE[47]).useDisplayNameStylesFont({ displayNameStyles: tmp26 });
+  const tmp6Result4 = type(NONE[47]);
+  const humanizeStatusResult = type(NONE[27]).humanizeStatus(status, { isMobile: isMobileOnline, isVR: isVROnline });
   let formatToPlainStringResult;
   if (typeof memo3 === "string") {
     if (null != humanizeStatusResult) {
-      let intl = tmp6(tmp5[30]).intl;
+      let intl = tmp6(tmp5[31]).intl;
       let obj9 = { label: memo3, status: humanizeStatusResult };
-      formatToPlainStringResult = intl.formatToPlainString(tmp6(tmp5[30]).t["/6mw10"], obj9);
+      formatToPlainStringResult = intl.formatToPlainString(tmp6(tmp5[31]).t["/6mw10"], obj9);
     }
   }
   let obj10 = { lineClamp: 1, variant: "text-md/semibold" };
@@ -710,26 +714,26 @@ export default noop.memo(function UserRow(type) {
         obj12.style = items15;
         obj12.accessibilityLabel = formatToPlainStringResult;
         const merged1 = Object.assign(obj10);
-        let tmp32Result6 = label(tmp4(tmp5[47]), obj12);
+        let tmp32Result6 = label(tmp4(tmp5[48]), obj12);
         let tmp32 = label;
-        const tmp4Result = tmp4(tmp5[47]);
+        const tmp4Result = tmp4(tmp5[48]);
       }
       const items16 = [tmp32Result6, memo4, , ];
       if (user.bot) {
         let obj13 = { verified: user.isVerifiedBot(), type: null };
-        const tmp4Result2 = tmp4(tmp5[48]);
-        obj13.type = tmp6(tmp5[49]).getBotTagTypeFromUser(user);
+        const tmp4Result2 = tmp4(tmp5[49]);
+        obj13.type = tmp6(tmp5[50]).getBotTagTypeFromUser(user);
         let tmp32Result = tmp32(tmp4Result2, obj13);
-        const tmp6Result6 = tmp6(tmp5[49]);
+        const tmp6Result6 = tmp6(tmp5[50]);
       } else {
         let obj14 = { userId: user.id };
-        tmp32Result = tmp32(tmp4(tmp5[50]), obj14);
+        tmp32Result = tmp32(tmp4(tmp5[51]), obj14);
       }
       items16[2] = tmp32Result;
       let tmp32Result4 = null != guildId;
       if (tmp32Result4) {
         let obj15 = { guildId, userId: user.id };
-        tmp32Result4 = tmp32(tmp4(tmp5[51]), obj15);
+        tmp32Result4 = tmp32(tmp4(tmp5[52]), obj15);
       }
       items16[3] = tmp32Result4;
       obj11.children = items16;
@@ -751,7 +755,7 @@ export default noop.memo(function UserRow(type) {
         }
         obj17.colors = roleColors;
         obj17.containerStyles = tmp3.roleDot;
-        const items17 = [tmp32(tmp6(tmp5[24]).RoleDot, obj17), tmp30Result];
+        const items17 = [tmp32(tmp6(tmp5[25]).RoleDot, obj17), tmp30Result];
         obj16.children = items17;
         tmp30Result2 = tmp30(tmp31, obj16);
       }
@@ -776,7 +780,7 @@ export default noop.memo(function UserRow(type) {
         let obj19 = {};
         const merged3 = Object.assign(obj18);
         obj19.checked = flag;
-        let tmp32Result5 = tmp32(tmp6(tmp5[52]).TableCheckboxRow, obj19);
+        let tmp32Result5 = tmp32(tmp6(tmp5[53]).TableCheckboxRow, obj19);
       } else {
         if (null != nameplate) {
           if (flag5) {
@@ -784,13 +788,13 @@ export default noop.memo(function UserRow(type) {
             const merged4 = Object.assign(obj18);
             obj20.trailing = memo6;
             obj20.nameplate = nameplate;
-            tmp32Result5 = tmp32(tmp6(tmp5[53]).UserNameplateRow, obj20);
+            tmp32Result5 = tmp32(tmp6(tmp5[54]).UserNameplateRow, obj20);
           }
         }
         let obj21 = {};
         const merged5 = Object.assign(obj18);
         obj21.trailing = memo6;
-        tmp32Result5 = tmp32(tmp6(tmp5[54]).TableRow, obj21);
+        tmp32Result5 = tmp32(tmp6(tmp5[55]).TableRow, obj21);
       }
       return tmp32Result5;
     }
@@ -801,7 +805,7 @@ export default noop.memo(function UserRow(type) {
     tmp33 = processColorStringsArray;
   }
   let obj22 = { gradientColors: tmp33, color: "mobile-text-heading-primary", style: null, accessibilityLabel: null };
-  const items18 = [tmp3.usernameLabel, memo1, ];
+  const items18 = [tmp3.usernameLabel, null != guildId && closure_17, memo1, ];
   if (flag7) {
     flag7 = null != displayNameStylesFont;
   }
@@ -809,10 +813,10 @@ export default noop.memo(function UserRow(type) {
     let obj23 = { fontFamily: displayNameStylesFont };
     flag7 = obj23;
   }
-  items18[2] = flag7;
+  items18[3] = flag7;
   obj22.style = items18;
   obj22.accessibilityLabel = formatToPlainStringResult;
   const merged6 = Object.assign(obj10);
   obj22.children = memo3;
-  tmp32Result6 = tmp32(tmp6(tmp5[25]).Text, obj22);
+  tmp32Result6 = tmp32(tmp6(tmp5[26]).Text, obj22);
 });

@@ -3,7 +3,7 @@
 // Module 10567 (FavoritesSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6495 */;
+import assetHelpers from "assetHelpers" /* 6497 */;
 import _modDef10568 from "module_10568" /* 10568 */;
 import _modDef10569 from "module_10569" /* 10569 */;
 import _modDef10570 from "module_10570" /* 10570 */;

@@ -1,18 +1,18 @@
-// === Module 9959: RoleLabel ===
+// === Module 9960: RoleLabel ===
 
-// Module 9959 (RoleLabel)
+// Module 9960 (RoleLabel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
-import Form from "Form" /* 8808 */;
+import Form from "Form" /* 8809 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row" }, roleDot: { marginRight: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 13594: GiftingBadgeProgress ===
+// === Module 13602: GiftingBadgeProgress ===
 
-// Module 13594 (GiftingBadgeProgress)
+// Module 13602 (GiftingBadgeProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10339 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10345 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10340 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8543).getSingleRequirementThreshold;
+let closure_4 = fn(8544).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gifting
   obj.children = hasOwnProperty(View, obj2);
   return hasOwnProperty(View, obj);
 });
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj3 = { container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 }, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj4 = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
 obj3.content = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };

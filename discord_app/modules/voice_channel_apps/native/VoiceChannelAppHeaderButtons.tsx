@@ -1,10 +1,10 @@
-// === Module 18172: VoiceChannelAppHeaderButtons ===
+// === Module 18182: VoiceChannelAppHeaderButtons ===
 
-// Module 18172 (VoiceChannelAppHeaderButtons)
+// Module 18182 (VoiceChannelAppHeaderButtons)
 import _modDef3963 from "module_3963" /* 3963 */;
-import _modDef11311 from "module_11311" /* 11311 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18094 */;
-import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 18176 */;
+import _modDef11308 from "module_11308" /* 11308 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18104 */;
+import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 18186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,14 +18,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
   const cResult = id(576).c(14);
   ({ channel, inCall } = arg0);
   const obj = id(576);
-  const voiceChannelAppAvailable = id(18173).useVoiceChannelAppAvailable(channel, inCall);
-  const obj2 = id(18173);
-  const voiceChannelAppOpen = id(18173).useVoiceChannelAppOpen(channel, inCall);
-  const obj3 = id(18173);
-  const voiceChannelAppVisible = id(18173).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(18183).useVoiceChannelAppAvailable(channel, inCall);
+  const obj2 = id(18183);
+  const voiceChannelAppOpen = id(18183).useVoiceChannelAppOpen(channel, inCall);
+  const obj3 = id(18183);
+  const voiceChannelAppVisible = id(18183).useVoiceChannelAppVisible(channel);
   id = channel.id;
   if (voiceChannelAppAvailable) {
-    const tmp8Result = importDefault(voiceChannelAppVisible ? 16774 : 8389);
+    const tmp8Result = importDefault(voiceChannelAppVisible ? 16788 : 8390);
     if (cResult[0] !== voiceChannelAppVisible) {
       const intl = tmp(1128).intl;
       if (voiceChannelAppVisible) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
           }
           let tmp18 = null;
           if (voiceChannelAppOpen) {
-            const obj6 = { icon: _modDef11311, accessibilityLabel: null, onPress: null };
+            const obj6 = { icon: _modDef11308, accessibilityLabel: null, onPress: null };
             const intl2 = tmp(1128).intl;
             obj6.accessibilityLabel = intl2.string(_modDef3963["D+wwh8"]);
             obj6.onPress = function onPress() {
@@ -99,19 +99,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
   } else {
     return null;
   }
-  const obj4 = id(18173);
+  const obj4 = id(18183);
 }) : (function VoiceChannelAppHeaderButtons(arg0) {
   ({ channel, inCall } = arg0);
   let id;
-  const voiceChannelAppAvailable = id(18173).useVoiceChannelAppAvailable(channel, inCall);
-  const obj = id(18173);
-  const voiceChannelAppOpen = id(18173).useVoiceChannelAppOpen(channel, inCall);
-  const obj2 = id(18173);
-  const voiceChannelAppVisible = id(18173).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(18183).useVoiceChannelAppAvailable(channel, inCall);
+  const obj = id(18183);
+  const voiceChannelAppOpen = id(18183).useVoiceChannelAppOpen(channel, inCall);
+  const obj2 = id(18183);
+  const voiceChannelAppVisible = id(18183).useVoiceChannelAppVisible(channel);
   id = channel.id;
   let tmp7Result = null;
   if (voiceChannelAppAvailable) {
-    const obj4 = { icon: importDefault(voiceChannelAppVisible ? 16774 : 8389), accessibilityLabel: null, onPress: null };
+    const obj4 = { icon: importDefault(voiceChannelAppVisible ? 16788 : 8390), accessibilityLabel: null, onPress: null };
     const intl = tmp(1128).intl;
     if (voiceChannelAppVisible) {
       let ZtYyOx = tmp(1128).t["3jrUBj"];
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
     const items = [closure_3(VoicePanelIconButtonDefault, obj4), ];
     let tmp9Result = null;
     if (voiceChannelAppOpen) {
-      const obj5 = { icon: _modDef11311, accessibilityLabel: null, onPress: null };
+      const obj5 = { icon: _modDef11308, accessibilityLabel: null, onPress: null };
       const intl2 = tmp(1128).intl;
       obj5.accessibilityLabel = intl2.string(_modDef3963["D+wwh8"]);
       obj5.onPress = function onPress() {

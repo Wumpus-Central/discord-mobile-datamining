@@ -1,10 +1,10 @@
-// === Module 7167: ConjureUtils ===
+// === Module 7169: ConjureUtils ===
 
-// Module 7167 (ConjureUtils)
+// Module 7169 (ConjureUtils)
 import c from "c" /* 576 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6285 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7168 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6298 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7170 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4807 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
@@ -341,7 +341,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     if (cResult[4] === guild_id2) {
       let tmp12 = cResult[5];
     }
-    const isConjureGuildEnabled = tmp(6285).useIsConjureGuildEnabled(tmp12);
+    const isConjureGuildEnabled = tmp(6298).useIsConjureGuildEnabled(tmp12);
     if (cResult[6] === appChannelApplication) {
       if (cResult[7] === guild_id) {
         if (cResult[8] === stateFromStores) {
@@ -381,7 +381,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     cResult[9] = isConjureGuildEnabled;
     cResult[10] = tmp17;
     tmp14 = tmp17;
-    const tmpResult4 = tmp(6285);
+    const tmpResult4 = tmp(6298);
   }
   const obj2 = { guildId: guild_id2, location };
   cResult[3] = location;

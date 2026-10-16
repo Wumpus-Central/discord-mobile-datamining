@@ -1,13 +1,13 @@
-// === Module 17430: GuildsBarDragPreview ===
+// === Module 17440: GuildsBarDragPreview ===
 
-// Module 17430 (GuildsBarDragPreview)
+// Module 17440 (GuildsBarDragPreview)
 import c from "c" /* 576 */;
 import _mod4792 from "module_4792" /* 4792 */;
 import native from "native" /* 4886 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import spring from "spring" /* 5440 */;
+import spring from "spring" /* 5441 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17357 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17369 */;
 
 require = fn;
 function getItemPreviewKey(id) {
@@ -16,12 +16,12 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6181).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17354).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6182).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17366).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   if ("convert-after" === overState) {
     if (null != overNode) {
       if (cResult[0] !== overNode) {
-        const element = { type: listInsets.FOLDER, id: -1, parentId: "test", name: "Array", color: "applicationId", expanded: "Array", children: "getShortDayLabels" };
+        const element = { type: listInsets.FOLDER, id: -1, parentId: "test", name: "Array", color: "apply", expanded: "<string:3841983154>", children: "<string:1174405393>" };
         const items = [overNode];
         element.children = items;
         cResult[0] = overNode;
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "test", name: "Array", color: "applicationId", expanded: "Array", children: "getShortDayLabels" };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "test", name: "Array", color: "apply", expanded: "<string:3841983154>", children: "<string:1174405393>" };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (null != dragSpecs) {
           if (null != overSpecs) {
             const state = overSpecs.state;
-            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", scrollPosition: null, dragRegion: "Add Friend Modal", windowSize: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", dropComplete: null, listInsets: "spinbutton" };
+            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "M49.6737 65.2838C49.4877 65.9355 49.3947 66.3312 49.3947 66.3312C34.9565 77.3872 48.5577 96.939 48.5577 96.939C51.2315 93.7502 54.4865 90.701 58.4855 88.42C60.6942 68.9614 54.6492 65.2605 49.6737 65.2838Z", scrollPosition: "#FF78B7", dragRegion: null, windowSize: null, dropComplete: null, listInsets: "absolute" };
             ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
             obj.overState = state;
             let node;
@@ -734,7 +734,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", scrollPosition: null, dragRegion: "Add Friend Modal", windowSize: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", dropComplete: null, listInsets: "spinbutton" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "M49.6737 65.2838C49.4877 65.9355 49.3947 66.3312 49.3947 66.3312C34.9565 77.3872 48.5577 96.939 48.5577 96.939C51.2315 93.7502 54.4865 90.701 58.4855 88.42C60.6942 68.9614 54.6492 65.2605 49.6737 65.2838Z", scrollPosition: "#FF78B7", dragRegion: null, windowSize: null, dropComplete: null, listInsets: "absolute" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

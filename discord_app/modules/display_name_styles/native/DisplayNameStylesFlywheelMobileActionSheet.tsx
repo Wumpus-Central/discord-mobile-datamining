@@ -1,8 +1,8 @@
-// === Module 18014: DisplayNameStylesFlywheelMobileActionSheet ===
+// === Module 18024: DisplayNameStylesFlywheelMobileActionSheet ===
 
-// Module 18014 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 18024 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 587 */;
-import openUserSettings from "openUserSettings" /* 7317 */;
+import openUserSettings from "openUserSettings" /* 7319 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -14,7 +14,7 @@ const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const ReactCompilerGating = fn(558);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, imageContainer: null, image: null, title: null, subtitle: null, actions: null };
   const size = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_24 };
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   markAsDismissed(5028).isThemeDark(ref(5090)());
   const tmp7 = closure_11();
   const obj2 = markAsDismissed(5028);
-  const typeConsolidationTextTransform = markAsDismissed(6885).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const typeConsolidationTextTransform = markAsDismissed(6887).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function y() {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   } else {
     [tmp9, tmp10] = cResult;
   }
-  const obj3 = markAsDismissed(6885);
+  const obj3 = markAsDismissed(6887);
   const stateFromStores = markAsDismissed(504).useStateFromStores(tmp9, tmp10);
   if (cResult[2] !== stateFromStores) {
     let result = tmp5(4828).canUsePremiumProfileCustomization(stateFromStores);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6948).runAfterInteractions(() => { ... });
+              markAsDismissed(6950).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
           tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
           obj = closure_0(closure_2[16]);
           openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-            markAsDismissed(6948).runAfterInteractions(() => { ... });
+            markAsDismissed(6950).runAfterInteractions(() => { ... });
           });
           return;
         }
@@ -131,12 +131,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6948).runAfterInteractions(() => { ... });
+              markAsDismissed(6950).runAfterInteractions(() => { ... });
             });
             return;
           }
         }
-        const tmp21 = closure_9(tmp(7067).ActionSheetHeaderBar, { onPress: null });
+        const tmp21 = closure_9(tmp(7069).ActionSheetHeaderBar, { onPress: null });
         cResult[13] = markAsDismissed;
         cResult[14] = tmp21;
         const obj4 = { onPress: null };
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               return;
             }
           }
-          const tmp23 = closure_9(tmp(18015).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+          const tmp23 = closure_9(tmp(18025).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
         }
         class O {
           constructor() {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6948).runAfterInteractions(() => { ... });
+              markAsDismissed(6950).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6948).runAfterInteractions(() => { ... });
+              markAsDismissed(6950).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6948).runAfterInteractions(() => { ... });
+              markAsDismissed(6950).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6948).runAfterInteractions(() => { ... });
+              markAsDismissed(6950).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
         tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
         obj = closure_0(closure_2[16]);
         openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-          markAsDismissed(6948).runAfterInteractions(() => { ... });
+          markAsDismissed(6950).runAfterInteractions(() => { ... });
         });
         return;
       }
@@ -284,8 +284,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const isThemeDarkResult = markAsDismissed(5028).isThemeDark(ref(5090)());
   const tmp6 = closure_11();
   const obj2 = markAsDismissed(5028);
-  const typeConsolidationTextTransform = markAsDismissed(6885).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
-  const obj3 = markAsDismissed(6885);
+  const typeConsolidationTextTransform = markAsDismissed(6887).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const obj3 = markAsDismissed(6887);
   const items = [UserStore];
   const stateFromStores = markAsDismissed(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj4 = markAsDismissed(504);
@@ -303,8 +303,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const items2 = [markAsDismissed];
   const callback = noop.useCallback(() => {
     openUserSettings.openUserSettings({ screen: c2 ? timestampProducer.PROFILE_CUSTOMIZATION : timestampProducer.PROFILE_CUSTOMIZATION_TRY_IT_OUT }, () => {
-      markAsDismissed(6948).runAfterInteractions(() => {
-        markAsDismissed(7317).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
+      markAsDismissed(6950).runAfterInteractions(() => {
+        markAsDismissed(7319).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
           closure_1_0(constants.TAKE_ACTION);
           const result = closure_2_0(4997).UNSAFE_markDismissibleContentAsDismissed(closure_2_0(2052).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, { dismissAction: constants.INDIRECT_ACTION });
         });
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(7067).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(7069).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(18015).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(18025).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     obj10.color = str2;
     const intl2 = tmp2(1128).intl;
     obj10.children = intl2.string(tmp4(2963).Uzms61);
-    items4[2] = closure_9(tmp2(5149).Text, obj10);
+    items4[2] = closure_9(tmp2(5150).Text, obj10);
     const obj11 = { variant: "text-lg/medium", style: tmp6.subtitle, color: null, children: null };
     if (isThemeDarkResult) {
       str = "text-overlay-light";
@@ -365,36 +365,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     const obj12 = { bottom: true, children: null };
     obj11.color = str;
     obj11.children = stringResult;
-    items4[3] = closure_9(tmp2(5149).Text, obj11);
+    items4[3] = closure_9(tmp2(5150).Text, obj11);
     const obj13 = { style: tmp6.actions, children: null };
     const obj14 = { text: null, variant: "primary", size: "lg", onPress: null };
     const intl3 = tmp2(1128).intl;
     obj14.text = intl3.string(tmp2(1128).t["4P5I8V"]);
     obj14.onPress = callback;
-    const items7 = [closure_9(tmp2(5441).Button, obj14), ];
+    const items7 = [closure_9(tmp2(5442).Button, obj14), ];
     const obj15 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1128).intl;
     obj15.text = intl4.string(tmp2(1128).t.TulDPl);
     obj15.onPress = callback1;
-    items7[1] = closure_9(tmp2(5441).Button, obj15);
+    items7[1] = closure_9(tmp2(5442).Button, obj15);
     obj13.children = items7;
     items4[4] = closure_10(View, obj13);
     obj7.children = items4;
     obj12.children = closure_10(View, obj7);
-    obj6.children = closure_9(tmp2(7037).SafeAreaPaddingView, obj12);
-    return closure_9(tmp2(7063).BottomSheet, obj6);
+    obj6.children = closure_9(tmp2(7039).SafeAreaPaddingView, obj12);
+    return closure_9(tmp2(7065).BottomSheet, obj6);
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(18019) };
+      const obj17 = { uri: tmp4(18029) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
       let tmp15Result2 = closure_9(tmp4(5091), obj16);
       const tmp4Result = tmp4(5091);
     } else {
-      const obj18 = { url: tmp4(18019), style: tmp6.image, autoplay: true };
-      tmp15Result2 = closure_9(tmp2(9242).APNGPlayer, obj18);
+      const obj18 = { url: tmp4(18029), style: tmp6.image, autoplay: true };
+      tmp15Result2 = closure_9(tmp2(9243).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1384);
   }

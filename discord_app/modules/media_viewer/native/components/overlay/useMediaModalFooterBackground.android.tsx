@@ -1,6 +1,6 @@
-// === Module 13917: useMediaModalFooterBackground ===
+// === Module 13928: useMediaModalFooterBackground ===
 
-// Module 13917 (useMediaModalFooterBackground)
+// Module 13928 (useMediaModalFooterBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;

@@ -1,29 +1,29 @@
-// === Module 17459: YouBarAvatar ===
+// === Module 17469: YouBarAvatar ===
 
-// Module 17459 (YouBarAvatar)
+// Module 17469 (YouBarAvatar)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import native2 from "native" /* 4886 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import spring from "spring" /* 5440 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6557 */;
-import ClipView from "ClipView" /* 9247 */;
+import spring from "spring" /* 5441 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6559 */;
+import ClipView from "ClipView" /* 9248 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5978 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(16056);
+const YouBarConstants = fn(16070);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1087).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -168,7 +168,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
                 return closure_1_8.animateYouBarAvatarDeco;
               }
             }
-            rect.withSpring = tmp(5440).withSpring;
+            rect.withSpring = tmp(5441).withSpring;
             rect.scale = sharedValue1;
             rect.YOU_BAR_SPRING_CONFIG = YOU_BAR_SPRING_CONFIG;
             rect.left = sharedValue2;
@@ -449,7 +449,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBar
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[19]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: 0 };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "blond" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }

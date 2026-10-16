@@ -1,30 +1,30 @@
-// === Module 18619: GuildSettingsModalModeration ===
+// === Module 18632: GuildSettingsModalModeration ===
 
-// Module 18619 (GuildSettingsModalModeration)
+// Module 18632 (GuildSettingsModalModeration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import TableRadioRow from "TableRadioRow" /* 6484 */;
-import TableRowGroup from "TableRowGroup" /* 6487 */;
-import NavScrim from "NavScrim" /* 6950 */;
-import TableSwitchRow from "TableSwitchRow" /* 7117 */;
-import HeaderActionButton from "HeaderActionButton" /* 7312 */;
-import useUserIsTeen from "useUserIsTeen" /* 7957 */;
-import Form from "Form" /* 8808 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import TableRadioRow from "TableRadioRow" /* 6486 */;
+import TableRowGroup from "TableRowGroup" /* 6489 */;
+import NavScrim from "NavScrim" /* 6952 */;
+import TableSwitchRow from "TableSwitchRow" /* 7119 */;
+import HeaderActionButton from "HeaderActionButton" /* 7314 */;
+import useUserIsTeen from "useUserIsTeen" /* 7958 */;
+import Form from "Form" /* 8809 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8864 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8865 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ GuildFeatures: metroRequire, HelpdeskArticles: closure_7, Permissions: closure_8, GuildNSFWContentLevel: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { stack: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createLegacyClassComponentStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -199,7 +199,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(15803).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(15813).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -222,7 +222,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj.disabled = tmp5;
     return collapsed(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(6485).TableRadioGroup, obj, "level-section");
+  return closure_10(self(6487).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -238,7 +238,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(15803).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(15813).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -251,7 +251,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj.disabled = tmp2;
     return collapsed(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(6485).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(6487).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;

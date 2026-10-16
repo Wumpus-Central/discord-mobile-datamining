@@ -1,11 +1,11 @@
-// === Module 8550: useUserProfileAnalyticsProperties ===
+// === Module 8551: useUserProfileAnalyticsProperties ===
 
-// Module 8550 (useUserProfileAnalyticsProperties)
+// Module 8551 (useUserProfileAnalyticsProperties)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserProfileAnalyticsTypes = fn(8534).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8535).UserProfileAnalyticsTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");

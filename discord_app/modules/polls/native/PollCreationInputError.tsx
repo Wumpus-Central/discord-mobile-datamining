@@ -1,6 +1,6 @@
-// === Module 12009: PollCreationInputError ===
+// === Module 12006: PollCreationInputError ===
 
-// Module 12009 (PollCreationInputError)
+// Module 12006 (PollCreationInputError)
 import nativeDefault from "native" /* 587 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollCrea
   }
   if (cResult[5] !== message) {
     const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", children: message };
-    const tmp13 = closure_4(tmp(5149).Text, obj2);
+    const tmp13 = closure_4(tmp(5150).Text, obj2);
     cResult[5] = message;
     cResult[6] = tmp13;
     let tmp11 = tmp13;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PollCrea
   }, items);
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [closure_4(message(1202).WarningCircle, size), closure_4(message(5149).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [closure_4(message(1202).WarningCircle, size), closure_4(message(5150).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
   obj.children = items1;
   return closure_5(View, obj);
 });

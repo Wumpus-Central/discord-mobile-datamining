@@ -1,11 +1,11 @@
-// === Module 16872: CollectiblesShopViewAllCategoryItems ===
+// === Module 16886: CollectiblesShopViewAllCategoryItems ===
 
-// Module 16872 (CollectiblesShopViewAllCategoryItems)
+// Module 16886 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import spring from "spring" /* 5440 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7528 */;
+import spring from "spring" /* 5441 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const constants = fn(1089).CollectiblesMobileShopScreen;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

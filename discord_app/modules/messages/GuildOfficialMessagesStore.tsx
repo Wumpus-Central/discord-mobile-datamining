@@ -1,10 +1,10 @@
-// === Module 14716: GuildOfficialMessagesStore ===
+// === Module 14726: GuildOfficialMessagesStore ===
 
-// Module 14716 (GuildOfficialMessagesStore)
+// Module 14726 (GuildOfficialMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5497 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;

@@ -1,15 +1,15 @@
-// === Module 11231: AnimatedEffectEmoji ===
+// === Module 11228: AnimatedEffectEmoji ===
 
-// Module 11231 (AnimatedEffectEmoji)
+// Module 11228 (AnimatedEffectEmoji)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import native from "native" /* 1202 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const jsx = fn(21).jsx;
 let c7 = -120;
 let closure_8 = 6 * DurationsDefault.Millis.SECOND;
 let closure_9 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, position: "absolute", right: 16, top: 16 };
 obj2.voiceChannelEffectEmojiContainer = rect;

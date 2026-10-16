@@ -1,6 +1,6 @@
-// === Module 16020: BountiesModalContent ===
+// === Module 16034: BountiesModalContent ===
 
-// Module 16020 (BountiesModalContent)
+// Module 16034 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -8,22 +8,22 @@ import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Patterns from "Patterns" /* 5121 */;
-import timing from "timing" /* 5154 */;
-import timingPresets from "timingPresets" /* 5157 */;
-import QuestContent from "QuestContent" /* 6195 */;
-import AdCreativeType from "AdCreativeType" /* 6197 */;
-import QuestDataUtils from "QuestDataUtils" /* 7605 */;
-import AnalyticsActions from "AnalyticsActions" /* 7625 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
-import AnimationUtils from "AnimationUtils" /* 13654 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13797 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 13819 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13836 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15966 */;
+import timing from "timing" /* 5155 */;
+import timingPresets from "timingPresets" /* 5158 */;
+import QuestContent from "QuestContent" /* 6196 */;
+import AdCreativeType from "AdCreativeType" /* 6198 */;
+import QuestDataUtils from "QuestDataUtils" /* 7606 */;
+import AnalyticsActions from "AnalyticsActions" /* 7626 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7635 */;
+import AnimationUtils from "AnimationUtils" /* 13662 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13808 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 13830 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13847 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15978 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7608 */;
+import BountyStore from "BountyStore" /* 7609 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -54,9 +54,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(6190);
+const QuestConstants = fn(6191);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15970);
+const BountiesModalConstants = fn(15982);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -128,7 +128,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBou
     return size;
   }, items);
 });
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: { position: "absolute", bottom: nativeDefault.space.PX_24, justifyContent: "flex-end" }, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
   const rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(9291).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(9291);
+                          const balance = tmp(9292).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9292);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {

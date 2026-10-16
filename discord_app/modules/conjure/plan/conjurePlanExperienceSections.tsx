@@ -1,14 +1,21 @@
-// === Module 12200: conjurePlanExperienceSections ===
+// === Module 12204: conjurePlanExperienceSections ===
 
-// Module 12200 (conjurePlanExperienceSections)
+// Module 12204 (conjurePlanExperienceSections)
 import util from "util" /* 1128 */;
 import _modDef3865 from "module_3865" /* 3865 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 12180 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 12184 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSections.tsx");
 
 export const CONJURE_PLAN_EXPERIENCE_KIND_LABELS = { frame: _modDef3865.Z2bt4u, overlay_widget: _modDef3865["0mGHfU"], user_widget: _modDef3865.Jipr29, bot: _modDef3865.EbvC13, commands: _modDef3865.EbvC13, automod: _modDef3865.tiMvei };
+export const conjurePlanExperienceIsApp = function conjurePlanExperienceIsApp(experience) {
+  let tmp = "frame" === experience.kind;
+  if (tmp) {
+    tmp = true !== experience.game;
+  }
+  return tmp;
+};
 export const conjurePlanDisplayedSections = function conjurePlanDisplayedSections(experiences, commandNames) {
   closure_0 = commandNames;
   const found = experiences.filter((kind) => "commands" === kind.kind);

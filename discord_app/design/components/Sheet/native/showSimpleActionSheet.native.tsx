@@ -1,6 +1,6 @@
-// === Module 7113: Sheet/showSimpleActionSheet ===
+// === Module 7115: Sheet/showSimpleActionSheet ===
 
-// Module 7113 (Sheet/showSimpleActionSheet)
+// Module 7115 (Sheet/showSimpleActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
 import size from "module_2" /* 2 */;
 
@@ -15,5 +15,5 @@ export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   obj2.hideActionSheet = function hideActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
-  obj.openLazy(key(2002)(7114, dependencyMap.paths), key, obj2, key.stackingBehavior);
+  obj.openLazy(key(2002)(7116, dependencyMap.paths), key, obj2, key.stackingBehavior);
 };

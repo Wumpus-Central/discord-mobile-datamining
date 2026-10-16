@@ -1,16 +1,16 @@
-// === Module 13511: ForLaterScreen ===
+// === Module 13519: ForLaterScreen ===
 
-// Module 13511 (ForLaterScreen)
+// Module 13519 (ForLaterScreen)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
-import spring from "spring" /* 5440 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7075 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9202 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13512 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13516 */;
+import spring from "spring" /* 5441 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7077 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9203 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13520 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9915 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9916 */;
 
 require = fn;
 function keyExtractor(saveData) {
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 }, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.headerBorder = size;
@@ -54,11 +54,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
   const tmp5 = useSavedMessagesForPageDefault(type);
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(tmp6, tmp7);
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(9916).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(9917).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
   const tmpResult = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp4(7100).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp4(7102).FOR_LATER_POPOUT).analyticsLocations;
   if (cResult[2] === overdueReminderCount) {
     if (cResult[3] === bookmarkCount) {
       if (cResult[4] === type) {
@@ -76,7 +76,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
         if (cResult[8] === bookmarkCount) {
           let tmp13 = cResult[9];
         }
-        tmp4(9202)(tmp11, tmp12, tmp13);
+        tmp4(9203)(tmp11, tmp12, tmp13);
         const _Symbol2 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const _Date = Date;
@@ -122,7 +122,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
             }
           }
         }
-        const tmp27 = fetchState === throttledNow(9916).BookmarksFetchState.LOADING;
+        const tmp27 = fetchState === throttledNow(9917).BookmarksFetchState.LOADING;
         if (0 === savedMessages.length) {
           class P {
             constructor(arg0) {
@@ -197,12 +197,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
   const items = [SavedMessagesStore];
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(items, () => ({ overdueReminderCount: SavedMessagesStore.getOverdueMessageReminderCount(), bookmarkCount: SavedMessagesStore.getBookmarkCount() }));
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(9916).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(9917).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
-  const tmp6 = fetchState === throttledNow(9916).BookmarksFetchState.LOADING;
+  const tmp6 = fetchState === throttledNow(9917).BookmarksFetchState.LOADING;
   const obj = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7100).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7102).FOR_LATER_POPOUT).analyticsLocations;
   const obj2 = { type: null, name: null, properties: null };
   const tmpResult = useAnalyticsLocationsDefault;
   obj2.type = throttledNow(1275).ImpressionTypes.MODAL;
@@ -221,11 +221,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
   [][0] = throttledNow;
   if (0 === savedMessages.length) {
     if (!tmp6) {
-      if (fetchState !== tmp4(9916).BookmarksFetchState.LOADED_HAS_MORE) {
+      if (fetchState !== tmp4(9917).BookmarksFetchState.LOADED_HAS_MORE) {
         const obj3 = { value: analyticsLocations, children: null };
         const obj4 = { type };
-        obj3.children = closure_8(tmp(13536), obj4);
-        let tmp18 = closure_8(tmp4(7075).AnalyticsLocationProvider, obj3);
+        obj3.children = closure_8(tmp(13544), obj4);
+        let tmp18 = closure_8(tmp4(7077).AnalyticsLocationProvider, obj3);
       }
     }
     const obj5 = { style: null };
@@ -242,9 +242,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
       tmp22Result = closure_8(closure_5, obj9);
     }
     obj8.ListFooterComponent = tmp22Result;
-    obj7.children = closure_8(tmp4(7036).FlashList, obj8);
+    obj7.children = closure_8(tmp4(7038).FlashList, obj8);
     obj6.children = closure_8(closure_6, obj7);
-    return closure_8(tmp4(7075).AnalyticsLocationProvider, obj6);
+    return closure_8(tmp4(7077).AnalyticsLocationProvider, obj6);
   }
   const date = new Date();
 });

@@ -1,11 +1,11 @@
-// === Module 15098: Tooltip/Tooltip ===
+// === Module 15108: Tooltip/Tooltip ===
 
-// Module 15098 (Tooltip/Tooltip)
+// Module 15108 (Tooltip/Tooltip)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import Text_Text from "Text/Text" /* 5149 */;
+import Text_Text from "Text/Text" /* 5150 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
 let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj4 = { container: { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
 let obj5 = { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj4.label = { fontFamily: fn(1087).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };

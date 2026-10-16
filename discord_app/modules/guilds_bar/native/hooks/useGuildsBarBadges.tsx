@@ -1,13 +1,13 @@
-// === Module 17401: useGuildsBarBadges ===
+// === Module 17411: useGuildsBarBadges ===
 
-// Module 17401 (useGuildsBarBadges)
+// Module 17411 (useGuildsBarBadges)
 import native from "native" /* 1202 */;
 import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5000 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17370 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17403 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17382 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17413 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11036 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11033 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4999 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -22,7 +22,7 @@ let closure_4 = ["guildActivityIndicatorSource"];
 const Constants = fn(1087);
 ({ GuildFeatures: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_16 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
     const tmpResult5 = tmp(504);
     const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(17402)(arg0);
+    const tmp20 = stateFromStores(17412)(arg0);
     const tmpResult6 = tmp(504);
     const token = tmp(4877).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
     const tmpResult7 = tmp(4877);

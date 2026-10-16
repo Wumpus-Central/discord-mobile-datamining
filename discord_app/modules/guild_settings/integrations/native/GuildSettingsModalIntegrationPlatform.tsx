@@ -1,25 +1,25 @@
-// === Module 18717: GuildSettingsModalIntegrationPlatform ===
+// === Module 18730: GuildSettingsModalIntegrationPlatform ===
 
-// Module 18717 (GuildSettingsModalIntegrationPlatform)
+// Module 18730 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import shared from "shared" /* 5028 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5362 */;
-import common_AlertDefault from "common/Alert" /* 5460 */;
-import PlatformsDefault from "Platforms" /* 5981 */;
-import TableRow from "TableRow" /* 6402 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import TableRowGroup from "TableRowGroup" /* 6487 */;
-import TableSwitchRow from "TableSwitchRow" /* 7117 */;
-import HeaderActionButton from "HeaderActionButton" /* 7312 */;
-import openUserSettings from "openUserSettings" /* 7317 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8863 */;
-import IntegrationTypes from "IntegrationTypes" /* 18648 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18678 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5363 */;
+import common_AlertDefault from "common/Alert" /* 5461 */;
+import PlatformsDefault from "Platforms" /* 5982 */;
+import TableRow from "TableRow" /* 6404 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import TableRowGroup from "TableRowGroup" /* 6489 */;
+import TableSwitchRow from "TableSwitchRow" /* 7119 */;
+import HeaderActionButton from "HeaderActionButton" /* 7314 */;
+import openUserSettings from "openUserSettings" /* 7319 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8864 */;
+import IntegrationTypes from "IntegrationTypes" /* 18661 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18691 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8864 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8865 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -28,7 +28,7 @@ const Constants = fn(1087);
 ({ GuildSettingsSections: metroRequire, HelpdeskArticles: closure_7, PlatformTypes: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { form: { paddingTop: nativeDefault.space.PX_16 }, trailingWrapper: { flexDirection: "row", alignItems: "center" }, platformIcon: { width: 24, height: 24 } };
 let closure_13 = createStyles.createStyles(obj2);
 const Component = noop.Component;
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       }
     }
     const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-    value = tmp4(5981).get(platformType);
+    value = tmp4(5982).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -408,10 +408,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       tmp28 = tmp49;
       tmp29 = forResult;
       tmp30 = tmp43;
-      Form = tmp(8808).Form;
-      Stack = tmp(5439).Stack;
+      Form = tmp(8809).Form;
+      Stack = tmp(5440).Stack;
     }
-    const tmp4Result = tmp4(5981);
+    const tmp4Result = tmp4(5982);
   }
   cResult[4] = stateFromStores;
   cResult[5] = closeGuildSettings;
@@ -469,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5981).get(platformType);
+    value = tmp3(5982).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -529,10 +529,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const obj11 = { children: null };
     const items2 = [mapped, ];
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_10(tmp(5149).Text, obj12);
+    items2[1] = closure_10(tmp(5150).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_11(tmp(5439).Stack, obj9);
-    const items3 = [closure_10(tmp(8808).Form, obj8), closure_10(tmp(6950).NavScrim, {})];
+    obj8.children = closure_11(tmp(5440).Stack, obj9);
+    const items3 = [closure_10(tmp(8809).Form, obj8), closure_10(tmp(6952).NavScrim, {})];
     obj11.children = items3;
     return closure_11(closure_12, obj11);
   }

@@ -1,17 +1,17 @@
-// === Module 11519: ConjureStandaloneScreen ===
+// === Module 11516: ConjureStandaloneScreen ===
 
-// Module 11519 (ConjureStandaloneScreen)
-import ConjureActionCreators from "ConjureActionCreators" /* 10922 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11520 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 11521 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 11608 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12259 */;
+// Module 11516 (ConjureStandaloneScreen)
+import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11517 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 11518 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 11605 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12265 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7143 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7145 */;
 
 require = fn;
 const Permissions = fn(1087).Permissions;
@@ -445,8 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   };
   obj4.render = function render() {
     const obj = { children: null };
-    const obj2 = { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef };
-    const items = [collapsed(closure_13, obj2), collapsed(ConjureProjectListDefault, { guildId })];
+    const items = [collapsed(closure_13, { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef }), collapsed(ConjureProjectListDefault, { guildId })];
     obj.children = items;
     return __initData(closure_2_11, obj);
   };

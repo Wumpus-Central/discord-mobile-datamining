@@ -1,6 +1,6 @@
-// === Module 11011: PresenceSubscriptionsActionCreators ===
+// === Module 11008: PresenceSubscriptionsActionCreators ===
 
-// Module 11011 (PresenceSubscriptionsActionCreators)
+// Module 11008 (PresenceSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

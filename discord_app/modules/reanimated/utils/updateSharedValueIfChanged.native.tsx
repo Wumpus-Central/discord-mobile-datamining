@@ -1,6 +1,6 @@
-// === Module 10621: updateSharedValueIfChanged ===
+// === Module 10618: updateSharedValueIfChanged ===
 
-// Module 10621 (updateSharedValueIfChanged)
+// Module 10618 (updateSharedValueIfChanged)
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import size from "module_2" /* 2 */;
 

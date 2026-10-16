@@ -1,9 +1,9 @@
-// === Module 16110: QuestGameLogotype ===
+// === Module 16124: QuestGameLogotype ===
 
-// Module 16110 (QuestGameLogotype)
+// Module 16124 (QuestGameLogotype)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import spring from "spring" /* 5440 */;
+import spring from "spring" /* 5441 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let SPRING_CONFIG = {};
-const merged = Object.assign(fn(5444).springSlow);
+const merged = Object.assign(fn(5445).springSlow);
 SPRING_CONFIG.overshootClamping = true;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,\"animate-always\")};}" };
@@ -82,7 +82,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj1;
       }
     }
-    const obj3 = { withSpring: SvgUri(5440).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
+    const obj3 = { withSpring: SvgUri(5441).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
     H.__closure = obj3;
     H.__workletHash = 13667917221894;
     H.__initData = __initData;
@@ -152,7 +152,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         obj4.style = items1;
-        SvgUri = SvgUri(7796).SvgUri;
+        SvgUri = SvgUri(7797).SvgUri;
         let size = { height: "100%", width: "100%", uri: assetUrl, onError };
         obj4.children = <SvgUri height="100%" width="100%" uri={assetUrl} onError={onError} />;
         let tmp18Result = <closure_5 style={null}>{null}</closure_5>;

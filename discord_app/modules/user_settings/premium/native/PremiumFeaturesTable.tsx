@@ -1,15 +1,15 @@
-// === Module 14469: PremiumFeaturesTable ===
+// === Module 14479: PremiumFeaturesTable ===
 
-// Module 14469 (PremiumFeaturesTable)
+// Module 14479 (PremiumFeaturesTable)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import shared from "shared" /* 5028 */;
 import useThemeDefault from "useTheme" /* 5090 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
-import _modDef14470 from "module_14470" /* 14470 */;
-import _modDef14471 from "module_14471" /* 14471 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
+import _modDef14480 from "module_14480" /* 14480 */;
+import _modDef14481 from "module_14481" /* 14481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ const PremiumConstants = fn(1394);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let obj2 = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj2.bottomBorderRadius = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
@@ -32,7 +32,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(6187).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6188).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 obj2.premiumGroupCard = { marginTop: 16 };
 obj2.priceContainer = { alignItems: "center" };
@@ -44,7 +44,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckI
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const tmp7 = shared.isThemeDark(tmp5) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   if (cResult[0] !== tmp7) {
-    const obj3 = { source: _modDef14470, color: tmp7, size: native.IconSizes.SMALL };
+    const obj3 = { source: _modDef14480, color: tmp7, size: native.IconSizes.SMALL };
     const tmp10 = closure_1_11(native.Icon, obj3);
     cResult[0] = tmp7;
     cResult[1] = tmp10;
@@ -58,11 +58,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckI
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  return closure_1_11(native.Icon, { source: _modDef14470, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef14480, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj8 = { icon: null };
-let obj5 = { backgroundColor: fn(6187).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6188).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj8.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj8);
 ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseI
   const cResult = c.c(2);
   const tmp4 = closure_16();
   if (cResult[0] !== tmp4.icon) {
-    const obj2 = { source: _modDef14471, style: tmp4.icon, size: native.IconSizes.SMALL };
+    const obj2 = { source: _modDef14481, style: tmp4.icon, size: native.IconSizes.SMALL };
     const tmp8 = closure_1_11(native.Icon, obj2);
     cResult[0] = tmp4.icon;
     cResult[1] = tmp8;
@@ -81,7 +81,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseI
   return tmp5;
 }) : (function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef14471, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef14481, style: closure_16().icon, size: native.IconSizes.SMALL });
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function CellText(text) {
@@ -604,8 +604,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   dependencyMap = tmp5;
   const tmp6 = closure_14();
   const tmp8 = str(5090)();
-  const tmp9 = str(9633)(closure_10.PREMIUM_MONTH_TIER_0);
-  const tmp10 = str(9633)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp9 = str(9632)(closure_10.PREMIUM_MONTH_TIER_0);
+  const tmp10 = str(9632)(closure_10.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp9 != null) {
     priceString = tmp9.priceString;
@@ -638,9 +638,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   }
   if (cResult[2] !== tmp6.logo) {
     const size = { style: tmp6.logo, width: 48, height: 9 };
-    const tmp22 = closure_11(tmp7(14472), size);
+    const tmp22 = closure_11(tmp7(14482), size);
     const size1 = { style: tmp6.logo, width: 50, height: 9 };
-    const tmp23 = closure_11(tmp7(14473), size1);
+    const tmp23 = closure_11(tmp7(14483), size1);
     cResult[2] = tmp6.logo;
     cResult[3] = tmp22;
     cResult[4] = tmp23;
@@ -665,9 +665,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         tmp26 = cResult[9];
       }
       if (tmpResult5.isThemeDark(tmp8)) {
-        let tmp7Result = tmp7(14474);
+        let tmp7Result = tmp7(14484);
       } else {
-        tmp7Result = tmp7(14475);
+        tmp7Result = tmp7(14485);
       }
       if (cResult[10] === tmp6.logo) {
         if (cResult[11] === tmp7Result) {
@@ -683,9 +683,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           tmp32 = cResult[13];
         }
         if (tmpResult6.isThemeDark(tmp8)) {
-          let tmp7Result2 = tmp7(14476);
+          let tmp7Result2 = tmp7(14486);
         } else {
-          tmp7Result2 = tmp7(14477);
+          tmp7Result2 = tmp7(14487);
         }
         if (cResult[14] === tmp6.logo) {
           if (cResult[15] === tmp7Result2) {
@@ -787,7 +787,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                               const intl10 = tmp(1128).intl;
                               const stringResult3 = intl10.string(tmp(1128).t["ufhQC+"]);
                               const obj6 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: first };
-                              const tmp75 = closure_11(tmp(5149).Text, obj6);
+                              const tmp75 = closure_11(tmp(5150).Text, obj6);
                               cResult[41] = tmp73;
                               cResult[42] = stringResult3;
                               cResult[43] = tmp75;
@@ -803,7 +803,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                             if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
                               const obj7 = { label: tmp68, rowName: tmp69, column1: tmp70, column1AccessibilityLabel: first, column2: null, column2AccessibilityLabel: null };
                               const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp16 };
-                              obj7.column2 = closure_11(tmp(5149).Text, obj8);
+                              obj7.column2 = closure_11(tmp(5150).Text, obj8);
                               obj7.column2AccessibilityLabel = tmp16;
                               cResult[44] = obj7;
                               let tmp76 = obj7;
@@ -1055,7 +1055,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                         }
                                         if (tmp136) {
                                           const obj24 = { style: tmp6.premiumGroupCard, premiumGroupRole };
-                                          tmp136 = closure_11(tmp7(14478), obj24);
+                                          tmp136 = closure_11(tmp7(14488), obj24);
                                         }
                                         cResult[79] = tmp5;
                                         cResult[80] = premiumGroupRole;
@@ -1064,7 +1064,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                         tmp135 = tmp136;
                                       }
                                       const obj25 = { style: tmp6.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: tmp130 };
-                                      const tmp134 = closure_11(tmp(5149).Text, obj25);
+                                      const tmp134 = closure_11(tmp(5150).Text, obj25);
                                       cResult[76] = tmp6.headerText;
                                       cResult[77] = tmp130;
                                       cResult[78] = tmp134;

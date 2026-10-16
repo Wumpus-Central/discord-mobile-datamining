@@ -1,13 +1,13 @@
-// === Module 9244: AvatarDecorationSampleV2 ===
+// === Module 9245: AvatarDecorationSampleV2 ===
 
-// Module 9244 (AvatarDecorationSampleV2)
+// Module 9245 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import _modDef9245 from "module_9245" /* 9245 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9246 */;
+import _modDef9246 from "module_9246" /* 9246 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 0.8333333333333334;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = { position: "absolute", height: arg0 * c7, width: arg0 * c7, borderRadius: arg0 * c7 / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarDe
       let tmp7 = cResult[2];
     }
     if (null == avatarSource) {
-      avatarSource = _modDef9245;
+      avatarSource = _modDef9246;
     }
     if (cResult[3] === tmp7) {
       if (cResult[4] === avatarSource) {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AvatarDe
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9245;
+    avatarSource = _modDef9246;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

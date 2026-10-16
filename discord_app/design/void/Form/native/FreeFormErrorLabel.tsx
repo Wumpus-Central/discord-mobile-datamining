@@ -1,6 +1,6 @@
-// === Module 6844: FreeFormErrorLabel ===
+// === Module 6846: FreeFormErrorLabel ===
 
-// Module 6844 (FreeFormErrorLabel)
+// Module 6846 (FreeFormErrorLabel)
 import shared from "shared" /* 5028 */;
 import noop from "module_19" /* 19 */;
 
@@ -74,5 +74,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Label(ar
       AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
-  return jsx(nodeText(5149).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(5150).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 });

@@ -1,6 +1,6 @@
-// === Module 9873: useAnnounceAsyncCompletion ===
+// === Module 9872: useAnnounceAsyncCompletion ===
 
-// Module 9873 (useAnnounceAsyncCompletion)
+// Module 9872 (useAnnounceAsyncCompletion)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

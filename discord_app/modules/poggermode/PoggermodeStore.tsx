@@ -1,13 +1,13 @@
-// === Module 14325: PoggermodeStore ===
+// === Module 14335: PoggermodeStore ===
 
-// Module 14325 (PoggermodeStore)
+// Module 14335 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 14326 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 14336 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7584 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7585 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -82,7 +82,7 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7585);
+const PoggermodeConstants = fn(7586);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1087).ComponentActions;
 const set = new Set();

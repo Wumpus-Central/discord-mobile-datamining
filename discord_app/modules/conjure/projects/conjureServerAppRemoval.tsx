@@ -1,13 +1,13 @@
-// === Module 12496: conjureServerAppRemoval ===
+// === Module 12502: conjureServerAppRemoval ===
 
-// Module 12496 (conjureServerAppRemoval)
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6286 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
-import ConjureUtils from "ConjureUtils" /* 7167 */;
-import conjureAppInServer from "conjureAppInServer" /* 10926 */;
+// Module 12502 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6299 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6324 */;
+import ConjureUtils from "ConjureUtils" /* 7169 */;
+import conjureAppInServer from "conjureAppInServer" /* 10923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
 import GuildChannelStore from "GuildChannelStore" /* 4807 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -52,8 +52,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10926).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10926);
+          items = guild(10923).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(10923);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -62,8 +62,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10926).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10926);
+          canRemoveConjureBotResult = guild(10923).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(10923);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -71,8 +71,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10926).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10926);
+          canRemoveConjureBotResult = guild(10923).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(10923);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;

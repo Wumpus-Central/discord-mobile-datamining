@@ -1,26 +1,26 @@
-// === Module 12958: BaseChannelItem ===
+// === Module 12966: BaseChannelItem ===
 
-// Module 12958 (BaseChannelItem)
+// Module 12966 (BaseChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import native2 from "native" /* 8770 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12959 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 12960 */;
+import native2 from "native" /* 8771 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12967 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 12968 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const utils_PlatformUtils = Text(1385);
-const Text_Text = Text(5149);
+const Text_Text = Text(5150);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11821);
+const RedesignChannelListConstants = fn(11818);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(6185).UnreadSetting;
+const UnreadSetting = fn(6186).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -575,9 +575,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12960);
+      let AnimatedPressableHighlight = hideIcon(12968);
     } else {
-      AnimatedPressableHighlight = mode(8770).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8771).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -592,8 +592,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_10(hideIcon(12959), obj3);
-    const tmp9 = hideIcon(12959);
+    closure_10(hideIcon(12967), obj3);
+    const tmp9 = hideIcon(12967);
   }
 });
 export const ChannelModes = obj2;

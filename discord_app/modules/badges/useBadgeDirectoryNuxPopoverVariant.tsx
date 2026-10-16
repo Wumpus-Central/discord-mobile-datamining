@@ -1,11 +1,11 @@
-// === Module 14038: useBadgeDirectoryNuxPopoverVariant ===
+// === Module 14048: useBadgeDirectoryNuxPopoverVariant ===
 
-// Module 14038 (useBadgeDirectoryNuxPopoverVariant)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8548 */;
-import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14039 */;
+// Module 14048 (useBadgeDirectoryNuxPopoverVariant)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8549 */;
+import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 14049 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8543 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8544 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);

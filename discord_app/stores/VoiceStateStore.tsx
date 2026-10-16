@@ -1,12 +1,12 @@
-// === Module 5174: VoiceStateStore ===
+// === Module 5175: VoiceStateStore ===
 
-// Module 5174 (VoiceStateStore)
+// Module 5175 (VoiceStateStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import _slicedToArray from "module_32" /* 32 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5175 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5176 */;
 
 require = fn;
 function updateVoiceState(arg0, arg1, fn) {
@@ -146,7 +146,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1087).ME;
-const VoicePlatforms = fn(5176).VoicePlatforms;
+const VoicePlatforms = fn(5177).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};

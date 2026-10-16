@@ -1,12 +1,12 @@
-// === Module 11553: useConjureTemplatePrepare ===
+// === Module 11550: useConjureTemplatePrepare ===
 
-// Module 11553 (useConjureTemplatePrepare)
+// Module 11550 (useConjureTemplatePrepare)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const prepareTemplate = fn(10901).prepareTemplate;
+const prepareTemplate = fn(10898).prepareTemplate;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/useConjureTemplatePrepare.tsx");

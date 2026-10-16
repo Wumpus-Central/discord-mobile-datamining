@@ -1,16 +1,16 @@
-// === Module 12443: GuildIconUploader ===
+// === Module 12449: GuildIconUploader ===
 
-// Module 12443 (GuildIconUploader)
+// Module 12449 (GuildIconUploader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 5028 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Pressables from "Pressables" /* 6407 */;
-import _modDef12444 from "module_12444" /* 12444 */;
-import _modDef12445 from "module_12445" /* 12445 */;
-import _modDef12446 from "module_12446" /* 12446 */;
-import _modDef12447 from "module_12447" /* 12447 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Pressables from "Pressables" /* 6409 */;
+import _modDef12450 from "module_12450" /* 12450 */;
+import _modDef12451 from "module_12451" /* 12451 */;
+import _modDef12452 from "module_12452" /* 12452 */;
+import _modDef12453 from "module_12453" /* 12453 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { width: 82, height: 82, marginTop: 4 }, guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildIcon: { width: 82, height: 82, borderRadius: 41 }, iconWrapperBorder: { position: "absolute", top: -8, right: -8, width: 40, height: 40, borderRadius: 20, justifyContent: "center", alignItems: "center" }, filledIconWrapper: null, emptyIconWrapper: null, emptyGuildIcon: null, emptyGuildIconText: null, uploadIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.filledIconWrapper = size;
@@ -51,9 +51,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef12444;
+      let tmp10Result = _modDef12450;
     } else {
-      tmp10Result = _modDef12445;
+      tmp10Result = _modDef12451;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj), ];
@@ -84,13 +84,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12446;
+    obj5.source = _modDef12452;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12447 };
+    const obj7 = { source: _modDef12453 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

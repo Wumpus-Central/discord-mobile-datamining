@@ -1,20 +1,20 @@
-// === Module 11484: TouchableStreamPreview ===
+// === Module 11481: TouchableStreamPreview ===
 
-// Module 11484 (TouchableStreamPreview)
+// Module 11481 (TouchableStreamPreview)
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5167 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6107 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6118 */;
-import StreamActionCreators from "StreamActionCreators" /* 7663 */;
-import transitionToStreamDefault from "transitionToStream" /* 7700 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5168 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6108 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6119 */;
+import StreamActionCreators from "StreamActionCreators" /* 7664 */;
+import transitionToStreamDefault from "transitionToStream" /* 7701 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5172 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+import GameConsoleStore from "GameConsoleStore" /* 5173 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Permissions = fn(1087).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

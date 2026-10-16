@@ -1,14 +1,16 @@
-// === Module 5521: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5522: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5521 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5522 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
 import _modDef3091 from "module_3091" /* 3091 */;
-import CheckpointTrait from "CheckpointTrait" /* 5523 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5524 */;
-import CheckpointConstants from "CheckpointConstants" /* 5499 */;
+import CheckpointTrait from "CheckpointTrait" /* 5524 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5525 */;
+import CheckpointConstants from "CheckpointConstants" /* 5500 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: c3, CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_4, CHECKPOINT_2026_POWER_BAR_UNITS: hasOwnProperty, NATIVE_CHARACTER_LAYER_SIZE: metroRequire, CheckpointVersions: closure_7 } = CheckpointConstants);
 let obj = {};
@@ -73,6 +75,29 @@ export const transformCheckpoint2026CardComponent = function transformCheckpoint
     tmp2 = tmp4;
   }
   return tmp2;
+};
+export const getCharacterLayerUrls = function getCharacterLayerUrls(wearable, arg1) {
+  _require = wearable;
+  closure_1 = arg1;
+  const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = require("CheckpointTraitConfig").CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
+  const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable.wearable);
+  const tmp2 = require("CheckpointTraitConfig");
+  items = [];
+  const item = hasItem ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.forEach((item) => {
+    let layer;
+    if (obj[item][character[item]] != null) {
+      layer = tmp.layer;
+    }
+    let tmp3 = null != layer;
+    if (tmp3) {
+      tmp3 = "" !== layer;
+    }
+    if (tmp3) {
+      const _HermesInternal = HermesInternal;
+      items.push("" + layer + "?height=" + closure_1 + "&width=" + closure_1);
+    }
+  });
+  return items;
 };
 export const transformCheckpoint2026CardToRowGeneratedComponent = function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
   checkpointData = checkpointData.checkpointData;

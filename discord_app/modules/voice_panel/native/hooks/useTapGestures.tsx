@@ -1,6 +1,6 @@
-// === Module 18186: useTapGestures ===
+// === Module 18196: useTapGestures ===
 
-// Module 18186 (useTapGestures)
+// Module 18196 (useTapGestures)
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import HapticUtils from "HapticUtils" /* 5119 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useT
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12842)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12848)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   __initData = tmp2;
@@ -47,8 +47,8 @@ export default function useTapGestures(onSingleTap) {
         }
       }
     }
-    const Gesture = current(6557).Gesture;
-    const Gesture2 = current(6557).Gesture;
+    const Gesture = current(6559).Gesture;
+    const Gesture2 = current(6559).Gesture;
     let tmp3 = gesturesEnabled;
     let tmp4 = gesturesEnabled;
     if (gesturesEnabled) {
@@ -79,7 +79,7 @@ export default function useTapGestures(onSingleTap) {
     fn.__workletHash = 13571114432746;
     fn.__initData = __initData;
     const obj2 = { runOnJS: current(4909).runOnJS, handleEvent };
-    const Gesture3 = current(6557).Gesture;
+    const Gesture3 = current(6559).Gesture;
     const onStartResult = onTouchesDownResult.onStart(fn);
     let tmp6 = tmp3;
     if (tmp3) {
@@ -95,7 +95,7 @@ export default function useTapGestures(onSingleTap) {
     fn2.__workletHash = 14109132753191;
     fn2.__initData = gesturesEnabled;
     const obj3 = { runOnJS: current(4909).runOnJS, handleEvent };
-    const Gesture4 = current(6557).Gesture;
+    const Gesture4 = current(6559).Gesture;
     const onStartResult1 = maxDistanceResult1.onStart(fn2);
     if (tmp3) {
       tmp3 = __initData2;

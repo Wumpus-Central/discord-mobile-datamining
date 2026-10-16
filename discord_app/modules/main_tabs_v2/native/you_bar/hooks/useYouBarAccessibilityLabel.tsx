@@ -1,19 +1,19 @@
-// === Module 17440: useYouBarAccessibilityLabel ===
+// === Module 17450: useYouBarAccessibilityLabel ===
 
-// Module 17440 (useYouBarAccessibilityLabel)
+// Module 17450 (useYouBarAccessibilityLabel)
 import util from "util" /* 1128 */;
 import UserUtils from "UserUtils" /* 5021 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10476 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10477 */;
-import isGameActivityDefault from "isGameActivity" /* 10484 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10488 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6115 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10477 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10478 */;
+import isGameActivityDefault from "isGameActivity" /* 10485 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10489 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
-import PresenceStore from "PresenceStore" /* 5169 */;
+import PresenceStore from "PresenceStore" /* 5170 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5977 */;
-import VoiceStateStore from "VoiceStateStore" /* 5174 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5978 */;
+import VoiceStateStore from "VoiceStateStore" /* 5175 */;
 
 const require = globalThis.__r;
 

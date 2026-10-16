@@ -1,6 +1,6 @@
-// === Module 15576: UserProfileEffectEditButton ===
+// === Module 15586: UserProfileEffectEditButton ===
 
-// Module 15576 (UserProfileEffectEditButton)
+// Module 15586 (UserProfileEffectEditButton)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
@@ -8,15 +8,15 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7126).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7128).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1098).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
 obj2.profileEffectPreviewContainer = size;
-obj2.sampleProfile = { aspectRatio: fn(9232).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj2.sampleProfile = { aspectRatio: fn(9233).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj2.noneIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -62,7 +62,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   const items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15577, dependencyMap.paths), "Profile Effect", { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15587, dependencyMap.paths), "Profile Effect", { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut });
   }, items);
   if (product != null) {
     name = product.name;

@@ -1,6 +1,6 @@
-// === Module 13164: getGuildPowerupsBoostInfoText ===
+// === Module 13172: getGuildPowerupsBoostInfoText ===
 
-// Module 13164 (getGuildPowerupsBoostInfoText)
+// Module 13172 (getGuildPowerupsBoostInfoText)
 import util from "util" /* 1128 */;
 import _modDef2603 from "module_2603" /* 2603 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5067 */;

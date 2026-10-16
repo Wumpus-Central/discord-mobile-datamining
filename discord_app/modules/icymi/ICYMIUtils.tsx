@@ -1,19 +1,19 @@
-// === Module 8697: ICYMIUtils ===
+// === Module 8698: ICYMIUtils ===
 
-// Module 8697 (ICYMIUtils)
+// Module 8698 (ICYMIUtils)
 import util from "util" /* 1128 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5496 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8493 */;
-import ICYMITypes from "ICYMITypes" /* 8693 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8698 */;
-import generateHydrationId from "generateHydrationId" /* 8703 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8704 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8705 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5497 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8494 */;
+import ICYMITypes from "ICYMITypes" /* 8694 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8699 */;
+import generateHydrationId from "generateHydrationId" /* 8704 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8705 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8706 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6272 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6273 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8694 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8695 */;
 
 require = fn;
 let closure_12 = async function _hydrateItems(arg0) {
@@ -47,10 +47,10 @@ let closure_12 = async function _hydrateItems(arg0) {
             let obj2 = ICYMIActionCreatorsDefault;
             const hydratedAttempt = obj2.loadHydratedAttempt(generateHydrationId.generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8693).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8694).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8693).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8694).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -86,7 +86,7 @@ let closure_12 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8693).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8694).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj7 = { messageItems: null, activityItems: null };

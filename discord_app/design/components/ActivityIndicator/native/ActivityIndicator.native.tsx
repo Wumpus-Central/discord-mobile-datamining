@@ -1,6 +1,6 @@
-// === Module 6378: ActivityIndicator/ActivityIndicator ===
+// === Module 6380: ActivityIndicator/ActivityIndicator ===
 
-// Module 6378 (ActivityIndicator/ActivityIndicator)
+// Module 6380 (ActivityIndicator/ActivityIndicator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4877 */;

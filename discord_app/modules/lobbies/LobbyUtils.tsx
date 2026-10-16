@@ -1,6 +1,6 @@
-// === Module 10538: LobbyUtils ===
+// === Module 10539: LobbyUtils ===
 
-// Module 10538 (LobbyUtils)
+// Module 10539 (LobbyUtils)
 import PermissionStore from "PermissionStore" /* 4809 */;
 
 const require = globalThis.__r;

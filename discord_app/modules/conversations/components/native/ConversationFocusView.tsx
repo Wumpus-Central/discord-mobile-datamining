@@ -1,10 +1,10 @@
-// === Module 9615: ConversationFocusView ===
+// === Module 9614: ConversationFocusView ===
 
-// Module 9615 (ConversationFocusView)
+// Module 9614 (ConversationFocusView)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9577 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9592 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9576 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9591 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { container: { flex: 1, backgroundColor }, pendingContent: { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor } };
   return obj;
@@ -22,7 +22,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationFocusView(channelId) {
-  const cResult = channelId(startMessageId[6]).c(31);
+  const cResult = channelId(startMessageId[6]).c(30);
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
   ({ jumpMessageId, messages, fullyHydrated, startMessageId } = channelId);
@@ -35,7 +35,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
       let tmp6 = cResult[2];
     }
     if (cResult[3] === channelId) {
-      if (cResult[4] === conversationId) {
+      class M {
+        constructor() {
+          if (null != startMessageId) {
+            tmp2 = closure_0;
+            tmp3 = closure_2;
+            obj = closure_0(closure_2[9]);
+            tmp4 = channelId;
+            result = obj.closeConversationsAndJumpToMessage(channelId, tmp);
+          }
+          return;
+        }
+      }
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        const string = tmp(startMessageId[10]).intl.string;
         class M {
           constructor() {
             if (null != startMessageId) {
@@ -43,41 +56,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
               tmp3 = closure_2;
               obj = closure_0(closure_2[9]);
               tmp4 = channelId;
-              tmp5 = conversationId;
-              result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+              result = obj.closeConversationsAndJumpToMessage(channelId, tmp);
             }
             return;
           }
         }
-        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const string = tmp(startMessageId[10]).intl.string;
-          class M {
-            constructor() {
-              if (null != startMessageId) {
-                tmp2 = closure_0;
-                tmp3 = closure_2;
-                obj = closure_0(closure_2[9]);
-                tmp4 = channelId;
-                tmp5 = conversationId;
-                result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+        cResult[6] = tmp10;
+        let tmp9 = tmp10;
+      } else {
+        tmp9 = cResult[6];
+      }
+      let tmp12 = jumpMessageId;
+      if (jumpMessageId == null) {
+        tmp12 = startMessageId;
+      }
+      if (cResult[7] === conversationId) {
+        if (cResult[8] === tmp6) {
+          if (!fullyHydrated) {
+            if (channelId.isFullFetchPending) {
+              const _Symbol = Symbol;
+              class M {
+                constructor() {
+                  if (null != startMessageId) {
+                    tmp2 = closure_0;
+                    tmp3 = closure_2;
+                    obj = closure_0(closure_2[9]);
+                    tmp4 = channelId;
+                    result = obj.closeConversationsAndJumpToMessage(channelId, tmp);
+                  }
+                  return;
+                }
               }
-              return;
-            }
-          }
-          cResult[7] = tmp10;
-          let tmp9 = tmp10;
-        } else {
-          tmp9 = cResult[7];
-        }
-        let tmp12 = jumpMessageId;
-        if (jumpMessageId == null) {
-          tmp12 = startMessageId;
-        }
-        if (cResult[8] === conversationId) {
-          if (cResult[9] === tmp6) {
-            if (!fullyHydrated) {
-              if (channelId.isFullFetchPending) {
-                const _Symbol = Symbol;
+              if (cResult[12] !== tmp5.pendingContent) {
                 class M {
                   constructor() {
                     if (null != startMessageId) {
@@ -85,59 +95,42 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
                       tmp3 = closure_2;
                       obj = closure_0(closure_2[9]);
                       tmp4 = channelId;
-                      tmp5 = conversationId;
-                      result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+                      result = obj.closeConversationsAndJumpToMessage(channelId, tmp);
                     }
                     return;
                   }
                 }
-                if (cResult[13] !== tmp5.pendingContent) {
-                  class M {
-                    constructor() {
-                      if (null != startMessageId) {
-                        tmp2 = closure_0;
-                        tmp3 = closure_2;
-                        obj = closure_0(closure_2[9]);
-                        tmp4 = channelId;
-                        tmp5 = conversationId;
-                        result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
-                      }
-                      return;
-                    }
-                  }
-                  tmp19[0] = tmp5.pendingContent;
-                  tmp19[1] = tmp15;
-                  const tmp20 = closure_7(closure_6, tmp19);
-                  cResult[13] = tmp5.pendingContent;
-                  cResult[14] = tmp20;
-                  let tmp16 = tmp20;
-                } else {
-                  tmp16 = cResult[14];
-                }
-                return tmp16;
+                tmp19[0] = tmp5.pendingContent;
+                tmp19[1] = tmp15;
+                const tmp20 = closure_7(closure_6, tmp19);
+                cResult[12] = tmp5.pendingContent;
+                cResult[13] = tmp20;
+                let tmp16 = tmp20;
+              } else {
+                tmp16 = cResult[13];
               }
+              return tmp16;
             }
-            class M {
-              constructor() {
-                if (null != startMessageId) {
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = closure_0(closure_2[9]);
-                  tmp4 = channelId;
-                  tmp5 = conversationId;
-                  result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
-                }
-                return;
+          }
+          class M {
+            constructor() {
+              if (null != startMessageId) {
+                tmp2 = closure_0;
+                tmp3 = closure_2;
+                obj = closure_0(closure_2[9]);
+                tmp4 = channelId;
+                result = obj.closeConversationsAndJumpToMessage(channelId, tmp);
               }
+              return;
             }
           }
         }
-        const obj3 = { jumpToChatText: tmp9, jumpTargetId: tmp12, onBeforeJumpToMessage: tmp6, conversationId };
-        cResult[8] = conversationId;
-        cResult[9] = tmp6;
-        cResult[10] = tmp12;
-        cResult[11] = obj3;
       }
+      const obj3 = { jumpToChatText: tmp9, jumpTargetId: tmp12, onBeforeJumpToMessage: tmp6, conversationId };
+      cResult[7] = conversationId;
+      cResult[8] = tmp6;
+      cResult[9] = tmp12;
+      cResult[10] = obj3;
     }
     class M {
       constructor() {
@@ -146,16 +139,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
           tmp3 = closure_2;
           obj = closure_0(closure_2[9]);
           tmp4 = channelId;
-          tmp5 = conversationId;
-          result = obj.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+          result = obj.closeConversationsAndJumpToMessage(channelId, tmp);
         }
         return;
       }
     }
     cResult[3] = channelId;
-    cResult[4] = conversationId;
-    cResult[5] = startMessageId;
-    cResult[6] = M;
+    cResult[4] = startMessageId;
+    cResult[5] = M;
   }
   const fn = function t(arg0) {
     if ("footer_cta" === arg0) {
@@ -187,11 +178,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
       const result = ConversationsAnalytics.trackFocusModeDismissed(obj);
     }
   }, items);
-  const items1 = [channelId, conversationId, startMessageId];
+  const items1 = [channelId, startMessageId];
   const items2 = [conversationId, jumpMessageId, startMessageId, onBeforeJumpToMessage];
   const callback1 = startMessageId.useCallback(() => {
     if (null != startMessageId) {
-      const result = ConversationNavigatorUtils.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
+      const result = ConversationNavigatorUtils.closeConversationsAndJumpToMessage(channelId, tmp);
     }
   }, items1);
   const memo = startMessageId.useMemo(() => {

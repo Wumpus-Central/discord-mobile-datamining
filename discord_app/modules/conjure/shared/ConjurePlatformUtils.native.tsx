@@ -1,18 +1,18 @@
-// === Module 10933: ConjurePlatformUtils ===
+// === Module 10930: ConjurePlatformUtils ===
 
-// Module 10933 (ConjurePlatformUtils)
+// Module 10930 (ConjurePlatformUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9471 */;
-import ApplicationUtils from "ApplicationUtils" /* 10936 */;
-import PushNotificationDefault from "PushNotification" /* 10945 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10949 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 10955 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 10958 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 10959 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 10962 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9472 */;
+import ApplicationUtils from "ApplicationUtils" /* 10933 */;
+import PushNotificationDefault from "PushNotification" /* 10942 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10946 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 10952 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 10955 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 10956 */;
+import restartFrames from "restartFrames" /* 10959 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10900 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
 
 const require = globalThis.__r;
 
@@ -630,13 +630,13 @@ let closure_18 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const isLaunched = fn(10934).isLaunched;
-const LocalNotificationTypes = fn(10935).LocalNotificationTypes;
-let items = [fn(8684).OAuth2Scopes.BOT, fn(8684).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const isLaunched = fn(10931).isLaunched;
+const LocalNotificationTypes = fn(10932).LocalNotificationTypes;
+let items = [fn(8685).OAuth2Scopes.BOT, fn(8685).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c15 = 0;
 let c16 = 0;
 let c19 = 0;
-const conjurePreviewControlLease = fn(10958);
+const conjurePreviewControlLease = fn(10955);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -739,7 +739,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(10961);
+const conjurePreviewOperationSurfaces = fn(10958);
 let closure_20 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -748,14 +748,14 @@ let closure_20 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
   }
   let tmp3 = null;
   if (null != prop) {
-    const conjureBuilderPreviewFrame = iframeId(10949).getConjureBuilderPreviewFrame(prop);
+    const conjureBuilderPreviewFrame = iframeId(10946).getConjureBuilderPreviewFrame(prop);
     let tmp7 = null;
     if (null != conjureBuilderPreviewFrame) {
       const obj3 = { applicationId: prop, launched: isLaunched(conjureBuilderPreviewFrame) };
       tmp7 = obj3;
     }
     tmp3 = tmp7;
-    const obj2 = iframeId(10949);
+    const obj2 = iframeId(10946);
   }
   let launched;
   if (tmp3 != null) {
@@ -776,13 +776,13 @@ let closure_20 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
     }
     let tmp12 = null;
     if (null != prop1) {
-      const conjureBuilderPreviewFrame1 = iframeId(10949).getConjureBuilderPreviewFrame(prop1);
+      const conjureBuilderPreviewFrame1 = iframeId(10946).getConjureBuilderPreviewFrame(prop1);
       iframeId = null;
       if (isLaunched(conjureBuilderPreviewFrame1)) {
         iframeId = conjureBuilderPreviewFrame1.data.iframeId;
       }
       tmp12 = iframeId;
-      const obj5 = iframeId(10949);
+      const obj5 = iframeId(10946);
     }
     iframeId = tmp12;
     const obj6 = {
@@ -1002,7 +1002,7 @@ export default {
     closure_20.end(projectId);
   },
   reloadAppFrames(application_id) {
-    restartConjureAppFramesDefault(application_id);
+    restartFrames.restartAppFrames(application_id);
   }
 };
 export const setConjurePreviewFrameVisibility = function setConjurePreviewFrameVisibility(iframeId, visible) {

@@ -1,10 +1,10 @@
-// === Module 13107: useGuildPowerupRollbackNotificationConfig ===
+// === Module 13115: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 13107 (useGuildPowerupRollbackNotificationConfig)
+// Module 13115 (useGuildPowerupRollbackNotificationConfig)
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import _modDef2603 from "module_2603" /* 2603 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13108 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13116 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5066 */;
 
 const require = globalThis.__r;

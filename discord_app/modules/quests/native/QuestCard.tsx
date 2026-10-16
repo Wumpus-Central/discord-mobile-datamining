@@ -1,6 +1,6 @@
-// === Module 16048: QuestCard ===
+// === Module 16062: QuestCard ===
 
-// Module 16048 (QuestCard)
+// Module 16062 (QuestCard)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,38 +8,38 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ColorUtils from "ColorUtils" /* 5026 */;
 import design_shared from "design/shared" /* 5029 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5947 */;
-import MetricEvents from "MetricEvents" /* 5952 */;
-import AdCreativeType from "AdCreativeType" /* 6197 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
-import OrbsIcon from "OrbsIcon" /* 9270 */;
-import QuestUtils from "QuestUtils" /* 9405 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9411 */;
-import captureAdUserAction from "captureAdUserAction" /* 9412 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9415 */;
-import AssetUtils from "AssetUtils" /* 9422 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9441 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16077 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 16084 */;
-import VideoQuestModal from "VideoQuestModal" /* 16085 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5948 */;
+import MetricEvents from "MetricEvents" /* 5953 */;
+import AdCreativeType from "AdCreativeType" /* 6198 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7635 */;
+import OrbsIcon from "OrbsIcon" /* 9271 */;
+import QuestUtils from "QuestUtils" /* 9406 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9412 */;
+import captureAdUserAction from "captureAdUserAction" /* 9413 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9416 */;
+import AssetUtils from "AssetUtils" /* 9423 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9442 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 16091 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 16098 */;
+import VideoQuestModal from "VideoQuestModal" /* 16099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import QuestStore from "QuestStore" /* 7609 */;
+import QuestStore from "QuestStore" /* 7610 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: metroRequire } = get_ActivityIndicator);
-let QuestsExperimentLocations = fn(6190).QuestsExperimentLocations;
+let QuestsExperimentLocations = fn(6191).QuestsExperimentLocations;
 const Constants = fn(1098);
 ({ NOOP: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5153);
+let createStyles = fn(5154);
 let result = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const internal = nativeDefault.internal;
@@ -48,7 +48,7 @@ let result = createStyles.experimental_createToken((theme) => {
   const isThemeDarkResult = design_shared.isThemeDark(theme);
   return ColorUtils.hexOpacityToRgba(semanticColor, 0);
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let result1 = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const isThemeDarkResult = design_shared.isThemeDark(theme);
@@ -61,13 +61,13 @@ let result1 = createStyles.experimental_createToken((theme) => {
   }
   return ColorUtils.hexOpacityToRgba(semanticColor, num);
 });
-createStyles = fn(5153);
+createStyles = fn(5154);
 let result2 = createStyles.experimental_createToken((theme) => {
   const colors = nativeDefault.colors;
   return design_shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 let PX_16 = nativeDefault.space.PX_16;
-createStyles = fn(5153);
+createStyles = fn(5154);
 let obj = { container: { position: "relative", padding: 0, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: nativeDefault.space.PX_16, overflow: "hidden" }, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, previewBadgeText: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, promotedByRow: null, shrinkableText: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, rewardSubtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };
 let obj6 = { position: "relative", padding: 0, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: nativeDefault.space.PX_16, overflow: "hidden" };
 obj.heroContainer = { display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: nativeDefault.space.PX_12 };
@@ -102,7 +102,7 @@ let obj13 = { flexDirection: "row", alignItems: "center", rowGap: nativeDefault.
 obj.buttonContainers = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12 };
 obj.equalWidthContainer = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
 let closure_15 = createStyles.createStyles(obj);
-createStyles = fn(5153);
+createStyles = fn(5154);
 let closure_16 = createStyles.createStyleProperties({ gradientStart: result, gradientMid: result1, gradientEnd: result2 });
 let obj14 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12 };
 size = fn(2);
@@ -122,7 +122,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     obj = AdAnalyticsInterfaceExperiment;
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16079, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16093, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
   }
   const tmp = _require;
   const tmp2 = QUEST_HOME_MOBILE;
@@ -694,7 +694,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const items25 = [tmp98(tmp(tmp2[72]).Button, obj42), ];
           const obj43 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
-                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16126, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
+                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16140, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
                     },
             variant: "tertiary",
             text: null
@@ -820,7 +820,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               openVideoQuestModalDefault(obj2);
             } else {
               const obj3 = { questId: quest.id, questContentPosition, sourceQuestContent };
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16079, dependencyMap.paths), "QuestBottomSheet", obj3);
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16093, dependencyMap.paths), "QuestBottomSheet", obj3);
             }
           };
           let tmp65 = null;
@@ -861,7 +861,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             obj56.onPress = function onPress() {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16079, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16093, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
             };
           }
         }

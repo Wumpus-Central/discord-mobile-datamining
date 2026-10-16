@@ -1,8 +1,8 @@
-// === Module 5368: OverlayView ===
+// === Module 5369: OverlayView ===
 
-// Module 5368 (OverlayView)
+// Module 5369 (OverlayView)
 import c from "c" /* 576 */;
-import _modDef5418 from "module_5418" /* 5418 */;
+import _modDef5419 from "module_5419" /* 5419 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,12 +15,12 @@ const jsx = fn(21).jsx;
 let PlatformUtils = fn(1384);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(5369).FullWindowOverlay;
+  FullWindowOverlay = fn(5370).FullWindowOverlay;
 }
 const ReactCompilerGating = fn(558);
 PlatformUtils = fn(1384);
 if (PlatformUtils.isIOS()) {
-  View = _modDef5418;
+  View = _modDef5419;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

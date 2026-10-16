@@ -1,9 +1,9 @@
-// === Module 17238: useActiveEventOrStageInstanceChannel ===
+// === Module 17251: useActiveEventOrStageInstanceChannel ===
 
-// Module 17238 (useActiveEventOrStageInstanceChannel)
+// Module 17251 (useActiveEventOrStageInstanceChannel)
 import c from "c" /* 576 */;
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8880 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 17237 */;
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8881 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 17250 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;

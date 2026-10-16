@@ -1,6 +1,6 @@
-// === Module 6112: canJoinVoiceChannel ===
+// === Module 6113: canJoinVoiceChannel ===
 
-// Module 6112 (canJoinVoiceChannel)
+// Module 6113 (canJoinVoiceChannel)
 import Constants from "Constants" /* 1087 */;
 import ChannelRecord from "ChannelRecord" /* 2072 */;
 import size from "module_2" /* 2 */;

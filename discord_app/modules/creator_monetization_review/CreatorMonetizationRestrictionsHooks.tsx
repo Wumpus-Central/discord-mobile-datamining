@@ -1,8 +1,8 @@
-// === Module 7176: CreatorMonetizationRestrictionsHooks ===
+// === Module 7178: CreatorMonetizationRestrictionsHooks ===
 
-// Module 7176 (CreatorMonetizationRestrictionsHooks)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7177 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7178 */;
+// Module 7178 (CreatorMonetizationRestrictionsHooks)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7179 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7180 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4802 */;
 import GuildStore from "GuildStore" /* 2090 */;

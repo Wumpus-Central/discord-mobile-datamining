@@ -1,6 +1,6 @@
-// === Module 17324: GameClaimCoachmarkExperiment ===
+// === Module 17336: GameClaimCoachmarkExperiment ===
 
-// Module 17324 (GameClaimCoachmarkExperiment)
+// Module 17336 (GameClaimCoachmarkExperiment)
 import c from "c" /* 576 */;
 import createExperiment from "module_5073" /* 5073 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

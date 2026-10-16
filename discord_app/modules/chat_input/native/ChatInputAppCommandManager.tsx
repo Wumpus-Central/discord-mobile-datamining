@@ -1,16 +1,16 @@
-// === Module 12990: ChatInputAppCommandManager ===
+// === Module 12998: ChatInputAppCommandManager ===
 
-// Module 12990 (ChatInputAppCommandManager)
+// Module 12998 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 587 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 8463 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12766 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12991 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8464 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12773 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8141 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8142 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8142 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8143 */;
 import GameStore from "GameStore" /* 2022 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8461 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8462 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -38,9 +38,9 @@ function areResolvedGamesEqual(size, size2) {
     return false;
   }
 }
-const ChannelAutocompleteConstants = fn(5466);
+const ChannelAutocompleteConstants = fn(5467);
 ({ extractGameMentionIds: closure_11, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = ChannelAutocompleteConstants);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { commandOption: { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 }, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
 let obj3 = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
 obj.commandErrorOption = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
         return null == closure_1_9.getGameById(arg0);
       }
     }
-    const games = tmp(7231).useGames(tmp7);
+    const games = tmp(7233).useGames(tmp7);
     const _Symbol2 = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       class E {
@@ -550,7 +550,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
     cResult[10] = stateFromStores;
     cResult[11] = obj2;
     tmp23 = obj2;
-    const tmpResult = tmp(7231);
+    const tmpResult = tmp(7233);
   }
   let obj = first1(576);
 }) : (function useResolveComposerGameMentions() {
@@ -567,8 +567,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
     });
   }, []);
   const memo = noop.useMemo(() => first.filter((item) => null == gameById.getGameById(item)), items);
-  const games = rawGameMentionIds(7231).useGames(memo);
-  let obj = rawGameMentionIds(7231);
+  const games = rawGameMentionIds(7233).useGames(memo);
+  let obj = rawGameMentionIds(7233);
   const items1 = [GameStore, UserStore, GameAutocompleteStore];
   const items2 = [rawGameMentionIds];
   let obj2 = rawGameMentionIds(504);

@@ -1,19 +1,19 @@
-// === Module 13422: GuildDirectoryNicknameUpsellModal ===
+// === Module 13430: GuildDirectoryNicknameUpsellModal ===
 
-// Module 13422 (GuildDirectoryNicknameUpsellModal)
+// Module 13430 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import components_Button_Button from "components/Button/Button" /* 5441 */;
-import GuildIcon from "GuildIcon" /* 6381 */;
-import useInitialValueDefault from "useInitialValue" /* 6392 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6507 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6887 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13414 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13421 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import components_Button_Button from "components/Button/Button" /* 5442 */;
+import GuildIcon from "GuildIcon" /* 6383 */;
+import useInitialValueDefault from "useInitialValue" /* 6394 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6509 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6889 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13422 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13429 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,12 +25,12 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(13413).GuildPrompts;
+const GuildPrompts = fn(13421).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5153);
-let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(6481).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6481).NAV_BAR_HEIGHT };
+const createStyles = fn(5154);
+let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(6483).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6483).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -63,7 +63,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
   }
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
-  const insets = handleClose(6887)().insets;
+  const insets = handleClose(6889)().insets;
   const tmpResult = require("initialize");
   [obj3, dependencyMap] = ref(noop.useState(null), 2);
   const tmp11 = ref(noop.useState(""), 2);
@@ -116,7 +116,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
               }
               if (cResult[22] !== tmp4.description) {
                 const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp30 };
-                const tmp34 = closure_10(tmp(5149).Text, obj4);
+                const tmp34 = closure_10(tmp(5150).Text, obj4);
                 cResult[22] = tmp4.description;
                 cResult[23] = tmp34;
                 let tmp32 = tmp34;
@@ -219,13 +219,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
                   obj5.error = tmp43;
                   obj5.onFocus = J;
                   obj5.onBlur = Q;
-                  const tmp50 = closure_10(tmp9(6507), obj5);
+                  const tmp50 = closure_10(tmp9(6509), obj5);
                   cResult[34] = first1;
                   cResult[35] = tmp4.input;
                   cResult[36] = tmp4.redesignTextInput;
                   cResult[37] = tmp43;
                   cResult[38] = tmp50;
-                  const tmp9Result = tmp9(6507);
+                  const tmp9Result = tmp9(6509);
                 }
               }
               const obj6 = { style: header, children: null };
@@ -238,18 +238,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
               cResult[27] = tmp38;
             }
             const obj7 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp23 };
-            const tmp29 = closure_10(tmp(5149).Text, obj7);
+            const tmp29 = closure_10(tmp(5150).Text, obj7);
             cResult[18] = tmp4.title;
             cResult[19] = tmp23;
             cResult[20] = tmp29;
             tmp27 = tmp29;
           }
-          const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6381).GuildIconSizes.XLARGE };
-          const tmp21 = closure_10(tmp9(6381), obj8);
+          const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6383).GuildIconSizes.XLARGE };
+          const tmp21 = closure_10(tmp9(6383), obj8);
           cResult[13] = stateFromStores;
           cResult[14] = tmp4.guildIcon;
           cResult[15] = tmp21;
-          const tmp9Result2 = tmp9(6381);
+          const tmp9Result2 = tmp9(6383);
         }
         const items2 = [tmp4.container, tmp16];
         cResult[10] = tmp4.container;
@@ -266,11 +266,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
   _require = first1(function*() {
     tmp30(null);
     let nick = 1;
-    yield closure_0(7032).updateGuildSelfMember(closure_0, { nick });
+    yield closure_0(7034).updateGuildSelfMember(closure_0, { nick });
     if (1 === tmp7) {
       nick = 0;
       closure_128_0 = tmp30;
-      const aPIError = new closure_0(5853).APIError(closure_128_0);
+      const aPIError = new closure_0(5854).APIError(closure_128_0);
       tmp30(aPIError);
       c5 = 3;
     } else if (arg0 === 1) {

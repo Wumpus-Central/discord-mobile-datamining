@@ -1,16 +1,17 @@
-// === Module 12710: useCheckpointPreloader ===
+// === Module 12717: useCheckpointPreloader ===
 
-// Module 12710 (useCheckpointPreloader)
+// Module 12717 (useCheckpointPreloader)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
+import _modDef4968 from "module_4968" /* 4968 */;
 import _modDef4972 from "module_4972" /* 4972 */;
 import _modDef4974 from "module_4974" /* 4974 */;
-import _modDef12663 from "module_12663" /* 12663 */;
-import _modDef12665 from "module_12665" /* 12665 */;
-import _modDef12672 from "module_12672" /* 12672 */;
-import _modDef12681 from "module_12681" /* 12681 */;
-import _modDef12685 from "module_12685" /* 12685 */;
-import _modDef12692 from "module_12692" /* 12692 */;
-import _modDef12696 from "module_12696" /* 12696 */;
+import _modDef12669 from "module_12669" /* 12669 */;
+import _modDef12671 from "module_12671" /* 12671 */;
+import _modDef12678 from "module_12678" /* 12678 */;
+import _modDef12687 from "module_12687" /* 12687 */;
+import _modDef12691 from "module_12691" /* 12691 */;
+import _modDef12698 from "module_12698" /* 12698 */;
+import _modDef12703 from "module_12703" /* 12703 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +19,8 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(12654).CheckpointFetchStates;
-let items = [_modDef4972, _modDef4974, _modDef12672, _modDef12696, _modDef12685, _modDef12681, _modDef12692, _modDef12665, _modDef12663];
+const CheckpointFetchStates = fn(12660).CheckpointFetchStates;
+let items = [_modDef4968, _modDef4972, _modDef4974, _modDef12678, _modDef12703, _modDef12691, _modDef12687, _modDef12698, _modDef12671, _modDef12669];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPreloader.tsx");
@@ -45,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCheck
       }
       const item = items.forEach((url) => {
         const HTTP = HTTPUtils.HTTP;
-        value = HTTP.get({ url, rejectWithError: true });
+        value = HTTP.get({ url, binary: true, rejectWithError: true });
         return value.then(handleSettled, handleSettled);
       });
     };
@@ -93,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCheck
     }
     const item = items.forEach((url) => {
       const HTTP = HTTPUtils.HTTP;
-      value = HTTP.get({ url, rejectWithError: true });
+      value = HTTP.get({ url, binary: true, rejectWithError: true });
       return value.then(handleSettled, handleSettled);
     });
   }, []);

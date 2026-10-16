@@ -1,7 +1,7 @@
-// === Module 8618: useMediaItemHasSpoiler ===
+// === Module 8619: useMediaItemHasSpoiler ===
 
-// Module 8618 (useMediaItemHasSpoiler)
-import MediaSourceUtil from "MediaSourceUtil" /* 8619 */;
+// Module 8619 (useMediaItemHasSpoiler)
+import MediaSourceUtil from "MediaSourceUtil" /* 8620 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
@@ -25,7 +25,7 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
   } else {
     tmp4 = cResult[1];
   }
-  const MediaViewerSourcesStore = tmp(8614).MediaViewerSourcesStore;
+  const MediaViewerSourcesStore = tmp(8615).MediaViewerSourcesStore;
   const state = MediaViewerSourcesStore.useState(tmp4);
   if (cResult[2] !== arg0) {
     const fn2 = function o(userRevealedIndexes) {
@@ -38,13 +38,13 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
   } else {
     tmp6 = cResult[3];
   }
-  const MediaViewerSourcesStore2 = tmp(8614).MediaViewerSourcesStore;
+  const MediaViewerSourcesStore2 = tmp(8615).MediaViewerSourcesStore;
   const state1 = MediaViewerSourcesStore2.useState(tmp6);
   if (cResult[4] !== state) {
     let flattenSourceResult;
     if (null != state) {
-      flattenSourceResult = tmp(8619).flattenSource(state);
-      const tmpResult = tmp(8619);
+      flattenSourceResult = tmp(8620).flattenSource(state);
+      const tmpResult = tmp(8620);
     }
     cResult[4] = state;
     cResult[5] = flattenSourceResult;
@@ -71,7 +71,7 @@ export const useMediaItemHasSpoiler = ReactCompilerGating.isReactCompilerEnabled
       let tmp15 = cResult[9];
     }
     const stateFromStores = tmp(573).useStateFromStores(tmp13, tmp15);
-    tmp(8625);
+    tmp(8626);
     let tmp19 = !state1;
     if (!state1) {
       let obscure;

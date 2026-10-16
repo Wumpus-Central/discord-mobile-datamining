@@ -1,11 +1,11 @@
-// === Module 6526: NativeTextInput ===
+// === Module 6528: NativeTextInput ===
 
-// Module 6526 (NativeTextInput)
+// Module 6528 (NativeTextInput)
 import c from "c" /* 576 */;
 import native from "native" /* 4879 */;
 import native2 from "native" /* 4886 */;
-import useMountEffect from "useMountEffect" /* 5458 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6528 */;
+import useMountEffect from "useMountEffect" /* 5459 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6530 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
 
@@ -80,7 +80,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
         const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { value: "Array", defaultValue: "test" };
+          const obj2 = { value: "Symbol", defaultValue: "current" };
           cResult[8] = obj2;
           let tmp11 = obj2;
         } else {
@@ -143,7 +143,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
       current.setNativeProps(obj);
     }
   });
-  return { value: "Array", defaultValue: "test" };
+  return { value: "Symbol", defaultValue: "current" };
 });
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePanGestureWrapper(arg0) {

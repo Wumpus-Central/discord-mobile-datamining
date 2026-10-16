@@ -1,18 +1,18 @@
-// === Module 15764: BlockedUsersListV2 ===
+// === Module 15774: BlockedUsersListV2 ===
 
-// Module 15764 (BlockedUsersListV2)
+// Module 15774 (BlockedUsersListV2)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import TableRowGroup from "TableRowGroup" /* 6487 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7037 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7075 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7100 */;
-import Blocked from "Blocked" /* 15765 */;
-import BlockedUserRowV2Default from "BlockedUserRowV2" /* 15769 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import TableRowGroup from "TableRowGroup" /* 6489 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7039 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7077 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
+import Blocked from "Blocked" /* 15775 */;
+import BlockedUserRowV2Default from "BlockedUserRowV2" /* 15779 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 
@@ -22,7 +22,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { list: { flex: 1, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
 let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };

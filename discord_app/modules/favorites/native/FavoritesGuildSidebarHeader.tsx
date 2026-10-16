@@ -1,45 +1,26 @@
-// === Module 17350: FavoritesGuildSidebarHeader ===
+// === Module 17362: FavoritesGuildSidebarHeader ===
 
-// Module 17350 (FavoritesGuildSidebarHeader)
+// Module 17362 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import _modDef3447 from "module_3447" /* 3447 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import ChatIcon from "ChatIcon" /* 8424 */;
-import TextIcon from "TextIcon" /* 8433 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8454 */;
-import FavoritesHooks from "FavoritesHooks" /* 10561 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10564 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13555 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import ChatIcon from "ChatIcon" /* 8425 */;
+import TextIcon from "TextIcon" /* 8434 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8455 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function EmptyBody() {
-  const callback = noop.useCallback(() => {
-    if (obj.getFavoritesAccess().hasAccess) {
-      openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
-    } else {
-      const tmp3Result = ActionSheetActionCreatorsDefault;
-      tmp3Result.openLazy(asyncRequireImpl(dependencyMap[9], dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
-      const tmp4 = asyncRequireImpl(dependencyMap[9], dependencyMap.paths);
-    }
-    obj = FavoritesHooks;
-  }, []);
-  let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = util.intl;
-  obj.children = intl.format(_modDef3447.Z3Hdr5, { onClick: callback });
-  return timestampProducer(Text_Text.Text, obj);
-}
 const View = fn(17).View;
-let closure_5 = fn(17253).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17266).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5153);
+let c10 = "text-sm/medium";
+const createStyles = fn(5154);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -53,11 +34,44 @@ let obj7 = { height: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii
 obj2.placeholderBarShort = { width: nativeDefault.space.PX_80 };
 let obj8 = { width: nativeDefault.space.PX_80 };
 obj2.placeholderBarLong = { width: nativeDefault.space.PX_128 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderRows() {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyBody() {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function l() {
+      openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { variant: variant2, color: "text-muted", children: null };
+    const intl = util.intl;
+    const obj3 = { onClick: first };
+    obj2.children = intl.format(_modDef3447.Z3Hdr5, obj3);
+    const tmp9 = timestampProducer(Text_Text.Text, obj2);
+    cResult[1] = tmp9;
+    let tmp5 = tmp9;
+  } else {
+    tmp5 = cResult[1];
+  }
+  return tmp5;
+}) : (function EmptyBody() {
+  const callback = noop.useCallback(() => {
+    openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
+  }, []);
+  const obj = { variant: variant2, color: "text-muted", children: null };
+  const intl = util.intl;
+  obj.children = intl.format(_modDef3447.Z3Hdr5, { onClick: callback });
+  return timestampProducer(Text_Text.Text, obj);
+});
+ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderRows() {
   const cResult = c.c(26);
-  const tmp4 = closure_10();
+  const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
     const tmp8 = timestampProducer(TextIcon.TextIcon, obj2);
@@ -186,7 +200,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
   cResult[3] = tmp10;
   tmp9 = tmp10;
 }) : (function PlaceholderRows() {
-  const tmp = closure_10();
+  const tmp = closure_11();
   const obj = { style: tmp.placeholderRows, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.placeholderRow, children: null };
   const items = [timestampProducer(TextIcon.TextIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), ];
@@ -227,7 +241,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildSidebarHeader() {
   const cResult = c.c(14);
-  const tmp4 = closure_10();
+  const tmp4 = closure_11();
   const tmp5 = closure_5();
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4.divider) {
@@ -239,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       const intl = util.intl;
       obj2.children = intl.string(_modDef3447["1n0TGE"]);
       const tmp16 = timestampProducer(Text_Text.Heading, obj2);
-      const tmp18 = timestampProducer(EmptyBody, {});
+      const tmp18 = timestampProducer(closure_12, {});
       cResult[3] = tmp16;
       cResult[4] = tmp18;
       let tmp12 = tmp18;
@@ -285,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     if (!tmp5) {
       const obj5 = { children: null };
       const obj6 = { style: tmp4.divider };
-      const items2 = [timestampProducer(View, obj6), timestampProducer(closure_12, {})];
+      const items2 = [timestampProducer(View, obj6), timestampProducer(closure_13, {})];
       obj5.children = items2;
       tmp24 = React5(closure_1_8, obj5);
     }
@@ -304,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   cResult[2] = tmp7;
   tmp6 = tmp7;
 }) : (function FavoritesGuildSidebarHeader() {
-  const tmp = closure_10();
+  const tmp = closure_11();
   const tmp2 = closure_5();
   const obj = { spacing: nativeDefault.space.PX_8, children: null };
   let tmp7 = null;
@@ -317,14 +331,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(_modDef3447["1n0TGE"]);
-  const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
+  const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(closure_12, {})];
   obj3.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj3);
   let tmp3Result = null;
   if (!tmp2) {
     const obj5 = { children: null };
     const obj6 = { style: tmp.divider };
-    const items2 = [timestampProducer(View, obj6), timestampProducer(closure_12, {})];
+    const items2 = [timestampProducer(View, obj6), timestampProducer(closure_13, {})];
     obj5.children = items2;
     tmp3Result = React5(closure_1_8, obj5);
   }

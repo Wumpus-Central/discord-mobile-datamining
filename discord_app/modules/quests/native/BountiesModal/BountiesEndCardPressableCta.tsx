@@ -1,20 +1,20 @@
-// === Module 15990: BountiesEndCardPressableCta ===
+// === Module 16002: BountiesEndCardPressableCta ===
 
-// Module 15990 (BountiesEndCardPressableCta)
+// Module 16002 (BountiesEndCardPressableCta)
 import nativeDefault from "native" /* 587 */;
-import QuestContent from "QuestContent" /* 6195 */;
-import AdCreativeType from "AdCreativeType" /* 6197 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7634 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9441 */;
+import QuestContent from "QuestContent" /* 6196 */;
+import AdCreativeType from "AdCreativeType" /* 6198 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7635 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(15991).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(16003).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
   const size = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };

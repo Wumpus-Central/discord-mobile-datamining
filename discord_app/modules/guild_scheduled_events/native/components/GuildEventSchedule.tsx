@@ -1,11 +1,11 @@
-// === Module 8768: GuildEventSchedule ===
+// === Module 8769: GuildEventSchedule ===
 
-// Module 8768 (GuildEventSchedule)
+// Module 8769 (GuildEventSchedule)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import ScheduleUtils from "ScheduleUtils" /* 8747 */;
-import GuildEventModalComponents from "GuildEventModalComponents" /* 8769 */;
+import ScheduleUtils from "ScheduleUtils" /* 8748 */;
+import GuildEventModalComponents from "GuildEventModalComponents" /* 8770 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -162,14 +162,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   const onChange = schedule.onChange;
   ({ guildEvent, recurrenceId } = schedule);
   const tmp2 = onChange(4761)();
-  const addResult = onChange(4761)().add(schedule(8747).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
+  const addResult = onChange(4761)().add(schedule(8748).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
   const items = [schedule.startDate];
   const memo = noop.useMemo(() => _modDef4761(schedule.startDate).add(15, "minutes"), items);
   let obj = onChange(4761)();
-  const addResult1 = onChange(4761)().add(schedule(8747).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+  const addResult1 = onChange(4761)().add(schedule(8748).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
   if (null != recurrenceId) {
-    addResult.add(tmp3(8747).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
-    addResult1.add(tmp3(8747).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+    addResult.add(tmp3(8748).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+    addResult1.add(tmp3(8748).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
   }
   const obj2 = {
     date: schedule.startDate,
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   obj2.dateLabel = intl.string(schedule(1128).t.kKOIwJ);
   const intl2 = tmp3(1128).intl;
   obj2.timeLabel = intl2.string(schedule(1128).t["6dGmCD"]);
-  const children = [closure_4(schedule(8769).GuildEventDatetime, obj2), ];
+  const children = [closure_4(schedule(8770).GuildEventDatetime, obj2), ];
   let tmp9Result = null != guildEvent.scheduled_end_time;
   if (tmp9Result) {
     const obj4 = {
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
     obj4.dateLabel = intl3.string(tmp3(1128).t.CTLgZJ);
     const intl4 = tmp3(1128).intl;
     obj4.timeLabel = intl4.string(tmp3(1128).t.j2RuXF);
-    tmp9Result = closure_4(tmp3(8769).GuildEventDatetime, obj4);
+    tmp9Result = closure_4(tmp3(8770).GuildEventDatetime, obj4);
   }
   children[1] = tmp9Result;
   return closure_6(closure_5, { children });

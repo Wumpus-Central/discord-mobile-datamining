@@ -1,10 +1,10 @@
-// === Module 14069: RibbonIcon ===
+// === Module 14079: RibbonIcon ===
 
-// Module 14069 (RibbonIcon)
+// Module 14079 (RibbonIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod14070 from "module_14070" /* 14070 */;
+import _mod14080 from "module_14080" /* 14080 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RibbonIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14070;
+    const tmpResult = _mod14080;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RibbonIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14070, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14080, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,21 +1,21 @@
-// === Module 17232: ChannelsUnreadBars ===
+// === Module 17245: ChannelsUnreadBars ===
 
-// Module 17232 (ChannelsUnreadBars)
+// Module 17245 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
 import HapticUtils from "HapticUtils" /* 5119 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
-import useFontScale from "useFontScale" /* 5448 */;
-import FastList from "FastList" /* 6983 */;
-import ChannelListState from "ChannelListState" /* 7469 */;
+import useFontScale from "useFontScale" /* 5449 */;
+import FastList from "FastList" /* 6985 */;
+import ChannelListState from "ChannelListState" /* 7471 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6302 */;
-import ReadStateStore from "ReadStateStore" /* 6253 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6184 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6304 */;
+import ReadStateStore from "ReadStateStore" /* 6254 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6185 */;
 
 require = fn;
 function shouldSkipSection(diff2) {
@@ -201,11 +201,11 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(11821).getScaledChannelRowHeight;
-const UnreadSetting = fn(6185).UnreadSetting;
+const getScaledChannelRowHeight = fn(11818).getScaledChannelRowHeight;
+const UnreadSetting = fn(6186).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_16 = createStyles.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 const constants = { MENTION: "mention", UNREAD: "unread" };
 let closure_18 = { beforeItem: null, afterItem: null };

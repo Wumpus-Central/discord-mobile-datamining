@@ -1,14 +1,14 @@
-// === Module 15431: guilds ===
+// === Module 15441: guilds ===
 
-// Module 15431 (guilds)
+// Module 15441 (guilds)
 import GuildRecord from "GuildRecord" /* 2086 */;
-import Constants2 from "Constants" /* 5857 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8684 */;
-import RPCErrorDefault from "RPCError" /* 11250 */;
-import botScopedAccess from "botScopedAccess" /* 15427 */;
+import Constants2 from "Constants" /* 5858 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8685 */;
+import RPCErrorDefault from "RPCError" /* 11247 */;
+import botScopedAccess from "botScopedAccess" /* 15437 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import Constants from "Constants" /* 1087 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15422 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15432 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;

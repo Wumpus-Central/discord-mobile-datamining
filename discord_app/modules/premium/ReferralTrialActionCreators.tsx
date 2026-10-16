@@ -1,11 +1,11 @@
-// === Module 7394: ReferralTrialActionCreators ===
+// === Module 7396: ReferralTrialActionCreators ===
 
-// Module 7394 (ReferralTrialActionCreators)
+// Module 7396 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7395 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7397 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import Backoff from "Backoff" /* 569 */;
@@ -359,7 +359,7 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
         num = body.body.referrals_remaining;
       }
     }
-    const obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null };
+    const obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null, recurring_reminder_state_id: null };
     if (null != body.body) {
       if (null != body.body.sent_user_ids) {
         const sent_user_ids = body.body.sent_user_ids;
@@ -393,6 +393,15 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
         reminder_state_id = null;
       }
       obj.reminder_state_id = reminder_state_id;
+      const body4 = body.body;
+      let prop;
+      if (body4 != null) {
+        prop = body4.recurring_reminder_state_id;
+      }
+      if (prop == null) {
+        prop = null;
+      }
+      obj.recurring_reminder_state_id = prop;
       obj2.dispatch(obj);
     }
     obj2 = DispatcherDefault;

@@ -1,20 +1,20 @@
-// === Module 11079: PlaintextFilePreviewModal ===
+// === Module 11076: PlaintextFilePreviewModal ===
 
-// Module 11079 (PlaintextFilePreviewModal)
+// Module 11076 (PlaintextFilePreviewModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import LinkingDefault from "Linking" /* 4865 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6152 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6378 */;
-import NavigatorHeader from "NavigatorHeader" /* 6423 */;
-import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7046 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8490 */;
-import ContextMenu from "ContextMenu" /* 9599 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11078 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11080 */;
-import useDownloadedFile from "useDownloadedFile" /* 11082 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6380 */;
+import NavigatorHeader from "NavigatorHeader" /* 6425 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7048 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8491 */;
+import ContextMenu from "ContextMenu" /* 9598 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11075 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11077 */;
+import useDownloadedFile from "useDownloadedFile" /* 11079 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, scroller: { flex: 1 }, scrollerContent: null, code: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollerContent = { padding: nativeDefault.space.PX_16 };
@@ -269,12 +269,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Plaintex
           obj = {
             items: closure_4,
             children(ref) {
-                      const obj = { IconComponent: url(9478).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                      const obj = { IconComponent: url(9479).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                       const intl = url(1128).intl;
                       obj.accessibilityLabel = intl.string(url(1128).t.PdRCRg);
                       obj.ref = ref.ref;
                       const merged = Object.assign(items(ref, closure_1_3));
-                      return closure_1_9(url(7312).HeaderActionButton, obj);
+                      return closure_1_9(url(7314).HeaderActionButton, obj);
                     }
           };
           return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -288,12 +288,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Plaintex
           obj = {
             items: closure_4,
             children(ref) {
-                      const obj = { IconComponent: url(9478).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                      const obj = { IconComponent: url(9479).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                       const intl = url(1128).intl;
                       obj.accessibilityLabel = intl.string(url(1128).t.PdRCRg);
                       obj.ref = ref.ref;
                       const merged = Object.assign(items(ref, closure_1_3));
-                      return closure_1_9(url(7312).HeaderActionButton, obj);
+                      return closure_1_9(url(7314).HeaderActionButton, obj);
                     }
           };
           return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -306,12 +306,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Plaintex
           obj = {
             items: closure_4,
             children(ref) {
-                      const obj = { IconComponent: url(9478).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                      const obj = { IconComponent: url(9479).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
                       const intl = url(1128).intl;
                       obj.accessibilityLabel = intl.string(url(1128).t.PdRCRg);
                       obj.ref = ref.ref;
                       const merged = Object.assign(items(ref, closure_1_3));
-                      return closure_1_9(url(7312).HeaderActionButton, obj);
+                      return closure_1_9(url(7314).HeaderActionButton, obj);
                     }
           };
           return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -387,12 +387,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Plaintex
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(9478).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const obj = { IconComponent: url(9479).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
             const intl = url(1128).intl;
             obj.accessibilityLabel = intl.string(url(1128).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_9(url(7312).HeaderActionButton, obj);
+            return closure_1_9(url(7314).HeaderActionButton, obj);
           }
         });
       },
@@ -404,5 +404,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Plaintex
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(10851).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(10848).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 });

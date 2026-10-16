@@ -1,12 +1,12 @@
-// === Module 12787: MessageAttachmentUtils ===
+// === Module 12793: MessageAttachmentUtils ===
 
-// Module 12787 (MessageAttachmentUtils)
+// Module 12793 (MessageAttachmentUtils)
 import util from "util" /* 1128 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7212 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 7217 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7218 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8625 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8705 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7214 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7219 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7220 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8626 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8706 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 
 require = fn;
@@ -177,7 +177,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
     }
   }
-  channel(7212);
+  channel(7214);
   if (cResult[7] === stateFromStores) {
     if (cResult[8] === setting) {
       let tmp11 = cResult[9];
@@ -207,7 +207,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
   const RenderSpoilers = channel(2044).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(573);
-  const enabledHarmTypesBitmaskForChannelType = channel(7212).getEnabledHarmTypesBitmaskForChannelType(channel(7218).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(7214).getEnabledHarmTypesBitmaskForChannelType(channel(7220).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 });
 export const getObscuredAlt = function getObscuredAlt(arg0) {

@@ -1,27 +1,27 @@
-// === Module 12684: CheckpointMessagesStatsScreen ===
+// === Module 12690: CheckpointMessagesStatsScreen ===
 
-// Module 12684 (CheckpointMessagesStatsScreen)
+// Module 12690 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3091 from "module_3091" /* 3091 */;
 import _modDef3123 from "module_3123" /* 3123 */;
-import CheckpointConstants from "CheckpointConstants" /* 5499 */;
-import CheckpointTextDefault from "CheckpointText" /* 12676 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12678 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12680 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12682 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12683 */;
-import _modDef12685 from "module_12685" /* 12685 */;
-import CheckpointStore from "CheckpointStore" /* 12654 */;
+import CheckpointConstants from "CheckpointConstants" /* 5500 */;
+import CheckpointTextDefault from "CheckpointText" /* 12682 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12684 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12686 */;
+import NumberAnimationDefault from "NumberAnimation" /* 12688 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12689 */;
+import _modDef12691 from "module_12691" /* 12691 */;
+import CheckpointStore from "CheckpointStore" /* 12660 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5153 */;
+import createStyles from "createStyles" /* 5154 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const initialize = TOMBAW(504);
 const util = TOMBAW(1128);
-const ChatIcon = TOMBAW(8424);
+const ChatIcon = TOMBAW(8425);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const tmp29Result = CheckpointScreenDefault;
   const container = tmp3.container;
   if (cResult[27] !== tmp3.image) {
-    const obj13 = { uri: _modDef12685, style: tmp3.image };
+    const obj13 = { uri: _modDef12691, style: tmp3.image };
     const tmp36 = timestampProducer(CheckpointApngPlayerDefault, obj13);
     cResult[27] = tmp3.image;
     cResult[28] = tmp36;
@@ -420,7 +420,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj4 = { style: tmp.imageContainer, children: null };
   const obj5 = { uri: null, style: null };
   const tmp8Result = CheckpointScreenDefault;
-  obj5.uri = _modDef12685;
+  obj5.uri = _modDef12691;
   obj5.style = tmp.image;
   obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
   const items1 = [timestampProducer(View, obj4), ];

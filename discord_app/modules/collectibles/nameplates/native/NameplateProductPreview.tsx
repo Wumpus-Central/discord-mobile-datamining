@@ -1,29 +1,29 @@
-// === Module 14138: NameplateProductPreview ===
+// === Module 14148: NameplateProductPreview ===
 
-// Module 14138 (NameplateProductPreview)
+// Module 14148 (NameplateProductPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import utils from "utils" /* 1992 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import LinearGradientDefault from "LinearGradient" /* 5453 */;
-import TableRow from "TableRow" /* 6402 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8517 */;
-import useShopProductItems from "useShopProductItems" /* 8522 */;
-import useCurrentUser from "useCurrentUser" /* 8529 */;
-import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8610 */;
-import types from "types" /* 10502 */;
-import UserNameplateRow from "UserNameplateRow" /* 10526 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import LinearGradientDefault from "LinearGradient" /* 5454 */;
+import TableRow from "TableRow" /* 6404 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8518 */;
+import useShopProductItems from "useShopProductItems" /* 8523 */;
+import useCurrentUser from "useCurrentUser" /* 8530 */;
+import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8611 */;
+import types from "types" /* 10503 */;
+import UserNameplateRow from "UserNameplateRow" /* 10527 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 }, memberListTitle: null, memberListGradient: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberListTitle = { paddingVertical: nativeDefault.space.PX_8 };
@@ -79,7 +79,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     } else {
       tmp16 = cResult[8];
     }
-    if (null == tmp8(5846)(tmp16)) {
+    if (null == tmp8(5847)(tmp16)) {
       if (cResult[12] === tmp9) {
         if (cResult[13] === tmp22) {
           if (cResult[14] === currentUser) {
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     } else {
       if (cResult[9] === id) {
       }
-      tmp8 = tmp8(10501);
+      tmp8 = tmp8(10502);
       const obj6 = { userId: currentUser.id, userName: id, effectDisplayType: types.EffectDisplayType.STATIC, lineClamp: 1, variant: "text-md/semibold" };
       const tmp20 = timestampProducer(tmp8, obj6);
       cResult[9] = id;

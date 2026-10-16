@@ -1,14 +1,14 @@
-// === Module 15565: UserProfileBadgesEditButton ===
+// === Module 15575: UserProfileBadgesEditButton ===
 
-// Module 15565 (UserProfileBadgesEditButton)
+// Module 15575 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10818 */;
-import BadgeUtils from "BadgeUtils" /* 10827 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15566 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10815 */;
+import BadgeUtils from "BadgeUtils" /* 10824 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 15576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10826 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10823 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, badge: { width: 32, height: 32 }, overflowCount: { marginLeft: 2 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

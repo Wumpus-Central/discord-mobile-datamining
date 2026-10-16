@@ -1,19 +1,19 @@
-// === Module 13184: GuildPowerupsGameServerCard ===
+// === Module 13192: GuildPowerupsGameServerCard ===
 
-// Module 13184 (GuildPowerupsGameServerCard)
+// Module 13192 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 587 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 13185 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 13186 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 13193 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 13194 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import GameServerStore from "GameServerStore" /* 8253 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import GameServerStore from "GameServerStore" /* 8254 */;
 
-const useGuildPowerupOnShowMoreDefault = description(13176);
-const GuildPowerupsPerkCardDefault = description(13181);
+const useGuildPowerupOnShowMoreDefault = description(13184);
+const GuildPowerupsPerkCardDefault = description(13189);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

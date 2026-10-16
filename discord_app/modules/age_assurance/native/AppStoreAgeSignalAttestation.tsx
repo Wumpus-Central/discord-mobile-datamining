@@ -1,12 +1,12 @@
-// === Module 7912: AppStoreAgeSignalAttestation ===
+// === Module 7913: AppStoreAgeSignalAttestation ===
 
-// Module 7912 (AppStoreAgeSignalAttestation)
+// Module 7913 (AppStoreAgeSignalAttestation)
 import Storage3 from "Storage" /* 510 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import TimeUtils from "TimeUtils" /* 5182 */;
-import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 7913 */;
-import NativeAppAttestModuleDefault from "NativeAppAttestModule" /* 7914 */;
-import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 7915 */;
+import TimeUtils from "TimeUtils" /* 5183 */;
+import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 7914 */;
+import NativeAppAttestModuleDefault from "NativeAppAttestModule" /* 7915 */;
+import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 7916 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
 

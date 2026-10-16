@@ -1,6 +1,6 @@
-// === Module 12206: clarification/ConjureImageOptions ===
+// === Module 12210: clarification/ConjureImageOptions ===
 
-// Module 12206 (clarification/ConjureImageOptions)
+// Module 12210 (clarification/ConjureImageOptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,16 +8,16 @@ import _modDef3865 from "module_3865" /* 3865 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4891 */;
 import FastImageDefault from "FastImage" /* 5091 */;
 import TrashIcon from "TrashIcon" /* 5111 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import FormCheckbox from "FormCheckbox" /* 6400 */;
-import Card from "Card" /* 6404 */;
-import FormRadio from "FormRadio" /* 6488 */;
-import IconButton from "IconButton" /* 7793 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8434 */;
-import openMediaModal from "openMediaModal" /* 8613 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12174 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 12202 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 12207 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import FormCheckbox from "FormCheckbox" /* 6402 */;
+import Card from "Card" /* 6406 */;
+import FormRadio from "FormRadio" /* 6490 */;
+import IconButton from "IconButton" /* 7794 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8435 */;
+import openMediaModal from "openMediaModal" /* 8614 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12108 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 12206 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 12211 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 1024;
 let c11 = 104;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -1216,7 +1216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(12209).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(12213).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -1230,8 +1230,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(12209).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(12209);
+            closure_129_4.onUpload(tmp2(12213).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(12213);
           }
           c3 = 3;
           return { value: "IconComponent", done: null };

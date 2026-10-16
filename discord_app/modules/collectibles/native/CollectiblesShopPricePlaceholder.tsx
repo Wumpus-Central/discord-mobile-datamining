@@ -1,16 +1,16 @@
-// === Module 9305: CollectiblesShopPricePlaceholder ===
+// === Module 9306: CollectiblesShopPricePlaceholder ===
 
-// Module 9305 (CollectiblesShopPricePlaceholder)
+// Module 9306 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
+import timing from "timing" /* 5155 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { skeletonContainer: { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollectiblesShopPricePlaceholderTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };

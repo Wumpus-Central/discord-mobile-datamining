@@ -1,11 +1,11 @@
-// === Module 8872: EditGuildEventDetails ===
+// === Module 8873: EditGuildEventDetails ===
 
-// Module 8872 (EditGuildEventDetails)
+// Module 8873 (EditGuildEventDetails)
 import util from "util" /* 1128 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8746 */;
-import ScheduleUtils from "ScheduleUtils" /* 8747 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8747 */;
+import ScheduleUtils from "ScheduleUtils" /* 8748 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,11 +20,11 @@ function assertGuildEventDetailsValid(guildEvent) {
     throw error;
   }
 }
-let closure_6 = fn(6272).isGuildScheduledEventActive;
+let closure_6 = fn(6273).isGuildScheduledEventActive;
 let constants = fn(2074).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,15 +1,15 @@
-// === Module 17916: IntegrationsSettingsWebhooksOverview ===
+// === Module 17926: IntegrationsSettingsWebhooksOverview ===
 
-// Module 17916 (IntegrationsSettingsWebhooksOverview)
+// Module 17926 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import NavScrim from "NavScrim" /* 6950 */;
-import Form from "Form" /* 8808 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17918 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import NavScrim from "NavScrim" /* 6952 */;
+import Form from "Form" /* 8809 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17928 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ import GuildChannelStore_mod from "GuildChannelStore" /* 4807 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
 import UserStore from "UserStore" /* 1392 */;
-import WebhooksStore from "WebhooksStore" /* 17917 */;
+import WebhooksStore from "WebhooksStore" /* 17927 */;
 
 require = fn;
 let closure_3 = ["channelId", "user"];
@@ -29,7 +29,7 @@ const Constants = fn(1087);
 ({ HelpdeskArticles: closure_15, ChannelSettingsSections: closure_16, NON_USER_BOT_DISCRIMINATOR: closure_17, Permissions: closure_18, WebhookTypes: closure_19 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -559,7 +559,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [closure_20(webhookType(5149).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [closure_20(webhookType(5150).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
@@ -567,7 +567,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17921).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(17931).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1128).intl;
       dkHRkE = webhookType(1128).t.dkHRkE;
@@ -589,7 +589,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6487).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6489).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }

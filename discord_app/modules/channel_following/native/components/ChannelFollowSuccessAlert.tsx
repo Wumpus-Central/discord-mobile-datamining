@@ -1,11 +1,11 @@
-// === Module 13056: ChannelFollowSuccessAlert ===
+// === Module 13064: ChannelFollowSuccessAlert ===
 
-// Module 13056 (ChannelFollowSuccessAlert)
+// Module 13064 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import useThemeDefault from "useTheme" /* 5090 */;
 import FastImageDefault from "FastImage" /* 5091 */;
-import common_AlertDefault from "common/Alert" /* 5460 */;
+import common_AlertDefault from "common/Alert" /* 5461 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(13057), fn(13058), fn(13059)];
-let items1 = [fn(13060), fn(13061), fn(13062)];
+let items = [fn(13065), fn(13066), fn(13067)];
+let items1 = [fn(13068), fn(13069), fn(13070)];
 let items2 = [
   () => {
     const intl = util.intl;
@@ -57,7 +57,7 @@ let items2 = [
     return intl.string(util.t.jgC65t);
   }
 ];
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_8 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       }
       if (cResult[15] !== tmp4.text) {
         const obj3 = { style: tmp4.text, variant: "text-md/medium", color: "text-muted", children: tmp23 };
-        const tmp27 = closure_3(tmp(5149).Text, obj3);
+        const tmp27 = closure_3(tmp(5150).Text, obj3);
         cResult[15] = tmp4.text;
         cResult[16] = tmp27;
         let tmp25 = tmp27;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       const tmp5Result = common_AlertDefault;
     }
     const obj5 = { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp18 };
-    const tmp22 = closure_3(tmp(5149).Text, obj5);
+    const tmp22 = closure_3(tmp(5150).Text, obj5);
     cResult[11] = tmp4.header;
     cResult[12] = tmp18;
     cResult[13] = tmp22;

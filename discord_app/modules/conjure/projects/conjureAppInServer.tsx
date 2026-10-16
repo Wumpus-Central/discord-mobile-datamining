@@ -1,9 +1,9 @@
-// === Module 10926: conjureAppInServer ===
+// === Module 10923: conjureAppInServer ===
 
-// Module 10926 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7167 */;
-import ApplicationStore from "ApplicationStore" /* 5502 */;
-import UserProfileStore from "UserProfileStore" /* 7539 */;
+// Module 10923 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7169 */;
+import ApplicationStore from "ApplicationStore" /* 5503 */;
+import UserProfileStore from "UserProfileStore" /* 7540 */;
 import GuildChannelStore from "GuildChannelStore" /* 4807 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4809 */;
@@ -135,7 +135,7 @@ export const readConjureAppServerPresence = function readConjureAppServerPresenc
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(7168);
+              obj2 = application_id(7170);
             }
             str2 = tmp7;
           }

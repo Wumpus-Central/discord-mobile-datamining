@@ -1,8 +1,8 @@
-// === Module 14326: PoggermodeUtils ===
+// === Module 14336: PoggermodeUtils ===
 
-// Module 14326 (PoggermodeUtils)
+// Module 14336 (PoggermodeUtils)
 import shims from "shims" /* 586 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7585 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7586 */;
 import size from "module_2" /* 2 */;
 
 ({ ShakeLevel: c2, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: closure_4 } = PoggermodeConstants);

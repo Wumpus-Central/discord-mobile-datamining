@@ -1,16 +1,16 @@
-// === Module 18232: VoicePanelFloatingCTAContainer ===
+// === Module 18242: VoicePanelFloatingCTAContainer ===
 
-// Module 18232 (VoicePanelFloatingCTAContainer)
+// Module 18242 (VoicePanelFloatingCTAContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5439 */;
-import spring from "spring" /* 5440 */;
-import RowButton from "RowButton" /* 8810 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11832 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11959 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12850 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18128 */;
+import Stack_Stack from "Stack/Stack" /* 5440 */;
+import spring from "spring" /* 5441 */;
+import RowButton from "RowButton" /* 8811 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11829 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11956 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12856 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18138 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,11 +18,11 @@ import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(12843).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(12846).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(12849).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(12852).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: null };
 const rect = { zIndex: 1, position: "absolute", bottom: 0, left: "50%", overflow: "hidden", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = rect;

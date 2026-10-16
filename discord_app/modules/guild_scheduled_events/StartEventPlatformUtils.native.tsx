@@ -1,13 +1,13 @@
-// === Module 8894: StartEventPlatformUtils ===
+// === Module 8895: StartEventPlatformUtils ===
 
-// Module 8894 (StartEventPlatformUtils)
+// Module 8895 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1114 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6107 */;
-import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 7712 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6108 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 7713 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5171 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
 
 require = fn;

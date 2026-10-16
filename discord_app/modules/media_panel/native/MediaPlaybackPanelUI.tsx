@@ -1,37 +1,37 @@
-// === Module 18289: MediaPlaybackPanelUI ===
+// === Module 18299: MediaPlaybackPanelUI ===
 
-// Module 18289 (MediaPlaybackPanelUI)
+// Module 18299 (MediaPlaybackPanelUI)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5154 */;
-import timingPresets from "timingPresets" /* 5157 */;
-import spring from "spring" /* 5440 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6557 */;
-import LayerScope from "LayerScope" /* 7069 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9815 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10621 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 18078 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 18080 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18288 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 18290 */;
+import timing from "timing" /* 5155 */;
+import timingPresets from "timingPresets" /* 5158 */;
+import spring from "spring" /* 5441 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6559 */;
+import LayerScope from "LayerScope" /* 7071 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9814 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10618 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 18088 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 18090 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18298 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 18300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11287 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11284 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(15497);
+const MediaPlaybackPanelConstants = fn(15507);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12844).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12843).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(12850).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(12849).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", borderWidth: 1, borderRadius: nativeDefault.radii.xl, borderColor: nativeDefault.colors.CHAT_BORDER };
 obj2.mask = rect;
@@ -238,7 +238,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return size;
         }
       }
-      const obj10 = { withTiming: tmp(5154).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp(5157).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp(5440).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: canShowPIP, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
+      const obj10 = { withTiming: tmp(5155).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp(5158).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp(5441).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: canShowPIP, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
       X.__closure = obj10;
       X.__workletHash = 12784426477772;
       X.__initData = __initData2;
@@ -254,7 +254,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return obj;
         }
       }
-      const obj11 = { withSpring: tmp(5440).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue2, maskElevationStyles: maskElevation };
+      const obj11 = { withSpring: tmp(5441).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue2, maskElevationStyles: maskElevation };
       V.__closure = obj11;
       V.__workletHash = 16028964429799;
       V.__initData = __initData3;
@@ -565,7 +565,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return size;
         }
       }
-      const obj10 = { withTiming: tmp7(5154).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp7(5157).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp7(5440).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: pipAvoidanceSpecs, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
+      const obj10 = { withTiming: tmp7(5155).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp7(5158).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp7(5441).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: pipAvoidanceSpecs, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
       L.__closure = obj10;
       L.__workletHash = 15678797521625;
       L.__initData = __initData8;
@@ -581,7 +581,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return obj;
         }
       }
-      const obj11 = { withSpring: tmp7(5440).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue1, maskElevationStyles: maskElevation };
+      const obj11 = { withSpring: tmp7(5441).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue1, maskElevationStyles: maskElevation };
       X.__closure = obj11;
       X.__workletHash = 17303815726802;
       X.__initData = __initData9;

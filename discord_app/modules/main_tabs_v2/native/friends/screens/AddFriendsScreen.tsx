@@ -1,20 +1,20 @@
-// === Module 17834: AddFriendsScreen ===
+// === Module 17844: AddFriendsScreen ===
 
-// Module 17834 (AddFriendsScreen)
+// Module 17844 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8530 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8723 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13267 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13271 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 17837 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 17839 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8724 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13275 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13279 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 17847 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 17849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7565 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7566 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -58,14 +58,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(13291).Sections;
+const Sections = fn(13299).Sections;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-let ContactPermissions = fn(13269).ContactPermissions;
+let ContactPermissions = fn(13277).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -80,11 +80,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   let obj = require("c");
   const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
   if (cResult[0] !== contactSyncAccount) {
-    const isContactSyncEnabledResult = tmp(13271).isContactSyncEnabled(contactSyncAccount);
+    const isContactSyncEnabledResult = tmp(13279).isContactSyncEnabled(contactSyncAccount);
     cResult[0] = contactSyncAccount;
     cResult[1] = isContactSyncEnabledResult;
     let tmp5 = isContactSyncEnabledResult;
-    let tmpResult = tmp(13271);
+    let tmpResult = tmp(13279);
   } else {
     tmp5 = cResult[1];
   }

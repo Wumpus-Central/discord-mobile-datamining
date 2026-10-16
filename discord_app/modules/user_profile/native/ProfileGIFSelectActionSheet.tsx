@@ -1,12 +1,12 @@
-// === Module 15544: ProfileGIFSelectActionSheet ===
+// === Module 15554: ProfileGIFSelectActionSheet ===
 
-// Module 15544 (ProfileGIFSelectActionSheet)
+// Module 15554 (ProfileGIFSelectActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7062 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7063 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9266 */;
-import GIFPickerDefault from "GIFPicker" /* 9968 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7064 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7065 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9267 */;
+import GIFPickerDefault from "GIFPicker" /* 9969 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ function blobToDataURI(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { titleWrapper: { flex: 0 }, titleContainer: { justifyContent: "flex-start" }, gifPicker: { flex: 1, marginTop: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 let obj4 = { AVATAR: 0, [0]: "AVATAR", BANNER: 1, [1]: "BANNER" };

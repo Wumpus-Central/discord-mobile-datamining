@@ -1,15 +1,15 @@
-// === Module 18936: NotificationSettingChannelOverrides ===
+// === Module 18949: NotificationSettingChannelOverrides ===
 
-// Module 18936 (NotificationSettingChannelOverrides)
+// Module 18949 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
-import useChannelName from "useChannelName" /* 5483 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6319 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7024 */;
+import useChannelName from "useChannelName" /* 5484 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6321 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7026 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7023 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7025 */;
 import RelationshipStore from "RelationshipStore" /* 4819 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -22,7 +22,7 @@ const Constants = fn(1087);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };

@@ -1,21 +1,21 @@
-// === Module 11780: useCanShowAppLauncherOnboarding ===
+// === Module 11777: useCanShowAppLauncherOnboarding ===
 
-// Module 11780 (useCanShowAppLauncherOnboarding)
+// Module 11777 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7323 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
 import UserStore from "UserStore" /* 1392 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 11781 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 11782 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 11778 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 11779 */;
 
 require = fn;
-const BuiltInSectionId = fn(5465).BuiltInSectionId;
+const BuiltInSectionId = fn(5466).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;

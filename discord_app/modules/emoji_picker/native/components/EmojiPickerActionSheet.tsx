@@ -1,28 +1,28 @@
-// === Module 9665: EmojiPickerActionSheet ===
+// === Module 9664: EmojiPickerActionSheet ===
 
-// Module 9665 (EmojiPickerActionSheet)
+// Module 9664 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5149 */;
-import SearchField from "SearchField" /* 6961 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9663 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9667 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9675 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 9677 */;
+import Text_Text from "Text/Text" /* 5150 */;
+import SearchField from "SearchField" /* 6963 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9662 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9666 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9674 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 9676 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9666).EmojiPickerSource;
+const EmojiPickerSource = fn(9665).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { header: { flexDirection: "column" }, searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 }, content: null, background: null, headerText: null, headerSpacer: null, burstReaction: null };
 let obj3 = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };

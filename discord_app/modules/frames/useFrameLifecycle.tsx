@@ -1,8 +1,8 @@
-// === Module 17665: useFrameLifecycle ===
+// === Module 17675: useFrameLifecycle ===
 
-// Module 17665 (useFrameLifecycle)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10964 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 17279 */;
+// Module 17675 (useFrameLifecycle)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10961 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 17292 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -68,7 +68,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(10934);
+const FramesConstants = fn(10931);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const ReactCompilerGating = fn(558);

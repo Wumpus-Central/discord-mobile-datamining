@@ -1,9 +1,9 @@
-// === Module 17351: NsfwGateGuildSidebar ===
+// === Module 17363: NsfwGateGuildSidebar ===
 
-// Module 17351 (NsfwGateGuildSidebar)
+// Module 17363 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7138 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7140 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -11,12 +11,12 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7137).NsfwGateSource;
+const NsfwGateSource = fn(7139).NsfwGateSource;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
 let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         if (cResult[11] !== stateFromStores) {
           let obj2 = { guild: stateFromStores, showExtraButtons: false };
-          const tmp21 = closure_12(stateFromStores(17187), obj2);
+          const tmp21 = closure_12(stateFromStores(17201), obj2);
           cResult[11] = stateFromStores;
           cResult[12] = tmp21;
           let tmp18 = tmp21;
@@ -79,8 +79,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp26 = stateFromStores(6124)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
-          const tmp27 = stateFromStores(6124)(constants3.PRIMARY_NORMAL, undefined, 14);
+          const tmp26 = stateFromStores(6125)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
+          const tmp27 = stateFromStores(6125)(constants3.PRIMARY_NORMAL, undefined, 14);
           cResult[13] = tmp26;
           cResult[14] = tmp27;
           let tmp23 = tmp27;

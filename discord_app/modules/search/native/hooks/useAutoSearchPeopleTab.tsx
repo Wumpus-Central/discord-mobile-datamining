@@ -1,17 +1,17 @@
-// === Module 17800: useAutoSearchPeopleTab ===
+// === Module 17810: useAutoSearchPeopleTab ===
 
-// Module 17800 (useAutoSearchPeopleTab)
+// Module 17810 (useAutoSearchPeopleTab)
 import _mod12 from "module_12" /* 12 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8941 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12907 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12932 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8942 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12915 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12940 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12921 */;
+import SearchQueryStore from "SearchQueryStore" /* 12929 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12923).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(12931).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
@@ -35,7 +35,7 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
       if (cResult[8] !== arg0) {
         const fn3 = function p() {
           return () => {
-            closure_1(12932).cleanupPeopleTab(closure_1_0);
+            closure_1(12940).cleanupPeopleTab(closure_1_0);
           };
         };
         const items = [arg0];
@@ -54,8 +54,8 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
       if (!closure_1) {
         const debounceResult = _mod12.debounce((searchQueryString) => {
           if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-            closure_1(12932).searchPeopleTab(closure_1_0, searchQueryString);
-            const obj = closure_1(12932);
+            closure_1(12940).searchPeopleTab(closure_1_0, searchQueryString);
+            const obj = closure_1(12940);
           }
         }, closure_5);
         return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -98,8 +98,8 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-          closure_1(12932).searchPeopleTab(closure_1_0, searchQueryString);
-          const obj = closure_1(12932);
+          closure_1(12940).searchPeopleTab(closure_1_0, searchQueryString);
+          const obj = closure_1(12940);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -107,6 +107,6 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
   }, items1);
   const items2 = [arg0];
   const effect2 = noop.useEffect(() => () => {
-    closure_1(12932).cleanupPeopleTab(closure_1_0);
+    closure_1(12940).cleanupPeopleTab(closure_1_0);
   }, items2);
 });

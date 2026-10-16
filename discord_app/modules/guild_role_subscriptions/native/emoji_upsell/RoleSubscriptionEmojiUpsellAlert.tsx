@@ -1,10 +1,10 @@
-// === Module 9699: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9698: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9699 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9698 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1128 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6322 */;
-import _modDef9507 from "module_9507" /* 9507 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9700 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6324 */;
+import _modDef9508 from "module_9508" /* 9508 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9699 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
     name = stateFromStores.name;
   }
   if (cResult[3] !== name) {
-    const obj2 = { image: tmp4(9507), title: null, description: null };
+    const obj2 = { image: tmp4(9508), title: null, description: null };
     let intl = tmp(1128).intl;
     obj2.title = intl.string(tmp(1128).t.cBjkcx);
     const intl2 = tmp(1128).intl;
@@ -118,14 +118,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
         }
       }
       const obj4 = { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 };
-      const tmp21 = jsx(tmp4(5460), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
+      const tmp21 = jsx(tmp4(5461), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
       cResult[14] = onClose;
       cResult[15] = P;
       cResult[16] = tmp16;
       cResult[17] = tmp21;
     }
     const obj5 = { alertWidth: diff, upsellItem: tmp11 };
-    const tmp18 = jsx(tmp(9703).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+    const tmp18 = jsx(tmp(9702).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
     cResult[11] = diff;
     cResult[12] = tmp11;
     cResult[13] = tmp18;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9507, title: null, description: null };
+    const obj = { image: _modDef9508, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

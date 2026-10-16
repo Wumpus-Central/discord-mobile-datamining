@@ -1,7 +1,7 @@
-// === Module 14002: ChannelAnimationConstants ===
+// === Module 14012: ChannelAnimationConstants ===
 
-// Module 14002 (ChannelAnimationConstants)
-import spring from "spring" /* 5440 */;
+// Module 14012 (ChannelAnimationConstants)
+import spring from "spring" /* 5441 */;
 import size from "module_2" /* 2 */;
 
 const CHANNEL_SPRING_CONFIG = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };

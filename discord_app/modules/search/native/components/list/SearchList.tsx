@@ -1,32 +1,32 @@
-// === Module 17711: SearchList ===
+// === Module 17721: SearchList ===
 
-// Module 17711 (SearchList)
+// Module 17721 (SearchList)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _mod7036 from "module_7036" /* 7036 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 17697 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17699 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 17708 */;
-import DMRowDefault from "DMRow" /* 17712 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 17713 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 17714 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 17715 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 17728 */;
-import MediaGridItemDefault from "MediaGridItem" /* 17729 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 17731 */;
-import MediaGridDefault from "MediaGrid" /* 17733 */;
-import MessageRowDefault from "MessageRow" /* 17734 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 17738 */;
-import LinkGridItemDefault from "LinkGridItem" /* 17739 */;
-import FileGridItemDefault from "FileGridItem" /* 17742 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 17743 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 17744 */;
-import GenericTextRowDefault from "GenericTextRow" /* 17745 */;
-import SearchListSectionDefault from "SearchListSection" /* 17746 */;
-import SmartSearchRowDefault from "SmartSearchRow" /* 17747 */;
-import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 17764 */;
-import smartSearchViewabilityConfig from "smartSearchViewabilityConfig" /* 17765 */;
+import _mod7038 from "module_7038" /* 7038 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 17707 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17709 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 17718 */;
+import DMRowDefault from "DMRow" /* 17722 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 17723 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 17724 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 17725 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 17738 */;
+import MediaGridItemDefault from "MediaGridItem" /* 17739 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 17741 */;
+import MediaGridDefault from "MediaGrid" /* 17743 */;
+import MessageRowDefault from "MessageRow" /* 17744 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 17748 */;
+import LinkGridItemDefault from "LinkGridItem" /* 17749 */;
+import FileGridItemDefault from "FileGridItem" /* 17752 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 17753 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 17754 */;
+import GenericTextRowDefault from "GenericTextRow" /* 17755 */;
+import SearchListSectionDefault from "SearchListSection" /* 17756 */;
+import SmartSearchRowDefault from "SmartSearchRow" /* 17757 */;
+import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 17774 */;
+import smartSearchViewabilityConfig from "smartSearchViewabilityConfig" /* 17775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -204,11 +204,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9549);
+const SearchConstants = fn(9550);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5153);
+const createStyles = fn(5154);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -300,7 +300,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const obj6 = { ref, overrideProps: tmp14, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data, renderItem, onEndReachedThreshold: num, onEndReached, scrollsToTop: true, contentContainerStyle: tmp16, keyExtractor, getItemType, ListHeaderComponent, ListFooterComponent, ItemSeparatorComponent, numColumns, viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig };
-    const tmp23 = closure_1_8(_mod7036.AnimatedFlashList, obj6);
+    const tmp23 = closure_1_8(_mod7038.AnimatedFlashList, obj6);
     cResult[7] = ItemSeparatorComponent;
     cResult[8] = ListFooterComponent;
     cResult[9] = ListHeaderComponent;
@@ -368,7 +368,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
   obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-  items[1] = closure_1_8(_mod7036.AnimatedFlashList, obj4);
+  items[1] = closure_1_8(_mod7038.AnimatedFlashList, obj4);
   obj.children = items;
   return React6(React4, obj);
 }));
