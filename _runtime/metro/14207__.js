@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/gifting",
-  width: 50,
-  height: 50,
+  width: 120,
+  height: 125,
   scales: [1, 2, 3],
-  hash: "6e2864dc237547922e1825f7b5583cf2",
-  name: "img_premium_basic_icon",
+  hash: "c43124de927c4f7db7d60a63938625a8",
+  name: "wumpus_cup_premium120",
   type: "png",
 });

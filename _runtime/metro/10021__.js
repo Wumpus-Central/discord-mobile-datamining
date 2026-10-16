@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 20,
   height: 20,
   scales: [2, 3],
-  hash: "e5fa0ec60fd37b3053a6ee815d7ed0e6",
-  name: "img_nitro_misc_perks_20px",
+  hash: "41b77a6677a2cd0322d1116c3e0298ad",
+  name: "img_nitro_premium_guilds_20px",
   type: "png",
 });

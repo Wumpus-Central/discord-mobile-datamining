@@ -1,13 +1,22 @@
 // _runtime/metro/10303__.js
-import _mod19 from "00019__.js";
 
-const useRef = _mod19.useRef;
-let closure_1 = {};
-
-export default function useLazyValue(fn) {
-  const tmp = useRef(closure_1);
-  if (tmp.current === closure_1) {
-    tmp.current = fn();
+export default function areHookInputsEqual(arg0, arg1) {
+  if (arg0.length !== arg1.length) {
+    return false;
+  } else {
+    if (0 < arg1.length) {
+      let num3 = 0;
+      if (0 < arg0.length) {
+        const _Object = Object;
+        while (Object.is(arg0[num3], arg1[num3])) {
+          let sum = num3 + 1;
+          if (sum < arg1.length) {
+            num3 = sum;
+          }
+        }
+        return false;
+      }
+    }
+    return true;
   }
-  return tmp.current;
 }

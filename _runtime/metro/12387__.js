@@ -1,191 +1,73 @@
 // _runtime/metro/12387__.js
-import _mod12298 from "12298__.js";
-import stackParserFromStackParserOptions from "../12301_stackParserFromStackParserOptions.js";
-import _mod12326 from "12326__.js";
-import setupIntegration from "12354__.js";
+const items = [
+  "X-Client-IP",
+  "X-Forwarded-For",
+  "Fly-Client-IP",
+  "CF-Connecting-IP",
+  "Fastly-Client-Ip",
+  "True-Client-Ip",
+  "X-Real-IP",
+  "X-Cluster-Client-IP",
+  "X-Forwarded",
+  "Forwarded-For",
+  "Forwarded",
+  "X-Vercel-Forwarded-For",
+];
 
-function _shouldDropEvent(message, message2) {
-  let tmp = message2;
-  if (tmp) {
-    message = message.message;
-    message2 = message2.message;
-    if (message) {
-      if (!message) {
-        if (message) {
-          let flag = false;
-          if (message === message2) {
-            flag = false;
-            if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
-              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-              if (framesFromEvent) {
-                if (!framesFromEvent) {
-                  if (framesFromEvent) {
-                    let flag2 = false;
-                    if (framesFromEvent1.length === framesFromEvent.length) {
-                      let num = 0;
-                      flag2 = true;
-                      if (0 < framesFromEvent1.length) {
-                        flag2 = false;
-                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
-                          flag2 = false;
-                          if (tmp5.lineno !== tmp6.lineno) {
-                            break;
-                          } else {
-                            flag2 = false;
-                            if (tmp5.colno !== tmp6.colno) {
-                              break;
-                            } else {
-                              flag2 = false;
-                              if (tmp5.function !== tmp6.function) {
-                                break;
-                              } else {
-                                let sum = num + 1;
-                                num = sum;
-                                flag2 = true;
-                                if (sum >= framesFromEvent1.length) {
-                                  break;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    flag2 = false;
-                  }
-                } else {
-                  flag2 = false;
-                }
-              } else {
-                flag2 = true;
-              }
-              flag = false;
-              if (flag2) {
-                flag = true;
-              }
+export const getClientIPAddress = function getClientIPAddress(headers) {
+  let mapped = items.map((item) => {
+    let str = obj;
+    if (Array.isArray(headers[item])) {
+      str = obj.join(";");
+    }
+    if ("Forwarded" === item) {
+      let mapped = (function parseForwardedHeader(str) {
+        if (str) {
+          const parts = str.split(";");
+          const iter = parts[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let arr = nextResult;
+            if (nextResult.startsWith("for=")) {
+              let substr = arr.slice(4);
+              iter.return();
+              return substr;
             }
-          }
-        } else {
-          flag = false;
-        }
-      } else {
-        flag = false;
-      }
-    } else {
-      flag = false;
-    }
-    let tmp9 = flag;
-    if (!tmp9) {
-      let flag3 = false;
-      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
-        flag3 = false;
-        if (iter2) {
-          flag3 = false;
-          if (iter.type === iter2.type) {
-            flag3 = false;
-            if (iter.value === iter2.value) {
-              flag3 = false;
-              if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
-                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-                if (framesFromEvent2) {
-                  if (!framesFromEvent2) {
-                    if (framesFromEvent2) {
-                      let flag4 = false;
-                      if (framesFromEvent3.length === framesFromEvent2.length) {
-                        let num2 = 0;
-                        flag4 = true;
-                        if (0 < framesFromEvent3.length) {
-                          flag4 = false;
-                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
-                            flag4 = false;
-                            if (tmp12.lineno !== tmp13.lineno) {
-                              break;
-                            } else {
-                              flag4 = false;
-                              if (tmp12.colno !== tmp13.colno) {
-                                break;
-                              } else {
-                                flag4 = false;
-                                if (tmp12.function !== tmp13.function) {
-                                  break;
-                                } else {
-                                  let sum1 = num2 + 1;
-                                  num2 = sum1;
-                                  flag4 = true;
-                                  if (sum1 >= framesFromEvent3.length) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      flag4 = false;
-                    }
-                  } else {
-                    flag4 = false;
-                  }
-                } else {
-                  flag4 = true;
-                }
-                flag3 = false;
-                if (flag4) {
-                  flag3 = true;
-                }
-              }
-            }
-          }
-        }
-      }
-      tmp9 = flag3;
-    }
-    tmp = tmp9;
-  }
-  return tmp;
-}
-function _isSameFingerprint(fingerprint, fingerprint2) {
-  fingerprint = fingerprint.fingerprint;
-  fingerprint2 = fingerprint2.fingerprint;
-  if (!fingerprint) {
-    if (!fingerprint2) {
-      return true;
-    }
-  }
-  if (!fingerprint) {
-    try {
-      const joined = fingerprint.join("");
-      return joined === fingerprint2.join("");
-    } catch (err) {
-      return false;
-    }
-  }
-  return false;
-}
-
-export { _shouldDropEvent };
-export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
-  name: "Dedupe",
-  processEvent(type) {
-    if (type.type) {
-      return type;
-    } else {
-      try {
-        if (_shouldDropEvent(type, closure_0)) {
-          if (_mod12326.DEBUG_BUILD) {
-            const logger = _mod12298.logger;
-            logger.warn("Event dropped due to being a duplicate of previously captured event.");
           }
           return null;
         } else {
-          closure_0 = type;
-          return type;
+          return null;
         }
-      } catch (err) {}
+      })(str);
+    } else {
+      mapped = str;
+      if (str) {
+        let parts = str.split(",");
+        mapped = parts.map((item) => item.trim());
+      }
     }
-  },
-}));
+    return mapped;
+  });
+  const reduced = mapped.reduce((arr, item) => {
+    let combined = arr;
+    if (item) {
+      combined = arr.concat(item);
+    }
+    return combined;
+  }, []);
+  return (
+    reduced.find((item) => {
+      let isMatch = null !== item;
+      if (isMatch) {
+        isMatch =
+          /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(
+            item,
+          );
+        const obj =
+          /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
+      }
+      return isMatch;
+    }) || null
+  );
+};
+export const ipHeaderNames = items;

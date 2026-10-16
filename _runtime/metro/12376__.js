@@ -1,31 +1,14 @@
 // _runtime/metro/12376__.js
-import _mod12377 from "12377__.js";
-import setupIntegration from "12354__.js";
+import _mod12375 from "12375__.js";
 
-export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
-  name: "ModuleMetadata",
-  setup(on) {
-    const options = on;
-    on.on("beforeEnvelope", (arg0) => {
-      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        if ("event" === arg1) {
-          const _Array = Array;
-          let tmp3;
-          if (Array.isArray(arg0)) {
-            tmp3 = arg0[1];
-          }
-          if (tmp3) {
-            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-            arg0[1] = tmp3;
-            const obj = options(dependencyMap[2]);
-          }
-        }
-      });
-    });
-    on.on("applyFrameMetadata", (type) => {
-      if (!type.type) {
-        const result = _mod12377.addMetadataToStackFrames(options.getOptions().stackParser, type);
-      }
-    });
-  },
-}));
+require = arg1;
+const dependencyMap = arg6;
+
+export const getTraceMetaTags = function getTraceMetaTags() {
+  const entries = Object.entries(_mod12375.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
+  });
+  return mapped.join("\n");
+};

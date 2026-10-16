@@ -1,31 +1,25 @@
 // _runtime/metro/15377__.js
-import emptyPromise from "../15360_emptyPromise.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
+export default () => (arg0) => {
+  closure_0 = arg0;
   return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
+    features: {
+      apiResponse(request, response, tmp4Result) {
+        let status = response;
+        if (response) {
+          status = response.status;
+        }
+        if (status) {
+          status = typeof response.status === "number";
+        }
+        if (status) {
+          status = response.status >= 200;
+        }
+        if (status) {
+          status = response.status <= 299;
+        }
+        closure_0.send("api.response", { request, response, duration: tmp4Result }, !status);
+      },
     },
   };
 };

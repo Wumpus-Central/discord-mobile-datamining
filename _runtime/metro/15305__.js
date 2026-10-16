@@ -1,40 +1,74 @@
 // _runtime/metro/15305__.js
-import _mod15244 from "15244__.js";
-import _mod15245 from "15245__.js";
-import _mod15247 from "15247__.js";
-import _mod15248 from "15248__.js";
-import _mod15265 from "15265__.js";
-import _mod15274 from "15274__.js";
-import _mod15294 from "15294__.js";
+import _mod15254 from "15254__.js";
+import text from "../15263_text.js";
+import _mod15286 from "15286__.js";
+import _mod15303 from "15303__.js";
 import _mod15306 from "15306__.js";
 
-let closure_4 = _mod15248([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod15265(arg0);
-    const f = _mod15294.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod15247(arguments[num]);
-      if (f) {
-        let tmp8 = _mod15306(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod15306(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod15244;
-        if (tmp12) {
-          tmp12 = !_mod15274(tmp2, tmp5, tmp9);
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod15254) {
+  if (_mod15306) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod15303(fn);
+      const tmp2 = text(arg1);
+      _mod15303(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = {
+                    configurable: configurable in value ? value[configurable] : tmp7[configurable],
+                    enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable],
+                    writable: false,
+                  };
+                }
+              }
+            }
+          }
         }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
+      }
+      return defineProperty(fn, tmp2, tmp4);
+    };
+  }
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod15303(arg0);
+    const tmp2 = text(arg1);
+    _mod15303(value);
+    if (!_mod15286) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
         }
       }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {}
     }
-    return tmp;
   };
 }
 
-export default assign;
+export const f = defineProperty2;

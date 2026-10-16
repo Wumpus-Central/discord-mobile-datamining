@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 128,
   height: 128,
   scales: [1],
-  hash: "d82ee9ebaba96d70f18b4f52bd66277a",
-  name: "nameplate_avatar_placeholder_light_mode",
+  hash: "dd1fce0fb6695abbba4a340bc5cd823e",
+  name: "nameplate_avatar_placeholder_dark_mode",
   type: "png",
 });

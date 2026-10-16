@@ -1,22 +1,20 @@
 // _runtime/metro/08063__.js
-import _mod8048 from "08048__.js";
+import _mod8049 from "08049__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
+let c2 = 6;
+let closure_3 = ["GIF87a", "GIF89a"];
 
 export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod8048.getStringFromDataView(dataView, c2, length.length) === length;
+  isGifFile(dataView) {
+    let hasItem = dataView;
+    if (hasItem) {
+      hasItem = closure_3.includes(_mod8049.getStringFromDataView(dataView, 0, c2));
     }
-    return tmp;
+    return hasItem;
   },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
+  findOffsets() {
+    return { gifHeaderOffset: 0 };
   },
 };

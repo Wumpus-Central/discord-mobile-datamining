@@ -1,324 +1,260 @@
 // _runtime/metro/12409__.js
-import _mod12296 from "12296__.js";
-import _mod12299 from "12299__.js";
-import _mod12304 from "12304__.js";
-import _mod12312 from "12312__.js";
-import supportsFetch from "../12410_supportsFetch.js";
-import _slicedToArray from "00032__.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import errorCallback from "../12300_errorCallback.js";
+import _mod12311 from "12311__.js";
+import _mod12328 from "12328__.js";
+import _mod12336 from "12336__.js";
+import _mod12375 from "12375__.js";
+import _toArray from "../00729__toArray.js";
+import "module_12303";
+import consoleSandbox from "12304__.js";
+import dateTimestampInSeconds from "12318__.js";
+import __SENTRY_DEBUG__ from "12332__.js";
 
-const require = globalThis.__r;
-
-let closure_4 = async function _resolveResponse(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
+function _addTracingHeadersToFetchRequest(headers, headers2, span) {
+  const traceData = _mod12375.getTraceData({ span });
+  ({ sentry-trace: tmp4, baggage } = traceData);
+  if (tmp4) {
+    headers = headers2.headers;
+    if (!headers) {
+      const _Request = Request;
+      let isInstanceOfResult = typeof Request !== "undefined";
+      if (typeof Request !== "undefined") {
+        const _Request2 = Request;
+        isInstanceOfResult = _mod12311.isInstanceOf(headers, Request);
+        const tmpResult = _mod12311;
+      }
+      let headers1;
+      if (isInstanceOfResult) {
+        headers1 = headers.headers;
+      }
+      headers = headers1;
     }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp7;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let reader;
-          let timeout;
-          closure_130_4 = undefined;
-          let timeout2;
-          let done;
-          if (_require) {
-            if (_require.body) {
-              const body = _require.body;
-              closure_130_1 = body;
-              reader = body.getReader();
-              const _setTimeout = setTimeout;
-              timeout = setTimeout(() => {
-                closure_1_1.cancel().then(null, () => {
-
-                });
-              }, 90000);
-              closure_130_4 = true;
-              if (closure_130_4) {
-                timeout2 = undefined;
-                c5 = 2;
-                const _setTimeout2 = setTimeout;
-                timeout2 = setTimeout(() => {
-                  closure_1_1.cancel().then(null, () => {
-
+    if (headers) {
+      const _Headers = Headers;
+      let isInstanceOfResult1 = typeof Headers !== "undefined";
+      if (typeof Headers !== "undefined") {
+        const _Headers3 = Headers;
+        isInstanceOfResult1 = _mod12311.isInstanceOf(headers, Headers);
+        const tmpResult2 = _mod12311;
+      }
+      if (isInstanceOfResult1) {
+        const _Headers2 = Headers;
+        headers2 = new Headers(headers);
+        const result = headers2.set("sentry-trace", tmp4);
+        if (baggage) {
+          const str6 = headers2.get("baggage");
+          if (str6) {
+            let parts = str6.split(",");
+            let found = parts.filter((item) => {
+              const first = item.split("=")[0];
+              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+            });
+            let joined = found.join(",");
+            let combined = baggage;
+            if (joined) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + joined + "," + baggage;
+            }
+            const result1 = headers2.set("baggage", combined);
+          } else {
+            const result2 = headers2.set("baggage", baggage);
+          }
+        }
+        return headers2;
+      } else {
+        const _Array = Array;
+        if (Array.isArray(headers)) {
+          const found1 = headers.filter((item) => {
+            let isArray = Array.isArray(item);
+            if (isArray) {
+              isArray = "sentry-trace" === item[0];
+            }
+            return !isArray;
+          });
+          let items = [];
+          const items1 = ["sentry-trace", tmp4];
+          items[HermesBuiltin.arraySpread(found1.map((item) => {
+            if (Array.isArray(item)) {
+              if ("baggage" === item[0]) {
+                if (typeof item[1] === "string") {
+                  const arr = _toArray(item);
+                  const items = [arr[0], ];
+                  const substr = arr.slice(2);
+                  const parts = arr[1].split(",");
+                  const found = parts.filter((item) => {
+                    const first = item.split("=")[0];
+                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
                   });
-                }, 5000);
-                c3 = 3;
-                c6 = 1;
-                const obj4 = { value: reader.read(), done: false };
-                return obj4;
-              } else {
-                const _clearTimeout5 = clearTimeout;
-                clearTimeout(timeout);
-                reader.releaseLock();
-                closure_130_1.cancel().then(null, () => {
-
-                });
-                const cancelResult = closure_130_1.cancel();
+                  items[1] = found.join(",");
+                  HermesBuiltin.arraySpread(substr, 2);
+                  return items;
+                }
               }
             }
+            return item;
+          }), 0)] = items1;
+          if (baggage) {
+            const items2 = ["baggage", baggage];
+            items.push(items2);
           }
-          c6 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } else if (1 !== tmp7) {
-        if (2 === tmp7) {
-          c5 = 1;
-          closure_130_4 = false;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          const _clearTimeout2 = clearTimeout;
-          clearTimeout(timeout2);
-          c6 = 3;
-          const obj = { value, done: true };
-          return obj;
+          return items;
         } else {
-          done = value.done;
-          const _clearTimeout = clearTimeout;
-          clearTimeout(timeout2);
-          if (done) {
-            closure_130_0();
-            closure_130_4 = false;
+          let baggage1;
+          if ("baggage" in headers) {
+            baggage1 = headers.baggage;
           }
-          c5 = 1;
+          const _Array2 = Array;
+          if (Array.isArray(baggage1)) {
+            const mapped = baggage1.map((item) => {
+              let joined = item;
+              if (typeof item === "string") {
+                const parts = item.split(",");
+                const found = parts.filter((item) => {
+                  const first = item.split("=")[0];
+                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                });
+                joined = found.join(",");
+              }
+              return joined;
+            });
+            let found2 = mapped.filter((item) => "" === item);
+          } else {
+            const items3 = [];
+            found2 = items3;
+            if (baggage1) {
+              const parts1 = baggage1.split(",");
+              const found3 = parts1.filter((item) => {
+                const first = item.split("=")[0];
+                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+              });
+              items3.push(found3.join(","));
+              found2 = items3;
+            }
+          }
+          if (baggage) {
+            found2.push(baggage);
+          }
+          const obj3 = {};
+          const merged = Object.assign(headers);
+          obj3["sentry-trace"] = tmp4;
+          let joined1;
+          if (found2.length > 0) {
+            joined1 = found2.join(",");
+          }
+          obj3.baggage = joined1;
+          return obj3;
         }
-        c5 = 0;
-        const _clearTimeout3 = clearTimeout;
-        clearTimeout(timeout2);
       }
-      c5 = 0;
-      const _clearTimeout4 = clearTimeout;
-      clearTimeout(timeout2);
-      throw closure_4;
-    } catch (tmp40) {
-      closure_4 = tmp40;
-      if (tmp4 === c5) {
-        c6 = tmp3;
-        throw tmp40;
-      } else if (tmp2 === tmp42) {
-        c3 = tmp2;
-      } else {
-        c3 = tmp;
-      }
+    } else {
+      const obj4 = {};
+      const merged1 = Object.assign(traceData);
+      return obj4;
     }
   }
-};
-function streamHandler(clone) {
-  const response = clone;
-  try {
-    !(function resolveResponse(clone, arg1) {
-      const self = this;
-      const apply = closure_1_4.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(clone.clone(), () => {
-      const obj2 = { endTimestamp: null, response: null };
-      const obj = _mod12296;
-      obj2.endTimestamp = 1000 * _mod12312.timestampInSeconds();
-      obj2.response = response;
-      obj.triggerHandlers("fetch-body-resolved", obj2);
-    });
-  } catch (err) {
-    return tmp;
-  }
+  const obj2 = { span };
 }
-function parseFetchArgs(arg0) {
-  if (0 === arg0.length) {
-    return { method: "GET", url: "" };
-  } else if (2 === arg0.length) {
-    [str4, tmp8] = arg0;
-    let tmp9 = str4;
-    if (typeof str4 !== "string") {
-      let str5 = "";
-      if (!str4) {
-        tmp9 = str5;
-      } else {
-        if (tmp10) {
-          str5 = str4.url;
-        } else if (str4.toString) {
-          str5 = str4.toString();
-        }
-        tmp10 = str4 && typeof str4 === "object" && str4.url;
-      }
-    }
-    const request = { url: tmp9, method: null };
-    let str6 = "GET";
-    if (tmp12) {
-      const _String2 = String;
-      str6 = String(tmp8.method).toUpperCase();
-      const str7 = String(tmp8.method);
-    }
-    request.method = str6;
-    return request;
-  } else {
-    let tmp3 = str8;
-    if (typeof arg0[0] !== "string") {
-      let str = "";
-      if (!str8) {
-        tmp3 = str;
-      } else {
-        if (tmp) {
-          str = str8.url;
-        } else if (str8.toString) {
-          str = str8.toString();
-        }
-        tmp = str8 && typeof str8 === "object" && str8.url;
-      }
-    }
-    const request1 = { url: tmp3, method: null };
-    let str2 = "GET";
-    if (tmp4) {
-      const _String = String;
-      str2 = String(str8.method).toUpperCase();
-      const str3 = String(str8.method);
-    }
-    request1.method = str2;
-    return request1;
-  }
-}
+errorCallback;
+_mod12328;
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
-  _mod12296.addHandler("fetch-body-resolved", errorCallback);
-  _mod12296.maybeInstrument("fetch-body-resolved", () => {
-    closure_0 = closure_5;
-    {
-      closure_0(12304).fill(closure_0(12299).GLOBAL_OBJ, "fetch", (arg0) => {
-        closure_0 = arg0;
-        return () => {
-          const items = [...arguments];
-          const error = new Error();
-          let stack = error;
-          const request = parseFetchArgs(items);
-          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
-          if (!closure_2_0) {
-            let obj3 = {};
-            let merged = Object.assign(obj);
-            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
-            const tmp2Result = tmp2(dependencyMap[2]);
-          }
-          let obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (response) => {
-            c1 = 0;
-            return (/* F159757 */ function*() { ... })();
-          });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }, (error) => {
-            obj = closure_3_0(12296);
-            const obj2 = {};
-            const merged = Object.assign(obj);
-            obj2.endTimestamp = 1000 * closure_3_0(12312).timestampInSeconds();
-            obj2.error = error;
-            obj.triggerHandlers("fetch", obj2);
-            const obj3 = closure_3_0(12312);
-            const obj4 = closure_3_0(12305);
-            if (tmp5) {
-              error.stack = stack.stack;
-              const result = closure_3_0(12304).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = closure_3_0(12304);
-            }
-            throw error;
-          });
-        };
-      });
-      const obj = closure_0(12304);
-    }
-  });
+export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
+  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
 };
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
-  _require = arg1;
-  require("12296__.js").addHandler("fetch", errorCallback);
-  let obj = require("12296__.js");
-  require("12296__.js").maybeInstrument("fetch", () => {
-    let flag = closure_0;
-    if (closure_0 === undefined) {
-      flag = false;
+export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
+  let str = arg4;
+  if (arg4 === undefined) {
+    str = "auto.http.browser";
+  }
+  let endResult = fetchData;
+  if (fetchData.fetchData) {
+    let setHttpStatus = require;
+    let headers = dependencyMap;
+    let hasTracingEnabledResult = _mod12336.hasTracingEnabled();
+    if (hasTracingEnabledResult) {
+      hasTracingEnabledResult = fn(endResult.fetchData.url);
     }
-    if (flag) {
-      flag = !supportsFetch.supportsNativeFetch();
-    }
-    if (!flag) {
-      _mod12304.fill(_mod12299.GLOBAL_OBJ, "fetch", (arg0) => {
-        closure_0 = arg0;
-        return () => {
-          const items = [...arguments];
-          const error = new Error();
-          let stack = error;
-          const request = parseFetchArgs(items);
-          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
-          if (!closure_2_0) {
-            let obj3 = {};
-            let merged = Object.assign(obj);
-            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
-            const tmp2Result = tmp2(dependencyMap[2]);
+    if (endResult.endTimestamp) {
+      if (hasTracingEnabledResult) {
+        const __span = endResult.fetchData.__span;
+        if (__span) {
+          if (arg3[__span]) {
+            if (endResult.response) {
+              setHttpStatus = setHttpStatus(12321).setHttpStatus;
+              setHttpStatus(obj10, endResult.response.status);
+              headers = endResult.response;
+              if (headers) {
+                headers = endResult.response.headers;
+              }
+              if (headers) {
+                const headers2 = endResult.response.headers;
+                headers = headers2.get("content-length");
+              }
+              if (headers) {
+                const _parseInt = parseInt;
+                setHttpStatus = parseInt(headers);
+                if (setHttpStatus > 0) {
+                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+                }
+              }
+              const setHttpStatusResult = setHttpStatus(12321);
+            } else if (endResult.error) {
+              const obj2 = { code: setHttpStatus(12321).SPAN_STATUS_ERROR, message: "internal_error" };
+              obj10.setStatus(obj2);
+            }
+            endResult = obj10.end();
+            delete tmp2[tmp];
           }
-          let obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (response) => {
-            c1 = 0;
-            return (/* F159757 */ function*() { ... })();
-          });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }, (error) => {
-            obj = closure_3_0(12296);
-            const obj2 = {};
-            const merged = Object.assign(obj);
-            obj2.endTimestamp = 1000 * closure_3_0(12312).timestampInSeconds();
-            obj2.error = error;
-            obj.triggerHandlers("fetch", obj2);
-            const obj3 = closure_3_0(12312);
-            const obj4 = closure_3_0(12305);
-            if (tmp5) {
-              error.stack = stack.stack;
-              const result = closure_3_0(12304).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = closure_3_0(12304);
-            }
-            throw error;
-          });
-        };
-      });
+        }
+      }
     }
-  });
+    ({ method, url } = endResult.fetchData);
+    const tmp7 = (function getFullURL(url) {
+      try {
+        const _URL = URL;
+        const uRL = new URL(url);
+        return uRL.href;
+      } catch (err) {
+      }
+    })(url);
+    if (tmp7) {
+      const host = setHttpStatus(12386).parseUrl(tmp7).host;
+      const setHttpStatusResult2 = setHttpStatus(12386);
+    }
+    const activeSpan = setHttpStatus(12309).getActiveSpan();
+    if (hasTracingEnabledResult) {
+      if (activeSpan) {
+        const obj3 = { name: null, attributes: null };
+        const _HermesInternal = HermesInternal;
+        obj3.name = "" + method + " " + url;
+        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
+        obj4[setHttpStatus(12319).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+        obj4[setHttpStatus(12319).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+        obj3.attributes = obj4;
+        let startInactiveSpanResult = setHttpStatus(12338).startInactiveSpan(obj3);
+        const setHttpStatusResult4 = setHttpStatus(12338);
+      }
+      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
+      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
+      if (fn2(endResult.fetchData.url)) {
+        let obj5 = endResult.args[1];
+        if (!obj5) {
+          obj5 = {};
+        }
+        let tmp14;
+        if (setHttpStatusResult5.hasTracingEnabled()) {
+          if (activeSpan) {
+            tmp14 = startInactiveSpanResult;
+          }
+        }
+        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
+        if (tmp13Result) {
+          endResult.args[1] = obj5;
+          obj5.headers = tmp13Result;
+        }
+        setHttpStatusResult5 = setHttpStatus(12336);
+      }
+      return startInactiveSpanResult;
+    }
+    startInactiveSpanResult = new setHttpStatus(12337).SentryNonRecordingSpan();
+    const setHttpStatusResult3 = setHttpStatus(12309);
+  }
 };
-export { parseFetchArgs };

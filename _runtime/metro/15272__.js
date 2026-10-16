@@ -1,12 +1,11 @@
 // _runtime/metro/15272__.js
-import _mod15267 from "15267__.js";
-import _mod15273 from "15273__.js";
+import _mod15251 from "15251__.js";
 
-export default (arg0) => {
-  if (_mod15267(arg0)) {
-    return arg0;
-  } else {
-    const tmp6 = new TypeError(_mod15273(arg0) + " is not a function");
-    throw tmp6;
-  }
-};
+const tmp = _mod15251.navigator && _mod15251.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
+
+export default str;

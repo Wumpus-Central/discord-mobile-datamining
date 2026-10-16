@@ -1,12 +1,47 @@
 // _runtime/metro/15244__.js
-import _mod15245 from "15245__.js";
 
-export default !_mod15245(
-  () =>
-    7 !==
-    Object.defineProperty({}, 1, {
-      get() {
-        return 7;
-      },
-    })[1],
-);
+export const units = [
+  "degree",
+  "acre",
+  "hectare",
+  "percent",
+  "bit",
+  "byte",
+  "gigabit",
+  "gigabyte",
+  "kilobit",
+  "kilobyte",
+  "megabit",
+  "megabyte",
+  "petabyte",
+  "terabit",
+  "terabyte",
+  "day",
+  "hour",
+  "millisecond",
+  "minute",
+  "month",
+  "second",
+  "week",
+  "year",
+  "centimeter",
+  "foot",
+  "inch",
+  "kilometer",
+  "meter",
+  "mile-scandinavian",
+  "mile",
+  "millimeter",
+  "yard",
+  "gram",
+  "kilogram",
+  "ounce",
+  "pound",
+  "stone",
+  "celsius",
+  "fahrenheit",
+  "fluid-ounce",
+  "gallon",
+  "liter",
+  "milliliter",
+];

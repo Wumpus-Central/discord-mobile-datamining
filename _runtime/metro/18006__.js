@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/app_icons/images",
-  width: 259,
-  height: 93,
+  httpServerLocation: "/assets/images/native",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "b6b1b6176f7b7fe50aec94892b5609a1",
-  name: "app_icon_marketing",
+  hash: "ed431a42081d7323282ce4207b41689a",
+  name: "icon-afk",
   type: "png",
 });

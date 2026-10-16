@@ -90,10 +90,10 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "emoji",
+      current: "duration",
       lastTimestamp: null,
-      startTimestamp: 8.917,
-      reduceMotion: -15.917,
+      startTimestamp: "CONJURE_DEBUG_COMPACTION_REPORT",
+      reduceMotion: null,
     };
     let num = obj.velocity;
     if (num == null) {

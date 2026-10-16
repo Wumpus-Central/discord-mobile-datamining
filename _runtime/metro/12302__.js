@@ -1,31 +1,55 @@
 // _runtime/metro/12302__.js
-import _mod12296 from "12296__.js";
-import _mod12299 from "12299__.js";
+import _mod12303 from "12303__.js";
+import _mod12304 from "12304__.js";
+import stackParserFromStackParserOptions from "../12307_stackParserFromStackParserOptions.js";
 
 require = arg1;
-const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod12299.GLOBAL_OBJ.onunhandledrejection;
-  _mod12299.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
-    _mod12296.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+const dependencyMap = {};
+let closure_3 = {};
+
+export const addHandler = function addHandler(console, errorCallback) {
+  dependencyMap[console] = dependencyMap[console] || [];
+  dependencyMap[console].push(errorCallback);
+  const tmp2 = dependencyMap[console] || [];
+};
+export const maybeInstrument = function maybeInstrument(console, fn) {
+  if (!closure_3[console]) {
+    tmp2[console] = true;
+    try {
+      fn();
+    } catch (tmp5) {
+      if (_mod12303.DEBUG_BUILD) {
+        const logger = _mod12304.logger;
+        const _HermesInternal = HermesInternal;
+        logger.error("Error while instrumenting " + tmp, tmp5);
       }
     }
-  };
-  _mod12299.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
-
-export const addGlobalUnhandledRejectionInstrumentationHandler =
-  function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-    _mod12296.addHandler("unhandledrejection", errorCallback);
-    _mod12296.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
-  };
+  }
+};
+export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
+  const keys = Object.keys(closure_2);
+  const item = keys.forEach((item) => {
+    dependencyMap[item] = undefined;
+  });
+};
+export const triggerHandlers = function triggerHandlers(arg0, arg1) {
+  let tmp8 = arg0;
+  if (arg0) {
+    tmp8 = dependencyMap[arg0];
+  }
+  if (tmp8) {
+    const iter = tmp8[Symbol.iterator]();
+    if (iter !== undefined) {
+      try {
+        tmp15(arg1);
+      } catch (tmp18) {
+        if (_mod12303.DEBUG_BUILD) {
+          const logger = _mod12304.logger;
+          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = stackParserFromStackParserOptions;
+        }
+      }
+    }
+    const nextResult = iter.next();
+  }
+};

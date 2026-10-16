@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180.5,
+  height: 88,
   scales: [2, 3],
-  hash: "3ffa9ed06dd765a4e4cda0729a10c2e1",
-  name: "ic_information_filled_24px",
+  hash: "170926482058c89c2a2a9d537ff237a4",
+  name: "img_what_you_lose_emojis",
   type: "png",
 });

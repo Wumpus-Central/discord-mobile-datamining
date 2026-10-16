@@ -1,21 +1,17 @@
 // _runtime/metro/06789__.js
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod6774 from "06774__.js";
+import _mod6790 from "06790__.js";
 
-export default _getPrototypeOf;
+export default function _possibleConstructorReturn(arg0, fn) {
+  if (fn) {
+    _mod6774;
+    return fn;
+  }
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
+  } else {
+    return _mod6790(arg0);
+  }
+}

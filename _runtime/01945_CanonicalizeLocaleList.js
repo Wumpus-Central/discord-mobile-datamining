@@ -764,8 +764,8 @@ class GetFormatNumber {
           if (undefined !== tmp["[[boundFormat]]"]) {
             return tmp["[[boundFormat]]"];
           } else {
-            tmp13 = f26414;
-            call2 = f26414.call;
+            tmp13 = f26427;
+            call2 = f26427.call;
             fn = function (arg0) {
               return FormatNumber(this, Number(arg0));
             };
@@ -795,8 +795,8 @@ class GetFormatNumber {
         tmp6 = closure_16;
         result = self.__getInternalProperties(closure_16);
       } else {
-        tmp4 = f26413;
-        result = f26413(null);
+        tmp4 = f26426;
+        result = f26426(null);
       }
       tmp7 = result;
     }
@@ -1607,8 +1607,8 @@ class GetFormatDateTime {
           if (undefined !== tmp["[[boundFormat]]"]) {
             return tmp["[[boundFormat]]"];
           } else {
-            tmp13 = f26414;
-            call2 = f26414.call;
+            tmp13 = f26427;
+            call2 = f26427.call;
             fn = function () {
               if (0 === arguments.length) {
                 const _Date = Date;
@@ -1644,8 +1644,8 @@ class GetFormatDateTime {
         tmp6 = closure_16;
         result = self.__getInternalProperties(closure_16);
       } else {
-        tmp4 = f26413;
-        result = f26413(null);
+        tmp4 = f26426;
+        result = f26426(null);
       }
       tmp7 = result;
     }
@@ -1838,10 +1838,10 @@ class Record {
         if (!tmp9) {
           continue;
         } else {
-          tmp5 = f26411;
+          tmp5 = f26424;
           obj = { value: null, enumerable: true, writable: true, configurable: true };
           obj.value = arg0[key10005];
-          tmp6 = f26411(tmp, key10005, obj);
+          tmp6 = f26424(tmp, key10005, obj);
           continue;
         }
         continue;
@@ -1861,7 +1861,7 @@ class Record {
 }
 class List {
   constructor() {
-    tmp = f26411(this, "length", { writable: true, value: 0 });
+    tmp = f26424(this, "length", { writable: true, value: 0 });
     if (!arguments.length) {
       return;
     } else {

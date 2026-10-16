@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "76ffb1082b31aab78c81ab7517722ab5",
-  name: "ic_volume_locked",
+  hash: "f0c32854a135e6d60a3190ac067a0b08",
+  name: "ic_headset_deafened_dark_24px",
   type: "png",
 });

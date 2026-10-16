@@ -1,28 +1,27 @@
 // _runtime/metro/12374__.js
-import eventFromMessage from "../12358_eventFromMessage.js";
-import _mod12375 from "12375__.js";
-import setupIntegration from "12354__.js";
+import _mod12306 from "12306__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+
+export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
+  let arr = arg2;
+  if (arg2 === undefined) {
+    const items = [arg1];
+    arr = items;
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12375.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "npm";
+  }
+  const tmp = _metadata._metadata || {};
+  if (!tmp.sdk) {
+    const obj = { name: null, packages: null, version: null };
+    const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12306.SDK_VERSION }));
+    obj.version = str(12306).SDK_VERSION;
+    tmp.sdk = obj;
+  }
+  _metadata._metadata = tmp;
+};

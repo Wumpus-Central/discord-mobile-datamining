@@ -1,18 +1,10 @@
 // _runtime/metro/15274__.js
-import _mod15249 from "15249__.js";
+import _mod15258 from "15258__.js";
+import _mod15275 from "15275__.js";
 
-if (_mod15249) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
+let closure_2 = _mod15258({}.hasOwnProperty);
+
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod15275(arg0), arg1);
   };
-}
-
-export default fn;

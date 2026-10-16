@@ -1,35 +1,12 @@
 // _runtime/metro/05866__.js
-import _mod1307 from "01307__.js";
-import requirePromise from "../05864_requirePromise.js";
-import PromiseResolve from "../05940_PromiseResolve.js";
-import callBind_mod from "../01476_callBind.js";
+import requirePromise from "../05865_requirePromise.js";
+import _mod5867 from "05867__.js";
 
-requirePromise();
-let callBind = callBind_mod;
-let closure_2 = callBind(_mod1307("%Promise.all%"));
-let callBind = callBind_mod;
-let closure_3 = callBind(_mod1307("%Promise.reject%"));
-
-export default function allSettled(arg0) {
-  const self = this;
-  if ("Object" !== self(5867)(this)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("`this` value must be an object");
-    throw typeError;
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
   } else {
-    return closure_2(
-      this,
-      tmp(5873)(tmp(5870)(arg0), (arg0) => {
-        try {
-          return promise.then(
-            (value) => ({ status: "fulfilled", value }),
-            (reason) => ({ status: "rejected", reason }),
-          );
-        } catch (tmp3) {
-          return closure_3(tmp, tmp3);
-        }
-        promise = PromiseResolve(self, arg0);
-      }),
-    );
+    allSettled = _mod5867;
   }
+  return allSettled;
 }

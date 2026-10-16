@@ -1,37 +1,26 @@
 // _runtime/metro/15311__.js
+import _mod15274 from "15274__.js";
+import getOwnPropertyDescriptor_mod from "15254__.js";
 
-export default {
-  name: "react-native-url-polyfill",
-  version: "2.0.0",
-  description: "A lightweight and trustworthy URL polyfill for React Native",
-  keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"],
-  bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" },
-  homepage: "https://github.com/charpeni/react-native-url-polyfill",
-  readme: "https://github.com/charpeni/react-native-url-polyfill#readme",
-  repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" },
-  main: "index.js",
-  types: "index.d.ts",
-  scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" },
-  author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
-  license: "MIT",
-  dependencies: { "whatwg-url-without-unicode": "8.0.0-3" },
-  devDependencies: {
-    "@react-native-community/eslint-config": "3.2.0",
-    detox: "20.9.1",
-    eslint: "8.44.0",
-    "eslint-plugin-prettier": "4.2.1",
-    husky: "8.0.3",
-    jest: "29.5.0",
-    "lint-staged": "13.2.3",
-    "metro-react-native-babel-preset": "0.76.7",
-    nanoid: "3.3.6",
-    prettier: "2.8.8",
-    react: "18.2.0",
-    "react-native": "0.72.1",
-    "react-native-bundle-scale": "1.1.0",
-    typescript: "5.1.6",
-  },
-  peerDependencies: { "react-native": "*" },
-  jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
-  "lint-staged": { "*.js": ["eslint --fix"] },
-};
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = _mod15274(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {}.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
+}
+
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

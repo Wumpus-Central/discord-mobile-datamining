@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
-  width: 88,
-  height: 80,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 250,
+  height: 200,
   scales: [2, 3],
-  hash: "b14cf67ed38d1ab1d1a28d6633250b87",
-  name: "safety_check_light",
+  hash: "3c95b7ec7d2eb4c8fde35f37e918dd98",
+  name: "img_bans_empty_light",
   type: "png",
 });

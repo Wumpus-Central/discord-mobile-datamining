@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
+  hash: "3301eac470d1db4f813dc4b19265d85e",
+  name: "audio",
   type: "png",
 });

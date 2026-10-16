@@ -1,7 +1,29 @@
 // _runtime/metro/15239__.js
-import _mod15305 from "15305__.js";
-import 15240__ from "15240__.js";
+const require = globalThis.__r;
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod15305;
-module_15240(obj, { assign: _mod15305 });
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) =>
+    (function isSupportedNumberingSystem(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+};

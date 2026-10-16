@@ -1,6 +1,15 @@
 // _runtime/metro/15314__.js
-import _mod15315 from "15315__.js";
-import _mod15322 from "15322__.js";
+import _mod15266 from "15266__.js";
+import _mod15273 from "15273__.js";
 
-export const URL = _mod15315;
-export const URLSearchParams = _mod15322;
+let closure_2 = _mod15266("keys");
+
+export default (arg0) => {
+  let tmp2 = closure_2[arg0];
+  if (!tmp2) {
+    const tmp5 = _mod15273(arg0);
+    tmp[arg0] = tmp5;
+    tmp2 = tmp5;
+  }
+  return tmp2;
+};

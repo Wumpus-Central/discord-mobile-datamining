@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "928ec3b0cfa6ddcb7b852c71960488c7",
-  name: "Share",
+  hash: "5ad61954329ae43fee881a48ae602d3b",
+  name: "ic_paperclip_24px",
   type: "png",
 });

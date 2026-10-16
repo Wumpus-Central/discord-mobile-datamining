@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3446a422668528039c87de87a6054a15",
-  name: "KeyboardIcon",
+  hash: "4d46cb9270219102b4f9e899fd51586c",
+  name: "FileIcon",
   type: "png",
 });

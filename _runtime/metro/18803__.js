@@ -1,12 +1,13 @@
 // _runtime/metro/18803__.js
-import _mod18804 from "18804__.js";
-import capitalize from "../18812_capitalize.js";
+import registerAsset from "01134__.js";
 
-export default _mod18804((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "1c24dd3dd196a8ef2977a4e0d877d187",
+  name: "safety_check",
+  type: "png",
 });

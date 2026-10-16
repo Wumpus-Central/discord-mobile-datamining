@@ -1,19 +1,10 @@
 // _runtime/metro/10301__.js
-import _mod19 from "00019__.js";
-import _modDef10302 from "10302__.js";
+import _slicedToArray from "00032__.js";
 
-const useRef = _mod19.useRef;
-let closure_3 = [];
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useStableMemo(cResult, cResult2) {
-  const tmp = useRef();
-  const tmp2 = useRef(closure_3);
-  if (tmp2.current === closure_3) {
-    tmp.current = cResult();
-    tmp2.current = cResult2;
-  } else if (!_modDef10302(cResult2, tmp2.current)) {
-    tmp.current = cResult();
-    tmp2.current = cResult2;
-  }
-  return tmp.current;
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
 }

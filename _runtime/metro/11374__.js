@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "623eff85d27fd4ffd7a4c28c327682e8",
-  name: "SpeedometerIcon",
+  hash: "4e9d569d897ff379f07644deddf6baf5",
+  name: "ScreenXIcon",
   type: "png",
 });
