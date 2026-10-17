@@ -1,4 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx
+import useWindowDimensions from "../../../screen/useWindowDimensions.native.tsx";
 import DeviceUtils from "../../../../utils/native/DeviceUtils.tsx";
 import useIsWindowLarge from "../../../screen/native/useIsWindowLarge.tsx";
 import DeviceOrientation from "../../../device/native/DeviceOrientation.tsx";
@@ -22,7 +23,13 @@ if (PlatformUtils.isAndroid()) {
 }
 let obj = { presentation: str, lockOrientation: null };
 let PlatformUtils = PlatformUtils_mod;
-obj.lockOrientation = !PlatformUtils.isAndroid();
+PlatformUtils = PlatformUtils.isAndroid();
+let tmp3 = !PlatformUtils;
+if (!PlatformUtils) {
+  const _module4 = DeviceUtils;
+  tmp3 = !_module4.isIpadOS();
+}
+obj.lockOrientation = tmp3;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation(arg0) {
@@ -46,16 +53,18 @@ export default function getNavigationModalPresentation(arg0) {
   let tmp4;
   if (lockOrientation) {
     const orientationLock = DeviceOrientation.getOrientationLock();
-    let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
-      if (null != orientationLock) {
-        str2 = "portrait";
-      } else {
-        const orientation = DeviceOrientation.getOrientation();
-        const tmp5Result = DeviceOrientation;
+      let str5 = "portrait";
+      str4 = "portrait";
+      if (null == orientationLock) {
+        const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
+        if (size.width > size.height) {
+          str5 = "landscape";
+        }
+        str4 = str5;
+        const tmp5Result = useWindowDimensions;
       }
-      str4 = str2;
     }
     tmp4 = str4;
   }

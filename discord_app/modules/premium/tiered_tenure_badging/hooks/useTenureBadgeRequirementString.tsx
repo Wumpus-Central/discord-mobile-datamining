@@ -6,7 +6,7 @@ import useTenureBadging from "useTenureBadging.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const TieredTenureBadgeUtils = erUSmA(7549);
+const TieredTenureBadgeUtils = erUSmA(7595);
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
 function getTenureBadgeRequirementString(badge, tenureReqNumMonths) {
   if (TieredTenureBadge.PREMIUM_TENURE_1_MONTH !== badge) {

@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef2963 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2981 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import openUserSettings from "../../core/native/openUserSettings.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
@@ -38,7 +38,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
   obj5.settings = items3;
   const intl3 = util.intl;
-  obj5.subLabel = intl3.format(_modDef2963.L8U56h, {
+  obj5.subLabel = intl3.format(_modDef2981.L8U56h, {
     onClickOpenModal() {
       openUserSettings.openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
         closure_1_0(closure_1_2[10]).runAfterInteractions(() => {
@@ -145,7 +145,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   items1[13] = obj20;
   return items1.filter((item) => null != item);
 }
-const MobileUserSettings = fn(8214).MobileUserSettings;
+const MobileUserSettings = fn(8260).MobileUserSettings;
 const Constants = fn(1087);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;

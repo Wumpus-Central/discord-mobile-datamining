@@ -26,7 +26,7 @@ export const useVisibleFontOrder = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useVisibleFontOrder() {
       isDisplayNameStylesFlywheelSettersEnabled =
-        isDisplayNameStylesFlywheelSettersEnabled(15570).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+        isDisplayNameStylesFlywheelSettersEnabled(15632).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
       items = [isDisplayNameStylesFlywheelSettersEnabled];
       return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);
     };

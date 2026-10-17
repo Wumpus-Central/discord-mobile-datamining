@@ -1,7 +1,7 @@
 // discord_app/modules/app_channels/useAppChannelApplicationOptions.tsx
 import c from "../../../_runtime/00576_c.js";
-import ApplicationActionCreators from "../applications/ApplicationActionCreators.tsx";
 import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
+import ApplicationActionCreators from "../applications/ApplicationActionCreators.tsx";
 import useGuildEmbeddedApplications from "../applications/useGuildEmbeddedApplications.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 

@@ -1,42 +1,42 @@
 // discord_app/modules/conjure/agent_activity/ConjureSubagentMarks.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = ["snail", "goat", "frog", "bunny", "cat", "caterpillar", "butterfly", "dog", "spider", "bee", "bot"];
 const dependencyMap = {
   snail() {
-    return _modDef3865.ABeVsS;
+    return _modDef3883.ABeVsS;
   },
   goat() {
-    return _modDef3865.dhXay8;
+    return _modDef3883.dhXay8;
   },
   frog() {
-    return _modDef3865.SHeweG;
+    return _modDef3883.SHeweG;
   },
   bunny() {
-    return _modDef3865.FytFE1;
+    return _modDef3883.FytFE1;
   },
   cat() {
-    return _modDef3865["5c+sHs"];
+    return _modDef3883["5c+sHs"];
   },
   caterpillar() {
-    return _modDef3865["/FYcne"];
+    return _modDef3883["/FYcne"];
   },
   butterfly() {
-    return _modDef3865["Ib/AxK"];
+    return _modDef3883["Ib/AxK"];
   },
   dog() {
-    return _modDef3865.zDjBR1;
+    return _modDef3883.zDjBR1;
   },
   spider() {
-    return _modDef3865["6sxyrN"];
+    return _modDef3883["6sxyrN"];
   },
   bee() {
-    return _modDef3865.cVtefg;
+    return _modDef3883.cVtefg;
   },
   bot() {
-    return _modDef3865.MjCw0v;
+    return _modDef3883.MjCw0v;
   },
 };
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureSubagentMarks.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/server/commands/setOrientationLockState.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
-import RPCErrorDefault from "../../RPCError.tsx";
 import getSocketFrameDefault from "../../helpers/getSocketFrame.tsx";
 import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
+import RPCErrorDefault from "../../RPCError.tsx";
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

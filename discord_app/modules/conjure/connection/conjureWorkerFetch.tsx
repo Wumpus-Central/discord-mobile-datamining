@@ -46,7 +46,7 @@ let closure_3 = async function _fetchConjureWorker(arg0) {
           closure_131_8 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

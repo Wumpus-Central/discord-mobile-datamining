@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items1 = [arg0, callback];
       const effect1 = noop.useEffect(() => {
         function handleStateChange(data) {
-          callback(resolveChannelScreens(data.data.state, handleStateChange(5038).getChatLayout()), data.data.state);
+          callback(resolveChannelScreens(data.data.state, handleStateChange(5075).getChatLayout()), data.data.state);
         }
         handleStateChange.addListener("state", handleStateChange);
         return () => {

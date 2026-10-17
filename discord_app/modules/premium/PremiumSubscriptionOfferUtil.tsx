@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import Server from "../../flow/Server.tsx";
-import _modDef4761 from "../../../_runtime/metro/04761__.js";
+import _modDef4797 from "../../../_runtime/metro/04797__.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
@@ -110,8 +110,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp10 = null != prop;
         if (tmp10) {
           const _Date = Date;
-          tmp10 = _modDef4761(Date.now()) <= _modDef4761(prop);
-          const tmp12Result = _modDef4761(Date.now());
+          tmp10 = _modDef4797(Date.now()) <= _modDef4797(prop);
+          const tmp12Result = _modDef4797(Date.now());
         }
         cResult[2] = prop;
         cResult[3] = tmp10;
@@ -136,8 +136,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null != prop;
       if (tmp4) {
         const _Date = Date;
-        tmp4 = _modDef4761(Date.now()) <= _modDef4761(prop);
-        const tmp6Result = _modDef4761(Date.now());
+        tmp4 = _modDef4797(Date.now()) <= _modDef4797(prop);
+        const tmp6Result = _modDef4797(Date.now());
       }
       return tmp4;
     };

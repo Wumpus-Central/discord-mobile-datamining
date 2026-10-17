@@ -21,12 +21,12 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "done",
+  guildId: "emoji",
   channelId: "toCharArray$esjava$1",
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
-  hasMediaOptions: "applicationId",
-  source: 285214014,
+  hasMediaOptions: "application",
+  source: 285214015,
   incrementableActions: 553217,
 };
 const values = Object.values(obj);

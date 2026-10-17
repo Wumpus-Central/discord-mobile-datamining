@@ -19,7 +19,7 @@ obj[fn(1202).AvatarSizes.REFRESH_MEDIUM_32] = fn(1202).AvatarSizes.XSMALL_20;
 obj[fn(1202).AvatarSizes.XSMALL] = fn(1202).AvatarSizes.SIZE_16;
 obj[fn(1202).AvatarSizes.SIZE_16] = fn(1202).AvatarSizes.XXSMALL_10;
 obj[fn(1202).AvatarSizes.NORMAL] = fn(1202).AvatarSizes.XSMALL;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },

@@ -4,6 +4,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import IOSPushNotificationRawPayloadFixExperiment from "../../notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
+import IOSAnchoredChatScrollerExperiment from "../../messages/native/IOSAnchoredChatScrollerExperiment.tsx";
 import YYTextReplacementExperiment from "../../messages/YYTextReplacementExperiment.tsx";
 import VideoStutterMitigationExperimentDefault from "../../media_engine/VideoStutterMitigationExperiment.tsx";
 import NotificationLoadMessagesExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
@@ -47,21 +48,33 @@ function updateIOSExperiments() {
       const result1 = setShouldFixPushNotificationRawPayload(
         IOSPushNotificationRawPayloadFixExperiment.isIOSPushNotificationRawPayloadFixExperimentEnabled(),
       );
-      const tmpResult2 = IOSPushNotificationRawPayloadFixExperiment;
+      const tmpResult3 = IOSPushNotificationRawPayloadFixExperiment;
+    }
+  }
+  const NSUserDefaultsBridge3 = NativeModules.NSUserDefaultsBridge;
+  if (NSUserDefaultsBridge3 != null) {
+    const setShouldUseAnchoredChatScroller = NSUserDefaultsBridge3.setShouldUseAnchoredChatScroller;
+    if (setShouldUseAnchoredChatScroller != null) {
+      const result2 = setShouldUseAnchoredChatScroller(
+        IOSAnchoredChatScrollerExperiment.shouldUseIOSAnchoredChatScroller({
+          location: "NativeExperimentBridgeManager",
+        }),
+      );
+      const tmpResult4 = IOSAnchoredChatScrollerExperiment;
     }
   }
   obj = PlatformUtils;
-  if (obj4.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
+  if (obj5.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
     const RNVVideo = NativeModules.RNVVideo;
     if (RNVVideo != null) {
-      const result2 = RNVVideo.setOptimizeConfigureAudio(true);
+      const result3 = RNVVideo.setOptimizeConfigureAudio(true);
     }
     const RNVVideo2 = NativeModules.RNVVideo;
     if (RNVVideo2 != null) {
-      const result3 = RNVVideo2.setUseBackgroundProgressQueue(true);
+      const result4 = RNVVideo2.setUseBackgroundProgressQueue(true);
     }
   }
-  obj4 = VideoStutterMitigationExperimentDefault;
+  obj5 = VideoStutterMitigationExperimentDefault;
 }
 function updateAndroidExperiments() {
   const obj = {

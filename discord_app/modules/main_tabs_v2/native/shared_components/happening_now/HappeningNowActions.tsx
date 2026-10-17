@@ -8,11 +8,11 @@ import CreateChannelModalActionCreatorsDefault from "../../../../../actions/nati
 import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/GuildSettingsActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import GuildDirectoryAddModalActionCreatorsDefault from "../../../../directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx";
-import _modDef13417 from "../../../../../../_runtime/metro/13417__.js";
+import _modDef13483 from "../../../../../../_runtime/metro/13483__.js";
 import HappeningNowCardDefault from "HappeningNowCard.tsx";
-import _modDef17157 from "../../../../../../_runtime/metro/17157__.js";
-import _modDef17158 from "../../../../../../_runtime/metro/17158__.js";
-import _modDef17159 from "../../../../../../_runtime/metro/17159__.js";
+import _modDef17217 from "../../../../../../_runtime/metro/17217__.js";
+import _modDef17218 from "../../../../../../_runtime/metro/17218__.js";
+import _modDef17219 from "../../../../../../_runtime/metro/17219__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -20,13 +20,13 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16284);
+const HappeningNowConstants = fn(16350);
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, InstantInviteSources: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = {
   actionCard: {
     flex: 1,
@@ -106,7 +106,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(576);
       const tmp9 = closure_11(closure_14, {
-        imageSource: _modDef17157,
+        imageSource: _modDef17217,
         onPress: tmp5,
         text: tmp6,
         panelVariant: undefined !== panelVariant && panelVariant,
@@ -116,7 +116,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp9;
       tmp8 = tmp9;
       let obj2 = {
-        imageSource: _modDef17157,
+        imageSource: _modDef17217,
         onPress: tmp5,
         text: tmp6,
         panelVariant: undefined !== panelVariant && panelVariant,
@@ -139,7 +139,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
         CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
       }, items);
-      obj.imageSource = _modDef17157;
+      obj.imageSource = _modDef17217;
       obj.onPress = callback;
       const intl = guildId(1128).intl;
       obj.text = intl.string(guildId(1128).t["fUYU+j"]);
@@ -177,7 +177,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = guildId(576);
       const tmp6 = closure_11(closure_14, {
         text: "Customize",
-        imageSource: _modDef17158,
+        imageSource: _modDef17218,
         onPress: tmp4,
         panelVariant: undefined !== panelVariant && panelVariant,
       });
@@ -187,7 +187,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
       let obj2 = {
         text: "Customize",
-        imageSource: _modDef17158,
+        imageSource: _modDef17218,
         onPress: tmp4,
         panelVariant: undefined !== panelVariant && panelVariant,
       };
@@ -209,7 +209,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
         GuildSettingsActionCreatorsDefault.open(guildId);
       }, items);
-      obj.imageSource = _modDef17158;
+      obj.imageSource = _modDef17218;
       obj.onPress = callback;
       obj.panelVariant = flag;
       return closure_11(closure_14, obj);
@@ -254,7 +254,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(576);
       const tmp9 = closure_11(closure_14, {
-        imageSource: _modDef17159,
+        imageSource: _modDef17219,
         onPress: tmp5,
         text: tmp6,
         panelVariant: undefined !== panelVariant && panelVariant,
@@ -264,7 +264,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp9;
       tmp8 = tmp9;
       let obj2 = {
-        imageSource: _modDef17159,
+        imageSource: _modDef17219,
         onPress: tmp5,
         text: tmp6,
         panelVariant: undefined !== panelVariant && panelVariant,
@@ -289,7 +289,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
         }
       }, items);
-      obj.imageSource = _modDef17159;
+      obj.imageSource = _modDef17219;
       obj.onPress = callback;
       const intl = guildId(1128).intl;
       obj.text = intl.string(guildId(1128).t.VINpSK);
@@ -422,7 +422,7 @@ export const HappeningNowStudentHubAddServer = ReactCompilerGating.isReactCompil
       }
       let obj = guildId(576);
       const tmp9 = closure_11(closure_14, {
-        imageSource: _modDef13417,
+        imageSource: _modDef13483,
         onPress: tmp5,
         text: tmp6,
         panelVariant: undefined !== panelVariant && panelVariant,
@@ -432,7 +432,7 @@ export const HappeningNowStudentHubAddServer = ReactCompilerGating.isReactCompil
       cResult[5] = tmp9;
       tmp8 = tmp9;
       let obj2 = {
-        imageSource: _modDef13417,
+        imageSource: _modDef13483,
         onPress: tmp5,
         text: tmp6,
         panelVariant: undefined !== panelVariant && panelVariant,
@@ -459,7 +459,7 @@ export const HappeningNowStudentHubAddServer = ReactCompilerGating.isReactCompil
         }
         tmp4 = null != guild && null != defaultChannel;
       }, items);
-      obj.imageSource = _modDef13417;
+      obj.imageSource = _modDef13483;
       obj.onPress = callback;
       const intl = guildId(1128).intl;
       obj.text = intl.string(guildId(1128).t.emRpdS);

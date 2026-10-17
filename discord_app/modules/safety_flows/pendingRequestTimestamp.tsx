@@ -1,19 +1,19 @@
 // discord_app/modules/safety_flows/pendingRequestTimestamp.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2867 from "SafetyFlows.messages.js";
+import _modDef2885 from "SafetyFlows.messages.js";
 import FamilyCenterUtils from "../parent_tools/FamilyCenterUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function SENT_TIMESTAMP_FORMATTER() {
   const time = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
   const intl = util.intl;
-  time.seconds = intl.string(_modDef2867.M4NOO3);
-  time.minutes = _modDef2867["9nem85"];
-  time.hours = _modDef2867.sJjWRY;
+  time.seconds = intl.string(_modDef2885.M4NOO3);
+  time.minutes = _modDef2885["9nem85"];
+  time.hours = _modDef2885.sJjWRY;
   const intl2 = util.intl;
-  time.yesterday = intl2.string(_modDef2867["7SxW32"]);
-  time.days = _modDef2867.tVHevX;
-  time.date = _modDef2867.q6jzya;
+  time.yesterday = intl2.string(_modDef2885["7SxW32"]);
+  time.days = _modDef2885.tVHevX;
+  time.date = _modDef2885.q6jzya;
   return time;
 }
 const result = size.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");

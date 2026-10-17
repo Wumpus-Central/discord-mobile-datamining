@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05454_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05491_LinearGradient.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
@@ -56,10 +56,10 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const Gradients = fn(7377).Gradients;
+const Gradients = fn(7423).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -571,13 +571,13 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5441).withSpring, springStandard: fn(5445).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5478).withSpring, springStandard: fn(5482).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
 };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5441).withSpring, springStandard: fn(5445).springStandard };
+let obj3 = { withSpring: fn(5478).withSpring, springStandard: fn(5482).springStandard };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 

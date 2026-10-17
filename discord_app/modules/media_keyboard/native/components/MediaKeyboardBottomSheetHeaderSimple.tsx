@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { headerHandleOnlyWrap: { height: fn(1629).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 } };
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

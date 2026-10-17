@@ -13,14 +13,14 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05454_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05491_LinearGradient.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
-  ({ mixAmount, theme } = mixColorOverride);
+  ({ mixAmount, theme, gradientPreset } = mixColorOverride);
   const obj = { mixAmount, mixColorOverride: mixColorOverride.mixColorOverride, theme };
   let mixAmount1 = obj.mixAmount;
   if (mixAmount1 === undefined) {
@@ -49,6 +49,17 @@ function getMixedGradientColor(mixColorOverride) {
     }
     mixColorOverride = new utils_ColorDefault(num2, num2, num2, tmp4);
   }
+  let tmp152 = mixColorOverride;
+  if (null != gradientPreset) {
+    ({ red, green } = mixColorOverride);
+    const tmp15 = utils_ColorDefault;
+    tmp152 = new tmp15(
+      red,
+      green,
+      mixColorOverride.blue,
+      client_themes_ClientThemesUtils.getPresetOverlayOpacity(gradientPreset, mixColorOverride.alpha),
+    );
+  }
   const obj2 = { mixAmount, theme };
   let mixAmount2 = obj2.mixAmount;
   if (mixAmount2 === undefined) {
@@ -62,7 +73,7 @@ function getMixedGradientColor(mixColorOverride) {
   if (num3 === undefined) {
     num3 = 0.2;
   }
-  if (obj6.isThemeDark(theme3)) {
+  if (obj7.isThemeDark(theme3)) {
     if (null != mixAmount2.dark) {
       darkFallbackAmount = 1 - mixAmount2.dark;
     }
@@ -70,13 +81,13 @@ function getMixedGradientColor(mixColorOverride) {
   } else if (null != mixAmount2.light) {
     num3 = 1 - mixAmount2.light;
   }
-  obj6 = shared;
-  const tmp12Result = ColorUtils;
+  obj7 = shared;
+  const tmp21Result = ColorUtils;
   ({ r, g, b } = ColorUtils.hexToRgb(mixColorOverride.color));
   const hexToRgbResult = ColorUtils.hexToRgb(mixColorOverride.color);
-  const tmp12Result2 = ColorUtils;
-  const tmp15 = new utils_ColorDefault(r, g, b, num3);
-  return tmp12Result2.mixColors(mixColorOverride, new utils_ColorDefault(r, g, b, num3)).toHexString();
+  const tmp21Result2 = ColorUtils;
+  const tmp24 = new utils_ColorDefault(r, g, b, num3);
+  return tmp21Result2.mixColors(tmp152, new utils_ColorDefault(r, g, b, num3)).toHexString();
 }
 let theme = ["overlayOpacity", "customTheme"];
 let closure_4 = ["activeGuildTheme", "theme"];
@@ -84,7 +95,7 @@ let closure_5 = ["overlayOpacity", "gradientOverride"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_12 = createStyles.createStyles({
   softenGradient: { flex: 1 },
   linearGradient: { flex: 1 },
@@ -208,10 +219,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function Gradient(arg0) {
-      const cResult = mix(576).c(25);
-      ({ gradient, absolute, wide, tall, angleOverride, componentStyles, mix } = arg0);
-      ({ mixAmount, mixColorOverride } = arg0);
+  ? function Gradient(gradient) {
+      const cResult = gradient(mixColorOverride[11]).c(20);
+      gradient = gradient.gradient;
+      ({ absolute, wide, tall, angleOverride, componentStyles, mix } = gradient);
+      ({ mixAmount, mixColorOverride } = gradient);
       if (cResult[0] !== mixAmount) {
         let obj2 = mixAmount;
         if (undefined === mixAmount) {
@@ -223,129 +235,134 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp3 = cResult[1];
       }
-      dependencyMap = tmp3;
-      const tmp4 = mixColorOverride(5090)();
+      mixAmount = tmp3;
+      const tmp4 = mix(mixColorOverride[14])();
       theme = tmp4;
-      if (cResult[2] === gradient.colors) {
+      if (cResult[2] === gradient) {
         if (cResult[3] === mix) {
           if (cResult[4] === tmp3) {
             if (cResult[5] === mixColorOverride) {
               if (cResult[6] === tmp4) {
-                if (cResult[13] !== gradient.colors) {
-                  const _Symbol = Symbol;
-                  if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                    const fn2 = function b(stop) {
-                      return stop.stop / 100;
-                    };
-                    cResult[15] = fn2;
-                    let tmp11 = fn2;
-                  } else {
-                    tmp11 = cResult[15];
-                  }
-                  const colors = gradient.colors;
-                  const mapped = colors.map(tmp11);
-                  cResult[13] = gradient.colors;
-                  cResult[14] = mapped;
-                } else {
-                  if (angleOverride == null) {
-                    angleOverride = gradient.angle;
-                  }
-                  angleCenter = gradient.angleCenter;
-                  if (angleCenter == null) {
-                    angleCenter = closure_13;
-                  }
-                  if (cResult[16] === absolute) {
-                    if (cResult[17] === tmp5) {
-                      if (cResult[18] === componentStyles) {
-                        if (cResult[19] === tmp9) {
-                          if (cResult[20] === angleOverride) {
-                            if (cResult[21] === angleCenter) {
-                              if (cResult[22] === tall) {
-                                if (cResult[23] === wide) {
-                                  let tmp15 = cResult[24];
-                                }
-                                return tmp15;
-                              }
-                            }
-                          }
-                        }
-                      }
+                let tmp5 = cResult[7];
+              }
+              if (cResult[8] !== gradient.colors) {
+                const _Symbol = Symbol;
+                if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+                  class G {
+                    constructor(arg0) {
+                      return gradient.stop / 100;
                     }
                   }
-                  const obj3 = {
-                    colors: tmp5,
-                    locations: cResult[14],
-                    angle: angleOverride,
-                    angleCenter,
-                    absolute,
-                    wide,
-                    tall,
-                    componentStyles,
-                  };
-                  const tmp18 = closure_10(closure_17, obj3);
-                  cResult[16] = absolute;
-                  cResult[17] = tmp5;
-                  cResult[18] = componentStyles;
-                  cResult[19] = cResult[14];
-                  cResult[20] = angleOverride;
-                  cResult[21] = angleCenter;
-                  cResult[22] = tall;
-                  cResult[23] = wide;
-                  cResult[24] = tmp18;
-                  tmp15 = tmp18;
+                  cResult[10] = G;
+                } else {
+                  class G {
+                    constructor(arg0) {
+                      return gradient.stop / 100;
+                    }
+                  }
                 }
+                const colors = gradient.colors;
+                const mapped = colors.map(G);
+                cResult[8] = gradient.colors;
+                cResult[9] = mapped;
+              } else {
+                class G {
+                  constructor(arg0) {
+                    return gradient.stop / 100;
+                  }
+                }
+                if (angleOverride == null) {
+                  class G {
+                    constructor(arg0) {
+                      return gradient.stop / 100;
+                    }
+                  }
+                }
+                angleCenter = gradient.angleCenter;
+                if (angleCenter == null) {
+                  class G {
+                    constructor(arg0) {
+                      return gradient.stop / 100;
+                    }
+                  }
+                }
+                if (cResult[11] === absolute) {
+                  class G {
+                    constructor(arg0) {
+                      return gradient.stop / 100;
+                    }
+                  }
+                }
+                const obj3 = {
+                  colors: tmp5,
+                  locations: tmp7,
+                  angle: angleOverride,
+                  angleCenter,
+                  absolute,
+                  wide,
+                  tall,
+                  componentStyles,
+                };
+                const tmp16 = closure_10(closure_17, obj3);
+                cResult[11] = absolute;
+                cResult[12] = tmp5;
+                cResult[13] = componentStyles;
+                cResult[14] = tmp7;
+                cResult[15] = angleOverride;
+                cResult[16] = angleCenter;
+                cResult[17] = tall;
+                cResult[18] = wide;
+                cResult[19] = tmp16;
               }
             }
           }
         }
       }
-      if (cResult[8] === mix) {
-        if (cResult[9] === tmp3) {
-          if (cResult[10] === mixColorOverride) {
-            if (cResult[11] === tmp4) {
-              let tmp6 = cResult[12];
-            }
-            const colors1 = gradient.colors;
-            const mapped1 = colors1.map(tmp6);
-            cResult[2] = gradient.colors;
-            cResult[3] = mix;
-            cResult[4] = tmp3;
-            cResult[5] = mixColorOverride;
-            cResult[6] = tmp4;
-            cResult[7] = mapped1;
-          }
-        }
-      }
-      const fn = function f(arg0) {
+      const colors1 = gradient.colors;
+      const mapped1 = colors1.map((item) => {
         if (mix) {
-          const obj = { color: nativeDefault.unsafe_rawColors[arg0.token], mixAmount, mixColorOverride, theme };
+          const obj = {
+            color: nativeDefault.unsafe_rawColors[item.token],
+            mixAmount,
+            mixColorOverride,
+            theme,
+            gradientPreset: gradient,
+          };
           let tmp3 = getMixedGradientColor(obj);
         } else {
-          tmp3 = nativeDefault.unsafe_rawColors[arg0.token];
+          tmp3 = nativeDefault.unsafe_rawColors[item.token];
         }
         return tmp3;
-      };
-      cResult[8] = mix;
-      cResult[9] = tmp3;
-      cResult[10] = mixColorOverride;
-      cResult[11] = tmp4;
-      cResult[12] = fn;
-      tmp6 = fn;
-      let obj = mix(576);
+      });
+      cResult[2] = gradient;
+      cResult[3] = mix;
+      cResult[4] = tmp3;
+      cResult[5] = mixColorOverride;
+      cResult[6] = tmp4;
+      cResult[7] = mapped1;
+      tmp5 = mapped1;
+      let obj = gradient(mixColorOverride[11]);
     }
-  : function Gradient(mixColorOverride) {
-      ({ gradient, angleOverride, mix: require, mixAmount } = mixColorOverride);
-      ({ absolute, wide, tall, componentStyles } = mixColorOverride);
+  : function Gradient(gradient) {
+      gradient = gradient.gradient;
+      ({ angleOverride, mix: importDefault, mixAmount } = gradient);
+      ({ absolute, wide, tall, componentStyles } = gradient);
       if (mixAmount === undefined) {
         mixAmount = {};
       }
-      mixColorOverride = mixColorOverride.mixColorOverride;
-      theme = mixAmount(mixColorOverride[13])();
+      const mixColorOverride = gradient.mixColorOverride;
+      theme = require("useTheme")();
       const colors = gradient.colors;
       let obj = {
         colors: colors.map((item) => {
-          if (require) {
-            const obj = { color: nativeDefault.unsafe_rawColors[item.token], mixAmount, mixColorOverride, theme };
+          if (closure_1_1) {
+            const obj = {
+              color: nativeDefault.unsafe_rawColors[item.token],
+              mixAmount,
+              mixColorOverride,
+              theme,
+              gradientPreset: gradient,
+            };
             let tmp3 = getMixedGradientColor(obj);
           } else {
             tmp3 = nativeDefault.unsafe_rawColors[item.token];
@@ -396,7 +413,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       dependencyMap = tmp4;
-      const tmp5 = mixColorOverride(5090)();
+      const tmp5 = mixColorOverride(5127)();
       theme = tmp5;
       if (cResult[2] === mix) {
         if (cResult[3] === tmp4) {
@@ -470,7 +487,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let obj = mix(576);
-      const guildThemePresetAppearance = mix(5032).getGuildThemePresetAppearance(preset, tmp5);
+      const guildThemePresetAppearance = mix(5069).getGuildThemePresetAppearance(preset, tmp5);
       if (cResult[11] === mix) {
         if (cResult[12] === tmp4) {
           if (cResult[13] === mixColorOverride) {
@@ -549,7 +566,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = tmp5;
       cResult[15] = A;
       tmp10 = A;
-      const tmpResult = mix(5032);
+      const tmpResult = mix(5069);
     }
   : function GuildThemePresetGradient(mixColorOverride) {
       ({ angleOverride, mix: require, mixAmount } = mixColorOverride);
@@ -558,7 +575,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         mixAmount = {};
       }
       mixColorOverride = mixColorOverride.mixColorOverride;
-      const tmp = mixAmount(mixColorOverride[13])();
+      const tmp = mixAmount(mixColorOverride[14])();
       theme = tmp;
       const guildThemePresetAppearance = require("GuildThemePresets").getGuildThemePresetAppearance(preset, tmp);
       const colors = guildThemePresetAppearance.colors;
@@ -597,7 +614,7 @@ const re20 = /^#(?:[0-9a-fA-F]{3}){1,2}$/;
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
   ? function CustomThemesGradient(arg0) {
-      const cResult = reduced(mixColorOverride[10]).c(26);
+      const cResult = reduced(mixColorOverride[11]).c(26);
       ({
         colors,
         gradientAngle,
@@ -616,9 +633,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         mixAmount = {};
       }
       const tmp3 = closure_12();
-      let obj = reduced(mixColorOverride[10]);
+      let obj = reduced(mixColorOverride[11]);
       const tmp4 = mixAmount;
-      ({ width, height } = mixAmount(mixColorOverride[11])());
+      ({ width, height } = mixAmount(mixColorOverride[12])());
       mixAmount = undefined;
       mixColorOverride = undefined;
       theme = undefined;
@@ -773,7 +790,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                         let obj3 = { colors: reduced, locations: mapped1, start, end, style: tmp19 };
-                        const tmp22 = closure_10(tmp4(tmp[12]), obj3);
+                        const tmp22 = closure_10(tmp4(tmp[13]), obj3);
                         cResult[20] = end;
                         cResult[21] = mapped1;
                         cResult[22] = start;
@@ -837,7 +854,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = reduced.length;
       cResult[4] = fn;
       tmp11 = fn;
-      const tmp5 = mixAmount(mixColorOverride[11])();
+      const tmp5 = mixAmount(mixColorOverride[12])();
     }
   : function CustomThemesGradient(arg0) {
       ({ colors, gradientColorStops, absolute, wide, tall, mixAmount } = arg0);
@@ -980,8 +997,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         items2[3] = absolute;
         items2[4] = componentStyles;
         obj.style = items2;
-        tmp10Result = closure_10(reduced(5454), obj);
-        const tmp2Result = reduced(5454);
+        tmp10Result = closure_10(reduced(5491), obj);
+        const tmp2Result = reduced(5491);
       }
       return tmp10Result;
     };
@@ -1297,11 +1314,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const merged = Object.assign(tmp4);
             const merged1 = Object.assign(gradientOverride.customThemeSettings);
             obj2.theme = gradientOverride.theme;
-            const tmp60 = collapsed(closure_21, obj2);
-            let tmp61 = tmp60;
+            const tmp64 = collapsed(closure_21, obj2);
+            let tmp65 = tmp64;
             if (withOverlay) {
               const obj3 = { style: styles.absolute, children: null };
-              const items1 = [tmp60];
+              const items1 = [tmp64];
               const obj4 = { style: null };
               const items2 = [styles.softenGradient];
               const obj5 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
@@ -1309,32 +1326,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj4.style = items2;
               items1[1] = collapsed(View, obj4);
               obj3.children = items1;
-              tmp61 = closure_1_11(View, obj3);
-              const tmpResult8 = ColorUtils;
+              tmp65 = closure_1_11(View, obj3);
+              const tmpResult10 = ColorUtils;
             }
-            return tmp61;
+            return tmp65;
           }
         }
         if (gradientOverride.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
           const obj6 = {};
           const merged2 = Object.assign(tmp4);
           obj6.gradient = gradientOverride;
-          const tmp49 = collapsed(closure_18, obj6);
-          let tmp50 = tmp49;
+          const tmp51 = collapsed(closure_18, obj6);
+          client_themes_ClientThemesUtils;
+          let tmp54 = tmp51;
           if (withOverlay) {
             const obj7 = { style: styles.absolute, children: null };
-            const items3 = [tmp49];
+            const items3 = [tmp51];
             const obj8 = { style: null };
             const items4 = [styles.softenGradient];
-            const obj9 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
+            const obj9 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp53) };
             items4[1] = obj9;
             obj8.style = items4;
             items3[1] = collapsed(View, obj8);
             obj7.children = items3;
-            tmp50 = closure_1_11(View, obj7);
-            const tmpResult9 = ColorUtils;
+            tmp54 = closure_1_11(View, obj7);
+            const tmpResult12 = ColorUtils;
           }
-          return tmp50;
+          return tmp54;
         }
       }
       if (null != tmp11) {
@@ -1342,11 +1360,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const merged3 = Object.assign(tmp4);
         obj10.activeGuildTheme = tmp11;
         obj10.theme = tmp7;
-        const tmp40 = collapsed(closure_23, obj10);
-        let tmp41 = tmp40;
+        const tmp42 = collapsed(closure_23, obj10);
+        let tmp43 = tmp42;
         if (withOverlay) {
           const obj11 = { style: styles.absolute, children: null };
-          const items5 = [tmp40];
+          const items5 = [tmp42];
           const obj12 = { style: null };
           const items6 = [styles.softenGradient];
           const obj13 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
@@ -1354,10 +1372,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj12.style = items6;
           items5[1] = collapsed(View, obj12);
           obj11.children = items5;
-          tmp41 = closure_1_11(View, obj11);
-          const tmpResult10 = ColorUtils;
+          tmp43 = closure_1_11(View, obj11);
+          const tmpResult13 = ColorUtils;
         }
-        let tmp14 = tmp41;
+        let tmp14 = tmp43;
       } else {
         if (tmp13) {
           if (tmp13) {
@@ -1365,11 +1383,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const merged4 = Object.assign(tmp4);
             const merged5 = Object.assign(customThemeDisplaySettings.customTheme);
             obj14.theme = customThemeDisplaySettings.baseTheme;
-            const tmp31 = collapsed(closure_21, obj14);
-            let tmp32 = tmp31;
+            const tmp33 = collapsed(closure_21, obj14);
+            let tmp34 = tmp33;
             if (withOverlay) {
               const obj15 = { style: styles.absolute, children: null };
-              const items7 = [tmp31];
+              const items7 = [tmp33];
               const obj16 = { style: null };
               const items8 = [styles.softenGradient];
               const obj17 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
@@ -1377,10 +1395,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj16.style = items8;
               items7[1] = collapsed(View, obj16);
               obj15.children = items7;
-              tmp32 = closure_1_11(View, obj15);
-              const tmpResult11 = ColorUtils;
+              tmp34 = closure_1_11(View, obj15);
+              const tmpResult14 = ColorUtils;
             }
-            tmp14 = tmp32;
+            tmp14 = tmp34;
           }
         }
         tmp14 = null;
@@ -1389,21 +1407,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged6 = Object.assign(tmp4);
           obj18.gradient = preset;
           const tmp20 = collapsed(closure_18, obj18);
-          let tmp21 = tmp20;
+          client_themes_ClientThemesUtils;
+          let tmp23 = tmp20;
           if (withOverlay) {
             const obj19 = { style: styles.absolute, children: null };
             const items9 = [tmp20];
             const obj20 = { style: null };
             const items10 = [styles.softenGradient];
-            const obj21 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
+            const obj21 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp22) };
             items10[1] = obj21;
             obj20.style = items10;
             items9[1] = collapsed(View, obj20);
             obj19.children = items9;
-            tmp21 = closure_1_11(View, obj19);
-            const tmpResult12 = ColorUtils;
+            tmp23 = closure_1_11(View, obj19);
+            const tmpResult16 = ColorUtils;
           }
-          tmp14 = tmp21;
+          tmp14 = tmp23;
         }
       }
       return tmp14;
@@ -1432,11 +1451,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const merged1 = Object.assign(merged);
             const merged2 = Object.assign(gradientOverride.customThemeSettings);
             obj3.theme = gradientOverride.theme;
-            const tmp55 = collapsed(closure_21, obj3);
-            let tmp56 = tmp55;
+            const tmp59 = collapsed(closure_21, obj3);
+            let tmp60 = tmp59;
             if (withOverlay) {
               const obj4 = { style: styles.absolute, children: null };
-              const items1 = [tmp55];
+              const items1 = [tmp59];
               const obj5 = { style: null };
               const items2 = [styles.softenGradient];
               const obj6 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
@@ -1444,32 +1463,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj5.style = items2;
               items1[1] = collapsed(View, obj5);
               obj4.children = items1;
-              tmp56 = closure_1_11(View, obj4);
+              tmp60 = closure_1_11(View, obj4);
               const tmp5Result = ColorUtils;
             }
-            return tmp56;
+            return tmp60;
           }
         }
         if (gradientOverride.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
           const obj7 = {};
           const merged3 = Object.assign(merged);
           obj7.gradient = gradientOverride;
-          const tmp44 = collapsed(closure_18, obj7);
-          let tmp45 = tmp44;
+          const tmp46 = collapsed(closure_18, obj7);
+          client_themes_ClientThemesUtils;
+          let tmp49 = tmp46;
           if (withOverlay) {
             const obj8 = { style: styles.absolute, children: null };
-            const items3 = [tmp44];
+            const items3 = [tmp46];
             const obj9 = { style: null };
             const items4 = [styles.softenGradient];
-            const obj10 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
+            const obj10 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp48) };
             items4[1] = obj10;
             obj9.style = items4;
             items3[1] = collapsed(View, obj9);
             obj8.children = items3;
-            tmp45 = closure_1_11(View, obj8);
-            const tmp5Result5 = ColorUtils;
+            tmp49 = closure_1_11(View, obj8);
+            const tmp5Result8 = ColorUtils;
           }
-          return tmp45;
+          return tmp49;
         }
       }
       if (null != tmp6) {
@@ -1477,11 +1497,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const merged4 = Object.assign(merged);
         obj11.activeGuildTheme = tmp6;
         obj11.theme = tmp4;
-        const tmp35 = collapsed(closure_23, obj11);
-        let tmp36 = tmp35;
+        const tmp37 = collapsed(closure_23, obj11);
+        let tmp38 = tmp37;
         if (withOverlay) {
           const obj12 = { style: styles.absolute, children: null };
-          const items5 = [tmp35];
+          const items5 = [tmp37];
           const obj13 = { style: null };
           const items6 = [styles.softenGradient];
           const obj14 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
@@ -1489,10 +1509,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj13.style = items6;
           items5[1] = collapsed(View, obj13);
           obj12.children = items5;
-          tmp36 = closure_1_11(View, obj12);
-          const tmp5Result6 = ColorUtils;
+          tmp38 = closure_1_11(View, obj12);
+          const tmp5Result9 = ColorUtils;
         }
-        let tmp9 = tmp36;
+        let tmp9 = tmp38;
       } else {
         if (tmp8) {
           if (tmp8) {
@@ -1500,11 +1520,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const merged5 = Object.assign(merged);
             const merged6 = Object.assign(customThemeDisplaySettings.customTheme);
             obj15.theme = customThemeDisplaySettings.baseTheme;
-            const tmp26 = collapsed(closure_21, obj15);
-            let tmp27 = tmp26;
+            const tmp28 = collapsed(closure_21, obj15);
+            let tmp29 = tmp28;
             if (withOverlay) {
               const obj16 = { style: styles.absolute, children: null };
-              const items7 = [tmp26];
+              const items7 = [tmp28];
               const obj17 = { style: null };
               const items8 = [styles.softenGradient];
               const obj18 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
@@ -1512,10 +1532,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj17.style = items8;
               items7[1] = collapsed(View, obj17);
               obj16.children = items7;
-              tmp27 = closure_1_11(View, obj16);
-              const tmp5Result7 = ColorUtils;
+              tmp29 = closure_1_11(View, obj16);
+              const tmp5Result10 = ColorUtils;
             }
-            tmp9 = tmp27;
+            tmp9 = tmp29;
           }
         }
         tmp9 = null;
@@ -1524,21 +1544,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged7 = Object.assign(merged);
           obj19.gradient = preset;
           const tmp15 = collapsed(closure_18, obj19);
-          let tmp16 = tmp15;
+          client_themes_ClientThemesUtils;
+          let tmp18 = tmp15;
           if (withOverlay) {
             const obj20 = { style: styles.absolute, children: null };
             const items9 = [tmp15];
             const obj21 = { style: null };
             const items10 = [styles.softenGradient];
-            const obj22 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
+            const obj22 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp17) };
             items10[1] = obj22;
             obj21.style = items10;
             items9[1] = collapsed(View, obj21);
             obj20.children = items9;
-            tmp16 = closure_1_11(View, obj20);
-            const tmp5Result8 = ColorUtils;
+            tmp18 = closure_1_11(View, obj20);
+            const tmp5Result12 = ColorUtils;
           }
-          tmp9 = tmp16;
+          tmp9 = tmp18;
         }
       }
       return tmp9;

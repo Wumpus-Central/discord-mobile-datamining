@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -51,7 +51,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === onConsoleSelect) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { hasIcons: true, children: tmp4 };
-            const tmp9 = closure_8(onConsoleSelect(6489).TableRowGroup, obj2);
+            const tmp9 = closure_8(onConsoleSelect(6542).TableRowGroup, obj2);
             cResult[5] = tmp4;
             cResult[6] = tmp9;
             let tmp7 = tmp9;
@@ -284,19 +284,19 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16093, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16159, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(9409).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9409);
-  closure_4 = quest(13843).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(13843);
-  noop = quest(9440).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9473).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9473);
+  closure_4 = quest(13911).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(13911);
+  noop = quest(9504).useGetQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(9440);
+  let obj3 = quest(9504);
   return closure_8(closure_9, {
     consoles: noop.useMemo(
       () =>

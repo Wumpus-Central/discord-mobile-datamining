@@ -9,17 +9,17 @@ import PremiumRewardGradientDefault from "../PremiumRewardGradient.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const native = Button(1202);
-const Text_Text = Button(5150);
-const components_Button_Button = Button(5442);
-const QuestDockHooks = Button(16064);
+const Text_Text = Button(5187);
+const components_Button_Button = Button(5479);
+const QuestDockHooks = Button(16130);
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(16067);
+const QuestDockConstants = fn(16133);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = {
   rewardTile: { borderRadius: nativeDefault.radii.lg },
   wrapper: {

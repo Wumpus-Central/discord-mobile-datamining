@@ -1,5 +1,5 @@
 // discord_app/records/GiftCodeRecord.tsx
-import _modDef4761 from "../../_runtime/metro/04761__.js";
+import _modDef4797 from "../../_runtime/metro/04797__.js";
 import Record from "../lib/Record.tsx";
 import SubscriptionTrialRecord from "../modules/billing/records/SubscriptionTrialRecord.tsx";
 import PromotionRecord from "PromotionRecord.tsx";
@@ -51,7 +51,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef4761(user.expires_at);
+    tmp5 = _modDef4797(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -127,8 +127,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef4761().isAfter(expiresAt);
-    const obj = _modDef4761();
+    isAfterResult = _modDef4797().isAfter(expiresAt);
+    const obj = _modDef4797();
   }
   return isAfterResult;
 };

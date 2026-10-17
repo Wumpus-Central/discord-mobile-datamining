@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
 import Constants from "../../../Constants.tsx";
-import RPCOpcodesDefault from "../RPCOpcodes.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
+import RPCOpcodesDefault from "../RPCOpcodes.tsx";
 import BaseSocket from "BaseSocket.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

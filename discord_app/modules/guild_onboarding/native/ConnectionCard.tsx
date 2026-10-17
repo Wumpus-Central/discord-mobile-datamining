@@ -5,7 +5,7 @@ import ProviderConnectionCardDefault from "ProviderConnectionCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const OnboardingConnectionType = fn(7014).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7067).OnboardingConnectionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

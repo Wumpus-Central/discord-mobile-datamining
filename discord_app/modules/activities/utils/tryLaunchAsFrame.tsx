@@ -4,7 +4,7 @@ import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFr
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(10931).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6296).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

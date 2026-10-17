@@ -16,12 +16,12 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
       channelId: tmp6[3],
       messageId: tmp6[4],
       parentChannelId: tmp6[2],
-      conversationId: "format",
+      conversationId: "gap",
     };
     return obj3;
   } else {
-    const CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE;
-    const match1 = CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE.exec(url);
+    const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
+    const match1 = CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE.exec(url);
     if (null == match1) {
       return null;
     } else {
@@ -36,9 +36,10 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
               channelId: tmp11,
               messageId: tmp12,
               parentChannelId: "Array",
-              conversationId: tmp13,
+              conversationId: LinkUtils.tryParseConversationIdFromQuery(tmp13),
             };
             tmp4 = obj4;
+            const tmpResult = LinkUtils;
           } else {
             tmp4 = null;
           }

@@ -6,7 +6,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06559_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06612_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -241,7 +241,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "done", positionPercentage: false };
+    sectionItemFromPosition = { item: "emoji", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -273,19 +273,19 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6182).GuildsNodeType;
-const GuildsBarConstants = fn(17366);
+const GuildsNodeType = fn(6219).GuildsNodeType;
+const GuildsBarConstants = fn(17425);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
 let __closure = { pan: null, itemMeasurements: null, activeIndex: null };
-let ReanimatedRexport = fn(4909);
+let ReanimatedRexport = fn(4945);
 __closure.pan = ReanimatedRexport.makeMutable(-1);
-ReanimatedRexport = fn(4909);
+ReanimatedRexport = fn(4945);
 __closure.itemMeasurements = ReanimatedRexport.makeMutable([]);
-ReanimatedRexport = fn(4909);
+ReanimatedRexport = fn(4945);
 __closure.activeIndex = ReanimatedRexport.makeMutable(-1);
-let closure_16 = debounce(fn(5119).triggerHapticFeedback, 16);
+let closure_16 = debounce(fn(5156).triggerHapticFeedback, 16);
 let closure_17 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -658,7 +658,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Symbol", overSpecs: "current" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Reflect" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -857,10 +857,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9599).ContextMenuStore;
+        const ContextMenuStore = tmp66(9663).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9599).hideContextMenu();
-          const tmp66Result = tmp66(9599);
+          tmp66(9663).hideContextMenu();
+          const tmp66Result = tmp66(9663);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -901,9 +901,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(6985).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7038).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(6985).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7038).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";

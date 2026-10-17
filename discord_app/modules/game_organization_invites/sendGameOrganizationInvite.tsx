@@ -129,9 +129,9 @@ let closure_8 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(8990).setSendState;
-let closure_5 = fn(10731).GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE;
-const InviteSendStates = fn(7643).InviteSendStates;
+const setSendState = fn(9036).setSendState;
+let closure_5 = fn(10794).GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE;
+const InviteSendStates = fn(7689).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

@@ -87,8 +87,8 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1087);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7242).ClearFriendRequestFilters;
-const SafetyToastType = fn(7243).SafetyToastType;
+const ClearFriendRequestFilters = fn(7294).ClearFriendRequestFilters;
+const SafetyToastType = fn(7295).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -216,7 +216,7 @@ let obj2 = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(5028).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = closure_0(5065).AccessibilityAnnouncer;
         const intl = closure_0(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(closure_0(1128).t.n6Jo3E));
       });
@@ -308,8 +308,8 @@ let obj2 = {
         obj3.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
       })
       .catch(() => {
-        channelId(7249).showFailedToast();
-        const AccessibilityAnnouncer = userId(5028).AccessibilityAnnouncer;
+        channelId(7301).showFailedToast();
+        const AccessibilityAnnouncer = userId(5065).AccessibilityAnnouncer;
         const intl = userId(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1128).t.n6Jo3E));
       });
@@ -334,8 +334,8 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7249).showFailedToast();
-        const AccessibilityAnnouncer = id(5028).AccessibilityAnnouncer;
+        channelId(7301).showFailedToast();
+        const AccessibilityAnnouncer = id(5065).AccessibilityAnnouncer;
         const intl = id(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(id(1128).t.n6Jo3E));
       });

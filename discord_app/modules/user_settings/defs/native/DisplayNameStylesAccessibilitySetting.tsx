@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2963 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2981 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -32,13 +32,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2963["2gFUEw"]);
+    return intl.string(_modDef2981["2gFUEw"]);
   },
-  parent: fn(8214).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8260).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange,
 });

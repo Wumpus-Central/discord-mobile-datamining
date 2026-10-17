@@ -28,7 +28,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSelectedDestinationChannel(arr) {
       const cResult = require("c").c(8);
       if (cResult[0] !== arr) {
-        const mapped = arr.map(tmp(12611).getChannelIdFromDestinationId);
+        const mapped = arr.map(tmp(12676).getChannelIdFromDestinationId);
         const found = mapped.find(tmp(1388).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
@@ -75,7 +75,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp11;
     }
   : function useSelectedDestinationChannel(arr) {
-      const mapped = arr.map(found(12611).getChannelIdFromDestinationId);
+      const mapped = arr.map(found(12676).getChannelIdFromDestinationId);
       found = mapped.find(found(1388).isNotNullish);
       const items = [ChannelStore];
       const items1 = [found];
@@ -112,8 +112,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               if (null != user) {
                 nickname = nickname.getNickname(user.id);
                 if (nickname == null) {
-                  nickname = closure_1_1(5021).getName(user);
-                  const obj2 = closure_1_1(5021);
+                  nickname = closure_1_1(5057).getName(user);
+                  const obj2 = closure_1_1(5057);
                 }
                 tmp13 = nickname;
               }
@@ -122,7 +122,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               channel = channel.getChannel(id);
               let channelName = null;
               if (null != channel) {
-                const obj = closure_1_0(5484);
+                const obj = closure_1_0(5521);
                 channelName = obj.computeChannelName(channel, user, nickname, true);
               }
               return channelName;
@@ -158,8 +158,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               if (null != user) {
                 nickname = nickname.getNickname(user.id);
                 if (nickname == null) {
-                  nickname = closure_1_1(5021).getName(user);
-                  const obj2 = closure_1_1(5021);
+                  nickname = closure_1_1(5057).getName(user);
+                  const obj2 = closure_1_1(5057);
                 }
                 tmp13 = nickname;
               }
@@ -168,7 +168,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               channel = channel.getChannel(id);
               let channelName = null;
               if (null != channel) {
-                const obj = closure_1_0(5484);
+                const obj = closure_1_0(5521);
                 channelName = obj.computeChannelName(channel, user, nickname, true);
               }
               return channelName;
@@ -218,7 +218,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(6143);
+          tmp12(6180);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1128).intl;
@@ -234,10 +234,10 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let result = tmp12(6128).shouldShowTiggerPawtect();
+          let result = tmp12(6165).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(6140).isFeatureAgeGated(tmp12(6139).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(6140);
+            result = tmp12(6177).isFeatureAgeGated(tmp12(6176).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(6177);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -250,9 +250,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
             }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(6128);
+          const tmp12Result9 = tmp12(6165);
         }
-        tmp12Result8 = tmp12(6143);
+        tmp12Result8 = tmp12(6180);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -279,9 +279,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj5.label = intl3.string(tmp12(1128).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(5966);
+              tmp12Result12 = tmp12(6003);
             }
-            tmp12Result11 = tmp12(5966);
+            tmp12Result11 = tmp12(6003);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -292,14 +292,14 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj6.label = intl4.string(tmp12(1128).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(5966);
+            tmp12Result13 = tmp12(6003);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(5968);
+          const tmp12Result14 = tmp12(6005);
           HermesBuiltin.arraySpread(
             messageSnapshots3.flatMap((message) => type(dependencyMap[14]).getMessageStickers(message.message)),
-            HermesBuiltin.arraySpread(tmp12(5968).getMessageStickers(components), 0),
+            HermesBuiltin.arraySpread(tmp12(6005).getMessageStickers(components), 0),
           );
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
@@ -334,7 +334,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5968).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6005).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");

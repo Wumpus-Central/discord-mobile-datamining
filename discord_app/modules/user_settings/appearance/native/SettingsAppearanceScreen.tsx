@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3447 from "../../../favorites/intl/FavoritesGuild.messages.js";
+import _modDef3465 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -55,7 +55,7 @@ function getAppearanceSettings() {
   obj6.settings = items6;
   const intl3 = util.intl;
   const obj7 = { helpCenterLink: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  obj6.subLabel = intl3.format(_modDef3447.GR2KOG, obj7);
+  obj6.subLabel = intl3.format(_modDef3465.GR2KOG, obj7);
   items1[5] = obj6;
   const obj9 = { label: null, settings: null };
   const intl4 = util.intl;
@@ -75,9 +75,9 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(16253);
+const FontScaleStore = fn(16319);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8214).MobileUserSettings;
+const MobileUserSettings = fn(8260).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

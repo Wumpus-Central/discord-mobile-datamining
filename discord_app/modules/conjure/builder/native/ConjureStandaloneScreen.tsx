@@ -462,10 +462,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.render = function render() {
         const obj = { children: null };
-        const items = [
-          collapsed(closure_13, { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef }),
-          collapsed(ConjureProjectListDefault, { guildId }),
-        ];
+        const obj2 = { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef };
+        const items = [collapsed(closure_13, obj2), collapsed(ConjureProjectListDefault, { guildId })];
         obj.children = items;
         return __initData(closure_2_11, obj);
       };

@@ -3,14 +3,14 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef17309 from "../../../../../_runtime/metro/17309__.js";
+import _modDef17368 from "../../../../../_runtime/metro/17368__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   brightTitle: null,
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef17309 };
+          const obj2 = { source: _modDef17368 };
           const tmp11 = React4(FastImageDefault, obj2);
           cResult[3] = tmp11;
           let tmp7 = tmp11;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
       obj.style = items;
       const obj2 = { style: tmp.unavailableInfo, children: null };
-      const obj3 = { source: _modDef17309 };
+      const obj3 = { source: _modDef17368 };
       const items1 = [React4(FastImageDefault, obj3), ,];
       const items2 = [tmp.joinCtaTitle];
       if (brightTitle) {

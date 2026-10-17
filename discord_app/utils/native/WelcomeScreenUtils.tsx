@@ -10,7 +10,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NO_WELCOME_SCREEN = fn(13424).NO_WELCOME_SCREEN;
+const NO_WELCOME_SCREEN = fn(13490).NO_WELCOME_SCREEN;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "a" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -24,7 +24,7 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const tmp = _require;
       const tmp2 = welcomeModalChannelId;
-      welcomeModalChannelId = require("../../../_runtime/metro/05009__.js").useLocation().welcomeModalChannelId;
+      welcomeModalChannelId = require("../../../_runtime/metro/05045__.js").useLocation().welcomeModalChannelId;
       const tmp4 = require("useWelcomeScreenEnabled")(arg1, arg0);
       noop = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -103,14 +103,14 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4;
       cResult[5] = fn;
       tmp9 = fn;
-      let obj2 = require("../../../_runtime/metro/05009__.js");
+      let obj2 = require("../../../_runtime/metro/05045__.js");
     }
   : function useShowWelcomeModal(arg0, arg1) {
       _require = arg0;
       importDefault = arg1;
-      welcomeModalChannelId = require("../../../_runtime/metro/05009__.js").useLocation().welcomeModalChannelId;
+      welcomeModalChannelId = require("../../../_runtime/metro/05045__.js").useLocation().welcomeModalChannelId;
       noop = require("useWelcomeScreenEnabled")(arg1, arg0);
-      let obj = require("../../../_runtime/metro/05009__.js");
+      let obj = require("../../../_runtime/metro/05045__.js");
       const items = [GuildStore, shouldFetchGuildId, GuildChannelStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         if (closure_3) {
@@ -158,7 +158,7 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13427, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, {
+  obj.openLazy(asyncRequireImpl(13493, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, {
     guildId,
     onHide: onHide.onHide,
   });

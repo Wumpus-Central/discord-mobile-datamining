@@ -3,10 +3,11 @@ import c from "../../../_runtime/00576_c.js";
 import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import SoundUtils from "../sound_playback/SoundUtils.tsx";
 import VoiceConnectFeedbackExperimentDefault from "../voice_calls/VoiceConnectFeedbackExperiment.tsx";
-import _modDef18011 from "../../../_runtime/metro/18011__.js";
+import _modDef18071 from "../../../_runtime/metro/18071__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
+import ConjureBuilderPreviewStore from "../conjure/preview/ConjureBuilderPreviewStore.tsx";
 import ConjureProjectStore from "../conjure/projects/ConjureProjectStore.tsx";
 import FramesStore from "../frames/FramesStore.tsx";
 import GameConsoleStore from "../game_console/GameConsoleStore.tsx";
@@ -24,20 +25,20 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 
 require = fn;
 const NO_ACTIVITIES = fn(2067).NO_ACTIVITIES;
-let closure_10 = fn(2072).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
+let closure_11 = fn(2072).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
 const Constants = fn(1087);
 ({
-  InputModes: closure_22,
-  ApplicationStreamStates: closure_23,
-  ChannelTypes: closure_24,
-  RTCConnectionStates: closure_25,
+  InputModes: closure_23,
+  ApplicationStreamStates: closure_24,
+  ChannelTypes: closure_25,
+  RTCConnectionStates: closure_26,
 } = Constants);
-const isLaunched = fn(10931).isLaunched;
+const isLaunched = fn(6296).isLaunched;
 const jsxProd = fn(21);
-({ jsx: closure_27, Fragment: closure_28, jsxs: closure_29 } = jsxProd);
-let c30 = 25;
+({ jsx: closure_28, Fragment: closure_29, jsxs: closure_30 } = jsxProd);
+let c31 = 25;
 let ReactCompilerGating = fn(558);
-let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSound(arg0, arg1, arg2, arg3) {
       _require = arg0;
       closure_1 = arg1;
@@ -56,7 +57,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function o() {
         closure_0 = batchedStoreListener();
-        batchedStoreListener = new closure_0(closure_2[23]).BatchedStoreListener(closure_0, () => {
+        batchedStoreListener = new closure_0(closure_2[24]).BatchedStoreListener(closure_0, () => {
           const tmp = batchedStoreListener();
           const tmp2 = closure_2(closure_0, tmp);
           let isSoundDisabledResult = null == tmp2;
@@ -89,7 +90,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       noop = arg3;
       const effect = noop.useEffect(() => {
         closure_0 = batchedStoreListener();
-        batchedStoreListener = new closure_0(closure_2[23]).BatchedStoreListener(closure_0, () => {
+        batchedStoreListener = new closure_0(closure_2[24]).BatchedStoreListener(closure_0, () => {
           const tmp = batchedStoreListener();
           const tmp2 = closure_2(closure_0, tmp);
           let isSoundDisabledResult = null == tmp2;
@@ -110,7 +111,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       });
     };
 ReactCompilerGating = fn(558);
-let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
   ? function MuteDeafen() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -156,12 +157,12 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function MuteDeafen() {
       const items = [MediaEngineStore, SelectedChannelStore];
-      closure_31(
+      closure_32(
         items,
         () => ({
           inVoiceChannel: null != voiceChannelId.getVoiceChannelId(),
@@ -197,7 +198,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
   ? function Camera() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -231,12 +232,12 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function Camera() {
       const items = [MediaEngineStore, SelectedChannelStore];
-      closure_31(
+      closure_32(
         items,
         () => ({
           videoEnabled: videoEnabled.isVideoEnabled(),
@@ -260,7 +261,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
   ? function RTCConnect() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -350,12 +351,12 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function RTCConnect() {
       const items = [ChannelStore, RTCConnectionStore, SelectedChannelStore, GameConsoleStore];
-      closure_31(
+      closure_32(
         items,
         () => {
           channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
@@ -437,7 +438,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
   ? function Speaking() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -468,12 +469,12 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function Speaking() {
       const items = [SpeakingStore];
-      closure_31(
+      closure_32(
         items,
         () => currentUserPTTActive.isCurrentUserPTTActive(),
         (arg0, arg1) => {
@@ -494,7 +495,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
   ? function SelfMutedTemporarily() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -531,12 +532,12 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function SelfMutedTemporarily() {
       const items = [MediaEngineStore, NotificationSettingsStore];
-      closure_31(
+      closure_32(
         items,
         () => MediaEngineStore.isSelfMutedTemporarily(),
         (arg0, arg1) => {
@@ -563,7 +564,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
   ? function PriorityVAD() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -594,12 +595,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function PriorityVAD() {
       const items = [SpeakingStore];
-      closure_31(
+      closure_32(
         items,
         () => currentUserPrioritySpeaker.isCurrentUserPrioritySpeaker(),
         (arg0, arg1) => {
@@ -620,7 +621,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
   ? function UserHasBeenMoved() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -642,12 +643,12 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function UserHasBeenMoved() {
       const items = [VoiceStateStore];
-      closure_31(
+      closure_32(
         items,
         () => VoiceStateStore.userHasBeenMovedVersion,
         (arg0, arg1) => {
@@ -659,7 +660,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
   ? function UserInvitedToSpeak() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -692,12 +693,12 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, tmp4);
       return null;
     }
   : function UserInvitedToSpeak() {
       const items = [SelectedChannelStore, VoiceStateStore];
-      closure_31(
+      closure_32(
         items,
         () => {
           voiceChannelId = voiceChannelId.getVoiceChannelId();
@@ -722,7 +723,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
   ? function VoiceChannel() {
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -805,11 +806,11 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
           let singleActiveStreamViewerCount = 0;
           let singleActiveStreamKey = null;
           if (null != first) {
-            const encodeStreamKeyResult = closure_0(dependencyMap[27]).encodeStreamKey(first);
+            const encodeStreamKeyResult = closure_0(dependencyMap[28]).encodeStreamKey(first);
             const viewerIds = obj.getViewerIds(encodeStreamKeyResult);
             singleActiveStreamViewerCount = viewerIds.filter((item) => item !== currentUserId).length;
             singleActiveStreamKey = encodeStreamKeyResult;
-            const obj3 = closure_0(dependencyMap[27]);
+            const obj3 = closure_0(dependencyMap[28]);
           }
           return {
             channelType,
@@ -847,22 +848,22 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             keys = [];
           }
-          const tmp8 = _modDef18011(rtcUserIds, rtcConnected.rtcUserIds);
+          const tmp8 = _modDef18071(rtcUserIds, rtcConnected.rtcUserIds);
           let rtcConnected3 = rtcConnected.rtcConnected;
           if (rtcConnected3) {
-            rtcConnected3 = rtcConnected.rtcUserIds.length <= c30;
+            rtcConnected3 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (rtcConnected3) {
-            rtcConnected3 = _modDef18011(tmp8, keys).length > 0;
+            rtcConnected3 = _modDef18071(tmp8, keys).length > 0;
           }
           let tmp10 = rtcConnected.rtcConnected && rtcConnected;
           if (tmp10) {
-            tmp10 = rtcConnected.rtcUserIds.length <= c30;
+            tmp10 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (tmp10) {
-            tmp10 = _modDef18011(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
+            tmp10 = _modDef18071(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
           }
-          streamingUserIds.current = _modDef18011(keys, tmp8);
+          streamingUserIds.current = _modDef18071(keys, tmp8);
           if (rtcConnected.voiceChannelId === voiceChannelId) {
             if (null != voiceChannelId) {
               channel = ChannelStore.getChannel(voiceChannelId);
@@ -889,7 +890,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp20 = null != voiceChannelUserCount;
                 }
                 if (tmp20) {
-                  tmp20 = voiceChannelUserCount2 <= c30;
+                  tmp20 = voiceChannelUserCount2 <= c31;
                 }
                 let tmp22 = tmp20;
                 if (tmp20) {
@@ -922,7 +923,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
                 if (!someResult) {
                   let str2 = "stream_ended";
                   if (!someResult1) {
-                    if (rtcConnected.singleActiveStreamViewerCount <= c30) {
+                    if (rtcConnected.singleActiveStreamViewerCount <= c31) {
                       if (tmp17) {
                         let str3 = "stream_user_joined";
                       }
@@ -933,7 +934,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
                       let str5 = "user_leave";
                       if (!tmp20) {
                         let str6;
-                        if (rtcConnected.singleActiveStreamViewerCount <= c30) {
+                        if (rtcConnected.singleActiveStreamViewerCount <= c31) {
                           if (tmp17) {
                             if (singleActiveStreamViewerCount < rtcConnected.singleActiveStreamViewerCount) {
                               str6 = "stream_user_left";
@@ -964,7 +965,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[2];
         tmp5 = cResult[3];
       }
-      closure_31(tmp3, tmp4, tmp5);
+      closure_32(tmp3, tmp4, tmp5);
       return null;
     }
   : function VoiceChannel() {
@@ -977,7 +978,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
         ChannelStore,
         RTCConnectionStore,
       ];
-      closure_31(
+      closure_32(
         items,
         () => {
           voiceChannelId = voiceChannelId.getVoiceChannelId();
@@ -1042,11 +1043,11 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
           let singleActiveStreamViewerCount = 0;
           let singleActiveStreamKey = null;
           if (null != first) {
-            const encodeStreamKeyResult = closure_0(dependencyMap[27]).encodeStreamKey(first);
+            const encodeStreamKeyResult = closure_0(dependencyMap[28]).encodeStreamKey(first);
             const viewerIds = obj.getViewerIds(encodeStreamKeyResult);
             singleActiveStreamViewerCount = viewerIds.filter((item) => item !== currentUserId).length;
             singleActiveStreamKey = encodeStreamKeyResult;
-            const obj3 = closure_0(dependencyMap[27]);
+            const obj3 = closure_0(dependencyMap[28]);
           }
           return {
             channelType,
@@ -1085,22 +1086,22 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             keys = [];
           }
-          const tmp8 = _modDef18011(rtcUserIds, rtcConnected.rtcUserIds);
+          const tmp8 = _modDef18071(rtcUserIds, rtcConnected.rtcUserIds);
           let rtcConnected3 = rtcConnected.rtcConnected;
           if (rtcConnected3) {
-            rtcConnected3 = rtcConnected.rtcUserIds.length <= c30;
+            rtcConnected3 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (rtcConnected3) {
-            rtcConnected3 = _modDef18011(tmp8, keys).length > 0;
+            rtcConnected3 = _modDef18071(tmp8, keys).length > 0;
           }
           let tmp10 = rtcConnected.rtcConnected && rtcConnected;
           if (tmp10) {
-            tmp10 = rtcConnected.rtcUserIds.length <= c30;
+            tmp10 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (tmp10) {
-            tmp10 = _modDef18011(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
+            tmp10 = _modDef18071(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
           }
-          streamingUserIds.current = _modDef18011(keys, tmp8);
+          streamingUserIds.current = _modDef18071(keys, tmp8);
           if (rtcConnected.voiceChannelId === voiceChannelId) {
             if (null != voiceChannelId) {
               channel = ChannelStore.getChannel(voiceChannelId);
@@ -1127,7 +1128,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp20 = null != voiceChannelUserCount;
                 }
                 if (tmp20) {
-                  tmp20 = voiceChannelUserCount2 <= c30;
+                  tmp20 = voiceChannelUserCount2 <= c31;
                 }
                 let tmp22 = tmp20;
                 if (tmp20) {
@@ -1160,7 +1161,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
                 if (!someResult) {
                   let str2 = "stream_ended";
                   if (!someResult1) {
-                    if (rtcConnected.singleActiveStreamViewerCount <= c30) {
+                    if (rtcConnected.singleActiveStreamViewerCount <= c31) {
                       if (tmp17) {
                         let str3 = "stream_user_joined";
                       }
@@ -1171,7 +1172,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
                       let str5 = "user_leave";
                       if (!tmp20) {
                         let str6;
-                        if (rtcConnected.singleActiveStreamViewerCount <= c30) {
+                        if (rtcConnected.singleActiveStreamViewerCount <= c31) {
                           if (tmp17) {
                             if (singleActiveStreamViewerCount < rtcConnected.singleActiveStreamViewerCount) {
                               str6 = "stream_user_left";
@@ -1195,7 +1196,7 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
       return null;
     };
 ReactCompilerGating = fn(558);
-let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ActivitySounds() {
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1206,10 +1207,11 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           AuthenticationStore,
           ChannelStore,
           ConjureProjectStore,
+          ConjureBuilderPreviewStore,
           ApplicationStore,
           GuildStore,
         ];
-        const fn = function u() {
+        const fn = function v() {
           const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
           const channelId = SelectedChannelStore.getChannelId();
           connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
@@ -1246,240 +1248,244 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             surface = mainFrame.surface;
           }
           const tmp13Result = getChannelIdForEmbeddedSurfaceDefault(surface);
-          let result1 = null == tmp13Result;
-          if (!result1) {
-            let result = null != mainFrame;
+          if (null == mainFrame) {
+            let result = null != tmp13Result;
             if (result) {
-              result = require("conjurePreviewSurface").isConjurePreviewSurface(mainFrame.surface);
-              const tmp4Result7 = require("conjurePreviewSurface");
+              result = require("ConjureUtils").isConjureChannelCandidate(
+                ChannelStore.getChannel(tmp13Result),
+                "ActivitySounds",
+              );
+              const tmp4Result7 = require("ConjureUtils");
             }
-            result1 = result;
-          }
-          if (result1) {
-            let applicationId;
-            if (mainFrame != null) {
-              applicationId = mainFrame.applicationId;
+            if (!result) {
+              result = tmp16;
             }
-            result1 = conjureProjectApplication.isConjureProjectApplication(applicationId);
-          }
-          let result2 = null != tmp13Result;
-          if (result2) {
-            result2 = require("ConjureUtils").isConjureChannelCandidate(
-              ChannelStore.getChannel(tmp13Result),
-              "ActivitySounds",
-            );
-            const tmp4Result8 = require("ConjureUtils");
-          }
-          if (!result2) {
-            result2 = result1;
-          }
-          let tmp22 = null != embeddedActivityLocationChannelId;
-          if (tmp22) {
-            const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId);
-            let type;
-            if (channel != null) {
-              type = channel.type;
+            let tmp23 = null != embeddedActivityLocationChannelId;
+            if (tmp23) {
+              const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId);
+              let type;
+              if (channel != null) {
+                type = channel.type;
+              }
+              tmp23 = type === constants.GUILD_SPACE;
             }
-            tmp22 = type === constants.GUILD_SPACE;
+            const obj4 = {
+              connectedActivityLocation,
+              voiceChannelId,
+              currentUserId: id,
+              channelActivities: embeddedActivitiesForChannel,
+              connectedChannelActivities: embeddedActivitiesForChannel2,
+              userConnectedActivity: selfEmbeddedActivityForLocation,
+              voiceChannelActivities: embeddedActivitiesForChannel1,
+              hasFrame: isLaunched(mainFrame),
+              inConjureChannel: result,
+              isGuildSpaceActivity: tmp23,
+            };
+            return obj4;
+          } else {
+            if (tmp4Result8.isConjurePreviewSurface(mainFrame.surface)) {
+              let result1 = conjureProjectApplication.isConjureProjectApplication(mainFrame.applicationId);
+            } else {
+              result1 = null == tmp13Result;
+              if (result1) {
+                result1 = mainFrame.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId();
+              }
+            }
+            tmp4Result8 = require("conjurePreviewSurface");
           }
-          return {
-            connectedActivityLocation,
-            voiceChannelId,
-            currentUserId: id,
-            channelActivities: embeddedActivitiesForChannel,
-            connectedChannelActivities: embeddedActivitiesForChannel2,
-            userConnectedActivity: selfEmbeddedActivityForLocation,
-            voiceChannelActivities: embeddedActivitiesForChannel1,
-            hasFrame: isLaunched(mainFrame),
-            inConjureChannel: result2,
-            isGuildSpaceActivity: tmp22,
-          };
         };
-        const fn2 = function v(isGuildSpaceActivity, arg1) {
-          ({ connectedActivityLocation, currentUserId: closure_0, userConnectedActivity } = arg1);
-          ({
-            voiceChannelActivities,
-            hasFrame,
-            isGuildSpaceActivity,
-            voiceChannelId,
-            channelActivities,
-            connectedChannelActivities,
-            inConjureChannel,
-          } = arg1);
-          if (!isGuildSpaceActivity) {
-            isGuildSpaceActivity = isGuildSpaceActivity.isGuildSpaceActivity;
-          }
-          const someResult = voiceChannelActivities.some((applicationId) => {
-            applicationId = undefined;
-            if (userConnectedActivity != null) {
-              applicationId = userConnectedActivity.applicationId;
-            }
-            return (
-              applicationId.applicationId === applicationId && applicationId.launchId === userConnectedActivity.launchId
-            );
-          });
-          let str;
-          if (obj.isNotNullish(voiceChannelId)) {
-            const prop = isGuildSpaceActivity.voiceChannelActivities;
-            const found = prop.find((userIds) => {
-              userIds = userIds.userIds;
-              return userIds.has(closure_1_0);
+        class C {
+          constructor(arg0, arg1) {
+            ({ connectedActivityLocation, currentUserId, userConnectedActivity } = arg1);
+            ({
+              voiceChannelActivities,
+              hasFrame,
+              isGuildSpaceActivity,
+              voiceChannelId,
+              channelActivities,
+              connectedChannelActivities,
+              inConjureChannel,
+            } = arg1);
+            someResult = voiceChannelActivities.some((applicationId) => {
+              applicationId = undefined;
+              if (userConnectedActivity != null) {
+                applicationId = userConnectedActivity.applicationId;
+              }
+              return (
+                applicationId.applicationId === applicationId &&
+                applicationId.launchId === userConnectedActivity.launchId
+              );
             });
-            const found1 = voiceChannelActivities.find((userIds) => {
-              userIds = userIds.userIds;
-              return userIds.has(closure_1_0);
-            });
-            let isNotNullishResult = isGuildSpaceActivity.voiceChannelActivities.length < voiceChannelActivities.length;
-            if (isNotNullishResult) {
-              isNotNullishResult = require("GlobalUtils").isNotNullish(isGuildSpaceActivity.voiceChannelId);
-              const tmp2Result = require("GlobalUtils");
+            if (!isGuildSpaceActivity) {
+              isGuildSpaceActivity = arg0.isGuildSpaceActivity;
             }
-            let str2;
-            if (isNotNullishResult) {
-              str2 = "activity_launch";
-            }
-            let isNotNullishResult1 = undefined === found1;
-            if (isNotNullishResult1) {
-              isNotNullishResult1 = require("GlobalUtils").isNotNullish(found);
-              const tmp2Result8 = require("GlobalUtils");
-            }
-            if (isNotNullishResult1) {
-              str2 = "activity_end";
-            }
-            let isNotNullishResult2 = undefined === found;
-            if (isNotNullishResult2) {
-              isNotNullishResult2 = require("GlobalUtils").isNotNullish(found1);
-              const tmp2Result9 = require("GlobalUtils");
-            }
-            if (isNotNullishResult2) {
-              isNotNullishResult2 = found1.userIds.size > 1;
-            }
-            if (isNotNullishResult2) {
-              str2 = "activity_user_join";
-            }
-            let isNotNullishResult3 = require("GlobalUtils").isNotNullish(found1);
-            if (isNotNullishResult3) {
-              isNotNullishResult3 = require("GlobalUtils").isNotNullish(found);
-              const tmp2Result11 = require("GlobalUtils");
-            }
-            str = str2;
-            if (isNotNullishResult3) {
-              if (found1.userIds.size > found.userIds.size) {
+            tmp2 = closure_1_0;
+            tmp3 = closure_1_2;
+            obj = closure_1_0(closure_1_2[31]);
+            str = undefined;
+            if (obj.isNotNullish(voiceChannelId)) {
+              prop = arg0.voiceChannelActivities;
+              found = prop.find((userIds) => {
+                userIds = userIds.userIds;
+                return userIds.has(closure_1_0);
+              });
+              found1 = voiceChannelActivities.find((userIds) => {
+                userIds = userIds.userIds;
+                return userIds.has(closure_1_0);
+              });
+              isNotNullishResult = arg0.voiceChannelActivities.length < voiceChannelActivities.length;
+              if (isNotNullishResult) {
+                tmp2Result = tmp2(tmp3[31]);
+                isNotNullishResult = tmp2Result.isNotNullish(arg0.voiceChannelId);
+              }
+              str2 = undefined;
+              if (isNotNullishResult) {
+                str2 = "activity_launch";
+              }
+              isNotNullishResult1 = undefined === found1;
+              if (isNotNullishResult1) {
+                tmp2Result1 = tmp2(tmp3[31]);
+                isNotNullishResult1 = tmp2Result1.isNotNullish(found);
+              }
+              if (isNotNullishResult1) {
+                str2 = "activity_end";
+              }
+              isNotNullishResult2 = undefined === found;
+              if (isNotNullishResult2) {
+                tmp2Result2 = tmp2(tmp3[31]);
+                isNotNullishResult2 = tmp2Result2.isNotNullish(found1);
+              }
+              if (isNotNullishResult2) {
+                num = 1;
+                isNotNullishResult2 = found1.userIds.size > 1;
+              }
+              if (isNotNullishResult2) {
                 str2 = "activity_user_join";
               }
-              if (found1.userIds.size < found.userIds.size) {
-                str2 = "activity_user_left";
+              tmp2Result3 = tmp2(tmp3[31]);
+              isNotNullishResult3 = tmp2Result3.isNotNullish(found1);
+              if (isNotNullishResult3) {
+                tmp2Result4 = tmp2(tmp3[31]);
+                isNotNullishResult3 = tmp2Result4.isNotNullish(found);
               }
               str = str2;
-            }
-            const tmp2Result10 = require("GlobalUtils");
-          }
-          let str3 = str;
-          if (!someResult) {
-            str3 = str;
-            if (!isGuildSpaceActivity) {
-              if (tmp10) {
-                str = "activity_launch";
-              }
-              const userConnectedActivity2 = isGuildSpaceActivity.userConnectedActivity;
-              let isNotNullishResult4 = null == userConnectedActivity;
-              if (isNotNullishResult4) {
-                isNotNullishResult4 = require("GlobalUtils").isNotNullish(userConnectedActivity2);
-                const tmp2Result12 = require("GlobalUtils");
-              }
-              if (isNotNullishResult4) {
-                str = "activity_end";
-              }
-              let isNotNullishResult5 = require("GlobalUtils").isNotNullish(userConnectedActivity);
-              if (isNotNullishResult5) {
-                isNotNullishResult5 = require("GlobalUtils").isNotNullish(userConnectedActivity2);
-                const tmp2Result14 = require("GlobalUtils");
-              }
-              str3 = str;
-              if (isNotNullishResult5) {
-                if (userConnectedActivity.userIds.size > userConnectedActivity2.userIds.size) {
-                  str = "activity_user_join";
+              if (isNotNullishResult3) {
+                if (found1.userIds.size > found.userIds.size) {
+                  str2 = "activity_user_join";
                 }
-                if (userConnectedActivity.userIds.size < userConnectedActivity2.userIds.size) {
-                  str = "activity_user_left";
+                if (found1.userIds.size < found.userIds.size) {
+                  str2 = "activity_user_left";
+                }
+                str = str2;
+              }
+            }
+            str3 = str;
+            if (!someResult) {
+              str3 = str;
+              if (!isGuildSpaceActivity) {
+                tmp10 =
+                  arg0.connectedChannelActivities.length < connectedChannelActivities.length &&
+                  arg0.channelActivities.length < channelActivities.length;
+                if (tmp10) {
+                  str = "activity_launch";
+                }
+                userConnectedActivity2 = arg0.userConnectedActivity;
+                tmp11 = null;
+                isNotNullishResult4 = null == userConnectedActivity;
+                if (isNotNullishResult4) {
+                  tmp2Result5 = tmp2(tmp3[31]);
+                  isNotNullishResult4 = tmp2Result5.isNotNullish(userConnectedActivity2);
+                }
+                if (isNotNullishResult4) {
+                  str = "activity_end";
+                }
+                tmp2Result6 = tmp2(tmp3[31]);
+                isNotNullishResult5 = tmp2Result6.isNotNullish(userConnectedActivity);
+                if (isNotNullishResult5) {
+                  tmp2Result7 = tmp2(tmp3[31]);
+                  isNotNullishResult5 = tmp2Result7.isNotNullish(userConnectedActivity2);
                 }
                 str3 = str;
-              }
-              tmp10 =
-                isGuildSpaceActivity.connectedChannelActivities.length < connectedChannelActivities.length &&
-                isGuildSpaceActivity.channelActivities.length < channelActivities.length;
-              const tmp2Result13 = require("GlobalUtils");
-            }
-          }
-          let tmp14 = null != str3 || isGuildSpaceActivity;
-          if (!tmp14) {
-            tmp14 = null == isGuildSpaceActivity.connectedActivityLocation && null == connectedActivityLocation;
-            const tmp15 = null == isGuildSpaceActivity.connectedActivityLocation && null == connectedActivityLocation;
-          }
-          let str4 = str3;
-          if (!tmp14) {
-            if (null != isGuildSpaceActivity.connectedActivityLocation) {
-              if (null == isGuildSpaceActivity.connectedActivityLocation) {
-                let tmp17 = str3;
-                if (tmp16) {
-                  let str7 = "activity_user_join";
-                  if (isGuildSpaceActivity.userConnectedActivity.userIds.size >= userConnectedActivity.userIds.size) {
-                    if (isGuildSpaceActivity.userConnectedActivity.userIds.size > userConnectedActivity.userIds.size) {
-                      str3 = "activity_user_leave";
-                    }
-                    str7 = str3;
+                if (isNotNullishResult5) {
+                  if (userConnectedActivity.userIds.size > userConnectedActivity2.userIds.size) {
+                    str = "activity_user_join";
                   }
-                  tmp17 = str7;
+                  if (userConnectedActivity.userIds.size < userConnectedActivity2.userIds.size) {
+                    str = "activity_user_left";
+                  }
+                  str3 = str;
                 }
-                let str6 = tmp17;
-                tmp16 = null != userConnectedActivity && null != isGuildSpaceActivity.userConnectedActivity;
+              }
+            }
+            tmp14 = null != str3 || isGuildSpaceActivity;
+            if (!tmp14) {
+              tmp15 = null == arg0.connectedActivityLocation && null == connectedActivityLocation;
+              tmp14 = tmp15;
+            }
+            str4 = str3;
+            if (!tmp14) {
+              if (null != arg0.connectedActivityLocation) {
+                if (null == arg0.connectedActivityLocation) {
+                  tmp16 = null != userConnectedActivity && null != arg0.userConnectedActivity;
+                  tmp17 = str3;
+                  if (tmp16) {
+                    str7 = "activity_user_join";
+                    if (arg0.userConnectedActivity.userIds.size >= userConnectedActivity.userIds.size) {
+                      if (arg0.userConnectedActivity.userIds.size > userConnectedActivity.userIds.size) {
+                        str3 = "activity_user_leave";
+                      }
+                      str7 = str3;
+                    }
+                    tmp17 = str7;
+                  }
+                  str6 = tmp17;
+                } else {
+                  str6 = "activity_end";
+                }
+                str5 = str6;
               } else {
-                str6 = "activity_end";
+                str5 = "activity_launch";
               }
-              let str5 = str6;
-            } else {
-              str5 = "activity_launch";
+              str4 = str5;
             }
-            str4 = str5;
-          }
-          let tmp18 = null == str4;
-          if (tmp18) {
-            tmp18 = isGuildSpaceActivity.hasFrame || hasFrame;
-            const tmp19 = isGuildSpaceActivity.hasFrame || hasFrame;
-          }
-          let tmp20 = str4;
-          if (tmp18) {
-            if (!isGuildSpaceActivity.hasFrame) {
-              if (hasFrame) {
-                let str8 = "activity_launch";
+            tmp18 = null == str4;
+            if (tmp18) {
+              tmp19 = arg0.hasFrame || hasFrame;
+              tmp18 = tmp19;
+            }
+            tmp20 = str4;
+            if (tmp18) {
+              if (!arg0.hasFrame) {
+                if (hasFrame) {
+                  str8 = "activity_launch";
+                }
+                tmp20 = str8;
               }
-              tmp20 = str8;
+              hasFrame2 = arg0.hasFrame;
+              inConjureChannel2 = !hasFrame2;
+              if (hasFrame2) {
+                inConjureChannel2 = hasFrame;
+              }
+              if (!inConjureChannel2) {
+                inConjureChannel2 = arg0.inConjureChannel;
+              }
+              if (!inConjureChannel2) {
+                str4 = "activity_end";
+              }
+              str8 = str4;
             }
-            const hasFrame2 = isGuildSpaceActivity.hasFrame;
-            let inConjureChannel2 = !hasFrame2;
-            if (hasFrame2) {
-              inConjureChannel2 = hasFrame;
-            }
-            if (!inConjureChannel2) {
-              inConjureChannel2 = isGuildSpaceActivity.inConjureChannel;
-            }
-            if (!inConjureChannel2) {
-              str4 = "activity_end";
-            }
-            str8 = str4;
+            return tmp20;
           }
-          return tmp20;
-        };
+        }
         cResult[0] = items;
         cResult[1] = fn;
-        cResult[2] = fn2;
+        cResult[2] = C;
         tmp2 = items;
         tmp3 = fn;
-        tmp4 = fn2;
       } else {
         [tmp2, tmp3, tmp4] = cResult;
       }
-      closure_31(tmp2, tmp3, tmp4);
+      closure_32(tmp2, tmp3, C);
       return null;
     }
   : function ActivitySounds() {
@@ -1490,10 +1496,11 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
         AuthenticationStore,
         ChannelStore,
         ConjureProjectStore,
+        ConjureBuilderPreviewStore,
         ApplicationStore,
         GuildStore,
       ];
-      closure_31(
+      closure_32(
         items,
         () => {
           const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
@@ -1532,54 +1539,51 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             surface = mainFrame.surface;
           }
           const tmp13Result = getChannelIdForEmbeddedSurfaceDefault(surface);
-          let result1 = null == tmp13Result;
-          if (!result1) {
-            let result = null != mainFrame;
+          if (null == mainFrame) {
+            let result = null != tmp13Result;
             if (result) {
-              result = require("conjurePreviewSurface").isConjurePreviewSurface(mainFrame.surface);
-              const tmp4Result7 = require("conjurePreviewSurface");
+              result = require("ConjureUtils").isConjureChannelCandidate(
+                ChannelStore.getChannel(tmp13Result),
+                "ActivitySounds",
+              );
+              const tmp4Result7 = require("ConjureUtils");
             }
-            result1 = result;
-          }
-          if (result1) {
-            let applicationId;
-            if (mainFrame != null) {
-              applicationId = mainFrame.applicationId;
+            if (!result) {
+              result = tmp16;
             }
-            result1 = conjureProjectApplication.isConjureProjectApplication(applicationId);
-          }
-          let result2 = null != tmp13Result;
-          if (result2) {
-            result2 = require("ConjureUtils").isConjureChannelCandidate(
-              ChannelStore.getChannel(tmp13Result),
-              "ActivitySounds",
-            );
-            const tmp4Result8 = require("ConjureUtils");
-          }
-          if (!result2) {
-            result2 = result1;
-          }
-          let tmp22 = null != embeddedActivityLocationChannelId;
-          if (tmp22) {
-            const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId);
-            let type;
-            if (channel != null) {
-              type = channel.type;
+            let tmp23 = null != embeddedActivityLocationChannelId;
+            if (tmp23) {
+              const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId);
+              let type;
+              if (channel != null) {
+                type = channel.type;
+              }
+              tmp23 = type === constants.GUILD_SPACE;
             }
-            tmp22 = type === constants.GUILD_SPACE;
+            const obj4 = {
+              connectedActivityLocation,
+              voiceChannelId,
+              currentUserId: id,
+              channelActivities: embeddedActivitiesForChannel,
+              connectedChannelActivities: embeddedActivitiesForChannel2,
+              userConnectedActivity: selfEmbeddedActivityForLocation,
+              voiceChannelActivities: embeddedActivitiesForChannel1,
+              hasFrame: isLaunched(mainFrame),
+              inConjureChannel: result,
+              isGuildSpaceActivity: tmp23,
+            };
+            return obj4;
+          } else {
+            if (tmp4Result8.isConjurePreviewSurface(mainFrame.surface)) {
+              let result1 = conjureProjectApplication.isConjureProjectApplication(mainFrame.applicationId);
+            } else {
+              result1 = null == tmp13Result;
+              if (result1) {
+                result1 = mainFrame.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId();
+              }
+            }
+            tmp4Result8 = require("conjurePreviewSurface");
           }
-          return {
-            connectedActivityLocation,
-            voiceChannelId,
-            currentUserId: id,
-            channelActivities: embeddedActivitiesForChannel,
-            connectedChannelActivities: embeddedActivitiesForChannel2,
-            userConnectedActivity: selfEmbeddedActivityForLocation,
-            voiceChannelActivities: embeddedActivitiesForChannel1,
-            hasFrame: isLaunched(mainFrame),
-            inConjureChannel: result2,
-            isGuildSpaceActivity: tmp22,
-          };
         },
         (isGuildSpaceActivity, arg1) => {
           ({ connectedActivityLocation, currentUserId: closure_0, userConnectedActivity } = arg1);
@@ -1769,19 +1773,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { children: null };
         const items = [
-          closure_1_27(closure_32, {}),
-          closure_1_27(closure_33, {}),
-          closure_1_27(closure_34, {}),
-          closure_1_27(closure_35, {}),
-          closure_1_27(closure_36, {}),
-          closure_1_27(closure_38, {}),
-          closure_1_27(closure_40, {}),
-          closure_1_27(closure_39, {}),
-          closure_1_27(closure_41, {}),
-          closure_1_27(closure_37, {}),
+          closure_1_28(closure_33, {}),
+          closure_1_28(closure_34, {}),
+          closure_1_28(closure_35, {}),
+          closure_1_28(closure_36, {}),
+          closure_1_28(closure_37, {}),
+          closure_1_28(closure_39, {}),
+          closure_1_28(closure_41, {}),
+          closure_1_28(closure_40, {}),
+          closure_1_28(closure_42, {}),
+          closure_1_28(closure_38, {}),
         ];
         obj2.children = items;
-        const tmp16 = closure_1_29(closure_1_28, obj2);
+        const tmp16 = __initData2(closure_1_29, obj2);
         cResult[0] = tmp16;
         let first = tmp16;
       } else {
@@ -1792,17 +1796,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function SoundPlayer() {
       const obj = { children: null };
       const items = [
-        closure_1_27(closure_32, {}),
-        closure_1_27(closure_33, {}),
-        closure_1_27(closure_34, {}),
-        closure_1_27(closure_35, {}),
-        closure_1_27(closure_36, {}),
-        closure_1_27(closure_38, {}),
-        closure_1_27(closure_40, {}),
-        closure_1_27(closure_39, {}),
-        closure_1_27(closure_41, {}),
-        closure_1_27(closure_37, {}),
+        closure_1_28(closure_33, {}),
+        closure_1_28(closure_34, {}),
+        closure_1_28(closure_35, {}),
+        closure_1_28(closure_36, {}),
+        closure_1_28(closure_37, {}),
+        closure_1_28(closure_39, {}),
+        closure_1_28(closure_41, {}),
+        closure_1_28(closure_40, {}),
+        closure_1_28(closure_42, {}),
+        closure_1_28(closure_38, {}),
       ];
       obj.children = items;
-      return closure_1_29(closure_1_28, obj);
+      return __initData2(closure_1_29, obj);
     };

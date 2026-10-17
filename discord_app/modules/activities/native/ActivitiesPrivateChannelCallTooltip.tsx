@@ -12,7 +12,7 @@ const helpdeskUrl = fn(2026).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 let c7 = 40;
 const TIMING_CONFIG = { duration: 500 };
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   arrow: null,
   tooltip: { padding: 16 },
@@ -88,11 +88,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      const tmpResult2 = num3(4909);
+      const tmpResult2 = num3(4945);
       F.__closure = {
-        withRepeat: num3(4909).withRepeat,
-        withSequence: num3(4909).withSequence,
-        withTiming: num3(5155).withTiming,
+        withRepeat: num3(4945).withRepeat,
+        withSequence: num3(4945).withSequence,
+        withTiming: num3(5192).withTiming,
         OFFSET,
         translateBounceOffset: num3,
         TIMING_CONFIG,
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[8] !== onClosePress) {
           let obj4 = { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true };
-          const tmp19 = jsx(tmp(5442).Button, {
+          const tmp19 = jsx(tmp(5479).Button, {
             text: tmp15,
             onPress: onClosePress,
             variant: "secondary",
@@ -250,9 +250,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp9 = items1;
       let obj2 = {
-        withRepeat: num3(4909).withRepeat,
-        withSequence: num3(4909).withSequence,
-        withTiming: num3(5155).withTiming,
+        withRepeat: num3(4945).withRepeat,
+        withSequence: num3(4945).withSequence,
+        withTiming: num3(5192).withTiming,
         OFFSET,
         translateBounceOffset: num3,
         TIMING_CONFIG,
@@ -281,11 +281,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items;
         return obj;
       };
-      const tmp2Result = num(4909);
+      const tmp2Result = num(4945);
       fn.__closure = {
-        withRepeat: num(4909).withRepeat,
-        withSequence: num(4909).withSequence,
-        withTiming: num(5155).withTiming,
+        withRepeat: num(4945).withRepeat,
+        withSequence: num(4945).withSequence,
+        withTiming: num(5192).withTiming,
         OFFSET,
         translateBounceOffset: num,
         TIMING_CONFIG,
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = tmp2(1128).intl;
       obj7.text = intl3.string(num(1128).t["NX+WJN"]);
       obj7.onPress = onClosePress.onClosePress;
-      obj6.children = jsx(num(5442).Button, {
+      obj6.children = jsx(num(5479).Button, {
         text: null,
         onPress: null,
         variant: "secondary",

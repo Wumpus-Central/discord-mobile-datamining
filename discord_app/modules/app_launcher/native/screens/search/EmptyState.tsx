@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_5 = createStyles.createStyles({
   container: { position: "relative", justifyContent: "center", alignItems: "center" },
   textContainer: { justifyContent: "center", width: "100%" },
@@ -27,8 +27,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       showsGenericMessage = tmp4;
       const tmp5 = closure_5();
       const obj = showsGenericMessage(576);
-      const logAppLauncherEmptyStateView = showsGenericMessage(11785).useLogAppLauncherEmptyStateView(
-        tmp(10868).AppLauncherEmptyStateType.SEARCH_EMPTY,
+      const logAppLauncherEmptyStateView = showsGenericMessage(11847).useLogAppLauncherEmptyStateView(
+        tmp(10933).AppLauncherEmptyStateType.SEARCH_EMPTY,
         showsGenericMessage.query,
       );
       if (cResult[0] !== tmp4) {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp19;
         }
         const obj4 = { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] };
-        const tmp15 = jsx(tmp(5150).Text, {
+        const tmp15 = jsx(tmp(5187).Text, {
           style: tmp5.text,
           variant: "text-sm/medium",
           color: "text-default",
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp15;
         tmp13 = tmp15;
       }
-      const tmpResult = showsGenericMessage(11785);
+      const tmpResult = showsGenericMessage(11847);
     }
   : function EmptyState(showsGenericMessage) {
       let flag = showsGenericMessage.showsGenericMessage;
@@ -116,8 +116,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       const tmp = closure_5();
-      const logAppLauncherEmptyStateView = flag(11785).useLogAppLauncherEmptyStateView(
-        flag(10868).AppLauncherEmptyStateType.SEARCH_EMPTY,
+      const logAppLauncherEmptyStateView = flag(11847).useLogAppLauncherEmptyStateView(
+        flag(10933).AppLauncherEmptyStateType.SEARCH_EMPTY,
         showsGenericMessage.query,
       );
       const items = [flag];
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.LSNOYf);
       }
       obj4.children = stringResult;
-      obj3.children = jsx(flag(5150).Text, {
+      obj3.children = jsx(flag(5187).Text, {
         style: tmp.text,
         variant: "text-sm/medium",
         color: "text-default",

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   box: {
     padding: nativeDefault.space.PX_12,
@@ -351,7 +351,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
         const intl = util.intl;
-        obj2.children = intl.string(_modDef3865["+E2PqP"]);
+        obj2.children = intl.string(_modDef3883["+E2PqP"]);
         const tmp7 = timestampProducer(Text_Text.Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -390,7 +390,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const optionalItem = items.optionalItem;
       const obj = { variant: "text-md/semibold", color: "text-strong", children: null };
       const intl = util.intl;
-      obj.children = intl.string(_modDef3865["+E2PqP"]);
+      obj.children = intl.string(_modDef3883["+E2PqP"]);
       items = [timestampProducer(Text_Text.Text, obj)];
       const obj2 = { items: items.items, children: null };
       let tmp2Result = null;
@@ -424,7 +424,7 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
       ({ checked, onChange, items } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3865.gKA9tU);
+        const stringResult = intl.string(_modDef3883.gKA9tU);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -480,7 +480,7 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
       const obj2 = { hasIcons: false, children: null };
       const obj3 = { label: null, checked: null, onPress: null };
       const intl = util.intl;
-      obj3.label = intl.string(_modDef3865.gKA9tU);
+      obj3.label = intl.string(_modDef3883.gKA9tU);
       obj3.checked = checked;
       obj3.onPress = onChange;
       obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);

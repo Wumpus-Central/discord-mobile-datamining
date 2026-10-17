@@ -1,12 +1,17 @@
 // discord_app/utils/GameUtils.native.tsx
+import waitForFrameSubscriptionDefault from "../modules/frames/waitForFrameSubscription.tsx";
+import NativeRPCServerDefault from "../modules/rpc/native/NativeRPCServer.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-let c0 = "not supported";
+let c2 = "not supported";
 const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {
     return Promise.resolve();
+  },
+  waitFrameSubscribed(frameId, ACTIVITY_JOIN) {
+    return waitForFrameSubscriptionDefault(NativeRPCServerDefault, frameId, ACTIVITY_JOIN);
   },
   waitParentSubscribed() {
     return Promise.resolve();
@@ -24,11 +29,11 @@ export default {
     return Promise.resolve(false);
   },
   launch() {
-    const error = new Error(c0);
+    const error = new Error(c2);
     return Promise.reject(error);
   },
   launchDispatchApplication() {
-    const error = new Error(c0);
+    const error = new Error(c2);
     return Promise.reject(error);
   },
   removeShortcuts() {
@@ -38,7 +43,7 @@ export default {
     return Promise.resolve(false);
   },
   launchGame() {
-    const error = new Error(c0);
+    const error = new Error(c2);
     return Promise.reject(error);
   },
   isProtocolRegistered() {

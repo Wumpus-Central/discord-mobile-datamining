@@ -49,6 +49,19 @@ prototype["open"] = function open(ticket) {
     }
   });
 };
+prototype["sendPublishScheduleMessage"] = function sendPublishScheduleMessage(map) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify(map));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids, project_name) {
   const self = this;
   if (null != this.socket) {

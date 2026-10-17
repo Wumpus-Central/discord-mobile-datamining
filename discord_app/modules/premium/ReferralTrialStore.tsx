@@ -141,7 +141,11 @@ prototype["getRecipientStatus"] = function getRecipientStatus() {
   return map1;
 };
 prototype["getReminderStateId"] = function getReminderStateId() {
-  return c19;
+  let tmp = c20;
+  if (c20 == null) {
+    tmp = c19;
+  }
+  return tmp;
 };
 prototype["getRecurringReminderStateId"] = function getRecurringReminderStateId() {
   return c20;

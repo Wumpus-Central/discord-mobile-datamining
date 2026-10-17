@@ -1,7 +1,7 @@
 // discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3059 from "../RequestToStream.messages.js";
+import _modDef3077 from "../RequestToStream.messages.js";
 import isInviteActive from "../../activities/utils/isInviteActive.tsx";
 import useCanFulfillStreamRequest from "../useCanFulfillStreamRequest.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,7 +18,7 @@ export default function getRequestToStreamCTAAndIsDisabled(id, arg1) {
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id.id);
   const intl = util.intl;
   const string = intl.string;
-  const tmp10 = _modDef3059;
+  const tmp10 = _modDef3077;
   if (arg1) {
     let stringResult = string(tmp10.K0spYL);
   } else {
@@ -26,11 +26,11 @@ export default function getRequestToStreamCTAAndIsDisabled(id, arg1) {
   }
   if (tmp9) {
     const intl6 = util.intl;
-    let text = intl6.string(_modDef3059.u4QmWl);
+    let text = intl6.string(_modDef3077.u4QmWl);
     let isDisabled = true;
   } else if (id.author.id === id) {
     const intl5 = util.intl;
-    text = intl5.string(_modDef3059["8HU1M2"]);
+    text = intl5.string(_modDef3077["8HU1M2"]);
     isDisabled = true;
   } else {
     isDisabled = false;
@@ -38,22 +38,22 @@ export default function getRequestToStreamCTAAndIsDisabled(id, arg1) {
     if (!tmp3[0]) {
       if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
         const intl4 = util.intl;
-        text = intl4.string(_modDef3059.P0wwmM);
+        text = intl4.string(_modDef3077.P0wwmM);
         isDisabled = true;
       } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
         const intl3 = util.intl;
-        text = intl3.string(_modDef3059["43zohO"]);
+        text = intl3.string(_modDef3077["43zohO"]);
         isDisabled = true;
       } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
         const intl2 = util.intl;
-        text = intl2.string(_modDef3059.qRXats);
+        text = intl2.string(_modDef3077.qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
         if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
           const intl7 = util.intl;
-          text = intl7.string(_modDef3059["fac+eE"]);
+          text = intl7.string(_modDef3077["fac+eE"]);
           isDisabled = true;
         }
       }

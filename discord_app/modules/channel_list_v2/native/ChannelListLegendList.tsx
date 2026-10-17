@@ -9,7 +9,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "done", positionPercentage: false };
+let closure_8 = { item: "emoji", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = {
   code: "function ChannelListLegendListTsx1(event){const{scrollPosValue,onScrollWorklet,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){runOnJS(onScroll)();}}",
@@ -358,7 +358,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   const obj4 = { children: null };
   const animatedScrollHandler = obj2.useAnimatedScrollHandler(G);
   const items6 = [
-    onScrollWorklet(require("../../../../_runtime/metro/13576__.js").AnimatedLegendList, {
+    onScrollWorklet(require("../../../../_runtime/metro/13644__.js").AnimatedLegendList, {
       ref: ref1,
       contentContainerStyle: memo3,
       data: tmp3.listData,

@@ -14,12 +14,12 @@ class LocalizedString$Type extends MessageType {
   }
 }
 const prototype = LocalizedString$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { default: "", localizations: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -153,12 +153,12 @@ class LocalizedSnowflake$Type extends MessageType2 {
   }
 }
 const prototype2 = LocalizedSnowflake$Type.prototype;
-prototype2["create"] = function create(arr) {
+prototype2["create"] = function create(partialSettings) {
   const obj = { default: "0", localizations: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

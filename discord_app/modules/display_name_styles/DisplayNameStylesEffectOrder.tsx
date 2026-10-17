@@ -18,7 +18,7 @@ export const useVisibleEffectOrder = ReactCompilerGating.isReactCompilerEnabled(
     }
   : function useVisibleEffectOrder() {
       isDisplayNameStylesFlywheelSettersEnabled =
-        isDisplayNameStylesFlywheelSettersEnabled(15570).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+        isDisplayNameStylesFlywheelSettersEnabled(15632).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
       items = [isDisplayNameStylesFlywheelSettersEnabled];
       return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER), items);
     };

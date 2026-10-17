@@ -2,10 +2,10 @@
 import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../../utils/PermissionUtils.tsx";
 import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import RPCErrorDefault from "../RPCError.tsx";
-import getGuildIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx";
 import isPostMessageSocketDefault from "isPostMessageSocket.tsx";
+import RPCErrorDefault from "../RPCError.tsx";
 import validateScopeDefault from "validateScope.tsx";
+import getGuildIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 

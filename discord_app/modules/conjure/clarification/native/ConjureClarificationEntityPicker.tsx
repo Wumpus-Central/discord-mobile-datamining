@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/clarification/native/ConjureClarificationEntityPicker.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -303,7 +303,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                             let obj = { content: null, key: null, stackingBehavior: "stack" };
                             obj4.selectedChannel = found;
                             const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef3865["jtBVV+"]);
+                            obj4.noChannelOptionLabel = intl.string(_modDef3883["jtBVV+"]);
                             obj4.onSelect = function onSelect(id) {
                               closure_0 = id;
                               if (null == id) {
@@ -314,7 +314,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 items = obj.clarificationEntities(
                                   input,
                                   items1,
-                                  () => question(5484).computeChannelName(closure_0, closure_2_6, stateFromStores),
+                                  () => question(5521).computeChannelName(closure_0, closure_2_6, stateFromStores),
                                   closure_1_1,
                                 );
                               }
@@ -497,7 +497,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                             let obj = { content: null, key: null, stackingBehavior: "stack" };
                             obj4.selectedChannel = found;
                             const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef3865["jtBVV+"]);
+                            obj4.noChannelOptionLabel = intl.string(_modDef3883["jtBVV+"]);
                             obj4.onSelect = function onSelect(id) {
                               closure_0 = id;
                               if (null == id) {
@@ -508,7 +508,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 items = obj.clarificationEntities(
                                   input,
                                   items1,
-                                  () => question(5484).computeChannelName(closure_0, closure_2_6, stateFromStores),
+                                  () => question(5521).computeChannelName(closure_0, closure_2_6, stateFromStores),
                                   closure_1_1,
                                 );
                               }
@@ -620,7 +620,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                             let obj = { content: null, key: null, stackingBehavior: "stack" };
                             obj4.selectedChannel = found;
                             const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef3865["jtBVV+"]);
+                            obj4.noChannelOptionLabel = intl.string(_modDef3883["jtBVV+"]);
                             obj4.onSelect = function onSelect(id) {
                               closure_0 = id;
                               if (null == id) {
@@ -631,7 +631,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 items = obj.clarificationEntities(
                                   input,
                                   items1,
-                                  () => question(5484).computeChannelName(closure_0, closure_2_6, stateFromStores),
+                                  () => question(5521).computeChannelName(closure_0, closure_2_6, stateFromStores),
                                   closure_1_1,
                                 );
                               }

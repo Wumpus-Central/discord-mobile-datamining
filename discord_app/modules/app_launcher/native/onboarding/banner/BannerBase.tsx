@@ -6,7 +6,7 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
-import _mod11798 from "../../../../../../_runtime/metro/11798__.js";
+import _mod11861 from "../../../../../../_runtime/metro/11861__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   banner: null,
   bannerGradientColor: null,
@@ -39,7 +39,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(11784).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(11846).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       return obj1;
                                     }
                                   }
-                                  const tmp55 = closure_8(tmp8(4909).View, obj4);
+                                  const tmp55 = closure_8(tmp8(4945).View, obj4);
                                   cResult[46] = tmp20;
                                   cResult[47] = tmp30;
                                   cResult[48] = tmp33;
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp35 = null != image;
                     if (tmp35) {
                       const obj7 = { style: tmp4.imageContainer, children: null };
-                      const obj8 = { style: tmp4.trinketsLottie, source: _mod11798, autoPlay: !stateFromStores };
+                      const obj8 = { style: tmp4.trinketsLottie, source: _mod11861, autoPlay: !stateFromStores };
                       class M {
                         constructor() {
                           obj = closure_1;
@@ -514,11 +514,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return obj1;
                         }
                       }
-                      tmp40[0] = closure_7(tmp8(6332), obj8);
+                      tmp40[0] = closure_7(tmp8(6385), obj8);
                       tmp40[1] = image;
                       obj7.children = tmp40;
                       tmp35 = closure_8(View, obj7);
-                      const tmp8Result = tmp8(6332);
+                      const tmp8Result = tmp8(6385);
                     }
                     cResult[29] = image;
                     cResult[30] = tmp4.imageContainer;
@@ -562,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp33 = tmp35;
                   }
                   const obj9 = { start: tmp26, end: tmp27, colors: tmp14, style: tmp29 };
-                  const tmp32 = closure_7(tmp8(5454), obj9);
+                  const tmp32 = closure_7(tmp8(5491), obj9);
                   class M {
                     constructor() {
                       obj = closure_1;
@@ -807,15 +807,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
       const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
       obj8.style = items3;
-      const items4 = [closure_7(sharedValue(5454), obj8), ,];
+      const items4 = [closure_7(sharedValue(5491), obj8), ,];
       let tmp11Result = null != image;
       if (tmp11Result) {
         const obj9 = { style: tmp.imageContainer, children: null };
-        const obj10 = { style: tmp.trinketsLottie, source: tmp4(11798), autoPlay: !stateFromStores };
-        const items5 = [closure_7(tmp7(6332), obj10), image];
+        const obj10 = { style: tmp.trinketsLottie, source: tmp4(11861), autoPlay: !stateFromStores };
+        const items5 = [closure_7(tmp7(6385), obj10), image];
         obj9.children = items5;
         tmp11Result = closure_8(View, obj9);
-        const tmp7Result = tmp7(6332);
+        const tmp7Result = tmp7(6385);
       }
       items4[1] = tmp11Result;
       const items6 = [tmp.bannerTextContainer];
@@ -835,5 +835,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       items4[2] = closure_7(View, obj11);
       obj7.children = items4;
-      return closure_8(sharedValue(4909).View, obj7);
+      return closure_8(sharedValue(4945).View, obj7);
     };

@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/commands/context.tsx
 import EmbeddedSurfaceType from "../../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
-import RPCErrorDefault from "../../RPCError.tsx";
 import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
+import RPCErrorDefault from "../../RPCError.tsx";
 import Constants_mod from "../../Constants.tsx";
 import Constants_mod from "../../../../Constants.tsx";
 import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";

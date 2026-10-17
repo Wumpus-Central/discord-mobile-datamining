@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const useConjurePatchNotesLinkDefault = useConjurePatchNotesLink;
 const ConjurePublishNotesSheetDefault = ConjurePublishNotesSheet;
 
-const _modDef3865 = v35VEu5(3865);
+const _modDef3883 = v35VEu5(3883);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
@@ -45,7 +45,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if ("sent" === tmp3.state) {
           intl = intl(1128).intl;
-          v35VEu5 = _modDef3865["35VEu5"];
+          v35VEu5 = _modDef3883["35VEu5"];
           obj = {
             sentHook(children, arg1) {
               return React3(
@@ -80,7 +80,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          formatResult = intl2.format(_modDef3865["6/zJpD"], obj4);
+          formatResult = intl2.format(_modDef3883["6/zJpD"], obj4);
         }
         cResult[0] = tmp3;
         cResult[1] = projectId;
@@ -117,7 +117,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               );
             },
           };
-          let formatResult = intl2.format(_modDef3865["35VEu5"], obj2);
+          let formatResult = intl2.format(_modDef3883["35VEu5"], obj2);
         } else {
           const intl = projectId(1128).intl;
           let obj3 = {
@@ -134,7 +134,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          formatResult = intl.format(_modDef3865["6/zJpD"], obj3);
+          formatResult = intl.format(_modDef3883["6/zJpD"], obj3);
         }
         obj = { children: null };
         items = [" ", formatResult];

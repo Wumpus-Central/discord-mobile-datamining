@@ -88,46 +88,49 @@ export default function useRowManager(arg0) {
     closure_2 = tmp9;
     if (obj.isIOS()) {
       if (!flag2) {
-        const JumpType = chatManager(ref[2]).JumpType;
-        let INSTANT = tmp6 ? JumpType.INSTANT : JumpType.ANIMATED;
-        closure_129_0 = scrollToMessageId;
-        closure_129_1 = true;
-        if (INSTANT === undefined) {
-          INSTANT = chatManager(ref[2]).JumpType.INSTANT;
-        }
-        closure_129_2 = INSTANT;
-        if (flag3 === undefined) {
-          flag3 = false;
-        }
-        closure_129_3 = flag3;
-        if (null != scrollToMessageId) {
-          const _setTimeout2 = setTimeout;
-          const timerId = setTimeout(() => {
-            const tmp2 = closure_2_39(scrollToMessageId);
-            if (null != tmp2) {
-              if (null != closure_2_28.current) {
-                let flag = false;
-                if (jumpTargetId) {
-                  const obj = {
-                    scrollToMessageId,
-                    jumpTargetId: scrollToMessageId,
-                    jumpType,
-                    focusTargetId: scrollToMessageId,
-                    overrideScrollJumpType: Client.JumpType.INSTANT,
-                    isRescrolling: true,
-                    hasJumpedToOriginalPost,
-                  };
-                  updateRows(obj);
-                  flag = true;
-                }
-                if (!flag) {
-                  const obj3 = { animated: jumpType === Client.JumpType.ANIMATED };
-                  NativeChatUtilsDefault.scrollTo(tmp15.current, tmp2, obj3);
+        if (!obj2.isIOSAnchoredChatScrollerEnabled()) {
+          const JumpType = chatManager(ref[2]).JumpType;
+          let INSTANT = tmp6 ? JumpType.INSTANT : JumpType.ANIMATED;
+          closure_129_0 = scrollToMessageId;
+          closure_129_1 = true;
+          if (INSTANT === undefined) {
+            INSTANT = chatManager(ref[2]).JumpType.INSTANT;
+          }
+          closure_129_2 = INSTANT;
+          if (flag3 === undefined) {
+            flag3 = false;
+          }
+          closure_129_3 = flag3;
+          if (null != scrollToMessageId) {
+            const _setTimeout2 = setTimeout;
+            const timerId = setTimeout(() => {
+              const tmp2 = closure_2_39(scrollToMessageId);
+              if (null != tmp2) {
+                if (null != closure_2_28.current) {
+                  let flag = false;
+                  if (jumpTargetId) {
+                    const obj = {
+                      scrollToMessageId,
+                      jumpTargetId: scrollToMessageId,
+                      jumpType,
+                      focusTargetId: scrollToMessageId,
+                      overrideScrollJumpType: Client.JumpType.INSTANT,
+                      isRescrolling: true,
+                      hasJumpedToOriginalPost,
+                    };
+                    updateRows(obj);
+                    flag = true;
+                  }
+                  if (!flag) {
+                    const obj3 = { animated: jumpType === Client.JumpType.ANIMATED };
+                    NativeChatUtilsDefault.scrollTo(tmp15.current, tmp2, obj3);
+                  }
                 }
               }
-            }
-          }, 50);
+            }, 50);
+          }
         }
+        obj2 = chatManager(ref[6]);
       }
     }
     let result;
@@ -137,7 +140,7 @@ export default function useRowManager(arg0) {
           scrollToMessageId.getPreviousRows(),
           selectedConversation,
         );
-        let obj2 = chatManager(ref[4]);
+        let obj3 = chatManager(ref[4]);
       }
     }
     if (result == null) {
@@ -154,9 +157,9 @@ export default function useRowManager(arg0) {
           });
         }, 5);
       } else {
-        const obj4 = { animated: tmp9, highlight: jumpTargetId === scrollToMessageId, position: TOP };
-        require("NativeChatUtils").scrollTo(closure_28.current, result, obj4);
-        let obj3 = require("NativeChatUtils");
+        const obj5 = { animated: tmp9, highlight: jumpTargetId === scrollToMessageId, position: TOP };
+        require("NativeChatUtils").scrollTo(closure_28.current, result, obj5);
+        const obj4 = require("NativeChatUtils");
       }
     }
     obj = chatManager(ref[5]);

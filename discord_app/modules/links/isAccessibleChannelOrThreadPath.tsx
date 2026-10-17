@@ -41,7 +41,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
           let channel2;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {

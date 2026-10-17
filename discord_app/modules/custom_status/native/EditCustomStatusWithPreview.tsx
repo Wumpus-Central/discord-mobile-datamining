@@ -12,11 +12,11 @@ import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.andro
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _modDef6845 from "../../../../_runtime/metro/06845__.js";
+import _modDef6898 from "../../../../_runtime/metro/06898__.js";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
-import maybeShowDiscardChangesAlertDefault from "../../user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx";
 import setCustomStatusDefault from "../setCustomStatus.tsx";
 import removeCustomStatusDefault from "../utils/removeCustomStatus.tsx";
+import maybeShowUnsavedChangesAlertDefault from "../../user_settings/profiles/native/maybeShowUnsavedChangesAlert.tsx";
 import CustomStatusPreviewDefault from "CustomStatusPreview.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -36,14 +36,15 @@ function EditCustomStatusWithPreview(navigation) {
   let first2;
   let onChange;
   c11 = undefined;
-  let callback;
+  let onSave;
+  let callback1;
   let ref1;
-  let callback2;
   let callback3;
+  let callback4;
   let ref2;
   let ref;
   let memo;
-  let callback7;
+  let callback8;
   if (null == _prompt) {
     _prompt = onClose(analyticsLocations[16])();
   }
@@ -92,8 +93,8 @@ function EditCustomStatusWithPreview(navigation) {
     labelResult = intl.string(tmp6(tmp7[12]).t.xod367);
   }
   c11 = labelResult;
-  const items2 = [value, first1, first2, onClose, analyticsLocations];
-  callback = obj.useCallback(() => {
+  const items2 = [value, first1, first2, analyticsLocations];
+  onSave = obj.useCallback(() => {
     const obj = { text, emojiInfo: first1, clearAfter: first2, analyticsLocations, prompt: null };
     const current = ref.current;
     obj.prompt = current;
@@ -101,24 +102,28 @@ function EditCustomStatusWithPreview(navigation) {
     const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.string(util.t.Og40Yn));
-    onClose();
   }, items2);
-  const items3 = [onClose];
-  const callback1 = obj.useCallback(() => {
+  const items3 = [onSave, onClose];
+  callback1 = obj.useCallback(() => {
+    callback();
+    onClose();
+  }, items3);
+  const items4 = [onClose];
+  const callback2 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(5028).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = navigation(5065).AccessibilityAnnouncer;
       const intl = navigation(1128).intl;
       AccessibilityAnnouncer.announce(intl.string(navigation(1128).t.YdUwBS));
     }, 300);
     onClose();
-  }, items3);
+  }, items4);
   ref1 = obj.useRef(null);
-  callback2 = obj.useCallback(() => {
+  callback3 = obj.useCallback(() => {
     const result = setAccessibilityFocus.setAccessibilityFocus({ ref: ref1, delay: 500 });
   }, []);
-  const items4 = [callback2];
-  callback3 = obj.useCallback((id) => {
+  const items5 = [callback3];
+  callback4 = obj.useCallback((id) => {
     const obj = { id: id.id, name: null, animated: null };
     if (null == id.id) {
       if (null != id.surrogates) {
@@ -128,41 +133,41 @@ function EditCustomStatusWithPreview(navigation) {
         obj.name = str2;
         obj.animated = id.animated;
         tmp(obj);
-        callback2();
+        callback3();
       }
     }
     str2 = id.name;
     if (str2 == null) {
       str2 = "";
     }
-  }, items4);
-  const items5 = [callback3, callback2];
-  const items6 = [tmp12Result[1], tmp13[1]];
-  const callback4 = obj.useCallback(() => {
+  }, items5);
+  const items6 = [callback4, callback3];
+  const items7 = [tmp12Result[1], tmp13[1]];
+  const callback5 = obj.useCallback(() => {
     const result = openEmojiPickerActionSheet.openEmojiPickerActionSheet({
-      onPressEmoji: callback3,
-      onClose: callback2,
+      onPressEmoji: callback4,
+      onClose: callback3,
       pickerIntention: EmojiIntention.STATUS,
     });
-  }, items5);
-  const callback5 = obj.useCallback(() => {
+  }, items6);
+  const callback6 = obj.useCallback(() => {
     closure_8(null);
     closure_6("");
-  }, items6);
+  }, items7);
   ref2 = obj.useRef(null);
   const ref3 = stateFromStores.useRef(null);
   const insets = tmp10(tmp7[26])({ includeKeyboardHeight: true, isKeyboardAwareOnIOS: false }).insets;
   const obj4 = { insets, inputs: null, scrollViewRef: ref3 };
-  const items7 = [{ ref: ref2 }];
-  obj4.inputs = items7;
-  const callback6 = obj.useCallback(() => {
+  const items8 = [{ ref: ref2 }];
+  obj4.inputs = items8;
+  const callback7 = obj.useCallback(() => {
     const current = ref2.current;
     if (current != null) {
       current.blur();
     }
   }, []);
   ref = obj.useRef({ statusText: value, statusEmoji: first1, clearAfter: first2 });
-  const items8 = [value, first1, first2];
+  const items9 = [value, first1, first2];
   memo = obj.useMemo(() => {
     let tmp2 = first !== ref.current.statusText;
     if (!tmp2) {
@@ -172,14 +177,19 @@ function EditCustomStatusWithPreview(navigation) {
       tmp2 = first2 !== ref.current.clearAfter;
     }
     return tmp2;
-  }, items8);
-  const items9 = [memo, onClose];
-  callback7 = obj.useCallback(() => {
-    const obj = { hasEdits: memo, onHasEdits: ChatInputUtils.dismissKeyboard, resetPending, onConfirm: onClose };
-    maybeShowDiscardChangesAlertDefault(obj);
   }, items9);
-  const items10 = [stateFromStores, value, first1, labelResult];
-  const items11 = [navigation, callback, memo, callback7];
+  const items10 = [memo, onClose, onSave];
+  callback8 = obj.useCallback(() => {
+    maybeShowUnsavedChangesAlertDefault({
+      location: "EditCustomStatusWithPreview",
+      hasUnsavedChanges: memo,
+      onReset,
+      onContinue: onClose,
+      onSave,
+    });
+  }, items10);
+  const items11 = [stateFromStores, value, first1, labelResult];
+  const items12 = [navigation, callback1, memo, callback8];
   const memo1 = obj.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores) {
@@ -187,7 +197,7 @@ function EditCustomStatusWithPreview(navigation) {
       tmp2 = map1(CustomStatusPreviewDefault, obj);
     }
     return tmp2;
-  }, items10);
+  }, items11);
   const layoutEffect = obj.useLayoutEffect(() => {
     let obj = {
       headerRight() {
@@ -196,25 +206,25 @@ function EditCustomStatusWithPreview(navigation) {
         obj.label = intl.string(navigation(analyticsLocations[12]).t["R3BPH+"]);
         obj.onPress = onPress;
         obj.disabled = !memo;
-        return ref1(navigation(analyticsLocations[31]).HeaderTextButton, obj);
+        return callback1(navigation(analyticsLocations[30]).HeaderTextButton, obj);
       },
-      headerLeft: NavigatorHeader.getHeaderCloseButton(callback7),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(callback8),
     };
     navigation.setOptions(obj);
-  }, items11);
+  }, items12);
   if (null == stateFromStores) {
     return null;
   } else {
     const obj5 = { style: tmp5.container, children: null };
     const obj6 = { style: tmp5.previewContainer, children: memo1 };
-    const items12 = [ref1(closure_6, obj6), , ,];
+    const items13 = [callback1(closure_6, obj6), , ,];
     const obj7 = { style: tmp5.statusSection, children: null };
     const obj8 = { style: tmp5.statusSectionHeader, children: null };
     const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
     const intl5 = tmp6(tmp7[12]).intl;
     obj9.children = intl5.string(tmp6(tmp7[12]).t.zOdg0A);
-    obj8.children = ref1(tmp6(tmp7[33]).Text, obj9);
-    const items13 = [ref1(closure_6, obj8)];
+    obj8.children = callback1(tmp6(tmp7[32]).Text, obj9);
+    const items14 = [callback1(closure_6, obj8)];
     const obj10 = { style: tmp5.statusInput, children: null };
     const obj11 = { style: tmp5.statusInputRow, children: null };
     const obj12 = {
@@ -233,10 +243,10 @@ function EditCustomStatusWithPreview(navigation) {
     }
     const obj13 = { text: name };
     obj12.accessibilityValue = obj13;
-    obj12.onPress = callback4;
+    obj12.onPress = callback5;
     const obj14 = { emoji: first1, size: 20, style: tmp5.emoji, withPlaceholder: true };
-    obj12.children = ref1(tmp10(tmp7[34]), obj14);
-    const items14 = [ref1(tmp6(tmp7[15]).PressableOpacity, obj12), ,];
+    obj12.children = callback1(tmp10(tmp7[33]), obj14);
+    const items15 = [callback1(tmp6(tmp7[15]).PressableOpacity, obj12), ,];
     const obj15 = {
       ref: ref2,
       maxLength,
@@ -260,27 +270,27 @@ function EditCustomStatusWithPreview(navigation) {
     };
     const intl2 = tmp6(tmp7[12]).intl;
     obj15.accessibilityLabel = intl2.string(tmp6(tmp7[12]).t.xalUlT);
-    obj15.onSubmitEditing = callback6;
+    obj15.onSubmitEditing = callback7;
     obj15.onFocus = tmp10(tmp7[27])(obj4).onFocus;
     obj15.style = tmp5.status;
     obj15.value = value;
     obj15.onChange = tmp15;
     obj15.inputTextStyle = tmp5.statusText;
-    items14[1] = ref1(tmp10(tmp7[35]), obj15);
-    let tmp48Result = null != first1;
-    if (!tmp48Result) {
-      tmp48Result = "" !== value;
+    items15[1] = callback1(tmp10(tmp7[34]), obj15);
+    let tmp49Result = null != first1;
+    if (!tmp49Result) {
+      tmp49Result = "" !== value;
     }
-    if (tmp48Result) {
-      const obj16 = { onPress: callback5 };
-      tmp48Result = tmp48(ref2, obj16);
+    if (tmp49Result) {
+      const obj16 = { onPress: callback6 };
+      tmp49Result = tmp49(callback4, obj16);
     }
-    items14[2] = tmp48Result;
-    obj11.children = items14;
-    obj10.children = callback2(closure_6, obj11);
-    items13[1] = ref1(closure_6, obj10);
-    obj7.children = items13;
-    items12[1] = callback2(closure_6, obj7);
+    items15[2] = tmp49Result;
+    obj11.children = items15;
+    obj10.children = ref1(closure_6, obj11);
+    items14[1] = callback1(closure_6, obj10);
+    obj7.children = items14;
+    items13[1] = ref1(closure_6, obj7);
     const obj17 = { hasIcons: false, children: null };
     const obj18 = { label: null, arrow: true, onPress: null, trailing: null };
     const intl3 = tmp6(tmp7[12]).intl;
@@ -288,54 +298,54 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10852, dependencyMap.paths),
+        asyncRequireImpl(10917, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[41])(first2) };
-    obj18.trailing = ref1(tmp6(tmp7[33]).Text, obj19);
-    obj17.children = ref1(tmp6(tmp7[37]).TableRow, obj18);
-    items12[2] = ref1(tmp6(tmp7[36]).TableRowGroup, obj17);
-    let tmp48Result3 = null != customStatusActivity;
-    if (tmp48Result3) {
+    obj18.trailing = callback1(tmp6(tmp7[32]).Text, obj19);
+    obj17.children = callback1(tmp6(tmp7[36]).TableRow, obj18);
+    items13[2] = callback1(tmp6(tmp7[35]).TableRowGroup, obj17);
+    let tmp49Result3 = null != customStatusActivity;
+    if (tmp49Result3) {
       const obj20 = { hasIcons: true, children: null };
       const obj21 = { icon: null, label: null, onPress: null, variant: "danger" };
       const obj22 = { color: tmp10(tmp7[9]).colors.TEXT_FEEDBACK_CRITICAL };
-      obj21.icon = tmp48(tmp6(tmp7[42]).TrashIcon, obj22);
+      obj21.icon = tmp49(tmp6(tmp7[42]).TrashIcon, obj22);
       const intl4 = tmp6(tmp7[12]).intl;
       obj21.label = intl4.string(tmp6(tmp7[12]).t.wO53tu);
-      obj21.onPress = callback1;
-      obj20.children = tmp48(tmp6(tmp7[37]).TableRow, obj21);
-      tmp48Result3 = tmp48(tmp6(tmp7[36]).TableRowGroup, obj20);
+      obj21.onPress = callback2;
+      obj20.children = tmp49(tmp6(tmp7[36]).TableRow, obj21);
+      tmp49Result3 = tmp49(tmp6(tmp7[35]).TableRowGroup, obj20);
     }
-    items12[3] = tmp48Result3;
-    obj5.children = items12;
-    const tmp46Result = callback2(closure_6, obj5);
-    const tmp10Result = tmp10(tmp7[35]);
+    items13[3] = tmp49Result3;
+    obj5.children = items13;
+    const tmp47Result = ref1(closure_6, obj5);
+    const tmp10Result = tmp10(tmp7[34]);
     if (tmp6Result.isAndroid()) {
       const obj23 = { ref: ref3, keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
       const obj24 = { paddingBottom: insets.bottom };
       obj23.contentContainerStyle = obj24;
-      obj23.children = tmp46Result;
-      let tmp48Result4 = tmp48(value, obj23);
+      obj23.children = tmp47Result;
+      let tmp49Result4 = tmp49(value, obj23);
     } else {
-      const obj25 = { keyboardShouldPersistTaps: "always", children: tmp46Result };
-      tmp48Result4 = tmp48(tmp6(tmp7[44]).KeyboardAwareScrollView, obj25);
+      const obj25 = { keyboardShouldPersistTaps: "always", children: tmp47Result };
+      tmp49Result4 = tmp49(tmp6(tmp7[44]).KeyboardAwareScrollView, obj25);
     }
-    return tmp48Result4;
+    return tmp49Result4;
   }
   const tmp11 = onClose(analyticsLocations[20])();
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(10764).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(10827).STATUS_MAX_LENGTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: { flexGrow: 1, padding: 16, rowGap: 24 },
   statusSection: { rowGap: 8 },
@@ -431,7 +441,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp4.closeIcon) {
-        const obj3 = { source: _modDef6845, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+        const obj3 = { source: _modDef6898, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
         const tmp12 = map1(native.Icon, obj3);
         cResult[3] = tmp4.closeIcon;
         cResult[4] = tmp12;
@@ -473,7 +483,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj.hitSlop = { top: 8, bottom: 8, right: 8 };
       const tmp = closure_15();
       obj.children = map1(native.Icon, {
-        source: _modDef6845,
+        source: _modDef6898,
         style: closure_15().closeIcon,
         size: native.Icon.Sizes.SMALL,
       });
@@ -509,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           analyticsLocations(1385);
           obj3.headerStatusBarHeight = 12;
           obj3.headerStyle = tmp6;
-          const tmp8Result = closure_13(analyticsLocations(6912).Navigator, obj3);
+          const tmp8Result = closure_13(analyticsLocations(6965).Navigator, obj3);
           cResult[4] = tmp4;
           cResult[5] = tmp8Result;
           let tmp7 = tmp8Result;
@@ -526,10 +536,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { title: null };
         const intl = analyticsLocations(1128).intl;
         obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-        return closure_1_13(analyticsLocations(9535).GenericHeaderTitle, obj);
+        return closure_1_13(analyticsLocations(9599).GenericHeaderTitle, obj);
       };
       const obj = analyticsLocations(576);
-      obj5.headerLeft = analyticsLocations(6425).getHeaderCloseButton(_prompt(6153).pop);
+      obj5.headerLeft = analyticsLocations(6478).getHeaderCloseButton(_prompt(6190).pop);
       obj5.render = function render(arg0, navigation) {
         return closure_2_13(EditCustomStatusWithPreview, {
           navigation,
@@ -543,7 +553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = _prompt;
       cResult[2] = obj4;
       tmp4 = obj4;
-      const tmpResult4 = analyticsLocations(6425);
+      const tmpResult4 = analyticsLocations(6478);
     }
   : function EditCustomStatusWithPreviewModal(analyticsLocations) {
       analyticsLocations = analyticsLocations.analyticsLocations;
@@ -558,7 +568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { title: null };
           const intl = analyticsLocations(1128).intl;
           obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-          return closure_1_13(analyticsLocations(9535).GenericHeaderTitle, obj);
+          return closure_1_13(analyticsLocations(9599).GenericHeaderTitle, obj);
         };
         obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
         obj2.render = function render(arg0, navigation) {
@@ -580,5 +590,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3 = { height: 56 };
       }
       obj.headerStyle = obj3;
-      return closure_13(analyticsLocations(6912).Navigator, obj);
+      return closure_13(analyticsLocations(6965).Navigator, obj);
     };

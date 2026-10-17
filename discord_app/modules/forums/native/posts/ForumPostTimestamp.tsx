@@ -5,9 +5,9 @@ import ForumHooks from "../../ForumHooks.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useForumChannelStore = fn(12781).useForumChannelStore;
+const useForumChannelStore = fn(12846).useForumChannelStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

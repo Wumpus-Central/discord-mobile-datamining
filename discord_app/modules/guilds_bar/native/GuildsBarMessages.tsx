@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "App Launcher Home (Mobile)",
-          externalChildren: true,
-          expandedChildren: false,
-          children: false,
+          label: "row",
+          externalChildren: "center",
+          expandedChildren: null,
+          children: null,
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "App Launcher Home (Mobile)",
-          externalChildren: true,
-          expandedChildren: false,
-          children: false,
+          label: "row",
+          externalChildren: "center",
+          expandedChildren: null,
+          children: null,
         });
       },
 );

@@ -8,22 +8,795 @@ function createGamesFromMessage(referenced_message) {
   closure_0 = false;
   const mention_games = referenced_message.mention_games;
   if (mention_games != null) {
-    const item = mention_games.forEach((game_flags) => {
-      if (tmp) {
-        if (!map.has(game_flags.id)) {
-          const tmp8 = new closure_2_2(game_flags);
-          const result = map.set(game_flags.id, tmp8);
-          c0 = true;
-          set2.delete(game_flags.id);
-          set.delete(game_flags.id);
+    const item = mention_games.forEach((third_party_skus) => {
+      let isArray = "third_party_skus" in third_party_skus;
+      if (isArray) {
+        const _Array = Array;
+        isArray = Array.isArray(third_party_skus.third_party_skus);
+      }
+      if (isArray) {
+        if (!map.has(third_party_skus.id)) {
+          const tmp9 = new closure_2_2(third_party_skus);
+          const result = map.set(third_party_skus.id, tmp9);
+          closure_0 = true;
+          set2.delete(third_party_skus.id);
+          set.delete(third_party_skus.id);
         }
       }
-      tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
     });
   }
   if (null != referenced_message.referenced_message) {
     closure_0 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
     const tmp3 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
+  }
+  const message_snapshots = referenced_message.message_snapshots;
+  if (message_snapshots != null) {
+    const item1 = message_snapshots.forEach((message) => {
+      message = message.message;
+      closure_0 = false;
+      const mention_games = message.mention_games;
+      if (mention_games != null) {
+        const item = mention_games.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
+            }
+          }
+        });
+      }
+      if (null != message.referenced_message) {
+        const referenced_message = message.referenced_message;
+        closure_0 = false;
+        const mention_games1 = referenced_message.mention_games;
+        if (mention_games1 != null) {
+          const item1 = mention_games1.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
+              }
+            }
+          });
+        }
+        if (null != referenced_message.referenced_message) {
+          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+        }
+        const message_snapshots = referenced_message.message_snapshots;
+        if (message_snapshots != null) {
+          const item2 = message_snapshots.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp6 = closure_0;
+        if (!closure_0) {
+          tmp6 = closure_0;
+        }
+        closure_0 = tmp6;
+      }
+      const message_snapshots1 = message.message_snapshots;
+      if (message_snapshots1 != null) {
+        const item3 = message_snapshots1.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
+      }
+      let tmp8 = closure_0;
+      if (!closure_0) {
+        tmp8 = closure_0;
+      }
+      closure_0 = tmp8;
+    });
   }
   return closure_0;
 }
@@ -33,17 +806,21 @@ function handleLoadMessages(messages) {
     closure_0 = false;
     mention_games = mention_games.mention_games;
     if (mention_games != null) {
-      const item = mention_games.forEach((game_flags) => {
-        if (tmp) {
-          if (!map.has(game_flags.id)) {
-            const tmp8 = new closure_2_2(game_flags);
-            const result = map.set(game_flags.id, tmp8);
-            c0 = true;
-            set2.delete(game_flags.id);
-            set.delete(game_flags.id);
+      const item = mention_games.forEach((third_party_skus) => {
+        let isArray = "third_party_skus" in third_party_skus;
+        if (isArray) {
+          const _Array = Array;
+          isArray = Array.isArray(third_party_skus.third_party_skus);
+        }
+        if (isArray) {
+          if (!map.has(third_party_skus.id)) {
+            const tmp9 = new closure_2_2(third_party_skus);
+            const result = map.set(third_party_skus.id, tmp9);
+            closure_0 = true;
+            set2.delete(third_party_skus.id);
+            set.delete(third_party_skus.id);
           }
         }
-        tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
       });
     }
     if (null != mention_games.referenced_message) {
@@ -51,34 +828,744 @@ function handleLoadMessages(messages) {
       closure_129_0 = false;
       const mention_games1 = referenced_message.mention_games;
       if (mention_games1 != null) {
-        const item1 = mention_games1.forEach((game_flags) => {
-          if (tmp) {
-            if (!map.has(game_flags.id)) {
-              const tmp8 = new closure_2_2(game_flags);
-              const result = map.set(game_flags.id, tmp8);
-              c0 = true;
-              set2.delete(game_flags.id);
-              set.delete(game_flags.id);
+        const item1 = mention_games1.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
             }
           }
-          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != referenced_message.referenced_message) {
         closure_129_0 = closure_7(referenced_message.referenced_message) || closure_129_0;
         const tmp4 = closure_7(referenced_message.referenced_message) || closure_129_0;
       }
-      let tmp5 = closure_129_0;
-      if (!closure_129_0) {
-        tmp5 = closure_0;
+      const message_snapshots = referenced_message.message_snapshots;
+      if (message_snapshots != null) {
+        const item2 = message_snapshots.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
       }
-      closure_0 = tmp5;
+      let tmp6 = closure_129_0;
+      if (!closure_129_0) {
+        tmp6 = closure_0;
+      }
+      closure_0 = tmp6;
     }
-    let tmp6 = closure_0;
+    const message_snapshots1 = mention_games.message_snapshots;
+    if (message_snapshots1 != null) {
+      const item3 = message_snapshots1.forEach((message) => {
+        message = message.message;
+        closure_0 = false;
+        const mention_games = message.mention_games;
+        if (mention_games != null) {
+          const item = mention_games.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
+              }
+            }
+          });
+        }
+        if (null != message.referenced_message) {
+          const referenced_message = message.referenced_message;
+          closure_0 = false;
+          const mention_games1 = referenced_message.mention_games;
+          if (mention_games1 != null) {
+            const item1 = mention_games1.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != referenced_message.referenced_message) {
+            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+          }
+          const message_snapshots = referenced_message.message_snapshots;
+          if (message_snapshots != null) {
+            const item2 = message_snapshots.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = closure_0;
+          }
+          closure_0 = tmp6;
+        }
+        const message_snapshots1 = message.message_snapshots;
+        if (message_snapshots1 != null) {
+          const item3 = message_snapshots1.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach(() => { ... });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach(() => { ... });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach(() => { ... });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach(() => { ... });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp8 = closure_0;
+        if (!closure_0) {
+          tmp8 = closure_0;
+        }
+        closure_0 = tmp8;
+      });
+    }
+    let tmp8 = closure_0;
     if (!closure_0) {
-      tmp6 = acc;
+      tmp8 = acc;
     }
-    return tmp6;
+    return tmp8;
   }, false);
 }
 function handleLoadSearchResults(data) {
@@ -88,55 +1575,145 @@ function handleLoadSearchResults(data) {
     messages = messages.messages;
     let item = messages.forEach((arr) => {
       let item = arr.forEach((mention_games) => {
-        c0 = false;
+        closure_0 = false;
         mention_games = mention_games.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          let item = mention_games.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != mention_games.referenced_message) {
-          const referenced_message = mention_games.referenced_message;
-          c0 = false;
-          const mention_games1 = referenced_message.mention_games;
+          let referenced_message = mention_games.referenced_message;
+          closure_0 = false;
+          let mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((game_flags) => {
-              if (tmp) {
-                if (!map.has(game_flags.id)) {
-                  const tmp8 = new closure_2_2(game_flags);
-                  const result = map.set(game_flags.id, tmp8);
-                  c0 = true;
-                  set2.delete(game_flags.id);
-                  set.delete(game_flags.id);
+            let item1 = mention_games1.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
                 }
               }
-              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
-            c0 = closure_2_7(referenced_message.referenced_message) || c0;
-            const tmp4 = closure_2_7(referenced_message.referenced_message) || c0;
+            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            let tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
           }
-          let tmp5 = c0;
-          if (!c0) {
-            tmp5 = c0;
+          let message_snapshots = referenced_message.message_snapshots;
+          if (message_snapshots != null) {
+            let item2 = message_snapshots.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach(() => { ... });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach(() => { ... });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach(() => { ... });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach(() => { ... });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
           }
-          c0 = tmp5;
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = closure_0;
+          }
+          closure_0 = tmp6;
         }
-        let tmp6 = c0;
-        if (!c0) {
-          tmp6 = closure_0;
+        let message_snapshots1 = mention_games.message_snapshots;
+        if (message_snapshots1 != null) {
+          let item3 = message_snapshots1.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach(() => { ... });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach(() => { ... });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach(() => { ... });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach(() => { ... });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
         }
-        closure_0 = tmp6;
+        let tmp8 = closure_0;
+        if (!closure_0) {
+          tmp8 = closure_0;
+        }
+        closure_0 = tmp8;
       });
     });
   });
@@ -147,17 +1724,21 @@ function handleIncomingMessage(message) {
   closure_0 = false;
   const mention_games = message.mention_games;
   if (mention_games != null) {
-    const item = mention_games.forEach((game_flags) => {
-      if (tmp) {
-        if (!map.has(game_flags.id)) {
-          const tmp8 = new closure_2_2(game_flags);
-          const result = map.set(game_flags.id, tmp8);
-          c0 = true;
-          set2.delete(game_flags.id);
-          set.delete(game_flags.id);
+    const item = mention_games.forEach((third_party_skus) => {
+      let isArray = "third_party_skus" in third_party_skus;
+      if (isArray) {
+        const _Array = Array;
+        isArray = Array.isArray(third_party_skus.third_party_skus);
+      }
+      if (isArray) {
+        if (!map.has(third_party_skus.id)) {
+          const tmp9 = new closure_2_2(third_party_skus);
+          const result = map.set(third_party_skus.id, tmp9);
+          closure_0 = true;
+          set2.delete(third_party_skus.id);
+          set.delete(third_party_skus.id);
         }
       }
-      tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
     });
   }
   if (null != message.referenced_message) {
@@ -165,28 +1746,1570 @@ function handleIncomingMessage(message) {
     closure_129_0 = false;
     const mention_games1 = referenced_message.mention_games;
     if (mention_games1 != null) {
-      const item1 = mention_games1.forEach((game_flags) => {
-        if (tmp) {
-          if (!map.has(game_flags.id)) {
-            const tmp8 = new closure_2_2(game_flags);
-            const result = map.set(game_flags.id, tmp8);
-            c0 = true;
-            set2.delete(game_flags.id);
-            set.delete(game_flags.id);
+      const item1 = mention_games1.forEach((third_party_skus) => {
+        let isArray = "third_party_skus" in third_party_skus;
+        if (isArray) {
+          const _Array = Array;
+          isArray = Array.isArray(third_party_skus.third_party_skus);
+        }
+        if (isArray) {
+          if (!map.has(third_party_skus.id)) {
+            const tmp9 = new closure_2_2(third_party_skus);
+            const result = map.set(third_party_skus.id, tmp9);
+            closure_0 = true;
+            set2.delete(third_party_skus.id);
+            set.delete(third_party_skus.id);
           }
         }
-        tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
       });
     }
     if (null != referenced_message.referenced_message) {
       closure_129_0 = createGamesFromMessage(referenced_message.referenced_message) || closure_129_0;
       const tmp4 = createGamesFromMessage(referenced_message.referenced_message) || closure_129_0;
     }
-    let tmp5 = closure_129_0;
-    if (!closure_129_0) {
-      tmp5 = closure_0;
+    const message_snapshots = referenced_message.message_snapshots;
+    if (message_snapshots != null) {
+      const item2 = message_snapshots.forEach((message) => {
+        message = message.message;
+        closure_0 = false;
+        const mention_games = message.mention_games;
+        if (mention_games != null) {
+          const item = mention_games.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
+              }
+            }
+          });
+        }
+        if (null != message.referenced_message) {
+          const referenced_message = message.referenced_message;
+          closure_0 = false;
+          const mention_games1 = referenced_message.mention_games;
+          if (mention_games1 != null) {
+            const item1 = mention_games1.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != referenced_message.referenced_message) {
+            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+          }
+          const message_snapshots = referenced_message.message_snapshots;
+          if (message_snapshots != null) {
+            const item2 = message_snapshots.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach((third_party_skus) => {
+                          let isArray = "third_party_skus" in third_party_skus;
+                          if (isArray) {
+                            const _Array = Array;
+                            isArray = Array.isArray(third_party_skus.third_party_skus);
+                          }
+                          if (isArray) {
+                            if (!map.has(third_party_skus.id)) {
+                              const tmp9 = new closure_2_2(third_party_skus);
+                              const result = map.set(third_party_skus.id, tmp9);
+                              closure_0 = true;
+                              set2.delete(third_party_skus.id);
+                              set.delete(third_party_skus.id);
+                            }
+                          }
+                        });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach((message) => {
+                          message = message.message;
+                          closure_0 = false;
+                          const mention_games = message.mention_games;
+                          if (mention_games != null) {
+                            const item = mention_games.forEach(() => { ... });
+                          }
+                          if (null != message.referenced_message) {
+                            const referenced_message = message.referenced_message;
+                            closure_0 = false;
+                            const mention_games1 = referenced_message.mention_games;
+                            if (mention_games1 != null) {
+                              const item1 = mention_games1.forEach(() => { ... });
+                            }
+                            if (null != referenced_message.referenced_message) {
+                              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            }
+                            const message_snapshots = referenced_message.message_snapshots;
+                            if (message_snapshots != null) {
+                              const item2 = message_snapshots.forEach(() => { ... });
+                            }
+                            let tmp6 = closure_0;
+                            if (!closure_0) {
+                              tmp6 = closure_0;
+                            }
+                            closure_0 = tmp6;
+                          }
+                          const message_snapshots1 = message.message_snapshots;
+                          if (message_snapshots1 != null) {
+                            const item3 = message_snapshots1.forEach(() => { ... });
+                          }
+                          let tmp8 = closure_0;
+                          if (!closure_0) {
+                            tmp8 = closure_0;
+                          }
+                          closure_0 = tmp8;
+                        });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = closure_0;
+          }
+          closure_0 = tmp6;
+        }
+        const message_snapshots1 = message.message_snapshots;
+        if (message_snapshots1 != null) {
+          const item3 = message_snapshots1.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp8 = closure_0;
+        if (!closure_0) {
+          tmp8 = closure_0;
+        }
+        closure_0 = tmp8;
+      });
     }
-    closure_0 = tmp5;
+    let tmp6 = closure_129_0;
+    if (!closure_129_0) {
+      tmp6 = closure_0;
+    }
+    closure_0 = tmp6;
+  }
+  const message_snapshots1 = message.message_snapshots;
+  if (message_snapshots1 != null) {
+    const item3 = message_snapshots1.forEach((message) => {
+      message = message.message;
+      closure_0 = false;
+      const mention_games = message.mention_games;
+      if (mention_games != null) {
+        const item = mention_games.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
+            }
+          }
+        });
+      }
+      if (null != message.referenced_message) {
+        const referenced_message = message.referenced_message;
+        closure_0 = false;
+        const mention_games1 = referenced_message.mention_games;
+        if (mention_games1 != null) {
+          const item1 = mention_games1.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
+              }
+            }
+          });
+        }
+        if (null != referenced_message.referenced_message) {
+          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+        }
+        const message_snapshots = referenced_message.message_snapshots;
+        if (message_snapshots != null) {
+          const item2 = message_snapshots.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp6 = closure_0;
+        if (!closure_0) {
+          tmp6 = closure_0;
+        }
+        closure_0 = tmp6;
+      }
+      const message_snapshots1 = message.message_snapshots;
+      if (message_snapshots1 != null) {
+        const item3 = message_snapshots1.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
+      }
+      let tmp8 = closure_0;
+      if (!closure_0) {
+        tmp8 = closure_0;
+      }
+      closure_0 = tmp8;
+    });
   }
   return closure_0;
 }
@@ -195,7 +3318,8 @@ let set = new Set();
 let set1 = new Set();
 let set2 = new Set();
 const Store = initializeDefault.Store;
-class GameStore extends Store {}
+class GameStore extends Store {
+}
 const prototype = GameStore.prototype;
 prototype["isFetching"] = function isFetching(arg0) {
   let hasItem = null != arg0;
@@ -300,17 +3424,21 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((game_flags) => {
-          if (tmp) {
-            if (!map.has(game_flags.id)) {
-              const tmp8 = new closure_2_2(game_flags);
-              const result = map.set(game_flags.id, tmp8);
-              c0 = true;
-              set2.delete(game_flags.id);
-              set.delete(game_flags.id);
+        const item = mention_games.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
             }
           }
-          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != mention_games.referenced_message) {
@@ -318,34 +3446,744 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item1 = mention_games1.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
           closure_129_0 = closure_7(referenced_message.referenced_message) || closure_129_0;
           const tmp4 = closure_7(referenced_message.referenced_message) || closure_129_0;
         }
-        let tmp5 = closure_129_0;
-        if (!closure_129_0) {
-          tmp5 = closure_0;
+        const message_snapshots = referenced_message.message_snapshots;
+        if (message_snapshots != null) {
+          const item2 = message_snapshots.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
         }
-        closure_0 = tmp5;
+        let tmp6 = closure_129_0;
+        if (!closure_129_0) {
+          tmp6 = closure_0;
+        }
+        closure_0 = tmp6;
       }
-      let tmp6 = closure_0;
+      const message_snapshots1 = mention_games.message_snapshots;
+      if (message_snapshots1 != null) {
+        const item3 = message_snapshots1.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
+      }
+      let tmp8 = closure_0;
       if (!closure_0) {
-        tmp6 = acc;
+        tmp8 = acc;
       }
-      return tmp6;
+      return tmp8;
     }, false);
   },
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
@@ -359,17 +4197,21 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((game_flags) => {
-          if (tmp) {
-            if (!map.has(game_flags.id)) {
-              const tmp8 = new closure_2_2(game_flags);
-              const result = map.set(game_flags.id, tmp8);
-              c0 = true;
-              set2.delete(game_flags.id);
-              set.delete(game_flags.id);
+        const item = mention_games.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
             }
           }
-          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != mention_games.referenced_message) {
@@ -377,34 +4219,744 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item1 = mention_games1.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
           closure_129_0 = closure_7(referenced_message.referenced_message) || closure_129_0;
           const tmp4 = closure_7(referenced_message.referenced_message) || closure_129_0;
         }
-        let tmp5 = closure_129_0;
-        if (!closure_129_0) {
-          tmp5 = closure_0;
+        const message_snapshots = referenced_message.message_snapshots;
+        if (message_snapshots != null) {
+          const item2 = message_snapshots.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
         }
-        closure_0 = tmp5;
+        let tmp6 = closure_129_0;
+        if (!closure_129_0) {
+          tmp6 = closure_0;
+        }
+        closure_0 = tmp6;
       }
-      let tmp6 = closure_0;
+      const message_snapshots1 = mention_games.message_snapshots;
+      if (message_snapshots1 != null) {
+        const item3 = message_snapshots1.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
+      }
+      let tmp8 = closure_0;
       if (!closure_0) {
-        tmp6 = acc;
+        tmp8 = acc;
       }
-      return tmp6;
+      return tmp8;
     }, false);
   },
   CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function handleChannelConversationsFetchSuccess(rawConversations) {
@@ -417,17 +4969,21 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           mention_games = mention_games.mention_games;
           if (mention_games != null) {
-            const item = mention_games.forEach((game_flags) => {
-              if (tmp) {
-                if (!map.has(game_flags.id)) {
-                  const tmp8 = new closure_2_2(game_flags);
-                  const result = map.set(game_flags.id, tmp8);
-                  c0 = true;
-                  set2.delete(game_flags.id);
-                  set.delete(game_flags.id);
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
                 }
               }
-              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != mention_games.referenced_message) {
@@ -435,34 +4991,328 @@ const gameStore = new GameStore(DispatcherDefault, {
             closure_0 = false;
             const mention_games1 = referenced_message.mention_games;
             if (mention_games1 != null) {
-              const item1 = mention_games1.forEach((game_flags) => {
-                if (tmp) {
-                  if (!map.has(game_flags.id)) {
-                    const tmp8 = new closure_2_2(game_flags);
-                    const result = map.set(game_flags.id, tmp8);
-                    c0 = true;
-                    set2.delete(game_flags.id);
-                    set.delete(game_flags.id);
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
                   }
                 }
-                tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
               });
             }
             if (null != referenced_message.referenced_message) {
               closure_0 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
               const tmp4 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
             }
-            let tmp5 = closure_0;
-            if (!closure_0) {
-              tmp5 = closure_0;
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
             }
-            closure_0 = tmp5;
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
           }
-          let tmp6 = closure_0;
+          const message_snapshots1 = mention_games.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
           if (!closure_0) {
-            tmp6 = closure_0;
+            tmp8 = closure_0;
           }
-          closure_0 = tmp6;
+          closure_0 = tmp8;
         });
       }
     });
@@ -475,17 +5325,21 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       const mention_games = message.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((game_flags) => {
-          if (tmp) {
-            if (!map.has(game_flags.id)) {
-              const tmp8 = new closure_2_2(game_flags);
-              const result = map.set(game_flags.id, tmp8);
-              c0 = true;
-              set2.delete(game_flags.id);
-              set.delete(game_flags.id);
+        const item = mention_games.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
             }
           }
-          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != message.referenced_message) {
@@ -493,34 +5347,744 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item1 = mention_games1.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
           closure_129_0 = closure_7(referenced_message.referenced_message) || closure_129_0;
           const tmp4 = closure_7(referenced_message.referenced_message) || closure_129_0;
         }
-        let tmp5 = closure_129_0;
-        if (!closure_129_0) {
-          tmp5 = closure_0;
+        const message_snapshots = referenced_message.message_snapshots;
+        if (message_snapshots != null) {
+          const item2 = message_snapshots.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
         }
-        closure_0 = tmp5;
+        let tmp6 = closure_129_0;
+        if (!closure_129_0) {
+          tmp6 = closure_0;
+        }
+        closure_0 = tmp6;
       }
-      let tmp6 = closure_0;
+      const message_snapshots1 = message.message_snapshots;
+      if (message_snapshots1 != null) {
+        const item3 = message_snapshots1.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
+      }
+      let tmp8 = closure_0;
       if (!closure_0) {
-        tmp6 = acc;
+        tmp8 = acc;
       }
-      return tmp6;
+      return tmp8;
     }, false);
   },
   THREAD_LIST_SYNC: function handleThreadListSync(mostRecentMessages) {
@@ -532,17 +6096,21 @@ const gameStore = new GameStore(DispatcherDefault, {
       closure_0 = false;
       mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        const item = mention_games.forEach((game_flags) => {
-          if (tmp) {
-            if (!map.has(game_flags.id)) {
-              const tmp8 = new closure_2_2(game_flags);
-              const result = map.set(game_flags.id, tmp8);
-              c0 = true;
-              set2.delete(game_flags.id);
-              set.delete(game_flags.id);
+        const item = mention_games.forEach((third_party_skus) => {
+          let isArray = "third_party_skus" in third_party_skus;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(third_party_skus.third_party_skus);
+          }
+          if (isArray) {
+            if (!map.has(third_party_skus.id)) {
+              const tmp9 = new closure_2_2(third_party_skus);
+              const result = map.set(third_party_skus.id, tmp9);
+              closure_0 = true;
+              set2.delete(third_party_skus.id);
+              set.delete(third_party_skus.id);
             }
           }
-          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != mention_games.referenced_message) {
@@ -550,34 +6118,744 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_129_0 = false;
         const mention_games1 = referenced_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item1 = mention_games1.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
           closure_129_0 = closure_7(referenced_message.referenced_message) || closure_129_0;
           const tmp4 = closure_7(referenced_message.referenced_message) || closure_129_0;
         }
-        let tmp5 = closure_129_0;
-        if (!closure_129_0) {
-          tmp5 = closure_0;
+        const message_snapshots = referenced_message.message_snapshots;
+        if (message_snapshots != null) {
+          const item2 = message_snapshots.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
         }
-        closure_0 = tmp5;
+        let tmp6 = closure_129_0;
+        if (!closure_129_0) {
+          tmp6 = closure_0;
+        }
+        closure_0 = tmp6;
       }
-      let tmp6 = closure_0;
+      const message_snapshots1 = mention_games.message_snapshots;
+      if (message_snapshots1 != null) {
+        const item3 = message_snapshots1.forEach((message) => {
+          message = message.message;
+          closure_0 = false;
+          const mention_games = message.mention_games;
+          if (mention_games != null) {
+            const item = mention_games.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
+                }
+              }
+            });
+          }
+          if (null != message.referenced_message) {
+            const referenced_message = message.referenced_message;
+            closure_0 = false;
+            const mention_games1 = referenced_message.mention_games;
+            if (mention_games1 != null) {
+              const item1 = mention_games1.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != referenced_message.referenced_message) {
+              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+            }
+            const message_snapshots = referenced_message.message_snapshots;
+            if (message_snapshots != null) {
+              const item2 = message_snapshots.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp6 = closure_0;
+            }
+            closure_0 = tmp6;
+          }
+          const message_snapshots1 = message.message_snapshots;
+          if (message_snapshots1 != null) {
+            const item3 = message_snapshots1.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach(() => { ... });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach(() => { ... });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach(() => { ... });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach(() => { ... });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp8 = closure_0;
+          if (!closure_0) {
+            tmp8 = closure_0;
+          }
+          closure_0 = tmp8;
+        });
+      }
+      let tmp8 = closure_0;
       if (!closure_0) {
-        tmp6 = acc;
+        tmp8 = acc;
       }
-      return tmp6;
+      return tmp8;
     }, false);
   },
   MESSAGE_CREATE: handleIncomingMessage,
@@ -591,17 +6869,21 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games = first_message.mention_games;
         if (mention_games != null) {
-          item = mention_games.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          item = mention_games.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != first_message.referenced_message) {
@@ -609,50 +6891,764 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((game_flags) => {
-              if (tmp) {
-                if (!map.has(game_flags.id)) {
-                  const tmp8 = new closure_2_2(game_flags);
-                  const result = map.set(game_flags.id, tmp8);
-                  c0 = true;
-                  set2.delete(game_flags.id);
-                  set.delete(game_flags.id);
+            const item1 = mention_games1.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
                 }
               }
-              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
             closure_0 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
             const tmp4 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
           }
-          let tmp5 = closure_0;
-          if (!closure_0) {
-            tmp5 = closure_0;
+          const message_snapshots = referenced_message.message_snapshots;
+          if (message_snapshots != null) {
+            const item2 = message_snapshots.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach((third_party_skus) => {
+                          let isArray = "third_party_skus" in third_party_skus;
+                          if (isArray) {
+                            const _Array = Array;
+                            isArray = Array.isArray(third_party_skus.third_party_skus);
+                          }
+                          if (isArray) {
+                            if (!map.has(third_party_skus.id)) {
+                              const tmp9 = new closure_2_2(third_party_skus);
+                              const result = map.set(third_party_skus.id, tmp9);
+                              closure_0 = true;
+                              set2.delete(third_party_skus.id);
+                              set.delete(third_party_skus.id);
+                            }
+                          }
+                        });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach((message) => {
+                          message = message.message;
+                          closure_0 = false;
+                          const mention_games = message.mention_games;
+                          if (mention_games != null) {
+                            const item = mention_games.forEach(() => { ... });
+                          }
+                          if (null != message.referenced_message) {
+                            const referenced_message = message.referenced_message;
+                            closure_0 = false;
+                            const mention_games1 = referenced_message.mention_games;
+                            if (mention_games1 != null) {
+                              const item1 = mention_games1.forEach(() => { ... });
+                            }
+                            if (null != referenced_message.referenced_message) {
+                              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            }
+                            const message_snapshots = referenced_message.message_snapshots;
+                            if (message_snapshots != null) {
+                              const item2 = message_snapshots.forEach(() => { ... });
+                            }
+                            let tmp6 = closure_0;
+                            if (!closure_0) {
+                              tmp6 = closure_0;
+                            }
+                            closure_0 = tmp6;
+                          }
+                          const message_snapshots1 = message.message_snapshots;
+                          if (message_snapshots1 != null) {
+                            const item3 = message_snapshots1.forEach(() => { ... });
+                          }
+                          let tmp8 = closure_0;
+                          if (!closure_0) {
+                            tmp8 = closure_0;
+                          }
+                          closure_0 = tmp8;
+                        });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
           }
-          closure_0 = tmp5;
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = closure_0;
+          }
+          closure_0 = tmp6;
         }
-        let tmp6 = closure_0;
+        const message_snapshots1 = first_message.message_snapshots;
+        if (message_snapshots1 != null) {
+          const item3 = message_snapshots1.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp8 = closure_0;
         if (!closure_0) {
-          tmp6 = closure_0;
+          tmp8 = closure_0;
         }
-        closure_0 = tmp6;
+        closure_0 = tmp8;
       }
       if (null != most_recent_message) {
         closure_0 = false;
         const mention_games2 = most_recent_message.mention_games;
         if (mention_games2 != null) {
-          const item2 = mention_games2.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item4 = mention_games2.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != most_recent_message.referenced_message) {
@@ -660,41 +7656,749 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games3 = referenced_message2.mention_games;
           if (mention_games3 != null) {
-            const item3 = mention_games3.forEach((game_flags) => {
-              if (tmp) {
-                if (!map.has(game_flags.id)) {
-                  const tmp8 = new closure_2_2(game_flags);
-                  const result = map.set(game_flags.id, tmp8);
-                  c0 = true;
-                  set2.delete(game_flags.id);
-                  set.delete(game_flags.id);
+            const item5 = mention_games3.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
                 }
               }
-              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message2.referenced_message) {
             closure_0 = createGamesFromMessage(referenced_message2.referenced_message) || closure_0;
-            const tmp10 = createGamesFromMessage(referenced_message2.referenced_message) || closure_0;
+            const tmp12 = createGamesFromMessage(referenced_message2.referenced_message) || closure_0;
           }
-          let tmp11 = closure_0;
+          const message_snapshots2 = referenced_message2.message_snapshots;
+          if (message_snapshots2 != null) {
+            const item6 = message_snapshots2.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach((third_party_skus) => {
+                          let isArray = "third_party_skus" in third_party_skus;
+                          if (isArray) {
+                            const _Array = Array;
+                            isArray = Array.isArray(third_party_skus.third_party_skus);
+                          }
+                          if (isArray) {
+                            if (!map.has(third_party_skus.id)) {
+                              const tmp9 = new closure_2_2(third_party_skus);
+                              const result = map.set(third_party_skus.id, tmp9);
+                              closure_0 = true;
+                              set2.delete(third_party_skus.id);
+                              set.delete(third_party_skus.id);
+                            }
+                          }
+                        });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach((message) => {
+                          message = message.message;
+                          closure_0 = false;
+                          const mention_games = message.mention_games;
+                          if (mention_games != null) {
+                            const item = mention_games.forEach(() => { ... });
+                          }
+                          if (null != message.referenced_message) {
+                            const referenced_message = message.referenced_message;
+                            closure_0 = false;
+                            const mention_games1 = referenced_message.mention_games;
+                            if (mention_games1 != null) {
+                              const item1 = mention_games1.forEach(() => { ... });
+                            }
+                            if (null != referenced_message.referenced_message) {
+                              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            }
+                            const message_snapshots = referenced_message.message_snapshots;
+                            if (message_snapshots != null) {
+                              const item2 = message_snapshots.forEach(() => { ... });
+                            }
+                            let tmp6 = closure_0;
+                            if (!closure_0) {
+                              tmp6 = closure_0;
+                            }
+                            closure_0 = tmp6;
+                          }
+                          const message_snapshots1 = message.message_snapshots;
+                          if (message_snapshots1 != null) {
+                            const item3 = message_snapshots1.forEach(() => { ... });
+                          }
+                          let tmp8 = closure_0;
+                          if (!closure_0) {
+                            tmp8 = closure_0;
+                          }
+                          closure_0 = tmp8;
+                        });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
+          }
+          let tmp14 = closure_0;
           if (!closure_0) {
-            tmp11 = closure_0;
+            tmp14 = closure_0;
           }
-          closure_0 = tmp11;
+          closure_0 = tmp14;
         }
-        let tmp12 = closure_0;
+        const message_snapshots3 = most_recent_message.message_snapshots;
+        if (message_snapshots3 != null) {
+          const item7 = message_snapshots3.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp16 = closure_0;
         if (!closure_0) {
-          tmp12 = closure_0;
+          tmp16 = closure_0;
         }
-        closure_0 = tmp12;
+        closure_0 = tmp16;
       }
     });
     return closure_0;
   },
-  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(
-    supplementalData,
-  ) {
+  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
     supplementalData = supplementalData.supplementalData;
     closure_0 = false;
     let item = supplementalData.forEach((message_preview) => {
@@ -703,17 +8407,21 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games = message_preview.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item = mention_games.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != message_preview.referenced_message) {
@@ -721,34 +8429,744 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((game_flags) => {
-              if (tmp) {
-                if (!map.has(game_flags.id)) {
-                  const tmp8 = new closure_2_2(game_flags);
-                  const result = map.set(game_flags.id, tmp8);
-                  c0 = true;
-                  set2.delete(game_flags.id);
-                  set.delete(game_flags.id);
+            const item1 = mention_games1.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
                 }
               }
-              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
             closure_0 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
             const tmp4 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
           }
-          let tmp5 = closure_0;
-          if (!closure_0) {
-            tmp5 = closure_0;
+          const message_snapshots = referenced_message.message_snapshots;
+          if (message_snapshots != null) {
+            const item2 = message_snapshots.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach((third_party_skus) => {
+                          let isArray = "third_party_skus" in third_party_skus;
+                          if (isArray) {
+                            const _Array = Array;
+                            isArray = Array.isArray(third_party_skus.third_party_skus);
+                          }
+                          if (isArray) {
+                            if (!map.has(third_party_skus.id)) {
+                              const tmp9 = new closure_2_2(third_party_skus);
+                              const result = map.set(third_party_skus.id, tmp9);
+                              closure_0 = true;
+                              set2.delete(third_party_skus.id);
+                              set.delete(third_party_skus.id);
+                            }
+                          }
+                        });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach((message) => {
+                          message = message.message;
+                          closure_0 = false;
+                          const mention_games = message.mention_games;
+                          if (mention_games != null) {
+                            const item = mention_games.forEach(() => { ... });
+                          }
+                          if (null != message.referenced_message) {
+                            const referenced_message = message.referenced_message;
+                            closure_0 = false;
+                            const mention_games1 = referenced_message.mention_games;
+                            if (mention_games1 != null) {
+                              const item1 = mention_games1.forEach(() => { ... });
+                            }
+                            if (null != referenced_message.referenced_message) {
+                              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            }
+                            const message_snapshots = referenced_message.message_snapshots;
+                            if (message_snapshots != null) {
+                              const item2 = message_snapshots.forEach(() => { ... });
+                            }
+                            let tmp6 = closure_0;
+                            if (!closure_0) {
+                              tmp6 = closure_0;
+                            }
+                            closure_0 = tmp6;
+                          }
+                          const message_snapshots1 = message.message_snapshots;
+                          if (message_snapshots1 != null) {
+                            const item3 = message_snapshots1.forEach(() => { ... });
+                          }
+                          let tmp8 = closure_0;
+                          if (!closure_0) {
+                            tmp8 = closure_0;
+                          }
+                          closure_0 = tmp8;
+                        });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
           }
-          closure_0 = tmp5;
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = closure_0;
+          }
+          closure_0 = tmp6;
         }
-        let tmp6 = closure_0;
+        const message_snapshots1 = message_preview.message_snapshots;
+        if (message_snapshots1 != null) {
+          const item3 = message_snapshots1.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp8 = closure_0;
         if (!closure_0) {
-          tmp6 = closure_0;
+          tmp8 = closure_0;
         }
-        closure_0 = tmp6;
+        closure_0 = tmp8;
       }
     });
     return closure_0;
@@ -762,17 +9180,21 @@ const gameStore = new GameStore(DispatcherDefault, {
         closure_0 = false;
         const mention_games = message.mention_games;
         if (mention_games != null) {
-          const item = mention_games.forEach((game_flags) => {
-            if (tmp) {
-              if (!map.has(game_flags.id)) {
-                const tmp8 = new closure_2_2(game_flags);
-                const result = map.set(game_flags.id, tmp8);
-                c0 = true;
-                set2.delete(game_flags.id);
-                set.delete(game_flags.id);
+          const item = mention_games.forEach((third_party_skus) => {
+            let isArray = "third_party_skus" in third_party_skus;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(third_party_skus.third_party_skus);
+            }
+            if (isArray) {
+              if (!map.has(third_party_skus.id)) {
+                const tmp9 = new closure_2_2(third_party_skus);
+                const result = map.set(third_party_skus.id, tmp9);
+                closure_0 = true;
+                set2.delete(third_party_skus.id);
+                set.delete(third_party_skus.id);
               }
             }
-            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != message.referenced_message) {
@@ -780,38 +9202,748 @@ const gameStore = new GameStore(DispatcherDefault, {
           closure_0 = false;
           const mention_games1 = referenced_message.mention_games;
           if (mention_games1 != null) {
-            const item1 = mention_games1.forEach((game_flags) => {
-              if (tmp) {
-                if (!map.has(game_flags.id)) {
-                  const tmp8 = new closure_2_2(game_flags);
-                  const result = map.set(game_flags.id, tmp8);
-                  c0 = true;
-                  set2.delete(game_flags.id);
-                  set.delete(game_flags.id);
+            const item1 = mention_games1.forEach((third_party_skus) => {
+              let isArray = "third_party_skus" in third_party_skus;
+              if (isArray) {
+                const _Array = Array;
+                isArray = Array.isArray(third_party_skus.third_party_skus);
+              }
+              if (isArray) {
+                if (!map.has(third_party_skus.id)) {
+                  const tmp9 = new closure_2_2(third_party_skus);
+                  const result = map.set(third_party_skus.id, tmp9);
+                  closure_0 = true;
+                  set2.delete(third_party_skus.id);
+                  set.delete(third_party_skus.id);
                 }
               }
-              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
             closure_0 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
             const tmp4 = createGamesFromMessage(referenced_message.referenced_message) || closure_0;
           }
-          let tmp5 = closure_0;
-          if (!closure_0) {
-            tmp5 = closure_0;
+          const message_snapshots = referenced_message.message_snapshots;
+          if (message_snapshots != null) {
+            const item2 = message_snapshots.forEach((message) => {
+              message = message.message;
+              closure_0 = false;
+              const mention_games = message.mention_games;
+              if (mention_games != null) {
+                const item = mention_games.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != message.referenced_message) {
+                const referenced_message = message.referenced_message;
+                closure_0 = false;
+                const mention_games1 = referenced_message.mention_games;
+                if (mention_games1 != null) {
+                  const item1 = mention_games1.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != referenced_message.referenced_message) {
+                  closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                }
+                const message_snapshots = referenced_message.message_snapshots;
+                if (message_snapshots != null) {
+                  const item2 = message_snapshots.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach((third_party_skus) => {
+                          let isArray = "third_party_skus" in third_party_skus;
+                          if (isArray) {
+                            const _Array = Array;
+                            isArray = Array.isArray(third_party_skus.third_party_skus);
+                          }
+                          if (isArray) {
+                            if (!map.has(third_party_skus.id)) {
+                              const tmp9 = new closure_2_2(third_party_skus);
+                              const result = map.set(third_party_skus.id, tmp9);
+                              closure_0 = true;
+                              set2.delete(third_party_skus.id);
+                              set.delete(third_party_skus.id);
+                            }
+                          }
+                        });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach((message) => {
+                          message = message.message;
+                          closure_0 = false;
+                          const mention_games = message.mention_games;
+                          if (mention_games != null) {
+                            const item = mention_games.forEach(() => { ... });
+                          }
+                          if (null != message.referenced_message) {
+                            const referenced_message = message.referenced_message;
+                            closure_0 = false;
+                            const mention_games1 = referenced_message.mention_games;
+                            if (mention_games1 != null) {
+                              const item1 = mention_games1.forEach(() => { ... });
+                            }
+                            if (null != referenced_message.referenced_message) {
+                              closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                              const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            }
+                            const message_snapshots = referenced_message.message_snapshots;
+                            if (message_snapshots != null) {
+                              const item2 = message_snapshots.forEach(() => { ... });
+                            }
+                            let tmp6 = closure_0;
+                            if (!closure_0) {
+                              tmp6 = closure_0;
+                            }
+                            closure_0 = tmp6;
+                          }
+                          const message_snapshots1 = message.message_snapshots;
+                          if (message_snapshots1 != null) {
+                            const item3 = message_snapshots1.forEach(() => { ... });
+                          }
+                          let tmp8 = closure_0;
+                          if (!closure_0) {
+                            tmp8 = closure_0;
+                          }
+                          closure_0 = tmp8;
+                        });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp6 = closure_0;
+                if (!closure_0) {
+                  tmp6 = closure_0;
+                }
+                closure_0 = tmp6;
+              }
+              const message_snapshots1 = message.message_snapshots;
+              if (message_snapshots1 != null) {
+                const item3 = message_snapshots1.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp8 = closure_0;
+              if (!closure_0) {
+                tmp8 = closure_0;
+              }
+              closure_0 = tmp8;
+            });
           }
-          closure_0 = tmp5;
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = closure_0;
+          }
+          closure_0 = tmp6;
         }
-        let tmp6 = closure_0;
+        const message_snapshots1 = message.message_snapshots;
+        if (message_snapshots1 != null) {
+          const item3 = message_snapshots1.forEach((message) => {
+            message = message.message;
+            closure_0 = false;
+            const mention_games = message.mention_games;
+            if (mention_games != null) {
+              const item = mention_games.forEach((third_party_skus) => {
+                let isArray = "third_party_skus" in third_party_skus;
+                if (isArray) {
+                  const _Array = Array;
+                  isArray = Array.isArray(third_party_skus.third_party_skus);
+                }
+                if (isArray) {
+                  if (!map.has(third_party_skus.id)) {
+                    const tmp9 = new closure_2_2(third_party_skus);
+                    const result = map.set(third_party_skus.id, tmp9);
+                    closure_0 = true;
+                    set2.delete(third_party_skus.id);
+                    set.delete(third_party_skus.id);
+                  }
+                }
+              });
+            }
+            if (null != message.referenced_message) {
+              const referenced_message = message.referenced_message;
+              closure_0 = false;
+              const mention_games1 = referenced_message.mention_games;
+              if (mention_games1 != null) {
+                const item1 = mention_games1.forEach((third_party_skus) => {
+                  let isArray = "third_party_skus" in third_party_skus;
+                  if (isArray) {
+                    const _Array = Array;
+                    isArray = Array.isArray(third_party_skus.third_party_skus);
+                  }
+                  if (isArray) {
+                    if (!map.has(third_party_skus.id)) {
+                      const tmp9 = new closure_2_2(third_party_skus);
+                      const result = map.set(third_party_skus.id, tmp9);
+                      closure_0 = true;
+                      set2.delete(third_party_skus.id);
+                      set.delete(third_party_skus.id);
+                    }
+                  }
+                });
+              }
+              if (null != referenced_message.referenced_message) {
+                closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+              }
+              const message_snapshots = referenced_message.message_snapshots;
+              if (message_snapshots != null) {
+                const item2 = message_snapshots.forEach((message) => {
+                  message = message.message;
+                  closure_0 = false;
+                  const mention_games = message.mention_games;
+                  if (mention_games != null) {
+                    const item = mention_games.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != message.referenced_message) {
+                    const referenced_message = message.referenced_message;
+                    closure_0 = false;
+                    const mention_games1 = referenced_message.mention_games;
+                    if (mention_games1 != null) {
+                      const item1 = mention_games1.forEach((third_party_skus) => {
+                        let isArray = "third_party_skus" in third_party_skus;
+                        if (isArray) {
+                          const _Array = Array;
+                          isArray = Array.isArray(third_party_skus.third_party_skus);
+                        }
+                        if (isArray) {
+                          if (!map.has(third_party_skus.id)) {
+                            const tmp9 = new closure_2_2(third_party_skus);
+                            const result = map.set(third_party_skus.id, tmp9);
+                            closure_0 = true;
+                            set2.delete(third_party_skus.id);
+                            set.delete(third_party_skus.id);
+                          }
+                        }
+                      });
+                    }
+                    if (null != referenced_message.referenced_message) {
+                      closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    }
+                    const message_snapshots = referenced_message.message_snapshots;
+                    if (message_snapshots != null) {
+                      const item2 = message_snapshots.forEach((message) => {
+                        message = message.message;
+                        closure_0 = false;
+                        const mention_games = message.mention_games;
+                        if (mention_games != null) {
+                          const item = mention_games.forEach(() => { ... });
+                        }
+                        if (null != message.referenced_message) {
+                          const referenced_message = message.referenced_message;
+                          closure_0 = false;
+                          const mention_games1 = referenced_message.mention_games;
+                          if (mention_games1 != null) {
+                            const item1 = mention_games1.forEach(() => { ... });
+                          }
+                          if (null != referenced_message.referenced_message) {
+                            closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                            const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          }
+                          const message_snapshots = referenced_message.message_snapshots;
+                          if (message_snapshots != null) {
+                            const item2 = message_snapshots.forEach(() => { ... });
+                          }
+                          let tmp6 = closure_0;
+                          if (!closure_0) {
+                            tmp6 = closure_0;
+                          }
+                          closure_0 = tmp6;
+                        }
+                        const message_snapshots1 = message.message_snapshots;
+                        if (message_snapshots1 != null) {
+                          const item3 = message_snapshots1.forEach(() => { ... });
+                        }
+                        let tmp8 = closure_0;
+                        if (!closure_0) {
+                          tmp8 = closure_0;
+                        }
+                        closure_0 = tmp8;
+                      });
+                    }
+                    let tmp6 = closure_0;
+                    if (!closure_0) {
+                      tmp6 = closure_0;
+                    }
+                    closure_0 = tmp6;
+                  }
+                  const message_snapshots1 = message.message_snapshots;
+                  if (message_snapshots1 != null) {
+                    const item3 = message_snapshots1.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp8 = closure_0;
+                  if (!closure_0) {
+                    tmp8 = closure_0;
+                  }
+                  closure_0 = tmp8;
+                });
+              }
+              let tmp6 = closure_0;
+              if (!closure_0) {
+                tmp6 = closure_0;
+              }
+              closure_0 = tmp6;
+            }
+            const message_snapshots1 = message.message_snapshots;
+            if (message_snapshots1 != null) {
+              const item3 = message_snapshots1.forEach((message) => {
+                message = message.message;
+                closure_0 = false;
+                const mention_games = message.mention_games;
+                if (mention_games != null) {
+                  const item = mention_games.forEach((third_party_skus) => {
+                    let isArray = "third_party_skus" in third_party_skus;
+                    if (isArray) {
+                      const _Array = Array;
+                      isArray = Array.isArray(third_party_skus.third_party_skus);
+                    }
+                    if (isArray) {
+                      if (!map.has(third_party_skus.id)) {
+                        const tmp9 = new closure_2_2(third_party_skus);
+                        const result = map.set(third_party_skus.id, tmp9);
+                        closure_0 = true;
+                        set2.delete(third_party_skus.id);
+                        set.delete(third_party_skus.id);
+                      }
+                    }
+                  });
+                }
+                if (null != message.referenced_message) {
+                  const referenced_message = message.referenced_message;
+                  closure_0 = false;
+                  const mention_games1 = referenced_message.mention_games;
+                  if (mention_games1 != null) {
+                    const item1 = mention_games1.forEach((third_party_skus) => {
+                      let isArray = "third_party_skus" in third_party_skus;
+                      if (isArray) {
+                        const _Array = Array;
+                        isArray = Array.isArray(third_party_skus.third_party_skus);
+                      }
+                      if (isArray) {
+                        if (!map.has(third_party_skus.id)) {
+                          const tmp9 = new closure_2_2(third_party_skus);
+                          const result = map.set(third_party_skus.id, tmp9);
+                          closure_0 = true;
+                          set2.delete(third_party_skus.id);
+                          set.delete(third_party_skus.id);
+                        }
+                      }
+                    });
+                  }
+                  if (null != referenced_message.referenced_message) {
+                    closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                    const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                  }
+                  const message_snapshots = referenced_message.message_snapshots;
+                  if (message_snapshots != null) {
+                    const item2 = message_snapshots.forEach((message) => {
+                      message = message.message;
+                      closure_0 = false;
+                      const mention_games = message.mention_games;
+                      if (mention_games != null) {
+                        const item = mention_games.forEach(() => { ... });
+                      }
+                      if (null != message.referenced_message) {
+                        const referenced_message = message.referenced_message;
+                        closure_0 = false;
+                        const mention_games1 = referenced_message.mention_games;
+                        if (mention_games1 != null) {
+                          const item1 = mention_games1.forEach(() => { ... });
+                        }
+                        if (null != referenced_message.referenced_message) {
+                          closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                          const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        }
+                        const message_snapshots = referenced_message.message_snapshots;
+                        if (message_snapshots != null) {
+                          const item2 = message_snapshots.forEach(() => { ... });
+                        }
+                        let tmp6 = closure_0;
+                        if (!closure_0) {
+                          tmp6 = closure_0;
+                        }
+                        closure_0 = tmp6;
+                      }
+                      const message_snapshots1 = message.message_snapshots;
+                      if (message_snapshots1 != null) {
+                        const item3 = message_snapshots1.forEach(() => { ... });
+                      }
+                      let tmp8 = closure_0;
+                      if (!closure_0) {
+                        tmp8 = closure_0;
+                      }
+                      closure_0 = tmp8;
+                    });
+                  }
+                  let tmp6 = closure_0;
+                  if (!closure_0) {
+                    tmp6 = closure_0;
+                  }
+                  closure_0 = tmp6;
+                }
+                const message_snapshots1 = message.message_snapshots;
+                if (message_snapshots1 != null) {
+                  const item3 = message_snapshots1.forEach((message) => {
+                    message = message.message;
+                    closure_0 = false;
+                    const mention_games = message.mention_games;
+                    if (mention_games != null) {
+                      const item = mention_games.forEach(() => { ... });
+                    }
+                    if (null != message.referenced_message) {
+                      const referenced_message = message.referenced_message;
+                      closure_0 = false;
+                      const mention_games1 = referenced_message.mention_games;
+                      if (mention_games1 != null) {
+                        const item1 = mention_games1.forEach(() => { ... });
+                      }
+                      if (null != referenced_message.referenced_message) {
+                        closure_0 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                        const tmp4 = closure_2_7(referenced_message.referenced_message) || closure_0;
+                      }
+                      const message_snapshots = referenced_message.message_snapshots;
+                      if (message_snapshots != null) {
+                        const item2 = message_snapshots.forEach(() => { ... });
+                      }
+                      let tmp6 = closure_0;
+                      if (!closure_0) {
+                        tmp6 = closure_0;
+                      }
+                      closure_0 = tmp6;
+                    }
+                    const message_snapshots1 = message.message_snapshots;
+                    if (message_snapshots1 != null) {
+                      const item3 = message_snapshots1.forEach(() => { ... });
+                    }
+                    let tmp8 = closure_0;
+                    if (!closure_0) {
+                      tmp8 = closure_0;
+                    }
+                    closure_0 = tmp8;
+                  });
+                }
+                let tmp8 = closure_0;
+                if (!closure_0) {
+                  tmp8 = closure_0;
+                }
+                closure_0 = tmp8;
+              });
+            }
+            let tmp8 = closure_0;
+            if (!closure_0) {
+              tmp8 = closure_0;
+            }
+            closure_0 = tmp8;
+          });
+        }
+        let tmp8 = closure_0;
         if (!closure_0) {
-          tmp6 = closure_0;
+          tmp8 = closure_0;
         }
-        closure_0 = tmp6;
+        closure_0 = tmp8;
       }
     });
     return closure_0;
-  },
+  }
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/GameStore.tsx");

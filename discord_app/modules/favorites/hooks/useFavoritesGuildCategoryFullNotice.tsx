@@ -1,12 +1,12 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _modDef3447 from "../intl/FavoritesGuild.messages.js";
+import _modDef3465 from "../intl/FavoritesGuild.messages.js";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 const initialize = intl(504);
 const util = intl(1128);
 const FavoritesUtils = intl(2093);
-const FavoritesHooks = intl(10562);
+const FavoritesHooks = intl(10625);
 require = fn;
 let closure_4 = fn(2081).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1087).ChannelTypes;
@@ -51,9 +51,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
                     const obj2 = { label: null, tooltip: null };
                     const intl2 = util.intl;
-                    obj2.label = intl2.string(_modDef3447.WsUrMD);
+                    obj2.label = intl2.string(_modDef3465.WsUrMD);
                     intl = util.intl;
-                    stringResult = intl.string(_modDef3447.dW9Kov);
+                    stringResult = intl.string(_modDef3465.dW9Kov);
                     obj2.tooltip = stringResult;
                     cResult[2] = obj2;
                   }
@@ -86,9 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (formatted === closure_4.toLowerCase()) {
                   const obj2 = { label: null, tooltip: null };
                   const intl = util.intl;
-                  obj2.label = intl.string(_modDef3447.WsUrMD);
+                  obj2.label = intl.string(_modDef3465.WsUrMD);
                   const intl2 = util.intl;
-                  obj2.tooltip = intl2.string(_modDef3447.dW9Kov);
+                  obj2.tooltip = intl2.string(_modDef3465.dW9Kov);
                   tmp6 = obj2;
                 }
               }

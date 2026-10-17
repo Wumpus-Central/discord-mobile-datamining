@@ -20,9 +20,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(10599);
+const ChannelCallStore = fn(10662);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(10600);
+const ChannelCallConstants = fn(10663);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1087);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -32,7 +32,7 @@ let c15 = 500;
 let c16 = 20;
 function EXTENDED_CONTROLS_OFFSET_Y(arg0) {}
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {}
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   bottomDrawerContainer: null,
   visualEffectView: null,
@@ -227,18 +227,18 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       positionY = positionY.positionY;
       const tmp4 = closure_19();
       const obj = positionY(576);
-      const canShowTooltip = positionY(11347).useCanShowTooltip(
+      const canShowTooltip = positionY(11406).useCanShowTooltip(
         positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
         true,
       );
-      const obj2 = positionY(11347);
+      const obj2 = positionY(11406);
       const fn = function o() {
         return { opacity: 1 - Math.min((-1 * positionY.get()) / c16, 1) };
       };
       fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
       fn.__workletHash = 15386908151356;
       fn.__initData = __initData3;
-      const animatedStyle = positionY(4909).useAnimatedStyle(fn);
+      const animatedStyle = positionY(4945).useAnimatedStyle(fn);
       if (canShowTooltip) {
         const _Symbol = Symbol;
         ({ tooltipStyle, containerStyle, labelStyle } = tmp4);
@@ -288,17 +288,17 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      const obj3 = positionY(4909);
+      const obj3 = positionY(4945);
       const obj4 = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
     }
   : function FocusedControlsBottomDrawerTooltip(positionY) {
       positionY = positionY.positionY;
       const tmp = closure_19();
-      const canShowTooltip = positionY(11347).useCanShowTooltip(
+      const canShowTooltip = positionY(11406).useCanShowTooltip(
         positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
         true,
       );
-      positionY(4909);
+      positionY(4945);
       const fn = function o() {
         return { opacity: 1 - Math.min((-1 * positionY.get()) / c16, 1) };
       };
@@ -348,7 +348,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
       fn.__workletHash = 16821998405506;
       fn.__initData = __initData5;
-      const animatedStyle = positionY(4909).useAnimatedStyle(fn);
+      const animatedStyle = positionY(4945).useAnimatedStyle(fn);
       if (cResult[0] !== isExpanded) {
         const obj4 = { expanded: isExpanded };
         cResult[0] = isExpanded;
@@ -367,7 +367,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_13(tmp(7069).ActionSheetHeaderBar, {});
+        const tmp13 = closure_13(tmp(7122).ActionSheetHeaderBar, {});
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -425,14 +425,14 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [tmp4.aboveActionBarChildrenContainer, animatedStyle];
         obj8.style = items1;
         obj8.children = aboveActionBar;
-        tmp15 = closure_13(offsetY(4909).View, obj8);
+        tmp15 = closure_13(offsetY(4945).View, obj8);
       }
       cResult[5] = aboveActionBar;
       cResult[6] = animatedStyle;
       cResult[7] = tmp4.aboveActionBarChildrenContainer;
       cResult[8] = tmp15;
       tmp14 = tmp15;
-      const obj2 = positionY(4909);
+      const obj2 = positionY(4945);
       const obj3 = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
     }
   : function FocusedControlsAboveActionBarView(positionY) {
@@ -457,15 +457,15 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const obj4 = { style: tmp.aboveActionBarContainer, children: null };
-      const animatedStyle = positionY(4909).useAnimatedStyle(fn);
-      const items = [closure_13(closure_27, { positionY }), closure_13(positionY(7069).ActionSheetHeaderBar, {})];
+      const animatedStyle = positionY(4945).useAnimatedStyle(fn);
+      const items = [closure_13(closure_27, { positionY }), closure_13(positionY(7122).ActionSheetHeaderBar, {})];
       let tmp4Result = null != aboveActionBar;
       if (tmp4Result) {
         obj5 = { style: null, children: null };
         const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
         obj5.style = items1;
         obj5.children = aboveActionBar;
-        tmp4Result = closure_13(offsetY(4909).View, obj5);
+        tmp4Result = closure_13(offsetY(4945).View, obj5);
       }
       items[2] = tmp4Result;
       obj4.children = items;

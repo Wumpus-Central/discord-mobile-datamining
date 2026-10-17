@@ -2,8 +2,8 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9156 from "../../../../../../../_runtime/metro/09156__.js";
-import _mod9157 from "../../../../../../../_runtime/metro/09157__.js";
+import _mod9216 from "../../../../../../../_runtime/metro/09216__.js";
+import _mod9217 from "../../../../../../../_runtime/metro/09217__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -45,7 +45,7 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod9156;
+        const tmpResult = _mod9216;
         cResult[5] = tmpResult;
         let tmp11 = tmpResult;
       } else {
@@ -58,7 +58,7 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult2 = _mod9157;
+            const tmpResult2 = _mod9217;
             cResult[10] = tmpResult2;
             let tmp16 = tmpResult2;
           } else {
@@ -133,9 +133,9 @@ export const CirclePlayIcon = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const merged1 = Object.assign(merged);
       const items = [
-        timestampProducer(BaseIconImage.BaseIconImage, { source: _mod9156, color: secondaryColor, style }),
+        timestampProducer(BaseIconImage.BaseIconImage, { source: _mod9216, color: secondaryColor, style }),
       ];
-      const obj3 = { source: _mod9157, color: INTERACTIVE_ICON_DEFAULT, style: null };
+      const obj3 = { source: _mod9217, color: INTERACTIVE_ICON_DEFAULT, style: null };
       const items1 = [style];
       const items2 = [];
       items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

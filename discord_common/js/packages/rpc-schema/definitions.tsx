@@ -2107,7 +2107,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "test",
+    response: "Reflect",
   },
   [helpers.RPCCommand.GET_CONTEXT]: obj36,
   [helpers.RPCCommand.GET_USER]: {
@@ -2176,7 +2176,7 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "test",
+    response: "Reflect",
   },
   [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj44,
   [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj45,
@@ -2195,7 +2195,7 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "OrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "test",
+    response: "Reflect",
   },
   [helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
@@ -2208,7 +2208,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "code", response: "" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2603 from "../GuildPowerups.messages.js";
+import _modDef2621 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useGuildPowerupOnDeactivateDefault from "../hooks/useGuildPowerupOnDeactivate.tsx";
 import useDeactivateWarningTextDefault from "../hooks/useDeactivateWarningText.tsx";
@@ -38,10 +38,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, powerup } = arg0);
       const tmp4 = closure_6();
       _require = tmp4;
-      const tmp6 = onDeactivate(13159)(guildId, powerup);
+      const tmp6 = onDeactivate(13224)(guildId, powerup);
       onDeactivate = tmp6.onDeactivate;
       const error = tmp6.error;
-      const arr = onDeactivate(13160)(guildId, powerup);
+      const arr = onDeactivate(13225)(guildId, powerup);
       let obj = require("c");
       const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(
         guildId,
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "custom",
           style: { width: 40, height: 40 },
         };
-        const tmp10 = closure_4(tmp(6514).CircleErrorIcon, obj3);
+        const tmp10 = closure_4(tmp(6567).CircleErrorIcon, obj3);
         cResult[0] = tmp10;
         let first = tmp10;
       } else {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== powerup.title) {
         const intl = tmp(1128).intl;
         const obj5 = { perk: powerup.title };
-        const formatToPlainStringResult = intl.formatToPlainString(tmp5(2603).iEBw1M, obj5);
+        const formatToPlainStringResult = intl.formatToPlainString(tmp5(2621).iEBw1M, obj5);
         cResult[3] = powerup.title;
         cResult[4] = formatToPlainStringResult;
         let tmp15 = formatToPlainStringResult;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] !== powerup.title) {
         const intl2 = tmp(1128).intl;
         const obj6 = { perk: powerup.title };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(tmp5(2603)["7o0K+2"], obj6);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(tmp5(2621)["7o0K+2"], obj6);
         cResult[5] = powerup.title;
         cResult[6] = formatToPlainStringResult1;
         let tmp17 = formatToPlainStringResult1;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = tmp(1128).intl;
-          const stringResult = intl3.string(tmp5(2603).PYPdl4);
+          const stringResult = intl3.string(tmp5(2621).PYPdl4);
           cResult[12] = stringResult;
           let tmp23 = stringResult;
         } else {
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp22) {
           const obj7 = { variant: "destructive", onPress: tmp22, text: tmp23 };
-          const tmp27 = closure_4(tmp(5368).AlertActionButton, obj7, "deactivate");
+          const tmp27 = closure_4(tmp(5405).AlertActionButton, obj7, "deactivate");
           cResult[13] = tmp22;
           cResult[14] = tmp27;
           let tmp25 = tmp27;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { onPress: tmp28, variant: "secondary", text: null };
           const intl4 = tmp(1128).intl;
           obj8.text = intl4.string(tmp(1128).t["ETE/oC"]);
-          const tmp31 = closure_4(tmp(5368).AlertActionButton, obj8, "cancel");
+          const tmp31 = closure_4(tmp(5405).AlertActionButton, obj8, "cancel");
           cResult[16] = tmp31;
           let tmp29 = tmp31;
         } else {
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj9 = { header: tmp11, title: tmp15, content: tmp17, actions: tmp32, extraContent: tmp40 };
-                const tmp46 = closure_4(tmp(5368).AlertModal, obj9);
+                const tmp46 = closure_4(tmp(5405).AlertModal, obj9);
                 cResult[28] = tmp32;
                 cResult[29] = tmp40;
                 cResult[30] = tmp11;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { children: null };
         const items = [tmp19, tmp25, tmp29];
         obj11.children = items;
-        const tmp34 = closure_5(tmp(5368).AlertActions, obj11);
+        const tmp34 = closure_5(tmp(5405).AlertActions, obj11);
         cResult[17] = tmp19;
         cResult[18] = tmp25;
         cResult[19] = tmp34;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: error,
         };
-        tmp20 = closure_4(tmp(5150).Text, obj12);
+        tmp20 = closure_4(tmp(5187).Text, obj12);
       }
       cResult[7] = error;
       cResult[8] = tmp4.warningText;
@@ -256,9 +256,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj2.header = closure_4(View, obj3);
       const intl = require("util").intl;
-      obj2.title = intl.formatToPlainString(_modDef2603.iEBw1M, { perk: powerup.title });
+      obj2.title = intl.formatToPlainString(_modDef2621.iEBw1M, { perk: powerup.title });
       const intl2 = require("util").intl;
-      obj2.content = intl2.formatToPlainString(_modDef2603["7o0K+2"], { perk: powerup.title });
+      obj2.content = intl2.formatToPlainString(_modDef2621["7o0K+2"], { perk: powerup.title });
       let tmp7Result = null != error;
       if (tmp7Result) {
         const obj7 = {
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: error,
         };
-        tmp7Result = closure_4(tmp5(5150).Text, obj7);
+        tmp7Result = closure_4(tmp5(5187).Text, obj7);
       }
       const obj8 = { children: null };
       const items = [tmp7Result, ,];
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         text: null,
       };
       const intl3 = tmp5(1128).intl;
-      obj9.text = intl3.string(_modDef2603.PYPdl4);
+      obj9.text = intl3.string(_modDef2621.PYPdl4);
       items[1] = closure_4(require("AlertModal").AlertActionButton, obj9, "deactivate");
       const obj10 = {
         onPress() {},

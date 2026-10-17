@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05454_LinearGradient.js";
-import _modDef6467 from "../../../../../_runtime/metro/06467__.js";
+import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
+import LinearGradientDefault from "../../../../../_runtime/05491_LinearGradient.js";
+import _modDef6520 from "../../../../../_runtime/metro/06520__.js";
 import conjureChatTurns from "../conjureChatTurns.tsx";
 import conjurePublishCard from "../../publish/conjurePublishCard.tsx";
 import ConjureTodoState from "../../agent_activity/ConjureTodoState.tsx";
@@ -31,7 +31,7 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(10898);
+let ConjureConnectionStore = fn(10962);
 ({
   ensureConnection: closure_7,
   interruptTurn: closure_8,
@@ -51,7 +51,7 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: { flex: 1 },
   transcript: { flex: 1 },
@@ -145,7 +145,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj7 = { style: transcript, maskElement: tmp23, children };
-              const tmp30 = value2(_modDef6467, obj7);
+              const tmp30 = value2(_modDef6520, obj7);
               cResult[11] = children;
               cResult[12] = tmp3.transcript;
               cResult[13] = tmp23;
@@ -189,7 +189,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = items;
         obj2.maskElement = value3(View, obj3);
         obj2.children = children;
-        tmp3 = value2(_modDef6467, obj2);
+        tmp3 = value2(_modDef6520, obj2);
       }
       return tmp3;
     };
@@ -1435,7 +1435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items30 = [projectId];
       closure_21 = obj3.useCallback(() => {
         const intl = util.intl;
-        conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3865.EMgIuY));
+        conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3883.EMgIuY));
       }, items30);
       const items31 = [projectId];
       onPickIdea = obj3.useCallback((implementation_prompt) => {
@@ -1450,7 +1450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items33 = [projectId];
       const callback1 = obj3.useCallback(() => {
         const intl = util.intl;
-        collapsed(projectId, intl.string(_modDef3865["t5CN3+"]));
+        collapsed(projectId, intl.string(_modDef3883["t5CN3+"]));
       }, items32);
       closure_23 = obj3.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
         conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt, {

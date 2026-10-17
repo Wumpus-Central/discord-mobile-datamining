@@ -9,7 +9,7 @@ require = fn;
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   alertContainer: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -49,7 +49,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(13599, dependencyMap.paths),
+        asyncRequireImpl(13667, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );

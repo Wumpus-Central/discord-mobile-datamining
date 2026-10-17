@@ -5,7 +5,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef17314 from "../../../../../_runtime/metro/17314__.js";
+import _modDef17373 from "../../../../../_runtime/metro/17373__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const GuildSettingsSections = fn(1087).GuildSettingsSections;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({
   container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 },
   title: { marginBottom: 6 },
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp8,
           };
-          const tmp11 = closure_6(tmp(5150).Text, obj3);
+          const tmp11 = closure_6(tmp(5187).Text, obj3);
           cResult[6] = tmp4.title;
           cResult[7] = tmp11;
         } else {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp12,
           };
-          const tmp15 = closure_6(tmp(5150).Text, obj5);
+          const tmp15 = closure_6(tmp(5187).Text, obj5);
           cResult[9] = tmp4.description;
           cResult[10] = tmp15;
         } else {
@@ -140,11 +140,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17314) };
-          const tmp19 = closure_6(markAsDismissed(5091), obj6);
+          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17373) };
+          const tmp19 = closure_6(markAsDismissed(5128), obj6);
           cResult[11] = tmp4.image;
           cResult[12] = tmp19;
-          const tmp18 = markAsDismissed(5091);
+          const tmp18 = markAsDismissed(5128);
         } else {
           class N {
             constructor() {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj8 = { onPress: tmp5, text: tmp20 };
-          const tmp23 = closure_6(tmp(5442).Button, obj8);
+          const tmp23 = closure_6(tmp(5479).Button, obj8);
           cResult[14] = tmp5;
           cResult[15] = tmp23;
         } else {
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj10 = { onPress: A, text: tmp25, variant: "secondary" };
-          const tmp28 = closure_6(tmp(5442).Button, obj10);
+          const tmp28 = closure_6(tmp(5479).Button, obj10);
           cResult[19] = A;
           cResult[20] = tmp28;
         } else {
@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.kUUFbG);
       items[1] = closure_6(Text_Text.Text, obj4);
-      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17314 };
+      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17373 };
       items[2] = closure_6(FastImageDefault, obj5);
       const obj6 = {
         onPress: function handleCheckItOut() {

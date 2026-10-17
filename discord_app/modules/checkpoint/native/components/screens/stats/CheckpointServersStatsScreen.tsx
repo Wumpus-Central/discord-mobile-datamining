@@ -4,8 +4,8 @@ import initialize from "../../../../../../../discord_common/js/packages/flux/ind
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3091 from "../../../../Checkpoint.messages.js";
-import _modDef3123 from "../../../../Checkpoint2026.messages.js";
+import _modDef3109 from "../../../../Checkpoint.messages.js";
+import _modDef3141 from "../../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -226,7 +226,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl = util.intl;
       const intl2 = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3091.UZbUtl, { numMinutes: rounded });
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3109.UZbUtl, { numMinutes: rounded });
       ({ guildCard, guildContent } = tmp4);
       const sum = index + 1;
       if (cResult[24] !== sum) {
@@ -324,7 +324,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[28] = tmp25;
       tmp24 = tmp25;
       const obj15 = { style: tmp4.guildRankRow, children: tmp21 };
-      stringResult = intl2.string(_modDef3091.wWKySP);
+      stringResult = intl2.string(_modDef3109.wWKySP);
     }
   : function GuildCard(arg0) {
       ({ guild, index } = arg0);
@@ -334,7 +334,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const rounded1 = Math.round(numMessagesSent);
       const intl = util.intl;
       const intl2 = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3091.UZbUtl, { numMinutes: rounded });
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3109.UZbUtl, { numMinutes: rounded });
       const obj = { style: tmp.guildCard, children: null };
       const obj2 = { style: tmp.guildContent, children: null };
       const obj3 = {
@@ -392,7 +392,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         ellipsizeMode: "tail",
         children: guild.name,
       };
-      stringResult = intl2.string(_modDef3091.wWKySP);
+      stringResult = intl2.string(_modDef3109.wWKySP);
       obj14.size = GuildIcon.GuildIconSizes.XXLARGE;
       obj14.style = 0 === index ? tmp.topGuildIcon : tmp.guildIcon;
       items5[1] = timestampProducer(GuildIconDefault, obj14);
@@ -434,10 +434,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const toLocaleUpperCaseResult = intl.string(_modDef3123.Mb5E6r).toLocaleUpperCase();
+        const toLocaleUpperCaseResult = intl.string(_modDef3141.Mb5E6r).toLocaleUpperCase();
         cResult[1] = toLocaleUpperCaseResult;
         let tmp9 = toLocaleUpperCaseResult;
-        const stringResult = intl.string(_modDef3123.Mb5E6r);
+        const stringResult = intl.string(_modDef3141.Mb5E6r);
       } else {
         tmp9 = cResult[1];
       }
@@ -459,11 +459,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { variant: "display-lg", children: null };
           const intl2 = util.intl;
           const tmp21 = CheckpointTextDefault;
-          obj5.children = intl2.string(_modDef3091.F0fkrh).toLocaleUpperCase();
+          obj5.children = intl2.string(_modDef3109.F0fkrh).toLocaleUpperCase();
           const tmp22 = timestampProducer(tmp21, obj5);
           cResult[7] = tmp22;
           let tmp18 = tmp22;
-          const stringResult1 = intl2.string(_modDef3091.F0fkrh);
+          const stringResult1 = intl2.string(_modDef3109.F0fkrh);
         } else {
           tmp18 = cResult[7];
         }
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             const obj6 = { variant: "heading-lg/medium", children: null };
             const intl3 = util.intl;
-            obj6.children = intl3.string(_modDef3123.IN1DaS);
+            obj6.children = intl3.string(_modDef3141.IN1DaS);
             const tmp31 = timestampProducer(CheckpointTextDefault, obj6);
             cResult[11] = tmp31;
             let tmp27 = tmp31;
@@ -598,22 +598,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = CheckpointScreenDefault;
       const intl = util.intl;
       const tmp5 = CheckpointTextDefault;
-      obj8.children = intl.string(_modDef3123.Mb5E6r).toLocaleUpperCase();
+      obj8.children = intl.string(_modDef3141.Mb5E6r).toLocaleUpperCase();
       items1[1] = timestampProducer(tmp5, obj8);
       obj6.children = items1;
       const items2 = [React5(View, obj6)];
       const obj9 = { variant: "display-lg", children: null };
-      const stringResult = intl.string(_modDef3123.Mb5E6r);
+      const stringResult = intl.string(_modDef3141.Mb5E6r);
       const intl2 = util.intl;
       const tmp6 = CheckpointTextDefault;
-      obj9.children = intl2.string(_modDef3091.F0fkrh).toLocaleUpperCase();
+      obj9.children = intl2.string(_modDef3109.F0fkrh).toLocaleUpperCase();
       items2[1] = timestampProducer(tmp6, obj9);
       obj5.children = items2;
       const items3 = [React5(View, obj5)];
       const obj10 = { variant: "heading-lg/medium", children: null };
-      const stringResult1 = intl2.string(_modDef3091.F0fkrh);
+      const stringResult1 = intl2.string(_modDef3109.F0fkrh);
       const intl3 = util.intl;
-      obj10.children = intl3.string(_modDef3123.IN1DaS);
+      obj10.children = intl3.string(_modDef3141.IN1DaS);
       items3[1] = timestampProducer(CheckpointTextDefault, obj10);
       obj4.children = items3;
       const items4 = [React5(View, obj4)];

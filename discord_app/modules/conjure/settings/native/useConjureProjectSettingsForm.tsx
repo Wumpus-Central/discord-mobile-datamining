@@ -18,7 +18,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5154);
+let createStyles = fn(5191);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -41,7 +41,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5154);
+createStyles = fn(5191);
 let closure_14 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -852,8 +852,8 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
                   if (!first2) {
                     let result = null;
                     if (closure_25) {
-                      result = tmp4(tmp94[29]).conjureProjectNameError(trimmed);
-                      const obj3 = tmp4(tmp94[29]);
+                      result = tmp4(tmp86[29]).conjureProjectNameError(trimmed);
+                      const obj3 = tmp4(tmp86[29]);
                     }
                     if (null != result) {
                       constants2(result);
@@ -865,30 +865,30 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
                       if (closure_25) {
                         obj6.name = trimmed;
                       }
-                      let tmp54 = closure_26;
+                      let tmp46 = closure_26;
                       if (closure_26) {
                         obj6.flags = flags;
                       }
-                      let tmp56 = closure_27;
+                      let tmp48 = closure_27;
                       if (closure_27) {
                         const _Array = Array;
                         obj6.collaborator_role_ids = Array.from(first1).sort();
                         const arr = Array.from(first1);
                       }
-                      let tmp58 = null == tmp104.guild_id;
-                      if (tmp58) {
-                        tmp58 = null != guild_id;
+                      let tmp50 = null == tmp95.guild_id;
+                      if (tmp50) {
+                        tmp50 = null != guild_id;
                       }
-                      if (tmp58) {
-                        if (!tmp56) {
-                          if (tmp54) {
-                            tmp54 = isGuildCollaboration;
+                      if (tmp50) {
+                        if (!tmp48) {
+                          if (tmp46) {
+                            tmp46 = isGuildCollaboration;
                           }
-                          tmp56 = tmp54;
+                          tmp48 = tmp46;
                         }
-                        tmp58 = tmp56;
+                        tmp50 = tmp48;
                       }
-                      if (tmp58) {
+                      if (tmp50) {
                         obj6.guild_id = guild_id;
                       }
                       closure_19(true);
@@ -898,7 +898,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
                       if (changed) {
                         guild_id = 3;
                         c4 = 1;
-                        const obj7 = { value: tmp4(tmp94[30]).updateProjectSettings(tmp4, obj6), done: false };
+                        const obj7 = { value: tmp4(tmp86[30]).updateProjectSettings(tmp4, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -911,11 +911,11 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           } else if (1 === tmp8) {
             c3 = 0;
             closure_128_19(false);
-            throw tmp94;
+            throw tmp86;
           } else if (2 === tmp8) {
             c3 = 1;
-            const intl2 = tmp4(tmp94[15]).intl;
-            closure_128_21(intl2.string(guild_id(tmp94[16])["9JPr8h"]));
+            const intl = tmp4(tmp86[15]).intl;
+            closure_128_21(intl.string(guild_id(tmp86[16])["9JPr8h"]));
             c3 = 0;
             closure_128_19(false);
             c4 = 3;
@@ -929,7 +929,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
             c4 = 3;
             const obj8 = { value, done: true };
             return obj8;
-          } else if (value.ok) {
+          } else {
             closure_128_11(closure_128_23);
             const obj = { flags: closure_128_14, roleIds: null };
             const items = [];
@@ -937,32 +937,25 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
             obj.roleIds = items;
             closure_128_12(obj);
             closure_128_7();
-          } else {
-            const intl = tmp4(tmp94[15]).intl;
-            closure_128_21(intl.string(guild_id(tmp94[16])["9JPr8h"]));
-            c3 = 0;
-            closure_128_19(false);
-            c4 = 3;
-            return { value: "project", done: true };
           }
           if (closure_128_4()) {
             if (!closure_128_9()) {
-              const intl4 = tmp4(tmp94[15]).intl;
-              closure_128_22(intl4.string(guild_id(tmp94[16])["9JPr8h"]));
+              const intl3 = tmp4(tmp86[15]).intl;
+              closure_128_22(intl3.string(guild_id(tmp86[16])["9JPr8h"]));
               const str2 = "experimental";
             }
           } else {
-            const intl3 = tmp4(tmp94[15]).intl;
-            closure_128_21(intl3.string(guild_id(tmp94[16]).XzkNBw));
+            const intl2 = tmp4(tmp86[15]).intl;
+            closure_128_21(intl2.string(guild_id(tmp86[16]).XzkNBw));
           }
           c3 = 0;
           closure_128_19(false);
           c4 = 3;
-        } catch (tmp94) {
+        } catch (tmp86) {
           if (tmp5 === c3) {
             c4 = tmp3;
-            throw tmp94;
-          } else if (tmp2 === tmp96) {
+            throw tmp86;
+          } else if (tmp2 === tmp88) {
             guild_id = tmp2;
           } else {
             guild_id = tmp;
@@ -1019,7 +1012,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       const obj10 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
       let intl3 = tmp2(tmp3[15]).intl;
       obj10.label = intl3.string(tmp6(tmp3[16]).lVvR4E);
-      let intl4 = tmp2(tmp3[15]).intl;
+      const intl4 = tmp2(tmp3[15]).intl;
       obj10.subLabel = intl4.string(tmp6(tmp3[16]).SQZGoV);
       obj10.checked = isGuildCollaboration;
       obj10.disabled = first2;

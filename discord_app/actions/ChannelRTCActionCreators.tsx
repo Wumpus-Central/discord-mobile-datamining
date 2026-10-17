@@ -24,17 +24,17 @@ export default {
   returnParticipant(channelId, participantId) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_RETURN_PARTICIPANT", channelId, participantId });
   },
-  updateLayout(channelId, video_layout) {
+  updateLayout(channelId, NO_CHAT) {
     let APP = arg2;
     if (arg2 === undefined) {
       APP = constants.APP;
     }
     const obj = AnalyticsUtilsDefault;
-    const obj2 = { video_layout };
+    const obj2 = { video_layout: NO_CHAT };
     const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channelId));
     obj.track(constants2.VIDEO_LAYOUT_TOGGLED, obj2);
-    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: video_layout, appContext: APP });
-    const obj5 = { type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: video_layout, appContext: APP };
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: NO_CHAT, appContext: APP });
+    const obj5 = { type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: NO_CHAT, appContext: APP };
   },
   toggleParticipants(channelId, participantsOpen) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN", channelId, participantsOpen });

@@ -1,7 +1,7 @@
 // discord_app/modules/video_backgrounds/isVideoBackgroundSupported.tsx
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
-const Features = fn(5179).Features;
+const Features = fn(5216).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

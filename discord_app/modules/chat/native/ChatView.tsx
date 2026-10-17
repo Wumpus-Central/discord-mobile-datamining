@@ -25,7 +25,7 @@ const createChannelRecord = fn(2072).createChannelRecord;
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = {
   empty: {
     flex: 1,
@@ -59,20 +59,21 @@ let result = size.fileFinishedImporting("modules/chat/native/ChatView.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? function ChatView(chatInputRef) {
-        let setInterstitialResult2 = HACK_fixModalInteraction;
-        const cResult = channelId(HACK_fixModalInteraction[11]).c(63);
-        ({ alwaysRespectKeyboard, channelId } = chatInputRef);
-        chatInputRef = chatInputRef.chatInputRef;
-        ({ disableGradient, guildId, HACK_fixModalInteraction } = chatInputRef);
-        const screenIndex = chatInputRef.screenIndex;
-        const secondaryTextFieldRef = chatInputRef.secondaryTextFieldRef;
-        const setNoExtractUI = chatInputRef.setNoExtractUI;
-        ChannelStore = tmp4;
-        let messages = visibleMessagesWindowHandler();
+    ? function ChatView(isActive) {
+        let setInterstitialResult2 = chatInputRef;
+        const cResult = channelId(chatInputRef[11]).c(64);
+        ({ alwaysRespectKeyboard, channelId } = isActive);
+        isActive = isActive.isActive;
+        chatInputRef = isActive.chatInputRef;
+        ({ disableGradient, guildId, HACK_fixModalInteraction } = isActive);
+        const screenIndex = isActive.screenIndex;
+        const secondaryTextFieldRef = isActive.secondaryTextFieldRef;
+        const setNoExtractUI = isActive.setNoExtractUI;
+        alwaysRespectKeyboard = tmp4;
+        let messages = ref2();
         if (cResult[0] !== (undefined !== alwaysRespectKeyboard && alwaysRespectKeyboard)) {
           const fn = function u() {
-            if (!closure_6) {
+            if (!closure_7) {
               ChatInputUtils.dismissKeyboard();
             }
           };
@@ -86,10 +87,10 @@ export default noop.memo(
           if (cResult[3] === channelId) {
             let tmp7 = cResult[4];
           }
-          const effect = screenIndex.useEffect(tmp6, tmp7);
+          const effect = HACK_fixModalInteraction.useEffect(tmp6, tmp7);
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            let items = [ChannelStore];
+            let items = [setNoExtractUI];
             cResult[5] = items;
             let tmp10 = items;
           } else {
@@ -134,54 +135,54 @@ export default noop.memo(
                 }
               }
               empty = channelId(setInterstitialResult2[16]).useGetSpoilerGatingChannelId(stateFromStores);
-              closure_9 = obj2.useRef(channelId);
+              closure_10 = HACK_fixModalInteraction.useRef(channelId);
+              HACK_fixModalInteraction.useRef(null);
               const tmp22 = null != empty;
               const tmpResult6 = channelId(setInterstitialResult2[16]);
-              obj2.useRef(null);
               const _Symbol2 = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                class A {
+                class U {
                   constructor() {
-                    tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                    tmp = new isActive(chatInputRef[17])();
                     return tmp;
                   }
                 }
-                cResult[14] = A;
+                cResult[14] = U;
               } else {
-                class A {
+                class U {
                   constructor() {
-                    tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                    tmp = new isActive(chatInputRef[17])();
                     return tmp;
                   }
                 }
               }
-              let setInterstitial = chatInputRef;
-              const tmp24 = chatInputRef(setInterstitialResult2[18])(A);
-              const tmp25 = chatInputRef(setInterstitialResult2[19])(channelId);
+              let setInterstitial = isActive;
+              const tmp24 = isActive(setInterstitialResult2[18])(U);
+              const tmp25 = isActive(setInterstitialResult2[19])(channelId);
               const isResourceChannel = tmp25;
               const _Symbol3 = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                class A {
+                class U {
                   constructor() {
-                    tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                    tmp = new isActive(chatInputRef[17])();
                     return tmp;
                   }
                 }
-                let items1 = [messages];
+                let items1 = [alwaysRespectKeyboard];
                 cResult[15] = items1;
                 const tmp26 = items1;
               } else {
-                class A {
+                class U {
                   constructor() {
-                    tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                    tmp = new isActive(chatInputRef[17])();
                     return tmp;
                   }
                 }
               }
               if (cResult[16] === channelId) {
-                class A {
+                class U {
                   constructor() {
-                    tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                    tmp = new isActive(chatInputRef[17])();
                     return tmp;
                   }
                 }
@@ -194,35 +195,35 @@ export default noop.memo(
                 const shouldRenderBegginingRow = stateFromStoresObject.shouldRenderBegginingRow;
                 const _Symbol4 = Symbol;
                 if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                   cResult[20] = tmp31;
                 } else {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                 }
                 const onScroll = tmp31;
                 if (cResult[21] !== chatInputRef) {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                   cResult[21] = chatInputRef;
                   cResult[22] = tmp33;
                 } else {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
@@ -230,17 +231,17 @@ export default noop.memo(
                 const onPressKey = tmp33;
                 const _Symbol5 = Symbol;
                 if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                   cResult[23] = tmp35;
                 } else {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
@@ -248,17 +249,17 @@ export default noop.memo(
                 const scrollToNewMessages = tmp35;
                 const _Symbol6 = Symbol;
                 if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                   cResult[24] = tmp37;
                 } else {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
@@ -266,9 +267,9 @@ export default noop.memo(
                 const onJumpToPresent = tmp37;
                 const _Symbol7 = Symbol;
                 if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
@@ -277,19 +278,19 @@ export default noop.memo(
                   cResult[26] = items2;
                   let tmp39 = items2;
                 } else {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                   tmp39 = cResult[26];
                 }
-                const layoutEffect = obj2.useLayoutEffect(tmp40, tmp39);
+                const layoutEffect = HACK_fixModalInteraction.useLayoutEffect(tmp40, tmp39);
                 if (cResult[27] !== channelId) {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
@@ -299,145 +300,145 @@ export default noop.memo(
                   cResult[29] = items3;
                   let tmp43 = items3;
                 } else {
-                  class A {
+                  class U {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
+                      tmp = new isActive(chatInputRef[17])();
                       return tmp;
                     }
                   }
                   tmp43 = cResult[29];
                 }
-                const effect1 = obj2.useEffect(tmp44, tmp43);
+                const effect1 = HACK_fixModalInteraction.useEffect(tmp44, tmp43);
                 if (cResult[30] !== channel.id) {
-                  class A {
+                  class Ie {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                      return tmp;
+                      closure_10.current = channel.id;
+                      return;
                     }
                   }
                   const items4 = [channel.id];
                   cResult[30] = channel.id;
-                  cResult[31] = tmp48;
+                  cResult[31] = Ie;
                   cResult[32] = items4;
                   let tmp47 = items4;
                 } else {
-                  class A {
+                  class Ie {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                      return tmp;
+                      closure_10.current = channel.id;
+                      return;
                     }
                   }
                   tmp47 = cResult[32];
                 }
-                const effect2 = obj2.useEffect(tmp48, tmp47);
+                const effect2 = HACK_fixModalInteraction.useEffect(Ie, tmp47);
                 const _Symbol8 = Symbol;
                 if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
-                  class A {
+                  class Ie {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                      return tmp;
+                      closure_10.current = channel.id;
+                      return;
                     }
                   }
                   const items5 = [];
-                  cResult[33] = tmp52;
+                  cResult[33] = tmp51;
                   cResult[34] = items5;
-                  let tmp51 = items5;
+                  let tmp50 = items5;
                 } else {
-                  class A {
+                  class Ie {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                      return tmp;
+                      closure_10.current = channel.id;
+                      return;
                     }
                   }
-                  tmp51 = cResult[34];
+                  tmp50 = cResult[34];
                 }
-                const effect3 = obj2.useEffect(tmp52, tmp51);
+                const effect3 = HACK_fixModalInteraction.useEffect(tmp51, tmp50);
                 if (cResult[35] === HACK_fixModalInteraction) {
-                  class A {
+                  class Ie {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                      return tmp;
+                      closure_10.current = channel.id;
+                      return;
                     }
                   }
                 }
-                if (cResult[58] === channelId) {
-                  class A {
+                if (cResult[59] === channelId) {
+                  class Ie {
                     constructor() {
-                      tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                      return tmp;
+                      closure_10.current = channel.id;
+                      return;
                     }
                   }
-                  if (cResult[61] !== tmp5) {
-                    class A {
+                  if (cResult[62] !== tmp5) {
+                    class Ie {
                       constructor() {
-                        tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                        return tmp;
+                        closure_10.current = channel.id;
+                        return;
                       }
                     }
                     if (!tmp5) {
-                      class A {
+                      class Ie {
                         constructor() {
-                          tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                          return tmp;
+                          closure_10.current = channel.id;
+                          return;
                         }
                       }
-                      const tmp58 = closure_9(setInterstitial(setInterstitialResult2[44]), { absolute: true });
+                      const tmp57 = channel(setInterstitial(setInterstitialResult2[44]), { absolute: true });
                     }
-                    cResult[61] = tmp5;
-                    cResult[62] = tmp58;
-                    const tmp57 = tmp58;
+                    cResult[62] = tmp5;
+                    cResult[63] = tmp57;
+                    const tmp56 = tmp57;
                   } else {
-                    class A {
+                    class Ie {
                       constructor() {
-                        tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                        return tmp;
+                        closure_10.current = channel.id;
+                        return;
                       }
                     }
                   }
                   let obj3 = { profile: channelId(setInterstitialResult2[45]).Profiles.ChatView, children: null };
-                  const items6 = [tmp54, tmp57];
+                  const items6 = [tmp53, tmp56];
                   const setInterstitialResult = setInterstitial(setInterstitialResult2[45]);
-                  const tmp59 = ref;
+                  const tmp58 = closure_10;
                   if (tmpResult8.shouldNSFWGateGuild(guildId)) {
-                    class A {
+                    class Ie {
                       constructor() {
-                        tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                        return tmp;
+                        closure_10.current = channel.id;
+                        return;
                       }
                     }
-                    let tmp61Result = closure_9(setInterstitial(setInterstitialResult2[37]), {});
+                    let tmp60Result = channel(setInterstitial(setInterstitialResult2[37]), {});
                     setInterstitial = setInterstitial(setInterstitialResult2[35]).setInterstitial;
                     setInterstitialResult2 = setInterstitial("NsfwGateChat");
                     const setInterstitialResult1 = setInterstitial(setInterstitialResult2[35]);
                   } else {
-                    class A {
+                    class Ie {
                       constructor() {
-                        tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                        return tmp;
+                        closure_10.current = channel.id;
+                        return;
                       }
                     }
                     if (channelIsLoading) {
-                      class A {
+                      class Ie {
                         constructor() {
-                          tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                          return tmp;
+                          closure_10.current = channel.id;
+                          return;
                         }
                       }
-                      if (!secondaryTextFieldRef.isConnected()) {
-                        class A {
+                      if (!screenIndex.isConnected()) {
+                        class Ie {
                           constructor() {
-                            tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                            return tmp;
+                            closure_10.current = channel.id;
+                            return;
                           }
                         }
-                        tmp61Result = tmp61();
+                        tmp60Result = tmp60();
                       }
                     }
                     if (channelIsLoading) {
-                      class A {
+                      class Ie {
                         constructor() {
-                          tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                          return tmp;
+                          closure_10.current = channel.id;
+                          return;
                         }
                       }
                       let obj4 = { style: messages.empty, title: null, body: null };
@@ -445,21 +446,21 @@ export default noop.memo(
                       obj4.title = intl2.string(channelId(setInterstitialResult2[14]).t.ai6Lbr);
                       const intl3 = channelId(setInterstitialResult2[14]).intl;
                       obj4.body = intl3.string(channelId(setInterstitialResult2[14]).t["LTr+x9"]);
-                      const tmp63 = closure_9(channelId(setInterstitialResult2[38]).EmptyState, obj4);
+                      const tmp62 = channel(channelId(setInterstitialResult2[38]).EmptyState, obj4);
                       setInterstitial(setInterstitialResult2[35]).setInterstitial("EmptyState");
                       const setInterstitialResult3 = setInterstitial(setInterstitialResult2[35]);
                     } else {
-                      class A {
+                      class Ie {
                         constructor() {
-                          tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                          return tmp;
+                          closure_10.current = channel.id;
+                          return;
                         }
                       }
                     }
                   }
-                  items6[2] = tmp61Result;
+                  items6[2] = tmp60Result;
                   obj3.children = items6;
-                  obj3 = tmp59(setInterstitialResult, obj3);
+                  obj3 = tmp58(setInterstitialResult, obj3);
                   cResult[35] = HACK_fixModalInteraction;
                   cResult[36] = tmp4;
                   cResult[37] = channel;
@@ -469,32 +470,33 @@ export default noop.memo(
                   cResult[41] = tmp5;
                   cResult[42] = guildId;
                   cResult[43] = tmp33;
-                  cResult[44] = tmp25;
-                  cResult[45] = isChannelContentGated;
-                  cResult[46] = screenIndex;
-                  cResult[47] = secondaryTextFieldRef;
-                  cResult[48] = setNoExtractUI;
-                  cResult[49] = shouldRenderBegginingRow;
-                  cResult[50] = shouldRenderPlaceholder;
-                  cResult[51] = empty;
-                  cResult[52] = tmp22;
-                  ({ chat: tmp3[53], empty } = messages);
-                  cResult[54] = empty;
+                  cResult[44] = isActive;
+                  cResult[45] = tmp25;
+                  cResult[46] = isChannelContentGated;
+                  cResult[47] = screenIndex;
+                  cResult[48] = secondaryTextFieldRef;
+                  cResult[49] = setNoExtractUI;
+                  cResult[50] = shouldRenderBegginingRow;
+                  cResult[51] = shouldRenderPlaceholder;
+                  cResult[52] = empty;
+                  cResult[53] = tmp22;
+                  ({ chat: tmp3[54], empty } = messages);
+                  cResult[55] = empty;
                   messages = messages.messages;
-                  cResult[55] = messages;
-                  cResult[56] = tmp24;
-                  cResult[57] = obj3;
+                  cResult[56] = messages;
+                  cResult[57] = tmp24;
+                  cResult[58] = obj3;
                   tmpResult8 = channelId(setInterstitialResult2[36]);
                 }
                 let obj5 = { channelId, guildId };
-                const tmp56 = closure_9(setInterstitial(setInterstitialResult2[43]), obj5);
-                cResult[58] = channelId;
-                cResult[59] = guildId;
-                cResult[60] = tmp56;
-                tmp54 = tmp56;
+                const tmp55 = channel(setInterstitial(setInterstitialResult2[43]), obj5);
+                cResult[59] = channelId;
+                cResult[60] = guildId;
+                cResult[61] = tmp55;
+                tmp53 = tmp55;
                 const tmpResult7 = channelId(setInterstitialResult2[13]);
               }
-              const fn2 = function q() {
+              const fn2 = function z() {
                 messages = MessageStore.getMessages(channelId);
                 let tmp = 0 === messages.length;
                 if (tmp) {
@@ -505,7 +507,7 @@ export default noop.memo(
                 const hasMoreBefore = messages.hasMoreBefore;
                 let tmp3 = !hasMoreBefore;
                 if (!hasMoreBefore) {
-                  tmp3 = !closure_13;
+                  tmp3 = !closure_14;
                 }
                 obj.shouldRenderBegginingRow = tmp3;
                 return obj;
@@ -515,10 +517,9 @@ export default noop.memo(
               cResult[17] = tmp25;
               cResult[18] = fn2;
               cResult[19] = items7;
-              ref = obj2.useRef(null);
+              ref2 = HACK_fixModalInteraction.useRef(null);
               tmp27 = fn2;
               tmp28 = items7;
-              visibleMessagesWindowHandler = tmp24;
             }
             let obj6 = { channel: tmp14, channelIsLoading: null == stateFromStores };
             cResult[11] = tmp14;
@@ -528,16 +529,16 @@ export default noop.memo(
           }
           let tmp16 = stateFromStores;
           if (null == stateFromStores) {
-            class A {
+            class Ie {
               constructor() {
-                tmp = new chatInputRef(HACK_fixModalInteraction[17])();
-                return tmp;
+                closure_10.current = channel.id;
+                return;
               }
             }
-            let obj7 = { id: channelId, type: channel.GUILD_TEXT, name: null };
+            let obj7 = { id: channelId, type: messages.GUILD_TEXT, name: null };
             const intl = channelId(setInterstitialResult2[14]).intl;
             obj7.name = intl.string(channelId(setInterstitialResult2[14]).t.ZTNur7);
-            tmp16 = setNoExtractUI(obj7);
+            tmp16 = secondaryTextFieldRef(obj7);
           }
           cResult[8] = channelId;
           cResult[9] = stateFromStores;
@@ -549,7 +550,7 @@ export default noop.memo(
         cResult[3] = channelId;
         cResult[4] = items8;
         tmp7 = items8;
-        let obj = channelId(HACK_fixModalInteraction[11]);
+        let obj = channelId(chatInputRef[11]);
       }
     : function ChatView(alwaysRespectKeyboard) {
         let flag = alwaysRespectKeyboard.alwaysRespectKeyboard;
@@ -557,41 +558,39 @@ export default noop.memo(
           flag = false;
         }
         const channelId = alwaysRespectKeyboard.channelId;
-        const chatInputRef = alwaysRespectKeyboard.chatInputRef;
+        ({ isActive: dependencyMap, chatInputRef } = alwaysRespectKeyboard);
         let flag2 = alwaysRespectKeyboard.disableGradient;
         if (flag2 === undefined) {
           flag2 = false;
         }
         ({
           guildId,
-          HACK_fixModalInteraction: noop,
-          screenIndex: GatewayConnectionStore,
-          secondaryTextFieldRef: createChannelRecord,
-          setNoExtractUI: ChannelStore,
+          HACK_fixModalInteraction: GatewayConnectionStore,
+          screenIndex: createChannelRecord,
+          secondaryTextFieldRef: ChannelStore,
+          setNoExtractUI: MessageStore,
         } = alwaysRespectKeyboard);
         channel = undefined;
-        closure_10 = undefined;
+        closure_11 = undefined;
         let ref;
         let isResourceChannel;
-        c15 = undefined;
         c16 = undefined;
+        c17 = undefined;
         let onScroll;
         let onPressKey;
         let scrollToNewMessages;
         let onJumpToPresent;
         let setInterstitial = ref();
         let items = [channelId, flag];
-        const effect = noop.useEffect(() => {
+        const effect = chatInputRef.useEffect(() => {
           if (!flag) {
             ChatInputUtils.dismissKeyboard();
           }
         }, items);
         let items1 = [ChannelStore];
-        let stateFromStores = flag(chatInputRef[13]).useStateFromStores(items1, () =>
-          ChannelStore.getChannel(channelId),
-        );
+        let stateFromStores = flag(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
         let items2 = [stateFromStores, channelId];
-        const memo = noop.useMemo(() => {
+        const memo = chatInputRef.useMemo(() => {
           let tmp2 = stateFromStores;
           if (null == stateFromStores) {
             const obj = { id: channelId, type: ChannelTypes.GUILD_TEXT, name: null };
@@ -602,23 +601,23 @@ export default noop.memo(
           return { channel: tmp2, channelIsLoading: null == stateFromStores };
         }, items2);
         ({ channelIsLoading, channel } = memo);
-        let obj2 = flag(chatInputRef[13]);
-        const isChannelContentGated = flag(chatInputRef[15]).useIsChannelContentGated(channel);
-        let obj3 = flag(chatInputRef[15]);
+        let obj2 = flag(504);
+        const isChannelContentGated = flag(6180).useIsChannelContentGated(channel);
+        let obj3 = flag(6180);
         if (stateFromStores == null) {
           stateFromStores = null;
         }
-        const getSpoilerGatingChannelId = flag(chatInputRef[16]).useGetSpoilerGatingChannelId(stateFromStores);
-        closure_10 = noop.useRef(channelId);
-        noop.useRef(null);
-        ref = noop.useRef(null);
-        channelId(chatInputRef[18])(() => new channelId(chatInputRef[17])());
-        const tmp10 = channelId(chatInputRef[19])(channelId);
+        const getSpoilerGatingChannelId = flag(6200).useGetSpoilerGatingChannelId(stateFromStores);
+        closure_11 = chatInputRef.useRef(channelId);
+        chatInputRef.useRef(null);
+        ref = chatInputRef.useRef(null);
+        channelId(6447)(() => new channelId(isActive[17])());
+        const tmp10 = channelId(10673)(channelId);
         isResourceChannel = tmp10;
-        let obj4 = flag(chatInputRef[16]);
-        const items3 = [setInterstitial];
+        let obj4 = flag(6200);
+        const items3 = [MessageStore];
         const items4 = [channelId, tmp10];
-        const stateFromStoresObject = flag(chatInputRef[13]).useStateFromStoresObject(
+        const stateFromStoresObject = flag(504).useStateFromStoresObject(
           items3,
           () => {
             const messages = MessageStore.getMessages(channelId);
@@ -631,72 +630,72 @@ export default noop.memo(
             const hasMoreBefore = messages.hasMoreBefore;
             let tmp3 = !hasMoreBefore;
             if (!hasMoreBefore) {
-              tmp3 = !closure_14;
+              tmp3 = !closure_15;
             }
             obj.shouldRenderBegginingRow = tmp3;
             return obj;
           },
           items4,
         );
-        ({ shouldRenderPlaceholder: c15, shouldRenderBegginingRow: c16 } = stateFromStoresObject);
-        onScroll = noop.useCallback((arg0) => {
+        ({ shouldRenderPlaceholder: c16, shouldRenderBegginingRow: c17 } = stateFromStoresObject);
+        onScroll = chatInputRef.useCallback((arg0) => {
           const current = ref.current;
           if (current != null) {
             current.onChatViewScrolled(arg0);
           }
         }, []);
         const items5 = [chatInputRef];
-        onPressKey = noop.useCallback((arg0) => {
+        onPressKey = chatInputRef.useCallback((arg0) => {
           const current = chatInputRef.current;
           if (current != null) {
             current.handlePressKey(tmp);
           }
         }, items5);
         const items6 = [ref];
-        scrollToNewMessages = noop.useCallback(() => {
+        scrollToNewMessages = chatInputRef.useCallback(() => {
           const current = ref.current;
           if (current != null) {
             current.scrollToNewMessages();
           }
         }, items6);
         const items7 = [ref];
-        onJumpToPresent = noop.useCallback(() => {
+        onJumpToPresent = chatInputRef.useCallback(() => {
           const current = ref.current;
           if (current != null) {
             current.jumpToPresent();
           }
         }, items7);
-        const layoutEffect = noop.useLayoutEffect(() => flag(chatInputRef[20]).trackAppUIViewed(), []);
+        const layoutEffect = chatInputRef.useLayoutEffect(() => flag(isActive[20]).trackAppUIViewed(), []);
         const items8 = [channelId];
-        const effect1 = noop.useEffect(() => {
+        const effect1 = chatInputRef.useEffect(() => {
           const thread = LazyLoadedThreadManagerDefault.loadThread(channelId);
           const summaries = SummaryActionCreators.fetchSummaries(channelId);
         }, items8);
         const items9 = [channel.id];
-        const effect2 = noop.useEffect(() => {
-          closure_10.current = channel.id;
+        const effect2 = chatInputRef.useEffect(() => {
+          closure_11.current = channel.id;
         }, items9);
-        const effect3 = noop.useEffect(
+        const effect3 = chatInputRef.useEffect(
           () => () => {
-            const result = flag(chatInputRef[23]).clearOldestUnreadMessageId(ref.current);
+            const result = flag(isActive[23]).clearOldestUnreadMessageId(ref.current);
           },
           [],
         );
         let obj5 = { profile: null, children: null };
-        const tmp16 = closure_10;
-        const tmp2Result = flag(chatInputRef[13]);
-        obj5.profile = flag(chatInputRef[45]).Profiles.ChatView;
-        const items10 = [channel(channelId(chatInputRef[43]), { channelId, guildId }), ,];
+        const tmp16 = channel;
+        const tmp2Result = flag(504);
+        obj5.profile = flag(12805).Profiles.ChatView;
+        const items10 = [stateFromStores(channelId(13484), { channelId, guildId }), ,];
         let tmp18Result = null;
         if (!flag2) {
-          tmp18Result = tmp18(tmp9(tmp3[44]), { absolute: true });
+          tmp18Result = tmp18(tmp9(10529), { absolute: true });
         }
         items10[1] = tmp18Result;
-        const tmp17 = channelId(chatInputRef[45]);
+        const tmp17 = channelId(12805);
         if (tmp2Result2.shouldNSFWGateGuild(guildId)) {
-          let tmp18Result3 = tmp18(tmp9(tmp3[37]), {});
-          tmp9(tmp3[35]).setInterstitial("NsfwGateChat");
-          const tmp9Result = tmp9(tmp3[35]);
+          let tmp18Result3 = tmp18(tmp9(13332), {});
+          tmp9(9).setInterstitial("NsfwGateChat");
+          const tmp9Result = tmp9(9);
         } else {
           function renderMessagesWrapper() {
             const obj = {
@@ -708,6 +707,7 @@ export default noop.memo(
             const obj3 = {
               alwaysRespectKeyboard: flag,
               channel,
+              isActive,
               screenIndex,
               chatInputRef,
               HACK_fixModalInteraction,
@@ -755,7 +755,7 @@ export default noop.memo(
             }
             items1[1] = tmp7Result;
             let tmp7Result3 = null;
-            if (c15) {
+            if (c16) {
               const obj8 = { screenIndex };
               tmp7Result3 = React6(ChatPlaceholderDefault, obj8);
             }
@@ -784,38 +784,38 @@ export default noop.memo(
           }
           if (channelIsLoading) {
             let obj6 = { style: setInterstitial.empty, title: null, body: null };
-            let intl = tmp2(tmp3[14]).intl;
-            obj6.title = intl.string(tmp2(tmp3[14]).t.ai6Lbr);
-            const intl2 = tmp2(tmp3[14]).intl;
-            obj6.body = intl2.string(tmp2(tmp3[14]).t["LTr+x9"]);
-            let tmp18Result4 = tmp18(tmp2(tmp3[38]).EmptyState, obj6);
-            setInterstitial = tmp9(tmp3[35]).setInterstitial;
+            let intl = tmp2(1128).intl;
+            obj6.title = intl.string(tmp2(1128).t.ai6Lbr);
+            const intl2 = tmp2(1128).intl;
+            obj6.body = intl2.string(tmp2(1128).t["LTr+x9"]);
+            let tmp18Result4 = tmp18(tmp2(1202).EmptyState, obj6);
+            setInterstitial = tmp9(9).setInterstitial;
             setInterstitial("EmptyState");
-            const tmp9Result6 = tmp9(tmp3[35]);
+            const tmp9Result6 = tmp9(9);
           } else if (isChannelContentGated) {
             let obj7 = { guildId, channelId };
-            tmp18Result4 = tmp18(tmp9(tmp3[39]), obj7);
-            tmp9(tmp3[35]).setInterstitial("GuildNSFW");
-            const tmp9Result7 = tmp9(tmp3[35]);
+            tmp18Result4 = tmp18(tmp9(11560), obj7);
+            tmp9(9).setInterstitial("GuildNSFW");
+            const tmp9Result7 = tmp9(9);
           } else {
             if (null != getSpoilerGatingChannelId) {
               if (null != getSpoilerGatingChannelId) {
                 let obj8 = { guildId, channelId: getSpoilerGatingChannelId };
-                tmp18Result4 = tmp18(tmp9(tmp3[40]), obj8, channelId);
-                tmp9(tmp3[35]).setInterstitial("ChannelSpoiler");
-                const tmp9Result8 = tmp9(tmp3[35]);
+                tmp18Result4 = tmp18(tmp9(13334), obj8, channelId);
+                tmp9(9).setInterstitial("ChannelSpoiler");
+                const tmp9Result8 = tmp9(9);
               }
             }
             if (channel.isDirectory()) {
               let obj9 = { channel, guildId };
-              tmp18Result4 = tmp18(tmp9(tmp3[41]), obj9);
-              tmp9(tmp3[35]).setInterstitial("GuildDirectory");
-              const tmp9Result9 = tmp9(tmp3[35]);
+              tmp18Result4 = tmp18(tmp9(13335), obj9);
+              tmp9(9).setInterstitial("GuildDirectory");
+              const tmp9Result9 = tmp9(9);
             } else if (channel.isForumLikeChannel()) {
               let obj10 = { channel };
-              tmp18Result4 = tmp18(tmp9(tmp3[42]), obj10);
-              tmp9(tmp3[35]).setInterstitial("ForumChannel");
-              const tmp9Result10 = tmp9(tmp3[35]);
+              tmp18Result4 = tmp18(tmp9(13470), obj10);
+              tmp9(9).setInterstitial("ForumChannel");
+              const tmp9Result10 = tmp9(9);
             } else {
               tmp18Result4 = renderMessagesWrapper();
             }

@@ -33,7 +33,7 @@ function hasOnlySelfParticipant(participants, meId) {
     return true;
   }
 }
-const CallConstants = fn(5177);
+const CallConstants = fn(5214);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
@@ -504,7 +504,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFoc
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "test", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
       let obj = obj2;
     } else {
       let type1;
@@ -589,7 +589,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFoc
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "test", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
       let obj = obj2;
     } else {
       let type1;

@@ -381,7 +381,7 @@ let closure_36 = async function _initializeIntl(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     log2 = log.log;
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -687,11 +687,11 @@ let closure_39 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[44])(paths[54], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[55]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15394).updateSaturation(closure_0(5144).default.saturation);
-            obj = closure_0(15394);
-            closure_0(18058).updateVisualRefresh(true);
-            const obj2 = closure_0(18058);
-            closure_0(18059).updateTheme(closure_0(1207).default.theme);
+            closure_0(15463).updateSaturation(closure_0(5181).default.saturation);
+            obj = closure_0(15463);
+            closure_0(18118).updateVisualRefresh(true);
+            const obj2 = closure_0(18118);
+            closure_0(18119).updateTheme(closure_0(1207).default.theme);
             closure_1_0();
           }));
         });
@@ -834,14 +834,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(constants), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_18340 = fn(18340);
-const superagentPatch = fn(18342);
+const module_18401 = fn(18401);
+const superagentPatch = fn(18403);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(18365);
+const logThirdPartyImportsDone = fn(18426);
 let closure_11 = fn(2133).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7403);
-const ManagerRegistry = fn(18366);
+const AnalyticsTrackingStore = fn(7449);
+const ManagerRegistry = fn(18427);
 const Constants = fn(1087);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -864,7 +864,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(9488).Future();
+const future = new fn(9552).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

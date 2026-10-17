@@ -6,7 +6,7 @@ import SearchMessageStore from "../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_4 = fn(9550).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(9614).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

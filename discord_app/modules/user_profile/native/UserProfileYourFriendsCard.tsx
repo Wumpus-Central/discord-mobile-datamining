@@ -15,7 +15,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1202).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RelationshipTypes.FRIEND,
       );
       const effect = stateFromStoresArray1.useEffect(() => {
-        const userAffinitiesV2 = closure_0(8942).fetchUserAffinitiesV2();
+        const userAffinitiesV2 = closure_0(8988).fetchUserAffinitiesV2();
       }, []);
       const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
       const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -216,12 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = {
-                  user,
-                  guildId: "r",
-                  size: closure_0(1202).AvatarSizes.XSMALL,
-                  cutout: -1516475215007125400000000000000000000,
-                };
+                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: "dier" };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -231,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1202).AvatarSizes.XSMALL,
-                  cutout: -1516475215007125400000000000000000000,
+                  cutout: "dier",
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>
@@ -251,12 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = {
-                  user,
-                  guildId: "r",
-                  size: closure_0(1202).AvatarSizes.XSMALL,
-                  cutout: -1516475215007125400000000000000000000,
-                };
+                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: "dier" };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -266,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1202).AvatarSizes.XSMALL,
-                  cutout: -1516475215007125400000000000000000000,
+                  cutout: "dier",
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>

@@ -1,5 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import participantHasVideo from "../../../video_calls/participantHasVideo.tsx";
 import isActivityParticipantCurrentUserCurrentSession from "../../../activities/isActivityParticipantCurrentUserCurrentSession.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
@@ -7,18 +8,18 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const VoicePanelConstants = fn(12849);
+const VoicePanelConstants = fn(12914);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(18122);
+const VoicePanelPIPConstants = fn(18183);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(5177).ParticipantTypes;
-const MorphablePanelConstants = fn(12850);
+const ParticipantTypes = fn(5214).ParticipantTypes;
+const MorphablePanelConstants = fn(12915);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
-const set = new Set();
+let set = new Set();
 function clamp(arg0, arg1, arg2) {
   return Math.min(Math.max(arg0, arg1), arg2);
 }
@@ -363,6 +364,21 @@ export const computePIPSize = function computePIPSize(SquarePIPReferenceDimensio
     }
   }
   ({ width: width3, height: height3 } = arg2 ? SquareActivityPIPReferenceDimensions : SquarePIPReferenceDimensions);
+};
+export const createPIPBlockList = function createPIPBlockList(mode, focusedId) {
+  set = new Set();
+  const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
+  if (null != currentUserActiveStream) {
+    set.add(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
+  }
+  let tmp5 = null != focusedId;
+  if (tmp5) {
+    tmp5 = mode === VoicePanelModes.PANEL;
+  }
+  if (tmp5) {
+    set.add(focusedId);
+  }
+  return set;
 };
 export const computePIPParticipantToShow = function computePIPParticipantToShow(showSecondaryPIP) {
   ({ channelId, panelMode, lastParticipantId, speakingUserId, focusedParticipantId, blockList } = showSecondaryPIP);

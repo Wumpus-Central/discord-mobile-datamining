@@ -15,7 +15,7 @@ export default function useMessagesScrollToTop(listRef) {
       () => ({
         scrollToTopTimeout: -1,
         scrollToTop() {
-          if (null != obj.coerceGuildsRoute(listRefHappeningNow(10871)())) {
+          if (null != obj.coerceGuildsRoute(listRefHappeningNow(10936)())) {
             const self = this;
             if (-1 === this.scrollToTopTimeout) {
               const _setTimeout = setTimeout;

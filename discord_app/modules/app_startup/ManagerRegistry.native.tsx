@@ -529,6 +529,13 @@ const obj = {
     },
     neverLoadBeforeConnectionOpen: true,
   },
+  NotifSettingsProtoManager: {
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "APP_STATE_UPDATE"],
+    inlineRequire() {
+      return require("NotifSettingsProtoManager").default;
+    },
+    neverLoadBeforeConnectionOpen: true,
+  },
   NUFChannelsManager: {
     actions: ["LOGOUT"],
     inlineRequire() {

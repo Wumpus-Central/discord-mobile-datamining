@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16067).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16133).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const __initData = {
   code: "function useIsQuestDockModeActiveOrExitingTsx1(){const{activeQuestDockMode,mode}=this.__closure;return activeQuestDockMode.get()===mode;}",
 };

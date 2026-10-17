@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
-import ApplicationWidgetConfigActions from "../../application_widget/ApplicationWidgetConfigActions.tsx";
 import ConjurePreviewActionCreators from "../preview/ConjurePreviewActionCreators.tsx";
+import ApplicationWidgetConfigActions from "../../application_widget/ApplicationWidgetConfigActions.tsx";
 import conjureLiveRelaunch from "../live_reload/conjureLiveRelaunch.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -54,7 +54,7 @@ let closure_9 = async function _unpublishProject(arg0) {
           ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -189,7 +189,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
           closure_130_12 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

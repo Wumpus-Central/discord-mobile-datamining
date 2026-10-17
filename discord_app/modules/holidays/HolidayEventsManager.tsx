@@ -6,10 +6,11 @@ import SoundpackActions from "../soundpacks/SoundpackActions.tsx";
 import setIncomingRingtone from "setIncomingRingtone.android.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Soundpacks = fn(11297).Soundpacks;
+const Soundpacks = fn(11356).Soundpacks;
 class HolidayEventsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,7 +19,12 @@ class HolidayEventsManager extends tmp2 {
     applyArgumentsResult.stores = map.set(closure_3, () => applyArgumentsResult.handleExperimentUpdated());
     applyArgumentsResult.actions = { NOTIFICATIONS_SET_DISABLED_SOUNDS: applyArgumentsResult.updateRingtone };
     applyArgumentsResult.handleExperimentUpdated = function handleExperimentUpdated() {
-      if (!HolidayEventsConfigDefault.isDesktopOnly) {
+      const isDesktopOnly = HolidayEventsConfigDefault.isDesktopOnly;
+      let tmp = !isDesktopOnly;
+      if (!isDesktopOnly) {
+        tmp = null != AuthenticationStore.getId();
+      }
+      if (tmp) {
         applyArgumentsResult.updateSoundpack();
         applyArgumentsResult.updateRingtone();
       }
@@ -35,21 +41,22 @@ prototype["updateSoundpack"] = function updateSoundpack() {
     const name = experiment.definition.name;
   }
   let isEligibleResult = HolidayEventsUtilsDefault.isEligible();
+  if (!isEligibleResult) {
+    if (soundpack !== Soundpacks.CLASSIC) {
+      SoundpackActions.setSoundpack(tmp6.CLASSIC, null);
+    }
+  }
   if (isEligibleResult) {
-    if (isEligibleResult) {
-      isEligibleResult = null != HolidayEventsConfigDefault.soundpack;
-    }
-    if (isEligibleResult) {
-      isEligibleResult = name !== lastSoundpackExperimentId;
-    }
-    if (isEligibleResult) {
-      isEligibleResult = soundpack !== HolidayEventsConfigDefault.soundpack;
-    }
-    if (isEligibleResult) {
-      SoundpackActions.setSoundpack(HolidayEventsConfigDefault.soundpack, name);
-    }
-  } else {
-    SoundpackActions.setSoundpack(Soundpacks.CLASSIC, null);
+    isEligibleResult = null != HolidayEventsConfigDefault.soundpack;
+  }
+  if (isEligibleResult) {
+    isEligibleResult = name !== lastSoundpackExperimentId;
+  }
+  if (isEligibleResult) {
+    isEligibleResult = soundpack !== HolidayEventsConfigDefault.soundpack;
+  }
+  if (isEligibleResult) {
+    SoundpackActions.setSoundpack(HolidayEventsConfigDefault.soundpack, name);
   }
   const tmp3Result = HolidayEventsUtilsDefault;
 };

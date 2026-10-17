@@ -45,8 +45,8 @@ function keyExtractor(type, arg1) {
   return id;
 }
 const View = fn(17).View;
-const getSection = fn(9485).getSection;
-const FetchState = fn(11803).FetchState;
+const getSection = fn(9549).getSection;
+const FetchState = fn(11866).FetchState;
 const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -65,7 +65,7 @@ const array = new Array(6);
 let closure_17 = array.fill("placeholder");
 const array2 = new Array(3);
 let closure_18 = array2.fill({ type: obj.PLACERHOLDER });
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj3 = {
   sectionHeader: { marginBottom: 8 },
   list: {
@@ -287,20 +287,20 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let hasOptions;
       let onPressSend;
       ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-      const appLauncherIconSource = hasOptions(11785).getAppLauncherIconSource(application);
+      const appLauncherIconSource = hasOptions(11847).getAppLauncherIconSource(application);
       let tmp4 = null != appLauncherIconSource;
       if (tmp4) {
         const obj2 = { iconSource: appLauncherIconSource };
-        tmp4 = closure_10(onPressSend(11790), obj2);
+        tmp4 = closure_10(onPressSend(11852), obj2);
       }
-      obj = hasOptions(11785);
-      const tmpResult = hasOptions(11852);
+      obj = hasOptions(11847);
+      const tmpResult = hasOptions(11915);
       const commandRowSend = tmpResult.useCommandRowSend({
         command,
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: hasOptions(10868).AppLauncherSectionName.SEARCH,
+        sectionName: hasOptions(10933).AppLauncherSectionName.SEARCH,
       });
       hasOptions = commandRowSend.hasOptions;
       onPressSend = commandRowSend.onPressSend;
@@ -339,16 +339,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: hasOptions(10868).AppLauncherSectionName.SEARCH,
+        sectionName: hasOptions(10933).AppLauncherSectionName.SEARCH,
       };
-      obj4.subLabel = hasOptions(9484).getSectionName(application);
+      obj4.subLabel = hasOptions(9548).getSectionName(application);
       obj4.start = isFirstRow;
       obj4.end = isLastRow;
       obj4.onPress = onPress;
       obj4.accessibilityActions = memo;
       obj4.onAccessibilityAction = callback;
-      obj4.trailing = closure_10(onPressSend(11852), { hasOptions, sending: commandRowSend.sending, onPressSend });
-      return closure_10(hasOptions(6404).TableRow, obj4);
+      obj4.trailing = closure_10(onPressSend(11915), { hasOptions, sending: commandRowSend.sending, onPressSend });
+      return closure_10(hasOptions(6457).TableRow, obj4);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()

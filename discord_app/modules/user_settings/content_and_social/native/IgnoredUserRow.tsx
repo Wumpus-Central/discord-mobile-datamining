@@ -11,7 +11,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function IgnoredUserRow(userRecord) {
       const cResult = userRecord(576).c(31);
       userRecord = userRecord.userRecord;
-      analyticsLocations = analyticsLocations(7077)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7130)().analyticsLocations;
       if (cResult[0] === userRecord.globalName) {
         if (cResult[1] === userRecord.username) {
           let tmp4 = cResult[2];
@@ -111,7 +111,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 };
-                  const tmp27 = jsx(tmp(6404).TableRow, {
+                  const tmp27 = jsx(tmp(6457).TableRow, {
                     accessible: false,
                     icon: tmp10,
                     label: tmp16,
@@ -125,7 +125,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[30] = tmp27;
                 }
                 const obj6 = { size: "sm", variant: "secondary", text: tmp19, accessibilityLabel: tmp4, onPress: S };
-                const tmp24 = jsx(tmp(5442).Button, {
+                const tmp24 = jsx(tmp(5479).Button, {
                   size: "sm",
                   variant: "secondary",
                   text: tmp19,
@@ -138,7 +138,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 };
-            const tmp18 = jsx(tmp(15780).RestrictedUserRowLabel, {
+            const tmp18 = jsx(tmp(15846).RestrictedUserRowLabel, {
               userRecord,
               accessibilityActions: tmp15,
               onAccessibilityAction: tmp7,
@@ -191,7 +191,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   : function IgnoredUserRow(userRecord) {
       userRecord = userRecord.userRecord;
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(7077)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7130)().analyticsLocations;
       const intl = userRecord(1128).intl;
       let username = userRecord.globalName;
       if (username == null) {
@@ -226,7 +226,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
       obj3.accessibilityActions = items;
-      obj.label = jsx(userRecord(15780).RestrictedUserRowLabel, {
+      obj.label = jsx(userRecord(15846).RestrictedUserRowLabel, {
         userRecord,
         accessibilityActions: null,
         onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -246,14 +246,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.onPress = function onPress() {
         RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
       };
-      obj.trailing = jsx(userRecord(5442).Button, {
+      obj.trailing = jsx(userRecord(5479).Button, {
         size: "sm",
         variant: "secondary",
         text: null,
         accessibilityLabel: null,
         onPress: null,
       });
-      return jsx(userRecord(6404).TableRow, {
+      return jsx(userRecord(6457).TableRow, {
         accessible: false,
         icon: jsx(userRecord(1202).Avatar, {
           source: userRecord.getAvatarSource(undefined),

@@ -2,14 +2,14 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2667 from "../../GiftingBadge.messages.js";
+import _modDef2685 from "../../GiftingBadge.messages.js";
 import RootNavigationRef from "../../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef18031 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef18091 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 },
   graphicContainer: null,
@@ -46,325 +46,308 @@ let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? function HasBadgeCoachmark(markAsDismissed) {
-      const cResult = markAsDismissed(576).c(41);
+      const cResult = markAsDismissed(576).c(40);
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ currentTier, giftCount, variant } = markAsDismissed);
       const tmp4 = closure_9();
-      let obj = markAsDismissed(576);
-      const isGiftingBadgeComplexArtEnabled = markAsDismissed(10340).useIsGiftingBadgeComplexArtEnabled(
-        "GiftingBadgesCoachmarkActionSheet",
-      );
-      if (cResult[0] === currentTier) {
-        if (cResult[1] === isGiftingBadgeComplexArtEnabled) {
-          let tmp6 = cResult[2];
-        }
-        if (cResult[3] !== markAsDismissed) {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-          cResult[3] = markAsDismissed;
-          cResult[4] = I;
-        } else {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-        }
-        if (cResult[5] !== markAsDismissed) {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-          cResult[5] = markAsDismissed;
-          cResult[6] = tmp10;
-        } else {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-        }
-        const container = tmp4.container;
-        if (cResult[7] !== tmp6) {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-          let tmp12 = null != tmp6;
-          if (tmp12) {
-            class I {
-              constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
-                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                obj2 = closure_0(closure_2[11]);
-                rootNavigationRef = obj2.getRootNavigationRef();
-                if (rootNavigationRef != null) {
-                  str = "you";
-                  navigateResult = rootNavigationRef.navigate("you");
-                }
-                return;
-              }
-            }
-            const obj3 = { icon: tmp6, size: 120 };
-            tmp12 = closure_7(GiftingBadgeIconDefault, obj3);
-          }
-          cResult[7] = tmp6;
-          cResult[8] = tmp12;
-        } else {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-        }
-        if (cResult[9] === tmp4.graphicContainer) {
-          class I {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-              obj2 = closure_0(closure_2[11]);
-              rootNavigationRef = obj2.getRootNavigationRef();
-              if (rootNavigationRef != null) {
-                str = "you";
-                navigateResult = rootNavigationRef.navigate("you");
-              }
-              return;
-            }
-          }
-          ({ textContainer, text } = tmp4);
-          if (cResult[12] !== currentTier.name) {
-            class I {
-              constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
-                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                obj2 = closure_0(closure_2[11]);
-                rootNavigationRef = obj2.getRootNavigationRef();
-                if (rootNavigationRef != null) {
-                  str = "you";
-                  navigateResult = rootNavigationRef.navigate("you");
-                }
-                return;
-              }
-            }
-            const name = currentTier.name;
-            if (name == null) {
-              class I {
-                constructor() {
-                  obj = closure_1(closure_2[10]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                  obj2 = closure_0(closure_2[11]);
-                  rootNavigationRef = obj2.getRootNavigationRef();
-                  if (rootNavigationRef != null) {
-                    str = "you";
-                    navigateResult = rootNavigationRef.navigate("you");
-                  }
-                  return;
-                }
-              }
-            }
-            const obj4 = { tierName: name };
-            const formatResult = obj6.format(_modDef2667["a+jfuy"], obj4);
-            cResult[12] = currentTier.name;
-            cResult[13] = formatResult;
-          } else {
-            class I {
-              constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
-                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                obj2 = closure_0(closure_2[11]);
-                rootNavigationRef = obj2.getRootNavigationRef();
-                if (rootNavigationRef != null) {
-                  str = "you";
-                  navigateResult = rootNavigationRef.navigate("you");
-                }
-                return;
-              }
-            }
-          }
-          if (cResult[14] === tmp4.text) {
-            class I {
-              constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
-                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                obj2 = closure_0(closure_2[11]);
-                rootNavigationRef = obj2.getRootNavigationRef();
-                if (rootNavigationRef != null) {
-                  str = "you";
-                  navigateResult = rootNavigationRef.navigate("you");
-                }
-                return;
-              }
-            }
-            if (cResult[17] === giftCount) {
-              class I {
-                constructor() {
-                  obj = closure_1(closure_2[10]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                  obj2 = closure_0(closure_2[11]);
-                  rootNavigationRef = obj2.getRootNavigationRef();
-                  if (rootNavigationRef != null) {
-                    str = "you";
-                    navigateResult = rootNavigationRef.navigate("you");
-                  }
-                  return;
-                }
-              }
-            }
-            if ("noCount" === variant) {
-              class I {
-                constructor() {
-                  obj = closure_1(closure_2[10]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                  obj2 = closure_0(closure_2[11]);
-                  rootNavigationRef = obj2.getRootNavigationRef();
-                  if (rootNavigationRef != null) {
-                    str = "you";
-                    navigateResult = rootNavigationRef.navigate("you");
-                  }
-                  return;
-                }
-              }
-              let stringResult = obj11.string(_modDef2667["0N8fCf"]);
-            } else {
-              class I {
-                constructor() {
-                  obj = closure_1(closure_2[10]);
-                  hideActionSheetResult = obj.hideActionSheet();
-                  tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                  obj2 = closure_0(closure_2[11]);
-                  rootNavigationRef = obj2.getRootNavigationRef();
-                  if (rootNavigationRef != null) {
-                    str = "you";
-                    navigateResult = rootNavigationRef.navigate("you");
-                  }
-                  return;
-                }
-              }
-              if (giftCount == null) {
-                class I {
-                  constructor() {
-                    obj = closure_1(closure_2[10]);
-                    hideActionSheetResult = obj.hideActionSheet();
-                    tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-                    obj2 = closure_0(closure_2[11]);
-                    rootNavigationRef = obj2.getRootNavigationRef();
-                    if (rootNavigationRef != null) {
-                      str = "you";
-                      navigateResult = rootNavigationRef.navigate("you");
-                    }
-                    return;
-                  }
-                }
-              }
-              const obj5 = { giftCount };
-              stringResult = obj9.formatToPlainString(_modDef2667.QxRA6w, obj5);
-            }
-            cResult[17] = giftCount;
-            cResult[18] = variant;
-            cResult[19] = stringResult;
-          }
-          const obj7 = { style: text, variant: "heading-xl/bold", color: "text-strong", children: tmp18 };
-          const tmp24 = closure_7(tmp(5150).Text, obj7);
-          cResult[14] = tmp4.text;
-          cResult[15] = tmp18;
-          cResult[16] = tmp24;
-        }
-        const obj8 = { style: tmp4.graphicContainer, children: tmp11 };
-        const tmp17 = closure_7(View, obj8);
-        cResult[9] = tmp4.graphicContainer;
-        cResult[10] = tmp11;
-        cResult[11] = tmp17;
+      if (cResult[0] !== currentTier) {
+        const giftingBadgeTierIconUrl = tmp(10406).getGiftingBadgeTierIconUrl(currentTier);
+        cResult[0] = currentTier;
+        cResult[1] = giftingBadgeTierIconUrl;
+        let tmp5 = giftingBadgeTierIconUrl;
+        const tmpResult = tmp(10406);
+      } else {
+        tmp5 = cResult[1];
       }
-      const obj2 = markAsDismissed(10340);
-      const giftingBadgeTierIconUrl = markAsDismissed(10340).getGiftingBadgeTierIconUrl(
-        currentTier,
-        isGiftingBadgeComplexArtEnabled,
-      );
-      cResult[0] = currentTier;
-      cResult[1] = isGiftingBadgeComplexArtEnabled;
-      cResult[2] = giftingBadgeTierIconUrl;
-      tmp6 = giftingBadgeTierIconUrl;
-      const tmpResult = markAsDismissed(10340);
+      if (cResult[2] !== markAsDismissed) {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+        cResult[2] = markAsDismissed;
+        cResult[3] = S;
+      } else {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+      }
+      if (cResult[4] !== markAsDismissed) {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+        cResult[4] = markAsDismissed;
+        cResult[5] = tmp9;
+      } else {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+      }
+      if (cResult[6] !== tmp5) {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+        let tmp11 = null != tmp5;
+        if (tmp11) {
+          class S {
+            constructor() {
+              obj = closure_1(closure_2[10]);
+              hideActionSheetResult = obj.hideActionSheet();
+              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+              obj2 = closure_0(closure_2[11]);
+              rootNavigationRef = obj2.getRootNavigationRef();
+              if (rootNavigationRef != null) {
+                str = "you";
+                navigateResult = rootNavigationRef.navigate("you");
+              }
+              return;
+            }
+          }
+          const obj2 = { icon: tmp5, size: 120 };
+          tmp11 = closure_7(GiftingBadgeIconDefault, obj2);
+        }
+        cResult[6] = tmp5;
+        cResult[7] = tmp11;
+      } else {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+      }
+      if (cResult[8] === tmp4.graphicContainer) {
+        class S {
+          constructor() {
+            obj = closure_1(closure_2[10]);
+            hideActionSheetResult = obj.hideActionSheet();
+            tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            obj2 = closure_0(closure_2[11]);
+            rootNavigationRef = obj2.getRootNavigationRef();
+            if (rootNavigationRef != null) {
+              str = "you";
+              navigateResult = rootNavigationRef.navigate("you");
+            }
+            return;
+          }
+        }
+        ({ textContainer, text } = tmp4);
+        if (cResult[11] !== currentTier.name) {
+          class S {
+            constructor() {
+              obj = closure_1(closure_2[10]);
+              hideActionSheetResult = obj.hideActionSheet();
+              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+              obj2 = closure_0(closure_2[11]);
+              rootNavigationRef = obj2.getRootNavigationRef();
+              if (rootNavigationRef != null) {
+                str = "you";
+                navigateResult = rootNavigationRef.navigate("you");
+              }
+              return;
+            }
+          }
+          const name = currentTier.name;
+          if (name == null) {
+            class S {
+              constructor() {
+                obj = closure_1(closure_2[10]);
+                hideActionSheetResult = obj.hideActionSheet();
+                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                obj2 = closure_0(closure_2[11]);
+                rootNavigationRef = obj2.getRootNavigationRef();
+                if (rootNavigationRef != null) {
+                  str = "you";
+                  navigateResult = rootNavigationRef.navigate("you");
+                }
+                return;
+              }
+            }
+          }
+          const obj3 = { tierName: name };
+          const formatResult = obj5.format(_modDef2685["a+jfuy"], obj3);
+          cResult[11] = currentTier.name;
+          cResult[12] = formatResult;
+        } else {
+          class S {
+            constructor() {
+              obj = closure_1(closure_2[10]);
+              hideActionSheetResult = obj.hideActionSheet();
+              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+              obj2 = closure_0(closure_2[11]);
+              rootNavigationRef = obj2.getRootNavigationRef();
+              if (rootNavigationRef != null) {
+                str = "you";
+                navigateResult = rootNavigationRef.navigate("you");
+              }
+              return;
+            }
+          }
+        }
+        if (cResult[13] === tmp4.text) {
+          class S {
+            constructor() {
+              obj = closure_1(closure_2[10]);
+              hideActionSheetResult = obj.hideActionSheet();
+              tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+              obj2 = closure_0(closure_2[11]);
+              rootNavigationRef = obj2.getRootNavigationRef();
+              if (rootNavigationRef != null) {
+                str = "you";
+                navigateResult = rootNavigationRef.navigate("you");
+              }
+              return;
+            }
+          }
+          if (cResult[16] === giftCount) {
+            class S {
+              constructor() {
+                obj = closure_1(closure_2[10]);
+                hideActionSheetResult = obj.hideActionSheet();
+                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                obj2 = closure_0(closure_2[11]);
+                rootNavigationRef = obj2.getRootNavigationRef();
+                if (rootNavigationRef != null) {
+                  str = "you";
+                  navigateResult = rootNavigationRef.navigate("you");
+                }
+                return;
+              }
+            }
+          }
+          if ("noCount" === variant) {
+            class S {
+              constructor() {
+                obj = closure_1(closure_2[10]);
+                hideActionSheetResult = obj.hideActionSheet();
+                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                obj2 = closure_0(closure_2[11]);
+                rootNavigationRef = obj2.getRootNavigationRef();
+                if (rootNavigationRef != null) {
+                  str = "you";
+                  navigateResult = rootNavigationRef.navigate("you");
+                }
+                return;
+              }
+            }
+            let stringResult = obj10.string(_modDef2685["0N8fCf"]);
+          } else {
+            class S {
+              constructor() {
+                obj = closure_1(closure_2[10]);
+                hideActionSheetResult = obj.hideActionSheet();
+                tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                obj2 = closure_0(closure_2[11]);
+                rootNavigationRef = obj2.getRootNavigationRef();
+                if (rootNavigationRef != null) {
+                  str = "you";
+                  navigateResult = rootNavigationRef.navigate("you");
+                }
+                return;
+              }
+            }
+            if (giftCount == null) {
+              class S {
+                constructor() {
+                  obj = closure_1(closure_2[10]);
+                  hideActionSheetResult = obj.hideActionSheet();
+                  tmp2 = markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                  obj2 = closure_0(closure_2[11]);
+                  rootNavigationRef = obj2.getRootNavigationRef();
+                  if (rootNavigationRef != null) {
+                    str = "you";
+                    navigateResult = rootNavigationRef.navigate("you");
+                  }
+                  return;
+                }
+              }
+            }
+            const obj4 = { giftCount };
+            stringResult = obj8.formatToPlainString(_modDef2685.QxRA6w, obj4);
+          }
+          cResult[16] = giftCount;
+          cResult[17] = variant;
+          cResult[18] = stringResult;
+        }
+        const obj6 = { style: text, variant: "heading-xl/bold", color: "text-strong", children: tmp14 };
+        const tmp20 = closure_7(tmp(5187).Text, obj6);
+        cResult[13] = tmp4.text;
+        cResult[14] = tmp14;
+        cResult[15] = tmp20;
+      }
+      let obj = markAsDismissed(576);
+      const obj7 = { style: tmp4.graphicContainer, children: tmp10 };
+      cResult[8] = tmp4.graphicContainer;
+      cResult[9] = tmp10;
+      cResult[10] = closure_7(View, { style: tmp4.graphicContainer, children: tmp10 });
+      const tmp13 = closure_7(View, { style: tmp4.graphicContainer, children: tmp10 });
     }
   : function HasBadgeCoachmark(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ currentTier, giftCount } = markAsDismissed);
       const tmp = closure_9();
-      const isGiftingBadgeComplexArtEnabled = markAsDismissed(10340).useIsGiftingBadgeComplexArtEnabled(
-        "GiftingBadgesCoachmarkActionSheet",
-      );
-      let obj = markAsDismissed(10340);
-      const giftingBadgeTierIconUrl = markAsDismissed(10340).getGiftingBadgeTierIconUrl(
-        currentTier,
-        isGiftingBadgeComplexArtEnabled,
-      );
+      const giftingBadgeTierIconUrl = markAsDismissed(10406).getGiftingBadgeTierIconUrl(currentTier);
       const items = [markAsDismissed];
       const items1 = [markAsDismissed];
       const callback = noop.useCallback(() => {
@@ -378,51 +361,51 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = noop.useCallback(() => {
         markAsDismissed(ContentDismissActionType.USER_DISMISS);
       }, items1);
-      const obj3 = { startExpanded: true, onDismiss: callback1, children: null };
-      const obj4 = { style: tmp.container, children: null };
-      const obj5 = { style: tmp.graphicContainer, children: null };
-      let tmp8Result = null != giftingBadgeTierIconUrl;
-      if (tmp8Result) {
-        const obj6 = { icon: giftingBadgeTierIconUrl, size: 120 };
-        tmp8Result = closure_7(GiftingBadgeIconDefault, obj6);
+      const obj2 = { startExpanded: true, onDismiss: callback1, children: null };
+      const obj3 = { style: tmp.container, children: null };
+      const obj4 = { style: tmp.graphicContainer, children: null };
+      let tmp7Result = null != giftingBadgeTierIconUrl;
+      if (tmp7Result) {
+        const obj5 = { icon: giftingBadgeTierIconUrl, size: 120 };
+        tmp7Result = closure_7(GiftingBadgeIconDefault, obj5);
       }
-      obj5.children = tmp8Result;
-      const items2 = [closure_7(View, obj5), ,];
-      const obj7 = { style: tmp.textContainer, children: null };
-      const obj8 = { style: tmp.text, variant: "heading-xl/bold", color: "text-strong", children: null };
+      obj4.children = tmp7Result;
+      const items2 = [closure_7(View, obj4), ,];
+      const obj6 = { style: tmp.textContainer, children: null };
+      const obj7 = { style: tmp.text, variant: "heading-xl/bold", color: "text-strong", children: null };
       const intl = tmp2(1128).intl;
       let str = currentTier.name;
       if (str == null) {
         str = "";
       }
-      obj8.children = intl.format(_modDef2667["a+jfuy"], { tierName: str });
-      const items3 = [closure_7(markAsDismissed(5150).Text, obj8)];
-      const obj9 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+      obj7.children = intl.format(_modDef2685["a+jfuy"], { tierName: str });
+      const items3 = [closure_7(markAsDismissed(5187).Text, obj7)];
+      const obj8 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
       if ("noCount" === markAsDismissed.variant) {
         const intl3 = tmp2(1128).intl;
-        let stringResult = intl3.string(_modDef2667["0N8fCf"]);
+        let stringResult = intl3.string(_modDef2685["0N8fCf"]);
       } else {
         const intl2 = tmp2(1128).intl;
         if (giftCount == null) {
           giftCount = 0;
         }
-        const obj10 = { giftCount };
-        stringResult = intl2.formatToPlainString(_modDef2667.QxRA6w, obj10);
+        const obj9 = { giftCount };
+        stringResult = intl2.formatToPlainString(_modDef2685.QxRA6w, obj9);
       }
-      obj9.children = stringResult;
-      items3[1] = closure_7(markAsDismissed(5150).Text, obj9);
-      obj7.children = items3;
-      items2[1] = closure_8(View, obj7);
-      const obj11 = { style: tmp.footer, children: null };
-      const obj12 = { grow: true, text: null, onPress: null };
+      obj8.children = stringResult;
+      items3[1] = closure_7(markAsDismissed(5187).Text, obj8);
+      obj6.children = items3;
+      items2[1] = closure_8(View, obj6);
+      const obj10 = { style: tmp.footer, children: null };
+      const obj11 = { grow: true, text: null, onPress: null };
       const intl4 = tmp2(1128).intl;
-      obj12.text = intl4.string(markAsDismissed(1128).t.RzWDqY);
-      obj12.onPress = callback;
-      obj11.children = closure_7(markAsDismissed(5442).Button, obj12);
-      items2[2] = closure_7(View, obj11);
-      obj4.children = items2;
-      obj3.children = closure_8(View, obj4);
-      return closure_7(markAsDismissed(7065).BottomSheet, obj3);
+      obj11.text = intl4.string(markAsDismissed(1128).t.RzWDqY);
+      obj11.onPress = callback;
+      obj10.children = closure_7(markAsDismissed(5479).Button, obj11);
+      items2[2] = closure_7(View, obj10);
+      obj3.children = items2;
+      obj2.children = closure_8(View, obj3);
+      return closure_7(markAsDismissed(7118).BottomSheet, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -466,7 +449,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp8[0] = _modDef18031;
+        tmp8[0] = _modDef18091;
         cResult[4] = tmp8;
       } else {
         class C {
@@ -511,7 +494,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult = obj4.string(_modDef2667.Q2RQka);
+          const stringResult = obj4.string(_modDef2685.Q2RQka);
           cResult[10] = stringResult;
           const tmp14 = stringResult;
         } else {
@@ -530,7 +513,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { style: text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp14 };
-          const tmp18 = closure_7(tmp(5150).Text, obj3);
+          const tmp18 = closure_7(tmp(5187).Text, obj3);
           cResult[11] = tmp4.text;
           cResult[12] = tmp18;
         } else {
@@ -549,7 +532,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult1 = obj6.string(_modDef2667["3EQnkg"]);
+          const stringResult1 = obj6.string(_modDef2685["3EQnkg"]);
           cResult[13] = stringResult1;
           const tmp19 = stringResult1;
         } else {
@@ -568,7 +551,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj5 = { style: tmp4.text, variant: "text-sm/medium", color: "text-muted", children: tmp19 };
-          const tmp23 = closure_7(tmp(5150).Text, obj5);
+          const tmp23 = closure_7(tmp(5187).Text, obj5);
           cResult[14] = tmp4.text;
           cResult[15] = tmp23;
         } else {
@@ -623,7 +606,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.container, children: null };
       let obj3 = { style: tmp.graphicContainer, children: null };
       const obj4 = { source: null, style: null };
-      const obj5 = { uri: _modDef18031 };
+      const obj5 = { uri: _modDef18091 };
       obj4.source = obj5;
       obj4.style = tmp.newBadgeImage;
       obj3.children = closure_7(FastImageDefault, obj4);
@@ -636,28 +619,28 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl = markAsDismissed(1128).intl;
-      obj7.children = intl.string(_modDef2667.Q2RQka);
-      const items3 = [closure_7(markAsDismissed(5150).Text, obj7)];
+      obj7.children = intl.string(_modDef2685.Q2RQka);
+      const items3 = [closure_7(markAsDismissed(5187).Text, obj7)];
       const obj8 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = markAsDismissed(1128).intl;
-      obj8.children = intl2.string(_modDef2667["3EQnkg"]);
-      items3[1] = closure_7(markAsDismissed(5150).Text, obj8);
+      obj8.children = intl2.string(_modDef2685["3EQnkg"]);
+      items3[1] = closure_7(markAsDismissed(5187).Text, obj8);
       obj6.children = items3;
       items2[1] = closure_8(View, obj6);
       const obj9 = { style: tmp.footer, children: null };
       const obj10 = { grow: true, text: null, icon: null, onPress: null };
       const intl3 = markAsDismissed(1128).intl;
-      obj10.text = intl3.string(_modDef2667.DZnomS);
-      obj10.icon = closure_7(markAsDismissed(12591).GiftIcon, {
+      obj10.text = intl3.string(_modDef2685.DZnomS);
+      obj10.icon = closure_7(markAsDismissed(12656).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });
       obj10.onPress = callback;
-      obj9.children = closure_7(markAsDismissed(5442).Button, obj10);
+      obj9.children = closure_7(markAsDismissed(5479).Button, obj10);
       items2[2] = closure_7(View, obj9);
       obj2.children = items2;
       obj.children = closure_8(View, obj2);
-      return closure_7(markAsDismissed(7065).BottomSheet, obj);
+      return closure_7(markAsDismissed(7118).BottomSheet, obj);
     };
 ReactCompilerGating = fn(558);
 let obj4 = { gap: nativeDefault.space.PX_8 };

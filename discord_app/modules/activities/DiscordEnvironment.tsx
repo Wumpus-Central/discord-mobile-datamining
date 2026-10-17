@@ -37,7 +37,7 @@ function getDiscordCustomTheme() {
   }
   return null;
 }
-const UIDensityConstants = fn(11239);
+const UIDensityConstants = fn(11304);
 ({
   RESPONSIVE_DENSITY_FALLBACK: closure_4,
   RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty,
@@ -53,6 +53,7 @@ const frozen = Object.freeze({
   highContrast: false,
   forcedColors: false,
   underlineLinks: false,
+  formFactor: "desktop",
 });
 let closure_8 = ["custom-theme-background", "custom-client-theme"];
 const size = fn(2);
@@ -118,6 +119,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
     highContrast: null,
     forcedColors: null,
     underlineLinks: null,
+    formFactor: "mobile",
   };
   if (typeof window !== "undefined") {
     const _window2 = window;

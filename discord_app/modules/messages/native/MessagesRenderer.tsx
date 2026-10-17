@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9619).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9683).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(2128).getUserCommunicationDisabledVersion;
-const Changeset = fn(7968).Changeset;
+const Changeset = fn(8014).Changeset;
 const Constants = fn(1087);
 ({
   ActivityActionTypes: closure_12,
@@ -1426,6 +1426,7 @@ class MessagesRenderer {
       style: merged.style,
       inverted: true,
       channelId: merged.channelId,
+      isActive: merged.isActive,
       alwaysRespectKeyboard: merged.alwaysRespectKeyboard,
       onChatScrollPosition: handleScrollPosition,
       onTapImage: first2.handleTapImage,

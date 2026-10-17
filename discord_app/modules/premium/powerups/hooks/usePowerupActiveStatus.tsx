@@ -4,7 +4,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 require = fn;
-const GuildPowerupsConstants = fn(5067);
+const GuildPowerupsConstants = fn(5104);
 ({
   GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4,
   PowerupActiveStatusType: hasOwnProperty,
@@ -12,7 +12,7 @@ const GuildPowerupsConstants = fn(5067);
   BOOSTING_TIER_TO_LEVEL_SKU_ID: closure_7,
 } = GuildPowerupsConstants);
 const GuildFeatures = fn(1087).GuildFeatures;
-let closure_9 = fn(5068).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(5105).GAME_SERVER_POWERUP_SKU_ID;
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePowerupsActiveStatuses(arg0, arr) {
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (arr2.length <= 0) {
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "cursor" };
+            const obj2 = { type: constants.INACTIVE, sourceEntitlement: "r", sourcePowerup: "toCharArray$esjava$1" };
             cResult[2] = obj2;
           }
         } else {
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = closure_10(arg0, items);
       if (tmpResult.length <= 0) {
-        const obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "cursor" };
+        const obj = { type: constants.INACTIVE, sourceEntitlement: "r", sourcePowerup: "toCharArray$esjava$1" };
         let first = obj;
       } else {
         first = tmpResult[0];

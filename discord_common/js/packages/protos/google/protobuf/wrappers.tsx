@@ -27,12 +27,12 @@ prototype["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 1, undefined, "value");
   return obj;
 };
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { value: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -124,12 +124,12 @@ prototype2["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 1, undefined, "value");
   return obj;
 };
-prototype2["create"] = function create(arr) {
+prototype2["create"] = function create(partialSettings) {
   const obj = { value: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -221,12 +221,12 @@ prototype3["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, _mod1212.ScalarType.INT64, _mod1212.LongType.STRING, "value");
   return obj;
 };
-prototype3["create"] = function create(arr) {
+prototype3["create"] = function create(partialSettings) {
   const obj = { value: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -319,12 +319,12 @@ prototype4["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, _mod1212.ScalarType.UINT64, _mod1212.LongType.STRING, "value");
   return obj;
 };
-prototype4["create"] = function create(arr) {
+prototype4["create"] = function create(partialSettings) {
   const obj = { value: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -417,12 +417,12 @@ prototype5["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 5, undefined, "value");
   return obj;
 };
-prototype5["create"] = function create(arr) {
+prototype5["create"] = function create(partialSettings) {
   const obj = { value: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -514,12 +514,12 @@ prototype6["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 13, undefined, "value");
   return obj;
 };
-prototype6["create"] = function create(arr) {
+prototype6["create"] = function create(partialSettings) {
   const obj = { value: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -610,12 +610,12 @@ prototype7["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 8, undefined, "value");
   return obj;
 };
-prototype7["create"] = function create(arr) {
+prototype7["create"] = function create(partialSettings) {
   const obj = { value: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -706,12 +706,12 @@ prototype8["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 9, undefined, "value");
   return obj;
 };
-prototype8["create"] = function create(arr) {
+prototype8["create"] = function create(partialSettings) {
   const obj = { value: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -796,14 +796,14 @@ prototype9["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   obj.value = refJsonReader.scalar(arg0, 12, undefined, "value");
   return obj;
 };
-prototype9["create"] = function create(arr) {
+prototype9["create"] = function create(partialSettings) {
   const obj = { value: null };
   const uint8Array = new Uint8Array(0);
   obj.value = uint8Array;
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmp2Result = _mod1212;
   }
   return obj;

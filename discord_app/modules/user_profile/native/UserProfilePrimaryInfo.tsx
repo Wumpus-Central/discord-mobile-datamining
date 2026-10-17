@@ -28,16 +28,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8535).getBadgeName;
-let Constants = fn(7128);
+const getBadgeName = fn(8581).getBadgeName;
+let Constants = fn(7181);
 ({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: closure_9, UserProfileThemeTypes } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_11, UserSettingsSections: closure_12 } = Constants);
-const GuildTagBadgeSize = fn(8109).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8546).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8155).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8592).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5154);
+let createStyles = fn(5191);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -100,10 +100,18 @@ const dependencyMap2 = {
     guildTagHorizontalPadding: 6,
   },
 };
+createStyles = fn(5191);
+let closure_20 = createStyles.createStyles((arg0) => {
+  let sum = arg0;
+  if (obj.isIOS()) {
+    sum = arg0 + 2;
+  }
+  return { text: { lineHeight: sum } };
+});
 let ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function DisplayName(user) {
-      const cResult = user(name[12]).c(34);
+      const cResult = user(name[13]).c(34);
       user = user.user;
       const guildId = user.guildId;
       name = user.name;
@@ -190,7 +198,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[24] !== tmp4) {
                         let tmp18 = tmp4;
                         if (tmp4) {
-                          tmp18 = closure_14(tmp(tmp2[16]).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+                          tmp18 = closure_14(tmp(tmp2[17]).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
                         }
                         cResult[24] = tmp4;
                         cResult[25] = tmp18;
@@ -224,7 +232,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       };
                       const items1 = [tmp13, tmp15, tmp17];
                       obj3.children = items1;
-                      const tmp22 = closure_15(tmp(tmp2[17]).PressableOpacity, obj3);
+                      const tmp22 = closure_15(tmp(tmp2[18]).PressableOpacity, obj3);
                       cResult[26] = accessibilityHint;
                       cResult[27] = name;
                       cResult[28] = onPress;
@@ -293,7 +301,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = user.id;
       cResult[9] = renderDisplayName;
       tmp10 = renderDisplayName;
-      let obj = user(name[12]);
+      let obj = user(name[13]);
     }
   : function DisplayName(user) {
       user = user.user;
@@ -332,7 +340,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10503).EffectDisplayType.STATIC,
+          effectDisplayType: user(10566).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -358,7 +366,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10503).EffectDisplayType.STATIC,
+          effectDisplayType: user(10566).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -369,22 +377,22 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
         const items1 = [closure_14(UsernameWithEffectsDefault, obj8), renderBotTag()];
         if (showChevron) {
-          showChevron = closure_14(tmp13(10778).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+          showChevron = closure_14(tmp13(10843).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
         }
         items1[2] = showChevron;
         obj7.children = items1;
-        tmp12Result = closure_15(user(6409).PressableOpacity, obj7);
+        tmp12Result = closure_15(user(6462).PressableOpacity, obj7);
         tmp13 = user;
       }
       return tmp12Result;
     };
-let closure_20 = tmp6;
+let closure_21 = tmp6;
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function UserTagAndPronouns(userTag) {
       let PressableOpacity = userTag;
       let obj = onPressUserTag;
-      const cResult = userTag(onPressUserTag[12]).c(24);
+      const cResult = userTag(onPressUserTag[13]).c(27);
       userTag = userTag.userTag;
       const pronouns = userTag.pronouns;
       ({ themeType, onPressUserTag } = userTag);
@@ -410,107 +418,119 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       const textVariant = tmp4.textVariant;
+      const tmp7 = closure_20(PressableOpacity(obj[19]).TextStyleSheet[textVariant].lineHeight);
+      text = tmp7;
       if (cResult[2] === onPressUserTag) {
-        if (cResult[3] === textVariant) {
-          if (cResult[4] === userTag) {
-            if (cResult[5] === userTagAccessibilityHint) {
-              let tmp7 = cResult[6];
-            }
-            if (cResult[7] === pronouns) {
-              if (cResult[8] === textVariant) {
-                let tmp8 = cResult[9];
+        if (cResult[3] === tmp7.text) {
+          if (cResult[4] === textVariant) {
+            if (cResult[5] === userTag) {
+              if (cResult[6] === userTagAccessibilityHint) {
+                let tmp8 = cResult[7];
               }
-              if (cResult[10] !== tmp7) {
-                const tmp7Result = tmp7();
-                cResult[10] = tmp7;
-                cResult[11] = tmp7Result;
-                let tmp9 = tmp7Result;
-              } else {
-                tmp9 = cResult[11];
-              }
-              if (cResult[12] === tmp3) {
-                if (cResult[13] === onPressPronouns) {
-                  if (cResult[14] === onPressUserTag) {
-                    if (cResult[15] === pronouns) {
-                      if (cResult[16] === pronounsAccessibilityHint) {
-                        if (cResult[17] === tmp8) {
-                          if (cResult[18] === textVariant) {
-                            let tmp11 = cResult[19];
-                          }
-                          if (cResult[20] === tmp2.detailsText) {
-                            if (cResult[21] === tmp9) {
-                              if (cResult[22] === tmp11) {
-                                let tmp20 = cResult[23];
+              if (cResult[8] === pronouns) {
+                if (cResult[9] === tmp7.text) {
+                  if (cResult[10] === textVariant) {
+                    let tmp9 = cResult[11];
+                  }
+                  if (cResult[12] !== tmp8) {
+                    const tmp8Result = tmp8();
+                    cResult[12] = tmp8;
+                    cResult[13] = tmp8Result;
+                    let tmp10 = tmp8Result;
+                  } else {
+                    tmp10 = cResult[13];
+                  }
+                  if (cResult[14] === tmp3) {
+                    if (cResult[15] === onPressPronouns) {
+                      if (cResult[16] === onPressUserTag) {
+                        if (cResult[17] === pronouns) {
+                          if (cResult[18] === pronounsAccessibilityHint) {
+                            if (cResult[19] === tmp9) {
+                              if (cResult[20] === tmp7.text) {
+                                if (cResult[21] === textVariant) {
+                                  let tmp12 = cResult[22];
+                                }
+                                if (cResult[23] === tmp2.detailsText) {
+                                  if (cResult[24] === tmp10) {
+                                    if (cResult[25] === tmp12) {
+                                      let tmp21 = cResult[26];
+                                    }
+                                    return tmp21;
+                                  }
+                                }
+                                let obj3 = { style: tmp2.detailsText, children: null };
+                                const items = [tmp10, tmp12];
+                                obj3.children = items;
+                                const tmp24 = closure_15(text, obj3);
+                                cResult[23] = tmp2.detailsText;
+                                cResult[24] = tmp10;
+                                cResult[25] = tmp12;
+                                cResult[26] = tmp24;
+                                tmp21 = tmp24;
                               }
-                              return tmp20;
                             }
                           }
-                          let obj3 = { style: tmp2.detailsText, children: null };
-                          const items = [tmp9, tmp11];
-                          obj3.children = items;
-                          const tmp23 = closure_15(closure_5, obj3);
-                          cResult[20] = tmp2.detailsText;
-                          cResult[21] = tmp9;
-                          cResult[22] = tmp11;
-                          cResult[23] = tmp23;
-                          tmp20 = tmp23;
                         }
                       }
                     }
                   }
+                  if (!tmp3) {
+                    cResult[14] = tmp3;
+                    cResult[15] = onPressPronouns;
+                    cResult[16] = onPressUserTag;
+                    cResult[17] = pronouns;
+                    cResult[18] = pronounsAccessibilityHint;
+                    cResult[19] = tmp9;
+                    cResult[20] = tmp7.text;
+                    cResult[21] = textVariant;
+                    cResult[22] = tmp3;
+                    tmp12 = tmp3;
+                  } else {
+                    const obj4 = {
+                      variant: textVariant,
+                      color: "mobile-text-heading-primary",
+                      style: tmp7.text,
+                      accessibilityElementsHidden: true,
+                      importantForAccessibility: "no-hide-descendants",
+                      children,
+                    };
+                    const items1 = [closure_14(PressableOpacity(obj[19]).Text, obj4)];
+                    if (null != onPressUserTag) {
+                      PressableOpacity = PressableOpacity(obj[18]).PressableOpacity;
+                      const obj5 = {
+                        onPress: onPressPronouns,
+                        accessibilityRole: "button",
+                        accessibilityLabel: pronouns,
+                        accessibilityHint: pronounsAccessibilityHint,
+                        children: tmp9(),
+                      };
+                      let tmp16Result = closure_14(PressableOpacity, obj5);
+                    } else {
+                      const obj6 = { children: tmp9() };
+                      tmp16Result = closure_14(text, obj6);
+                    }
+                    obj = { children: null };
+                    items1[1] = tmp16Result;
+                    obj.children = items1;
+                    closure_15(closure_16, obj);
+                  }
                 }
               }
-              if (!tmp3) {
-                cResult[12] = tmp3;
-                cResult[13] = onPressPronouns;
-                cResult[14] = onPressUserTag;
-                cResult[15] = pronouns;
-                cResult[16] = pronounsAccessibilityHint;
-                cResult[17] = tmp8;
-                cResult[18] = textVariant;
-                cResult[19] = tmp3;
-                tmp11 = tmp3;
-              } else {
-                const obj4 = {
+              function renderPronouns() {
+                return closure_2_14(Text_Text.Text, {
                   variant: textVariant,
                   color: "mobile-text-heading-primary",
-                  accessibilityElementsHidden: true,
-                  importantForAccessibility: "no-hide-descendants",
-                  children,
-                };
-                const items1 = [closure_14(PressableOpacity(obj[18]).Text, obj4)];
-                if (null != onPressUserTag) {
-                  PressableOpacity = PressableOpacity(obj[17]).PressableOpacity;
-                  const obj5 = {
-                    onPress: onPressPronouns,
-                    accessibilityRole: "button",
-                    accessibilityLabel: pronouns,
-                    accessibilityHint: pronounsAccessibilityHint,
-                    children: tmp8(),
-                  };
-                  let tmp15Result = closure_14(PressableOpacity, obj5);
-                } else {
-                  const obj6 = { children: tmp8() };
-                  tmp15Result = closure_14(closure_5, obj6);
-                }
-                obj = { children: null };
-                items1[1] = tmp15Result;
-                obj.children = items1;
-                closure_15(closure_16, obj);
+                  lineClamp: 1,
+                  style: closure_5.text,
+                  children: pronouns,
+                });
               }
+              cResult[8] = pronouns;
+              cResult[9] = tmp7.text;
+              cResult[10] = textVariant;
+              cResult[11] = renderPronouns;
+              tmp9 = renderPronouns;
             }
-            function renderPronouns() {
-              return closure_2_14(Text_Text.Text, {
-                variant: textVariant,
-                color: "mobile-text-heading-primary",
-                lineClamp: 1,
-                children: pronouns,
-              });
-            }
-            cResult[7] = pronouns;
-            cResult[8] = textVariant;
-            cResult[9] = renderPronouns;
-            tmp8 = renderPronouns;
           }
         }
       }
@@ -523,11 +543,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             tmp5 = jsx;
             tmp6 = closure_0;
             tmp7 = closure_2;
-            obj1 = { variant: null, color: "mobile-text-heading-primary", lineClamp: 2, children: null };
+            obj1 = { variant: null, color: "mobile-text-heading-primary", lineClamp: 2, style: null, children: null };
             tmp8 = textVariant;
             obj1.variant = textVariant;
+            tmp9 = closure_5;
+            obj1.style = closure_5.text;
             obj1.children = tmp;
-            tmp9 = jsx(closure_0(closure_2[18]).Text, obj1);
+            tmp10 = jsx(closure_0(closure_2[19]).Text, obj1);
             if (null != onPressUserTag) {
               obj4 = {
                 onPress: null,
@@ -536,16 +558,16 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityHint: null,
                 children: null,
               };
-              obj4.onPress = tmp10;
+              obj4.onPress = tmp11;
               obj4.accessibilityLabel = tmp;
               tmp4 = userTagAccessibilityHint;
               obj4.accessibilityHint = userTagAccessibilityHint;
-              obj4.children = tmp9;
-              tmp5Result = tmp5(tmp6(tmp7[17]).PressableOpacity, obj4);
+              obj4.children = tmp10;
+              tmp5Result = tmp5(tmp6(tmp7[18]).PressableOpacity, obj4);
             } else {
               tmp2 = View;
               obj = { children: null };
-              obj.children = tmp9;
+              obj.children = tmp10;
               tmp5Result = tmp5(View, obj);
             }
             return tmp5Result;
@@ -553,18 +575,20 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       cResult[2] = onPressUserTag;
-      cResult[3] = textVariant;
-      cResult[4] = userTag;
-      cResult[5] = userTagAccessibilityHint;
-      cResult[6] = P;
-      tmp7 = P;
-      let obj2 = userTag(onPressUserTag[12]);
+      cResult[3] = tmp7.text;
+      cResult[4] = textVariant;
+      cResult[5] = userTag;
+      cResult[6] = userTagAccessibilityHint;
+      cResult[7] = P;
+      tmp8 = P;
+      let obj2 = userTag(onPressUserTag[13]);
     }
   : function UserTagAndPronouns(userTag) {
       userTag = userTag.userTag;
       ({ pronouns, themeType, onPressUserTag } = userTag);
       const userTagAccessibilityHint = userTag.userTagAccessibilityHint;
       let textVariant;
+      c4 = undefined;
       ({ onPressPronouns, pronounsAccessibilityHint } = userTag);
       let tmp2 = null != pronouns;
       if (tmp2) {
@@ -578,7 +602,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = closure_18;
       }
       textVariant = tmp3.textVariant;
-      const items = [onPressUserTag, textVariant, userTag, userTagAccessibilityHint];
+      let Text = userTag;
+      let tmp9Result = userTagAccessibilityHint;
+      text = closure_20(userTag(userTagAccessibilityHint[19]).TextStyleSheet[textVariant].lineHeight);
+      c4 = text;
+      const items = [onPressUserTag, text.text, textVariant, userTag, userTagAccessibilityHint];
       let obj = { style: closure_17().detailsText, children: null };
       const items1 = [
         textVariant.useCallback(() => {
@@ -589,20 +617,21 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               variant: textVariant,
               color: "mobile-text-heading-primary",
               lineClamp: 2,
+              style: _undefined.text,
               children: userTag,
             };
-            const tmp9 = closure_2_14(Text_Text.Text, obj2);
+            const tmp10 = closure_2_14(Text_Text.Text, obj2);
             if (null != onPressUserTag) {
               const obj3 = {
-                onPress: tmp10,
+                onPress: tmp11,
                 accessibilityRole: "button",
                 accessibilityLabel: userTag,
                 accessibilityHint: userTagAccessibilityHint,
-                children: tmp9,
+                children: tmp10,
               };
               let tmp5Result = closure_2_14(Pressables.PressableOpacity, obj3);
             } else {
-              const obj = { children: tmp9 };
+              const obj = { children: tmp10 };
               tmp5Result = closure_2_14(hasOwnProperty, obj);
             }
             return tmp5Result;
@@ -614,16 +643,15 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         obj.children = items1;
         return closure_15(closure_5, obj);
       } else {
-        let Text = userTag;
-        let tmp8Result = userTagAccessibilityHint;
         let obj2 = {
           variant: textVariant,
           color: "mobile-text-heading-primary",
+          style: text.text,
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
           children,
         };
-        const items2 = [closure_14(userTag(userTagAccessibilityHint[18]).Text, obj2)];
+        const items2 = [closure_14(Text(tmp9Result[19]).Text, obj2)];
         if (null != onPressUserTag) {
           let obj3 = {
             onPress: onPressPronouns,
@@ -632,30 +660,45 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityHint: pronounsAccessibilityHint,
             children: null,
           };
-          Text = Text(tmp8Result[18]).Text;
-          const obj4 = { variant: textVariant, color: "mobile-text-heading-primary", lineClamp: 1, children: pronouns };
-          tmp8Result = closure_14(Text, obj4);
-          obj3.children = tmp8Result;
-          let tmp8Result2 = closure_14(Text(tmp8Result[17]).PressableOpacity, obj3);
+          Text = Text(tmp9Result[19]).Text;
+          const obj4 = {
+            variant: textVariant,
+            color: "mobile-text-heading-primary",
+            lineClamp: 1,
+            style: null,
+            children: null,
+          };
+          text = text.text;
+          obj4.style = text;
+          obj4.children = pronouns;
+          tmp9Result = closure_14(Text, obj4);
+          obj3.children = tmp9Result;
+          let tmp9Result2 = closure_14(Text(tmp9Result[18]).PressableOpacity, obj3);
         } else {
           const obj5 = { children: null };
-          const obj6 = { variant: textVariant, color: "mobile-text-heading-primary", lineClamp: 1, children: pronouns };
-          obj5.children = closure_14(Text(tmp8Result[18]).Text, obj6);
-          tmp8Result2 = closure_14(closure_5, obj5);
+          const obj6 = {
+            variant: textVariant,
+            color: "mobile-text-heading-primary",
+            lineClamp: 1,
+            style: text.text,
+            children: pronouns,
+          };
+          obj5.children = closure_14(Text(tmp9Result[19]).Text, obj6);
+          tmp9Result2 = closure_14(closure_5, obj5);
         }
         const obj7 = { children: null };
-        items2[1] = tmp8Result2;
+        items2[1] = tmp9Result2;
         obj7.children = items2;
         closure_15(closure_16, obj7);
       }
       const tmp = closure_17();
     };
-let closure_21 = tmp7;
+let closure_22 = tmp7;
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ProfileBadge(source) {
       let obj = label;
-      const cResult = source(label[12]).c(14);
+      const cResult = source(label[13]).c(14);
       source = source.source;
       ({ catalogBadge, id } = source);
       label = source.label;
@@ -669,12 +712,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const size = { width: badgeSize, height: badgeSize };
       }
       const ref = tieredTenureBadgeClickHandler.useRef(null);
-      let obj2 = source(label[12]);
-      tieredTenureBadgeClickHandler = source(obj[19]).useTieredTenureBadgeClickHandler(id, source.userId, themeType);
-      const tmpResult = source(obj[19]);
-      const adUser = source(obj[20]).useAdUser("profile_badge");
+      let obj2 = source(label[13]);
+      tieredTenureBadgeClickHandler = source(obj[20]).useTieredTenureBadgeClickHandler(id, source.userId, themeType);
+      const tmpResult = source(obj[20]);
+      const adUser = source(obj[21]).useAdUser("profile_badge");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const rootNavigationRef = tmp(obj[21]).getRootNavigationRef();
+        const rootNavigationRef = tmp(obj[22]).getRootNavigationRef();
         let currentRoute;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -683,7 +726,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = currentRoute;
         let first = currentRoute;
-        const tmpResult5 = tmp(obj[21]);
+        const tmpResult5 = tmp(obj[22]);
       } else {
         first = cResult[0];
       }
@@ -704,8 +747,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp10 = cResult[1];
       }
-      const tmpResult4 = source(obj[20]);
-      let props = source(obj[22]).useOrbsBadgeCoachmark(tmp10);
+      const tmpResult4 = source(obj[21]);
+      let props = source(obj[23]).useOrbsBadgeCoachmark(tmp10);
       if (cResult[2] === adUser) {
         if (cResult[3] === id) {
           if (cResult[4] === label) {
@@ -732,7 +775,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 if (!tmp22) {
                   let tmp23 = "orb_profile_badge" !== id;
                   if (tmp23) {
-                    tmp23 = id !== getBadgeName(tmp(obj[23]).BadgeId.ORB_PROFILE);
+                    tmp23 = id !== getBadgeName(tmp(obj[24]).BadgeId.ORB_PROFILE);
                   }
                   tmp22 = tmp23;
                 }
@@ -742,7 +785,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 if (tmp22) {
                   let obj5 = { children: null };
                   if (tmp3) {
-                    let PressableOpacity = tmp(obj[17]).PressableOpacity;
+                    let PressableOpacity = tmp(obj[18]).PressableOpacity;
                     let obj6 = {
                       accessibilityRole: "image",
                       accessibilityLabel: tmp12,
@@ -799,11 +842,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 } else if (cResult[12] !== props.props) {
                   const obj11 = { badgeRef: ref };
                   let merged = Object.assign(props.props);
-                  const tmp32 = closure_14(id(obj[22]), obj11);
+                  const tmp32 = closure_14(id(obj[23]), obj11);
                   props = props.props;
                   cResult[12] = props;
                   cResult[13] = tmp32;
-                  const tmp29 = id(obj[22]);
+                  const tmp29 = id(obj[23]);
                 }
               } else if (cResult[10] !== id) {
                 const obj12 = { targetRef: ref, badgeId: id };
@@ -897,7 +940,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tieredTenureBadgeClickHandler;
       cResult[7] = showToast;
       tmp11 = showToast;
-      const tmpResult6 = source(obj[22]);
+      const tmpResult6 = source(obj[23]);
     }
   : function ProfileBadge(source) {
       source = source.source;
@@ -915,11 +958,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const ref = noop.useRef(null);
       let obj9 = label;
-      noop = source(label[19]).useTieredTenureBadgeClickHandler(id, source.userId, themeType);
-      let obj3 = source(label[19]);
-      closure_4 = source(label[20]).useAdUser("profile_badge");
-      let obj4 = source(label[20]);
-      const rootNavigationRef = source(label[21]).getRootNavigationRef();
+      noop = source(label[20]).useTieredTenureBadgeClickHandler(id, source.userId, themeType);
+      let obj3 = source(label[20]);
+      closure_4 = source(label[21]).useAdUser("profile_badge");
+      let obj4 = source(label[21]);
+      const rootNavigationRef = source(label[22]).getRootNavigationRef();
       let currentRoute;
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
@@ -936,8 +979,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag == null) {
         flag = false;
       }
-      let obj5 = source(label[21]);
-      const orbsBadgeCoachmark = source(obj9[22]).useOrbsBadgeCoachmark({ disabled: !flag });
+      let obj5 = source(label[22]);
+      const orbsBadgeCoachmark = source(obj9[23]).useOrbsBadgeCoachmark({ disabled: !flag });
       const intl = tmp3(obj9[34]).intl;
       const formatToPlainStringResult = intl.formatToPlainString(source(obj9[34]).t.A0LN9t, { badgeLabel: label });
       let tmp8 = themeType === UserProfileThemeTypes.YOU_SCREEN;
@@ -953,7 +996,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (!tmp12) {
         let tmp13 = "orb_profile_badge" !== id;
         if (tmp13) {
-          tmp13 = id !== getBadgeName(tmp3(obj9[23]).BadgeId.ORB_PROFILE);
+          tmp13 = id !== getBadgeName(tmp3(obj9[24]).BadgeId.ORB_PROFILE);
         }
         tmp12 = tmp13;
       }
@@ -964,12 +1007,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (!tmp12) {
         let obj6 = { badgeRef: ref };
         let merged = Object.assign(orbsBadgeCoachmark.props);
-        tmp15 = closure_14(id(obj9[22]), obj6);
-        let tmp18 = id(obj9[22]);
+        tmp15 = closure_14(id(obj9[23]), obj6);
+        let tmp18 = id(obj9[23]);
       }
       const obj7 = { children: null };
       if (showToastOnPress) {
-        let PressableOpacity = tmp3(obj9[17]).PressableOpacity;
+        let PressableOpacity = tmp3(obj9[18]).PressableOpacity;
         let obj8 = {
           accessibilityRole: "image",
           accessibilityLabel: formatToPlainStringResult,
@@ -1100,12 +1143,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp21(tmp22, obj7);
       }
       let obj = { disabled: !flag };
-      const tmp3Result = source(obj9[22]);
+      const tmp3Result = source(obj9[23]);
     };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ProfileBadgeRows(userId) {
-      const cResult = userId(style[12]).c(87);
+      const cResult = userId(style[13]).c(87);
       userId = userId.userId;
       ({ badges, catalogBadges, isTryItOut, canOpenBadgeDirectory, badgeDirectoryEntryPointRef, onOpenBadgeDirectory } =
         userId);
@@ -1138,7 +1181,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[2];
       }
-      let obj = userId(style[12]);
+      let obj = userId(style[13]);
       const tmp4 = undefined !== canOpenBadgeDirectory && canOpenBadgeDirectory;
       const isBadgeManagementEnabled = userId(style[38]).useIsBadgeManagementEnabled(tmp11);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1300,7 +1343,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                                                   };
                                                   const intl5 = tmp(tmp2[34]).intl;
                                                   obj6.children = intl5.string(tmp(tmp2[34]).t.l6w3Vj);
-                                                  const tmp80 = closure_14(tmp(tmp2[18]).Text, obj6);
+                                                  const tmp80 = closure_14(tmp(tmp2[19]).Text, obj6);
                                                   class W {
                                                     constructor(arg0) {
                                                       obj = {
@@ -1362,7 +1405,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                                                 };
                                                 const items1 = [tmp75, tmp78];
                                                 obj7.children = items1;
-                                                const tmp83 = closure_15(tmp(tmp2[17]).PressableOpacity, obj7);
+                                                const tmp83 = closure_15(tmp(tmp2[18]).PressableOpacity, obj7);
                                                 cResult[53] = badgeDirectoryEntryPointRef;
                                                 cResult[54] = tmp17;
                                                 cResult[55] = tmp73;
@@ -1511,7 +1554,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                                                           return jsx(ProfileBadge, obj, userId.id);
                                                         }
                                                       }
-                                                      tmp63 = closure_14(tmp(tmp2[17]).PressableOpacity, obj10);
+                                                      tmp63 = closure_14(tmp(tmp2[18]).PressableOpacity, obj10);
                                                     }
                                                     cResult[71] = tmp58;
                                                     class W {
@@ -1614,7 +1657,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                                                 );
                                                 const _HermesInternal = HermesInternal;
                                                 obj12.children = "+" + diff;
-                                                tmp56 = closure_14(tmp(tmp2[18]).Text, obj12);
+                                                tmp56 = closure_14(tmp(tmp2[19]).Text, obj12);
                                                 const obj13 = { overflow_count: null };
                                               }
                                               cResult[64] = diff;
@@ -1746,7 +1789,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                             obj2.badgeSize = badgeSize;
                             obj2.themeType = themeType;
                             obj2.showToastOnPress = showToastOnPress;
-                            return closure_2_14(closure_22, obj2, badge_id.badge_id);
+                            return closure_2_14(closure_23, obj2, badge_id.badge_id);
                           });
                         }
                         cResult[33] = tmp15;
@@ -1988,7 +2031,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                   obj17.label = tmp23;
                   obj17.badgeSize = badgeSize;
                   obj17.showToastOnPress = tmp15;
-                  const tmp32 = closure_14(closure_22, obj17);
+                  const tmp32 = closure_14(closure_23, obj17);
                   cResult[24] = tmp15;
                   cResult[25] = badgeSize;
                   cResult[26] = tmp23;
@@ -2059,7 +2102,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[22] = W;
         tmp22 = W;
       }
-      class H {
+      class U {
         constructor() {
           if (onOpenBadgeDirectory != null) {
             tmpResult = tmp();
@@ -2072,8 +2115,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[4] = onOpenBadgeDirectory;
       cResult[5] = userId;
-      cResult[6] = H;
-      tmp17 = H;
+      cResult[6] = U;
+      tmp17 = U;
       const tmpResult4 = userId(style[39]);
     }
   : function ProfileBadgeRows(userId) {
@@ -2153,7 +2196,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         obj.badgeSize = badgeSize;
         obj.themeType = themeType;
         obj.showToastOnPress = flag;
-        return closure_2_14(closure_22, obj, id.id);
+        return closure_2_14(closure_23, obj, id.id);
       });
       if (isTryItOut) {
         isTryItOut = null == badges.find((id) => "premium" === id.id);
@@ -2175,7 +2218,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         obj4.label = intl.formatToPlainString(tmp4(onOpenBadgeDirectory[34]).t["8zbGNR"], obj5);
         obj4.badgeSize = badgeSize;
         obj4.showToastOnPress = tmp8;
-        mapped.push(closure_14(closure_22, obj4));
+        mapped.push(closure_14(closure_23, obj4));
       }
       width = badges(onOpenBadgeDirectory[43])().width;
       const items3 = [mapped, badgeRowHorizontalPadding, badgeSize, width, isBadgeManagementEnabled];
@@ -2222,7 +2265,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             obj2.badgeSize = badgeSize;
             obj2.themeType = themeType;
             obj2.showToastOnPress = flag;
-            return closure_2_14(closure_22, obj2, badge_id.badge_id);
+            return closure_2_14(closure_23, obj2, badge_id.badge_id);
           });
         }
         if (mapped1 == null) {
@@ -2262,9 +2305,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               const obj9 = { variant: "text-xs/normal", color: "text-strong", children: null };
               const intl5 = tmp4(onOpenBadgeDirectory[34]).intl;
               obj9.children = intl5.string(tmp4(onOpenBadgeDirectory[34]).t.l6w3Vj);
-              items5[1] = closure_14(tmp4(onOpenBadgeDirectory[18]).Text, obj9);
+              items5[1] = closure_14(tmp4(onOpenBadgeDirectory[19]).Text, obj9);
               obj6.children = items5;
-              tmp32 = closure_15(tmp4(onOpenBadgeDirectory[17]).PressableOpacity, obj6);
+              tmp32 = closure_15(tmp4(onOpenBadgeDirectory[18]).PressableOpacity, obj6);
             }
           }
           return tmp32;
@@ -2290,7 +2333,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             obj12.accessibilityLabel = intl2.formatToPlainString(tmp4(onOpenBadgeDirectory[34]).t.eIHfGZ, obj13);
             const _HermesInternal = HermesInternal;
             obj12.children = "+" + diff;
-            tmp28 = closure_14(tmp4(onOpenBadgeDirectory[18]).Text, obj12);
+            tmp28 = closure_14(tmp4(onOpenBadgeDirectory[19]).Text, obj12);
           }
           items7[1] = tmp28;
           obj10.children = items7;
@@ -2303,7 +2346,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             obj15.accessibilityLabel = intl3.string(tmp4(onOpenBadgeDirectory[34]).t.PEjP4L);
             obj15.onPress = callback;
             obj15.children = tmp33Result;
-            tmp30Result = closure_14(tmp4(onOpenBadgeDirectory[17]).PressableOpacity, obj15);
+            tmp30Result = closure_14(tmp4(onOpenBadgeDirectory[18]).PressableOpacity, obj15);
           }
           obj14.children = tmp30Result;
           return closure_14(badgeRow, obj14);
@@ -2323,9 +2366,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = userId(onOpenBadgeDirectory[39]);
       tmp20 = badges;
     };
-let closure_23 = tmp8;
+let closure_24 = tmp8;
 ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildTag(arg0) {
       const cResult = c.c(21);
       ({ user, themeType, style, showToastOnPress, primaryGuildOverride } = arg0);
@@ -2661,7 +2704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               themeType,
                                               showToastOnPress: showBadgeToastOnPress,
                                             };
-                                            const tmp27 = closure_1_14(closure_23, obj6);
+                                            const tmp27 = closure_1_14(closure_24, obj6);
                                             cResult[29] = badgeDirectoryEntryPointRef;
                                             cResult[30] = badges;
                                             cResult[31] = canOpenBadgeDirectory;
@@ -2684,7 +2727,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       showToastOnPress: showBadgeToastOnPress,
                                       primaryGuildOverride,
                                     };
-                                    const tmp23 = closure_1_14(closure_24, obj7);
+                                    const tmp23 = closure_1_14(closure_25, obj7);
                                     cResult[23] = tmp4;
                                     cResult[24] = primaryGuildOverride;
                                     cResult[25] = showBadgeToastOnPress;
@@ -2707,7 +2750,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           onPressPronouns,
                           pronounsAccessibilityHint,
                         };
-                        const tmp19 = closure_1_14(closure_21, obj8);
+                        const tmp19 = closure_1_14(closure_22, obj8);
                         cResult[15] = onPressPronouns;
                         cResult[16] = onPressUserTag;
                         cResult[17] = pronouns;
@@ -2736,7 +2779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           showChevron,
           pendingDisplayNameStyles,
         };
-        const tmp14 = closure_1_14(closure_20, obj9);
+        const tmp14 = closure_1_14(closure_21, obj9);
         cResult[5] = displayNameAccessibilityHint;
         cResult[6] = displayNameAccessibilityRole;
         cResult[7] = guildId;
@@ -2810,14 +2853,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.displayNameAccessibilityRole = displayNameAccessibilityRole;
       obj5.showChevron = showChevron;
       obj5.pendingDisplayNameStyles = pendingDisplayNameStyles;
-      const items1 = [closure_1_14(closure_20, obj5)];
+      const items1 = [closure_1_14(closure_21, obj5)];
       const obj6 = { style: tmp.details, children: null };
       let tmp11 = null;
       if (!user.isProvisional) {
         tmp11 = userTag;
       }
       const items2 = [
-        closure_1_14(closure_21, {
+        closure_1_14(closure_22, {
           userTag: tmp11,
           pronouns,
           themeType,
@@ -2826,14 +2869,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onPressPronouns,
           pronounsAccessibilityHint,
         }),
-        closure_1_14(closure_24, {
+        closure_1_14(closure_25, {
           user,
           themeType,
           style: obj,
           showToastOnPress: showBadgeToastOnPress,
           primaryGuildOverride,
         }),
-        closure_1_14(closure_23, {
+        closure_1_14(closure_24, {
           userId: user.id,
           badges,
           catalogBadges,

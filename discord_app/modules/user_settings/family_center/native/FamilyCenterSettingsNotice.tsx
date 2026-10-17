@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
-import _modDef2571 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2589 from "../../../parent_tools/FamilyCenter.messages.js";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import LayerActionCreators from "../../../../actions/LayerActionCreators.tsx";
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SafetySettingsNoticeType = fn(7243).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7295).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterSettingsParentalControlsNotice() {
       const cResult = activeLinkUserIds(576).c(5);
       let obj = activeLinkUserIds(576);
-      activeLinkUserIds = activeLinkUserIds(7959).useActiveLinkUserIds();
+      activeLinkUserIds = activeLinkUserIds(8005).useActiveLinkUserIds();
       if (cResult[0] !== activeLinkUserIds) {
         function handleMessageParentClick() {
           LayerActionCreators.popLayer();
@@ -35,8 +35,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp4;
       }
       const obj3 = { label: null, noticeType: null, labelHook: null, count: null };
-      const obj2 = activeLinkUserIds(7959);
-      obj3.label = _modDef2571.i284fU;
+      const obj2 = activeLinkUserIds(8005);
+      obj3.label = _modDef2589.i284fU;
       obj3.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
       obj3.labelHook = tmp3;
       obj3.count = activeLinkUserIds.length;
@@ -47,10 +47,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp6;
     }
   : function FamilyCenterSettingsParentalControlsNotice() {
-      activeLinkUserIds = activeLinkUserIds(7959).useActiveLinkUserIds();
+      activeLinkUserIds = activeLinkUserIds(8005).useActiveLinkUserIds();
       const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-      let obj = activeLinkUserIds(7959);
-      obj2.label = _modDef2571.i284fU;
+      let obj = activeLinkUserIds(8005);
+      obj2.label = _modDef2589.i284fU;
       obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
       obj2.labelHook = function handleMessageParentClick() {
         LayerActionCreators.popLayer();

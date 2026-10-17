@@ -5,7 +5,7 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const ReadStateTypes = fn(6186).ReadStateTypes;
+const ReadStateTypes = fn(6223).ReadStateTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureGuildUnreadSummary.tsx");
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp10, tmp11);
       const tmpResult = stateFromStoresArray(504);
-      return stateFromStoresArray(10920).useConjureUnreadSummary(arg0);
+      return stateFromStoresArray(10984).useConjureUnreadSummary(arg0);
     }
   : function useConjureGuildUnreadSummary(arg0) {
       const items = [ReadStateStore, ConjureProjectStore];
@@ -80,5 +80,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj = stateFromStoresArray(504);
-      return stateFromStoresArray(10920).useConjureUnreadSummary(arg0);
+      return stateFromStoresArray(10984).useConjureUnreadSummary(arg0);
     };

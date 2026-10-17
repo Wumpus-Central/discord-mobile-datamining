@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx
 import util from "../../../../intl/index.native.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import _modDef9508 from "../../../../../_runtime/metro/09508__.js";
+import _modDef9572 from "../../../../../_runtime/metro/09572__.js";
 import CreatorRevenueButton from "../components/CreatorRevenueButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = stateFromStores.name;
       }
       if (cResult[3] !== name) {
-        const obj2 = { image: tmp4(9508), title: null, description: null };
+        const obj2 = { image: tmp4(9572), title: null, description: null };
         let intl = tmp(1128).intl;
         obj2.title = intl.string(tmp(1128).t.cBjkcx);
         const intl2 = tmp(1128).intl;
@@ -119,14 +119,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 };
-          const tmp21 = jsx(tmp4(5461), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
+          const tmp21 = jsx(tmp4(5498), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
           cResult[14] = onClose;
           cResult[15] = P;
           cResult[16] = tmp16;
           cResult[17] = tmp21;
         }
         const obj5 = { alertWidth: diff, upsellItem: tmp11 };
-        const tmp18 = jsx(tmp(9702).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+        const tmp18 = jsx(tmp(9766).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
         cResult[11] = diff;
         cResult[12] = tmp11;
         cResult[13] = tmp18;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           name = stateFromStores.name;
         }
-        const obj = { image: _modDef9508, title: null, description: null };
+        const obj = { image: _modDef9572, title: null, description: null };
         const intl = util.intl;
         obj.title = intl.string(util.t.cBjkcx);
         const intl2 = util.intl;

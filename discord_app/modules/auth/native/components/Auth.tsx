@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
-import StackNavigator from "../../../../../_runtime/06914_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/06967_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
@@ -16,9 +16,9 @@ import MultiAccountStore from "../../../multi_account/MultiAccountStore.tsx";
 const util = PX_24(1128);
 const utils_PlatformUtils = PX_24(1385);
 const KeyboardChatScrollView = PX_24(1647);
-const WideAuthScrollContext = PX_24(6879);
-const Navigator = PX_24(6912);
-const _mod17053 = PX_24(17053);
+const WideAuthScrollContext = PX_24(6932);
+const Navigator = PX_24(6965);
+const _mod17113 = PX_24(17113);
 require = fn;
 function getInitialAuthRouteStack() {
   if (!obj.hasRegistrationHandoff()) {
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1087).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17000);
+let RegistrationStepsUtils = fn(17060);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -93,13 +93,13 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(6857).hasWebAuthn) {
+if (fn(6910).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj3 = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
@@ -186,11 +186,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         obj13 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { backgroundImageSource: _mod17053, backgroundImageCover: true };
-        const tmp19 = closure_9(tmp3(6881), obj4);
+        const obj4 = { backgroundImageSource: _mod17113, backgroundImageCover: true };
+        const tmp19 = closure_9(tmp3(6934), obj4);
         cResult[4] = tmp19;
         let tmp16 = tmp19;
-        const tmp3Result = tmp3(6881);
+        const tmp3Result = tmp3(6934);
       } else {
         tmp16 = cResult[4];
       }
@@ -358,7 +358,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         closure_1(false);
       }, []);
       const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-      obj3.backgroundImageSource = _mod17053;
+      obj3.backgroundImageSource = _mod17113;
       const children = [closure_9(BackgroundImageDefault, obj3)];
       if (tmp5) {
         const obj5 = { value: tmp11, children: null };
@@ -464,7 +464,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7417).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7463).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

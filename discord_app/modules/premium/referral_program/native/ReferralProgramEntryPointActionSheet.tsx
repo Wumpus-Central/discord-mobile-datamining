@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef8307 from "../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import _modDef8353 from "../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: {
     display: "flex",
@@ -59,7 +59,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const callback = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.PRIMARY);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14443, dependencyMap.paths),
+      asyncRequireImpl(14511, dependencyMap.paths),
       "referral-program-share-action-sheet",
     );
   }, items);
@@ -69,7 +69,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const obj = { onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef8307 };
+  const obj4 = { uri: _modDef8353 };
   obj3.source = obj4;
   obj3.style = tmp.image;
   const items2 = [closure_6(FastImageDefault, obj3), , ,];
@@ -81,19 +81,19 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   };
   const intl = markAsDismissed(1128).intl;
   obj5.children = intl.string(markAsDismissed(1128).t.u1CFbS);
-  items2[1] = closure_6(markAsDismissed(5150).Text, obj5);
+  items2[1] = closure_6(markAsDismissed(5187).Text, obj5);
   const obj6 = { style: tmp.body, color: "text-default", variant: "text-sm/normal", children: null };
   const intl2 = markAsDismissed(1128).intl;
   obj6.children = intl2.string(markAsDismissed(1128).t.k2ibMz);
-  items2[2] = closure_6(markAsDismissed(5150).Text, obj6);
+  items2[2] = closure_6(markAsDismissed(5187).Text, obj6);
   const obj7 = { style: tmp.buttonContainer, children: null };
   const obj8 = { text: null, size: "lg", onPress: null, variant: "primary" };
   const intl3 = markAsDismissed(1128).intl;
   obj8.text = intl3.string(markAsDismissed(1128).t.TI8qgg);
   obj8.onPress = callback;
-  obj7.children = closure_6(markAsDismissed(5442).Button, obj8);
+  obj7.children = closure_6(markAsDismissed(5479).Button, obj8);
   items2[3] = closure_6(View, obj7);
   obj2.children = items2;
   obj.children = closure_7(View, obj2);
-  return closure_6(markAsDismissed(7065).BottomSheet, obj);
+  return closure_6(markAsDismissed(7118).BottomSheet, obj);
 }

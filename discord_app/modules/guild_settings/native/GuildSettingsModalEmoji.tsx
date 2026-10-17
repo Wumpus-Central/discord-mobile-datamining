@@ -23,8 +23,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(9781).fetchEmoji, 1000);
-const createStyles = fn(5154);
+let closure_11 = apply.throttle(fn(9845).fetchEmoji, 1000);
+const createStyles = fn(5191);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },

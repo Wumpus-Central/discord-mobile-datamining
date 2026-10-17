@@ -7,7 +7,7 @@ require = fn;
 const DEFAULT_CONTENT_PADDING = fn(1504).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_6 = createStyles.createStyles({
   emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
 });
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(onPressRow(11914).AppLauncherList, {
+      const tmp8 = jsx(onPressRow(11977).AppLauncherList, {
         contentContainerStyle: tmp4.emptyState,
         data: tmp5,
         renderItem: tmp6,
@@ -78,7 +78,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [onPressRow.query];
       obj.data = items;
-      return jsx(onPressRow(11914).AppLauncherList, {
+      return jsx(onPressRow(11977).AppLauncherList, {
         contentContainerStyle: closure_6().emptyState,
         data: null,
         renderItem(label) {
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11[1] = guild_id;
           tmp11[3] = U;
           tmp11[6] = tmp4;
-          tmp9Result = jsx(tmp10(11081), tmp11);
+          tmp9Result = jsx(tmp10(11144), tmp11);
         }
         cResult[8] = channel;
         cResult[9] = id;

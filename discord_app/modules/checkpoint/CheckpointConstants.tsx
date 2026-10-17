@@ -1,28 +1,28 @@
 // discord_app/modules/checkpoint/CheckpointConstants.tsx
-import _modDef3123 from "Checkpoint2026.messages.js";
+import _modDef3141 from "Checkpoint2026.messages.js";
 
 const obj = {
-  [fn(5501).CheckpointTraitRarity.DEFAULT]: "#FFE047",
-  [fn(5501).CheckpointTraitRarity.COMMON]: "#35ED7E",
-  [fn(5501).CheckpointTraitRarity.RARE]: "#EF3054",
-  [fn(5501).CheckpointTraitRarity.EPIC]: "#7D53DE",
-  [fn(5501).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
+  [fn(5538).CheckpointTraitRarity.DEFAULT]: "#FFE047",
+  [fn(5538).CheckpointTraitRarity.COMMON]: "#35ED7E",
+  [fn(5538).CheckpointTraitRarity.RARE]: "#EF3054",
+  [fn(5538).CheckpointTraitRarity.EPIC]: "#7D53DE",
+  [fn(5538).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
 };
-obj[fn(5501).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+obj[fn(5538).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
 const obj2 = {};
-obj2[fn(5501).CheckpointTraitRarity.DEFAULT] = _modDef3123.bP4GV1;
-obj2[fn(5501).CheckpointTraitRarity.COMMON] = _modDef3123.QwkKWr;
-obj2[fn(5501).CheckpointTraitRarity.RARE] = _modDef3123.KLmNgL;
-obj2[fn(5501).CheckpointTraitRarity.EPIC] = _modDef3123.hAmdLZ;
-obj2[fn(5501).CheckpointTraitRarity.ULTRA] = _modDef3123.Tv4xyf;
-obj2[fn(5501).CheckpointTraitRarity.NITRO] = _modDef3123["0ModIv"];
+obj2[fn(5538).CheckpointTraitRarity.DEFAULT] = _modDef3141.bP4GV1;
+obj2[fn(5538).CheckpointTraitRarity.COMMON] = _modDef3141.QwkKWr;
+obj2[fn(5538).CheckpointTraitRarity.RARE] = _modDef3141.KLmNgL;
+obj2[fn(5538).CheckpointTraitRarity.EPIC] = _modDef3141.hAmdLZ;
+obj2[fn(5538).CheckpointTraitRarity.ULTRA] = _modDef3141.Tv4xyf;
+obj2[fn(5538).CheckpointTraitRarity.NITRO] = _modDef3141["0ModIv"];
 const items = [
-  fn(5501).CheckpointTraitRarity.ULTRA,
-  fn(5501).CheckpointTraitRarity.EPIC,
-  fn(5501).CheckpointTraitRarity.RARE,
-  fn(5501).CheckpointTraitRarity.COMMON,
-  fn(5501).CheckpointTraitRarity.DEFAULT,
-  fn(5501).CheckpointTraitRarity.NITRO,
+  fn(5538).CheckpointTraitRarity.ULTRA,
+  fn(5538).CheckpointTraitRarity.EPIC,
+  fn(5538).CheckpointTraitRarity.RARE,
+  fn(5538).CheckpointTraitRarity.COMMON,
+  fn(5538).CheckpointTraitRarity.DEFAULT,
+  fn(5538).CheckpointTraitRarity.NITRO,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");

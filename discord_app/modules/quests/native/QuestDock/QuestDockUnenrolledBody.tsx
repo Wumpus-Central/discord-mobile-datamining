@@ -10,7 +10,7 @@ import QuestStore from "../../QuestStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6191);
+const QuestConstants = fn(6228);
 ({ QuestDockMode: metroRequire, QuestsExperimentLocations: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -192,10 +192,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const callback = obj2.useCallback(launchMobileActivity(function*() {
     const v0 = 0;
     if (isQuestAccessSuspended) {
-      trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(6194).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7635).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(6194).QuestContent.QUEST_BAR_MOBILE });
-      v2(16091)();
+      trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(6231).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7681).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(6231).QuestContent.QUEST_BAR_MOBILE });
+      v2(16157)();
     }
-    yield v0(9410).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7635).QuestContentCTA.ACCEPT_QUEST, questContent: v0(6194).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(6194).QuestContent.QUEST_BAR_MOBILE });
+    yield v0(9474).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7681).QuestContentCTA.ACCEPT_QUEST, questContent: v0(6231).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(6231).QuestContent.QUEST_BAR_MOBILE });
     if (1 === tmp4) {
       if (arg0 === 1) {
         dependencyMap = 3;
@@ -209,10 +209,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return { value: closure_128_3(), done: false };
       } else {
         if (closure_128_1) {
-          v2(16098)({ questId: closure_128_0.id, sourceQuestContent: v0(6194).QuestContent.QUEST_BAR_MOBILE });
+          v2(16164)({ questId: closure_128_0.id, sourceQuestContent: v0(6231).QuestContent.QUEST_BAR_MOBILE });
           closure_128_5(constants.COLLAPSED);
-          v2(16098);
-          { questId: closure_128_0.id, sourceQuestContent: v0(6194).QuestContent.QUEST_BAR_MOBILE };
+          v2(16164);
+          { questId: closure_128_0.id, sourceQuestContent: v0(6231).QuestContent.QUEST_BAR_MOBILE };
         }
         dependencyMap = 3;
       }

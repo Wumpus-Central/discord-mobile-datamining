@@ -7,14 +7,14 @@ import VisibilitySensorDefault from "VisibilitySensor.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
-const FastImageDefault = tmp12(5091);
+const FastImageDefault = tmp12(5128);
 require = fn;
 let closure_4 = fn(1089).CollectiblesMobileShopScreen;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_9 = createStyles.createStyles({
   container: { position: "relative" },
   bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
@@ -128,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_9();
       importDefault = subblock(1505).useNavigation();
       let obj = subblock(1505);
-      dependencyMap = subblock(9202).useCollectiblesAnalyticsContext();
+      dependencyMap = subblock(9262).useCollectiblesAnalyticsContext();
       const assetUrl = subblock.assetUrl;
-      let obj2 = subblock(9202);
+      let obj2 = subblock(9262);
       let items = [stateFromStores];
       stateFromStores = subblock(504).useStateFromStores(items, () =>
         CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -150,14 +150,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         date = new Date(unpublishedAt);
       }
       let obj5 = {
-        onChange: subblock(16850).useTrackProductCardImpression(
+        onChange: subblock(16910).useTrackProductCardImpression(
           subblock.categoryStoreListingId,
           "mobile_home",
           "featured_block",
         ).handleCardVisibilityChange,
         children: null,
       };
-      let obj4 = subblock(16850);
+      let obj4 = subblock(16910);
       const obj6 = {
         accessibilityRole: "button",
         accessibilityLabel: null,
@@ -232,13 +232,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [tmp11Result];
       const obj8 = { radius: nativeDefault.radii.lg };
-      let result = subblock(7496).shouldShowLimitedTimeBadge(date);
+      let result = subblock(7542).shouldShowLimitedTimeBadge(date);
       if (result) {
         const obj11 = { style: tmp.limitedTimeBadge };
-        result = closure_7(tmp2(9265).LimitedTimeBadge, obj11);
+        result = closure_7(tmp2(9325).LimitedTimeBadge, obj11);
       }
       items1[1] = result;
       obj6.children = items1;
-      obj5.children = closure_8(subblock(6409).PressableOpacity, obj6);
+      obj5.children = closure_8(subblock(6462).PressableOpacity, obj6);
       return closure_7(tmp13, obj5);
     };

@@ -345,7 +345,7 @@ const identity = fn(1269);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  let obj = {
+  return {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "code",
@@ -368,7 +368,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
-  return obj;
 });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

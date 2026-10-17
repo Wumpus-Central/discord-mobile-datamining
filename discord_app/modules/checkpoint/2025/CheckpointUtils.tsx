@@ -2,16 +2,16 @@
 import util from "../../../intl/index.native.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import getTimestampString from "../../notification_center/getTimestampString.tsx";
-import _modDef5512 from "../../../../discord_assets/assets/checkpoint/card-plant.png.js";
-import _modDef5513 from "../../../../discord_assets/assets/checkpoint/card-donut.png.js";
-import _modDef5514 from "../../../../discord_assets/assets/checkpoint/card-capybara.png.js";
-import _modDef5515 from "../../../../discord_assets/assets/checkpoint/card-disco.png.js";
-import _modDef5516 from "../../../../discord_assets/assets/checkpoint/card-origami.png.js";
-import _modDef5517 from "../../../../discord_assets/assets/checkpoint/card-snail.png.js";
-import _modDef5518 from "../../../../discord_assets/assets/checkpoint/card-duck.png.js";
-import _modDef5519 from "../../../../discord_assets/assets/checkpoint/card-banana.png.js";
-import _modDef5520 from "../../../../discord_assets/assets/checkpoint/card-cat.png.js";
-import _modDef5521 from "../../../../discord_assets/assets/checkpoint/card-cassette.png.js";
+import _modDef5549 from "../../../../discord_assets/assets/checkpoint/card-plant.png.js";
+import _modDef5550 from "../../../../discord_assets/assets/checkpoint/card-donut.png.js";
+import _modDef5551 from "../../../../discord_assets/assets/checkpoint/card-capybara.png.js";
+import _modDef5552 from "../../../../discord_assets/assets/checkpoint/card-disco.png.js";
+import _modDef5553 from "../../../../discord_assets/assets/checkpoint/card-origami.png.js";
+import _modDef5554 from "../../../../discord_assets/assets/checkpoint/card-snail.png.js";
+import _modDef5555 from "../../../../discord_assets/assets/checkpoint/card-duck.png.js";
+import _modDef5556 from "../../../../discord_assets/assets/checkpoint/card-banana.png.js";
+import _modDef5557 from "../../../../discord_assets/assets/checkpoint/card-cat.png.js";
+import _modDef5558 from "../../../../discord_assets/assets/checkpoint/card-cassette.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -39,27 +39,45 @@ export const getVoiceDurationString = function getVoiceDurationString(rounded) {
     return formatToPlainStringResult;
   }
 };
+export const getAccessibleVoiceDurationString = function getAccessibleVoiceDurationString(rounded) {
+  const timeAndUnit = TimeUtils.getTimeAndUnit(rounded, items);
+  let num = timeAndUnit.time;
+  if (num == null) {
+    num = 0;
+  }
+  rounded = Math.round(num);
+  if (timeAndUnit.unit === TimeUtils.TimeUnits.HOURS) {
+    const intl2 = util.intl;
+    const obj2 = { hours: rounded };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.xCjYxK, obj2);
+  } else {
+    const intl = util.intl;
+    const obj3 = { minutes: rounded };
+    formatToPlainStringResult = intl.formatToPlainString(util.t.iXLF9W, obj3);
+  }
+  return formatToPlainStringResult;
+};
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef5512;
+    return _modDef5549;
   } else if (1 === cardId) {
-    return _modDef5513;
+    return _modDef5550;
   } else if (2 === cardId) {
-    return _modDef5514;
+    return _modDef5551;
   } else if (3 === cardId) {
-    return _modDef5515;
+    return _modDef5552;
   } else if (4 === cardId) {
-    return _modDef5516;
+    return _modDef5553;
   } else if (5 === cardId) {
-    return _modDef5517;
+    return _modDef5554;
   } else if (6 === cardId) {
-    return _modDef5518;
+    return _modDef5555;
   } else if (7 === cardId) {
-    return _modDef5519;
+    return _modDef5556;
   } else if (8 === cardId) {
-    return _modDef5520;
+    return _modDef5557;
   } else {
-    return _modDef5521;
+    return _modDef5558;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(checkpointData) {

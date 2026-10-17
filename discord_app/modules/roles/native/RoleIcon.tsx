@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5150);
+const Text_Text = Text(5187);
 require = fn;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1384);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         fontFamily: "System",
         fontSize: result,
-        lineHeight: "unicodeVersion",
+        lineHeight: "ix",
         textAlign: true,
         width: num,
         marginBottom: true,
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         fontFamily: "System",
         fontSize: size * num,
-        lineHeight: "unicodeVersion",
+        lineHeight: "ix",
         textAlign: true,
         width: size,
         marginBottom: true,

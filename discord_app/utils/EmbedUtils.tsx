@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef4761 from "../../_runtime/metro/04761__.js";
+import _modDef4797 from "../../_runtime/metro/04797__.js";
 import InteractionComponentUtils from "../modules/interaction_components/InteractionComponentUtils.tsx";
 import EmbedConstants from "../modules/messages/EmbedConstants.tsx";
 import Constants from "../Constants.tsx";
@@ -90,8 +90,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef4761(date);
-    const tmpResult = _modDef4761;
+    obj.timestamp = _modDef4797(date);
+    const tmpResult = _modDef4797;
   }
   if (null != footer.color) {
     obj.color = footer.color;

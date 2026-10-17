@@ -1,8 +1,10 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
+import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4761 from "../../../_runtime/metro/04761__.js";
+import _modDef4797 from "../../../_runtime/metro/04797__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -51,7 +53,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7733);
+const SafetyHubConstants = fn(7779);
 ({
   AppealIngestionSignal: closure_4,
   SafetySystemNotificationCtaType: hasOwnProperty,
@@ -59,12 +61,14 @@ const SafetyHubConstants = fn(7733);
 } = SafetyHubConstants);
 const Constants = fn(1087);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
+const result = 182 * DurationsDefault.Millis.DAY;
+let c10 = result;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
+const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4761().to(_modDef4761(timestamp));
+  return _modDef4797().to(_modDef4797(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -156,6 +160,10 @@ export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromC
     stringResult = intl.string(util.t.aPmsx3);
   }
   return stringResult;
+};
+export const APPEAL_WINDOW_DURATION_MS = result;
+export const isAppealWindowExpired = function isAppealWindowExpired(classificationId) {
+  return SnowflakeUtilsDefault.age(classificationId) > result;
 };
 export const getClassificationAccountStatusExpiration = function getClassificationAccountStatusExpiration(
   classification,

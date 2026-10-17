@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert.tsx";
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert.tsx";
 import GuildIdentityActionCreators from "../../../guild_identity/GuildIdentityActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../../../user_profile/UserProfileSettingsStore.tsx";
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   guildSelector: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -29,19 +29,19 @@ const result = size.fileFinishedImporting("modules/user_settings/profiles/native
 
 export default function UserSettingsEditGuildProfile() {
   function onSelectGuild(dependencyMap) {
-    resetPending();
+    onReset();
     GuildIdentityActionCreators.setCurrentGuild(dependencyMap.id);
   }
   let tmp = closure_9();
-  const tmp4 = guild(resetPending[7]);
+  const tmp4 = guild(7130);
   const items = [UserStore];
-  stateFromStores = stateFromStores(resetPending[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(resetPending[10])();
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const tmp7 = guild(15709)();
   guild = tmp7.guild;
-  resetPending = tmp7.resetPending;
-  let obj = stateFromStores(resetPending[9]);
-  const items1 = [UserProfileSettingsStore];
-  noop = stateFromStores(resetPending[9]).useStateFromStores(items1, () => UserProfileSettingsStore.showNotice());
+  ({ resetPending: dependencyMap, handleSubmit: noop } = tmp7);
+  let obj = stateFromStores(504);
+  const items1 = [onSelectGuild];
+  const hasUnsavedChanges = stateFromStores(504).useStateFromStores(items1, () => onSelectGuild.showNotice());
   const items2 = [stateFromStores, guild];
   const effect = noop.useEffect(() => {
     let tmp = null != stateFromStores;
@@ -56,42 +56,44 @@ export default function UserSettingsEditGuildProfile() {
   }, items2);
   if (null != stateFromStores) {
     if (null != guild) {
-      let obj3 = { value: tmp4(guild(resetPending[8]).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
+      let obj3 = { value: tmp4(guild(7155).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
       const obj4 = { style: tmp.guildSelector, children: null };
       const obj5 = { icon: null, label: null, arrow: true, onPress: null };
-      const obj6 = { guild, size: tmp5(tmp3[15]).GuildIconSizes.XSMALL };
-      obj5.icon = closure_7(tmp2(tmp3[15]), obj6);
+      const obj6 = { guild, size: tmp5(6436).GuildIconSizes.XSMALL };
+      obj5.icon = closure_7(tmp2(6436), obj6);
       obj5.label = guild.name;
       obj5.onPress = function onPress() {
-        maybeShowDiscardChangesAlertDefault({
-          onConfirm: function openGuildSelectActionSheet() {
+        maybeShowUnsavedChangesAlertDefault({
+          location: "UserSettingsEditGuildProfile",
+          hasUnsavedChanges,
+          onReset,
+          onContinue: function openGuildSelectActionSheet() {
             let tmp2 = null != user;
             if (tmp2) {
               tmp2 = null != selectedGuild;
             }
             if (tmp2) {
               const obj2 = { user, selectedGuild, onSelectGuild };
-              guild(resetPending[17]).openLazy(
-                stateFromStores(resetPending[19])(resetPending[18], resetPending.paths),
+              guild(onReset[17]).openLazy(
+                stateFromStores(onReset[19])(onReset[18], onReset.paths),
                 "GuildSelectComponentActionSheet",
                 obj2,
               );
-              const obj = guild(resetPending[17]);
+              const obj = guild(onReset[17]);
             }
           },
-          hasEdits,
-          resetPending,
+          onSave,
         });
       };
-      obj4.children = closure_7(tmp5(tmp3[14]).TableRow, obj5);
-      const items3 = [closure_7(onSelectGuild, obj4)];
+      obj4.children = closure_7(tmp5(6457).TableRow, obj5);
+      const items3 = [closure_7(hasUnsavedChanges, obj4)];
       const obj7 = { currentUser: stateFromStores };
       const _HermesInternal = HermesInternal;
-      const tmp2Result = tmp2(tmp3[15]);
-      items3[1] = closure_7(tmp2(tmp3[20]), obj7, "" + stateFromStores.id + "-" + guild.id);
+      const tmp2Result = tmp2(6436);
+      items3[1] = closure_7(tmp2(15714), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj3.children = items3;
-      return closure_8(tmp5(tmp3[7]).AnalyticsLocationProvider, obj3);
+      return closure_8(tmp5(7130).AnalyticsLocationProvider, obj3);
     }
   }
-  return closure_7(guild(resetPending[13]), {});
+  return closure_7(guild(15711), {});
 }

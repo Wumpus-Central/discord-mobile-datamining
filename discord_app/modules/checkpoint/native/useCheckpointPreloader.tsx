@@ -1,15 +1,15 @@
 // discord_app/modules/checkpoint/native/useCheckpointPreloader.tsx
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4968 from "../../../../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js";
-import _modDef4972 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
-import _modDef4974 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
-import _modDef12669 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
-import _modDef12671 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
-import _modDef12678 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
-import _modDef12687 from "../../../../discord_assets/assets/checkpoint/voice-soundwave.png.js";
-import _modDef12691 from "../../../../discord_assets/assets/checkpoint/messages.png.js";
-import _modDef12698 from "../../../../discord_assets/assets/checkpoint/game-time.png.js";
-import _modDef12703 from "../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
+import _modDef5004 from "../../../../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js";
+import _modDef5008 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
+import _modDef5010 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
+import _modDef12734 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
+import _modDef12736 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
+import _modDef12743 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef12752 from "../../../../discord_assets/assets/checkpoint/voice-soundwave.png.js";
+import _modDef12756 from "../../../../discord_assets/assets/checkpoint/messages.png.js";
+import _modDef12763 from "../../../../discord_assets/assets/checkpoint/game-time.png.js";
+import _modDef12768 from "../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -17,18 +17,18 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(12660).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12725).CheckpointFetchStates;
 let items = [
-  _modDef4968,
-  _modDef4972,
-  _modDef4974,
-  _modDef12678,
-  _modDef12703,
-  _modDef12691,
-  _modDef12687,
-  _modDef12698,
-  _modDef12671,
-  _modDef12669,
+  _modDef5004,
+  _modDef5008,
+  _modDef5010,
+  _modDef12743,
+  _modDef12768,
+  _modDef12756,
+  _modDef12752,
+  _modDef12763,
+  _modDef12736,
+  _modDef12734,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

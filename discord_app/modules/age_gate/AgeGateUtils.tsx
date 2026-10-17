@@ -571,7 +571,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
       const tmpResult4 = require("initialize");
       let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-        tmp(6139).AgeGatedFeature.AGE_GATED_SPACES,
+        tmp(6176).AgeGatedFeature.AGE_GATED_SPACES,
       );
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];

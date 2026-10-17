@@ -32,12 +32,12 @@ class PaymentModalBanner$Type extends MessageType {
   }
 }
 const prototype = PaymentModalBanner$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { assetUrl: "", header: "", body: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

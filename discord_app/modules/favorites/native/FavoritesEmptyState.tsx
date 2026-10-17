@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3447 from "../intl/FavoritesGuild.messages.js";
+import _modDef3465 from "../intl/FavoritesGuild.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: {
     flex: 1,
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3447["wh+Rz1"]);
+        const stringResult = intl.string(_modDef3465["wh+Rz1"]);
         cResult[2] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef3447["+SuGKb"]);
+        const stringResult1 = intl2.string(_modDef3465["+SuGKb"]);
         cResult[5] = stringResult1;
         let tmp15 = stringResult1;
       } else {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { variant: "primary", text: null, icon: null, onPress: null };
           const intl3 = util.intl;
-          obj4.text = intl3.string(_modDef3447["6kk0gM"]);
+          obj4.text = intl3.string(_modDef3465["6kk0gM"]);
           obj4.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
           obj4.onPress = first;
           const tmp26 = hasOwnProperty(components_Button_Button.Button, obj4);
@@ -156,17 +156,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl = util.intl;
-      obj3.children = intl.string(_modDef3447["wh+Rz1"]);
+      obj3.children = intl.string(_modDef3465["wh+Rz1"]);
       const items1 = [hasOwnProperty(Text_Text.Heading, obj3)];
       const obj4 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef3447["+SuGKb"]);
+      obj4.children = intl2.string(_modDef3465["+SuGKb"]);
       items1[1] = hasOwnProperty(Text_Text.Text, obj4);
       obj2.children = items1;
       items[1] = timestampProducer(Stack_Stack.Stack, obj2);
       const obj5 = { variant: "primary", text: null, icon: null, onPress: null };
       const intl3 = util.intl;
-      obj5.text = intl3.string(_modDef3447["6kk0gM"]);
+      obj5.text = intl3.string(_modDef3465["6kk0gM"]);
       obj5.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
       obj5.onPress = callback;
       items[2] = hasOwnProperty(components_Button_Button.Button, obj5);

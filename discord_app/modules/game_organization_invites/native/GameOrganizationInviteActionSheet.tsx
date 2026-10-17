@@ -30,11 +30,11 @@ function showTooManyInvitesToast() {
   ToastActionCreatorsDefault.open("GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES", obj2);
 }
 const View = fn(17).View;
-let closure_6 = fn(8990).useInstantInviteSendStates;
+let closure_6 = fn(9036).useInstantInviteSendStates;
 const NOOP_NULL = fn(1098).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -296,8 +296,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return found.map((item) => item.item);
           }
         }
-        const stringResult = intl.string(combined(2441).nVMqjA);
-        const ActionSheet = formatToPlainString(7122).ActionSheet;
+        const stringResult = intl.string(combined(2459).nVMqjA);
+        const ActionSheet = formatToPlainString(7175).ActionSheet;
         const _Symbol = Symbol;
         if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
           class N {
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const Stack = formatToPlainString(5440).Stack;
+        const Stack = formatToPlainString(5477).Stack;
         const PX_16 = centeredText(587).space.PX_16;
         const header = str.header;
         let obj2 = { spacing: centeredText(587).space.PX_4, children: null };
@@ -349,19 +349,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl2 = formatToPlainString(1128).intl;
         const obj6 = { noun: stringResult };
-        obj3.children = intl2.formatToPlainString(centeredText(2441).EnTIIr, obj6);
-        const items3 = [closure_10(formatToPlainString(5150).Heading, obj3)];
+        obj3.children = intl2.formatToPlainString(centeredText(2459).EnTIIr, obj6);
+        const items3 = [closure_10(formatToPlainString(5187).Heading, obj3)];
         const obj7 = { variant: "text-sm/medium", color: "text-muted", style: str.centeredText, children: null };
         const intl3 = formatToPlainString(1128).intl;
         const obj8 = { noun: stringResult };
-        obj7.children = intl3.formatToPlainString(centeredText(2441).BBk7Qw, obj8);
-        items3[1] = closure_10(formatToPlainString(5150).Text, obj7);
+        obj7.children = intl3.formatToPlainString(centeredText(2459).BBk7Qw, obj8);
+        items3[1] = closure_10(formatToPlainString(5187).Text, obj7);
         obj2.children = items3;
-        const tmp25 = closure_11(formatToPlainString(5440).Stack, obj2);
+        const tmp25 = closure_11(formatToPlainString(5477).Stack, obj2);
         const intl4 = formatToPlainString(1128).intl;
         formatToPlainString = intl4.formatToPlainString;
         const obj9 = { noun: stringResult };
-        const formatToPlainStringResult2 = formatToPlainString(centeredText(2441).cRK6SQ, obj9);
+        const formatToPlainStringResult2 = formatToPlainString(centeredText(2459).cRK6SQ, obj9);
         centeredText = str.centeredText;
         cResult[15] = centeredText;
         cResult[16] = str.header;
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[27] = true;
         cResult[28] = true;
         cResult[29] = tmp21;
-        const SearchField = formatToPlainString(6963).SearchField;
+        const SearchField = formatToPlainString(7016).SearchField;
       }
       class U {
         constructor(arg0) {
@@ -488,7 +488,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
       const intl = guildId(1128).intl;
-      const stringResult = intl.string(combined(2441).nVMqjA);
+      const stringResult = intl.string(combined(2459).nVMqjA);
       const obj3 = {
         scrollable: true,
         startExpanded: true,
@@ -507,26 +507,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl3 = guildId(1128).intl;
-      obj6.children = intl3.formatToPlainString(combined(2441).EnTIIr, { noun: stringResult });
-      const items4 = [closure_10(guildId(5150).Heading, obj6)];
+      obj6.children = intl3.formatToPlainString(combined(2459).EnTIIr, { noun: stringResult });
+      const items4 = [closure_10(guildId(5187).Heading, obj6)];
       const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
       const intl4 = guildId(1128).intl;
-      obj7.children = intl4.formatToPlainString(combined(2441).BBk7Qw, { noun: stringResult });
-      items4[1] = closure_10(guildId(5150).Text, obj7);
+      obj7.children = intl4.formatToPlainString(combined(2459).BBk7Qw, { noun: stringResult });
+      items4[1] = closure_10(guildId(5187).Text, obj7);
       obj5.children = items4;
-      const items5 = [closure_11(guildId(5440).Stack, obj5)];
+      const items5 = [closure_11(guildId(5477).Stack, obj5)];
       const obj8 = { size: "md", round: true, onChange: callback, placeholder: null };
       const intl5 = guildId(1128).intl;
-      obj8.placeholder = intl5.formatToPlainString(combined(2441).cRK6SQ, { noun: stringResult });
-      items5[1] = closure_10(guildId(6963).SearchField, obj8);
+      obj8.placeholder = intl5.formatToPlainString(combined(2459).cRK6SQ, { noun: stringResult });
+      items5[1] = closure_10(guildId(7016).SearchField, obj8);
       obj4.children = items5;
-      obj3.header = closure_11(guildId(5440).Stack, obj4);
+      obj3.header = closure_11(guildId(5477).Stack, obj4);
       if (tmp7[0]) {
         let tmp14Result = closure_10(closure_15, {});
       } else {
         const obj9 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-        tmp14Result = closure_10(combined(14908), obj9);
+        tmp14Result = closure_10(combined(14977), obj9);
       }
       obj3.children = tmp14Result;
-      return closure_10(guildId(7122).ActionSheet, obj3);
+      return closure_10(guildId(7175).ActionSheet, obj3);
     };

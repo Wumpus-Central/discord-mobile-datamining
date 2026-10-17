@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/shared/ConjureUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
-import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
+import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import GuildChannelStore_mod from "../../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -26,7 +26,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4807);
+let GuildChannelStore = fn(4843);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
@@ -348,7 +348,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
         if (cResult[4] === guild_id2) {
           let tmp12 = cResult[5];
         }
-        const isConjureGuildEnabled = tmp(6298).useIsConjureGuildEnabled(tmp12);
+        const isConjureGuildEnabled = tmp(6356).useIsConjureGuildEnabled(tmp12);
         if (cResult[6] === appChannelApplication) {
           if (cResult[7] === guild_id) {
             if (cResult[8] === stateFromStores) {
@@ -388,7 +388,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
         cResult[9] = isConjureGuildEnabled;
         cResult[10] = tmp17;
         tmp14 = tmp17;
-        const tmpResult4 = tmp(6298);
+        const tmpResult4 = tmp(6356);
       }
       const obj2 = { guildId: guild_id2, location };
       cResult[3] = location;

@@ -10,7 +10,7 @@ import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05454_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05491_LinearGradient.js";
 import FileUtils from "../../../../../utils/FileUtils.tsx";
 import UploadLimits from "../../../../media_uploads/UploadLimits.tsx";
 import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
@@ -19,11 +19,11 @@ import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/
 import PremiumFeatureUpsellUtils from "../utils/PremiumFeatureUpsellUtils.tsx";
 import ReactionsSpotIllustration from "../../../../../design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx";
 import StickersSpotIllustration from "../../../../../design/components/mana-assets/native/generated/StickersSpotIllustration.native.tsx";
-import _modDef9528 from "../../../../../../_runtime/metro/09528__.js";
-import _modDef9529 from "../../../../../../_runtime/metro/09529__.js";
+import _modDef9592 from "../../../../../../_runtime/metro/09592__.js";
+import _modDef9593 from "../../../../../../_runtime/metro/09593__.js";
 import ScheduledMessagesUtils from "../../../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import NitroScheduleMessageSpotIllustration from "../../../../../design/components/mana-assets/native/generated/NitroScheduleMessageSpotIllustration.native.tsx";
-import _modDef13751 from "../../../../../../_runtime/metro/13751__.js";
+import _modDef13819 from "../../../../../../_runtime/metro/13819__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -37,11 +37,11 @@ const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: c10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5274).ApplicationStreamFPS;
-const premiumMax = fn(9517).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(5311).ApplicationStreamFPS;
+const premiumMax = fn(9581).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },
@@ -131,7 +131,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       obj5.description = intl11.string(util.t.jBqF2k);
                       obj5.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
                       obj5.upsellType = constants.CLIENT_THEMES_UPSELL;
-                      obj5.image = _modDef9528;
+                      obj5.image = _modDef9592;
                       cResult[37] = obj5;
                       let tmp63 = obj5;
                     } else {
@@ -152,7 +152,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       obj6.description = intl13.string(util.t.HDt8ip);
                       obj6.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
                       obj6.upsellType = constants.APP_ICON_UPSELL;
-                      obj6.image = _modDef9529;
+                      obj6.image = _modDef9593;
                       cResult[38] = obj6;
                       let tmp66 = obj6;
                     } else {
@@ -278,7 +278,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       description: tmp82,
                       analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY,
                       upsellType: constants.STREAM_QUALITY_UPSELL,
-                      image: _modDef13751,
+                      image: _modDef13819,
                       imageGradientBackground: null,
                     };
                     const obj14 = { colors: null, start: null, end: null };
@@ -574,7 +574,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj14.description = intl11.string(util.t.jBqF2k);
       obj14.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
       obj14.upsellType = constants.CLIENT_THEMES_UPSELL;
-      obj14.image = _modDef9528;
+      obj14.image = _modDef9592;
       obj3[EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES] = obj14;
       const obj15 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
       const intl12 = util.intl;
@@ -583,7 +583,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj15.description = intl13.string(util.t.HDt8ip);
       obj15.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
       obj15.upsellType = constants.APP_ICON_UPSELL;
-      obj15.image = _modDef9529;
+      obj15.image = _modDef9593;
       obj3[EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS] = obj15;
       const obj16 = {
         title: null,
@@ -628,7 +628,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj20.description = intl17.formatToPlainString(util.t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
       obj20.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
       obj20.upsellType = constants.STREAM_QUALITY_UPSELL;
-      obj20.image = _modDef13751;
+      obj20.image = _modDef13819;
       const obj22 = {
         colors: null,
         start: ConstantsIOS.HorizontalGradient.START,

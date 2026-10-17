@@ -10,10 +10,10 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7014).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7067).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabBar: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabBar = { paddingHorizontal: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_16 };
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = guildId(576);
       const stateFromStores = guildId(573).useStateFromStores(first, tmp6);
-      const tmp9 = defaultTab(7270)(stateFromStores);
+      const tmp9 = defaultTab(7321)(stateFromStores);
       if (cResult[3] !== tmp9) {
         const intl = tmp(1128).intl;
         const string = intl.string;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
-          const tmp15 = closure_8(tmp8(9869), obj2);
+          const tmp15 = closure_8(tmp8(9933), obj2);
           cResult[8] = tmp10;
           cResult[9] = tmp13;
           cResult[10] = tmp15;

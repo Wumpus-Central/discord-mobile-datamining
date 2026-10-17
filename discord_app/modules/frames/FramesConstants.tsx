@@ -81,6 +81,17 @@ export const getFrameHostWindowKey = function getFrameHostWindowKey(state) {
   }
   return hostWindowKey;
 };
+export const getFrameLaunchChannelId = function getFrameLaunchChannelId(surface) {
+  let type;
+  if (surface != null) {
+    type = surface.surface.type;
+  }
+  let channelId;
+  if (type === EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN) {
+    channelId = surface.surface.channelId;
+  }
+  return channelId;
+};
 export const asLaunched = function asLaunched(mainFrame) {
   let state;
   if (mainFrame != null) {

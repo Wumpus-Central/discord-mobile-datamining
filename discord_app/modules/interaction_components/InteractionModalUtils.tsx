@@ -5,10 +5,10 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import Server from "../../flow/Server.tsx";
+import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import ComponentStateContext from "ComponentStateContext.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
 import stageAttachmentFilesDefault from "../../lib/uploader/stageAttachmentFiles.tsx";
-import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -2193,8 +2193,8 @@ let closure_21 = async function _submitModal(arg0) {
     }
   }
 };
-const DraftType = fn(7464).DraftType;
-const InteractionModalState = fn(15352).InteractionModalState;
+const DraftType = fn(7510).DraftType;
+const InteractionModalState = fn(15421).InteractionModalState;
 const Endpoints = fn(1087).Endpoints;
 fn(558);
 let ReactCompilerGating = fn(558);

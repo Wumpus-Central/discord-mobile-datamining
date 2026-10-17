@@ -1,7 +1,8 @@
 // discord_app/modules/rpc/helpers/validateConjureAppFrame.tsx
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
-import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import isConjureApplicationDefault from "../../conjure/shared/isConjureApplication.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
+import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import ConjureProjectStore from "../../conjure/projects/ConjureProjectStore.tsx";
@@ -14,36 +15,15 @@ let result = size.fileFinishedImporting("modules/rpc/helpers/validateConjureAppF
 
 export default function validateConjureAppFrame(arg0) {
   const tmp3 = validateEmbeddedAppFrameDefault(arg0);
-  const applicationId = tmp3.frame.applicationId;
-  const application = ApplicationStore.getApplication(applicationId);
-  let conjureProjectId;
-  if (application != null) {
-    conjureProjectId = application.conjureProjectId;
-  }
-  let result = null != conjureProjectId;
-  if (!result) {
-    result = ConjureProjectStore.isConjureProjectApplication(applicationId);
-  }
-  if (result) {
+  if (isConjureApplicationDefault(tmp3.frame.applicationId)) {
     return tmp3;
   } else {
     const obj = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
-    const tmp12 = new RPCErrorDefault(obj, "Only a Conjuring app can use this API");
-    throw tmp12;
+    const tmp8 = new RPCErrorDefault(obj, "Only a Conjuring app can use this API");
+    throw tmp8;
   }
 }
-export const isConjureApplication = function isConjureApplication(applicationId) {
-  const application = ApplicationStore.getApplication(applicationId);
-  let conjureProjectId;
-  if (application != null) {
-    conjureProjectId = application.conjureProjectId;
-  }
-  let result = null != conjureProjectId;
-  if (!result) {
-    result = ConjureProjectStore.isConjureProjectApplication(applicationId);
-  }
-  return result;
-};
+export const isConjureApplication = isConjureApplicationDefault;
 export const isUserScopedConjureApplication = function isUserScopedConjureApplication(applicationId) {
   const result = ConjureProjectStore.findProjectByApplicationId(applicationId);
   if (null != result) {

@@ -231,7 +231,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
     }
     return applyArgumentsResult;
   };
-  return "test";
+  return "Reflect";
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");

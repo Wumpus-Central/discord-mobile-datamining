@@ -501,12 +501,12 @@ class PreloadedUserSettings$Type extends MessageType {
   }
 }
 const prototype = PreloadedUserSettings$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -923,12 +923,12 @@ class InboxSettings$Type extends MessageType2 {
   }
 }
 const prototype2 = InboxSettings$Type.prototype;
-prototype2["create"] = function create(arr) {
+prototype2["create"] = function create(partialSettings) {
   const obj = { currentTab: 0, viewedTutorial: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1045,12 +1045,12 @@ class AllGuildSettings$Type extends MessageType3 {
   }
 }
 const prototype3 = AllGuildSettings$Type.prototype;
-prototype3["create"] = function create(arr) {
+prototype3["create"] = function create(partialSettings) {
   const obj = { guilds: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1207,7 +1207,7 @@ class GuildDismissibleContentState$Type extends MessageType4 {
   }
 }
 const prototype4 = GuildDismissibleContentState$Type.prototype;
-prototype4["create"] = function create(arr) {
+prototype4["create"] = function create(partialSettings) {
   const obj = {
     dismissed: false,
     lastDismissedVersion: 0,
@@ -1217,8 +1217,8 @@ prototype4["create"] = function create(arr) {
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1411,7 +1411,7 @@ class GuildSettings$Type extends MessageType5 {
   }
 }
 const prototype5 = GuildSettings$Type.prototype;
-prototype5["create"] = function create(arr) {
+prototype5["create"] = function create(partialSettings) {
   const obj = {
     channels: {},
     hubProgress: 0,
@@ -1428,8 +1428,8 @@ prototype5["create"] = function create(arr) {
   obj.guildDismissibleContentStates = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmp2Result = _mod1212;
   }
   return obj;
@@ -1685,12 +1685,12 @@ class ChannelIconEmoji$Type extends MessageType6 {
   }
 }
 const prototype6 = ChannelIconEmoji$Type.prototype;
-prototype6["create"] = function create(arr) {
+prototype6["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1864,12 +1864,12 @@ class ChannelSettings$Type extends MessageType7 {
   }
 }
 const prototype7 = ChannelSettings$Type.prototype;
-prototype7["create"] = function create(arr) {
+prototype7["create"] = function create(partialSettings) {
   const obj = { collapsedInInbox: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2022,12 +2022,12 @@ class CustomNotificationSoundConfig$Type extends MessageType8 {
   }
 }
 const prototype8 = CustomNotificationSoundConfig$Type.prototype;
-prototype8["create"] = function create(arr) {
+prototype8["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2143,12 +2143,12 @@ class RecurringDismissibleContentState$Type extends MessageType9 {
   }
 }
 const prototype9 = RecurringDismissibleContentState$Type.prototype;
-prototype9["create"] = function create(arr) {
+prototype9["create"] = function create(partialSettings) {
   const obj = { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2306,7 +2306,7 @@ class UserContentSettings$Type extends MessageType10 {
   }
 }
 const prototype10 = UserContentSettings$Type.prototype;
-prototype10["create"] = function create(arr) {
+prototype10["create"] = function create(partialSettings) {
   const obj = {
     dismissedContents: null,
     lastReceivedChangelogId: "0",
@@ -2319,8 +2319,8 @@ prototype10["create"] = function create(arr) {
   obj.recurringDismissibleContentStates = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmp2Result = _mod1212;
   }
   return obj;
@@ -2625,12 +2625,12 @@ class VideoFilterAsset$Type extends MessageType11 {
   }
 }
 const prototype11 = VideoFilterAsset$Type.prototype;
-prototype11["create"] = function create(arr) {
+prototype11["create"] = function create(partialSettings) {
   const obj = { id: "0", assetHash: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2728,12 +2728,12 @@ class VideoFilterBackgroundBlur$Type extends MessageType12 {
   }
 }
 const prototype12 = VideoFilterBackgroundBlur$Type.prototype;
-prototype12["create"] = function create(arr) {
+prototype12["create"] = function create(partialSettings) {
   const obj = { useBlur: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2896,12 +2896,12 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
   }
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
-prototype13["create"] = function create(arr) {
+prototype13["create"] = function create(partialSettings) {
   const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3198,12 +3198,12 @@ class ExplicitContentSettings$Type extends MessageType14 {
   }
 }
 const prototype14 = ExplicitContentSettings$Type.prototype;
-prototype14["create"] = function create(arr) {
+prototype14["create"] = function create(partialSettings) {
   const obj = { explicitContentGuilds: 0, explicitContentFriendDm: 0, explicitContentNonFriendDm: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3359,12 +3359,12 @@ class GoreContentSettings$Type extends MessageType15 {
   }
 }
 const prototype15 = GoreContentSettings$Type.prototype;
-prototype15["create"] = function create(arr) {
+prototype15["create"] = function create(partialSettings) {
   const obj = { goreContentGuilds: 0, goreContentFriendDm: 0, goreContentNonFriendDm: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3520,12 +3520,12 @@ class SelfHarmContentSettings$Type extends MessageType16 {
   }
 }
 const prototype16 = SelfHarmContentSettings$Type.prototype;
-prototype16["create"] = function create(arr) {
+prototype16["create"] = function create(partialSettings) {
   const obj = { selfHarmContentGuilds: 0, selfHarmContentFriendDm: 0, selfHarmContentNonFriendDm: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3677,12 +3677,12 @@ class KeywordFilterSettings$Type extends MessageType17 {
   }
 }
 const prototype17 = KeywordFilterSettings$Type.prototype;
-prototype17["create"] = function create(arr) {
+prototype17["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4141,7 +4141,7 @@ class TextAndImagesSettings$Type extends MessageType18 {
   }
 }
 const prototype18 = TextAndImagesSettings$Type.prototype;
-prototype18["create"] = function create(arr) {
+prototype18["create"] = function create(partialSettings) {
   const obj = {
     emojiPickerCollapsedSections: [],
     stickerPickerCollapsedSections: [],
@@ -4151,8 +4151,8 @@ prototype18["create"] = function create(arr) {
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4921,7 +4921,7 @@ class NotificationSettings$Type extends MessageType19 {
   }
 }
 const prototype19 = NotificationSettings$Type.prototype;
-prototype19["create"] = function create(arr) {
+prototype19["create"] = function create(partialSettings) {
   const obj = {
     notificationCenterAckedBeforeId: "0",
     focusModeExpiresAtMs: "0",
@@ -4931,8 +4931,8 @@ prototype19["create"] = function create(arr) {
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5516,7 +5516,7 @@ class PrivacySettings$Type extends MessageType20 {
   }
 }
 const prototype20 = PrivacySettings$Type.prototype;
-prototype20["create"] = function create(arr) {
+prototype20["create"] = function create(partialSettings) {
   const obj = {
     restrictedGuildIds: [],
     defaultGuildsRestricted: false,
@@ -5533,8 +5533,8 @@ prototype20["create"] = function create(arr) {
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5977,12 +5977,12 @@ class DebugSettings$Type extends MessageType21 {
   }
 }
 const prototype21 = DebugSettings$Type.prototype;
-prototype21["create"] = function create(arr) {
+prototype21["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6119,12 +6119,12 @@ class GameLibrarySettings$Type extends MessageType22 {
   }
 }
 const prototype22 = GameLibrarySettings$Type.prototype;
-prototype22["create"] = function create(arr) {
+prototype22["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6325,12 +6325,12 @@ class StatusSettings$Type extends MessageType23 {
   }
 }
 const prototype23 = StatusSettings$Type.prototype;
-prototype23["create"] = function create(arr) {
+prototype23["create"] = function create(partialSettings) {
   const obj = { statusExpiresAtMs: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6538,12 +6538,12 @@ class CustomStatus$Type extends MessageType24 {
   }
 }
 const prototype24 = CustomStatus$Type.prototype;
-prototype24["create"] = function create(arr) {
+prototype24["create"] = function create(partialSettings) {
   const obj = { text: "", emojiId: "0", emojiName: "", expiresAtMs: "0", createdAtMs: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6713,12 +6713,12 @@ class LocalizationSettings$Type extends MessageType25 {
   }
 }
 const prototype25 = LocalizationSettings$Type.prototype;
-prototype25["create"] = function create(arr) {
+prototype25["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6892,12 +6892,12 @@ class ChannelListSettings$Type extends MessageType26 {
   }
 }
 const prototype26 = ChannelListSettings$Type.prototype;
-prototype26["create"] = function create(arr) {
+prototype26["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -7132,7 +7132,7 @@ class AppearanceSettings$Type extends MessageType27 {
   }
 }
 const prototype27 = AppearanceSettings$Type.prototype;
-prototype27["create"] = function create(arr) {
+prototype27["create"] = function create(partialSettings) {
   const obj = {
     theme: 0,
     developerMode: false,
@@ -7146,8 +7146,8 @@ prototype27["create"] = function create(arr) {
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -7296,12 +7296,12 @@ class CustomUserThemeSettings$Type extends MessageType28 {
   }
 }
 const prototype28 = CustomUserThemeSettings$Type.prototype;
-prototype28["create"] = function create(arr) {
+prototype28["create"] = function create(partialSettings) {
   const obj = { colors: [], gradientColorStops: [], gradientAngle: 0, baseMix: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -7457,12 +7457,12 @@ class ClientThemeSettings$Type extends MessageType29 {
   }
 }
 const prototype29 = ClientThemeSettings$Type.prototype;
-prototype29["create"] = function create(arr) {
+prototype29["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -7615,12 +7615,12 @@ class GuildFolders$Type extends MessageType30 {
   }
 }
 const prototype30 = GuildFolders$Type.prototype;
-prototype30["create"] = function create(arr) {
+prototype30["create"] = function create(partialSettings) {
   const obj = { folders: [], guildPositions: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -7785,12 +7785,12 @@ class GuildFolder$Type extends MessageType31 {
   }
 }
 const prototype31 = GuildFolder$Type.prototype;
-prototype31["create"] = function create(arr) {
+prototype31["create"] = function create(partialSettings) {
   const obj = { guildIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -7998,12 +7998,12 @@ class Favorites$Type extends MessageType32 {
   }
 }
 const prototype32 = Favorites$Type.prototype;
-prototype32["create"] = function create(arr) {
+prototype32["create"] = function create(partialSettings) {
   const obj = { favoriteChannels: {}, muted: false, autoAddJoinedThreads: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -8216,12 +8216,12 @@ class FavoriteChannel$Type extends MessageType33 {
   }
 }
 const prototype33 = FavoriteChannel$Type.prototype;
-prototype33["create"] = function create(arr) {
+prototype33["create"] = function create(partialSettings) {
   const obj = { nickname: "", type: 0, position: 0, parentId: "0", collapsed: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -8376,12 +8376,12 @@ class AudioContextSetting$Type extends MessageType34 {
   }
 }
 const prototype34 = AudioContextSetting$Type.prototype;
-prototype34["create"] = function create(arr) {
+prototype34["create"] = function create(partialSettings) {
   const obj = { muted: false, volume: 0, modifiedAt: "0", soundboardMuted: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -8515,12 +8515,12 @@ class AudioSettings$Type extends MessageType35 {
   }
 }
 const prototype35 = AudioSettings$Type.prototype;
-prototype35["create"] = function create(arr) {
+prototype35["create"] = function create(partialSettings) {
   const obj = { user: {}, stream: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -8737,12 +8737,12 @@ class CommunitiesSettings$Type extends MessageType36 {
   }
 }
 const prototype36 = CommunitiesSettings$Type.prototype;
-prototype36["create"] = function create(arr) {
+prototype36["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -8855,12 +8855,12 @@ class SoundboardSettings$Type extends MessageType37 {
   }
 }
 const prototype37 = SoundboardSettings$Type.prototype;
-prototype37["create"] = function create(arr) {
+prototype37["create"] = function create(partialSettings) {
   const obj = { volume: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -8949,12 +8949,12 @@ class CustomCallSound$Type extends MessageType38 {
   }
 }
 const prototype38 = CustomCallSound$Type.prototype;
-prototype38["create"] = function create(arr) {
+prototype38["create"] = function create(partialSettings) {
   const obj = { soundId: "0", guildId: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9071,12 +9071,12 @@ class BroadcastSettings$Type extends MessageType39 {
   }
 }
 const prototype39 = BroadcastSettings$Type.prototype;
-prototype39["create"] = function create(arr) {
+prototype39["create"] = function create(partialSettings) {
   const obj = { allowedGuildIds: [], allowedUserIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9279,12 +9279,12 @@ class ClipsSettings$Type extends MessageType40 {
   }
 }
 const prototype40 = ClipsSettings$Type.prototype;
-prototype40["create"] = function create(arr) {
+prototype40["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9398,12 +9398,12 @@ class SpendingLimit$Type extends MessageType41 {
   }
 }
 const prototype41 = SpendingLimit$Type.prototype;
-prototype41["create"] = function create(arr) {
+prototype41["create"] = function create(partialSettings) {
   const obj = { amount: "0", currency: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9509,12 +9509,12 @@ class SpendingLimitSettings$Type extends MessageType42 {
   }
 }
 const prototype42 = SpendingLimitSettings$Type.prototype;
-prototype42["create"] = function create(arr) {
+prototype42["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9645,12 +9645,12 @@ class SafetySettings$Type extends MessageType43 {
   }
 }
 const prototype43 = SafetySettings$Type.prototype;
-prototype43["create"] = function create(arr) {
+prototype43["create"] = function create(partialSettings) {
   const obj = { safetySettingsPreset: 0, ignoreProfileSpeedbumpDisabled: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9794,12 +9794,12 @@ class ForLaterSettings$Type extends MessageType44 {
   }
 }
 const prototype44 = ForLaterSettings$Type.prototype;
-prototype44["create"] = function create(arr) {
+prototype44["create"] = function create(partialSettings) {
   const obj = { currentTab: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -9897,12 +9897,12 @@ class ICYMISettings$Type extends MessageType45 {
   }
 }
 const prototype45 = ICYMISettings$Type.prototype;
-prototype45["create"] = function create(arr) {
+prototype45["create"] = function create(partialSettings) {
   const obj = { feedGeneratedAt: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10003,12 +10003,12 @@ class AllApplicationSettings$Type extends MessageType46 {
   }
 }
 const prototype46 = AllApplicationSettings$Type.prototype;
-prototype46["create"] = function create(arr) {
+prototype46["create"] = function create(partialSettings) {
   const obj = { appSettings: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10177,12 +10177,12 @@ class ApplicationSettings$Type extends MessageType47 {
   }
 }
 const prototype47 = ApplicationSettings$Type.prototype;
-prototype47["create"] = function create(arr) {
+prototype47["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10320,12 +10320,12 @@ class ApplicationDMSettings$Type extends MessageType48 {
   }
 }
 const prototype48 = ApplicationDMSettings$Type.prototype;
-prototype48["create"] = function create(arr) {
+prototype48["create"] = function create(partialSettings) {
   const obj = { allowMobilePush: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10413,12 +10413,12 @@ class ApplicationSharingSettings$Type extends MessageType49 {
   }
 }
 const prototype49 = ApplicationSharingSettings$Type.prototype;
-prototype49["create"] = function create(arr) {
+prototype49["create"] = function create(partialSettings) {
   const obj = { disableApplicationActivitySharing: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10510,12 +10510,12 @@ class AdsSettings$Type extends MessageType50 {
   }
 }
 const prototype50 = AdsSettings$Type.prototype;
-prototype50["create"] = function create(arr) {
+prototype50["create"] = function create(partialSettings) {
   const obj = { alwaysDeliver: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10619,12 +10619,12 @@ class InAppFeedbackState$Type extends MessageType51 {
   }
 }
 const prototype51 = InAppFeedbackState$Type.prototype;
-prototype51["create"] = function create(arr) {
+prototype51["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10799,12 +10799,12 @@ class DefaultReactionEmoji$Type extends MessageType52 {
   }
 }
 const prototype52 = DefaultReactionEmoji$Type.prototype;
-prototype52["create"] = function create(arr) {
+prototype52["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -10999,12 +10999,12 @@ class InAppFeedbackSettings$Type extends MessageType53 {
   }
 }
 const prototype53 = InAppFeedbackSettings$Type.prototype;
-prototype53["create"] = function create(arr) {
+prototype53["create"] = function create(partialSettings) {
   const obj = { inAppFeedbackStates: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -11241,12 +11241,12 @@ class AppVersionSettings$Type extends MessageType54 {
   }
 }
 const prototype54 = AppVersionSettings$Type.prototype;
-prototype54["create"] = function create(arr) {
+prototype54["create"] = function create(partialSettings) {
   const obj = { isUsingOutdatedMobileVersion: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -11438,12 +11438,12 @@ class ConjureSettings$Type extends MessageType55 {
   }
 }
 const prototype55 = ConjureSettings$Type.prototype;
-prototype55["create"] = function create(arr) {
+prototype55["create"] = function create(partialSettings) {
   const obj = { projects: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -11681,12 +11681,12 @@ class ConjureProjectSettings$Type extends MessageType56 {
   }
 }
 const prototype56 = ConjureProjectSettings$Type.prototype;
-prototype56["create"] = function create(arr) {
+prototype56["create"] = function create(partialSettings) {
   const obj = { muted: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

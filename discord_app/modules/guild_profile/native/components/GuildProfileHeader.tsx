@@ -13,10 +13,10 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9092).getBadgeTooltip;
+const getBadgeTooltip = fn(9138).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,

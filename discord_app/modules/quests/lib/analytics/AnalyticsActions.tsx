@@ -248,7 +248,7 @@ let closure_12 = async function _getCommonClickEventProperties(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -375,7 +375,7 @@ let closure_13 = async function _trackQuestContentClicked() {
     trackGuildAndChannelMetadata: closure_135_7,
     sourceQuestContent: closure_135_8,
   } = closure_0);
-  return "test";
+  return "Reflect";
 };
 let closure_14 = async function _trackAdContentClicked() {
   dependencyMap = closure_131_10;
@@ -411,7 +411,7 @@ let closure_14 = async function _trackAdContentClicked() {
     trackGuildAndChannelMetadata: closure_132_8,
     sourceQuestContent: closure_132_9,
   } = closure_0);
-  return "test";
+  return "Reflect";
 };
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const items = [, ,];

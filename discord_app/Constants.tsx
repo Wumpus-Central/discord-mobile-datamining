@@ -1663,6 +1663,7 @@ const frozen2 = Object.freeze({
   KLIPY_ASSET_PATH: "/klipy",
   EMAIL_SETTINGS: "/users/@me/email-settings",
   ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
+  ACCOUNT_NOTIFICATION_DECLARATIVE_SETTINGS: "/users/@me/notification-settings/declarative",
   VIDEO_FILTER_ASSETS: "/users/@me/video-filters/assets",
   VIDEO_FILTER_ASSET(id) {
     return "/users/@me/video-filters/assets/" + id;
@@ -3729,6 +3730,7 @@ const obj2 = {
   KLIPY_ASSET_PATH: "/klipy",
   EMAIL_SETTINGS: "/users/@me/email-settings",
   ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
+  ACCOUNT_NOTIFICATION_DECLARATIVE_SETTINGS: "/users/@me/notification-settings/declarative",
   VIDEO_FILTER_ASSETS: "/users/@me/video-filters/assets",
   VIDEO_FILTER_ASSET(id) {
     return "/users/@me/video-filters/assets/" + id;
@@ -6815,6 +6817,8 @@ export const AbortCodes = {
   [100023]: "INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE",
   INVALID_GIFT_REDEMPTION_INVOICE_OPEN: 100024,
   [100024]: "INVALID_GIFT_REDEMPTION_INVOICE_OPEN",
+  INVALID_USER_SETTINGS_BYTES: 50104,
+  [50104]: "INVALID_USER_SETTINGS_BYTES",
   INVALID_USER_SETTINGS_DATA: 50105,
   [50105]: "INVALID_USER_SETTINGS_DATA",
   INVALID_ACTIVITY_LAUNCH_AGE_GATED: 50165,

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2667 from "../GiftingBadge.messages.js";
+import _modDef2685 from "../GiftingBadge.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "views/GiftingBadgeIcon.tsx";
@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8544).getSingleRequirementThreshold;
+let closure_7 = fn(8590).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [BadgeDirectoryStore];
         const fn = function x() {
-          return badgeById.getBadgeById(closure_0(8536).BadgeId.GIFTING);
+          return badgeById.getBadgeById(closure_0(8582).BadgeId.GIFTING);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult = obj4.string(tmp5(2667)["0MB2C6"]);
+          const stringResult = obj4.string(tmp5(2685)["0MB2C6"]);
           cResult[11] = stringResult;
           const tmp20 = stringResult;
         } else {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityRole: "header",
             children: tmp20,
           };
-          const tmp23 = closure_9(tmp(5150).Text, obj2);
+          const tmp23 = closure_9(tmp(5187).Text, obj2);
           cResult[12] = tmp4.title;
           cResult[13] = tmp23;
         } else {
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult1 = obj6.string(tmp5(2667).k9sNVH);
+          const stringResult1 = obj6.string(tmp5(2685).k9sNVH);
           cResult[14] = stringResult1;
           const tmp24 = stringResult1;
         } else {
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { style: tmp4.description, variant: "text-md/medium", color: "text-default", children: tmp24 };
-          const tmp27 = closure_9(tmp(5150).Text, obj3);
+          const tmp27 = closure_9(tmp(5187).Text, obj3);
           cResult[15] = tmp4.description;
           cResult[16] = tmp27;
         } else {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp;
       let items = [BadgeDirectoryStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        badgeById.getBadgeById(closure_0(8536).BadgeId.GIFTING),
+        badgeById.getBadgeById(closure_0(8582).BadgeId.GIFTING),
       );
       let obj = require("initialize");
       const items1 = [AccessibilityStore];
@@ -282,11 +282,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       let intl = require("util").intl;
-      obj6.children = intl.string(_modDef2667["0MB2C6"]);
+      obj6.children = intl.string(_modDef2685["0MB2C6"]);
       const items3 = [closure_9(require("Text/Text").Text, obj6)];
       let obj7 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
       const intl2 = require("util").intl;
-      obj7.children = intl2.string(_modDef2667.k9sNVH);
+      obj7.children = intl2.string(_modDef2685.k9sNVH);
       items3[1] = closure_9(require("Text/Text").Text, obj7);
       obj5.children = items3;
       const items4 = [closure_10(View, obj5)];
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { variant: "text-md/normal", color: "text-subtle", children: null };
               const intl = util.intl;
               const obj7 = { count: tmp3 };
-              obj6.children = intl.formatToPlainString(_modDef2667.qvx9E4, obj7);
+              obj6.children = intl.formatToPlainString(_modDef2685.qvx9E4, obj7);
               tmp12Result = React6(Text_Text.Text, obj6);
             }
             items[2] = tmp12Result;

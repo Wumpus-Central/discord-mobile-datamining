@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/12819__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/12884__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -87,16 +87,16 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  let obj = closure_1_0(9781);
+                  let obj = closure_1_0(9845);
                   let obj2 = { guildId: image.id, image, name: combined, roles, originalMd5 };
-                  const uploadEmojiResult = closure_1_0(9781).uploadEmoji({
+                  const uploadEmojiResult = closure_1_0(9845).uploadEmoji({
                     guildId: image.id,
                     image,
                     name: combined,
                     roles,
                     originalMd5,
                   });
-                  closure_1_0(9781)
+                  closure_1_0(9845)
                     .uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 })
                     .then(() =>
                       closure_2_1(1267).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id }),
@@ -173,10 +173,10 @@ function HeaderRow(guild) {
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   [c6, c7] = noop.useState("");
   const tmp6 = _slicedToArray(noop.useState(""), 2);
-  let canCreateExpressions = guild(8802).useManageResourcePermissions(guild).canCreateExpressions;
+  let canCreateExpressions = guild(8848).useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1128).intl;
   let obj2 = { id: null, text: null };
-  let obj = guild(8802);
+  let obj = guild(8848);
   obj2.id = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1;
   obj2.text = intl.string(guild(1128).t.N2qTQ3);
   let items = [obj2, , ,];
@@ -220,26 +220,26 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1128).intl;
     obj8.text = intl5.string(tmp7(1128).t["DU0dy/"]);
     obj8.disabled = uploadDisabled;
-    canCreateExpressions = closure_14(tmp7(5442).Button, obj8);
+    canCreateExpressions = closure_14(tmp7(5479).Button, obj8);
   }
   const items1 = [canCreateExpressions, ,];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     let obj9 = { style: tmp.errorText, variant: "text-sm/medium", color: "text-feedback-critical", children: tmp5 };
-    tmp13Result = closure_14(tmp7(5150).Text, obj9);
+    tmp13Result = closure_14(tmp7(5187).Text, obj9);
   }
   const obj10 = { children: null };
   items1[1] = tmp13Result;
   let obj11 = { style: tmp.uploadInstructionsContainer, children: null };
   const items2 = [
-    closure_14(guild(5150).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
+    closure_14(guild(5187).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
     ,
   ];
   const obj12 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1128).intl;
   const stringResult2 = intl4.string(guild(1128).t["8Vr5Qd"]);
   obj12.children = intl6.string(guild(1128).t.jrXfyw).toUpperCase();
-  items2[1] = closure_14(guild(5150).Text, obj12);
+  items2[1] = closure_14(guild(5187).Text, obj12);
   const str = intl6.string(guild(1128).t.jrXfyw);
   items2[2] = closure_14(c7, {
     style: tmp.uploadInstructionsList,
@@ -268,7 +268,7 @@ const Constants = fn(1087);
 const EMOJI_MAX_FILESIZE_KB = fn(1395).EMOJI_MAX_FILESIZE_KB;
 const jsxProd = fn(21);
 ({ jsxs: map1, jsx: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   uploadInstructionsContainer: { marginTop: nativeDefault.space.PX_12 },
   uploadInstructionsHeading: null,

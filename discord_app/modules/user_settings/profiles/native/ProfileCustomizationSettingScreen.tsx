@@ -1,10 +1,9 @@
 // discord_app/modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import UserSettingsAccountActionCreators from "../../../../actions/UserSettingsAccountActionCreators.tsx";
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert.tsx";
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert.tsx";
 import GuildIdentityActionCreators from "../../../guild_identity/GuildIdentityActionCreators.tsx";
 import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile.tsx";
 import useUserProfileEditFormDefault from "useUserProfileEditForm.tsx";
@@ -31,7 +30,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_19 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -66,19 +65,19 @@ const result = size.fileFinishedImporting(
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function ProfileCustomizationSettingScreen() {
-        const cResult = obj5(576).c(55);
+        const cResult = obj5(576).c(56);
         useMaybeFetchCollectiblesRecommendationsDefault();
         closure_19();
         let obj = obj5(576);
-        const token = obj5(4877).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+        const token = obj5(4913).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
         obj5 = token;
         const tmp8 = _slicedToArray(stateFromStores.useState(0), 2);
         importDefault = tmp8[1];
         [dependencyMap, closure_3] = stateFromStores.useState(false);
-        let obj2 = obj5(4877);
+        let obj2 = obj5(4913);
         const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
         let obj3 = obj5(1505);
-        const params = obj5(6907).useSettingNavigationRoute().params;
+        const params = obj5(6960).useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
@@ -97,7 +96,7 @@ export default noop.memo(
           tmp13 = cResult[1];
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -108,9 +107,9 @@ export default noop.memo(
               return;
             }
           }
-          cResult[2] = D;
+          cResult[2] = H;
         } else {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -122,7 +121,7 @@ export default noop.memo(
             }
           }
         }
-        let obj4 = obj5(6907);
+        let obj4 = obj5(6960);
         const obj6 = {
           items: tmp13,
           pageWidth: tmp8[0],
@@ -131,7 +130,7 @@ export default noop.memo(
           onPageChangeStart: null,
         };
         if (field === ProfileCustomizationSubsection.GUILD) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -144,21 +143,22 @@ export default noop.memo(
           }
         }
         obj6.defaultIndex = 0;
-        obj6.onPageChange = D;
-        obj6.onPageChangeStart = function onPageChangeStart(arg0, onConfirm) {
+        obj6.onPageChange = H;
+        obj6.onPageChangeStart = function onPageChangeStart(arg0, onContinue) {
           const obj = {
-            hasEdits: stateFromStores,
-            resetPending: UserSettingsAccountActionCreators.resetAllPending,
-            onHasEdits: ChatInputUtils.dismissKeyboard,
-            onConfirm,
+            location: "ProfileCustomizationSettingScreen",
+            hasUnsavedChanges: stateFromStores,
+            onReset: UserSettingsAccountActionCreators.resetAllPending,
+            onContinue,
+            onSave,
           };
-          return maybeShowDiscardChangesAlertDefault(obj);
+          return maybeShowUnsavedChangesAlertDefault(obj);
         };
-        const segmentedControlState = obj5(8759).useSegmentedControlState(obj6);
+        const segmentedControlState = obj5(8805).useSegmentedControlState(obj6);
         const activeIndex = segmentedControlState.activeIndex;
         const tmp18 = items[activeIndex.get(activeIndex)];
         if (tmp18 == null) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -173,7 +173,7 @@ export default noop.memo(
         const subSection = tmp18;
         const tmp19 = useUserProfileEditFormDefault();
         if (cResult[3] !== tmp19) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -191,7 +191,7 @@ export default noop.memo(
           cResult[5] = tmp22;
           const tmp20 = tmp25;
         } else {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -206,7 +206,7 @@ export default noop.memo(
         }
         const tmp26 = useGuildProfileEditFormDefault();
         if (cResult[6] !== tmp26) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -227,7 +227,7 @@ export default noop.memo(
           cResult[9] = handleSubmit;
           let tmp28 = tmp33;
         } else {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -243,7 +243,7 @@ export default noop.memo(
           _slicedToArray = cResult[9];
         }
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -265,7 +265,7 @@ export default noop.memo(
           let tmp35 = J;
           const tmp34 = items;
         } else {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -278,11 +278,11 @@ export default noop.memo(
           }
           tmp35 = cResult[11];
         }
-        const tmpResult = obj5(8759);
+        const tmpResult = obj5(8805);
         stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
         closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
         if (cResult[12] === tmp29) {
-          class D {
+          class H {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
@@ -330,7 +330,7 @@ export default noop.memo(
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
         }
-        const field = callback.useField("subsection");
+        const field = onSave.useField("subsection");
         _require = { autoFocusElement };
         const mapped = items.map((renderLabel) => {
           ({ id, renderPage } = renderLabel);
@@ -356,14 +356,15 @@ export default noop.memo(
           }
           callback.setState({ subsection: first.subSection });
         };
-        obj5.onPageChangeStart = function onPageChangeStart(arg0, onConfirm) {
+        obj5.onPageChangeStart = function onPageChangeStart(arg0, onContinue) {
           const obj = {
-            hasEdits: stateFromStores,
-            resetPending: UserSettingsAccountActionCreators.resetAllPending,
-            onHasEdits: ChatInputUtils.dismissKeyboard,
-            onConfirm,
+            location: "ProfileCustomizationSettingScreen",
+            hasUnsavedChanges: stateFromStores,
+            onReset: UserSettingsAccountActionCreators.resetAllPending,
+            onContinue,
+            onSave,
           };
-          return maybeShowDiscardChangesAlertDefault(obj);
+          return maybeShowUnsavedChangesAlertDefault(obj);
         };
         const segmentedControlState = require("SegmentedControlState").useSegmentedControlState(obj5);
         const activeIndex = segmentedControlState.activeIndex;
@@ -385,7 +386,7 @@ export default noop.memo(
         );
         closure_11 = tmp22;
         const items1 = [field, handleSubmit, handleSubmit2];
-        callback = obj2.useCallback(() => {
+        onSave = obj2.useCallback(() => {
           if (field === ProfileCustomizationSubsection.GUILD) {
             let tmp2 = handleSubmit2();
           } else {
@@ -410,7 +411,7 @@ export default noop.memo(
         }, items3);
         const effect2 = obj2.useEffect(
           () => () => {
-            callback.resetState();
+            onSave.resetState();
           },
           [],
         );
@@ -419,14 +420,14 @@ export default noop.memo(
           nativeStackNavigation,
           stateFromStores,
           tmp18.isSubmitting || tmp20.isSubmitting,
-          callback,
+          onSave,
         ];
         const layoutEffect = obj2.useLayoutEffect(() => {
           let obj = {
             contentStyle: { backgroundColor },
             headerShadowVisible: false,
             headerRight: closure_11
-              ? () => closure_1_17(backgroundColor(first[30]).HeaderSubmittingIndicator, {})
+              ? () => closure_1_17(backgroundColor(first[29]).HeaderSubmittingIndicator, {})
               : (arg0) => {
                   let obj = {};
                   const merged = Object.assign(arg0);
@@ -461,7 +462,7 @@ export default noop.memo(
                             closure_0 = tmp4;
                             c1 = 1;
                             c2 = 1;
-                            const obj4 = { value: callback(), done: false };
+                            const obj4 = { value: onSave(), done: false };
                             return obj4;
                           }
                         } else if (arg0 === 1) {
@@ -484,7 +485,7 @@ export default noop.memo(
                       }
                     }
                   });
-                  return closure_2_17(closure_0(first[31]).HeaderTextButton, obj);
+                  return closure_2_17(closure_0(first[30]).HeaderTextButton, obj);
                 },
           };
           nativeStackNavigation.setOptions(obj);
@@ -502,12 +503,13 @@ export default noop.memo(
         const preventRemove = require("Link").usePreventRemove(stateFromStores, (data) => {
           const action = data.data.action;
           const obj = {
-            hasEdits: stateFromStores,
-            resetPending: backgroundColor(first[23]).resetAllPending,
-            onHasEdits: backgroundColor(first[24]).dismissKeyboard,
-            onConfirm() {
+            location: "ProfileCustomizationSettingScreen",
+            hasUnsavedChanges: stateFromStores,
+            onReset: backgroundColor(first[23]).resetAllPending,
+            onContinue() {
               return nativeStackNavigation.dispatch(action);
             },
+            onSave,
           };
           closure_1(first[22])(obj);
         });

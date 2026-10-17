@@ -7,7 +7,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const NsfwGateSource = fn(7139).NsfwGateSource;
+const NsfwGateSource = fn(7192).NsfwGateSource;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;
@@ -83,10 +83,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = tmp(1128).intl;
         obj2.text = intl3.string(tmp(1128).t.wi6hPV);
         obj2.onPress = function onPress() {
-          const obj = first(4865);
+          const obj = first(4901);
           return obj.openURL(first(2131).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
         };
-        const tmp16 = jsx(tmp(5368).AlertActionButton, { text: null, onPress: null }, "help-center");
+        const tmp16 = jsx(tmp(5405).AlertActionButton, { text: null, onPress: null }, "help-center");
         cResult[6] = tmp16;
         let tmp14 = tmp16;
       } else {
@@ -98,9 +98,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "secondary", text: null };
         const intl4 = tmp(1128).intl;
         obj4.text = intl4.string(tmp(1128).t.WAI6xu);
-        items1[1] = jsx(tmp(5368).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+        items1[1] = jsx(tmp(5405).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
         obj3.actions = items1;
-        const tmp19 = jsx(tmp(5368).AlertModal, { title: tmp10, content: tmp11, actions: null });
+        const tmp19 = jsx(tmp(5405).AlertModal, { title: tmp10, content: tmp11, actions: null });
         cResult[7] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -150,16 +150,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = guildId(1128).intl;
       obj2.text = intl3.string(guildId(1128).t.wi6hPV);
       obj2.onPress = function onPress() {
-        const obj = currentUser(4865);
+        const obj = currentUser(4901);
         return obj.openURL(currentUser(2131).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
       };
-      const items1 = [jsx(guildId(5368).AlertActionButton, { text: null, onPress: null }, "help-center")];
+      const items1 = [jsx(guildId(5405).AlertActionButton, { text: null, onPress: null }, "help-center")];
       let obj3 = { variant: "secondary", text: null };
       const intl4 = guildId(1128).intl;
       obj3.text = intl4.string(guildId(1128).t.WAI6xu);
-      items1[1] = jsx(guildId(5368).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+      items1[1] = jsx(guildId(5405).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
       obj.actions = items1;
-      return jsx(guildId(5368).AlertModal, { title: null, content: null, actions: null });
+      return jsx(guildId(5405).AlertModal, { title: null, content: null, actions: null });
     };
 let closure_11 = tmp3;
 const size = fn(2);

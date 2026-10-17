@@ -289,7 +289,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   }
   closure_129_1 = navigationReplace;
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
-  return "test";
+  return "Reflect";
 };
 const isGuildVocalChannelType = fn(2072).isGuildVocalChannelType;
 const isGuildLurker = fn(2086).isGuildLurker;

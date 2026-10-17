@@ -34,15 +34,15 @@ export default {
             isUserInCreatorMonetizationEligibleCountry: null,
             shouldRestrictUpdatingRoleSubscriptionSettings: null,
           };
-          const obj = closure_1_0(7185);
+          const obj = closure_1_0(7237);
           obj2.isUserInCreatorMonetizationEligibleCountry =
-            closure_1_0(7186).isUserInCreatorMonetizationEligibleCountry();
-          const obj3 = closure_1_0(7186);
+            closure_1_0(7238).isUserInCreatorMonetizationEligibleCountry();
+          const obj3 = closure_1_0(7238);
           obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
-            4801,
+            4837,
           ).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
           result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
-          const obj4 = closure_1_0(4801);
+          const obj4 = closure_1_0(4837);
         }
         return result;
       },

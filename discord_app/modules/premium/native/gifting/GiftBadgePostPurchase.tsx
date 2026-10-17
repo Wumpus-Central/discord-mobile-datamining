@@ -3,10 +3,14 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2667 from "../../gifting/GiftingBadge.messages.js";
+import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import _modDef2685 from "../../gifting/GiftingBadge.messages.js";
+import DismissibleContentUnsafeUtils from "../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import GiftingBadgesUtils from "../../gifting/GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "../../gifting/native/views/GiftingBadgeIcon.tsx";
 import GiftingBadgeProgressDefault from "../../gifting/native/views/GiftingBadgeProgress.tsx";
@@ -14,12 +18,10 @@ import GiftingBadgeLevelUpProgressDefault from "../../gifting/native/views/Gifti
 import noop from "../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
 
-const require = globalThis.__r;
-
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13601);
+const GiftingBadgeConstants = fn(13669);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
@@ -28,7 +30,7 @@ const GiftingBadgeConstants = fn(13601);
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },
@@ -132,9 +134,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp10 = closure_10(tmp(12591).GiftIcon, obj2);
+        const tmp10 = closure_10(tmp(12656).GiftIcon, obj2);
         const intl = tmp(1128).intl;
-        const stringResult = intl.string(_modDef2667.g86YiI);
+        const stringResult = intl.string(_modDef2685.g86YiI);
         cResult[3] = tmp10;
         cResult[4] = stringResult;
         let tmp9 = stringResult;
@@ -170,7 +172,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { grow: true, variant: "primary", icon: tmp8, text: tmp9, onPress: tmp6 };
-        const tmp13 = closure_10(tmp(5442).Button, obj3);
+        const tmp13 = closure_10(tmp(5479).Button, obj3);
         cResult[5] = tmp6;
         cResult[6] = tmp13;
       } else {
@@ -204,9 +206,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
         const intl2 = tmp(1128).intl;
-        obj4.text = intl2.string(_modDef2667["sa/cfM"]);
+        obj4.text = intl2.string(_modDef2685["sa/cfM"]);
         obj4.onPress = T;
-        const tmp15 = closure_10(tmp(5442).Button, obj4);
+        const tmp15 = closure_10(tmp(5479).Button, obj4);
         cResult[7] = tmp15;
         const tmp14 = tmp15;
       } else {
@@ -259,26 +261,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
       const callback1 = noop.useCallback(() => {
         ModalActionCreatorsDefault.pop();
-        const rootNavigationRef = onSendGift(5036).getRootNavigationRef();
+        const rootNavigationRef = onSendGift(5073).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("you");
         }
       }, []);
       const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
       const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-      obj2.icon = closure_10(onSendGift(12591).GiftIcon, {
+      obj2.icon = closure_10(onSendGift(12656).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });
       const intl = onSendGift(1128).intl;
-      obj2.text = intl.string(_modDef2667.g86YiI);
+      obj2.text = intl.string(_modDef2685.g86YiI);
       obj2.onPress = callback;
-      const items1 = [closure_10(onSendGift(5442).Button, obj2)];
+      const items1 = [closure_10(onSendGift(5479).Button, obj2)];
       const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
       const intl2 = onSendGift(1128).intl;
-      obj4.text = intl2.string(_modDef2667["sa/cfM"]);
+      obj4.text = intl2.string(_modDef2685["sa/cfM"]);
       obj4.onPress = callback1;
-      items1[1] = closure_10(onSendGift(5442).Button, obj4);
+      items1[1] = closure_10(onSendGift(5479).Button, obj4);
       obj.children = items1;
       return closure_11(View, obj);
     };
@@ -444,146 +446,230 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? function LevelUpScreen(arg0) {
-      const cResult = c.c(43);
+      const cResult = c.c(42);
       ({ simulatedProgress, currentTier, newTier, nextTier, giftsToNextTier, onSendGift } = arg0);
       const tmp5 = closure_12(useSafeAreaInsetsDefault().bottom);
-      const isGiftingBadgeComplexArtEnabled =
-        GiftingBadgesUtils.useIsGiftingBadgeComplexArtEnabled("GiftBadgePostPurchase");
-      if (cResult[0] === isGiftingBadgeComplexArtEnabled) {
-        if (cResult[1] === newTier) {
-          let tmp7 = cResult[2];
-        }
-        const _Symbol = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          class I {
-            constructor() {
-              obj = closure_1_0(closure_1_2[20]);
-              result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-              return;
-            }
-          }
-          const items = [];
-          cResult[3] = I;
-          cResult[4] = items;
-          let tmp11 = items;
-        } else {
-          class I {
-            constructor() {
-              obj = closure_1_0(closure_1_2[20]);
-              result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-              return;
-            }
-          }
-          tmp11 = cResult[4];
-        }
-        const effect = noop.useEffect(I, tmp11);
-        let tmp15 = null != nextTier && null != giftsToNextTier;
-        if (tmp15) {
-          class I {
-            constructor() {
-              obj = closure_1_0(closure_1_2[20]);
-              result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-              return;
-            }
-          }
-          tmp15 = giftsToNextTier > 0;
-        }
-        ({ screenContainer, content } = tmp5);
-        if (cResult[5] !== tmp7) {
-          class I {
-            constructor() {
-              obj = closure_1_0(closure_1_2[20]);
-              result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-              return;
-            }
-          }
-          if (tmp17) {
-            class I {
-              constructor() {
-                obj = closure_1_0(closure_1_2[20]);
-                result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-                return;
-              }
-            }
-            const obj3 = { icon: tmp7, size: 140 };
-            tmp17 = collapsed(GiftingBadgeIconDefault, obj3);
-          }
-          cResult[5] = tmp7;
-          cResult[6] = tmp17;
-        } else {
-          class I {
-            constructor() {
-              obj = closure_1_0(closure_1_2[20]);
-              result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-              return;
-            }
-          }
-        }
-        if (cResult[7] === tmp5.levelUpIconWrapper) {
-          class I {
-            constructor() {
-              obj = closure_1_0(closure_1_2[20]);
-              result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-              return;
-            }
-          }
-          if (cResult[10] === currentTier) {
-            class I {
-              constructor() {
-                obj = closure_1_0(closure_1_2[20]);
-                result = obj.triggerHapticFeedback(closure_1_1(closure_1_2[21]).IMPACT_HEAVY);
-                return;
-              }
-            }
-          }
-          const obj4 = { progress: simulatedProgress, currentTier, newTier, style: tmp5.levelUpProgress };
-          const tmp24 = collapsed(GiftingBadgeLevelUpProgressDefault, obj4);
-          cResult[10] = currentTier;
-          cResult[11] = newTier;
-          cResult[12] = simulatedProgress;
-          cResult[13] = tmp5.levelUpProgress;
-          cResult[14] = tmp24;
-        }
-        const obj5 = { style: tmp5.levelUpIconWrapper, children: tmp16 };
-        const tmp21 = collapsed(View, obj5);
-        cResult[7] = tmp5.levelUpIconWrapper;
-        cResult[8] = tmp16;
-        cResult[9] = tmp21;
+      if (cResult[0] !== newTier) {
+        const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(newTier);
+        cResult[0] = newTier;
+        cResult[1] = giftingBadgeTierIconUrl;
+        let tmp6 = giftingBadgeTierIconUrl;
+        const tmpResult = GiftingBadgesUtils;
+      } else {
+        tmp6 = cResult[1];
       }
-      const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(
-        newTier,
-        isGiftingBadgeComplexArtEnabled,
-      );
-      cResult[0] = isGiftingBadgeComplexArtEnabled;
-      cResult[1] = newTier;
-      cResult[2] = giftingBadgeTierIconUrl;
-      tmp7 = giftingBadgeTierIconUrl;
-      const tmpResult = GiftingBadgesUtils;
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function b() {
+          const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_HEAVY);
+        };
+        const items = [];
+        cResult[2] = fn;
+        cResult[3] = items;
+        let tmp9 = items;
+        let tmp8 = fn;
+      } else {
+        tmp8 = cResult[2];
+        tmp9 = cResult[3];
+      }
+      const effect = noop.useEffect(tmp8, tmp9);
+      let tmp11 = null != nextTier && null != giftsToNextTier;
+      if (tmp11) {
+        tmp11 = giftsToNextTier > 0;
+      }
+      ({ screenContainer, content } = tmp5);
+      if (cResult[4] !== tmp6) {
+        let tmp13 = null != tmp6;
+        if (tmp13) {
+          const obj2 = { icon: tmp6, size: 140 };
+          tmp13 = collapsed(GiftingBadgeIconDefault, obj2);
+        }
+        cResult[4] = tmp6;
+        cResult[5] = tmp13;
+        let tmp12 = tmp13;
+      } else {
+        tmp12 = cResult[5];
+      }
+      if (cResult[6] === tmp5.levelUpIconWrapper) {
+        if (cResult[7] === tmp12) {
+          let tmp15 = cResult[8];
+        }
+        if (cResult[9] === currentTier) {
+          if (cResult[10] === newTier) {
+            if (cResult[11] === simulatedProgress) {
+              if (cResult[12] === tmp5.levelUpProgress) {
+                let tmp18 = cResult[13];
+              }
+              ({ messageSection, centerText } = tmp5);
+              if (cResult[14] !== newTier.name) {
+                const intl = util.intl;
+                let str = newTier.name;
+                if (str == null) {
+                  str = "";
+                }
+                const obj3 = { tierName: str };
+                const formatResult = intl.format(_modDef2685.k8MmO8, obj3);
+                cResult[14] = newTier.name;
+                cResult[15] = formatResult;
+                let tmp21 = formatResult;
+              } else {
+                tmp21 = cResult[15];
+              }
+              if (cResult[16] === tmp5.centerText) {
+                if (cResult[17] === tmp21) {
+                  let tmp23 = cResult[18];
+                }
+                if (cResult[19] === giftsToNextTier) {
+                  if (cResult[20] === nextTier) {
+                    if (cResult[21] === tmp11) {
+                      if (cResult[22] === tmp5.centerText) {
+                        let tmp26 = cResult[23];
+                      }
+                      if (cResult[24] === tmp5.messageSection) {
+                        if (cResult[25] === tmp23) {
+                          if (cResult[26] === tmp26) {
+                            let tmp29 = cResult[27];
+                          }
+                          if (cResult[28] === tmp5.levelUpBody) {
+                            if (cResult[29] === tmp29) {
+                              if (cResult[30] === tmp18) {
+                                let tmp33 = cResult[31];
+                              }
+                              if (cResult[32] === tmp5.content) {
+                                if (cResult[33] === tmp33) {
+                                  if (cResult[34] === tmp15) {
+                                    let tmp37 = cResult[35];
+                                  }
+                                  if (cResult[36] !== onSendGift) {
+                                    const obj4 = { onSendGift };
+                                    const tmp44 = collapsed(closure_13, obj4);
+                                    cResult[36] = onSendGift;
+                                    cResult[37] = tmp44;
+                                    let tmp41 = tmp44;
+                                  } else {
+                                    tmp41 = cResult[37];
+                                  }
+                                  if (cResult[38] === tmp5.screenContainer) {
+                                    if (cResult[39] === tmp37) {
+                                      if (cResult[40] === tmp41) {
+                                        let tmp45 = cResult[41];
+                                      }
+                                      return tmp45;
+                                    }
+                                  }
+                                  const obj5 = { style: screenContainer, children: null };
+                                  const items1 = [tmp37, tmp41];
+                                  obj5.children = items1;
+                                  const tmp48 = closure_1_11(View, obj5);
+                                  cResult[38] = tmp5.screenContainer;
+                                  cResult[39] = tmp37;
+                                  cResult[40] = tmp41;
+                                  cResult[41] = tmp48;
+                                  tmp45 = tmp48;
+                                }
+                              }
+                              const obj6 = { style: content, children: null };
+                              const items2 = [tmp15, tmp33];
+                              obj6.children = items2;
+                              const tmp40 = closure_1_11(View, obj6);
+                              cResult[32] = tmp5.content;
+                              cResult[33] = tmp33;
+                              cResult[34] = tmp15;
+                              cResult[35] = tmp40;
+                              tmp37 = tmp40;
+                            }
+                          }
+                          const obj7 = { style: tmp17, children: null };
+                          const items3 = [tmp18, tmp29];
+                          obj7.children = items3;
+                          const tmp36 = closure_1_11(View, obj7);
+                          cResult[28] = tmp5.levelUpBody;
+                          cResult[29] = tmp29;
+                          cResult[30] = tmp18;
+                          cResult[31] = tmp36;
+                          tmp33 = tmp36;
+                        }
+                      }
+                      const obj8 = { style: messageSection, children: null };
+                      const items4 = [tmp23, tmp26];
+                      obj8.children = items4;
+                      const tmp32 = closure_1_11(View, obj8);
+                      cResult[24] = tmp5.messageSection;
+                      cResult[25] = tmp23;
+                      cResult[26] = tmp26;
+                      cResult[27] = tmp32;
+                      tmp29 = tmp32;
+                    }
+                  }
+                }
+                let tmp28Result = tmp11;
+                if (tmp11) {
+                  const obj9 = {
+                    variant: "text-md/normal",
+                    color: "text-subtle",
+                    style: tmp5.centerText,
+                    children: null,
+                  };
+                  const intl2 = util.intl;
+                  const obj10 = { count: giftsToNextTier, nextTierName: null };
+                  let str2 = nextTier.name;
+                  if (str2 == null) {
+                    str2 = "";
+                  }
+                  obj10.nextTierName = str2;
+                  obj9.children = intl2.format(_modDef2685["6QVlxw"], obj10);
+                  tmp28Result = collapsed(Text_Text.Text, obj9);
+                }
+                cResult[19] = giftsToNextTier;
+                cResult[20] = nextTier;
+                cResult[21] = tmp11;
+                cResult[22] = tmp5.centerText;
+                cResult[23] = tmp28Result;
+                tmp26 = tmp28Result;
+              }
+              const obj11 = { variant: "heading-xxl/bold", style: centerText, children: tmp21 };
+              const tmp25 = collapsed(Text_Text.Text, obj11);
+              cResult[16] = tmp5.centerText;
+              cResult[17] = tmp21;
+              cResult[18] = tmp25;
+              tmp23 = tmp25;
+            }
+          }
+        }
+        const obj12 = { progress: simulatedProgress, currentTier, newTier, style: tmp5.levelUpProgress };
+        const tmp20 = collapsed(GiftingBadgeLevelUpProgressDefault, obj12);
+        cResult[9] = currentTier;
+        cResult[10] = newTier;
+        cResult[11] = simulatedProgress;
+        cResult[12] = tmp5.levelUpProgress;
+        cResult[13] = tmp20;
+        tmp18 = tmp20;
+      }
+      const tmp16 = collapsed(View, { style: tmp5.levelUpIconWrapper, children: tmp12 });
+      cResult[6] = tmp5.levelUpIconWrapper;
+      cResult[7] = tmp12;
+      cResult[8] = tmp16;
+      tmp15 = tmp16;
+      const obj13 = { style: tmp5.levelUpIconWrapper, children: tmp12 };
     }
   : function LevelUpScreen(arg0) {
       ({ newTier, nextTier, giftsToNextTier } = arg0);
       ({ simulatedProgress, currentTier, onSendGift } = arg0);
       const tmp3 = closure_12(useSafeAreaInsetsDefault().bottom);
-      const isGiftingBadgeComplexArtEnabled =
-        GiftingBadgesUtils.useIsGiftingBadgeComplexArtEnabled("GiftBadgePostPurchase");
-      const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(
-        newTier,
-        isGiftingBadgeComplexArtEnabled,
-      );
+      const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(newTier);
       const effect = noop.useEffect(() => {
-        const result = require("HapticUtils").triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_HEAVY);
+        const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_HEAVY);
       }, []);
-      const obj3 = { style: tmp3.screenContainer, children: null };
-      const obj4 = { style: tmp3.content, children: null };
-      const obj5 = { style: tmp3.levelUpIconWrapper, children: null };
-      let tmp10Result = null != giftingBadgeTierIconUrl;
-      if (tmp10Result) {
-        const obj6 = { icon: giftingBadgeTierIconUrl, size: 140 };
-        tmp10Result = collapsed(GiftingBadgeIconDefault, obj6);
+      const obj2 = { style: tmp3.screenContainer, children: null };
+      const obj3 = { style: tmp3.content, children: null };
+      const obj4 = { style: tmp3.levelUpIconWrapper, children: null };
+      let tmp9Result = null != giftingBadgeTierIconUrl;
+      if (tmp9Result) {
+        const obj5 = { icon: giftingBadgeTierIconUrl, size: 140 };
+        tmp9Result = collapsed(GiftingBadgeIconDefault, obj5);
       }
-      obj5.children = tmp10Result;
-      const items = [collapsed(View, obj5)];
-      const obj7 = { style: tmp3.levelUpBody, children: null };
+      obj4.children = tmp9Result;
+      const items = [collapsed(View, obj4)];
+      const obj6 = { style: tmp3.levelUpBody, children: null };
       const items1 = [
         collapsed(GiftingBadgeLevelUpProgressDefault, {
           progress: simulatedProgress,
@@ -592,40 +678,40 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp3.levelUpProgress,
         }),
       ];
-      const obj9 = { style: tmp3.messageSection, children: null };
-      const obj10 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
+      const obj8 = { style: tmp3.messageSection, children: null };
+      const obj9 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
       const intl = util.intl;
       let str = newTier.name;
       if (str == null) {
         str = "";
       }
-      obj10.children = intl.format(_modDef2667.k8MmO8, { tierName: str });
-      const items2 = [collapsed(Text_Text.Text, obj10)];
-      let tmp10Result2 = null != nextTier && null != giftsToNextTier;
-      if (tmp10Result2) {
-        tmp10Result2 = giftsToNextTier > 0;
+      obj9.children = intl.format(_modDef2685.k8MmO8, { tierName: str });
+      const items2 = [collapsed(Text_Text.Text, obj9)];
+      let tmp9Result2 = null != nextTier && null != giftsToNextTier;
+      if (tmp9Result2) {
+        tmp9Result2 = giftsToNextTier > 0;
       }
-      if (tmp10Result2) {
-        const obj11 = { variant: "text-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
+      if (tmp9Result2) {
+        const obj10 = { variant: "text-md/normal", color: "text-subtle", style: tmp3.centerText, children: null };
         const intl2 = util.intl;
-        const obj12 = { count: giftsToNextTier, nextTierName: null };
+        const obj11 = { count: giftsToNextTier, nextTierName: null };
         let str2 = nextTier.name;
         if (str2 == null) {
           str2 = "";
         }
-        obj12.nextTierName = str2;
-        obj11.children = intl2.format(_modDef2667["6QVlxw"], obj12);
-        tmp10Result2 = collapsed(Text_Text.Text, obj11);
+        obj11.nextTierName = str2;
+        obj10.children = intl2.format(_modDef2685["6QVlxw"], obj11);
+        tmp9Result2 = collapsed(Text_Text.Text, obj10);
       }
-      items2[1] = tmp10Result2;
-      obj9.children = items2;
-      items1[1] = closure_1_11(View, obj9);
-      obj7.children = items1;
-      items[1] = closure_1_11(View, obj7);
-      obj4.children = items;
-      const items3 = [closure_1_11(View, obj4), collapsed(closure_13, { onSendGift })];
-      obj3.children = items3;
-      return closure_1_11(View, obj3);
+      items2[1] = tmp9Result2;
+      obj8.children = items2;
+      items1[1] = closure_1_11(View, obj8);
+      obj6.children = items1;
+      items[1] = closure_1_11(View, obj6);
+      obj3.children = items;
+      const items3 = [closure_1_11(View, obj3), collapsed(closure_13, { onSendGift })];
+      obj2.children = items3;
+      return closure_1_11(View, obj2);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -640,8 +726,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let str = "react.memo_cache_sentinel";
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          const result = require("DismissibleContentUnsafeUtils").UNSAFE_markDismissibleContentAsDismissed(
-            require("dismissible_content").DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+          const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+            dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
             { dismissAction: constants.INDIRECT_ACTION },
           );
         };
@@ -657,7 +743,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for(str)) {
         const items1 = [BadgeDirectoryStore];
         const fn2 = function v() {
-          badgeById = badgeById.getBadgeById(require("BadgeId").BadgeId.GIFTING);
+          badgeById = badgeById.getBadgeById(BadgeId.BadgeId.GIFTING);
           let tiers;
           if (badgeById != null) {
             tiers = badgeById.tiers;
@@ -773,9 +859,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol3 = Symbol;
               if (cResult[23] === Symbol.for(str)) {
                 const intl3 = util.intl;
-                const stringResult = intl3.string(_modDef2667["/rBQud"]);
+                const stringResult = intl3.string(_modDef2685["/rBQud"]);
                 const intl4 = util.intl;
-                str = intl4.string(_modDef2667.DDQMlx);
+                str = intl4.string(_modDef2685.DDQMlx);
                 cResult[23] = stringResult;
                 cResult[24] = str;
                 let tmp44 = str;
@@ -797,7 +883,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   name1 = tmp19.name;
                 }
                 obj = { tierName: name1 };
-                str4 = formatToPlainString(_modDef2667.bwyQt8, obj);
+                str4 = formatToPlainString(_modDef2685.bwyQt8, obj);
               }
               tmp38 = str4;
               tmp33Result = forResult;
@@ -818,9 +904,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[21] === Symbol.for(str)) {
                 const intl = util.intl;
-                const stringResult1 = intl.string(_modDef2667.oqDrEM);
+                const stringResult1 = intl.string(_modDef2685.oqDrEM);
                 const intl2 = util.intl;
-                const stringResult2 = intl2.string(_modDef2667["Ka5s+Q"]);
+                const stringResult2 = intl2.string(_modDef2685["Ka5s+Q"]);
                 cResult[21] = stringResult1;
                 cResult[22] = stringResult2;
                 let tmp30 = stringResult2;
@@ -830,7 +916,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp30 = cResult[22];
               }
               const obj6 = {
-                title: intl6.formatToPlainString(_modDef2667.KjdBPz, obj5),
+                title: intl6.formatToPlainString(_modDef2685.KjdBPz, obj5),
                 description: tmp29,
                 progressBarTitle: tmp30,
                 progress: sum,
@@ -839,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onSendGift,
               };
               tmp33Result = collapsed(closure_14, obj6);
-              const formatToPlainStringResult1 = intl6.formatToPlainString(_modDef2667.KjdBPz, obj5);
+              const formatToPlainStringResult1 = intl6.formatToPlainString(_modDef2685.KjdBPz, obj5);
             }
           }
           const tmp27 = timestampProducer(stateFromStores, sum);
@@ -860,14 +946,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GiftBadgePostPurchase(arg0) {
       ({ currentProgress, onSendGift } = arg0);
       const effect = noop.useEffect(() => {
-        const result = require("DismissibleContentUnsafeUtils").UNSAFE_markDismissibleContentAsDismissed(
-          require("dismissible_content").DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+        const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+          dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
           { dismissAction: constants.INDIRECT_ACTION },
         );
       }, []);
       const items = [BadgeDirectoryStore];
       const stateFromStores = initialize.useStateFromStores(items, () => {
-        badgeById = badgeById.getBadgeById(require("BadgeId").BadgeId.GIFTING);
+        badgeById = badgeById.getBadgeById(BadgeId.BadgeId.GIFTING);
         let tiers;
         if (badgeById != null) {
           tiers = badgeById.tiers;
@@ -923,11 +1009,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onSendGift: null,
           };
           const obj4 = { nextTier: str2 };
-          obj3.title = intl2.formatToPlainString(_modDef2667.KjdBPz, obj4);
+          obj3.title = intl2.formatToPlainString(_modDef2685.KjdBPz, obj4);
           const intl3 = util.intl;
-          obj3.description = intl3.string(_modDef2667.oqDrEM);
+          obj3.description = intl3.string(_modDef2685.oqDrEM);
           const intl4 = util.intl;
-          obj3.progressBarTitle = intl4.string(_modDef2667["Ka5s+Q"]);
+          obj3.progressBarTitle = intl4.string(_modDef2685["Ka5s+Q"]);
           obj3.progress = sum;
           obj3.currentTier = tmp26;
           obj3.nextTier = tmp8;
@@ -944,9 +1030,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onSendGift: null,
           };
           const intl5 = util.intl;
-          obj5.title = intl5.string(_modDef2667["/rBQud"]);
+          obj5.title = intl5.string(_modDef2685["/rBQud"]);
           const intl6 = util.intl;
-          obj5.description = intl6.string(_modDef2667.DDQMlx);
+          obj5.description = intl6.string(_modDef2685.DDQMlx);
           let name;
           if (tmp24 != null) {
             name = tmp24.name;
@@ -959,7 +1045,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               name1 = tmp24.name;
             }
             const obj6 = { tierName: name1 };
-            str = intl.formatToPlainString(_modDef2667.bwyQt8, obj6);
+            str = intl.formatToPlainString(_modDef2685.bwyQt8, obj6);
           }
           obj5.progressBarTitle = str;
           obj5.progress = sum;

@@ -12,7 +12,7 @@ const Constants = fn(1098);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: {
     display: "flex",
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp10,
         };
-        const tmp14 = closure_7(tmp(5150).Text, obj2);
+        const tmp14 = closure_7(tmp(5187).Text, obj2);
         cResult[5] = tmp4.title;
         cResult[6] = tmp14;
         let tmp12 = tmp14;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[8] !== tmp4.subtitle) {
         const obj3 = { style: tmp4.subtitle, variant: "text-sm/normal", color: "text-default", children: tmp15 };
-        const tmp19 = closure_7(tmp(5150).Text, obj3);
+        const tmp19 = closure_7(tmp(5187).Text, obj3);
         cResult[8] = tmp4.subtitle;
         cResult[9] = tmp19;
         let tmp17 = tmp19;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj5.children = intl3.format(tmp(1128).t["K+DH2o"], obj6);
-        tmp21 = closure_7(tmp(5150).Text, obj5);
+        tmp21 = closure_7(tmp(5187).Text, obj5);
       }
       cResult[10] = stateFromStores;
       cResult[11] = guild;
@@ -188,11 +188,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = guild(1128).intl;
       obj3.children = intl.string(guild(1128).t["WgZ+3D"]);
-      const items2 = [closure_7(guild(5150).Text, obj3), ,];
+      const items2 = [closure_7(guild(5187).Text, obj3), ,];
       const obj4 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
       const intl2 = guild(1128).intl;
       obj4.children = intl2.string(guild(1128).t["v/S/PG"]);
-      items2[1] = closure_7(guild(5150).Text, obj4);
+      items2[1] = closure_7(guild(5187).Text, obj4);
       if (stateFromStores) {
         const obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
         const intl3 = tmp2(1128).intl;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj5.children = intl3.format(tmp2(1128).t["K+DH2o"], obj6);
-        stateFromStores = closure_7(tmp2(5150).Text, obj5);
+        stateFromStores = closure_7(tmp2(5187).Text, obj5);
       }
       items2[2] = stateFromStores;
       obj2.children = items2;

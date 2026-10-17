@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDmSpamFilterSettingOptions() {
       const cResult = c.c(1);
@@ -33,7 +33,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(8214).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8260).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
     ? function useDmSpamFilterSettingOptions() {
         const cResult = c.c(1);
@@ -58,7 +58,7 @@ const radio = SettingBuilders.createRadio({
           return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
         }, []);
       },
-  useValue: fn(15815).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(15881).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

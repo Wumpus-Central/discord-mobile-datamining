@@ -1,22 +1,22 @@
 // discord_app/modules/conjure/plan/conjurePlanDesign.tsx
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
 import conjurePlanTags from "conjurePlanTags.tsx";
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.APP_CHANNEL] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.ACTIVITY] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.OVERLAY] = _modDef3865["rPpf5/"];
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.PROFILE_WIDGET] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.AUTOMOD] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.BOT] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(7170).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.APP_CHANNEL] = _modDef3883["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3883["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.ACTIVITY] = _modDef3883["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.OVERLAY] = _modDef3883["rPpf5/"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.PROFILE_WIDGET] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.AUTOMOD] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.BOT] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6294).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
 const items = [
-  fn(7170).ConjureSupportedSurface.ACTIVITY,
-  fn(7170).ConjureSupportedSurface.APP_CHANNEL,
-  fn(7170).ConjureSupportedSurface.VOICE_CHANNEL,
-  fn(7170).ConjureSupportedSurface.OVERLAY,
+  fn(6294).ConjureSupportedSurface.ACTIVITY,
+  fn(6294).ConjureSupportedSurface.APP_CHANNEL,
+  fn(6294).ConjureSupportedSurface.VOICE_CHANNEL,
+  fn(6294).ConjureSupportedSurface.OVERLAY,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");
@@ -37,7 +37,7 @@ export const conjurePlanDesignAlt = function conjurePlanDesignAlt(proposal) {
     found = null;
   }
   if (null == found) {
-    let prop = _modDef3865["3/aHX6"];
+    let prop = _modDef3883["3/aHX6"];
   } else {
     prop = obj[found];
   }

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalGuildSpace.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef2475 from "../../guild_space/GuildSpace.messages.js";
+import _modDef2493 from "../../guild_space/GuildSpace.messages.js";
 import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
 import ServerHubAnalytics from "../../guild_space/ServerHubAnalytics.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ const Constants = fn(1087);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(18625).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18687).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
         };
         const intl3 = tmp2(1128).intl;
-        obj7.label = intl3.string(_modDef2475.btBTIw);
+        obj7.label = intl3.string(_modDef2493.btBTIw);
         const intl4 = tmp2(1128).intl;
         obj7.subLabel = intl4.string(tmp2(1128).t.n3aRYQ);
         obj7.disabled = !stateFromStores1;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(18625).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18687).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };
@@ -226,21 +226,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-          settingType: tmp2(18625).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+          settingType: tmp2(18687).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
         };
         const intl6 = tmp2(1128).intl;
-        obj9.label = intl6.string(_modDef2475["5xxUI2"]);
+        obj9.label = intl6.string(_modDef2493["5xxUI2"]);
         const intl7 = tmp2(1128).intl;
-        obj9.subLabel = intl7.string(_modDef2475.FMGoDB);
+        obj9.subLabel = intl7.string(_modDef2493.FMGoDB);
         obj9.disabled = !stateFromStores1;
         items4[2] = closure_8(closure_12, obj9);
         obj6.children = items4;
-        obj5.children = closure_9(tmp2(6489).TableRowGroup, obj6);
-        obj4.children = closure_8(tmp2(5440).Stack, obj5);
-        const items5 = [closure_8(tmp2(8809).Form, obj4), closure_8(tmp2(6952).NavScrim, {})];
+        obj5.children = closure_9(tmp2(6542).TableRowGroup, obj6);
+        obj4.children = closure_8(tmp2(5477).Stack, obj5);
+        const items5 = [closure_8(tmp2(8855).Form, obj4), closure_8(tmp2(7005).NavScrim, {})];
         obj3.children = items5;
         tmp6 = closure_9(closure_10, obj3);
       }

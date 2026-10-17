@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8697).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8743).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (platformsContainer != null) {
             const genres1 = platformsContainer.genres;
-            const mapped = genres1.map(trackAction(9148).getGenreText);
+            const mapped = genres1.map(trackAction(9208).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -335,10 +335,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Date = Date;
                   const date = new Date(tmp30);
-                  const dateFormatResult = tmp5(4852).dateFormat(date, "LL");
+                  const dateFormatResult = tmp5(4888).dateFormat(date, "LL");
                   cResult[32] = tmp30;
                   cResult[33] = dateFormatResult;
-                  const obj7 = tmp5(4852);
+                  const obj7 = tmp5(4888);
                 } else {
                   class S {
                     constructor(arg0) {
@@ -636,7 +636,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: headerText,
               children: tmp64,
             };
-            const tmp67 = closure_8(trackAction(5150).Text, obj5);
+            const tmp67 = closure_8(trackAction(5187).Text, obj5);
             cResult[57] = tmp4.headerText;
             cResult[58] = tmp67;
           } else {
@@ -779,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const websites = game.websites;
                     if (websites != null) {
                       const mapped3 = websites.map((item) =>
-                        trackAction(9334)(item, trackAction(587).colors.ICON_SUBTLE),
+                        trackAction(9392)(item, trackAction(587).colors.ICON_SUBTLE),
                       );
                       found = mapped3.filter((item) => null != item);
                     }
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     style: closure_2.platformsContainer,
                     children: platforms.map((platform) =>
                       closure_1_8(
-                        game(9327).GameUpdatePlatformIcon,
+                        game(9385).GameUpdatePlatformIcon,
                         { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE },
                         platform,
                       ),

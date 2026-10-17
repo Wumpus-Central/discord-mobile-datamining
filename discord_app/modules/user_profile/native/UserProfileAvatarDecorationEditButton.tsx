@@ -3,17 +3,17 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import avatar_decorations_AvatarDecorationUtils from "../../collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
 import CutoutableAvatarDecorationDefault from "../../collectibles/native/components/CutoutableAvatarDecoration.tsx";
-import _modDef14188 from "../../../../_runtime/metro/14188__.js";
+import _modDef14256 from "../../../../_runtime/metro/14256__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(7128).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7181).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1098).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = {
   position: "relative",
@@ -331,8 +331,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             });
                             let tmp7 = <hasOwnProperty style={closure_3.previewContainer}>{null}</hasOwnProperty>;
                           } else {
-                            const obj = { source: _modDef14188, style: closure_3.noneIcon };
-                            tmp7 = jsx(native.Icon, { source: _modDef14188, style: closure_3.noneIcon });
+                            const obj = { source: _modDef14256, style: closure_3.noneIcon };
+                            tmp7 = jsx(native.Icon, { source: _modDef14256, style: closure_3.noneIcon });
                           }
                           return tmp7;
                         }

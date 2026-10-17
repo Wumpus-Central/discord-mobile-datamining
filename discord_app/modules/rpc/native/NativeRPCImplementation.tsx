@@ -1,24 +1,24 @@
 // discord_app/modules/rpc/native/NativeRPCImplementation.tsx
+import NativeRPCServerDefault from "NativeRPCServer.tsx";
 import WebViewPostMessageTransportDefault from "server/transports/WebViewPostMessageTransport.tsx";
 import commands_activitiesDefault from "server/commands/activities.tsx";
 import authDefault from "server/commands/auth.tsx";
 import voiceSettingsDefault from "server/commands/voiceSettings.tsx";
 import unsupportedDefault from "server/commands/unsupported.tsx";
 import crossPlatformRPCEventHandlersDefault from "../server/events/crossPlatformRPCEventHandlers.tsx";
-import NativeRPCServerDefault from "NativeRPCServer.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
-const merged = Object.assign(fn(15424).crossPlatformCommands);
+const merged = Object.assign(fn(15491).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const auth = Object.assign(authDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(15487);
+const discordEnvironmentEvents = fn(15552);
 const merged6 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
-const merged7 = Object.assign(fn(15488).voiceSettingsEventHandlers);
+const merged7 = Object.assign(fn(15553).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},

@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4792 from "../../../../_runtime/metro/04792__.js";
+import _mod4828 from "../../../../_runtime/metro/04828__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -14,16 +14,16 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6182).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17366).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6219).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17425).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(5154);
+let createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(5154);
+createStyles = fn(5191);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -187,11 +187,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const element = {
               type: listInsets.FOLDER,
               id: -1,
-              parentId: "test",
+              parentId: "Reflect",
               name: "Array",
-              color: "apply",
-              expanded: "<string:3841983154>",
-              children: "<string:1174405393>",
+              color: "applicationId",
+              expanded: 1255866370,
+              children: 2102460419,
             };
             const items = [overNode];
             element.children = items;
@@ -377,11 +377,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const element = {
               type: GuildsNodeType.FOLDER,
               id: -1,
-              parentId: "test",
+              parentId: "Reflect",
               name: "Array",
-              color: "apply",
-              expanded: "<string:3841983154>",
-              children: "<string:1174405393>",
+              color: "applicationId",
+              expanded: 1255866370,
+              children: 2102460419,
             };
             const items = [tmp2];
             element.children = items;
@@ -891,13 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState:
-                      "M49.6737 65.2838C49.4877 65.9355 49.3947 66.3312 49.3947 66.3312C34.9565 77.3872 48.5577 96.939 48.5577 96.939C51.2315 93.7502 54.4865 90.701 58.4855 88.42C60.6942 68.9614 54.6492 65.2605 49.6737 65.2838Z",
-                    scrollPosition: "#FF78B7",
-                    dragRegion: null,
-                    windowSize: null,
-                    dropComplete: null,
-                    listInsets: "absolute",
+                    gestureState: "\u0441\u0456\u043C\u0432\u0430\u043B",
+                    scrollPosition: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
+                    dragRegion: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E",
+                    windowSize: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+                    dropComplete: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B",
+                    listInsets: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E",
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -923,7 +922,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp5 = GuildsBarDnDStore(first, _mod4792.shallow);
+        const tmp5 = GuildsBarDnDStore(first, _mod4828.shallow);
         if (cResult[1] !== tmp5) {
           let tmp7 = null;
           if (null != tmp5) {
@@ -992,13 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState:
-                    "M49.6737 65.2838C49.4877 65.9355 49.3947 66.3312 49.3947 66.3312C34.9565 77.3872 48.5577 96.939 48.5577 96.939C51.2315 93.7502 54.4865 90.701 58.4855 88.42C60.6942 68.9614 54.6492 65.2605 49.6737 65.2838Z",
-                  scrollPosition: "#FF78B7",
-                  dragRegion: null,
-                  windowSize: null,
-                  dropComplete: null,
-                  listInsets: "absolute",
+                  gestureState: "\u0441\u0456\u043C\u0432\u0430\u043B",
+                  scrollPosition: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
+                  dragRegion: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E",
+                  windowSize: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+                  dropComplete: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B",
+                  listInsets: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E",
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;
@@ -1018,7 +1016,7 @@ export default noop.memo(
             }
             return null;
           }
-        }, _mod4792.shallow);
+        }, _mod4828.shallow);
         let tmp2 = null;
         if (null != tmp) {
           let obj = {};

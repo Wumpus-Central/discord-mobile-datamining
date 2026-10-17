@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/helpers/validateOpenInviteDialog.tsx
-import canViewInviteModal from "../../instant_invite/canViewInviteModal.tsx";
 import EmbeddedAppTypes from "../../embedded_apps/EmbeddedAppTypes.tsx";
 import getChannelIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
+import canViewInviteModal from "../../instant_invite/canViewInviteModal.tsx";
+import isPostMessageSocketDefault from "isPostMessageSocket.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
 import getGuildIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx";
-import isPostMessageSocketDefault from "isPostMessageSocket.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";

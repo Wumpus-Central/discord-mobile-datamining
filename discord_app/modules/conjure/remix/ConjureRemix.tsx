@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/remix/ConjureRemix.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -43,7 +43,7 @@ let closure_7 = async function _remixConjureProjectInto(arg0) {
             closure_130_3 = undefined;
             const obj6 = { ok: false, message: null };
             const intl2 = util.intl;
-            obj6.message = intl2.string(_modDef3865.Cn8H0Y);
+            obj6.message = intl2.string(_modDef3883.Cn8H0Y);
             closure_130_2 = obj6;
             c4 = 1;
             const obj7 = { name: null, guild_id: null, install_scope: null };
@@ -131,7 +131,7 @@ let closure_7 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10898);
+const ConjureConnectionStore = fn(10962);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let c6 = " (Remix)";
 const size = fn(2);

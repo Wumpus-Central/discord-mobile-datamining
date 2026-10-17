@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: {
     flex: 1,
@@ -18,9 +18,8 @@ let obj2 = {
     gap: nativeDefault.space.PX_8,
     paddingHorizontal: nativeDefault.space.PX_24,
   },
+  action: null,
 };
-let closure_5 = createStyles.createStyles(obj2);
-fn(558);
 let obj3 = {
   flex: 1,
   alignItems: "center",
@@ -28,11 +27,15 @@ let obj3 = {
   gap: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_24,
 };
+obj2.action = { marginTop: nativeDefault.space.PX_16 };
+let closure_5 = createStyles.createStyles(obj2);
+fn(558);
+let obj4 = { marginTop: nativeDefault.space.PX_16 };
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FrameSurfaceExplanation(arg0) {
-      const cResult = c.c(11);
-      ({ heading, description, error } = arg0);
+      const cResult = c.c(16);
+      ({ icon, heading, description, error, action } = arg0);
       const tmp4 = closure_5();
       if (cResult[0] !== heading) {
         let tmp6 = null;
@@ -70,48 +73,76 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[5];
       }
-      if (cResult[6] === tmp4.container) {
-        if (cResult[7] === tmp5) {
-          if (cResult[8] === tmp8) {
-            if (cResult[9] === tmp11) {
-              let tmp14 = cResult[10];
+      if (cResult[6] === action) {
+        if (cResult[7] === tmp4.action) {
+          let tmp14 = cResult[8];
+        }
+        if (cResult[9] === icon) {
+          if (cResult[10] === tmp4.container) {
+            if (cResult[11] === tmp5) {
+              if (cResult[12] === tmp8) {
+                if (cResult[13] === tmp11) {
+                  if (cResult[14] === tmp14) {
+                    let tmp18 = cResult[15];
+                  }
+                  return tmp18;
+                }
+              }
             }
-            return tmp14;
           }
         }
+        const obj5 = { style: tmp4.container, children: null };
+        const items = [icon, tmp5, tmp8, tmp11, tmp14];
+        obj5.children = items;
+        const tmp21 = React4(View, obj5);
+        cResult[9] = icon;
+        cResult[10] = tmp4.container;
+        cResult[11] = tmp5;
+        cResult[12] = tmp8;
+        cResult[13] = tmp11;
+        cResult[14] = tmp14;
+        cResult[15] = tmp21;
+        tmp18 = tmp21;
       }
-      const obj5 = { style: tmp4.container, children: null };
-      const items = [tmp5, tmp8, tmp11];
-      obj5.children = items;
-      const tmp15 = React4(View, obj5);
-      cResult[6] = tmp4.container;
-      cResult[7] = tmp5;
-      cResult[8] = tmp8;
-      cResult[9] = tmp11;
-      cResult[10] = tmp15;
+      let tmp15 = null;
+      if (null != action) {
+        const obj6 = { style: tmp4.action, children: action };
+        tmp15 = React3(View, obj6);
+      }
+      cResult[6] = action;
+      cResult[7] = tmp4.action;
+      cResult[8] = tmp15;
       tmp14 = tmp15;
     }
-  : function FrameSurfaceExplanation(arg0) {
-      ({ heading, description, error } = arg0);
-      const obj = { style: closure_5().container, children: null };
-      let tmp3 = null;
+  : function FrameSurfaceExplanation(icon) {
+      ({ heading, description, error, action } = icon);
+      const tmp = closure_5();
+      const obj = { style: tmp.container, children: null };
+      const items = [icon.icon, , , ,];
+      let tmp4 = null;
       if (null != heading) {
         const obj2 = { variant: "heading-md/semibold", color: "text-default", children: heading };
-        tmp3 = React3(Text_Text.Heading, obj2);
+        tmp4 = React3(Text_Text.Heading, obj2);
       }
-      const items = [tmp3, ,];
-      let tmp7 = null;
+      items[1] = tmp4;
+      let tmp8 = null;
       if (null != description) {
         const obj3 = { variant: "text-sm/normal", color: "text-muted", children: description };
-        tmp7 = React3(Text_Text.Text, obj3);
+        tmp8 = React3(Text_Text.Text, obj3);
       }
-      items[1] = tmp7;
-      let tmp11 = null;
+      items[2] = tmp8;
+      let tmp12 = null;
       if (null != error) {
         const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
-        tmp11 = React3(Text_Text.Text, obj4);
+        tmp12 = React3(Text_Text.Text, obj4);
       }
-      items[2] = tmp11;
+      items[3] = tmp12;
+      let tmp16 = null;
+      if (null != action) {
+        const obj5 = { style: tmp.action, children: action };
+        tmp16 = React3(View, obj5);
+      }
+      items[4] = tmp16;
       obj.children = items;
       return React4(View, obj);
     };

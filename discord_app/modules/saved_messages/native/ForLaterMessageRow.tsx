@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" },
   flushToCardBottom: {
@@ -40,11 +40,11 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = useThemeDefault();
       if (cResult[0] !== tmp6) {
         let obj2 = { seeMoreLabelColor: tmp5(587).colors.TEXT_DEFAULT };
-        const tmp8 = lineClamp(5154).createNativeStyleProperties(obj2)(tmp6);
+        const tmp8 = lineClamp(5191).createNativeStyleProperties(obj2)(tmp6);
         cResult[0] = tmp6;
         cResult[1] = tmp8;
         let tmp7 = tmp8;
-        const tmpResult = lineClamp(5154);
+        const tmpResult = lineClamp(5191);
       } else {
         tmp7 = cResult[1];
       }
@@ -82,7 +82,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol4 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = new tmp5(7967)();
+          const obj4 = new tmp5(8013)();
           let obj3 = {
             renderEmbeds: tmp11,
             inlineEmbedMedia: tmp13,
@@ -158,7 +158,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled()
             rowGenerator: tmp17,
             maxHeight,
           };
-          const tmp27 = closure_5(tmp5(9609), obj7);
+          const tmp27 = closure_5(tmp5(9673), obj7);
           cResult[12] = maxHeight;
           cResult[13] = message;
           cResult[14] = tmp9;

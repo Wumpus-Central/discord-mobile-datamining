@@ -45,12 +45,12 @@ export { b64ToProto };
 export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
   return b64ToProto(preloaded_user_settings.PreloadedUserSettings, settings);
 };
-export const protoToB64WithType = function protoToB64WithType(arg0, favoriteGifs) {
+export const protoToB64WithType = function protoToB64WithType(arg0, partialSettings) {
   obj = ProtoUtils;
-  return obj.protoToB64(obj[arg0], favoriteGifs);
+  return obj.protoToB64(obj[arg0], partialSettings);
 };
-export const protoToB64 = function protoToB64(DeclarativeSettings, favoriteGifs) {
-  return ProtoUtils.protoToB64(DeclarativeSettings, favoriteGifs);
+export const protoToB64 = function protoToB64(DeclarativeSettings, partialSettings) {
+  return ProtoUtils.protoToB64(DeclarativeSettings, partialSettings);
 };
 export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
   obj = {};

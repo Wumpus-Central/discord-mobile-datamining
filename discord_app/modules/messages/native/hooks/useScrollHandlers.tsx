@@ -6,10 +6,11 @@ import QuestTypes from "../../../quests/QuestTypes.tsx";
 import NativeChatUtilsDefault from "../../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../../chat/native/ChatChangesetUpdateTracker.tsx";
 import DimensionActionCreatorsDefault from "../../../../actions/DimensionActionCreators.tsx";
+import IOSAnchoredChatScrollerExperiment from "../IOSAnchoredChatScrollerExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9619);
+const useChatBottomManagerUIStore = fn(9683);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const ReactCompilerGating = fn(558);
@@ -264,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   ref4.current = tmp2;
                                   ref6.current = tmp3;
                                   ref5.current = tmp4;
-                                  chatRef(chatUpdatesQueue[8]).batchUpdates(() => {
+                                  chatRef(chatUpdatesQueue[9]).batchUpdates(() => {
                                     let hasMoreAfter = closure_1;
                                     if (!closure_1) {
                                       hasMoreAfter = messages.hasMoreAfter;
@@ -272,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     hasOwnProperty(channelId, screenIndex, hasMoreAfter);
                                     React4(screenIndex, isAtBottom);
                                   });
-                                  const obj2 = chatRef(chatUpdatesQueue[8]);
+                                  const obj2 = chatRef(chatUpdatesQueue[9]);
                                 }
                               }
                               cResult[26] = channelId;
@@ -366,10 +367,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 function updateNativeRows(isLoadingAtTop) {
                   if (chatUpdatesQueue.isBlocking) {
                     chatUpdatesQueue.add(isLoadingAtTop);
-                  } else if (!isLoadingAtTop.isLoadingAtTop) {
-                    applyNativeRowsUpdate(isLoadingAtTop);
                   } else {
-                    chatUpdatesQueue.add(isLoadingAtTop);
+                    if (!obj2.isIOSAnchoredChatScrollerEnabled()) {
+                      if (isLoadingAtTop.isLoadingAtTop) {
+                        chatUpdatesQueue.add(isLoadingAtTop);
+                      }
+                    }
+                    applyNativeRowsUpdate(isLoadingAtTop);
+                    obj2 = IOSAnchoredChatScrollerExperiment;
                   }
                 }
                 cResult[15] = applyNativeRowsUpdate;
@@ -496,7 +501,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj2 = { isFirstMessageVisible: flag4 };
                 closure_1_13(obj2);
-                dependencyMap.tryFlush();
+                set.tryFlush();
                 return true;
               }
             }
@@ -631,12 +636,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         },
         updateNativeRows(isLoadingAtTop) {
-          if (dependencyMap.isBlocking) {
-            dependencyMap.add(isLoadingAtTop);
-          } else if (!isLoadingAtTop.isLoadingAtTop) {
-            closure_1_8(isLoadingAtTop);
+          if (set.isBlocking) {
+            set.add(isLoadingAtTop);
           } else {
-            dependencyMap.add(isLoadingAtTop);
+            if (!obj2.isIOSAnchoredChatScrollerEnabled()) {
+              if (isLoadingAtTop.isLoadingAtTop) {
+                set.add(isLoadingAtTop);
+              }
+            }
+            closure_1_8(isLoadingAtTop);
+            obj2 = IOSAnchoredChatScrollerExperiment;
           }
         },
         handleScrollCallbacks,

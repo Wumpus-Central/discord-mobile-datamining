@@ -2,15 +2,16 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import GuildOnboardingPromptsStore from "../guild_onboarding/GuildOnboardingPromptsStore.tsx";
 import ActiveJoinedThreadsStore from "../threads/ActiveJoinedThreadsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
-const require = fn;
+require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ReadStateTypes = fn(6186).ReadStateTypes;
+const ReadStateTypes = fn(6223).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
@@ -85,5 +86,26 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(7024).bulkAck(mapped, onFinished);
+  return mapped(7077).bulkAck(mapped, onFinished);
 }
+export const markChannelsAsRead = function markChannelsAsRead(arr, source, onFinished) {
+  const mapped = arr.map((channelId) => {
+    const obj = { channelId, readStateType: constants.CHANNEL, messageId: null };
+    channel = channel.getChannel(channelId);
+    let isForumLikeChannelResult;
+    if (channel != null) {
+      isForumLikeChannelResult = channel.isForumLikeChannel();
+    }
+    if (isForumLikeChannelResult) {
+      const _Date = Date;
+      let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
+    } else {
+      fromTimestampResult = ReadStateStore.lastMessageId(channelId);
+    }
+    obj.messageId = fromTimestampResult;
+    return obj;
+  });
+  AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
+  const obj2 = { source, type: "guild" };
+  return ReadStateActionCreators.bulkAck(mapped, onFinished);
+};

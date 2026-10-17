@@ -17,7 +17,7 @@ const route = SettingBuilders.createRoute({
   screen: {
     route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
     getComponent() {
-      return require("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").default;
+      return require("ProfileCustomizationTryItOutSettingScreen").default;
     },
   },
 });

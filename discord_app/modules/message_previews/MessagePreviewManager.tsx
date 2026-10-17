@@ -102,7 +102,7 @@ class MessagePreviewManager extends tmp3 {
                 closure_131_4 = undefined;
                 c7 = 1;
                 c8 = 1;
-                return { value: "test", done: true };
+                return { value: "Reflect", done: true };
               }
             } else {
               if (1 === tmp4) {

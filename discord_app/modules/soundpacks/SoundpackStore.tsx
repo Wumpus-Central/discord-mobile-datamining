@@ -6,8 +6,8 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const Soundpacks = Constants.Soundpacks;
 let obj = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };
-const PersistedStore = initializeDefault.PersistedStore;
-class SoundpackStore extends PersistedStore {}
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+class SoundpackStore extends DeviceSettingsStore {}
 const prototype = SoundpackStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -18,7 +18,7 @@ prototype["initialize"] = function initialize(arg0) {
     }
   }
 };
-prototype["getState"] = function getState() {
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
 };
 prototype["getSoundpack"] = function getSoundpack() {

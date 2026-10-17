@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePremiumSettingTrailing() {
       const cResult = c.c(1);
@@ -87,7 +87,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(9267).NitroWheelIcon,
+  IconComponent: fn(9327).NitroWheelIcon,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function usePremiumSettingTrailing() {

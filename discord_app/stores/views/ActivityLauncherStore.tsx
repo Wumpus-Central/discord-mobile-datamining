@@ -138,6 +138,9 @@ obj = {
   ACTIVITY_JOIN_LOADING(type) {
     return handleActivityStateChanged(constants.LOADING, constants2.JOIN, type);
   },
+  ACTIVITY_JOIN_NAVIGATION_COMPLETE(type) {
+    return handleActivityStateChanged(constants.COMPLETE, constants2.JOIN, type);
+  },
   ACTIVITY_JOIN_FAILED(type) {
     return handleActivityStateChanged(constants.FAILED, constants2.JOIN, type);
   },

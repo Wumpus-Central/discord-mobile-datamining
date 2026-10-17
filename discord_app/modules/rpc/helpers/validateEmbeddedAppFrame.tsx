@@ -1,11 +1,11 @@
 // discord_app/modules/rpc/helpers/validateEmbeddedAppFrame.tsx
 import EmbeddedSurfaceUtils from "../../applications/utils/EmbeddedSurfaceUtils.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
-import conjurePreviewSurface from "../../conjure/preview/conjurePreviewSurface.tsx";
-import RPCErrorDefault from "../RPCError.tsx";
-import RPCHelpers from "../RPCHelpers.tsx";
 import getSocketFrameDefault from "getSocketFrame.tsx";
 import isPostMessageSocketDefault from "isPostMessageSocket.tsx";
+import RPCErrorDefault from "../RPCError.tsx";
+import conjurePreviewSurface from "../../conjure/preview/conjurePreviewSurface.tsx";
+import RPCHelpers from "../RPCHelpers.tsx";
 import ConjureBuilderPreviewStore from "../../conjure/preview/ConjureBuilderPreviewStore.tsx";
 
 require = fn;

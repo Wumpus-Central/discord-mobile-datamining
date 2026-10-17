@@ -42,7 +42,7 @@ let closure_7 = async function _fetchCheckpointData() {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

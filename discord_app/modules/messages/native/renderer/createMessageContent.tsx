@@ -10,7 +10,7 @@ import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8113 from "../../../../../_runtime/metro/08113__.js";
+import _modDef8159 from "../../../../../_runtime/metro/08159__.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -84,7 +84,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8113);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8159);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -1421,11 +1421,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result72 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = {
-      content: "Set",
-      hasSpoilerEmbeds: "onGestureHandlerStateChange",
-      hasBailedAst: "onContentSizeChange",
-    };
+    parseMessageMarkupResult = { content: "test", hasSpoilerEmbeds: "none", hasBailedAst: "URL" };
     const tmp13Result66 = tmp13(tmp3[42]);
   }
   const obj4 = message(tmp3[37]);

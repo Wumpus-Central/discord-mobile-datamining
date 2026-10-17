@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -65,7 +65,7 @@ export default noop.memo(
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
         let obj = markAsDismissed(576);
-        let first = markAsDismissed(17256).useUnclaimedGameIdsForGuild(guild.id)[0];
+        let first = markAsDismissed(17316).useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
         }
@@ -77,7 +77,7 @@ export default noop.memo(
         } else {
           first1 = cResult[0];
         }
-        const obj2 = markAsDismissed(17256);
+        const obj2 = markAsDismissed(17316);
         ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
         if (null == coverImageUrl) {
           return null;
@@ -109,7 +109,7 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp18 = closure_8(markAsDismissed(6432).XSmallIcon, { size: "sm", color: "text-default" });
+            const tmp18 = closure_8(markAsDismissed(6485).XSmallIcon, { size: "sm", color: "text-default" });
             cResult[5] = tmp18;
             let tmp16 = tmp18;
           } else {
@@ -154,7 +154,7 @@ export default noop.memo(
                   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = markAsDismissed(1128).intl;
                     const stringResult2 = intl4.string(markAsDismissed(1128).t["2u6ZlY"]);
-                    const tmp38 = closure_8(markAsDismissed(7926).LinkExternalSmallIcon, {
+                    const tmp38 = closure_8(markAsDismissed(7972).LinkExternalSmallIcon, {
                       size: "xs",
                       color: "white",
                     });
@@ -202,9 +202,9 @@ export default noop.memo(
                                 v1 = 1;
                                 v3 = 1;
                                 const obj5 = {
-                                  value: v1(7257).redirectDeveloperPortalWithHandoffToken(
+                                  value: v1(7309).redirectDeveloperPortalWithHandoffToken(
                                     constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                                    v3(7261).LoginHandoffSource.GAME_CLAIM,
+                                    v3(7313).LoginHandoffSource.GAME_CLAIM,
                                   ),
                                   done: false,
                                 };
@@ -228,7 +228,7 @@ export default noop.memo(
                         }
                       }),
                     };
-                    const tmp42 = closure_8(markAsDismissed(5442).Button, obj5);
+                    const tmp42 = closure_8(markAsDismissed(5479).Button, obj5);
                     cResult[24] = markAsDismissed;
                     cResult[25] = tmp42;
                     let tmp39 = tmp42;
@@ -256,7 +256,7 @@ export default noop.memo(
                     const obj6 = { variant: "secondary", style: tmp4.card, children: null };
                     const items = [tmp19, tmp22, tmp27, tmp31, tmp43];
                     obj6.children = items;
-                    const tmp49 = closure_9(markAsDismissed(6406).Card, obj6);
+                    const tmp49 = closure_9(markAsDismissed(6459).Card, obj6);
                     cResult[29] = tmp4.card;
                     cResult[30] = tmp27;
                     cResult[31] = tmp31;
@@ -274,7 +274,7 @@ export default noop.memo(
                   tmp43 = tmp46;
                 }
                 const obj8 = { variant: "text-sm/normal", color: "text-overlay-light", style: tmp30, children: tmp10 };
-                const tmp33 = closure_8(markAsDismissed(5150).Text, obj8);
+                const tmp33 = closure_8(markAsDismissed(5187).Text, obj8);
                 cResult[19] = tmp10;
                 cResult[20] = tmp30;
                 cResult[21] = tmp33;
@@ -293,14 +293,14 @@ export default noop.memo(
               style: tmp4.centeredText,
               children: tmp25,
             };
-            const tmp29 = closure_8(markAsDismissed(5150).Text, obj9);
+            const tmp29 = closure_8(markAsDismissed(5187).Text, obj9);
             cResult[13] = tmp4.centeredText;
             cResult[14] = tmp25;
             cResult[15] = tmp29;
             tmp27 = tmp29;
           }
           const obj10 = { accessibilityRole: "button", onPress: tmp15, style: tmp4.closeButton, children: tmp16 };
-          const tmp21 = closure_8(markAsDismissed(6409).PressableOpacity, obj10);
+          const tmp21 = closure_8(markAsDismissed(6462).PressableOpacity, obj10);
           cResult[6] = tmp4.closeButton;
           cResult[7] = tmp15;
           cResult[8] = tmp21;
@@ -392,9 +392,9 @@ export default noop.memo(
                     v1 = 1;
                     v3 = 1;
                     const obj5 = {
-                      value: v1(7257).redirectDeveloperPortalWithHandoffToken(
+                      value: v1(7309).redirectDeveloperPortalWithHandoffToken(
                         constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                        v3(7261).LoginHandoffSource.GAME_CLAIM,
+                        v3(7313).LoginHandoffSource.GAME_CLAIM,
                       ),
                       done: false,
                     };

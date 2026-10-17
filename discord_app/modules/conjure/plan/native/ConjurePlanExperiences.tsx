@@ -2,14 +2,14 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon2 from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import conjurePlanExperienceSurfaces from "../conjurePlanExperienceSurfaces.tsx";
 import conjurePlanExperienceSections from "../conjurePlanExperienceSections.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjurePlanCommandText2 = ConjurePlanCommandText(12200);
+const ConjurePlanCommandText2 = ConjurePlanCommandText(12263);
 require = fn;
 function frameBlocks(proposal, experience, infoRows) {
   const result = conjurePlanExperienceSurfaces.conjurePlanExperiencePlacement(proposal, experience);
@@ -21,7 +21,7 @@ function frameBlocks(proposal, experience, infoRows) {
       const obj2 = { channels: true, caption: null, children: null };
       const intl2 = util.intl;
       const obj3 = { count: result.channels.length };
-      obj2.caption = intl2.formatToPlainString(_modDef3865.w8F5sy, obj3);
+      obj2.caption = intl2.formatToPlainString(_modDef3883.w8F5sy, obj3);
       const obj4 = { style: infoRows.infoRows, children: null };
       const channels = result.channels;
       obj4.children = channels.map((description) => {
@@ -35,7 +35,7 @@ function frameBlocks(proposal, experience, infoRows) {
     if (result1.length > 0) {
       const obj5 = { caption: null, children: null };
       const intl = util.intl;
-      obj5.caption = intl.string(_modDef3865.MY6UGJ);
+      obj5.caption = intl.string(_modDef3883.MY6UGJ);
       const obj6 = { labels: result1 };
       obj5.children = hasOwnProperty(closure_10, obj6);
       items.push(hasOwnProperty(closure_9, obj5, "features"));
@@ -47,14 +47,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  frame: fn(9450).GameControllerIcon,
-  overlay_widget: fn(12202).WindowTopIcon,
-  user_widget: fn(10535).UserCircleIcon,
-  bot: fn(11568).RobotIcon,
-  commands: fn(11568).RobotIcon,
-  automod: fn(10654).ShieldIcon,
+  frame: fn(9514).GameControllerIcon,
+  overlay_widget: fn(12265).WindowTopIcon,
+  user_widget: fn(10598).UserCircleIcon,
+  bot: fn(11627).RobotIcon,
+  commands: fn(11627).RobotIcon,
+  automod: fn(10717).ShieldIcon,
 };
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj3 = {
   intro: { gap: nativeDefault.space.PX_8 },
   divider: null,
@@ -818,7 +818,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         let kind = intl.string;
         if (tmp4) {
-          let BM4Ymz = _modDef3865.BM4Ymz;
+          let BM4Ymz = _modDef3883.BM4Ymz;
         } else {
           BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
         }
@@ -854,7 +854,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [hasOwnProperty(View, obj4)];
       const intl = util.intl;
       if (result) {
-        let BM4Ymz = _modDef3865.BM4Ymz;
+        let BM4Ymz = _modDef3883.BM4Ymz;
       } else {
         BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
       }

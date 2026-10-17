@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const BackPressTracking = tmp(5438);
+const BackPressTracking = tmp(5475);
 require = fn;
 const NativeModules = fn(17).NativeModules;
 const ReactCompilerGating = fn(558);

@@ -153,7 +153,7 @@ let closure_11 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4859)(url);
+                  closure_1(4895)(url);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
@@ -204,7 +204,7 @@ let closure_11 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(5858);
+let Constants = fn(5895);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
@@ -214,7 +214,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15432);
+let CONTEXT_MENU_ICON_NAMES = fn(15499);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -346,7 +346,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15432);
+CONTEXT_MENU_ICON_NAMES = fn(15499);
 let obj6 = {
   scope: null,
   handler(arg0) {

@@ -3,16 +3,16 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef12866 from "../../../../_runtime/metro/12866__.js";
-import _modDef17384 from "../../../../_runtime/metro/17384__.js";
-import _modDef17385 from "../../../../_runtime/metro/17385__.js";
-import _modDef17386 from "../../../../_runtime/metro/17386__.js";
+import _modDef12931 from "../../../../_runtime/metro/12931__.js";
+import _modDef17443 from "../../../../_runtime/metro/17443__.js";
+import _modDef17444 from "../../../../_runtime/metro/17444__.js";
+import _modDef17445 from "../../../../_runtime/metro/17445__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { badgeImageContainer: null, badgeImage: null };
 let size = {
   position: "absolute",
@@ -28,7 +28,7 @@ let size = {
   overflow: "hidden",
 };
 obj2.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6188).DARK_1_LIGHT_08 };
+const size1 = { height: 16, width: 16, opacity: fn(6225).DARK_1_LIGHT_08 };
 obj2.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -42,17 +42,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_5();
       if (cResult[0] !== joinRequestState) {
         if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-          let tmp6 = _modDef17384;
+          let tmp6 = _modDef17443;
         } else {
           if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-            tmp6 = _modDef17385;
+            tmp6 = _modDef17444;
           } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED !== joinRequestState) {
             tmp6 = null;
             if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-              tmp6 = _modDef12866;
+              tmp6 = _modDef12931;
             }
           }
-          tmp6 = _modDef17386;
+          tmp6 = _modDef17445;
         }
         cResult[0] = joinRequestState;
         cResult[1] = tmp6;
@@ -97,15 +97,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       joinRequestState = joinRequestState.joinRequestState;
       const tmp = closure_5();
       if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-        let tmp4 = _modDef17384;
+        let tmp4 = _modDef17443;
       } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-        tmp4 = _modDef17385;
+        tmp4 = _modDef17444;
       } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-        tmp4 = _modDef17386;
+        tmp4 = _modDef17445;
       } else {
         tmp4 = null;
         if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-          tmp4 = _modDef12866;
+          tmp4 = _modDef12931;
         }
       }
       let tmp9 = null;

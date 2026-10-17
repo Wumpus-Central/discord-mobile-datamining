@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_3.getGuild(closure_0);
           }
         }
-        const isUserInCreatorMonetizationEligibleCountry = tmp(7186).useIsUserInCreatorMonetizationEligibleCountry();
+        const isUserInCreatorMonetizationEligibleCountry = tmp(7238).useIsUserInCreatorMonetizationEligibleCountry();
         if (stateFromStores != null) {
           class E {
             constructor() {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp11;
         cResult[10] = isUserInCreatorMonetizationEligibleCountry;
         cResult[11] = tmp17;
-        const tmpResult4 = tmp(7186);
+        const tmpResult4 = tmp(7238);
       }
       let tmp12 = null != stateFromStores;
       if (tmp12) {

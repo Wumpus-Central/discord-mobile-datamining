@@ -4,14 +4,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05454_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05491_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7377).Gradients;
+const Gradients = fn(7423).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,

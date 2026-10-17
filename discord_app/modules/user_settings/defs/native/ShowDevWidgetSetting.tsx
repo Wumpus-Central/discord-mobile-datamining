@@ -6,7 +6,7 @@ import DevToolsSettingsStore from "../../../devtools/DevToolsSettingsStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShowDevWidgetSettingToggleValue() {
       const cResult = c.c(2);
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(16574).StaffBadgeIcon,
+  IconComponent: fn(16638).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },
@@ -58,7 +58,7 @@ const toggle = SettingBuilders.createToggle({
         const items = [DevToolsSettingsStore];
         return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
       },
-  usePredicate: fn(15818).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15884).useStaffOrDeveloperSettingPredicate,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");

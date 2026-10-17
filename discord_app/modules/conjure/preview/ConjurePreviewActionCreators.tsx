@@ -2,7 +2,10 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
+import leaveFrame from "../../frames/leaveFrame.tsx";
+import conjurePausedPreviewViews from "conjurePausedPreviewViews.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore.tsx";
 
 require = fn;
 const size = fn(2);
@@ -34,4 +37,24 @@ export const setBuilderPreviewMobile = function setBuilderPreviewMobile(enabled)
 };
 export const setBuilderPreviewLandscape = function setBuilderPreviewLandscape(landscape) {
   DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape });
+};
+export const pauseConjurePreview = function pauseConjurePreview(projectId, id) {
+  DispatcherDefault.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: true });
+  const obj2 = { type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: true };
+  leaveFrame.leaveFrame(id);
+};
+export const resumeConjurePreview = function resumeConjurePreview(projectId) {
+  if (ConjurePreviewPauseStore.isPaused(projectId)) {
+    const obj2 = { type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: false };
+    DispatcherDefault.dispatch(obj2);
+  }
+};
+export const wakeConjurePreview = function wakeConjurePreview(projectId) {
+  if (obj.isConjurePausedPreviewMounted(projectId)) {
+    if (ConjurePreviewPauseStore.isPaused(projectId)) {
+      const obj3 = { type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: false };
+      DispatcherDefault.dispatch(obj3);
+    }
+  }
+  obj = conjurePausedPreviewViews;
 };

@@ -85,12 +85,12 @@ class Rule$Type extends MessageType {
   }
 }
 const prototype = Rule$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   obj = { type: 0, filters: [], subtype: 0, hash: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -277,12 +277,12 @@ class Override$Type extends MessageType2 {
   }
 }
 const prototype2 = Override$Type.prototype;
-prototype2["create"] = function create(arr) {
+prototype2["create"] = function create(partialSettings) {
   obj = { variationId: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -617,12 +617,12 @@ class Filter$Type extends MessageType3 {
   }
 }
 const prototype3 = Filter$Type.prototype;
-prototype3["create"] = function create(arr) {
+prototype3["create"] = function create(partialSettings) {
   obj = { filter: { oneofKind: "r" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1087,12 +1087,12 @@ class StaffUsers$Type extends MessageType4 {
   }
 }
 const prototype4 = StaffUsers$Type.prototype;
-prototype4["create"] = function create(arr) {
+prototype4["create"] = function create(partialSettings) {
   obj = { workAccounts: false, personalAccounts: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1190,12 +1190,12 @@ class UserInGuild$Type extends MessageType5 {
   }
 }
 const prototype5 = UserInGuild$Type.prototype;
-prototype5["create"] = function create(arr) {
+prototype5["create"] = function create(partialSettings) {
   obj = { guildIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1308,12 +1308,12 @@ class UserIds$Type extends MessageType6 {
   }
 }
 const prototype6 = UserIds$Type.prototype;
-prototype6["create"] = function create(arr) {
+prototype6["create"] = function create(partialSettings) {
   obj = { userIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1426,12 +1426,12 @@ class UserLocale$Type extends MessageType7 {
   }
 }
 const prototype7 = UserLocale$Type.prototype;
-prototype7["create"] = function create(arr) {
+prototype7["create"] = function create(partialSettings) {
   obj = { locales: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1527,12 +1527,12 @@ class ClientLocale$Type extends MessageType8 {
   }
 }
 const prototype8 = ClientLocale$Type.prototype;
-prototype8["create"] = function create(arr) {
+prototype8["create"] = function create(partialSettings) {
   obj = { locales: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1628,12 +1628,12 @@ class ClientSystemLocale$Type extends MessageType9 {
   }
 }
 const prototype9 = ClientSystemLocale$Type.prototype;
-prototype9["create"] = function create(arr) {
+prototype9["create"] = function create(partialSettings) {
   obj = { locales: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1738,12 +1738,12 @@ class ClientLocation$Type extends MessageType10 {
   }
 }
 const prototype10 = ClientLocation$Type.prototype;
-prototype10["create"] = function create(arr) {
+prototype10["create"] = function create(partialSettings) {
   obj = { locations: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1852,12 +1852,12 @@ class ClientLocation_Place$Type extends MessageType11 {
   }
 }
 const prototype11 = ClientLocation_Place$Type.prototype;
-prototype11["create"] = function create(arr) {
+prototype11["create"] = function create(partialSettings) {
   obj = { city: "", subdivision: "", country: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1957,12 +1957,12 @@ class ClientLocation_ISORegion$Type extends MessageType12 {
   }
 }
 const prototype12 = ClientLocation_ISORegion$Type.prototype;
-prototype12["create"] = function create(arr) {
+prototype12["create"] = function create(partialSettings) {
   obj = { isoCountry: "", isoSubdivision: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2073,12 +2073,12 @@ class ClientLocation_Location$Type extends MessageType13 {
   }
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
-prototype13["create"] = function create(arr) {
+prototype13["create"] = function create(partialSettings) {
   obj = { location: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2235,12 +2235,12 @@ class UserLocation$Type extends MessageType14 {
   }
 }
 const prototype14 = UserLocation$Type.prototype;
-prototype14["create"] = function create(arr) {
+prototype14["create"] = function create(partialSettings) {
   obj = { locations: [], preferClientIp: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2358,12 +2358,12 @@ class UserStoreCountry$Type extends MessageType15 {
   }
 }
 const prototype15 = UserStoreCountry$Type.prototype;
-prototype15["create"] = function create(arr) {
+prototype15["create"] = function create(partialSettings) {
   obj = { isoCountries: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2459,12 +2459,12 @@ class ClientIP$Type extends MessageType16 {
   }
 }
 const prototype16 = ClientIP$Type.prototype;
-prototype16["create"] = function create(arr) {
+prototype16["create"] = function create(partialSettings) {
   obj = { blocks: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2561,12 +2561,12 @@ class UserIP$Type extends MessageType17 {
   }
 }
 const prototype17 = UserIP$Type.prototype;
-prototype17["create"] = function create(arr) {
+prototype17["create"] = function create(partialSettings) {
   obj = { blocks: [], preferClientIp: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -2727,12 +2727,12 @@ class ClientOperatingSystem$Type extends MessageType18 {
   }
 }
 const prototype18 = ClientOperatingSystem$Type.prototype;
-prototype18["create"] = function create(arr) {
+prototype18["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3002,12 +3002,12 @@ class SDKVersion$Type extends MessageType19 {
   }
 }
 const prototype19 = SDKVersion$Type.prototype;
-prototype19["create"] = function create(arr) {
+prototype19["create"] = function create(partialSettings) {
   obj = { ranges: [], workAroundPyotoBug: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3135,12 +3135,12 @@ class SDKVersionRange$Type extends MessageType20 {
   }
 }
 const prototype20 = SDKVersionRange$Type.prototype;
-prototype20["create"] = function create(arr) {
+prototype20["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3277,12 +3277,12 @@ class SDKVersionRangeBound$Type extends MessageType21 {
   }
 }
 const prototype21 = SDKVersionRangeBound$Type.prototype;
-prototype21["create"] = function create(arr) {
+prototype21["create"] = function create(partialSettings) {
   obj = { inclusive: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3388,12 +3388,12 @@ class SDKVersionSpecifier$Type extends MessageType22 {
   }
 }
 const prototype22 = SDKVersionSpecifier$Type.prototype;
-prototype22["create"] = function create(arr) {
+prototype22["create"] = function create(partialSettings) {
   obj = { version: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3522,12 +3522,12 @@ class ClientPlatform$Type extends MessageType23 {
   }
 }
 const prototype23 = ClientPlatform$Type.prototype;
-prototype23["create"] = function create(arr) {
+prototype23["create"] = function create(partialSettings) {
   obj = { allowNonNativeWeb: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3754,12 +3754,12 @@ class PlatformVersion$Type extends MessageType24 {
   }
 }
 const prototype24 = PlatformVersion$Type.prototype;
-prototype24["create"] = function create(arr) {
+prototype24["create"] = function create(partialSettings) {
   obj = { ranges: [], workAroundPyotoBug: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -3887,12 +3887,12 @@ class PlatformVersionRange$Type extends MessageType25 {
   }
 }
 const prototype25 = PlatformVersionRange$Type.prototype;
-prototype25["create"] = function create(arr) {
+prototype25["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4029,12 +4029,12 @@ class PlatformVersionRangeBound$Type extends MessageType26 {
   }
 }
 const prototype26 = PlatformVersionRangeBound$Type.prototype;
-prototype26["create"] = function create(arr) {
+prototype26["create"] = function create(partialSettings) {
   obj = { inclusive: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4156,12 +4156,12 @@ class PlatformVersionSpecifier$Type extends MessageType27 {
   }
 }
 const prototype27 = PlatformVersionSpecifier$Type.prototype;
-prototype27["create"] = function create(arr) {
+prototype27["create"] = function create(partialSettings) {
   obj = { major: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4297,12 +4297,12 @@ class ClientRequiredChanges$Type extends MessageType28 {
   }
 }
 const prototype28 = ClientRequiredChanges$Type.prototype;
-prototype28["create"] = function create(arr) {
+prototype28["create"] = function create(partialSettings) {
   obj = { commitHashes: [], prNumbers: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4428,12 +4428,12 @@ class UserIsBot$Type extends MessageType29 {
   }
 }
 const prototype29 = UserIsBot$Type.prototype;
-prototype29["create"] = function create(arr) {
+prototype29["create"] = function create(partialSettings) {
   obj = { isBot: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4538,12 +4538,12 @@ class UserAgeRange$Type extends MessageType30 {
   }
 }
 const prototype30 = UserAgeRange$Type.prototype;
-prototype30["create"] = function create(arr) {
+prototype30["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4673,12 +4673,12 @@ class Fixed64Value$Type extends MessageType31 {
   }
 }
 const prototype31 = Fixed64Value$Type.prototype;
-prototype31["create"] = function create(arr) {
+prototype31["create"] = function create(partialSettings) {
   obj = { value: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4783,12 +4783,12 @@ class UserIDRange$Type extends MessageType32 {
   }
 }
 const prototype32 = UserIDRange$Type.prototype;
-prototype32["create"] = function create(arr) {
+prototype32["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -4914,12 +4914,12 @@ class UserHasFlag$Type extends MessageType33 {
   }
 }
 const prototype33 = UserHasFlag$Type.prototype;
-prototype33["create"] = function create(arr) {
+prototype33["create"] = function create(partialSettings) {
   obj = { mask: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5011,12 +5011,12 @@ class UnitIdInRangeByHash$Type extends MessageType34 {
   }
 }
 const prototype34 = UnitIdInRangeByHash$Type.prototype;
-prototype34["create"] = function create(arr) {
+prototype34["create"] = function create(partialSettings) {
   obj = { hashKey: "", stopRingPosition: 0, startRingPosition: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5121,12 +5121,12 @@ class ClientReleaseChannel$Type extends MessageType35 {
   }
 }
 const prototype35 = ClientReleaseChannel$Type.prototype;
-prototype35["create"] = function create(arr) {
+prototype35["create"] = function create(partialSettings) {
   obj = { releaseChannels: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5222,12 +5222,12 @@ class Always$Type extends MessageType36 {
   }
 }
 const prototype36 = Always$Type.prototype;
-prototype36["create"] = function create(arr) {
+prototype36["create"] = function create(partialSettings) {
   obj = { value: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5320,12 +5320,12 @@ class UnitIdInExperiment$Type extends MessageType37 {
   }
 }
 const prototype37 = UnitIdInExperiment$Type.prototype;
-prototype37["create"] = function create(arr) {
+prototype37["create"] = function create(partialSettings) {
   obj = { experimentId: "0", variationIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5449,12 +5449,12 @@ class UserPremiumType$Type extends MessageType38 {
   }
 }
 const prototype38 = UserPremiumType$Type.prototype;
-prototype38["create"] = function create(arr) {
+prototype38["create"] = function create(partialSettings) {
   obj = { premiumTypes: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5566,12 +5566,12 @@ class UnitIdMatchesFilterSnapshot$Type extends MessageType39 {
   }
 }
 const prototype39 = UnitIdMatchesFilterSnapshot$Type.prototype;
-prototype39["create"] = function create(arr) {
+prototype39["create"] = function create(partialSettings) {
   obj = { filterSnapshotName: "", targetFilterValues: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5696,12 +5696,12 @@ class GuildIds$Type extends MessageType40 {
   }
 }
 const prototype40 = GuildIds$Type.prototype;
-prototype40["create"] = function create(arr) {
+prototype40["create"] = function create(partialSettings) {
   obj = { guildIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -5884,12 +5884,12 @@ class GuildMemberCountRange$Type extends MessageType41 {
   }
 }
 const prototype41 = GuildMemberCountRange$Type.prototype;
-prototype41["create"] = function create(arr) {
+prototype41["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6097,12 +6097,12 @@ class GuildIdRange$Type extends MessageType42 {
   }
 }
 const prototype42 = GuildIdRange$Type.prototype;
-prototype42["create"] = function create(arr) {
+prototype42["create"] = function create(partialSettings) {
   obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6288,12 +6288,12 @@ class GuildHasFeature$Type extends MessageType43 {
   }
 }
 const prototype43 = GuildHasFeature$Type.prototype;
-prototype43["create"] = function create(arr) {
+prototype43["create"] = function create(partialSettings) {
   obj = { features: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -6448,12 +6448,12 @@ class InstallationIds$Type extends MessageType44 {
   }
 }
 const prototype44 = InstallationIds$Type.prototype;
-prototype44["create"] = function create(arr) {
+prototype44["create"] = function create(partialSettings) {
   obj = { installationIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

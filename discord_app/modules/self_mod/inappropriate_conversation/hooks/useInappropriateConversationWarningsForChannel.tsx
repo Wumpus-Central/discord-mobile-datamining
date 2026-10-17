@@ -4,7 +4,7 @@ import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SafetyWarningTypes = fn(10534).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10597).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

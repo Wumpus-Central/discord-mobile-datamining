@@ -1,6 +1,6 @@
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2603 from "../../premium/powerups/GuildPowerups.messages.js";
+import _modDef2621 from "../../premium/powerups/GuildPowerups.messages.js";
 import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const obj3 = { type: "active", statusText: null };
             const intl = tmp(1128).intl;
-            obj3.statusText = intl.string(_modDef2603.FFLkmx);
+            obj3.statusText = intl.string(_modDef2621.FFLkmx);
             cResult[6] = obj3;
             let tmp10 = obj3;
           } else {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
-      const tmp2 = stateFromStores(13177)(arg0);
+      const tmp2 = stateFromStores(13242)(arg0);
       dependencyMap = tmp2;
       const items2 = [tmp2, stateFromStores];
       return noop.useMemo(() => {
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             obj3 = { type: "active", statusText: null };
             const intl = util.intl;
-            obj3.statusText = intl.string(_modDef2603.FFLkmx);
+            obj3.statusText = intl.string(_modDef2621.FFLkmx);
           }
           return obj3;
         }

@@ -3,6 +3,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureChatConnection from "../chat/conjureChatConnection.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
 import conjurePreviewClaims from "conjurePreviewClaims.tsx";
@@ -195,7 +196,7 @@ let closure_8 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     ({ probe: obj4.probe, spec: obj4.spec, build: obj4.build } = probe);
     closure_131_4 = asyncGeneratorStep(async () => {
       closure_2_1.sendCaptureAck(user.id, "accepted");
-      await v3(closure_1_2[2]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[3]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return value;
     });
     obj7.onAccepted = function onAccepted() {
@@ -249,7 +250,7 @@ let closure_9 = async function _relayControlRequest(arg0) {
     request,
     asyncGeneratorStep(async () => {
       closure_2_1.sendControlAck(user.id, "accepted");
-      await v3(closure_1_2[2]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[3]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return null != value;
     }),
   );
@@ -287,7 +288,20 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewConnection.tsx");
 
 export const previewFrameHandlers = {
-  capture_preview(arg0, projectId) {
+  capture_preview(probe, projectId) {
+    projectId = projectId.projectId;
+    let tmp = true !== probe.probe;
+    if (tmp) {
+      const spec = probe.spec;
+      let mode;
+      if (spec != null) {
+        mode = spec.mode;
+      }
+      tmp = "widget" !== mode;
+    }
+    if (tmp) {
+      ConjurePreviewActionCreators.wakeConjurePreview(projectId);
+    }
     (function relayCaptureRequest() {
       const self = this;
       const apply = closure_1_8.apply;
@@ -297,9 +311,21 @@ export const previewFrameHandlers = {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(projectId.projectId, projectId.ws, arg0).catch(() => {});
+    })(projectId, projectId.ws, probe).catch(() => {});
+    const promise = (function relayCaptureRequest() {
+      const self = this;
+      const apply = closure_1_8.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })(projectId, projectId.ws, probe);
   },
   control_preview(arg0, projectId) {
+    projectId = projectId.projectId;
+    ConjurePreviewActionCreators.wakeConjurePreview(projectId);
     (function relayControlRequest() {
       const self = this;
       const apply = closure_1_9.apply;
@@ -309,7 +335,7 @@ export const previewFrameHandlers = {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(projectId.projectId, projectId.ws, arg0).catch(() => {});
+    })(projectId, projectId.ws, arg0).catch(() => {});
   },
   control_abort(arg0, projectId) {
     ConjurePlatformUtilsDefault.abortPreviewControl(projectId.projectId);
@@ -327,6 +353,7 @@ export const previewFrameHandlers = {
   preview_operation(phase, projectId) {
     projectId = projectId.projectId;
     if ("begin" === phase.phase) {
+      ConjurePreviewActionCreators.wakeConjurePreview(projectId);
       const result = conjurePreviewControlLease.setConjureControlTuning(projectId, "tuning" === phase.mode);
       const result1 = ConjurePlatformUtilsDefault.beginPreviewOperation(projectId);
     } else {
