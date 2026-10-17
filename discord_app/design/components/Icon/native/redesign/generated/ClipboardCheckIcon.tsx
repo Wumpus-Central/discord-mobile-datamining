@@ -1,10 +1,10 @@
-// === Module 16657: ClipboardCheckIcon ===
+// === Module 16721: ClipboardCheckIcon ===
 
-// Module 16657 (ClipboardCheckIcon)
+// Module 16721 (ClipboardCheckIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod16658 from "module_16658" /* 16658 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod16722 from "module_16722" /* 16722 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ClipboardCheckIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16658;
+    const tmpResult = _mod16722;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ClipboardCheckIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16658, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16722, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

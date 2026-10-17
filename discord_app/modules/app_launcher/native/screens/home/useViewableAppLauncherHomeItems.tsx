@@ -1,8 +1,8 @@
-// === Module 11833: useViewableAppLauncherHomeItems ===
+// === Module 11896: useViewableAppLauncherHomeItems ===
 
-// Module 11833 (useViewableAppLauncherHomeItems)
+// Module 11896 (useViewableAppLauncherHomeItems)
 import noop from "module_19" /* 19 */;
-import AppLauncherStore from "AppLauncherStore" /* 11834 */;
+import AppLauncherStore from "AppLauncherStore" /* 11897 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,24 +1,24 @@
-// === Module 18916: GuildRoleSubscriptionBenefitPreview ===
+// === Module 18978: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 18916 (GuildRoleSubscriptionBenefitPreview)
+// Module 18978 (GuildRoleSubscriptionBenefitPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import useChannelNameDefault from "useChannelName" /* 5484 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8385 */;
-import _modDef11333 from "module_11333" /* 11333 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16221 */;
-import EmojiIconDefault from "EmojiIcon" /* 16228 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import useChannelNameDefault from "useChannelName" /* 5521 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
+import _modDef11392 from "module_11392" /* 11392 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16287 */;
+import EmojiIconDefault from "EmojiIcon" /* 16294 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16193).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(16259).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, emojiContainer: { width: 24, height: 24, alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginEnd: 16 }, benefitColumn: { flexDirection: "column", flexGrow: 1, flex: 1, alignItems: "flex-start", justifyContent: "center" }, benefitDescription: { flex: 1, marginTop: 2 }, channelRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 }, emojiRow: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }, emojiColons: { paddingHorizontal: 2 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseBenefitRow(arg0) {
@@ -44,7 +44,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseBen
           if (cResult[12] !== tmp4) {
             let tmp18 = true === tmp4;
             if (tmp18) {
-              const obj2 = { source: _modDef11333 };
+              const obj2 = { source: _modDef11392 };
               tmp18 = hasOwnProperty(native.Icon, obj2);
             }
             cResult[12] = tmp4;
@@ -114,7 +114,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseBen
   items[1] = hasOwnProperty(View, obj3);
   let tmp4Result = true === flag;
   if (tmp4Result) {
-    const obj4 = { source: _modDef11333 };
+    const obj4 = { source: _modDef11392 };
     tmp4Result = hasOwnProperty(native.Icon, obj4);
   }
   items[2] = tmp4Result;

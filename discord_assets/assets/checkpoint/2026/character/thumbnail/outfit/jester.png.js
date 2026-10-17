@@ -1,6 +1,6 @@
-// === Module 5604: ? ===
+// === Module 5641: ? ===
 
-// Module 5604
+// Module 5641
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/jester.png.js");

@@ -1,15 +1,15 @@
-// === Module 12950: SearchTabsFetchManager ===
+// === Module 13015: SearchTabsFetchManager ===
 
-// Module 12950 (SearchTabsFetchManager)
-import SearchFetcher from "SearchFetcher" /* 12952 */;
+// Module 13015 (SearchTabsFetchManager)
+import SearchFetcher from "SearchFetcher" /* 13017 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_2 = ["include_nsfw", "channel_id", "search_session_id", "search_query_id"];
-const SearchConstants = fn(9550);
+const SearchConstants = fn(9614);
 ({ SEARCH_FILTERS_BY_TAB: closure_4, SEARCH_QUERY_BY_SEARCH_FILTER: hasOwnProperty, SEARCH_QUERY_DEFAULT_FILTERS: metroRequire } = SearchConstants);
 const SearchTypes = fn(1087).SearchTypes;
-const AbstractSearchFetchManager = fn(12951).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(13016).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {
 }
 const prototype = SearchTabsFetchManager.prototype;

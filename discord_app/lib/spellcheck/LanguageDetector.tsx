@@ -1,6 +1,6 @@
-// === Module 6365: LanguageDetector ===
+// === Module 6418: LanguageDetector ===
 
-// Module 6365 (LanguageDetector)
+// Module 6418 (LanguageDetector)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

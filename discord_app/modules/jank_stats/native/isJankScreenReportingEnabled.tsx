@@ -1,6 +1,6 @@
-// === Module 17070: isJankScreenReportingEnabled ===
+// === Module 17130: isJankScreenReportingEnabled ===
 
-// Module 17070 (isJankScreenReportingEnabled)
+// Module 17130 (isJankScreenReportingEnabled)
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;

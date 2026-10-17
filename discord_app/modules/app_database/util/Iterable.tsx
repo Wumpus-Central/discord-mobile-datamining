@@ -1,6 +1,6 @@
-// === Module 7424: Iterable ===
+// === Module 7470: Iterable ===
 
-// Module 7424 (Iterable)
+// Module 7470 (Iterable)
 import size from "module_2" /* 2 */;
 
 class Chained {
@@ -24,7 +24,7 @@ prototype["next"] = function next() {
     }
     return iter2;
   }
-  return { done: true, value: "a" };
+  return { done: true, value: "Array" };
 };
 const result = size.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
 

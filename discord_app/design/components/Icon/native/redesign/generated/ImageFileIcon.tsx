@@ -1,10 +1,10 @@
-// === Module 11943: ImageFileIcon ===
+// === Module 12006: ImageFileIcon ===
 
-// Module 11943 (ImageFileIcon)
+// Module 12006 (ImageFileIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod11944 from "module_11944" /* 11944 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod12007 from "module_12007" /* 12007 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ImageFileIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11944;
+    const tmpResult = _mod12007;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ImageFileIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11944, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12007, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

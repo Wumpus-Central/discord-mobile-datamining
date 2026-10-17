@@ -1,15 +1,15 @@
-// === Module 13157: useGuildPowerupOnShowDeactivate ===
+// === Module 13222: useGuildPowerupOnShowDeactivate ===
 
-// Module 13157 (useGuildPowerupOnShowDeactivate)
+// Module 13222 (useGuildPowerupOnShowDeactivate)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import useAlertStore from "useAlertStore" /* 5364 */;
+import useAlertStore from "useAlertStore" /* 5401 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_4 = noop.lazy(() => asyncRequireImpl(13158, dependencyMap.paths));
+let closure_4 = noop.lazy(() => asyncRequireImpl(13223, dependencyMap.paths));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");

@@ -1,10 +1,10 @@
-// === Module 14506: SubscriptionPlaceholderPattern ===
+// === Module 14574: SubscriptionPlaceholderPattern ===
 
-// Module 14506 (SubscriptionPlaceholderPattern)
+// Module 14574 (SubscriptionPlaceholderPattern)
 import c from "c" /* 576 */;
-import shared from "shared" /* 5028 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import _mod8587 from "module_8587" /* 8587 */;
+import shared from "shared" /* 5065 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import _mod8633 from "module_8633" /* 8633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,50 +16,50 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscript
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_14507");
+          return require("module_14575");
         },
       darker() {
-          return require("module_14508");
+          return require("module_14576");
         },
       light() {
-          return require("module_14509");
+          return require("module_14577");
         }
     };
-    const illustrationSource = _mod8587.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8633.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8587;
+    const tmpResult = _mod8633;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useSubscriptionPlaceholderPatternSource() {
   const obj = shared;
-  return _mod8587.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8633.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14507");
+      return require("module_14575");
     },
     darker() {
-      return require("module_14508");
+      return require("module_14576");
     },
     light() {
-      return require("module_14509");
+      return require("module_14577");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getSubscriptionPlaceholderPatternSource(theme) {
-  return _mod8587.getIllustrationSource(theme, {
+  return _mod8633.getIllustrationSource(theme, {
     dark() {
-      return require("module_14507");
+      return require("module_14575");
     },
     darker() {
-      return require("module_14508");
+      return require("module_14576");
     },
     light() {
-      return require("module_14509");
+      return require("module_14577");
     }
   });
 }

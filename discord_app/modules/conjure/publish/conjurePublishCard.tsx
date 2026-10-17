@@ -1,7 +1,7 @@
-// === Module 12046: conjurePublishCard ===
+// === Module 12109: conjurePublishCard ===
 
-// Module 12046 (conjurePublishCard)
-import _modDef3865 from "module_3865" /* 3865 */;
+// Module 12109 (conjurePublishCard)
+import _modDef3883 from "module_3883" /* 3883 */;
 import size from "module_2" /* 2 */;
 
 const weakMap = new WeakMap();
@@ -53,13 +53,13 @@ export const showsOutdatedNotice = function showsOutdatedNotice(isUpdate) {
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
   if (true === notice.channel_skipped) {
-    let ev23Cw = _modDef3865.ev23Cw;
+    let ev23Cw = _modDef3883.ev23Cw;
   } else if (notice.update) {
-    ev23Cw = _modDef3865.gQzuLC;
+    ev23Cw = _modDef3883.gQzuLC;
   } else if (null == arg1) {
-    ev23Cw = _modDef3865.MOrR29;
+    ev23Cw = _modDef3883.MOrR29;
   } else {
-    ev23Cw = _modDef3865["/npn7F"];
+    ev23Cw = _modDef3883["/npn7F"];
   }
   return ev23Cw;
 };

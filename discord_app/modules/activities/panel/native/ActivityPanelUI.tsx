@@ -1,20 +1,20 @@
-// === Module 18085: ActivityPanelUI ===
+// === Module 18146: ActivityPanelUI ===
 
-// Module 18085 (ActivityPanelUI)
+// Module 18146 (ActivityPanelUI)
 import c from "c" /* 576 */;
-import native from "native" /* 4886 */;
-import LayerScope from "LayerScope" /* 7071 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18084 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18106 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 18107 */;
+import native from "native" /* 4922 */;
+import LayerScope from "LayerScope" /* 7124 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18145 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18167 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 18168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 18086;
+    let tmp4 = 18147;
   } else {
-    tmp4 = 18092;
+    tmp4 = 18153;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -26,7 +26,7 @@ function wrapChildren(items3) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(6287).ActivityPanelModes;
+const ActivityPanelModes = fn(6298).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];
@@ -92,9 +92,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivity
     tmp4 = closure_12;
   }, items);
   const obj = { children: null };
-  const items1 = [renderActivityPanelSystemUIManager(), closure_7(mode(4886).TransitionGroup, { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren })];
+  const items1 = [renderActivityPanelSystemUIManager(), closure_7(mode(4922).TransitionGroup, { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren })];
   obj.children = items1;
-  return closure_8(mode(7071).LayerScope, obj);
+  return closure_8(mode(7124).LayerScope, obj);
 });
 let closure_15 = tmp4;
 ReactCompilerGating = fn(558);

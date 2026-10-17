@@ -1,12 +1,12 @@
-// === Module 16322: OfficialMessageStyleSetting ===
+// === Module 16388: OfficialMessageStyleSetting ===
 
-// Module 16322 (OfficialMessageStyleSetting)
+// Module 16388 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15393 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15462 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);
@@ -79,13 +79,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOfficia
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
   const result = AccessibilityActionCreators.setOfficialMessageStyle(officialMessageStyle);
 }
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nC2XBl);
   },
-  parent: fn(8214).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8260).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: tmp3

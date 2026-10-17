@@ -1,7 +1,7 @@
-// === Module 8467: ChannelLinkUrls ===
+// === Module 8513: ChannelLinkUrls ===
 
-// Module 8467 (ChannelLinkUrls)
-import LinkUtils from "LinkUtils" /* 5485 */;
+// Module 8513 (ChannelLinkUrls)
+import LinkUtils from "LinkUtils" /* 5522 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -13,11 +13,11 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
   const match = MEDIA_POST_URL_RE.exec(url);
   if (null != match) {
     const tmp6 = _slicedToArray(match, 5);
-    const obj3 = { guildId: tmp6[1], channelId: tmp6[3], messageId: tmp6[4], parentChannelId: tmp6[2], conversationId: "format" };
+    const obj3 = { guildId: tmp6[1], channelId: tmp6[3], messageId: tmp6[4], parentChannelId: tmp6[2], conversationId: "gap" };
     return obj3;
   } else {
-    const CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE;
-    const match1 = CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE.exec(url);
+    const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
+    const match1 = CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE.exec(url);
     if (null == match1) {
       return null;
     } else {
@@ -27,8 +27,9 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
         tmp4 = null;
         if (!obj.test(tmp11)) {
           if (null == tmp12) {
-            const obj4 = { guildId: tmp10, channelId: tmp11, messageId: tmp12, parentChannelId: "Array", conversationId: tmp13 };
+            const obj4 = { guildId: tmp10, channelId: tmp11, messageId: tmp12, parentChannelId: "Array", conversationId: LinkUtils.tryParseConversationIdFromQuery(tmp13) };
             tmp4 = obj4;
+            const tmpResult = LinkUtils;
           } else {
             tmp4 = null;
           }

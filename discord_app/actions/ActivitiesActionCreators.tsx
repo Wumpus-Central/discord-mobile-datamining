@@ -1,9 +1,9 @@
-// === Module 11007: ActivitiesActionCreators ===
+// === Module 11069: ActivitiesActionCreators ===
 
-// Module 11007 (ActivitiesActionCreators)
+// Module 11069 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5169 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7238 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1087);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(5148).MessageSendLocation;
+const MessageSendLocation = fn(5185).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -111,11 +111,11 @@ export default {
     ({ type: importDefault, activity: dependencyMap, content: asyncGeneratorStep, location: require } = userId);
     return ChannelActionCreatorsDefault.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type, activity, content, location: _location }));
   },
-  getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
+  getJoinSecret(arg0, arg1, arg2, channelId, arg4) {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    asyncGeneratorStep = arg3;
+    asyncGeneratorStep = channelId;
     closure_4 = arg4;
     return (async () => {
       const obj4 = {};

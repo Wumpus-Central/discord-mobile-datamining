@@ -1,10 +1,10 @@
-// === Module 17617: useComponentRenderSpan ===
+// === Module 17676: useComponentRenderSpan ===
 
-// Module 17617 (useComponentRenderSpan)
+// Module 17676 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12556 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 12559 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 17618 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12621 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 12624 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 17677 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

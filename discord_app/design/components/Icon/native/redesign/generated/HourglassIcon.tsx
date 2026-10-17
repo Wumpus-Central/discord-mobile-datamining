@@ -1,10 +1,10 @@
-// === Module 11764: HourglassIcon ===
+// === Module 11826: HourglassIcon ===
 
-// Module 11764 (HourglassIcon)
+// Module 11826 (HourglassIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod11765 from "module_11765" /* 11765 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod11827 from "module_11827" /* 11827 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const HourglassIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11765;
+    const tmpResult = _mod11827;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const HourglassIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11765, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11827, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

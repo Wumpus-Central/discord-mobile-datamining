@@ -1,7 +1,7 @@
-// === Module 12102: useConjureTurnTraceId ===
+// === Module 12165: useConjureTurnTraceId ===
 
-// Module 12102 (useConjureTurnTraceId)
-import ConjureDebugStore from "ConjureDebugStore" /* 10903 */;
+// Module 12165 (useConjureTurnTraceId)
+import ConjureDebugStore from "ConjureDebugStore" /* 10967 */;
 
 const require = globalThis.__r;
 
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
         }
         tmp6 = turn_id;
       }
-      tmpResult2 = tmp(10900);
+      tmpResult2 = tmp(10964);
     }
   }
   cResult[0] = role;

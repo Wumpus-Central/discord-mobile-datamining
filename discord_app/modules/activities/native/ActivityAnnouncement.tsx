@@ -1,8 +1,8 @@
-// === Module 11185: ActivityAnnouncement ===
+// === Module 11250: ActivityAnnouncement ===
 
-// Module 11185 (ActivityAnnouncement)
+// Module 11250 (ActivityAnnouncement)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7797 */;
+import inlineStyles from "inlineStyles" /* 7843 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

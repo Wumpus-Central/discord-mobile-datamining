@@ -1,16 +1,16 @@
-// === Module 18062: FrameView ===
+// === Module 18122: FrameView ===
 
-// Module 18062 (FrameView)
+// Module 18122 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5363 */;
-import leaveFrame from "leaveFrame" /* 10960 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 18063 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5400 */;
+import leaveFrame from "leaveFrame" /* 11020 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 18123 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FrameLayoutModes = fn(10931).FrameLayoutModes;
+const FrameLayoutModes = fn(6296).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -23,9 +23,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   const layoutMode = presentation.layoutMode;
   ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
   let obj = frame(576);
-  const data = frame(6299).useApplication(frame.applicationId).data;
+  const data = frame(6357).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
-  const obj2 = frame(6299);
+  const obj2 = frame(6357);
   const first = _slicedToArray(noop.useState(true), 2)[0];
   if (cResult[0] === frame.applicationId) {
     if (cResult[1] === frame.id) {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   const layoutMode = presentation.layoutMode;
   let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
   ({ iframeId, onActivityCrash } = frame);
-  const data = frame(6299).useApplication(frame.applicationId).data;
+  const data = frame(6357).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   let first = tmp3[0];
@@ -119,8 +119,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   if (!first) {
     first = null == data;
   }
-  let obj = frame(6299);
-  const baseActivityView = frame(11236).useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp3[1], application: data, setOrientationLockState: callback1 });
+  let obj = frame(6357);
+  const baseActivityView = frame(11301).useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp3[1], application: data, setOrientationLockState: callback1 });
   ({ isResetting, isLandscape } = baseActivityView);
   const obj2 = { showLoadingIndicator: first, isResetting, children: null };
   let obj3 = {
@@ -149,15 +149,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
     safeAreasConfig: null
   };
   const obj4 = { type: null, frameId: null };
-  const tmpResult = frame(11236);
-  obj4.type = frame(10949).EmbeddedContextSourceType.FRAME;
+  const tmpResult = frame(11301);
+  obj4.type = frame(6312).EmbeddedContextSourceType.FRAME;
   obj4.frameId = frame.id;
   obj3.contextSource = obj4;
-  const tmp10 = layoutMode(18067);
-  obj3.queryParams = layoutMode(18064)(frame, frame(11252).ActivityPlatform.MOBILE);
+  const tmp10 = layoutMode(18127);
+  obj3.queryParams = layoutMode(18124)(frame, frame(11314).ActivityPlatform.MOBILE);
   obj3.onLoadError = callback;
-  const tmp11 = layoutMode(18064);
-  obj3.allowPopups = frame(11275).allowPopups(data);
+  const tmp11 = layoutMode(18124);
+  obj3.allowPopups = frame(11334).allowPopups(data);
   obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
   if (isLandscape) {
     landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
@@ -174,5 +174,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   }} onInvalidUrl={function onInvalidUrl() {
     return leaveFrame.leaveFrame(frame.id);
   }} activityUrl={frame.data.url} contextSource={null} queryParams={null} onLoadError={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} safeAreasConfig={null} />;
-  return jsx(frame(11236).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+  return jsx(frame(11301).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
 });

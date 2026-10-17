@@ -1,12 +1,12 @@
-// === Module 17880: BadgeCustomizationProfileCoachmark ===
+// === Module 17940: BadgeCustomizationProfileCoachmark ===
 
-// Module 17880 (BadgeCustomizationProfileCoachmark)
+// Module 17940 (BadgeCustomizationProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4902 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
   }
   const obj = markAsDismissed(576);
   const stateFromStores = markAsDismissed(504).useStateFromStores(tmp4, tmp5);
-  const reducedMotion = noop.useContext(markAsDismissed(4893).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = noop.useContext(markAsDismissed(4929).AccessibilityPreferencesContext).reducedMotion;
   const tmp8 = closure_8(targetRef, visible);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = markAsDismissed(1128).intl;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
                   if (cResult[19] === visible) {
                     let tmp19 = cResult[20];
                   }
-                  const coachmark = markAsDismissed(9678).useCoachmark(targetRef, tmp19);
+                  const coachmark = markAsDismissed(9742).useCoachmark(targetRef, tmp19);
                   return null;
                 }
               }
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
       cResult[13] = I;
       tmp18 = I;
     }
-    const obj3 = { type: "rive", rive: markAsDismissed(4902).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    const obj3 = { type: "rive", rive: markAsDismissed(4938).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
     const obj4 = { dataBinding: null };
     const obj5 = { on: null, reducedMotion: reducedMotion.enabled };
     obj4.dataBinding = obj5;

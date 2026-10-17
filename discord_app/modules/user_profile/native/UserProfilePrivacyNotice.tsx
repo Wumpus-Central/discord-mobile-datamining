@@ -1,16 +1,16 @@
-// === Module 14108: UserProfilePrivacyNotice ===
+// === Module 14176: UserProfilePrivacyNotice ===
 
-// Module 14108 (UserProfilePrivacyNotice)
+// Module 14176 (UserProfilePrivacyNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5108 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import Pressables from "Pressables" /* 6409 */;
-import XSmallIcon from "XSmallIcon" /* 6432 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7325 */;
-import useUserIsTeen from "useUserIsTeen" /* 7958 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5145 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import Pressables from "Pressables" /* 6462 */;
+import XSmallIcon from "XSmallIcon" /* 6485 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7376 */;
+import useUserIsTeen from "useUserIsTeen" /* 8004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ const UserSettingsSections = fn(1087).UserSettingsSections;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp38 = closure_7(tmp(6432).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                      const tmp38 = closure_7(tmp(6485).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                       cResult[25] = tmp38;
                       let tmp36 = tmp38;
                     } else {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                       tmp42 = tmp44;
                     }
                     const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp33, onPress: tmp35, style: tmp4.closeButton, children: tmp36 };
-                    const tmp41 = closure_7(tmp(6409).PressableOpacity, obj4);
+                    const tmp41 = closure_7(tmp(6462).PressableOpacity, obj4);
                     cResult[26] = tmp4.closeButton;
                     cResult[27] = tmp35;
                     cResult[28] = tmp41;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     const container = tmp4.container;
     const _Symbol = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_7(tmp(5108).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+      const tmp19 = closure_7(tmp(5145).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
       cResult[13] = tmp19;
       let str2 = tmp19;
     } else {
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     } else {
       tmp20 = cResult[15];
     }
-    const Text = tmp(5150).Text;
+    const Text = tmp(5187).Text;
     const text = tmp4.text;
     const intl = tmp(1128).intl;
     const obj7 = { privacySettingsLink: first };

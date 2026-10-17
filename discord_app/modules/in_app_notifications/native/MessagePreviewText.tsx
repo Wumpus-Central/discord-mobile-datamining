@@ -1,37 +1,37 @@
-// === Module 13461: MessagePreviewText ===
+// === Module 13527: MessagePreviewText ===
 
-// Module 13461 (MessagePreviewText)
+// Module 13527 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1109 */;
 import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import useMessageAuthor from "useMessageAuthor" /* 5846 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7226 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9551 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13452 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13462 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13463 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13464 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 13467 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13468 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import useMessageAuthor from "useMessageAuthor" /* 5883 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7278 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9615 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13518 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 13528 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13529 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13530 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 13533 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 13534 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13453);
+const InAppNotificationConstants = fn(13519);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5154);
+let createStyles = fn(5191);
 const PlatformUtils = fn(1385);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5154);
+createStyles = fn(5191);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -39,7 +39,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "unicodeVersion" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "ix" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

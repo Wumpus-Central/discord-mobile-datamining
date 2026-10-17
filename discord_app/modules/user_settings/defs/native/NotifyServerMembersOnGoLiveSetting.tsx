@@ -1,22 +1,22 @@
-// === Module 16957: NotifyServerMembersOnGoLiveSetting ===
+// === Module 17017: NotifyServerMembersOnGoLiveSetting ===
 
-// Module 16957 (NotifyServerMembersOnGoLiveSetting)
+// Module 17017 (NotifyServerMembersOnGoLiveSetting)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import _modDef2739 from "module_2739" /* 2739 */;
-import SettingsConstants from "SettingsConstants" /* 8214 */;
-import go_live_GoLiveNotificationUtils from "go_live/GoLiveNotificationUtils" /* 16958 */;
-import SettingBuilders from "SettingBuilders" /* 11003 */;
+import _modDef2757 from "module_2757" /* 2757 */;
+import SettingsConstants from "SettingsConstants" /* 8260 */;
+import go_live_GoLiveNotificationUtils from "go_live/GoLiveNotificationUtils" /* 17018 */;
+import SettingBuilders from "SettingBuilders" /* 11065 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2739["9l5u6A"]);
+    return intl.string(_modDef2757["9l5u6A"]);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2739.QcmgBF);
+    return intl.string(_modDef2757.QcmgBF);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyServerMembersOnGoLive.useSetting,

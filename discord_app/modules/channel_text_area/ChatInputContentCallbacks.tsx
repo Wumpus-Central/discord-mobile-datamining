@@ -1,13 +1,13 @@
-// === Module 12775: ChatInputContentCallbacks ===
+// === Module 12840: ChatInputContentCallbacks ===
 
-// Module 12775 (ChatInputContentCallbacks)
+// Module 12840 (ChatInputContentCallbacks)
 import _modDef12 from "module_12" /* 12 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7200 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7202 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9497 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7252 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7254 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7197 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7249 */;
 
 const require = globalThis.__r;
 
@@ -166,9 +166,9 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
       if (!(arr.length < 5 || arr.length > closure_1_3)) {
         let flag = -1 !== arr.indexOf(memo);
         if (flag) {
-          closure_0(7202).subscribeChannel(closure_1_1, dependencyMap, closure_0(7200).DEFAULT_RANGES);
+          closure_0(7254).subscribeChannel(closure_1_1, dependencyMap, closure_0(7252).DEFAULT_RANGES);
           flag = true;
-          const obj = closure_0(7202);
+          const obj = closure_0(7254);
         }
         tmp9 = flag;
       }

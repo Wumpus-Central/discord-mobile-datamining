@@ -1,8 +1,8 @@
-// === Module 4900: ThemeContextFlags ===
+// === Module 4936: ThemeContextFlags ===
 
-// Module 4900 (ThemeContextFlags)
+// Module 4936 (ThemeContextFlags)
 import c from "c" /* 576 */;
-import ThemeContext from "ThemeContext" /* 4890 */;
+import ThemeContext from "ThemeContext" /* 4926 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 9072: SecureFramesCopyIcon ===
+// === Module 9118: SecureFramesCopyIcon ===
 
-// Module 9072 (SecureFramesCopyIcon)
-import ToastUtils from "ToastUtils" /* 4867 */;
-import ClipboardUtils from "ClipboardUtils" /* 7109 */;
+// Module 9118 (SecureFramesCopyIcon)
+import ToastUtils from "ToastUtils" /* 4903 */;
+import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     tmp6 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp9 = jsx(tmp(5104).CopyIcon, { size: "sm" });
+    const tmp9 = jsx(tmp(5141).CopyIcon, { size: "sm" });
     cResult[4] = tmp9;
     let tmp7 = tmp9;
   } else {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   }
   if (cResult[6] !== tmp6) {
     const obj2 = { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" };
-    const tmp14 = jsx(tmp(7794).IconButton, { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" });
+    const tmp14 = jsx(tmp(7840).IconButton, { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" });
     cResult[6] = tmp6;
     cResult[7] = tmp14;
     let tmp12 = tmp14;

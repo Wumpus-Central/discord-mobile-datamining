@@ -1,15 +1,15 @@
-// === Module 14841: ShareScreen ===
+// === Module 14910: ShareScreen ===
 
-// Module 14841 (ShareScreen)
+// Module 14910 (ShareScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 14845 */;
-import ShareEmbedDefault from "ShareEmbed" /* 14846 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 14914 */;
+import ShareEmbedDefault from "ShareEmbed" /* 14915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -31,11 +31,11 @@ const ChannelRecord = fn(2072);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12610).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10457).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12675).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10520).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -227,7 +227,7 @@ export default function ShareScreen(appEntryKey) {
                                       let channel2;
                                       c5 = 1;
                                       c6 = 1;
-                                      return { value: "test", done: true };
+                                      return { value: "Reflect", done: true };
                                     }
                                   } else if (1 === tmp7) {
                                     if (arg0 === 1) {

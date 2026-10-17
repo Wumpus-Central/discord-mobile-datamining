@@ -1,22 +1,22 @@
-// === Module 14187: CollectiblesEditUserProfileListItems ===
+// === Module 14255: CollectiblesEditUserProfileListItems ===
 
-// Module 14187 (CollectiblesEditUserProfileListItems)
+// Module 14255 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import HapticUtils from "HapticUtils" /* 5119 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import Pressables from "Pressables" /* 6409 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7483 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7496 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8525 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 9265 */;
-import _modDef14188 from "module_14188" /* 14188 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4864 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import HapticUtils from "HapticUtils" /* 5156 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5157 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import Pressables from "Pressables" /* 6462 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7529 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8571 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9325 */;
+import _modDef14256 from "module_14256" /* 14256 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -30,7 +30,7 @@ const View = fn(17).View;
 let closure_9 = fn(1089).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { pressable: { marginTop: 10, borderRadius: nativeDefault.radii.sm }, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
 let obj3 = { marginTop: 10, borderRadius: nativeDefault.radii.sm };
 obj2.item = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
@@ -111,7 +111,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollec
             }
           }
           const obj3 = { style: tmp4.pressable, disabled: isSelected, onPress: tmp5, onLongPress, accessibilityRole: str, accessibilityLabel, accessibilityState: tmp6, children: tmp10 };
-          const tmp16 = closure_10(onPress(6409).PressableOpacity, obj3);
+          const tmp16 = closure_10(onPress(6462).PressableOpacity, obj3);
           cResult[14] = accessibilityLabel;
           cResult[15] = str;
           cResult[16] = tmp5;
@@ -179,7 +179,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
   const cResult = c.c(10);
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef14188, size: native.IconSizes.LARGE };
+    const obj2 = { source: _modDef14256, size: native.IconSizes.LARGE };
     const tmp8 = collapsed(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -233,7 +233,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
   const tmp = closure_12();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [collapsed(native.Icon, { source: _modDef14188, size: native.IconSizes.LARGE }), ];
+  const items = [collapsed(native.Icon, { source: _modDef14256, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -264,14 +264,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
     tmp5 = cResult[2];
   }
   const tmp9 = closure_12();
-  analyticsLocations = analyticsLocations(7077)(tmp4).analyticsLocations;
+  analyticsLocations = analyticsLocations(7130)(tmp4).analyticsLocations;
   if (cResult[3] === analyticsLocations) {
     if (cResult[4] === tmp4) {
       let tmp11 = cResult[5];
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj2 = { source: tmp10(14189), size: tmp(1202).IconSizes.LARGE };
+      let obj2 = { source: tmp10(14257), size: tmp(1202).IconSizes.LARGE };
       const tmp15 = closure_10(tmp(1202).Icon, obj2);
       cResult[6] = tmp15;
       let tmp13 = tmp15;
@@ -289,7 +289,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
     }
     if (cResult[8] !== tmp9.optionCellText) {
       const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp9.optionCellText, children: tmp16 };
-      const tmp20 = closure_10(tmp(5150).Text, obj3);
+      const tmp20 = closure_10(tmp(5187).Text, obj3);
       cResult[8] = tmp9.optionCellText;
       cResult[9] = tmp20;
       let tmp18 = tmp20;
@@ -298,7 +298,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
     }
     if (cResult[10] !== tmp9.newIcon) {
       const obj4 = { style: tmp9.newIcon };
-      const tmp23 = closure_10(tmp(9265).NewBadge, obj4);
+      const tmp23 = closure_10(tmp(9325).NewBadge, obj4);
       cResult[10] = tmp9.newIcon;
       cResult[11] = tmp23;
       let tmp21 = tmp23;
@@ -346,7 +346,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_12();
-  analyticsLocations = analyticsLocations(7077)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(7130)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -358,12 +358,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollecti
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_10(analyticsSource(1202).Icon, { source: analyticsLocations(14189), size: analyticsSource(1202).IconSizes.LARGE }), , ];
+  const items1 = [closure_10(analyticsSource(1202).Icon, { source: analyticsLocations(14257), size: analyticsSource(1202).IconSizes.LARGE }), , ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1128).intl;
   obj3.children = intl.string(analyticsSource(1128).t.pWG4ze);
-  items1[1] = closure_10(analyticsSource(5150).Text, obj3);
-  items1[2] = closure_10(analyticsSource(9265).NewBadge, { style: tmp2.newIcon });
+  items1[1] = closure_10(analyticsSource(5187).Text, obj3);
+  items1[2] = closure_10(analyticsSource(9325).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_11(closure_13, obj);
 });
@@ -433,7 +433,7 @@ export const EditCollectiblesListItemProduct = ReactCompilerGating.isReactCompil
   const tmpResult = require("initialize");
   ({ product, purchase } = useCollectiblesDataDefault(tmp8));
   if (cResult[10] !== tmp8) {
-    const isProductNewResult = tmp(7496).isProductNew(tmp8);
+    const isProductNewResult = tmp(7542).isProductNew(tmp8);
     class L {
       constructor() {
         return closure_1_8.getCurrentUser();
@@ -441,7 +441,7 @@ export const EditCollectiblesListItemProduct = ReactCompilerGating.isReactCompil
     }
     cResult[11] = isProductNewResult;
     let tmp21 = isProductNewResult;
-    const tmpResult4 = tmp(7496);
+    const tmpResult4 = tmp(7542);
   } else {
     tmp21 = cResult[11];
   }
@@ -520,8 +520,8 @@ export const EditCollectiblesListItemProduct = ReactCompilerGating.isReactCompil
   const tmp20 = useCollectiblesDataDefault(tmp8);
   let result = require("CollectiblesUtils").isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp(7496).isPremiumCollectiblesPurchase(purchase);
-    const tmpResult6 = tmp(7496);
+    result = tmp(7542).isPremiumCollectiblesPurchase(purchase);
+    const tmpResult6 = tmp(7542);
   }
   cResult[12] = product;
   cResult[13] = purchase;

@@ -1,13 +1,13 @@
-// === Module 11552: ConjureRemixSheet ===
+// === Module 11611: ConjureRemixSheet ===
 
-// Module 11552 (ConjureRemixSheet)
+// Module 11611 (ConjureRemixSheet)
 import nativeDefault from "native" /* 587 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7115 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7168 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import SortedGuildStore from "SortedGuildStore" /* 6182 */;
+import SortedGuildStore from "SortedGuildStore" /* 6219 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const ConjureRemixSheet = "ConjureRemixSheet";
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
               _undefined(null);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(11553).remixConjureProjectInto(project, first), done: false };
+              const obj5 = { value: tmp2(11612).remixConjureProjectInto(project, first), done: false };
               return obj5;
             }
           }
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
             closure_129_5(false);
           }
         }
-        tmp5(5118).hideActionSheet(ConjureRemixSheet);
+        tmp5(5155).hideActionSheet(ConjureRemixSheet);
         closure_129_1(closure_128_0.projectId, closure_129_2);
         c3 = 3;
         const obj7 = { value: undefined, done: true };

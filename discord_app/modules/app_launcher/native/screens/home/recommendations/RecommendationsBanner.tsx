@@ -1,15 +1,15 @@
-// === Module 11839: RecommendationsBanner ===
+// === Module 11902: RecommendationsBanner ===
 
-// Module 11839 (RecommendationsBanner)
+// Module 11902 (RecommendationsBanner)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8495 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8538 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8600 */;
-import AppLauncherContext from "AppLauncherContext" /* 10867 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11277 */;
-import HeroMedia from "HeroMedia" /* 11830 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8541 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8584 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8646 */;
+import AppLauncherContext from "AppLauncherContext" /* 10932 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11336 */;
+import HeroMedia from "HeroMedia" /* 11893 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const Constants = fn(1087);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let ReactCompilerGating = fn(558);
 let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function RecommendationBannerEmbedded(applicationId) {
@@ -85,7 +85,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           if (null != imageSource) {
-            tmp6 = tmp6(5091);
+            tmp6 = tmp6(5128);
             const obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
             let tmp19 = <tmp6 style={imageStyle} source={imageSource} resizeMode="cover" />;
           } else {
@@ -120,8 +120,8 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmpResult = HeroMedia;
 }) : (function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(10867);
-  heroMediaDimensions = heroMediaDimensions(11830).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(10932);
+  heroMediaDimensions = heroMediaDimensions(11893).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

@@ -1,15 +1,15 @@
-// === Module 17063: MainTabsNavigatorPanel ===
+// === Module 17123: MainTabsNavigatorPanel ===
 
-// Module 17063 (MainTabsNavigatorPanel)
+// Module 17123 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 5036 */;
-import ChatInputUtils from "ChatInputUtils" /* 5044 */;
-import transitionToChannel from "transitionToChannel" /* 5165 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7238 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17064 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17065 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17069 */;
+import RootNavigationRef from "RootNavigationRef" /* 5073 */;
+import ChatInputUtils from "ChatInputUtils" /* 5081 */;
+import transitionToChannel from "transitionToChannel" /* 5202 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17124 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17125 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17129 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -54,11 +54,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let obj = require;
         let result = dependencyMap;
         if (isChatLockedOpen) {
-          obj = obj(17064);
+          obj = obj(17124);
           result = obj.convertPortraitToLandscapeScreens();
         } else {
-          obj(5044).dismissKeyboard();
-          const objResult = obj(5044);
+          obj(5081).dismissKeyboard();
+          const objResult = obj(5081);
           const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
         }
         closure_4.current = true;
@@ -510,11 +510,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(17064);
+        obj = obj(17124);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5044).dismissKeyboard();
-        const objResult = obj(5044);
+        obj(5081).dismissKeyboard();
+        const objResult = obj(5081);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

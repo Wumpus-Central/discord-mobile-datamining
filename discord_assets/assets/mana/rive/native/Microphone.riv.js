@@ -1,6 +1,6 @@
-// === Module 4980: ? ===
+// === Module 5016: ? ===
 
-// Module 4980
+// Module 5016
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/Microphone.riv.js");

@@ -1,10 +1,10 @@
-// === Module 7776: AppleNeutralIcon ===
+// === Module 7822: AppleNeutralIcon ===
 
-// Module 7776 (AppleNeutralIcon)
+// Module 7822 (AppleNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod7777 from "module_7777" /* 7777 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod7823 from "module_7823" /* 7823 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const AppleNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod7777;
+    const tmpResult = _mod7823;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const AppleNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7777, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7823, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

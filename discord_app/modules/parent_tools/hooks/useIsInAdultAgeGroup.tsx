@@ -1,9 +1,9 @@
-// === Module 7960: useIsInAdultAgeGroup ===
+// === Module 8006: useIsInAdultAgeGroup ===
 
-// Module 7960 (useIsInAdultAgeGroup)
+// Module 8006 (useIsInAdultAgeGroup)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7479 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7525 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

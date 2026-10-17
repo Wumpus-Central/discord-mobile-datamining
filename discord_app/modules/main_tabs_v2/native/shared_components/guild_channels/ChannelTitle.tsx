@@ -1,16 +1,16 @@
-// === Module 17731: guild_channels/ChannelTitle ===
+// === Module 17791: guild_channels/ChannelTitle ===
 
-// Module 17731 (guild_channels/ChannelTitle)
+// Module 17791 (guild_channels/ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import ChannelListLayout from "ChannelListLayout" /* 11819 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import ChannelListLayout from "ChannelListLayout" /* 11882 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(6186).UnreadSetting;
+const UnreadSetting = fn(6223).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_5 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
 const ReactCompilerGating = fn(558);
 let obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };

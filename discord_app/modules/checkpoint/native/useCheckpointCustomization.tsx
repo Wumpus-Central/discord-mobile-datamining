@@ -1,14 +1,14 @@
-// === Module 12675: useCheckpointCustomization ===
+// === Module 12740: useCheckpointCustomization ===
 
-// Module 12675 (useCheckpointCustomization)
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5501 */;
-import CheckpointTrait from "CheckpointTrait" /* 5524 */;
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 5526 */;
-import CheckpointCharacterFace from "CheckpointCharacterFace" /* 5727 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 12673 */;
+// Module 12740 (useCheckpointCustomization)
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5538 */;
+import CheckpointTrait from "CheckpointTrait" /* 5561 */;
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 5563 */;
+import CheckpointCharacterFace from "CheckpointCharacterFace" /* 5764 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 12738 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import CheckpointStore from "CheckpointStore" /* 12660 */;
+import CheckpointStore from "CheckpointStore" /* 12725 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

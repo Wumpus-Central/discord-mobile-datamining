@@ -1,8 +1,8 @@
-// === Module 4910: REAWorkaroundView ===
+// === Module 4946: REAWorkaroundView ===
 
-// Module 4910 (REAWorkaroundView)
+// Module 4946 (REAWorkaroundView)
 import c from "c" /* 576 */;
-import ReanimatedViewNativeComponentDefault from "ReanimatedViewNativeComponent" /* 4911 */;
+import ReanimatedViewNativeComponentDefault from "ReanimatedViewNativeComponent" /* 4947 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import cancelAnimation from "cancelAnimation" /* 1658 */;
 

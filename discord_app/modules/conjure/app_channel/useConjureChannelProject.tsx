@@ -1,15 +1,15 @@
-// === Module 13573: useConjureChannelProject ===
+// === Module 13641: useConjureChannelProject ===
 
-// Module 13573 (useConjureChannelProject)
-import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
+// Module 13641 (useConjureChannelProject)
+import ConjureActionCreators from "ConjureActionCreators" /* 10983 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 
 require = fn;
-const isProjectOwner = fn(10897).isProjectOwner;
+const isProjectOwner = fn(6293).isProjectOwner;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

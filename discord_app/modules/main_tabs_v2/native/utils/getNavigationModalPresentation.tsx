@@ -1,9 +1,10 @@
-// === Module 9870: getNavigationModalPresentation ===
+// === Module 9934: getNavigationModalPresentation ===
 
-// Module 9870 (getNavigationModalPresentation)
-import DeviceUtils from "DeviceUtils" /* 5130 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6851 */;
-import DeviceOrientation from "DeviceOrientation" /* 8678 */;
+// Module 9934 (getNavigationModalPresentation)
+import useWindowDimensions from "useWindowDimensions" /* 1499 */;
+import DeviceUtils from "DeviceUtils" /* 5167 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6904 */;
+import DeviceOrientation from "DeviceOrientation" /* 8724 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +25,13 @@ if (PlatformUtils.isAndroid()) {
 }
 let obj = { presentation: str, lockOrientation: null };
 let PlatformUtils = PlatformUtils_mod;
-obj.lockOrientation = !PlatformUtils.isAndroid();
+PlatformUtils = PlatformUtils.isAndroid();
+let tmp3 = !PlatformUtils;
+if (!PlatformUtils) {
+  const _module4 = DeviceUtils;
+  tmp3 = !_module4.isIpadOS();
+}
+obj.lockOrientation = tmp3;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation(arg0) {
@@ -48,16 +55,18 @@ export default function getNavigationModalPresentation(arg0) {
   let tmp4;
   if (lockOrientation) {
     const orientationLock = DeviceOrientation.getOrientationLock();
-    let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
-      if (null != orientationLock) {
-        str2 = "portrait";
-      } else {
-        const orientation = DeviceOrientation.getOrientation();
-        const tmp5Result = DeviceOrientation;
+      let str5 = "portrait";
+      str4 = "portrait";
+      if (null == orientationLock) {
+        const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
+        if (size.width > size.height) {
+          str5 = "landscape";
+        }
+        str4 = str5;
+        const tmp5Result = useWindowDimensions;
       }
-      str4 = str2;
     }
     tmp4 = str4;
   }

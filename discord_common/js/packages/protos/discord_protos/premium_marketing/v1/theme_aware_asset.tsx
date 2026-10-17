@@ -1,6 +1,6 @@
-// === Module 9372: theme_aware_asset ===
+// === Module 9436: theme_aware_asset ===
 
-// Module 9372 (theme_aware_asset)
+// Module 9436 (theme_aware_asset)
 import _mod1212 from "module_1212" /* 1212 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -18,12 +18,12 @@ class ThemeAwareAsset$Type extends MessageType {
   }
 }
 const prototype = ThemeAwareAsset$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

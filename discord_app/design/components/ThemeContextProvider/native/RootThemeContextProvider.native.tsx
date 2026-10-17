@@ -1,8 +1,8 @@
-// === Module 11500: ThemeContextProvider/RootThemeContextProvider ===
+// === Module 11559: ThemeContextProvider/RootThemeContextProvider ===
 
-// Module 11500 (ThemeContextProvider/RootThemeContextProvider)
+// Module 11559 (ThemeContextProvider/RootThemeContextProvider)
 import c from "c" /* 576 */;
-import native from "native" /* 4886 */;
+import native from "native" /* 4922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -174,7 +174,7 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled() ?
   tmp11 = tmp12;
   const obj4 = { value: tmp5, children: children.children };
 }) : (function DisableCustomTheme(children) {
-  themeContext = themeContext(4886).useThemeContext();
+  themeContext = themeContext(4922).useThemeContext();
   const items = [themeContext];
   const memo = noop.useMemo(() => {
     const obj2 = {};
@@ -184,5 +184,5 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled() ?
     obj2.gradient = null;
     return native.createThemedContext(obj2);
   }, items);
-  return jsx(themeContext(4886).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4922).ThemeContext.Provider, { value: memo, children: children.children });
 });

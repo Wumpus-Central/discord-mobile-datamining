@@ -1,15 +1,15 @@
-// === Module 15444: validateOpenInviteDialog ===
+// === Module 15509: validateOpenInviteDialog ===
 
-// Module 15444 (validateOpenInviteDialog)
-import canViewInviteModal from "canViewInviteModal" /* 8762 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10949 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10950 */;
-import RPCErrorDefault from "RPCError" /* 11247 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 11254 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 15418 */;
+// Module 15509 (validateOpenInviteDialog)
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6312 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6313 */;
+import canViewInviteModal from "canViewInviteModal" /* 8808 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9163 */;
+import RPCErrorDefault from "RPCError" /* 9169 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9173 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 require = fn;
 const RPCErrors = fn(1087).RPCErrors;

@@ -1,8 +1,8 @@
-// === Module 9391: marketing_page_bento_box ===
+// === Module 9455: marketing_page_bento_box ===
 
-// Module 9391 (marketing_page_bento_box)
+// Module 9455 (marketing_page_bento_box)
 import _mod1212 from "module_1212" /* 1212 */;
-import theme_aware_asset from "theme_aware_asset" /* 9372 */;
+import theme_aware_asset from "theme_aware_asset" /* 9436 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -24,12 +24,12 @@ class MarketingPageBentoBox$Type extends MessageType {
   }
 }
 const prototype = MarketingPageBentoBox$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

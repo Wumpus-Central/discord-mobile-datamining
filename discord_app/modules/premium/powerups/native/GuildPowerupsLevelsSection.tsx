@@ -1,10 +1,10 @@
-// === Module 13181: GuildPowerupsLevelsSection ===
+// === Module 13246: GuildPowerupsLevelsSection ===
 
-// Module 13181 (GuildPowerupsLevelsSection)
+// Module 13246 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 13182 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 13186 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 13247 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 13251 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 const obj3 = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 }, scrollerContent: null };
 const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
 obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -102,9 +102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       }
       const obj2 = { title: null, description: null };
       const intl = tmp(arr2[9]).intl;
-      obj2.title = intl.string(require("module_2603")["TXY/b0"]);
+      obj2.title = intl.string(require("module_2621")["TXY/b0"]);
       const intl2 = tmp(arr2[9]).intl;
-      obj2.description = intl2.string(require("module_2603").aJv4PB);
+      obj2.description = intl2.string(require("module_2621").aJv4PB);
       const tmp17 = closure_5(require("GuildPowerupsSectionHeader"), obj2);
       cResult[5] = tmp17;
       const tmp16 = require("GuildPowerupsSectionHeader");
@@ -149,11 +149,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   }, []);
   const obj2 = { title: null, description: null };
   const intl = util.intl;
-  obj2.title = intl.string(listings(2603)["TXY/b0"]);
+  obj2.title = intl.string(listings(2621)["TXY/b0"]);
   const intl2 = util.intl;
-  obj2.description = intl2.string(listings(2603).aJv4PB);
-  const items1 = [closure_5(listings(13170), obj2), ];
-  const tmp3 = listings(13170);
+  obj2.description = intl2.string(listings(2621).aJv4PB);
+  const items1 = [closure_5(listings(13235), obj2), ];
+  const tmp3 = listings(13235);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

@@ -1,8 +1,8 @@
-// === Module 16700: DevSettingsActions ===
+// === Module 16764: DevSettingsActions ===
 
-// Module 16700 (DevSettingsActions)
+// Module 16764 (DevSettingsActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DevSettingsStore from "DevSettingsStore" /* 5153 */;
+import DevSettingsStore from "DevSettingsStore" /* 5190 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");

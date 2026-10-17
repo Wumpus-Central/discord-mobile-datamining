@@ -1,12 +1,12 @@
-// === Module 18870: useCreatorMonetizationEligibility ===
+// === Module 18932: useCreatorMonetizationEligibility ===
 
-// Module 18870 (useCreatorMonetizationEligibility)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 18843 */;
+// Module 18932 (useCreatorMonetizationEligibility)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 18905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_6 = fn(18840).CreatorMonetizationApplicationState;
+let closure_6 = fn(18902).CreatorMonetizationApplicationState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
@@ -59,7 +59,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = closure_3;
-            const tmp45 = new closure_0(5855)(closure_129_1);
+            const tmp45 = new closure_0(5892)(closure_129_1);
             tmp4(tmp45);
             c4 = 0;
             closure_1(false);

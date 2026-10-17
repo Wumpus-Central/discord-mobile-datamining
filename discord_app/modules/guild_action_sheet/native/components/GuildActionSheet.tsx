@@ -1,26 +1,26 @@
-// === Module 14920: GuildActionSheet ===
+// === Module 14989: GuildActionSheet ===
 
-// Module 14920 (GuildActionSheet)
+// Module 14989 (GuildActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import BottomSheetModal from "BottomSheetModal" /* 6531 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7065 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7069 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8522 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 14852 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 14915 */;
-import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 14921 */;
-import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 14922 */;
-import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 14925 */;
+import BottomSheetModal from "BottomSheetModal" /* 6584 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7122 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8568 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 14921 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 14984 */;
+import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 14990 */;
+import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 14991 */;
+import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 14994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

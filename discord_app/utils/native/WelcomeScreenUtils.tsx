@@ -1,18 +1,18 @@
-// === Module 13423: WelcomeScreenUtils ===
+// === Module 13489: WelcomeScreenUtils ===
 
-// Module 13423 (WelcomeScreenUtils)
+// Module 13489 (WelcomeScreenUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import WelcomeScreenActionCreators from "WelcomeScreenActionCreators" /* 13426 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import WelcomeScreenActionCreators from "WelcomeScreenActionCreators" /* 13492 */;
 import noop from "module_19" /* 19 */;
-import WelcomeScreenStore from "WelcomeScreenStore" /* 13424 */;
-import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import WelcomeScreenStore from "WelcomeScreenStore" /* 13490 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NO_WELCOME_SCREEN = fn(13424).NO_WELCOME_SCREEN;
+const NO_WELCOME_SCREEN = fn(13490).NO_WELCOME_SCREEN;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "a" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -25,7 +25,7 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled() 
   let obj = require("c");
   const tmp = _require;
   const tmp2 = welcomeModalChannelId;
-  welcomeModalChannelId = require("module_5009").useLocation().welcomeModalChannelId;
+  welcomeModalChannelId = require("module_5045").useLocation().welcomeModalChannelId;
   const tmp4 = require("useWelcomeScreenEnabled")(arg1, arg0);
   noop = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -104,13 +104,13 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled() 
   cResult[4] = tmp4;
   cResult[5] = fn;
   tmp9 = fn;
-  let obj2 = require("module_5009");
+  let obj2 = require("module_5045");
 }) : (function useShowWelcomeModal(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  welcomeModalChannelId = require("module_5009").useLocation().welcomeModalChannelId;
+  welcomeModalChannelId = require("module_5045").useLocation().welcomeModalChannelId;
   noop = require("useWelcomeScreenEnabled")(arg1, arg0);
-  let obj = require("module_5009");
+  let obj = require("module_5045");
   const items = [GuildStore, shouldFetchGuildId, GuildChannelStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (closure_3) {
@@ -158,5 +158,5 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled() 
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13427, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
+  obj.openLazy(asyncRequireImpl(13493, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
 };

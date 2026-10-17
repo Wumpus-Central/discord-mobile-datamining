@@ -1,6 +1,6 @@
-// === Module 9931: ForumComposer ===
+// === Module 9995: ForumComposer ===
 
-// Module 9931 (ForumComposer)
+// Module 9995 (ForumComposer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,33 +9,33 @@ import KeyboardUIStore from "KeyboardUIStore" /* 1503 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5046 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import transitionToChannel from "transitionToChannel" /* 5165 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6889 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7206 */;
-import MessageParser from "MessageParser" /* 7589 */;
-import Tracking from "Tracking" /* 8125 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8140 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
-import TagIcon from "TagIcon" /* 9307 */;
-import useFocusHandlers from "useFocusHandlers" /* 9948 */;
-import ForumGuidelinesActionSheet from "ForumGuidelinesActionSheet" /* 9956 */;
-import openExpressionPickerActionSheet from "openExpressionPickerActionSheet" /* 9961 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10249 */;
-import ImageCarouselDefault from "ImageCarousel" /* 10254 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10258 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5083 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import transitionToChannel from "transitionToChannel" /* 5202 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7258 */;
+import MessageParser from "MessageParser" /* 7635 */;
+import Tracking from "Tracking" /* 8171 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8186 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
+import TagIcon from "TagIcon" /* 9365 */;
+import useFocusHandlers from "useFocusHandlers" /* 10012 */;
+import ForumGuidelinesActionSheet from "ForumGuidelinesActionSheet" /* 10020 */;
+import openExpressionPickerActionSheet from "openExpressionPickerActionSheet" /* 10025 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 10313 */;
+import ImageCarouselDefault from "ImageCarousel" /* 10318 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
-import DraftStore from "DraftStore" /* 7464 */;
+import DraftStore from "DraftStore" /* 7510 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import SlowmodeStore from "SlowmodeStore" /* 7594 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8129 */;
+import SlowmodeStore from "SlowmodeStore" /* 7640 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8175 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -97,7 +97,7 @@ function ActionBar(channel) {
       const items5 = [, ];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9307).TagIcon;
+      obj6.IconComponent = tmp2(9365).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -123,20 +123,20 @@ function ActionBar(channel) {
           }
           tmp4 = closure_1_7 !== channel(1631).KeyboardTypes.SYSTEM && closure_1_7 !== channel(1631).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(10706, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(10769, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7314).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7365).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(9948).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10012).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl3 = tmp2(1128).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1128).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9192).ReactionIcon;
+      obj7.IconComponent = tmp2(9252).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7314).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7365).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -154,13 +154,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(8425).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(8471).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5442).Button, obj9);
+    obj8.children = closure_29(tmp2(5479).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -174,9 +174,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(13680).KeyboardIcon;
+      let ImageIcon = tmp2(13748).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(8441).ImageIcon;
+      ImageIcon = tmp2(8487).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -188,14 +188,14 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7314).HeaderActionButton, obj11);
+    closure_29(tmp2(7365).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: metroRequire, Pressable: closure_7, StyleSheet, Text: closure_8, View: closure_9 } = get_ActivityIndicator);
-const DraftType = fn(7464).DraftType;
-const SlowmodeType = fn(7594).SlowmodeType;
+const DraftType = fn(7510).DraftType;
+const SlowmodeType = fn(7640).SlowmodeType;
 let Constants = fn(1087);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(2075).ChannelFlags;
@@ -207,7 +207,7 @@ Constants = fn(1098);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" }, scrollViewContentContainer: { paddingBottom: 16 }, avatarContainer: { height: 40 }, avatar: { marginRight: 12 }, titleInput: { padding: 8 }, titleInputText: null, contentInput: null, mentionText: null, postButtonWrapper: null, tags: null, tagIcon: null, editor: null, editorBody: null, usernameToChannel: null, channelName: null, actionsContainer: null, actions: null, actionButton: null, mediaButton: null, horizontalAutocomplete: null, nameError: null, messageError: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" };
 obj2.titleInputText = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -736,7 +736,7 @@ export default function ForumComposer(parentChannel) {
             let content;
             c5 = 1;
             c6 = 1;
-            return { value: "test", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp8) {

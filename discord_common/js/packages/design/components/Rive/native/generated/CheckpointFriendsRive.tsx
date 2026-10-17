@@ -1,9 +1,9 @@
-// === Module 4967: CheckpointFriendsRive ===
+// === Module 5003: CheckpointFriendsRive ===
 
-// Module 4967 (CheckpointFriendsRive)
+// Module 5003 (CheckpointFriendsRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 4903 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4956 */;
+import BaseRive from "BaseRive" /* 4939 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4992 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -2662,9 +2662,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Checkp
           }
         }
       }
-      obj2 = { ref: tmp6, src: require("module_4968"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 };
+      obj2 = { ref: tmp6, src: require("module_5004"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 };
       let merged = Object.assign(tmp7);
-      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_4968"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 });
+      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_5004"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;

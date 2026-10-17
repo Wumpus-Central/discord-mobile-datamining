@@ -1,7 +1,7 @@
-// === Module 11850: useAnimatedScrollLock ===
+// === Module 11913: useAnimatedScrollLock ===
 
-// Module 11850 (useAnimatedScrollLock)
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+// Module 11913 (useAnimatedScrollLock)
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

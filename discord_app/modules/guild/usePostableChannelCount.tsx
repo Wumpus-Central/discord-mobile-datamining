@@ -1,14 +1,14 @@
-// === Module 17830: usePostableChannelCount ===
+// === Module 17890: usePostableChannelCount ===
 
-// Module 17830 (usePostableChannelCount)
+// Module 17890 (usePostableChannelCount)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import GuildChannelStore from "GuildChannelStore" /* 4807 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(4807).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

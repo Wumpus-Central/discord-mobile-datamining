@@ -1,8 +1,8 @@
-// === Module 10902: conjureChatHistory ===
+// === Module 10966: conjureChatHistory ===
 
-// Module 10902 (conjureChatHistory)
+// Module 10966 (conjureChatHistory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10901 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10965 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -125,6 +125,9 @@ function newMessageFromHistory(ts) {
   if (null != ts.restore_proposal) {
     tmp.restoreProposal = ts.restore_proposal;
   }
+  if (null != ts.publish_schedule_proposal) {
+    tmp.publishScheduleProposal = ts.publish_schedule_proposal;
+  }
   if (null != ts.app_build_request) {
     tmp.appBuildRequest = ts.app_build_request;
   }
@@ -166,11 +169,18 @@ function newMessageFromHistory(ts) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp15 = nextResult;
-    let tmp16 = "awaiting_user" === nextResult.kind;
+    let tmp16 = "publish_schedule_proposal" === nextResult.kind;
     if (tmp16) {
-      tmp16 = "secrets" === tmp15.action;
+      tmp16 = null != tmp15.publish_schedule_proposal;
     }
     if (tmp16) {
+      tmp.publishScheduleProposal = tmp15.publish_schedule_proposal;
+    }
+    let tmp20 = "awaiting_user" === tmp15.kind;
+    if (tmp20) {
+      tmp20 = "secrets" === tmp15.action;
+    }
+    if (tmp20) {
       let obj3 = { action: null };
       obj3.action = tmp15.action;
       tmp.awaitingUser = obj3;

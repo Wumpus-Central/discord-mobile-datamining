@@ -1,6 +1,6 @@
-// === Module 11536: ConjureAttachmentTypes ===
+// === Module 11595: ConjureAttachmentTypes ===
 
-// Module 11536 (ConjureAttachmentTypes)
+// Module 11595 (ConjureAttachmentTypes)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);

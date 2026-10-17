@@ -1,6 +1,6 @@
-// === Module 11267: WebViewContext ===
+// === Module 11326: WebViewContext ===
 
-// Module 11267 (WebViewContext)
+// Module 11326 (WebViewContext)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const context = noop.createContext(0);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({ placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

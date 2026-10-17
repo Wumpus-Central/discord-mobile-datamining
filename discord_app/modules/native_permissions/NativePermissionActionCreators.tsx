@@ -1,6 +1,6 @@
-// === Module 7724: NativePermissionActionCreators ===
+// === Module 7770: NativePermissionActionCreators ===
 
-// Module 7724 (NativePermissionActionCreators)
+// Module 7770 (NativePermissionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

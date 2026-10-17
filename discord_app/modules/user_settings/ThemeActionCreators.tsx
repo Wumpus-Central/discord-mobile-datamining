@@ -1,6 +1,6 @@
-// === Module 5025: ThemeActionCreators ===
+// === Module 5061: ThemeActionCreators ===
 
-// Module 5025 (ThemeActionCreators)
+// Module 5061 (ThemeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1245 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;

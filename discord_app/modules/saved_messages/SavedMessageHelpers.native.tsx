@@ -1,6 +1,6 @@
-// === Module 13525: SavedMessageHelpers ===
+// === Module 13591: SavedMessageHelpers ===
 
-// Module 13525 (SavedMessageHelpers)
+// Module 13591 (SavedMessageHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -32,10 +32,10 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
         const intl5 = tmp9(1128).intl;
         obj3.cancelText = intl5.string(closure_0(1128).t.ZGbTcy);
         obj3.onCancel = function onCancel() {
-          const SavedMessageSortTypes = displayToast(9917).SavedMessageSortTypes;
-          return displayToast(13516).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+          const SavedMessageSortTypes = displayToast(9981).SavedMessageSortTypes;
+          return displayToast(13582).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
         };
-        closure_1(5362).show(obj3);
+        closure_1(5399).show(obj3);
         return null;
       } else {
         let message;
@@ -50,7 +50,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
           message = intl.string(closure_0(1128).t.R0RpRX);
         }
         const obj = { text: message, variant: "critical" };
-        closure_1(4868).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+        closure_1(4904).open("SAVED_MESSAGE_CREATE_ERROR", obj);
         return null;
       }
     });
@@ -78,7 +78,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
     closure_1 = tmp2;
     displayToast2 = displayToast.displayToast;
     closure_129_1 = Object.assign(displayToast, Object.assign({ displayToast: 0 }));
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -126,10 +126,10 @@ let closure_8 = async function _removeSavedMessage() {
   closure_1 = tmp2;
   ({ displayToast: closure_129_0, isReminder: closure_129_1 } = closure_0);
   closure_129_2 = Object.assign(closure_0, Object.assign({ displayToast: 0, isReminder: 0 }));
-  return "test";
+  return "Reflect";
 };
 const AbortCodes = fn(1087).AbortCodes;
-const SavedMessagesConstants = fn(13526);
+const SavedMessagesConstants = fn(13592);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

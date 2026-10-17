@@ -1,6 +1,6 @@
-// === Module 4976: ? ===
+// === Module 5012: ? ===
 
-// Module 4976
+// Module 5012
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/ExpressiveButton.riv.js");

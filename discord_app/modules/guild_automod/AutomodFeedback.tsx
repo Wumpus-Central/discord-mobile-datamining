@@ -1,6 +1,6 @@
-// === Module 7460: AutomodFeedback ===
+// === Module 7506: AutomodFeedback ===
 
-// Module 7460 (AutomodFeedback)
+// Module 7506 (AutomodFeedback)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 11168: openIgnoreThermalStateAlert ===
+// === Module 11233: openIgnoreThermalStateAlert ===
 
-// Module 11168 (openIgnoreThermalStateAlert)
+// Module 11233 (openIgnoreThermalStateAlert)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5363 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5400 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(
   closure_0 = arg0;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11169, dependencyMap.paths).then((IgnoreThermalStateAlert) => {
+      return asyncRequireImpl(11234, dependencyMap.paths).then((IgnoreThermalStateAlert) => {
         IgnoreThermalStateAlert = IgnoreThermalStateAlert.IgnoreThermalStateAlert;
         return (arg0) => {
           const obj = {};

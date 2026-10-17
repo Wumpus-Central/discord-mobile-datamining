@@ -1,6 +1,6 @@
-// === Module 10491: getChannelCopyForEmbeddedActivity ===
+// === Module 10554: getChannelCopyForEmbeddedActivity ===
 
-// Module 10491 (getChannelCopyForEmbeddedActivity)
+// Module 10554 (getChannelCopyForEmbeddedActivity)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

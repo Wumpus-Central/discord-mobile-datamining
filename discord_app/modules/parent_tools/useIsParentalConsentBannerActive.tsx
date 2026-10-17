@@ -1,9 +1,9 @@
-// === Module 15841: useIsParentalConsentBannerActive ===
+// === Module 15907: useIsParentalConsentBannerActive ===
 
-// Module 15841 (useIsParentalConsentBannerActive)
+// Module 15907 (useIsParentalConsentBannerActive)
 import c from "c" /* 576 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 15842 */;
-import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 15844 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 15908 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 15910 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

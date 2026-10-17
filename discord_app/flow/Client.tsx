@@ -1,6 +1,6 @@
-// === Module 5086: Client ===
+// === Module 5123: Client ===
 
-// Module 5086 (Client)
+// Module 5123 (Client)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 15780: RestrictedUserRowLabel ===
+// === Module 15846: RestrictedUserRowLabel ===
 
-// Module 15780 (RestrictedUserRowLabel)
+// Module 15846 (RestrictedUserRowLabel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useToken from "useToken" /* 4877 */;
-import Text_Text from "Text/Text" /* 5150 */;
+import useToken from "useToken" /* 4913 */;
+import Text_Text from "Text/Text" /* 5187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 18732: GuildSettingsModalSecurity ===
+// === Module 18794: GuildSettingsModalSecurity ===
 
-// Module 18732 (GuildSettingsModalSecurity)
+// Module 18794 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8864 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8865 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8911 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -16,7 +16,7 @@ const Constants = fn(1087);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { wrapper: { flexGrow: 1, justifyContent: "space-between", paddingTop: 99 }, center: { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, label: { textAlign: "center", marginBottom: 8 }, image: { width: 295, height: 142, marginHorizontal: 35 }, infoWrapper: { marginBottom: 40 }, button: { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 } };
 let closure_15 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           obj2.children = tmp26;
-          const tmp30 = closure_12(tmp(5150).Text, obj2);
+          const tmp30 = closure_12(tmp(5187).Text, obj2);
           cResult[16] = tmp4.label;
           cResult[17] = tmp30;
           let tmp28 = tmp30;
@@ -344,13 +344,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          tmp58[0] = stateFromStores(15742);
+                          tmp58[0] = stateFromStores(15808);
                           tmp58[1] = tmp4.image;
-                          const tmp59 = closure_12(stateFromStores(5091), tmp58);
+                          const tmp59 = closure_12(stateFromStores(5128), tmp58);
                           cResult[35] = tmp4.image;
                           cResult[36] = tmp59;
                           let tmp54 = tmp59;
-                          const tmp57 = stateFromStores(5091);
+                          const tmp57 = stateFromStores(5128);
                         } else {
                           tmp54 = cResult[36];
                         }
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                                   }
                                 }
                                 if (tmp76 === Symbol.for("react.memo_cache_sentinel")) {
-                                  const tmp79 = closure_12(tmp(6952).NavScrim, {});
+                                  const tmp79 = closure_12(tmp(7005).NavScrim, {});
                                   class B {
                                     constructor() {
                                       if (null == closure_1) {
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           const obj9 = { text: cResult[19], disabled: !tmp14, variant: str, onPress: tmp22, shrink: true };
-          const tmp38 = closure_12(tmp(5442).Button, obj9);
+          const tmp38 = closure_12(tmp(5479).Button, obj9);
           cResult[20] = tmp22;
           cResult[21] = cResult[19];
           cResult[22] = !tmp14;
@@ -747,7 +747,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj5 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1128).intl;
   obj5.children = intl.string(guildId(1128).t.Wi9LEV);
-  const items4 = [closure_12(guildId(5150).Text, obj5), , ];
+  const items4 = [closure_12(guildId(5187).Text, obj5), , ];
   const obj6 = { style: tmp.button, children: null };
   const intl2 = tmp2(1128).intl;
   const string = intl2.string;
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   }
   obj7.variant = str;
   obj7.onPress = callback;
-  obj6.children = closure_12(guildId(5442).Button, obj7);
+  obj6.children = closure_12(guildId(5479).Button, obj7);
   items4[1] = closure_12(closure_4, obj6);
   let hasItem;
   if (stateFromStores != null) {
@@ -776,7 +776,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1128).intl;
     obj8.children = intl3.string(tmp2(1128).t["KG1V/E"]);
-    tmp18Result = closure_12(tmp2(5150).Text, obj8);
+    tmp18Result = closure_12(tmp2(5187).Text, obj8);
   }
   const obj9 = { children: null };
   items4[2] = tmp18Result;
@@ -785,19 +785,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(15742);
+  obj11.source = stateFromStores(15808);
   obj11.style = tmp.image;
-  const items6 = [closure_12(stateFromStores(5091), obj11), ];
+  const items6 = [closure_12(stateFromStores(5128), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1128).intl;
   obj13.children = intl4.format(guildId(1128).t["FK0+iX"], {});
-  obj12.children = closure_12(guildId(5150).Text, obj13);
+  obj12.children = closure_12(guildId(5187).Text, obj13);
   items6[1] = closure_12(closure_4, obj12);
   obj10.children = items6;
   items5[1] = closure_13(closure_4, obj10);
   obj3.children = items5;
-  const items7 = [closure_13(closure_5, obj3), closure_12(guildId(6952).NavScrim, {})];
+  const items7 = [closure_13(closure_5, obj3), closure_12(guildId(7005).NavScrim, {})];
   obj9.children = items7;
   return closure_13(closure_14, obj9);
 });

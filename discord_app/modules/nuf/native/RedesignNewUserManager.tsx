@@ -1,17 +1,17 @@
-// === Module 18526: RedesignNewUserManager ===
+// === Module 18587: RedesignNewUserManager ===
 
-// Module 18526 (RedesignNewUserManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
-import RootNavigationRef from "RootNavigationRef" /* 5036 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8909 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 18527 */;
-import NewUserUtils from "NewUserUtils" /* 18531 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 13276 */;
+// Module 18587 (RedesignNewUserManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
+import RootNavigationRef from "RootNavigationRef" /* 5073 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8955 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 18588 */;
+import NewUserUtils from "NewUserUtils" /* 18592 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 13342 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2062 */;
-import NewUserStore from "NewUserStore" /* 6360 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7032 */;
+import NewUserStore from "NewUserStore" /* 6413 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;
 import size from "module_2" /* 2 */;
 
 ({ initialize: c3, ContactSyncModes: closure_4 } = ContactSyncModalStore);

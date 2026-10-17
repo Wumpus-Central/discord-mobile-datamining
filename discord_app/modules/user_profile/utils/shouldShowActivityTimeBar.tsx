@@ -1,6 +1,6 @@
-// === Module 13990: shouldShowActivityTimeBar ===
+// === Module 14058: shouldShowActivityTimeBar ===
 
-// Module 13990 (shouldShowActivityTimeBar)
+// Module 14058 (shouldShowActivityTimeBar)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

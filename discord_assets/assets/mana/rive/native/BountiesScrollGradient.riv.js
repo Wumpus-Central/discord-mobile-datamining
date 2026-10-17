@@ -1,6 +1,6 @@
-// === Module 4960: ? ===
+// === Module 4996: ? ===
 
-// Module 4960
+// Module 4996
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BountiesScrollGradient.riv.js");

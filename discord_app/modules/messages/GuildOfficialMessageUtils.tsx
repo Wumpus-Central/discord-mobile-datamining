@@ -1,19 +1,19 @@
-// === Module 7192: GuildOfficialMessageUtils ===
+// === Module 7244: GuildOfficialMessageUtils ===
 
-// Module 7192 (GuildOfficialMessageUtils)
+// Module 7244 (GuildOfficialMessageUtils)
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import ColorUtils from "ColorUtils" /* 5026 */;
-import shared from "shared" /* 5028 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6306 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7193 */;
+import ColorUtils from "ColorUtils" /* 5063 */;
+import shared from "shared" /* 5065 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6364 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7245 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
-const ThreadHooks = tmp(7194);
+const ThreadHooks = tmp(7246);
 require = fn;
-let closure_5 = fn(5148).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
+let closure_5 = fn(5185).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1087);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);

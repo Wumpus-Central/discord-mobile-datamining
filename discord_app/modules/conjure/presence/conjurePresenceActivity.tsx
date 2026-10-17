@@ -1,6 +1,6 @@
-// === Module 10487: conjurePresenceActivity ===
+// === Module 10550: conjurePresenceActivity ===
 
-// Module 10487 (conjurePresenceActivity)
+// Module 10550 (conjurePresenceActivity)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

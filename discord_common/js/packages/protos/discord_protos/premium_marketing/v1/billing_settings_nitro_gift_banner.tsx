@@ -1,10 +1,10 @@
-// === Module 9375: billing_settings_nitro_gift_banner ===
+// === Module 9439: billing_settings_nitro_gift_banner ===
 
-// Module 9375 (billing_settings_nitro_gift_banner)
+// Module 9439 (billing_settings_nitro_gift_banner)
 import _mod1212 from "module_1212" /* 1212 */;
-import localized_string from "localized_string" /* 9362 */;
-import gradient from "gradient" /* 9370 */;
-import theme_aware_asset from "theme_aware_asset" /* 9372 */;
+import localized_string from "localized_string" /* 9426 */;
+import gradient from "gradient" /* 9434 */;
+import theme_aware_asset from "theme_aware_asset" /* 9436 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -71,12 +71,12 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
   }
 }
 const prototype = BillingSettingsNitroGiftBanner$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { assetUrl: "", header: "", body: "", backgroundAssetUrl: "", textColor: "", additionalTerms: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

@@ -1,16 +1,16 @@
-// === Module 12077: ConjureLiveBehindTip ===
+// === Module 12140: ConjureLiveBehindTip ===
 
-// Module 12077 (ConjureLiveBehindTip)
+// Module 12140 (ConjureLiveBehindTip)
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import UploadIcon from "UploadIcon" /* 9641 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12078 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import UploadIcon from "UploadIcon" /* 9705 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12141 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12067).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(12130).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp2 = null;
@@ -22,7 +22,7 @@ obj.render = function render(arg0, context) {
           return publish.run("outdated_notice");
         }
     };
-    obj.children = intl.format(_modDef3865.fWfeZ8, obj2);
+    obj.children = intl.format(_modDef3883.fWfeZ8, obj2);
     tmp2 = jsx(ConjureTipHintDefault, { icon: UploadIcon.UploadIcon, onDismiss: tmp, children: null });
   }
   return tmp2;

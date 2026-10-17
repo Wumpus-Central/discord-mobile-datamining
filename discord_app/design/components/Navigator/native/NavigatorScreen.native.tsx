@@ -1,9 +1,9 @@
-// === Module 6947: NavigatorScreen ===
+// === Module 7000: NavigatorScreen ===
 
-// Module 6947 (NavigatorScreen)
+// Module 7000 (NavigatorScreen)
 import c from "c" /* 576 */;
-import config from "config" /* 6948 */;
-import PostponeRender from "PostponeRender" /* 6949 */;
+import config from "config" /* 7001 */;
+import PostponeRender from "PostponeRender" /* 7002 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

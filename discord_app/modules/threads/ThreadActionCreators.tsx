@@ -1,21 +1,21 @@
-// === Module 8123: ThreadActionCreators ===
+// === Module 8169: ThreadActionCreators ===
 
-// Module 8123 (ThreadActionCreators)
+// Module 8169 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5169 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5362 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8140 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8141 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5206 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8186 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8187 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8124 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4811 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8139 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8170 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 8185 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
 let closure_4 = fn(2072).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8124).PAGE_SIZE;
+const PAGE_SIZE = fn(8170).PAGE_SIZE;
 const Constants = fn(1087);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
 const ChannelFlags = fn(2075).ChannelFlags;
@@ -890,14 +890,14 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = tmp4(8144).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
+              const result = tmp4(8190).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
               if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
                 c1 = 1;
                 dependencyMap = 1;
                 const obj5 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
                 return obj5;
               }
-              const obj8 = tmp4(8144);
+              const obj8 = tmp4(8190);
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;

@@ -1,10 +1,10 @@
-// === Module 16066: QuestDockUtils ===
+// === Module 16132: QuestDockUtils ===
 
-// Module 16066 (QuestDockUtils)
+// Module 16132 (QuestDockUtils)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import spring from "spring" /* 5441 */;
-import QuestDockConstants from "QuestDockConstants" /* 16067 */;
+import spring from "spring" /* 5478 */;
+import QuestDockConstants from "QuestDockConstants" /* 16133 */;
 import size from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;

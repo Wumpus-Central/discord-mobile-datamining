@@ -1,14 +1,14 @@
-// === Module 16090: useQuestForPlacement ===
+// === Module 16156: useQuestForPlacement ===
 
-// Module 16090 (useQuestForPlacement)
+// Module 16156 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1104 */;
-import AdCreativeType from "AdCreativeType" /* 6198 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6291 */;
-import QuestsEligibility from "QuestsEligibility" /* 9404 */;
-import QuestActionCreators from "QuestActionCreators" /* 9410 */;
+import AdCreativeType from "AdCreativeType" /* 6235 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6349 */;
+import QuestsEligibility from "QuestsEligibility" /* 9468 */;
+import QuestActionCreators from "QuestActionCreators" /* 9474 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7607 */;
-import QuestStore from "QuestStore" /* 7610 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7653 */;
+import QuestStore from "QuestStore" /* 7656 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
 import size from "module_2" /* 2 */;
@@ -198,11 +198,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDelivered
     creative = tmp9.creative;
   }
   if (cResult[4] !== creative) {
-    const deliveredQuestId = tmp(7608).getDeliveredQuestId(creative);
+    const deliveredQuestId = tmp(7654).getDeliveredQuestId(creative);
     cResult[4] = creative;
     cResult[5] = deliveredQuestId;
     let tmp11 = deliveredQuestId;
-    const tmpResult3 = tmp(7608);
+    const tmpResult3 = tmp(7654);
   } else {
     tmp11 = cResult[5];
   }
@@ -497,11 +497,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     creative = tmp5.creative;
   }
   if (cResult[0] !== creative) {
-    const deliveredQuestId = tmp(7608).getDeliveredQuestId(creative);
+    const deliveredQuestId = tmp(7654).getDeliveredQuestId(creative);
     cResult[0] = creative;
     cResult[1] = deliveredQuestId;
     let tmp7 = deliveredQuestId;
-    const tmpResult = tmp(7608);
+    const tmpResult = tmp(7654);
   } else {
     tmp7 = cResult[1];
   }
@@ -540,7 +540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     if (!tmpResult4.isQuestExpired(stateFromStores)) {
       tmp13 = stateFromStores;
     }
-    tmpResult4 = tmp(7616);
+    tmpResult4 = tmp(7662);
   }
   return tmp13;
 }) : (function useFetchQuestForAdPlacement(arg0) {
@@ -571,7 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     if (!tmp3Result2.isQuestExpired(stateFromStores)) {
       tmp7 = stateFromStores;
     }
-    tmp3Result2 = tmp3(7616);
+    tmp3Result2 = tmp3(7662);
   }
   return tmp7;
 });

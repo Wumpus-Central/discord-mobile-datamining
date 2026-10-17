@@ -1,16 +1,16 @@
-// === Module 16300: DefaultGuildThemePreferenceSetting ===
+// === Module 16366: DefaultGuildThemePreferenceSetting ===
 
-// Module 16300 (DefaultGuildThemePreferenceSetting)
+// Module 16366 (DefaultGuildThemePreferenceSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5071 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDefaultGuildThemePreferenceOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -50,7 +50,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(8214).MobileUserSettings.APPEARANCE,
+  parent: fn(8260).MobileUserSettings.APPEARANCE,
   useValue: fn(2044).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;

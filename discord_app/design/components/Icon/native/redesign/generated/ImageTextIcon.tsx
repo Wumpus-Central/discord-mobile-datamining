@@ -1,10 +1,10 @@
-// === Module 16449: ImageTextIcon ===
+// === Module 16513: ImageTextIcon ===
 
-// Module 16449 (ImageTextIcon)
+// Module 16513 (ImageTextIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod16450 from "module_16450" /* 16450 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod16514 from "module_16514" /* 16514 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ImageTextIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16450;
+    const tmpResult = _mod16514;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ImageTextIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16450, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16514, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

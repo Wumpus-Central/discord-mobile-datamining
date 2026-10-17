@@ -1,7 +1,7 @@
-// === Module 6371: MemberVerificationModalActionCreators ===
+// === Module 6424: MemberVerificationModalActionCreators ===
 
-// Module 6371 (MemberVerificationModalActionCreators)
-import guild_member_verification_MemberVerificationModalActionCreators from "guild_member_verification/MemberVerificationModalActionCreators" /* 6372 */;
+// Module 6424 (MemberVerificationModalActionCreators)
+import guild_member_verification_MemberVerificationModalActionCreators from "guild_member_verification/MemberVerificationModalActionCreators" /* 6425 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationModalActionCreators.tsx");

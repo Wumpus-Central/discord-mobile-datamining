@@ -1,7 +1,7 @@
-// === Module 7574: SafePostTTIScheduler ===
+// === Module 7620: SafePostTTIScheduler ===
 
-// Module 7574 (SafePostTTIScheduler)
-import PostTTIScheduler from "PostTTIScheduler" /* 7575 */;
+// Module 7620 (SafePostTTIScheduler)
+import PostTTIScheduler from "PostTTIScheduler" /* 7621 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");

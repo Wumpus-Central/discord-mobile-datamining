@@ -1,14 +1,14 @@
-// === Module 17945: SearchNavigatorPreviewHeader ===
+// === Module 18005: SearchNavigatorPreviewHeader ===
 
-// Module 17945 (SearchNavigatorPreviewHeader)
+// Module 18005 (SearchNavigatorPreviewHeader)
 import c from "c" /* 576 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13718 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13786 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_5 = createStyles.createStyles({ container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

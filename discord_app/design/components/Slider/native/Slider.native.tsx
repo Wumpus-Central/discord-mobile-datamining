@@ -1,10 +1,10 @@
-// === Module 14992: Slider ===
+// === Module 15061: Slider ===
 
-// Module 14992 (Slider)
+// Module 15061 (Slider)
 import nativeDefault from "native" /* 587 */;
-import HapticUtils from "HapticUtils" /* 5119 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
-import _modDef8632 from "module_8632" /* 8632 */;
+import HapticUtils from "HapticUtils" /* 5156 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5157 */;
+import _modDef8678 from "module_8678" /* 8678 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ let closure_3 = ["startIcon", "endIcon", "style", "onValueChange", "step"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -124,7 +124,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
         obj4.minimumTrackTintColor = tmp12.minimumTrackTintColor.backgroundColor;
         obj4.maximumTrackTintColor = tmp12.maximumTrackTintColor.backgroundColor;
         obj4.tapToSeek = true;
-        const tmp26 = closure_7(_modDef8632, obj4);
+        const tmp26 = closure_7(_modDef8678, obj4);
         cResult[16] = tmp13;
         cResult[17] = tmp5;
         cResult[18] = tmp7;
@@ -193,7 +193,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
   obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj3.tapToSeek = true;
-  items1[1] = closure_7(step(8632), obj3);
+  items1[1] = closure_7(step(8678), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
     const obj4 = { style: tmp2.endIcon, children: endIcon };

@@ -1,6 +1,6 @@
-// === Module 12047: ConjureChatEmptyState ===
+// === Module 12110: ConjureChatEmptyState ===
 
-// Module 12047 (ConjureChatEmptyState)
+// Module 12110 (ConjureChatEmptyState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatEmptyState.tsx");

@@ -1,21 +1,21 @@
-// === Module 15944: XboxTwoWayLinkUpsell ===
+// === Module 16010: XboxTwoWayLinkUpsell ===
 
-// Module 15944 (XboxTwoWayLinkUpsell)
+// Module 16010 (XboxTwoWayLinkUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9444 */;
-import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 15945 */;
-import _modDef15946 from "module_15946" /* 15946 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9508 */;
+import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 16011 */;
+import _modDef16012 from "module_16012" /* 16012 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -41,8 +41,8 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
     [tmp5, tmp6, tmp7] = cResult;
   }
   if (cResult[3] !== tmp4.upsellImage) {
-    const obj4 = { style: tmp4.upsellImage, source: _modDef15946, resizeMode: "contain" };
-    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15946, resizeMode: "contain" });
+    const obj4 = { style: tmp4.upsellImage, source: _modDef16012, resizeMode: "contain" };
+    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef16012, resizeMode: "contain" });
     cResult[3] = tmp4.upsellImage;
     cResult[4] = tmp17;
     let tmp13 = tmp17;
@@ -78,7 +78,7 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef15946;
+  obj3.source = _modDef16012;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

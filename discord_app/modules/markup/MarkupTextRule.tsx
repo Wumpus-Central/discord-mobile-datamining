@@ -1,6 +1,6 @@
-// === Module 5474: MarkupTextRule ===
+// === Module 5511: MarkupTextRule ===
 
-// Module 5474 (MarkupTextRule)
+// Module 5511 (MarkupTextRule)
 import _modDef1951 from "module_1951" /* 1951 */;
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;

@@ -1,38 +1,38 @@
-// === Module 12609: ForwardModal ===
+// === Module 12674: ForwardModal ===
 
-// Module 12609 (ForwardModal)
+// Module 12674 (ForwardModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ToastUtils from "ToastUtils" /* 4867 */;
-import LinkIcon from "LinkIcon" /* 5100 */;
-import HapticUtils from "HapticUtils" /* 5119 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5120 */;
-import ChannelUtils from "ChannelUtils" /* 5477 */;
-import ClipboardUtils from "ClipboardUtils" /* 7109 */;
-import HeaderActionButton from "HeaderActionButton" /* 7314 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12606 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12607 */;
-import formatResults from "formatResults" /* 12611 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12613 */;
+import ToastUtils from "ToastUtils" /* 4903 */;
+import LinkIcon from "LinkIcon" /* 5137 */;
+import HapticUtils from "HapticUtils" /* 5156 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5157 */;
+import ChannelUtils from "ChannelUtils" /* 5514 */;
+import ClipboardUtils from "ClipboardUtils" /* 7162 */;
+import HeaderActionButton from "HeaderActionButton" /* 7365 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12671 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12672 */;
+import formatResults from "formatResults" /* 12676 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12678 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7534 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7538 */;
-import ICYMIStore from "ICYMIStore" /* 8681 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7580 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7584 */;
+import ICYMIStore from "ICYMIStore" /* 8727 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import MessageStore from "MessageStore" /* 5495 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8708 */;
+import MessageStore from "MessageStore" /* 5532 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8754 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(12610).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10457).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12675).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10520).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                 if (forwardOptions(source[27])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5364).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12616), {
+                    closure_1_0(5401).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12681), {
                       onConfirm() {
                         return closure_0(true);
                       },

@@ -1,31 +1,32 @@
-// === Module 11791: useActivityShelfItem ===
+// === Module 11853: useActivityShelfItem ===
 
-// Module 11791 (useActivityShelfItem)
+// Module 11853 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Server from "Server" /* 2000 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4798 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6301 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7081 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10965 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11138 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11230 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11231 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11277 */;
-import getPlatformDefault from "getPlatform" /* 11774 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11792 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11793 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6359 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7134 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11025 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11201 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11295 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11296 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11336 */;
+import getPlatformDefault from "getPlatform" /* 11836 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11854 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11855 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 
 require = fn;
 function useOnActivityItemSelected(arg0) {
   ({ application, botUserIdForAppDM: require, context } = arg0);
-  ({ locationObject: dependencyMap, onActivityItemSelectedProp: asyncGeneratorStep, launchingComponentId: EmbeddedActivitiesStore, commandOrigin: STAFF_RELEASE_PHASES, sectionName: ApplicationFlags, source: MAIN_SURFACE, fetchesApplication } = arg0);
+  ({ locationObject: dependencyMap, onActivityItemSelectedProp: asyncGeneratorStep, launchingComponentId: ChannelRTCStore, commandOrigin: EmbeddedActivitiesStore, sectionName: STAFF_RELEASE_PHASES, source: ApplicationFlags, fetchesApplication } = arg0);
   if (fetchesApplication === undefined) {
     fetchesApplication = true;
   }
-  ({ customId: obj, referrerId: closure_9, onConfirmActivityLaunchChecksAlertOpen: useOnActivityItemSelected } = arg0);
+  ({ customId: MAIN_SURFACE, referrerId: obj, onConfirmActivityLaunchChecksAlertOpen: closure_10 } = arg0);
   let analyticsLocations;
   closure_13 = undefined;
   closure_14 = undefined;
@@ -36,9 +37,9 @@ function useOnActivityItemSelected(arg0) {
   if (str == null) {
     str = "";
   }
-  let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7077)().analyticsLocations;
-  closure_13 = context(11231)();
+  let tmp = closure_10({ context, applicationId: str, fetchesApplication });
+  analyticsLocations = context(7130)().analyticsLocations;
+  closure_13 = context(11296)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -64,7 +65,7 @@ function useOnActivityItemSelected(arg0) {
       } else {
         try {
           c5 = 2;
-          if (0 === c4) {
+          if (0 === participant) {
             if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -74,26 +75,28 @@ function useOnActivityItemSelected(arg0) {
               return obj3;
             } else {
               closure_128_0 = undefined;
+              let frameParticipantId;
+              closure_128_2 = undefined;
               if (closure_14) {
                 let id;
                 if ("channel" === context.type) {
                   id = context.channel.id;
                 }
-                tmp3(tmp55[20])(id);
+                tmp3(tmp71[21])(id);
                 let guildId = null;
                 if ("channel" === context.type) {
                   const channel = context.channel;
                   guildId = channel.getGuildId();
                 }
                 c3 = 1;
-                tmp3(tmp55[21]);
+                tmp3(tmp71[22]);
                 const obj4 = { applicationId: str, surface: null, analyticsContext: null };
                 if ("channel" === context.type) {
                   if (null != guildId) {
-                    const obj5 = { type: tmp5(tmp55[22]).EmbeddedSurfaceType.MAIN, channelId: context.channel.id, guildId };
-                    let tmp49 = obj5;
+                    const obj5 = { type: tmp5(tmp71[23]).EmbeddedSurfaceType.MAIN, channelId: context.channel.id, guildId };
+                    let tmp62 = obj5;
                   }
-                  obj4.surface = tmp49;
+                  obj4.surface = tmp62;
                   const obj7 = { isStart: true, analyticsLocations, source, channelId: null };
                   let id1;
                   if ("channel" === context.type) {
@@ -101,29 +104,29 @@ function useOnActivityItemSelected(arg0) {
                   }
                   obj7.channelId = id1;
                   obj4.analyticsContext = obj7;
-                  c4 = 2;
+                  participant = 2;
                   c5 = 1;
-                  const obj8 = { value: tmp47(obj4), done: false };
+                  const obj8 = { value: tmp59(obj4), done: false };
                   return obj8;
                 }
-                tmp49 = closure_1_7;
-                const tmp39 = tmp3(tmp55[20]);
+                tmp62 = customId;
+                const tmp48 = tmp3(tmp71[21]);
               } else {
                 let id2;
                 if ("channel" === context.type) {
                   id2 = context.channel.id;
                 }
-                closure_128_0 = id2;
+                closure_128_2 = id2;
                 if (null != require) {
                   c3 = 2;
-                  const obj9 = { recipientIds: tmp18, navigateToChannel: true };
-                  c4 = 5;
+                  const obj9 = { recipientIds: tmp27, navigateToChannel: true };
+                  participant = 5;
                   c5 = 1;
-                  const obj10 = { value: tmp3(tmp55[23]).openPrivateChannel(obj9), done: false };
+                  const obj10 = { value: tmp3(tmp71[26]).openPrivateChannel(obj9), done: false };
                   return obj10;
                 } else {
-                  const obj11 = { targetApplicationId: closure_129_11, locationObject: closure_129_2, channelId: closure_128_0, analyticsLocations: closure_129_12, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, source: closure_129_7, customId: closure_129_8, referrerId: closure_129_9, onConfirmActivityLaunchChecksAlertOpen: closure_129_10 };
-                  tmp3(tmp55[24])(obj11).then((result) => {
+                  const obj11 = { targetApplicationId: closure_129_11, locationObject: closure_129_2, channelId: closure_128_2, analyticsLocations: closure_129_12, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, source: closure_129_7, customId: closure_129_8, referrerId: closure_129_9, onConfirmActivityLaunchChecksAlertOpen: closure_129_10 };
+                  tmp3(tmp71[27])(obj11).then((result) => {
                     let tmp = result;
                     if (result) {
                       let tmp2Result;
@@ -135,9 +138,9 @@ function useOnActivityItemSelected(arg0) {
                     }
                     return tmp;
                   });
-                  c4 = 4;
+                  participant = 4;
                   c5 = 1;
-                  const promise = tmp3(tmp55[24])(obj11);
+                  const promise = tmp3(tmp71[27])(obj11);
                 }
               }
             }
@@ -156,9 +159,18 @@ function useOnActivityItemSelected(arg0) {
                 const obj12 = { value, done: true };
                 return obj12;
               } else {
+                closure_128_0 = value;
+                if ("channel" === closure_129_1.type) {
+                  const obj13 = { applicationId: closure_129_11, id: closure_128_0 };
+                  frameParticipantId = tmp5(tmp71[24]).getFrameParticipantId(obj13);
+                  if (null != participant.getParticipant(closure_129_1.channel.id, frameParticipantId)) {
+                    tmp3(tmp71[25])(closure_129_1.channel.id, frameParticipantId);
+                  }
+                  const obj15 = tmp5(tmp71[24]);
+                }
                 if (closure_129_3 != null) {
-                  const obj13 = { applicationId: closure_129_11 };
-                  tmp12(obj13);
+                  const obj14 = { applicationId: closure_129_11 };
+                  tmp19(obj14);
                 }
                 c3 = 0;
               }
@@ -172,14 +184,14 @@ function useOnActivityItemSelected(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                const obj14 = { value, done: true };
-                return obj14;
+                const obj16 = { value, done: true };
+                return obj16;
               }
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              closure_128_0 = value;
+              closure_128_2 = value;
               c3 = 0;
             }
             c5 = 3;
@@ -189,14 +201,14 @@ function useOnActivityItemSelected(arg0) {
           c5 = 3;
           let obj = { value, done: true };
           return obj;
-        } catch (tmp55) {
+        } catch (tmp71) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp55;
-          } else if (tmp === tmp57) {
-            c4 = tmp;
+            throw tmp71;
+          } else if (tmp === tmp73) {
+            participant = tmp;
           } else {
-            c4 = tmp2;
+            participant = tmp2;
           }
         }
       }
@@ -240,11 +252,11 @@ function useOnActivityItemSelected(arg0) {
               obj4.source = source;
               obj4.customId = customId;
               obj4.referrerId = referrerId;
-              const tmp7 = v1(locationObject[25]);
+              const tmp7 = v1(locationObject[28]);
               v1 = 1;
               c0 = 1;
               const obj5 = {
-                value: v1(locationObject[25])(obj4).then((result) => {
+                value: v1(locationObject[28])(obj4).then((result) => {
                           let tmp = result;
                           if (result) {
                             let tmp2Result;
@@ -293,7 +305,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2026).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1087).ApplicationFlags;
-const MAIN_SURFACE = fn(10931).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6296).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -390,7 +402,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityA
     const tmp6Result = embeddedActivityLocationUtils;
   }
 });
-let closure_9 = tmp3;
+let closure_10 = tmp3;
 function getStaffReleasePhase(application, arg1) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
     ApplicationFlagUtils;
@@ -464,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
               if (cResult[15] === context) {
                 let tmp20 = cResult[16];
               }
-              const tmp22 = closure_9(tmp20);
+              const tmp22 = closure_10(tmp20);
               if (cResult[17] === activityItem.application) {
                 if (cResult[18] === commandOrigin) {
                   if (cResult[19] === context) {
@@ -635,7 +647,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   const obj3 = { context, applicationId: application.id };
   const obj4 = { application: activityItem.application, context, locationObject, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
   const tmpResultResult = useEmbeddedAppsForChannelDefault(channel);
-  const tmp13 = closure_9({ context, applicationId: application.id });
+  const tmp13 = closure_10({ context, applicationId: application.id });
   const tmp14 = useOnActivityItemSelected(obj4);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
     const tmp4Result3 = PlatformUtils;

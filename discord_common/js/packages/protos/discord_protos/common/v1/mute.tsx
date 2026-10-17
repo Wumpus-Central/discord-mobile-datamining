@@ -1,6 +1,6 @@
-// === Module 14689: mute ===
+// === Module 14757: mute ===
 
-// Module 14689 (mute)
+// Module 14757 (mute)
 import _mod1212 from "module_1212" /* 1212 */;
 import timestamp from "timestamp" /* 1241 */;
 import wrappers from "wrappers" /* 1242 */;
@@ -33,12 +33,12 @@ class MuteNotificationSettings$Type extends MessageType {
   }
 }
 const prototype = MuteNotificationSettings$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

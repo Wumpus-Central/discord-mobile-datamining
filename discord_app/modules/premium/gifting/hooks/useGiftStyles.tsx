@@ -1,6 +1,6 @@
-// === Module 10293: useGiftStyles ===
+// === Module 10357: useGiftStyles ===
 
-// Module 10293 (useGiftStyles)
+// Module 10357 (useGiftStyles)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import size from "module_2" /* 2 */;
 

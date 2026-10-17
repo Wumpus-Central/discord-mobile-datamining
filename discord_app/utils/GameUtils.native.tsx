@@ -1,14 +1,19 @@
-// === Module 9114: GameUtils ===
+// === Module 9160: GameUtils ===
 
-// Module 9114 (GameUtils)
+// Module 9160 (GameUtils)
+import waitForFrameSubscriptionDefault from "waitForFrameSubscription" /* 9161 */;
+import NativeRPCServerDefault from "NativeRPCServer" /* 9164 */;
 import size from "module_2" /* 2 */;
 
-let c0 = "not supported";
+let c2 = "not supported";
 const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {
     return Promise.resolve();
+  },
+  waitFrameSubscribed(frameId, ACTIVITY_JOIN) {
+    return waitForFrameSubscriptionDefault(NativeRPCServerDefault, frameId, ACTIVITY_JOIN);
   },
   waitParentSubscribed() {
     return Promise.resolve();
@@ -26,11 +31,11 @@ export default {
     return Promise.resolve(false);
   },
   launch() {
-    const error = new Error(c0);
+    const error = new Error(c2);
     return Promise.reject(error);
   },
   launchDispatchApplication() {
-    const error = new Error(c0);
+    const error = new Error(c2);
     return Promise.reject(error);
   },
   removeShortcuts() {
@@ -40,7 +45,7 @@ export default {
     return Promise.resolve(false);
   },
   launchGame() {
-    const error = new Error(c0);
+    const error = new Error(c2);
     return Promise.reject(error);
   },
   isProtocolRegistered() {

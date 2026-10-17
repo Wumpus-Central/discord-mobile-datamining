@@ -1,34 +1,34 @@
-// === Module 17101: MessagesItemChannelContent ===
+// === Module 17161: MessagesItemChannelContent ===
 
-// Module 17101 (MessagesItemChannelContent)
+// Module 17161 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef4761 from "module_4761" /* 4761 */;
-import useThemeDefault from "useTheme" /* 5090 */;
-import useChannelNameDefault from "useChannelName" /* 5484 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6311 */;
-import _modDef6875 from "module_6875" /* 6875 */;
-import _modDef8552 from "module_8552" /* 8552 */;
-import BotTagDefault from "BotTag" /* 8993 */;
-import GuildTagDefault from "GuildTag" /* 9084 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10475 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10502 */;
-import _modDef10579 from "module_10579" /* 10579 */;
-import _modDef10709 from "module_10709" /* 10709 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 16307 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 17103 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 17105 */;
+import _modDef4797 from "module_4797" /* 4797 */;
+import useThemeDefault from "useTheme" /* 5127 */;
+import useChannelNameDefault from "useChannelName" /* 5521 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6369 */;
+import _modDef6928 from "module_6928" /* 6928 */;
+import _modDef8598 from "module_8598" /* 8598 */;
+import BotTagDefault from "BotTag" /* 9039 */;
+import GuildTagDefault from "GuildTag" /* 9130 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10538 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10565 */;
+import _modDef10642 from "module_10642" /* 10642 */;
+import _modDef10772 from "module_10772" /* 10772 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 16373 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 17163 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 17165 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6254 */;
+import ReadStateStore from "ReadStateStore" /* 6291 */;
 
 const native = channelMutedIcon(1202);
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6186).UnreadSetting;
+const UnreadSetting = fn(6223).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-let createStyles = fn(5154);
+let createStyles = fn(5191);
 let obj = { content: { flex: 1 }, channelIcon: { alignSelf: "center" }, channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" }, channelIcons: { flexDirection: "row", alignItems: "center" }, channelAccessoriesContainer: { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 }, channelAccessories: null, channelNameAndBadge: null, botTag: null, contentPadded: null };
 let obj3 = { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 };
 obj.channelAccessories = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", borderRadius: nativeDefault.radii.xs, paddingHorizontal: nativeDefault.space.PX_4, paddingVertical: 1 };
@@ -39,7 +39,7 @@ obj.botTag = { marginRight: nativeDefault.space.PX_4 };
 let obj6 = { marginRight: nativeDefault.space.PX_4 };
 obj.contentPadded = { paddingRight: nativeDefault.space.PX_40 };
 let closure_9 = createStyles.createStyles(obj);
-createStyles = fn(5154);
+createStyles = fn(5191);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   if (arg2) {
     let MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.TEXT_MUTED;
@@ -57,7 +57,7 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { channelText: { color: MOBILE_TEXT_HEADING_PRIMARY }, channelName: { flexShrink: 1 }, timestamp: { color: tmp5(587).colors.TEXT_SUBTLE } };
   return obj;
 });
-createStyles = fn(5154);
+createStyles = fn(5191);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = { channelIcon: { marginRight: nativeDefault.space.PX_4 }, channelMutedIcon: null, channelFavoriteIcon: null, channelIgnoredIcon: null };
   const colors = nativeDefault.colors;
@@ -78,7 +78,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   if (blocked) {
     if (cResult[0] === channelMutedIcon2.channelIcon) {
     }
-    const obj2 = { source: _modDef8552, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8598, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     items = [, ];
     ({ channelIcon: arr[0], channelMutedIcon } = channelMutedIcon2);
     items[1] = channelMutedIcon;
@@ -90,7 +90,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else if (ignored) {
     if (cResult[3] === channelMutedIcon2.channelIcon) {
     }
-    const obj3 = { source: _modDef6875, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef6928, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [, ];
     ({ channelIcon: arr4[0], channelIgnoredIcon: arr4[1] } = channelMutedIcon2);
     obj3.style = items1;
@@ -101,7 +101,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else if (muted) {
     if (cResult[6] === channelMutedIcon2.channelIcon) {
     }
-    const obj4 = { source: _modDef10709, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10772, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
     obj4.style = items2;
@@ -114,7 +114,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else {
     if (cResult[9] === channelMutedIcon2.channelFavoriteIcon) {
     }
-    const obj5 = { source: _modDef10579, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj5 = { source: _modDef10642, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items3 = [, ];
     ({ channelIcon: arr2[0], channelFavoriteIcon: arr2[1] } = channelMutedIcon2);
     obj5.style = items3;
@@ -127,19 +127,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = closure_11(selected.selected);
   if (blocked) {
-    const obj2 = { source: _modDef8552, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8598, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj2.style = items;
     let tmp2 = timestampProducer(native.Icon, obj2);
   } else if (ignored) {
-    const obj3 = { source: _modDef6875, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef6928, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj3.style = items1;
     tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj4 = { source: _modDef10709, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10772, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj4.style = items2;
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else {
     tmp2 = null;
     if (favorite) {
-      const obj = { source: _modDef10579, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      const obj = { source: _modDef10642, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -167,10 +167,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ channelSelected, favorite, muted, ignored, blocked, hasActivity, hasUnreadMessages, hasNameplate } = channel);
   const tmp5 = useThemeDefault();
   if (cResult[0] !== tmp5) {
-    const isThemeLightResult = tmp(4884).isThemeLight(tmp5);
+    const isThemeLightResult = tmp(4920).isThemeLight(tmp5);
     cResult[0] = tmp5;
     cResult[1] = isThemeLightResult;
-    const tmpResult = tmp(4884);
+    const tmpResult = tmp(4920);
   }
   let tmp8 = hasUnreadMessages;
   if (hasUnreadMessages) {
@@ -264,7 +264,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
   ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
   let tmp5 = hasUnreadMessages;
-  const obj = channel(4884);
+  const obj = channel(4920);
   if (hasUnreadMessages) {
     tmp5 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
   }
@@ -280,21 +280,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const tmp8 = closure_9();
   const tmp9 = closure_10(channelSelected, tmp5, tmp7);
-  const isThemeLightResult = channel(4884).isThemeLight(useThemeDefault());
+  const isThemeLightResult = channel(4920).isThemeLight(useThemeDefault());
   const items = [ReadStateStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
   const tmp11 = useMessagePreviewsDefault(channel, { unread: hasUnreadMessages });
   let tmp12 = null != tmp11;
   if (tmp12) {
-    const obj3 = _modDef4761();
-    tmp12 = _modDef4761().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
-    const tmp13 = _modDef4761().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+    const obj3 = _modDef4797();
+    tmp12 = _modDef4797().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+    const tmp13 = _modDef4797().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
   }
   if (tmp12) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(17102);
+  const tmpResult3 = channel(17162);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -310,7 +310,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const waveShouldShow = tmp17.waveShouldShow;
   let obj4 = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
   const obj2 = { timestamp: SnowflakeUtilsDefault.extractTimestamp(id) };
-  obj4.variant = channel(4877).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  obj4.variant = channel(4913).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [, ];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
   obj4.style = items1;
@@ -321,7 +321,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (null != channel.recipients) {
       if (channel.recipients.length > 0) {
         const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-        const EffectDisplayType = tmp(10503).EffectDisplayType;
+        const EffectDisplayType = tmp(10566).EffectDisplayType;
         obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj4 = Object.assign(obj4);
         closure_6(UsernameWithEffectsDefault, obj8);
@@ -332,7 +332,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj9 = {};
   const merged = Object.assign(obj4);
   obj9.children = tmp16;
-  const items2 = [closure_6(channel(5150).Text, obj9), , ];
+  const items2 = [closure_6(channel(5187).Text, obj9), , ];
   let tmp20Result = null;
   if (tmp15) {
     const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
@@ -379,7 +379,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
       obj17.style = items7;
       obj17.children = relativeTimestamp;
-      tmp20Result6 = closure_6(tmp(5150).Text, obj17);
+      tmp20Result6 = closure_6(tmp(5187).Text, obj17);
     }
     items6[1] = tmp20Result6;
     obj14.children = items6;
@@ -405,9 +405,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         str7 = str6;
       }
       obj19.color = str7;
-      obj19.layout = tmp(9551).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj19.layout = tmp(9615).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(13463).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(13529).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;
@@ -423,7 +423,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj21 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
         const intl = tmp(1128).intl;
         obj21.children = intl.string(tmp(1128).t.FL5T01);
-        tmp20Result7 = closure_6(tmp(5150).Text, obj21);
+        tmp20Result7 = closure_6(tmp(5187).Text, obj21);
       }
     }
     obj18.children = tmp20Result7;
@@ -457,5 +457,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const obj24 = { backgroundColor: combined };
   }
-  const tmpResult4 = channel(4877);
+  const tmpResult4 = channel(4913);
 }));

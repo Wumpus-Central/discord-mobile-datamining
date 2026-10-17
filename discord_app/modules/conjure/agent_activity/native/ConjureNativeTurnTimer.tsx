@@ -1,15 +1,15 @@
-// === Module 12240: ConjureNativeTurnTimer ===
+// === Module 12305: ConjureNativeTurnTimer ===
 
-// Module 12240 (ConjureNativeTurnTimer)
+// Module 12305 (ConjureNativeTurnTimer)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import ConjureDuration from "ConjureDuration" /* 12176 */;
-import useConjureElapsedMs from "useConjureElapsedMs" /* 12241 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import ConjureDuration from "ConjureDuration" /* 12239 */;
+import useConjureElapsedMs from "useConjureElapsedMs" /* 12306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_3 = createStyles.createStyles({ timer: { fontVariant: ["tabular-nums"] } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

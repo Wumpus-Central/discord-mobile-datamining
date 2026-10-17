@@ -1,20 +1,20 @@
-// === Module 15877: FamilyCenterActivityPurchaseRow ===
+// === Module 15943: FamilyCenterActivityPurchaseRow ===
 
-// Module 15877 (FamilyCenterActivityPurchaseRow)
+// Module 15943 (FamilyCenterActivityPurchaseRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import PriceUtils from "PriceUtils" /* 7163 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8525 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15878 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 15879 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import PriceUtils from "PriceUtils" /* 7216 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8571 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15944 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 15945 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

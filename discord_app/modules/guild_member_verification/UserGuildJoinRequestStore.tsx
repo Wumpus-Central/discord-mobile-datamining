@@ -1,10 +1,10 @@
-// === Module 4999: UserGuildJoinRequestStore ===
+// === Module 5035: UserGuildJoinRequestStore ===
 
-// Module 4999 (UserGuildJoinRequestStore)
+// Module 5035 (UserGuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5000 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5036 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

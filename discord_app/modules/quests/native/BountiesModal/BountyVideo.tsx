@@ -1,22 +1,22 @@
-// === Module 16006: BountyVideo ===
+// === Module 16072: BountyVideo ===
 
-// Module 16006 (BountyVideo)
+// Module 16072 (BountyVideo)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 5155 */;
-import timingPresets from "timingPresets" /* 5158 */;
-import LinearGradientDefault from "LinearGradient" /* 5454 */;
-import AssetUtils from "AssetUtils" /* 9423 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 16007 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16008 */;
+import timing from "timing" /* 5192 */;
+import timingPresets from "timingPresets" /* 5195 */;
+import LinearGradientDefault from "LinearGradient" /* 5491 */;
+import AssetUtils from "AssetUtils" /* 9487 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 16073 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import n_mod from "module_683" /* 683 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(15982);
+const BountiesModalConstants = fn(16048);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -33,7 +33,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0).hex();
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null, scrimGradient: null };
   const obj2 = {};

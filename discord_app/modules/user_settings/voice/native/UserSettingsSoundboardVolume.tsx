@@ -1,10 +1,10 @@
-// === Module 11395: UserSettingsSoundboardVolume ===
+// === Module 11454: UserSettingsSoundboardVolume ===
 
-// Module 11395 (UserSettingsSoundboardVolume)
+// Module 11454 (UserSettingsSoundboardVolume)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7077 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7273 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11392 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7130 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7324 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11451 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,10 +22,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   const cResult = analyticsLocations(576).c(17);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const amplitudinalSoundboardVolume = tmp(7281).getAmplitudinalSoundboardVolume();
+    const amplitudinalSoundboardVolume = tmp(7332).getAmplitudinalSoundboardVolume();
     cResult[0] = amplitudinalSoundboardVolume;
     let first = amplitudinalSoundboardVolume;
-    const tmpResult = tmp(7281);
+    const tmpResult = tmp(7332);
   } else {
     first = cResult[0];
   }
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
     }
     if (cResult[12] !== tmp4.text) {
       const obj4 = { style: tmp4.text, variant: "text-sm/medium", children: tmp20 };
-      const tmp25 = closure_5(tmp(5150).Text, obj4);
+      const tmp25 = closure_5(tmp(5187).Text, obj4);
       cResult[12] = tmp4.text;
       cResult[13] = tmp25;
       let tmp23 = tmp25;
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
     const items = [tmp18, tmp23];
     obj7.children = items;
     obj6.subLabel = closure_7(closure_6, obj7);
-    obj5.children = closure_5(tmp(6404).TableRow, obj6);
-    const tmp30 = closure_5(tmp(11383).UserSettingsTableRowGroup, obj5);
+    obj5.children = closure_5(tmp(6457).TableRow, obj6);
+    const tmp30 = closure_5(tmp(11442).UserSettingsTableRowGroup, obj5);
     cResult[14] = tmp23;
     cResult[15] = tmp18;
     cResult[16] = tmp30;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   const obj = analyticsLocations(576);
 }) : (function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(7281).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(7332).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1128).intl;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
     },
     accessibilityLabel: null
   };
-  const obj = analyticsLocations(7281);
+  const obj = analyticsLocations(7332);
   const intl3 = analyticsLocations(1128).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1128).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -152,9 +152,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   const obj8 = { helpCenterArticle: null };
   obj8.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj7.children = intl4.format(analyticsLocations(1128).t.BPbGq7, obj8);
-  items[1] = closure_5(analyticsLocations(5150).Text, obj7);
+  items[1] = closure_5(analyticsLocations(5187).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
-  obj2.children = closure_5(analyticsLocations(6404).TableRow, obj3);
-  return closure_5(analyticsLocations(11383).UserSettingsTableRowGroup, obj2);
+  obj2.children = closure_5(analyticsLocations(6457).TableRow, obj3);
+  return closure_5(analyticsLocations(11442).UserSettingsTableRowGroup, obj2);
 });

@@ -1,15 +1,15 @@
-// === Module 11852: CommandRowButton ===
+// === Module 11915: CommandRowButton ===
 
-// Module 11852 (CommandRowButton)
+// Module 11915 (CommandRowButton)
 import c from "c" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const util = TableRowArrow(1128);
-const SendMessageIcon = TableRowArrow(5102);
-const components_Button_Button = TableRowArrow(5442);
-const TableRowArrow2 = TableRowArrow(6413);
+const SendMessageIcon = TableRowArrow(5139);
+const components_Button_Button = TableRowArrow(5479);
+const TableRowArrow2 = TableRowArrow(6466);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -106,11 +106,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             }
             c3 = 1;
             const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            const obj2 = tmp3(9484);
-            obj6.optionValues = tmp3(11854).parseOptionValuesForSend(commandContext.channel, command, {});
+            const obj2 = tmp3(9548);
+            obj6.optionValues = tmp3(11917).parseOptionValuesForSend(commandContext.channel, command, {});
             obj6.context = commandContext;
             obj6.sectionName = sectionName;
-            obj6.commandOrigin = tmp3(7467).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj6.commandOrigin = tmp3(7513).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };

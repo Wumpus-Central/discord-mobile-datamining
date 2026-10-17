@@ -1,23 +1,23 @@
-// === Module 15445: links ===
+// === Module 15510: links ===
 
-// Module 15445 (links)
+// Module 15510 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4798 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5149 */;
-import openUserSettings from "openUserSettings" /* 7319 */;
-import RPCErrorDefault from "RPCError" /* 11247 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11250 */;
-import RPCHelpers from "RPCHelpers" /* 11256 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15415 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15446 */;
-import internalDeepLinks from "internalDeepLinks" /* 15447 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15448 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15450 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5186 */;
+import openUserSettings from "openUserSettings" /* 7370 */;
+import RPCErrorDefault from "RPCError" /* 9169 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11312 */;
+import RPCHelpers from "RPCHelpers" /* 11317 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15484 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15511 */;
+import internalDeepLinks from "internalDeepLinks" /* 15512 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15513 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15515 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import ApplicationStore from "ApplicationStore" /* 5503 */;
+import ApplicationStore from "ApplicationStore" /* 5540 */;
 
 require = fn;
 let closure_11 = async function _openExternalLink(arg0) {
@@ -154,7 +154,7 @@ let closure_11 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4859)(url);
+                  closure_1(4895)(url);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
@@ -192,7 +192,7 @@ let closure_11 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(5858);
+let Constants = fn(5895);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
@@ -202,7 +202,7 @@ const items = [, ];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15432);
+let CONTEXT_MENU_ICON_NAMES = fn(15499);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -334,7 +334,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15432);
+CONTEXT_MENU_ICON_NAMES = fn(15499);
 let obj6 = {
   scope: null,
   handler(arg0) {

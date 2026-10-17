@@ -1,9 +1,9 @@
-// === Module 8525: useCollectiblesData ===
+// === Module 8571: useCollectiblesData ===
 
-// Module 8525 (useCollectiblesData)
+// Module 8571 (useCollectiblesData)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7484 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7500 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7530 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7546 */;
 
 const require = globalThis.__r;
 

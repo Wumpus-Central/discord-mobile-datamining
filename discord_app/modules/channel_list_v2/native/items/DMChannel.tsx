@@ -1,24 +1,24 @@
-// === Module 17304: DMChannel ===
+// === Module 17363: DMChannel ===
 
-// Module 17304 (DMChannel)
+// Module 17363 (DMChannel)
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5165 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8877 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10532 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 17098 */;
-import ChannelItemDefault from "ChannelItem" /* 17194 */;
+import transitionToChannel from "transitionToChannel" /* 5202 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8923 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10595 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 17158 */;
+import ChannelItemDefault from "ChannelItem" /* 17254 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6254 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6185 */;
+import ReadStateStore from "ReadStateStore" /* 6291 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6222 */;
 
 require = fn;
-const UnreadSetting = fn(6186).UnreadSetting;
+const UnreadSetting = fn(6223).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
-let obj = { container: { marginVertical: fn(11818).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5191);
+let obj = { container: { marginVertical: fn(11881).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11818).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11881).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 

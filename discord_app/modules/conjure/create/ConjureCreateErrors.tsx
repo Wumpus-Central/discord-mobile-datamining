@@ -1,9 +1,9 @@
-// === Module 10922: ConjureCreateErrors ===
+// === Module 10986: ConjureCreateErrors ===
 
-// Module 10922 (ConjureCreateErrors)
+// Module 10986 (ConjureCreateErrors)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
+import _modDef3883 from "module_3883" /* 3883 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
@@ -19,10 +19,10 @@ class prototype extends Error {
 const result = size.fileFinishedImporting("modules/conjure/create/ConjureCreateErrors.tsx");
 
 export const ConjureCreateError = prototype;
-export const classifyCreateFailure = function classifyCreateFailure(obj) {
-  if (typeof obj === "object") {
-    if (null !== obj) {
-      ({ status, body } = obj);
+export const classifyCreateFailure = function classifyCreateFailure(error) {
+  if (typeof error === "object") {
+    if (null !== error) {
+      ({ status, body } = error);
       if (typeof status !== "number") {
         return "unknown";
       } else if (429 === status) {
@@ -62,12 +62,12 @@ export const getConjureCreateErrorMessage = function getConjureCreateErrorMessag
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3865["lh+h/p"]);
+    return intl3.string(_modDef3883["lh+h/p"]);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3865.zBENJU);
+    return intl2.string(_modDef3883.zBENJU);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3865["9m86fn"]);
+    return intl.string(_modDef3883["9m86fn"]);
   }
 };

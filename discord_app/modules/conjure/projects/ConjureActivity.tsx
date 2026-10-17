@@ -1,6 +1,6 @@
-// === Module 11519: ConjureActivity ===
+// === Module 11578: ConjureActivity ===
 
-// Module 11519 (ConjureActivity)
+// Module 11578 (ConjureActivity)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { building: 0, done: 1, idle: 2 };

@@ -1,6 +1,6 @@
-// === Module 5974: IOSPushNotificationRawPayloadFixExperiment ===
+// === Module 6011: IOSPushNotificationRawPayloadFixExperiment ===
 
-// Module 5974 (IOSPushNotificationRawPayloadFixExperiment)
+// Module 6011 (IOSPushNotificationRawPayloadFixExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

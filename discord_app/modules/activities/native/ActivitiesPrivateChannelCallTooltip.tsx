@@ -1,10 +1,10 @@
-// === Module 13437: ActivitiesPrivateChannelCallTooltip ===
+// === Module 13503: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 13437 (ActivitiesPrivateChannelCallTooltip)
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5155 */;
+// Module 13503 (ActivitiesPrivateChannelCallTooltip)
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import timing from "timing" /* 5192 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -14,7 +14,7 @@ const helpdeskUrl = fn(2026).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 let c7 = 40;
 const TIMING_CONFIG = { duration: 500 };
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { arrow: null, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } };
 let obj3 = { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: null };
 let items = [{ rotateZ: "225deg" }];
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
       return obj;
     }
   }
-  const tmpResult2 = num3(4909);
-  F.__closure = { withRepeat: num3(4909).withRepeat, withSequence: num3(4909).withSequence, withTiming: num3(5155).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
+  const tmpResult2 = num3(4945);
+  F.__closure = { withRepeat: num3(4945).withRepeat, withSequence: num3(4945).withSequence, withTiming: num3(5192).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
   F.__workletHash = 4621705591670;
   F.__initData = __initData;
   const animatedStyle = tmpResult2.useAnimatedStyle(F);
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
     }
     if (cResult[8] !== onClosePress) {
       let obj4 = { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true };
-      const tmp19 = jsx(tmp(5442).Button, { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true });
+      const tmp19 = jsx(tmp(5479).Button, { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true });
       cResult[8] = onClosePress;
       cResult[9] = tmp19;
       let tmp17 = tmp19;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
   cResult[3] = tmp4.tooltipContainer;
   cResult[4] = items1;
   tmp9 = items1;
-  let obj2 = { withRepeat: num3(4909).withRepeat, withSequence: num3(4909).withSequence, withTiming: num3(5155).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
+  let obj2 = { withRepeat: num3(4945).withRepeat, withSequence: num3(4945).withSequence, withTiming: num3(5192).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
 }) : (function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const tmp = closure_9();
   let items = [AccessibilityStore];
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
     obj.transform = items;
     return obj;
   };
-  const tmp2Result = num(4909);
-  fn.__closure = { withRepeat: num(4909).withRepeat, withSequence: num(4909).withSequence, withTiming: num(5155).withTiming, OFFSET, translateBounceOffset: num, TIMING_CONFIG };
+  const tmp2Result = num(4945);
+  fn.__closure = { withRepeat: num(4945).withRepeat, withSequence: num(4945).withSequence, withTiming: num(5192).withTiming, OFFSET, translateBounceOffset: num, TIMING_CONFIG };
   fn.__workletHash = 10615395921877;
   fn.__initData = __initData2;
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
   const intl3 = tmp2(1128).intl;
   obj7.text = intl3.string(num(1128).t["NX+WJN"]);
   obj7.onPress = onClosePress.onClosePress;
-  obj6.children = jsx(num(5442).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj6.children = jsx(num(5479).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj4.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj3.children = jsx(num(1202).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null });
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });

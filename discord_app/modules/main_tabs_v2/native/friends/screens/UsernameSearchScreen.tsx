@@ -1,6 +1,6 @@
-// === Module 17855: UsernameSearchScreen ===
+// === Module 17915: UsernameSearchScreen ===
 
-// Module 17855 (UsernameSearchScreen)
+// Module 17915 (UsernameSearchScreen)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.content = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
     [tmp5, tmp6] = cResult;
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  const insets = ref(6889)().insets;
+  const insets = ref(6942)().insets;
   const tmp4 = closure_10();
   if (cResult[2] !== navigation) {
     class T {
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5425).getIsScreenReaderEnabled();
-            const obj = navigation(5425);
+            closing = navigation(5462).getIsScreenReaderEnabled();
+            const obj = navigation(5462);
           }
           if (!closing) {
             const current = ref.current;
@@ -76,8 +76,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5425).getIsScreenReaderEnabled();
-            const obj = navigation(5425);
+            closing = navigation(5462).getIsScreenReaderEnabled();
+            const obj = navigation(5462);
           }
           if (!closing) {
             const current = ref.current;
@@ -92,15 +92,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   }
   const effect1 = noop.useEffect(T, tmp10);
   ref = noop.useRef(null);
-  const clientThemesOverride = navigation(9544).useClientThemesOverride();
+  const clientThemesOverride = navigation(9608).useClientThemesOverride();
   if (cResult[5] === insets.top) {
     class T {
       constructor() {
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5425).getIsScreenReaderEnabled();
-            const obj = navigation(5425);
+            closing = navigation(5462).getIsScreenReaderEnabled();
+            const obj = navigation(5462);
           }
           if (!closing) {
             const current = ref.current;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
       }
     }
   }
-  const tmpResult = navigation(9544);
+  const tmpResult = navigation(9608);
   let tmp13 = null;
   if (tmpResult2.isIOS()) {
     class T {
@@ -120,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
         return navigation.addListener("transitionEnd", (data) => {
           let closing = data.data.closing;
           if (!closing) {
-            closing = navigation(5425).getIsScreenReaderEnabled();
-            const obj = navigation(5425);
+            closing = navigation(5462).getIsScreenReaderEnabled();
+            const obj = navigation(5462);
           }
           if (!closing) {
             const current = ref.current;
@@ -138,8 +138,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
           return navigation.addListener("transitionEnd", (data) => {
             let closing = data.data.closing;
             if (!closing) {
-              closing = navigation(5425).getIsScreenReaderEnabled();
-              const obj = navigation(5425);
+              closing = navigation(5462).getIsScreenReaderEnabled();
+              const obj = navigation(5462);
             }
             if (!closing) {
               const current = ref.current;
@@ -157,8 +157,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
             return navigation.addListener("transitionEnd", (data) => {
               let closing = data.data.closing;
               if (!closing) {
-                closing = navigation(5425).getIsScreenReaderEnabled();
-                const obj = navigation(5425);
+                closing = navigation(5462).getIsScreenReaderEnabled();
+                const obj = navigation(5462);
               }
               if (!closing) {
                 const current = ref.current;
@@ -184,14 +184,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   const effect = noop.useEffect(() => {
     ref(1267).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
-  const insets = ref(6889)().insets;
+  const insets = ref(6942)().insets;
   ref = noop.useRef(null);
   const items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(5425).getIsScreenReaderEnabled();
-      const obj = navigation(5425);
+      closing = navigation(5462).getIsScreenReaderEnabled();
+      const obj = navigation(5462);
     }
     if (!closing) {
       const current = ref.current;
@@ -200,8 +200,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
       }
     }
   }), items);
-  const clientThemesOverride = navigation(9544).useClientThemesOverride();
-  let obj = navigation(9544);
+  const clientThemesOverride = navigation(9608).useClientThemesOverride();
+  let obj = navigation(9608);
   let prop = null;
   if (obj2.isIOS()) {
     prop = null;
@@ -217,10 +217,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
   obj2 = navigation(1384);
-  const items2 = [closure_8(ref(10466), { absolute: true }), ];
+  const items2 = [closure_8(ref(10529), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
-  const tmp3Result = ref(6953);
+  const tmp3Result = ref(7006);
   items3[2] = { paddingBottom: insets.bottom + ref(587).space.PX_16 };
   obj5.contentContainerStyle = items3;
   const obj7 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Username
   obj7.headerText = intl.string(navigation(1128).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(14791), obj7);
+  obj5.children = closure_8(ref(14860), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

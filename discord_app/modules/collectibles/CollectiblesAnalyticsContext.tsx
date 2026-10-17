@@ -1,6 +1,6 @@
-// === Module 9202: CollectiblesAnalyticsContext ===
+// === Module 9262: CollectiblesAnalyticsContext ===
 
-// Module 9202 (CollectiblesAnalyticsContext)
+// Module 9262 (CollectiblesAnalyticsContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

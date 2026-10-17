@@ -1,13 +1,13 @@
-// === Module 15533: SettingHookHarness ===
+// === Module 15596: SettingHookHarness ===
 
-// Module 15533 (SettingHookHarness)
+// Module 15596 (SettingHookHarness)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 15534 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 15597 */;
 
 const require = fn;
-const NodeType = fn(11004).NodeType;
+const NodeType = fn(11066).NodeType;
 let closure_7 = [];
 const map = new Map();
 const map1 = new Map();

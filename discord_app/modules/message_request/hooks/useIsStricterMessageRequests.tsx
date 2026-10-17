@@ -1,7 +1,7 @@
-// === Module 13047: useIsStricterMessageRequests ===
+// === Module 13112: useIsStricterMessageRequests ===
 
-// Module 13047 (useIsStricterMessageRequests)
-import RegionalTeenUtils from "RegionalTeenUtils" /* 13012 */;
+// Module 13112 (useIsStricterMessageRequests)
+import RegionalTeenUtils from "RegionalTeenUtils" /* 13077 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

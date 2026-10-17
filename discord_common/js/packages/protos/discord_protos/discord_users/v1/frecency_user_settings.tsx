@@ -129,12 +129,12 @@ class FrecencyUserSettings$Type extends MessageType {
   }
 }
 const prototype = FrecencyUserSettings$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -257,12 +257,12 @@ class FavoriteGIFs$Type extends MessageType2 {
   }
 }
 const prototype2 = FavoriteGIFs$Type.prototype;
-prototype2["create"] = function create(arr) {
+prototype2["create"] = function create(partialSettings) {
   const obj = { gifs: {}, hideTooltip: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -412,12 +412,12 @@ class FavoriteGIF$Type extends MessageType3 {
   }
 }
 const prototype3 = FavoriteGIF$Type.prototype;
-prototype3["create"] = function create(arr) {
+prototype3["create"] = function create(partialSettings) {
   const size = { format: 0, src: "", width: 0, height: 0, order: 0 };
   const _Object = Object;
   _Object.defineProperty(size, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, size, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, size, partialSettings);
     const tmpResult = _mod1212;
   }
   return size;
@@ -527,12 +527,12 @@ class FavoriteStickers$Type extends MessageType4 {
   }
 }
 const prototype4 = FavoriteStickers$Type.prototype;
-prototype4["create"] = function create(arr) {
+prototype4["create"] = function create(partialSettings) {
   const obj = { stickerIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -640,12 +640,12 @@ class StickerFrecency$Type extends MessageType5 {
   }
 }
 const prototype5 = StickerFrecency$Type.prototype;
-prototype5["create"] = function create(arr) {
+prototype5["create"] = function create(partialSettings) {
   const obj = { stickers: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -776,12 +776,12 @@ class FavoriteEmojis$Type extends MessageType6 {
   }
 }
 const prototype6 = FavoriteEmojis$Type.prototype;
-prototype6["create"] = function create(arr) {
+prototype6["create"] = function create(partialSettings) {
   const obj = { emojis: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -860,12 +860,12 @@ class PinnedEmojiPacks$Type extends MessageType7 {
   }
 }
 const prototype7 = PinnedEmojiPacks$Type.prototype;
-prototype7["create"] = function create(arr) {
+prototype7["create"] = function create(partialSettings) {
   const obj = { packIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -973,12 +973,12 @@ class EmojiFrecency$Type extends MessageType8 {
   }
 }
 const prototype8 = EmojiFrecency$Type.prototype;
-prototype8["create"] = function create(arr) {
+prototype8["create"] = function create(partialSettings) {
   const obj = { emojis: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1120,12 +1120,12 @@ class ApplicationCommandFrecency$Type extends MessageType9 {
   }
 }
 const prototype9 = ApplicationCommandFrecency$Type.prototype;
-prototype9["create"] = function create(arr) {
+prototype9["create"] = function create(partialSettings) {
   const obj = { applicationCommands: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1258,12 +1258,12 @@ class FrecencyItem$Type extends MessageType10 {
   }
 }
 const prototype10 = FrecencyItem$Type.prototype;
-prototype10["create"] = function create(arr) {
+prototype10["create"] = function create(partialSettings) {
   const obj = { totalUses: 0, recentUses: [], frecency: 0, score: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1378,12 +1378,12 @@ class FavoriteSoundboardSounds$Type extends MessageType11 {
   }
 }
 const prototype11 = FavoriteSoundboardSounds$Type.prototype;
-prototype11["create"] = function create(arr) {
+prototype11["create"] = function create(partialSettings) {
   const obj = { soundIds: [], orderedSoundIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1521,12 +1521,12 @@ class HeardSoundFrecency$Type extends MessageType12 {
   }
 }
 const prototype12 = HeardSoundFrecency$Type.prototype;
-prototype12["create"] = function create(arr) {
+prototype12["create"] = function create(partialSettings) {
   const obj = { heardSounds: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1668,12 +1668,12 @@ class PlayedSoundFrecency$Type extends MessageType13 {
   }
 }
 const prototype13 = PlayedSoundFrecency$Type.prototype;
-prototype13["create"] = function create(arr) {
+prototype13["create"] = function create(partialSettings) {
   const obj = { playedSounds: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1815,12 +1815,12 @@ class ApplicationFrecency$Type extends MessageType14 {
   }
 }
 const prototype14 = ApplicationFrecency$Type.prototype;
-prototype14["create"] = function create(arr) {
+prototype14["create"] = function create(partialSettings) {
   const obj = { applications: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -1962,12 +1962,12 @@ class GuildAndChannelFrecency$Type extends MessageType15 {
   }
 }
 const prototype15 = GuildAndChannelFrecency$Type.prototype;
-prototype15["create"] = function create(arr) {
+prototype15["create"] = function create(partialSettings) {
   const obj = { guildAndChannels: {} };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

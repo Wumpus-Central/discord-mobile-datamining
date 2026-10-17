@@ -1,13 +1,13 @@
-// === Module 18402: VoiceCallTriggerPoint ===
+// === Module 18463: VoiceCallTriggerPoint ===
 
-// Module 18402 (VoiceCallTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5076 */;
-import Helpers from "Helpers" /* 10405 */;
-import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 14199 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17917 */;
-import VoiceChannelHoistingExperiment from "VoiceChannelHoistingExperiment" /* 18403 */;
-import PastVcActivityMessagesExperimentDefault from "PastVcActivityMessagesExperiment" /* 18404 */;
-import VoiceCallTriggerPointExperimentDefault from "VoiceCallTriggerPointExperiment" /* 18405 */;
+// Module 18463 (VoiceCallTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 5113 */;
+import Helpers from "Helpers" /* 10468 */;
+import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 14267 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17977 */;
+import VoiceChannelHoistingExperiment from "VoiceChannelHoistingExperiment" /* 18464 */;
+import PastVcActivityMessagesExperimentDefault from "PastVcActivityMessagesExperiment" /* 18465 */;
+import VoiceCallTriggerPointExperimentDefault from "VoiceCallTriggerPointExperiment" /* 18466 */;
 import size from "module_2" /* 2 */;
 
 const items = [VoiceChannelHoistingExperiment.VoiceChannelHoistingExperiment, HangoutWindowExperiment.HangoutWindowExperiment, PastVcActivityMessagesExperimentDefault, VoiceCallTriggerPointExperimentDefault, VoiceChannelBadgeExperiment.VoiceChannelBadgeExperiment];

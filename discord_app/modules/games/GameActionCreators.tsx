@@ -1,6 +1,6 @@
-// === Module 7234: GameActionCreators ===
+// === Module 7286: GameActionCreators ===
 
-// Module 7234 (GameActionCreators)
+// Module 7286 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2022 */;

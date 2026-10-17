@@ -1,12 +1,12 @@
-// === Module 14180: useAvatarDecorationSections ===
+// === Module 14248: useAvatarDecorationSections ===
 
-// Module 14180 (useAvatarDecorationSections)
+// Module 14248 (useAvatarDecorationSections)
 import util from "util" /* 1128 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7496 */;
-import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14181 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
+import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14249 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7484 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7500 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7530 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7546 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  let avatarDecorations = stateFromStores(7496).getAvatarDecorations(stateFromStores, tmp12);
+  let avatarDecorations = stateFromStores(7542).getAvatarDecorations(stateFromStores, tmp12);
   if (cResult[10] === tmp13) {
     if (cResult[11] === stateFromStores) {
       let tmp17 = cResult[12];
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
   cResult[11] = stateFromStores;
   cResult[12] = M;
   tmp17 = M;
-  const tmpResult4 = stateFromStores(7496);
+  const tmpResult4 = stateFromStores(7542);
 }) : (function useAvatarDecorationSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14181)(useMemo(() => {
+  return first(14249)(useMemo(() => {
     let obj = CollectiblesUtils;
     const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);
     const reduced = avatarDecorations.reduce((premium_purchase, skuId) => {

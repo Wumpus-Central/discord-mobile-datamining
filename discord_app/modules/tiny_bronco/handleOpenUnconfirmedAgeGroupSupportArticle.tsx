@@ -1,11 +1,11 @@
-// === Module 15701: handleOpenUnconfirmedAgeGroupSupportArticle ===
+// === Module 15767: handleOpenUnconfirmedAgeGroupSupportArticle ===
 
-// Module 15701 (handleOpenUnconfirmedAgeGroupSupportArticle)
+// Module 15767 (handleOpenUnconfirmedAgeGroupSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7718 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10968 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7764 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 11028 */;
 
-const TinyBroncoConstants = fn(6146);
+const TinyBroncoConstants = fn(6183);
 ({ TINY_BRONCO_AGE_GROUP_SUPPORT_ARTICLE_IDS_BY_COUNTRY: c3, TINY_BRONCO_DEFAULT_ARTICLE_ID: closure_4 } = TinyBroncoConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/handleOpenUnconfirmedAgeGroupSupportArticle.tsx");

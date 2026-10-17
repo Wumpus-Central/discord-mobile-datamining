@@ -1,15 +1,15 @@
-// === Module 14166: OrbCheckoutModal ===
+// === Module 14234: OrbCheckoutModal ===
 
-// Module 14166 (OrbCheckoutModal)
+// Module 14234 (OrbCheckoutModal)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import Stack_Stack from "Stack/Stack" /* 5440 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9417 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10404 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10752 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14167 */;
-import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 14168 */;
+import Stack_Stack from "Stack/Stack" /* 5477 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9481 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10467 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10815 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14235 */;
+import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 14236 */;
 import "module_19";
 
 const require = globalThis.__r;
@@ -141,11 +141,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOrb
   let obj2 = require("OrbCheckoutModalContext");
   const virtualCurrencyBalance = require("useVirtualCurrencyBalance").useVirtualCurrencyBalance();
   if (cResult[0] !== skuId) {
-    let result = tmp(9417).get1PShopApplicationIdForSKU(skuId);
+    let result = tmp(9481).get1PShopApplicationIdForSKU(skuId);
     cResult[0] = skuId;
     cResult[1] = result;
     let tmp6 = result;
-    const tmpResult = tmp(9417);
+    const tmpResult = tmp(9481);
   } else {
     tmp6 = cResult[1];
   }

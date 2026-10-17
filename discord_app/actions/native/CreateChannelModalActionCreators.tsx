@@ -1,9 +1,9 @@
-// === Module 8834: CreateChannelModalActionCreators ===
+// === Module 8880: CreateChannelModalActionCreators ===
 
-// Module 8834 (CreateChannelModalActionCreators)
+// Module 8880 (CreateChannelModalActionCreators)
 import ChannelRecord from "ChannelRecord" /* 2072 */;
-import transitionToChannel from "transitionToChannel" /* 5165 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
+import transitionToChannel from "transitionToChannel" /* 5202 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import size from "module_2" /* 2 */;
 
@@ -35,8 +35,8 @@ export default {
             }
           }
       };
-      obj2.pushLazy(self(2002)(8808, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp9 = self(2002)(8808, dependencyMap.paths);
+      obj2.pushLazy(self(2002)(8854, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      const tmp9 = self(2002)(8854, dependencyMap.paths);
     }
   },
   close() {

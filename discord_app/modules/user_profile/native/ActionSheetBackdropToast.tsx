@@ -1,24 +1,24 @@
-// === Module 14139: ActionSheetBackdropToast ===
+// === Module 14207: ActionSheetBackdropToast ===
 
-// Module 14139 (ActionSheetBackdropToast)
+// Module 14207 (ActionSheetBackdropToast)
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5155 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import timing from "timing" /* 5192 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp5(4909);
+const ReanimatedRexportDefault = tmp5(4945);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ACTION_SHEET_START_HEIGHT_RATIO = fn(7066).ACTION_SHEET_START_HEIGHT_RATIO;
+const ACTION_SHEET_START_HEIGHT_RATIO = fn(7119).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsx = fn(21).jsx;
 let c7 = 24;
 let c8 = 200;
 const PlatformUtils = fn(1384);
 const isInIOS = PlatformUtils.isIOS();
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj3 = { container: null, toast: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -42,19 +42,19 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
   const height = useWindowDimensionsDefault().height;
   let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
   importDefault = result;
-  const diff = height - isExpanded(6483).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(6536).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
   let obj = isExpanded(576);
-  const sharedValue = isExpanded(4909).useSharedValue(0);
-  let obj2 = isExpanded(4909);
-  const sharedValue1 = isExpanded(4909).useSharedValue(0);
+  const sharedValue = isExpanded(4945).useSharedValue(0);
+  let obj2 = isExpanded(4945);
+  const sharedValue1 = isExpanded(4945).useSharedValue(0);
   if (cResult[0] === sharedValue1) {
     if (cResult[1] === sharedValue) {
       let tmp11 = cResult[2];
       let tmp12 = cResult[3];
     }
     const effect = sharedValue.useEffect(tmp11, tmp12);
-    class R {
+    class D {
       constructor() {
         tmp = isExpanded;
         if (closure_9) {
@@ -92,18 +92,18 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
       }
     }
     let obj4 = { isInIOS, isExpanded, maxDynamicContentSize: diff, TOAST_BOTTOM_MARGIN, nonExpandedHeight: result, ACTION_SHEET_START_HEIGHT_RATIO, TOAST_BOTTOM_GAP: 46, positionDelta: sharedValue, TOAST_ANIMATION_Y_DELTA: 15, opacity: sharedValue1 };
-    R.__closure = obj4;
-    R.__workletHash = 9630436597435;
-    R.__initData = __initData;
-    const animatedStyle = isExpanded(4909).useAnimatedStyle(R);
+    D.__closure = obj4;
+    D.__workletHash = 9630436597435;
+    D.__initData = __initData;
+    const animatedStyle = isExpanded(4945).useAnimatedStyle(D);
     if (cResult[4] === tmp4.toast) {
       if (cResult[5] === animatedStyle) {
         let tmp19 = cResult[6];
       }
       if (cResult[7] !== text) {
         let obj5 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: text };
-        const tmp22 = jsx(isExpanded(5150).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: text });
-        class R {
+        const tmp22 = jsx(isExpanded(5187).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: text });
+        class D {
           constructor() {
             tmp = isExpanded;
             if (closure_9) {
@@ -156,7 +156,7 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
           }
           return tmp27;
         }
-        class R {
+        class D {
           constructor() {
             tmp = isExpanded;
             if (closure_9) {
@@ -201,7 +201,7 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
         cResult[14] = tmp31;
         tmp27 = tmp31;
       }
-      class R {
+      class D {
         constructor() {
           tmp = isExpanded;
           if (closure_9) {
@@ -239,7 +239,7 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
         }
       }
       tmp25[0] = tmp19;
-      tmp25[1] = tmp20;
+      tmp25[2] = tmp20;
       const tmp26 = jsx(ReanimatedRexportDefault.View, tmp25);
       cResult[9] = tmp19;
       cResult[10] = tmp20;
@@ -251,7 +251,7 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
     cResult[5] = animatedStyle;
     cResult[6] = items;
     tmp19 = items;
-    const tmpResult = isExpanded(4909);
+    const tmpResult = isExpanded(4945);
   }
   const fn = function o() {
     let obj = ReanimatedRexport;
@@ -280,18 +280,18 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
   cResult[3] = items1;
   tmp12 = items1;
   tmp11 = fn;
-  let obj3 = isExpanded(4909);
+  let obj3 = isExpanded(4945);
 }) : (function ActionSheetBackdropToast(children) {
   const isExpanded = children.isExpanded;
   const tmp = closure_10();
   const height = useWindowDimensionsDefault().height;
   let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
   importDefault = result;
-  const diff = height - isExpanded(6483).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(6536).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
-  const sharedValue = isExpanded(4909).useSharedValue(0);
-  let obj = isExpanded(4909);
-  const sharedValue1 = isExpanded(4909).useSharedValue(0);
+  const sharedValue = isExpanded(4945).useSharedValue(0);
+  let obj = isExpanded(4945);
+  const sharedValue1 = isExpanded(4945).useSharedValue(0);
   const items = [sharedValue, sharedValue1];
   const effect = sharedValue.useEffect(() => {
     let obj = ReanimatedRexport;
@@ -304,16 +304,16 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
     obj5.easing = Easing2.in(ReanimatedRexport.Easing.linear);
     let result1 = sharedValue1.set(timing.withTiming(1, obj5));
     return () => {
-      const obj = isExpanded(4909);
-      const result = sharedValue.set(obj.withDelay(duration, isExpanded(5155).withTiming(0)));
-      const obj2 = isExpanded(5155);
+      const obj = isExpanded(4945);
+      const result = sharedValue.set(obj.withDelay(duration, isExpanded(5192).withTiming(0)));
+      const obj2 = isExpanded(5192);
       const obj4 = { duration, easing: null };
-      const Easing = isExpanded(4909).Easing;
-      obj4.easing = Easing.out(isExpanded(4909).Easing.exp);
-      const result1 = sharedValue1.set(isExpanded(5155).withTiming(0, obj4));
+      const Easing = isExpanded(4945).Easing;
+      obj4.easing = Easing.out(isExpanded(4945).Easing.exp);
+      const result1 = sharedValue1.set(isExpanded(5192).withTiming(0, obj4));
     };
   }, items);
-  let obj2 = isExpanded(4909);
+  let obj2 = isExpanded(4945);
   class M {
     constructor() {
       tmp = isExpanded;
@@ -355,10 +355,10 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
   M.__workletHash = 16641609709624;
   M.__initData = __initData2;
   let obj5 = { style: tmp.container, pointerEvents: "none", children: null };
-  const animatedStyle = isExpanded(4909).useAnimatedStyle(M);
-  const obj6 = { style: null, children: jsx(isExpanded(5150).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) };
+  const animatedStyle = isExpanded(4945).useAnimatedStyle(M);
+  const obj6 = { style: null, accessibilityLiveRegion: "polite", children: jsx(isExpanded(5187).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) };
   const items1 = [tmp.toast, animatedStyle];
   obj6.style = items1;
-  obj5.children = jsx(ReanimatedRexportDefault.View, { style: null, children: jsx(isExpanded(5150).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) });
+  obj5.children = jsx(ReanimatedRexportDefault.View, { style: null, accessibilityLiveRegion: "polite", children: jsx(isExpanded(5187).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text }) });
   return <sharedValue1 style={tmp.container} pointerEvents="none">{null}</sharedValue1>;
 });

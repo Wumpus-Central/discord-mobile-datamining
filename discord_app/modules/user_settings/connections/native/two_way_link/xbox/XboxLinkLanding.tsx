@@ -1,13 +1,13 @@
-// === Module 9447: XboxLinkLanding ===
+// === Module 9511: XboxLinkLanding ===
 
-// Module 9447 (XboxLinkLanding)
+// Module 9511 (XboxLinkLanding)
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import GroupIcon from "GroupIcon" /* 8443 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8455 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9448 */;
-import GameControllerIcon from "GameControllerIcon" /* 9450 */;
-import _modDef9451 from "module_9451" /* 9451 */;
+import GroupIcon from "GroupIcon" /* 8489 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8501 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9512 */;
+import GameControllerIcon from "GameControllerIcon" /* 9514 */;
+import _modDef9515 from "module_9515" /* 9515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,11 +34,11 @@ function getXboxValueProps() {
   items[3] = obj4;
   return items;
 }
-const XboxLinkModalScenes = fn(9446).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9510).XboxLinkModalScenes;
 const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
         return;
       }
     }
-    tmp16[0] = _modDef9451;
+    tmp16[0] = _modDef9515;
     cResult[4] = tmp16;
   } else {
     class N {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
     return tmp22;
   }
-  tmp22 = jsx(navigation(9452).TwoWayLinkLanding, { platformType: constants2.XBOX, img: tmp16, imgStyle: tmp4.image, headerConnect: tmp18, headerReconnect: tmp19, body: first, onNext: N, valueProps: tmp11 });
+  tmp22 = jsx(navigation(9516).TwoWayLinkLanding, { platformType: constants2.XBOX, img: tmp16, imgStyle: tmp4.image, headerConnect: tmp18, headerReconnect: tmp19, body: first, onNext: N, valueProps: tmp11 });
   cResult[7] = N;
   cResult[8] = tmp4.image;
   cResult[9] = tmp22;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const callback = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9451 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9515 }), []);
   const obj3 = { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   const intl2 = navigation(1128).intl;
   obj3.headerConnect = intl2.string(navigation(1128).t.m8aahn);
@@ -158,5 +158,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   obj3.body = intl.format(navigation(1128).t.CIc3IN, { helpdeskArticleUrl: articleURL });
   obj3.onNext = callback;
   obj3.valueProps = memo;
-  return jsx(navigation(9452).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(9516).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 });

@@ -1,8 +1,8 @@
-// === Module 17892: SecondsSliderUtils ===
+// === Module 17952: SecondsSliderUtils ===
 
-// Module 17892 (SecondsSliderUtils)
+// Module 17952 (SecondsSliderUtils)
 import util from "util" /* 1128 */;
-import _modDef4761 from "module_4761" /* 4761 */;
+import _modDef4797 from "module_4797" /* 4797 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
@@ -17,7 +17,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     intl = util.intl;
     stringResult = intl.string(util.t.Yl1D84);
   }
-  const time = _modDef4761.duration(rateLimitPerUser, "seconds");
+  const time = _modDef4797.duration(rateLimitPerUser, "seconds");
   if (time.days() > 0) {
     const intl6 = util.intl;
     const t = { days: time.days() };

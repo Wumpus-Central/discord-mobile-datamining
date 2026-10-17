@@ -1,13 +1,13 @@
-// === Module 11236: EmbeddedActivityView ===
+// === Module 11301: EmbeddedActivityView ===
 
-// Module 11236 (EmbeddedActivityView)
+// Module 11301 (EmbeddedActivityView)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5168 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10965 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11237 */;
-import DiscordEnvironment from "DiscordEnvironment" /* 11238 */;
-import activityWebViewController from "activityWebViewController" /* 11240 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11025 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11302 */;
+import DiscordEnvironment from "DiscordEnvironment" /* 11303 */;
+import activityWebViewController from "activityWebViewController" /* 11305 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -76,7 +76,7 @@ const Constants = fn(2026);
 fn(1375).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const EmbeddedActivities = "EmbeddedActivities";
 let ReactCompilerGating = fn(558);
@@ -427,7 +427,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Embedd
   applicationId = applicationId.applicationId;
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   const merged1 = Object.assign(merged);
-  return closure_14(applicationId(11266).BaseEmbeddedAppWebView, { iframeId: _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0], deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_14(applicationId(11325).BaseEmbeddedAppWebView, { iframeId: _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0], deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 });
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityViewInner(channel) {

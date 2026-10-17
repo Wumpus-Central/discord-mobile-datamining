@@ -1,19 +1,19 @@
-// === Module 17367: GuildsBar ===
+// === Module 17426: GuildsBar ===
 
-// Module 17367 (GuildsBar)
-import NativeViewDefault from "NativeView" /* 6386 */;
-import FastListDefault from "FastList" /* 6985 */;
-import StartupProfilerDefault from "StartupProfiler" /* 12740 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17244 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 17368 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 17376 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 17440 */;
+// Module 17426 (GuildsBar)
+import NativeViewDefault from "NativeView" /* 6439 */;
+import FastListDefault from "FastList" /* 7038 */;
+import StartupProfilerDefault from "StartupProfiler" /* 12805 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17304 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 17427 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 17435 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 17499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_6 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePipResizeFix(current, arg1) {
@@ -201,9 +201,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                       return tmp26;
                     }
-                    const obj3 = { profile: fastListRef(12740).Profiles.Guilds, children: null };
+                    const obj3 = { profile: fastListRef(12805).Profiles.Guilds, children: null };
                     const obj4 = { gesture, children: tmp23 };
-                    obj3.children = closure_4(fastListRef(6559).GestureDetector, obj4);
+                    obj3.children = closure_4(fastListRef(6612).GestureDetector, obj4);
                     const tmp29 = closure_4(StartupProfilerDefault, obj3);
                     cResult[19] = gesture;
                     cResult[20] = tmp23;
@@ -273,7 +273,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   closure_7(listProps, fastListRef);
   const obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(12740).Profiles.Guilds;
+  obj.profile = fastListRef(12805).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp9 = StartupProfilerDefault;
@@ -300,6 +300,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items1 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
   obj3.children = items1;
   obj2.children = closure_5(tmp11, obj3);
-  obj.children = closure_4(fastListRef(6559).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(6612).GestureDetector, obj2);
   return closure_4(tmp9, obj);
 }));

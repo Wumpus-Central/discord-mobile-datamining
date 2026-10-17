@@ -1,6 +1,6 @@
-// === Module 7260: MobileWebHandoffUtils ===
+// === Module 7312: MobileWebHandoffUtils ===
 
-// Module 7260 (MobileWebHandoffUtils)
+// Module 7312 (MobileWebHandoffUtils)
 import v1 from "v1" /* 1281 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

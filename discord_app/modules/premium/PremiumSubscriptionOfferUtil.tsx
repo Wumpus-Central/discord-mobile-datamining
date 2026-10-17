@@ -1,19 +1,19 @@
-// === Module 8311: PremiumSubscriptionOfferUtil ===
+// === Module 8357: PremiumSubscriptionOfferUtil ===
 
-// Module 8311 (PremiumSubscriptionOfferUtil)
+// Module 8357 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import Server from "Server" /* 2000 */;
-import _modDef4761 from "module_4761" /* 4761 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7390 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8312 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8313 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8314 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8315 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8318 */;
+import _modDef4797 from "module_4797" /* 4797 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7436 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8358 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8359 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8360 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8361 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4834 */;
+import SubscriptionStore from "SubscriptionStore" /* 4870 */;
 
 require = fn;
 function getDiscountInfo(active_discount_id) {
@@ -94,8 +94,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let tmp10 = null != prop;
     if (tmp10) {
       const _Date = Date;
-      tmp10 = _modDef4761(Date.now()) <= _modDef4761(prop);
-      const tmp12Result = _modDef4761(Date.now());
+      tmp10 = _modDef4797(Date.now()) <= _modDef4797(prop);
+      const tmp12Result = _modDef4797(Date.now());
     }
     cResult[2] = prop;
     cResult[3] = tmp10;
@@ -117,8 +117,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef4761(Date.now()) <= _modDef4761(prop);
-    const tmp6Result = _modDef4761(Date.now());
+    tmp4 = _modDef4797(Date.now()) <= _modDef4797(prop);
+    const tmp6Result = _modDef4797(Date.now());
   }
   return tmp4;
 });

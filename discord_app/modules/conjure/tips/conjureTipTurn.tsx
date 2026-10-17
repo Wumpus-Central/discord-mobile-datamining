@@ -1,7 +1,7 @@
-// === Module 12072: conjureTipTurn ===
+// === Module 12135: conjureTipTurn ===
 
-// Module 12072 (conjureTipTurn)
-import conjureChatTurns from "conjureChatTurns" /* 10900 */;
+// Module 12135 (conjureTipTurn)
+import conjureChatTurns from "conjureChatTurns" /* 10964 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipTurn.tsx");

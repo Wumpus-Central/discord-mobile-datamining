@@ -1,27 +1,27 @@
-// === Module 12182: ConjurePlanProposalCard ===
+// === Module 12245: ConjurePlanProposalCard ===
 
-// Module 12182 (ConjurePlanProposalCard)
+// Module 12245 (ConjurePlanProposalCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5142 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12108 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12123 */;
-import conjurePlanBot from "conjurePlanBot" /* 12189 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 12192 */;
-import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12193 */;
-import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12194 */;
-import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12196 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5179 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12171 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12186 */;
+import conjurePlanBot from "conjurePlanBot" /* 12252 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 12255 */;
+import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12256 */;
+import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12257 */;
+import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12259 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { surface: { padding: 0, overflow: "hidden" }, content: { padding: nativeDefault.space.PX_12 }, whatChanged: null, footer: null, replyHint: null, design: null };
 let obj3 = { padding: nativeDefault.space.PX_12 };
 obj2.whatChanged = { gap: nativeDefault.space.PX_8 };

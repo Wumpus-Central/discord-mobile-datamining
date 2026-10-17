@@ -1,7 +1,7 @@
-// === Module 4804: SecondaryIndexMap ===
+// === Module 4840: SecondaryIndexMap ===
 
-// Module 4804 (SecondaryIndexMap)
-import sortedIndexByDefault from "sortedIndexBy" /* 4805 */;
+// Module 4840 (SecondaryIndexMap)
+import sortedIndexByDefault from "sortedIndexBy" /* 4841 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 let closure_3 = [];

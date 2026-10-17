@@ -1,25 +1,25 @@
-// === Module 9962: ExpressionPickerActionSheet ===
+// === Module 10026: ExpressionPickerActionSheet ===
 
-// Module 9962 (ExpressionPickerActionSheet)
+// Module 10026 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import useKeyboardType from "useKeyboardType" /* 5046 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import NavigatorConstants from "NavigatorConstants" /* 6483 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7065 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9690 */;
-import KeyboardUtils from "KeyboardUtils" /* 9964 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 9965 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import useKeyboardType from "useKeyboardType" /* 5083 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import NavigatorConstants from "NavigatorConstants" /* 6536 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9754 */;
+import KeyboardUtils from "KeyboardUtils" /* 10028 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10029 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;
-let closure_5 = fn(7066).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(9963).STICKER_FORMATS;
+let closure_5 = fn(7119).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10027).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);

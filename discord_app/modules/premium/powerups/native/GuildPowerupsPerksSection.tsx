@@ -1,16 +1,16 @@
-// === Module 13187: GuildPowerupsPerksSection ===
+// === Module 13252: GuildPowerupsPerksSection ===
 
-// Module 13187 (GuildPowerupsPerksSection)
+// Module 13252 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef2603 from "module_2603" /* 2603 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 13170 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 13188 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 13190 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 13192 */;
+import _modDef2621 from "module_2621" /* 2621 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 13235 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 13253 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 13255 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 13257 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5154 */;
+import createStyles from "createStyles" /* 5191 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -29,9 +29,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { title: null, description: null };
     const intl = tmp(1128).intl;
-    obj2.title = intl.string(_modDef2603.TV3Vm8);
+    obj2.title = intl.string(_modDef2621.TV3Vm8);
     const intl2 = tmp(1128).intl;
-    obj2.description = intl2.string(_modDef2603.STx9hp);
+    obj2.description = intl2.string(_modDef2621.STx9hp);
     const tmp9 = closure_4(GuildPowerupsSectionHeaderDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
@@ -94,9 +94,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   let obj2 = { title: null, description: null };
   const tmp = closure_7();
   const intl = util.intl;
-  obj2.title = intl.string(_modDef2603.TV3Vm8);
+  obj2.title = intl.string(_modDef2621.TV3Vm8);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2603.STx9hp);
+  obj2.description = intl2.string(_modDef2621.STx9hp);
   const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2), ];
   items[1] = closure_4(View, {
     style: tmp.container,

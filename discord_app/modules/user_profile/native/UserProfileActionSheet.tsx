@@ -1,36 +1,36 @@
-// === Module 8553: UserProfileActionSheet ===
+// === Module 8599: UserProfileActionSheet ===
 
-// Module 8553 (UserProfileActionSheet)
+// Module 8599 (UserProfileActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import isChangelogUserDefault from "isChangelogUser" /* 2117 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import BottomSheetModal from "BottomSheetModal" /* 6531 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
-import openUserSettings from "openUserSettings" /* 7319 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
-import UserActionCreators from "UserActionCreators" /* 8533 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8539 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8561 */;
-import ProfileFrameDefault from "ProfileFrame" /* 8574 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8578 */;
-import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8585 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import BottomSheetModal from "BottomSheetModal" /* 6584 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
+import openUserSettings from "openUserSettings" /* 7370 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
+import UserActionCreators from "UserActionCreators" /* 8579 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8585 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8607 */;
+import ProfileFrameDefault from "ProfileFrame" /* 8620 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8624 */;
+import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8631 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8512 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8558 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7128).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7181).UserProfileThemeTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(7066).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7119).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_18 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 }, profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 } });
 const __initData = { code: "function UserProfileActionSheetTsx1(){const{value}=this.__closure;return value.get();}" };
 const __initData2 = { code: "function UserProfileActionSheetTsx2(prepared){const{animatedPosition}=this.__closure;return animatedPosition.set(prepared);}" };
@@ -148,7 +148,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActionSheet.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileActionSheet(userId) {
-  const cResult = userId(localUser[15]).c(190);
+  const cResult = userId(localUser[15]).c(191);
   userId = userId.userId;
   const channelId = userId.channelId;
   ({ messageId, localUser } = userId);
@@ -348,11 +348,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const fn = (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-        const scrollEventsHandlersDefault = animatedScrollableState(6531).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
-        const obj = animatedScrollableState(6531);
-        animatedScrollableState = animatedScrollableState(6531).useBottomSheetInternal().animatedScrollableState;
+        const scrollEventsHandlersDefault = animatedScrollableState(6584).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+        const obj = animatedScrollableState(6584);
+        animatedScrollableState = animatedScrollableState(6584).useBottomSheetInternal().animatedScrollableState;
         const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-        const obj2 = animatedScrollableState(6531);
+        const obj2 = animatedScrollableState(6584);
         const fn = function s(contentOffset, arg1) {
           if (handleOnScroll != null) {
             tmp(contentOffset, arg1);
@@ -364,13 +364,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           const result = animatedScrollableState.set(num);
         };
-        const obj3 = animatedScrollableState(4909);
-        fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6531).SCROLLABLE_STATE };
+        const obj3 = animatedScrollableState(4945);
+        fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6584).SCROLLABLE_STATE };
         fn.__workletHash = 1075381102662;
         fn.__initData = __initData;
         const items = [handleOnScroll, animatedScrollableState];
         const obj5 = {};
-        obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6531).SCROLLABLE_STATE };
+        obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6584).SCROLLABLE_STATE };
         const merged = Object.assign(scrollEventsHandlersDefault);
         obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
         return obj5;
@@ -632,11 +632,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const memo = isPreviewingChanges.useMemo(() => {
     closure_0 = sharedValue2;
     return (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-      const scrollEventsHandlersDefault = animatedScrollableState(6531).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
-      const obj = animatedScrollableState(6531);
-      animatedScrollableState = animatedScrollableState(6531).useBottomSheetInternal().animatedScrollableState;
+      const scrollEventsHandlersDefault = animatedScrollableState(6584).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+      const obj = animatedScrollableState(6584);
+      animatedScrollableState = animatedScrollableState(6584).useBottomSheetInternal().animatedScrollableState;
       const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-      const obj2 = animatedScrollableState(6531);
+      const obj2 = animatedScrollableState(6584);
       const fn = function s(contentOffset, arg1) {
         if (handleOnScroll != null) {
           tmp(contentOffset, arg1);
@@ -648,13 +648,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const result = animatedScrollableState.set(num);
       };
-      const obj3 = animatedScrollableState(4909);
-      fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6531).SCROLLABLE_STATE };
+      const obj3 = animatedScrollableState(4945);
+      fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6584).SCROLLABLE_STATE };
       fn.__workletHash = 1075381102662;
       fn.__initData = __initData;
       const items = [handleOnScroll, animatedScrollableState];
       const obj5 = {};
-      obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6531).SCROLLABLE_STATE };
+      obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(6584).SCROLLABLE_STATE };
       const merged = Object.assign(scrollEventsHandlersDefault);
       obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
       return obj5;
@@ -782,6 +782,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       width = size.width;
       const diff = size.height - tmp2(tmp3[35]).NAV_BAR_HEIGHT_MULTILINE - top;
       const items8 = [isPreviewingChanges, tmp6Result2Result, width];
+      let tmp110Result = null != tmp6Result2Result;
       const memo2 = obj8.useMemo(() => {
         if (isPreviewingChanges) {
           if (null != closure_24) {
@@ -792,12 +793,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         return 0;
       }, items8);
+      if (!tmp110Result) {
+        tmp110Result = isPreviewingChanges;
+      }
       const tmp56 = tmp6(tmp3[33])(sharedValue2);
-      const tmp59 = tmp6(tmp3[37])();
+      const tmp60 = tmp6(tmp3[37])();
       const token = tmp2(tmp3[38]).useToken(tmp6(tmp3[39]).colors.INTERACTIVE_TEXT_HOVER, theme);
       const obj7 = { userId, user: obj4, channelId, guildId: guild_id, displayProfile: tmp6ResultResult, guildMember: stateFromStores2 };
-      const tmp61 = tmp6(tmp3[40])(obj7);
-      closure_26 = tmp61;
+      const tmp62 = tmp6(tmp3[40])(obj7);
+      closure_26 = tmp62;
       const items9 = [obj4, channelId];
       const items10 = [stateFromStores, userId];
       const memo3 = obj8.useMemo(() => {
@@ -829,7 +833,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           maybeFetchUserProfileDefault(obj4.id, avatarURL, obj2);
         }
       }, items11);
-      const items12 = [tmp61, tmp6ResultResult, guild_id, first, stateFromStores2];
+      const items12 = [tmp62, tmp6ResultResult, guild_id, first, stateFromStores2];
       const effect2 = obj8.useEffect(() => {
         let tmp = first;
         if (!first) {
@@ -955,7 +959,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         obj11.children = first(tmp2(tmp3[51]).EmptyState, obj12);
         obj10.children = first(tmp2(tmp3[50]).BottomSheet, obj11);
         obj9.children = first(tmp2(tmp3[23]).UserProfileAnalyticsProvider, obj10);
-        let tmp108Result8 = tmp104(tmp2(tmp3[20]).AnalyticsLocationProvider, obj9);
+        let tmp109Result10 = tmp105(tmp2(tmp3[20]).AnalyticsLocationProvider, obj9);
       } else {
         const obj13 = { theme, primaryColor, secondaryColor, children: null };
         const obj14 = { value: analyticsLocations, children: null };
@@ -976,12 +980,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         obj15.isLoaded = isLoaded1;
         const obj16 = { ref: bottomSheetRef.bottomSheetRef, handleDisabled: true, scrollable: true, startExpanded: true, maxHeight: diff - memo2, contentStyles: tmp.noPadding, backdropChildren: memo1, animatedIndex: sharedValue1, children: null };
-        let tmp108Result = null != tmp6Result2Result;
-        if (tmp108Result) {
+        let tmp109Result = tmp110Result;
+        if (tmp110Result) {
           const obj17 = { animatedPosition: sharedValue };
-          tmp108Result = tmp108(createUserProfileAnalyticsContext, obj17);
+          tmp109Result = tmp109(createUserProfileAnalyticsContext, obj17);
         }
-        const items15 = [tmp108Result, , , ];
+        const items15 = [tmp109Result, , , ];
         const obj18 = { gradientHeight: diff, bannerHeight: tmp56 };
         items15[1] = first(tmp6(tmp3[55]), obj18);
         const obj19 = { scrollsToTop: false, style: tmp.container, contentContainerStyle: null, scrollEventsHandlersHook: null, ref: null, children: null };
@@ -991,19 +995,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const obj20 = { pointerEvents: str2 };
         obj19.contentContainerStyle = obj20;
-        let tmp77;
+        let tmp78;
         if (tmp2Result23.isIOS()) {
-          tmp77 = memo;
+          tmp78 = memo;
         }
-        obj19.scrollEventsHandlersHook = tmp77;
+        obj19.scrollEventsHandlersHook = tmp78;
         obj19.ref = ref;
         const obj21 = { style: tmp.profileContainer, onLayout: callback, children: null };
         const obj22 = { user: obj4, channel: stateFromStores1, guildId: null, displayProfile: null, disableCalls: null, disableMessage: null, isVoiceContext: null, location: null, disableStatus: null, scrollViewRef: null, isPreviewingChanges: null, avatarDecorationOverride: null, navigateToShop: null, navigateToPremium: null, showUserProfileActionSheet: null, initialSection: null, scrollPosition: null };
-        let tmp79;
+        let tmp80;
         if (showGuildProfile) {
-          tmp79 = guild_id;
+          tmp80 = guild_id;
         }
-        obj22.guildId = tmp79;
+        obj22.guildId = tmp80;
         obj22.displayProfile = tmp6ResultResult;
         obj22.disableCalls = disableCalls;
         obj22.disableMessage = disableMessage;
@@ -1029,30 +1033,30 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         };
         obj22.initialSection = userId.initialSection;
         tmp2Result23 = tmp2(tmp3[56]);
-        let tmp81;
+        let tmp82;
         if (tmp2Result24.isIOS()) {
-          tmp81 = sharedValue2;
+          tmp82 = sharedValue2;
         }
-        obj22.scrollPosition = tmp81;
+        obj22.scrollPosition = tmp82;
         if (obj4.isNonUserBot()) {
           const obj23 = {};
           let merged = Object.assign(obj22);
-          let tmp108Result5 = tmp108(tmp6(tmp3[58]), obj23);
+          let tmp109Result6 = tmp109(tmp6(tmp3[58]), obj23);
           const tmp6Result15 = tmp6(tmp3[58]);
         } else if (obj4.bot) {
           const obj24 = {};
           const merged1 = Object.assign(obj22);
-          tmp108Result5 = tmp108(tmp6(tmp3[59]), obj24);
+          tmp109Result6 = tmp109(tmp6(tmp3[59]), obj24);
           const tmp6Result16 = tmp6(tmp3[59]);
         } else {
           const obj25 = {};
           const merged2 = Object.assign(obj22);
-          tmp108Result5 = tmp108(tmp6(tmp3[60]), obj25);
+          tmp109Result6 = tmp109(tmp6(tmp3[60]), obj25);
           const tmp6Result17 = tmp6(tmp3[60]);
         }
-        const items16 = [tmp108Result5, ];
-        let tmp108Result6 = null != tmp49Result;
-        if (tmp108Result6) {
+        const items16 = [tmp109Result6, ];
+        let tmp109Result7 = null != tmp49Result;
+        if (tmp109Result7) {
           const obj26 = { style: null, pointerEvents: "none", children: null };
           const items17 = [tmp.profileEffect, , ];
           const obj27 = { height: diff };
@@ -1060,49 +1064,52 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           items17[2] = animatedStyle;
           obj26.style = items17;
           const obj28 = { skuId: tmp49Result.skuId, bannerAdjustment: 0 };
-          obj26.children = tmp108(tmp6(tmp3[61]), obj28);
-          tmp108Result6 = tmp108(tmp6(tmp3[14]).View, obj26);
+          obj26.children = tmp109(tmp6(tmp3[61]), obj28);
+          tmp109Result7 = tmp109(tmp6(tmp3[14]).View, obj26);
         }
         const obj29 = { children: null };
-        items16[1] = tmp108Result6;
+        items16[1] = tmp109Result7;
         obj21.children = items16;
         obj29.children = closure_17(sharedValue, obj21);
         obj19.children = first(sharedValue, obj29);
         items15[2] = first(tmp2(tmp3[13]).BottomSheetScrollView, obj19);
-        let tmp108Result7 = null == tmp6Result2Result;
-        if (tmp108Result7) {
+        let tmp109Result8 = !tmp110Result;
+        if (!tmp110Result) {
           const obj30 = { variant: "floating", tabStyle: null, onPress: null };
           const obj31 = { backgroundColor: token };
           obj30.tabStyle = obj31;
           obj30.onPress = bottomSheetClose;
-          tmp108Result7 = tmp108(tmp2(tmp3[62]).ActionSheetHeaderBar, obj30);
+          tmp109Result8 = tmp109(tmp2(tmp3[62]).ActionSheetHeaderBar, obj30);
         }
-        items15[3] = tmp108Result7;
+        items15[3] = tmp109Result8;
         obj16.children = items15;
         const items18 = [closure_17(tmp2(tmp3[50]).BottomSheet, obj16), , ];
-        let tmp109Result = null != tmp6Result2Result;
-        if (tmp109Result) {
+        if (tmp110Result) {
           const obj32 = { animatedPosition: sharedValue, safeAreaTop: top, animatedIndex: sharedValue1, children: null };
-          const obj33 = { frame: tmp6Result2Result, profileThemeType: guild_id.ACTION_SHEET, frameOrder: tmp2(tmp3[30]).ProfileFrameLayerOrder.FRONT, containerWidth: first1 };
-          const items19 = [tmp108(tmp6(tmp3[29]), obj33), ];
+          let tmp109Result9 = null != tmp6Result2Result;
+          if (tmp109Result9) {
+            const obj33 = { frame: tmp6Result2Result, profileThemeType: guild_id.ACTION_SHEET, frameOrder: tmp2(tmp3[30]).ProfileFrameLayerOrder.FRONT, containerWidth: first1 };
+            tmp109Result9 = tmp109(tmp6(tmp3[29]), obj33);
+            const tmp6Result18 = tmp6(tmp3[29]);
+          }
+          const items19 = [tmp109Result9, ];
           const obj34 = { variant: "floating", tabStyle: null, onPress: null };
           const obj35 = { backgroundColor: token };
           obj34.tabStyle = obj35;
           obj34.onPress = bottomSheetClose;
-          items19[1] = tmp108(tmp2(tmp3[62]).ActionSheetHeaderBar, obj34);
+          items19[1] = tmp109(tmp2(tmp3[62]).ActionSheetHeaderBar, obj34);
           obj32.children = items19;
-          tmp109Result = tmp109(closure_26, obj32);
-          const tmp6Result18 = tmp6(tmp3[29]);
+          tmp110Result = tmp110(closure_26, obj32);
         }
-        items18[1] = tmp109Result;
+        items18[1] = tmp110Result;
         if (!isPreviewingChanges) {
           items18[2] = isPreviewingChanges;
           obj15.children = items18;
-          obj14.children = tmp109(tmp2(tmp3[23]).UserProfileAnalyticsProvider, obj15);
-          obj13.children = tmp108(tmp2(tmp3[20]).AnalyticsLocationProvider, obj14);
-          tmp108Result8 = tmp108(tmp2(tmp3[54]).ThemeContextProvider, obj13);
+          obj14.children = tmp110(tmp2(tmp3[23]).UserProfileAnalyticsProvider, obj15);
+          obj13.children = tmp109(tmp2(tmp3[20]).AnalyticsLocationProvider, obj14);
+          tmp109Result10 = tmp109(tmp2(tmp3[54]).ThemeContextProvider, obj13);
         } else {
-          const obj36 = { theme: tmp59, primaryColor: null, secondaryColor: null, children: null };
+          const obj36 = { theme: tmp60, primaryColor: null, secondaryColor: null, children: null };
           const intl = tmp2(tmp3[53]).intl;
           if (setting === tmp2(tmp3[64]).ProfileVisibility.FRIENDS_ONLY) {
             let mNZcD8 = tmp2(tmp3[53]).t.mNZcD8;
@@ -1110,12 +1117,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             mNZcD8 = tmp2(tmp3[53]).t["wSnI/0"];
           }
           const obj37 = { text: intl.string(mNZcD8), isExpanded: true };
-          obj36.children = tmp108(tmp2(tmp3[63]).ActionSheetBackdropToast, obj37);
-          tmp108(tmp2(tmp3[54]).ThemeContextProvider, obj36);
+          obj36.children = tmp109(tmp2(tmp3[63]).ActionSheetBackdropToast, obj37);
+          tmp109(tmp2(tmp3[54]).ThemeContextProvider, obj36);
         }
         tmp2Result24 = tmp2(tmp3[56]);
       }
-      return tmp108Result8;
+      return tmp109Result10;
     }
     if (tmp6ResultResult != null) {
       const profileEffect = tmp6ResultResult.profileEffect;

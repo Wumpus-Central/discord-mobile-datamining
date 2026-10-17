@@ -1,12 +1,12 @@
-// === Module 11095: showChatGDMUpsellActionSheet ===
+// === Module 11158: showChatGDMUpsellActionSheet ===
 
-// Module 11095 (showChatGDMUpsellActionSheet)
+// Module 11158 (showChatGDMUpsellActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/group_dm/native/showChatGDMUpsellActionSheet.tsx");
 
 export default function showChatGDMUpsellActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11096, dependencyMap.paths), "ChatGDMUpsellActionSheet", arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11159, dependencyMap.paths), "ChatGDMUpsellActionSheet", arg0);
 };

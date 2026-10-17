@@ -1,10 +1,10 @@
-// === Module 14611: GuildBoostingMarketingFaq ===
+// === Module 14679: GuildBoostingMarketingFaq ===
 
-// Module 14611 (GuildBoostingMarketingFaq)
+// Module 14679 (GuildBoostingMarketingFaq)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import _modDef14612 from "module_14612" /* 14612 */;
+import _modDef14680 from "module_14680" /* 14680 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
-let obj2 = { wrapper: { alignSelf: "center", marginTop: 50, marginBottom: fn(7342).VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" }, content: null, heading: null, list: null, listItem: null, questionWrapper: null, questionWrapperExpanded: null, question: null, questionIcon: null, questionIconExpanded: null, answer: null };
-let obj3 = { alignSelf: "center", marginTop: 50, marginBottom: fn(7342).VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
+const createStyles = fn(5191);
+let obj2 = { wrapper: { alignSelf: "center", marginTop: 50, marginBottom: fn(7388).VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" }, content: null, heading: null, list: null, listItem: null, questionWrapper: null, questionWrapperExpanded: null, question: null, questionIcon: null, questionIconExpanded: null, answer: null };
+let obj3 = { alignSelf: "center", marginTop: 50, marginBottom: fn(7388).VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
 obj2.content = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
 obj2.heading = { marginBottom: 20, textAlign: "center" };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   }
   if (cResult[1] !== tmp4.heading) {
     let obj2 = { style: heading, variant: "heading-xxl/bold", children: first1 };
-    const tmp11 = closure_7(tmp(5150).Heading, obj2);
+    const tmp11 = closure_7(tmp(5187).Heading, obj2);
     cResult[1] = tmp4.heading;
     cResult[2] = tmp11;
     let tmp9 = tmp11;
@@ -324,8 +324,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
       if (tmp) {
         str = "interactive-text-active";
       }
-      items1 = [closure_1_7(closure_0(5150).Text, { color: str, style: closure_0.question, variant: "text-md/normal", children: getQuestion.getQuestion() }), ];
-      const obj4 = { source: _modDef14612, style: null };
+      items1 = [closure_1_7(closure_0(5187).Text, { color: str, style: closure_0.question, variant: "text-md/normal", children: getQuestion.getQuestion() }), ];
+      const obj4 = { source: _modDef14680, style: null };
       const items2 = [closure_0.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {
@@ -335,10 +335,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
       obj4.style = items2;
       items1[1] = closure_1_7(closure_0(1202).Icon, obj4);
       obj2.children = items1;
-      const items3 = [closure_1_8(closure_0(6409).PressableOpacity, obj2), ];
+      const items3 = [closure_1_8(closure_0(6462).PressableOpacity, obj2), ];
       if (tmp) {
         const obj5 = { style: tmp4.answer, color: "interactive-text-active", variant: "text-sm/normal", children: getQuestion.getAnswer() };
-        tmp = closure_1_7(tmp5(5150).Text, obj5);
+        tmp = closure_1_7(tmp5(5187).Text, obj5);
       }
       items3[1] = tmp;
       obj.children = items3;

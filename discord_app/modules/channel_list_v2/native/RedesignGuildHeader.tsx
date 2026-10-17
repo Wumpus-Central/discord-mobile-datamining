@@ -1,35 +1,35 @@
-// === Module 17199: RedesignGuildHeader ===
+// === Module 17259: RedesignGuildHeader ===
 
-// Module 17199 (RedesignGuildHeader)
+// Module 17259 (RedesignGuildHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import FavoritesUtils from "FavoritesUtils" /* 2093 */;
-import useToken from "useToken" /* 4877 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4910 */;
-import shared from "shared" /* 5028 */;
-import useThemeDefault from "useTheme" /* 5090 */;
-import spring from "spring" /* 5441 */;
-import springPresets from "springPresets" /* 5445 */;
-import ButtonConstants from "ButtonConstants" /* 5447 */;
-import useFontScale from "useFontScale" /* 5449 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9545 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10466 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10760 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11829 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 14849 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17170 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17200 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17201 */;
+import useToken from "useToken" /* 4913 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4946 */;
+import shared from "shared" /* 5065 */;
+import useThemeDefault from "useTheme" /* 5127 */;
+import spring from "spring" /* 5478 */;
+import springPresets from "springPresets" /* 5482 */;
+import ButtonConstants from "ButtonConstants" /* 5484 */;
+import useFontScale from "useFontScale" /* 5486 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9609 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10529 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10823 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11892 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 14918 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 17230 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 17260 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 17261 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
-import ActionSheetStore from "ActionSheetStore" /* 4861 */;
+import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import ActionSheetStore from "ActionSheetStore" /* 4897 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11818);
+const RedesignChannelListConstants = fn(11881);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
@@ -63,9 +63,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   return isThemeDarkResult;
 });
 fn(558);
-let createStyles = fn(5154);
+let createStyles = fn(5191);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5154);
+createStyles = fn(5191);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = { bannerWrapper: { width: "100%", maxHeight: arg0 * collapsed, aspectRatio, overflow: "hidden" }, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
   const obj3 = {};
@@ -74,7 +74,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5154);
+createStyles = fn(5191);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -83,7 +83,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5154);
+createStyles = fn(5191);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = { code: "function RedesignGuildHeaderTsx1(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};}" };

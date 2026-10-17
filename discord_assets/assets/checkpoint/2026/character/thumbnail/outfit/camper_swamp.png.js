@@ -1,6 +1,6 @@
-// === Module 5642: ? ===
+// === Module 5679: ? ===
 
-// Module 5642
+// Module 5679
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/camper_swamp.png.js");

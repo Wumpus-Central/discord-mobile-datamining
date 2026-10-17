@@ -1,14 +1,16 @@
-// === Module 5485: LinkUtils ===
+// === Module 5522: LinkUtils ===
 
-// Module 5485 (LinkUtils)
-import RegexUtilsDefault from "RegexUtils" /* 5139 */;
+// Module 5522 (LinkUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import RegexUtilsDefault from "RegexUtils" /* 5176 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 const Constants = fn(1087);
 const ME = Constants.ME;
 const Permissions = Constants.Permissions;
+const CONVERSATION_QUERY_PARAM = fn(5169).CONVERSATION_QUERY_PARAM;
 const mapped = Array.from(fn(2075).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
@@ -16,17 +18,18 @@ const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + 
 const regExp2 = new RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 const regExp3 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$");
 const regExp4 = new RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?");
-const re12 = /^\/users\/(\d+)\/?$/;
+const re13 = /^\/users\/(\d+)\/?$/;
 const regExp5 = new RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?");
 const regExp6 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|" + ME + ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?");
-const regExp7 = new RegExp("" + regExp6.source + "(?:\\?" + fn(5132).CONVERSATION_QUERY_PARAM + "=(\\d+)(?![\\w=&%-]))?");
-const regExp8 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
+const regExp7 = new RegExp("[\\w%=&+-]+");
+const regExp8 = new RegExp("" + regExp6.source + "(?:\\?(" + regExp7.source + "))?");
+const regExp9 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/LinkUtils.tsx");
 
 export const CHANNEL_OR_MESSAGES_URL_RE = regExp6;
-export const CHANNEL_OR_MESSAGES_URL_WITH_CONVERSATION_RE = regExp7;
-export const MEDIA_POST_URL_RE = regExp8;
+export const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = regExp8;
+export const MEDIA_POST_URL_RE = regExp9;
 export const tryParseChannelPath = function tryParseChannelPath(pathname) {
   if (null == pathname) {
     return null;
@@ -76,7 +79,7 @@ export const tryParseEventDetailsPath = function tryParseEventDetailsPath(pathna
 export const tryParseUserProfilePath = function tryParseUserProfilePath(pathname) {
   let tmp = null;
   if (null != pathname) {
-    const match = pathname.match(re12);
+    const match = pathname.match(re13);
     let tmp4;
     if (match != null) {
       tmp4 = match[1];
@@ -143,5 +146,18 @@ export const tryParseDiceRollLink = function tryParseDiceRollLink(pathname) {
       }
     }
     return tmp;
+  }
+};
+export const tryParseConversationIdFromQuery = function tryParseConversationIdFromQuery(arg0) {
+  if (null != arg0) {
+    const _URLSearchParams = URLSearchParams;
+    const uRLSearchParams = new URLSearchParams(arg0);
+    value = uRLSearchParams.get(CONVERSATION_QUERY_PARAM);
+    if (null != value) {
+      if (obj2.isProbablyAValidSnowflake(value)) {
+        return SnowflakeUtilsDefault.cast(value);
+      }
+      obj2 = SnowflakeUtilsDefault;
+    }
   }
 };

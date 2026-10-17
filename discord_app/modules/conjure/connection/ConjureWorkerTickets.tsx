@@ -1,6 +1,6 @@
-// === Module 10982: ConjureWorkerTickets ===
+// === Module 11042: ConjureWorkerTickets ===
 
-// Module 10982 (ConjureWorkerTickets)
+// Module 11042 (ConjureWorkerTickets)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

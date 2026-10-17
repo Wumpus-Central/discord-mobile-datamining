@@ -1,6 +1,6 @@
-// === Module 15511: getSoundboardSoundURL ===
+// === Module 15574: getSoundboardSoundURL ===
 
-// Module 15511 (getSoundboardSoundURL)
+// Module 15574 (getSoundboardSoundURL)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

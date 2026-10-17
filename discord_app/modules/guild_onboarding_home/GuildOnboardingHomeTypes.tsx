@@ -1,8 +1,8 @@
-// === Module 12862: GuildOnboardingHomeTypes ===
+// === Module 12927: GuildOnboardingHomeTypes ===
 
-// Module 12862 (GuildOnboardingHomeTypes)
+// Module 12927 (GuildOnboardingHomeTypes)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;

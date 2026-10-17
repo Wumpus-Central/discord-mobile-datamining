@@ -1,7 +1,7 @@
-// === Module 9779: useMaybeAddReactionMarketingEasterEggNote ===
+// === Module 9843: useMaybeAddReactionMarketingEasterEggNote ===
 
-// Module 9779 (useMaybeAddReactionMarketingEasterEggNote)
-import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 9780 */;
+// Module 9843 (useMaybeAddReactionMarketingEasterEggNote)
+import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 9844 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

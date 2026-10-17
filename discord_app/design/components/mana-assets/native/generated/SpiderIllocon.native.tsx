@@ -1,23 +1,23 @@
-// === Module 12163: SpiderIllocon ===
+// === Module 12226: SpiderIllocon ===
 
-// Module 12163 (SpiderIllocon)
+// Module 12226 (SpiderIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6497 */;
-import _modDef12164 from "module_12164" /* 12164 */;
-import _modDef12165 from "module_12165" /* 12165 */;
-import _modDef12166 from "module_12166" /* 12166 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import assetHelpers from "assetHelpers" /* 6550 */;
+import _modDef12227 from "module_12227" /* 12227 */;
+import _modDef12228 from "module_12228" /* 12228 */;
+import _modDef12229 from "module_12229" /* 12229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12164 }, 3: null };
-const obj2 = { uri: _modDef12164 };
-obj[2] = { uri: _modDef12165 };
-const obj3 = { uri: _modDef12165 };
-obj[3] = { uri: _modDef12166 };
+let obj = { 1: null, 2: { uri: _modDef12227 }, 3: null };
+const obj2 = { uri: _modDef12227 };
+obj[2] = { uri: _modDef12228 };
+const obj3 = { uri: _modDef12228 };
+obj[3] = { uri: _modDef12229 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12166 };
+const obj4 = { uri: _modDef12229 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SpiderIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const SpiderIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6497).getAssetSource(obj);
+  obj.source = num(6550).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

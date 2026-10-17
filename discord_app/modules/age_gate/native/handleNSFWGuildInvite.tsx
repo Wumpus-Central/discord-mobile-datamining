@@ -1,14 +1,14 @@
-// === Module 9854: handleNSFWGuildInvite ===
+// === Module 9918: handleNSFWGuildInvite ===
 
-// Module 9854 (handleNSFWGuildInvite)
+// Module 9918 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1087 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import GuildRecord from "GuildRecord" /* 2086 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6140 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 6146 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6147 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9855 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9856 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 6183 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6184 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9919 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9920 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 6247: getSystemVersion ===
+// === Module 6284: getSystemVersion ===
 
-// Module 6247 (getSystemVersion)
-import DeviceUtils from "DeviceUtils" /* 5130 */;
+// Module 6284 (getSystemVersion)
+import DeviceUtils from "DeviceUtils" /* 5167 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx");

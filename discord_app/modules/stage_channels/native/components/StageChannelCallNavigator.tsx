@@ -1,16 +1,16 @@
-// === Module 11285: StageChannelCallNavigator ===
+// === Module 11344: StageChannelCallNavigator ===
 
-// Module 11285 (StageChannelCallNavigator)
+// Module 11344 (StageChannelCallNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4909 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5168 */;
-import spring from "spring" /* 5441 */;
-import MessageManagerDefault from "MessageManager" /* 9554 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11216 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 11291 */;
-import JoinStageViewDefault from "JoinStageView" /* 11355 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11500 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4945 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
+import spring from "spring" /* 5478 */;
+import MessageManagerDefault from "MessageManager" /* 9618 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11281 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 11350 */;
+import JoinStageViewDefault from "JoinStageView" /* 11414 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11559 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -238,8 +238,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  const obj3 = showOverlay(4909);
-  fn.__closure = { withSpring: showOverlay(5441).withSpring, showOverlay, viewAnimationConfig };
+  const obj3 = showOverlay(4945);
+  fn.__closure = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 3866068723381;
   fn.__initData = __initData3;
   const animatedStyle = obj3.useAnimatedStyle(fn);
@@ -296,7 +296,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   cResult[8] = tmp13;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-  const obj4 = { withSpring: showOverlay(5441).withSpring, showOverlay, viewAnimationConfig };
+  const obj4 = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
 }) : (function JoinStageOverlay(channel) {
   showOverlay = undefined;
   importDefault = undefined;
@@ -308,8 +308,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = showOverlay(4909);
-  fn.__closure = { withSpring: showOverlay(5441).withSpring, showOverlay, viewAnimationConfig };
+  let obj = showOverlay(4945);
+  fn.__closure = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 17555856853074;
   fn.__initData = __initData4;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -323,7 +323,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5441).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;
@@ -331,7 +331,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinSt
   return closure_8(ReanimatedRexportDefault.View, obj3);
 });
 ReactCompilerGating = fn(558);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj5 = { startStagePrompt: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallNavigator(channel) {
   const cResult = channel(first[6]).c(31);

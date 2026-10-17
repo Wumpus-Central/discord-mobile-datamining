@@ -1,17 +1,17 @@
-// === Module 10946: conjurePreviewSurface ===
+// === Module 11011: conjurePreviewSurface ===
 
-// Module 10946 (conjurePreviewSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7263 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10951 */;
-import FramesStore from "FramesStore" /* 10947 */;
+// Module 11011 (conjurePreviewSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11012 */;
+import FramesStore from "FramesStore" /* 6295 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(10931);
+const FramesConstants = fn(6296);
 ({ isLaunched: c3, makeFrameId: closure_4 } = FramesConstants);
 let c5 = "0";
-const CONJURE_PREVIEW_SURFACE = { type: fn(7263).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
+const CONJURE_PREVIEW_SURFACE = { type: fn(6297).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewSurface.tsx");
 

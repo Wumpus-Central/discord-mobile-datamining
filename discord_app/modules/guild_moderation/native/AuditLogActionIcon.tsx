@@ -1,32 +1,32 @@
-// === Module 18678: AuditLogActionIcon ===
+// === Module 18740: AuditLogActionIcon ===
 
-// Module 18678 (AuditLogActionIcon)
+// Module 18740 (AuditLogActionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import ChatIcon from "ChatIcon" /* 8425 */;
-import RobotIcon2 from "RobotIcon" /* 11568 */;
-import _modDef18683 from "module_18683" /* 18683 */;
-import _modDef18684 from "module_18684" /* 18684 */;
-import _modDef18685 from "module_18685" /* 18685 */;
+import ChatIcon from "ChatIcon" /* 8471 */;
+import RobotIcon2 from "RobotIcon" /* 11627 */;
+import _modDef18745 from "module_18745" /* 18745 */;
+import _modDef18746 from "module_18746" /* 18746 */;
+import _modDef18747 from "module_18747" /* 18747 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AuditLogRecord = fn(18673);
+const AuditLogRecord = fn(18735);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1087);
 ({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { actionImageContainer: { height: 24, width: 24 }, actionImageOverlay: null, iconComponent: null, actionImage: null };
 let size = { borderRadius: nativeDefault.radii.round, width: 13, height: 13, bottom: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.actionImageOverlay = size;
 obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
-let obj3 = { [ALL]: fn(18679).ListBulletsIcon, [CHANNEL]: fn(18613).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(18613).ChannelListIcon, [EMOJI]: fn(9192).ReactionIcon, [GUILD]: fn(5108).CircleInformationIcon, [GUILD_PROFILE]: fn(5108).CircleInformationIcon, [INTEGRATION]: fn(15933).PuzzlePieceIcon, [INVITE]: fn(5100).LinkIcon, [ROLE]: fn(9809).FlagIcon, [USER]: fn(8443).GroupIcon, [WEBHOOK]: fn(17815).WebhookIcon, [STAGE_INSTANCE]: fn(8451).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(8906).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8906).CalendarIcon, [THREAD]: fn(8427).ThreadIcon, [STICKER]: fn(13149).StickerIcon, [APPLICATION_COMMAND]: fn(10865).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(17815).WebhookIcon, [GUILD_SOUNDBOARD]: fn(13144).SoundboardIcon, [ONBOARDING_PROMPT]: fn(8443).GroupIcon, [GUILD_ONBOARDING]: fn(8443).GroupIcon, [HOME_SETTINGS]: fn(8443).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(8443).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(18613).ChannelListIcon, [GUILD_HOME]: fn(18681).HomeIcon, [UNKNOWN]: fn(13668).CircleQuestionIcon };
+let obj3 = { [ALL]: fn(18741).ListBulletsIcon, [CHANNEL]: fn(18675).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(18675).ChannelListIcon, [EMOJI]: fn(9252).ReactionIcon, [GUILD]: fn(5145).CircleInformationIcon, [GUILD_PROFILE]: fn(5145).CircleInformationIcon, [INTEGRATION]: fn(15999).PuzzlePieceIcon, [INVITE]: fn(5137).LinkIcon, [ROLE]: fn(9873).FlagIcon, [USER]: fn(8489).GroupIcon, [WEBHOOK]: fn(17875).WebhookIcon, [STAGE_INSTANCE]: fn(8497).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(8952).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8952).CalendarIcon, [THREAD]: fn(8473).ThreadIcon, [STICKER]: fn(13214).StickerIcon, [APPLICATION_COMMAND]: fn(10930).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(17875).WebhookIcon, [GUILD_SOUNDBOARD]: fn(13209).SoundboardIcon, [ONBOARDING_PROMPT]: fn(8489).GroupIcon, [GUILD_ONBOARDING]: fn(8489).GroupIcon, [HOME_SETTINGS]: fn(8489).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(8489).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(18675).ChannelListIcon, [GUILD_HOME]: fn(18743).HomeIcon, [UNKNOWN]: fn(13736).CircleQuestionIcon };
 ({ ALL, CHANNEL, CHANNEL_OVERWRITE, EMOJI, GUILD, GUILD_PROFILE, INTEGRATION, INVITE, ROLE, USER, WEBHOOK, STAGE_INSTANCE, GUILD_SCHEDULED_EVENT, GUILD_SCHEDULED_EVENT_EXCEPTION, THREAD, STICKER, APPLICATION_COMMAND, AUTO_MODERATION_RULE, GUILD_SOUNDBOARD, ONBOARDING_PROMPT, GUILD_ONBOARDING, HOME_SETTINGS, GUILD_MEMBER_VERIFICATION, VOICE_CHANNEL_STATUS, GUILD_HOME, UNKNOWN } = AuditLogTargetTypes);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuditIcons(action) {
@@ -36,16 +36,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuditI
   if (cResult[0] !== action) {
     const tmp7 = hasOwnProperty(action);
     if (constants.CREATE === tmp7) {
-      let tmp9 = _modDef18683;
+      let tmp9 = _modDef18745;
       cResult[0] = action;
       cResult[1] = tmp9;
     } else if (constants.UPDATE !== tmp7) {
       tmp9 = null;
       if (constants.DELETE === tmp7) {
-        tmp9 = _modDef18685;
+        tmp9 = _modDef18747;
       }
     }
-    tmp9 = _modDef18684;
+    tmp9 = _modDef18746;
   } else if (cResult[2] !== action) {
     if (action === constants2.MESSAGE_DELETE) {
       let RobotIcon = ChatIcon.ChatIcon;
@@ -126,13 +126,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuditI
   const tmp = closure_10();
   const tmp2 = hasOwnProperty(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = _modDef18683;
+    let tmp4 = _modDef18745;
   } else if (constants.UPDATE === tmp2) {
-    tmp4 = _modDef18684;
+    tmp4 = _modDef18746;
   } else {
     tmp4 = null;
     if (constants.DELETE === tmp2) {
-      tmp4 = _modDef18685;
+      tmp4 = _modDef18747;
     }
   }
   if (action === constants2.MESSAGE_DELETE) {

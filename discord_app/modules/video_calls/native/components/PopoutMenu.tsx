@@ -1,16 +1,16 @@
-// === Module 11279: PopoutMenu ===
+// === Module 11338: PopoutMenu ===
 
-// Module 11279 (PopoutMenu)
+// Module 11338 (PopoutMenu)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import Patterns from "Patterns" /* 5121 */;
-import timing from "timing" /* 5155 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6559 */;
-import FormRowDefault from "FormRow" /* 7053 */;
-import Form from "Form" /* 8809 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import Patterns from "Patterns" /* 5158 */;
+import timing from "timing" /* 5192 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
+import FormRowDefault from "FormRow" /* 7106 */;
+import Form from "Form" /* 8855 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = 250;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -331,11 +331,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
           return obj1;
         }
       }
-      let obj3 = { withTiming: onOpen(5155).withTiming, animateIn: tmp7[0] > 0 && !first, STANDARD_EASING: onOpen(1202).STANDARD_EASING, ANIMATION_DURATION: v250, runOnJS: onOpen(4909).runOnJS, handleClose, EXTRA_PADDING: 8 };
+      let obj3 = { withTiming: onOpen(5192).withTiming, animateIn: tmp7[0] > 0 && !first, STANDARD_EASING: onOpen(1202).STANDARD_EASING, ANIMATION_DURATION: v250, runOnJS: onOpen(4945).runOnJS, handleClose, EXTRA_PADDING: 8 };
       De.__closure = obj3;
       De.__workletHash = 4709130936628;
       De.__initData = debounceResult;
-      const animatedStyle = onOpen(4909).useAnimatedStyle(De);
+      const animatedStyle = onOpen(4945).useAnimatedStyle(De);
       const _Symbol3 = Symbol;
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
         class Ie {
@@ -398,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
               return;
             }
           }
-          let obj4 = { runOnJS: onOpen(4909).runOnJS, _setClose: tmp10 };
+          let obj4 = { runOnJS: onOpen(4945).runOnJS, _setClose: tmp10 };
           PopoutMenuTsx4.__closure = obj4;
           PopoutMenuTsx4.__workletHash = 15929711498886;
           PopoutMenuTsx4.__initData = Ie;
@@ -412,12 +412,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
             }
           }
         }
-        const Gesture = onOpen(6559).Gesture;
+        const Gesture = onOpen(6612).Gesture;
         const LongPressResult = Gesture.LongPress();
         function be() {
           ReanimatedRexport.runOnJS(Oe)();
         }
-        let obj5 = { runOnJS: onOpen(4909).runOnJS, handleLongPress: tmp36 };
+        let obj5 = { runOnJS: onOpen(4945).runOnJS, handleLongPress: tmp36 };
         be.__closure = obj5;
         be.__workletHash = 1649917173815;
         class De {
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
           const obj6 = { gesture: tmp37, children: null };
           const obj8 = { ref, children: trigger };
           obj6.children = closure_6(first1, obj8);
-          const items2 = [closure_6(onOpen(6559).GestureDetector, obj6), ];
+          const items2 = [closure_6(onOpen(6612).GestureDetector, obj6), ];
           class De {
             constructor() {
               tmp = closure_0;
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
         cResult[30] = trigger;
         cResult[31] = tmp44Result;
       }
-      let tmpResult = onOpen(4909);
+      let tmpResult = onOpen(4945);
     }
     const rect = { left, top };
     cResult[9] = left;

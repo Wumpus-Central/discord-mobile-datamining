@@ -1,6 +1,6 @@
-// === Module 4834: SubscriptionStore ===
+// === Module 4870: SubscriptionStore ===
 
-// Module 4834 (SubscriptionStore)
+// Module 4870 (SubscriptionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1393 */;
@@ -17,8 +17,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(4829).isNoneSubscription;
-const SubscriptionRecord = fn(4835).SubscriptionRecord;
+const isNoneSubscription = fn(4865).isNoneSubscription;
+const SubscriptionRecord = fn(4871).SubscriptionRecord;
 const Constants = fn(1087);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;

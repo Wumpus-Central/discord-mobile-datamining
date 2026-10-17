@@ -1,27 +1,27 @@
-// === Module 12840: DMMessageStickerGreeting ===
+// === Module 12905: DMMessageStickerGreeting ===
 
-// Module 12840 (DMMessageStickerGreeting)
+// Module 12905 (DMMessageStickerGreeting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import useToken from "useToken" /* 4877 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4995 */;
-import ColorUtils from "ColorUtils" /* 5026 */;
-import timing from "timing" /* 5155 */;
-import StickersActionCreators from "StickersActionCreators" /* 9994 */;
+import useToken from "useToken" /* 4913 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5031 */;
+import ColorUtils from "ColorUtils" /* 5063 */;
+import timing from "timing" /* 5192 */;
+import StickersActionCreators from "StickersActionCreators" /* 10058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6249 */;
-import MessageStore from "MessageStore" /* 5495 */;
+import StickersStore from "StickersStore" /* 6286 */;
+import MessageStore from "MessageStore" /* 5532 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -33,7 +33,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
 let c14 = "847199849233514549";
 let c15 = "749054660769218631";
 let c16 = 180;
-const END = fn(4995).GradientPercentage.END;
+const END = fn(5031).GradientPercentage.END;
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsRendered() {
   const cResult = c.c(3);
@@ -171,8 +171,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
                 if (closure_1_1 !== text) {
                   dependencyMap(text);
                 }
-                closure_1(4868).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
-                const obj = closure_1(4868);
+                closure_1(4904).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+                const obj = closure_1(4904);
                 const obj2 = { text, variant: "critical" };
               }
               closure_128_0 = showErrorToast;
@@ -284,8 +284,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
               if (closure_1_1 !== text) {
                 dependencyMap(text);
               }
-              closure_1(4868).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
-              const obj = closure_1(4868);
+              closure_1(4904).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+              const obj = closure_1(4904);
               const obj2 = { text, variant: "critical" };
             }
             closure_128_0 = showErrorToast;
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   channel = channel.channel;
   const hasInputText = channel.hasInputText;
   let obj = channel(576);
-  const tmp4 = closure_13(channel(4995).useGradientValue(END));
+  const tmp4 = closure_13(channel(5031).useGradientValue(END));
   dependencyMap = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MessageStore];
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   } else {
     tmp7 = cResult[2];
   }
-  let obj2 = channel(4995);
+  let obj2 = channel(5031);
   const stateFromStores = channel(504).useStateFromStores(first, tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
@@ -400,15 +400,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   const stateFromStores1 = channel(504).useStateFromStores(tmp9, tmp11);
   const tmp13 = hasInputText;
   const tmpResult6 = channel(504);
-  let name = hasInputText(5021).useName(stateFromStores1);
+  let name = hasInputText(5057).useName(stateFromStores1);
   if (name == null) {
     const intl = tmp(1128).intl;
     name = intl.string(tmp(1128).t.y1Wu2f);
   }
   const intl2 = tmp(1128).intl;
   intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
-  let obj5 = hasInputText(5021);
-  const showConvoStarterInDM = channel(12842).useShowConvoStarterInDM(channel);
+  let obj5 = hasInputText(5057);
+  const showConvoStarterInDM = channel(12907).useShowConvoStarterInDM(channel);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [StickersStore];
     cResult[6] = items2;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     }
     tmp20 = cResult[9];
   }
-  const tmpResult7 = channel(12842);
+  const tmpResult7 = channel(12907);
   const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
   if (cResult[10] !== showConvoStarterInDM) {
     class U {
@@ -517,14 +517,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     obj.height = obj5.withDelay(300, obj6.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 }));
     return obj;
   };
-  const tmpResult9 = channel(4909);
-  fn3.__closure = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4909).withDelay, withTiming: channel(5155).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
+  const tmpResult9 = channel(4945);
+  fn3.__closure = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4945).withDelay, withTiming: channel(5192).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
   fn3.__workletHash = 16992012801942;
   fn3.__initData = __initData;
   const animatedStyle = tmpResult9.useAnimatedStyle(fn3);
   const tmp28 = closure_19();
-  let obj3 = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4909).withDelay, withTiming: channel(5155).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
-  const shouldAnimateSticker = channel(9993).useShouldAnimateSticker(false);
+  let obj3 = { styles: tmp4, isRendered, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL, withDelay: channel(4945).withDelay, withTiming: channel(5192).withTiming, STANDARD_EASING: channel(1202).STANDARD_EASING };
+  const shouldAnimateSticker = channel(10057).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     class U {
       constructor() {
@@ -554,12 +554,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
       }
     }
     let obj4 = { style: tmp4.gradient, colors: tmp28 };
-    const tmp32 = closure_10(tmp13(5454), obj4);
+    const tmp32 = closure_10(tmp13(5491), obj4);
     cResult[13] = tmp28;
     cResult[14] = tmp4.gradient;
     cResult[15] = tmp32;
   }
-  const tmpResult10 = channel(9993);
+  const tmpResult10 = channel(10057);
 }) : (function DMMessageStickerGreeting(channel) {
   channel = channel.channel;
   const hasInputText = channel.hasInputText;

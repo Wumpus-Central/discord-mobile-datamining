@@ -1,42 +1,42 @@
-// === Module 18191: VoicePanelCard ===
+// === Module 18252: VoicePanelCard ===
 
-// Module 18191 (VoicePanelCard)
+// Module 18252 (VoicePanelCard)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4886 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5155 */;
-import spring from "spring" /* 5441 */;
-import LinearGradientDefault from "LinearGradient" /* 5454 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6119 */;
-import StreamActionCreators from "StreamActionCreators" /* 7664 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9814 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11829 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18121 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18194 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18195 */;
+import native from "native" /* 4922 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4945 */;
+import timing from "timing" /* 5192 */;
+import spring from "spring" /* 5478 */;
+import LinearGradientDefault from "LinearGradient" /* 5491 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6156 */;
+import StreamActionCreators from "StreamActionCreators" /* 7710 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11892 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18182 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18255 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
-import SpeakingStore from "SpeakingStore" /* 6166 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
+import SpeakingStore from "SpeakingStore" /* 6203 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12849);
+const VoicePanelConstants = fn(12914);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12847).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18122).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12852).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12912).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18183).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12917).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
-const ParticipantTypes = fn(5177).ParticipantTypes;
-let SCALE_PHYSICS = fn(12850).SCALE_PHYSICS;
+const ParticipantTypes = fn(5214).ParticipantTypes;
+let SCALE_PHYSICS = fn(12915).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(5150).Text);
+let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(5187).Text);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 let tmp4 = fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.XXLARGE];
@@ -46,7 +46,7 @@ obj.stiffness = 150;
 let closure_26 = { duration: 200 };
 let closure_27 = { duration: 0 };
 let c28 = 0.75;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { positionWrapper: null, userRoundedCard: null, nonUserRoundedCard: null, blackBackground: null, selfStreamFocusedSubtitle: null, avatarImageMaskStyles: null, avatarPlaceholder: null, image: null, speakingIndicatorWrapper: null, speakingIndicatorUnderlay: null, speakingIndicatorBar: null };
 const rect = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK };
 obj2.positionWrapper = rect;
@@ -837,283 +837,218 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const tmp11 = userId(streamGuildId[29]);
 }));
-const __initData6 = { code: "function VoicePanelCardTsx7(){const{withTiming,isRinging,CONNECTING_OPACITY,solidBackgroundColor}=this.__closure;return{opacity:withTiming(isRinging?CONNECTING_OPACITY:1,{duration:100},\"animate-always\"),backgroundColor:solidBackgroundColor};}" };
+const __initData6 = { code: "function VoicePanelCardTsx7(){const{withTiming,isRinging,CONNECTING_OPACITY,backgroundColor}=this.__closure;return{opacity:withTiming(isRinging?CONNECTING_OPACITY:1,{duration:100},\"animate-always\"),backgroundColor:backgroundColor};}" };
 const __initData7 = { code: "function VoicePanelCardTsx8(){const{withSpring,mode,VoicePanelModes,layoutPhysics}=this.__closure;return{transform:[{scale:withSpring(mode.get()===VoicePanelModes.PIP?0.8:1,layoutPhysics)}]};}" };
-const __initData8 = { code: "function VoicePanelCardTsx9(){const{withTiming,isRinging,CONNECTING_OPACITY,solidBackgroundColor}=this.__closure;return{opacity:withTiming(isRinging?CONNECTING_OPACITY:1,{duration:100},'animate-always'),backgroundColor:solidBackgroundColor};}" };
+const __initData8 = { code: "function VoicePanelCardTsx9(){const{withTiming,isRinging,CONNECTING_OPACITY,backgroundColor}=this.__closure;return{opacity:withTiming(isRinging?CONNECTING_OPACITY:1,{duration:100},'animate-always'),backgroundColor:backgroundColor};}" };
 const __initData9 = { code: "function VoicePanelCardTsx10(){const{withSpring,mode,VoicePanelModes,layoutPhysics}=this.__closure;return{transform:[{scale:withSpring(mode.get()===VoicePanelModes.PIP?64/80:1,layoutPhysics)}]};}" };
 ReactCompilerGating = fn(558);
 let closure_42 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedUserCardInner(isRinging) {
-  const cResult = isRinging(mode[21]).c(30);
+  const cResult = isRinging(mode[21]).c(31);
   isRinging = isRinging.isRinging;
   ({ layout, avatarURI, avatarDecoration, layoutPhysics } = isRinging);
   ({ userId, guildId } = isRinging);
   let image = closure_29();
   mode = noop.useContext(layoutPhysics(mode[28])).mode;
-  isRinging(mode[36]);
-  if (cResult[0] === guildId) {
-    if (cResult[1] === userId) {
-      let tmp7 = cResult[2];
-    }
-    const tmp8 = layoutPhysics(tmp2[37])(tmp7);
-    let str = "transparent";
-    if (null == tmp8) {
-      str = tmp6;
-    }
-    class C {
-      constructor() {
-        obj = closure_0(closure_2[38]);
-        num = 1;
+  if (cResult[0] === avatarURI) {
+    if (cResult[1] === guildId) {
+      if (cResult[2] === userId) {
+        let tmp5 = cResult[3];
+      }
+      ({ gradientStops, backgroundColor } = layoutPhysics(tmp2[36])(tmp5));
+      const tmp6 = layoutPhysics(tmp2[36])(tmp5);
+      const fn = function w() {
+        let num = 1;
         if (isRinging) {
           num = c28;
         }
-        obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-        return obj1;
-      }
-    }
-    let obj2 = { withTiming: tmp(tmp2[38]).withTiming, isRinging, CONNECTING_OPACITY, solidBackgroundColor: str };
-    C.__closure = obj2;
-    C.__workletHash = 14362526641310;
-    C.__initData = __initData6;
-    const animatedStyle = tmp(tmp2[14]).useAnimatedStyle(C);
-    const tmpResult = tmp(tmp2[14]);
-    const fn = function y() {
-      let num = 1;
-      if (mode.get() === VoicePanelModes.PIP) {
-        num = 0.8;
-      }
-      const obj2 = { transform: null };
-      const items = [{ scale: spring.withSpring(num, layoutPhysics) }];
-      obj2.transform = items;
-      return obj2;
-    };
-    const obj3 = { withSpring: tmp(tmp2[39]).withSpring, mode, VoicePanelModes, layoutPhysics };
-    fn.__closure = obj3;
-    fn.__workletHash = 1926256435326;
-    fn.__initData = __initData7;
-    const animatedStyle1 = tmp(tmp2[14]).useAnimatedStyle(fn);
-    if (cResult[3] !== avatarURI) {
-      let cachedSourceFromURI;
-      if (null != avatarURI) {
-        cachedSourceFromURI = tmp(tmp2[36]).getCachedSourceFromURI(avatarURI);
-        const tmpResult4 = tmp(tmp2[36]);
-      }
-      cResult[3] = avatarURI;
-      cResult[4] = cachedSourceFromURI;
-      let tmp16 = cachedSourceFromURI;
-    } else {
-      tmp16 = cResult[4];
-    }
-    if (cResult[5] === animatedStyle) {
-      if (cResult[6] === image.userRoundedCard) {
-        let tmp18 = cResult[7];
-      }
-      if (cResult[8] === tmp8) {
-        if (cResult[9] === layout) {
-          let tmp19 = cResult[10];
-        }
-        if (null != tmp16) {
-          let prop;
-          if (null == avatarDecoration) {
-            prop = image.avatarImageMaskStyles;
-          }
-          if (cResult[13] === animatedStyle1) {
-            if (cResult[14] === prop) {
-              let tmp29 = cResult[15];
-            }
-            if (cResult[16] === avatarDecoration) {
-              if (cResult[17] === tmp16) {
-                if (cResult[18] === tmp27) {
-                  if (cResult[19] === image.image) {
-                    if (cResult[21] === layout) {
-                      if (cResult[22] === tmp29) {
-                      }
-                    }
-                    const obj4 = { style: tmp29, layout, children: cResult[20] };
-                    class C {
-                      constructor() {
-                        obj = closure_0(closure_2[38]);
-                        num = 1;
-                        if (isRinging) {
-                          num = c28;
-                        }
-                        obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-                        return obj1;
-                      }
-                    }
-                    cResult[21] = layout;
-                    cResult[22] = tmp29;
-                    cResult[23] = cResult[20];
-                    cResult[24] = tmp36;
-                  }
-                }
-              }
-            }
-            if (tmp27) {
-              const obj5 = { source: tmp16, size: tmp(tmp2[17]).AvatarSizes.XXLARGE, avatarDecoration };
-              let tmp31Result = closure_20(tmp(tmp2[17]).Avatar, obj5);
-            } else {
-              const size = { source: tmp16, resizeMode: "stretch", width: 80, height: 80, style: image.image };
-              tmp31Result = closure_20(layoutPhysics(tmp2[40]), size);
-            }
-            cResult[16] = avatarDecoration;
-            class C {
-              constructor() {
-                obj = closure_0(closure_2[38]);
-                num = 1;
-                if (isRinging) {
-                  num = c28;
-                }
-                obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-                return obj1;
-              }
-            }
-            cResult[18] = tmp27;
-            image = image.image;
-            cResult[19] = image;
-            cResult[20] = tmp31Result;
-          }
-          let items = [prop, animatedStyle1];
-          class C {
-            constructor() {
-              obj = closure_0(closure_2[38]);
-              num = 1;
-              if (isRinging) {
-                num = c28;
-              }
-              obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-              return obj1;
-            }
-          }
-          cResult[13] = animatedStyle1;
-          cResult[14] = prop;
-          cResult[15] = items;
-          tmp29 = items;
-        } else {
-          if (cResult[11] !== image.avatarPlaceholder) {
-            const obj6 = { style: image.avatarPlaceholder };
-            cResult[11] = image.avatarPlaceholder;
-            class C {
-              constructor() {
-                obj = closure_0(closure_2[38]);
-                num = 1;
-                if (isRinging) {
-                  num = c28;
-                }
-                obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-                return obj1;
-              }
-            }
-            let tmp24 = closure_20(layoutPhysics(tmp2[25]), obj6);
-            const tmp26 = closure_20(layoutPhysics(tmp2[25]), obj6);
-          } else {
-            tmp24 = cResult[12];
-          }
-          if (cResult[25] === layout) {
-            if (cResult[26] === tmp18) {
-              if (cResult[27] === tmp19) {
-                if (cResult[28] === tmp24) {
-                  let tmp38 = cResult[29];
-                }
-                return tmp38;
-              }
-            }
-          }
-          const obj7 = { style: tmp18, layout, children: null };
-          const items1 = [, ];
-          class C {
-            constructor() {
-              obj = closure_0(closure_2[38]);
-              num = 1;
-              if (isRinging) {
-                num = c28;
-              }
-              obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-              return obj1;
-            }
-          }
-          items1[1] = tmp24;
-          obj7.children = items1;
-          const tmp40 = closure_22(layoutPhysics(tmp2[41]), obj7);
-          cResult[25] = layout;
-          cResult[26] = tmp18;
-          cResult[27] = tmp19;
-          cResult[28] = tmp24;
-          cResult[29] = tmp40;
-          tmp38 = tmp40;
-        }
-      }
-      let tmp20 = null;
-      if (null != tmp8) {
-        const obj8 = { colors: tmp8, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: null, layout: null, pointerEvents: "none" };
-        class C {
-          constructor() {
-            obj = closure_0(closure_2[38]);
-            num = 1;
-            if (isRinging) {
-              num = c28;
-            }
-            obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
-            return obj1;
-          }
-        }
-        obj8.layout = layout;
-        tmp20 = closure_20(LinearGradient, obj8);
-      }
-      cResult[8] = tmp8;
+        return { opacity: timing.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor };
+      };
+      let obj2 = { withTiming: tmp(tmp2[37]).withTiming, isRinging, CONNECTING_OPACITY, backgroundColor };
+      fn.__closure = obj2;
+      fn.__workletHash = 13655669649054;
+      fn.__initData = __initData6;
+      const animatedStyle = tmp(tmp2[14]).useAnimatedStyle(fn);
+      const tmpResult = tmp(tmp2[14]);
       class C {
         constructor() {
           obj = closure_0(closure_2[38]);
           num = 1;
-          if (isRinging) {
-            num = c28;
+          if (mode.get() === VoicePanelModes.PIP) {
+            num = 0.8;
           }
-          obj1 = { opacity: obj.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: closure_3 };
+          obj1 = { transform: null };
+          obj4 = { scale: obj.withSpring(num, layoutPhysics) };
+          items = [];
+          items[0] = obj4;
+          obj1.transform = items;
           return obj1;
         }
       }
-      cResult[10] = tmp20;
-      tmp19 = tmp20;
+      const obj3 = { withSpring: tmp(tmp2[38]).withSpring, mode, VoicePanelModes, layoutPhysics };
+      C.__closure = obj3;
+      C.__workletHash = 1926256435326;
+      C.__initData = __initData7;
+      const animatedStyle1 = tmp(tmp2[14]).useAnimatedStyle(C);
+      if (cResult[4] !== avatarURI) {
+        let cachedSourceFromURI;
+        if (null != avatarURI) {
+          cachedSourceFromURI = tmp(tmp2[39]).getCachedSourceFromURI(avatarURI);
+          const tmpResult4 = tmp(tmp2[39]);
+        }
+        cResult[4] = avatarURI;
+        cResult[5] = cachedSourceFromURI;
+        let tmp13 = cachedSourceFromURI;
+      } else {
+        tmp13 = cResult[5];
+      }
+      if (cResult[6] === animatedStyle) {
+        if (cResult[7] === image.userRoundedCard) {
+          let tmp16 = cResult[8];
+        }
+        if (cResult[9] === gradientStops) {
+          if (cResult[10] === layout) {
+            let tmp17 = cResult[11];
+          }
+          if (null != tmp13) {
+            let prop;
+            if (null == avatarDecoration) {
+              prop = image.avatarImageMaskStyles;
+            }
+            if (cResult[14] === animatedStyle1) {
+              if (cResult[15] === prop) {
+                let tmp28 = cResult[16];
+              }
+              if (cResult[17] === avatarDecoration) {
+                if (cResult[18] === tmp13) {
+                  if (cResult[19] === tmp26) {
+                    if (cResult[20] === image.image) {
+                      if (cResult[22] === layout) {
+                        if (cResult[23] === tmp28) {
+                        }
+                      }
+                      const obj4 = { style: tmp28, layout, children: cResult[21] };
+                      const tmp35 = closure_20(layoutPhysics(tmp2[41]), obj4);
+                      cResult[22] = layout;
+                      cResult[23] = tmp28;
+                      cResult[24] = cResult[21];
+                      cResult[25] = tmp35;
+                    }
+                  }
+                }
+              }
+              if (tmp26) {
+                const obj5 = { source: tmp13, size: tmp(tmp2[17]).AvatarSizes.XXLARGE, avatarDecoration };
+                let tmp30Result = closure_20(tmp(tmp2[17]).Avatar, obj5);
+              } else {
+                const size = { source: tmp13, resizeMode: "stretch", width: 80, height: 80, style: image.image };
+                tmp30Result = closure_20(layoutPhysics(tmp2[40]), size);
+              }
+              cResult[17] = avatarDecoration;
+              cResult[18] = tmp13;
+              cResult[19] = tmp26;
+              image = image.image;
+              cResult[20] = image;
+              cResult[21] = tmp30Result;
+            }
+            let items = [prop, animatedStyle1];
+            cResult[14] = animatedStyle1;
+            cResult[15] = prop;
+            cResult[16] = items;
+            tmp28 = items;
+          } else {
+            if (cResult[12] !== image.avatarPlaceholder) {
+              const obj6 = { style: image.avatarPlaceholder };
+              const tmp25 = closure_20(layoutPhysics(tmp2[25]), obj6);
+              cResult[12] = image.avatarPlaceholder;
+              cResult[13] = tmp25;
+              let tmp23 = tmp25;
+            } else {
+              tmp23 = cResult[13];
+            }
+            if (cResult[26] === layout) {
+              if (cResult[27] === tmp16) {
+                if (cResult[28] === tmp17) {
+                  if (cResult[29] === tmp23) {
+                    const tmp37 = cResult[30];
+                  }
+                  return tmp37;
+                }
+              }
+            }
+            const obj7 = { style: tmp16, layout, children: null };
+            const items1 = [tmp17, tmp23];
+            obj7.children = items1;
+            cResult[26] = layout;
+            cResult[27] = tmp16;
+            cResult[28] = tmp17;
+            cResult[29] = tmp23;
+            cResult[30] = closure_22(layoutPhysics(tmp2[41]), obj7);
+            class C {
+              constructor() {
+                obj = closure_0(closure_2[38]);
+                num = 1;
+                if (mode.get() === VoicePanelModes.PIP) {
+                  num = 0.8;
+                }
+                obj1 = { transform: null };
+                obj4 = { scale: obj.withSpring(num, layoutPhysics) };
+                items = [];
+                items[0] = obj4;
+                obj1.transform = items;
+                return obj1;
+              }
+            }
+            const tmp39 = closure_22(layoutPhysics(tmp2[41]), obj7);
+          }
+        }
+        let tmp18 = null;
+        if (null != gradientStops) {
+          const obj8 = { colors: gradientStops, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: StyleSheet.absoluteFill, layout, pointerEvents: "none" };
+          tmp18 = closure_20(LinearGradient, obj8);
+        }
+        cResult[9] = gradientStops;
+        cResult[10] = layout;
+        cResult[11] = tmp18;
+        tmp17 = tmp18;
+      }
+      const items2 = [image.userRoundedCard, animatedStyle];
+      cResult[6] = animatedStyle;
+      cResult[7] = image.userRoundedCard;
+      cResult[8] = items2;
+      tmp16 = items2;
+      const tmpResult3 = tmp(tmp2[14]);
     }
-    const items2 = [image.userRoundedCard, animatedStyle];
-    cResult[5] = animatedStyle;
-    cResult[6] = image.userRoundedCard;
-    cResult[7] = items2;
-    tmp18 = items2;
-    const tmpResult3 = tmp(tmp2[14]);
   }
-  const obj9 = { userId, guildId, location: "VoicePanelCard-native" };
-  cResult[0] = guildId;
-  cResult[1] = userId;
-  cResult[2] = obj9;
-  tmp7 = obj9;
+  const obj9 = { userId, guildId, avatarURI, location: "VoicePanelCard-native" };
+  cResult[0] = avatarURI;
+  cResult[1] = guildId;
+  cResult[2] = userId;
+  cResult[3] = obj9;
+  tmp5 = obj9;
   obj = isRinging(mode[21]);
 }) : (function AnimatedUserCardInner(isRinging) {
   isRinging = isRinging.isRinging;
   ({ layout, avatarURI, avatarDecoration, layoutPhysics } = isRinging);
   let mode;
+  backgroundColor = undefined;
   ({ userId, guildId } = isRinging);
   const tmp = closure_29();
   mode = noop.useContext(layoutPhysics(mode[28])).mode;
-  const dominantColorFromImage = isRinging(mode[36]).useDominantColorFromImage(avatarURI);
-  const tmp6 = layoutPhysics(mode[37])({ userId, guildId, location: "VoicePanelCard-native" });
-  let str = "transparent";
-  if (null == tmp6) {
-    str = dominantColorFromImage;
-  }
-  obj = isRinging(mode[36]);
+  ({ gradientStops, backgroundColor } = layoutPhysics(mode[36])({ userId, guildId, avatarURI, location: "VoicePanelCard-native" }));
+  const tmp4 = layoutPhysics(mode[36])({ userId, guildId, avatarURI, location: "VoicePanelCard-native" });
   const fn = function _() {
     let num = 1;
     if (isRinging) {
       num = c28;
     }
-    return { opacity: timing.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor: str };
+    return { opacity: timing.withTiming(num, { duration: 100 }, "animate-always"), backgroundColor };
   };
-  const tmp4Result = isRinging(mode[14]);
-  fn.__closure = { withTiming: isRinging(mode[38]).withTiming, isRinging, CONNECTING_OPACITY, solidBackgroundColor: str };
-  fn.__workletHash = 8753835850480;
+  obj = isRinging(mode[14]);
+  fn.__closure = { withTiming: isRinging(mode[37]).withTiming, isRinging, CONNECTING_OPACITY, backgroundColor };
+  fn.__workletHash = 12115732984752;
   fn.__initData = __initData8;
-  const animatedStyle = tmp4Result.useAnimatedStyle(fn);
-  let obj2 = { withTiming: isRinging(mode[38]).withTiming, isRinging, CONNECTING_OPACITY, solidBackgroundColor: str };
+  const animatedStyle = obj.useAnimatedStyle(fn);
+  let obj2 = { withTiming: isRinging(mode[37]).withTiming, isRinging, CONNECTING_OPACITY, backgroundColor };
   const fn2 = function f() {
     let num = 1;
     if (mode.get() === VoicePanelModes.PIP) {
@@ -1124,52 +1059,52 @@ let closure_42 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj2.transform = items;
     return obj2;
   };
-  const tmp4Result3 = isRinging(mode[14]);
-  fn2.__closure = { withSpring: isRinging(mode[39]).withSpring, mode, VoicePanelModes, layoutPhysics };
+  const obj3 = isRinging(mode[14]);
+  fn2.__closure = { withSpring: isRinging(mode[38]).withSpring, mode, VoicePanelModes, layoutPhysics };
   fn2.__workletHash = 10965423163748;
   fn2.__initData = __initData9;
   let cachedSourceFromURI;
-  const animatedStyle1 = tmp4Result3.useAnimatedStyle(fn2);
+  const animatedStyle1 = obj3.useAnimatedStyle(fn2);
   if (null != avatarURI) {
-    cachedSourceFromURI = tmp4(tmp3[36]).getCachedSourceFromURI(avatarURI);
-    const tmp4Result4 = tmp4(tmp3[36]);
+    cachedSourceFromURI = tmp5(tmp3[39]).getCachedSourceFromURI(avatarURI);
+    const tmp5Result = tmp5(tmp3[39]);
   }
-  const obj4 = { style: null, layout, children: null };
+  const obj5 = { style: null, layout, children: null };
   let items = [tmp.userRoundedCard, animatedStyle];
-  obj4.style = items;
-  let tmp12 = null;
-  const obj3 = { withSpring: isRinging(mode[39]).withSpring, mode, VoicePanelModes, layoutPhysics };
-  if (null != tmp6) {
-    const obj5 = { colors: tmp6, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: StyleSheet.absoluteFill, layout, pointerEvents: "none" };
-    tmp12 = closure_20(LinearGradient, obj5);
+  obj5.style = items;
+  let tmp11 = null;
+  const obj4 = { withSpring: isRinging(mode[38]).withSpring, mode, VoicePanelModes, layoutPhysics };
+  if (null != gradientStops) {
+    const obj6 = { colors: gradientStops, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, style: StyleSheet.absoluteFill, layout, pointerEvents: "none" };
+    tmp11 = closure_20(LinearGradient, obj6);
   }
-  const items1 = [tmp12, ];
+  const items1 = [tmp11, ];
   if (null == cachedSourceFromURI) {
-    const obj6 = { style: tmp.avatarPlaceholder };
-    let tmp21Result2 = closure_20(layoutPhysics(tmp3[25]), obj6);
+    const obj7 = { style: tmp.avatarPlaceholder };
+    let tmp20Result2 = closure_20(layoutPhysics(tmp3[25]), obj7);
   } else {
     let prop;
     if (null == avatarDecoration) {
       prop = tmp.avatarImageMaskStyles;
     }
-    const obj7 = { style: null, layout: null, children: null };
+    const obj8 = { style: null, layout: null, children: null };
     const items2 = [prop, animatedStyle1];
-    obj7.style = items2;
-    obj7.layout = layout;
+    obj8.style = items2;
+    obj8.layout = layout;
     if (null != avatarDecoration) {
-      const obj8 = { source: cachedSourceFromURI, size: tmp4(tmp3[17]).AvatarSizes.XXLARGE, avatarDecoration };
-      let tmp21Result = closure_20(tmp4(tmp3[17]).Avatar, obj8);
+      const obj9 = { source: cachedSourceFromURI, size: tmp5(tmp3[17]).AvatarSizes.XXLARGE, avatarDecoration };
+      let tmp20Result = closure_20(tmp5(tmp3[17]).Avatar, obj9);
     } else {
       const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 80, height: 80, style: tmp.image };
-      tmp21Result = closure_20(layoutPhysics(tmp3[40]), size);
+      tmp20Result = closure_20(layoutPhysics(tmp3[40]), size);
     }
-    obj7.children = tmp21Result;
-    tmp21Result2 = closure_20(layoutPhysics(tmp3[41]), obj7);
+    obj8.children = tmp20Result;
+    tmp20Result2 = closure_20(layoutPhysics(tmp3[41]), obj8);
     const tmp2Result2 = layoutPhysics(tmp3[41]);
   }
-  items1[1] = tmp21Result2;
-  obj4.children = items1;
-  return closure_22(layoutPhysics(mode[41]), obj4);
+  items1[1] = tmp20Result2;
+  obj5.children = items1;
+  return closure_22(layoutPhysics(mode[41]), obj5);
 }));
 const __initData10 = { code: "function VoicePanelCardTsx11(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()!==VoicePanelModes.PIP&&((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{opacity:disable?0:1,borderRadius:withSpring(disable?0:computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}),SPEAKING_PHYSICS,!disable?\"animate-always\":\"animate-never\")};}" };
 const __initData11 = { code: "function VoicePanelCardTsx12(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS,speaking,roundToNearestPixel,SPEAKING_BORDER_SIZE,SPEAKING_INSET}=this.__closure;var _focused$get,_focused$get2;const disable_0=mode.get()===VoicePanelModes.PIP||((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{borderRadius:withSpring(!disable_0?computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}):0,SPEAKING_PHYSICS,!disable_0?\"animate-always\":\"animate-never\"),borderWidth:withSpring(!disable_0&&speaking.get()?roundToNearestPixel(SPEAKING_BORDER_SIZE+SPEAKING_INSET):0,SPEAKING_PHYSICS,!disable_0?\"animate-always\":\"animate-never\")};}" };
@@ -1232,7 +1167,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
       obj2.borderRadius = spring.withSpring(num2, SPEAKING_PHYSICS, str);
       return obj2;
     };
-    let obj3 = { mode, VoicePanelModes, focused, id, withSpring: tmp(tmp2[39]).withSpring, computeCardBorderRadius: isSelf(tmp2[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS };
+    let obj3 = { mode, VoicePanelModes, focused, id, withSpring: tmp(tmp2[38]).withSpring, computeCardBorderRadius: isSelf(tmp2[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS };
     fn.__closure = obj3;
     fn.__workletHash = 11554900074499;
     fn.__initData = __initData10;
@@ -1255,7 +1190,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
         }
         tmp8 = closure_2;
         tmp7 = closure_0;
-        obj2 = closure_0(closure_2[39]);
+        obj2 = closure_0(closure_2[38]);
         num = 0;
         if (!tmp) {
           tmp9 = closure_1;
@@ -1285,7 +1220,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
           str2 = "animate-never";
         }
         obj6 = { borderRadius: obj2.withSpring(num, tmp18, str2), borderWidth: null };
-        tmp7Result = tmp7(tmp8[39]);
+        tmp7Result = tmp7(tmp8[38]);
         num2 = 0;
         if (!tmp) {
           tmp19 = speaking;
@@ -1303,7 +1238,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
         return obj6;
       }
     }
-    let obj4 = { mode, VoicePanelModes, focused, id, withSpring: tmp(tmp2[39]).withSpring, computeCardBorderRadius: isSelf(tmp2[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, roundToNearestPixel: isSelf(tmp2[45]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
+    let obj4 = { mode, VoicePanelModes, focused, id, withSpring: tmp(tmp2[38]).withSpring, computeCardBorderRadius: isSelf(tmp2[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, roundToNearestPixel: isSelf(tmp2[45]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
     E.__closure = obj4;
     E.__workletHash = 9044857468643;
     E.__initData = __initData11;
@@ -1351,7 +1286,7 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
       obj4.borderWidth = spring.withSpring(num2, SPEAKING_PHYSICS, str);
       return obj4;
     };
-    const obj5 = { mode, VoicePanelModes, focused, id, withSpring: tmp(tmp2[39]).withSpring, computeCardBorderRadius: isSelf(tmp2[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, SPEAKING_BORDER_SIZE: 3 };
+    const obj5 = { mode, VoicePanelModes, focused, id, withSpring: tmp(tmp2[38]).withSpring, computeCardBorderRadius: isSelf(tmp2[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, SPEAKING_BORDER_SIZE: 3 };
     fn2.__closure = obj5;
     fn2.__workletHash = 382845800969;
     fn2.__initData = __initData12;
@@ -1497,11 +1432,11 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
     return obj2;
   };
   let obj3 = id(speaking[14]);
-  fn.__closure = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[39]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS };
+  fn.__closure = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[38]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS };
   fn.__workletHash = 10993051977798;
   fn.__initData = __initData13;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj4 = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[39]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS };
+  let obj4 = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[38]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS };
   const fn2 = function h() {
     let tmp = mode.get() === VoicePanelModes.PIP;
     if (!tmp) {
@@ -1545,11 +1480,11 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
     return obj4;
   };
   const obj5 = id(speaking[14]);
-  fn2.__closure = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[39]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, roundToNearestPixel: isSelf(speaking[45]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
+  fn2.__closure = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[38]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, roundToNearestPixel: isSelf(speaking[45]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
   fn2.__workletHash = 492143708356;
   fn2.__initData = __initData14;
   const animatedStyle1 = obj5.useAnimatedStyle(fn2);
-  const obj6 = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[39]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, roundToNearestPixel: isSelf(speaking[45]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
+  const obj6 = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[38]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, roundToNearestPixel: isSelf(speaking[45]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
   const fn3 = function p() {
     let tmp = mode.get() === VoicePanelModes.PIP;
     if (!tmp) {
@@ -1593,14 +1528,14 @@ let closure_49 = ReactCompilerGating.isReactCompilerEnabled() ? (function Speaki
     return obj4;
   };
   const obj7 = id(speaking[14]);
-  fn3.__closure = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[39]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, SPEAKING_BORDER_SIZE: 3 };
+  fn3.__closure = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[38]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, SPEAKING_BORDER_SIZE: 3 };
   fn3.__workletHash = 14974168975148;
   fn3.__initData = __initData15;
   const animatedStyle2 = obj7.useAnimatedStyle(fn3);
   const obj9 = { style: null, layout, pointerEvents: "none", children: null };
   const items = [tmp2.speakingIndicatorWrapper, animatedStyle];
   obj9.style = items;
-  const obj8 = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[39]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, SPEAKING_BORDER_SIZE: 3 };
+  const obj8 = { mode, VoicePanelModes, focused, id, withSpring: id(speaking[38]).withSpring, computeCardBorderRadius: isSelf(speaking[44]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS, speaking, SPEAKING_BORDER_SIZE: 3 };
   const obj10 = { style: null, layout };
   const items1 = [tmp2.speakingIndicatorUnderlay, animatedStyle1];
   obj10.style = items1;
@@ -1989,7 +1924,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
 }
 let obj4 = { position: "relative", borderRadius: nativeDefault.radii.round, overflow: "hidden" };
 let obj8 = {};
-layoutTransitionFunction.__closure = { withSpring: fn(5441).withSpring };
+layoutTransitionFunction.__closure = { withSpring: fn(5478).withSpring };
 layoutTransitionFunction.__workletHash = 14607823135698;
 layoutTransitionFunction.__initData = { code: "function layoutTransitionFunction_VoicePanelCardTsx25(values,physics,scale,lastScale,disableAnimation=false){const{withSpring}=this.__closure;const scaleAdjustment=scale.get()/lastScale.get();const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth*scaleAdjustment,height:values.currentHeight*scaleAdjustment},callback:function(){lastScale.set(scale.get());}};}" };
 const __initData24 = { code: "function VoicePanelCardTsx26(){const{id,pipState,mode,VoicePanelModes}=this.__closure;if(id===pipState.id&&mode.get()===VoicePanelModes.PIP){return true;}return false;}" };
@@ -2269,7 +2204,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                     size1.borderRadius = spring.withSpring(tmp22Result, SCALE_PHYSICS);
                     return size1;
                   }
-                  let obj6 = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(tmp2[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(tmp2[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: tmp4(tmp2[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(tmp2[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: tmp4(tmp2[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(tmp2[14]).withDelay, withTiming: cleanUp(tmp2[38]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(tmp2[14]).runOnJS, cleanUp, withSpring: cleanUp(tmp2[39]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS: showControls };
+                  let obj6 = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(tmp2[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(tmp2[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: tmp4(tmp2[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(tmp2[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: tmp4(tmp2[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(tmp2[14]).withDelay, withTiming: cleanUp(tmp2[37]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(tmp2[14]).runOnJS, cleanUp, withSpring: cleanUp(tmp2[38]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS: showControls };
                   ce.__closure = obj6;
                   ce.__workletHash = 7444094303589;
                   ce.__initData = __initData27;
@@ -2338,7 +2273,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                                                             result = closure_33.set(0);
                                                             tmp3 = closure_0;
                                                             tmp4 = closure_2;
-                                                            obj = closure_0(closure_2[39]);
+                                                            obj = closure_0(closure_2[38]);
                                                             tmp5 = layoutPhysics;
                                                             fn = function t(arg0) {
                                                               if (true === arg0) {
@@ -2372,7 +2307,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                                                           return pipHandoff.setCardArrivedInPIP(id);
                                                         }
                                                       }
-                                                      class Be {
+                                                      class Fe {
                                                         constructor(arg0) {
                                                           scale = closure_24.scale;
                                                           value = scale.get();
@@ -2380,13 +2315,13 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                                                           size = { originX: coords.currentOriginX, originY: coords.currentOriginY, width: coords.currentWidth * result, height: coords.currentHeight * result };
                                                           obj1 = { animations: null, initialValues: null, callback: null };
                                                           size1 = { originX: null, originY: null, width: null, height: null };
-                                                          obj4 = closure_0(closure_2[39]);
+                                                          obj4 = closure_0(closure_2[38]);
                                                           size1.originX = obj4.withSpring(coords.targetOriginX, layoutPhysics, "respect-motion-settings");
-                                                          obj5 = closure_0(closure_2[39]);
+                                                          obj5 = closure_0(closure_2[38]);
                                                           size1.originY = obj5.withSpring(coords.targetOriginY, layoutPhysics, "respect-motion-settings");
-                                                          obj6 = closure_0(closure_2[39]);
+                                                          obj6 = closure_0(closure_2[38]);
                                                           size1.width = obj6.withSpring(coords.targetWidth, layoutPhysics, "respect-motion-settings");
-                                                          obj7 = closure_0(closure_2[39]);
+                                                          obj7 = closure_0(closure_2[38]);
                                                           size1.height = obj7.withSpring(coords.targetHeight, layoutPhysics, "respect-motion-settings");
                                                           obj1.animations = size1;
                                                           obj1.initialValues = size;
@@ -2405,15 +2340,15 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                                                           return obj1;
                                                         }
                                                       }
-                                                      let obj7 = { pipState: pIPState, lastPIPScale: sharedValue1, withSpring: cleanUp(tmp2[39]).withSpring, layoutPhysics, wrapperOffset };
-                                                      Be.__closure = obj7;
-                                                      Be.__workletHash = 1978895565164;
-                                                      Be.__initData = __initData29;
+                                                      let obj7 = { pipState: pIPState, lastPIPScale: sharedValue1, withSpring: cleanUp(tmp2[38]).withSpring, layoutPhysics, wrapperOffset };
+                                                      Fe.__closure = obj7;
+                                                      Fe.__workletHash = 1978895565164;
+                                                      Fe.__initData = __initData29;
                                                       cResult[49] = sharedValue1;
                                                       cResult[50] = layoutPhysics;
                                                       cResult[51] = pIPState.scale;
                                                       cResult[52] = wrapperOffset;
-                                                      cResult[53] = Be;
+                                                      cResult[53] = Fe;
                                                       const tmpResult15 = cleanUp(tmp2[14]);
                                                     }
                                                   }
@@ -2426,7 +2361,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                                                       result = closure_33.set(0);
                                                       tmp3 = closure_0;
                                                       tmp4 = closure_2;
-                                                      obj = closure_0(closure_2[39]);
+                                                      obj = closure_0(closure_2[38]);
                                                       tmp5 = layoutPhysics;
                                                       fn = function t(arg0) {
                                                         if (true === arg0) {
@@ -2834,9 +2769,9 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
         num7 = 0;
       }
       size1 = { zIndex: null, opacity: null, width: null, height: null, transform: null, borderRadius: null };
-      obj11 = closure_0(closure_2[38]);
+      obj11 = closure_0(closure_2[37]);
       size1.zIndex = obj9.withDelay(num7, obj11.withTiming(num2, closure_27));
-      obj12 = closure_0(closure_2[38]);
+      obj12 = closure_0(closure_2[37]);
       tmp31 = closure_26;
       str = "animate-never";
       if (isScrollVisible.get()) {
@@ -2878,7 +2813,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
       if (!gestureActive) {
         tmp33 = closure_0;
         tmp34 = closure_2;
-        obj14 = closure_0(closure_2[39]);
+        obj14 = closure_0(closure_2[38]);
         tmp35 = layoutPhysics;
         str2 = "respect-motion-settings";
         withSpringResult = obj14.withSpring(num, layoutPhysics, "respect-motion-settings");
@@ -2889,24 +2824,24 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
       if (!gestureActive) {
         tmp37 = closure_0;
         tmp38 = closure_2;
-        obj15 = closure_0(closure_2[39]);
+        obj15 = closure_0(closure_2[38]);
         tmp39 = layoutPhysics;
         str3 = "respect-motion-settings";
         withSpringResult1 = obj15.withSpring(sum, layoutPhysics, "respect-motion-settings");
       }
       items[1] = { translateY: withSpringResult1 };
       obj23 = { scale: null };
-      obj17 = closure_0(closure_2[39]);
+      obj17 = closure_0(closure_2[38]);
       obj23.scale = obj17.withSpring(num6, closure_25);
       items[2] = obj23;
       size1.transform = items;
-      obj18 = closure_0(closure_2[39]);
+      obj18 = closure_0(closure_2[38]);
       size1.borderRadius = obj18.withSpring(tmp22Result, SCALE_PHYSICS);
       return size1;
     }
   }
   const tmp5Result12 = cleanUp(id[14]);
-  E.__closure = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(id[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(id[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: coords(id[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(id[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: coords(id[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(id[14]).withDelay, withTiming: cleanUp(id[38]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(id[14]).runOnJS, cleanUp, withSpring: cleanUp(id[39]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS };
+  E.__closure = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(id[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(id[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: coords(id[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(id[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: coords(id[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(id[14]).withDelay, withTiming: cleanUp(id[37]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(id[14]).runOnJS, cleanUp, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS };
   E.__workletHash = 12967186727989;
   E.__initData = __initData33;
   const animatedStyle = tmp5Result12.useAnimatedStyle(E);
@@ -2922,7 +2857,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
     onDoubleTap: null,
     onLongPress: null
   };
-  let obj6 = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(id[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(id[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: coords(id[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(id[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: coords(id[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(id[14]).withDelay, withTiming: cleanUp(id[38]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(id[14]).runOnJS, cleanUp, withSpring: cleanUp(id[39]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS };
+  let obj6 = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(id[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(id[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: coords(id[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(id[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: coords(id[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(id[14]).withDelay, withTiming: cleanUp(id[37]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(id[14]).runOnJS, cleanUp, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS };
   const tmpResult = coords(id[54]);
   if (tmp5Result13.isStableActivityParticipant(tmp7)) {
     const fn3 = () => {
@@ -3006,7 +2941,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
     return obj;
   }
   const tmp5Result16 = cleanUp(id[14]);
-  me.__closure = { pipState: pIPState, lastPIPScale: sharedValue1, withSpring: cleanUp(id[39]).withSpring, layoutPhysics, wrapperOffset };
+  me.__closure = { pipState: pIPState, lastPIPScale: sharedValue1, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, wrapperOffset };
   me.__workletHash = 12776532702151;
   me.__initData = __initData35;
   const items4 = [layoutPhysics, wrapperOffset, sharedValue1, pIPState.scale];
@@ -3023,7 +2958,7 @@ const __initData37 = { code: "function layoutTransition_VoicePanelCardTsx41(valu
 const __initData38 = { code: "function VoicePanelCardTsx42(){const{EDGE_GUTTER,coords,scrollPosition,windowDimensions}=this.__closure;const yPos=EDGE_GUTTER+coords.get().y;return yPos>scrollPosition.get()-coords.get().height&&yPos<scrollPosition.get()+windowDimensions.get().height;}" };
 let closure_80 = { code: "function layoutTransition_VoicePanelCardTsx43(values,disableAnimation=false){const{layoutTransitionFunction,physics,pipState,lastPipScale}=this.__closure;return layoutTransitionFunction(values,physics,pipState.scale,lastPipScale,disableAnimation);}" };
 ReactCompilerGating = fn(558);
-let obj9 = { withSpring: fn(5441).withSpring };
+let obj9 = { withSpring: fn(5478).withSpring };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
 
@@ -3444,7 +3379,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp36 = obj11;
     const tmpResult17 = scrollPosition(tmp2[14]);
   }
-  class B {
+  class F {
     constructor() {
       handleChange = function handleChange() {
         let isSpeakingResult = null != id2;
@@ -3469,10 +3404,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items2 = [id2, sharedValue1];
   cResult[6] = sharedValue1;
   cResult[7] = id2;
-  cResult[8] = B;
+  cResult[8] = F;
   cResult[9] = items2;
   tmp25 = items2;
-  tmp24 = B;
+  tmp24 = F;
   const tmpResult13 = scrollPosition(id2[14]);
 }) : (function VoicePanelCard(cleanUp) {
   ({ item, transitionState } = cleanUp);
@@ -3554,7 +3489,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp5Result12 = scrollPosition(id2[14]);
   cardLayoutCoordsSubscription = scrollPosition(id2[57]).useCardLayoutCoordsSubscription(id, layoutManager);
   const tmp5Result13 = scrollPosition(id2[57]);
-  class B {
+  class F {
     constructor() {
       sum = EDGE_GUTTER + closure_4.get().y;
       obj = scrollPosition;
@@ -3568,10 +3503,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return tmp3;
     }
   }
-  B.__closure = { EDGE_GUTTER, coords: cardLayoutCoordsSubscription, scrollPosition, windowDimensions };
-  B.__workletHash = 4524381131947;
-  B.__initData = __initData38;
-  const derivedValue = scrollPosition(id2[14]).useDerivedValue(B);
+  F.__closure = { EDGE_GUTTER, coords: cardLayoutCoordsSubscription, scrollPosition, windowDimensions };
+  F.__workletHash = 4524381131947;
+  F.__initData = __initData38;
+  const derivedValue = scrollPosition(id2[14]).useDerivedValue(F);
   const obj3 = { EDGE_GUTTER, coords: cardLayoutCoordsSubscription, scrollPosition, windowDimensions };
   const tmp5Result14 = scrollPosition(id2[14]);
   pIPState = scrollPosition(id2[49]).usePIPState();

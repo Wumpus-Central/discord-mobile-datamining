@@ -1,7 +1,7 @@
-// === Module 9963: StickerPickerConstants ===
+// === Module 10027: StickerPickerConstants ===
 
-// Module 9963 (StickerPickerConstants)
-import StickersTypes from "StickersTypes" /* 5969 */;
+// Module 10027 (StickerPickerConstants)
+import StickersTypes from "StickersTypes" /* 6006 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1243 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 7477: GuildSidebarConstants ===
+// === Module 7523: GuildSidebarConstants ===
 
-// Module 7477 (GuildSidebarConstants)
+// Module 7523 (GuildSidebarConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/GuildSidebarConstants.tsx");

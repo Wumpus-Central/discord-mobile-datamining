@@ -1,9 +1,9 @@
-// === Module 8200: useAuthorWithProcessedColor ===
+// === Module 8246: useAuthorWithProcessedColor ===
 
-// Module 8200 (useAuthorWithProcessedColor)
+// Module 8246 (useAuthorWithProcessedColor)
 import _mod17 from "module_17" /* 17 */;
-import useMessageAuthor from "useMessageAuthor" /* 5846 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8201 */;
+import useMessageAuthor from "useMessageAuthor" /* 5883 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8247 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;

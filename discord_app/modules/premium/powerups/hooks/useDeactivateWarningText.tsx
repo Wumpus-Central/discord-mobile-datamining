@@ -1,12 +1,12 @@
-// === Module 13160: useDeactivateWarningText ===
+// === Module 13225: useDeactivateWarningText ===
 
-// Module 13160 (useDeactivateWarningText)
+// Module 13225 (useDeactivateWarningText)
 import util from "util" /* 1128 */;
-import _modDef2603 from "module_2603" /* 2603 */;
-import Powerups from "Powerups" /* 5070 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7042 */;
+import _modDef2621 from "module_2621" /* 2621 */;
+import Powerups from "Powerups" /* 5107 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7095 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5079 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5116 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
@@ -204,17 +204,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
       if (stateFromStores2 > 0) {
         const intl5 = util.intl;
         const obj2 = { perk: tmp.title, memberCount: tmp14 };
-        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2603["4jSvr1"], obj2);
+        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2621["4jSvr1"], obj2);
       } else {
         const intl4 = util.intl;
         const obj3 = { perk: tmp.title };
-        formatToPlainStringResult = intl4.formatToPlainString(_modDef2603.cavtEo, obj3);
+        formatToPlainStringResult = intl4.formatToPlainString(_modDef2621.cavtEo, obj3);
       }
     } else {
       if (Powerups.VANITY_URL_POWERUP_SKU_ID === skuId) {
         const intl3 = util.intl;
         const string = intl3.string;
-        const tmp11 = _modDef2603;
+        const tmp11 = _modDef2621;
         if (stateFromStores1) {
           let stringResult = string(tmp11.hN75yb);
           let tmp13 = importDefault;
@@ -236,14 +236,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
                   num = 0;
                 }
                 obj.memberCount = num;
-                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2603["4jSvr1"], obj);
+                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2621["4jSvr1"], obj);
                 tmp7 = importDefault;
               }
             }
           }
         }
         const intl2 = util.intl;
-        formatToPlainStringResult1 = intl2.string(_modDef2603.Vf2ZcR);
+        formatToPlainStringResult1 = intl2.string(_modDef2621.Vf2ZcR);
         tmp7 = importDefault;
       }
       const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID };
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useDeact
       if (tmp20) {
         const obj5 = { text: null, critical: true };
         const intl6 = util.intl;
-        obj5.text = intl6.string(tmp7(2603).M4XL5n);
+        obj5.text = intl6.string(tmp7(2621).M4XL5n);
         items.push(obj5);
       }
       return items;

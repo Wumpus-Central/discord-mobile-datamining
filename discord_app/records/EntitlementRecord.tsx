@@ -1,10 +1,10 @@
-// === Module 7336: EntitlementRecord ===
+// === Module 6303: EntitlementRecord ===
 
-// Module 7336 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7337 */;
+// Module 6303 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 4864 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 6308 */;
 import Record from "Record" /* 1407 */;
-import SKURecord from "SKURecord" /* 6315 */;
+import SKURecord from "SKURecord" /* 6304 */;
 import UserRecord from "UserRecord" /* 1406 */;
 
 require = fn;

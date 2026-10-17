@@ -1,6 +1,6 @@
-// === Module 9244: APNGDecorationNativeComponent ===
+// === Module 9304: APNGDecorationNativeComponent ===
 
-// Module 9244 (APNGDecorationNativeComponent)
+// Module 9304 (APNGDecorationNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;

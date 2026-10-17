@@ -1,6 +1,6 @@
-// === Module 5973: SortedArrayUtils ===
+// === Module 6010: SortedArrayUtils ===
 
-// Module 5973 (SortedArrayUtils)
+// Module 6010 (SortedArrayUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SortedArrayUtils.tsx");

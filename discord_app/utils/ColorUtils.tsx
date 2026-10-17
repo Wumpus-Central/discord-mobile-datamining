@@ -1,10 +1,10 @@
-// === Module 5026: ColorUtils ===
+// === Module 5063: ColorUtils ===
 
-// Module 5026 (ColorUtils)
+// Module 5063 (ColorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1128 */;
-import utils_ColorDefault from "utils/Color" /* 5027 */;
+import utils_ColorDefault from "utils/Color" /* 5064 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -243,11 +243,11 @@ function sortColors(hsv, hsv2) {
   hsv2 = hsv2.hsv;
   return hsv2.s + hsv2.v - (hsv.s + hsv.v);
 }
-function hexWithOpacity(color, overlayOpacity) {
+function hexWithOpacity(color, c3) {
   if (7 === color.length) {
-    const str1 = 255 * overlayOpacity | 0.toString(16);
-    const str14 = 255 * overlayOpacity | 0;
-    return color + 255 * overlayOpacity | 0.toString(16).padStart(2, "0").toUpperCase();
+    const str1 = 255 * c3 | 0.toString(16);
+    const str14 = 255 * c3 | 0;
+    return color + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
   } else {
     let substr = color;
     if ("#" === color.charAt(0)) {
@@ -260,9 +260,9 @@ function hexWithOpacity(color, overlayOpacity) {
       const sum = charAtResult + charAtResult;
       const sum1 = charAtResult1 + charAtResult1;
       const sum2 = charAtResult2 + charAtResult2;
-      const str11 = 255 * overlayOpacity | 0;
-      const str18 = 255 * overlayOpacity | 0.toString(16);
-      return "#" + sum + sum1 + sum2 + 255 * overlayOpacity | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str11 = 255 * c3 | 0;
+      const str18 = 255 * c3 | 0.toString(16);
+      return "#" + sum + sum1 + sum2 + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (4 === length) {
       const charAtResult3 = substr.charAt(0);
       const charAtResult4 = substr.charAt(1);
@@ -272,20 +272,20 @@ function hexWithOpacity(color, overlayOpacity) {
       const sum3 = charAtResult3 + charAtResult3;
       const sum4 = charAtResult4 + charAtResult4;
       const sum5 = charAtResult5 + charAtResult5;
-      const str8 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * overlayOpacity) | 0;
-      const str19 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * overlayOpacity) | 0.toString(16);
-      return "#" + sum3 + sum4 + sum5 + 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * overlayOpacity) | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str8 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0;
+      const str19 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16);
+      return "#" + sum3 + sum4 + sum5 + 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (6 === length) {
       const text = `#${arr}`;
-      const str20 = 255 * overlayOpacity | 0.toString(16);
-      const str5 = 255 * overlayOpacity | 0;
-      return `#${arr}` + 255 * overlayOpacity | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str20 = 255 * c3 | 0.toString(16);
+      const str5 = 255 * c3 | 0;
+      return `#${arr}` + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (8 === length) {
       const _parseInt = parseInt;
       const text1 = `#${arr.slice(0, 6)}`;
-      const str2 = parseInt(substr.slice(6), 16) / 255 * overlayOpacity * 255 | 0;
-      const str21 = parseInt(substr.slice(6), 16) / 255 * overlayOpacity * 255 | 0.toString(16);
-      return `#${arr.slice(0, 6)}` + parseInt(substr.slice(6), 16) / 255 * overlayOpacity * 255 | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str2 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0;
+      const str21 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0.toString(16);
+      return `#${arr.slice(0, 6)}` + parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else {
       const _Error = Error;
       const error = new Error("Invalid hex color format");
@@ -456,12 +456,12 @@ export const hexToColorName = function hexToColorName(tmp2Result4, arg1) {
     return tmp();
   }
 };
-export const mixColors = function mixColors(mixColorOverride, red) {
-  const alpha = mixColorOverride.alpha;
-  const sum = (1 - alpha) * red.red + alpha * mixColorOverride.red;
-  const sum1 = (1 - alpha) * red.green + alpha * mixColorOverride.green;
-  const sum2 = (1 - alpha) * red.blue + alpha * mixColorOverride.blue;
-  const sum3 = mixColorOverride.alpha + red.alpha * (1 - mixColorOverride.alpha);
+export const mixColors = function mixColors(alpha, red) {
+  alpha = alpha.alpha;
+  const sum = (1 - alpha) * red.red + alpha * alpha.red;
+  const sum1 = (1 - alpha) * red.green + alpha * alpha.green;
+  const sum2 = (1 - alpha) * red.blue + alpha * alpha.blue;
+  const sum3 = alpha.alpha + red.alpha * (1 - alpha.alpha);
   return new utils_ColorDefault(sum, sum1, sum2, sum3);
 };
 export { hex2rgb2hsv };

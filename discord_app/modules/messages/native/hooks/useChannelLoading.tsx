@@ -1,8 +1,8 @@
-// === Module 11029: useChannelLoading ===
+// === Module 11091: useChannelLoading ===
 
-// Module 11029 (useChannelLoading)
-import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5460 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9618 */;
+// Module 11091 (useChannelLoading)
+import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5497 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9682 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

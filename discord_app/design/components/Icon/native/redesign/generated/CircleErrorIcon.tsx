@@ -1,11 +1,11 @@
-// === Module 6514: CircleErrorIcon ===
+// === Module 6567: CircleErrorIcon ===
 
-// Module 6514 (CircleErrorIcon)
+// Module 6567 (CircleErrorIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod6515 from "module_6515" /* 6515 */;
-import _mod6516 from "module_6516" /* 6516 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod6568 from "module_6568" /* 6568 */;
+import _mod6569 from "module_6569" /* 6569 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod6515;
+    const tmpResult = _mod6568;
     cResult[5] = tmpResult;
     let tmp11 = tmpResult;
   } else {
@@ -59,7 +59,7 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult2 = _mod6516;
+        const tmpResult2 = _mod6569;
         cResult[10] = tmpResult2;
         let tmp16 = tmpResult2;
       } else {
@@ -132,8 +132,8 @@ export const CircleErrorIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod6515, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod6516, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod6568, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod6569, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

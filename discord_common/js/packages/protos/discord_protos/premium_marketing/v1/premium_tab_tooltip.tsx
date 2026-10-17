@@ -1,9 +1,9 @@
-// === Module 9378: premium_tab_tooltip ===
+// === Module 9442: premium_tab_tooltip ===
 
-// Module 9378 (premium_tab_tooltip)
+// Module 9442 (premium_tab_tooltip)
 import _mod1212 from "module_1212" /* 1212 */;
-import localized_string from "localized_string" /* 9362 */;
-import theme_aware_asset from "theme_aware_asset" /* 9372 */;
+import localized_string from "localized_string" /* 9426 */;
+import theme_aware_asset from "theme_aware_asset" /* 9436 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -42,12 +42,12 @@ class PremiumTabTooltip$Type extends MessageType {
   }
 }
 const prototype = PremiumTabTooltip$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { header: "", body: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

@@ -1,10 +1,10 @@
-// === Module 6278: NotificationCenterUtils ===
+// === Module 6337: NotificationCenterUtils ===
 
-// Module 6278 (NotificationCenterUtils)
+// Module 6337 (NotificationCenterUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import getTimestampString from "getTimestampString" /* 5511 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6277 */;
+import getTimestampString from "getTimestampString" /* 5548 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6336 */;
 import size from "module_2" /* 2 */;
 
 const getTimestampStringDefault = getTimestampString;

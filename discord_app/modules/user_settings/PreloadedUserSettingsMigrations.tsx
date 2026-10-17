@@ -1,6 +1,6 @@
-// === Module 15409: PreloadedUserSettingsMigrations ===
+// === Module 15478: PreloadedUserSettingsMigrations ===
 
-// Module 15409 (PreloadedUserSettingsMigrations)
+// Module 15478 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
@@ -8,8 +8,8 @@ import wrappers from "wrappers" /* 1242 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1248 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2051 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
-import HotspotStore2 from "HotspotStore" /* 7132 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7463 */;
+import HotspotStore2 from "HotspotStore" /* 7185 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7509 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 9231: useWishlistGiftableItems ===
+// === Module 9291: useWishlistGiftableItems ===
 
-// Module 9231 (useWishlistGiftableItems)
+// Module 9291 (useWishlistGiftableItems)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

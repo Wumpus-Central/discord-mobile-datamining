@@ -1,15 +1,15 @@
-// === Module 4996: ClientThemesBackgroundStore ===
+// === Module 5032: ClientThemesBackgroundStore ===
 
-// Module 4996 (ClientThemesBackgroundStore)
+// Module 5032 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4997 */;
-import UserUtils from "UserUtils" /* 5021 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5025 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4864 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5033 */;
+import UserUtils from "UserUtils" /* 5057 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5061 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;

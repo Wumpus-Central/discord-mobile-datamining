@@ -1,22 +1,22 @@
-// === Module 15500: EmbeddedActivitiesNativeManager ===
+// === Module 15563: EmbeddedActivitiesNativeManager ===
 
-// Module 15500 (EmbeddedActivitiesNativeManager)
+// Module 15563 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
-import ChatInputUtils from "ChatInputUtils" /* 5044 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5359 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5363 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11170 */;
-import activityWebViewController from "activityWebViewController" /* 11240 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15501 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
+import ChatInputUtils from "ChatInputUtils" /* 5081 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5396 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5400 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11235 */;
+import activityWebViewController from "activityWebViewController" /* 11305 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15564 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15502 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15565 */;
 
 require = fn;
 const Constants = fn(1087);

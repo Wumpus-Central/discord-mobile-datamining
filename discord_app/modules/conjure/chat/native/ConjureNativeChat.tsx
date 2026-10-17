@@ -1,39 +1,39 @@
-// === Module 12043: ConjureNativeChat ===
+// === Module 12106: ConjureNativeChat ===
 
-// Module 12043 (ConjureNativeChat)
+// Module 12106 (ConjureNativeChat)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import LinearGradientDefault from "LinearGradient" /* 5454 */;
-import _modDef6467 from "module_6467" /* 6467 */;
-import conjureChatTurns from "conjureChatTurns" /* 10900 */;
-import conjurePublishCard from "conjurePublishCard" /* 12046 */;
-import ConjureTodoState from "ConjureTodoState" /* 12048 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12049 */;
-import ConjureSecretRequestState from "ConjureSecretRequestState" /* 12050 */;
-import conjureCardOverrides from "conjureCardOverrides" /* 12051 */;
-import conjurePendingPlan from "conjurePendingPlan" /* 12052 */;
-import ConjureChatGrouping from "ConjureChatGrouping" /* 12053 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12054 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12059 */;
-import ConjureRepliedMessage from "ConjureRepliedMessage" /* 12060 */;
-import ConjureMessageRowDefault from "ConjureMessageRow" /* 12089 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import LinearGradientDefault from "LinearGradient" /* 5491 */;
+import _modDef6520 from "module_6520" /* 6520 */;
+import conjureChatTurns from "conjureChatTurns" /* 10964 */;
+import conjurePublishCard from "conjurePublishCard" /* 12109 */;
+import ConjureTodoState from "ConjureTodoState" /* 12111 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12112 */;
+import ConjureSecretRequestState from "ConjureSecretRequestState" /* 12113 */;
+import conjureCardOverrides from "conjureCardOverrides" /* 12114 */;
+import conjurePendingPlan from "conjurePendingPlan" /* 12115 */;
+import ConjureChatGrouping from "ConjureChatGrouping" /* 12116 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12117 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 12122 */;
+import ConjureRepliedMessage from "ConjureRepliedMessage" /* 12123 */;
+import ConjureMessageRowDefault from "ConjureMessageRow" /* 12152 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10898 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10913 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10915 */;
-import ConjureChatStore from "ConjureChatStore" /* 10899 */;
+import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10962 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10977 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10979 */;
+import ConjureChatStore from "ConjureChatStore" /* 10963 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(10898);
+let ConjureConnectionStore = fn(10962);
 ({ ensureConnection: closure_7, interruptTurn: closure_8, loadOlderHistory: closure_9, sendUserMessage: c10 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
 const jsxProd = fn(21);
@@ -48,7 +48,7 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { flex: 1 }, transcript: { flex: 1 }, maskSolid: { flex: 1, backgroundColor: BLACK }, maskFade: { height: 52 }, transcriptArea: { flex: 1, position: "relative" }, transcriptContent: null, bottomStack: null, notice: null, placeholder: null };
 const alphaResult = _modDef683(BLACK).alpha(0.2);
 obj2.transcriptContent = { paddingTop: nativeDefault.space.PX_8 };
@@ -113,7 +113,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Transc
             }
           }
           const obj7 = { style: transcript, maskElement: tmp23, children };
-          const tmp30 = value2(_modDef6467, obj7);
+          const tmp30 = value2(_modDef6520, obj7);
           cResult[11] = children;
           cResult[12] = tmp3.transcript;
           cResult[13] = tmp23;
@@ -156,7 +156,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Transc
     obj3.children = items;
     obj2.maskElement = value3(View, obj3);
     obj2.children = children;
-    tmp3 = value2(_modDef6467, obj2);
+    tmp3 = value2(_modDef6520, obj2);
   }
   return tmp3;
 });
@@ -1319,7 +1319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   const items30 = [projectId];
   closure_21 = obj3.useCallback(() => {
     const intl = util.intl;
-    conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3865.EMgIuY));
+    conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3883.EMgIuY));
   }, items30);
   const items31 = [projectId];
   onPickIdea = obj3.useCallback((implementation_prompt) => {
@@ -1331,7 +1331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   const items33 = [projectId];
   const callback1 = obj3.useCallback(() => {
     const intl = util.intl;
-    collapsed(projectId, intl.string(_modDef3865["t5CN3+"]));
+    collapsed(projectId, intl.string(_modDef3883["t5CN3+"]));
   }, items32);
   closure_23 = obj3.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
     conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt, { clarificationAnswers, attachments });
@@ -1548,13 +1548,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   }, items44);
   if (stateFromStores5) {
     const intl3 = tmp2(tmp3[27]).intl;
-    memo6 = intl3.string(require("module_3865").mKK6wB);
+    memo6 = intl3.string(require("module_3883").mKK6wB);
   } else if (stateFromStores4) {
     const intl2 = tmp2(tmp3[27]).intl;
-    memo6 = intl2.string(require("module_3865").xnCAaP);
+    memo6 = intl2.string(require("module_3883").xnCAaP);
   } else if (memo6 == null) {
     let intl = tmp2(tmp3[27]).intl;
-    memo6 = intl.string(require("module_3865").L9EDub);
+    memo6 = intl.string(require("module_3883").L9EDub);
   }
   const items45 = [memo, memo4];
   let tmp75;
@@ -1906,9 +1906,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
     const obj33 = { style: tmp.placeholder, children: null };
     const intl4 = tmp2(tmp3[27]).intl;
     if ("unavailable" === chatEmptyStateResult) {
-      let AyiQEp = require("module_3865").Td4Sf4;
+      let AyiQEp = require("module_3883").Td4Sf4;
     } else {
-      AyiQEp = require("module_3865").AyiQEp;
+      AyiQEp = require("module_3883").AyiQEp;
     }
     const obj34 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
     obj33.children = tmp94(tmp2(tmp3[41]).Text, obj34);

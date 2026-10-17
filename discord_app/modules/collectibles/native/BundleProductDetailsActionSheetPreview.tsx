@@ -1,14 +1,14 @@
-// === Module 14144: BundleProductDetailsActionSheetPreview ===
+// === Module 14212: BundleProductDetailsActionSheetPreview ===
 
-// Module 14144 (BundleProductDetailsActionSheetPreview)
+// Module 14212 (BundleProductDetailsActionSheetPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6559 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7496 */;
-import useShopProductItems from "useShopProductItems" /* 8523 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 14146 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
+import useShopProductItems from "useShopProductItems" /* 8569 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 14214 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1089).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { previewContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
 let size = { width: 56, height: 56, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
 obj2.bundleThumbnail = size;

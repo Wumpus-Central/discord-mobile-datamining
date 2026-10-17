@@ -1,10 +1,10 @@
-// === Module 14733: ProgramRewardsUtils ===
+// === Module 14801: ProgramRewardsUtils ===
 
-// Module 14733 (ProgramRewardsUtils)
-import _modDef4602 from "module_4602" /* 4602 */;
-import PremiumUtils from "PremiumUtils" /* 4828 */;
-import useHasXboxMonthlyOrbsPerk from "useHasXboxMonthlyOrbsPerk" /* 14734 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 14735 */;
+// Module 14801 (ProgramRewardsUtils)
+import _modDef4638 from "module_4638" /* 4638 */;
+import PremiumUtils from "PremiumUtils" /* 4864 */;
+import useHasXboxMonthlyOrbsPerk from "useHasXboxMonthlyOrbsPerk" /* 14802 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 14803 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function canFetchXboxProgramReward() {
   return useHasXboxMonthlyOrbsPerk.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
 }
 const PremiumTypes = fn(1394).PremiumTypes;
-const dependencyMap = { [fn(14735).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(14735).RewardProgram.XBOX]: canFetchXboxProgramReward };
+const dependencyMap = { [fn(14803).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(14803).RewardProgram.XBOX]: canFetchXboxProgramReward };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
@@ -32,7 +32,7 @@ export const isProgramRewardStale = function isProgramRewardStale(next_reward_da
     if (tmp) {
       const _Date = Date;
       const date = new Date(next_reward_date);
-      tmp = _modDef4602(date);
+      tmp = _modDef4638(date);
     }
     return tmp;
   }

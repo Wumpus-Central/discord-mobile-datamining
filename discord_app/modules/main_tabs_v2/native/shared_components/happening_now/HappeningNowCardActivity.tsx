@@ -1,6 +1,6 @@
-// === Module 17139: HappeningNowCardActivity ===
+// === Module 17199: HappeningNowCardActivity ===
 
-// Module 17139 (HappeningNowCardActivity)
+// Module 17199 (HappeningNowCardActivity)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,23 +8,23 @@ import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ColorUtils from "ColorUtils" /* 5026 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8501 */;
-import VideoBackground from "VideoBackground" /* 8602 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10492 */;
-import StreamPreviewDefault from "StreamPreview" /* 11482 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11485 */;
-import isOnXboxDefault from "isOnXbox" /* 13985 */;
-import useLiveStageData from "useLiveStageData" /* 17137 */;
-import _modDef17140 from "module_17140" /* 17140 */;
-import _modDef17141 from "module_17141" /* 17141 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 17148 */;
+import ColorUtils from "ColorUtils" /* 5063 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8547 */;
+import VideoBackground from "VideoBackground" /* 8648 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10555 */;
+import StreamPreviewDefault from "StreamPreview" /* 11541 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11544 */;
+import isOnXboxDefault from "isOnXbox" /* 14053 */;
+import useLiveStageData from "useLiveStageData" /* 17197 */;
+import _modDef17200 from "module_17200" /* 17200 */;
+import _modDef17201 from "module_17201" /* 17201 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 17208 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2073 */;
 import UserStore from "UserStore" /* 1392 */;
 
-const _modDef17150 = tmp4(17150);
+const _modDef17210 = tmp4(17210);
 require = fn;
 function getActivityA11yLabel(activity) {
   if (isListeningOnSpotifyDefault(activity)) {
@@ -56,16 +56,16 @@ function getActivityA11yLabel(activity) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16284);
+const HappeningNowConstants = fn(16350);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1087);
 ({ ActivityTypes: closure_9, AnalyticEvents: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef17140, _modDef17141];
+let items = [_modDef17200, _modDef17201];
 let c16 = 0.32;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 obj.cardImageAsset = { flex: 1, width: "100%", borderRadius: nativeDefault.radii.sm - 1 };
@@ -491,7 +491,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAct
         const substr = userId.slice(-1);
         let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
       } else {
-        tmp4Result = _modDef17150;
+        tmp4Result = _modDef17210;
       }
       tmp6 = activity == tmp6;
       let type2;
@@ -597,7 +597,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAct
       userId = substr.charCodeAt(0);
       let tmpResult = items[userId % items.length];
     } else {
-      tmpResult = _modDef17150;
+      tmpResult = _modDef17210;
     }
   }
 });
@@ -682,11 +682,11 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12434, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12434, dependencyMap.paths);
+      asyncRequireImpl(12499, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(12499, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8531, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8531, dependencyMap.paths);
+      asyncRequireImpl(8577, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8577, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

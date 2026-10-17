@@ -1,11 +1,11 @@
-// === Module 17219: LurkerServerPreviewJoinButton ===
+// === Module 17279: LurkerServerPreviewJoinButton ===
 
-// Module 17219 (LurkerServerPreviewJoinButton)
+// Module 17279 (LurkerServerPreviewJoinButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import LurkingStore from "LurkingStore" /* 4810 */;
+import LurkingStore from "LurkingStore" /* 4846 */;
 
 const require = fn;
 const JoinGuildSources = fn(1087).JoinGuildSources;

@@ -1,13 +1,13 @@
-// === Module 6527: BaseTextField ===
+// === Module 6580: BaseTextField ===
 
-// Module 6527 (BaseTextField)
+// Module 6580 (BaseTextField)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import mergeProps from "mergeProps" /* 4882 */;
-import useFocus from "useFocus" /* 4883 */;
-import InputFieldContainer2 from "InputFieldContainer" /* 6525 */;
-import NativeTextInput2 from "NativeTextInput" /* 6528 */;
-import propsForNativeTextInput from "propsForNativeTextInput" /* 6842 */;
+import mergeProps from "mergeProps" /* 4918 */;
+import useFocus from "useFocus" /* 4919 */;
+import InputFieldContainer2 from "InputFieldContainer" /* 6578 */;
+import NativeTextInput2 from "NativeTextInput" /* 6581 */;
+import propsForNativeTextInput from "propsForNativeTextInput" /* 6895 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

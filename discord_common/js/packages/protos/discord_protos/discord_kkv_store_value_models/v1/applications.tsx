@@ -1,6 +1,6 @@
-// === Module 9468: applications ===
+// === Module 9532: applications ===
 
-// Module 9468 (applications)
+// Module 9532 (applications)
 import _mod1212 from "module_1212" /* 1212 */;
 import timestamp from "timestamp" /* 1241 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -20,12 +20,12 @@ class ApplicationUserRoleConnection$Type extends MessageType {
   }
 }
 const prototype = ApplicationUserRoleConnection$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { metadata: {}, platformName: "", platformUsername: "", version: "0" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -176,12 +176,12 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
   }
 }
 const prototype2 = AcknowledgedApplicationDisclosure$Type.prototype;
-prototype2["create"] = function create(arr) {
+prototype2["create"] = function create(partialSettings) {
   const obj = { disclosureType: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;
@@ -290,12 +290,12 @@ class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
   }
 }
 const prototype3 = AcknowledgedApplicationDisclosures$Type.prototype;
-prototype3["create"] = function create(arr) {
+prototype3["create"] = function create(partialSettings) {
   const obj = { ackedDisclosures: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

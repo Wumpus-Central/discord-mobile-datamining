@@ -1,6 +1,6 @@
-// === Module 16004: BountyCtaHelpers ===
+// === Module 16070: BountyCtaHelpers ===
 
-// Module 16004 (BountyCtaHelpers)
+// Module 16070 (BountyCtaHelpers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/utils/BountyCtaHelpers.tsx");

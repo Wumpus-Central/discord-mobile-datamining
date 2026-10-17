@@ -1,11 +1,11 @@
-// === Module 8678: DeviceOrientation ===
+// === Module 8724: DeviceOrientation ===
 
-// Module 8678 (DeviceOrientation)
+// Module 8724 (DeviceOrientation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DeviceUtils from "DeviceUtils" /* 5130 */;
+import DeviceUtils from "DeviceUtils" /* 5167 */;
 import noop from "module_19" /* 19 */;
-import get_ActivityIndicator_mod from "module_8679" /* 8679 */;
+import get_ActivityIndicator_mod from "module_8725" /* 8725 */;
 
 const require = globalThis.__r;
 

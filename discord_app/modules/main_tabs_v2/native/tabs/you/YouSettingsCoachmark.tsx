@@ -1,9 +1,9 @@
-// === Module 17867: YouSettingsCoachmark ===
+// === Module 17927: YouSettingsCoachmark ===
 
-// Module 17867 (YouSettingsCoachmark)
+// Module 17927 (YouSettingsCoachmark)
 import c from "c" /* 576 */;
-import useCoachmark from "useCoachmark" /* 9678 */;
-import useReferralProgramCoachmark from "useReferralProgramCoachmark" /* 17868 */;
+import useCoachmark from "useCoachmark" /* 9742 */;
+import useReferralProgramCoachmark from "useReferralProgramCoachmark" /* 17928 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function YouSettingsCoachmark(buttonRef) {
       tmp9 = cResult[1];
       tmp10 = cResult[2];
     }
-    obj3 = obj3(9678);
+    obj3 = obj3(9742);
     coachmark = obj3.useCoachmark(tmp9, tmp10);
   } else {
     const merged = Object.assign(buttonRef, Object.assign({ buttonRef: 0 }));

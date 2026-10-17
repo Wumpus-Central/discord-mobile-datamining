@@ -1,8 +1,8 @@
-// === Module 8687: ContentInventoryTypes ===
+// === Module 8733: ContentInventoryTypes ===
 
-// Module 8687 (ContentInventoryTypes)
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8494 */;
-import PlatformType from "PlatformType" /* 8688 */;
+// Module 8733 (ContentInventoryTypes)
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8540 */;
+import PlatformType from "PlatformType" /* 8734 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");

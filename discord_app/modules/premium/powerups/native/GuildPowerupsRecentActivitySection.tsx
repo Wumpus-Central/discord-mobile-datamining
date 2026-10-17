@@ -1,24 +1,24 @@
-// === Module 13197: GuildPowerupsRecentActivitySection ===
+// === Module 13262: GuildPowerupsRecentActivitySection ===
 
-// Module 13197 (GuildPowerupsRecentActivitySection)
+// Module 13262 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import DateUtils from "DateUtils" /* 4852 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6888 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8201 */;
-import BoostGemIcon from "BoostGemIcon" /* 9645 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 13198 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 13200 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 13202 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 13204 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import DateUtils from "DateUtils" /* 4888 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6941 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8247 */;
+import BoostGemIcon from "BoostGemIcon" /* 9709 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 13263 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 13265 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 13267 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 13270 */;
+import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5154 */;
+import createStyles from "createStyles" /* 5191 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

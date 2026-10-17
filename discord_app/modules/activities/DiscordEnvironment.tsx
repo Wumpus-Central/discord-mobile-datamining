@@ -1,8 +1,8 @@
-// === Module 11238: DiscordEnvironment ===
+// === Module 11303: DiscordEnvironment ===
 
-// Module 11238 (DiscordEnvironment)
+// Module 11303 (DiscordEnvironment)
 import UserSettings from "UserSettings" /* 2044 */;
-import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
@@ -39,9 +39,9 @@ function getDiscordCustomTheme() {
   }
   return null;
 }
-const UIDensityConstants = fn(11239);
+const UIDensityConstants = fn(11304);
 ({ RESPONSIVE_DENSITY_FALLBACK: closure_4, RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty, resolveUIDensity: metroRequire } = UIDensityConstants);
-const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false });
+const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false, formFactor: "desktop" });
 let closure_8 = ["custom-theme-background", "custom-client-theme"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/DiscordEnvironment.tsx");
@@ -96,7 +96,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       }
     }
   }
-  const obj = { baseTheme: str, customTheme: getDiscordCustomTheme(), uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null };
+  const obj = { baseTheme: str, customTheme: getDiscordCustomTheme(), uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null, formFactor: "mobile" };
   if (typeof window !== "undefined") {
     const _window2 = window;
     if (typeof window.matchMedia === "function") {

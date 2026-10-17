@@ -1,6 +1,6 @@
-// === Module 5469: UnicodeSanitizationUtils ===
+// === Module 5506: UnicodeSanitizationUtils ===
 
-// Module 5469 (UnicodeSanitizationUtils)
+// Module 5506 (UnicodeSanitizationUtils)
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import size from "module_2" /* 2 */;
 

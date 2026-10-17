@@ -1,11 +1,11 @@
-// === Module 11340: useVoiceStateForRemoteSession ===
+// === Module 11399: useVoiceStateForRemoteSession ===
 
-// Module 11340 (useVoiceStateForRemoteSession)
+// Module 11399 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 5175 */;
-import GameConsoleStore from "GameConsoleStore" /* 5173 */;
+import VoiceStateStore from "VoiceStateStore" /* 5212 */;
+import GameConsoleStore from "GameConsoleStore" /* 5210 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,19 +1,19 @@
-// === Module 11620: AnimatedKeyboardProviderController ===
+// === Module 11682: AnimatedKeyboardProviderController ===
 
-// Module 11620 (AnimatedKeyboardProviderController)
+// Module 11682 (AnimatedKeyboardProviderController)
 import c from "c" /* 576 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1647 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4909 */;
-import KeyboardPreloadExperiment2 from "KeyboardPreloadExperiment" /* 11621 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4945 */;
+import KeyboardPreloadExperiment2 from "KeyboardPreloadExperiment" /* 11683 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-let ReanimatedRexport = fn(4909);
+let ReanimatedRexport = fn(4945);
 const mutable = ReanimatedRexport.makeMutable(0);
-ReanimatedRexport = fn(4909);
-const mutable1 = ReanimatedRexport.makeMutable(fn(4909).KeyboardState.UNKNOWN);
+ReanimatedRexport = fn(4945);
+const mutable1 = ReanimatedRexport.makeMutable(fn(4945).KeyboardState.UNKNOWN);
 fn(558);
 const __initData = { code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}" };
 const __initData2 = { code: "function AnimatedKeyboardProviderControllerTsx2(e_0){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e_0.height);}" };

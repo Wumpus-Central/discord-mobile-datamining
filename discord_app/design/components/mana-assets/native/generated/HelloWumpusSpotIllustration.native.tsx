@@ -1,23 +1,23 @@
-// === Module 13349: HelloWumpusSpotIllustration ===
+// === Module 13415: HelloWumpusSpotIllustration ===
 
-// Module 13349 (HelloWumpusSpotIllustration)
+// Module 13415 (HelloWumpusSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import assetHelpers from "assetHelpers" /* 6497 */;
-import _modDef13350 from "module_13350" /* 13350 */;
-import _modDef13351 from "module_13351" /* 13351 */;
-import _modDef13352 from "module_13352" /* 13352 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import assetHelpers from "assetHelpers" /* 6550 */;
+import _modDef13416 from "module_13416" /* 13416 */;
+import _modDef13417 from "module_13417" /* 13417 */;
+import _modDef13418 from "module_13418" /* 13418 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13350 }, 3: null };
-let obj2 = { uri: _modDef13350 };
-obj[2] = { uri: _modDef13351 };
-const obj3 = { uri: _modDef13351 };
-obj[3] = { uri: _modDef13352 };
+let obj = { 1: null, 2: { uri: _modDef13416 }, 3: null };
+let obj2 = { uri: _modDef13416 };
+obj[2] = { uri: _modDef13417 };
+const obj3 = { uri: _modDef13417 };
+obj[3] = { uri: _modDef13418 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13352 };
+const obj4 = { uri: _modDef13418 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HelloWumpusSpotIllustration.native.tsx");
 

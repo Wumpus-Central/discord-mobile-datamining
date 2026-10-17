@@ -1,9 +1,9 @@
-// === Module 12088: ConjureTipSwap ===
+// === Module 12151: ConjureTipSwap ===
 
-// Module 12088 (ConjureTipSwap)
+// Module 12151 (ConjureTipSwap)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import timing from "timing" /* 5155 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import timing from "timing" /* 5192 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -19,7 +19,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function TipFade
   children = children.children;
   const obj = sharedValue(576);
   const tmp = sharedValue;
-  sharedValue = sharedValue(4909).useSharedValue(0);
+  sharedValue = sharedValue(4945).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function s() {
       const obj2 = { duration: 260, easing: null };
@@ -39,14 +39,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function TipFade
     tmp6 = cResult[2];
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  let obj2 = sharedValue(4909);
+  let obj2 = sharedValue(4945);
   const fn2 = function f() {
     return { opacity: sharedValue.get() };
   };
   fn2.__closure = { opacity: sharedValue };
   fn2.__workletHash = 14074417751279;
   fn2.__initData = __initData;
-  const animatedStyle = tmp(4909).useAnimatedStyle(fn2);
+  const animatedStyle = tmp(4945).useAnimatedStyle(fn2);
   if (cResult[3] === children) {
     if (cResult[4] === animatedStyle) {
       let tmp9 = cResult[5];
@@ -58,10 +58,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function TipFade
   cResult[4] = animatedStyle;
   cResult[5] = tmp10;
   tmp9 = tmp10;
-  const tmpResult = tmp(4909);
+  const tmpResult = tmp(4945);
 }) : (function TipFade(children) {
   let sharedValue;
-  sharedValue = sharedValue(4909).useSharedValue(0);
+  sharedValue = sharedValue(4945).useSharedValue(0);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj2 = { duration: 260, easing: null };
@@ -70,14 +70,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function TipFade
     const result = sharedValue.set(timing.withTiming(1, obj2));
     return () => sharedValue(dependencyMap[4]).cancelAnimation(closure_1_0);
   }, items);
-  const obj = sharedValue(4909);
+  const obj = sharedValue(4945);
   const fn = function u() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 13445232887916;
   fn.__initData = __initData2;
-  const style = sharedValue(4909).useAnimatedStyle(fn);
+  const style = sharedValue(4945).useAnimatedStyle(fn);
   return jsx(ReanimatedRexportDefault.View, { style, children: children.children });
 });
 const size = fn(2);

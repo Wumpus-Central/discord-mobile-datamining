@@ -1,6 +1,6 @@
-// === Module 13219: ConsoleOAuthApplications ===
+// === Module 13285: ConsoleOAuthApplications ===
 
-// Module 13219 (ConsoleOAuthApplications)
+// Module 13285 (ConsoleOAuthApplications)
 import size from "module_2" /* 2 */;
 
 const obj = { PLAYSTATION_APPLICATION_IDS: new Set(["984193235868065795", "1008890872156405890"]), IMPLICIT_IDENTIFY_PREMIUM_APPLICATION_IDS: null, ALL: null };

@@ -1,9 +1,9 @@
-// === Module 9937: BackgroundTaskManager ===
+// === Module 10001: BackgroundTaskManager ===
 
-// Module 9937 (BackgroundTaskManager)
+// Module 10001 (BackgroundTaskManager)
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9938 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 9940 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10002 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 10004 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

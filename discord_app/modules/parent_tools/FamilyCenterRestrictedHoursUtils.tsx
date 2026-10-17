@@ -1,9 +1,9 @@
-// === Module 13443: FamilyCenterRestrictedHoursUtils ===
+// === Module 13509: FamilyCenterRestrictedHoursUtils ===
 
-// Module 13443 (FamilyCenterRestrictedHoursUtils)
+// Module 13509 (FamilyCenterRestrictedHoursUtils)
 import util from "util" /* 1128 */;
 import user from "user" /* 1400 */;
-import _modDef2571 from "module_2571" /* 2571 */;
+import _modDef2589 from "module_2589" /* 2589 */;
 import size from "module_2" /* 2 */;
 
 function setsEqual(set, set2) {
@@ -27,13 +27,13 @@ function formatDays(days) {
   set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2571.bPjqd1);
+    return intl3.string(_modDef2589.bPjqd1);
   } else if (setsEqual(set, set)) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2571["4dr9L9"]);
+    return intl2.string(_modDef2589["4dr9L9"]);
   } else if (setsEqual(set, set1)) {
     const intl = util.intl;
-    return intl.string(_modDef2571["6lTTJ+"]);
+    return intl.string(_modDef2589["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { weekday: "short" });
@@ -96,7 +96,7 @@ export const formatDuration = function formatDuration(arg0) {
   const result = arg0 / 60;
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const tmp3 = _modDef2571;
+  const tmp3 = _modDef2589;
   if (isIntegerResult) {
     const obj2 = { hours: result };
     let formatToPlainStringResult = formatToPlainString(tmp3.hFDcmZ, obj2);
@@ -127,9 +127,9 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const endTime2 = startTime.endTime;
       const formatResult = dateTimeFormat.format(date);
       if (60 * startTime2.hours + startTime2.minutes > 60 * endTime2.hours + endTime2.minutes) {
-        let OxveI8 = _modDef2571.OxveI8;
+        let OxveI8 = _modDef2589.OxveI8;
       } else {
-        OxveI8 = _modDef2571["ERTn+E"];
+        OxveI8 = _modDef2589["ERTn+E"];
       }
       const intl = util.intl;
       const obj = { days: tmp5, startTime: formatResult, endTime: dateTimeFormat1.format(date1) };

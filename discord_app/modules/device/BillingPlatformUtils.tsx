@@ -1,6 +1,6 @@
-// === Module 4841: BillingPlatformUtils ===
+// === Module 4877: BillingPlatformUtils ===
 
-// Module 4841 (BillingPlatformUtils)
+// Module 4877 (BillingPlatformUtils)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import size from "module_2" /* 2 */;

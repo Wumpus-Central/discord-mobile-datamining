@@ -1,10 +1,10 @@
-// === Module 17927: WebhooksStore ===
+// === Module 17987: WebhooksStore ===
 
-// Module 17927 (WebhooksStore)
+// Module 17987 (WebhooksStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17928 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17988 */;
 
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);

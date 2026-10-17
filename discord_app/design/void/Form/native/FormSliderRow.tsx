@@ -1,21 +1,21 @@
-// === Module 8823: FormSliderRow ===
+// === Module 8869: FormSliderRow ===
 
-// Module 8823 (FormSliderRow)
+// Module 8869 (FormSliderRow)
 import c from "c" /* 576 */;
-import FormRowDefault from "FormRow" /* 7053 */;
-import _modDef8632 from "module_8632" /* 8632 */;
+import FormRowDefault from "FormRow" /* 7106 */;
+import _modDef8678 from "module_8678" /* 8678 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Card(5150);
-const Card2 = Card(6406);
-const RedesignCompat = Card(6488);
+const Text_Text = Card(5187);
+const Card2 = Card(6459);
+const RedesignCompat = Card(6541);
 require = fn;
 let closure_3 = ["label", "trailing"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_10 = createStyles.createStyles({ labels: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, slider: { marginStart: -4, marginTop: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSlid
         const obj4 = {};
         const merged = Object.assign(tmp4);
         obj4.style = tmp10.slider;
-        const tmp41 = React5(_modDef8632, obj4);
+        const tmp41 = React5(_modDef8678, obj4);
         cResult[10] = tmp4;
         cResult[11] = tmp10.slider;
         cResult[12] = tmp41;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSlid
       if (cResult[19] !== tmp4) {
         const obj6 = {};
         const merged1 = Object.assign(tmp4);
-        const tmp22 = React5(_modDef8632, obj6);
+        const tmp22 = React5(_modDef8678, obj6);
         cResult[19] = tmp4;
         cResult[20] = tmp22;
         let tmp15 = tmp22;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSlid
     const obj5 = {};
     const merged1 = Object.assign(merged);
     obj5.style = tmp5.slider;
-    items1[1] = React5(_modDef8632, obj5);
+    items1[1] = React5(_modDef8678, obj5);
     obj2.children = items1;
     let tmp6Result = closure_1_8(Card2.Card, obj2);
   } else {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormSlid
     const items2 = [React5(FormRowDefault, obj6), ];
     const obj7 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = React5(_modDef8632, obj7);
+    items2[1] = React5(_modDef8678, obj7);
     obj.children = items2;
     tmp6Result = closure_1_8(React6, obj);
   }

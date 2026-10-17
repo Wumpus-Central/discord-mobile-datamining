@@ -1,14 +1,14 @@
-// === Module 7484: CollectiblesCategoryStore ===
+// === Module 7530: CollectiblesCategoryStore ===
 
-// Module 7484 (CollectiblesCategoryStore)
+// Module 7530 (CollectiblesCategoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7496 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7485 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7531 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {

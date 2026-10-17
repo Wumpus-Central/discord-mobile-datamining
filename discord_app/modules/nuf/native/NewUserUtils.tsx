@@ -1,18 +1,18 @@
-// === Module 18531: NewUserUtils ===
+// === Module 18592: NewUserUtils ===
 
-// Module 18531 (NewUserUtils)
+// Module 18592 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Link from "Link" /* 1506 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7726 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13282 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13389 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 18530 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7772 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13348 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13455 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 18591 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 17013 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5980 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 17073 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6017 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -133,7 +133,7 @@ let closure_17 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -224,8 +224,8 @@ let closure_17 = async function _getNextOnboardingStep() {
 };
 const Constants = fn(1087);
 ({ PlatformTypes: closure_7, Routes: closure_8 } = Constants);
-const ContactPermissions = fn(13277).ContactPermissions;
-let closure_10 = fn(7703).NotificationAuthorizationStatus;
+const ContactPermissions = fn(13343).ContactPermissions;
+let closure_10 = fn(7749).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_12 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
@@ -389,7 +389,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(8909).hasDeferredInvite,
+    shouldShowStep: fn(8955).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

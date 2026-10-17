@@ -1,6 +1,6 @@
-// === Module 15836: HarvesterConstants ===
+// === Module 15902: HarvesterConstants ===
 
-// Module 15836 (HarvesterConstants)
+// Module 15902 (HarvesterConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/harvester/HarvesterConstants.tsx");

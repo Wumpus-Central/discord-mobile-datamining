@@ -1,6 +1,6 @@
-// === Module 5571: ? ===
+// === Module 5608: ? ===
 
-// Module 5571
+// Module 5608
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/shoes/western_boots.png.js");

@@ -1,9 +1,9 @@
-// === Module 12661: CheckpointActionCreators ===
+// === Module 12726: CheckpointActionCreators ===
 
-// Module 12661 (CheckpointActionCreators)
+// Module 12726 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7238 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
@@ -44,7 +44,7 @@ let closure_7 = async function _fetchCheckpointData() {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,10 +1,10 @@
-// === Module 12195: ConjurePlanAutomodOutcomes ===
+// === Module 12258: ConjurePlanAutomodOutcomes ===
 
-// Module 12195 (ConjurePlanAutomodOutcomes)
+// Module 12258 (ConjurePlanAutomodOutcomes)
 import util from "util" /* 1128 */;
 import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2130 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5142 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5179 */;
 import size from "module_2" /* 2 */;
 
 const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;
@@ -17,28 +17,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865.Vi4cjL);
+      return intl.string(_modDef3883.Vi4cjL);
     },
     blockedStyle: false
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865.YdnZ8q);
+      return intl.string(_modDef3883.YdnZ8q);
     },
     blockedStyle: true
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865.QGrx9O);
+      return intl.string(_modDef3883.QGrx9O);
     },
     blockedStyle: true
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865.RGzFNK);
+      return intl.string(_modDef3883.RGzFNK);
     },
     blockedStyle: false
   }
@@ -47,21 +47,21 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865.YdnZ8q);
+      return intl.string(_modDef3883.YdnZ8q);
     },
     tone: "red"
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865["8ockl9"]);
+      return intl.string(_modDef3883["8ockl9"]);
     },
     tone: "blurple"
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3865.RGzFNK);
+      return intl.string(_modDef3883.RGzFNK);
     },
     tone: "green"
   }

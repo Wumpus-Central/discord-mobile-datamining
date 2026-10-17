@@ -30,6 +30,9 @@ const RawColors = _mod591._private.RawColors;
 const Shadows = _mod593._private.Shadows;
 let closure_6 = Symbol("semanticColor");
 const set = new Set(Object.values(ThemeTypes._private.Themes));
+function clamp01(arg0) {
+  return Math.min(1, Math.max(0, arg0));
+}
 let result = size.fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
 
 export default {
@@ -37,41 +40,41 @@ export default {
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_1_6]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    let f84066 = (shadowOffset, arg1) => {
+    let f84268 = (shadowOffset, arg1) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
       }
       return shadowOffset;
     };
-    f84066 = (shadowColorAndroid, arg1) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
-    f84066 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f84066 = (shadowRadius) => shadowRadius.shadowRadius;
-    f84066 = (elevation) => elevation.elevation;
+    f84268 = (shadowColorAndroid, arg1) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
+    f84268 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f84268 = (shadowRadius) => shadowRadius.shadowRadius;
+    f84268 = (elevation) => elevation.elevation;
     return {
       shadowOffset: {
         resolve(isAndroid) {
-          return f84066(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f84268(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowColor: {
         resolve(isAndroid) {
-          return f84066(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f84268(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowOpacity: {
         resolve(isAndroid) {
-          return f84066(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f84268(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f84066(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f84268(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       elevation: {
         resolve(isAndroid) {
-          return f84066(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f84268(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       }
     };
@@ -154,35 +157,35 @@ export default {
               theme = gradient.theme;
             }
           }
-          let tmp41 = null;
+          let tmp56 = null;
           if (null != theme) {
-            tmp41 = tmp3.userProfileThemes[theme];
+            tmp56 = tmp3.userProfileThemes[theme];
           }
-          if (null != tmp41) {
-            result = RawColors[tmp41.raw];
-            opacity = tmp41.opacity;
+          if (null != tmp56) {
+            result = RawColors[tmp56.raw];
+            opacity = tmp56.opacity;
           }
         }
-        let num2;
+        let num6;
         if (semanticColorContextFromThemeContext != null) {
-          num2 = semanticColorContextFromThemeContext.contrast;
+          num6 = semanticColorContextFromThemeContext.contrast;
         }
-        if (num2 == null) {
-          num2 = 1;
+        if (num6 == null) {
+          num6 = 1;
         }
-        let num3;
+        let num7;
         if (semanticColorContextFromThemeContext != null) {
-          num3 = semanticColorContextFromThemeContext.saturation;
+          num7 = semanticColorContextFromThemeContext.saturation;
         }
-        if (num3 == null) {
-          num3 = 1;
+        if (num7 == null) {
+          num7 = 1;
         }
-        if (num3 < 1) {
-          result = transforms.transformColorForReducedSaturation(result, category, num3);
+        if (num7 < 1) {
+          result = transforms.transformColorForReducedSaturation(result, category, num7);
         }
-        if (1 !== num2) {
+        if (1 !== num6) {
           const obj7 = transforms;
-          result = obj7.transformColorContrast(result, category, theme, num2);
+          result = obj7.transformColorContrast(result, category, theme, num6);
         }
         if (1 === opacity) {
           let hexResult = result;
@@ -238,26 +241,74 @@ export default {
           tmp36 = tmp22[theme1];
         }
         if (null != tmp36) {
-          if (tmp36.color in RawColors) {
-            let tmp38 = tmp62[tmp36.color];
-          } else if (semanticColorContextFromThemeContext != null) {
-            tmp38 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
+          let num2 = 1;
+          if (!semanticColorContextFromThemeContext.isProfileTheme) {
+            let num = semanticColorContextFromThemeContext.gradient.unsupported_overlayOpacityMultiplier;
+            if (num == null) {
+              num = 1;
+            }
+            num2 = num;
           }
-          const tmp61Result = _modDef683(tmp38);
-          let result1 = tmp61Result;
+          const _Number = Number;
+          let num3 = 1;
+          if (Number.isFinite(num2)) {
+            num3 = clamp01(num2);
+          }
+          if (tmp36.color in RawColors) {
+            let tmp47 = RawColors[tmp36.color];
+          } else if (semanticColorContextFromThemeContext != null) {
+            tmp47 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
+          }
+          const tmp46Result = _modDef683(tmp47);
+          let result1 = tmp46Result;
           if ("saturation" in tmp36) {
-            result1 = tmp61Result.set("hsl.s", tmp36.saturation);
+            result1 = tmp46Result.set("hsl.s", tmp36.saturation);
           }
           let result2 = result1;
           if ("lightness" in tmp36) {
-            result2 = result1.set("hsl.l", tmp36.lightness);
+            const lightness = tmp36.lightness;
+            let tmp50 = lightness;
+            if (1 !== num3) {
+              tmp50 = lightness;
+              if (!tmp43) {
+                tmp50 = lightness;
+                if (typeof lightness === "number") {
+                  tmp50 = lightness;
+                  if (!("opacity" in tmp36)) {
+                    tmp50 = lightness;
+                    if (tmp49 ? lightness < 0.5 : lightness > 0.5) {
+                      value = result1.get("hsl.l");
+                      tmp50 = clamp01(value + (lightness - value) * num3);
+                    }
+                  }
+                }
+              }
+            }
+            result2 = result1.set("hsl.l", tmp50);
           }
           result = result2.hex();
-          let num = 1;
+          let num5 = 1;
           if ("opacity" in tmp36) {
-            num = tmp36.opacity;
+            num5 = tmp36.opacity;
           }
-          opacity = num;
+          opacity = num5;
+          let tmp53 = 1 !== num3;
+          if (tmp53) {
+            let str9 = "WHITE_500";
+            if (tmp49) {
+              str9 = "BLACK_500";
+            }
+            tmp53 = tmp36.color === str9;
+          }
+          if (tmp53) {
+            tmp53 = "opacity" in tmp36;
+          }
+          if (tmp53) {
+            tmp53 = !("lightness" in tmp36);
+          }
+          if (tmp53) {
+            opacity = clamp01(tmp36.opacity * num3);
+          }
         }
       }
     },

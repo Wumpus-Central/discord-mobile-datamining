@@ -1,13 +1,13 @@
-// === Module 16933: DoubleTapEmojiSetting ===
+// === Module 16993: DoubleTapEmojiSetting ===
 
-// Module 16933 (DoubleTapEmojiSetting)
+// Module 16993 (DoubleTapEmojiSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import EmojiDefault from "Emoji" /* 7045 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8208 */;
+import EmojiDefault from "Emoji" /* 7098 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8254 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
@@ -153,7 +153,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDoubleTap
 });
 ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDoubleTapEmojiDescription() {
   const cResult = c.c(2);
   const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
@@ -189,7 +189,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8214).MobileUserSettings.CHAT,
+  parent: fn(8260).MobileUserSettings.CHAT,
   useTrailing: tmp3,
   onPress: function onPressSetting() {
     let obj2 = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };

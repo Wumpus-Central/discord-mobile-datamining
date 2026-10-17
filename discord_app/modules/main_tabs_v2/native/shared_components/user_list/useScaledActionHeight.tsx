@@ -1,9 +1,9 @@
-// === Module 10462: useScaledActionHeight ===
+// === Module 10525: useScaledActionHeight ===
 
-// Module 10462 (useScaledActionHeight)
+// Module 10525 (useScaledActionHeight)
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4877 */;
-import useFontScale from "useFontScale" /* 5449 */;
+import useToken from "useToken" /* 4913 */;
+import useFontScale from "useFontScale" /* 5486 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

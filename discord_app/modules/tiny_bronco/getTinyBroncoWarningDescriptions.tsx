@@ -1,10 +1,10 @@
-// === Module 6145: getTinyBroncoWarningDescriptions ===
+// === Module 6182: getTinyBroncoWarningDescriptions ===
 
-// Module 6145 (getTinyBroncoWarningDescriptions)
+// Module 6182 (getTinyBroncoWarningDescriptions)
 import util from "util" /* 1128 */;
-import _modDef3157 from "module_3157" /* 3157 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6147 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 6146 */;
+import _modDef3175 from "module_3175" /* 3175 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6184 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 6183 */;
 import size from "module_2" /* 2 */;
 
 ({ TINY_BRONCO_CHANNEL_LOCATION: c3, TINY_BRONCO_SERVER_LOCATION: closure_4 } = TinyBroncoConstants);
@@ -36,13 +36,13 @@ export const getTinyBroncoWarningDescriptions = function getTinyBroncoWarningDes
       obj2.unverified = stringResult;
     } else {
       const obj3 = { guildName };
-      obj2.adult = intl.formatToPlainString(_modDef3157.iK0n30, obj3);
+      obj2.adult = intl.formatToPlainString(_modDef3175.iK0n30, obj3);
       const intl2 = util.intl;
       const obj4 = { guildName };
-      obj2.teen = intl2.formatToPlainString(_modDef3157.ezJA0R, obj4);
+      obj2.teen = intl2.formatToPlainString(_modDef3175.ezJA0R, obj4);
       const intl3 = util.intl;
       const obj5 = { guildName };
-      obj2.unverified = intl3.formatToPlainString(_modDef3157.h4HbnI, obj5);
+      obj2.unverified = intl3.formatToPlainString(_modDef3175.h4HbnI, obj5);
     }
   }
   obj = TinyBroncoExperiment;

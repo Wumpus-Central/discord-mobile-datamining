@@ -1,15 +1,15 @@
-// === Module 10484: ActivityStatusText ===
+// === Module 10547: ActivityStatusText ===
 
-// Module 10484 (ActivityStatusText)
+// Module 10547 (ActivityStatusText)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5150 */;
+import Text_Text from "Text/Text" /* 5187 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["children", "style", "variant"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_5 = createStyles.createStyles({ text: { flexShrink: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

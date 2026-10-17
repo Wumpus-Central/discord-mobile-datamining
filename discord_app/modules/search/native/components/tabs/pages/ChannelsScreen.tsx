@@ -1,20 +1,20 @@
-// === Module 17784: ChannelsScreen ===
+// === Module 17844: ChannelsScreen ===
 
-// Module 17784 (ChannelsScreen)
+// Module 17844 (ChannelsScreen)
 import util from "util" /* 1128 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12936 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4923 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13001 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5178 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12942 */;
-import SearchQueryStore from "SearchQueryStore" /* 12929 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5215 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13007 */;
+import SearchQueryStore from "SearchQueryStore" /* 12994 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9550);
+const SearchConstants = fn(9614);
 ({ EMPTY_VOICE_STATES: closure_7, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(9549).SearchResultContentEntityTypes;
+let closure_10 = fn(9613).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

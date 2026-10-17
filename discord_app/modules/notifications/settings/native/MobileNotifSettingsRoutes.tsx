@@ -1,13 +1,13 @@
-// === Module 16961: MobileNotifSettingsRoutes ===
+// === Module 17021: MobileNotifSettingsRoutes ===
 
-// Module 16961 (MobileNotifSettingsRoutes)
+// Module 17021 (MobileNotifSettingsRoutes)
 import util from "util" /* 1128 */;
-import _modDef2899 from "module_2899" /* 2899 */;
-import BellIcon from "BellIcon" /* 8999 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15404 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16481 */;
-import MobileNotifSettingsSections from "MobileNotifSettingsSections" /* 16962 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11003 */;
+import _modDef2917 from "module_2917" /* 2917 */;
+import BellIcon from "BellIcon" /* 9045 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 15473 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16545 */;
+import MobileNotifSettingsSections from "MobileNotifSettingsSections" /* 17022 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11065 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -35,7 +35,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2899.S5cB9e);
+    return intl.string(_modDef2917.S5cB9e);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -60,7 +60,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2899["UzRF+8"]);
+    return intl.string(_modDef2917["UzRF+8"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -85,7 +85,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2899.zRKbpz);
+    return intl.string(_modDef2917.zRKbpz);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -110,7 +110,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj9 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2899.q5M7HV);
+    return intl.string(_modDef2917.q5M7HV);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {

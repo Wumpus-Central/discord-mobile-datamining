@@ -1,18 +1,18 @@
-// === Module 11857: ExpandableList ===
+// === Module 11920: ExpandableList ===
 
-// Module 11857 (ExpandableList)
-import timing from "timing" /* 5155 */;
-import timingPresets from "timingPresets" /* 5158 */;
-import usePreviousDefault from "usePrevious" /* 6141 */;
+// Module 11920 (ExpandableList)
+import timing from "timing" /* 5192 */;
+import timingPresets from "timingPresets" /* 5195 */;
+import usePreviousDefault from "usePrevious" /* 6178 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp4(4909);
+const ReanimatedRexportDefault = tmp4(4945);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 const __initData = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
 const __initData2 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
@@ -463,10 +463,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  sharedValue = memo1(4909).useSharedValue(0);
-  let obj3 = memo1(4909);
-  sharedValue1 = memo1(4909).useSharedValue(0);
-  const obj4 = memo1(4909);
+  sharedValue = memo1(4945).useSharedValue(0);
+  let obj3 = memo1(4945);
+  sharedValue1 = memo1(4945).useSharedValue(0);
+  const obj4 = memo1(4945);
   class S {
     constructor() {
       if (closure_5) {
@@ -488,12 +488,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
   S.__closure = { expanded: first, collapsedListHeight: sharedValue, remainingListHeight: sharedValue1 };
   S.__workletHash = 15615156859143;
   S.__initData = __initData3;
-  derivedValue = memo1(4909).useDerivedValue(S);
+  derivedValue = memo1(4945).useDerivedValue(S);
   const items3 = [items, bound];
   const memo = noop.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = noop.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  const obj5 = memo1(4909);
+  const obj5 = memo1(4945);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
@@ -511,8 +511,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
       return obj;
     }
   }
-  const obj6 = memo1(4909);
-  A.__closure = { collapsedListHeight: sharedValue, withTiming: memo1(5155).withTiming, containerHeight: derivedValue, timingStandard: memo1(5158).timingStandard };
+  const obj6 = memo1(4945);
+  A.__closure = { collapsedListHeight: sharedValue, withTiming: memo1(5192).withTiming, containerHeight: derivedValue, timingStandard: memo1(5195).timingStandard };
   A.__workletHash = 16625034396799;
   A.__initData = __initData4;
   const animatedStyle = obj6.useAnimatedStyle(A);
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
     }
     obj14 = { children: null };
     const obj15 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
-    obj13.children = tmp16(tmp9(5150).Text, obj15);
+    obj13.children = tmp16(tmp9(5187).Text, obj15);
     obj13 = tmp16(tmp17, obj13);
     obj12.label = obj13;
     obj12.onPress = function handleExpandCTAPress() {
@@ -600,11 +600,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
         tmp4(obj);
       }
     };
-    obj12 = tmp16(tmp9(6404).TableRow, obj12);
+    obj12 = tmp16(tmp9(6457).TableRow, obj12);
     obj14.children = obj12;
     tmp16(tmp17, obj14);
   }
-  let obj2 = { collapsedListHeight: sharedValue, withTiming: memo1(5155).withTiming, containerHeight: derivedValue, timingStandard: memo1(5158).timingStandard };
+  let obj2 = { collapsedListHeight: sharedValue, withTiming: memo1(5192).withTiming, containerHeight: derivedValue, timingStandard: memo1(5195).timingStandard };
   tmp15 = bound;
 });
 export const COLLAPSED_LIST_ITEM_MAX = 4;

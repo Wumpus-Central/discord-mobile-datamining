@@ -1,6 +1,6 @@
-// === Module 8894: StartEventUtils ===
+// === Module 8940: StartEventUtils ===
 
-// Module 8894 (StartEventUtils)
+// Module 8940 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -55,7 +55,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -238,7 +238,7 @@ let closure_14 = async function _setEventAsActive(arg0) {
     flag = false;
   }
   closure_130_1 = flag;
-  return "test";
+  return "Reflect";
 };
 let closure_4 = fn(2072).createChannelRecordFromServer;
 const GuildScheduledEventsConstants = fn(2074);

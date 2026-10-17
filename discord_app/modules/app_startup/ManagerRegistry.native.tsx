@@ -1,7 +1,7 @@
-// === Module 18366: ManagerRegistry ===
+// === Module 18427: ManagerRegistry ===
 
-// Module 18366 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 19050 */;
+// Module 18427 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 19112 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -432,6 +432,13 @@ const obj = {
     actions: ["MESSAGE_CREATE", "MESSAGE_REACTION_ADD", "INVITE_ACCEPT_SUCCESS", "RELATIONSHIP_ADD", "POST_CONNECTION_OPEN", "APP_STATE_UPDATE"],
     inlineRequire() {
       return require("NotificationsManager").default;
+    },
+    neverLoadBeforeConnectionOpen: true
+  },
+  NotifSettingsProtoManager: {
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "APP_STATE_UPDATE"],
+    inlineRequire() {
+      return require("NotifSettingsProtoManager").default;
     },
     neverLoadBeforeConnectionOpen: true
   },

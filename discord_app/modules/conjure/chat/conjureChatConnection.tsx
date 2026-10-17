@@ -1,12 +1,12 @@
-// === Module 10916: conjureChatConnection ===
+// === Module 10980: conjureChatConnection ===
 
-// Module 10916 (conjureChatConnection)
+// Module 10980 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10917 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10918 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10981 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10982 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10983 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -80,7 +80,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3865["913RMa"]);
+      const stringResult = intl.string(_modDef3883["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -169,7 +169,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3865["0+RUWx"]);
+      const stringResult = intl.string(_modDef3883["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -202,6 +202,14 @@ let obj2 = {
     if (null != restore_proposal.restore_proposal) {
       const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: tmp, turnId: restore_proposal.turn_id, patch: null };
       obj3 = { restoreProposal: restore_proposal.restore_proposal };
+      obj2.patch = obj3;
+      DispatcherDefault.dispatch(obj2);
+    }
+  },
+  publish_schedule_proposal(publish_schedule_proposal, arg1) {
+    if (null != publish_schedule_proposal.publish_schedule_proposal) {
+      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: tmp, turnId: publish_schedule_proposal.turn_id, patch: null };
+      obj3 = { publishScheduleProposal: publish_schedule_proposal.publish_schedule_proposal };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

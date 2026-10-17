@@ -1,21 +1,21 @@
-// === Module 11283: ChannelCallNavigator ===
+// === Module 11342: ChannelCallNavigator ===
 
-// Module 11283 (ChannelCallNavigator)
+// Module 11342 (ChannelCallNavigator)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5061 */;
-import VoiceChatModalContext from "VoiceChatModalContext" /* 10605 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5098 */;
+import VoiceChatModalContext from "VoiceChatModalContext" /* 10668 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11284 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11343 */;
 
 require = fn;
 function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   const tmp = closure_14();
-  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10603).useIsConnectedToVoiceChannel(channel);
+  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10666).useIsConnectedToVoiceChannel(channel);
   const id = noop.useId();
   const items = [isConnectedToVoiceChannel, id];
   const effect = noop.useEffect(() => {
@@ -26,14 +26,14 @@ function MainCallScreen(channel) {
       const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
     };
   }, items);
-  let obj = isConnectedToVoiceChannel(10603);
-  const isChannelContentGated = isConnectedToVoiceChannel(6143).useIsChannelContentGated(channel);
+  let obj = isConnectedToVoiceChannel(10666);
+  const isChannelContentGated = isConnectedToVoiceChannel(6180).useIsChannelContentGated(channel);
   const effect1 = noop.useEffect(() => {
     function dismissOAuthModal() {
       if (c0) {
-        id(6153).popWithKey(closure_2_11);
+        id(6190).popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(6153);
+        const obj = id(6190);
       }
     }
     function showOAuth2Modal() {
@@ -107,19 +107,19 @@ function MainCallScreen(channel) {
       const ComponentDispatch = isConnectedToVoiceChannel(1123).ComponentDispatch;
       ComponentDispatch.unsubscribe(ComponentActions.SHOW_OAUTH2_MODAL, showOAuth2Modal);
       if (c0) {
-        id(6153).popWithKey(closure_2_11);
+        id(6190).popWithKey(closure_2_11);
         c0 = false;
-        const obj = id(6153);
+        const obj = id(6190);
       }
     };
   }, []);
-  isConnectedToVoiceChannel(11331);
+  isConnectedToVoiceChannel(11390);
   if (isChannelContentGated) {
-    let obj3 = { onReturnToSafety: id(6153).pop, guildId: null, channelId: null };
+    let obj3 = { onReturnToSafety: id(6190).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(11501), obj3);
+    let tmp14Result2 = closure_12(id(11560), obj3);
     let tmp11 = closure_12;
-    const tmp20 = id(11501);
+    const tmp20 = id(11560);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -132,27 +132,27 @@ function MainCallScreen(channel) {
     let tmp14Result = null;
     if (channel.isGuildStageVoice()) {
       let obj7 = { channel };
-      tmp14Result = closure_12(id(11285), obj7);
+      tmp14Result = closure_12(id(11344), obj7);
     }
     obj5.children = tmp14Result;
     tmp14Result2 = closure_12(closure_6, obj5);
     tmp11 = closure_12;
   }
-  let obj2 = isConnectedToVoiceChannel(6143);
-  const tmp21 = id(5031)();
-  const tmp22 = id(11343);
+  let obj2 = isConnectedToVoiceChannel(6180);
+  const tmp21 = id(5068)();
+  const tmp22 = id(11402);
   const tmp2Result = isConnectedToVoiceChannel(1384);
   const tmp23 = isConnectedToVoiceChannel(1384).isAndroid() || !isConnectedToVoiceChannel;
-  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(1384).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4886).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }) });
+  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(1384).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4922).ThemeContextProvider, { gradient: tmp21, children: tmp14Result2 }) });
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ChannelCallScreens = fn(10600).ChannelCallScreens;
+const ChannelCallScreens = fn(10663).ChannelCallScreens;
 const ComponentActions = fn(1087).ComponentActions;
-let closure_11 = fn(10934).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_11 = fn(10999).OAUTH2_AUTHORIZE_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { flex: { flex: 1, alignSelf: "stretch" }, textInVoiceContainer: null, voiceContainer: null, textContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -276,7 +276,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
       let tmp18 = null;
       if (channel.isGuildStageVoice()) {
         const obj5 = { channel };
-        tmp18 = closure_12(tmp5(11285), obj5);
+        tmp18 = closure_12(tmp5(11344), obj5);
       }
       cResult[5] = channel;
       cResult[6] = tmp18;
@@ -288,7 +288,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
       const obj6 = { pointerEvents: "box-none", style: null };
       let items = [animatedStyle1, StyleSheet.absoluteFill];
       obj6.style = items;
-      const tmp23 = closure_12(tmp5(4909).View, obj6);
+      const tmp23 = closure_12(tmp5(4945).View, obj6);
       cResult[7] = animatedStyle1;
       cResult[8] = tmp23;
       let tmp20 = tmp23;
@@ -319,7 +319,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
             const obj7 = { style: tmp16, children: null };
             const items1 = [tmp24, tmp31];
             obj7.children = items1;
-            const tmp37 = closure_13(tmp5(4909).View, obj7);
+            const tmp37 = closure_13(tmp5(4945).View, obj7);
             cResult[19] = tmp16;
             cResult[20] = tmp24;
             cResult[21] = tmp31;
@@ -336,7 +336,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
         let tmp29 = null;
         if (tmp13) {
           const obj9 = { channel };
-          tmp29 = closure_12(tmp5(10598), obj9);
+          tmp29 = closure_12(tmp5(10661), obj9);
         }
         cResult[13] = channel;
         cResult[14] = tmp13;
@@ -453,25 +453,25 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
   let tmp16 = null;
   if (channel.isGuildStageVoice()) {
     const obj6 = { channel };
-    tmp16 = closure_12(tmp2(11285), obj6);
+    tmp16 = closure_12(tmp2(11344), obj6);
   }
   const items1 = [tmp16, ];
   const obj7 = { pointerEvents: "box-none", style: null };
   const items2 = [animatedStyle1, StyleSheet.absoluteFill];
   obj7.style = items2;
-  items1[1] = closure_12(translateX(4909).View, obj7);
+  items1[1] = closure_12(translateX(4945).View, obj7);
   obj5.children = items1;
   const items3 = [closure_13(closure_6, obj5), ];
   const obj8 = { style: tmp.textContainer, children: null };
   let tmp18Result = null;
   if (tmp11[0]) {
     const obj9 = { channel };
-    tmp18Result = closure_12(tmp2(10598), obj9);
+    tmp18Result = closure_12(tmp2(10661), obj9);
   }
   obj8.children = tmp18Result;
   items3[1] = closure_12(closure_6, obj8);
   obj4.children = items3;
-  return closure_13(translateX(4909).View, obj4);
+  return closure_13(translateX(4945).View, obj4);
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
   }
   if (cResult[2] !== tmp6) {
     const obj4 = { screens: tmp6, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN };
-    const tmp9 = closure_12(tmp(6912).Navigator, obj4);
+    const tmp9 = closure_12(tmp(6965).Navigator, obj4);
     cResult[2] = tmp6;
     cResult[3] = tmp9;
     let tmp7 = tmp9;
@@ -545,6 +545,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
     },
     initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN
   };
-  obj.children = closure_12(channel(6912).Navigator, obj2);
+  obj.children = closure_12(channel(6965).Navigator, obj2);
   return closure_12(GuildThemeGuildIdOverrideContextDefault.Provider, obj);
 });

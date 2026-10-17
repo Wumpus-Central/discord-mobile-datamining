@@ -1,18 +1,18 @@
-// === Module 11266: BaseEmbeddedAppWebView ===
+// === Module 11325: BaseEmbeddedAppWebView ===
 
-// Module 11266 (BaseEmbeddedAppWebView)
+// Module 11325 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5362 */;
-import usePreviousDefault from "usePrevious" /* 6141 */;
-import WebView from "WebView" /* 7742 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
+import usePreviousDefault from "usePrevious" /* 6178 */;
+import WebView from "WebView" /* 7788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9297 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 6311 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -39,7 +39,7 @@ const Linking = fn(17).Linking;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let closure_10 = fn(2026).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_12 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_13 = new LoggerDefault("BaseEmbeddedAppWebView");
 const PlatformUtils = fn(1384);

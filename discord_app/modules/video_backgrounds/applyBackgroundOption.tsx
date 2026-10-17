@@ -1,16 +1,16 @@
-// === Module 5316: applyBackgroundOption ===
+// === Module 5353: applyBackgroundOption ===
 
-// Module 5316 (applyBackgroundOption)
+// Module 5353 (applyBackgroundOption)
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5199 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5319 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5321 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5324 */;
-import getFilterImageDefault from "getFilterImage" /* 5329 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5330 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5236 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5356 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5358 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5361 */;
+import getFilterImageDefault from "getFilterImage" /* 5366 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5367 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5317 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 5354 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -219,7 +219,7 @@ let closure_14 = async function _applyBackgroundOptionLive(arg0, arg1) {
     }
     closure_130_1 = flag;
     _location = track.location;
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -247,12 +247,12 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
     }
     closure_131_2 = flag;
     _location = track.location;
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(5318);
+const VideoBackgroundConstants = fn(5355);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1087).NOOP;
 const size = fn(2);

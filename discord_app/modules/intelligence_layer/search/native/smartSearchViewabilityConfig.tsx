@@ -1,9 +1,9 @@
-// === Module 17775: smartSearchViewabilityConfig ===
+// === Module 17835: smartSearchViewabilityConfig ===
 
-// Module 17775 (smartSearchViewabilityConfig)
-import SearchConstants from "SearchConstants" /* 9550 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12937 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12939 */;
+// Module 17835 (smartSearchViewabilityConfig)
+import SearchConstants from "SearchConstants" /* 9614 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13002 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13004 */;
 import size from "module_2" /* 2 */;
 
 const SearchListItemTypes = SearchConstants.SearchListItemTypes;

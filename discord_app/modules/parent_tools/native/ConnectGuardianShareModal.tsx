@@ -1,30 +1,30 @@
-// === Module 18550: ConnectGuardianShareModal ===
+// === Module 18612: ConnectGuardianShareModal ===
 
-// Module 18550 (ConnectGuardianShareModal)
+// Module 18612 (ConnectGuardianShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef2571 from "module_2571" /* 2571 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
-import NavigatorHeader from "NavigatorHeader" /* 6425 */;
-import Modal from "Modal" /* 10848 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15856 */;
+import _modDef2589 from "module_2589" /* 2589 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
+import NavigatorHeader from "NavigatorHeader" /* 6478 */;
+import Modal from "Modal" /* 10913 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15922 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7479 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7525 */;
 
 require = fn;
 function ConnectGuardianShareScreen() {
   const tmp = closure_8();
-  const syncMessages = getLinkCode(1128).useSyncMessages(getLinkCode(2571).messagesLoader);
+  const syncMessages = getLinkCode(1128).useSyncMessages(getLinkCode(2589).messagesLoader);
   const callback = noop.useCallback(() => {
     const intl = getLinkCode(1128).intl;
-    getLinkCode(4867).presentFailedToast(intl.string(getLinkCode(1128).t.R0RpRX));
-    const obj = getLinkCode(4867);
+    getLinkCode(4903).presentFailedToast(intl.string(getLinkCode(1128).t.R0RpRX));
+    const obj = getLinkCode(4903);
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1128);
-  getLinkCode = getLinkCode(12585).useFamilyCenterActions({ onError: callback }).getLinkCode;
-  const obj2 = getLinkCode(12585);
+  getLinkCode = getLinkCode(12650).useFamilyCenterActions({ onError: callback }).getLinkCode;
+  const obj2 = getLinkCode(12650);
   const items = [FamilyCenterStore];
   const stateFromStores = getLinkCode(573).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(573);
@@ -39,41 +39,41 @@ function ConnectGuardianShareScreen() {
   const obj6 = { spacing: nativeDefault.space.PX_8, children: null };
   const obj7 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   let intl = getLinkCode(1128).intl;
-  obj7.children = intl.string(_modDef2571.ITlV6p);
-  const items2 = [closure_6(getLinkCode(5150).Text, obj7), ];
+  obj7.children = intl.string(_modDef2589.ITlV6p);
+  const items2 = [closure_6(getLinkCode(5187).Text, obj7), ];
   const obj8 = { style: tmp.body, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = getLinkCode(1128).intl;
-  obj8.children = intl2.format(_modDef2571.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-  items2[1] = closure_6(getLinkCode(5150).Text, obj8);
+  obj8.children = intl2.format(_modDef2589.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+  items2[1] = closure_6(getLinkCode(5187).Text, obj8);
   obj6.children = items2;
-  const items3 = [closure_7(getLinkCode(5440).Stack, obj6), ];
+  const items3 = [closure_7(getLinkCode(5477).Stack, obj6), ];
   const obj9 = { spacing: nativeDefault.space.PX_24, style: tmp.cardSection, children: null };
   const obj10 = { style: tmp.qrLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = getLinkCode(1128).intl;
-  obj10.children = intl3.string(_modDef2571.pojgfk);
-  const items4 = [closure_6(getLinkCode(5150).Text, obj10), ];
+  obj10.children = intl3.string(_modDef2589.pojgfk);
+  const items4 = [closure_6(getLinkCode(5187).Text, obj10), ];
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj11 = { shareActions: "full", linkCode: stateFromStores, expiresAt: stateFromStores1, onRefresh: getLinkCode };
-      let tmp11Result = closure_6(tmp2(15857).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(15923).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };
     items4[1] = tmp11Result;
     obj9.children = items4;
-    items3[1] = closure_7(getLinkCode(5440).Stack, obj9);
+    items3[1] = closure_7(getLinkCode(5477).Stack, obj9);
     obj5.children = items3;
-    obj13.children = closure_7(getLinkCode(5440).Stack, obj5);
-    obj12.children = closure_6(getLinkCode(7736).ModalContent, obj13);
-    return closure_6(getLinkCode(7735).ModalScreen, obj12);
+    obj13.children = closure_7(getLinkCode(5477).Stack, obj5);
+    obj12.children = closure_6(getLinkCode(7782).ModalContent, obj13);
+    return closure_6(getLinkCode(7781).ModalScreen, obj12);
   }
-  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(6380).ActivityIndicator, {}) });
-  const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(6380).ActivityIndicator, {}) };
+  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(6433).ActivityIndicator, {}) });
+  const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(6433).ActivityIndicator, {}) };
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { title: { textAlign: "center" }, body: { textAlign: "center" }, qrLabel: { textAlign: "center" }, cardSection: { alignItems: "center" }, loading: { alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_24 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

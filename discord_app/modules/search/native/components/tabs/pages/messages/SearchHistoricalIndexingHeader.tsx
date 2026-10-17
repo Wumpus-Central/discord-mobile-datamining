@@ -1,15 +1,15 @@
-// === Module 17790: SearchHistoricalIndexingHeader ===
+// === Module 17850: SearchHistoricalIndexingHeader ===
 
-// Module 17790 (SearchHistoricalIndexingHeader)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12936 */;
+// Module 17850 (SearchHistoricalIndexingHeader)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13001 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 
 const require = fn;
-const SearchConstants = fn(9550);
+const SearchConstants = fn(9614);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_7 = createStyles.createStyles({ header: { marginBottom: 16 }, headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Historic
       }
       if (cResult[11] !== tmp14) {
         const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 };
-        const tmp18 = jsx(tmp(5150).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 });
+        const tmp18 = jsx(tmp(5187).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 });
         cResult[11] = tmp14;
         cResult[12] = tmp18;
         let tmp16 = tmp18;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Historic
         return tmp19;
       }
       const obj4 = { variant: "primary", border: "subtle", style: tmp13, children: tmp16 };
-      const tmp21 = jsx(tmp(6406).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
+      const tmp21 = jsx(tmp(6459).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
       cResult[13] = tmp13;
       cResult[14] = tmp16;
       cResult[15] = tmp21;

@@ -1,6 +1,6 @@
-// === Module 14225: invite/GuildInvite ===
+// === Module 14293: invite/GuildInvite ===
 
-// Module 14225 (invite/GuildInvite)
+// Module 14293 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,32 +9,32 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1900 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2082 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import UserUtilsDefault from "UserUtils" /* 5021 */;
-import useChannelName from "useChannelName" /* 5484 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7971 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8110 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8112 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8385 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8738 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9096 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 9843 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9844 */;
-import GuestUtilsDefault from "GuestUtils" /* 9845 */;
-import _modDef12458 from "module_12458" /* 12458 */;
-import _modDef12459 from "module_12459" /* 12459 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 13363 */;
-import _modDef13364 from "module_13364" /* 13364 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14226 */;
+import UserUtilsDefault from "UserUtils" /* 5057 */;
+import useChannelName from "useChannelName" /* 5521 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8017 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8156 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8158 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8784 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9142 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 9907 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9908 */;
+import GuestUtilsDefault from "GuestUtils" /* 9909 */;
+import _modDef12523 from "module_12523" /* 12523 */;
+import _modDef12524 from "module_12524" /* 12524 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 13429 */;
+import _modDef13430 from "module_13430" /* 13430 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 14294 */;
 import GuildRecord from "GuildRecord" /* 2086 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import InviteStore from "InviteStore" /* 5136 */;
-import RelationshipStore from "RelationshipStore" /* 4819 */;
+import InviteStore from "InviteStore" /* 5173 */;
+import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1392 */;
 import Constants_mod from "Constants" /* 1087 */;
-import Constants_mod from "Constants" /* 7643 */;
+import Constants_mod from "Constants" /* 7689 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -71,7 +71,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(7971).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(8017).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1128).intl;
     let stringResult = intl4.string(tmp6(1128).t["F/OLvL"]);
@@ -94,11 +94,11 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   obj.subtitle = stringResult;
   const intl5 = tmp6(1128).intl;
   obj.titleText = intl5.string(tmp6(1128).t["Jhx/ud"]);
-  const tmp6Result = tmp6(7971);
+  const tmp6Result = tmp6(8017);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef12458;
+    let tmpResult2 = _modDef12523;
   } else {
-    tmpResult2 = _modDef12459;
+    tmpResult2 = _modDef12524;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -151,7 +151,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13364);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13430);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -209,9 +209,9 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef12458;
+    let tmpResult = _modDef12523;
   } else {
-    tmpResult = _modDef12459;
+    tmpResult = _modDef12524;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

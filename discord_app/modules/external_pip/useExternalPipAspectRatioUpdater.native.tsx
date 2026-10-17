@@ -1,7 +1,7 @@
-// === Module 18294: useExternalPipAspectRatioUpdater ===
+// === Module 18355: useExternalPipAspectRatioUpdater ===
 
-// Module 18294 (useExternalPipAspectRatioUpdater)
-import ExternalPipDefault from "ExternalPip" /* 5283 */;
+// Module 18355 (useExternalPipAspectRatioUpdater)
+import ExternalPipDefault from "ExternalPip" /* 5320 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,15 +1,15 @@
-// === Module 11296: SoundpackStore ===
+// === Module 11355: SoundpackStore ===
 
-// Module 11296 (SoundpackStore)
+// Module 11355 (SoundpackStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 11297 */;
+import Constants from "Constants" /* 11356 */;
 import size from "module_2" /* 2 */;
 
 const Soundpacks = Constants.Soundpacks;
 let obj = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };
-const PersistedStore = initializeDefault.PersistedStore;
-class SoundpackStore extends PersistedStore {
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+class SoundpackStore extends DeviceSettingsStore {
 }
 const prototype = SoundpackStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
@@ -21,7 +21,7 @@ prototype["initialize"] = function initialize(arg0) {
     }
   }
 };
-prototype["getState"] = function getState() {
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
 };
 prototype["getSoundpack"] = function getSoundpack() {

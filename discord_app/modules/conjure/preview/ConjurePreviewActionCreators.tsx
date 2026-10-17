@@ -1,10 +1,13 @@
-// === Module 10979: ConjurePreviewActionCreators ===
+// === Module 10994: ConjurePreviewActionCreators ===
 
-// Module 10979 (ConjurePreviewActionCreators)
+// Module 10994 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7170 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10930 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6294 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10996 */;
+import leaveFrame from "leaveFrame" /* 11020 */;
+import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 11034 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 10995 */;
 
 require = fn;
 const size = fn(2);
@@ -36,4 +39,24 @@ export const setBuilderPreviewMobile = function setBuilderPreviewMobile(enabled)
 };
 export const setBuilderPreviewLandscape = function setBuilderPreviewLandscape(landscape) {
   DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape });
+};
+export const pauseConjurePreview = function pauseConjurePreview(projectId, id) {
+  DispatcherDefault.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: true });
+  const obj2 = { type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: true };
+  leaveFrame.leaveFrame(id);
+};
+export const resumeConjurePreview = function resumeConjurePreview(projectId) {
+  if (ConjurePreviewPauseStore.isPaused(projectId)) {
+    const obj2 = { type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: false };
+    DispatcherDefault.dispatch(obj2);
+  }
+};
+export const wakeConjurePreview = function wakeConjurePreview(projectId) {
+  if (obj.isConjurePausedPreviewMounted(projectId)) {
+    if (ConjurePreviewPauseStore.isPaused(projectId)) {
+      const obj3 = { type: "CONJURE_PREVIEW_PAUSED_SET", projectId, paused: false };
+      DispatcherDefault.dispatch(obj3);
+    }
+  }
+  obj = conjurePausedPreviewViews;
 };

@@ -1,9 +1,9 @@
-// === Module 6175: StageChannelParticipantStoreHooks ===
+// === Module 6212: StageChannelParticipantStoreHooks ===
 
-// Module 6175 (StageChannelParticipantStoreHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 6169 */;
+// Module 6212 (StageChannelParticipantStoreHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 6206 */;
 import _slicedToArray from "module_32" /* 32 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6115 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6152 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStagePa
       let tmp7 = cResult[4];
     }
     const tmpResult = tmp(504);
-    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(6176).isVersionEqual), 1)[0];
+    return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(6213).isVersionEqual), 1)[0];
   }
   const fn = function c() {
     const items = [StageChannelParticipantStore.getMutableParticipants(closure_0, closure_1), StageChannelParticipantStore.getParticipantsVersion(closure_0)];

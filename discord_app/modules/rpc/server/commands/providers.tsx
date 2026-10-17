@@ -1,12 +1,12 @@
-// === Module 15455: providers ===
+// === Module 15520: providers ===
 
-// Module 15455 (providers)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11250 */;
+// Module 15520 (providers)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5980 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6017 */;
 
 const require = fn;
-let Constants = fn(5858);
+let Constants = fn(5895);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1087);
 ({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
@@ -247,7 +247,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

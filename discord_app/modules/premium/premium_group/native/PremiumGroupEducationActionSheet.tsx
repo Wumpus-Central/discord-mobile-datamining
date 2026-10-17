@@ -1,17 +1,17 @@
-// === Module 14519: PremiumGroupEducationActionSheet ===
+// === Module 14587: PremiumGroupEducationActionSheet ===
 
-// Module 14519 (PremiumGroupEducationActionSheet)
+// Module 14587 (PremiumGroupEducationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3285 from "module_3285" /* 3285 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4842 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6514 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7065 */;
+import _modDef3303 from "module_3303" /* 3303 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4878 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6567 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5154 */;
+import createStyles from "createStyles" /* 5191 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
           const obj4 = { helpCenterLink: HELP_CENTER_LINK };
-          const formatResult = intl.format(_modDef3285.ah1Ecm, obj4);
+          const formatResult = intl.format(_modDef3303.ah1Ecm, obj4);
           cResult[11] = formatResult;
           let tmp18 = formatResult;
         } else {
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   const items1 = [timestampProducer(View, obj3), ];
   const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
   const intl = util.intl;
-  obj6.children = intl.format(_modDef3285.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  obj6.children = intl.format(_modDef3303.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
   items1[1] = hasOwnProperty(Text_Text.Text, obj6);
   obj2.children = items1;
   obj.children = timestampProducer(View, obj2);

@@ -1,16 +1,16 @@
-// === Module 10919: ConjureActionCreators ===
+// === Module 10983: ConjureActionCreators ===
 
-// Module 10919 (ConjureActionCreators)
+// Module 10983 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7170 */;
-import UserActionCreators from "UserActionCreators" /* 8533 */;
-import conjureAppInServer from "conjureAppInServer" /* 10923 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6294 */;
+import UserActionCreators from "UserActionCreators" /* 8579 */;
+import conjureAppInServer from "conjureAppInServer" /* 10987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6254 */;
+import ReadStateStore from "ReadStateStore" /* 6291 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 
 require = fn;
 function updateIntegrationStatus(projectId, integrationStatus) {
@@ -303,7 +303,6 @@ let closure_24 = async function _drainMissingProjects() {
           closure_2 = tmp2;
           closure_130_1 = undefined;
           closure_130_2 = undefined;
-          closure_130_3 = undefined;
           c22 = true;
           closure_130_0 = [];
           closure_1 = dependencyMap;
@@ -326,7 +325,7 @@ let closure_24 = async function _drainMissingProjects() {
             c7 = 3;
           } else {
             c5 = 1;
-            closure_130_1 = tmp38;
+            closure_130_1 = tmp34;
             let deleteResult = closure_131_21.delete(closure_130_1);
             if (!closure_131_20.has(closure_130_1)) {
               let addResult = closure_131_20.add(closure_130_1);
@@ -348,9 +347,9 @@ let closure_24 = async function _drainMissingProjects() {
       } else {
         if (2 === tmp5) {
           c5 = 1;
-          closure_130_4 = ReadStateStore;
+          closure_130_3 = ReadStateStore;
           let obj2 = closure_131_0(closure_131_2[10]);
-          closure_130_2 = obj2.createFailureStatus(closure_130_4);
+          closure_130_2 = obj2.createFailureStatus(closure_130_3);
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -361,12 +360,7 @@ let closure_24 = async function _drainMissingProjects() {
           let obj = { value, done: true };
           return obj;
         } else {
-          closure_130_3 = value;
-          let num2 = 200;
-          if (!closure_130_3.ok) {
-            num2 = closure_130_3.status;
-          }
-          closure_130_2 = num2;
+          closure_130_2 = 200;
           c5 = 1;
         }
         if (200 !== closure_130_2) {
@@ -376,7 +370,7 @@ let closure_24 = async function _drainMissingProjects() {
               let arr = closure_130_0.push(closure_130_1);
             }
           }
-          let tmp32 = closure_131_17(closure_130_1);
+          let tmp28 = closure_131_17(closure_130_1);
         }
       }
       c5 = 0;
@@ -504,11 +498,7 @@ let closure_28 = async function _getProject(arg0) {
     if (closure_130_1 != null) {
       const aborted = closure_130_1.aborted;
     }
-    let ok = true !== aborted;
-    if (ok) {
-      ok = closure_130_2.ok;
-    }
-    if (ok) {
+    if (true !== aborted) {
       closure_131_1(closure_131_2[6]).dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_130_2.body.project });
       closure_131_9(closure_130_0, { bot_permissions_changed: closure_130_2.body.bot_permissions_changed, integration_installed: closure_130_2.body.integration_installed, preview_ready: closure_130_2.body.preview_ready, has_activity: closure_130_2.body.has_activity, owner_authorization_revoked: closure_130_2.body.owner_authorization_revoked });
       closure_131_1(closure_131_2[6]);
@@ -623,10 +613,7 @@ let closure_31 = async function _patchProject(arg0) {
     const request = { url: Endpoints.CONJURE_PROJECT(closure_0), body, rejectWithError: false };
     await HTTP.patch(request);
     closure_130_0 = value;
-    if (closure_130_0.ok) {
-      closure_131_1(closure_131_2[6]).dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
-      closure_131_1(closure_131_2[6]);
-    }
+    closure_131_1(closure_131_2[6]).dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
     return closure_130_0;
   })();
 };
@@ -686,15 +673,13 @@ let closure_33 = async function _updateProjectSettings(arg0) {
             return obj6;
           } else {
             closure_130_1 = value;
-            if (closure_130_1.ok) {
-              closure_130_2 = closure_130_1.body.preview_application_id;
-              if (null != closure_130_2) {
-                c4 = 1;
-                c5 = 3;
-                c6 = 1;
-                const obj7 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_2), done: false };
-                return obj7;
-              }
+            closure_130_2 = closure_130_1.body.preview_application_id;
+            if (null != closure_130_2) {
+              c4 = 1;
+              c5 = 3;
+              c6 = 1;
+              const obj7 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_2), done: false };
+              return obj7;
             }
           }
         } else {
@@ -713,10 +698,10 @@ let closure_33 = async function _updateProjectSettings(arg0) {
         }
         c6 = 3;
       }
-    } catch (tmp27) {
+    } catch (tmp25) {
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp27;
+        throw tmp25;
       } else {
         c5 = tmp;
       }
@@ -855,21 +840,17 @@ let closure_36 = async function _deleteProject() {
         } else {
           closure_129_1 = value;
           c4 = 0;
-          let str = "CONJURE_PROJECT_DELETE_FAIL";
-          if (closure_129_1.ok) {
-            str = "CONJURE_PROJECT_DELETE_SUCCESS";
-          }
-          const obj11 = { type: str, projectId: closure_129_0 };
+          const obj11 = { type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: closure_129_0 };
           closure_130_1(closure_130_2[6]).dispatch(obj11);
           c6 = 3;
           const obj12 = { value: closure_129_1, done: true };
           return obj12;
         }
-      } catch (tmp25) {
-        closure_3 = tmp25;
+      } catch (tmp23) {
+        closure_3 = tmp23;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp25;
+          throw tmp23;
         } else {
           c5 = tmp;
         }
@@ -878,7 +859,7 @@ let closure_36 = async function _deleteProject() {
   })();
 };
 const Endpoints = fn(1087).Endpoints;
-const ReadStateTypes = fn(6186).ReadStateTypes;
+const ReadStateTypes = fn(6223).ReadStateTypes;
 let c10 = null;
 let c11 = null;
 let c12 = false;
@@ -982,11 +963,8 @@ export const fetchApplicationChannels = function fetchApplicationChannels() {
 };
 export { deleteProject };
 export const deleteProjectInBackground = function deleteProjectInBackground(id, arg1) {
-  closure_0 = arg1;
-  deleteProject(id).then((ok) => {
-    if (!ok.ok) {
-      closure_0();
-    }
+  deleteProject(id).then(() => {
+
   }, arg1);
 };
 export const refreshConjureInstallState = function refreshConjureInstallState(projectId) {

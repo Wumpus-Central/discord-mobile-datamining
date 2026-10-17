@@ -1,26 +1,26 @@
-// === Module 17362: FavoritesGuildSidebarHeader ===
+// === Module 17421: FavoritesGuildSidebarHeader ===
 
-// Module 17362 (FavoritesGuildSidebarHeader)
+// Module 17421 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3447 from "module_3447" /* 3447 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import Stack_Stack from "Stack/Stack" /* 5440 */;
-import ChatIcon from "ChatIcon" /* 8425 */;
-import TextIcon from "TextIcon" /* 8434 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8455 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13563 */;
+import _modDef3465 from "module_3465" /* 3465 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import Stack_Stack from "Stack/Stack" /* 5477 */;
+import ChatIcon from "ChatIcon" /* 8471 */;
+import TextIcon from "TextIcon" /* 8480 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8501 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13631 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17266).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17326).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
 let c10 = "text-sm/medium";
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -51,7 +51,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyB
     const obj2 = { variant: variant2, color: "text-muted", children: null };
     const intl = util.intl;
     const obj3 = { onClick: first };
-    obj2.children = intl.format(_modDef3447.Z3Hdr5, obj3);
+    obj2.children = intl.format(_modDef3465.Z3Hdr5, obj3);
     const tmp9 = timestampProducer(Text_Text.Text, obj2);
     cResult[1] = tmp9;
     let tmp5 = tmp9;
@@ -65,7 +65,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyB
   }, []);
   const obj = { variant: variant2, color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3447.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3465.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 });
 ReactCompilerGating = fn(558);
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { variant, color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef3447["1n0TGE"]);
+      obj2.children = intl.string(_modDef3465["1n0TGE"]);
       const tmp16 = timestampProducer(Text_Text.Heading, obj2);
       const tmp18 = timestampProducer(closure_12, {});
       cResult[3] = tmp16;
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3447["1n0TGE"]);
+  obj4.children = intl.string(_modDef3465["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(closure_12, {})];
   obj3.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj3);

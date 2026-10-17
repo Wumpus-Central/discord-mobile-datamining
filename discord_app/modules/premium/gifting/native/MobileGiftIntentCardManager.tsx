@@ -1,15 +1,15 @@
-// === Module 18558: MobileGiftIntentCardManager ===
+// === Module 18620: MobileGiftIntentCardManager ===
 
-// Module 18558 (MobileGiftIntentCardManager)
+// Module 18620 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import Timers from "Timers" /* 2063 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8942 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7567 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8988 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7613 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import MessageStore from "MessageStore" /* 5495 */;
+import MessageStore from "MessageStore" /* 5532 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8330 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 18559 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8376 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 18621 */;
 
 require = fn;
 const PremiumConstants = fn(1394);
@@ -30,9 +30,9 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
       if (id === SelectedChannelStore.getChannelId()) {
         if (MessageStore.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)) {
-            const result = tmp(10337).logMessageGiftIntentShown(found);
+            const result = tmp(10401).logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            const tmpResult = tmp(10337);
+            const tmpResult = tmp(10401);
             const obj = { name: tmp(1275).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1275).ImpressionTypes.VIEW, properties: null };
             const obj2 = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;
@@ -42,8 +42,8 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             obj2.dm_affinity = dmProbability;
             obj2.channel_id = id;
             obj.properties = obj2;
-            tmp(9203).trackImpression(obj);
-            const tmpResult2 = tmp(9203);
+            tmp(9263).trackImpression(obj);
+            const tmpResult2 = tmp(9263);
           }
         } else {
           MessageStore.whenReady(id, () => {

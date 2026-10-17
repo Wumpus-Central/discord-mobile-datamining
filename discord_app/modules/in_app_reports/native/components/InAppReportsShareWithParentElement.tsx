@@ -1,8 +1,8 @@
-// === Module 14280: InAppReportsShareWithParentElement ===
+// === Module 14348: InAppReportsShareWithParentElement ===
 
-// Module 14280 (InAppReportsShareWithParentElement)
-import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7481 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14279 */;
+// Module 14348 (InAppReportsShareWithParentElement)
+import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7527 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14347 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parents) => {
                       }
                       const _Symbol = Symbol;
                       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                        const tmp52 = jsx(tmp(13913).ShareIcon, {});
+                        const tmp52 = jsx(tmp(13981).ShareIcon, {});
                         const intl3 = tmp(1128).intl;
                         const stringResult = intl3.string(tmp(1128).t["5l/hlt"]);
                         cResult[15] = tmp52;
@@ -182,9 +182,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parents) => {
         username1 = tmp4.username;
       }
       obj2.parent3 = username1;
-      parents(4867).showSafetySuccess("IAR_SHARE_WITH_PARENT_SUCCESS", intl.formatToPlainString(parents(1128).t.wr4IT5, obj2));
+      parents(4903).showSafetySuccess("IAR_SHARE_WITH_PARENT_SUCCESS", intl.formatToPlainString(parents(1128).t.wr4IT5, obj2));
       closure_1_1(true);
-      const obj = parents(4867);
+      const obj = parents(4903);
     }).catch(() => {
       closure_1_1(dependencyMap[8]).showFailedToast();
     });
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((parents) => {
     }
     obj3.parent3 = username3;
     obj.disabledTitle = intl.formatToPlainString(parents(1128).t.BlAMme, obj3);
-    obj.icon = jsx(parents(13913).ShareIcon, {});
+    obj.icon = jsx(parents(13981).ShareIcon, {});
     const intl2 = tmp15(1128).intl;
     obj.description = intl2.string(parents(1128).t["5l/hlt"]);
     obj.disabled = tmp[0];

@@ -1,12 +1,12 @@
-// === Module 12129: ConjureActivityBox ===
+// === Module 12192: ConjureActivityBox ===
 
-// Module 12129 (ConjureActivityBox)
+// Module 12192 (ConjureActivityBox)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import WarningIcon from "WarningIcon" /* 7792 */;
-import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 12080 */;
-import ConjureSubagentMark from "ConjureSubagentMark" /* 12130 */;
-import ConjureNativeStepImagesDefault from "ConjureNativeStepImages" /* 12178 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import WarningIcon from "WarningIcon" /* 7838 */;
+import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 12143 */;
+import ConjureSubagentMark from "ConjureSubagentMark" /* 12193 */;
+import ConjureNativeStepImagesDefault from "ConjureNativeStepImages" /* 12241 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,11 +14,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5154);
-let obj2 = { activityBox: { marginLeft: -fn(12090).RAIL_INDENT }, activityDetail: null, stepDetail: null, stepLine: null, stepCommand: null };
-let obj3 = { marginLeft: -fn(12090).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12090).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12090).RAIL_INDENT };
+const createStyles = fn(5191);
+let obj2 = { activityBox: { marginLeft: -fn(12153).RAIL_INDENT }, activityDetail: null, stepDetail: null, stepLine: null, stepCommand: null };
+let obj3 = { marginLeft: -fn(12153).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12153).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12153).RAIL_INDENT };
 obj2.stepDetail = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
 let obj5 = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
 obj2.stepLine = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -554,11 +554,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Timeli
     cResult[1] = flatMapResult;
   } else {
     if (cResult[3] !== node) {
-      const describeNodeResult = node(12049).describeNode(node);
+      const describeNodeResult = node(12112).describeNode(node);
       cResult[3] = node;
       cResult[4] = describeNodeResult;
       let tmp11 = describeNodeResult;
-      let tmpResult = node(12049);
+      let tmpResult = node(12112);
     } else {
       tmp11 = cResult[4];
     }
@@ -573,9 +573,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Timeli
     if (cResult[5] !== node.durationMs) {
       let tmp15 = null;
       if (null != node.durationMs) {
-        let obj2 = { variant: "text-xs/normal", color: "text-subtle", children: node(12176).describeDuration(node.durationMs) };
-        tmp15 = closure_6(node(5150).Text, obj2);
-        const tmpResult2 = node(12176);
+        let obj2 = { variant: "text-xs/normal", color: "text-subtle", children: node(12239).describeDuration(node.durationMs) };
+        tmp15 = closure_6(node(5187).Text, obj2);
+        const tmpResult2 = node(12239);
       }
       cResult[5] = node.durationMs;
       cResult[6] = tmp15;
@@ -728,7 +728,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Timeli
   });
   let obj = { line: null, live: null, settled: null, failed: null, presentation: null, crestColor: null, inGutter: null, epoch: null, trailing: null };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(12049).describeNode(node);
+  obj.line = node(12112).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -746,9 +746,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Timeli
   obj.epoch = epoch;
   let tmp4Result = null;
   if (null != node.durationMs) {
-    let obj3 = { variant: "text-xs/normal", color: "text-subtle", children: node(12176).describeDuration(node.durationMs) };
-    tmp4Result = closure_6(node(5150).Text, obj3);
-    const tmp8Result = node(12176);
+    let obj3 = { variant: "text-xs/normal", color: "text-subtle", children: node(12239).describeDuration(node.durationMs) };
+    tmp4Result = closure_6(node(5187).Text, obj3);
+    const tmp8Result = node(12239);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), , ];

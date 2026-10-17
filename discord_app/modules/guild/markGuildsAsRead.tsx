@@ -1,18 +1,19 @@
-// === Module 14902: markGuildsAsRead ===
+// === Module 14971: markGuildsAsRead ===
 
-// Module 14902 (markGuildsAsRead)
+// Module 14971 (markGuildsAsRead)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7013 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6253 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7077 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7066 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6290 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildChannelStore from "GuildChannelStore" /* 4807 */;
-import ReadStateStore from "ReadStateStore" /* 6254 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
+import ReadStateStore from "ReadStateStore" /* 6291 */;
 
-const require = fn;
+require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ReadStateTypes = fn(6186).ReadStateTypes;
+const ReadStateTypes = fn(6223).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
@@ -81,5 +82,26 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(7024).bulkAck(mapped, onFinished);
+  return mapped(7077).bulkAck(mapped, onFinished);
+};
+export const markChannelsAsRead = function markChannelsAsRead(arr, source, onFinished) {
+  const mapped = arr.map((channelId) => {
+    const obj = { channelId, readStateType: constants.CHANNEL, messageId: null };
+    channel = channel.getChannel(channelId);
+    let isForumLikeChannelResult;
+    if (channel != null) {
+      isForumLikeChannelResult = channel.isForumLikeChannel();
+    }
+    if (isForumLikeChannelResult) {
+      const _Date = Date;
+      let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
+    } else {
+      fromTimestampResult = ReadStateStore.lastMessageId(channelId);
+    }
+    obj.messageId = fromTimestampResult;
+    return obj;
+  });
+  AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
+  const obj2 = { source, type: "guild" };
+  return ReadStateActionCreators.bulkAck(mapped, onFinished);
 };

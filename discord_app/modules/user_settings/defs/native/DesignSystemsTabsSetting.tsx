@@ -1,9 +1,9 @@
-// === Module 16784: DesignSystemsTabsSetting ===
+// === Module 16848: DesignSystemsTabsSetting ===
 
-// Module 16784 (DesignSystemsTabsSetting)
+// Module 16848 (DesignSystemsTabsSetting)
 import Constants from "Constants" /* 1087 */;
-import SettingsConstants from "SettingsConstants" /* 8214 */;
-import SettingBuilders from "SettingBuilders" /* 11003 */;
+import SettingsConstants from "SettingsConstants" /* 8260 */;
+import SettingBuilders from "SettingBuilders" /* 11065 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

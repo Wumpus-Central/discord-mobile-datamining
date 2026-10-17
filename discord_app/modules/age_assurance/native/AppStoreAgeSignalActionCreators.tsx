@@ -1,6 +1,6 @@
-// === Module 7914: AppStoreAgeSignalActionCreators ===
+// === Module 7960: AppStoreAgeSignalActionCreators ===
 
-// Module 7914 (AppStoreAgeSignalActionCreators)
+// Module 7960 (AppStoreAgeSignalActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -140,7 +140,7 @@ let closure_7 = async function _submitAgeSignal(arg0) {
           closure_134_4 = closure_4;
           c8 = 1;
           c9 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

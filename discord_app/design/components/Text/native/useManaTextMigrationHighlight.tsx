@@ -1,13 +1,13 @@
-// === Module 5152: useManaTextMigrationHighlight ===
+// === Module 5189: useManaTextMigrationHighlight ===
 
-// Module 5152 (useManaTextMigrationHighlight)
+// Module 5189 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 5153 */;
+import DevSettingsStore from "DevSettingsStore" /* 5190 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
-import createStyles from "createStyles" /* 5154 */;
+import createStyles from "createStyles" /* 5191 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

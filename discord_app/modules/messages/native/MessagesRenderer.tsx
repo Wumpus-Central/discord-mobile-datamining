@@ -1,35 +1,35 @@
-// === Module 11025: MessagesRenderer ===
+// === Module 11087: MessagesRenderer ===
 
-// Module 11025 (MessagesRenderer)
+// Module 11087 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import Client from "Client" /* 5086 */;
-import CodedLink from "CodedLink" /* 5140 */;
-import QuestTypes from "QuestTypes" /* 6194 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7399 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7642 */;
-import QuestActionCreators from "QuestActionCreators" /* 9410 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9618 */;
-import computeScrollData from "computeScrollData" /* 9832 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9833 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9835 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9838 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9912 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11026 */;
-import MessagesHandlers from "MessagesHandlers" /* 11032 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12556 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12737 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 12738 */;
+import Client from "Client" /* 5123 */;
+import CodedLink from "CodedLink" /* 5177 */;
+import QuestTypes from "QuestTypes" /* 6231 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7445 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7688 */;
+import QuestActionCreators from "QuestActionCreators" /* 9474 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9682 */;
+import computeScrollData from "computeScrollData" /* 9896 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9897 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9899 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9902 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9976 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11088 */;
+import MessagesHandlers from "MessagesHandlers" /* 11095 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12621 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12802 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12803 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
-import ReadStateStore from "ReadStateStore" /* 6254 */;
-import SKUStore from "SKUStore" /* 6314 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import ReadStateStore from "ReadStateStore" /* 6291 */;
+import SKUStore from "SKUStore" /* 6310 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9619).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9683).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(2128).getUserCommunicationDisabledVersion;
-const Changeset = fn(7968).Changeset;
+const Changeset = fn(8014).Changeset;
 const Constants = fn(1087);
 ({ ActivityActionTypes: closure_12, MAX_MESSAGES_PER_CHANNEL: map1, MessageFlags: closure_14, MessageTypes: closure_15, Permissions: closure_16 } = Constants);
 const jsxProd = fn(21);
@@ -1076,6 +1076,7 @@ class MessagesRenderer {
       style: merged.style,
       inverted: true,
       channelId: merged.channelId,
+      isActive: merged.isActive,
       alwaysRespectKeyboard: merged.alwaysRespectKeyboard,
       onChatScrollPosition: handleScrollPosition,
       onTapImage: first2.handleTapImage,

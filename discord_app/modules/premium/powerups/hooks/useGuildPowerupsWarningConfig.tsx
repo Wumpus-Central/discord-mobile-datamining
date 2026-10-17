@@ -1,11 +1,11 @@
-// === Module 13179: useGuildPowerupsWarningConfig ===
+// === Module 13244: useGuildPowerupsWarningConfig ===
 
-// Module 13179 (useGuildPowerupsWarningConfig)
+// Module 13244 (useGuildPowerupsWarningConfig)
 import util from "util" /* 1128 */;
-import _modDef2603 from "module_2603" /* 2603 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8253 */;
+import _modDef2621 from "module_2621" /* 2621 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8299 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13180 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13245 */;
 
 const require = globalThis.__r;
 
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1128).intl;
-      const stringResult = intl.string(_modDef2603.n5hQhc);
+      const stringResult = intl.string(_modDef2621.n5hQhc);
       cResult[7] = stringResult;
       let tmp12 = stringResult;
     } else {
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
     const intl2 = tmp(1128).intl;
     const obj4 = { boostCount: diff, perksString: join.join(", ") };
-    const formatToPlainStringResult = intl2.formatToPlainString(_modDef2603.iAaAiG, obj4);
+    const formatToPlainStringResult = intl2.formatToPlainString(_modDef2621.iAaAiG, obj4);
     cResult[8] = join;
     cResult[9] = diff;
     cResult[10] = formatToPlainStringResult;
@@ -147,10 +147,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2603.n5hQhc);
+      obj.title = intl.string(_modDef2621.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2603.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2621.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

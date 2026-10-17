@@ -1,6 +1,6 @@
-// === Module 17003: Welcome ===
+// === Module 17063: Welcome ===
 
-// Module 17003 (Welcome)
+// Module 17063 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
@@ -9,24 +9,24 @@ import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Link from "Link" /* 1506 */;
-import UserUtilsDefault from "UserUtils" /* 5021 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6851 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6887 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7417 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 13358 */;
-import _modDef14236 from "module_14236" /* 14236 */;
-import _mod14798 from "module_14798" /* 14798 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17000 */;
+import UserUtilsDefault from "UserUtils" /* 5057 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6904 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6940 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7463 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 13424 */;
+import _modDef14304 from "module_14304" /* 14304 */;
+import _mod14867 from "module_14867" /* 14867 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17060 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 17004 */;
-import ExperimentStore from "ExperimentStore" /* 5075 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7400 */;
-import MultiAccountStore from "MultiAccountStore" /* 13006 */;
+import AgeGateStore from "AgeGateStore" /* 17064 */;
+import ExperimentStore from "ExperimentStore" /* 5112 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7446 */;
+import MultiAccountStore from "MultiAccountStore" /* 13071 */;
 import UserRecord from "UserRecord" /* 1406 */;
-import InviteStore from "InviteStore" /* 5136 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8914 */;
+import InviteStore from "InviteStore" /* 5173 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8960 */;
 
 const require = globalThis.__r;
 
@@ -35,11 +35,11 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1087);
 ({ AnalyticEvents: map1, StorageKeys: closure_14, AuthStates: closure_15, InviteStates: closure_16, ThemeTypes: closure_17 } = Constants);
-const GuildTemplateStates = fn(7254).GuildTemplateStates;
-const InviteTypes = fn(7643).InviteTypes;
+const GuildTemplateStates = fn(7306).GuildTemplateStates;
+const InviteTypes = fn(7689).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-let createStyles = fn(5154);
+let createStyles = fn(5191);
 let closure_22 = createStyles.createStyles((arg0) => {
   const obj = { container: { height: "100%", flex: 1, padding: 16 }, logo: { flex: 0, width: 93, height: 70, tintColor: "white", alignSelf: "center", marginBottom: 24 }, scrollViewContainer: { flexShrink: 0, flexGrow: 1, justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8, textTransform: "uppercase" }, subHeader: null, subHeaderWithInvite: null, centerpieceContainer: null, buttonContainer: null };
   let num = 300;
@@ -52,7 +52,7 @@ let closure_22 = createStyles.createStyles((arg0) => {
   obj.buttonContainer = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
-createStyles = fn(5154);
+createStyles = fn(5191);
 let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, flexDirection: "row", borderRadius: nativeDefault.radii.sm }, text: { marginLeft: 16 } };
 let closure_23 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
@@ -89,7 +89,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
         tmp24 = cResult[4];
       }
       if (cResult[5] !== tmp24) {
-        const obj4 = { user: tmp24, guildId: "r" };
+        const obj4 = { user: tmp24, guildId: "a" };
         const tmp33 = constants2(native.Avatar, obj4);
         cResult[5] = tmp24;
         cResult[6] = tmp33;
@@ -130,7 +130,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
         tmp6 = cResult[11];
       }
       if (cResult[12] !== tmp6) {
-        const obj5 = { user: tmp6, guildId: "r" };
+        const obj5 = { user: tmp6, guildId: "a" };
         const tmp15 = constants2(native.Avatar, obj5);
         cResult[12] = tmp6;
         cResult[13] = tmp15;
@@ -235,7 +235,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
       let tmp18 = constants2;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "r" };
+      const obj = { user: null, guildId: "a" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = constants2(native.Avatar, obj);
@@ -247,7 +247,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "r" };
+      const obj4 = { user: null, guildId: "a" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -264,9 +264,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
     const items1 = [tmp14, ];
     const obj6 = { style: tmp.text, children: null };
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(5150).Text, obj7), ];
+    const items2 = [tmp18(tmp17(5187).Text, obj7), ];
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(5150).Text, obj8);
+    items2[1] = tmp18(tmp17(5187).Text, obj8);
     obj6.children = items2;
     items1[1] = closure_1_21(React4, obj6);
     obj5.children = items1;
@@ -284,7 +284,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef14236 };
+      const obj2 = { source: _modDef14304 };
       const tmp11 = constants2(FastImageDefault, obj2);
       cResult[3] = tmp11;
       let tmp7 = tmp11;
@@ -350,7 +350,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef14236 };
+  const obj2 = { source: _modDef14304 };
   const items1 = [constants2(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -370,7 +370,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Center
   const tmp6 = closure_22(tmp5);
   const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14798;
+    const tmpResult = _mod14867;
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -546,7 +546,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Center
   }
   const obj2 = { style: tmp4.centerpieceContainer, children: null };
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  const items = [constants2(FastImageDefault, { style: tmp4.logo, source: _mod14798 }), , ];
+  const items = [constants2(FastImageDefault, { style: tmp4.logo, source: _mod14867 }), , ];
   const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   const items1 = [tmp4.header, typeConsolidationTextTransform];
   obj5.style = items1;

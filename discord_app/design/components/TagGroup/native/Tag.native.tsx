@@ -1,18 +1,18 @@
-// === Module 12026: Tag ===
+// === Module 12089: Tag ===
 
-// Module 12026 (Tag)
+// Module 12089 (Tag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import TagGroupTypes from "TagGroupTypes" /* 12024 */;
-import TagGraphic from "TagGraphic" /* 12027 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import TagGroupTypes from "TagGroupTypes" /* 12087 */;
+import TagGraphic from "TagGraphic" /* 12090 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   const obj = { tag: null, inline: null, label: null };
   const obj2 = { flexDirection: "row", alignItems: "center", gap: TagGroupTypes.getTagGap(arg0), minHeight: null, paddingVertical: null, paddingHorizontal: null, borderWidth: null, borderRadius: null, borderColor: null, backgroundColor: null };

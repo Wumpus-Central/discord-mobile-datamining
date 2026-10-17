@@ -1,6 +1,6 @@
-// === Module 5745: ? ===
+// === Module 5782: ? ===
 
-// Module 5745
+// Module 5782
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/face/rage.png.js");

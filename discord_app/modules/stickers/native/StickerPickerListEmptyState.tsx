@@ -1,20 +1,20 @@
-// === Module 10029: StickerPickerListEmptyState ===
+// === Module 10093: StickerPickerListEmptyState ===
 
-// Module 10029 (StickerPickerListEmptyState)
+// Module 10093 (StickerPickerListEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import BottomSheetModal from "BottomSheetModal" /* 6531 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9762 */;
-import _modDef10030 from "module_10030" /* 10030 */;
+import BottomSheetModal from "BottomSheetModal" /* 6584 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 9826 */;
+import _modDef10094 from "module_10094" /* 10094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
@@ -83,7 +83,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const obj4 = { body: tmp10, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null };
     ({ emptyStateBody: obj5.bodyStyle, emptyStateContainer: obj5.containerStyle, emptyStateImage: obj5.imageStyle } = tmp4);
-    obj4.source = _modDef10030;
+    obj4.source = _modDef10094;
     obj4.titleStyle = tmp12;
     const tmp16 = jsx(native.RefreshEmptyState, { body: tmp10, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
     cResult[5] = tmp4.emptyStateBody;
@@ -104,9 +104,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [insetBottom, insetTop];
   const memo = noop.useMemo(() => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }), items);
   const tmp = closure_7();
-  const modalDismissGuardRefreshControl = insetTop(9762).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = insetTop(9826).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = insetTop(6531).BottomSheetScrollView;
+    let BottomSheetScrollView = insetTop(6584).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const intl = insetTop(1128).intl;
   obj5.body = intl.string(insetTop(1128).t.jyiGfc);
   ({ emptyStateBody: obj3.bodyStyle, emptyStateContainer: obj3.containerStyle, emptyStateImage: obj3.imageStyle } = tmp);
-  obj5.source = insetBottom(10030);
+  obj5.source = insetBottom(10094);
   obj5.titleStyle = { marginBottom: 0 };
   obj2.children = jsx(insetTop(1202).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
   return <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>{null}</BottomSheetScrollView>;

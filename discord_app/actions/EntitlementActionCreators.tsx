@@ -1,6 +1,6 @@
-// === Module 7341: EntitlementActionCreators ===
+// === Module 7387: EntitlementActionCreators ===
 
-// Module 7341 (EntitlementActionCreators)
+// Module 7387 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -62,7 +62,7 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
             closure_129_4 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "test", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {

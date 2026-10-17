@@ -1,9 +1,9 @@
-// === Module 12882: GuildDirectoryConstants ===
+// === Module 12947: GuildDirectoryConstants ===
 
-// Module 12882 (GuildDirectoryConstants)
+// Module 12947 (GuildDirectoryConstants)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import util from "util" /* 1128 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

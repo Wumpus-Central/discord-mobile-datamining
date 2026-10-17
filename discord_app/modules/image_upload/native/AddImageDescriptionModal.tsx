@@ -1,20 +1,20 @@
-// === Module 13675: AddImageDescriptionModal ===
+// === Module 13743: AddImageDescriptionModal ===
 
-// Module 13675 (AddImageDescriptionModal)
+// Module 13743 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9869 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9933 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8129 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8175 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7464).DraftType;
+const DraftType = fn(7510).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, imageContainer: null, image: null, placeholderText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
@@ -135,9 +135,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9500).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9500);
-            id(13674).close();
+            id(9564).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9564);
+            id(13742).close();
           });
           let merged = Object.assign(arg0);
           return renderHeaderTextButton({});
@@ -220,9 +220,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9500).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9500);
-          id(13674).close();
+          id(9564).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(9564);
+          id(13742).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});

@@ -1,13 +1,13 @@
-// === Module 15952: SettingsClipsScreen ===
+// === Module 16018: SettingsClipsScreen ===
 
-// Module 15952 (SettingsClipsScreen)
+// Module 16018 (SettingsClipsScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11003 */;
-import SettingLayoutDefault from "SettingLayout" /* 15662 */;
+import SettingBuilders from "SettingBuilders" /* 11065 */;
+import SettingLayoutDefault from "SettingLayout" /* 15728 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8214).MobileUserSettings;
+const MobileUserSettings = fn(8260).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 9995: stickers/StickersUtils ===
+// === Module 10059: stickers/StickersUtils ===
 
-// Module 9995 (stickers/StickersUtils)
+// Module 10059 (stickers/StickersUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import StickersTypes from "StickersTypes" /* 5969 */;
-import StickerCategoryUtils from "StickerCategoryUtils" /* 9997 */;
-import _modDef9998 from "module_9998" /* 9998 */;
-import _modDef9999 from "module_9999" /* 9999 */;
+import StickersTypes from "StickersTypes" /* 6006 */;
+import StickerCategoryUtils from "StickerCategoryUtils" /* 10061 */;
+import _modDef10062 from "module_10062" /* 10062 */;
+import _modDef10063 from "module_10063" /* 10063 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(9996).useStickerPickerStore;
+const useStickerPickerStore = fn(10060).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1087).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
@@ -150,9 +150,9 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
     if (type.type === StickersTypes.StickerCategoryTypes.FAVORITE) {
-      let tmp14 = _modDef9998;
+      let tmp14 = _modDef10062;
     } else {
-      tmp14 = _modDef9999;
+      tmp14 = _modDef10063;
     }
     const obj3 = {};
     const merged1 = Object.assign(type);

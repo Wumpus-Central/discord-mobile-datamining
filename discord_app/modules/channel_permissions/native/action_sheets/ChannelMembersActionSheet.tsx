@@ -1,33 +1,33 @@
-// === Module 11102: ChannelMembersActionSheet ===
+// === Module 11165: ChannelMembersActionSheet ===
 
-// Module 11102 (ChannelMembersActionSheet)
+// Module 11165 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import Pressables from "Pressables" /* 6409 */;
-import BottomSheetModal from "BottomSheetModal" /* 6531 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7064 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7065 */;
-import SettingsIcon from "SettingsIcon" /* 7317 */;
-import InlineNotice from "InlineNotice" /* 7788 */;
-import RowButton from "RowButton" /* 8811 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8831 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8848 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9932 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10576 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11101 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11103 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11104 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import Pressables from "Pressables" /* 6462 */;
+import BottomSheetModal from "BottomSheetModal" /* 6584 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
+import SettingsIcon from "SettingsIcon" /* 7368 */;
+import InlineNotice from "InlineNotice" /* 7834 */;
+import RowButton from "RowButton" /* 8857 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8877 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8894 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9996 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10639 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11164 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11166 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11167 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 
 require = fn;
 const View = fn(17).View;
@@ -35,7 +35,7 @@ const Constants = fn(1087);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 }, warning: { margin: 16, marginBottom: 0 } };
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -147,9 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelM
   const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, B, tmp20);
   const tmpResult6 = channelId(504);
   navigation = channelId(1505).useNavigation();
-  tmp5(5484)(stateFromStores);
+  tmp5(5521)(stateFromStores);
   const tmpResult7 = channelId(1505);
-  const appChannelBotUserId = channelId(11103).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11166).useAppChannelBotUserId(stateFromStores);
   if (null != stateFromStores) {
     class B {
       constructor() {

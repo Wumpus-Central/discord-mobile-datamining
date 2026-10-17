@@ -1,20 +1,20 @@
-// === Module 18676: GuildSettingsModalAuditLogFilter ===
+// === Module 18738: GuildSettingsModalAuditLogFilter ===
 
-// Module 18676 (GuildSettingsModalAuditLogFilter)
+// Module 18738 (GuildSettingsModalAuditLogFilter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4891 */;
-import UserUtilsDefault from "UserUtils" /* 5021 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6321 */;
-import FormRadio from "FormRadio" /* 6490 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10549 */;
-import AuditLogUtils from "AuditLogUtils" /* 18674 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 18677 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4927 */;
+import UserUtilsDefault from "UserUtils" /* 5057 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6374 */;
+import FormRadio from "FormRadio" /* 6543 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10612 */;
+import AuditLogUtils from "AuditLogUtils" /* 18736 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 18739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18672 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18734 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1087).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          const tmp26 = closure_9(filterType(6963).SearchField, obj5);
+                          const tmp26 = closure_9(filterType(7016).SearchField, obj5);
                           cResult[25] = tmp20;
                           cResult[26] = tmp26;
                           let tmp24 = tmp26;

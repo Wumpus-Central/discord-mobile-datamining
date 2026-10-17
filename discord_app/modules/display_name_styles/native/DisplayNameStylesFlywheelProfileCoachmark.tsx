@@ -1,10 +1,10 @@
-// === Module 17875: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 17935: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 17875 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 17935 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
-import _modDef2963 from "module_2963" /* 2963 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17876 */;
+import _modDef2981 from "module_2981" /* 2981 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4864 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17936 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   if (cResult[4] !== tmp8) {
     const intl = markAsDismissed(1128).intl;
     const string = intl.string;
-    let h6sykk = _modDef2963;
+    let h6sykk = _modDef2981;
     if (tmp8) {
       h6sykk = h6sykk.h6sykk;
       let stringResult = string(h6sykk);
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   } else if (cResult[6] !== tmp8) {
     const intl2 = markAsDismissed(1128).intl;
     const string2 = intl2.string;
-    let TyUdka = _modDef2963;
+    let TyUdka = _modDef2981;
     if (tmp8) {
       TyUdka = TyUdka.TyUdka;
       let string2Result = string2(TyUdka);
@@ -142,10 +142,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(4828).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(4864).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1128).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(2963);
+  const tmp6 = markAsDismissed(2981);
   if (result) {
     let stringResult = string(tmp6.h6sykk);
   } else {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   dependencyMap = stringResult;
   const intl2 = tmp(1128).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(2963);
+  const tmp4Result = tmp4(2981);
   if (result) {
     let string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(4828);
-  const coachmark = visible(9678).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(4864);
+  const coachmark = visible(9742).useCoachmark(visible.targetRef, memo);
   return null;
 });

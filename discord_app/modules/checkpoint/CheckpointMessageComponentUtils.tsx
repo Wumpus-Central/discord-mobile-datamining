@@ -1,13 +1,13 @@
-// === Module 5522: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5559: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5522 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5559 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import CheckpointTrait from "CheckpointTrait" /* 5524 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5525 */;
-import CheckpointConstants from "CheckpointConstants" /* 5500 */;
+import _modDef3109 from "module_3109" /* 3109 */;
+import CheckpointTrait from "CheckpointTrait" /* 5561 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5562 */;
+import CheckpointConstants from "CheckpointConstants" /* 5537 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -105,98 +105,152 @@ export const transformCheckpoint2026CardToRowGeneratedComponent = function trans
   obj = { version: checkpointData.version, authorId: message.author.id, primaryBackgroundColor, secondaryBackgroundColor, tertiaryBackgroundColor, character: null, stats: null, clickable: null };
   if (null == checkpointData.character) {
     obj.character = undefined;
-    let tmp8;
-    if (null != checkpointData.stats) {
-      const stats = checkpointData.stats;
+    if (null == checkpointData.stats) {
+      obj.stats = undefined;
+      let tmp27;
+      if (obj31.getIsCheckpointEnabled("getCheckpointClickable")) {
+        const obj2 = { ariaDescription: null };
+        const intl17 = character(tmp2[7]).intl;
+        obj2.ariaDescription = intl17.string(tmp(tmp2[10]).r8GEbK);
+        tmp27 = obj2;
+      }
+      obj.clickable = tmp27;
+      return obj;
+    } else {
+      topGame = checkpointData.stats;
+      const obj4 = { powerLevel: null, powerLevelUnits: null, voice: null, messages: null, topGuildDaysInteracted: null, topGuildName: null, reactions: null, topEmojiName: null, daysPlayed: null, topGameName: null, topEmoji: null, topGuild: null, topGame: null };
       const _Intl = Intl;
-      const numberFormat = new Intl.NumberFormat(character(tmp2[6]).intl.currentLocale, { notation: "compact", compactDisplay: "short" });
+      const numberFormat = new Intl.NumberFormat(character(tmp2[7]).intl.currentLocale, { notation: "compact", compactDisplay: "short" });
+      obj4.powerLevel = numberFormat.format(topGame.powerLevel);
       const _Math = Math;
-      const rounded = Math.round(stats.totalVoiceMinutes);
-      const obj2 = { powerLevel: numberFormat.format(stats.powerLevel), powerLevelUnits: null, messagesString: null, voiceString: null, reactionString: null, daysPlayedString: null, topGuildDaysInteractedString: null, topEmoji: null, topGuild: null, topGame: null };
       const _Math2 = Math;
       const _Math3 = Math;
+      obj4.powerLevelUnits = Math.min(Math.max(Math.round(topGame.powerLevelPercentile / 100 * closure_5), closure_4), closure_3);
       const _Math4 = Math;
-      obj2.powerLevelUnits = Math.min(Math.max(Math.round(stats.powerLevelPercentile / 100 * closure_5), closure_4), closure_3);
-      if (stats.numMessagesSent > 0) {
-        const numMessagesSent = stats.numMessagesSent;
-        let toLocaleStringResult = numMessagesSent.toLocaleString(tmp9(tmp2[6]).intl.currentLocale);
-      } else {
-        const intl = tmp9(tmp2[6]).intl;
-        const obj3 = { count: stats.numMessagesSent };
-        toLocaleStringResult = intl.formatToPlainString(tmp(tmp2[7]).foKBCN, obj3);
-      }
-      obj2.messagesString = toLocaleStringResult;
+      const rounded = Math.round(topGame.totalVoiceMinutes);
       if (rounded > 0) {
-        let voiceDurationString = tmp9(tmp2[8]).getVoiceDurationString(rounded);
-        const tmp9Result = tmp9(tmp2[8]);
+        let voiceDurationString = tmp8(tmp2[6]).getVoiceDurationString(rounded);
+        const tmp8Result = tmp8(tmp2[6]);
       } else {
-        const intl2 = tmp9(tmp2[6]).intl;
+        const intl = tmp8(tmp2[7]).intl;
         const obj5 = { minutes: rounded };
-        voiceDurationString = intl2.formatToPlainString(tmp9(tmp2[6]).t.iXLF9W, obj5);
+        voiceDurationString = intl.formatToPlainString(tmp8(tmp2[7]).t.iXLF9W, obj5);
       }
-      obj2.voiceString = voiceDurationString;
-      if (stats.numEmojisSent > 0) {
-        const numEmojisSent = stats.numEmojisSent;
-        let toLocaleStringResult1 = numEmojisSent.toLocaleString(tmp9(tmp2[6]).intl.currentLocale);
+      const obj6 = { text: voiceDurationString, accessibilityLabel: null };
+      const intl2 = tmp8(tmp2[7]).intl;
+      const obj7 = { duration: character(tmp2[6]).getAccessibleVoiceDurationString(rounded) };
+      obj6.accessibilityLabel = intl2.formatToPlainString(tmp(tmp2[8]).lw35aH, obj7);
+      obj4.voice = obj6;
+      if (topGame.numMessagesSent > 0) {
+        const numMessagesSent = topGame.numMessagesSent;
+        let toLocaleStringResult = numMessagesSent.toLocaleString(tmp8(tmp2[7]).intl.currentLocale);
       } else {
-        const intl3 = tmp9(tmp2[6]).intl;
-        const obj6 = { count: stats.numEmojisSent };
-        toLocaleStringResult1 = intl3.formatToPlainString(tmp(tmp2[7]).RHYx1k, obj6);
+        const intl3 = tmp8(tmp2[7]).intl;
+        const obj8 = { count: topGame.numMessagesSent };
+        toLocaleStringResult = intl3.formatToPlainString(tmp(tmp2[8]).foKBCN, obj8);
       }
-      obj2.reactionString = toLocaleStringResult1;
-      if (stats.totalDaysPlayed > 0) {
-        const intl5 = tmp9(tmp2[6]).intl;
-        const obj7 = { days: stats.totalDaysPlayed };
-        let formatToPlainStringResult = intl5.formatToPlainString(tmp9(tmp2[6]).t.GBLpQ8, obj7);
+      const obj9 = { text: toLocaleStringResult, accessibilityLabel: null };
+      const intl4 = tmp8(tmp2[7]).intl;
+      const obj10 = { count: topGame.numMessagesSent };
+      obj9.accessibilityLabel = intl4.formatToPlainString(tmp(tmp2[8]).IdRUAC, obj10);
+      obj4.messages = obj9;
+      if (null == topGame.topGuild) {
+        const intl5 = tmp8(tmp2[7]).intl;
+        const stringResult = intl5.string(tmp(tmp2[8]).GultYJ);
+        const obj11 = { text: stringResult, accessibilityLabel: stringResult };
+        let obj12 = obj11;
       } else {
-        const intl4 = tmp9(tmp2[6]).intl;
-        formatToPlainStringResult = intl4.string(tmp(tmp2[7]).mg1NPe);
+        obj12 = { text: null, accessibilityLabel: null };
+        const intl18 = tmp8(tmp2[7]).intl;
+        const obj13 = { days: topGame.topGuildNumDaysInteracted };
+        obj12.text = intl18.formatToPlainString(tmp8(tmp2[7]).t.GBLpQ8, obj13);
+        const intl19 = tmp8(tmp2[7]).intl;
+        const obj14 = { days: topGame.topGuildNumDaysInteracted };
+        obj12.accessibilityLabel = intl19.formatToPlainString(tmp(tmp2[8]).MpSH8v, obj14);
       }
-      obj2.daysPlayedString = formatToPlainStringResult;
-      if (null != stats.topGuild) {
-        const intl7 = tmp9(tmp2[6]).intl;
-        const obj8 = { days: stats.topGuildNumDaysInteracted };
-        let formatToPlainStringResult1 = intl7.formatToPlainString(tmp9(tmp2[6]).t.GBLpQ8, obj8);
+      obj4.topGuildDaysInteracted = obj12;
+      if (null == topGame.topGuild) {
+        const intl7 = tmp8(tmp2[7]).intl;
+        const stringResult1 = intl7.string(tmp8(tmp2[7]).t["52UOf9"]);
+        const obj15 = { text: stringResult1, accessibilityLabel: stringResult1 };
+        let obj16 = obj15;
       } else {
-        const intl6 = tmp9(tmp2[6]).intl;
-        formatToPlainStringResult1 = intl6.string(tmp(tmp2[7]).GultYJ);
+        obj16 = { text: topGame.topGuild.guildName, accessibilityLabel: null };
+        const intl6 = tmp8(tmp2[7]).intl;
+        const obj17 = { guildName: topGame.topGuild.guildName };
+        obj16.accessibilityLabel = intl6.formatToPlainString(tmp(tmp2[8])["9UTJ+t"], obj17);
       }
-      obj2.topGuildDaysInteractedString = formatToPlainStringResult1;
-      let tmp22;
-      if (null != stats.topEmoji) {
-        const obj9 = {};
-        const merged = Object.assign(stats.topEmoji);
-        let result;
-        if (null == stats.topEmoji.emojiId) {
-          result = tmp(tmp2[9]).convertSurrogateToName(stats.topEmoji.emojiName);
+      obj4.topGuildName = obj16;
+      if (topGame.numEmojisSent > 0) {
+        const numEmojisSent = topGame.numEmojisSent;
+        let toLocaleStringResult1 = numEmojisSent.toLocaleString(tmp8(tmp2[7]).intl.currentLocale);
+      } else {
+        const intl8 = tmp8(tmp2[7]).intl;
+        const obj18 = { count: topGame.numEmojisSent };
+        toLocaleStringResult1 = intl8.formatToPlainString(tmp(tmp2[8]).RHYx1k, obj18);
+      }
+      const obj19 = { text: toLocaleStringResult1, accessibilityLabel: null };
+      const intl9 = tmp8(tmp2[7]).intl;
+      const obj20 = { count: topGame.numEmojisSent };
+      obj19.accessibilityLabel = intl9.formatToPlainString(tmp(tmp2[8])["36qpUG"], obj20);
+      obj4.reactions = obj19;
+      if (null == topGame.topEmoji) {
+        const intl11 = tmp8(tmp2[7]).intl;
+        const stringResult2 = intl11.string(tmp8(tmp2[7]).t.lxsmBd);
+        const obj21 = { text: stringResult2, accessibilityLabel: stringResult2 };
+        let obj22 = obj21;
+      } else {
+        if (null == topGame.topEmoji.emojiId) {
+          let result = tmp(tmp2[9]).convertSurrogateToName(topGame.topEmoji.emojiName);
           const tmpResult = tmp(tmp2[9]);
+        } else {
+          let _HermesInternal = HermesInternal;
+          result = ":" + topGame.topEmoji.emojiName + ":";
         }
-        obj9.emojiSurrogateName = result;
-        tmp22 = obj9;
+        obj22 = { text: result, accessibilityLabel: null };
+        const intl10 = tmp8(tmp2[7]).intl;
+        const obj23 = { emojiName: topGame.topEmoji.emojiName };
+        obj22.accessibilityLabel = intl10.formatToPlainString(tmp(tmp2[8]).CcBo8C, obj23);
       }
-      obj2.topEmoji = tmp22;
-      ({ topGuild: obj4.topGuild, topGame: obj4.topGame } = stats);
-      tmp8 = obj2;
+      obj4.topEmojiName = obj22;
+      if (topGame.totalDaysPlayed > 0) {
+        const intl13 = tmp8(tmp2[7]).intl;
+        const obj24 = { days: topGame.totalDaysPlayed };
+        let formatToPlainStringResult = intl13.formatToPlainString(tmp8(tmp2[7]).t.GBLpQ8, obj24);
+      } else {
+        const intl12 = tmp8(tmp2[7]).intl;
+        formatToPlainStringResult = intl12.string(tmp(tmp2[8]).mg1NPe);
+      }
+      const obj25 = { text: formatToPlainStringResult, accessibilityLabel: null };
+      const intl14 = tmp8(tmp2[7]).intl;
+      const obj26 = { days: topGame.totalDaysPlayed };
+      obj25.accessibilityLabel = intl14.formatToPlainString(tmp(tmp2[8]).LYcKX7, obj26);
+      obj4.daysPlayed = obj25;
+      if (null == topGame.topGame) {
+        const intl16 = tmp8(tmp2[7]).intl;
+        const stringResult3 = intl16.string(tmp8(tmp2[7]).t["5eYZiW"]);
+        const obj27 = { text: stringResult3, accessibilityLabel: stringResult3 };
+        let obj28 = obj27;
+      } else {
+        obj28 = { text: topGame.topGame.applicationName, accessibilityLabel: null };
+        const intl15 = tmp8(tmp2[7]).intl;
+        const obj29 = { gameName: topGame.topGame.applicationName };
+        obj28.accessibilityLabel = intl15.formatToPlainString(tmp(tmp2[8]).kLqpNC, obj29);
+      }
+      obj4.topGameName = obj28;
+      ({ topEmoji: obj3.topEmoji, topGuild: obj3.topGuild, topGame } = topGame);
+      obj4.topGame = topGame;
+      const tmp8Result2 = character(tmp2[6]);
     }
-    obj.stats = tmp8;
-    let tmp27;
-    if (obj13.getIsCheckpointEnabled("getCheckpointClickable")) {
-      const obj10 = { ariaDescription: null };
-      const intl8 = character(tmp2[6]).intl;
-      obj10.ariaDescription = intl8.string(tmp(tmp2[10]).r8GEbK);
-      tmp27 = obj10;
-    }
-    obj.clickable = tmp27;
-    return obj;
   } else {
     character = checkpointData.character;
     importDefault = tmp3;
     const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = character(tmp2[5]).CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
     const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(character.wearable);
     character(tmp2[5]);
-    const obj11 = { layerUrls: null };
+    const obj30 = { layerUrls: null };
     const items = [];
-    const item = hasItem ? obj11.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : obj11.CHECKPOINT_LAYER_DEFAULT_ORDERING.forEach((item) => {
+    const item = hasItem ? obj30.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : obj30.CHECKPOINT_LAYER_DEFAULT_ORDERING.forEach((item) => {
       let layer;
       if (obj[item][character[item]] != null) {
         layer = tmp.layer;
@@ -210,8 +264,8 @@ export const transformCheckpoint2026CardToRowGeneratedComponent = function trans
         items.push("" + layer + "?height=" + closure_1 + "&width=" + closure_1);
       }
     });
-    obj11.layerUrls = items;
-    const arr = hasItem ? obj11.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : obj11.CHECKPOINT_LAYER_DEFAULT_ORDERING;
+    obj30.layerUrls = items;
+    const arr = hasItem ? obj30.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : obj30.CHECKPOINT_LAYER_DEFAULT_ORDERING;
   }
 };
 export const getCheckpointDataFromMessage = function getCheckpointDataFromMessage(contentMessage) {
@@ -228,7 +282,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (V2025.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3091.goiR2u);
+    return intl.string(_modDef3109.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

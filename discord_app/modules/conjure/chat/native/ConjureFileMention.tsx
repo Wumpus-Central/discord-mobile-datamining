@@ -1,21 +1,21 @@
-// === Module 12105: ConjureFileMention ===
+// === Module 12168: ConjureFileMention ===
 
-// Module 12105 (ConjureFileMention)
+// Module 12168 (ConjureFileMention)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import conjureFileMentions from "conjureFileMentions" /* 12042 */;
-import conjureStoredAttachments from "conjureStoredAttachments" /* 12106 */;
-import ConjureFileThumbnailDefault from "ConjureFileThumbnail" /* 12107 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import conjureFileMentions from "conjureFileMentions" /* 12105 */;
+import conjureStoredAttachments from "conjureStoredAttachments" /* 12169 */;
+import ConjureFileThumbnailDefault from "ConjureFileThumbnail" /* 12170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: 2, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, transform: null };
 let items = [{ translateY: nativeDefault.space.PX_4 }];
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
         }
         if (name1 == null) {
           const intl = util.intl;
-          name1 = intl.string(_modDef3865.ff9Q4C);
+          name1 = intl.string(_modDef3883.ff9Q4C);
         }
         let name2;
         if (conjureStoredAttachment != null) {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   }
   if (name == null) {
     const intl = util.intl;
-    name = intl.string(_modDef3865.ff9Q4C);
+    name = intl.string(_modDef3883.ff9Q4C);
   }
   obj4.children = name;
   items[1] = hasOwnProperty(Text_Text.Text, obj4);

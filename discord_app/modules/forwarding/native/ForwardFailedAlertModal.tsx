@@ -1,7 +1,7 @@
-// === Module 12645: ForwardFailedAlertModal ===
+// === Module 12710: ForwardFailedAlertModal ===
 
-// Module 12645 (ForwardFailedAlertModal)
-import ForwardModalUtils from "ForwardModalUtils" /* 12606 */;
+// Module 12710 (ForwardFailedAlertModal)
+import ForwardModalUtils from "ForwardModalUtils" /* 12671 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

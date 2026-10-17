@@ -1,6 +1,6 @@
-// === Module 4956: RiveErrorBoundary ===
+// === Module 4992: RiveErrorBoundary ===
 
-// Module 4956 (RiveErrorBoundary)
+// Module 4992 (RiveErrorBoundary)
 import _modAll19 from "module_19" /* 19 */;
 
 const Component = _modAll19.Component;
@@ -35,7 +35,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-RiveErrorBoundary.contextType = fn(4952).ManaContext;
+RiveErrorBoundary.contextType = fn(4988).ManaContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx");
 

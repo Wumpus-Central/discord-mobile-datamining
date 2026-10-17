@@ -1,8 +1,8 @@
-// === Module 9263: CollectiblesShopVariantsUIStore ===
+// === Module 9323: CollectiblesShopVariantsUIStore ===
 
-// Module 9263 (CollectiblesShopVariantsUIStore)
-import _mod4792 from "module_4792" /* 4792 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7495 */;
+// Module 9323 (CollectiblesShopVariantsUIStore)
+import _mod4828 from "module_4828" /* 4828 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7541 */;
 import identity from "module_1269" /* 1269 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4792.shallow);
+}, _mod4828.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedVariantIndex(arg0) {

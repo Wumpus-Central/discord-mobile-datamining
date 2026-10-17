@@ -1,14 +1,14 @@
-// === Module 6112: StageChannelPermissionUtils ===
+// === Module 6149: StageChannelPermissionUtils ===
 
-// Module 6112 (StageChannelPermissionUtils)
+// Module 6149 (StageChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2076 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4814 */;
-import LurkingStore from "LurkingStore" /* 4810 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
+import LurkingStore from "LurkingStore" /* 4846 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
 import StageInstanceStore from "StageInstanceStore" /* 2073 */;
 
 const require = globalThis.__r;

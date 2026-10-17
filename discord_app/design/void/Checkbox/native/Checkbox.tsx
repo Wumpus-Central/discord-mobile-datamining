@@ -1,10 +1,10 @@
-// === Module 15094: Checkbox/Checkbox ===
+// === Module 15163: Checkbox/Checkbox ===
 
-// Module 15094 (Checkbox/Checkbox)
+// Module 15163 (Checkbox/Checkbox)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import _modDef15095 from "module_15095" /* 15095 */;
-import _modDef15096 from "module_15096" /* 15096 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import _modDef15164 from "module_15164" /* 15164 */;
+import _modDef15165 from "module_15165" /* 15165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox
   if (style.selected) {
     if (cResult[0] !== style) {
       const obj2 = { style, source: null };
-      tmp = _modDef15095;
+      tmp = _modDef15164;
       obj2.source = tmp;
       const tmp12 = jsx(FastImageDefault, { style, source: null });
       cResult[0] = style;
@@ -28,8 +28,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox
     }
   } else {
     if (cResult[2] !== style) {
-      const obj3 = { style, source: _modDef15096 };
-      const tmp7 = jsx(FastImageDefault, { style, source: _modDef15096 });
+      const obj3 = { style, source: _modDef15165 };
+      const tmp7 = jsx(FastImageDefault, { style, source: _modDef15165 });
       cResult[2] = style;
       cResult[3] = tmp7;
       let tmp3 = tmp7;
@@ -42,10 +42,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox
   ({ style, selected } = arg0);
   const obj = { style, source: null };
   if (selected) {
-    obj.source = _modDef15095;
+    obj.source = _modDef15164;
     let tmp5 = obj;
   } else {
-    obj.source = _modDef15096;
+    obj.source = _modDef15165;
     tmp5 = obj;
   }
   return jsx(FastImageDefault, tmp5);

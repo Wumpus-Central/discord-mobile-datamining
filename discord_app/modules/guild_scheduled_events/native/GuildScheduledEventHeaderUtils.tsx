@@ -1,13 +1,13 @@
-// === Module 9002: GuildScheduledEventHeaderUtils ===
+// === Module 9048: GuildScheduledEventHeaderUtils ===
 
-// Module 9002 (GuildScheduledEventHeaderUtils)
+// Module 9048 (GuildScheduledEventHeaderUtils)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2074 */;
-import _modDef8790 from "module_8790" /* 8790 */;
-import _modDef9003 from "module_9003" /* 9003 */;
-import _modDef9004 from "module_9004" /* 9004 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6273 */;
+import _modDef8836 from "module_8836" /* 8836 */;
+import _modDef9049 from "module_9049" /* 9049 */;
+import _modDef9050 from "module_9050" /* 9050 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6332 */;
 import size from "module_2" /* 2 */;
 
 ({ isGuildEventEnded: c3, isGuildScheduledEventActive: closure_4 } = GuildScheduledEventStore);
@@ -29,12 +29,12 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   }
   const tmp7 = React3(event);
   const ICON_SUBTLE = nativeDefault.colors.ICON_SUBTLE;
-  let tmp8Result = _modDef9003;
+  let tmp8Result = _modDef9049;
   if (tmp4) {
     const intl4 = util.intl;
     let stringResult = intl4.string(util.t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = _modDef8790;
+      tmp8Result = _modDef8836;
     }
     let entity_type;
     if (event != null) {
@@ -48,11 +48,11 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     let stringResult1 = stringResult;
     let tmp8Result3 = tmp8Result;
   } else if (tmp7) {
-    tmp8Result3 = _modDef9004;
+    tmp8Result3 = _modDef9050;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result3 = _modDef9004;
+    tmp8Result3 = _modDef9050;
     const intl3 = util.intl;
     stringResult1 = intl3.string(util.t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -70,9 +70,9 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
         formatToPlainStringResult = intl.string(util.t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result3 = _modDef9004;
+      tmp8Result3 = _modDef9050;
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result4 = _modDef9004;
+      const tmp8Result4 = _modDef9050;
     }
   }
   if (isCanceled) {

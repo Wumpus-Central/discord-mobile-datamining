@@ -1,10 +1,10 @@
-// === Module 7395: ReferralTrialStore ===
+// === Module 7441: ReferralTrialStore ===
 
-// Module 7395 (ReferralTrialStore)
+// Module 7441 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageTypes from "MessageTypes" /* 1103 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7396 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7442 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -144,7 +144,11 @@ prototype["getRecipientStatus"] = function getRecipientStatus() {
   return map1;
 };
 prototype["getReminderStateId"] = function getReminderStateId() {
-  return c19;
+  let tmp = c20;
+  if (c20 == null) {
+    tmp = c19;
+  }
+  return tmp;
 };
 prototype["getRecurringReminderStateId"] = function getRecurringReminderStateId() {
   return c20;

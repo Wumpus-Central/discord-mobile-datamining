@@ -1,15 +1,15 @@
-// === Module 11245: PostMessageTransport ===
+// === Module 11310: PostMessageTransport ===
 
-// Module 11245 (PostMessageTransport)
+// Module 11310 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1104 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11246 */;
-import RPCErrorDefault from "RPCError" /* 11247 */;
+import RPCErrorDefault from "RPCError" /* 9169 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11311 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(5858).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(5895).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
@@ -51,9 +51,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
           const obj = closure_1_1(1267);
-          obj2.channel_id = closure_1_0(4798).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4798);
-          obj2.guild_id = closure_1_0(4798).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.channel_id = closure_1_0(4834).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4834);
+          obj2.guild_id = closure_1_0(4834).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });

@@ -1,12 +1,12 @@
-// === Module 13167: usePowerupGroupConfig ===
+// === Module 13232: usePowerupGroupConfig ===
 
-// Module 13167 (usePowerupGroupConfig)
+// Module 13232 (usePowerupGroupConfig)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import _modDef2603 from "module_2603" /* 2603 */;
-import GuildTagUtils from "GuildTagUtils" /* 8517 */;
-import _modDef13168 from "module_13168" /* 13168 */;
-import _modDef13169 from "module_13169" /* 13169 */;
+import _modDef2621 from "module_2621" /* 2621 */;
+import GuildTagUtils from "GuildTagUtils" /* 8563 */;
+import _modDef13233 from "module_13233" /* 13233 */;
+import _modDef13234 from "module_13234" /* 13234 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
@@ -51,10 +51,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1128).intl;
-      const stringResult = intl.string(_modDef2603.KC9HRW);
+      const stringResult = intl.string(_modDef2621.KC9HRW);
       const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(_modDef2603.GJiSmP);
-      const obj2 = { staticUrl: _modDef13168, animatedUrl: _modDef13169 };
+      const stringResult1 = intl2.string(_modDef2621.GJiSmP);
+      const obj2 = { staticUrl: _modDef13233, animatedUrl: _modDef13234 };
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       let stringResult2;
       if (!stateFromStores) {
         const intl3 = tmp(1128).intl;
-        stringResult2 = intl3.string(_modDef2603.lvk1Gc);
+        stringResult2 = intl3.string(_modDef2621.lvk1Gc);
       }
       cResult[6] = stateFromStores;
       cResult[7] = stringResult2;
@@ -105,15 +105,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
     if ("guildTagsBadgePacks" === group.group) {
       const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "IconComponent" };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef2603.KC9HRW);
+      obj2.title = intl.string(_modDef2621.KC9HRW);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2603.GJiSmP);
-      const obj3 = { staticUrl: _modDef13168, animatedUrl: _modDef13169 };
+      obj2.description = intl2.string(_modDef2621.GJiSmP);
+      const obj3 = { staticUrl: _modDef13233, animatedUrl: _modDef13234 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef2603.lvk1Gc);
+        stringResult = intl3.string(_modDef2621.lvk1Gc);
       }
       obj2.disabledReason = stringResult;
       return obj2;

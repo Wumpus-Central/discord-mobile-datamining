@@ -1,6 +1,6 @@
-// === Module 8611: useAvatarDecorationIfNotExpired ===
+// === Module 8657: useAvatarDecorationIfNotExpired ===
 
-// Module 8611 (useAvatarDecorationIfNotExpired)
+// Module 8657 (useAvatarDecorationIfNotExpired)
 import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1987 */;
 import Timers from "Timers" /* 2063 */;
 import _slicedToArray from "module_32" /* 32 */;

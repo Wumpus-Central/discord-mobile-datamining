@@ -1,16 +1,16 @@
-// === Module 15491: RPCServer ===
+// === Module 9166: RPCServer ===
 
-// Module 15491 (RPCServer)
+// Module 9166 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 10957 */;
-import RPCErrorDefault from "RPCError" /* 11247 */;
-import transformUserDefault from "transformUser" /* 11259 */;
-import validateScopeDefault from "validateScope" /* 15438 */;
+import transformUserDefault from "transformUser" /* 9167 */;
+import RPCErrorDefault from "RPCError" /* 9169 */;
+import validateScopeDefault from "validateScope" /* 9171 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9174 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(5858).TransportTypes;
+const TransportTypes = fn(5895).TransportTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -738,6 +738,48 @@ prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   }
   return tmp;
 };
+prototype["waitForSubscription"] = function waitForSubscription(ACTIVITY_JOIN, arg1, arg2) {
+  const self = this;
+  closure_1 = ACTIVITY_JOIN;
+  closure_2 = arg1;
+  closure_0 = arg2;
+  let subscriptions = this.subscriptions;
+  if (subscriptions.some((evt) => {
+    let tmp = evt.evt === closure_1_1;
+    if (tmp) {
+      tmp = timeout(evt);
+    }
+    return tmp;
+  })) {
+    let resolveResult = _Promise.resolve();
+  } else {
+    resolveResult = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const timeout = new closure_0(closure_2[11]).Timeout();
+      _self = _self.listenIsSubscribed(() => {
+        const subscriptions = self.subscriptions;
+        if (subscriptions.some((evt) => {
+          let tmp = evt.evt === closure_1_1;
+          if (tmp) {
+            tmp = timeout(evt);
+          }
+          return tmp;
+        })) {
+          timeout.stop();
+          closure_3();
+          closure_0();
+        }
+      });
+      timeout.start(closure_0, () => {
+        closure_3();
+        const error = new Error("No subscription to " + closure_1 + " after " + closure_0 + "ms");
+        closure_1(error);
+      });
+    });
+  }
+  return resolveResult;
+};
 prototype["getSubscription"] = function getSubscription(socket, evt, c3) {
   closure_0 = socket;
   closure_1 = evt;
@@ -877,7 +919,7 @@ prototype["storeWait"] = function storeWait(socket, fn, timeout) {
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-        }, closure_3 * socket(timeout[11]).Millis.SECOND);
+        }, closure_3 * socket(timeout[12]).Millis.SECOND);
         self.addSubscription(socket, RPC_STORE_WAIT, { uniqueId }, () => {
           const tmp = closure_2();
           if (tmp) {

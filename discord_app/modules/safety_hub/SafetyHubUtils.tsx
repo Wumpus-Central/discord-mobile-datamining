@@ -1,12 +1,14 @@
-// === Module 7732: SafetyHubUtils ===
+// === Module 7778: SafetyHubUtils ===
 
-// Module 7732 (SafetyHubUtils)
+// Module 7778 (SafetyHubUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
+import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
-import _modDef4761 from "module_4761" /* 4761 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5482 */;
-import SafetyHubModels from "SafetyHubModels" /* 7734 */;
+import _modDef4797 from "module_4797" /* 4797 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5519 */;
+import SafetyHubModels from "SafetyHubModels" /* 7780 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -44,16 +46,18 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7733);
+const SafetyHubConstants = fn(7779);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1087);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
+const result = 182 * DurationsDefault.Millis.DAY;
+let c10 = result;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
+const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4761().to(_modDef4761(timestamp));
+  return _modDef4797().to(_modDef4797(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -145,6 +149,10 @@ export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromC
     stringResult = intl.string(util.t.aPmsx3);
   }
   return stringResult;
+};
+export const APPEAL_WINDOW_DURATION_MS = result;
+export const isAppealWindowExpired = function isAppealWindowExpired(classificationId) {
+  return SnowflakeUtilsDefault.age(classificationId) > result;
 };
 export const getClassificationAccountStatusExpiration = function getClassificationAccountStatusExpiration(classification) {
   const actions = classification.actions;

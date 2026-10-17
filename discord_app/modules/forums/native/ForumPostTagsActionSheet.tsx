@@ -1,18 +1,18 @@
-// === Module 10706: ForumPostTagsActionSheet ===
+// === Module 10769: ForumPostTagsActionSheet ===
 
-// Module 10706 (ForumPostTagsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9564 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 10707 */;
+// Module 10769 (ForumPostTagsActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9628 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 10770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(7205).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7257).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_9 = createStyles.createStyles({ tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" }, saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 }, subtitle: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -231,15 +231,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
     }
   }
   const tmp3 = closure_9();
-  let appliedTags = thread(7207).useAppliedTags(thread);
+  let appliedTags = thread(7259).useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
   }
-  let obj = thread(7207);
+  let obj = thread(7259);
   [first, closure_5] = first.useState(new Set(appliedTags));
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(7207).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(7259).useVisibleForumTags(thread.parentChannel);
   let obj2 = {
     onDismiss() {
       let tmp;
@@ -255,8 +255,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   const intl2 = tmp4(1128).intl;
   obj3.subtitle = intl2.string(thread(1128).t["+HS9+m"]);
   obj3.subtitleStyle = tmp3.subtitle;
-  obj2.header = toggleTag(thread(7064).BottomSheetTitleHeader, obj3);
-  const tmp4Result = thread(7207);
+  obj2.header = toggleTag(thread(7117).BottomSheetTitleHeader, obj3);
+  const tmp4Result = thread(7259);
   let items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
@@ -294,8 +294,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5442).Button, obj6);
+  obj5.children = toggleTag(thread(5479).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
-  return closure_8(thread(7122).ActionSheet, obj2);
+  return closure_8(thread(7175).ActionSheet, obj2);
 });

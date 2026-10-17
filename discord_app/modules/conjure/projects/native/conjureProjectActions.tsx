@@ -1,25 +1,25 @@
-// === Module 11554: conjureProjectActions ===
+// === Module 11613: conjureProjectActions ===
 
-// Module 11554 (conjureProjectActions)
+// Module 11613 (conjureProjectActions)
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ToastUtils from "ToastUtils" /* 4867 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4868 */;
-import CopyIcon from "CopyIcon" /* 5104 */;
-import AlertModal from "AlertModal" /* 5368 */;
-import ChannelUtils from "ChannelUtils" /* 5477 */;
-import ClipboardUtils from "ClipboardUtils" /* 7109 */;
-import conjureProjectMute from "conjureProjectMute" /* 10921 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 11523 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11565 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11570 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import ToastUtils from "ToastUtils" /* 4903 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
+import CopyIcon from "CopyIcon" /* 5141 */;
+import AlertModal from "AlertModal" /* 5405 */;
+import ChannelUtils from "ChannelUtils" /* 5514 */;
+import ClipboardUtils from "ClipboardUtils" /* 7162 */;
+import conjureProjectMute from "conjureProjectMute" /* 10985 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 11582 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11624 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10913 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10977 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_10 = async function _importIntoProject(arg0) {
+let closure_11 = async function _importIntoProject(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -88,13 +88,13 @@ let closure_10 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11523).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3865).Owerd3));
+          await tmp3(11582).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3883).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;
-            tmp3(4867).presentError(intl.string(v2(3865)["Q+l4Hv"]));
+            tmp3(4903).presentError(intl.string(v2(3883)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(4867);
+            tmp3(4903);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -122,10 +122,10 @@ let closure_10 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10898);
+const ConjureConnectionStore = fn(10962);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(10897);
-({ canRemixProject: closure_7, isProjectOwner: closure_8 } = ConjureProjectStore);
+const ConjureProjectStore = fn(6293);
+({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);
 const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/conjureProjectActions.tsx");
@@ -135,12 +135,12 @@ export const conjureProjectActions = function conjureProjectActions(project) {
   ({ guildId: importDefault, muted } = project);
   const removeTarget = project.removeTarget;
   ({ openChat: closure_4, onOpenSettings, onConnectTool, onHistory, onRefresh, onClose, preview } = project);
-  const tmp = closure_8(project);
+  const tmp = closure_9(project);
   const items1 = [];
   if (null != onRefresh) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = project(muted[8]).intl;
-    obj.label = intl.string(require("module_3865")["p4B/7M"]);
+    obj.label = intl.string(require("module_3883")["p4B/7M"]);
     obj.IconComponent = project(muted[10]).RefreshIcon;
     obj.action = onRefresh;
     items1.push(obj);
@@ -148,7 +148,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
   if (null != onClose) {
     let obj2 = { label: null, IconComponent: null, action: null };
     let intl2 = project(muted[8]).intl;
-    obj2.label = intl2.string(require("module_3865")["/TlGcK"]);
+    obj2.label = intl2.string(require("module_3883")["/TlGcK"]);
     obj2.IconComponent = project(muted[11]).DoorExitIcon;
     obj2.action = onClose;
     items1.push(obj2);
@@ -176,7 +176,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     }
   }
   let intl3 = project(muted[8]).intl;
-  const tmp17 = require("module_3865");
+  const tmp17 = require("module_3883");
   if (muted) {
     let s9rCuH = tmp17.s9rCuH;
     let tmp19 = importDefault;
@@ -195,7 +195,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     return conjureProjectMute.setConjureProjectMuted(project.id, !muted);
   };
   items1.push(obj3);
-  if (closure_7(project)) {
+  if (closure_8(project)) {
     let obj4 = { label: null, IconComponent: null, action: null };
     const intl4 = tmp14(muted[8]).intl;
     obj4.label = intl4.string(tmp19(muted[9]).XWgAfc);
@@ -213,7 +213,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     }
     React4(project.id);
     const intl = util.intl;
-    hasOwnProperty(project.id, intl.string(_modDef3865.oU20rd));
+    hasOwnProperty(project.id, intl.string(_modDef3883.oU20rd));
   };
   items1.push(obj5);
   if (tmp) {
@@ -224,7 +224,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     obj6.action = function action() {
       (function importIntoProject() {
         const self = this;
-        const apply = closure_1_10.apply;
+        const apply = closure_1_11.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -233,7 +233,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1128).intl;
-        project(4867).presentError(intl.string(closure_1_1(3865)["Q+l4Hv"]));
+        project(4903).presentError(intl.string(closure_1_1(3883)["Q+l4Hv"]));
       });
     };
     items1.push(obj6);
@@ -272,15 +272,11 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     ClipboardUtils.copy(project.id);
     const obj3 = { text: null, icon: null };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef3865.CmfaZG);
+    obj3.text = intl.string(_modDef3883.CmfaZG);
     obj3.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
   };
   items1.push(obj10);
-  let tmp28 = tmp;
-  if (tmp) {
-    tmp28 = null != onOpenSettings;
-  }
   if (tmp28) {
     const obj11 = { label: null, IconComponent: null, action: null };
     const intl11 = tmp14(muted[8]).intl;
@@ -329,15 +325,15 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         const obj3 = { key: "ConjureProjectDelete", title: null, content: null, confirmText: null, onConfirm: null };
         let intl = util.intl;
         const obj4 = { name: project.name };
-        obj3.title = intl.formatToPlainString(_modDef3865.CJBhb2, obj4);
+        obj3.title = intl.formatToPlainString(_modDef3883.CJBhb2, obj4);
         const intl2 = util.intl;
-        obj3.content = intl2.string(_modDef3865["0OmrVn"]);
+        obj3.content = intl2.string(_modDef3883["0OmrVn"]);
         const intl3 = util.intl;
         obj3.confirmText = intl3.string(util.t.oyYWHE);
         obj3.onConfirm = function onConfirm() {
           const result = project(muted[34]).deleteProjectInBackground(id.id, () => {
             const intl = id(1128).intl;
-            return id(4867).presentError(intl.string(closure_1_1(3865)["0XDHob"]));
+            return id(4903).presentError(intl.string(closure_1_1(3883)["0XDHob"]));
           });
         };
         AlertModal.showConfirmModal(obj3);

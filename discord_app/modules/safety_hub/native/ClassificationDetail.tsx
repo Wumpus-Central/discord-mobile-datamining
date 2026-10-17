@@ -1,24 +1,24 @@
-// === Module 12538: ClassificationDetail ===
+// === Module 12603: ClassificationDetail ===
 
-// Module 12538 (ClassificationDetail)
+// Module 12603 (ClassificationDetail)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import _modDef3189 from "module_3189" /* 3189 */;
-import LinkingDefault from "Linking" /* 4865 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import components_Button_Button from "components/Button/Button" /* 5442 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5948 */;
-import MetricEvents from "MetricEvents" /* 5953 */;
-import TableRow from "TableRow" /* 6404 */;
-import SafetyHubModels from "SafetyHubModels" /* 7734 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8900 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12542 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12544 */;
+import _modDef3207 from "module_3207" /* 3207 */;
+import LinkingDefault from "Linking" /* 4901 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import components_Button_Button from "components/Button/Button" /* 5479 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5985 */;
+import MetricEvents from "MetricEvents" /* 5990 */;
+import TableRow from "TableRow" /* 6457 */;
+import SafetyHubModels from "SafetyHubModels" /* 7780 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8946 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12607 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12609 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
-import SafetyHubStore from "SafetyHubStore" /* 7757 */;
+import SafetyHubStore from "SafetyHubStore" /* 7803 */;
 
 require = fn;
 function ClassificationPolicyCard(policyExplainerLink) {
@@ -42,7 +42,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const tmp19 = closure_13(tmp10(10654).ShieldIcon, obj2);
+      const tmp19 = closure_13(tmp10(10717).ShieldIcon, obj2);
       cResult[2] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -69,7 +69,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[7] !== tmp24) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp24 };
-      const tmp28 = closure_13(tmp10(5150).Text, obj5);
+      const tmp28 = closure_13(tmp10(5187).Text, obj5);
       cResult[7] = tmp24;
       cResult[8] = tmp28;
       let tmp26 = tmp28;
@@ -120,14 +120,14 @@ function ClassificationPolicyCard(policyExplainerLink) {
     };
     const obj11 = { style: tmp2.classificationPolicyCardIcon, children: null };
     const obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-    obj11.children = closure_13(policyExplainerLink(10654).ShieldIcon, obj12);
+    obj11.children = closure_13(policyExplainerLink(10717).ShieldIcon, obj12);
     const items = [closure_13(closure_4, obj11), ];
     const obj13 = { style: tmp2.classificationPolicyCardContent, children: null };
     const obj14 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = policyExplainerLink(1128).intl;
     const obj15 = { classificationDescription: policyExplainerLink.classificationTypeText };
     obj14.children = intl.format(policyExplainerLink(1128).t.zxUdpj, obj15);
-    obj13.children = closure_13(policyExplainerLink(5150).Text, obj14);
+    obj13.children = closure_13(policyExplainerLink(5187).Text, obj14);
     items[1] = closure_13(closure_4, obj13);
     obj10.children = items;
     obj.children = closure_14(TouchableHitBoxDefault, obj10);
@@ -136,13 +136,13 @@ function ClassificationPolicyCard(policyExplainerLink) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7733);
+const SafetyHubConstants = fn(7779);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5154);
-let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, confirmMinimumAgeSection: null, guidelinesFooter: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, bulletText: null, redirectButtonWrapper: null };
+const createStyles = fn(5191);
+let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, appealWindowExpiredContainer: null, appealWindowExpiredText: null, confirmMinimumAgeSection: null, guidelinesFooter: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, bulletText: null, redirectButtonWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.container = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };
 let obj4 = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };
@@ -156,18 +156,21 @@ let obj7 = { display: "flex", paddingLeft: nativeDefault.space.PX_4, flexDirecti
 obj2.classificationDetailContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_32 };
 obj2.letUsKnowContainer = { display: "flex", alignItems: "center" };
 let obj8 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_32 };
+obj2.appealWindowExpiredContainer = { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.appealWindowExpiredText = { textAlign: "center" };
+let obj9 = { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.confirmMinimumAgeSection = { display: "flex", gap: nativeDefault.space.PX_12 };
-let obj9 = { display: "flex", gap: nativeDefault.space.PX_12 };
+let obj10 = { display: "flex", gap: nativeDefault.space.PX_12 };
 obj2.guidelinesFooter = { marginTop: nativeDefault.space.PX_12 };
-let obj10 = { marginTop: nativeDefault.space.PX_12 };
+let obj11 = { marginTop: nativeDefault.space.PX_12 };
 obj2.classificationPolicyCard = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4, flexShrink: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, width: 32, height: 32, borderRadius: nativeDefault.radii.xxl };
 obj2.classificationPolicyCardIcon = size;
 obj2.classificationPolicyCardContent = { flex: 1 };
-let obj11 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4, flexShrink: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj12 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4, flexShrink: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.classificationActionDescription = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.bulletText = { flex: 1 };
-let obj12 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let obj13 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.redirectButtonWrapper = { width: 300, alignSelf: "center", marginTop: nativeDefault.space.PX_32 };
 let closure_16 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -203,7 +206,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Classi
     }
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function p(children, arg1) {
+    const fn = function u(children, arg1) {
       return closure_1_13(require("Text/Text").Text, { variant: "heading-xl/bold", children }, arg1);
     };
     cResult[3] = fn;
@@ -295,7 +298,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Classi
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5150).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(5187).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 });
 ReactCompilerGating = fn(558);
@@ -627,7 +630,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { large: true, children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3189.rn3Gto);
+    obj3.children = intl2.string(_modDef3207.rn3Gto);
     const tmp13 = map1(closure_19, obj3);
     cResult[1] = tmp13;
     let tmp9 = tmp13;
@@ -667,7 +670,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3189.rn3Gto);
+  obj4.children = intl2.string(_modDef3207.rn3Gto);
   obj3.children = map1(closure_19, obj4);
   items[1] = map1(React4, obj3);
   obj.children = items;
@@ -732,7 +735,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { large: true, children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3189["yV/t/V"]);
+    obj3.children = intl2.string(_modDef3207["yV/t/V"]);
     const tmp13 = map1(closure_19, obj3);
     cResult[1] = tmp13;
     let tmp9 = tmp13;
@@ -772,7 +775,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3189["yV/t/V"]);
+  obj4.children = intl2.string(_modDef3207["yV/t/V"]);
   obj3.children = map1(closure_19, obj4);
   items[1] = map1(React4, obj3);
   obj.children = items;
@@ -902,7 +905,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function LetUsK
   }
   if (cResult[2] !== tmp4) {
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-    const tmp8 = closure_13(tmp(5150).Text, obj3);
+    const tmp8 = closure_13(tmp(5187).Text, obj3);
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -922,39 +925,130 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function LetUsK
   return closure_13(require("Text/Text").Text, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealFooter(hasBeenAppealed) {
-  onPressLetUsKnow = hasBeenAppealed;
-  const cResult = c.c(6);
-  const tmp2 = closure_16();
-  if (cResult[0] === hasBeenAppealed.hasBeenAppealed) {
-    if (cResult[1] === onPressLetUsKnow.onPressLetUsKnow) {
-      if (cResult[3] === tmp2.letUsKnowContainer) {
-        if (cResult[4] === tmp3) {
-          let tmp8 = cResult[5];
-        }
-        return tmp8;
+let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealWindowExpired() {
+  const cResult = c.c(10);
+  const tmp4 = closure_16();
+  ({ appealWindowExpiredContainer, appealWindowExpiredText } = tmp4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.PHriyz);
+    cResult[0] = stringResult;
+    let first = stringResult;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== tmp4.appealWindowExpiredText) {
+    const obj2 = { variant: "text-md/medium", color: "text-default", style: appealWindowExpiredText, children: first };
+    const tmp9 = map1(Text_Text.Text, obj2);
+    cResult[1] = tmp4.appealWindowExpiredText;
+    cResult[2] = tmp9;
+    let tmp7 = tmp9;
+  } else {
+    tmp7 = cResult[2];
+  }
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl2 = util.intl;
+    const stringResult1 = intl2.string(util.t.YsxY1D);
+    cResult[3] = stringResult1;
+    let tmp10 = stringResult1;
+  } else {
+    tmp10 = cResult[3];
+  }
+  if (cResult[4] !== tmp4.appealWindowExpiredText) {
+    const obj3 = { variant: "text-sm/normal", color: "text-muted", style: tmp4.appealWindowExpiredText, children: tmp10 };
+    const tmp14 = map1(Text_Text.Text, obj3);
+    cResult[4] = tmp4.appealWindowExpiredText;
+    cResult[5] = tmp14;
+    let tmp12 = tmp14;
+  } else {
+    tmp12 = cResult[5];
+  }
+  if (cResult[6] === tmp4.appealWindowExpiredContainer) {
+    if (cResult[7] === tmp7) {
+      if (cResult[8] === tmp12) {
+        let tmp15 = cResult[9];
       }
-      const obj2 = { style: tmp2.letUsKnowContainer, children: cResult[2] };
-      const tmp11 = map1(React4, obj2);
-      cResult[3] = tmp2.letUsKnowContainer;
-      cResult[4] = cResult[2];
-      cResult[5] = tmp11;
-      tmp8 = tmp11;
+      return tmp15;
     }
   }
-  if (onPressLetUsKnow.hasBeenAppealed) {
-    let tmp4Result = map1(closure_27, {});
-  } else {
-    const obj3 = { onPressLetUsKnow: onPressLetUsKnow.onPressLetUsKnow };
-    tmp4Result = map1(closure_28, obj3);
+  const obj4 = { style: appealWindowExpiredContainer, children: null };
+  const items = [tmp7, tmp12];
+  obj4.children = items;
+  const tmp16 = closure_1_14(React4, obj4);
+  cResult[6] = tmp4.appealWindowExpiredContainer;
+  cResult[7] = tmp7;
+  cResult[8] = tmp12;
+  cResult[9] = tmp16;
+  tmp15 = tmp16;
+}) : (function AppealWindowExpired() {
+  const tmp = closure_16();
+  const obj = { style: tmp.appealWindowExpiredContainer, children: null };
+  const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.appealWindowExpiredText, children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.PHriyz);
+  const items = [map1(Text_Text.Text, obj2), ];
+  const obj3 = { variant: "text-sm/normal", color: "text-muted", style: tmp.appealWindowExpiredText, children: null };
+  const intl2 = util.intl;
+  obj3.children = intl2.string(util.t.YsxY1D);
+  items[1] = map1(Text_Text.Text, obj3);
+  obj.children = items;
+  return closure_1_14(React4, obj);
+});
+ReactCompilerGating = fn(558);
+let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealFooter(hasBeenAppealed) {
+  _require = hasBeenAppealed;
+  const cResult = require("c").c(9);
+  const tmp2 = closure_16();
+  if (cResult[0] === hasBeenAppealed.hasBeenAppealed) {
+    if (cResult[1] === hasBeenAppealed.isAppealWindowExpired) {
+      if (cResult[2] === hasBeenAppealed.onPressLetUsKnow) {
+        let tmp3 = cResult[3];
+      }
+      if (cResult[4] !== tmp3) {
+        const tmp3Result = tmp3();
+        cResult[4] = tmp3;
+        cResult[5] = tmp3Result;
+        let tmp4 = tmp3Result;
+      } else {
+        tmp4 = cResult[5];
+      }
+      if (cResult[6] === tmp2.letUsKnowContainer) {
+        if (cResult[7] === tmp4) {
+          let tmp6 = cResult[8];
+        }
+        return tmp6;
+      }
+      const obj2 = { style: tmp2.letUsKnowContainer, children: tmp4 };
+      const tmp9 = closure_13(closure_4, obj2);
+      cResult[6] = tmp2.letUsKnowContainer;
+      cResult[7] = tmp4;
+      cResult[8] = tmp9;
+      tmp6 = tmp9;
+    }
   }
-  ({ hasBeenAppealed: tmp[0], onPressLetUsKnow } = onPressLetUsKnow);
-  cResult[1] = onPressLetUsKnow;
-  cResult[2] = tmp4Result;
+  function renderContent() {
+    if (hasBeenAppealed.hasBeenAppealed) {
+      let tmp2Result = map1(closure_27, {});
+    } else if (hasBeenAppealed.isAppealWindowExpired) {
+      tmp2Result = map1(closure_29, {});
+    } else {
+      const obj = { onPressLetUsKnow: hasBeenAppealed.onPressLetUsKnow };
+      tmp2Result = map1(closure_28, obj);
+    }
+    return tmp2Result;
+  }
+  cResult[0] = hasBeenAppealed.hasBeenAppealed;
+  cResult[1] = hasBeenAppealed.isAppealWindowExpired;
+  cResult[2] = hasBeenAppealed.onPressLetUsKnow;
+  cResult[3] = renderContent;
+  tmp3 = renderContent;
+  let obj = require("c");
 }) : (function AppealFooter(hasBeenAppealed) {
   const obj = { style: closure_16().letUsKnowContainer, children: null };
   if (hasBeenAppealed.hasBeenAppealed) {
     let tmpResult = map1(closure_27, {});
+  } else if (hasBeenAppealed.isAppealWindowExpired) {
+    tmpResult = map1(closure_29, {});
   } else {
     const obj2 = { onPressLetUsKnow: hasBeenAppealed.onPressLetUsKnow };
     tmpResult = map1(closure_28, obj2);
@@ -963,7 +1057,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Appeal
   return map1(React4, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmMinimumAgeGuidance(arg0) {
+let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmMinimumAgeGuidance(arg0) {
   const cResult = c.c(14);
   ({ tosLink, communityGuidelinesLink, onPressLetUsKnow } = arg0);
   const tmp4 = closure_16();
@@ -1054,7 +1148,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confir
   return closure_1_14(React4, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManualReviewDecidedUnderageFooter(arg0) {
+let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManualReviewDecidedUnderageFooter(arg0) {
   const cResult = c.c(5);
   ({ tosLink, communityGuidelinesLink } = arg0);
   if (cResult[0] === communityGuidelinesLink) {
@@ -1073,7 +1167,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
     return tmp6;
   }
   const intl = util.intl;
-  const formatResult = intl.format(_modDef3189.vPOpia, { tosLink, communityGuidelinesLink });
+  const formatResult = intl.format(_modDef3207.vPOpia, { tosLink, communityGuidelinesLink });
   cResult[0] = communityGuidelinesLink;
   cResult[1] = tosLink;
   cResult[2] = formatResult;
@@ -1082,17 +1176,17 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
   ({ tosLink, communityGuidelinesLink } = arg0);
   const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3189.vPOpia, { tosLink, communityGuidelinesLink });
+  obj.children = intl.format(_modDef3207.vPOpia, { tosLink, communityGuidelinesLink });
   return map1(Text_Text.Text, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManualReviewDecidedUnderageView() {
+let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? (function ManualReviewDecidedUnderageView() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { children: null };
     const items = [map1(closure_21, {}), map1(closure_23, {}), ];
     ({ TOS_LINK: obj3.tosLink, COMMUNITY_GUIDELINES: obj3.communityGuidelinesLink } = constants);
-    items[2] = map1(closure_31, { tosLink: null, communityGuidelinesLink: null });
+    items[2] = map1(closure_32, { tosLink: null, communityGuidelinesLink: null });
     obj2.children = items;
     const tmp10 = closure_1_14(value2, obj2);
     cResult[0] = tmp10;
@@ -1104,12 +1198,12 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manual
   return first;
 }) : (function ManualReviewDecidedUnderageView() {
   const obj = { children: null };
-  const items = [map1(closure_21, {}), map1(closure_23, {}), map1(closure_31, { tosLink: constants.TOS_LINK, communityGuidelinesLink: constants.COMMUNITY_GUIDELINES })];
+  const items = [map1(closure_21, {}), map1(closure_23, {}), map1(closure_32, { tosLink: constants.TOS_LINK, communityGuidelinesLink: constants.COMMUNITY_GUIDELINES })];
   obj.children = items;
   return closure_1_14(value2, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClassificationDetailFooter(onClose) {
+let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClassificationDetailFooter(onClose) {
   const cResult = c.c(6);
   onClose = onClose.onClose;
   const tmp4 = closure_16();
@@ -1151,12 +1245,12 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? (function Classi
   return map1(React4, obj);
 });
 ReactCompilerGating = fn(558);
-let obj13 = { width: 300, alignSelf: "center", marginTop: nativeDefault.space.PX_32 };
+let obj14 = { width: 300, alignSelf: "center", marginTop: nativeDefault.space.PX_32 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationDetail.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedClassificationDetail(classificationId) {
-  const cResult = classificationId(onClose[10]).c(45);
+  const cResult = classificationId(onClose[10]).c(48);
   classificationId = classificationId.classificationId;
   const source = classificationId.source;
   onClose = classificationId.onClose;
@@ -1166,8 +1260,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   const isAppealEligible = safetyHubClassification.isAppealEligible;
   const tmp5 = closure_16();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [closure_8];
-    const fn = function p() {
+    let items = [SafetyHubStore];
+    const fn = function u() {
       return closure_8.getAppealEligibility();
     };
     cResult[0] = items;
@@ -1202,7 +1296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
     if (cResult[3] === is_coppa) {
       let tmp14 = cResult[4];
     }
-    closure_8 = tmp14;
+    SafetyHubStore = tmp14;
     if (cResult[5] === stateFromStores) {
       let is_coppa1;
       if (classification != null) {
@@ -1214,23 +1308,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
       closure_9 = tmp19;
       let isExpressiveModalV2Enabled = tmp19;
       if (tmp19) {
-        isExpressiveModalV2Enabled = tmpResult6.useIsExpressiveModalV2Enabled(tmp(tmp2[24]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS);
+        isExpressiveModalV2Enabled = tmpResult5.useIsExpressiveModalV2Enabled(tmp(tmp2[24]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS);
       }
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [closure_8];
-        const fn2 = function j() {
-          return closure_8.getIsManualReviewDecidedUnderage();
-        };
+        const items1 = [SafetyHubStore];
+        class X {
+          constructor() {
+            return closure_8.getIsManualReviewDecidedUnderage();
+          }
+        }
         cResult[8] = items1;
-        cResult[9] = fn2;
-        let tmp25 = fn2;
+        cResult[9] = X;
+        let tmp25 = X;
         let tmp24 = items1;
       } else {
         tmp24 = cResult[8];
         tmp25 = cResult[9];
       }
-      tmpResult6 = tmp(tmp2[23]);
+      tmpResult5 = tmp(tmp2[23]);
       let is_coppa2;
       const stateFromStores1 = tmp(tmp2[14]).useStateFromStores(tmp24, tmp25);
       if (classification != null) {
@@ -1245,14 +1341,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
                 let tmp29 = cResult[15];
               }
               let current = tmp29;
-              const ref = safetyHubClassification.useRef(tmp29);
+              class X {
+                constructor() {
+                  return closure_8.getIsManualReviewDecidedUnderage();
+                }
+              }
               if (cResult[16] !== tmp29) {
-                const fn3 = function $() {
-                  closure_11.current = current;
+                const fn2 = function $() {
+                  ref.current = current;
                 };
                 cResult[16] = tmp29;
-                cResult[17] = fn3;
-                let tmp31 = fn3;
+                class X {
+                  constructor() {
+                    return closure_8.getIsManualReviewDecidedUnderage();
+                  }
+                }
+                cResult[17] = fn2;
+                let tmp31 = fn2;
               } else {
                 tmp31 = cResult[17];
               }
@@ -1277,6 +1382,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
                   }
                 }
                 const items2 = [classification];
+                class X {
+                  constructor() {
+                    return closure_8.getIsManualReviewDecidedUnderage();
+                  }
+                }
                 cResult[18] = classification;
                 cResult[19] = ee;
                 cResult[20] = items2;
@@ -1302,100 +1412,77 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
                                 if (null == classification) {
                                   if (safetyHubClassification.classificationRequestState === tmp(tmp2[12]).ClassificationRequestState.FAILED) {
                                     classificationId.onError();
-                                    let tmp57 = null;
+                                    let tmp44 = null;
                                   }
-                                  return tmp57;
+                                  return tmp44;
                                 }
                                 if (cResult[32] === classification) {
-                                  if (cResult[33] === onClose) {
-                                    if (cResult[34] === tmp36) {
-                                      if (cResult[35] === classificationDetailContainer) {
-                                        if (cResult[36] === tmp5.classificationDetailContainer) {
-                                          if (cResult[37] === isExpressiveModalV2Enabled) {
-                                            if (cResult[39] === tmp5.container) {
-                                              if (cResult[40] === tmp37) {
-                                                let tmp54 = cResult[41];
-                                              }
-                                              if (cResult[42] === tmp5.root) {
-                                                if (cResult[43] === tmp54) {
-                                                  tmp57 = cResult[44];
+                                  if (cResult[33] === classificationId) {
+                                    if (cResult[34] === tmp19) {
+                                      if (cResult[35] === tmp14) {
+                                        if (cResult[36] === onClose) {
+                                          if (cResult[37] === tmp36) {
+                                            if (cResult[38] === classificationDetailContainer) {
+                                              if (cResult[39] === tmp5.classificationDetailContainer) {
+                                                if (cResult[40] === isExpressiveModalV2Enabled) {
+                                                  if (cResult[42] === tmp5.container) {
+                                                    if (cResult[43] === tmp37) {
+                                                      let tmp40 = cResult[44];
+                                                    }
+                                                    if (cResult[45] === tmp5.root) {
+                                                      if (cResult[46] === tmp40) {
+                                                        tmp44 = cResult[47];
+                                                      }
+                                                    }
+                                                    class X {
+                                                      constructor() {
+                                                        return closure_8.getIsManualReviewDecidedUnderage();
+                                                      }
+                                                    }
+                                                    let obj3 = { style: tmp5.root, children: tmp40 };
+                                                    const tmp46 = closure_13(is_violative_content_shown, obj3);
+                                                    cResult[45] = tmp5.root;
+                                                    cResult[46] = tmp40;
+                                                    cResult[47] = tmp46;
+                                                    tmp44 = tmp46;
+                                                  }
+                                                  class X {
+                                                    constructor() {
+                                                      return closure_8.getIsManualReviewDecidedUnderage();
+                                                    }
+                                                  }
+                                                  tmp42[0] = tmp5.container;
+                                                  tmp42[2] = cResult[41];
+                                                  const tmp43 = closure_13(tmp(tmp2[32]).SafeAreaPaddingView, tmp42);
+                                                  cResult[42] = tmp5.container;
+                                                  cResult[43] = cResult[41];
+                                                  cResult[44] = tmp43;
+                                                  tmp40 = tmp43;
                                                 }
                                               }
-                                              let obj3 = { style: tmp5.root, children: tmp54 };
-                                              const tmp60 = closure_13(is_violative_content_shown, obj3);
-                                              cResult[42] = tmp5.root;
-                                              cResult[43] = tmp54;
-                                              cResult[44] = tmp60;
-                                              tmp57 = tmp60;
                                             }
-                                            let obj4 = { style: tmp5.container, bottom: true, children: cResult[38] };
-                                            const tmp56 = closure_13(tmp(tmp2[32]).SafeAreaPaddingView, obj4);
-                                            cResult[39] = tmp5.container;
-                                            cResult[40] = cResult[38];
-                                            cResult[41] = tmp56;
-                                            tmp54 = tmp56;
                                           }
                                         }
                                       }
                                     }
                                   }
                                 }
-                                if (null == classification) {
-                                  let tmp62Result = closure_13(isAppealEligible, { size: "large" });
-                                } else {
-                                  let obj5 = { style: tmp5.classificationDetailContainer, children: null };
-                                  ({ description: obj21.classificationTypeText, guild_metadata: obj21.guildMetadata } = classification);
-                                  const items3 = [closure_13(closure_17, { classificationTypeText: null, guildMetadata: null }), , , ];
-                                  let flagged_content1 = classification.flagged_content;
-                                  if (flagged_content1 == null) {
-                                    flagged_content1 = [];
+                                class X {
+                                  constructor() {
+                                    return closure_8.getIsManualReviewDecidedUnderage();
                                   }
-                                  const obj7 = { flaggedContent: flagged_content1 };
-                                  items3[1] = closure_13(source(tmp2[30]), obj7);
-                                  if (classificationDetailContainer) {
-                                    let tmp62Result1 = closure_13(closure_32, {});
-                                  } else {
-                                    const obj8 = { actions: classification.actions, classificationExpiration: tmp(tmp2[31]).getClassificationAccountStatusExpiration(classification), redesigned: isExpressiveModalV2Enabled };
-                                    const items4 = [closure_13(closure_20, obj8), ];
-                                    if (isExpressiveModalV2Enabled) {
-                                      const obj10 = { tosLink: null, communityGuidelinesLink: null, onPressLetUsKnow: null };
-                                      ({ TOS_LINK: obj15.tosLink, COMMUNITY_GUIDELINES: obj15.communityGuidelinesLink } = ref);
-                                      obj10.onPressLetUsKnow = tmp36;
-                                      let tmp64Result3 = closure_13(closure_30, obj10);
-                                    } else {
-                                      const obj11 = { appealLink: null, communityGuidelinesLink: null, tosLink: null, classificationTypeText: null, policyExplainerLink: null, appealComponent: null };
-                                      ({ APPEALS_LINK: obj13.appealLink, COMMUNITY_GUIDELINES: obj13.communityGuidelinesLink, TOS_LINK: obj13.tosLink } = ref);
-                                      ({ description: obj13.classificationTypeText, explainer_link: obj13.policyExplainerLink } = classification);
-                                      const obj12 = { hasBeenAppealed: null != classification.appeal_status, onPressLetUsKnow: tmp36 };
-                                      obj11.appealComponent = closure_13(closure_29, obj12);
-                                      tmp64Result3 = closure_13(closure_24, obj11);
-                                    }
-                                    const obj14 = { children: null };
-                                    items4[1] = tmp64Result3;
-                                    obj14.children = items4;
-                                    tmp62Result1 = closure_14(closure_15, obj14);
-                                    let tmpResult8 = tmp(tmp2[31]);
-                                  }
-                                  items3[2] = tmp62Result1;
-                                  let tmp64Result4 = !isExpressiveModalV2Enabled;
-                                  if (!isExpressiveModalV2Enabled) {
-                                    const obj16 = { onClose };
-                                    tmp64Result4 = closure_13(closure_33, obj16);
-                                  }
-                                  items3[3] = tmp64Result4;
-                                  obj5.children = items3;
-                                  tmp62Result = closure_14(classification, obj5);
-                                  const obj6 = { classificationTypeText: null, guildMetadata: null };
-                                  const tmp67 = source(tmp2[30]);
                                 }
                                 cResult[32] = classification;
-                                cResult[33] = onClose;
-                                cResult[34] = tmp36;
-                                cResult[35] = classificationDetailContainer;
+                                cResult[33] = classificationId;
+                                cResult[34] = tmp19;
+                                cResult[35] = tmp14;
+                                cResult[36] = onClose;
+                                cResult[37] = tmp36;
+                                cResult[38] = classificationDetailContainer;
                                 classificationDetailContainer = tmp5.classificationDetailContainer;
-                                cResult[36] = classificationDetailContainer;
-                                cResult[37] = isExpressiveModalV2Enabled;
-                                cResult[38] = tmp62Result;
+                                cResult[39] = classificationDetailContainer;
+                                cResult[40] = isExpressiveModalV2Enabled;
+                                cResult[41] = tmp38;
                               }
                             }
                           }
@@ -1451,15 +1538,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
           }
         }
       }
-      const obj17 = { accountStanding: safetyHubAccountStanding, classificationId, classificationState: safetyHubClassification, hasFlaggedContent: tmp10, source };
+      let obj4 = { accountStanding: safetyHubAccountStanding, classificationId, classificationState: safetyHubClassification, hasFlaggedContent: tmp10, source };
       cResult[10] = safetyHubAccountStanding;
       cResult[11] = classificationId;
       cResult[12] = safetyHubClassification;
       cResult[13] = tmp10;
       cResult[14] = source;
-      cResult[15] = obj17;
-      tmp29 = obj17;
-      let tmpResult7 = tmp(tmp2[14]);
+      cResult[15] = obj4;
+      tmp29 = obj4;
+      let tmpResult6 = tmp(tmp2[14]);
     }
     let is_coppa3;
     if (classification != null) {
@@ -1494,7 +1581,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   cResult[3] = is_coppa6;
   cResult[4] = hasItem1;
   tmp14 = hasItem1;
-  let tmpResult5 = classificationId(onClose[22]);
+  const tmpResult4 = classificationId(onClose[22]);
 }) : (function ConnectedClassificationDetail(classificationId) {
   classificationId = classificationId.classificationId;
   const source = classificationId.source;
@@ -1539,10 +1626,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
     hasItem1 = stateFromStores.includes(tmp(tmp2[12]).AppealEligibility.AGE_VERIFY_GLOBAL_ELIGIBLE);
   }
   let tmpResult = classificationId(onClose[22]);
+  let isExpressiveModalV2Enabled = hasItem1;
   if (hasItem1) {
-    hasItem1 = tmpResult4.useIsExpressiveModalV2Enabled(tmp(tmp2[24]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS);
+    isExpressiveModalV2Enabled = tmpResult5.useIsExpressiveModalV2Enabled(tmp(tmp2[24]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS);
   }
-  tmpResult4 = classificationId(onClose[23]);
+  tmpResult5 = classificationId(onClose[23]);
   const items1 = [tmp5];
   let is_coppa2;
   const stateFromStores1 = classificationId(onClose[14]).useStateFromStores(items1, () => hasItem.getIsManualReviewDecidedUnderage());
@@ -1575,17 +1663,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   if (null == classification) {
     if (safetyHubClassification.classificationRequestState === tmp(tmp2[12]).ClassificationRequestState.FAILED) {
       classificationId.onError();
-      let tmp19Result8 = null;
+      let tmp20Result8 = null;
     }
-    return tmp19Result8;
+    return tmp20Result8;
   }
   let obj4 = { style: tmp4.root, children: null };
   let obj5 = { style: tmp4.container, bottom: true, children: null };
   if (null == classification) {
-    let tmp37Result = closure_13(isAppealEligible, { size: "large" });
+    let tmp39Result = closure_13(isAppealEligible, { size: "large" });
   } else {
     const obj6 = { style: tmp4.classificationDetailContainer, children: null };
-    ({ description: obj19.classificationTypeText, guild_metadata: obj19.guildMetadata } = classification);
+    ({ description: obj20.classificationTypeText, guild_metadata: obj20.guildMetadata } = classification);
     const items3 = [closure_13(closure_17, { classificationTypeText: null, guildMetadata: null }), , , ];
     let flagged_content1 = classification.flagged_content;
     if (flagged_content1 == null) {
@@ -1593,8 +1681,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
     }
     const obj8 = { flaggedContent: flagged_content1 };
     items3[1] = closure_13(source(tmp2[30]), obj8);
-    if (tmp16) {
-      let tmp19Result5 = closure_13(closure_32, {});
+    if (tmp17) {
+      let tmp20Result5 = closure_13(closure_33, {});
     } else {
       function onPressLetUsKnow() {
         obj3 = { action: collapsed.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
@@ -1626,43 +1714,47 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
           const tmpResult8 = LinkingDefault;
         }
       }
-      const obj9 = { actions: classification.actions, classificationExpiration: tmp(tmp2[31]).getClassificationAccountStatusExpiration(classification), redesigned: hasItem1 };
+      const obj9 = { actions: classification.actions, classificationExpiration: tmp(tmp2[31]).getClassificationAccountStatusExpiration(classification), redesigned: isExpressiveModalV2Enabled };
       const items4 = [closure_13(closure_20, obj9), ];
-      if (hasItem1) {
+      if (isExpressiveModalV2Enabled) {
         const obj10 = { tosLink: null, communityGuidelinesLink: null, onPressLetUsKnow: null };
-        ({ TOS_LINK: obj15.tosLink, COMMUNITY_GUIDELINES: obj15.communityGuidelinesLink } = ref);
+        ({ TOS_LINK: obj16.tosLink, COMMUNITY_GUIDELINES: obj16.communityGuidelinesLink } = ref);
         obj10.onPressLetUsKnow = onPressLetUsKnow;
-        let tmp19Result6 = closure_13(closure_30, obj10);
+        let tmp20Result6 = closure_13(closure_31, obj10);
       } else {
         const obj11 = { appealLink: null, communityGuidelinesLink: null, tosLink: null, classificationTypeText: null, policyExplainerLink: null, appealComponent: null };
         ({ APPEALS_LINK: obj13.appealLink, COMMUNITY_GUIDELINES: obj13.communityGuidelinesLink, TOS_LINK: obj13.tosLink } = ref);
         ({ description: obj13.classificationTypeText, explainer_link: obj13.policyExplainerLink } = classification);
-        const obj12 = { hasBeenAppealed: null != classification.appeal_status, onPressLetUsKnow };
-        obj11.appealComponent = closure_13(closure_29, obj12);
-        tmp19Result6 = closure_13(closure_24, obj11);
+        const obj12 = { hasBeenAppealed: null != classification.appeal_status, isAppealWindowExpired: null, onPressLetUsKnow: null };
+        let tmpResult8 = tmp(tmp2[31]);
+        obj12.isAppealWindowExpired = tmp(tmp2[31]).isAppealWindowExpired(classificationId) && !hasItem && !hasItem1;
+        obj12.onPressLetUsKnow = onPressLetUsKnow;
+        obj11.appealComponent = closure_13(closure_30, obj12);
+        tmp20Result6 = closure_13(closure_24, obj11);
+        const tmp27 = tmp(tmp2[31]).isAppealWindowExpired(classificationId) && !hasItem && !hasItem1;
       }
       const obj14 = { children: null };
-      items4[1] = tmp19Result6;
+      items4[1] = tmp20Result6;
       obj14.children = items4;
-      tmp19Result5 = closure_14(closure_15, obj14);
-      let tmpResult6 = tmp(tmp2[31]);
+      tmp20Result5 = closure_14(closure_15, obj14);
+      let tmpResult7 = tmp(tmp2[31]);
     }
-    items3[2] = tmp19Result5;
-    let tmp19Result7 = !hasItem1;
-    if (!hasItem1) {
-      const obj16 = { onClose };
-      tmp19Result7 = closure_13(closure_33, obj16);
+    items3[2] = tmp20Result5;
+    let tmp20Result7 = !isExpressiveModalV2Enabled;
+    if (!isExpressiveModalV2Enabled) {
+      const obj15 = { onClose };
+      tmp20Result7 = closure_13(closure_34, obj15);
     }
-    items3[3] = tmp19Result7;
+    items3[3] = tmp20Result7;
     obj6.children = items3;
-    tmp37Result = closure_14(classification, obj6);
+    tmp39Result = closure_14(classification, obj6);
     const obj7 = { classificationTypeText: null, guildMetadata: null };
-    const tmp41 = source(tmp2[30]);
+    const tmp43 = source(tmp2[30]);
   }
-  obj5.children = tmp37Result;
+  obj5.children = tmp39Result;
   obj4.children = closure_13(classificationId(onClose[32]).SafeAreaPaddingView, obj5);
-  tmp19Result8 = closure_13(is_violative_content_shown, obj4);
+  tmp20Result8 = closure_13(is_violative_content_shown, obj4);
   let obj3 = { accountStanding: safetyHubAccountStanding, classificationId, classificationState: safetyHubClassification, hasFlaggedContent: tmp7, source };
-  tmp16 = is_coppa2 && stateFromStores1;
-  let tmpResult5 = classificationId(onClose[14]);
+  tmp17 = is_coppa2 && stateFromStores1;
+  let tmpResult6 = classificationId(onClose[14]);
 });

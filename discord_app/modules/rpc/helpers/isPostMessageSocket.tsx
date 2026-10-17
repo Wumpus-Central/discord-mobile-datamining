@@ -1,7 +1,7 @@
-// === Module 15418: isPostMessageSocket ===
+// === Module 9163: isPostMessageSocket ===
 
-// Module 15418 (isPostMessageSocket)
-import Constants from "Constants" /* 5858 */;
+// Module 9163 (isPostMessageSocket)
+import Constants from "Constants" /* 5895 */;
 import size from "module_2" /* 2 */;
 
 const TransportTypes = Constants.TransportTypes;

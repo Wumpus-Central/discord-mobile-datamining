@@ -1,6 +1,6 @@
-// === Module 5467: ChannelAutocompleteConstants ===
+// === Module 5504: ChannelAutocompleteConstants ===
 
-// Module 5467 (ChannelAutocompleteConstants)
+// Module 5504 (ChannelAutocompleteConstants)
 import size from "module_2" /* 2 */;
 
 let closure_0 = [];

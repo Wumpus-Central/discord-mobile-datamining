@@ -1,23 +1,23 @@
-// === Module 14581: GuildPowerupsMarketingHeader ===
+// === Module 14649: GuildPowerupsMarketingHeader ===
 
-// Module 14581 (GuildPowerupsMarketingHeader)
+// Module 14649 (GuildPowerupsMarketingHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1128 */;
-import _modDef2603 from "module_2603" /* 2603 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13106 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13129 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 14582 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 14583 */;
+import _modDef2621 from "module_2621" /* 2621 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13171 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13194 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 14650 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 14651 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5066 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5103 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef683("#000000");
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   const cResult = guild(576).c(13);
   guild = guild.guild;
   const tmp4 = closure_7();
-  arr = arr(14582)(guild.id);
+  arr = arr(14650)(guild.id);
   if (cResult[0] !== guild.id) {
     const fn = function s() {
       if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  if (arr(13129)(guild.id)) {
+  if (arr(13194)(guild.id)) {
     let num4;
     if (arr != null) {
       num4 = arr.length;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
                 obj.perk1 = <closure_8 powerup={arr2[0]} />;
                 const obj4 = { powerup: arr2[1] };
                 obj.perk2 = <closure_8 powerup={arr2[1]} />;
-                formatResult = intl.format(_modDef2603.MNO3sG, obj);
+                formatResult = intl.format(_modDef2621.MNO3sG, obj);
               }
               return formatResult;
             }
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       if (cResult[5] !== tmp10) {
         let intl = tmp(1128).intl;
         let obj2 = { perks: tmp10() };
-        let formatResult = intl.format(tmp5(2603)["7lwpzR"], obj2);
+        let formatResult = intl.format(tmp5(2621)["7lwpzR"], obj2);
         cResult[5] = tmp10;
         cResult[6] = formatResult;
         let tmp11 = formatResult;
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
         tmp16 = tmp19;
       }
       let obj4 = { style: text, variant: "text-sm/semibold", children: tmp11 };
-      const tmp15 = jsx(tmp(5150).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
+      const tmp15 = jsx(tmp(5187).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
       cResult[7] = tmp4.text;
       cResult[8] = tmp11;
       cResult[9] = tmp15;
@@ -186,13 +186,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
             obj4.perk1 = <closure_8 powerup={first[0]} />;
             const obj6 = { powerup: first[1] };
             obj4.perk2 = <closure_8 powerup={first[1]} />;
-            formatResult = intl2.format(_modDef2603.MNO3sG, obj4);
+            formatResult = intl2.format(_modDef2621.MNO3sG, obj4);
           }
         }
       }
       const obj7 = { perks: str2 };
-      obj2.children = intl.format(_modDef2603["7lwpzR"], obj7);
-      obj.children = jsx(guild(5150).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj2.children = intl.format(_modDef2621["7lwpzR"], obj7);
+      obj.children = jsx(guild(5187).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

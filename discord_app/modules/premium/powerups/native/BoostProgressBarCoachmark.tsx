@@ -1,17 +1,17 @@
-// === Module 17231: BoostProgressBarCoachmark ===
+// === Module 17291: BoostProgressBarCoachmark ===
 
-// Module 17231 (BoostProgressBarCoachmark)
+// Module 17291 (BoostProgressBarCoachmark)
 import util from "util" /* 1128 */;
-import _modDef2603 from "module_2603" /* 2603 */;
-import BoostThisServerRive from "BoostThisServerRive" /* 4957 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8864 */;
+import _modDef2621 from "module_2621" /* 2621 */;
+import BoostThisServerRive from "BoostThisServerRive" /* 4993 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -40,9 +40,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1128).intl;
-      const stringResult = intl.string(markAsDismissed(2603).uwV2dH);
+      const stringResult = intl.string(markAsDismissed(2621).uwV2dH);
       const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(markAsDismissed(2603).MIwlcR);
+      const stringResult1 = intl2.string(markAsDismissed(2621).MIwlcR);
       cResult[5] = stringResult;
       cResult[6] = stringResult1;
       let tmp9 = stringResult1;
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
         if (cResult[12] === tmp13) {
           let tmp16 = cResult[13];
         }
-        const coachmark = tmp(9678).useCoachmark(guild.targetRef, tmp16);
+        const coachmark = tmp(9742).useCoachmark(guild.targetRef, tmp16);
         return null;
       }
     }
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
   const memo = onDismiss.useMemo(() => {
     const obj = { title: null, description: null, visible: true, position: "bottom", offsetY: 8, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef2603.uwV2dH);
+    obj.title = intl.string(_modDef2621.uwV2dH);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef2603.MIwlcR);
+    obj.description = intl2.string(_modDef2621.MIwlcR);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return <callback1 style={riveContainer.riveContainer}>{jsx(guild(riveContainer[10]).BoostThisServerRive, { stateMachine: "State Machine 1" })}</callback1>;
@@ -125,6 +125,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(9678).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(9742).useCoachmark(guild.targetRef, memo);
   return null;
 });

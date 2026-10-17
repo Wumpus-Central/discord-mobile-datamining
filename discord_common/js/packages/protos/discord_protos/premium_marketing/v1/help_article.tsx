@@ -1,8 +1,8 @@
-// === Module 9363: help_article ===
+// === Module 9427: help_article ===
 
-// Module 9363 (help_article)
+// Module 9427 (help_article)
 import _mod1212 from "module_1212" /* 1212 */;
-import localized_string from "localized_string" /* 9362 */;
+import localized_string from "localized_string" /* 9426 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -25,12 +25,12 @@ class HelpArticle$Type extends MessageType {
   }
 }
 const prototype = HelpArticle$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { id: "", linkText: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

@@ -1,13 +1,13 @@
-// === Module 18334: LaunchPadMembers ===
+// === Module 18395: LaunchPadMembers ===
 
-// Module 18334 (LaunchPadMembers)
+// Module 18395 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 11081 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 11955 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17780 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11144 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12018 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17840 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
@@ -15,7 +15,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -46,7 +46,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
       }
-      return { channelId: "unicodeVersion", type: 49 };
+      return { channelId: "ix", type: "<string:79365185>" };
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    return { channelId: "unicodeVersion", type: 49 };
+    return { channelId: "ix", type: "<string:79365185>" };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

@@ -1,19 +1,19 @@
-// === Module 11363: useScreenshareUtils ===
+// === Module 11422: useScreenshareUtils ===
 
-// Module 11363 (useScreenshareUtils)
+// Module 11422 (useScreenshareUtils)
 import util from "util" /* 1128 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import inject from "inject" /* 2016 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5306 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6119 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7077 */;
-import StreamActionCreators from "StreamActionCreators" /* 7664 */;
-import CallsUtils from "CallsUtils" /* 9012 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9938 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 11358 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11369 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5343 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6156 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7130 */;
+import StreamActionCreators from "StreamActionCreators" /* 7710 */;
+import CallsUtils from "CallsUtils" /* 9058 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10002 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 11417 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11428 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6116 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
@@ -49,8 +49,8 @@ function startStream() {
   obj = inject;
 }
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
-const Features = fn(5179).Features;
-const DeviceUtils = fn(5130);
+const Features = fn(5216).Features;
+const DeviceUtils = fn(5167);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 const BroadcastUploadManager = fn(17).NativeModules.BroadcastUploadManager;
 const ReactCompilerGating = fn(558);
@@ -125,7 +125,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScreenshareUtils(arg0) {
   const cResult = require("c").c(24);
-  const tmp5 = analyticsLocations(11358)(arg0);
+  const tmp5 = analyticsLocations(11417)(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[0] = closure_8 >= 12;
     let first = tmp8;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp13 = cResult[3];
   }
   const tmpResult = require("initialize");
-  const showMobileGoLiveUpsell = analyticsLocations(11369).useConfig(tmp13).showMobileGoLiveUpsell;
+  const showMobileGoLiveUpsell = analyticsLocations(11428).useConfig(tmp13).showMobileGoLiveUpsell;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationStreamingStore];
     class E {
@@ -171,9 +171,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
     tmp14 = cResult[4];
     tmp15 = cResult[5];
   }
-  const tmp4Result = analyticsLocations(11369);
+  const tmp4Result = analyticsLocations(11428);
   const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-  analyticsLocations = tmp4(7077)().analyticsLocations;
+  analyticsLocations = tmp4(7130)().analyticsLocations;
   let tmp18 = null != stateFromStores1;
   if (tmp18) {
     tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
                     return closure_1_4.getCurrentUserActiveStream();
                   }
                 }
-                tmp4(tmp18 ? 11374 : 11375);
+                tmp4(tmp18 ? 11433 : 11434);
               }
             }
           }

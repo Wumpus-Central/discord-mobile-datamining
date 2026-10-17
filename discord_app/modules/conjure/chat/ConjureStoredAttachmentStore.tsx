@@ -1,6 +1,6 @@
-// === Module 12094: ConjureStoredAttachmentStore ===
+// === Module 12157: ConjureStoredAttachmentStore ===
 
-// Module 12094 (ConjureStoredAttachmentStore)
+// Module 12157 (ConjureStoredAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

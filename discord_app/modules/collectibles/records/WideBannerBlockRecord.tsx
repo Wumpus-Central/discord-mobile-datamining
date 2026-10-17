@@ -1,7 +1,7 @@
-// === Module 7525: WideBannerBlockRecord ===
+// === Module 7571: WideBannerBlockRecord ===
 
-// Module 7525 (WideBannerBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7515 */;
+// Module 7571 (WideBannerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7561 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function WideBannerBlockRecord(arg0) {

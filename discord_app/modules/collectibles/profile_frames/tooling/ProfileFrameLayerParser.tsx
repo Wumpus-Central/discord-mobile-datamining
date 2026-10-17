@@ -1,16 +1,16 @@
-// === Module 8560: ProfileFrameLayerParser ===
+// === Module 8606: ProfileFrameLayerParser ===
 
-// Module 8560 (ProfileFrameLayerParser)
-import ProfileFrameLayerType from "ProfileFrameLayerType" /* 8562 */;
-import ProfileFrameLayerAnchor from "ProfileFrameLayerAnchor" /* 8563 */;
+// Module 8606 (ProfileFrameLayerParser)
+import ProfileFrameLayerType from "ProfileFrameLayerType" /* 8608 */;
+import ProfileFrameLayerAnchor from "ProfileFrameLayerAnchor" /* 8609 */;
 import _toArray from "_toArray" /* 729 */;
 
 require = fn;
 const preview = "preview";
 const responsive = "responsive";
-const items = [fn(8562).ProfileFrameLayerType.STAPLE, fn(8562).ProfileFrameLayerType.RAIL, fn(8562).ProfileFrameLayerType.BORDER];
+const items = [fn(8608).ProfileFrameLayerType.STAPLE, fn(8608).ProfileFrameLayerType.RAIL, fn(8608).ProfileFrameLayerType.BORDER];
 const set = new Set(items);
-const items1 = [fn(8563).ProfileFrameLayerAnchor.TOP, fn(8563).ProfileFrameLayerAnchor.BOTTOM, fn(8563).ProfileFrameLayerAnchor.CENTER];
+const items1 = [fn(8609).ProfileFrameLayerAnchor.TOP, fn(8609).ProfileFrameLayerAnchor.BOTTOM, fn(8609).ProfileFrameLayerAnchor.CENTER];
 const set1 = new Set(items1);
 let obj2 = { WRONG_PART_COUNT: "wrong_part_count", INVALID_INDEX: "invalid_index", INVALID_TYPE: "invalid_type", INVALID_ANCHOR: "invalid_anchor", INVALID_RESPONSIVE: "invalid_responsive", BORDER_HAS_ANCHOR: "border_has_anchor" };
 let obj3 = { [obj2.WRONG_PART_COUNT]: "wrong filename format", [obj2.INVALID_INDEX]: "invalid index" };
@@ -20,13 +20,13 @@ const items3 = [...set1];
 obj3[obj2.INVALID_ANCHOR] = "invalid anchor (expected: " + items3.join(", ") + ")";
 obj3[obj2.INVALID_RESPONSIVE] = "invalid suffix (expected '" + "responsive" + "')";
 obj3[obj2.BORDER_HAS_ANCHOR] = "border layers must omit the anchor";
-const dependencyMap = { [fn(8561).ProfileFrameLayerOrder.FRONT]: 0, [fn(8561).ProfileFrameLayerOrder.BACK]: 1 };
+const dependencyMap = { [fn(8607).ProfileFrameLayerOrder.FRONT]: 0, [fn(8607).ProfileFrameLayerOrder.BACK]: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
 
 export const PREVIEW_FILENAME = "preview";
 export const RESPONSIVE_KEYWORD = "responsive";
-export const FOLDER_ORDER_MAP = { foreground: fn(8561).ProfileFrameLayerOrder.FRONT, background: fn(8561).ProfileFrameLayerOrder.BACK };
+export const FOLDER_ORDER_MAP = { foreground: fn(8607).ProfileFrameLayerOrder.FRONT, background: fn(8607).ProfileFrameLayerOrder.BACK };
 export const ParseErrorKind = obj2;
 export const PARSE_ERROR_LABELS = obj3;
 export const parseLayerFilename = function parseLayerFilename(str) {

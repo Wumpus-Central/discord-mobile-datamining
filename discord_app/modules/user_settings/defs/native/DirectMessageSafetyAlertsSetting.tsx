@@ -1,16 +1,16 @@
-// === Module 15810: DirectMessageSafetyAlertsSetting ===
+// === Module 15876: DirectMessageSafetyAlertsSetting ===
 
-// Module 15810 (DirectMessageSafetyAlertsSetting)
+// Module 15876 (DirectMessageSafetyAlertsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import SettingsConstants from "SettingsConstants" /* 8214 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10634 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10635 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10636 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 12530 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 15811 */;
+import SettingsConstants from "SettingsConstants" /* 8260 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10697 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10698 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10699 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 12595 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 15877 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11003 */;
+import SettingBuilders from "SettingBuilders" /* 11065 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

@@ -1,14 +1,14 @@
-// === Module 17132: useActiveChannels ===
+// === Module 17192: useActiveChannels ===
 
-// Module 17132 (useActiveChannels)
+// Module 17192 (useActiveChannels)
 import Constants from "Constants" /* 1087 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ChannelRecord from "ChannelRecord" /* 2072 */;
 import ChannelConstants from "ChannelConstants" /* 2075 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6185 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 14714 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6222 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 14782 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;

@@ -1,6 +1,6 @@
-// === Module 6294: VoicePanelStore ===
+// === Module 6352: VoicePanelStore ===
 
-// Module 6294 (VoicePanelStore)
+// Module 6352 (VoicePanelStore)
 import identity from "module_1269" /* 1269 */;
 import size from "module_2" /* 2 */;
 

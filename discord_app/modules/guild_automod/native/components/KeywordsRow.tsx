@@ -1,8 +1,8 @@
-// === Module 18657: KeywordsRow ===
+// === Module 18719: KeywordsRow ===
 
-// Module 18657 (KeywordsRow)
+// Module 18719 (KeywordsRow)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function KeywordsRow(label) {
     const intl = tmp2(1128).intl;
     StringResult = intl.string(tmp2(1128).t.PoWNfe);
   }
-  obj.trailing = keywords(label(5150).Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: StringResult });
+  obj.trailing = keywords(label(5187).Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: StringResult });
   obj.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { title: label, description, keywords, onSave };
@@ -34,8 +34,8 @@ export default function KeywordsRow(label) {
       obj4 = { type, maxWordCount };
     }
     const merged = Object.assign(obj4);
-    obj.openLazy(asyncRequireImpl(18658, dependencyMap.paths), "AutomodKeywords", obj2);
-    const tmp = asyncRequireImpl(18658, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(18720, dependencyMap.paths), "AutomodKeywords", obj2);
+    const tmp = asyncRequireImpl(18720, dependencyMap.paths);
   };
-  return keywords(label(6404).TableRow, obj);
+  return keywords(label(6457).TableRow, obj);
 };

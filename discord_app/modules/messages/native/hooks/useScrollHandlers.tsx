@@ -1,17 +1,18 @@
-// === Module 11031: useScrollHandlers ===
+// === Module 11093: useScrollHandlers ===
 
-// Module 11031 (useScrollHandlers)
+// Module 11093 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5425 */;
-import QuestTypes from "QuestTypes" /* 6194 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9833 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9835 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11017 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5462 */;
+import QuestTypes from "QuestTypes" /* 6231 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9897 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9899 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11079 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 11094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9619);
+const useChatBottomManagerUIStore = fn(9683);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const ReactCompilerGating = fn(558);
@@ -193,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrol
                               ref4.current = tmp2;
                               ref6.current = tmp3;
                               ref5.current = tmp4;
-                              chatRef(chatUpdatesQueue[8]).batchUpdates(() => {
+                              chatRef(chatUpdatesQueue[9]).batchUpdates(() => {
                                 let hasMoreAfter = closure_1;
                                 if (!closure_1) {
                                   hasMoreAfter = messages.hasMoreAfter;
@@ -201,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrol
                                 hasOwnProperty(channelId, screenIndex, hasMoreAfter);
                                 React4(screenIndex, isAtBottom);
                               });
-                              const obj2 = chatRef(chatUpdatesQueue[8]);
+                              const obj2 = chatRef(chatUpdatesQueue[9]);
                             }
                           }
                           cResult[26] = channelId;
@@ -287,10 +288,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrol
             function updateNativeRows(isLoadingAtTop) {
               if (chatUpdatesQueue.isBlocking) {
                 chatUpdatesQueue.add(isLoadingAtTop);
-              } else if (!isLoadingAtTop.isLoadingAtTop) {
-                applyNativeRowsUpdate(isLoadingAtTop);
               } else {
-                chatUpdatesQueue.add(isLoadingAtTop);
+                if (!obj2.isIOSAnchoredChatScrollerEnabled()) {
+                  if (isLoadingAtTop.isLoadingAtTop) {
+                    chatUpdatesQueue.add(isLoadingAtTop);
+                  }
+                }
+                applyNativeRowsUpdate(isLoadingAtTop);
+                obj2 = IOSAnchoredChatScrollerExperiment;
               }
             }
             cResult[15] = applyNativeRowsUpdate;
@@ -398,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrol
             }
             const obj2 = { isFirstMessageVisible: flag4 };
             closure_1_13(obj2);
-            dependencyMap.tryFlush();
+            set.tryFlush();
             return true;
           }
         }
@@ -522,12 +527,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScrol
       }
     },
     updateNativeRows(isLoadingAtTop) {
-      if (dependencyMap.isBlocking) {
-        dependencyMap.add(isLoadingAtTop);
-      } else if (!isLoadingAtTop.isLoadingAtTop) {
-        closure_1_8(isLoadingAtTop);
+      if (set.isBlocking) {
+        set.add(isLoadingAtTop);
       } else {
-        dependencyMap.add(isLoadingAtTop);
+        if (!obj2.isIOSAnchoredChatScrollerEnabled()) {
+          if (isLoadingAtTop.isLoadingAtTop) {
+            set.add(isLoadingAtTop);
+          }
+        }
+        closure_1_8(isLoadingAtTop);
+        obj2 = IOSAnchoredChatScrollerExperiment;
       }
     },
     handleScrollCallbacks,

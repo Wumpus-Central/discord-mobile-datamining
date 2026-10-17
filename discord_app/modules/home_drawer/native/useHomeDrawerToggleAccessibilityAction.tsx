@@ -1,9 +1,9 @@
-// === Module 17380: useHomeDrawerToggleAccessibilityAction ===
+// === Module 17439: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 17380 (useHomeDrawerToggleAccessibilityAction)
+// Module 17439 (useHomeDrawerToggleAccessibilityAction)
 import util from "util" /* 1128 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5035 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4923 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeD
         name,
         label: stringResult,
         action() {
-            closure_0(5035).setHomeDrawerState(!dependencyMap);
+            closure_0(5072).setHomeDrawerState(!dependencyMap);
             const intl = closure_0(1128).intl;
             const string = intl.string;
             const t = closure_0(1128).t;
@@ -87,9 +87,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeD
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(4887).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(4923).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(5035);
+            const obj = closure_0(5072);
           }
       };
       return obj;

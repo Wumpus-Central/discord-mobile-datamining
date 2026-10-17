@@ -1,12 +1,12 @@
-// === Module 12234: AIShimmer ===
+// === Module 12299: AIShimmer ===
 
-// Module 12234 (AIShimmer)
+// Module 12299 (AIShimmer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 12235 */;
-import waveTransition2 from "waveTransition" /* 12236 */;
-import createWaveTransition from "createWaveTransition" /* 12237 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 12300 */;
+import waveTransition2 from "waveTransition" /* 12301 */;
+import createWaveTransition from "createWaveTransition" /* 12302 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 30;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_13 = createStyles.createStyles((height, height2) => {
   const obj = { container: { alignSelf: "flex-start", height }, sizer: { opacity: 0 }, layer: { position: "absolute", top: 0, left: 0, height }, glyphLayer: null, window: { position: "absolute", top: 0, left: 0, height, overflow: "hidden" } };
   const rect = { position: "absolute", top: (height - height2) / 2, left: 0, height: height2 };

@@ -1,9 +1,9 @@
-// === Module 14731: GuildFriendshipStore ===
+// === Module 14799: GuildFriendshipStore ===
 
-// Module 14731 (GuildFriendshipStore)
+// Module 14799 (GuildFriendshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6324 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6377 */;
 
 function resetStates() {
   closure_3 = {};

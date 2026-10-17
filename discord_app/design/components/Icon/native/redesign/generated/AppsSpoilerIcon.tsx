@@ -1,10 +1,10 @@
-// === Module 8458: AppsSpoilerIcon ===
+// === Module 8504: AppsSpoilerIcon ===
 
-// Module 8458 (AppsSpoilerIcon)
+// Module 8504 (AppsSpoilerIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4876 */;
-import _mod8413 from "module_8413" /* 8413 */;
+import BaseIconImage from "BaseIconImage" /* 4912 */;
+import _mod8459 from "module_8459" /* 8459 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const AppsSpoilerIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8413;
+    const tmpResult = _mod8459;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const AppsSpoilerIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8413, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8459, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

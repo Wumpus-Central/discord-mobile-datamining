@@ -1,6 +1,6 @@
-// === Module 5559: ? ===
+// === Module 5596: ? ===
 
-// Module 5559
+// Module 5596
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/shoes/fancy_heels.png.js");

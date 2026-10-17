@@ -4,9 +4,9 @@
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2134 from "module_2134" /* 2134 */;
-import bg from "bg" /* 4253 */;
-import formatjs from "formatjs" /* 4728 */;
-import moment from "moment" /* 4759 */;
+import bg from "bg" /* 4289 */;
+import formatjs from "formatjs" /* 4764 */;
+import moment from "moment" /* 4795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_1904 from "module_1904" /* 1904 */;
 
@@ -347,7 +347,7 @@ const identity = fn(1269);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  let obj = {
+  return {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "code",
@@ -370,7 +370,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
-  return obj;
 });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

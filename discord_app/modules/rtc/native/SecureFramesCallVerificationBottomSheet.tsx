@@ -1,11 +1,11 @@
-// === Module 18168: SecureFramesCallVerificationBottomSheet ===
+// === Module 18229: SecureFramesCallVerificationBottomSheet ===
 
-// Module 18168 (SecureFramesCallVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8709 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9058 */;
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9071 */;
+// Module 18229 (SecureFramesCallVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8755 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9104 */;
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9117 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5172 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
 
 require = fn;
 const AnalyticsSections = fn(1087).AnalyticsSections;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     const intl2 = tmp(1128).intl;
     const stringResult1 = intl2.string(tmp(1128).t["MPp7+C"]);
     const intl3 = tmp(1128).intl;
-    let obj2 = { helpArticle: tmp(9055).getSecureFramesHelpdeskArticle() };
+    let obj2 = { helpArticle: tmp(9101).getSecureFramesHelpdeskArticle() };
     const formatResult = intl3.format(tmp(1128).t.wKxADe, obj2);
     cResult[4] = stringResult;
     cResult[5] = stringResult1;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     let tmp11 = formatResult;
     let tmp10 = stringResult1;
     let tmp9 = stringResult;
-    const tmpResult2 = tmp(9055);
+    const tmpResult2 = tmp(9101);
   } else {
     tmp9 = cResult[4];
     tmp10 = cResult[5];
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   obj2.subtitle = intl2.string(channelId(1128).t["MPp7+C"]);
   const intl3 = channelId(1128).intl;
   const obj3 = { helpArticle: null };
-  obj3.helpArticle = channelId(9055).getSecureFramesHelpdeskArticle();
+  obj3.helpArticle = channelId(9101).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1128).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

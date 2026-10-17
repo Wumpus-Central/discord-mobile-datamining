@@ -1,29 +1,29 @@
-// === Module 17524: ForYouShowAllRow ===
+// === Module 17583: ForYouShowAllRow ===
 
-// Module 17524 (ForYouShowAllRow)
+// Module 17583 (ForYouShowAllRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import useFontScale from "useFontScale" /* 5449 */;
-import Pressables from "Pressables" /* 6409 */;
-import _modDef7058 from "module_7058" /* 7058 */;
-import ChannelListLayout from "ChannelListLayout" /* 11819 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14991 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 17519 */;
-import ChannelWrapper from "ChannelWrapper" /* 17520 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import useFontScale from "useFontScale" /* 5486 */;
+import Pressables from "Pressables" /* 6462 */;
+import _modDef7111 from "module_7111" /* 7111 */;
+import ChannelListLayout from "ChannelListLayout" /* 11882 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 15060 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 17578 */;
+import ChannelWrapper from "ChannelWrapper" /* 17579 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const Sections = fn(13299).Sections;
+const Sections = fn(13365).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_10 = createStyles.createStyles((layout) => {
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);
@@ -180,7 +180,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
                 cResult[28] = tmp37;
                 tmp34 = tmp37;
               }
-              const obj8 = { style: tmp6.icon, color: tmp6.iconColor.color, source: _modDef7058, size: native.IconSizes.CUSTOM };
+              const obj8 = { style: tmp6.icon, color: tmp6.iconColor.color, source: _modDef7111, size: native.IconSizes.CUSTOM };
               const tmp33 = React5(native.Icon, obj8);
               cResult[22] = tmp6.icon;
               cResult[23] = tmp6.iconColor.color;
@@ -252,7 +252,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForYou
   obj11.children = React5(Text_Text.Text, obj12);
   items1[1] = React5(View, obj11);
   const obj10 = { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children };
-  items1[2] = React5(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7058, size: native.IconSizes.CUSTOM });
+  items1[2] = React5(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7111, size: native.IconSizes.CUSTOM });
   obj9.children = items1;
   obj5.children = obj6.renderChannelWrapper(React6(closure_1_8, obj9), { layout, fontScale, panelVariant });
   return obj4.renderChannelPressableWrapper(React5(Pressables.PressableHighlight, obj5), { layout, panelVariant });
@@ -296,7 +296,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
     }
     if (cResult[6] !== messagesTabLayout) {
       const fn2 = function y(user) {
-        const obj = { user: user.user, guildId: "Array", size: null };
+        const obj = { user: user.user, guildId: "Array", size: -1 };
         const AvatarSizes = native.AvatarSizes;
         obj.size = ChannelListLayout.isLayoutCompact(messagesTabLayout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
         return React5(native.Avatar, obj, user.user.id);
@@ -343,7 +343,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: null };
+        const obj = { user: user.user, guildId: "Array", size: -1 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[13]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

@@ -1,6 +1,6 @@
-// === Module 4840: PremiumSubscription ===
+// === Module 4876: PremiumSubscription ===
 
-// Module 4840 (PremiumSubscription)
+// Module 4876 (PremiumSubscription)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import size from "module_2" /* 2 */;
 

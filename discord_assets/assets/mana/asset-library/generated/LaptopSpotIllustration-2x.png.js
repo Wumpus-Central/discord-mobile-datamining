@@ -1,6 +1,6 @@
-// === Module 7332: ? ===
+// === Module 7383: ? ===
 
-// Module 7332
+// Module 7383
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LaptopSpotIllustration-2x.png.js");

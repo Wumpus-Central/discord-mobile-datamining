@@ -1,7 +1,7 @@
-// === Module 9825: SwipeableFastList ===
+// === Module 9889: SwipeableFastList ===
 
-// Module 9825 (SwipeableFastList)
-import FastListDefault from "FastList" /* 6985 */;
+// Module 9889 (SwipeableFastList)
+import FastListDefault from "FastList" /* 7038 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

@@ -1,9 +1,9 @@
-// === Module 11553: ConjureRemix ===
+// === Module 11612: ConjureRemix ===
 
-// Module 11553 (ConjureRemix)
+// Module 11612 (ConjureRemix)
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10919 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10983 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -45,7 +45,7 @@ let closure_7 = async function _remixConjureProjectInto(arg0) {
             closure_130_3 = undefined;
             const obj6 = { ok: false, message: null };
             const intl2 = util.intl;
-            obj6.message = intl2.string(_modDef3865.Cn8H0Y);
+            obj6.message = intl2.string(_modDef3883.Cn8H0Y);
             closure_130_2 = obj6;
             c4 = 1;
             const obj7 = { name: null, guild_id: null, install_scope: null };
@@ -133,7 +133,7 @@ let closure_7 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10898);
+const ConjureConnectionStore = fn(10962);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let c6 = " (Remix)";
 const size = fn(2);

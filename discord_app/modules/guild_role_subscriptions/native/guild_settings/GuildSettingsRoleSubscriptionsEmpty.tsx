@@ -1,14 +1,14 @@
-// === Module 18836: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 18898: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 18836 (GuildSettingsRoleSubscriptionsEmpty)
+// Module 18898 (GuildSettingsRoleSubscriptionsEmpty)
 import c from "c" /* 576 */;
 import useNavigation from "useNavigation" /* 1505 */;
-import useGuildApplicationDefault from "useGuildApplication" /* 18837 */;
+import useGuildApplicationDefault from "useGuildApplication" /* 18899 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
-const PlaceholderDefault = tmp3(18838);
-const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(18839);
+const PlaceholderDefault = tmp3(18900);
+const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(18901);
 require = fn;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);

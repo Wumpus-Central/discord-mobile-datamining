@@ -1,22 +1,22 @@
-// === Module 13919: MediaViewerThumbnails ===
+// === Module 13987: MediaViewerThumbnails ===
 
-// Module 13919 (MediaViewerThumbnails)
+// Module 13987 (MediaViewerThumbnails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import useToken from "useToken" /* 4877 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4910 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13920 */;
+import useToken from "useToken" /* 4913 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4946 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = View(4909);
-const VisualEffectViewDefault = View(5428);
+const ReanimatedRexportDefault = View(4945);
+const VisualEffectViewDefault = View(5465);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8646);
+const Constants = fn(8692);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -92,7 +92,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Obscur
   }
   return tmp10Result;
 });
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
 let closure_12 = noop.memo(function MediaThumbnail(source) {
   source = source.source;

@@ -1,13 +1,13 @@
-// === Module 14285: InAppReportsSettingsUpsellsElement ===
+// === Module 14353: InAppReportsSettingsUpsellsElement ===
 
-// Module 14285 (InAppReportsSettingsUpsellsElement)
+// Module 14353 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5169 */;
-import useMountEffectDefault from "useMountEffect" /* 5459 */;
-import SettingsIcon from "SettingsIcon" /* 7317 */;
-import openUserSettings from "openUserSettings" /* 7319 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7946 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14279 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
+import useMountEffectDefault from "useMountEffect" /* 5496 */;
+import SettingsIcon from "SettingsIcon" /* 7368 */;
+import openUserSettings from "openUserSettings" /* 7370 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7992 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14347 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -18,7 +18,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, settingsContainer: null, goToSettingsText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
@@ -42,14 +42,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   } else {
     tmp6 = cResult[1];
   }
-  trackSettingsUpsellsAction(5459)(tmp6);
+  trackSettingsUpsellsAction(5496)(tmp6);
   if (cResult[2] === onButtonClick) {
     if (cResult[3] === trackSettingsUpsellsAction) {
       let tmp9 = cResult[4];
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_9(onButtonClick(7317).SettingsIcon, {});
+      const tmp13 = closure_9(onButtonClick(7368).SettingsIcon, {});
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -68,7 +68,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
       }
     }
     const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-    const tmp16 = closure_9(tmp7(14279), obj2);
+    const tmp16 = closure_9(tmp7(14347), obj2);
     cResult[6] = description;
     cResult[7] = disabledTitle;
     cResult[8] = tmp5;

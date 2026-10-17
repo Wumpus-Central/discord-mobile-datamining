@@ -1,11 +1,11 @@
-// === Module 8143: ApplicationCommandStore ===
+// === Module 8189: ApplicationCommandStore ===
 
-// Module 8143 (ApplicationCommandStore)
+// Module 8189 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7463 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7509 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6280 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6339 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 
 require = fn;
@@ -134,7 +134,7 @@ function handleUpdateOptionStates(channelId) {
           }
         }
       } else {
-        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "r", length: "IconComponent" };
+        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "application", length: "hideActionSheet" };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;
         }

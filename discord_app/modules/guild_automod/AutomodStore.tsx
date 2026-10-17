@@ -1,8 +1,8 @@
-// === Module 18634: AutomodStore ===
+// === Module 18696: AutomodStore ===
 
-// Module 18634 (AutomodStore)
-import _mod4792 from "module_4792" /* 4792 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 18635 */;
+// Module 18696 (AutomodStore)
+import _mod4828 from "module_4828" /* 4828 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 18697 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12516).AutomodTriggerType;
+const AutomodTriggerType = fn(12581).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1269);
@@ -217,7 +217,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4792").shallow), 2);
+  }, require("module_4828").shallow), 2);
   first = tmp3[0];
   asyncGeneratorStep = tmp5;
   const items = [tmp2[0], ];
@@ -377,7 +377,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4792").shallow), 2);
+  }, require("module_4828").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   let items = [tmp[0], ];
@@ -510,7 +510,7 @@ function useSyncAutomodRules(arg0) {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _mod4792.shallow), 2);
+  }, _mod4828.shallow), 2);
   const first = tmp2[0];
   closure_3 = tmp4;
   const items = [tmp[0], ];
@@ -620,7 +620,7 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() 
   } else {
     tmp4 = cResult[1];
   }
-  return withEqualityFn(tmp4, require("module_4792").shallow);
+  return withEqualityFn(tmp4, require("module_4828").shallow);
 }) : (function useAutomodRulesList(arg0) {
   _require = arg0;
   return withEqualityFn((updateRule) => {
@@ -633,5 +633,5 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() 
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_4792").shallow);
+  }, require("module_4828").shallow);
 });

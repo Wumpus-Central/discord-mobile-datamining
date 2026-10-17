@@ -1,6 +1,6 @@
-// === Module 18627: guildSpaceWidgetLayout ===
+// === Module 18689: guildSpaceWidgetLayout ===
 
-// Module 18627 (guildSpaceWidgetLayout)
+// Module 18689 (guildSpaceWidgetLayout)
 import size from "module_2" /* 2 */;
 
 function byOrder(position, position2) {

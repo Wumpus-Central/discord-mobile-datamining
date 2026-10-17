@@ -1,6 +1,6 @@
-// === Module 17453: YouAccountActionSheet ===
+// === Module 17512: YouAccountActionSheet ===
 
-// Module 17453 (YouAccountActionSheet)
+// Module 17512 (YouAccountActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,56 +8,56 @@ import native from "native" /* 1202 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import useToken from "useToken" /* 4877 */;
-import UserUtilsDefault from "UserUtils" /* 5021 */;
-import FastImageDefault from "FastImage" /* 5091 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5323 */;
-import Stack_Stack from "Stack/Stack" /* 5440 */;
-import Card from "Card" /* 6406 */;
-import Pressables from "Pressables" /* 6409 */;
-import TableRowIcon from "TableRowIcon" /* 6412 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6427 */;
-import TableRadioRow from "TableRadioRow" /* 6486 */;
-import TableRadioGroup from "TableRadioGroup" /* 6487 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6888 */;
-import _modDef7002 from "module_7002" /* 7002 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7064 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7102 */;
-import ActionSheet from "ActionSheet" /* 7122 */;
-import getChannelA11yLabel from "getChannelA11yLabel" /* 8877 */;
-import ReactionIcon from "ReactionIcon" /* 9192 */;
-import useGameMentionsAsPlainText from "useGameMentionsAsPlainText" /* 10479 */;
-import ActivityEmojiDefault from "ActivityEmoji" /* 10496 */;
-import userSettingToActivity from "userSettingToActivity" /* 10758 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 10769 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13010 */;
-import FocusModeUtils from "FocusModeUtils" /* 13448 */;
-import setUserStatusDefault from "setUserStatus" /* 13449 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 13555 */;
-import _modDef15116 from "module_15116" /* 15116 */;
-import _modDef15117 from "module_15117" /* 15117 */;
-import _modDef15118 from "module_15118" /* 15118 */;
-import _modDef15119 from "module_15119" /* 15119 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 16257 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16259 */;
-import ThemeGrayIcon from "ThemeGrayIcon" /* 17454 */;
-import openManageAccountsModalDefault from "openManageAccountsModal" /* 17456 */;
+import useToken from "useToken" /* 4913 */;
+import UserUtilsDefault from "UserUtils" /* 5057 */;
+import FastImageDefault from "FastImage" /* 5128 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5360 */;
+import Stack_Stack from "Stack/Stack" /* 5477 */;
+import Card from "Card" /* 6459 */;
+import Pressables from "Pressables" /* 6462 */;
+import TableRowIcon from "TableRowIcon" /* 6465 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6480 */;
+import TableRadioRow from "TableRadioRow" /* 6539 */;
+import TableRadioGroup from "TableRadioGroup" /* 6540 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6941 */;
+import _modDef7055 from "module_7055" /* 7055 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
+import ActionSheet from "ActionSheet" /* 7175 */;
+import getChannelA11yLabel from "getChannelA11yLabel" /* 8923 */;
+import ReactionIcon from "ReactionIcon" /* 9252 */;
+import useGameMentionsAsPlainText from "useGameMentionsAsPlainText" /* 10542 */;
+import ActivityEmojiDefault from "ActivityEmoji" /* 10559 */;
+import userSettingToActivity from "userSettingToActivity" /* 10821 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 10832 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13075 */;
+import FocusModeUtils from "FocusModeUtils" /* 13514 */;
+import setUserStatusDefault from "setUserStatus" /* 13515 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 13621 */;
+import _modDef15185 from "module_15185" /* 15185 */;
+import _modDef15186 from "module_15186" /* 15186 */;
+import _modDef15187 from "module_15187" /* 15187 */;
+import _modDef15188 from "module_15188" /* 15188 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 16323 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 16325 */;
+import ThemeGrayIcon from "ThemeGrayIcon" /* 17513 */;
+import openManageAccountsModalDefault from "openManageAccountsModal" /* 17515 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 13006 */;
+import MultiAccountStore from "MultiAccountStore" /* 13071 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import UserRecord from "UserRecord" /* 1406 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7628 */;
-import StreamerModeStore from "StreamerModeStore" /* 5022 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7674 */;
+import StreamerModeStore from "StreamerModeStore" /* 5058 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const util = currentLocale(1128);
-const TableRowGroup = currentLocale(6489);
-const TableSwitchRow = currentLocale(7119);
-const BellSlashIcon = currentLocale(10591);
-const DevToolsContentDefault = tmp9(16755);
-const YouSwitchClientsRadioGroupDefault = tmp9(17462);
+const TableRowGroup = currentLocale(6542);
+const TableSwitchRow = currentLocale(7172);
+const BellSlashIcon = currentLocale(10654);
+const DevToolsContentDefault = tmp9(16819);
+const YouSwitchClientsRadioGroupDefault = tmp9(17521);
 require = fn;
 function FocusModeSetting() {
   let currentLocale = require;
@@ -80,11 +80,11 @@ function FocusModeSetting() {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
-              closure_1_0(13448).setFocusMode(quiet_mode_enabled, arg1);
-              const obj = closure_1_0(13448);
-              closure_1_1(5118).hideActionSheet();
-              const obj2 = closure_1_1(5118);
-              const result = closure_1_0(17451).showYouAccountActionSheet();
+              closure_1_0(13514).setFocusMode(quiet_mode_enabled, arg1);
+              const obj = closure_1_0(13514);
+              closure_1_1(5155).hideActionSheet();
+              const obj2 = closure_1_1(5155);
+              const result = closure_1_0(17510).showYouAccountActionSheet();
             }
         };
         require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[50], paths.paths), "FocusModeOptionsActionSheet", obj3);
@@ -119,13 +119,13 @@ function FocusModeSetting() {
   }
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13006).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(13071).MultiAccountTokenStatus;
 const Constants = fn(1087);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
-let closure_17 = fn(13007).MultiAccountSwitchLocation;
+let closure_17 = fn(13072).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj = { account: { position: "relative" }, manage: { position: "absolute", right: 0, zIndex: 100 }, leadingIcon: { width: 24, height: 24, margin: 4 }, trailingIcon: null, customStatusRow: null, customStatusEditButton: null, customStatusRemoveButton: null, customStatusText: null, sectionHeading: null };
 let size = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
 obj.trailingIcon = size;
@@ -164,22 +164,22 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSta
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { icon: null, value: null };
-    const obj3 = { source: _modDef15119, variant: "text-status-online" };
+    const obj3 = { source: _modDef15188, variant: "text-status-online" };
     obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj3);
     obj2.value = constants3.ONLINE;
     const items = [obj2, , , ];
     const obj4 = { icon: null, value: null };
-    const obj5 = { source: _modDef15116, variant: "text-status-idle" };
+    const obj5 = { source: _modDef15185, variant: "text-status-idle" };
     obj4.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj5);
     obj4.value = constants3.IDLE;
     items[1] = obj4;
     const obj6 = { icon: null, value: null };
-    const obj7 = { source: _modDef15117, variant: "text-status-dnd" };
+    const obj7 = { source: _modDef15186, variant: "text-status-dnd" };
     obj6.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj7);
     obj6.value = constants3.DND;
     items[2] = obj6;
     const obj8 = { icon: null, value: null };
-    const obj9 = { source: _modDef15118, variant: "text-status-offline" };
+    const obj9 = { source: _modDef15187, variant: "text-status-offline" };
     obj8.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj9);
     obj8.value = constants3.INVISIBLE;
     items[3] = obj8;
@@ -191,21 +191,21 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSta
   return first;
 }) : (function useStatusRadioRowProps() {
   return noop.useMemo(() => {
-    const obj = { icon: closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15119, variant: "text-status-online" }), value: constants.ONLINE };
+    const obj = { icon: closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15188, variant: "text-status-online" }), value: constants.ONLINE };
     const items = [obj, , , ];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: _modDef15119, variant: "text-status-online" };
-    obj3.icon = closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15116, variant: "text-status-idle" });
+    const obj2 = { source: _modDef15188, variant: "text-status-online" };
+    obj3.icon = closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15185, variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: _modDef15116, variant: "text-status-idle" };
-    obj5.icon = closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15117, variant: "text-status-dnd" });
+    const obj4 = { source: _modDef15185, variant: "text-status-idle" };
+    obj5.icon = closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15186, variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: _modDef15117, variant: "text-status-dnd" };
-    obj7.icon = closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15118, variant: "text-status-offline" });
+    const obj6 = { source: _modDef15186, variant: "text-status-dnd" };
+    obj7.icon = closure_1_18(require("TableRowIcon").TableRowIcon, { source: _modDef15187, variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
@@ -220,7 +220,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouSta
   const StatusExpiresAtSetting = setting(2044).StatusExpiresAtSetting;
   const setting1 = StatusExpiresAtSetting.useSetting();
   let obj = setting(576);
-  const manaTypeConsolidationExperiment = setting(6888).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
+  const manaTypeConsolidationExperiment = setting(6941).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
   if (cResult[0] !== setting) {
     const fn = function e(nextStatus) {
       setUserStatusDefault({ prevStatus: setting, nextStatus });
@@ -273,7 +273,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouSta
           }
         }
         const obj5 = { title: tmp10, accessibilityLabel: tmp11, onChange: tmp7, defaultValue: setting, hasIcons: true, children: cResult[6] };
-        const tmp18 = closure_18(tmp(6487).TableRadioGroup, obj5);
+        const tmp18 = closure_18(tmp(6540).TableRadioGroup, obj5);
         cResult[10] = tmp7;
         cResult[11] = setting;
         cResult[12] = tmp10;
@@ -319,14 +319,14 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouSta
   cResult[8] = setting1;
   cResult[9] = fn2;
   tmp13 = fn2;
-  const obj2 = setting(6888);
+  const obj2 = setting(6941);
 }) : (function YouStatusRadioGroup() {
   const StatusSetting = setting(2044).StatusSetting;
   setting = StatusSetting.useSetting();
   const StatusExpiresAtSetting = setting(2044).StatusExpiresAtSetting;
   closure_1 = StatusExpiresAtSetting.useSetting();
   const arr = closure_22();
-  const manaTypeConsolidationExperiment = setting(6888).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
+  const manaTypeConsolidationExperiment = setting(6941).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
   const items = [setting];
   const callback = noop.useCallback((nextStatus) => {
     setUserStatusDefault({ prevStatus: setting, nextStatus });
@@ -367,7 +367,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouSta
     obj.subLabel = formatToPlainStringResult;
     return collapsedCategories(TableRadioRow.TableRadioRow, obj, value.value);
   });
-  const tmp5Result = closure_18(setting(6487).TableRadioGroup, obj2);
+  const tmp5Result = closure_18(setting(6540).TableRadioGroup, obj2);
   let tmp9 = tmp5Result;
   if (manaTypeConsolidationExperiment) {
     let obj3 = { children: null };
@@ -598,7 +598,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAcc
         str2 = "never";
       }
       const obj3 = { label: UserUtilsDefault.getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-      obj3.icon = collapsedCategories(native.Avatar, { user: obj, guildId: "Array", size: native.AvatarSizes.REFRESH_MEDIUM_32 });
+      const obj4 = { user: obj, guildId: "Array", size: native.AvatarSizes.REFRESH_MEDIUM_32 };
+      obj3.icon = collapsedCategories(native.Avatar, obj4);
       return obj3;
     };
     cResult[5] = stateFromStores;
@@ -632,8 +633,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAcc
       str2 = "never";
     }
     const obj3 = { label: stateFromStores(dependencyMap[38]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    const obj2 = stateFromStores(dependencyMap[38]);
-    obj3.icon = closure_2_18(closure_0(dependencyMap[39]).Avatar, { user: obj, guildId: "Array", size: closure_0(dependencyMap[39]).AvatarSizes.REFRESH_MEDIUM_32 });
+    const obj4 = { user: obj, guildId: "Array", size: closure_0(dependencyMap[39]).AvatarSizes.REFRESH_MEDIUM_32 };
+    obj3.icon = closure_2_18(closure_0(dependencyMap[39]).Avatar, obj4);
     return obj3;
   }), items1);
 });
@@ -656,10 +657,10 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(17006).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(17066).useMultiAccountUsers().multiAccountUsers;
   const arr2 = closure_25(multiAccountUsers);
-  const tmpResult3 = stateFromStores(17006);
-  const manaTypeConsolidationExperiment = stateFromStores(6888).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
+  const tmpResult3 = stateFromStores(17066);
+  const manaTypeConsolidationExperiment = stateFromStores(6941).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -684,7 +685,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
       const account = tmp4.account;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const fn3 = function f() {
-          return multiAccountUsers(17456)();
+          return multiAccountUsers(17515)();
         };
         cResult[6] = fn3;
         let tmp14 = fn3;
@@ -697,8 +698,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
         let obj3 = { variant: "text-sm/semibold", color: "text-brand", children: null };
         const intl2 = tmp(1128).intl;
         obj3.children = intl2.string(tmp(1128).t.HxrBOZ);
-        obj2.children = closure_18(tmp(5150).Text, obj3);
-        const tmp17 = closure_18(tmp(6409).PressableOpacity, obj2);
+        obj2.children = closure_18(tmp(5187).Text, obj3);
+        const tmp17 = closure_18(tmp(6462).PressableOpacity, obj2);
         cResult[7] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -760,7 +761,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
           }
         }
         const obj6 = { title: tmp26, accessibilityLabel: tmp27, onChange: tmp11, defaultValue: tmp28, hasIcons: true, children: tmp29 };
-        const tmp35 = closure_18(tmp(6487).TableRadioGroup, obj6);
+        const tmp35 = closure_18(tmp(6540).TableRadioGroup, obj6);
         cResult[15] = stateFromStores.id;
         cResult[16] = tmp11;
         cResult[17] = tmp27;
@@ -804,16 +805,16 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
   cResult[3] = multiAccountUsers;
   cResult[4] = fn2;
   tmp11 = fn2;
-  const tmpResult4 = stateFromStores(6888);
+  const tmpResult4 = stateFromStores(6941);
 }) : (function YouAccountRadioGroup() {
   const tmp = closure_20();
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(17006).useMultiAccountUsers().multiAccountUsers;
-  let obj2 = stateFromStores(17006);
+  const multiAccountUsers = stateFromStores(17066).useMultiAccountUsers().multiAccountUsers;
+  let obj2 = stateFromStores(17066);
   const arr2 = closure_25(multiAccountUsers);
-  const manaTypeConsolidationExperiment = stateFromStores(6888).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
+  const manaTypeConsolidationExperiment = stateFromStores(6941).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
   const items1 = [multiAccountUsers, ];
   let id;
   if (stateFromStores != null) {
@@ -829,15 +830,15 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
     let obj5 = { style: tmp.manage, children: null };
     const obj6 = {
       onPress() {
-          return multiAccountUsers(17456)();
+          return multiAccountUsers(17515)();
         },
       children: null
     };
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp2(1128).intl;
     obj7.children = intl2.string(tmp2(1128).t.HxrBOZ);
-    obj6.children = closure_18(tmp2(5150).Text, obj7);
-    obj5.children = closure_18(tmp2(6409).PressableOpacity, obj6);
+    obj6.children = closure_18(tmp2(5187).Text, obj7);
+    obj5.children = closure_18(tmp2(6462).PressableOpacity, obj6);
     const items2 = [closure_18(View, obj5), , ];
     let tmp15Result = manaTypeConsolidationExperiment;
     if (manaTypeConsolidationExperiment) {
@@ -859,13 +860,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAcc
     obj9.defaultValue = stateFromStores.id;
     obj9.children = arr2.map((value) => {
       const merged = Object.assign(value);
-      return closure_1_18(stateFromStores(6486).TableRadioRow, {}, value.value);
+      return closure_1_18(stateFromStores(6539).TableRadioRow, {}, value.value);
     });
-    items2[2] = closure_18(tmp2(6487).TableRadioGroup, obj9);
+    items2[2] = closure_18(tmp2(6540).TableRadioGroup, obj9);
     obj4.children = items2;
     return closure_19(View, obj4);
   }
-  let obj3 = stateFromStores(6888);
+  let obj3 = stateFromStores(6941);
 });
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomStatus() {
@@ -990,7 +991,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
                                 const intl4 = util.intl;
                                 obj6.accessibilityLabel = intl4.string(util.t.wfYTHe);
                                 obj6.style = tmp4.customStatusRemoveButton;
-                                const obj7 = { style: tmp4.trailingIcon, source: _modDef7002 };
+                                const obj7 = { style: tmp4.trailingIcon, source: _modDef7055 };
                                 obj6.children = collapsedCategories(FastImageDefault, obj7);
                                 tmp38 = collapsedCategories(Pressables.PressableOpacity, obj6);
                                 const tmp6Result = FastImageDefault;
@@ -1174,7 +1175,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
     const intl4 = util.intl;
     obj9.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj9.style = tmp.customStatusRemoveButton;
-    const obj10 = { style: tmp.trailingIcon, source: _modDef7002 };
+    const obj10 = { style: tmp.trailingIcon, source: _modDef7055 };
     obj9.children = collapsedCategories(FastImageDefault, obj10);
     tmp14Result2 = collapsedCategories(Pressables.PressableOpacity, obj9);
     const tmp5Result = FastImageDefault;

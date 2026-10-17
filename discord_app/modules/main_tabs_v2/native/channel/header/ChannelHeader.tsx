@@ -1,16 +1,16 @@
-// === Module 13718: ChannelHeader ===
+// === Module 13786: ChannelHeader ===
 
-// Module 13718 (ChannelHeader)
+// Module 13786 (ChannelHeader)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RootNavigationRef from "RootNavigationRef" /* 5036 */;
-import ChatInputUtils from "ChatInputUtils" /* 5044 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11001 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13719 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13720 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13721 */;
-import ForumChannelHeaderDefault from "ForumChannelHeader" /* 13729 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13731 */;
+import RootNavigationRef from "RootNavigationRef" /* 5073 */;
+import ChatInputUtils from "ChatInputUtils" /* 5081 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11063 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13787 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13788 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13789 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 13797 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13799 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
   const tmp4 = undefined === pressable || pressable;
   const stateFromStores = channelId(573).useStateFromStores(first, tmp9);
   const tmpResult = channelId(573);
-  const isChannelContentGated = channelId(6143).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6180).useIsChannelContentGated(stateFromStores);
   let tmp11 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp11 = tmp4;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
       }
     }
   }
-  const tmpResult2 = channelId(6143);
+  const tmpResult2 = channelId(6180);
 }) : (function ChannelHeader(channelId) {
   channelId = channelId.channelId;
   ({ screenIndex, isNavigationScreen, pressable } = channelId);
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
   const items = [ChannelStore];
   const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(573);
-  const isChannelContentGated = channelId(6143).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6180).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;

@@ -1,8 +1,8 @@
-// === Module 7493: CollectiblesStoreListingRecord ===
+// === Module 7539: CollectiblesStoreListingRecord ===
 
-// Module 7493 (CollectiblesStoreListingRecord)
+// Module 7539 (CollectiblesStoreListingRecord)
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import tinycolorDefault from "tinycolor" /* 7494 */;
+import tinycolorDefault from "tinycolor" /* 7540 */;
 import Record from "Record" /* 1407 */;
 
 require = fn;

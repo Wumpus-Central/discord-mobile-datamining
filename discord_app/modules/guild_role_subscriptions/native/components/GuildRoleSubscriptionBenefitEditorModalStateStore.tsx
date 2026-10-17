@@ -1,15 +1,15 @@
-// === Module 18908: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 18970: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 18908 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 18970 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import _mod4792 from "module_4792" /* 4792 */;
+import _mod4828 from "module_4828" /* 4828 */;
 import identity from "module_1269" /* 1269 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "unicodeVersion", emojiName: "kind", description: "transform", refId: "channel" });
+let closure_2 = Object.freeze({ name: "", emojiId: "gap", emojiName: "w", description: "ix", refId: "key" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -51,13 +51,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDescrip
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4792.shallow);
+  return closure_3(first, _mod4828.shallow);
 }) : (function useDescriptionState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod4792.shallow);
+  }, _mod4828.shallow);
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiIdState() {
@@ -73,13 +73,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiId
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4792.shallow);
+  return closure_3(first, _mod4828.shallow);
 }) : (function useEmojiIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod4792.shallow);
+  }, _mod4828.shallow);
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiNameState() {
@@ -95,13 +95,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiNa
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4792.shallow);
+  return closure_3(first, _mod4828.shallow);
 }) : (function useEmojiNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod4792.shallow);
+  }, _mod4828.shallow);
 });
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNameState() {
@@ -117,13 +117,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNameSta
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4792.shallow);
+  return closure_3(first, _mod4828.shallow);
 }) : (function useNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod4792.shallow);
+  }, _mod4828.shallow);
 });
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
 
@@ -162,11 +162,11 @@ export const useRefIdState = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4792.shallow);
+  return closure_3(first, _mod4828.shallow);
 }) : (function useRefIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod4792.shallow);
+  }, _mod4828.shallow);
 });

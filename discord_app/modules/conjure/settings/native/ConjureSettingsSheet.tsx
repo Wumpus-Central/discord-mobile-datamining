@@ -1,32 +1,34 @@
-// === Module 11571: ConjureSettingsSheet ===
+// === Module 11630: ConjureSettingsSheet ===
 
-// Module 11571 (ConjureSettingsSheet)
+// Module 11630 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6889 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10898 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10911 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10962 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10975 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6293 */;
 
-const useConjureProjectSettingsFormDefault = tmp5(11572);
+const useConjureProjectSettingsFormDefault = tmp5(11631);
 const require = fn;
 const View = fn(17).View;
-const isProjectOwner = fn(10897).isProjectOwner;
+let ConjureProjectStore = fn(6293);
+({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
+let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
-let obj = { project: _modDef3865.W0eQfN, app: _modDef3865.lFaJYF, secrets: _modDef3865.vDpCPU, model: _modDef3865.Rs3qc9, experimental: _modDef3865["0Pe9uw"] };
-const createStyles = fn(5154);
-let closure_15 = createStyles.createStyles((paddingBottom) => {
+let obj = { project: _modDef3883.W0eQfN, app: _modDef3883.lFaJYF, secrets: _modDef3883.vDpCPU, model: _modDef3883.Rs3qc9, experimental: _modDef3883["0Pe9uw"] };
+const createStyles = fn(5191);
+let closure_16 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
 });
 fn(558);
 const ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsTabStrip(tabs) {
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsTabStrip(tabs) {
   const cResult = tabs(576).c(18);
   tabs = tabs.tabs;
   ({ selected, onSelect } = tabs);
@@ -48,7 +50,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
         constructor(arg0) {
           obj = { id: tabs, label: null, page: null };
           intl = tabs(closure_2[18]).intl;
-          obj.label = intl.string(closure_1_14[tabs]);
+          obj.label = intl.string(closure_1_15[tabs]);
           return obj;
         }
       }
@@ -58,7 +60,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
         constructor(arg0) {
           obj = { id: tabs, label: null, page: null };
           intl = tabs(closure_2[18]).intl;
-          obj.label = intl.string(closure_1_14[tabs]);
+          obj.label = intl.string(closure_1_15[tabs]);
           return obj;
         }
       }
@@ -71,7 +73,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
       constructor(arg0) {
         obj = { id: tabs, label: null, page: null };
         intl = tabs(closure_2[18]).intl;
-        obj.label = intl.string(closure_1_14[tabs]);
+        obj.label = intl.string(closure_1_15[tabs]);
         return obj;
       }
     }
@@ -80,7 +82,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
         constructor(arg0) {
           obj = { id: tabs, label: null, page: null };
           intl = tabs(closure_2[18]).intl;
-          obj.label = intl.string(closure_1_14[tabs]);
+          obj.label = intl.string(closure_1_15[tabs]);
           return obj;
         }
       }
@@ -91,7 +93,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
           constructor(arg0) {
             obj = { id: tabs, label: null, page: null };
             intl = tabs(closure_2[18]).intl;
-            obj.label = intl.string(closure_1_14[tabs]);
+            obj.label = intl.string(closure_1_15[tabs]);
             return obj;
           }
         }
@@ -100,7 +102,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
             constructor(arg0) {
               obj = { id: tabs, label: null, page: null };
               intl = tabs(closure_2[18]).intl;
-              obj.label = intl.string(closure_1_14[tabs]);
+              obj.label = intl.string(closure_1_15[tabs]);
               return obj;
             }
           }
@@ -156,11 +158,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const memo = noop.useMemo(() => tabs.map((id) => {
     obj = { id, label: null, page: null };
     const intl = tabs(_undefined[18]).intl;
-    obj.label = intl.string(closure_1_14[id]);
+    obj.label = intl.string(closure_1_15[id]);
     return obj;
   }), items);
   const tmp = _slicedToArray(noop.useState(0), 2);
-  obj = tabs(8759);
+  obj = tabs(8805);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -174,19 +176,19 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp8Result = closure_11(tmp5(11597).Tabs, obj4);
+    let tmp8Result = closure_12(tmp5(11659).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp8Result = closure_11(tmp5(9005).SegmentedControl, obj5);
+    tmp8Result = closure_12(tmp5(9051).SegmentedControl, obj5);
   }
   obj3.children = tmp8Result;
-  return closure_11(View, obj3);
+  return closure_12(View, obj3);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/native/ConjureSettingsSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureSettingsSheet(projectId) {
-  const cResult = projectId(576).c(75);
+  const cResult = projectId(576).c(86);
   projectId = projectId.projectId;
   ({ initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -196,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else {
     first = cResult[0];
   }
-  closure_15(useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom);
+  closure_16(useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ConjureProjectStore];
     cResult[1] = items;
@@ -205,27 +207,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     tmp7 = cResult[1];
   }
   if (cResult[2] !== projectId) {
-    const fn = function w() {
-      return ConjureProjectStore.getProject(projectId);
-    };
+    class K {
+      constructor() {
+        return closure_11.getProject(closure_0);
+      }
+    }
     const items1 = [projectId];
     cResult[2] = projectId;
-    cResult[3] = fn;
+    cResult[3] = K;
     cResult[4] = items1;
     let tmp10 = items1;
-    let tmp9 = fn;
   } else {
-    tmp9 = cResult[3];
+    class K {
+      constructor() {
+        return closure_11.getProject(closure_0);
+      }
+    }
     tmp10 = cResult[4];
   }
   obj = projectId(576);
-  const stateFromStores = projectId(504).useStateFromStores(tmp7, tmp9, tmp10);
+  const stateFromStores = projectId(504).useStateFromStores(tmp7, K, tmp10);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class K {
+      constructor() {
+        return closure_11.getProject(closure_0);
+      }
+    }
     const items2 = [ConjureModelSettingsStore];
     cResult[5] = items2;
-    let tmp12 = items2;
+    const tmp12 = items2;
   } else {
-    tmp12 = cResult[5];
+    class K {
+      constructor() {
+        return closure_11.getProject(closure_0);
+      }
+    }
   }
   if (cResult[6] !== projectId) {
     class J {
@@ -242,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     cResult[6] = projectId;
     cResult[7] = J;
     cResult[8] = items3;
-    let tmp15 = items3;
+    let tmp14 = items3;
   } else {
     class J {
       constructor() {
@@ -254,10 +270,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         return null != tierSettings;
       }
     }
-    tmp15 = cResult[8];
+    tmp14 = cResult[8];
   }
   const tmpResult = projectId(504);
-  const stateFromStores1 = projectId(504).useStateFromStores(tmp12, J, tmp15);
+  const stateFromStores1 = projectId(504).useStateFromStores(tmp12, J, tmp14);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class J {
       constructor() {
@@ -271,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     const items4 = [ConjureConnectionStore];
     cResult[9] = items4;
-    const tmp17 = items4;
+    const tmp16 = items4;
   } else {
     class J {
       constructor() {
@@ -294,35 +310,61 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     cResult[10] = projectId;
     cResult[11] = items5;
     cResult[12] = U;
-    let tmp19 = U;
-    const tmp18 = items5;
+    let tmp18 = U;
+    const tmp17 = items5;
   } else {
     class U {
       constructor() {
         return "open" === closure_7.getConnState(closure_0);
       }
     }
-    tmp19 = cResult[12];
+    tmp18 = cResult[12];
   }
   const tmpResult3 = projectId(504);
-  const stateFromStores2 = projectId(504).useStateFromStores(tmp17, tmp19, tmp18);
+  const stateFromStores2 = projectId(504).useStateFromStores(tmp16, tmp18, tmp17);
   if (cResult[13] !== stateFromStores) {
     class U {
       constructor() {
         return "open" === closure_7.getConnState(closure_0);
       }
     }
-    let tmp22 = null != stateFromStores;
-    if (tmp22) {
+    let tmp21 = null != stateFromStores;
+    if (tmp21) {
       class U {
         constructor() {
           return "open" === closure_7.getConnState(closure_0);
         }
       }
-      tmp22 = isProjectOwner(stateFromStores);
+      tmp21 = closure_10(stateFromStores);
     }
     cResult[13] = stateFromStores;
-    cResult[14] = tmp22;
+    cResult[14] = tmp21;
+    const tmp20 = tmp21;
+  } else {
+    class U {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+  }
+  importDefault = tmp20;
+  if (cResult[15] !== stateFromStores) {
+    class U {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+    let tmp23 = null != stateFromStores;
+    if (tmp23) {
+      class U {
+        constructor() {
+          return "open" === closure_7.getConnState(closure_0);
+        }
+      }
+      tmp23 = closure_9(stateFromStores);
+    }
+    cResult[15] = stateFromStores;
+    cResult[16] = tmp23;
   } else {
     class U {
       constructor() {
@@ -346,20 +388,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
   }
   const tmp5Result = useConjureProjectSettingsFormDefault;
-  importDefault = useConjureProjectSettingsFormDefault(projectId, undefined);
-  if (cResult[15] === isPreview) {
+  dependencyMap = useConjureProjectSettingsFormDefault(projectId, undefined);
+  if (cResult[17] === isPreview) {
     class U {
       constructor() {
         return "open" === closure_7.getConnState(closure_0);
       }
     }
   }
-  cResult[15] = isPreview;
-  cResult[16] = note;
-  cResult[17] = notifyAgent;
-  cResult[18] = projectId;
-  cResult[19] = scopeKeys;
-  cResult[20] = { projectId, scopeKeys, note, notifyAgent, isPreview };
+  cResult[17] = isPreview;
+  cResult[18] = note;
+  cResult[19] = notifyAgent;
+  cResult[20] = projectId;
+  cResult[21] = scopeKeys;
+  cResult[22] = { projectId, scopeKeys, note, notifyAgent, isPreview };
   let obj3 = { projectId, scopeKeys, note, notifyAgent, isPreview };
   const tmp5ResultResult = useConjureProjectSettingsFormDefault(projectId, undefined);
 }) : (function ConjureSettingsSheet(projectId) {
@@ -368,21 +410,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   dependencyMap = undefined;
   asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
+  noop = undefined;
   let isScoped;
   let loaded;
-  closure_7 = undefined;
+  closure_8 = undefined;
   let memo;
-  closure_9 = undefined;
+  closure_10 = undefined;
   let found;
-  closure_11 = undefined;
+  let saving;
   let canSave;
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
-  const tmp3 = closure_15(stateFromStores1(6889)({ includeKeyboardHeight: true }).insets.bottom);
-  let items = [closure_9];
+  const tmp3 = closure_16(stateFromStores1(6942)({ includeKeyboardHeight: true }).insets.bottom);
+  let items = [found];
   const items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
   obj = projectId(504);
-  const items2 = [memo];
+  const items2 = [closure_8];
   const items3 = [projectId];
   stateFromStores1 = projectId(504).useStateFromStores(items2, () => {
     const modelSettings = ConjureModelSettingsStore.getModelSettings(projectId);
@@ -393,14 +436,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     return null != tierSettings;
   }, items3);
   let obj2 = projectId(504);
-  const items4 = [closure_7];
+  const items4 = [loaded];
   const items5 = [projectId];
   let tmp8 = null != stateFromStores;
   const stateFromStores2 = projectId(504).useStateFromStores(items4, () => "open" === ConjureConnectionStore.getConnState(projectId), items5);
   if (tmp8) {
-    tmp8 = found(stateFromStores);
+    tmp8 = closure_10(stateFromStores);
   }
   dependencyMap = tmp8;
+  let tmp10 = null != stateFromStores;
+  if (tmp10) {
+    tmp10 = memo(stateFromStores);
+  }
+  asyncGeneratorStep = tmp10;
   let guild_id;
   let obj3 = projectId(504);
   if (stateFromStores != null) {
@@ -409,27 +457,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = stateFromStores1(11572)(projectId, guild_id);
-  asyncGeneratorStep = tmpResultResult;
-  const tmp13 = stateFromStores1(11585)({ projectId, scopeKeys, note, notifyAgent, isPreview });
-  _slicedToArray = tmp13;
-  isScoped = tmp13.isScoped;
-  loaded = tmp13.loaded;
+  const tmpResultResult = stateFromStores1(11631)(projectId, guild_id);
+  _slicedToArray = tmpResultResult;
+  const tmp15 = stateFromStores1(11644)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+  noop = tmp15;
+  isScoped = tmp15.isScoped;
+  loaded = tmp15.loaded;
   if (loaded) {
-    loaded = tmp13.valueCount > 0 || 0 === tmp13.secretCount;
-    const tmp14 = tmp13.valueCount > 0 || 0 === tmp13.secretCount;
+    loaded = tmp15.valueCount > 0 || 0 === tmp15.secretCount;
+    const tmp16 = tmp15.valueCount > 0 || 0 === tmp15.secretCount;
   }
-  closure_7 = tmp15;
-  const items6 = [stateFromStores1, tmp8, loaded, tmp13.secretCount > 0];
-  memo = isScoped.useMemo(() => {
+  closure_8 = tmp17;
+  const items6 = [tmp10, stateFromStores1, tmp8, loaded, tmp15.secretCount > 0];
+  memo = noop.useMemo(() => {
+    let tmp2 = closure_2;
+    if (!closure_2) {
+      tmp2 = closure_3;
+    }
     const items = [];
-    if (closure_2) {
+    if (tmp2) {
       items.push("project");
     }
     if (loaded) {
       items.push("app");
     }
-    if (closure_7) {
+    if (closure_8) {
       items.push("secrets");
     }
     if (stateFromStores1) {
@@ -440,9 +492,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     return items;
   }, items6);
-  const tmp16 = _slicedToArray(isScoped.useState(null), 2);
-  closure_9 = tmp17;
-  const items7 = [tmp16[0], initialTab];
+  const tmp18 = _slicedToArray(noop.useState(null), 2);
+  closure_10 = tmp19;
+  const items7 = [tmp18[0], initialTab];
   found = items7.find((item) => {
     let hasItem = null != item;
     if (hasItem) {
@@ -453,17 +505,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (found == null) {
     found = memo[0];
   }
-  closure_11 = tmp19;
-  canSave = tmp13.canSave;
+  saving = tmp8;
+  if (tmp8) {
+    saving = tmpResultResult.saving;
+  }
+  if (!saving) {
+    saving = tmp15.saving;
+  }
+  canSave = tmp15.canSave;
   if (!canSave) {
     let canSave2 = !isScoped;
     if (!isScoped) {
+      canSave2 = tmp8;
+    }
+    if (canSave2) {
       canSave2 = tmpResultResult.canSave;
     }
     canSave = canSave2;
   }
-  const items8 = [tmp13, canSave, tmpResultResult, tmpResultResult.saving || tmp13.saving, isScoped, found, memo];
-  const callback = isScoped.useCallback(asyncGeneratorStep(async () => {
+  const items8 = [tmp15, canSave, tmp8, tmpResultResult, saving, isScoped, found, memo];
+  const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -494,12 +555,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
             closure_128_2 = undefined;
             closure_128_3 = undefined;
             if (canSave) {
-              if (!closure_11) {
+              if (!saving) {
                 let submitResult = null;
                 if (!isScoped) {
-                  submitResult = closure_3.submit();
+                  submitResult = null;
+                  if (closure_2) {
+                    submitResult = closure_4.submit();
+                  }
                 }
-                const items = [submitResult, closure_4.submit()];
+                const items = [submitResult, closure_5.submit()];
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: Promise.all(items), done: false };
@@ -528,55 +592,64 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
           }
           if (null == closure_128_2) {
             let str = "secrets";
-            if ("secrets" !== closure_129_10) {
-              if (closure_129_8.includes("app")) {
+            if ("secrets" !== closure_129_11) {
+              if (closure_129_9.includes("app")) {
                 str = "app";
               }
-              closure_129_9(str);
+              closure_129_10(str);
             }
           }
         }
-        closure_129_9(closure_128_2);
-      } catch (tmp30) {
+        closure_129_10(closure_128_2);
+      } catch (tmp31) {
         c3 = tmp;
-        throw tmp30;
+        throw tmp31;
       }
     }
   }), items8);
   let obj5 = { startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl = tmp4(1128).intl;
-  obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3865).bA4VU5);
+  obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3883).bA4VU5);
   const intl2 = tmp4(1128).intl;
-  const tmpResult2 = stateFromStores1(3865);
-  const tmpResult = stateFromStores1(11572);
-  obj5.header = closure_11(projectId(7064).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) });
+  const tmpResult2 = stateFromStores1(3883);
+  const tmpResult = stateFromStores1(11631);
+  obj5.header = saving(projectId(7117).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) });
   const obj7 = { style: tmp3.container, children: null };
-  let tmp21Result = null;
+  let tmp22Result = null;
   if (!isScoped) {
-    tmp21Result = null;
+    tmp22Result = null;
     if (memo.length > 1) {
-      tmp21Result = null;
+      tmp22Result = null;
       if (null != found) {
-        const obj8 = { tabs: memo, selected: found, onSelect: tmp17 };
-        tmp21Result = tmp21(closure_16, obj8, memo.join(","));
+        const obj8 = { tabs: memo, selected: found, onSelect: tmp19 };
+        tmp22Result = tmp22(closure_17, obj8, memo.join(","));
       }
     }
   }
-  const items9 = [tmp21Result, , , , , , , ];
+  const items9 = [tmp22Result, , , , , , , ];
   if (isScoped) {
-    let fields = tmp13.fields;
+    let fields = tmp15.fields;
   } else {
     fields = null;
   }
   items9[1] = fields;
-  let fields1 = null;
+  let tmp24Result = null;
   if (!isScoped) {
-    fields1 = null;
+    tmp24Result = null;
     if ("project" === found) {
-      fields1 = tmpResultResult.fields;
+      const obj9 = { spacing: tmp(587).space.PX_24, children: null };
+      let fields1 = null;
+      if (tmp8) {
+        fields1 = tmpResultResult.fields;
+      }
+      const items10 = [fields1, ];
+      const obj10 = { projectId, canEdit: tmp10 };
+      items10[1] = tmp22(tmp(11655), obj10, projectId);
+      obj9.children = items10;
+      tmp24Result = tmp24(tmp4(5477).Stack, obj9);
     }
   }
-  items9[2] = fields1;
+  items9[2] = tmp24Result;
   let experimentalFields = null;
   if (!isScoped) {
     experimentalFields = null;
@@ -589,46 +662,45 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (!isScoped) {
     secretFields = null;
     if ("secrets" === found) {
-      secretFields = tmp13.secretFields;
+      secretFields = tmp15.secretFields;
     }
   }
   items9[4] = secretFields;
-  let tmp21Result3 = null;
+  let tmp22Result3 = null;
   if (!isScoped) {
-    tmp21Result3 = null;
+    tmp22Result3 = null;
     if ("model" === found) {
-      const obj9 = { projectId };
-      tmp21Result3 = tmp21(tmp4(11596).ConjureModelSettingsContent, obj9);
+      const obj11 = { projectId };
+      tmp22Result3 = tmp22(tmp4(11658).ConjureModelSettingsContent, obj11);
     }
   }
-  items9[5] = tmp21Result3;
-  let tmp32 = null;
+  items9[5] = tmp22Result3;
+  let tmp34 = null;
   if (!isScoped) {
-    tmp32 = null;
+    tmp34 = null;
     if (null == found) {
       if (stateFromStores2) {
-        const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
+        const obj12 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl3 = tmp4(1128).intl;
-        obj10.children = intl3.string(tmp(3865).lJJayk);
-        let tmp21Result4 = tmp21(tmp4(5150).Text, obj10);
+        obj12.children = intl3.string(tmp(3883).lJJayk);
+        let tmp22Result4 = tmp22(tmp4(5187).Text, obj12);
       } else {
-        tmp21Result4 = tmp21(tmp4(6380).ActivityIndicator, {});
+        tmp22Result4 = tmp22(tmp4(6433).ActivityIndicator, {});
       }
     }
   }
-  items9[6] = tmp32;
+  items9[6] = tmp34;
   const intl4 = tmp4(1128).intl;
   if (isScoped) {
-    let A7dQd9 = tmp(3865).A7dQd9;
+    let A7dQd9 = tmp(3883).A7dQd9;
   } else {
     A7dQd9 = tmp4(1128).t["R3BPH+"];
   }
   const obj6 = { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) };
-  const tmp23 = canSave;
-  const tmp24 = loaded;
-  items9[7] = closure_11(projectId(5442).Button, { text: intl4.string(A7dQd9), variant: "primary", loading: tmpResultResult.saving || tmp13.saving, disabled: !canSave, onPress: callback });
+  const tmp25 = isScoped;
+  items9[7] = saving(projectId(5479).Button, { text: intl4.string(A7dQd9), variant: "primary", loading: saving, disabled: !canSave, onPress: callback });
   obj7.children = items9;
-  obj5.children = tmp23(tmp24, obj7);
-  return closure_11(projectId(7122).ActionSheet, obj5);
+  obj5.children = canSave(tmp25, obj7);
+  return saving(projectId(7175).ActionSheet, obj5);
 });
 export const CONJURE_SETTINGS_SHEET_KEY = "ConjureSettingsSheet";

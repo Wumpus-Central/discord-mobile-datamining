@@ -1,7 +1,7 @@
-// === Module 12558: NavigationTTIDebugFreeze ===
+// === Module 12623: NavigationTTIDebugFreeze ===
 
-// Module 12558 (NavigationTTIDebugFreeze)
-import NativeTTIManagerModule from "NativeTTIManagerModule" /* 5042 */;
+// Module 12623 (NavigationTTIDebugFreeze)
+import NativeTTIManagerModule from "NativeTTIManagerModule" /* 5079 */;
 import size from "module_2" /* 2 */;
 
 function notify() {

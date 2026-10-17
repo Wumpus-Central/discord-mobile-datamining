@@ -1,17 +1,17 @@
-// === Module 12089: ConjureMessageRow ===
+// === Module 12152: ConjureMessageRow ===
 
-// Module 12089 (ConjureMessageRow)
+// Module 12152 (ConjureMessageRow)
 import nativeDefault from "native" /* 587 */;
-import conjureChatTurns from "conjureChatTurns" /* 10900 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11607 */;
-import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12028 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12049 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12059 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12097 */;
-import ConjureChatRestore from "ConjureChatRestore" /* 12101 */;
-import conjureQueuedMessage from "conjureQueuedMessage" /* 12103 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12123 */;
-import ConjureActivityBox from "ConjureActivityBox" /* 12129 */;
+import conjureChatTurns from "conjureChatTurns" /* 10964 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11669 */;
+import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12091 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12112 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 12122 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12160 */;
+import ConjureChatRestore from "ConjureChatRestore" /* 12164 */;
+import conjureQueuedMessage from "conjureQueuedMessage" /* 12166 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12186 */;
+import ConjureActivityBox from "ConjureActivityBox" /* 12192 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -22,32 +22,32 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5154);
-let obj = { row: { position: "relative", paddingLeft: fn(12080).MESSAGE_CONTENT_INSET, paddingRight: fn(12080).MESSAGE_EDGE_INSET, paddingVertical: fn(12090).ROW_PAD, gap: fn(12090).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
-let obj3 = { position: "relative", paddingLeft: fn(12080).MESSAGE_CONTENT_INSET, paddingRight: fn(12080).MESSAGE_EDGE_INSET, paddingVertical: fn(12090).ROW_PAD, gap: fn(12090).BLOCK_GAP };
-obj.rowGroupStart = { marginTop: fn(12090).GROUP_GAP };
-let obj4 = { marginTop: fn(12090).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(12080).MESSAGE_EDGE_INSET, paddingVertical: fn(12090).ROW_PAD };
-const rect = { position: "absolute", left: fn(12080).MESSAGE_EDGE_INSET, top: fn(12090).ROW_PAD };
+const createStyles = fn(5191);
+let obj = { row: { position: "relative", paddingLeft: fn(12143).MESSAGE_CONTENT_INSET, paddingRight: fn(12143).MESSAGE_EDGE_INSET, paddingVertical: fn(12153).ROW_PAD, gap: fn(12153).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
+let obj3 = { position: "relative", paddingLeft: fn(12143).MESSAGE_CONTENT_INSET, paddingRight: fn(12143).MESSAGE_EDGE_INSET, paddingVertical: fn(12153).ROW_PAD, gap: fn(12153).BLOCK_GAP };
+obj.rowGroupStart = { marginTop: fn(12153).GROUP_GAP };
+let obj4 = { marginTop: fn(12153).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(12143).MESSAGE_EDGE_INSET, paddingVertical: fn(12153).ROW_PAD };
+const rect = { position: "absolute", left: fn(12143).MESSAGE_EDGE_INSET, top: fn(12153).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(12080).MESSAGE_EDGE_INSET, paddingVertical: fn(12090).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(12090).BLOCK_GAP };
-const rect1 = { left: fn(12080).MESSAGE_EDGE_INSET - fn(12080).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(12143).MESSAGE_EDGE_INSET, paddingVertical: fn(12153).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(12153).BLOCK_GAP };
+const rect1 = { left: fn(12143).MESSAGE_EDGE_INSET - fn(12143).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(12090).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(12091).REPLY_PREVIEW_HEIGHT + fn(12090).BLOCK_GAP };
-let obj7 = { top: fn(12091).REPLY_PREVIEW_HEIGHT + fn(12090).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(12153).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(12154).REPLY_PREVIEW_HEIGHT + fn(12153).BLOCK_GAP };
+let obj7 = { top: fn(12154).REPLY_PREVIEW_HEIGHT + fn(12153).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(12090).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(12153).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj9 = { marginLeft: -fn(12090).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(12153).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureMessageRow(projectId) {
-  const cResult = projectId(groupStart[10]).c(230);
+  const cResult = projectId(groupStart[10]).c(232);
   projectId = projectId.projectId;
   const message = projectId.message;
   groupStart = projectId.groupStart;
@@ -82,7 +82,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[5] = message;
       cResult[6] = turnSettledResult1;
       let tmp10 = turnSettledResult1;
-      const tmpResult10 = tmp(tmp2[11]);
+      const tmpResult11 = tmp(tmp2[11]);
     } else {
       tmp10 = cResult[6];
     }
@@ -91,13 +91,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const latestTodosResult = tmp(tmp2[12]).latestTodos(message.steps);
         cResult[10] = message.steps;
         cResult[11] = latestTodosResult;
-        const tmpResult11 = tmp(tmp2[12]);
+        const tmpResult12 = tmp(tmp2[12]);
       }
       if (cResult[12] !== tmp8.tasks) {
         const runningTodoAgentsResult = tmp(tmp2[13]).runningTodoAgents(tmp8.tasks);
         cResult[12] = tmp8.tasks;
         cResult[13] = runningTodoAgentsResult;
-        const tmpResult12 = tmp(tmp2[13]);
+        const tmpResult13 = tmp(tmp2[13]);
       }
       if (cResult[14] === checklistSuperseded) {
         if (cResult[15] === message.render_id) {
@@ -109,7 +109,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   cResult[25] = message.content;
                   cResult[26] = result;
                   let tmp22 = result;
-                  const tmpResult13 = tmp(tmp2[14]);
+                  const tmpResult14 = tmp(tmp2[14]);
                 } else {
                   tmp22 = cResult[26];
                 }
@@ -128,7 +128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 } else {
                   tmp26 = cResult[28];
                 }
-                content = tmp26;
+                const content = tmp26;
                 const conjureMentionNames = tmp(tmp2[15]).useConjureMentionNames(tmp26);
                 if (cResult[29] === message.attachments) {
                   if (cResult[30] === message.content) {
@@ -207,27 +207,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                               }
                             }
                           }
-                          class Ee {
-                            constructor() {
-                              obj = closure_0(closure_2[20]);
-                              obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
-                              obj3 = closure_0(closure_2[21]);
-                              obj1.onQueuedAction = obj3.queuedMessageActionHandler(projectId, message, closure_17);
-                              fn = undefined;
-                              if (null != closure_18) {
-                                tmp = onRestoreVersion;
-                                if (null != onRestoreVersion) {
-                                  fn = () => projectId(groupStart[22]).confirmRestoreVersion({ onConfirm() { ... } });
-                                }
+                          function be() {
+                            const obj2 = { content, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
+                            const obj = ConjureMessageActionSheet;
+                            obj2.onQueuedAction = conjureQueuedMessage.queuedMessageActionHandler(projectId, message, stateFromStores);
+                            let fn;
+                            if (null != closure_18) {
+                              if (null != onRestoreVersion) {
+                                fn = () => projectId(groupStart[22]).confirmRestoreVersion({
+                                  onConfirm() {
+                                    return closure_1_11(closure_1_18);
+                                  }
+                                });
                               }
-                              obj1.onRestoreVersion = fn;
-                              fn2 = undefined;
-                              if (null != closure_19) {
-                                fn2 = () => projectId(groupStart[23]).requestConjureTrace(closure_1_0, closure_1_19);
-                              }
-                              obj1.onViewTrace = fn2;
-                              return obj.showConjureMessageActions(obj1);
                             }
+                            obj2.onRestoreVersion = fn;
+                            let fn2;
+                            if (null != closure_19) {
+                              fn2 = () => projectId(groupStart[23]).requestConjureTrace(closure_1_0, closure_1_19);
+                            }
+                            obj2.onViewTrace = fn2;
+                            return obj.showConjureMessageActions(obj2);
                           }
                           cResult[41] = user_id;
                           cResult[42] = tmp26;
@@ -237,18 +237,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                           cResult[46] = projectId;
                           cResult[47] = tmp42;
                           cResult[48] = tmp39;
-                          cResult[49] = Ee;
+                          cResult[49] = be;
                         }
                         let turnRestoreEntryResult = null;
                         if (null != onRestoreVersion) {
                           turnRestoreEntryResult = tmp(tmp2[18]).turnRestoreEntry(message);
-                          const tmpResult16 = tmp(tmp2[18]);
+                          const tmpResult17 = tmp(tmp2[18]);
                         }
                         cResult[38] = message;
                         cResult[39] = onRestoreVersion;
                         cResult[40] = turnRestoreEntryResult;
                         tmp39 = turnRestoreEntryResult;
-                        const tmpResult15 = tmp(tmp2[17]);
+                        const tmpResult16 = tmp(tmp2[17]);
                       }
                       const items1 = [tmp4.row, rowGroupStart];
                       cResult[33] = tmp4.row;
@@ -259,7 +259,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
                 if ("user" === message.role) {
                   let attachments = tmp(tmp2[16]).withoutInlineFileMentions(message.attachments, message.content);
-                  const tmpResult17 = tmp(tmp2[16]);
+                  const tmpResult18 = tmp(tmp2[16]);
                 } else {
                   attachments = message.attachments;
                 }
@@ -267,7 +267,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 cResult[30] = message.content;
                 cResult[31] = message.role;
                 cResult[32] = attachments;
-                const tmpResult14 = tmp(tmp2[15]);
+                const tmpResult15 = tmp(tmp2[15]);
               }
               function oe() {
                 if (null != replied) {
@@ -277,6 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
               cResult[22] = onJumpToReplied;
+              cResult[23] = replied;
               cResult[24] = oe;
             }
           }
@@ -284,23 +285,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return onTogglePlan(message.render_id, planSuperseded);
           }
           cResult[18] = message.render_id;
+          cResult[19] = onTogglePlan;
           cResult[20] = planSuperseded;
           cResult[21] = te;
         }
       }
-      function ne() {
+      function le() {
         return onToggleChecklist(message.render_id, checklistSuperseded);
       }
       cResult[14] = checklistSuperseded;
       cResult[15] = message.render_id;
       cResult[16] = onToggleChecklist;
-      cResult[17] = ne;
+      cResult[17] = le;
     }
     let obj2 = { turnActive: !tmp10 };
-    const turnSegmentsResult = obj5.turnSegments(message.steps, obj2);
+    const turnSegmentsResult = tmp(tmp2[12]).turnSegments(message.steps, obj2);
     cResult[7] = message.steps;
     cResult[8] = !tmp10;
     cResult[9] = turnSegmentsResult;
+    const tmpResult19 = tmp(tmp2[12]);
   }
   let obj = projectId(groupStart[10]);
   const timelineTree = projectId(groupStart[12]).buildTimelineTree(message.steps, { turnActive: tmp7 });
@@ -450,28 +453,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if ("user" === message.role) {
         if ("" === trimmed) {
           if (null == memo4) {
-            let tmp86Result2 = null;
+            let tmp88Result2 = null;
           }
-          return tmp86Result2;
+          return tmp88Result2;
         }
         let obj3 = { style: items8, onLongPress: tmp22, accessible: false, children: null };
-        let tmp88 = null;
+        let tmp90 = null;
         if (groupStart) {
           let obj4 = { style: tmp.avatar, children: null };
           const obj5 = { userId: message.user_id };
           obj4.children = replied(tmp11(tmp12[24]).ConjureUserAvatar, obj5);
-          tmp88 = replied(planSuperseded, obj4);
+          tmp90 = replied(planSuperseded, obj4);
         }
-        const items12 = [tmp88, , , ];
-        let tmp91 = null;
+        const items12 = [tmp90, , , ];
+        let tmp93 = null;
         if (groupStart) {
           const obj6 = { style: tmp.header, children: null };
-          ({ user_id: obj54.userId, created_at: obj54.at } = message);
+          ({ user_id: obj55.userId, created_at: obj55.at } = message);
           obj6.children = replied(tmp11(tmp12[24]).ConjureUserHeader, { userId: null, at: null });
-          tmp91 = replied(planSuperseded, obj6);
+          tmp93 = replied(planSuperseded, obj6);
           const obj7 = { userId: null, at: null };
         }
-        items12[1] = tmp91;
+        items12[1] = tmp93;
         if (tmp21) {
           let combined;
           if (!groupStart) {
@@ -480,12 +483,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             combined = "" + intl3.string(tmp11(tmp12[26]).t.KD6OJJ) + ": " + conjureMentionNames;
           }
           const obj8 = { variant: "text-md/normal", color: "text-default", accessibilityLabel: combined, children: null };
-          let tmp97 = null;
+          let tmp99 = null;
           if (null != memo4) {
             const obj9 = { label: memo4.label, variant: "text-md/medium" };
-            tmp97 = replied(tmp18(tmp12[27]), obj9);
+            tmp99 = replied(tmp18(tmp12[27]), obj9);
           }
-          const items13 = [tmp97, , ];
+          const items13 = [tmp99, , ];
           let str6 = null;
           if (null != memo4) {
             str6 = null;
@@ -497,28 +500,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj10 = { text: trimmed, variant: "text-md/normal" };
           items13[2] = replied(tmp18(tmp12[28]), obj10);
           obj8.children = items13;
-          let tmp86Result = tmp86(tmp11(tmp12[25]).Text, obj8);
+          let tmp88Result = tmp88(tmp11(tmp12[25]).Text, obj8);
         } else {
-          tmp86Result = null;
+          tmp88Result = null;
         }
-        items12[2] = tmp86Result;
-        let tmp100 = null;
+        items12[2] = tmp88Result;
+        let tmp102 = null;
         if (null != tmp14) {
           const obj11 = { projectId, attachments: tmp14 };
-          tmp100 = replied(tmp18(tmp12[29]), obj11);
+          tmp102 = replied(tmp18(tmp12[29]), obj11);
         }
-        items12[3] = tmp100;
+        items12[3] = tmp102;
         obj3.children = items12;
-        tmp86Result2 = tmp86(onToggleChecklist, obj3);
+        tmp88Result2 = tmp88(onToggleChecklist, obj3);
       } else if ("context_boundary" === message.kind) {
-        let tmp82 = null;
+        let tmp84 = null;
         if (null != message.contextSwitch) {
           const obj12 = { style: tmp.boundaryRow, children: null };
           const obj13 = { projectId, contextSwitch: message.contextSwitch };
           obj12.children = replied(tmp18(tmp12[30]), obj13);
-          tmp82 = replied(planSuperseded, obj12);
+          tmp84 = replied(planSuperseded, obj12);
         }
-        return tmp82;
+        return tmp84;
       } else {
         if ("project_event" === message.kind) {
           if (null != message.projectEvent) {
@@ -604,6 +607,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (restoreProposal == null) {
             restoreProposal = null;
           }
+          let prop = message.publishScheduleProposal;
+          if (prop == null) {
+            prop = null;
+          }
           clarification = null;
           if (isNewest) {
             clarification = null;
@@ -617,21 +624,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          let tmp36 = null;
+          let tmp37 = null;
           if (isNewest) {
-            tmp36 = null;
+            tmp37 = null;
             if (turnSettledResult) {
-              tmp36 = null;
+              tmp37 = null;
               if (!appBuildRequestDismissed) {
                 appBuildRequest = message.appBuildRequest;
                 if (appBuildRequest == null) {
                   appBuildRequest = null;
                 }
-                tmp36 = appBuildRequest;
+                tmp37 = appBuildRequest;
               }
             }
           }
-          appBuildRequest = tmp36;
+          appBuildRequest = tmp37;
           let items18 = memo2;
           if (memo2 == null) {
             let todos = null;
@@ -654,11 +661,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj22 = { steps: message.steps, content: trimmed, hasProposal: null != proposal, hasLiveClarification: null != clarification, hasAttachments: null != tmp14 };
           const turnPresentation = tmp11(tmp12[36]).resolveTurnPresentation(obj22);
           ({ showsClosingMessage, replyKey: c23 } = turnPresentation);
-          let tmp40 = memo.steps.length > 0;
-          if (!tmp40) {
-            tmp40 = memo.tasks.length > 0;
+          let tmp41 = memo.steps.length > 0;
+          if (!tmp41) {
+            tmp41 = memo.tasks.length > 0;
           }
-          if (!tmp40) {
+          if (!tmp41) {
             if (0 === turnPresentation.streamed.length) {
               if ("" === trimmed) {
                 if (null == proposal) {
@@ -671,9 +678,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                               if (null == tmp14) {
                                 if (null == clarification) {
                                   if (null == restoreProposal) {
-                                    if (null == tmp36) {
-                                      if (null == tmp26) {
-                                        return null;
+                                    if (null == prop) {
+                                      if (null == tmp37) {
+                                        if (null == tmp26) {
+                                          return null;
+                                        }
                                       }
                                     }
                                   }
@@ -690,7 +699,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           }
           const tmp11Result13 = tmp11(tmp12[36]);
-          const turnLeadsWithStretchResult = tmp11(tmp12[36]).turnLeadsWithStretch(tmp40, turnPresentation);
+          const turnLeadsWithStretchResult = tmp11(tmp12[36]).turnLeadsWithStretch(tmp41, turnPresentation);
           c24 = turnLeadsWithStretchResult;
           const found1 = memo1.filter((hasWork) => hasWork.hasWork);
           const atResult = found1.at(-1);
@@ -699,27 +708,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             index = atResult.index;
           }
           const tmp11Result14 = tmp11(tmp12[36]);
-          const tmp44 = !tmp11(tmp12[11]).turnSettled(message);
-          closure_26 = tmp44;
+          const tmp45 = !tmp11(tmp12[11]).turnSettled(message);
+          closure_26 = tmp45;
           const tmp11Result15 = tmp11(tmp12[11]);
-          const obj23 = { turnActive: tmp44 };
+          const obj23 = { turnActive: tmp45 };
           open = tmp11(tmp12[12]).turnLifecycle(memo1, obj23).open;
           let avatarSpokenReplying = groupStart;
           if (groupStart) {
             avatarSpokenReplying = null != replied;
           }
-          let tmp48Result = null;
+          let tmp49Result = null;
           if (avatarSpokenReplying) {
             const obj24 = { replied, onJump: null };
-            let tmp50;
+            let tmp51;
             if (null != onJumpToReplied) {
-              tmp50 = callback2;
+              tmp51 = callback2;
             }
-            obj24.onJump = tmp50;
-            tmp48Result = replied(tmp18(tmp12[7]), obj24);
+            obj24.onJump = tmp51;
+            tmp49Result = replied(tmp18(tmp12[7]), obj24);
             const tmp18Result5 = tmp18(tmp12[7]);
           }
-          const items14 = [tmp48Result, , ];
+          const items14 = [tmp49Result, , ];
           const items15 = [, , ];
           ({ avatar: arr17[0], avatarSpoken: arr17[1] } = tmp);
           if (avatarSpokenReplying) {
@@ -736,18 +745,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           obj27.children = replied(tmp11(tmp12[24]).ConjureHeader, obj28);
           items14[2] = replied(planSuperseded, obj27);
           obj25.children = items14;
-          const tmp45Result = onJumpToReplied(closure_9, obj25);
+          const tmp46Result = onJumpToReplied(closure_9, obj25);
           const obj29 = { style: items8, onLongPress: tmp22, accessible: false, children: null };
-          let tmp51Result = null;
+          let tmp52Result = null;
           if (turnLeadsWithStretchResult) {
-            tmp51Result = null;
+            tmp52Result = null;
             if (groupStart) {
-              const obj30 = { style: tmp.spoken, children: tmp45Result };
-              tmp51Result = tmp51(tmp52, obj30);
+              const obj30 = { style: tmp.spoken, children: tmp46Result };
+              tmp52Result = tmp52(tmp53, obj30);
             }
           }
           const items16 = [
-            tmp51Result,
+            tmp52Result,
             memo1.map((prose, index) => {
                       let tmp19Result = null;
                       if (null != prose.prose) {
@@ -801,29 +810,31 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             if (null == proposal) {
               if (null == clarification) {
                 if (null == restoreProposal) {
-                  if (null == tmp36) {
-                    if (null == ideas) {
-                      if (null == tmp28) {
-                        if (null == tmp32) {
-                          if (null == tmp14) {
-                            if (null == found) {
-                              if (null == items18) {
-                                if (null == provisionalTodo) {
-                                  let tmp45Result2 = null;
+                  if (null == prop) {
+                    if (null == tmp37) {
+                      if (null == ideas) {
+                        if (null == tmp28) {
+                          if (null == tmp32) {
+                            if (null == tmp14) {
+                              if (null == found) {
+                                if (null == items18) {
+                                  if (null == provisionalTodo) {
+                                    let tmp46Result2 = null;
+                                  }
+                                  items16[2] = tmp46Result2;
+                                  let tmp52Result16 = null;
+                                  if (null != tmp30) {
+                                    const obj31 = { style: tmp.spoken, children: null };
+                                    const obj32 = { variant: "text-xs/normal", color: "text-muted", children: null };
+                                    const intl = tmp11(tmp12[26]).intl;
+                                    obj32.children = intl.string(tmp18(tmp12[33]).YR8A2v);
+                                    obj31.children = tmp52(tmp11(tmp12[25]).Text, obj32);
+                                    tmp52Result16 = tmp52(tmp53, obj31);
+                                  }
+                                  items16[3] = tmp52Result16;
+                                  obj29.children = items16;
+                                  return tmp46(onToggleChecklist, obj29);
                                 }
-                                items16[2] = tmp45Result2;
-                                let tmp51Result15 = null;
-                                if (null != tmp30) {
-                                  const obj31 = { style: tmp.spoken, children: null };
-                                  const obj32 = { variant: "text-xs/normal", color: "text-muted", children: null };
-                                  const intl = tmp11(tmp12[26]).intl;
-                                  obj32.children = intl.string(tmp18(tmp12[33]).YR8A2v);
-                                  obj31.children = tmp51(tmp11(tmp12[25]).Text, obj32);
-                                  tmp51Result15 = tmp51(tmp52, obj31);
-                                }
-                                items16[3] = tmp51Result15;
-                                obj29.children = items16;
-                                return tmp45(onToggleChecklist, obj29);
                               }
                             }
                           }
@@ -836,33 +847,33 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           }
           const obj33 = { style: tmp.spoken, children: null };
-          let tmp57 = null;
+          let tmp58 = null;
           if (groupStart) {
-            tmp57 = null;
+            tmp58 = null;
             if (!turnLeadsWithStretchResult) {
-              tmp57 = tmp45Result;
+              tmp58 = tmp46Result;
             }
           }
-          const items17 = [tmp57, , , , , , , , , , , , , ];
-          let tmp51Result16 = null;
+          const items17 = [tmp58, , , , , , , , , , , , , , ];
+          let tmp52Result17 = null;
           if (showsClosingMessage) {
             const obj34 = { source: turnPresentation.closingContent };
-            tmp51Result16 = tmp51(tmp18(tmp12[37]), obj34);
+            tmp52Result17 = tmp52(tmp18(tmp12[37]), obj34);
           }
-          items17[1] = tmp51Result16;
-          let tmp51Result17 = null;
+          items17[1] = tmp52Result17;
+          let tmp52Result18 = null;
           if ("side_reply" === message.kind) {
             const obj35 = { variant: "text-xs/normal", color: "text-muted", children: tmp11(tmp12[39]).midTurnCaption(message.acknowledges) };
-            tmp51Result17 = tmp51(tmp11(tmp12[25]).Text, obj35);
+            tmp52Result18 = tmp52(tmp11(tmp12[25]).Text, obj35);
             const tmp11Result17 = tmp11(tmp12[39]);
           }
-          items17[2] = tmp51Result17;
-          let tmp51Result18 = null;
+          items17[2] = tmp52Result18;
+          let tmp52Result19 = null;
           if (null != tmp14) {
             const obj36 = { projectId, attachments: tmp14 };
-            tmp51Result18 = tmp51(tmp18(tmp12[29]), obj36);
+            tmp52Result19 = tmp52(tmp18(tmp12[29]), obj36);
           }
-          items17[3] = tmp51Result18;
+          items17[3] = tmp52Result19;
           if (null != items18) {
             const tmp18Result6 = tmp18(tmp12[40]);
             if (items18 == null) {
@@ -875,20 +886,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj38.superseded = checklistSuperseded;
             obj38.expanded = checklistExpanded;
             obj38.onToggleExpanded = callback;
-            obj37.children = tmp51(tmp18Result7, obj38);
-            let tmp51Result19 = tmp51(tmp18Result6, obj37);
+            obj37.children = tmp52(tmp18Result7, obj38);
+            let tmp52Result20 = tmp52(tmp18Result6, obj37);
             const tmp11Result18 = tmp11(tmp12[42]);
           } else {
-            tmp51Result19 = null;
+            tmp52Result20 = null;
           }
-          items17[4] = tmp51Result19;
-          let tmp51Result20 = null;
+          items17[4] = tmp52Result20;
+          let tmp52Result21 = null;
           if (null != proposal) {
             const obj39 = { projectId, proposal, version: planVersion, superseded: planSuperseded, expanded: planExpanded, onToggleExpanded: callback1, onApprove: onApprovePlan };
-            tmp51Result20 = tmp51(tmp18(tmp12[43]), obj39);
+            tmp52Result21 = tmp52(tmp18(tmp12[43]), obj39);
           }
-          items17[5] = tmp51Result20;
-          let tmp51Result21 = null;
+          items17[5] = tmp52Result21;
+          let tmp52Result22 = null;
           if (null != clarification) {
             const obj40 = {
               projectId,
@@ -898,47 +909,47 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                           return closure_1_9(clarification.id);
                         }
             };
-            tmp51Result21 = tmp51(tmp18(tmp12[44]), obj40);
+            tmp52Result22 = tmp52(tmp18(tmp12[44]), obj40);
           }
-          items17[6] = tmp51Result21;
-          let tmp51Result22 = null;
-          if (null != tmp36) {
+          items17[6] = tmp52Result22;
+          let tmp52Result23 = null;
+          if (null != tmp37) {
             const obj41 = {
               projectId,
-              request: tmp36,
+              request: tmp37,
               canSend,
               onDismiss() {
                           return closure_1_10(appBuildRequest.id);
                         }
             };
-            tmp51Result22 = tmp51(tmp18(tmp12[45]), obj41);
+            tmp52Result23 = tmp52(tmp18(tmp12[45]), obj41);
           }
-          items17[7] = tmp51Result22;
-          let tmp51Result23 = null;
+          items17[7] = tmp52Result23;
+          let tmp52Result24 = null;
           if (null != tmp28) {
             const obj42 = { projectId, cardId: message.render_id, request: tmp28, status: secretRequestStatus, awaiting: tmp30 };
-            tmp51Result23 = tmp51(tmp18(tmp12[46]), obj42);
+            tmp52Result24 = tmp52(tmp18(tmp12[46]), obj42);
           }
-          items17[8] = tmp51Result23;
-          let tmp51Result24 = null;
+          items17[8] = tmp52Result24;
+          let tmp52Result25 = null;
           if (null != tmp32) {
             const obj43 = { projectId, request: tmp32 };
-            tmp51Result24 = tmp51(tmp18(tmp12[47]), obj43);
+            tmp52Result25 = tmp52(tmp18(tmp12[47]), obj43);
           }
-          items17[9] = tmp51Result24;
-          let tmp51Result25 = null;
+          items17[9] = tmp52Result25;
+          let tmp52Result26 = null;
           if (null != tmp26) {
             const obj44 = { projectId };
-            tmp51Result25 = tmp51(tmp18(tmp12[48]), obj44);
+            tmp52Result26 = tmp52(tmp18(tmp12[48]), obj44);
           }
-          items17[10] = tmp51Result25;
-          let tmp51Result26 = null;
+          items17[10] = tmp52Result26;
+          let tmp52Result27 = null;
           if (null != ideas) {
             const obj45 = { ideas, onPick: onPickIdea };
-            tmp51Result26 = tmp51(tmp18(tmp12[49]), obj45);
+            tmp52Result27 = tmp52(tmp18(tmp12[49]), obj45);
           }
-          items17[11] = tmp51Result26;
-          let tmp51Result27 = null;
+          items17[11] = tmp52Result27;
+          let tmp52Result28 = null;
           if (null != restoreProposal) {
             const obj46 = { proposal: restoreProposal, onRestore: null };
             let fn;
@@ -952,21 +963,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
             obj46.onRestore = fn;
-            tmp51Result27 = tmp51(tmp18(tmp12[50]), obj46);
+            tmp52Result28 = tmp52(tmp18(tmp12[50]), obj46);
             const tmp18Result8 = tmp18(tmp12[50]);
           }
-          items17[12] = tmp51Result27;
-          let tmp51Result28 = null;
+          items17[12] = tmp52Result28;
+          let tmp52Result29 = null;
+          if (null != prop) {
+            const obj47 = { projectId, proposal: prop, current: isNewest };
+            tmp52Result29 = tmp52(tmp18(tmp12[51]), obj47);
+          }
+          items17[13] = tmp52Result29;
+          let tmp52Result30 = null;
           if (null != found) {
-            tmp51Result28 = null;
+            tmp52Result30 = null;
             if ("message" in found) {
-              const obj47 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
-              tmp51Result28 = tmp51(tmp11(tmp12[25]).Text, obj47);
+              const obj48 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
+              tmp52Result30 = tmp52(tmp11(tmp12[25]).Text, obj48);
             }
           }
-          items17[13] = tmp51Result28;
+          items17[14] = tmp52Result30;
           obj33.children = items17;
-          tmp45Result2 = tmp45(tmp52, obj33);
+          tmp46Result2 = tmp46(tmp53, obj33);
           const tmp11Result16 = tmp11(tmp12[12]);
         }
       }

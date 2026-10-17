@@ -1,27 +1,27 @@
-// === Module 18096: ActivityInviteSheet ===
+// === Module 18157: ActivityInviteSheet ===
 
-// Module 18096 (ActivityInviteSheet)
+// Module 18157 (ActivityInviteSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5118 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8919 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8941 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8965 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8987 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8924 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8970 */;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(8990);
+const InstantInviteSendStateStore = fn(9036);
 ({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1087).ActivityActionTypes;
-const Constants = fn(7643);
+const Constants = fn(7689);
 ({ InviteSendStates: c10, InviteTargetTypes: closure_11 } = Constants);
 const NOOP_NULL = fn(1098).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;
@@ -103,8 +103,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   activity = activity.activity;
   const tmp4 = closure_16();
   let obj = activity(576);
-  analyticsLocations = analyticsLocations(7077)(analyticsLocations(7102).ACTIVITY_INVITE_SHEET).analyticsLocations;
-  const tmp5 = analyticsLocations(7077);
+  analyticsLocations = analyticsLocations(7130)(analyticsLocations(7155).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  const tmp5 = analyticsLocations(7130);
   let tmp6 = dependencyMap2;
   [tmp8, dependencyMap] = dependencyMap2(noop.useState(null), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -511,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       let obj3 = { title: null };
       const intl = tmp(1128).intl;
       obj3.title = intl.string(tmp(1128).t["OzOM/q"]);
-      const tmp24 = closure_13(tmp(7064).BottomSheetTitleHeader, obj3);
+      const tmp24 = closure_13(tmp(7117).BottomSheetTitleHeader, obj3);
       cResult[12] = tmp24;
     } else {
       class F {
@@ -566,7 +566,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           return;
         }
       }
-      let obj4 = { style: tmp4.emptyState, Illustration: tmp(8944).AppCrash, title: tmp8 };
+      let obj4 = { style: tmp4.emptyState, Illustration: tmp(8990).AppCrash, title: tmp8 };
       const tmp25 = closure_13(tmp(1202).EmptyState, obj4);
     } else {
       class F {
@@ -666,9 +666,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   dependencyMap2 = undefined;
   noop = undefined;
   const tmp = closure_16();
-  analyticsLocations = analyticsLocations(7077)(analyticsLocations(7102).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(7130)(analyticsLocations(7155).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(7077);
+  const tmp4 = analyticsLocations(7130);
   [tmp6, c2] = dependencyMap2(noop.useState(null), 2);
   const tmp7 = closure_7((arg0) => arg0);
   dependencyMap2 = tmp7;
@@ -766,19 +766,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   let obj4 = { title: null };
   const intl = tmp11(1128).intl;
   obj4.title = intl.string(activity(1128).t["OzOM/q"]);
-  obj3.header = closure_13(activity(7064).BottomSheetTitleHeader, obj4);
+  obj3.header = closure_13(activity(7117).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(8944).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(8990).AppCrash, title: tmp6 };
     let tmp19Result = closure_13(tmp11(1202).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_13(closure_17, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(8941).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(8987).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1128).intl;
     obj8.placeholder = intl2.string(tmp11(1128).t.iI1gMg);
-    obj7.children = closure_13(tmp11(6963).SearchField, obj8);
+    obj7.children = closure_13(tmp11(7016).SearchField, obj8);
     obj6.children = closure_13(View, obj7);
     const items4 = [closure_13(View, obj6), ];
     if (tmp16) {
@@ -788,7 +788,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       let tmp17Result2 = closure_13(tmp11(1202).EmptyState, obj9);
     } else {
       const obj10 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result2 = closure_13(tmp2(18097), obj10);
+      tmp17Result2 = closure_13(tmp2(18158), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -796,6 +796,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     tmp19Result = closure_15(closure_14, obj11);
   }
   obj3.children = tmp19Result;
-  obj2.children = closure_13(activity(7065).BottomSheet, obj3);
-  return closure_13(activity(7077).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_13(activity(7118).BottomSheet, obj3);
+  return closure_13(activity(7130).AnalyticsLocationProvider, obj2);
 });

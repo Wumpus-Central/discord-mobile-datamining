@@ -1,6 +1,6 @@
-// === Module 9908: handleContentLinking ===
+// === Module 9972: handleContentLinking ===
 
-// Module 9908 (handleContentLinking)
+// Module 9972 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -47,7 +47,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
           closure_129_12 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -154,7 +154,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(6359).addPostConnectionCallback;
+fn(6412).addPostConnectionCallback;
 const Routes = fn(1087).Routes;
 let c6 = null;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 15779: BlockedUserRowV2 ===
+// === Module 15845: BlockedUserRowV2 ===
 
-// Module 15779 (BlockedUserRowV2)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7241 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8531 */;
+// Module 15845 (BlockedUserRowV2)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7293 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -12,7 +12,7 @@ let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedUserRow(userRecord) {
   const cResult = userRecord(576).c(29);
   userRecord = userRecord.userRecord;
-  analyticsLocations = analyticsLocations(7077)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7130)().analyticsLocations;
   if (cResult[0] === userRecord.globalName) {
     if (cResult[1] === userRecord.username) {
       let tmp4 = cResult[2];
@@ -92,7 +92,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
                 }
               }
               const obj5 = { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 };
-              const tmp25 = jsx(tmp(6404).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
+              const tmp25 = jsx(tmp(6457).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
               cResult[24] = tmp6;
               cResult[25] = tmp20;
               cResult[26] = tmp8;
@@ -101,7 +101,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
               tmp23 = tmp25;
             }
             const obj6 = { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: tmp19 };
-            const tmp22 = jsx(tmp(5442).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: tmp19 });
+            const tmp22 = jsx(tmp(5479).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: tmp19 });
             cResult[21] = tmp19;
             cResult[22] = tmp4;
             cResult[23] = tmp22;
@@ -109,7 +109,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
           }
         }
         const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-        const tmp16 = jsx(tmp(15780).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
+        const tmp16 = jsx(tmp(15846).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
         cResult[14] = tmp7;
         cResult[15] = tmp13;
         cResult[16] = userRecord;
@@ -151,7 +151,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
 }) : (function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7077)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7130)().analyticsLocations;
   const intl = userRecord(1128).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -161,7 +161,9 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
     showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   }
   const formatToPlainStringResult = intl.formatToPlainString(userRecord(1128).t.izBDZN, { name: username });
-  let obj = { accessible: false, icon: jsx(userRecord(1202).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1202).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null };
+  let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
+  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1202).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj.icon = jsx(userRecord(1202).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1202).AvatarSizes.REFRESH_MEDIUM_32 });
   const obj3 = {
     userRecord,
     accessibilityActions: null,
@@ -177,7 +179,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
   };
   const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(15780).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(15846).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -190,6 +192,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
       }
     }
   });
+  obj.onPress = handleOpenProfile;
   const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl2 = tmp2(1128).intl;
   obj4.text = intl2.string(userRecord(1128).t["PR/xUz"]);
@@ -197,8 +200,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5442).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6404).TableRow, { accessible: false, icon: jsx(userRecord(1202).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1202).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  obj.trailing = jsx(userRecord(5479).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(6457).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

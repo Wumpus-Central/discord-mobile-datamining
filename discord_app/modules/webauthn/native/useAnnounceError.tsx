@@ -1,7 +1,7 @@
-// === Module 15761: useAnnounceError ===
+// === Module 15827: useAnnounceError ===
 
-// Module 15761 (useAnnounceError)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4887 */;
+// Module 15827 (useAnnounceError)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4923 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

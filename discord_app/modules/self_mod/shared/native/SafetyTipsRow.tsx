@@ -1,8 +1,8 @@
-// === Module 7924: SafetyTipsRow ===
+// === Module 7970: SafetyTipsRow ===
 
-// Module 7924 (SafetyTipsRow)
+// Module 7970 (SafetyTipsRow)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5150 */;
+import Text_Text from "Text/Text" /* 5187 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { indexContainer: null };
 let size = { width: 32, height: 32, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", marginRight: nativeDefault.space.PX_4 };
 obj2.indexContainer = size;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
       }
     }
     const obj2 = { icon: tmp6, label: tip, subLabel: description, end };
-    const tmp10 = jsx(tmp(6404).TableRow, { icon: tmp6, label: tip, subLabel: description, end });
+    const tmp10 = jsx(tmp(6457).TableRow, { icon: tmp6, label: tip, subLabel: description, end });
     cResult[5] = description;
     cResult[6] = end;
     cResult[7] = tmp6;

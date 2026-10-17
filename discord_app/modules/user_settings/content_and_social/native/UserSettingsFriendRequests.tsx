@@ -1,9 +1,9 @@
-// === Module 17858: UserSettingsFriendRequests ===
+// === Module 17918: UserSettingsFriendRequests ===
 
-// Module 17858 (UserSettingsFriendRequests)
+// Module 17918 (UserSettingsFriendRequests)
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
 import UserSettings from "UserSettings" /* 2044 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6908 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6961 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,11 +21,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   let FriendSourceFlagsSetting = setting(2044).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   if (cResult[0] !== setting) {
-    const flags = tmp(6908).computeFlags(setting);
+    const flags = tmp(6961).computeFlags(setting);
     cResult[0] = setting;
     cResult[1] = flags;
     let tmp5 = flags;
-    const tmpResult = tmp(6908);
+    const tmpResult = tmp(6961);
   } else {
     tmp5 = cResult[1];
   }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   if (cResult[5] !== tmp5.all) {
     const obj2 = { label: tmp9, value: tmp5.all, onValueChange: tmp11 };
-    const tmp14 = closure_7(tmp(7119).TableSwitchRow, obj2);
+    const tmp14 = closure_7(tmp(7172).TableSwitchRow, obj2);
     cResult[5] = tmp5.all;
     cResult[6] = tmp14;
     let tmp12 = tmp14;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj4 = { title: tmp7, hasIcons: false, children: null };
       const items = [tmp12, tmp18, tmp24];
       obj4.children = items;
-      obj3.children = closure_8(tmp(6489).TableRowGroup, obj4);
+      obj3.children = closure_8(tmp(6542).TableRowGroup, obj4);
       const tmp31 = closure_7(View, obj3);
       cResult[19] = tmp24;
       cResult[20] = tmp12;
@@ -254,12 +254,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       cResult[22] = tmp31;
     }
     const obj6 = { label: tmp20, value: tmp5.mutualGuilds, onValueChange: tmp23 };
-    const tmp26 = closure_7(tmp(7119).TableSwitchRow, obj6);
+    const tmp26 = closure_7(tmp(7172).TableSwitchRow, obj6);
     cResult[16] = tmp5.mutualGuilds;
     cResult[17] = tmp23;
     cResult[18] = tmp26;
   }
-  const tmp19 = closure_7(setting(7119).TableSwitchRow, { label: tmp15, value: tmp5.mutualFriends, onValueChange: R });
+  const tmp19 = closure_7(setting(7172).TableSwitchRow, { label: tmp15, value: tmp5.mutualFriends, onValueChange: R });
   cResult[10] = tmp5.mutualFriends;
   cResult[11] = R;
   cResult[12] = tmp19;
@@ -287,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [closure_7(setting(7119).TableSwitchRow, obj3), , ];
+  const items1 = [closure_7(setting(7172).TableSwitchRow, obj3), , ];
   const obj4 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1128).intl;
   obj4.label = intl3.string(setting(1128).t.IqlCSq);
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = closure_7(setting(7119).TableSwitchRow, obj4);
+  items1[1] = closure_7(setting(7172).TableSwitchRow, obj4);
   const obj5 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1128).intl;
   obj5.label = intl4.string(setting(1128).t.mozb8f);
@@ -317,8 +317,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = closure_7(setting(7119).TableSwitchRow, obj5);
+  items1[2] = closure_7(setting(7172).TableSwitchRow, obj5);
   obj2.children = items1;
-  obj.children = closure_8(setting(6489).TableRowGroup, obj2);
+  obj.children = closure_8(setting(6542).TableRowGroup, obj2);
   return closure_7(View, obj);
 });

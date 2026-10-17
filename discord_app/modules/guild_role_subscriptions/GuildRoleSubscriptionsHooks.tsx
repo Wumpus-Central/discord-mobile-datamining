@@ -1,21 +1,21 @@
-// === Module 16200: GuildRoleSubscriptionsHooks ===
+// === Module 16266: GuildRoleSubscriptionsHooks ===
 
-// Module 16200 (GuildRoleSubscriptionsHooks)
+// Module 16266 (GuildRoleSubscriptionsHooks)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7180 */;
-import useRequestDefault from "useRequest" /* 11978 */;
-import subscriptionUtils from "subscriptionUtils" /* 16202 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7232 */;
+import useRequestDefault from "useRequest" /* 12041 */;
+import subscriptionUtils from "subscriptionUtils" /* 16268 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5976 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4802 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6013 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4838 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(4802).FetchState;
+const FetchState = fn(4838).FetchState;
 let closure_10 = [];
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchListingsForGuild(arg0, arg1) {
@@ -1124,7 +1124,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             ({ guildId: closure_129_0, groupListingId: closure_129_1, listingId: closure_129_2 } = closure_0);
             c5 = 1;
             c6 = 1;
-            return { value: "test", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {

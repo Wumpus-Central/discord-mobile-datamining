@@ -1,8 +1,8 @@
-// === Module 13453: InAppNotificationConstants ===
+// === Module 13519: InAppNotificationConstants ===
 
-// Module 13453 (InAppNotificationConstants)
+// Module 13519 (InAppNotificationConstants)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import size from "module_2" /* 2 */;
 
 const obj = { duration: 220, easing: null };

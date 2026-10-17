@@ -1,13 +1,13 @@
-// === Module 7486: CollectiblesProductRecord ===
+// === Module 7532: CollectiblesProductRecord ===
 
-// Module 7486 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6317 */;
+// Module 7532 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 6306 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7487 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7493 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7533 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7539 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7488);
+const CollectiblesItemRecord = fn(7534);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1087);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "code", items: "gap", categorySkuId: "toCharArray$esjava$1", categoryWillUnpublishAt: "Array", isCategoryReward: "unicodeVersion", prices: "", previewAssets: "values", googleSkuIds: "IconComponent", eligibleOffers: "Array", variants: "done", bundledProducts: "e", isFirstParty: "toCharArray$esjava$1" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 24, categoryWillUnpublishAt: 24, isCategoryReward: null, prices: "2735b94e62f2bc71613cf7e1aec9c3fe", previewAssets: "img_account_sync_twitch_white", googleSkuIds: "svg", eligibleOffers: "embed", variants: false, bundledProducts: null, isFirstParty: null };
               let str;
               if (first != null) {
                 str = first.optionValue;

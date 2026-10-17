@@ -1,15 +1,15 @@
-// === Module 13559: AnnouncementChannelLurkerBar ===
+// === Module 13625: AnnouncementChannelLurkerBar ===
 
-// Module 13559 (AnnouncementChannelLurkerBar)
+// Module 13625 (AnnouncementChannelLurkerBar)
 import nativeDefault from "native" /* 587 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 13058 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 13123 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 }, text: { textAlign: "center", marginBottom: 8 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Announcement
   }
   if (cResult[3] !== tmp4.text) {
     const obj2 = { style: text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    const tmp10 = closure_3(tmp(5150).Text, obj2);
+    const tmp10 = closure_3(tmp(5187).Text, obj2);
     cResult[3] = tmp4.text;
     cResult[4] = tmp10;
     let tmp8 = tmp10;
@@ -58,7 +58,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Announcement
   }
   if (cResult[6] !== tmp5) {
     const obj3 = { onPress: tmp5, text: tmp11, size: "sm", variant: "secondary", grow: true };
-    const tmp15 = closure_3(tmp(5442).Button, obj3);
+    const tmp15 = closure_3(tmp(5479).Button, obj3);
     cResult[6] = tmp5;
     cResult[7] = tmp15;
     let tmp13 = tmp15;
@@ -90,7 +90,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Announcement
   const obj2 = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1128).intl;
   obj2.children = intl.string(channel(1128).t.Hl0Mqh);
-  const items = [closure_3(channel(5150).Text, obj2), ];
+  const items = [closure_3(channel(5187).Text, obj2), ];
   const obj3 = {
     onPress: function handleFollowing() {
       const guildId = channel.getGuildId();
@@ -105,7 +105,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function Announcement
   };
   const intl2 = channel(1128).intl;
   obj3.text = intl2.string(channel(1128).t["4z5PU1"]);
-  items[1] = closure_3(channel(5442).Button, obj3);
+  items[1] = closure_3(channel(5479).Button, obj3);
   obj.children = items;
   return closure_4(View, obj);
 });

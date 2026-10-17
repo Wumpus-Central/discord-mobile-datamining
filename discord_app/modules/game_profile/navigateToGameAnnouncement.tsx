@@ -1,6 +1,6 @@
-// === Module 9197: navigateToGameAnnouncement ===
+// === Module 9257: navigateToGameAnnouncement ===
 
-// Module 9197 (navigateToGameAnnouncement)
+// Module 9257 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
@@ -43,7 +43,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {

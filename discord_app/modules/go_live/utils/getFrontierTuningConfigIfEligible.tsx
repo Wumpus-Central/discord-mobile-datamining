@@ -1,8 +1,8 @@
-// === Module 5300: getFrontierTuningConfigIfEligible ===
+// === Module 5337: getFrontierTuningConfigIfEligible ===
 
-// Module 5300 (getFrontierTuningConfigIfEligible)
-import PremiumUtilsDefault from "PremiumUtils" /* 4828 */;
-import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 5301 */;
+// Module 5337 (getFrontierTuningConfigIfEligible)
+import PremiumUtilsDefault from "PremiumUtils" /* 4864 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 5338 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
 const require = fn;

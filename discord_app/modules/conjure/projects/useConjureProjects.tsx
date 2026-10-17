@@ -1,22 +1,22 @@
-// === Module 12216: useConjureProjects ===
+// === Module 12279: useConjureProjects ===
 
-// Module 12216 (useConjureProjects)
+// Module 12279 (useConjureProjects)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6298 */;
-import conjureAppInServer from "conjureAppInServer" /* 10923 */;
-import ConjureActivity from "ConjureActivity" /* 11519 */;
+import _modDef3883 from "module_3883" /* 3883 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6356 */;
+import conjureAppInServer from "conjureAppInServer" /* 10987 */;
+import ConjureActivity from "ConjureActivity" /* 11578 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5503 */;
-import UserProfileStore from "UserProfileStore" /* 7540 */;
-import GuildChannelStore from "GuildChannelStore" /* 4807 */;
+import ApplicationStore from "ApplicationStore" /* 5540 */;
+import UserProfileStore from "UserProfileStore" /* 7586 */;
+import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4809 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4998 */;
-import ConjureChatStore from "ConjureChatStore" /* 10899 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10897 */;
+import PermissionStore from "PermissionStore" /* 4845 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
+import ConjureChatStore from "ConjureChatStore" /* 10963 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 
 const require = globalThis.__r;
 
@@ -291,24 +291,24 @@ export const describeConjureProjectRow = function describeConjureProjectRow(entr
   if (entry.notInServer) {
     const obj3 = { serverName: null, label: null };
     const intl4 = util.intl;
-    obj3.serverName = intl4.string(_modDef3865["08PzLy"]);
+    obj3.serverName = intl4.string(_modDef3883["08PzLy"]);
     const intl5 = util.intl;
     const obj4 = { name: entry.name };
-    obj3.label = intl5.formatToPlainString(_modDef3865.pyh2pa, obj4);
+    obj3.label = intl5.formatToPlainString(_modDef3883.pyh2pa, obj4);
     let obj = obj3;
   } else if (null == entry.guildName) {
     const obj5 = { serverName: null, label: null };
     const intl2 = util.intl;
-    obj5.serverName = intl2.string(_modDef3865["3QFps8"]);
+    obj5.serverName = intl2.string(_modDef3883["3QFps8"]);
     const intl3 = util.intl;
     const obj6 = { name: entry.name };
-    obj5.label = intl3.formatToPlainString(_modDef3865["2sBOnp"], obj6);
+    obj5.label = intl3.formatToPlainString(_modDef3883["2sBOnp"], obj6);
     obj = obj5;
   } else {
     obj = { serverName: entry.guildName, label: null };
     const intl = util.intl;
     ({ name: obj2.name, guildName: obj2.server } = entry);
-    obj.label = intl.formatToPlainString(_modDef3865["hd+GF1"], { name: null, server: null });
+    obj.label = intl.formatToPlainString(_modDef3883["hd+GF1"], { name: null, server: null });
     const obj11 = { name: null, server: null };
   }
   return obj;

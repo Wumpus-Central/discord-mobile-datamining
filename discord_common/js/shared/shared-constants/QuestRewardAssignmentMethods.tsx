@@ -1,6 +1,6 @@
-// === Module 9432: QuestRewardAssignmentMethods ===
+// === Module 9496: QuestRewardAssignmentMethods ===
 
-// Module 9432 (QuestRewardAssignmentMethods)
+// Module 9496 (QuestRewardAssignmentMethods)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardAssignmentMethods.tsx");

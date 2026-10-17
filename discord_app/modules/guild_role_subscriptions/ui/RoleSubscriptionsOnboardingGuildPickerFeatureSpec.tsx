@@ -1,9 +1,9 @@
-// === Module 14832: RoleSubscriptionsOnboardingGuildPickerFeatureSpec ===
+// === Module 14901: RoleSubscriptionsOnboardingGuildPickerFeatureSpec ===
 
-// Module 14832 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
+// Module 14901 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
-import ExperimentStore from "ExperimentStore" /* 5075 */;
+import ExperimentStore from "ExperimentStore" /* 5112 */;
 
 require = fn;
 const isGuildOwner = fn(2086).isGuildOwner;
@@ -26,12 +26,12 @@ export default {
       let result = closure_1_3(guild, arg1);
       if (result) {
         const obj2 = { guild, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-        const obj = closure_1_0(7185);
-        obj2.isUserInCreatorMonetizationEligibleCountry = closure_1_0(7186).isUserInCreatorMonetizationEligibleCountry();
-        const obj3 = closure_1_0(7186);
-        obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(4801).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
+        const obj = closure_1_0(7237);
+        obj2.isUserInCreatorMonetizationEligibleCountry = closure_1_0(7238).isUserInCreatorMonetizationEligibleCountry();
+        const obj3 = closure_1_0(7238);
+        obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(4837).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
         result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
-        const obj4 = closure_1_0(4801);
+        const obj4 = closure_1_0(4837);
       }
       return result;
     }, [], initialize.statesWillNeverBeEqual);

@@ -1,15 +1,15 @@
-// === Module 15433: definitions ===
+// === Module 15500: definitions ===
 
-// Module 15433 (definitions)
+// Module 15500 (definitions)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import Constants2 from "Constants" /* 2027 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7263 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8685 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10490 */;
-import ActivityPlatform from "ActivityPlatform" /* 11252 */;
-import SKUTypes from "SKUTypes" /* 15434 */;
-import helpers from "helpers" /* 15435 */;
-import contextMenuIcons from "contextMenuIcons" /* 15436 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8731 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10553 */;
+import ActivityPlatform from "ActivityPlatform" /* 11314 */;
+import SKUTypes from "SKUTypes" /* 15501 */;
+import helpers from "helpers" /* 15502 */;
+import contextMenuIcons from "contextMenuIcons" /* 15503 */;
 import Constants from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
@@ -1855,7 +1855,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "test"
+    response: "Reflect"
   },
   [helpers.RPCCommand.GET_CONTEXT]: obj36,
   [helpers.RPCCommand.GET_USER]: {
@@ -1924,7 +1924,7 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "test"
+    response: "Reflect"
   },
   [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj44,
   [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj45,
@@ -1939,7 +1939,7 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "OrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "test"
+    response: "Reflect"
   },
   [helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
@@ -1952,7 +1952,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "code", response: "" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

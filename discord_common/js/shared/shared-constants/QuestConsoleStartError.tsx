@@ -1,6 +1,6 @@
-// === Module 13834: QuestConsoleStartError ===
+// === Module 13902: QuestConsoleStartError ===
 
-// Module 13834 (QuestConsoleStartError)
+// Module 13902 (QuestConsoleStartError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestConsoleStartError.tsx");

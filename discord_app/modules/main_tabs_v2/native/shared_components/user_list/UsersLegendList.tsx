@@ -1,9 +1,9 @@
-// === Module 13575: UsersLegendList ===
+// === Module 13643: UsersLegendList ===
 
-// Module 13575 (UsersLegendList)
-import ReanimatedRexport from "ReanimatedRexport" /* 4909 */;
-import BottomSheetModal from "BottomSheetModal" /* 6531 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 6977 */;
+// Module 13643 (UsersLegendList)
+import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import BottomSheetModal from "BottomSheetModal" /* 6584 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
 const __initData = { code: "function UsersLegendListTsx1(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}" };
 let closure_10 = { code: "function UsersLegendListTsx2(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}" };

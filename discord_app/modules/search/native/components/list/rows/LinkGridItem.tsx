@@ -1,22 +1,22 @@
-// === Module 17749: LinkGridItem ===
+// === Module 17809: LinkGridItem ===
 
-// Module 17749 (LinkGridItem)
+// Module 17809 (LinkGridItem)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import LinkIcon from "LinkIcon" /* 5100 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8364 */;
-import ChatIcon from "ChatIcon" /* 8425 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8718 */;
-import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 9852 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12915 */;
-import SearchMediaImage from "SearchMediaImage" /* 17740 */;
-import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 17750 */;
+import LinkIcon from "LinkIcon" /* 5137 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8410 */;
+import ChatIcon from "ChatIcon" /* 8471 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8764 */;
+import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 9916 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12980 */;
+import SearchMediaImage from "SearchMediaImage" /* 17800 */;
+import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 17810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import SearchMessageStore from "SearchMessageStore" /* 6281 */;
+import SearchMessageStore from "SearchMessageStore" /* 6340 */;
 
 require = fn;
 function getLinkNodeAtIndex(content, diff, fn) {
@@ -4741,11 +4741,11 @@ function LinkParsedGridItem(author) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchConstants = fn(9550);
+const SearchConstants = fn(9614);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_9, SearchLinkTypes: c10 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_13 = createStyles.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkEmbedGridItem(channelId) {

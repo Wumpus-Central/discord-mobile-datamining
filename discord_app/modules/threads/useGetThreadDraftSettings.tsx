@@ -1,8 +1,8 @@
-// === Module 9930: useGetThreadDraftSettings ===
+// === Module 9994: useGetThreadDraftSettings ===
 
-// Module 9930 (useGetThreadDraftSettings)
+// Module 9994 (useGetThreadDraftSettings)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DraftStore from "DraftStore" /* 7464 */;
+import DraftStore from "DraftStore" /* 7510 */;
 
 const require = globalThis.__r;
 

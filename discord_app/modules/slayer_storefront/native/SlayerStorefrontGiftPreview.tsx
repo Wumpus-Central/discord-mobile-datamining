@@ -1,12 +1,12 @@
-// === Module 10754: SlayerStorefrontGiftPreview ===
+// === Module 10817: SlayerStorefrontGiftPreview ===
 
-// Module 10754 (SlayerStorefrontGiftPreview)
+// Module 10817 (SlayerStorefrontGiftPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef3735 from "module_3735" /* 3735 */;
-import Text_Text from "Text/Text" /* 5150 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9260 */;
-import InfoBox from "InfoBox" /* 10755 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import Text_Text from "Text/Text" /* 5187 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9320 */;
+import InfoBox from "InfoBox" /* 10818 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5154);
+const createStyles = fn(5191);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -40,7 +40,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Warning
           name1 = application.name;
         }
         const obj2 = { applicationName: name1 };
-        const formatToPlainStringResult = intl3.formatToPlainString(_modDef3735.BMMo2K, obj2);
+        const formatToPlainStringResult = intl3.formatToPlainString(_modDef3753.BMMo2K, obj2);
         let name2;
         if (application != null) {
           name2 = application.name;
@@ -137,7 +137,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Warning
     const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
     const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3735).BMMo2K;
+      BMMo2K = name(3753).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {

@@ -1,8 +1,8 @@
-// === Module 9367: payment_modal_banner ===
+// === Module 9431: payment_modal_banner ===
 
-// Module 9367 (payment_modal_banner)
+// Module 9431 (payment_modal_banner)
 import _mod1212 from "module_1212" /* 1212 */;
-import localized_string from "localized_string" /* 9362 */;
+import localized_string from "localized_string" /* 9426 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -34,12 +34,12 @@ class PaymentModalBanner$Type extends MessageType {
   }
 }
 const prototype = PaymentModalBanner$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { assetUrl: "", header: "", body: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

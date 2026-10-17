@@ -1,6 +1,6 @@
-// === Module 9370: gradient ===
+// === Module 9434: gradient ===
 
-// Module 9370 (gradient)
+// Module 9434 (gradient)
 import _mod1212 from "module_1212" /* 1212 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -16,12 +16,12 @@ class Gradient$Type extends MessageType {
   }
 }
 const prototype = Gradient$Type.prototype;
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { colors: [], angle: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

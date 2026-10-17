@@ -1,9 +1,9 @@
-// === Module 9660: SuperReactionLocalImageAnimation ===
+// === Module 9724: SuperReactionLocalImageAnimation ===
 
-// Module 9660 (SuperReactionLocalImageAnimation)
+// Module 9724 (SuperReactionLocalImageAnimation)
 import c from "c" /* 576 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 8147 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 8190 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 8193 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 8236 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

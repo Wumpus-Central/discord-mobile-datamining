@@ -1,8 +1,8 @@
-// === Module 15447: internalDeepLinks ===
+// === Module 15512: internalDeepLinks ===
 
-// Module 15447 (internalDeepLinks)
+// Module 15512 (internalDeepLinks)
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import openURL from "openURL" /* 4859 */;
+import openURL from "openURL" /* 4895 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

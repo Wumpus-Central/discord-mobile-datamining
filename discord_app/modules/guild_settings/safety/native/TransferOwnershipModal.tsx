@@ -1,11 +1,11 @@
-// === Module 12497: TransferOwnershipModal ===
+// === Module 12562: TransferOwnershipModal ===
 
-// Module 12497 (TransferOwnershipModal)
+// Module 12562 (TransferOwnershipModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Navigator from "Navigator" /* 6912 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12496 */;
-import TransferOwnershipDefault from "TransferOwnership" /* 12499 */;
+import Navigator from "Navigator" /* 6965 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12561 */;
+import TransferOwnershipDefault from "TransferOwnership" /* 12564 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,7 +41,7 @@ function getScreens(guild, toUser) {
       c2 = 0;
       c1 = 0;
       return (async (arg0) => {
-        await toUser(8864).transferOwnership(id.id, id2.id, constants.EMAIL, id);
+        await toUser(8910).transferOwnership(id.id, id2.id, constants.EMAIL, id);
         return value;
       })();
     });
@@ -56,11 +56,11 @@ function getScreens(guild, toUser) {
       return applyArgumentsResult;
     };
     obj.onSuccess = function onSuccess() {
-      toUser(12496).close();
-      const obj = toUser(12496);
-      toUser(8864).close();
-      const obj2 = toUser(8864);
-      const result = closure_0(4867).showTransferOwnershipSuccess();
+      toUser(12561).close();
+      const obj = toUser(12561);
+      toUser(8910).close();
+      const obj2 = toUser(8910);
+      const result = closure_0(4903).showTransferOwnershipSuccess();
     };
     obj.onResend = asyncGeneratorStep(async () => {
       if (c0 === 2) {
@@ -113,12 +113,12 @@ function getScreens(guild, toUser) {
     obj.headerText = intl.string(guild(1128).t.Z5s7PM);
     const intl2 = guild(1128).intl;
     obj.confirmButtonText = intl2.string(guild(1128).t.Z5s7PM);
-    return jsx(toUser(6508), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
+    return jsx(toUser(6561), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
   };
   obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
   return obj2;
 }
-const TransferOwnershipConstants = fn(12498);
+const TransferOwnershipConstants = fn(12563);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -165,5 +165,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Transfer
   const obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   const intl = guild(1128).intl;
   obj.headerBackTitle = intl.string(guild(1128).t["13/7kX"]);
-  return jsx(guild(6912).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  return jsx(guild(6965).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 });

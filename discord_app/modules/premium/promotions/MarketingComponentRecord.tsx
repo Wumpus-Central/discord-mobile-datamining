@@ -1,10 +1,10 @@
-// === Module 9359: MarketingComponentRecord ===
+// === Module 9423: MarketingComponentRecord ===
 
-// Module 9359 (MarketingComponentRecord)
+// Module 9423 (MarketingComponentRecord)
 import DurationsDefault from "Durations" /* 1104 */;
 import ProtoUtils from "ProtoUtils" /* 1249 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1266 */;
-import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9360 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9424 */;
 import Record from "Record" /* 1407 */;
 
 require = fn;

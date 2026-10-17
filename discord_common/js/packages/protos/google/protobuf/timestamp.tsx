@@ -122,12 +122,12 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
     }
   }
 };
-prototype["create"] = function create(arr) {
+prototype["create"] = function create(partialSettings) {
   const obj = { seconds: "0", nanos: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== arr) {
-    const result = _mod1212.reflectionMergePartial(this, obj, arr);
+  if (undefined !== partialSettings) {
+    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
     const tmpResult = _mod1212;
   }
   return obj;

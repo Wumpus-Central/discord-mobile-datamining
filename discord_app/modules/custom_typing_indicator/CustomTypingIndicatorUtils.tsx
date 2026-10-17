@@ -1,15 +1,15 @@
-// === Module 12751: CustomTypingIndicatorUtils ===
+// === Module 12816: CustomTypingIndicatorUtils ===
 
-// Module 12751 (CustomTypingIndicatorUtils)
+// Module 12816 (CustomTypingIndicatorUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import user2 from "user" /* 1400 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1413 */;
-import _modDef3867 from "module_3867" /* 3867 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4823 */;
-import EmojiStore from "EmojiStore" /* 6206 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8512 */;
+import _modDef3885 from "module_3885" /* 3885 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
+import EmojiStore from "EmojiStore" /* 6243 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8558 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import SortedGuildStore from "SortedGuildStore" /* 6182 */;
+import SortedGuildStore from "SortedGuildStore" /* 6219 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -18,23 +18,23 @@ require = fn;
 const Permissions = fn(1087).Permissions;
 const EmojiIntention = fn(1395).EmojiIntention;
 let obj = {};
-obj[fn(1400).TypingSuggestion.UNSPECIFIED] = _modDef3867["6Cdy4a"];
-obj[fn(1400).TypingSuggestion.YAPPING] = _modDef3867.E5VRaj;
-obj[fn(1400).TypingSuggestion.VENTING] = _modDef3867.xmxdPC;
-obj[fn(1400).TypingSuggestion.OVERSHARING] = _modDef3867["qGaH/9"];
-obj[fn(1400).TypingSuggestion.BARKING] = _modDef3867.M282uk;
-obj[fn(1400).TypingSuggestion.BABBLING] = _modDef3867.myNZDT;
-obj[fn(1400).TypingSuggestion.DAYDREAMING] = _modDef3867.F7RLTP;
-obj[fn(1400).TypingSuggestion.MEOWING] = _modDef3867.EfxyQI;
+obj[fn(1400).TypingSuggestion.UNSPECIFIED] = _modDef3885["6Cdy4a"];
+obj[fn(1400).TypingSuggestion.YAPPING] = _modDef3885.E5VRaj;
+obj[fn(1400).TypingSuggestion.VENTING] = _modDef3885.xmxdPC;
+obj[fn(1400).TypingSuggestion.OVERSHARING] = _modDef3885["qGaH/9"];
+obj[fn(1400).TypingSuggestion.BARKING] = _modDef3885.M282uk;
+obj[fn(1400).TypingSuggestion.BABBLING] = _modDef3885.myNZDT;
+obj[fn(1400).TypingSuggestion.DAYDREAMING] = _modDef3885.F7RLTP;
+obj[fn(1400).TypingSuggestion.MEOWING] = _modDef3885.EfxyQI;
 let obj2 = {};
-obj2[fn(1400).TypingSuggestion.UNSPECIFIED] = _modDef3867.kh4K4F;
-obj2[fn(1400).TypingSuggestion.YAPPING] = _modDef3867.m9AeqG;
-obj2[fn(1400).TypingSuggestion.VENTING] = _modDef3867["SZ0/Qu"];
-obj2[fn(1400).TypingSuggestion.OVERSHARING] = _modDef3867.N8cWE8;
-obj2[fn(1400).TypingSuggestion.BARKING] = _modDef3867.L5aWEN;
-obj2[fn(1400).TypingSuggestion.BABBLING] = _modDef3867.AoBaEw;
-obj2[fn(1400).TypingSuggestion.DAYDREAMING] = _modDef3867["3hOLod"];
-obj2[fn(1400).TypingSuggestion.MEOWING] = _modDef3867["0Z9/o9"];
+obj2[fn(1400).TypingSuggestion.UNSPECIFIED] = _modDef3885.kh4K4F;
+obj2[fn(1400).TypingSuggestion.YAPPING] = _modDef3885.m9AeqG;
+obj2[fn(1400).TypingSuggestion.VENTING] = _modDef3885["SZ0/Qu"];
+obj2[fn(1400).TypingSuggestion.OVERSHARING] = _modDef3885.N8cWE8;
+obj2[fn(1400).TypingSuggestion.BARKING] = _modDef3885.L5aWEN;
+obj2[fn(1400).TypingSuggestion.BABBLING] = _modDef3885.AoBaEw;
+obj2[fn(1400).TypingSuggestion.DAYDREAMING] = _modDef3885["3hOLod"];
+obj2[fn(1400).TypingSuggestion.MEOWING] = _modDef3885["0Z9/o9"];
 let items = [fn(1400).TypingSuggestion.UNSPECIFIED, fn(1400).TypingSuggestion.YAPPING, fn(1400).TypingSuggestion.VENTING, fn(1400).TypingSuggestion.OVERSHARING, fn(1400).TypingSuggestion.BARKING, fn(1400).TypingSuggestion.BABBLING, fn(1400).TypingSuggestion.DAYDREAMING, fn(1400).TypingSuggestion.MEOWING];
 let items1 = [fn(1400).TypingIndicatorAnimation.PULSE, fn(1400).TypingIndicatorAnimation.RING, fn(1400).TypingIndicatorAnimation.WAVE];
 const ReactCompilerGating = fn(558);

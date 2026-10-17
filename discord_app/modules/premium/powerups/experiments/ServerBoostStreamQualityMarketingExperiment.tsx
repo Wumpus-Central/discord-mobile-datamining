@@ -1,6 +1,6 @@
-// === Module 14595: ServerBoostStreamQualityMarketingExperiment ===
+// === Module 14663: ServerBoostStreamQualityMarketingExperiment ===
 
-// Module 14595 (ServerBoostStreamQualityMarketingExperiment)
+// Module 14663 (ServerBoostStreamQualityMarketingExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1456 */;
 
 const obj = { name: "2026-04-server-boost-copy-1440p", kind: "user", defaultConfig: { streamQualityMarketingResolution: "1080p" }, variations: null };

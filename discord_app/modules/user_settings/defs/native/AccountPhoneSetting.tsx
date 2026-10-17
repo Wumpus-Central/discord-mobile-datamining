@@ -1,18 +1,18 @@
-// === Module 15688: AccountPhoneSetting ===
+// === Module 15754: AccountPhoneSetting ===
 
-// Module 15688 (AccountPhoneSetting)
+// Module 15754 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6153 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 6958 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 7011 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-let closure_4 = fn(6956).PHONE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(7009).PHONE_VERIFICATION_MODAL_KEY;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11003);
+const SettingBuilders = fn(11065);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountPhoneSettingTrailing() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,7 +49,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(8214).MobileUserSettings.ACCOUNT,
+  parent: fn(8260).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountPhoneSettingTrailing() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -85,7 +85,7 @@ const pressable = SettingBuilders.createPressable({
     const obj2 = { allowDeletePhone: true, reason: null };
     const obj = ModalActionCreatorsDefault;
     obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(6955, dependencyMap.paths), obj2, closure_4);
+    obj.pushLazy(asyncRequireImpl(7008, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true
 });
