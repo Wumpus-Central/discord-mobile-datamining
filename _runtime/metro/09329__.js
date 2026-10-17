@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "34bb1c89964a0349aafd993e713936d7",
-  name: "ScreenIcon",
+  hash: "0272dced0f6c0fbc37cda949ecb8a378",
+  name: "DiceIcon",
   type: "png",
 });

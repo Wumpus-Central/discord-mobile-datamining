@@ -1,13 +1,7 @@
 // _runtime/metro/06598__.js
-import get_ActivityIndicator from "00017__.js";
+import _mod19 from "00019__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
+const context = _mod19.createContext(null);
 
-export default PlatformConstants;
+export const BottomSheetModalInternalContext = context;
+export const BottomSheetModalInternalProvider = context.Provider;

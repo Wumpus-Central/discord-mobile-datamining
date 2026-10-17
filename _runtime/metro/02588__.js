@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJlbnRfdG9vbHM=",
+  httpServerLocation: "/assets/modules/guild_settings/server_monetization/guild_theme/web",
   scales: [1],
-  hash: "f0740671fc095d4bbeee29af08c5713f",
-  name: "lt.messages.f0740671fc095d4bbeee29af08c5713f.compiled.messages",
+  hash: "568a306e5dbbd7f0a78da5ed8e4b8801",
+  name: "GuildSettingsGuildTheme.compiled.messages",
   type: "jsona",
 });

@@ -1,30 +1,28 @@
 // _runtime/metro/15322__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../15323_replaceByteInByteSequence.js";
+import _mod15323 from "15323__.js";
+import _mod15325 from "15325__.js";
+import text from "../15332_text.js";
+import _mod15343 from "15343__.js";
+import _mod15353 from "15353__.js";
+import _mod15355 from "15355__.js";
+import _mod15357 from "15357__.js";
+import _mod15358 from "15358__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+if (!_mod15323) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod15325(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod15355) {
+      if (_mod15343(tmp3, tmp4)) {
+        const tmpResult = _mod15357;
+        return tmpResult(!_mod15353(_mod15358.f, tmp3, tmp4), tmp3[tmp4]);
+      }
+    } else {
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
+    }
+  };
 }
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
 
-export const URL = replaceByteInByteSequence.URL;
+export const f = getOwnPropertyDescriptor;

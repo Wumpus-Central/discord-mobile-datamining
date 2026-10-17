@@ -1,37 +1,43 @@
 // _runtime/metro/08082__.js
-import _modDef8083 from "08083__.js";
+import _mod8083 from "08083__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  decode(arg0, buffer) {
-    value = _modDef8083.get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          const decoder = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
           } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
           }
-          decoder.decode(buffer);
-        } catch (err) {}
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
       }
-    }
-    const mapped = buffer.map((item) => String.fromCharCode(item));
-    return (function decodeAsciiValue(arg0) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(arg0));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5,
-};
+    };
+  }
+  const _Object2 = Object;
+  fn(_mod8083, exports);
+} else {
+  let _Object = Object;
+}

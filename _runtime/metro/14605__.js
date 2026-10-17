@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 30,
-  height: 30,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting",
+  width: 177.5,
+  height: 112,
   scales: [2, 3],
-  hash: "1e3b48d91e5d1a57c5c0dcf0e9c39aca",
-  name: "role_2",
+  hash: "d63f711157bc9a870f14f2f22d76c3fb",
+  name: "guild_subscription_no_guilds_dark",
   type: "png",
 });

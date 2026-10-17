@@ -1,42 +1,38 @@
 // _runtime/metro/04710__.js
-import 04711__ from "04711__.js";
-import 04712__ from "04712__.js";
-import 04713__ from "04713__.js";
-import date_mod from "04714__.js";
-import date_mod from "04715__.js";
+import module_4298_mod from "04298__.js";
+import _typeof_mod from "04294__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-if (!module_4711) {
-  const obj = { default: module_4711 };
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj = { default: module_4298 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4711;
+  tmp3 = module_4298;
 }
-if (!module_4712) {
-  const obj2 = { default: module_4712 };
+module_4298 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4712;
+  tmp5 = _typeof;
 }
-if (!module_4713) {
-  const obj3 = { default: module_4713 };
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4713;
+  tmp7 = requiredArgs;
 }
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function setDayOfYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_4298.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

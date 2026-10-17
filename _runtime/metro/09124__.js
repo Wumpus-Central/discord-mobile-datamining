@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d6b6d301228ff846f051730b4a535337",
-  name: "SteamNeutralIcon",
+  hash: "89f7dd41fa8b5bbc58e4a48619a1a1a9",
+  name: "XLargeBoldIcon",
   type: "png",
 });

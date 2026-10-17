@@ -1,6 +1,6 @@
 // _runtime/metro/04446__.js
-import _typeof_mod from "04258__.js";
-import requiredArgs_mod from "../04259_requiredArgs.js";
+import _typeof_mod from "04294__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getQuarter(arg0) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(_typeof.default(arg0).getMonth() / 3) + 1;
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

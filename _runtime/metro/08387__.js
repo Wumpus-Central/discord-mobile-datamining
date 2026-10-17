@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f5152f59510615cd9a196a52f24801ee",
-  name: "ThreadIcon",
+  hash: "8f1bbba7f556b427515687c5a1498793",
+  name: "TrophyIcon",
   type: "png",
 });

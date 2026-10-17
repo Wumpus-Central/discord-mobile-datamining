@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "a7a629f03005b09b581ccdee10e4a92d",
-  name: "img_boost_subheader_resub_mobile",
+  hash: "72af9903f630d67fa106808d11ca96fb",
+  name: "speaker",
   type: "png",
 });

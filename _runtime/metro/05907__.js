@@ -1,17 +1,13 @@
 // _runtime/metro/05907__.js
-import _mod1332 from "01332__.js";
-import _mod1333 from "01333__.js";
-import _mod1339 from "01339__.js";
-import _mod5899 from "05899__.js";
 
-export default function isInteger(num) {
-  if (typeof num === "number") {
-    if (!_mod1339(num)) {
-      if (_mod5899(num)) {
-        const tmp = _mod1332(num);
-        return _mod1333(tmp) === tmp;
-      }
+export default function isObject(fn) {
+  let tmp = fn;
+  if (tmp) {
+    let tmp2 = typeof fn === "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn === "object";
     }
+    tmp = tmp2;
   }
-  return false;
+  return tmp;
 }

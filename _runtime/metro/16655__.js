@@ -3,9 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/intl/messages",
-  scales: [1],
-  hash: "10b2c11f96663a832c7bc6992f4ab3f5",
-  name: "SecondTest.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "84a1e2a3b13ea7ae45e68f1bb8755810",
+  name: "TreehouseIcon",
+  type: "png",
 });

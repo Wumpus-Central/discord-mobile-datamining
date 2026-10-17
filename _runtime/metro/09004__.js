@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
-  width: 20,
-  height: 20,
-  scales: [1, 2, 3],
-  hash: "e955954d3b070442dffa061da0dc1d1a",
-  name: "ic_clock",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "a9bda86a153eecbc9eb21d6f5b6433f7",
+  name: "QrCodeIcon",
   type: "png",
 });

@@ -1,28 +1,33 @@
 // _runtime/metro/06710__.js
-import _mod19 from "00019__.js";
-import _mod6554 from "06554__.js";
+import _mod17 from "00017__.js";
 
-const useLayoutEffect = _mod19.useLayoutEffect;
+const Platform = _mod17.Platform;
 
-export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (obj.isFabricInstalled()) {
-    useLayoutEffect(() => {
-      if (closure_0) {
-        if (closure_0.current) {
-          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
-            if (typeof closure_0.current.getBoundingClientRect === "function") {
-              const current2 = closure_0.current;
-              closure_1(current2.getBoundingClientRect());
-            }
-          } else {
-            const current = closure_0.current;
-            closure_1(current.unstable_getBoundingClientRect());
-          }
-        }
-      }
-    });
+export const getTVProps = function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
   }
-  obj = _mod6554;
+  return obj;
+};
+export const applyRelationProp = function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      const items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
 };

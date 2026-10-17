@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/modules/premium/native/images",
+  width: 375,
+  height: 199.5,
   scales: [2, 3],
-  hash: "b8e06ae6b6de6ac4efb5803ebe56348e",
-  name: "star",
+  hash: "84a21c838928df371966fa4ffd9053d1",
+  name: "nitro_home_banner",
   type: "png",
 });

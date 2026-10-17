@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "841d46455ae53fb7e7901a2d793c8d1a",
-  name: "HeadphonesSlashIcon",
+  hash: "a07985aa2246ccd4facb50f3c745ccda",
+  name: "twitter",
   type: "png",
 });

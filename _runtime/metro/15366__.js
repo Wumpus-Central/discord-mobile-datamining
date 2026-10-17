@@ -1,49 +1,99 @@
 // _runtime/metro/15366__.js
+let c0 = false;
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
-    const _Map = Map;
-    map = new Map();
-  }
-  return {
-    all: map,
-    on(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        value.push(arg1);
-      } else {
-        const items = [arg1];
-        const result = map.set(arg0, items);
+export default {
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(15325)(arg0);
+    const tmp4 = closure_0(15367)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
       }
-    },
-    off(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        if (arg1) {
-          value.splice(value.indexOf(arg1) >>> 0, 1);
-        } else {
-          const result = map.set(arg0, []);
+      return num3;
+    } else {
+      let sum = closure_0(15371)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
         }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
       }
-    },
-    emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
-      if (value) {
-        const substr = value.slice();
-        const mapped = substr.map((fn) => {
-          fn(closure_1);
-        });
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
       }
-      value2 = map.get("*");
-      if (value2) {
-        const substr1 = value2.slice();
-        const mapped1 = substr1.map((fn) => {
-          fn(closure_0, closure_1);
-        });
+    }
+  },
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(15325)(arg0);
+    const tmp4 = closure_0(15367)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
       }
-    },
-  };
+      return num3;
+    } else {
+      let sum = closure_0(15371)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  },
 };

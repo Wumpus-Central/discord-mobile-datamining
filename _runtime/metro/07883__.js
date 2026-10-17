@@ -1,13 +1,14 @@
 // _runtime/metro/07883__.js
-import _modDef7821 from "07821__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7882 from "07882__.js";
+import _modDef7884 from "07884__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Pattern = importDefault;
+const FeColorMatrix = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Pattern {
+class FeColorMatrix {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
-    tmp2 = closure_4;
-    obj = closure_4(Pattern);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, FeColorMatrix);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeColorMatrix);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,64 +49,37 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef7821);
+_inherits(FeColorMatrix, _modDef7882);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
-    }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(7805)(patternTransform);
-    const size = {
-      x,
-      y,
-      width,
-      height,
-      name: id,
-      matrix: tmp3Result,
-      patternTransform: tmp3Result,
-      patternUnits: null,
-      patternContentUnits: null,
-    };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(7875)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(7875)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const tmp3 = Pattern(7805);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(7810)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(7884), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const merged = Object.assign(FeColorMatrix(7881).extractFilter(this.props));
+    const obj2 = FeColorMatrix(7881);
+    const merged1 = Object.assign(FeColorMatrix(7881).extractIn(this.props));
+    const obj3 = FeColorMatrix(7881);
+    const merged2 = Object.assign(FeColorMatrix(7881).extractFeColorMatrix(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeColorMatrix, items);
+importDefaultResultResult.displayName = "FeColorMatrix";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.type = "matrix";
+obj.values = "";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

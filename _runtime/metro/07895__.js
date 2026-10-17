@@ -1,17 +1,14 @@
 // _runtime/metro/07895__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import appendTransformPropsDefault from "../07805_appendTransformProps.js";
-import extractPropsDefault from "../07812_extractProps.js";
-import extractFontDefault from "../07819_extractFont.js";
-import _modDef7821 from "07821__.js";
-import _modDef7898 from "07898__.js";
+import _modDef7882 from "07882__.js";
+import _modDef7896 from "07896__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Text = fn;
+const FeOffset = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,73 +28,57 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 _possibleConstructorReturnDefault;
-_isNativeReflectConstruct = fn(7896);
 const jsx = fn(21).jsx;
-class Text {
+class FeOffset {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, Text);
-    items1 = [...items];
+    tmp = closure_3(this, FeOffset);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Text);
+    obj = hasOwnProperty(FeOffset);
     tmp3 = closure_4;
     if (closure_7()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = Text(7812).propsAndStyles(matrix);
-      const obj = Text(7812);
-      const merged = Object.assign(
-        propsAndStylesResult,
-        Text(7813).pickNotNil(extractFontDefault(propsAndStylesResult, true)),
-      );
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = Text(7813);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Text, _modDef7821);
+_inherits(FeOffset, _modDef7882);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = Text(7812).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = Text(7812);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef7898, {});
+    const self = this;
+    const merged = Object.assign(this.props);
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged1 = Object.assign(FeOffset(7881).extractFilter(this.props));
+    const obj2 = FeOffset(7881);
+    const merged2 = Object.assign(FeOffset(7881).extractIn(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Text, items);
-importDefaultResultResult.displayName = "Text";
+const items = [entry];
+const importDefaultResultResult = _createClass(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.dx = 0;
+obj.dy = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

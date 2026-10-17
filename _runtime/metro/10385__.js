@@ -1,3 +1,13 @@
 // _runtime/metro/10385__.js
+import registerAsset from "01134__.js";
 
-export const Pagination = { Basic: fn(10386).Basic, Custom: fn(10388).Custom };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 279,
+  height: 48,
+  scales: [2, 3],
+  hash: "1fff7418e65eeae25a3f248ccb7dea3b",
+  name: "img_nitro_tier_1_activated_light",
+  type: "png",
+});

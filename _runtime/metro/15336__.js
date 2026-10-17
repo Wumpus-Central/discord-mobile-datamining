@@ -1,45 +1,28 @@
 // _runtime/metro/15336__.js
-import _typeof from "15337__.js";
+import _mod15320 from "15320__.js";
+import _mod15321 from "15321__.js";
+import _mod15337 from "15337__.js";
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
-  }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
-    } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
-      }
-    }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
-        }
-      }
-    }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
-  }
+let prop = _mod15320["__core-js_shared__"];
+if (!prop) {
+  prop = _mod15321("__core-js_shared__", {});
 }
-_default = { default: _typeof };
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod15337) {
+  str2 = "pure";
+}
+versions.push({
+  version: "3.41.0",
+  mode: str2,
+  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
+  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
+  source: "https://github.com/zloirock/core-js",
+});
+
+export default prop;

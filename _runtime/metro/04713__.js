@@ -1,33 +1,54 @@
 // _runtime/metro/04713__.js
-import module_4260_mod from "04260__.js";
+import module_4298_mod from "04298__.js";
+import _typeof_mod from "04294__.js";
+import module_4442_mod from "04442__.js";
+import module_4565_mod from "04565__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-let module_4260 = module_4260_mod;
-if (!module_4260) {
-  const obj = { default: module_4260 };
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj = { default: module_4298 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4260;
+  tmp3 = module_4298;
 }
-function checkWeek(getTime, getTime2, arg2) {
-  let str = "eeee p";
-  if (!module_4260.default(getTime, getTime2, arg2)) {
-    const time = getTime.getTime();
-    let str2 = "'\u4E0A\u4E2A'eeee p";
-    if (time > getTime2.getTime()) {
-      str2 = "'\u4E0B\u4E2A'eeee p";
-    }
-    str = str2;
-  }
-  return str;
+module_4298 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-module_4260 = tmp3;
-let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
+_typeof = tmp5;
+let module_4442 = module_4442_mod;
+if (!module_4442) {
+  const obj3 = { default: module_4442 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4442;
+}
+module_4442 = tmp7;
+let module_4565 = module_4565_mod;
+if (!module_4565) {
+  const obj4 = { default: module_4565 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_4565;
+}
+module_4565 = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
+} else {
+  tmp11 = requiredArgs;
+}
+requiredArgs = tmp11;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
+export default function setISODay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return module_4442.default(defaultResult1, module_4298.default(arg1) - module_4565.default(defaultResult1));
 };
 export default exports.default;

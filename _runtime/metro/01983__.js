@@ -47,13 +47,11 @@ export default {
   NAVIGATION_SERVERS: "M\u00E1y ch\u1EE7",
   NAVIGATION_CAREERS: "Ngh\u1EC1 nghi\u1EC7p",
   NAVIGATION_QUESTS: "Nhi\u1EC7m V\u1EE5",
-  STOREFRONT_BENEFITS_SUMMARY:
-    "{count, plural, one {# l\u1EE3i \u00EDch \u0111\u1ED9c quy\u1EC1n} other {# l\u1EE3i \u00EDch \u0111\u1ED9c quy\u1EC1n}}",
+  STOREFRONT_BENEFITS_SUMMARY: "{count, number} l\u1EE3i \u00EDch \u0111\u1ED9c quy\u1EC1n",
   STOREFRONT_BENEFITS_TITLE: "\u0110\u1ED9c quy\u1EC1n d\u00E0nh cho b\u1EADc n\u00E0y",
   STOREFRONT_SERVER_SUBSCRIPTION: "G\u00F3i \u0111\u0103ng k\u00FD m\u00E1y ch\u1EE7",
   STOREFRONT_USER_SUBSCRIPTION: "\u0110\u0103ng k\u00FD c\u00E1 nh\u00E2n",
-  STOREFRONT_MORE_BENEFITS:
-    "+ {count, plural, one {# l\u1EE3i \u00EDch t\u0103ng th\u00EAm} other {# l\u1EE3i \u00EDch t\u0103ng th\u00EAm}}",
+  STOREFRONT_MORE_BENEFITS: "+ {count, number} l\u1EE3i \u00EDch t\u0103ng th\u00EAm",
   NUMBER_ABBREVIATIONS_MILLION: "{num}M",
   NUMBER_ABBREVIATIONS_THOUSAND: "{num}K",
   DYNAMIC_LINKS_IOS_APP_PREVIEW_DESCRIPTION:

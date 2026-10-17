@@ -1,134 +1,174 @@
 // _runtime/metro/06615__.js
-import ComposedGestureName from "../06618_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06627_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6631 from "06631__.js";
-import _slicedToArray from "00032__.js";
+import _mod17 from "00017__.js";
+import handlerIDToTag from "../06616_handlerIDToTag.js";
+import _mod6618 from "06618__.js";
+import _mod6619 from "06619__.js";
+import TouchEventType from "../06620_TouchEventType.js";
 
-const require = globalThis.__r;
-
-require = fn;
-function isSupportedGesture(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    return gestures.some(isSupportedGesture);
-  } else {
-    const type = gestures.type;
-    if (ComposedGestureName.SingleGestureName.Tap !== type) {
-      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-        if (ComposedGestureName.SingleGestureName.Fling !== type) {
-          if (ComposedGestureName.SingleGestureName.Native !== type) {
-            if (ComposedGestureName.SingleGestureName.Hover !== type) {
-              return false;
-            }
+function onGestureHandlerEvent(handlerTag) {
+  const findHandlerResult = handlerIDToTag.findHandler(handlerTag.handlerTag);
+  if (findHandlerResult) {
+    if (null != handlerTag.oldState) {
+      if (handlerTag.oldState === _mod6618.State.UNDETERMINED) {
+        if (handlerTag.state === _mod6618.State.BEGAN) {
+          const handlers11 = findHandlerResult.handlers;
+          const onBegin = handlers11.onBegin;
+          if (onBegin != null) {
+            onBegin(handlerTag);
           }
         }
       }
-    }
-    return true;
-  }
-  obj = DEFAULT_PROPS_TRANSFORMER;
-}
-const noop = fn(19);
-({ use: c3, useCallback: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
-let closure_8 = fn(6616).SHARED_VALUE_OFFSET + 0.5;
-let closure_10 = {
-  code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}",
-};
-let closure_11 = {
-  code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}",
-};
-
-export const useJSResponderHandler = function useJSResponderHandler(gesture) {
-  _require = gesture;
-  let tmp = closure_3(require("06631__.js").JSResponderContext);
-  dependencyMap = tmp;
-  const tmp2 = _slicedToArray(closure_7(0), 2);
-  _slicedToArray = tmp2[1];
-  const tmp3 = closure_6(null);
-  closure_3 = tmp3;
-  if (null === tmp3.current) {
-    closure_8 = tmp5 + 1;
-    tmp3.current = +closure_8;
-  }
-  const items = [gesture];
-  closure_5(() => {
-    const Reanimated = gesture(6602).Reanimated;
-    const enabledSharedValues = gesture(6616).getEnabledSharedValues(Reanimated);
-    if (undefined !== Reanimated) {
-      if (0 !== enabledSharedValues.length) {
-        const current = runOnJS.current;
-        if (null !== current) {
-          runOnJS = Reanimated.runOnJS;
-          const fn = function o(arg0, arg1, arg2) {
-            const iter = arg0[Symbol.iterator]();
-            const tmp = runOnJS(arg2);
-            while (iter !== undefined) {
-              let addListenerResult = nextResult.addListener(arg1, tmp);
-              continue;
-            }
-          };
-          const obj2 = { runOnJS };
-          fn.__closure = obj2;
-          fn.__workletHash = 3030529712101;
-          fn.__initData = __initData;
-          const fn2 = function l(arg0, arg1) {
-            const iter = arg0[Symbol.iterator]();
-            while (iter !== undefined) {
-              let removeListenerResult = nextResult.removeListener(arg1);
-              continue;
-            }
-          };
-          fn2.__closure = {};
-          fn2.__workletHash = 3663767498079;
-          fn2.__initData = __initData2;
-          Reanimated.runOnUI(fn)(enabledSharedValues, current, () => {
-            current((arg0) => arg0 + 1);
-          });
-          return () => {
-            Reanimated.runOnUI(fn2)(enabledSharedValues, current);
-          };
+      if (handlerTag.oldState === _mod6618.State.BEGAN) {
+        if (handlerTag.state === _mod6618.State.ACTIVE) {
+          const handlers6 = findHandlerResult.handlers;
+          const onStart = handlers6.onStart;
+          if (onStart != null) {
+            onStart(handlerTag);
+          }
+          closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
         }
       }
-    }
-    const obj = gesture(6616);
-  }, items);
-  const items1 = [tmp2[0], gesture];
-  const tmp7 = closure_4(() => {
-    let some = closure_0;
-    const isGestureEnabledResult = DEFAULT_PROPS_TRANSFORMER.isGestureEnabled(closure_0);
-    if (!isGestureEnabledResult) {
-      return isGestureEnabledResult;
+      if (handlerTag.oldState !== handlerTag.state) {
+        if (handlerTag.state === _mod6618.State.END) {
+          if (handlerTag.oldState === _mod6618.State.ACTIVE) {
+            const handlers9 = findHandlerResult.handlers;
+            const onEnd2 = handlers9.onEnd;
+            if (onEnd2 != null) {
+              onEnd2(handlerTag, true);
+            }
+          }
+          const handlers10 = findHandlerResult.handlers;
+          const onFinalize2 = handlers10.onFinalize;
+          if (onFinalize2 != null) {
+            onFinalize2(handlerTag, true);
+          }
+          closure_6[findHandlerResult.handlers.handlerTag] = undefined;
+        }
+      }
+      let tmp18 = handlerTag.state !== _mod6618.State.FAILED;
+      if (tmp18) {
+        tmp18 = handlerTag.state !== _mod6618.State.CANCELLED;
+      }
+      if (!tmp18) {
+        tmp18 = handlerTag.oldState === handlerTag.state;
+      }
+      if (!tmp18) {
+        if (handlerTag.oldState === _mod6618.State.ACTIVE) {
+          const handlers7 = findHandlerResult.handlers;
+          const onEnd = handlers7.onEnd;
+          if (onEnd != null) {
+            onEnd(handlerTag, false);
+          }
+        }
+        const handlers8 = findHandlerResult.handlers;
+        const onFinalize = handlers8.onFinalize;
+        if (onFinalize != null) {
+          onFinalize(handlerTag, false);
+        }
+        map.delete(handlerTag.handlerTag);
+        closure_6[findHandlerResult.handlers.handlerTag] = undefined;
+      }
+    } else if (null != handlerTag.eventType) {
+      if (!map.has(handlerTag.handlerTag)) {
+        const GestureStateManager = _mod6619.GestureStateManager;
+        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
+      }
+      value = map.get(handlerTag.handlerTag);
+      const eventType = handlerTag.eventType;
+      if (TouchEventType.TouchEventType.TOUCHES_DOWN === eventType) {
+        const handlers5 = findHandlerResult.handlers;
+        if (handlers5 != null) {
+          const onTouchesDown = handlers5.onTouchesDown;
+          if (onTouchesDown != null) {
+            onTouchesDown(handlerTag, value);
+          }
+        }
+      } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === eventType) {
+        const handlers4 = findHandlerResult.handlers;
+        if (handlers4 != null) {
+          const onTouchesMove = handlers4.onTouchesMove;
+          if (onTouchesMove != null) {
+            onTouchesMove(handlerTag, value);
+          }
+        }
+      } else if (TouchEventType.TouchEventType.TOUCHES_UP === eventType) {
+        const handlers3 = findHandlerResult.handlers;
+        if (handlers3 != null) {
+          const onTouchesUp = handlers3.onTouchesUp;
+          if (onTouchesUp != null) {
+            onTouchesUp(handlerTag, value);
+          }
+        }
+      } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === eventType) {
+        const handlers13 = findHandlerResult.handlers;
+        if (handlers13 != null) {
+          const onTouchesCancelled = handlers13.onTouchesCancelled;
+          if (onTouchesCancelled != null) {
+            onTouchesCancelled(handlerTag, value);
+          }
+        }
+      }
     } else {
-      if (tmpResult.isComposedGesture(some)) {
-        const gestures = some.gestures;
-        some = gestures.some;
-        let flag = some(isSupportedGesture);
-      } else {
-        const type = some.type;
-        if (ComposedGestureName.SingleGestureName.Tap !== type) {
-          if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-            if (ComposedGestureName.SingleGestureName.Fling !== type) {
-              if (ComposedGestureName.SingleGestureName.Native !== type) {
-                flag = false;
-              }
-            }
-          }
-        }
-        flag = true;
+      const handlers12 = findHandlerResult.handlers;
+      const onUpdate = handlers12.onUpdate;
+      if (onUpdate != null) {
+        onUpdate(handlerTag);
       }
-      tmpResult = DEFAULT_PROPS_TRANSFORMER;
+      if (tmp9) {
+        const handlers = findHandlerResult.handlers;
+        const onChange = handlers.onChange;
+        if (onChange != null) {
+          const handlers2 = findHandlerResult.handlers;
+          const changeEventCalculator = handlers2.changeEventCalculator;
+          let result1;
+          if (changeEventCalculator != null) {
+            result1 = changeEventCalculator(handlerTag, closure_6[findHandlerResult.handlers.handlerTag]);
+          }
+          onChange(result1);
+        }
+        closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
+      }
+      tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
     }
-  }, items1);
-  closure_4 = tmp7;
-  const items2 = [tmp, tmp7];
-  let handleStartShouldSetResponder = closure_4(() => {
-    if (closure_4()) {
-      const result = _mod6631.updateResponderEventValue(closure_1, true);
+  } else {
+    const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
+    if (result2) {
+      const obj2 = { nativeEvent: handlerTag };
+      if (null != handlerTag.oldState) {
+        result2.onGestureStateChange(obj2);
+      } else {
+        result2.onGestureEvent(obj2);
+      }
     }
-    return false;
-  }, items2);
-  if (null == tmp) {
-    handleStartShouldSetResponder = () => false;
+    const tmpResult = handlerIDToTag;
   }
-  return { handleStartShouldSetResponder };
+}
+const DeviceEventEmitter = _mod17.DeviceEventEmitter;
+let closure_3 = null;
+let closure_4 = null;
+const map = new Map();
+let closure_6 = [];
+
+export { onGestureHandlerEvent };
+export const startListening = function startListening() {
+  if (closure_3) {
+    closure_3.remove();
+    closure_3 = null;
+  }
+  if (closure_4) {
+    closure_4.remove();
+    closure_4 = null;
+  }
+  closure_3 = DeviceEventEmitter.addListener("onGestureHandlerEvent", onGestureHandlerEvent);
+  closure_4 = DeviceEventEmitter.addListener("onGestureHandlerStateChange", onGestureHandlerEvent);
+};
+export const stopListening = function stopListening() {
+  if (closure_3) {
+    closure_3.remove();
+    closure_3 = null;
+  }
+  if (closure_4) {
+    closure_4.remove();
+    closure_4 = null;
+  }
 };

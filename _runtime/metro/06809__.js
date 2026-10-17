@@ -1,137 +1,50 @@
 // _runtime/metro/06809__.js
-import _mod6806 from "06806__.js";
-import noop from "00019__.js";
+import ErrorMessages from "../06811_ErrorMessages.js";
+import FlashList from "../06812_FlashList.js";
+import _mod6832 from "06832__.js";
+import _mod6833 from "06833__.js";
+import _mod6871 from "06871__.js";
+import RenderTargetOptions from "../06872_RenderTargetOptions.js";
+import _modDef6873 from "06873__.js";
+import _mod6874 from "06874__.js";
+import Cancellable from "../06875_Cancellable.js";
+import JSFPSMonitor from "../06876_JSFPSMonitor.js";
+import _mod6878 from "06878__.js";
+import runScrollBenchmark from "../06879_runScrollBenchmark.js";
+import _mod6880 from "06880__.js";
+import _mod6881 from "06881__.js";
+import _modDef6882 from "06882__.js";
+import LayoutCommitObserver from "../06883_LayoutCommitObserver.js";
+import get_ActivityIndicator from "06810__.js";
 
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  closure_0 = recyclerViewManager;
-  closure_1 = arg1;
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(Date.now());
-  const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _mod6806.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  let num = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num = recyclerViewManager.getWindowSize().height;
-  }
-  let num2 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num2 = recyclerViewManager.getChildContainerDimensions().height;
-  }
-  let num3 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num3 = recyclerViewManager.getWindowSize().width;
-  }
-  let num4 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num4 = recyclerViewManager.getChildContainerDimensions().width;
-  }
-  const items = [recyclerViewManager];
-  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
-  const checkBounds = React2(() => {
-    closure_5.current = Date.now();
-    const props = closure_0.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
-      props);
-    let num;
-    if (maintainVisibleContentPosition != null) {
-      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
-    }
-    if (num == null) {
-      num = -1;
-    }
-    if (closure_0.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
-      const size = closure_0.getChildContainerDimensions();
-      const size2 = closure_0.getWindowSize();
-      const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
-      if (tmp3 > 0) {
-        if (onEndReached) {
-          if (onEndReachedThreshold == null) {
-            onEndReachedThreshold = 0.5;
-          }
-          const _Math = Math;
-          const result = onEndReachedThreshold * tmp3;
-          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
-          let tmp7 = tmp6;
-          if (tmp6) {
-            tmp7 = !ref.current;
-          }
-          if (tmp7) {
-            ref.current = true;
-            onEndReached();
-          }
-          ref.current = tmp6;
-        }
-        if (onStartReached) {
-          if (onStartReachedThreshold == null) {
-            onStartReachedThreshold = 0.2;
-          }
-          let tmp13 = tmp12;
-          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
-            tmp13 = !ref2.current;
-          }
-          if (tmp13) {
-            ref2.current = true;
-            onStartReached();
-          }
-          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
-        }
-        if (!tmp2) {
-          if (num >= 0) {
-            const _Math2 = Math;
-            const result1 = num * tmp3;
-            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
-          }
-        }
-      }
-    }
-  }, items);
-  const tmp2 = React2(() => {
-    let current = props.isOffsetProjectionEnabled;
-    if (current) {
-      current = ref3.current;
-    }
-    if (current) {
-      ref3.current = false;
-      _requestAnimationFrame(() => {
-        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
-        let flag;
-        if (maintainVisibleContentPosition != null) {
-          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
-        }
-        if (flag == null) {
-          flag = true;
-        }
-        const current = ref.current;
-        if (current != null) {
-          if (flag) {
-            flag = !props.ignoreScrollEvents;
-          }
-          const obj = { animated: flag };
-          current.scrollToEnd(obj);
-        }
-      });
-    }
-  }, items1);
-  closure_7 = tmp2;
-  const items2 = [data];
-  React4(() => {
-    closure_2.current = false;
-  }, items2);
-  const items3 = [data, tmp2, num, num3];
-  React3(() => {
-    closure_7();
-  }, items3);
-  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
-  React3(() => {
-    if (Date.now() - ref4.current >= 100) {
-      closure_7();
-    }
-  }, items4);
-  return { checkBounds };
-};
+if (get_ActivityIndicator.isNewArch()) {
+  exports.FlashList = FlashList.FlashList;
+  exports.FlashListRef = _mod6871.FlashListRef;
+  exports.FlashListProps = RenderTargetOptions.FlashListProps;
+  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
+  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
+  exports.RenderTarget = RenderTargetOptions.RenderTarget;
+  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
+  exports.AnimatedFlashList = _modDef6873;
+  exports.useBenchmark = _mod6874.useBenchmark;
+  exports.BenchmarkParams = _mod6874.BenchmarkParams;
+  exports.BenchmarkResult = _mod6874.BenchmarkResult;
+  exports.useDataMultiplier = _mod6878.useDataMultiplier;
+  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
+  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
+  exports.useLayoutState = _mod6832.useLayoutState;
+  exports.useRecyclingState = _mod6880.useRecyclingState;
+  exports.useMappingHelper = _mod6881.useMappingHelper;
+  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
+  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
+  exports.autoScroll = Cancellable.autoScroll;
+  exports.Cancellable = Cancellable.Cancellable;
+  exports.ViewToken = _modDef6882;
+  exports.useFlashListContext = _mod6833.useFlashListContext;
+  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
+  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
+} else {
+  const _Error = Error;
+  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
+  throw error;
+}

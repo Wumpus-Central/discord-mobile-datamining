@@ -1,16 +1,9 @@
 // _runtime/metro/05909__.js
-import _mod1307 from "01307__.js";
-import callBoundIntrinsic from "../01341_callBoundIntrinsic.js";
 
-const tmp = _mod1307("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
+export default function getIterator(arg0) {
+  if (null != arg0) {
+    if (undefined !== arg0[iterator]) {
+      return arg0[iterator]();
+    }
+  }
 }
-let closure_0 = tmp2;
-
-export default tmp.isArray ||
-  function IsArray(arg0) {
-    return "[object Array]" === closure_0(arg0);
-  };

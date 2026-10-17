@@ -1,13 +1,4 @@
 // _runtime/metro/15117__.js
-import registerAsset from "01134__.js";
+import _mod15107 from "15107__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "89ef758cad16b0f89bf10bf57ab078db",
-  name: "StatusDND",
-  type: "png",
-});
+export default (arg0, arg1, arg2) => _mod15107(arg0, arg1, arg2) >= 0;

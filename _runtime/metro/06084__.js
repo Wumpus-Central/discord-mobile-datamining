@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 628,
+  height: 167,
   scales: [1],
-  hash: "e219f41761a656e709d88fce70516612",
-  name: "img_account_sync_instagram_white",
-  type: "png",
+  hash: "87dcaca9679ceb1e78d3b15aba4c2917",
+  name: "img_account_sync_samsung_white",
+  type: "svg",
 });

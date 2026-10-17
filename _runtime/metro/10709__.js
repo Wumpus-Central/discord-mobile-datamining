@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/chat_sidebar",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "735f759c8548e858d5ddb5e988a22d5f",
-  name: "ic_notif_off",
+  httpServerLocation: "/assets/modules/explicit_media_redaction/assets",
+  width: 86,
+  height: 100,
+  scales: [1, 2, 3],
+  hash: "a7ccb6b54d1f9e097b1427e3e452e7f9",
+  name: "safety_shield",
   type: "png",
 });

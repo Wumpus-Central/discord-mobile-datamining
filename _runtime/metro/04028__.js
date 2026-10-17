@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/riot_credit_campaign",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zdGFnZV9jaGFubmVscw==",
   scales: [1],
-  hash: "e3268bd141917880c9b07e45ce47ffee",
-  name: "RiotCreditCampaign.compiled.messages",
+  hash: "891b7f541720adc2b8c85f9a2b8d1d30",
+  name: "tr.messages.891b7f541720adc2b8c85f9a2b8d1d30.compiled.messages",
   type: "jsona",
 });

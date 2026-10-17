@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
-  scales: [2, 3],
-  hash: "8eabe75983473aecbcb03200bb7a397b",
-  name: "ic_alert",
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 76,
+  height: 76,
+  scales: [1],
+  hash: "357b6ff4f5f31060d463e9e4858af437",
+  name: "family_center_chat_check_icon",
   type: "png",
 });

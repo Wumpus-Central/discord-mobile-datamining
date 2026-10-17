@@ -1,9 +1,48 @@
 // _runtime/metro/05413__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import get_synchronousScreenUpdatesEnabled from "../05414_get_synchronousScreenUpdatesEnabled.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
+require = arg1;
+const dependencyMap = arg6;
 
-export default module_65.get("RNSScreenContentWrapper", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const RNSLog = {
+  log(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  warn(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  error(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  info(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+};

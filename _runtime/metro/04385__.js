@@ -1,5 +1,5 @@
 // _runtime/metro/04385__.js
-let closure_0 = { lastWeek: "'i' EEEE's kl.' p", yesterday: "'ig\u00E5r kl.' p", today: "'idag kl.' p", tomorrow: "'imorgon kl.' p", nextWeek: "EEEE 'kl.' p", other: "P" };
+let closure_0 = { lastWeek: "'afgelopen' eeee 'om' p", yesterday: "'gisteren om' p", today: "'vandaag om' p", tomorrow: "'morgen om' p", nextWeek: "eeee 'om' p", other: "P" };
 
 export default function formatRelative(arg0, arg1, arg2, arg3) {
   return closure_0[arg0];

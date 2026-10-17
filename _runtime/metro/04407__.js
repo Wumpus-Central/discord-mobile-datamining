@@ -1,55 +1,24 @@
 // _runtime/metro/04407__.js
-import module_4262_mod from "04262__.js";
-import _typeof_mod from "04258__.js";
-import requiredArgs_mod from "../04259_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "mai pu\u021Bin de o secund\u0103", other: "mai pu\u021Bin de {{count}} secunde" }, xSeconds: { one: "1 secund\u0103", other: "{{count}} secunde" }, halfAMinute: "jum\u0103tate de minut", lessThanXMinutes: { one: "mai pu\u021Bin de un minut", other: "mai pu\u021Bin de {{count}} minute" }, xMinutes: { one: "1 minut", other: "{{count}} minute" }, aboutXHours: { one: "circa 1 or\u0103", other: "circa {{count}} ore" }, xHours: { one: "1 or\u0103", other: "{{count}} ore" }, xDays: { one: "1 zi", other: "{{count}} zile" }, aboutXWeeks: { one: "circa o s\u0103pt\u0103m\u00E2n\u0103", other: "circa {{count}} s\u0103pt\u0103m\u00E2ni" }, xWeeks: { one: "1 s\u0103pt\u0103m\u00E2n\u0103", other: "{{count}} s\u0103pt\u0103m\u00E2ni" }, aboutXMonths: { one: "circa 1 lun\u0103", other: "circa {{count}} luni" }, xMonths: { one: "1 lun\u0103", other: "{{count}} luni" }, aboutXYears: { one: "circa 1 an", other: "circa {{count}} ani" }, xYears: { one: "1 an", other: "{{count}} ani" }, overXYears: { one: "peste 1 an", other: "peste {{count}} ani" }, almostXYears: { one: "aproape 1 an", other: "aproape {{count}} ani" } };
 
-let module_4262 = module_4262_mod;
-if (!module_4262) {
-  const obj = { default: module_4262 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4262;
-}
-module_4262 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addMonths(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(interval);
-  const defaultResult2 = module_4262.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date2 = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    const date1 = defaultResult1.getDate();
-    const _Date = Date;
-    const date2 = new Date(defaultResult1.getTime());
-    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
-    let tmp8 = date2;
-    if (date1 < date2.getDate()) {
-      const fullYear = date2.getFullYear();
-      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
-      tmp8 = defaultResult1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} în urmă`;
+        }
+        text = `în ${tmp}`;
+      }
     }
-    return tmp8;
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
   } else {
-    return defaultResult1;
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
 };
 export default exports.default;

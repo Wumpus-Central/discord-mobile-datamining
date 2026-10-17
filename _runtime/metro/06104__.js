@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 1505,
-  height: 1505,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "dad08de0f63cac4aff0fb523b64af317",
-  name: "img_meta_quest",
-  type: "svg",
+  hash: "8fce658b14b12e381e1ecc554a57f171",
+  name: "img_roblox_white",
+  type: "png",
 });

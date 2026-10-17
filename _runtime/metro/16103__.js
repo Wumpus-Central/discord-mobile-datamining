@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
-  width: 345,
-  height: 82,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 375,
+  height: 229,
   scales: [1, 2, 3],
-  hash: "91248bc802fa2159ae23ab96ddaf91db",
-  name: "clouds_light_background",
+  hash: "33688e5a17ba6d5d12db0d817e82285c",
+  name: "empty_quest_home",
   type: "png",
 });

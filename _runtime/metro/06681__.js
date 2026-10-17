@@ -1,207 +1,140 @@
 // _runtime/metro/06681__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import tagMessage from "../06617_tagMessage.js";
+import _mod6655 from "06655__.js";
+import hash from "../06669_hash.js";
+import allowedNativeProps2 from "../06670_allowedNativeProps.js";
+import _mod6682 from "06682__.js";
+import _slicedToArray from "00032__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+require = fn;
+const useMemo = fn(19).useMemo;
+const map = new Map();
+function DEFAULT_PROPS_TRANSFORMER(arg0) {
+  return arg0;
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(translationX, translationX2) {
-  if (undefined === translationX2) {
-    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
+function isGestureEnabled(gestures) {
+  if (obj.isComposedGesture(gestures)) {
+    gestures = gestures.gestures;
+    let someResult = gestures.some(isGestureEnabled);
   } else {
-    obj = {
-      changeX: translationX.translationX - translationX2.translationX,
-      changeY: translationX.translationY - translationX2.translationY,
-    };
+    someResult = false !== hash.maybeUnpackValue(gestures.config.enabled);
+    const tmpResult = hash;
   }
-  const merged = Object.assign(translationX);
-  const merged1 = Object.assign(obj);
-  return {};
+  return someResult;
 }
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 1947784830943;
-changeEventCalculator.__initData = {
-  code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}",
-};
-class PanGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, PanGesture);
-    tmp2 = c2;
-    obj = c2(PanGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "PanGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = PanGesture;
-_inherits(PanGesture, fn(6580).ContinousBaseGesture);
-const entry = {
-  key: "activeOffsetY",
-  value: function activeOffsetY(items) {
-    const self = this;
-    if (Array.isArray(items)) {
-      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
-    } else if (items < 0) {
-      self.config.activeOffsetYStart = items;
-    } else {
-      self.config.activeOffsetYEnd = items;
-    }
-    return self;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "activeOffsetX",
-    value: function activeOffsetX(items) {
-      const self = this;
-      if (Array.isArray(items)) {
-        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
-      } else if (items < 0) {
-        self.config.activeOffsetXStart = items;
-      } else {
-        self.config.activeOffsetXEnd = items;
-      }
-      return self;
-    },
-  },
-  {
-    key: "failOffsetY",
-    value: function failOffsetY(items) {
-      const self = this;
-      if (Array.isArray(items)) {
-        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = items;
-      } else if (items < 0) {
-        self.config.failOffsetYStart = items;
-      } else {
-        self.config.failOffsetYEnd = items;
-      }
-      return self;
-    },
-  },
-  {
-    key: "failOffsetX",
-    value: function failOffsetX(items1) {
-      const self = this;
-      if (Array.isArray(items1)) {
-        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
-      } else if (items1 < 0) {
-        self.config.failOffsetXStart = items1;
-      } else {
-        self.config.failOffsetXEnd = items1;
-      }
-      return self;
-    },
-  },
-  {
-    key: "minPointers",
-    value: function minPointers(minPointers) {
-      this.config.minPointers = minPointers;
-      return this;
-    },
-  },
-  {
-    key: "maxPointers",
-    value: function maxPointers(maxPointers) {
-      this.config.maxPointers = maxPointers;
-      return this;
-    },
-  },
-  {
-    key: "minDistance",
-    value: function minDistance(minDist) {
-      this.config.minDist = minDist;
-      return this;
-    },
-  },
-  {
-    key: "minVelocity",
-    value: function minVelocity(minVelocity) {
-      this.config.minVelocity = minVelocity;
-      return this;
-    },
-  },
-  {
-    key: "minVelocityX",
-    value: function minVelocityX(minVelocityX) {
-      this.config.minVelocityX = minVelocityX;
-      return this;
-    },
-  },
-  {
-    key: "minVelocityY",
-    value: function minVelocityY(minVelocityY) {
-      this.config.minVelocityY = minVelocityY;
-      return this;
-    },
-  },
-  {
-    key: "averageTouches",
-    value: function averageTouches(avgTouches) {
-      this.config.avgTouches = avgTouches;
-      return this;
-    },
-  },
-  {
-    key: "enableTrackpadTwoFingerGesture",
-    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
-      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
-      return this;
-    },
-  },
-  {
-    key: "activateAfterLongPress",
-    value: function activateAfterLongPress(activateAfterLongPress) {
-      this.config.activateAfterLongPress = activateAfterLongPress;
-      return this;
-    },
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
-    },
-  },
-];
 
-export const PanGesture = _createClass(PanGesture, items);
+export { isGestureEnabled };
+export const resolveInternalConfigProps = function resolveInternalConfigProps(useAnimated) {
+  useAnimated = useAnimated.useAnimated;
+  if (!useAnimated) {
+    useAnimated = _mod6682.isNativeAnimatedEvent(useAnimated.onUpdate);
+  }
+  useAnimated.dispatchesAnimatedEvents = useAnimated;
+  if (useAnimated.dispatchesAnimatedEvents) {
+    useAnimated.disableReanimated = true;
+  }
+  const disableReanimated = useAnimated.disableReanimated;
+  let result = !disableReanimated;
+  if (!disableReanimated) {
+    result = undefined !== _mod6655.Reanimated;
+  }
+  if (result) {
+    result = hash.hasWorkletEventHandlers(useAnimated);
+  }
+  if (result) {
+    result = !useAnimated.dispatchesAnimatedEvents;
+  }
+  useAnimated.shouldUseReanimatedDetector = result;
+  useAnimated.needsPointerData = _mod6682.shouldHandleTouchEvents(useAnimated);
+};
+export const prepareConfigForNativeSide = function prepareConfigForNativeSide(arg0, shouldUseReanimatedDetector) {
+  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
+  if (shouldUseReanimatedDetector) {
+    shouldUseReanimatedDetector = !hash.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
+  }
+  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
+  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
+  let EMPTY_WHITE_LIST = PropsWhiteLists.get(arg0);
+  if (EMPTY_WHITE_LIST == null) {
+    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
+  }
+  const entries = Object.entries(shouldUseReanimatedDetector);
+  while (tmp12 !== undefined) {
+    [first, iter] = tmp13;
+    let tmp17 = first;
+    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
+    if (!allowedNativeProps.has(first)) {
+      if (!EMPTY_WHITE_LIST.has(tmp17)) {
+        let PropsToFilter = allowedNativeProps2.PropsToFilter;
+        if (PropsToFilter.has(tmp17)) {
+          continue;
+        } else {
+          let _console = console;
+          let tmp19Result = tagMessage;
+          let _HermesInternal = HermesInternal;
+          let str = "";
+          let str2 = " is not a valid property for ";
+          let str3 = " and will be ignored.";
+          let warnResult = console.warn(
+            tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + arg0 + " and will be ignored."),
+          );
+          continue;
+        }
+        continue;
+      }
+    }
+    let Reanimated = _mod6655.Reanimated;
+    let isSharedValueResult;
+    if (Reanimated != null) {
+      isSharedValueResult = Reanimated.isSharedValue(iter);
+    }
+    obj2[tmp17] = isSharedValueResult ? iter.value : iter;
+  }
+  return obj2;
+};
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(cResult) {
+  closure_0 = cResult;
+  let tmp = map;
+  if (map === undefined) {
+    tmp = map;
+  }
+  closure_1 = tmp;
+  let tmp2 = transformHoverProps;
+  if (transformHoverProps === undefined) {
+    tmp2 = DEFAULT_PROPS_TRANSFORMER;
+  }
+  closure_2 = tmp2;
+  const items = [cResult, tmp, tmp2];
+  return useMemo(() => {
+    const merged = Object.assign(closure_0);
+    const item = closure_1.forEach((item, index) => {
+      if (index in obj) {
+        obj[item] = obj[index];
+        delete tmp[tmp2];
+      }
+    });
+    const tmp3 = closure_2({});
+    let useAnimated = tmp3.useAnimated;
+    if (!useAnimated) {
+      useAnimated = _mod6682.isNativeAnimatedEvent(tmp3.onUpdate);
+    }
+    tmp3.dispatchesAnimatedEvents = useAnimated;
+    if (tmp3.dispatchesAnimatedEvents) {
+      tmp3.disableReanimated = true;
+    }
+    const disableReanimated = tmp3.disableReanimated;
+    let result = !disableReanimated;
+    if (!disableReanimated) {
+      result = undefined !== _mod6655.Reanimated;
+    }
+    if (result) {
+      result = hash.hasWorkletEventHandlers(tmp3);
+    }
+    if (result) {
+      result = !tmp3.dispatchesAnimatedEvents;
+    }
+    tmp3.shouldUseReanimatedDetector = result;
+    tmp3.needsPointerData = _mod6682.shouldHandleTouchEvents(tmp3);
+    return tmp3;
+  }, items);
+};

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b0762f0f9ef3f22f62e92b1be981b656",
-  name: "ChevronLargeUpIcon",
+  hash: "2e0d6978350694e35552111153599c69",
+  name: "BoostTier3Icon",
   type: "png",
 });

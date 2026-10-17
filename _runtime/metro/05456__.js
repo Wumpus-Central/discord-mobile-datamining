@@ -1,12 +1,9 @@
 // _runtime/metro/05456__.js
-import _modDef5457 from "05457__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-const require = globalThis.__r;
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-for (const key10016 in require("05457__.js")) {
-  arg5[key10016] = require("05457__.js")[key10016];
-  continue;
-}
-
-export default _modDef5457;
-export const LinearGradient = _modDef5457;
+export default module_65.get("RNSFullWindowOverlay", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

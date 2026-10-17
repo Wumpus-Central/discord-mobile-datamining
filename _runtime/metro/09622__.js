@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "ba11c4394297d005e32400d962515cfe",
-  name: "wumpus-luigi",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f046981b02f540ff191ca29308781e07",
+  name: "PhoneCallIcon",
   type: "png",
 });

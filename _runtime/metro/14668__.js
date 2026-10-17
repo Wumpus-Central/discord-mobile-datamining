@@ -1,14 +1,13 @@
 // _runtime/metro/14668__.js
-let num = 0;
-let num2 = 0;
-let tmp2 = num;
-do {
-  do {
-    let tmp3 = tmp2 >>> 1;
-    let tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
-    num2 = num2 + 1;
-    tmp2 = tmp5;
-  } while (num2 < 8);
-  tmp[num] = tmp5;
-  num = num + 1;
-} while (num < 256);
+import registerAsset from "01134__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/guild_boosting/native/images",
+  width: 18,
+  height: 15,
+  scales: [2, 3],
+  hash: "dc018ce302b0357451a31422d7180d84",
+  name: "sparkle_star_pointed",
+  type: "png",
+});

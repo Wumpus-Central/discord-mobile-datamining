@@ -1,13 +1,26 @@
 // _runtime/metro/06865__.js
-import registerAsset from "01134__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e37bbde49f12a4469b46214e14dfde4a",
-  name: "KeyIcon",
-  type: "png",
-});
+export const isComponentClass = (renderScrollComponent) => {
+  let BooleanResult = typeof renderScrollComponent === "function";
+  if (typeof renderScrollComponent === "function") {
+    const prototype = renderScrollComponent.prototype;
+    let isReactComponent;
+    if (prototype != null) {
+      isReactComponent = prototype.isReactComponent;
+    }
+    BooleanResult = Boolean(isReactComponent);
+  }
+  return BooleanResult;
+};
+export const getValidComponent = (backdropComponent1) => {
+  let tmp = backdropComponent1;
+  if (!noop.isValidElement(backdropComponent1)) {
+    let element = null;
+    if (null != backdropComponent1) {
+      element = <backdropComponent1 />;
+    }
+    tmp = element;
+  }
+  return tmp;
+};

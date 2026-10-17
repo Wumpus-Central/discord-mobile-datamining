@@ -1,7 +1,7 @@
 // _runtime/metro/04394__.js
 import 04395__ from "04395__.js";
 import 04396__ from "04396__.js";
-import 04397__ from "04397__.js";
+import dayAndTimeWithAdjective from "../04397_dayAndTimeWithAdjective.js";
 import date_mod from "04398__.js";
 import date_mod from "04399__.js";
 
@@ -17,11 +17,11 @@ if (!module_4396) {
 } else {
   tmp5 = module_4396;
 }
-if (!module_4397) {
-  const obj3 = { default: module_4397 };
+if (!dayAndTimeWithAdjective) {
+  const obj3 = { default: dayAndTimeWithAdjective };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4397;
+  tmp7 = dayAndTimeWithAdjective;
 }
 let date = date_mod;
 if (!date) {
@@ -38,5 +38,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "pl", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

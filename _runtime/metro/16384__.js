@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "55d614823d330c269b44a0f5edd649b6",
-  name: "EmojiSmilingFaceWithSunglassesIcon",
+  hash: "30252dd38aca1d861a91a71b38c8a502",
+  name: "AccessibilityIcon",
   type: "png",
 });

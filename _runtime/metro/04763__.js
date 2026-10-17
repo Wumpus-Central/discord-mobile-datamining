@@ -1,201 +1,59 @@
 // _runtime/metro/04763__.js
-import _mod4761 from "04761__.js";
+import _mod4760 from "04760__.js";
+import 02142__ from "02142__.js";
+import 02143__ from "02143__.js";
 
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod4761;
-      const obj2 = {
-        months: null,
-        monthsShort: null,
-        weekdays: null,
-        weekdaysShort: null,
-        weekdaysMin: null,
-        longDateFormat: null,
-        calendar: null,
-        relativeTime: null,
-        dayOfMonthOrdinalParse: null,
-        ordinal: "%d.",
-        week: null,
-      };
-      const split = "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split;
-      obj2.months = "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_");
-      const split2 = "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split;
-      obj2.monthsShort = "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_");
-      const split3 = "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split;
-      obj2.weekdays = "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_");
-      const split4 = "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split;
-      obj2.weekdaysShort = "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_");
-      const split5 = "s\u00F8_ma_ti_on_to_fr_l\u00F8".split;
-      obj2.weekdaysMin = "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_");
-      obj2.longDateFormat = {
-        LT: "HH:mm",
-        LTS: "HH:mm:ss",
-        L: "DD.MM.YYYY",
-        LL: "D. MMMM YYYY",
-        LLL: "D. MMMM YYYY HH:mm",
-        LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
-      };
-      obj2.calendar = {
-        sameDay: "[i dag kl.] LT",
-        nextDay: "[i morgen kl.] LT",
-        nextWeek: "p\u00E5 dddd [kl.] LT",
-        lastDay: "[i g\u00E5r kl.] LT",
-        lastWeek: "[i] dddd[s kl.] LT",
-        sameElse: "L",
-      };
-      obj2.relativeTime = {
-        future: "om %s",
-        past: "%s siden",
-        s: "f\u00E5 sekunder",
-        ss: "%d sekunder",
-        m: "et minut",
-        mm: "%d minutter",
-        h: "en time",
-        hh: "%d timer",
-        d: "en dag",
-        dd: "%d dage",
-        M: "en m\u00E5ned",
-        MM: "%d m\u00E5neder",
-        y: "et \u00E5r",
-        yy: "%d \u00E5r",
-      };
-      obj2.dayOfMonthOrdinalParse = /\d{1,2}\./;
-      obj2.week = { dow: 1, doy: 4 };
-      _module.defineLocale("da", obj2);
-    }
-  }
+if (!module_2142) {
+  const obj2 = { default: module_2142 };
+  let obj = obj2;
+} else {
+  obj = module_2142;
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function n(defineLocale) {
-      return defineLocale.defineLocale("da", {
-        months: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
-        monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
-        weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
-        weekdaysShort: "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_"),
-        weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
-        longDateFormat: {
-          LT: "HH:mm",
-          LTS: "HH:mm:ss",
-          L: "DD.MM.YYYY",
-          LL: "D. MMMM YYYY",
-          LLL: "D. MMMM YYYY HH:mm",
-          LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
-        },
-        calendar: {
-          sameDay: "[i dag kl.] LT",
-          nextDay: "[i morgen kl.] LT",
-          nextWeek: "p\u00E5 dddd [kl.] LT",
-          lastDay: "[i g\u00E5r kl.] LT",
-          lastWeek: "[i] dddd[s kl.] LT",
-          sameElse: "L",
-        },
-        relativeTime: {
-          future: "om %s",
-          past: "%s siden",
-          s: "f\u00E5 sekunder",
-          ss: "%d sekunder",
-          m: "et minut",
-          mm: "%d minutter",
-          h: "en time",
-          hh: "%d timer",
-          d: "en dag",
-          dd: "%d dage",
-          M: "en m\u00E5ned",
-          MM: "%d m\u00E5neder",
-          y: "et \u00E5r",
-          yy: "%d \u00E5r",
-        },
-        dayOfMonthOrdinalParse: /\d{1,2}\./,
-        ordinal: "%d.",
-        week: { dow: 1, doy: 4 },
-      });
-    });
-  }
+if (!module_2143) {
+  const obj4 = { default: module_2143 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2143;
 }
-const moment = this.moment;
-moment.defineLocale("da", {
-  months: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
-  monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
-  weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
-  weekdaysShort: "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_"),
-  weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
-  longDateFormat: {
-    LT: "HH:mm",
-    LTS: "HH:mm:ss",
-    L: "DD.MM.YYYY",
-    LL: "D. MMMM YYYY",
-    LLL: "D. MMMM YYYY HH:mm",
-    LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
-  },
-  calendar: {
-    sameDay: "[i dag kl.] LT",
-    nextDay: "[i morgen kl.] LT",
-    nextWeek: "p\u00E5 dddd [kl.] LT",
-    lastDay: "[i g\u00E5r kl.] LT",
-    lastWeek: "[i] dddd[s kl.] LT",
-    sameElse: "L",
-  },
-  relativeTime: {
-    future: "om %s",
-    past: "%s siden",
-    s: "f\u00E5 sekunder",
-    ss: "%d sekunder",
-    m: "et minut",
-    mm: "%d minutter",
-    h: "en time",
-    hh: "%d timer",
-    d: "en dag",
-    dd: "%d dage",
-    M: "en m\u00E5ned",
-    MM: "%d m\u00E5neder",
-    y: "et \u00E5r",
-    yy: "%d \u00E5r",
-  },
-  dayOfMonthOrdinalParse: /\d{1,2}\./,
-  ordinal: "%d.",
-  week: { dow: 1, doy: 4 },
-});
-const obj = {
-  months: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
-  monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
-  weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
-  weekdaysShort: "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_"),
-  weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
-  longDateFormat: {
-    LT: "HH:mm",
-    LTS: "HH:mm:ss",
-    L: "DD.MM.YYYY",
-    LL: "D. MMMM YYYY",
-    LLL: "D. MMMM YYYY HH:mm",
-    LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
-  },
-  calendar: {
-    sameDay: "[i dag kl.] LT",
-    nextDay: "[i morgen kl.] LT",
-    nextWeek: "p\u00E5 dddd [kl.] LT",
-    lastDay: "[i g\u00E5r kl.] LT",
-    lastWeek: "[i] dddd[s kl.] LT",
-    sameElse: "L",
-  },
-  relativeTime: {
-    future: "om %s",
-    past: "%s siden",
-    s: "f\u00E5 sekunder",
-    ss: "%d sekunder",
-    m: "et minut",
-    mm: "%d minutter",
-    h: "en time",
-    hh: "%d timer",
-    d: "en dag",
-    dd: "%d dage",
-    M: "en m\u00E5ned",
-    MM: "%d m\u00E5neder",
-    y: "et \u00E5r",
-    yy: "%d \u00E5r",
-  },
-  dayOfMonthOrdinalParse: /\d{1,2}\./,
-  ordinal: "%d.",
-  week: { dow: 1, doy: 4 },
+const date = { ordinalNumber: obj3.default({ matchPattern: /^[०१२३४५६७८९]+/i, parsePattern: /^[०१२३४५६७८९]+/i, valueCallback: _mod4760.localeToNumber }), era: null, quarter: null, month: null, day: null, dayPeriod: null };
+const obj6 = { matchPatterns: { narrow: /^(ईसा-पूर्व|ईस्वी)/i, abbreviated: /^(ईसा\.?\s?पूर्व\.?|ईसा\.?)/i, wide: /^(ईसा-पूर्व|ईसवी पूर्व|ईसवी सन|ईसवी)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^b/i, /^(a|c)/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^ति[1234]/i, wide: /^[1234](पहली|दूसरी|तीसरी|चौथी)? तिमाही/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
 };
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[जफ़माअप्मईजूनजुअगसिअक्तनदि]/i, abbreviated: /^(जन|फ़र|मार्च|अप्|मई|जून|जुल|अग|सित|अक्तू|नव|दिस)/i, wide: /^(जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^ज/i, /^फ़/i, /^मा/i, /^अप्/i, /^मई/i, /^जू/i, /^जु/i, /^अग/i, /^सि/i, /^अक्तू/i, /^न/i, /^दि/i];
+obj11.narrow = items2;
+const items3 = [/^जन/i, /^फ़/i, /^मा/i, /^अप्/i, /^मई/i, /^जू/i, /^जु/i, /^अग/i, /^सि/i, /^अक्तू/i, /^नव/i, /^दिस/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[रविसोममंगलबुधगुरुशुक्रशनि]/i, short: /^(रवि|सोम|मंगल|बुध|गुरु|शुक्र|शनि)/i, abbreviated: /^(रवि|सोम|मंगल|बुध|गुरु|शुक्र|शनि)/i, wide: /^(रविवार|सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items4 = [/^रवि/i, /^सोम/i, /^मंगल/i, /^बुध/i, /^गुरु/i, /^शुक्र/i, /^शनि/i];
+obj13.narrow = items4;
+const items5 = [/^रवि/i, /^सोम/i, /^मंगल/i, /^बुध/i, /^गुरु/i, /^शुक्र/i, /^शनि/i];
+obj13.any = items5;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(पू|अ|म|द.\?|सु|दो|शा|रा)/i, any: /^(पूर्वाह्न|अपराह्न|म|द.\?|सु|दो|शा|रा)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^पूर्वाह्न/i, pm: /^अपराह्न/i, midnight: /^मध्य/i, noon: /^दो/i, morning: /सु/i, afternoon: /दो/i, evening: /शा/i, night: /रा/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
+export default exports.default;

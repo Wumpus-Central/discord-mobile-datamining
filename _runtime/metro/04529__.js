@@ -1,6 +1,6 @@
 // _runtime/metro/04529__.js
-import _typeof_mod from "04258__.js";
-import requiredArgs_mod from "../04259_requiredArgs.js";
+import _typeof_mod from "04294__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -18,13 +18,14 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let c2 = 86400000;
 
-export default function getISODay(arg0) {
+export default function getUTCDayOfYear(arg0) {
   requiredArgs.default(1, arguments);
-  let num = _typeof.default(arg0).getDay();
-  if (0 === num) {
-    num = 7;
-  }
-  return num;
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  defaultResult1.setUTCMonth(0, 1);
+  defaultResult1.setUTCHours(0, 0, 0, 0);
+  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
 };
 export default exports.default;

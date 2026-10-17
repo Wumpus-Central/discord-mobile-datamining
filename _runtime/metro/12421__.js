@@ -1,49 +1,72 @@
 // _runtime/metro/12421__.js
-
-export function makeFifoCache(arg0) {
-  closure_0 = arg0;
-  closure_1 = [];
-  dependencyMap = {};
-  return {
-    add(arg0, arg1) {
-      if (closure_1.length >= closure_0) {
-        do {
-          if (undefined !== closure_1.shift()) {
-            delete tmp[tmp2];
-          }
-        } while (closure_1.length >= closure_0);
+const require = arg1;
+const dependencyMap = arg6;
+function getFilenameToDebugIdMap(arg0) {
+  _require = arg0;
+  _sentryDebugIds = require("12370__.js").GLOBAL_OBJ._sentryDebugIds;
+  if (_sentryDebugIds) {
+    const _Object = Object;
+    const keys = Object.keys(_sentryDebugIds);
+    if (reduced) {
+      return reduced;
+    }
+    reduced = keys.reduce((acc, item) => {
+      let filename;
+      let tmp = obj;
+      if (!obj) {
+        obj = {};
+        tmp = obj;
       }
-      if (dependencyMap[arg0]) {
-        const self = this;
-        this.delete(arg0);
-      }
-      closure_1.push(arg0);
-      dependencyMap[arg0] = arg1;
-    },
-    clear() {
-      closure_2 = {};
-      closure_1 = [];
-    },
-    get(arg0) {
-      return dependencyMap[arg0];
-    },
-    size() {
-      return closure_1.length;
-    },
-    delete(arg0) {
-      if (dependencyMap[arg0]) {
-        delete tmp[tmp2];
-        let num = 0;
-        if (0 < closure_1.length) {
-          while (closure_1[num] !== arg0) {
-            num = num + 1;
-          }
-          closure_1.splice(num, 1);
-        }
-        return true;
+      if (tmp[item]) {
+        acc[tmp2[0]] = tmp2[1];
       } else {
-        return false;
+        const arr = closure_0(item);
+        let diff = arr.length - 1;
+        if (0 <= diff) {
+          while (true) {
+            let tmp5 = arr[diff];
+            filename = tmp5;
+            if (tmp5) {
+              filename = tmp5.filename;
+            }
+            if (filename) {
+              if (_sentryDebugIds[item]) {
+                break;
+              }
+            }
+            diff = diff - 1;
+          }
+          acc[filename] = tmp8;
+          const items = [filename, tmp8];
+          obj[item] = items;
+        }
       }
-    },
-  };
+      return acc;
+    }, {});
+  } else {
+    return {};
+  }
 }
+
+export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
+  const tmp = getFilenameToDebugIdMap(arg0);
+  const items = [];
+  if (tmp) {
+    const iter = arg1[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp7 = nextResult;
+      if (nextResult) {
+        obj = { type: "sourcemap", code_file: null, debug_id: null };
+        obj.code_file = tmp7;
+        obj.debug_id = tmp[tmp7];
+        let arr = items.push(obj);
+      }
+      continue;
+    }
+    return items;
+  } else {
+    return items;
+  }
+};
+export { getFilenameToDebugIdMap };

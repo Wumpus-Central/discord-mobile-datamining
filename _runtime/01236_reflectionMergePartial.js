@@ -1,13 +1,13 @@
 // _runtime/01236_reflectionMergePartial.js
 
-export const reflectionMergePartial = function reflectionMergePartial(arg0, reflectionCreateResult, arr) {
+export const reflectionMergePartial = function reflectionMergePartial(arg0, reflectionCreateResult, partialSettings) {
   const iter = arg0.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let obj = nextResult;
     let localName = nextResult.localName;
     if (nextResult.oneof) {
-      let tmp8 = arr[obj.oneof];
+      let tmp8 = partialSettings[obj.oneof];
       let tmp9 = tmp8;
       let oneofKind;
       if (null != tmp8) {
@@ -17,7 +17,7 @@ export const reflectionMergePartial = function reflectionMergePartial(arg0, refl
         continue;
       } else {
         let tmp59 = tmp9[localName];
-        arr = tmp59;
+        let arr = tmp59;
         let tmp61 = reflectionCreateResult[obj.oneof];
         let tmp4 = tmp61;
         tmp61.oneofKind = tmp9.oneofKind;
@@ -28,7 +28,7 @@ export const reflectionMergePartial = function reflectionMergePartial(arg0, refl
       }
     } else {
       tmp4 = reflectionCreateResult;
-      let tmp6 = arr[localName];
+      let tmp6 = partialSettings[localName];
       arr = tmp6;
       continue;
     }

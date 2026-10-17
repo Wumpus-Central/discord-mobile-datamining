@@ -1,125 +1,317 @@
 // _runtime/metro/06725__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import LegacyBaseButton from "../06559_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import ButtonComponentDefault from "../06708_ButtonComponent.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
+import 06726__ from "06726__.js";
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo((nativeGestureRef) => {
-  nativeGestureRef = nativeGestureRef.nativeGestureRef;
-  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
-  ({ style, children } = nativeGestureRef);
-  const merged = Object.assign(
-    nativeGestureRef,
-    Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }),
-  );
-  let enableContentPanningGesture;
-  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
-  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  const waitFor = bottomSheetInternal.waitFor;
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
-  const failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  const obj = nativeGestureRef(enableContentPanningGesture[2]);
-  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers()
-    .contentPanGestureHandler;
-  let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
-  const tmp3 = simultaneousHandlers(() => {
-    const items = [];
-    if (nativeGestureRef) {
-      items.push(tmp);
+let InnerBorderlessButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (refreshControlGestureRef) {
-      items.push(tmp3);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let closure_3 = ["rippleColor", "style"];
+let closure_4 = ["children", "style", "activeOpacity"];
+let closure_5 = ["children", "style", "innerRef", "activeOpacity"];
+_possibleConstructorReturnDefault;
+get_ActivityIndicator = fn(17);
+const Animated = get_ActivityIndicator.Animated;
+({ Platform, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const ButtonComponent = module_6726(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
+class LegacyRawButton {
+  constructor(arg0) {
+    obj = {};
+    merged = Object.assign(global);
+    obj.needsOffscreenAlphaCompositing = true;
+    return jsx(closure_15, obj);
+  }
+}
+class InnerBaseButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_7(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
     }
-    if (simultaneousHandlers) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(simultaneousHandlers)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(simultaneousHandlers);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleEvent = (nativeEvent) => {
+      nativeEvent = nativeEvent.nativeEvent;
+      ({ state, pointerInside } = nativeEvent);
+      let tmp = pointerInside;
+      if (pointerInside) {
+        let tmp4 = state === InnerBorderlessButton(6618).State.BEGAN;
+        if (!tmp4) {
+          tmp4 = state === InnerBorderlessButton(6618).State.ACTIVE;
+        }
+        tmp = tmp4;
       }
+      if (tmp8) {
+        const props = closure_0.props;
+        props.onActiveStateChange(tmp);
+      }
+      const longPressDetected = closure_0.longPressDetected;
+      let onPress = !longPressDetected;
+      if (!longPressDetected) {
+        onPress = nativeEvent.oldState === InnerBorderlessButton(6618).State.ACTIVE;
+      }
+      if (onPress) {
+        onPress = state !== InnerBorderlessButton(6618).State.CANCELLED;
+      }
+      if (onPress) {
+        onPress = closure_0.lastIsPressed;
+      }
+      if (onPress) {
+        onPress = closure_0.props.onPress;
+      }
+      if (onPress) {
+        const props2 = closure_0.props;
+        props2.onPress(pointerInside);
+      }
+      if (!closure_0.lastIsPressed) {
+        if (state === InnerBorderlessButton(6618).State.BEGAN) {
+          if (pointerInside) {
+            closure_0.longPressDetected = false;
+            if (closure_0.props.onLongPress) {
+              const _setTimeout = setTimeout;
+              closure_0.longPressTimeout = setTimeout(closure_0.onLongPress, closure_0.props.delayLongPress);
+            }
+          }
+          closure_0.lastIsPressed = tmp;
+        }
+      }
+      let tmp18 = state !== InnerBorderlessButton(6618).State.ACTIVE || pointerInside || undefined === closure_0.longPressTimeout;
+      if (tmp18) {
+        let tmp19 = undefined === closure_0.longPressTimeout;
+        if (!tmp19) {
+          let tmp22 = state !== InnerBorderlessButton(6618).State.END;
+          if (tmp22) {
+            tmp22 = state !== InnerBorderlessButton(6618).State.CANCELLED;
+          }
+          if (tmp22) {
+            tmp22 = state !== InnerBorderlessButton(6618).State.FAILED;
+          }
+          tmp19 = tmp22;
+        }
+        tmp18 = tmp19;
+      }
+      if (!tmp18) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(closure_0.longPressTimeout);
+        closure_0.longPressTimeout = undefined;
+      }
+      tmp8 = tmp !== closure_0.lastIsPressed && closure_0.props.onActiveStateChange;
+    };
+    tmp3Result.onLongPress = () => {
+      closure_0.longPressDetected = true;
+      const props = closure_0.props;
+      const onLongPress = props.onLongPress;
+      if (onLongPress != null) {
+        onLongPress();
+      }
+    };
+    tmp3Result.onHandlerStateChange = (arg0) => {
+      const props = closure_0.props;
+      if (props.onHandlerStateChange != null) {
+        onHandlerStateChange(arg0);
+      }
+      closure_0.handleEvent(arg0);
+    };
+    tmp3Result.onGestureEvent = (arg0) => {
+      const props = closure_0.props;
+      const onGestureEvent = props.onGestureEvent;
+      if (onGestureEvent != null) {
+        onGestureEvent(arg0);
+      }
+      closure_0.handleEvent(arg0);
+    };
+    tmp3Result.lastIsPressed = false;
+    tmp3Result.longPressDetected = false;
+    return tmp3Result;
+  }
+}
+InnerBorderlessButton = InnerBaseButton;
+_inherits(InnerBaseButton, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    ({ rippleColor, style } = props);
+    const obj = { ref: this.props.innerRef, rippleColor, style: null };
+    const items = [style, false];
+    obj.style = items;
+    const merged = Object.assign(_objectWithoutProperties(props, closure_3));
+    ({ onGestureEvent: obj.onGestureEvent, onHandlerStateChange: obj.onHandlerStateChange } = this);
+    return __initData(LegacyRawButton, obj);
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(InnerBaseButton, items);
+importDefaultResultResult.defaultProps = { delayLongPress: 600 };
+let closure_18 = Animated.createAnimatedComponent(importDefaultResultResult);
+class LegacyBaseButton {
+  constructor(arg0) {
+    obj = { innerRef: global.ref };
+    merged = Object.assign(Object.assign(global, Object.assign({ ref: 0 })));
+    return jsx(closure_17, obj);
+  }
+}
+function AnimatedBaseButton(innerRef) {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return __initData(closure_18, { innerRef: innerRef.ref });
+}
+const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
+class InnerRectButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_7(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
     }
-    return items;
-  }, items);
-  closure_10 = tmp3;
-  let items1 = [
-    activeOffsetX,
-    activeOffsetY,
-    enableContentPanningGesture,
-    failOffsetX,
-    failOffsetY,
-    tmp3,
-    waitFor,
-    ,
-    ,
-    ,
-  ];
-  ({
-    handleOnChange: arr2[7],
-    handleOnEnd: arr2[8],
-    handleOnFinalize: arr2[9],
-    handleOnStart: arr2[10],
-  } = contentPanGestureHandler);
-  const tmp4 = simultaneousHandlers(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange)
-      .onEnd(contentPanGestureHandler.handleOnEnd)
-      .onFinalize(contentPanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.onActiveStateChange = (arg0) => {
+      props = props.props;
+      const onActiveStateChange = props.onActiveStateChange;
+      if (onActiveStateChange != null) {
+        onActiveStateChange(arg0);
+      }
+    };
+    value = new c10.Value(0);
+    tmp3Result.opacity = value;
+    return tmp3Result;
+  }
+}
+InnerBorderlessButton = InnerRectButton;
+_inherits(InnerRectButton, noop.Component);
+const entry1 = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ children, style } = props);
+    let flattenResult = StyleSheet.flatten(style);
+    if (flattenResult == null) {
+      flattenResult = {};
     }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
+    const obj = {};
+    const merged = Object.assign(_objectWithoutProperties(props, closure_4));
+    obj.ref = self.props.innerRef;
+    obj.style = flattenResult;
+    obj.onActiveStateChange = self.onActiveStateChange;
+    const obj2 = { style: null };
+    const items = [underlay.underlay, { opacity: self.opacity, backgroundColor: self.props.underlayColor, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+    obj2.style = items;
+    const items1 = [__initData(Animated.View, obj2), children];
+    obj.children = items1;
+    return map1(LegacyBaseButton, obj);
+  }
+};
+let items1 = [entry1];
+const importDefaultResultResult1 = _createClass(InnerRectButton, items1);
+importDefaultResultResult1.defaultProps = { activeOpacity: 0.105, underlayColor: "black" };
+class InnerBorderlessButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_7(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
     }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  const obj3 = { gesture: tmp4, children: null };
-  const obj4 = { value: tmp4, children: null };
-  const obj5 = { style };
-  const merged1 = Object.assign(merged);
-  obj5.children = children;
-  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
-  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
-});
-memoResult.displayName = "BottomSheetDraggableView";
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.onActiveStateChange = (arg0) => {
+      props = props.props;
+      const onActiveStateChange = props.onActiveStateChange;
+      if (onActiveStateChange != null) {
+        onActiveStateChange(arg0);
+      }
+    };
+    value = new c10.Value(1);
+    tmp3Result.opacity = value;
+    return tmp3Result;
+  }
+}
+_inherits(InnerBorderlessButton, noop.Component);
+const entry2 = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    ({ children, style, innerRef } = props);
+    const obj = {};
+    const merged = Object.assign(_objectWithoutProperties(props, closure_5));
+    obj.innerRef = innerRef;
+    obj.onActiveStateChange = this.onActiveStateChange;
+    const items = [style, false];
+    obj.style = items;
+    obj.children = children;
+    return __initData(AnimatedBaseButton, obj);
+  }
+};
+const items2 = [entry2];
+const importDefaultResultResult2 = _createClass(InnerBorderlessButton, items2);
+importDefaultResultResult2.defaultProps = { activeOpacity: 0.3, borderless: true };
 
-export default memoResult;
+export { LegacyRawButton };
+export { LegacyBaseButton };
+export const LegacyRectButton = (innerRef) => {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return __initData(importDefaultResultResult1, { innerRef: innerRef.ref });
+};
+export const LegacyBorderlessButton = (innerRef) => {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return __initData(importDefaultResultResult2, { innerRef: innerRef.ref });
+};
+export const LegacyPureNativeButton = (arg0) => {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj.needsOffscreenAlphaCompositing = true;
+  return __initData(ButtonComponentDefault, obj);
+};

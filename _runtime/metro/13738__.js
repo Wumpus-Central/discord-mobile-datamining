@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6fb23e8fddb36af1d7c8748104537e96",
-  name: "VideoDenyIcon",
+  hash: "367021fc812df044b1b4d5405a1e12c2",
+  name: "CircleQuestionIcon-primary",
   type: "png",
 });

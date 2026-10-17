@@ -1,68 +1,132 @@
 // _runtime/metro/06684__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import noop_mod from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+let noop = noop_mod;
+({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
+let c7 = 0;
+let closure_8 = [];
+let c9 = false;
+const context = noop.createContext(null);
+const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
+
+export default function _default(children) {
+  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
+  const tmp = closure_3(false);
+  const isRNGHResponderEvent = tmp;
+  let items = [tmp, keyboardShouldPersistTaps];
+  isRNGHResponderEvent(() => {
+    sum = sum + 1;
+    if (1 >= sum) {
+      let addListener;
+      if (closure_1_4 != null) {
+        addListener = closure_1_4.addListener;
+      }
+      if (null != addListener) {
+        const metrics = closure_1_4.metrics;
+        let height;
+        if (metrics != null) {
+          const metricsResult = metrics();
+          if (metricsResult != null) {
+            height = metricsResult.height;
+          }
+        }
+        let tmp5 = null != height;
+        if (tmp5) {
+          tmp5 = height > 0;
+        }
+        function setVisible(endCoordinates) {
+          endCoordinates = endCoordinates.endCoordinates;
+          let height;
+          if (endCoordinates != null) {
+            height = endCoordinates.height;
+          }
+          let tmp2 = null != height;
+          if (tmp2) {
+            tmp2 = height > 0;
+          }
+          c9 = tmp2;
+        }
+        closure_9 = tmp5;
+        items = [
+          closure_1_4.addListener("keyboardDidShow", setVisible),
+          closure_1_4.addListener("keyboardWillShow", setVisible),
+          closure_1_4.addListener("keyboardDidHide", () => {
+            c9 = false;
+          }),
+        ];
+      }
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
+    return () => {
+      (function unsubscribeFromKeyboardVisibility() {
+        diff = diff - 1;
+        if (0 >= diff) {
+          for (const item10008 of closure_8) {
+            let removeResult = item10008.remove();
+            continue;
+          }
+          closure_8 = [];
+          c9 = false;
+        }
+      })();
     };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+  }, []);
+  const items1 = [keyboardShouldPersistTaps];
+  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
+  const obj = { value: tmp2, children: null };
+  const tmp4 = keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, []);
+  obj.children = (
+    <closure_5
+      collapsable={false}
+      onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+        closure_1.current = false;
+        return false;
+      }, [])}
+      onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+        let current = "handled" === keyboardShouldPersistTaps;
+        if (current) {
+          current = isRNGHResponderEvent.current;
+        }
+        isRNGHResponderEvent.current = false;
+        return current;
+      }, items1)}
+      pointerEvents="box-none"
+      style={logicalResponder.logicalResponder}
+    >
+      {children.children}
+    </closure_5>
+  );
+  return <context value={tmp2}>{null}</context>;
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FlingGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, FlingGesture);
-    tmp2 = c2;
-    obj = c2(FlingGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
-    return tmp3Result;
+export const JSResponderContext = context;
+export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {
+  isRNGHResponderEvent = undefined;
+  if (isRNGHResponderEvent != null) {
+    isRNGHResponderEvent = isRNGHResponderEvent.isRNGHResponderEvent;
   }
-}
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6580).BaseGesture);
-const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
-    return this;
-  },
+  if (isRNGHResponderEvent) {
+    isRNGHResponderEvent.current = current;
+  }
 };
-const items = [
-  entry,
-  {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
-      return this;
-    },
-  },
-];
-
-export const FlingGesture = _createClass(FlingGesture, items);
+export const isKeyboardDismissingTap = function isKeyboardDismissingTap(keyboardShouldPersistTaps) {
+  if (null == keyboardShouldPersistTaps) {
+    return false;
+  } else {
+    keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
+    let tmp = !keyboardShouldPersistTaps;
+    if (keyboardShouldPersistTaps) {
+      tmp = "never" === keyboardShouldPersistTaps;
+    }
+    if (tmp) {
+      tmp = c9;
+    }
+    return tmp;
+  }
+};

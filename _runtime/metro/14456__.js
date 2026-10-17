@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
   width: 180,
-  height: 180,
-  scales: [1],
-  hash: "7d7d766e7ebb30cec66584e69b89634d",
-  name: "Glow",
+  height: 108,
+  scales: [2, 3],
+  hash: "ff9dd208f5a022cb1483def98770bc0b",
+  name: "img_what_you_lose_profile",
   type: "png",
 });

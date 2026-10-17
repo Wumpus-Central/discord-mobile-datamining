@@ -1,6 +1,13 @@
 // _runtime/metro/06833__.js
-import _mod17 from "00017__.js";
+import noop from "00019__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+const useContext = noop.useContext;
+const context = noop.createContext(undefined);
 
-export const styles = StyleSheet.create({ container: {} });
+export const RecyclerViewContextProvider = context.Provider;
+export const useRecyclerViewContext = function useRecyclerViewContext() {
+  return useContext(context);
+};
+export const useFlashListContext = function useFlashListContext() {
+  return useContext(context);
+};

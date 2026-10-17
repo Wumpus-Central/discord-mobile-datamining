@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "6186005757c9a6da5db2aeedc6cf425e",
-  name: "wumpus-wizard",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "b5ac530e11705d268a2dd9d0cf020b0a",
+  name: "PhoneHangUpIcon",
   type: "png",
 });

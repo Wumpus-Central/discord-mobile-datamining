@@ -1,33 +1,51 @@
 // _runtime/metro/06657__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _modDef6647 from "06647__.js";
+import needsToReattach from "../06658_needsToReattach.js";
+import dropHandlers from "../06659_dropHandlers.js";
+import attachHandlers from "../06660_attachHandlers.js";
+import _mod6661 from "06661__.js";
 
-const Platform = _mod17.Platform;
+const require = globalThis.__r;
 
-export const getTVProps = function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
+_mod19.useCallback;
+
+export const useDetectorUpdater = function useDetectorUpdater(
+  current,
+  current2,
+  gesturesToAttach,
+  gesture,
+  webEventHandlers,
+) {
+  _require = current;
+  const preparedGesture = current2;
+  dependencyMap = gesturesToAttach;
+  const forceRender = require("convertToHandlerTag").useForceRender();
+  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
+  return gesture((arg0) => {
+    const tmp3 = _modDef6647(current.viewRef);
+    if (tmp3 === current.previousViewTag) {
+      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
+        if (!arg0) {
+          _mod6661.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
+          const tmp5Result = _mod6661;
+        }
+      }
+      obj = needsToReattach;
     }
-    if (flag == null) {
-      flag = true;
+    dropHandlers.dropHandlers(preparedGesture);
+    attachHandlers.attachHandlers({
+      preparedGesture,
+      gestureConfig,
+      gesturesToAttach,
+      webEventHandlersRef,
+      viewTag: tmp3,
+    });
+    if (tmp3 !== current.previousViewTag) {
+      current.previousViewTag = tmp3;
+      current.forceRebuildReanimatedEvent = true;
+      forceRender();
     }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
-};
-export const applyRelationProp = function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      const items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
+    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
+  }, items);
 };

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/stream_feedback",
-  width: 72,
-  height: 72,
-  scales: [1, 2, 3],
-  hash: "a961e7716a9e5270654c872f10256829",
-  name: "feedback-modal-neutral",
+  httpServerLocation: "/assets/images/native",
+  width: 18,
+  height: 18,
+  scales: [2, 3],
+  hash: "36e39be8b33ba48e0db05b6e6fe9d9e1",
+  name: "ic_add_reaction_v2",
   type: "png",
 });

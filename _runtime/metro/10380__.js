@@ -1,15 +1,13 @@
 // _runtime/metro/10380__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01134__.js";
 
-const useEffect = _mod19.useEffect;
-
-export const useUpdateGestureConfig = (arg0, options) => {
-  closure_0 = arg0;
-  const enabled = options.enabled;
-  const items = [enabled, arg0];
-  useEffect(() => {
-    if (undefined !== enabled) {
-      closure_0.enabled(tmp);
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 179.5,
+  height: 70,
+  scales: [2, 3],
+  hash: "894749452230f66f12adff4cbc7b37d2",
+  name: "img_logo_nitro_classic",
+  type: "png",
+});

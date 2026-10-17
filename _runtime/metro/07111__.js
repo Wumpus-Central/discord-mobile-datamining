@@ -1,29 +1,13 @@
 // _runtime/metro/07111__.js
-import _mod7112 from "07112__.js";
-import noop from "00019__.js";
+import registerAsset from "01134__.js";
 
-function setString(arg0) {
-  closure_0 = arg0;
-  const Clipboard = _mod7112.Clipboard;
-  Clipboard.setString(arg0);
-  const item = set.forEach((fn) => fn(closure_0));
-}
-const set = new Set();
-
-export const useClipboard = () => {
-  const state = noop.useState("");
-  [tmp2, require] = state;
-  const effect = noop.useEffect(() => {
-    const Clipboard = _mod7112.Clipboard;
-    const string = Clipboard.getString();
-    string.then(closure_1_0);
-  }, []);
-  const effect1 = noop.useEffect(() => {
-    set.add(require);
-    return () => {
-      set.delete(closure_1_0);
-    };
-  }, []);
-  const items = [tmp2, setString];
-  return items;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "edefaa7b105418ac79e91df5e7252965",
+  name: "ic_arrow_right",
+  type: "png",
+});

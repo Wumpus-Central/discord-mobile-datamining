@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "18bf95267062a719213a10081e62b607",
-  name: "img_amazon_music",
+  hash: "a3f3002b04ef160e95cf684a02c6531a",
+  name: "img_account_sync_riot_white",
   type: "png",
 });

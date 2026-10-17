@@ -1,49 +1,21 @@
 // _runtime/metro/06662__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import _slicedToArray from "00032__.js";
+import _mod19 from "00019__.js";
+import _modDef6647 from "06647__.js";
 
-const noop = fn(19);
-({ useEffect: c2, useState: c3 } = noop);
-const AccessibilityInfo = fn(17).AccessibilityInfo;
+_mod19.useCallback;
 
-export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
-  const tmp = _slicedToArray(closure_3(false), 2);
-  closure_0 = tmp[1];
-  closure_2(() => {
-    closure_129_0 = closure_0(function* () {
-      closure_1 = tmp3;
-      yield screenReaderEnabled.isScreenReaderEnabled();
-      if (1 === tmp7) {
-        c3 = 0;
-        const _console = console;
-        console.warn("Could not read accessibility info: defaulting to false");
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_128_0 = value;
-        closure_0(closure_128_0);
-        c3 = 0;
+export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        previousViewTag.previousViewTag = _modDef6647(previousViewTag.viewRef);
       }
-      return value;
-    });
-    (function checkStatus() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
       }
-      return applyArgumentsResult;
-    })();
-    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
-      closure_0(event);
-    });
-    return () => {
-      closure_0.remove();
-    };
-  }, []);
-  return tmp[0];
+    }
+  }, items);
 };

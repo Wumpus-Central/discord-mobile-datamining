@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/ColorWaveIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "c1f01c1cb21b1b0825a7707e0be435be",
-  name: "ColorWaveIcon",
+  hash: "45844ffe000e8da4174843bafa8614af",
+  name: "SuperReactionIcon",
   type: "png",
 });

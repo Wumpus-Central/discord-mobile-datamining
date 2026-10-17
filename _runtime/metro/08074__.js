@@ -1,28 +1,82 @@
 // _runtime/metro/08074__.js
+import _mod8067 from "08067__.js";
+import _mod8068 from "08068__.js";
 
-export const getStringValue = function getStringValue(value) {
-  const mapped = value.map((item) => String.fromCharCode(item));
-  return mapped.join("");
+require = arg1;
+const dependencyMap = arg6;
+
+export const isBLEND = function isBLEND(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "blend");
 };
-export const getEncodedString = function getEncodedString(arr) {
-  if (arr.length >= 8) {
-    const substr = arr.slice(0, 8);
-    const mapped = substr.map((item) => String.fromCharCode(item));
-    const joined = mapped.join("");
-    if ("ASCII\0\0\0" === joined) {
-      const substr1 = arr.slice(8);
-      const mapped1 = substr1.map((item) => String.fromCharCode(item));
-      return mapped1.join("");
-    } else if ("JIS\0\0\0\0\0" === joined) {
-      return "[JIS encoded text]";
-    } else if ("UNICODE\0" === joined) {
-      return "[Unicode encoded text]";
-    } else if ("\0\0\0\0\0\0\0\0" === joined) {
-      return "[Undefined encoding]";
-    }
-  }
-  return "Undefined";
+export const isELF = function isELF(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "elf");
 };
-export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
-  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
+export const isEXE = function isEXE(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exe");
+};
+export const isMACHO = function isMACHO(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "macho");
+};
+export const isINDD = function isINDD(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "indd");
+};
+export const isORC = function isORC(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "orc");
+};
+export const isPARQUET = function isPARQUET(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "parquet");
+};
+export const isPDF = function isPDF(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pdf");
+};
+export const isPS = function isPS(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ps");
+};
+export const isRTF = function isRTF(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "rtf");
+};
+export const isSQLITE = function isSQLITE(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "sqlite");
+};
+export const isSTL = function isSTL(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "stl");
+};
+export const isTTF = function isTTF(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ttf");
+};
+export const isDOC = function isDOC(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "doc");
+};
+export const isPCAP = function isPCAP(fileChunk) {
+  fileChunk = _mod8067.getFileChunk(fileChunk);
+  const FileTypes = _mod8068.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pcap");
 };

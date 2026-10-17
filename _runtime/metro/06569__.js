@@ -1,18 +1,13 @@
 // _runtime/metro/06569__.js
-import _mod6570 from "06570__.js";
-import ScrollView from "../06658_ScrollView.js";
-import hitSlopDefault from "../06659_hitSlop.js";
-import Touchable from "../06670_Touchable.js";
+import registerAsset from "01134__.js";
 
-export const BaseButton = _mod6570.BaseButton;
-export const BorderlessButton = _mod6570.BorderlessButton;
-export const PureNativeButton = _mod6570.PureNativeButton;
-export const RawButton = _mod6570.RawButton;
-export const RectButton = _mod6570.RectButton;
-export const FlatList = ScrollView.FlatList;
-export const RefreshControl = ScrollView.RefreshControl;
-export const ScrollView = ScrollView.ScrollView;
-export const Switch = ScrollView.Switch;
-export const TextInput = ScrollView.TextInput;
-export const Pressable = hitSlopDefault;
-export const Touchable = Touchable.Touchable;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "db11ea9da81d79144310eac53428fbe9",
+  name: "CircleErrorIcon-primary",
+  type: "png",
+});

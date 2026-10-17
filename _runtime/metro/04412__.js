@@ -1,36 +1,42 @@
 // _runtime/metro/04412__.js
-import module_4262_mod from "04262__.js";
-import module_4413_mod from "04413__.js";
-import requiredArgs_mod from "../04259_requiredArgs.js";
+import 04413__ from "04413__.js";
+import 04414__ from "04414__.js";
+import 04415__ from "04415__.js";
+import date_mod from "04416__.js";
+import date_mod from "04417__.js";
 
-let module_4262 = module_4262_mod;
-if (!module_4262) {
-  const obj = { default: module_4262 };
+if (!module_4413) {
+  const obj = { default: module_4413 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4262;
+  tmp3 = module_4413;
 }
-module_4262 = tmp3;
-let module_4413 = module_4413_mod;
-if (!module_4413) {
-  const obj2 = { default: module_4413 };
+if (!module_4414) {
+  const obj2 = { default: module_4414 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4413;
+  tmp5 = module_4414;
 }
-module_4413 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+if (!module_4415) {
+  const obj3 = { default: module_4415 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4415;
 }
-requiredArgs = tmp7;
-let c3 = 3600000;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function addHours(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4413.default(interval, module_4262.default(arg1) * c3);
-};
+export default { code: "ru", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;
