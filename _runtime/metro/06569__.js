@@ -1,21 +1,7 @@
 // === Module 6569: ? ===
 
 // Module 6569
-import _mod6570 from "module_6570" /* 6570 */;
-import ScrollView from "ScrollView" /* 6658 */;
-import hitSlopDefault from "hitSlop" /* 6659 */;
-import Touchable from "Touchable" /* 6670 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export const BaseButton = _mod6570.BaseButton;
-export const BorderlessButton = _mod6570.BorderlessButton;
-export const PureNativeButton = _mod6570.PureNativeButton;
-export const RawButton = _mod6570.RawButton;
-export const RectButton = _mod6570.RectButton;
-export const FlatList = ScrollView.FlatList;
-export const RefreshControl = ScrollView.RefreshControl;
-export const ScrollView = ScrollView.ScrollView;
-export const Switch = ScrollView.Switch;
-export const TextInput = ScrollView.TextInput;
-export const Pressable = hitSlopDefault;
-export const Touchable = Touchable.Touchable;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db11ea9da81d79144310eac53428fbe9", name: "CircleErrorIcon-primary", type: "png" });

@@ -1,122 +1,196 @@
 // === Module 4542: ? ===
 
 // Module 4542
-import _mod4263 from "module_4263" /* 4263 */;
-import module_4520_mod from "module_4520" /* 4520 */;
-import module_4521_mod from "module_4521" /* 4521 */;
-import startOfMonth_mod from "startOfMonth" /* 4474 */;
-import requiredArgs_mod from "requiredArgs" /* 4259 */;
-import module_4262_mod from "module_4262" /* 4262 */;
+import _mod4299 from "module_4299" /* 4299 */;
+import compareAsc_mod from "compareAsc" /* 4470 */;
+import differenceInMonths_mod from "differenceInMonths" /* 4492 */;
+import differenceInSeconds_mod from "differenceInSeconds" /* 4497 */;
+import code_mod from "module_4540" /* 4540 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import cloneObject_mod from "cloneObject" /* 4543 */;
+import assign_mod from "assign" /* 4544 */;
+import module_4457_mod from "module_4457" /* 4457 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let module_4520 = module_4520_mod;
-if (!module_4520) {
-  const obj = { default: module_4520 };
+let compareAsc = compareAsc_mod;
+if (!compareAsc) {
+  let obj = { default: compareAsc };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4520;
+  tmp3 = compareAsc;
 }
-module_4520 = tmp3;
-let module_4521 = module_4521_mod;
-if (!module_4521) {
-  const obj2 = { default: module_4521 };
+compareAsc = tmp3;
+let differenceInMonths = differenceInMonths_mod;
+if (!differenceInMonths) {
+  const obj2 = { default: differenceInMonths };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4521;
+  tmp5 = differenceInMonths;
 }
-module_4521 = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
+differenceInMonths = tmp5;
+let differenceInSeconds = differenceInSeconds_mod;
+if (!differenceInSeconds) {
+  const obj3 = { default: differenceInSeconds };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfMonth;
+  tmp7 = differenceInSeconds;
 }
-startOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
+differenceInSeconds = tmp7;
+let code = code_mod;
+if (!code) {
+  const obj4 = { default: code };
   let tmp9 = obj4;
 } else {
-  tmp9 = requiredArgs;
+  tmp9 = code;
 }
-requiredArgs = tmp9;
-let module_4262 = module_4262_mod;
-if (!module_4262) {
-  const obj5 = { default: module_4262 };
+code = tmp9;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj5 = { default: _typeof };
   let tmp11 = obj5;
 } else {
-  tmp11 = module_4262;
+  tmp11 = _typeof;
 }
-module_4262 = tmp11;
+_typeof = tmp11;
+let cloneObject = cloneObject_mod;
+if (!cloneObject) {
+  const obj6 = { default: cloneObject };
+  let tmp13 = obj6;
+} else {
+  tmp13 = cloneObject;
+}
+cloneObject = tmp13;
+let assign = assign_mod;
+if (!assign) {
+  const obj7 = { default: assign };
+  let tmp15 = obj7;
+} else {
+  tmp15 = assign;
+}
+assign = tmp15;
+let module_4457 = module_4457_mod;
+if (!module_4457) {
+  const obj8 = { default: module_4457 };
+  let tmp17 = obj8;
+} else {
+  tmp17 = module_4457;
+}
+module_4457 = tmp17;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj9 = { default: requiredArgs };
+  let tmp19 = obj9;
+} else {
+  tmp19 = requiredArgs;
+}
+requiredArgs = tmp19;
+let c11 = 1440;
+let c12 = 2520;
+let c13 = 43200;
+let c14 = 86400;
 
-export default function getWeekOfMonth(arg0, weekStartsOn) {
-  requiredArgs.default(1, arguments);
-  const defaultOptions = _mod4263.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
+export default function formatDistance(arg0, arg1, locale) {
+  requiredArgs.default(2, arguments);
+  locale = undefined;
+  const defaultOptions = _mod4299.getDefaultOptions();
+  if (null != locale) {
+    locale = locale.locale;
   }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
+  if (null === locale) {
+    locale = defaultOptions.locale;
+  }
+  if (null === locale) {
+    locale = code.default;
+  }
+  if (locale.formatDistance) {
+    const defaultResult1 = compareAsc.default(arg0, arg1);
+    const _isNaN = isNaN;
+    if (isNaN(defaultResult1)) {
+      const _RangeError2 = RangeError;
+      const rangeError = new RangeError("Invalid time value");
+      throw rangeError;
+    } else {
+      let addSuffix;
+      if (null != locale) {
+        addSuffix = locale.addSuffix;
+      }
+      const obj = { addSuffix: Boolean(addSuffix), comparison: defaultResult1 };
+      const defaultResult3 = assign.default(cloneObject.default(locale), obj);
+      if (defaultResult1 > 0) {
+        let defaultResult4 = _typeof.default(arg1);
+        let defaultResult5 = _typeof.default(arg0);
+      } else {
+        defaultResult4 = _typeof.default(arg0);
+        defaultResult5 = _typeof.default(arg1);
+      }
+      const defaultResult6 = differenceInSeconds.default(defaultResult5, defaultResult4);
+      const defaultResult2 = cloneObject.default(locale);
+      const _Math = Math;
+      const rounded = Math.round((defaultResult6 - (module_4457.default(defaultResult5) - module_4457.default(defaultResult4)) / 1000) / 60);
+      if (rounded < 2) {
+        if (null != locale) {
+          if (locale.includeSeconds) {
+            if (defaultResult6 < 5) {
+              let formatDistanceResult = locale.formatDistance("lessThanXSeconds", 5, defaultResult3);
+            } else if (defaultResult6 < 10) {
+              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 10, defaultResult3);
+            } else if (defaultResult6 < 20) {
+              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 20, defaultResult3);
+            } else if (defaultResult6 < 40) {
+              formatDistanceResult = locale.formatDistance("halfAMinute", 0, defaultResult3);
+            } else if (defaultResult6 < 60) {
+              formatDistanceResult = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
+            } else {
+              formatDistanceResult = locale.formatDistance("xMinutes", 1, defaultResult3);
             }
           }
         }
-      }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
+        if (0 === rounded) {
+          let formatDistanceResult1 = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
+        } else {
+          formatDistanceResult1 = locale.formatDistance("xMinutes", rounded, defaultResult3);
         }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_4262.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = module_4520.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult2)) {
-        return NaN;
+        return formatDistanceResult1;
+      } else if (rounded < 45) {
+        return locale.formatDistance("xMinutes", rounded, defaultResult3);
+      } else if (rounded < 90) {
+        return locale.formatDistance("aboutXHours", 1, defaultResult3);
+      } else if (rounded < c11) {
+        const _Math6 = Math;
+        return locale.formatDistance("aboutXHours", Math.round(rounded / 60), defaultResult3);
+      } else if (rounded < c12) {
+        return locale.formatDistance("xDays", 1, defaultResult3);
+      } else if (rounded < c13) {
+        const _Math5 = Math;
+        return locale.formatDistance("xDays", Math.round(rounded / tmp37), defaultResult3);
+      } else if (rounded < c14) {
+        const _Math4 = Math;
+        return locale.formatDistance("aboutXMonths", Math.round(rounded / c13), defaultResult3);
       } else {
-        const diff = defaultResult1 - module_4521.default(startOfMonth.default(arg0));
-        let sum = diff;
-        if (diff <= 0) {
-          sum = diff + 7;
+        const defaultResult8 = differenceInMonths.default(defaultResult5, defaultResult4);
+        if (defaultResult8 < 12) {
+          const _Math3 = Math;
+          return locale.formatDistance("xMonths", Math.round(rounded / c13), defaultResult3);
+        } else {
+          const result = defaultResult8 % 12;
+          const _Math2 = Math;
+          const rounded1 = Math.floor(defaultResult8 / 12);
+          if (result < 3) {
+            let formatDistanceResult2 = locale.formatDistance("aboutXYears", rounded1, defaultResult3);
+          } else if (result < 9) {
+            formatDistanceResult2 = locale.formatDistance("overXYears", rounded1, defaultResult3);
+          } else {
+            formatDistanceResult2 = locale.formatDistance("almostXYears", rounded1 + 1, defaultResult3);
+          }
+          return formatDistanceResult2;
         }
-        const _Math = Math;
-        return Math.ceil((defaultResult2 - sum) / 7) + 1;
       }
+      const defaultResult7 = module_4457.default(defaultResult5);
     }
+  } else {
+    const _RangeError = RangeError;
+    const rangeError1 = new RangeError("locale must contain formatDistance property");
+    throw rangeError1;
   }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
 };
 export default exports.default;

@@ -1,49 +1,10 @@
 // === Module 6709: ? ===
 
 // Module 6709
-import noop from "module_19" /* 19 */;
+import _mod26 from "module_26" /* 26 */;
+import module_65 from "module_65" /* 65 */;
 
-const require = globalThis.__r;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", validAttributes: { exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = INITIAL_CONTAINER_HEIGHT;
-  if (INITIAL_CONTAINER_HEIGHT) {
-    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = INITIAL_CONTAINER_HEIGHT;
-      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
-        const obj2 = {};
-        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
-        let mutable = require("cancelAnimation").makeMutable(obj2);
-        let obj = require("cancelAnimation");
-      } else {
-        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
-        const obj3 = require("cancelAnimation");
-      }
-      tmp2.current = mutable;
-    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
-      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
-    }
-  }
-  closure_2(() => () => {
-    if (ref.current) {
-      ref(dependencyMap[1]).cancelAnimation(tmp.current);
-      const obj = ref(dependencyMap[1]);
-    }
-  }, []);
-  let current = tmp2.current;
-  if (current == null) {
-    current = INITIAL_CONTAINER_HEIGHT;
-  }
-  return current;
-};
+export default module_65.get("RNGestureHandlerButton", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

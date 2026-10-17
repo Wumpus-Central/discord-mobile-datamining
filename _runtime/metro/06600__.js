@@ -1,95 +1,80 @@
 // === Module 6600: ? ===
 
 // Module 6600
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import normalizeSnapPoint from "normalizeSnapPoint" /* 6601 */;
+import noop from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const require = globalThis.__r;
+
+({ useCallback: c2, useRef: c3 } = noop);
+
+export const useScrollable = () => {
+  const tmp = closure_3(null);
+  _require = tmp;
+  dependencyMap = closure_3(null);
+  const sharedValue = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_TYPE.UNDETERMINED);
+  let obj = require("cancelAnimation");
+  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
+  const obj2 = require("cancelAnimation");
+  const sharedValue2 = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = require("cancelAnimation");
+  const sharedValue3 = require("cancelAnimation").useSharedValue(false);
+  const obj4 = require("cancelAnimation");
+  const tmp6 = closure_2((id) => {
+    const current = ref.current;
+    id = undefined;
+    if (current != null) {
+      id = current.id;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(arg0, arg1) {
-  if (undefined === arg1) {
-    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
-  } else {
-    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
-  }
-  const merged = Object.assign(arg0);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 2074844346342;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
-class HoverGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, HoverGesture);
-    tmp2 = c2;
-    obj = c2(HoverGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
+    if (id == null) {
+      id = null;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "HoverGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = HoverGesture;
-_inherits(HoverGesture, fn(6580).ContinousBaseGesture);
-const entry = {
-  key: "effect",
-  value: function effect(hoverEffect) {
-    this.config.hoverEffect = hoverEffect;
-    return this;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+    if (id !== id.id) {
+      if (ref.current) {
+        closure_1.current = ref.current;
       }
-      const items = [arg0];
-      return fn(items);
+      ref.current = id;
     }
-  }
-];
-
-export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
-export const hoverGestureHandlerProps = ["hoverEffect"];
-export const HoverGesture = _createClass(HoverGesture, items);
+  }, []);
+  return {
+    scrollableRef: tmp,
+    animatedScrollableType: sharedValue,
+    animatedScrollableContentOffsetY: sharedValue1,
+    animatedScrollableOverrideState: sharedValue2,
+    isScrollableRefreshable: sharedValue3,
+    setScrollableRef: closure_2((id) => {
+      const current = ref.current;
+      id = undefined;
+      if (current != null) {
+        id = current.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      if (id !== id.id) {
+        if (ref.current) {
+          closure_1.current = ref.current;
+        }
+        ref.current = id;
+      }
+    }, []),
+    removeScrollableRef: closure_2((current) => {
+      try {
+        const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(current.current);
+        current = ref.current;
+        let id;
+        if (current != null) {
+          id = current.id;
+        }
+        if (id == null) {
+          id = null;
+        }
+        if (findNodeHandleResult === id) {
+          ref.current = ref2.current;
+        }
+      } catch (err) {
+        return tmp;
+      }
+    }, [])
+  };
+};

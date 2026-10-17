@@ -1,7 +1,30 @@
 // === Module 16603: ? ===
 
 // Module 16603
-import registerAsset from "module_1134" /* 1134 */;
+import _regeneratorRuntime2 from "_regeneratorRuntime" /* 16604 */;
+import module_8679 from "module_8679" /* 8679 */;
 
+let _regeneratorRuntime = module_8679(_regeneratorRuntime2);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9e0f7ca920e7d55418409ccf322d663c", name: "BurgerIcon", type: "png" });
+export const getYoutubeMeta = function getYoutubeMeta(arg0) {
+  _regeneratorRuntime = arg0;
+  return _regeneratorRuntime.default.async(async function getYoutubeMeta$(next) {
+    next = next.next;
+    next.prev = next;
+    while (0 !== next) {
+      if (2 === next) {
+        sent = next.sent;
+        next.next = 5;
+        let _default = _regeneratorRuntime.default;
+        return _default.awrap(sent.json());
+      } else if (5 === next) {
+        let str = "return";
+        return next.abrupt("return", next.sent);
+      } else {
+        return next.stop();
+      }
+    }
+    next.next = 2;
+    return _regeneratorRuntime.default.awrap(fetch("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + closure_0 + "&format=json"));
+  }, null, null, null, Promise);
+};

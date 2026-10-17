@@ -1,7 +1,7 @@
 // === Module 15116: ? ===
 
 // Module 15116
-import registerAsset from "module_1134" /* 1134 */;
+import _mod15107 from "module_15107" /* 15107 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "b452f17f7046013be582dffe125561c0", name: "StatusIdle", type: "png" });
+export default (arg0, arg1, arg2) => 0 !== _mod15107(arg0, arg1, arg2);

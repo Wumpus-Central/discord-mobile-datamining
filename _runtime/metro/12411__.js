@@ -1,36 +1,52 @@
 // === Module 12411: ? ===
 
 // Module 12411
-import _mod12310 from "module_12310" /* 12310 */;
-import _mod12331 from "module_12331" /* 12331 */;
+import _mod12369 from "module_12369" /* 12369 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12374 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 12384 */;
+import _mod12397 from "module_12397" /* 12397 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const captureFeedback = function captureFeedback(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
   }
-  let currentScope = arg2;
-  if (arg2 === undefined) {
-    currentScope = _mod12331.getCurrentScope();
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
   }
-  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
-  const obj4 = { feedback: _mod12310.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
-  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj2.contexts = obj4;
-  obj2.tags = tags;
-  let client = currentScope;
-  if (currentScope) {
-    client = currentScope.getClient();
+  if (rootSpan) {
+    if (_mod12397.DEBUG_BUILD) {
+      const logger = _mod12369.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+    }
+    const obj2 = {};
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
   }
-  if (!client) {
-    client = _mod12331.getClient();
-    const tmp3Result = _mod12331;
+};
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
+        }
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
+      });
+      return obj;
+    }
   }
-  if (client) {
-    client.emit("beforeSendFeedback", obj2, obj);
-  }
-  return currentScope.captureEvent(obj2, obj);
 };

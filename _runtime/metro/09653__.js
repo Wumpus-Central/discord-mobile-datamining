@@ -1,7 +1,43 @@
 // === Module 9653: ? ===
 
 // Module 9653
-import registerAsset from "module_1134" /* 1134 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 163.5, height: 20, scales: [2, 3], hash: "cd3f012d84fd9fd0e06d08e5556058d7", name: "img_logo_nitro_tier_0_horizontal_dark", type: "png" });
+export const getModalRouteKeys = (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    let options;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
+    }
+    if (options == null) {
+      options = {};
+    }
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedTransparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "fullScreenModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "formSheet" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "pageSheet" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
+};

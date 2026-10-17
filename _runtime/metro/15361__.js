@@ -1,34 +1,20 @@
 // === Module 15361: ? ===
 
 // Module 15361
+import _mod15327 from "module_15327" /* 15327 */;
+import _mod15348 from "module_15348" /* 15348 */;
+import f2 from "f" /* 15362 */;
+import _mod15372 from "module_15372" /* 15372 */;
+import _mod15373 from "module_15373" /* 15373 */;
 
-export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
-  try {
-    if (constants) {
-      if (constants.reactNativeVersion) {
-        const major = constants.reactNativeVersion.major;
-        const minor = constants.reactNativeVersion.minor;
-        const patch = constants.reactNativeVersion.patch;
-        const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major !== "number") {
-          return null;
-        } else {
-          const items = [];
-          const _HermesInternal2 = HermesInternal;
-          items.push("" + tmp4 + "." + minor + "." + patch);
-          if (prerelease) {
-            const _HermesInternal = HermesInternal;
-            arr2.push("-" + prerelease);
-          }
-          return items.join("");
-        }
-      } else {
-        return null;
-      }
-    } else {
-      return null;
-    }
-  } catch (err) {
-    return null;
+let closure_2 = _mod15327([].concat);
+
+export default _mod15348("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod15372(arg0));
+  const f = _mod15373.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
   }
-};
+  return tmp2;
+});

@@ -1,73 +1,134 @@
 // === Module 12412: ? ===
 
 // Module 12412
-import _mod12331 from "module_12331" /* 12331 */;
-import _flush from "_flush" /* 12352 */;
-import _mod12377 from "module_12377" /* 12377 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12374 */;
+import _mod12413 from "module_12413" /* 12413 */;
+import _mod12416 from "module_12416" /* 12416 */;
+import __SENTRY_DEBUG__ from "module_12368" /* 12368 */;
+import consoleSandbox from "module_12369" /* 12369 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12331.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12331.withScope,
-    getClient() {
-      return _mod12331.getClient();
-    },
-    getScope: _mod12331.getCurrentScope,
-    getIsolationScope: _mod12331.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12331.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12331.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12377.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12331.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod12331.getCurrentScope();
-        const tmpResult3 = _mod12331;
-        const client = _mod12331.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod12331;
-      }
+
+export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12413.getSdkMetadataForEnvelopeHeader(sdk);
+  let str = "event";
+  if (type.type) {
+    str = "event";
+    if ("replay_event" !== type.type) {
+      str = type.type;
     }
-  };
-}
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+  }
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    type.sdk = type.sdk || {};
+    let name = type.sdk.name;
+    if (!name) {
+      name = sdk.name;
+    }
+    type.sdk.name = name;
+    let version = type.sdk.version;
+    if (!version) {
+      version = sdk.version;
+    }
+    type.sdk.version = version;
+    let integrations = type.sdk.integrations;
+    if (!integrations) {
+      integrations = [];
+    }
+    const items = [];
+    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const tmp9 = sdk.integrations || [];
+    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    type.sdk.integrations = items;
+    let packages = type.sdk.packages;
+    if (!packages) {
+      packages = [];
+    }
+    const items1 = [];
+    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
+    const tmp17 = sdk.packages || [];
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
+    type.sdk.packages = items1;
+  }
+  const eventEnvelopeHeaders = _mod12413.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  delete tmp[tmp2];
+  const items2 = [{ type: str }, type];
+  const tmp3Result = _mod12413;
+  const items3 = [items2];
+  return _mod12413.createEnvelope(eventEnvelopeHeaders, items3);
+};
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12413.getSdkMetadataForEnvelopeHeader(sdk);
+  const obj2 = { sent_at: null };
+  obj2.sent_at = new Date().toISOString();
+  let tmp4 = sdkMetadataForEnvelopeHeader;
+  if (sdkMetadataForEnvelopeHeader) {
+    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj3;
+  }
+  const merged = Object.assign(tmp4);
+  let tmp6 = arg3 && url;
+  if (tmp6) {
+    const obj4 = { dsn: _mod12416.dsnToString(url) };
+    tmp6 = obj4;
+    const tmpResult = _mod12416;
+  }
+  const merged1 = Object.assign(tmp6);
+  if ("aggregates" in toJSON) {
+    const items = [{ type: "sessions" }, toJSON];
+    let items1 = items;
+  } else {
+    items1 = [{ type: "session" }, toJSON.toJSON()];
+  }
+  const date = new Date();
+  const items2 = [items1];
+  return _mod12413.createEnvelope(obj2, items2);
+};
+export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
+  const dynamicSamplingContextFromSpan = beforeSendSpan(12405).getDynamicSamplingContextFromSpan(arg0[0]);
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  const obj = beforeSendSpan(12405);
+  const obj2 = { sent_at: new Date().toISOString() };
+  const tmp2 = beforeSendSpan;
+  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
+    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
+  })(dynamicSamplingContextFromSpan);
+  if (tmp7) {
+    const obj3 = { trace: dynamicSamplingContextFromSpan };
+    tmp7 = obj3;
+  }
+  const merged = Object.assign(tmp7);
+  let tmp9 = tunnel && dsn;
+  if (tmp9) {
+    const obj4 = { dsn: tmp2(12416).dsnToString(dsn) };
+    tmp9 = obj4;
+    const tmp2Result = tmp2(12416);
+  }
+  const merged1 = Object.assign(tmp9);
+  beforeSendSpan = getDsn;
+  if (getDsn) {
+    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
+  }
+  if (beforeSendSpan) {
+    const fn2 = (arg0) => {
+      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
+      if (!tmp3) {
+        spanTimeInputToSeconds.showSpanDropWarning();
+        const tmpResult = spanTimeInputToSeconds;
+      }
+      return tmp3;
+    };
+  } else {
+    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
+  }
+  arg0[Symbol.iterator]();
+  const date = new Date();
+};

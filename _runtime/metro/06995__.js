@@ -1,7 +1,15 @@
 // === Module 6995: ? ===
 
 // Module 6995
-import registerAsset from "module_1134" /* 1134 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Platform = _mod17.Platform;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cb57655a680893ff0ad8eb9c16157cda", name: "EnvelopeIcon", type: "png" });
+export const getShadowStyle = function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
+  }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
+};

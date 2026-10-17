@@ -1,8 +1,15 @@
 // === Module 6833: ? ===
 
 // Module 6833
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const useContext = noop.useContext;
+const context = noop.createContext(undefined);
 
-export const styles = StyleSheet.create({ container: {} });
+export const RecyclerViewContextProvider = context.Provider;
+export const useRecyclerViewContext = function useRecyclerViewContext() {
+  return useContext(context);
+};
+export const useFlashListContext = function useFlashListContext() {
+  return useContext(context);
+};

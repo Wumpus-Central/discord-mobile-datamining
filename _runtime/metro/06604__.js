@@ -1,41 +1,38 @@
 // === Module 6604: ? ===
 
 // Module 6604
-import _mod19 from "module_19" /* 19 */;
-import _modDef6594 from "module_6594" /* 6594 */;
-import needsToReattach from "needsToReattach" /* 6605 */;
-import dropHandlers from "dropHandlers" /* 6606 */;
-import attachHandlers from "attachHandlers" /* 6607 */;
-import _mod6608 from "module_6608" /* 6608 */;
+import cancelAnimation from "cancelAnimation" /* 1658 */;
 
-const require = globalThis.__r;
-
-_mod19.useCallback;
-
-export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
-  _require = current;
-  const preparedGesture = current2;
-  dependencyMap = gesturesToAttach;
-  const forceRender = require("convertToHandlerTag").useForceRender();
-  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
-  return gesture((arg0) => {
-    const tmp3 = _modDef6594(current.viewRef);
-    if (tmp3 === current.previousViewTag) {
-      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
-        if (!arg0) {
-          _mod6608.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
-          const tmp5Result = _mod6608;
-        }
-      }
-      obj = needsToReattach;
-    }
-    dropHandlers.dropHandlers(preparedGesture);
-    attachHandlers.attachHandlers({ preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 });
-    if (tmp3 !== current.previousViewTag) {
-      current.previousViewTag = tmp3;
-      current.forceRebuildReanimatedEvent = true;
-      forceRender();
-    }
-    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
-  }, items);
+require = fn;
+const dependencyMap = arg6;
+fn = function n(keyboard, value) {
+  if ("easeIn" === keyboard) {
+    const obj2 = { easing: null, duration: null };
+    const Easing3 = cancelAnimation.Easing;
+    obj2.easing = Easing3.in(cancelAnimation.Easing.ease);
+    obj2.duration = value;
+    return obj2;
+  } else if ("easeOut" === keyboard) {
+    const obj3 = { easing: null, duration: null };
+    const Easing2 = cancelAnimation.Easing;
+    obj3.easing = Easing2.out(cancelAnimation.Easing.ease);
+    obj3.duration = value;
+    return obj3;
+  } else if ("easeInEaseOut" === keyboard) {
+    const obj4 = { easing: null, duration: null };
+    const Easing = cancelAnimation.Easing;
+    obj4.easing = Easing.inOut(cancelAnimation.Easing.ease);
+    obj4.duration = value;
+    return obj4;
+  } else if ("linear" === keyboard) {
+    const obj = { easing: cancelAnimation.Easing.linear, duration: value };
+    return obj;
+  } else if ("keyboard" === keyboard) {
+    return { damping: 500, stiffness: 1000, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 };
+  }
 };
+fn.__closure = { Easing: fn(1658).Easing };
+fn.__workletHash = 10639588577824;
+fn.__initData = { code: "function pnpm_getKeyboardAnimationConfigsTs1(easing,duration){const{Easing}=this.__closure;switch(easing){case'easeIn':return{easing:Easing.in(Easing.ease),duration:duration};case'easeOut':return{easing:Easing.out(Easing.ease),duration:duration};case'easeInEaseOut':return{easing:Easing.inOut(Easing.ease),duration:duration};case'linear':return{easing:Easing.linear,duration:duration};case'keyboard':return{damping:500,stiffness:1000,mass:3,overshootClamping:true,restDisplacementThreshold:10,restSpeedThreshold:10};}}" };
+
+export const getKeyboardAnimationConfigs = fn;

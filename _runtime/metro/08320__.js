@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 300, height: 122, scales: [2, 3], hash: "ced54d2b1068855a4a9d8181be71ee66", name: "img_discord_nitro_logo_left", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 16, height: 16, scales: [2, 3], hash: "9fc7a06bd709251a424bf9095d4f7ecf", name: "ic_auto_moderation_shield", type: "png" });

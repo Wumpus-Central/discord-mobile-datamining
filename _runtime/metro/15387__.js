@@ -1,33 +1,9 @@
 // === Module 15387: ? ===
 
 // Module 15387
-import emptyPromise from "emptyPromise" /* 15370 */;
+import _mod17 from "module_17" /* 17 */;
+import setupURLPolyfill_mod from "setupURLPolyfill" /* 15388 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
-    }
-  };
-};
+const Platform = _mod17.Platform;
+let setupURLPolyfill = setupURLPolyfill_mod;
+setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();

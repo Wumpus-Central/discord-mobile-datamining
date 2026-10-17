@@ -1,30 +1,25 @@
 // === Module 5928: ? ===
 
 // Module 5928
+import _mod5929 from "module_5929" /* 5929 */;
 
-export default function fromPropertyDescriptor(__Value__) {
-  if (undefined === __Value__) {
-    return __Value__;
-  } else {
-    const obj = {};
-    if ("[[Value]]" in __Value__) {
-      obj.value = __Value__["[[Value]]"];
+
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
+        }
+      }
     }
-    if ("[[Writable]]" in __Value__) {
-      obj.writable = __Value__["[[Writable]]"];
-    }
-    if ("[[Get]]" in __Value__) {
-      obj.get = __Value__["[[Get]]"];
-    }
-    if ("[[Set]]" in __Value__) {
-      obj.set = __Value__["[[Set]]"];
-    }
-    if ("[[Enumerable]]" in __Value__) {
-      obj.enumerable = __Value__["[[Enumerable]]"];
-    }
-    if ("[[Configurable]]" in __Value__) {
-      obj.configurable = __Value__["[[Configurable]]"];
-    }
-    return obj;
   }
+  trim5 = _mod5929;
 };

@@ -1,35 +1,37 @@
 // === Module 4578: ? ===
 
 // Module 4578
-import module_4262_mod from "module_4262" /* 4262 */;
-import _typeof_mod from "module_4258" /* 4258 */;
-import module_4494_mod from "module_4494" /* 4494 */;
-import requiredArgs_mod from "requiredArgs" /* 4259 */;
+import _mod4299 from "module_4299" /* 4299 */;
+import module_4556_mod from "module_4556" /* 4556 */;
+import module_4557_mod from "module_4557" /* 4557 */;
+import startOfMonth_mod from "startOfMonth" /* 4510 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_4298_mod from "module_4298" /* 4298 */;
 
-let module_4262 = module_4262_mod;
-if (!module_4262) {
-  const obj = { default: module_4262 };
+let module_4556 = module_4556_mod;
+if (!module_4556) {
+  const obj = { default: module_4556 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4262;
+  tmp3 = module_4556;
 }
-module_4262 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4556 = tmp3;
+let module_4557 = module_4557_mod;
+if (!module_4557) {
+  const obj2 = { default: module_4557 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4557;
 }
-_typeof = tmp5;
-let module_4494 = module_4494_mod;
-if (!module_4494) {
-  const obj3 = { default: module_4494 };
+module_4557 = tmp5;
+let startOfMonth = startOfMonth_mod;
+if (!startOfMonth) {
+  const obj3 = { default: startOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4494;
+  tmp7 = startOfMonth;
 }
-module_4494 = tmp7;
+startOfMonth = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -38,12 +40,83 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj5 = { default: module_4298 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4298;
+}
+module_4298 = tmp11;
 
-export default function setUTCISOWeek(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4494.default(defaultResult1) - module_4262.default(arg1);
-  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
-  return defaultResult1;
+export default function getWeekOfMonth(arg0, weekStartsOn) {
+  requiredArgs.default(1, arguments);
+  const defaultOptions = _mod4299.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult1 = module_4298.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = module_4556.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult2)) {
+        return NaN;
+      } else {
+        const diff = defaultResult1 - module_4557.default(startOfMonth.default(arg0));
+        let sum = diff;
+        if (diff <= 0) {
+          sum = diff + 7;
+        }
+        const _Math = Math;
+        return Math.ceil((defaultResult2 - sum) / 7) + 1;
+      }
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
 export default exports.default;

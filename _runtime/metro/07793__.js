@@ -1,7 +1,7 @@
 // === Module 7793: ? ===
 
 // Module 7793
-import registerAsset from "module_1134" /* 1134 */;
+import _mod17 from "module_17" /* 17 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ef2e4520c6c90d142994f338601f4002", name: "WarningIcon", type: "png" });
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

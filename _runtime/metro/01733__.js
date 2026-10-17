@@ -78,9 +78,9 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "duration",
+      current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "CONJURE_DEBUG_COMPACTION_REPORT",
+      startTimestamp: "frame",
       reduceMotion: null
     };
     let num = obj.velocity;

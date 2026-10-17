@@ -1,26 +1,61 @@
 // === Module 4711: ? ===
 
 // Module 4711
-let closure_0 = { lessThanXSeconds: { one: "\u4E0D\u5230 1 \u79D2", other: "\u4E0D\u5230 {{count}} \u79D2" }, xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" }, halfAMinute: "\u534A\u5206\u949F", lessThanXMinutes: { one: "\u4E0D\u5230 1 \u5206\u949F", other: "\u4E0D\u5230 {{count}} \u5206\u949F" }, xMinutes: { one: "1 \u5206\u949F", other: "{{count}} \u5206\u949F" }, xHours: { one: "1 \u5C0F\u65F6", other: "{{count}} \u5C0F\u65F6" }, aboutXHours: { one: "\u5927\u7EA6 1 \u5C0F\u65F6", other: "\u5927\u7EA6 {{count}} \u5C0F\u65F6" }, xDays: { one: "1 \u5929", other: "{{count}} \u5929" }, aboutXWeeks: { one: "\u5927\u7EA6 1 \u4E2A\u661F\u671F", other: "\u5927\u7EA6 {{count}} \u4E2A\u661F\u671F" }, xWeeks: { one: "1 \u4E2A\u661F\u671F", other: "{{count}} \u4E2A\u661F\u671F" }, aboutXMonths: { one: "\u5927\u7EA6 1 \u4E2A\u6708", other: "\u5927\u7EA6 {{count}} \u4E2A\u6708" }, xMonths: { one: "1 \u4E2A\u6708", other: "{{count}} \u4E2A\u6708" }, aboutXYears: { one: "\u5927\u7EA6 1 \u5E74", other: "\u5927\u7EA6 {{count}} \u5E74" }, xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" }, overXYears: { one: "\u8D85\u8FC7 1 \u5E74", other: "\u8D85\u8FC7 {{count}} \u5E74" }, almostXYears: { one: "\u5C06\u8FD1 1 \u5E74", other: "\u5C06\u8FD1 {{count}} \u5E74" } };
+import _mod4299 from "module_4299" /* 4299 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp}前`;
-        }
-        text = `${tmp}内`;
-      }
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  let obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
+
+export default function setDefaultOptions(obj) {
+  requiredArgs.default(1, arguments);
+  obj = {};
+  const defaultOptions = _mod4299.getDefaultOptions();
+  for (const key10017 in defaultOptions) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10017);
+    } else {
+      hasOwnPropertyResult = call(defaultOptions, key10017);
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      obj[key10017] = defaultOptions[key10017];
+      continue;
+    }
+    continue;
   }
+  for (const key10023 in arg0) {
+    let _Object2 = Object;
+    let call2 = hasOwnProperty2.call;
+    if (typeof call2 === "unknown") {
+      let hasOwnProperty2Result = hasOwnProperty2(key10023);
+    } else {
+      hasOwnProperty2Result = call2(arg0, key10023);
+    }
+    if (!hasOwnProperty2Result) {
+      continue;
+    } else {
+      if (undefined === arg0[key10023]) {
+        delete tmp[tmp2];
+        continue;
+      } else {
+        obj[key10023] = arg0[key10023];
+        continue;
+      }
+      continue;
+    }
+    continue;
+  }
+  _mod4299.setDefaultOptions(obj);
 };
 export default exports.default;

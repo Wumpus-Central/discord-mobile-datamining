@@ -1,68 +1,40 @@
 // === Module 6808: ? ===
 
 // Module 6808
-import _mod6806 from "module_6806" /* 6806 */;
-import _slicedToArray from "module_6761" /* 6761 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f95121();
-    }
-  });
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
+let noop = fn(19);
+const forwardRef = noop.forwardRef;
+({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+try {
+  const FlashList = fn(6809);
+  const memoResult = memo(forwardRef((focusHook, ref) => {
+    focusHook = focusHook.focusHook;
+    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
+    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
+    closure_6(() => {
+      if (!FlashList) {
+        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
+      }
+    }, []);
+    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
+    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
+    let merged = Object.assign(tmp);
+    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
+      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
+      const obj = { ref };
+      const merged1 = Object.assign(merged);
+      obj.focusHook = focusHook;
+      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
+      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
+      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
+    }), items)} />;
+  }));
+  exports.default = memoResult;
+  exports.BottomSheetFlashList = memoResult;
+} catch (err) {
 }
-
-export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f95121 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod6806.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  const items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f95121 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f95121 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
-        }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
-      }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f95121();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-export { useOnLoad };

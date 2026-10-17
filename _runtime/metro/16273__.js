@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 160, scales: [1], hash: "332a7ab2f8939700ebbadbbe2c81234f", name: "mallow_1", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 87, height: 87, scales: [2, 3], hash: "d299e9311da17e9393089ebfa8d667b1", name: "resubscribed_alert_header", type: "png" });

@@ -1,309 +1,71 @@
 // === Module 12396: ? ===
 
 // Module 12396
-function resolve() {
-  let tmp17;
-  const items = [...arguments];
-  let diff = items.length - 1;
-  let flag = false;
-  let str = "";
-  let flag2 = false;
-  let str2 = "";
-  if (-1 <= diff) {
-    while (true) {
-      let tmp3 = flag;
-      let str3 = "/";
-      if (0 <= diff) {
-        str3 = items[diff];
-      }
-      let combined = str;
-      if (str3) {
-        let _HermesInternal = HermesInternal;
-        combined = "" + str3 + "/" + str;
-        tmp3 = "/" === str3.charAt(0);
-      }
-      let diff1 = diff - 1;
-      flag2 = tmp3;
-      str2 = combined;
-      if (-1 > diff1) {
-        break;
-      } else {
-        diff = diff1;
-        flag = tmp3;
-        str = combined;
-        str2 = combined;
-        flag2 = tmp3;
-        if (tmp3) {
-          break;
-        }
-      }
-    }
-  }
-  let str4 = "";
-  if (flag2) {
-    str4 = "/";
-  }
-  const parts = str2.split("/");
-  const found = parts.filter((item) => item);
-  let diff2 = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff2) {
-    do {
-      let tmp8 = found[diff2];
-      if ("." === tmp8) {
-        let spliceResult = found.splice(diff2, 1);
-        let sum = num;
-      } else if (".." === tmp8) {
-        let spliceResult1 = found.splice(diff2, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff2, 1);
-          sum = num - 1;
-        }
-      }
-      diff2 = diff2 - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff2);
-  }
-  if (!flag2) {
-    let diff3 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp17 = diff3;
-        diff3 = diff3 - 1;
-      } while (tmp17);
-    }
-  }
-  return str4 + found.join("/") || ".";
-}
-function normalizePath(str) {
-  let tmp14;
-  const substr = str.slice(-1);
-  const parts = str.split("/");
-  const found = parts.filter((item) => item);
-  let diff = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff) {
-    do {
-      let tmp4 = found[diff];
-      if ("." === tmp4) {
-        let spliceResult = found.splice(diff, 1);
-        let sum = num;
-      } else if (".." === tmp4) {
-        let spliceResult1 = found.splice(diff, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff, 1);
-          sum = num - 1;
-        }
-      }
-      diff = diff - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff);
-  }
-  const tmp11 = "/" === str.charAt(0);
-  if (!tmp11) {
-    let diff1 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp14 = diff1;
-        diff1 = diff1 - 1;
-      } while (tmp14);
-    }
-  }
-  str = found.join("/");
-  let tmp15 = str;
-  if (!str) {
-    tmp15 = tmp11;
-  }
-  if (!tmp15) {
-    str = ".";
-  }
-  let tmp16 = str;
-  if (str) {
-    tmp16 = "/" === substr;
-  }
-  let text = str;
-  if (tmp16) {
-    text = `${str}/`;
-  }
-  let str2 = "";
-  if (tmp11) {
-    str2 = "/";
-  }
-  return str2 + text;
-}
-const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+import _mod12370 from "module_12370" /* 12370 */;
+import _mod12375 from "module_12375" /* 12375 */;
+import _mod12387 from "module_12387" /* 12387 */;
+import _mod12388 from "module_12388" /* 12388 */;
+import ScopeClass from "ScopeClass" /* 12390 */;
 
-export const basename = function basename(arr, arg1) {
-  let combined = arr;
-  if (arr.length > 1024) {
-    const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
-  }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  let tmp3 = arg1;
-  if (arg1) {
-    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
-  }
-  let substr1 = arr3;
-  if (tmp3) {
-    substr1 = arr3.slice(0, arr3.length - arg1.length);
-  }
-  return substr1;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getClient = function getClient() {
+  const mainCarrier = _mod12387.getMainCarrier();
+  const asyncContextStrategy = _mod12388.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
 };
-export const dirname = function dirname(arr) {
-  let combined = arr;
-  if (arr.length > 1024) {
-    const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
-  }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  if (substr[0] || "") {
-    let substr1 = arr3;
-    if (arr3) {
-      substr1 = arr3.slice(0, arr3.length - 1);
-    }
-    let str2 = tmp3 + substr1;
-  } else {
-    str2 = ".";
-  }
-  return str2;
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12387.getMainCarrier();
+  const asyncContextStrategy = _mod12388.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
 };
-export const isAbsolute = function isAbsolute(str) {
-  return "/" === str.charAt(0);
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12370.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 };
-export const join = function join() {
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12387.getMainCarrier();
+  const asyncContextStrategy = _mod12388.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12375.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
   const items = [...arguments];
-  return normalizePath(items.join("/"));
-};
-export { normalizePath };
-export const relative = function relative(root, replaced) {
-  let length;
-  const arr = resolve(root);
-  const str = resolve(root).slice(1);
-  const arr2 = resolve(replaced);
-  const parts = str.split("/");
-  let num = 0;
-  if (0 < parts.length) {
-    let num2 = 0;
-    num = 0;
-    if ("" === parts[0]) {
-      const sum = num2 + 1;
-      num = sum;
-      while (sum < parts.length) {
-        num2 = sum;
-        num = sum;
-        if ("" !== parts[sum]) {
-          break;
-        }
-      }
+  const mainCarrier = _mod12387.getMainCarrier();
+  const asyncContextStrategy = _mod12388.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
     }
-  }
-  const diff = parts.length - 1;
-  let tmp3 = diff;
-  if (0 <= diff) {
-    let tmp4 = diff;
-    tmp3 = diff;
-    if ("" === parts[diff]) {
-      const diff1 = tmp4 - 1;
-      tmp3 = diff1;
-      while (0 <= diff1) {
-        tmp4 = diff1;
-        tmp3 = diff1;
-        if ("" !== parts[diff1]) {
-          break;
-        }
-      }
-    }
-  }
-  if (tmp3 < num) {
-    let items = [];
+    return result;
   } else {
-    items = parts.slice(num, tmp3 - num + 1);
+    return asyncContextStrategy.withIsolationScope(items[0]);
   }
-  const parts1 = resolve(replaced).slice(1).split("/");
-  let num3 = 0;
-  if (0 < parts1.length) {
-    let num4 = 0;
-    num3 = 0;
-    if ("" === parts1[0]) {
-      const sum1 = num4 + 1;
-      num3 = sum1;
-      while (sum1 < parts1.length) {
-        num4 = sum1;
-        num3 = sum1;
-        if ("" !== parts1[sum1]) {
-          break;
-        }
-      }
-    }
-  }
-  const diff2 = parts1.length - 1;
-  let tmp8 = diff2;
-  if (0 <= diff2) {
-    let tmp9 = diff2;
-    tmp8 = diff2;
-    if ("" === parts1[diff2]) {
-      const diff3 = tmp9 - 1;
-      tmp8 = diff3;
-      while (0 <= diff3) {
-        tmp9 = diff3;
-        tmp8 = diff3;
-        if ("" !== parts1[diff3]) {
-          break;
-        }
-      }
-    }
-  }
-  if (tmp8 < num3) {
-    let items1 = [];
-  } else {
-    items1 = parts1.slice(num3, tmp8 - num3 + 1);
-  }
-  const bound = Math.min(items.length, items1.length);
-  let num5 = 0;
-  let tmp12 = bound;
-  if (0 < bound) {
-    tmp12 = num5;
-    while (items[num5] === items1[num5]) {
-      num5 = num5 + 1;
-      tmp12 = bound;
-      if (num5 >= bound) {
-        break;
-      }
-    }
-  }
-  const items2 = [];
-  let sum2 = tmp12;
-  if (tmp12 < items.length) {
-    do {
-      let arr3 = items2.push("..");
-      sum2 = sum2 + 1;
-      length = items.length;
-    } while (sum2 < length);
-  }
-  const combined = items2.concat(items1.slice(tmp12));
-  return combined.join("/");
 };
-export { resolve };
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12387.getMainCarrier();
+  const asyncContextStrategy = _mod12388.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
+  }
+};

@@ -1,183 +1,111 @@
 // === Module 6787: ? ===
 
 // Module 6787
-import _modDef6771 from "module_6771" /* 6771 */;
-import _classCallCheck from "module_6770" /* 6770 */;
+import jsxProd from "jsxProd" /* 21 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
+import noop_mod from "module_19" /* 19 */;
 
-const ViewabilityHelper = arg1;
-class ViewabilityHelper {
-  constructor(arg0, arg1) {
-    tmp = c2(this, ViewabilityHelper);
-    this.possiblyViewableIndices = [];
-    this.hasInteracted = false;
-    this.viewableIndices = [];
-    this.lastReportedViewableIndices = [];
-    set = new Set();
-    this.timers = set;
-    this.viewabilityConfig = global;
-    this.viewableIndicesChanged = arg1;
-    return;
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
+  simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
+  let DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers.enableHandlePanningGesture;
+  ({ animatedIndex, animatedPosition } = simultaneousHandlers);
+  if (DEFAULT_ENABLE_HANDLE_PANNING_GESTURE === undefined) {
+    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers(handleHeight[2]).DEFAULT_ENABLE_HANDLE_PANNING_GESTURE;
   }
-}
-const entry = {
-  key: "dispose",
-  value: function dispose() {
-    const timers = this.timers;
-    const item = timers.forEach(clearTimeout);
-  }
-};
-const items = [
-  entry,
-  {
-    key: "updateViewableItems",
-    value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
-      const self = this;
-      closure_1 = arg0;
-      closure_2 = arg1;
-      closure_3 = arg2;
-      closure_4 = arg3;
-      closure_5 = arg4;
-      if (undefined !== possiblyViewableIndices) {
-        self.possiblyViewableIndices = possiblyViewableIndices;
-      }
-      let viewabilityConfig = self.viewabilityConfig;
-      let prop;
-      if (viewabilityConfig != null) {
-        prop = viewabilityConfig.itemVisiblePercentThreshold;
-      }
-      if (null !== prop) {
-        let viewabilityConfig2 = self.viewabilityConfig;
-        let prop1;
-        if (viewabilityConfig2 != null) {
-          prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
-        }
-        if (undefined !== prop1) {
-          const viewabilityConfig3 = self.viewabilityConfig;
-          let prop2;
-          if (viewabilityConfig3 != null) {
-            prop2 = viewabilityConfig3.viewAreaCoveragePercentThreshold;
-          }
-          if (null !== prop2) {
-            const viewabilityConfig4 = self.viewabilityConfig;
-            let prop3;
-            if (viewabilityConfig4 != null) {
-              prop3 = viewabilityConfig4.viewAreaCoveragePercentThreshold;
-            }
-            if (undefined !== prop3) {
-              const _Error = Error;
-              const error = new Error(ViewabilityHelper(6758).ErrorMessages.multipleViewabilityThresholdTypesNotSupported);
-              throw error;
-            }
-          }
-        }
-      }
-      const viewabilityConfig5 = self.viewabilityConfig;
-      let waitForInteraction;
-      if (viewabilityConfig5 != null) {
-        waitForInteraction = viewabilityConfig5.waitForInteraction;
-      }
-      if (!waitForInteraction) {
-        const prop4 = self.possiblyViewableIndices;
-        const found = prop4.filter((item) => {
-          const viewabilityConfig = self.viewabilityConfig;
-          let prop;
-          if (viewabilityConfig != null) {
-            prop = viewabilityConfig.viewAreaCoveragePercentThreshold;
-          }
-          const viewabilityConfig2 = self.viewabilityConfig;
-          let prop1;
-          if (viewabilityConfig2 != null) {
-            prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
-          }
-          return self.isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
-        });
-        self.viewableIndices = found;
-        const viewabilityConfig6 = self.viewabilityConfig;
-        let num;
-        if (viewabilityConfig6 != null) {
-          num = viewabilityConfig6.minimumViewTime;
-        }
-        if (num == null) {
-          num = 250;
-        }
-        if (num > 0) {
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            const timers = self.timers;
-            timers.delete(timerId);
-            const result = self.checkViewableIndicesChanges(found);
-          }, num);
-          let timers = self.timers;
-          timers.add(timerId);
-        } else {
-          let result = self.checkViewableIndicesChanges(found);
-        }
-      }
+  handleHeight = simultaneousHandlers.handleHeight;
+  let handleComponent = simultaneousHandlers.handleComponent;
+  let failOffsetX;
+  ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
+  const tmp3 = failOffsetX(null);
+  const bottomSheetInternal = simultaneousHandlers(handleHeight[3]).useBottomSheetInternal();
+  const activeOffsetX = bottomSheetInternal.activeOffsetX;
+  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  failOffsetX = bottomSheetInternal.failOffsetX;
+  const failOffsetY = bottomSheetInternal.failOffsetY;
+  const waitFor = bottomSheetInternal.waitFor;
+  const simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
+  const obj = simultaneousHandlers(handleHeight[3]);
+  const tmp4 = simultaneousHandlers;
+  const handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
+  let items = [simultaneousHandlers2, simultaneousHandlers];
+  const tmp7 = activeOffsetY(() => {
+    const items = [];
+    if (simultaneousHandlers) {
+      items.push(tmp);
     }
-  },
-  {
-    key: "checkViewableIndicesChanges",
-    value: function checkViewableIndicesChanges(found) {
-      const self = this;
-      found = found.filter((item) => {
-        const viewableIndices = self.viewableIndices;
-        return viewableIndices.includes(item);
-      });
-      const found1 = found.filter((item) => {
-        const lastReportedViewableIndices = self.lastReportedViewableIndices;
-        return !lastReportedViewableIndices.includes(item);
-      });
-      const prop = this.lastReportedViewableIndices;
-      const found2 = prop.filter((item) => !found.includes(item));
-      if (tmp) {
-        self.lastReportedViewableIndices = found;
-        const result = self.viewableIndicesChanged(found, found1, found2);
-      }
-    }
-  },
-  {
-    key: "clearLastReportedViewableIndices",
-    value: function clearLastReportedViewableIndices() {
-      this.lastReportedViewableIndices = [];
-    }
-  },
-  {
-    key: "isItemViewable",
-    value: function isItemViewable(item, arg1, arg2, arg3, width, prop, prop1, fn) {
-      const size = fn(item);
-      if (undefined === size) {
-        return false;
+    if (simultaneousHandlers2) {
+      const _Array = Array;
+      const push = items.push;
+      if (Array.isArray(simultaneousHandlers2)) {
+        const items1 = [];
+        HermesBuiltin.arraySpread(simultaneousHandlers2, 0);
+        HermesBuiltin.apply(items1, items);
       } else {
-        const diff = (arg1 ? size.x : size.y) - arg2;
-        const tmp3 = arg1 ? size.width : size.height;
-        if (arg1) {
-          width = width.width;
-        } else {
-          width = width.height - arg3;
-        }
-        const _Math = Math;
-        const _Math2 = Math;
-        const bound = Math.min(diff + tmp3, width);
-        const diff1 = bound - Math.max(diff, 0);
-        if (diff1 === tmp3) {
-          return true;
-        } else if (0 === diff1) {
-          return false;
-        } else {
-          if (null != prop) {
-            let result = 0.01 * prop;
-          } else {
-            let num2 = prop1;
-            if (prop1 == null) {
-              num2 = 0;
-            }
-            result = 0.01 * num2;
-          }
-          return (null != prop ? diff1 / width : diff1 / tmp3) >= result;
-        }
+        push(simultaneousHandlers2);
       }
     }
+    return items;
+  }, items);
+  closure_10 = tmp7;
+  let items1 = [activeOffsetX, activeOffsetY, DEFAULT_ENABLE_HANDLE_PANNING_GESTURE, failOffsetX, failOffsetY, tmp7, waitFor, , , , ];
+  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = handlePanGestureHandler);
+  const items2 = [handleHeight];
+  const obj2 = simultaneousHandlers(handleHeight[3]);
+  const items3 = [handleHeight];
+  const tmp8 = activeOffsetY(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
+    const result = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE).shouldCancelWhenOutside(false);
+    const enabledResult = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE);
+    const runOnJSResult = result.runOnJS(false);
+    const onStartResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart);
+    const onChangeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange);
+    const onFinalizeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange).onEnd(handlePanGestureHandler.handleOnEnd).onFinalize(handlePanGestureHandler.handleOnFinalize);
+    let result1 = onFinalizeResult;
+    if (waitFor) {
+      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
+    }
+    let result2 = result1;
+    if (closure_10) {
+      result2 = result1.simultaneousWithExternalGesture(tmp2);
+    }
+    let activeOffsetXResult = result2;
+    if (activeOffsetX) {
+      activeOffsetXResult = result2.activeOffsetX(tmp3);
+    }
+    let activeOffsetYResult = activeOffsetXResult;
+    if (activeOffsetY) {
+      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
+    }
+    let failOffsetXResult = activeOffsetYResult;
+    if (failOffsetX) {
+      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
+    }
+    let failOffsetYResult = failOffsetXResult;
+    if (failOffsetY) {
+      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
+    }
+    return failOffsetYResult;
+  }, items1);
+  const tmp9 = activeOffsetX(function handleContainerLayout(nativeEvent) {
+    handleHeight.value = nativeEvent.nativeEvent.layout.height;
+  }, items2);
+  const tmp10 = activeOffsetX((height) => {
+    handleHeight.value = height.height;
+  }, items3);
+  const boundingClientRect = simultaneousHandlers(handleHeight[3]).useBoundingClientRect(tmp3, tmp10);
+  if (handleComponent == null) {
+    handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
-];
+  const obj4 = { gesture: tmp8, children: null };
+  const obj3 = simultaneousHandlers(handleHeight[3]);
+  obj4.children = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, { ref: tmp3, onLayout: tmp9, children: failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle }) }, "BottomSheetHandleContainer");
+  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj4);
+});
+memoResult.displayName = "BottomSheetHandleContainer";
 
-export default _modDef6771(ViewabilityHelper, items);
+export default memoResult;

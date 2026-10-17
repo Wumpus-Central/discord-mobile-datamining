@@ -1,17 +1,19 @@
 // === Module 12391: ? ===
 
 // Module 12391
+import _mod12375 from "module_12375" /* 12375 */;
 
-export const severityLevelFromString = function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
-    }
-    str = str2;
-  }
-  return str;
+require = arg1;
+const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
+
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
 };
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12375.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
+  }
+};

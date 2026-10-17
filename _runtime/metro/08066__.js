@@ -1,59 +1,106 @@
 // === Module 8066: ? ===
 
 // Module 8066
-import _modDef8054 from "module_8054" /* 8054 */;
+import _mod8067 from "module_8067" /* 8067 */;
 
-importDefault = arg2;
+const _mod8068 = tmp5(8068);
+require = arg1;
 const dependencyMap = arg6;
-const typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
-const obj2 = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
 
-export default {
-  getAsciiValue(items) {
-    return items.map((item) => String.fromCharCode(item));
-  },
-  getByteAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getAsciiAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getShortAt(dataView, sum, byteOrder) {
-    return dataView.getUint16(sum, byteOrder === _modDef8054.LITTLE_ENDIAN);
-  },
-  getLongAt(dataView, sum, byteOrder) {
-    return dataView.getUint32(sum, byteOrder === _modDef8054.LITTLE_ENDIAN);
-  },
-  getRationalAt(getUint32, sum, arg2) {
-    const items = [getUint32.getUint32(sum, arg2 === _modDef8054.LITTLE_ENDIAN), ];
-    sum = sum + 4;
-    items[1] = getUint32.getUint32(sum, arg2 === _modDef8054.LITTLE_ENDIAN);
-    return items;
-  },
-  getUndefinedAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getSlongAt(getInt32, sum, arg2) {
-    return getInt32.getInt32(sum, arg2 === _modDef8054.LITTLE_ENDIAN);
-  },
-  getSrationalAt(getInt32, sum, arg2) {
-    const items = [getInt32.getInt32(sum, arg2 === _modDef8054.LITTLE_ENDIAN), ];
-    sum = sum + 4;
-    items[1] = getInt32.getInt32(sum, arg2 === _modDef8054.LITTLE_ENDIAN);
-    return items;
-  },
-  getIfdPointerAt(getUint32, sum, arg2) {
-    return getUint32.getUint32(sum, arg2 === _modDef8054.LITTLE_ENDIAN);
-  },
-  typeSizes,
-  tagTypes: obj2,
-  getTypeSize(LONG) {
-    if (undefined === obj2[LONG]) {
-      const _Error = Error;
-      const error = new Error("No such type found.");
-      throw error;
+export const detectFile = function detectFile(uint8Array, chunkSize) {
+  if (chunkSize) {
+    const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty("chunkSize");
     } else {
-      return obj[tmp[LONG]];
+      hasOwnPropertyResult = call(chunkSize, "chunkSize");
+    }
+    if (hasOwnPropertyResult) {
+      chunkSize = undefined;
+      if (null != chunkSize) {
+        chunkSize = chunkSize.chunkSize;
+      }
+      let num2 = 0;
+      if (null !== chunkSize) {
+        num2 = 0;
+        if (undefined !== chunkSize) {
+          num2 = chunkSize;
+        }
+      }
+      if (num2 <= 0) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("chunkSize must be bigger than zero");
+        throw rangeError;
+      }
+    }
+  }
+  let num3;
+  if (null != chunkSize) {
+    num3 = chunkSize.chunkSize;
+  }
+  if (!num3) {
+    num3 = 64;
+  }
+  const fileChunk = _mod8067.getFileChunk(uint8Array, num3);
+  if (0 !== fileChunk.length) {
+    const items = [];
+    const items1 = [];
+    for (const key10027 in _mod8068.FileTypes) {
+      let _Object4 = Object;
+      let call2 = hasOwnProperty2.call;
+      let tmp23 = require;
+      let FileTypes5 = _mod8068.FileTypes;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2(key10027);
+      } else {
+        hasOwnProperty2Result = call2(FileTypes5, key10027);
+      }
+      if (!hasOwnProperty2Result) {
+        continue;
+      } else {
+        let FileTypes = tmp23(8068).FileTypes;
+        let signaturesByName = FileTypes.getSignaturesByName(key10027);
+        let FileTypes2 = tmp23(8068).FileTypes;
+        let detectbBySignaturesResult = FileTypes2.detectbBySignatures(fileChunk, signaturesByName);
+        if (!detectbBySignaturesResult) {
+          continue;
+        } else {
+          let FileTypes3 = tmp23(8068).FileTypes;
+          let infoByName = FileTypes3.getInfoByName(key10027);
+          let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = tmp23(8068).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+          if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(infoByName.extension)) {
+            let arr = items1.push(infoByName.extension);
+          }
+          let obj = { extension: null, mimeType: null, description: null, signature: null };
+          ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
+          let _Object2 = Object;
+          let _Object3 = Object;
+          let obj2 = { sequence: null };
+          let sequence = detectbBySignaturesResult.sequence;
+          let merged = Object.assign({}, detectbBySignaturesResult);
+          obj2.sequence = sequence.map((item) => item.toString(16));
+          obj.signature = Object.assign(merged, obj2);
+          let arr2 = items.push(obj);
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    if (0 !== items.length) {
+      if (1 === items.length) {
+        if (0 === items1.length) {
+          return items[0];
+        }
+      }
+      const FileTypes4 = _mod8068.FileTypes;
+      const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
+      require = result;
+      if (result) {
+        return items.find((extension) => extension.extension === result);
+      }
     }
   }
 };

@@ -1,13 +1,26 @@
 // === Module 6664: ? ===
 
 // Module 6664
-const require = globalThis.__r;
+import noop from "module_19" /* 19 */;
 
-for (const key10013 in require("module_6665")) {
-  arg5[key10013] = require("module_6665")[key10013];
-  continue;
+let tmp3 = typeof window === "undefined";
+if (typeof window !== "undefined") {
+  const _window2 = window;
+  tmp3 = undefined === window.document;
 }
-for (const key10017 in require("transformLongPressProps")) {
-  arg5[key10017] = require("transformLongPressProps")[key10017];
-  continue;
+if (!tmp3) {
+  const _window = window;
+  tmp3 = undefined === window.document.createElement;
 }
+let tmp4 = typeof navigator !== "undefined";
+if (typeof navigator !== "undefined") {
+  const _navigator = navigator;
+  tmp4 = "ReactNative" === navigator.product;
+}
+if (tmp3) {
+  if (!tmp4) {
+    let useLayoutEffect = noop.useEffect;
+  }
+  exports.useIsomorphicLayoutEffect = useLayoutEffect;
+}
+useLayoutEffect = noop.useLayoutEffect;

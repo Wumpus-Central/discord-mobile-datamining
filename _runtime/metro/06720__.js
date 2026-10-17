@@ -1,29 +1,61 @@
 // === Module 6720: ? ===
 
 // Module 6720
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6721 from "module_6721" /* 6721 */;
-import noop_mod from "module_19" /* 19 */;
+const require = arg1;
+const dependencyMap = arg6;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod6721.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(6722).BottomSheetBackground;
+export const useComposedGesture = function useComposedGesture(type) {
+  const substr = [...arguments].slice();
+  const flatMapResult = substr.flatMap((handlerTags) => {
+    if (obj.isComposedGesture(handlerTags)) {
+      handlerTags = handlerTags.handlerTags;
+    } else {
+      handlerTags = [];
+      handlerTags[0] = handlerTags.handlerTag;
+    }
+    return handlerTags;
+  });
+  if (obj.containsDuplicates(flatMapResult)) {
+    const _Error2 = Error;
+    const error = new Error(tmp2(6617).tagMessage("Each gesture can be used only once in the gesture composition."));
+    throw error;
+  } else {
+    const obj2 = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
+    if (obj2.shouldUseReanimatedDetector) {
+      if (obj2.dispatchesAnimatedEvents) {
+        const _Error = Error;
+        const error1 = new Error(tmp2(6617).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
+        throw error1;
+      }
+    }
+    const Reanimated = tmp2(6655).Reanimated;
+    let composedEventHandler;
+    if (Reanimated != null) {
+      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
+    }
+    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
+    let animatedEventHandler;
+    if (found.length > 0) {
+      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
+    }
+    const obj3 = { handlerTags: flatMapResult, type, config: obj2, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
+    const obj4 = {
+      jsEventHandler(arg0) {
+          for (const item10007 of substr) {
+            if (item10007.detectorCallbacks.jsEventHandler) {
+              let detectorCallbacks = tmp.detectorCallbacks;
+              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
+            }
+            continue;
+          }
+        },
+      reanimatedEventHandler: composedEventHandler,
+      animatedEventHandler
+    };
+    obj3.detectorCallbacks = obj4;
+    obj3.externalSimultaneousHandlers = [];
+    obj3.gestures = substr;
+    return obj3;
   }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
-
-export const BottomSheetBackgroundContainer = memoResult;
+  obj = substr(6680);
+};

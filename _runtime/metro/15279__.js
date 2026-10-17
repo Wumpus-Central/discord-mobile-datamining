@@ -1,23 +1,27 @@
 // === Module 15279: ? ===
 
 // Module 15279
-import _mod15251 from "module_15251" /* 15251 */;
-import _mod15277 from "module_15277" /* 15277 */;
+import e from "e" /* 1174 */;
 
-
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod15251[arg0];
-    let tmp8;
-    if (_mod15277(tmp7)) {
-      tmp8 = tmp7;
+e.__extends(function MissingLocaleDataError() {
+  const self = this;
+  let tmp2 = null !== Error;
+  if (!tmp2) {
+    if (!tmp2) {
+      tmp2 = self;
     }
-    let tmp3 = tmp8;
+    tmp2.type = "MISSING_LOCALE_DATA";
+    return tmp2;
   } else {
-    tmp3 = _mod15251[arg0];
-    if (tmp3) {
-      tmp3 = _mod15251[arg0][arg1];
+    const apply = Error.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
     }
   }
-  return tmp3;
+}, Error);
+
+export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
+  return "MISSING_LOCALE_DATA" === type.type;
 };

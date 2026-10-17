@@ -1,27 +1,19 @@
 // === Module 6706: ? ===
 
 // Module 6706
-import noop from "module_19" /* 19 */;
+import ComposedGestureName from "ComposedGestureName" /* 6671 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6680 */;
+import _mod6695 from "module_6695" /* 6695 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
-    }
-    return applyResult;
-  }, []);
+export const useNativeGesture = function useNativeGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6695.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
 };

@@ -1,15 +1,14 @@
 // === Module 7888: ? ===
 
 // Module 7888
-import _modDef7821 from "module_7821" /* 7821 */;
+import _modDef7882 from "module_7882" /* 7882 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const RadialGradient = importDefault;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class RadialGradient {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = c2(this, RadialGradient);
+    tmp = c2(this, FeConvolveMatrix);
     tmp2 = closure_4;
-    obj = closure_4(RadialGradient);
+    obj = closure_4(FeConvolveMatrix);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,44 +48,18 @@ class RadialGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RadialGradient, _modDef7821);
+_inherits(FeConvolveMatrix, _modDef7882);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ rx, ry, r, cx, cy, fx } = props);
-    if (undefined === fx) {
-      fx = cx;
-    }
-    let fy = props.fy;
-    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
-    if (undefined === fy) {
-      fy = cy;
-    }
-    obj.fy = fy;
-    if (!rx) {
-      rx = r;
-    }
-    obj.rx = rx;
-    if (!ry) {
-      ry = r;
-    }
-    obj.ry = ry;
-    obj.cx = cx;
-    obj.cy = cy;
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(RadialGradient(7874)(props, this));
-    return jsx(RadialGradient(7889), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeConvolveMatrix(7859).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(RadialGradient, items);
-importDefaultResultResult.displayName = "RadialGradient";
-importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

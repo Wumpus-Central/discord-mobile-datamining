@@ -1,14 +1,11 @@
 // === Module 5456: ? ===
 
 // Module 5456
-import _modDef5457 from "module_5457" /* 5457 */;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-const require = globalThis.__r;
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-for (const key10016 in require("module_5457")) {
-  arg5[key10016] = require("module_5457")[key10016];
-  continue;
-}
-
-export default _modDef5457;
-export const LinearGradient = _modDef5457;
+export default module_65.get("RNSFullWindowOverlay", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

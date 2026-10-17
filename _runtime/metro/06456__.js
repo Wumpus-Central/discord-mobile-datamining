@@ -1,15 +1,7 @@
 // === Module 6456: ? ===
 
 // Module 6456
+import registerAsset from "module_1134" /* 1134 */;
 
-export const getHeaderTitle = function getHeaderTitle(options, name) {
-  if (typeof options.headerTitle === "string") {
-    let title = options.headerTitle;
-  } else {
-    title = name;
-    if (undefined !== options.title) {
-      title = options.title;
-    }
-  }
-  return title;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5967259ca8cb17c5090eb349838b5289", name: "CheckmarkSmallBoldIcon", type: "png" });

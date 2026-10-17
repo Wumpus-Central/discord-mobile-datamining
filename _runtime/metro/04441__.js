@@ -1,7 +1,11 @@
 // === Module 4441: ? ===
 
 // Module 4441
-import requiredArgs_mod from "requiredArgs" /* 4259 */;
+import module_4442_mod from "module_4442" /* 4442 */;
+import module_4443_mod from "module_4443" /* 4443 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_4298_mod from "module_4298" /* 4298 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,30 +32,96 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+let module_4442 = module_4442_mod;
+if (!module_4442) {
+  const obj = { default: module_4442 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_4442;
 }
-requiredArgs = tmp3;
+module_4442 = tmp3;
+let module_4443 = module_4443_mod;
+if (!module_4443) {
+  const obj2 = { default: module_4443 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4443;
+}
+module_4443 = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj5 = { default: module_4298 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4298;
+}
+module_4298 = tmp11;
 
-export default function isDate(arg0) {
-  requiredArgs.default(1, arguments);
-  let tmp2 = arg0 instanceof Date;
-  if (!tmp2) {
-    const tmp4 = "object" === _typeof(arg0);
-    if (!tmp4) {
-      tmp2 = tmp4;
-    } else {
-      const _Object = Object;
-      let str2 = Object.prototype.toString;
-      const call = str2.call;
-      str2 = "[object Date]";
-      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
+export default function add(arg0, years) {
+  requiredArgs.default(2, arguments);
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_4298.default(years.years);
+      }
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_4298.default(years.months);
+      }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_4298.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_4298.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_4298.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_4298.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_4298.default(years.seconds);
+      }
+      const defaultResult1 = _typeof.default(arg0);
+      if (num2) {
+        let defaultResult2 = module_4443.default(defaultResult1, num2 + 12 * num);
+      } else {
+        defaultResult2 = defaultResult1;
+      }
+      if (num4) {
+        let defaultResult3 = module_4442.default(defaultResult2, num4 + 7 * num3);
+      } else {
+        defaultResult3 = defaultResult2;
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(defaultResult3.getTime() + 1000 * sum);
+      return date;
     }
   }
-  return tmp2;
+  return new Date(NaN);
 };
 export default exports.default;

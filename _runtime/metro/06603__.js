@@ -1,59 +1,42 @@
 // === Module 6603: ? ===
 
 // Module 6603
-import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6588 */;
+import value2 from "value2" /* 6585 */;
 
-const require = arg1;
-importDefault = fn;
-let dependencyMap = arg6;
-let obj = {
-  createGestureHandler(Handler, handlerTag, config) {
-    _require = Handler;
-    closure_1 = handlerTag;
-    dependencyMap = config;
-    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      let obj2 = closure_2;
-      if (!closure_2) {
-        obj2 = {};
-      }
-      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
-    });
-  },
-  setGestureHandlerConfig(handlerTag, result) {
-    _require = handlerTag;
-    closure_1 = result;
-    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
-    });
-  },
-  updateGestureHandlerConfig: null,
-  dropGestureHandler: null,
-  configureRelations: null,
-  installUIRuntimeBindings: null
+const cancelAnimation = tmp3(1658);
+require = fn;
+const dependencyMap = arg6;
+fn = function n(arg0) {
+  ({ point, configs, velocity } = arg0);
+  if (velocity === undefined) {
+    velocity = 0;
+  }
+  ({ overrideReduceMotion, onComplete } = arg0);
+  if (!configs) {
+    configs = value2.ANIMATION_CONFIGS;
+  }
+  if (overrideReduceMotion) {
+    configs.reduceMotion = overrideReduceMotion;
+  }
+  if (!("duration" in configs)) {
+    if (!("easing" in configs)) {
+      let TIMING = value2.ANIMATION_METHOD.SPRING;
+    }
+    if (TIMING === value2.ANIMATION_METHOD.TIMING) {
+      let withTimingResult = cancelAnimation.withTiming(point, configs, onComplete);
+      const tmp3Result = cancelAnimation;
+    } else {
+      const _Object = Object;
+      const obj = { velocity };
+      withTimingResult = cancelAnimation.withSpring(point, Object.assign(obj, configs), onComplete);
+      const tmp3Result2 = cancelAnimation;
+    }
+    return withTimingResult;
+  }
+  TIMING = value2.ANIMATION_METHOD.TIMING;
 };
-fn = function n(arg0, arg1) {
-  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
-  RNGestureHandlerModuleDefault.flushOperations();
-};
-fn.__closure = { updateGestureHandlerConfig: fn(6588).updateGestureHandlerConfig, flushOperations: fn(6588).flushOperations };
-fn.__workletHash = 12442858879797;
-fn.__initData = { code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}" };
-obj.updateGestureHandlerConfig = fn;
-obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
-  _require = handlerTag;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
-  });
-};
-obj.configureRelations = function configureRelations(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
-  });
-};
-obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
-  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
-};
+fn.__closure = { ANIMATION_CONFIGS: fn(6585).ANIMATION_CONFIGS, ANIMATION_METHOD: fn(6585).ANIMATION_METHOD, withTiming: fn(1658).withTiming, withSpring: fn(1658).withSpring };
+fn.__workletHash = 17032227615993;
+fn.__initData = { code: "function pnpm_animateTs1({point:point,configs:configs,velocity=0,overrideReduceMotion:overrideReduceMotion,onComplete:onComplete}){const{ANIMATION_CONFIGS,ANIMATION_METHOD,withTiming,withSpring}=this.__closure;if(!configs){configs=ANIMATION_CONFIGS;}if(overrideReduceMotion){configs.reduceMotion=overrideReduceMotion;}const type='duration'in configs||'easing'in configs?ANIMATION_METHOD.TIMING:ANIMATION_METHOD.SPRING;if(type===ANIMATION_METHOD.TIMING){return withTiming(point,configs,onComplete);}return withSpring(point,Object.assign({velocity:velocity},configs),onComplete);}" };
 
-export const NativeProxy = obj;
+export const animate = fn;

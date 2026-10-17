@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "26d0550d85f689dbef34ccad40bbdeb4", name: "ic_radio_circle_checked", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 256, height: 212, scales: [2, 3], hash: "13ff76500b381861f2432b0c193716ac", name: "img_bans_empty_darker", type: "png" });

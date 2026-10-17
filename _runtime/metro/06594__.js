@@ -1,7 +1,16 @@
 // === Module 6594: ? ===
 
 // Module 6594
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 6595 */;
 
+const useContext = _mod19.useContext;
 
-export default _mod17.findNodeHandle;
+export const useBottomSheetModal = () => {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  if (null === tmp) {
+    throw "'BottomSheetModalContext' cannot be null!";
+  } else {
+    return tmp;
+  }
+};

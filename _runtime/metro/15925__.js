@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c8ba289430cf44af74e8a6dfe840935f", name: "LaptopPhoneIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 185, height: 125, scales: [1, 2, 3], hash: "fa358a5ff3d1f49a00fc1180e0e601e5", name: "family_center_activity_banner_image_parent", type: "png" });

@@ -1,15 +1,9 @@
 // === Module 6598: ? ===
 
 // Module 6598
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
+const context = _mod19.createContext(null);
 
-export default PlatformConstants;
+export const BottomSheetModalInternalContext = context;
+export const BottomSheetModalInternalProvider = context.Provider;

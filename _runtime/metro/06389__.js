@@ -1,7 +1,33 @@
 // === Module 6389: ? ===
 
 // Module 6389
-import registerAsset from "module_1134" /* 1134 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Image = _mod17.Image;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fb8db2c451f0cd706524543233306348", name: "ic_partnered_guild_icon_blurple_24px", type: "png" });
+export const parsePossibleSources = function parsePossibleSources(source) {
+  const uri = source.uri;
+  if (typeof source === "string") {
+    const obj2 = { sourceName: source };
+    let obj = obj2;
+  } else {
+    if (typeof source === "object") {
+      if (!uri) {
+        obj = { sourceJson: null };
+        const _JSON = JSON;
+        obj.sourceJson = JSON.stringify(source);
+      }
+    }
+    if (typeof source !== "object") {
+      if (typeof source === "number") {
+        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
+      }
+    }
+    if (uri.includes(".lottie")) {
+      const obj4 = { sourceDotLottieURI: uri };
+    } else {
+      const obj5 = { sourceURL: uri };
+    }
+  }
+  return obj;
+};

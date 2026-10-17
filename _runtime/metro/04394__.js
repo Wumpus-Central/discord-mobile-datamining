@@ -3,7 +3,7 @@
 // Module 4394
 import module_4395 from "module_4395" /* 4395 */;
 import module_4396 from "module_4396" /* 4396 */;
-import module_4397 from "module_4397" /* 4397 */;
+import dayAndTimeWithAdjective from "dayAndTimeWithAdjective" /* 4397 */;
 import date_mod from "module_4398" /* 4398 */;
 import date_mod from "module_4399" /* 4399 */;
 
@@ -19,11 +19,11 @@ if (!module_4396) {
 } else {
   tmp5 = module_4396;
 }
-if (!module_4397) {
-  const obj3 = { default: module_4397 };
+if (!dayAndTimeWithAdjective) {
+  const obj3 = { default: dayAndTimeWithAdjective };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4397;
+  tmp7 = dayAndTimeWithAdjective;
 }
 let date = date_mod;
 if (!date) {
@@ -40,5 +40,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "pl", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

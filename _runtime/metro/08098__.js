@@ -1,54 +1,5 @@
 // === Module 8098: ? ===
 
 // Module 8098
-import _modDef8066 from "module_8066" /* 8066 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
-
-export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef8066.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
-    }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
-    }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
-    }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef8066.getByteAt(getUint8, sum);
-    const tmpResult = _modDef8066;
-    const sum1 = byteAt1 + 256 * _modDef8066.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef8066;
-    const sum2 = sum1 + 65536 * _modDef8066.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef8066;
-    const byteAt2 = _modDef8066.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef8066;
-    const sum4 = byteAt2 + 256 * _modDef8066.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef8066;
-    const sum5 = sum4 + 65536 * _modDef8066.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
-  }
-};
+export default { USE_FILE: true, USE_JFIF: true, USE_PNG_FILE: true, USE_EXIF: true, USE_IPTC: true, USE_XMP: true, USE_ICC: true, USE_MPF: true, USE_PHOTOSHOP: true, USE_THUMBNAIL: true, USE_TIFF: true, USE_JPEG: true, USE_PNG: true, USE_HEIC: true, USE_AVIF: true, USE_WEBP: true, USE_GIF: true, USE_MAKER_NOTES: true };

@@ -1,71 +1,33 @@
 // === Module 6687: ? ===
 
 // Module 6687
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6686 */;
+import noop from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+({ useEffect: c2, useMemo: c3 } = noop);
+
+export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  const items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class NativeGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, NativeGesture);
-    tmp2 = c2;
-    obj = c2(NativeGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6580).BaseGesture);
-const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
-    return this;
-  }
+  }, items1);
 };
-const items = [
-  entry,
-  {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
-      return this;
-    }
-  }
-];
-
-export const NativeGesture = _createClass(NativeGesture, items);

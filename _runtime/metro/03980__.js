@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "18e87a468718a51514ac8a01ecd6907b", name: "lt.messages.18e87a468718a51514ac8a01ecd6907b.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/friends", scales: [1], hash: "5c07817bbbf13f50ad420522bd5ebdcf", name: "Friends.compiled.messages", type: "jsona" });

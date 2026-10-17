@@ -1,8 +1,16 @@
 // === Module 6721: ? ===
 
 // Module 6721
-import _mod17 from "module_17" /* 17 */;
+import ComposedGestureName from "ComposedGestureName" /* 6671 */;
+import _mod6720 from "module_6720" /* 6720 */;
 
-const StyleSheet = _mod17.StyleSheet;
+require = arg1;
+const dependencyMap = arg6;
 
-export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });
+export const useExclusiveGestures = function useExclusiveGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
+  const applyResult = _mod6720.useComposedGesture.apply(items1);
+  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
+  return applyResult;
+};

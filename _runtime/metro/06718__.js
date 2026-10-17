@@ -1,8 +1,11 @@
 // === Module 6718: ? ===
 
 // Module 6718
-import _mod17 from "module_17" /* 17 */;
+import _mod6719 from "module_6719" /* 6719 */;
+import _mod6721 from "module_6721" /* 6721 */;
+import _mod6722 from "module_6722" /* 6722 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });
+export const useCompetingGestures = _mod6719.useCompetingGestures;
+export const useExclusiveGestures = _mod6721.useExclusiveGestures;
+export const useSimultaneousGestures = _mod6722.useSimultaneousGestures;

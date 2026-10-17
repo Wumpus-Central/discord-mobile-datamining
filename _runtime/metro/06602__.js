@@ -1,55 +1,16 @@
 // === Module 6602: ? ===
 
 // Module 6602
-import cancelAnimation from "cancelAnimation" /* 1658 */;
-import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4908 */;
-import tagMessage from "tagMessage" /* 6564 */;
-import ghQueueMicrotask from "ghQueueMicrotask" /* 6591 */;
-import _mod6603 from "module_6603" /* 6603 */;
-
-try {
-  const _module = cancelAnimation;
-  try {
-    const _module1 = reactNativeWorkletsCompat;
-    if (_module1 != null) {
-      const fn = function t() {
-
-      };
-      fn.__closure = {};
-      fn.__workletHash = 1792171573139;
-      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
-      _module1.scheduleOnUI(fn);
-    }
-    const _module2 = ghQueueMicrotask;
-    _module2.ghQueueMicrotask(() => {
-      const NativeProxy = _mod6603.NativeProxy;
-      if (!NativeProxy.installUIRuntimeBindings()) {
-        const _console = console;
-        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
-        const tmpResult = tagMessage;
-      }
-    });
-    let useSharedValue;
-    if (_module != null) {
-      useSharedValue = _module.useSharedValue;
-    }
-    let setGestureState = undefined === _module;
-    if (!setGestureState) {
-      setGestureState = _module.setGestureState;
-    }
-    if (!setGestureState) {
-      const fn2 = function o() {
-        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
-      };
-      const obj = { tagMessage: tagMessage.tagMessage };
-      fn2.__closure = obj;
-      fn2.__workletHash = 3596069664305;
-      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-      _module.setGestureState = fn2;
-      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-    }
-    exports.Reanimated = _module;
-  } catch (err) {
+const fn = function n(item, value) {
+  let result = item;
+  if (typeof item === "string") {
+    const _Number = Number;
+    result = Number(item.split("%")[0]) * value / 100;
   }
-} catch (err) {
-}
+  return Math.max(0, value - result);
+};
+fn.__closure = {};
+fn.__workletHash = 14612470006791;
+fn.__initData = { code: "function pnpm_normalizeSnapPointTs1(snapPoint,containerHeight){let normalizedSnapPoint=snapPoint;if(typeof normalizedSnapPoint==='string'){normalizedSnapPoint=Number(normalizedSnapPoint.split('%')[0])*containerHeight/100;}return Math.max(0,containerHeight-normalizedSnapPoint);}" };
+
+export const normalizeSnapPoint = fn;
