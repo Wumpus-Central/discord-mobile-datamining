@@ -1,7 +1,7 @@
-// === Module 6202: canSpectate ===
+// === Module 6632: canSpectate ===
 
-// Module 6202 (canSpectate)
-import Constants from "Constants" /* 5216 */;
+// Module 6632 (canSpectate)
+import Constants from "Constants" /* 5680 */;
 import size from "module_2" /* 2 */;
 
 const Features = Constants.Features;

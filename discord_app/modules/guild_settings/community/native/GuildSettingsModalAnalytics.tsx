@@ -1,13 +1,13 @@
-// === Module 18879: GuildSettingsModalAnalytics ===
+// === Module 18914: GuildSettingsModalAnalytics ===
 
-// Module 18879 (GuildSettingsModalAnalytics)
+// Module 18914 (GuildSettingsModalAnalytics)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7309 */;
-import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 18900 */;
+import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7375 */;
+import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 18935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, RelativeMarketingURLs: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { flex: 1 }, content: { padding: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               const result = closure_2_8.DEVELOPER_PORTAL_GUILD_ANALYTICS(guild_id);
               c1 = 1;
               guild_id = 1;
-              const obj6 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(result, guild_id(7313).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
+              const obj6 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(result, guild_id(7379).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
       const intl = tmp(1128).intl;
       obj2.children = intl.string(tmp(1128).t.NIZ60a).trim();
-      const tmp16 = closure_9(tmp(5187).Text, obj2);
+      const tmp16 = closure_9(tmp(5195).Text, obj2);
       cResult[7] = tmp16;
       let tmp14 = tmp16;
       const str = intl.string(tmp(1128).t.NIZ60a);
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       let tmp18 = null;
       if (null != notice) {
         ({ type: obj5.type, message: obj5.message, role: obj5.role } = notice);
-        tmp18 = closure_9(tmp(7834).InlineNotice, { type: null, message: null, role: null });
+        tmp18 = closure_9(tmp(7897).InlineNotice, { type: null, message: null, role: null });
         let obj3 = { type: null, message: null, role: null };
       }
       cResult[8] = notice;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       let obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = tmp(1128).intl;
       obj4.children = intl2.string(tmp(1128).t.A5vswv);
-      const tmp22 = closure_9(tmp(5187).Text, obj4);
+      const tmp22 = closure_9(tmp(5195).Text, obj4);
       cResult[10] = tmp22;
       let tmp20 = tmp22;
     } else {
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     }
     if (cResult[12] !== tmp10) {
       let obj6 = { text: tmp23, onPress: tmp10 };
-      const tmp27 = closure_9(tmp(5479).Button, obj6);
+      const tmp27 = closure_9(tmp(5205).Button, obj6);
       cResult[12] = tmp10;
       cResult[13] = tmp27;
       let tmp25 = tmp27;
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               }
               const _Symbol4 = Symbol;
               if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp57 = closure_9(tmp(7005).NavScrim, {});
+                const tmp57 = closure_9(tmp(5553).NavScrim, {});
                 cResult[25] = tmp57;
                 let tmp55 = tmp57;
               } else {
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       const obj9 = { spacing: nativeDefault.space.PX_16, children: null };
       const items2 = [tmp14, tmp17, tmp20, tmp25, tmp28];
       obj9.children = items2;
-      const tmp50 = closure_10(tmp(5477).Stack, obj9);
+      const tmp50 = closure_10(tmp(5932).Stack, obj9);
       cResult[17] = tmp25;
       cResult[18] = tmp28;
       cResult[19] = tmp17;
@@ -237,35 +237,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       const intl5 = tmp(1128).intl;
       obj11.description = intl5.string(tmp(1128).t.KiRbLJ);
       const tmp33 = GuildSettingsAnalyticsCardDefault;
-      const merged = Object.assign(tmp(18880).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
+      const merged = Object.assign(tmp(18915).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
       const items3 = [closure_9(tmp33, obj11), , , ];
       const obj12 = { metricKey: "communicators", title: null, description: null };
-      const tmpResult7 = tmp(18880);
+      const tmpResult7 = tmp(18915);
       const intl6 = tmp(1128).intl;
       obj12.title = intl6.string(tmp(1128).t.DDAHdQ);
       const intl7 = tmp(1128).intl;
       obj12.description = intl7.string(tmp(1128).t.HxWUkU);
       const tmp36 = GuildSettingsAnalyticsCardDefault;
-      const merged1 = Object.assign(tmp(18880).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
+      const merged1 = Object.assign(tmp(18915).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
       items3[1] = closure_9(tmp36, obj12);
       const obj13 = { metricKey: "new_members", title: null };
-      const tmpResult8 = tmp(18880);
+      const tmpResult8 = tmp(18915);
       const intl8 = tmp(1128).intl;
       obj13.title = intl8.string(tmp(1128).t.hYeOqC);
       const tmp39 = GuildSettingsAnalyticsCardDefault;
-      const merged2 = Object.assign(tmp(18880).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
+      const merged2 = Object.assign(tmp(18915).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
       items3[2] = closure_9(tmp39, obj13);
       const obj14 = { metricKey: "new_member_retention", title: null, description: null };
-      const tmpResult9 = tmp(18880);
+      const tmpResult9 = tmp(18915);
       const intl9 = tmp(1128).intl;
       obj14.title = intl9.string(tmp(1128).t.jj7OPw);
       const intl10 = tmp(1128).intl;
       obj14.description = intl10.string(tmp(1128).t.MQCslz);
-      const tmpResult10 = tmp(18880);
+      const tmpResult10 = tmp(18915);
       const merged3 = Object.assign(tmpResult10.getGuildAnalyticsCardProps(analytics.pctRetained, analytics.pctRetainedChange, stateFromStores, true));
       items3[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj14);
       obj10.children = items3;
-      tmp29 = closure_10(tmp(5477).Stack, obj10);
+      tmp29 = closure_10(tmp(5932).Stack, obj10);
     }
     cResult[14] = analytics;
     cResult[15] = stateFromStores;
@@ -284,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const items = [LocaleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => locale.locale);
   let obj = guildId(504);
-  const guildAnalyticsOverview = guildId(18880).useGuildAnalyticsOverview(guildId);
+  const guildAnalyticsOverview = guildId(18915).useGuildAnalyticsOverview(guildId);
   ({ analytics, notice } = guildAnalyticsOverview);
   const items1 = [guildId];
   let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             const result = closure_1_8.DEVELOPER_PORTAL_GUILD_ANALYTICS(guildId);
             v1 = 1;
             v3 = 1;
-            const obj6 = { value: v1(7309).redirectDeveloperPortalWithHandoffToken(result, v3(7313).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
+            const obj6 = { value: v1(7375).redirectDeveloperPortalWithHandoffToken(result, v3(7379).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -344,25 +344,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   let obj4 = { spacing: nativeDefault.space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildId(1128).intl;
-  let obj2 = guildId(18880);
+  let obj2 = guildId(18915);
   obj5.children = intl.string(guildId(1128).t.NIZ60a).trim();
-  const items3 = [closure_9(guildId(5187).Text, obj5), , , , ];
+  const items3 = [closure_9(guildId(5195).Text, obj5), , , , ];
   let tmp9Result = null;
   if (null != notice) {
     ({ type: obj6.type, message: obj6.message, role: obj6.role } = notice);
-    tmp9Result = closure_9(tmp2(7834).InlineNotice, { type: null, message: null, role: null });
+    tmp9Result = closure_9(tmp2(7897).InlineNotice, { type: null, message: null, role: null });
     const obj7 = { type: null, message: null, role: null };
   }
   items3[1] = tmp9Result;
   const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1128).intl;
   obj8.children = intl2.string(guildId(1128).t.A5vswv);
-  items3[2] = closure_9(guildId(5187).Text, obj8);
+  items3[2] = closure_9(guildId(5195).Text, obj8);
   const obj9 = { text: null, onPress: null };
   const intl3 = tmp2(1128).intl;
   obj9.text = intl3.string(guildId(1128).t.Uskgxx);
   obj9.onPress = callback;
-  items3[3] = closure_9(guildId(5479).Button, obj9);
+  items3[3] = closure_9(guildId(5205).Button, obj9);
   let tmp7Result = null;
   if (null != analytics) {
     const obj10 = { spacing: nativeDefault.space.PX_8, children: null };
@@ -372,42 +372,42 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const intl5 = tmp2(1128).intl;
     obj11.description = intl5.string(tmp2(1128).t.KiRbLJ);
     const tmp11Result = GuildSettingsAnalyticsCardDefault;
-    const merged = Object.assign(tmp2(18880).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
+    const merged = Object.assign(tmp2(18915).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
     const items4 = [closure_9(tmp11Result, obj11), , , ];
     const obj12 = { metricKey: "communicators", title: null, description: null };
-    const tmp2Result = tmp2(18880);
+    const tmp2Result = tmp2(18915);
     const intl6 = tmp2(1128).intl;
     obj12.title = intl6.string(tmp2(1128).t.DDAHdQ);
     const intl7 = tmp2(1128).intl;
     obj12.description = intl7.string(tmp2(1128).t.HxWUkU);
     const tmp11Result4 = GuildSettingsAnalyticsCardDefault;
-    const merged1 = Object.assign(tmp2(18880).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
+    const merged1 = Object.assign(tmp2(18915).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
     items4[1] = closure_9(tmp11Result4, obj12);
     const obj13 = { metricKey: "new_members", title: null };
-    const tmp2Result4 = tmp2(18880);
+    const tmp2Result4 = tmp2(18915);
     const intl8 = tmp2(1128).intl;
     obj13.title = intl8.string(tmp2(1128).t.hYeOqC);
     const tmp11Result5 = GuildSettingsAnalyticsCardDefault;
-    const merged2 = Object.assign(tmp2(18880).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
+    const merged2 = Object.assign(tmp2(18915).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
     items4[2] = closure_9(tmp11Result5, obj13);
     const obj14 = { metricKey: "new_member_retention", title: null, description: null };
-    const tmp2Result5 = tmp2(18880);
+    const tmp2Result5 = tmp2(18915);
     const intl9 = tmp2(1128).intl;
     obj14.title = intl9.string(tmp2(1128).t.jj7OPw);
     const intl10 = tmp2(1128).intl;
     obj14.description = intl10.string(tmp2(1128).t.MQCslz);
-    const tmp2Result6 = tmp2(18880);
+    const tmp2Result6 = tmp2(18915);
     const merged3 = Object.assign(tmp2Result6.getGuildAnalyticsCardProps(analytics.pctRetained, analytics.pctRetainedChange, stateFromStores, true));
     items4[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj14);
     obj10.children = items4;
-    tmp7Result = closure_10(tmp2(5477).Stack, obj10);
+    tmp7Result = closure_10(tmp2(5932).Stack, obj10);
     const tmp11Result6 = GuildSettingsAnalyticsCardDefault;
   }
   const obj15 = { children: null };
   items3[4] = tmp7Result;
   obj4.children = items3;
-  obj3.children = closure_10(guildId(5477).Stack, obj4);
-  const items5 = [closure_9(ScrollView, obj3), closure_9(guildId(7005).NavScrim, {})];
+  obj3.children = closure_10(guildId(5932).Stack, obj4);
+  const items5 = [closure_9(ScrollView, obj3), closure_9(guildId(5553).NavScrim, {})];
   obj15.children = items5;
   return closure_10(closure_11, obj15);
 });

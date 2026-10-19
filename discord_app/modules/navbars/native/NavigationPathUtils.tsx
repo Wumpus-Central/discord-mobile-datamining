@@ -1,9 +1,9 @@
-// === Module 13503: NavigationPathUtils ===
+// === Module 13537: NavigationPathUtils ===
 
-// Module 13503 (NavigationPathUtils)
+// Module 13537 (NavigationPathUtils)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1087 */;
-import _mod5045 from "module_5045" /* 5045 */;
+import _mod4982 from "module_4982" /* 4982 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ export { getSelectedSpecialNavigationPath };
 export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedSpecialNavigationPath() {
   const obj = c;
   const cResult = obj.c(2);
-  const _location = _mod5045.useLocation();
+  const _location = _mod4982.useLocation();
   if (cResult[0] !== _location) {
     let FRIENDS;
     if (_location.pathname === Routes.FRIENDS) {
@@ -35,7 +35,7 @@ export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompi
   }
   return tmp3;
 }) : (function useSelectedSpecialNavigationPath() {
-  const obj = _mod5045;
+  const obj = _mod4982;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

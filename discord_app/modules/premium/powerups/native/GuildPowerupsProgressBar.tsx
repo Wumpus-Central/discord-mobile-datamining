@@ -1,16 +1,16 @@
-// === Module 17351: GuildPowerupsProgressBar ===
+// === Module 17380: GuildPowerupsProgressBar ===
 
-// Module 17351 (GuildPowerupsProgressBar)
+// Module 17380 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 5192 */;
-import LinearGradientDefault from "LinearGradient" /* 5491 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13170 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 17354 */;
+import timing from "timing" /* 5167 */;
+import LinearGradientDefault from "LinearGradient" /* 5219 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13202 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 17383 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 17352 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 17381 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -21,7 +21,7 @@ const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let c10 = 500;
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   }
   let obj = guildId(576);
   const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
-  stateFromStores1(17353)(stateFromStores);
+  stateFromStores1(17382)(stateFromStores);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [GuildBoostingProgressBarPersistedStore];
     cResult[4] = items2;

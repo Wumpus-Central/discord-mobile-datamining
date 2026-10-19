@@ -1,6 +1,6 @@
-// === Module 5577: ? ===
+// === Module 6009: ? ===
 
-// Module 5577
+// Module 6009
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/base/glacier.png.js");

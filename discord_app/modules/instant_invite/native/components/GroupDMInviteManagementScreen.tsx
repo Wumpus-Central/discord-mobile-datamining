@@ -1,28 +1,28 @@
-// === Module 10600: GroupDMInviteManagementScreen ===
+// === Module 10614: GroupDMInviteManagementScreen ===
 
-// Module 10600 (GroupDMInviteManagementScreen)
+// Module 10614 (GroupDMInviteManagementScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import useMountEffectDefault from "useMountEffect" /* 5496 */;
-import NavigatorHeader from "NavigatorHeader" /* 6478 */;
-import InstantInviteDefault from "InstantInvite" /* 10601 */;
-import _modDef10619 from "module_10619" /* 10619 */;
-import _modDef10620 from "module_10620" /* 10620 */;
+import useMountEffectDefault from "useMountEffect" /* 5224 */;
+import NavigatorHeader from "NavigatorHeader" /* 6872 */;
+import InstantInviteDefault from "InstantInvite" /* 10615 */;
+import _modDef10633 from "module_10633" /* 10633 */;
+import _modDef10634 from "module_10634" /* 10634 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteRecord from "InviteRecord" /* 8772 */;
+import InviteRecord from "InviteRecord" /* 8788 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(9997);
+const ChannelSettingsStore = fn(10011);
 const Constants = fn(1087);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { listContent: { paddingTop: nativeDefault.space.PX_8 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -269,7 +269,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
           return jsx(View, obj);
         }
       }
-      SceneLoadingIndicator = SceneLoadingIndicator(7004).SceneLoadingIndicator;
+      SceneLoadingIndicator = SceneLoadingIndicator(7082).SceneLoadingIndicator;
       let obj = {};
       let tmp16 = <SceneLoadingIndicator />;
     } else {
@@ -306,12 +306,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
             return jsx(View, obj);
           }
         }
-        let obj3 = { lightSource: _modDef10619, darkSource: _modDef10620, title: null, body: null };
+        let obj3 = { lightSource: _modDef10633, darkSource: _modDef10634, title: null, body: null };
         const intl = SceneLoadingIndicator(1128).intl;
         obj3.title = intl.string(SceneLoadingIndicator(1128).t["+nLJkZ"]);
         const intl2 = SceneLoadingIndicator(1128).intl;
         obj3.body = intl2.string(SceneLoadingIndicator(1128).t.F53CAc);
-        tmp16 = jsx(SceneLoadingIndicator(1202).EmptyState, { lightSource: _modDef10619, darkSource: _modDef10620, title: null, body: null });
+        tmp16 = jsx(SceneLoadingIndicator(1202).EmptyState, { lightSource: _modDef10633, darkSource: _modDef10634, title: null, body: null });
       } else {
         class F {
           constructor(arg0) {
@@ -330,7 +330,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
           }
         }
         let obj4 = { contentContainerStyle: tmp2.listContent, data: tmp10, keyExtractor: G, renderItem: F };
-        tmp16 = jsx(SceneLoadingIndicator(7091).FlashList, { contentContainerStyle: tmp2.listContent, data: tmp10, keyExtractor: G, renderItem: F });
+        tmp16 = jsx(SceneLoadingIndicator(7168).FlashList, { contentContainerStyle: tmp2.listContent, data: tmp10, keyExtractor: G, renderItem: F });
       }
     }
     cResult[8] = arr2;
@@ -347,7 +347,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5496)(() => {
+  first(5224)(() => {
     closure_0 = async function _fetchInvites2() {
       if (v3 === 2) {
         v3 = 3;
@@ -438,17 +438,17 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   }), items);
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp12 = jsx(channelId(7004).SceneLoadingIndicator, {});
+    let tmp12 = jsx(channelId(7082).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10619), darkSource: tmp4(10620), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10633), darkSource: tmp4(10634), title: null, body: null };
     const intl = channelId(1128).intl;
     obj2.title = intl.string(channelId(1128).t["+nLJkZ"]);
     const intl2 = channelId(1128).intl;
     obj2.body = intl2.string(channelId(1128).t.F53CAc);
-    tmp12 = jsx(channelId(1202).EmptyState, { lightSource: tmp4(10619), darkSource: tmp4(10620), title: null, body: null });
+    tmp12 = jsx(channelId(1202).EmptyState, { lightSource: tmp4(10633), darkSource: tmp4(10634), title: null, body: null });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
-    tmp12 = jsx(channelId(7091).FlashList, { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 });
+    tmp12 = jsx(channelId(7168).FlashList, { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 });
   }
   return tmp12;
 });
@@ -466,7 +466,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[3] !== tmp4) {
       const obj2 = { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT };
-      const tmp8 = jsx(channelId(6965).Navigator, { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+      const tmp8 = jsx(channelId(7043).Navigator, { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
       cResult[3] = tmp4;
       cResult[4] = tmp8;
       let tmp5 = tmp8;
@@ -480,7 +480,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const intl = channelId(1128).intl;
   obj4.title = intl.string(channelId(1128).t.OQ9MKu);
   const obj = channelId(576);
-  obj4.headerLeft = channelId(6478).getHeaderCloseButton(onClose);
+  obj4.headerLeft = channelId(6872).getHeaderCloseButton(onClose);
   obj4.render = function render() {
     return <closure_2_12 channelId={channelId} />;
   };
@@ -490,7 +490,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[1] = onClose;
   cResult[2] = obj3;
   tmp4 = obj3;
-  const tmpResult = channelId(6478);
+  const tmpResult = channelId(6872);
 }) : (function GroupDMInviteManagementScreen(channelId) {
   channelId = channelId.channelId;
   const onClose = channelId.onClose;
@@ -508,5 +508,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
-  return jsx(channelId(6965).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(7043).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 }));

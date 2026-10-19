@@ -1,6 +1,6 @@
-// === Module 14812: SharedSpacesWarningStore ===
+// === Module 14845: SharedSpacesWarningStore ===
 
-// Module 14812 (SharedSpacesWarningStore)
+// Module 14845 (SharedSpacesWarningStore)
 import DurationsDefault from "Durations" /* 1104 */;
 
 const require = globalThis.__r;
@@ -9,11 +9,11 @@ let closure_2 = 3 * DurationsDefault.Millis.DAY;
 let closure_3 = 2 * DurationsDefault.Millis.DAY;
 const HOUR = DurationsDefault.Millis.HOUR;
 const module_570 = fn(570);
-fn(5086);
+fn(5125);
 const obj3 = { name: "shared-spaces-warning-storage", storage: null };
-const module_5086 = fn(5086);
-obj3.storage = module_5086.createJSONStorage(() => require("LocalStorageWrapper"));
-const obj7 = module_570.create(module_5086.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj3));
+const module_5125 = fn(5125);
+obj3.storage = module_5125.createJSONStorage(() => require("LocalStorageWrapper"));
+const obj7 = module_570.create(module_5125.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj3));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 

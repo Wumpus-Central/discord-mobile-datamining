@@ -1,10 +1,10 @@
-// === Module 11353: EmbeddedActivityBackgroundImageWithOverlay ===
+// === Module 11374: EmbeddedActivityBackgroundImageWithOverlay ===
 
-// Module 11353 (EmbeddedActivityBackgroundImageWithOverlay)
+// Module 11374 (EmbeddedActivityBackgroundImageWithOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11354 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11375 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_9 = createStyles.createStyles(obj2);
 const names = ["embedded_background"];

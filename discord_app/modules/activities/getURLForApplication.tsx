@@ -1,8 +1,8 @@
-// === Module 6299: getURLForApplication ===
+// === Module 5584: getURLForApplication ===
 
-// Module 6299 (getURLForApplication)
-import TestModeStore from "TestModeStore" /* 6300 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 6311 */;
+// Module 5584 (getURLForApplication)
+import TestModeStore from "TestModeStore" /* 5585 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5586 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");
@@ -41,7 +41,7 @@ export default function getURLForApplication(arg0) {
   }
   return activityUrlOverride;
 };
-export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(parseCsp) {
+export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(applicationId) {
   if (null == ACTIVITY_APPLICATION_HOST) {
     return null;
   } else if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
@@ -51,11 +51,11 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
     const _HermesInternal2 = HermesInternal;
     const uRL = new URL(ACTIVITY_APPLICATION_HOST, "" + window.location.protocol + "//" + window.location.host);
     const _HermesInternal3 = HermesInternal;
-    uRL.hostname = "" + parseCsp + "." + uRL.hostname;
+    uRL.hostname = "" + applicationId + "." + uRL.hostname;
     return uRL.origin;
   } else {
     const _HermesInternal = HermesInternal;
-    return "https://" + parseCsp + "." + ACTIVITY_APPLICATION_HOST;
+    return "https://" + applicationId + "." + ACTIVITY_APPLICATION_HOST;
   }
 };
 export const isUsingDevShelfActivityUrlOverride = function isUsingDevShelfActivityUrlOverride() {

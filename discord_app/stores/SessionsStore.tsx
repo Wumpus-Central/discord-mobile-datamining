@@ -1,6 +1,6 @@
-// === Module 5211: SessionsStore ===
+// === Module 5678: SessionsStore ===
 
-// Module 5211 (SessionsStore)
+// Module 5678 (SessionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

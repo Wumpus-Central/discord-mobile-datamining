@@ -1,23 +1,23 @@
-// === Module 17344: ConjureChannelRow ===
+// === Module 17373: ConjureChannelRow ===
 
-// Module 17344 (ConjureChannelRow)
+// Module 17373 (ConjureChannelRow)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 13039 */;
-import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 17345 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 17346 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 13071 */;
+import useConjureGuildUnreadSummaryDefault from "useConjureGuildUnreadSummary" /* 17374 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 17375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1087).Routes;
-const StaticChannelRoute = fn(2075).StaticChannelRoute;
+const StaticChannelRoute = fn(4807).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
-let obj2 = { container: { marginVertical: fn(11900).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4945);
+let obj2 = { container: { marginVertical: fn(11920).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11900).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11920).CHANNEL_MARGIN_VERTICAL, marginHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureChannelRow.tsx");
 
@@ -39,14 +39,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const obj = id(576);
   ({ hasUnread, badgeCount } = useConjureGuildUnreadSummaryDefault(id));
   if (true === selected) {
-    let SELECTED = tmp(13039).ChannelModes.SELECTED;
+    let SELECTED = tmp(13071).ChannelModes.SELECTED;
   } else {
-    const ChannelModes = tmp(13039).ChannelModes;
+    const ChannelModes = tmp(13071).ChannelModes;
     SELECTED = hasUnread ? ChannelModes.UNREAD_IMPORTANT : ChannelModes.DEFAULT;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
-    const stringResult = intl.string(_modDef3883.uk6jhJ);
+    const stringResult = intl.string(_modDef3820.uk6jhJ);
     cResult[2] = stringResult;
     let tmp8 = stringResult;
   } else {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(_modDef3883.uk6jhJ);
+    const stringResult1 = intl2.string(_modDef3820.uk6jhJ);
     cResult[5] = stringResult1;
     let tmp11 = stringResult1;
   } else {
@@ -70,9 +70,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   }
   if (cResult[6] !== SELECTED) {
     const obj3 = { name: tmp11, mode: SELECTED };
-    const tmp16 = jsx(tmp(13039).BaseChannelName, { name: tmp11, mode: SELECTED });
-    const obj4 = { mode: SELECTED, IconComponent: tmp(12163).MagicWandIcon };
-    const tmp17 = jsx(tmp(13039).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp(12163).MagicWandIcon });
+    const tmp16 = jsx(tmp(13071).BaseChannelName, { name: tmp11, mode: SELECTED });
+    const obj4 = { mode: SELECTED, IconComponent: tmp(12183).MagicWandIcon };
+    const tmp17 = jsx(tmp(13071).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp(12183).MagicWandIcon });
     cResult[6] = SELECTED;
     cResult[7] = tmp16;
     cResult[8] = tmp17;
@@ -131,10 +131,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const tmp5 = useConjureGuildUnreadSummaryDefault(id);
   const hasUnread = tmp5.hasUnread;
   if (true === selected) {
-    let DEFAULT = id(13039).ChannelModes.SELECTED;
+    let DEFAULT = id(13071).ChannelModes.SELECTED;
     let tmp7 = id;
   } else {
-    const ChannelModes = id(13039).ChannelModes;
+    const ChannelModes = id(13071).ChannelModes;
     if (hasUnread) {
       DEFAULT = ChannelModes.UNREAD_IMPORTANT;
       tmp7 = tmp6;
@@ -146,17 +146,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const obj = { onPress: callback, style: closure_7().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, unread: null, name: null, icon: null, channelInfo: null };
   const tmp = closure_7();
   const intl = tmp7(1128).intl;
-  obj.accessibilityLabel = intl.string(_modDef3883.uk6jhJ);
+  obj.accessibilityLabel = intl.string(_modDef3820.uk6jhJ);
   obj.accessibilityState = { selected };
   obj.mode = DEFAULT;
   obj.unread = hasUnread;
   const obj2 = { name: null, mode: null };
   const intl2 = tmp7(1128).intl;
-  obj2.name = intl2.string(_modDef3883.uk6jhJ);
+  obj2.name = intl2.string(_modDef3820.uk6jhJ);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp7(13039).BaseChannelName, { name: null, mode: null });
+  obj.name = jsx(tmp7(13071).BaseChannelName, { name: null, mode: null });
   const tmp3Result = BaseChannelItemDefault;
-  obj.icon = jsx(tmp7(13039).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12163).MagicWandIcon });
+  obj.icon = jsx(tmp7(13071).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp7(12183).MagicWandIcon });
   obj.channelInfo = jsx(ChannelBadgeDefault, { mentionCount: tmp5.badgeCount, isNewChannel: false });
   return <tmp3Result onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} unread={null} name={null} icon={null} channelInfo={null} />;
 });

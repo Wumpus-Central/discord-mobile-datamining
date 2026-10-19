@@ -1,13 +1,13 @@
-// === Module 7036: PortalToNativeView ===
+// === Module 7113: PortalToNativeView ===
 
-// Module 7036 (PortalToNativeView)
+// Module 7113 (PortalToNativeView)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let closure_3 = fn(17).requireNativeComponent("PortalToNativeView");
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_4 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, right: 0, left: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

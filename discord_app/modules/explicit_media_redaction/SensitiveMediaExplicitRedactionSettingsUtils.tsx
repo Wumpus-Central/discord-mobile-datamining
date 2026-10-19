@@ -1,11 +1,11 @@
-// === Module 7273: SensitiveMediaExplicitRedactionSettingsUtils ===
+// === Module 7342: SensitiveMediaExplicitRedactionSettingsUtils ===
 
-// Module 7273 (SensitiveMediaExplicitRedactionSettingsUtils)
+// Module 7342 (SensitiveMediaExplicitRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7274 */;
-import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 7275 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5612 */;
+import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 7343 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -83,7 +83,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
   }
 }
-const ExplicitContentFilterTypes = fn(2046).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(4778).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1211).ExplicitContentRedaction.SHOW;

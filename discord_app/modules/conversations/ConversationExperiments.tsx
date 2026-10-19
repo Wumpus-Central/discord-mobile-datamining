@@ -1,8 +1,8 @@
-// === Module 9635: ConversationExperiments ===
+// === Module 9649: ConversationExperiments ===
 
-// Module 9635 (ConversationExperiments)
+// Module 9649 (ConversationExperiments)
 import c from "c" /* 576 */;
-import GuildStore from "GuildStore" /* 2090 */;
+import GuildStore from "GuildStore" /* 4822 */;
 
 require = fn;
 const GuildFeatures = fn(1087).GuildFeatures;

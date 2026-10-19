@@ -1,10 +1,10 @@
-// === Module 16601: UploadDebugLogsSetting ===
+// === Module 16630: UploadDebugLogsSetting ===
 
-// Module 16601 (UploadDebugLogsSetting)
+// Module 16630 (UploadDebugLogsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DebugUploadManager from "DebugUploadManager" /* 13572 */;
+import DebugUploadManager from "DebugUploadManager" /* 13606 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -123,7 +123,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadDebugLogsDisabled() {
   return closure_7().isDisabled;
 }
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadDebugLogsTrailing() {
   const cResult = c.c(2);
   if (typeof useIsUploadingDebugLogs === "function") {
@@ -160,7 +160,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(5145).CircleInformationIcon,
+  IconComponent: fn(5648).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_9.apply;

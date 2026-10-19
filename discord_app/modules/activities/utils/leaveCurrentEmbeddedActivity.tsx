@@ -1,8 +1,8 @@
-// === Module 11045: leaveCurrentEmbeddedActivity ===
+// === Module 11060: leaveCurrentEmbeddedActivity ===
 
-// Module 11045 (leaveCurrentEmbeddedActivity)
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11046 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+// Module 11060 (leaveCurrentEmbeddedActivity)
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11061 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
 
 require = fn;
 const size = fn(2);

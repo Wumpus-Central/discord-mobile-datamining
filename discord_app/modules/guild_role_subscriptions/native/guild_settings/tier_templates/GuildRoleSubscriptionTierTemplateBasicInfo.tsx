@@ -1,15 +1,15 @@
-// === Module 19007: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 19042: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 19007 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 19042 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import BaseTextButton from "BaseTextButton" /* 5480 */;
-import PriceUtils from "PriceUtils" /* 7216 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16289 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import BaseTextButton from "BaseTextButton" /* 5206 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import PriceUtils from "PriceUtils" /* 7285 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16318 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1098).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
 obj2.image = size;

@@ -1,11 +1,11 @@
-// === Module 19049: GlobalDiscoveryServersUtils ===
+// === Module 19088: GlobalDiscoveryServersUtils ===
 
-// Module 19049 (GlobalDiscoveryServersUtils)
+// Module 19088 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1128 */;
 import v1 from "v1" /* 1281 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 
 require = fn;
 let closure_13 = async function _navigateToGuild() {
@@ -18,9 +18,9 @@ let closure_13 = async function _navigateToGuild() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
-  return "Reflect";
+  return "test";
 };
-const GlobalDiscoveryServersConstants = fn(8912);
+const GlobalDiscoveryServersConstants = fn(8928);
 ({ GlobalDiscoveryServerTab: metroRequire, FEATURED_GUILDS_CACHE_DURATION: closure_7, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: c10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);

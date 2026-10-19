@@ -1,15 +1,15 @@
-// === Module 9846: useEmojiAndSource ===
+// === Module 9860: useEmojiAndSource ===
 
-// Module 9846 (useEmojiAndSource)
-import EmojiTypes from "EmojiTypes" /* 4862 */;
+// Module 9860 (useEmojiAndSource)
+import EmojiTypes from "EmojiTypes" /* 4897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import EmojiStore from "EmojiStore" /* 6243 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import EmojiStore from "EmojiStore" /* 6673 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(6437);
+const ExpressionSourceRecord = fn(6832);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
@@ -421,7 +421,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
       if (current != null) {
         currentResult = current();
       }
-      closure_0 = closure_2(/* F156761 */ function() { ... });
+      closure_0 = closure_2(/* F157264 */ function() { ... });
       if (closure_2) {
         tmp4 = (function fetch() { ... })();
       } else {

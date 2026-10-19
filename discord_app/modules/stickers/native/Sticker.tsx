@@ -1,16 +1,16 @@
-// === Module 10073: Sticker ===
+// === Module 10087: Sticker ===
 
-// Module 10073 (Sticker)
+// Module 10087 (Sticker)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import shared from "shared" /* 5065 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import StickersUtils from "StickersUtils" /* 6005 */;
-import StickersTypes from "StickersTypes" /* 6006 */;
-import _modDef7099 from "module_7099" /* 7099 */;
-import _modDef7100 from "module_7100" /* 7100 */;
-import NativeLottieView from "NativeLottieView" /* 8287 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 10074 */;
+import shared from "shared" /* 4952 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import StickersUtils from "StickersUtils" /* 6442 */;
+import StickersTypes from "StickersTypes" /* 6443 */;
+import _modDef7176 from "module_7176" /* 7176 */;
+import _modDef7177 from "module_7177" /* 7177 */;
+import NativeLottieView from "NativeLottieView" /* 8303 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 10088 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -165,9 +165,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
           }
           let obj6 = { enableAnimation: tmp4, resizeMode: "contain", style: tmp22, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
           if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-            let tmp25Result = _modDef7099;
+            let tmp25Result = _modDef7176;
           } else {
-            tmp25Result = _modDef7100;
+            tmp25Result = _modDef7177;
           }
           obj6.placeholder = tmp25Result;
           obj6.source = tmp23;
@@ -273,9 +273,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
     const size3 = { height: size, width: size, opacity: num };
     obj6.style = size3;
     if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef7099;
+      let tmp13Result = _modDef7176;
     } else {
-      tmp13Result = _modDef7100;
+      tmp13Result = _modDef7177;
     }
     obj6.placeholder = tmp13Result;
     const obj7 = { uri: str };

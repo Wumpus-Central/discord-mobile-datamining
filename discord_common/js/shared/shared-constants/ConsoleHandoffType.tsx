@@ -1,6 +1,6 @@
-// === Module 11500: ConsoleHandoffType ===
+// === Module 11521: ConsoleHandoffType ===
 
-// Module 11500 (ConsoleHandoffType)
+// Module 11521 (ConsoleHandoffType)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]) };

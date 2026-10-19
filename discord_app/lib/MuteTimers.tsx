@@ -1,6 +1,6 @@
-// === Module 4848: MuteTimers ===
+// === Module 4883: MuteTimers ===
 
-// Module 4848 (MuteTimers)
+// Module 4883 (MuteTimers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/MuteTimers.tsx");

@@ -1,21 +1,11 @@
-// === Module 12100: conjureHistoryRequests ===
+// === Module 12120: conjureHistoryRequests ===
 
-// Module 12100 (conjureHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11063 */;
+// Module 12120 (conjureHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11077 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-function fetchVersionHistory() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_4 = async function _fetchVersionHistory() {
+let closure_3 = async function _fetchVersionHistory() {
   closure_1 = tmp2;
   await conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/source-history");
   closure_129_0 = value;
@@ -46,11 +36,7 @@ let closure_4 = async function _fetchVersionHistory() {
   obj.publishedSha = publishedSha;
   return obj;
 };
-let closure_5 = async function _fetchSourceHistory() {
-  await fetchVersionHistory(closure_0);
-  return value.entries;
-};
-let closure_6 = async function _restoreSourceHistoryEntry(arg0) {
+let closure_4 = async function _restoreSourceHistoryEntry(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -161,7 +147,7 @@ let closure_6 = async function _restoreSourceHistoryEntry(arg0) {
     }
   }
 };
-let closure_7 = async function _fetchDatabaseRestorePoints(arg0) {
+let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -247,7 +233,7 @@ let closure_7 = async function _fetchDatabaseRestorePoints(arg0) {
     }
   })();
 };
-let closure_8 = async function _fetchDatabaseRestoreWindow(arg0) {
+let closure_6 = async function _fetchDatabaseRestoreWindow(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -265,7 +251,7 @@ let closure_8 = async function _fetchDatabaseRestoreWindow(arg0) {
     return value;
   })();
 };
-let closure_9 = async function _createDatabaseRestorePoint(arg0) {
+let closure_7 = async function _createDatabaseRestorePoint(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -358,7 +344,7 @@ let closure_9 = async function _createDatabaseRestorePoint(arg0) {
 };
 function settleDatabaseRestore() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -366,7 +352,7 @@ function settleDatabaseRestore() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _settleDatabaseRestore(arg0, arg1) {
+let closure_9 = async function _settleDatabaseRestore(arg0, arg1) {
   closure_0 = arg0;
   let ok = arg1;
   c6 = 0;
@@ -448,7 +434,7 @@ let closure_11 = async function _settleDatabaseRestore(arg0, arg1) {
     }
   })();
 };
-let closure_12 = async function _restoreDatabaseToPoint() {
+let closure_10 = async function _restoreDatabaseToPoint() {
   closure_3 = settleDatabaseRestore;
   closure_2 = closure_0;
   const _encodeURIComponent = encodeURIComponent;
@@ -456,7 +442,7 @@ let closure_12 = async function _restoreDatabaseToPoint() {
   await conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/database/restore-points/" + encodeURIComponent(closure_1) + "/restore", { method: "POST" });
   return closure_3(closure_2, value);
 };
-let closure_13 = async function _restoreDatabaseToTimestamp(arg0) {
+let closure_11 = async function _restoreDatabaseToTimestamp(arg0) {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -470,10 +456,9 @@ let closure_13 = async function _restoreDatabaseToTimestamp(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/history/conjureHistoryRequests.tsx");
 
-export { fetchVersionHistory };
-export const fetchSourceHistory = function fetchSourceHistory() {
+export const fetchVersionHistory = function fetchVersionHistory() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -483,7 +468,7 @@ export const fetchSourceHistory = function fetchSourceHistory() {
 };
 export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -493,7 +478,7 @@ export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
 };
 export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -503,7 +488,7 @@ export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() 
 };
 export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -513,7 +498,7 @@ export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() 
 };
 export const createDatabaseRestorePoint = function createDatabaseRestorePoint() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -523,7 +508,7 @@ export const createDatabaseRestorePoint = function createDatabaseRestorePoint() 
 };
 export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -533,7 +518,7 @@ export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
 };
 export const restoreDatabaseToTimestamp = function restoreDatabaseToTimestamp() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

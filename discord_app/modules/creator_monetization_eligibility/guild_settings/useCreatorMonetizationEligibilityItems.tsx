@@ -1,9 +1,9 @@
-// === Module 18911: useCreatorMonetizationEligibilityItems ===
+// === Module 18946: useCreatorMonetizationEligibilityItems ===
 
-// Module 18911 (useCreatorMonetizationEligibilityItems)
+// Module 18946 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 18914 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 18949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -564,8 +564,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         let handleContactSupportClick;
         if (!noRecentViolations) {
           handleContactSupportClick = function handleContactSupportClick() {
-            const tmp = onEligibilityBecameStale(4895);
-            return tmp(onEligibilityBecameStale(2131).getSubmitRequestURL());
+            const tmp = onEligibilityBecameStale(5617);
+            return tmp(onEligibilityBecameStale(2068).getSubmitRequestURL());
           };
         }
         obj2.actionHandler = handleContactSupportClick;

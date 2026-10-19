@@ -3,7 +3,6 @@
 // Module 2040 (DetectableGameStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;
 import DurationsDefault from "Durations" /* 1104 */;
@@ -13,7 +12,6 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2041 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 2043 */;
-import UserSettings from "UserSettings" /* 2044 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 
@@ -21,38 +19,38 @@ const require = globalThis.__r;
 
 function gameFromServer(id) {
   ({ executables, aliases, third_party_skus } = id);
-  obj = { id: id.id, name: id.name, executables: null, aliases: null, thirdPartySkus: null };
+  const obj = { id: id.id, name: id.name, executables: null, aliases: null, thirdPartySkus: null };
   let mapped;
   if (executables != null) {
     mapped = executables.map(createExecutable);
   }
   if (null == mapped) {
-    mapped = closure_26;
+    mapped = closure_24;
   }
   obj.executables = mapped;
   if (null == aliases) {
-    aliases = closure_26;
+    aliases = closure_24;
   }
   obj.aliases = aliases;
   if (null == third_party_skus) {
-    third_party_skus = closure_26;
+    third_party_skus = closure_24;
   }
   obj.thirdPartySkus = third_party_skus;
   return obj;
 }
 function convertGameRecordToGame(id) {
   ({ executables, aliases, thirdPartySkus } = id);
-  obj = { id: id.id, name: id.name, executables: null, aliases: null, thirdPartySkus: null };
+  const obj = { id: id.id, name: id.name, executables: null, aliases: null, thirdPartySkus: null };
   if (null == executables) {
-    executables = closure_26;
+    executables = closure_24;
   }
   obj.executables = executables;
   if (null == aliases) {
-    aliases = closure_26;
+    aliases = closure_24;
   }
   obj.aliases = aliases;
   if (null == thirdPartySkus) {
-    thirdPartySkus = closure_26;
+    thirdPartySkus = closure_24;
   }
   obj.thirdPartySkus = thirdPartySkus;
   return obj;
@@ -79,7 +77,7 @@ function addDetectableGame(id) {
   if (id instanceof GameDetectionTypes.DetectableGameRecord) {
     tmp = convertGameRecordToGame(id);
   }
-  const result = closure_8.set(id.id, tmp);
+  const result = closure_7.set(id.id, tmp);
   addGameIdToNameCache(tmp.id, toNameKey(tmp.name));
   for (const item10026 of tmp5) {
     let tmp8 = addGameIdToNameCache(tmp.id, toNameKey(item10026));
@@ -97,26 +95,19 @@ function addDetectableGame(id) {
 const createExecutable = ApplicationRecord.createExecutable;
 const AnalyticEvents = Constants.AnalyticEvents;
 const ApplicationTypes = ApplicationConstants.ApplicationTypes;
-const GameStoreReportedGames = "GameStoreReportedGames";
 const DAY = DurationsDefault.Millis.DAY;
-let closure_8 = new CachedEntriesMapDefault();
+let closure_7 = new CachedEntriesMapDefault();
 const map = new Map();
 const map1 = new Map();
-let Storage = Storage2.Storage;
-let obj = Storage.get("GameStoreReportedGames");
-if (obj == null) {
-  const _Object = Object;
-  obj = Object.create(null);
-}
 let etag = "";
-let c13;
+let c11;
+let closure_12 = null;
+let c13 = false;
 let closure_14 = null;
 let c15 = false;
-let closure_16 = null;
-let c17 = false;
 etag = "";
 let blocklistExecutables = [];
-let closure_20 = [];
+let closure_18 = [];
 const map2 = new Map();
 const HOUR = DurationsDefault.Millis.HOUR;
 const set = new Set();
@@ -133,7 +124,7 @@ if (!PlatformUtils.isWindows()) {
     }
   }
 }
-let closure_26 = Object.freeze([]);
+let closure_24 = Object.freeze([]);
 const PersistedStore = initializeDefault.PersistedStore;
 class DetectableGameStore extends PersistedStore {
 }
@@ -151,7 +142,7 @@ prototype["initialize"] = function initialize(detectableGamesEtag) {
     }
     if (null != detectableGamesEtag.blocklistPatterns) {
       const blocklistPatterns = detectableGamesEtag.blocklistPatterns;
-      closure_20 = blocklistPatterns.map((item) => {
+      closure_18 = blocklistPatterns.map((item) => {
         const regExp = new RegExp(item, "i");
         return regExp;
       });
@@ -166,7 +157,7 @@ prototype["initialize"] = function initialize(detectableGamesEtag) {
 };
 prototype["getState"] = function getState() {
   if (obj.isDesktop()) {
-    const obj2 = { detectableGamesEtag: etag, detectableGames: closure_8.values(), blocklistEtag: etag, blocklistExecutables, blocklistPatterns: closure_20.map((source) => source.source) };
+    const obj2 = { detectableGamesEtag: etag, detectableGames: closure_7.values(), blocklistEtag: etag, blocklistExecutables, blocklistPatterns: closure_18.map((source) => source.source) };
     let obj3 = obj2;
   } else {
     obj3 = { detectableGamesEtag: "", detectableGames: [], blocklistEtag: "", blocklistExecutables: [], blocklistPatterns: [] };
@@ -175,12 +166,12 @@ prototype["getState"] = function getState() {
 };
 Object.defineProperty(prototype, "games", {
   get: function games() {
-    return closure_8.values();
+    return closure_7.values();
   },
   set: undefined
 });
 prototype["getDetectableGame"] = function getDetectableGame(id) {
-  return closure_8.get(SnowflakeUtilsDefault.cast(id));
+  return closure_7.get(SnowflakeUtilsDefault.cast(id));
 };
 prototype["searchGamesByName"] = function searchGamesByName(name) {
   if (null == name) {
@@ -223,7 +214,7 @@ prototype["findGame"] = function findGame(nextResult, arg1) {
             const found = parts.filter(GlobalUtils.isNotNullish);
             const executables = detectableGame.executables;
             if (executables.some((name) => name.name === closure_0)) {
-              obj = { v: detectableGame };
+              const obj = { v: detectableGame };
               return obj;
             }
             nextResult = found.pop();
@@ -251,7 +242,7 @@ prototype["findGame"] = function findGame(nextResult, arg1) {
         return gameByExecutable;
       } else {
         const parts1 = nextResult.exePath.split("/");
-        const found1 = parts1.filter(tmp15(tmp16[10]).isNotNullish);
+        const found1 = parts1.filter(tmp15(tmp16[9]).isNotNullish);
         const substr = found1.slice(-2);
         const gameByExecutable1 = self.getGameByExecutable(substr.join("/"));
         if (null != gameByExecutable1) {
@@ -335,7 +326,7 @@ prototype["isGameInDatabase"] = function isGameInDatabase(nativeProcessObserverI
 };
 Object.defineProperty(prototype, "fetching", {
   get: function fetching() {
-    return true === c13;
+    return true === c11;
   },
   set: undefined
 });
@@ -353,13 +344,13 @@ Object.defineProperty(prototype, "blocklistEtag", {
 });
 Object.defineProperty(prototype, "lastFetched", {
   get: function lastFetched() {
-    return closure_14;
+    return closure_12;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "hasAttemptedFetch", {
   get: function hasAttemptedFetch() {
-    return c15;
+    return c13;
   },
   set: undefined
 });
@@ -370,24 +361,24 @@ Object.defineProperty(prototype, "detectableGamesTtl", {
   set: undefined
 });
 prototype["canFetchDetectableGames"] = function canFetchDetectableGames() {
-  let tmp = true !== c13;
+  let tmp = true !== c11;
   if (tmp) {
-    let tmp4 = null == closure_14;
+    let tmp4 = null == closure_12;
     if (!tmp4) {
       const _Date = Date;
-      tmp4 = Date.now() >= closure_14 + DAY;
+      tmp4 = Date.now() >= closure_12 + DAY;
     }
     tmp = tmp4;
   }
   return tmp;
 };
 prototype["canFetchExecutableBlocklist"] = function canFetchExecutableBlocklist() {
-  let tmp = !c17;
-  if (!c17) {
-    let tmp4 = null == closure_16;
+  let tmp = !c15;
+  if (!c15) {
+    let tmp4 = null == closure_14;
     if (!tmp4) {
       const _Date = Date;
-      tmp4 = Date.now() >= closure_16 + DAY;
+      tmp4 = Date.now() >= closure_14 + DAY;
     }
     tmp = tmp4;
   }
@@ -426,7 +417,7 @@ prototype["shouldBlock"] = function shouldBlock(exePath) {
         self.maybeTrackBlock(exePath, "explicit_list", found);
         return true;
       } else {
-        const found1 = closure_20.find((test) => test.test(exePath.exePath));
+        const found1 = closure_18.find((test) => test.test(exePath.exePath));
         let flag = null != found1;
         if (flag) {
           self.maybeTrackBlock(exePath, "pattern_match", found1.source);
@@ -447,10 +438,10 @@ prototype["getBlockReason"] = function getBlockReason(exePath) {
         const obj2 = { matchedExe: found, matchedPattern: null };
         return obj2;
       } else {
-        const found1 = closure_20.find((test) => test.test(exePath.exePath));
+        const found1 = closure_18.find((test) => test.test(exePath.exePath));
         let tmp5 = null;
         if (null != found1) {
-          obj = { matchedExe: null, matchedPattern: found1.source };
+          const obj = { matchedExe: null, matchedPattern: found1.source };
           tmp5 = obj;
         }
         return tmp5;
@@ -536,35 +527,6 @@ prototype["maybeTrackBlock"] = function maybeTrackBlock(exePath, explicit_list, 
     AnalyticsUtilsDefault.track(AnalyticEvents.GAME_BLOCKLIST_TRIGGERED, obj3);
   }
 };
-prototype["shouldReport"] = function shouldReport(name) {
-  const self = this;
-  if (this.shouldBlock(name)) {
-    return false;
-  } else {
-    let tmp2 = null != self.findGame(name);
-    let tmp3 = null != name.name;
-    if (tmp3) {
-      tmp3 = null != obj[name.name];
-    }
-    const ShowCurrentGame = UserSettings.ShowCurrentGame;
-    let setting = ShowCurrentGame.getSetting();
-    if (setting) {
-      setting = !c13;
-    }
-    if (setting) {
-      if (!tmp2) {
-        tmp2 = tmp3;
-      }
-      setting = !tmp2;
-    }
-    return setting;
-  }
-};
-prototype["markGameReported"] = function markGameReported(arg0) {
-  obj[arg0] = true;
-  const Storage = Storage2.Storage;
-  const result = Storage.set(GameStoreReportedGames, obj);
-};
 DetectableGameStore.displayName = "GameStore";
 DetectableGameStore.persistKey = "GameStore";
 let items = [
@@ -577,17 +539,17 @@ let items = [
         mapped = detectableGames.map((item) => {
           const detectableGameRecord = new require("GameDetectionTypes").DetectableGameRecord(item);
           ({ executables, aliases, thirdPartySkus } = detectableGameRecord);
-          obj = { id: detectableGameRecord.id, name: detectableGameRecord.name, executables: null, aliases: null, thirdPartySkus: null };
+          const obj = { id: detectableGameRecord.id, name: detectableGameRecord.name, executables: null, aliases: null, thirdPartySkus: null };
           if (null == executables) {
-            executables = closure_1_26;
+            executables = closure_1_24;
           }
           obj.executables = executables;
           if (null == aliases) {
-            aliases = closure_1_26;
+            aliases = closure_1_24;
           }
           obj.aliases = aliases;
           if (null == thirdPartySkus) {
-            thirdPartySkus = closure_1_26;
+            thirdPartySkus = closure_1_24;
           }
           obj.thirdPartySkus = thirdPartySkus;
           return obj;
@@ -597,7 +559,7 @@ let items = [
         mapped = [];
       }
       obj3.detectableGames = mapped;
-      obj = obj3;
+      let obj = obj3;
     } else {
       obj = { detectableGamesEtag: "", detectableGames: [] };
     }
@@ -613,7 +575,7 @@ let items = [
   },
   () => ({ detectableGamesEtag: "", detectableGames: [] }),
   (blocklistEtag) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(blocklistEtag);
     str = blocklistEtag.blocklistEtag;
     if (str == null) {
@@ -636,7 +598,7 @@ let items = [
 DetectableGameStore.migrations = items;
 const detectableGameStore = new DetectableGameStore(DispatcherDefault, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
-    closure_8.clear();
+    closure_7.clear();
     map.clear();
     map1.clear();
     while (tmp4 !== undefined) {
@@ -646,11 +608,11 @@ const detectableGameStore = new DetectableGameStore(DispatcherDefault, {
     tmp4 = arg0.detectableApplications[Symbol.iterator]();
   },
   GAMES_DATABASE_FETCH: function handleApplicationsFetch() {
-    c13 = true;
+    c11 = true;
   },
   GAMES_DATABASE_FETCH_FAIL: function handleApplicationsFetchFail() {
-    c13 = false;
-    c15 = true;
+    c11 = false;
+    c13 = true;
   },
   GAMES_DATABASE_UPDATE: function handleDetectableGamesUpdated(arg0) {
     ({ games, etag } = arg0);
@@ -659,7 +621,7 @@ const detectableGameStore = new DetectableGameStore(DispatcherDefault, {
       tmp = etag !== etag;
     }
     if (tmp) {
-      closure_8.clear();
+      closure_7.clear();
       map.clear();
       map1.clear();
     }
@@ -667,16 +629,16 @@ const detectableGameStore = new DetectableGameStore(DispatcherDefault, {
       let tmp13 = addDetectableGame(gameFromServer(tmp10));
       continue;
     }
-    c13 = undefined;
-    closure_14 = Date.now();
-    c15 = true;
+    c11 = undefined;
+    closure_12 = Date.now();
+    c13 = true;
     tmp9 = games[Symbol.iterator]();
   },
   GAMES_BLOCKLIST_FETCH: function handleGamesBlocklistFetch() {
-    c17 = true;
+    c15 = true;
   },
   GAMES_BLOCKLIST_FETCH_FAIL: function handleGamesBlocklistFetchFail() {
-    c17 = false;
+    c15 = false;
   },
   GAMES_BLOCKLIST_UPDATE: function handleGamesBlocklistUpdated(arg0) {
     ({ executables, patterns, etag } = arg0);
@@ -685,14 +647,14 @@ const detectableGameStore = new DetectableGameStore(DispatcherDefault, {
       tmp = etag !== etag;
     }
     if (tmp) {
-      closure_19 = executables.map((item) => item.toLowerCase());
-      closure_20 = patterns.map((item) => {
+      closure_17 = executables.map((item) => item.toLowerCase());
+      closure_18 = patterns.map((item) => {
         const regExp = new RegExp(item, "i");
         return regExp;
       });
     }
-    c17 = false;
-    closure_16 = Date.now();
+    c15 = false;
+    closure_14 = Date.now();
   }
 });
 let result = size.fileFinishedImporting("stores/DetectableGameStore.tsx");

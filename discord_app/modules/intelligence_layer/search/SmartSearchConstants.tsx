@@ -1,6 +1,6 @@
-// === Module 12990: SmartSearchConstants ===
+// === Module 13022: SmartSearchConstants ===
 
-// Module 12990 (SmartSearchConstants)
+// Module 13022 (SmartSearchConstants)
 import DurationsDefault from "Durations" /* 1104 */;
 
 const result = 60 * DurationsDefault.Millis.MINUTE;

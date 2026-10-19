@@ -1,10 +1,10 @@
-// === Module 13597: BookmarkIcon ===
+// === Module 13631: BookmarkIcon ===
 
-// Module 13597 (BookmarkIcon)
+// Module 13631 (BookmarkIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4912 */;
-import _mod13598 from "module_13598" /* 13598 */;
+import BaseIconImage from "BaseIconImage" /* 5630 */;
+import _mod13632 from "module_13632" /* 13632 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const BookmarkIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13598;
+    const tmpResult = _mod13632;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const BookmarkIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13598, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13632, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

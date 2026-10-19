@@ -1,6 +1,6 @@
-// === Module 7456: ClickstreamEvents ===
+// === Module 7523: ClickstreamEvents ===
 
-// Module 7456 (ClickstreamEvents)
+// Module 7523 (ClickstreamEvents)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

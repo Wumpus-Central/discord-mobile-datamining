@@ -1,6 +1,6 @@
-// === Module 17930: profileModalTransition ===
+// === Module 17959: profileModalTransition ===
 
-// Module 17930 (profileModalTransition)
+// Module 17959 (profileModalTransition)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

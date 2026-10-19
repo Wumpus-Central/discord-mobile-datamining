@@ -1,6 +1,6 @@
-// === Module 5176: RegexUtils ===
+// === Module 5569: RegexUtils ===
 
-// Module 5176 (RegexUtils)
+// Module 5569 (RegexUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/RegexUtils.tsx");

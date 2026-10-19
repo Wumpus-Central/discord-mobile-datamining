@@ -1,14 +1,14 @@
-// === Module 11926: SearchBarBottomBorder ===
+// === Module 11946: SearchBarBottomBorder ===
 
-// Module 11926 (SearchBarBottomBorder)
+// Module 11946 (SearchBarBottomBorder)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5478 */;
-import springPresets from "springPresets" /* 5482 */;
+import spring from "spring" /* 5208 */;
+import springPresets from "springPresets" /* 5209 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
@@ -27,7 +27,7 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
   }
   const tmp4 = closure_5();
   let obj = num(576);
-  const sharedValue = num(4945).useSharedValue(0);
+  const sharedValue = num(5014).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function c() {
       const result = sharedValue.set(0);
@@ -60,11 +60,11 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
       }
       return { opacity: spring.withSpring(num, springPresets.springStandard) };
     };
-    const obj2 = { withSpring: tmp(5478).withSpring, scrollPosition: sharedValue, triggerScrollHeight: num, springStandard: tmp(5482).springStandard };
+    const obj2 = { withSpring: tmp(5208).withSpring, scrollPosition: sharedValue, triggerScrollHeight: num, springStandard: tmp(5209).springStandard };
     fn3.__closure = obj2;
     fn3.__workletHash = 5466161440826;
     fn3.__initData = __initData;
-    const animatedStyle = tmp(4945).useAnimatedStyle(fn3);
+    const animatedStyle = tmp(5014).useAnimatedStyle(fn3);
     if (cResult[7] === animatedStyle) {
       if (cResult[8] === tmp4.border) {
         let tmp13 = cResult[9];
@@ -86,7 +86,7 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
         tmp18 = obj3;
       }
       const obj4 = { style: tmp13 };
-      const tmp17 = jsx(sharedValue(4945).View, { style: tmp13 }, key);
+      const tmp17 = jsx(sharedValue(5014).View, { style: tmp13 }, key);
       cResult[10] = key;
       cResult[11] = tmp13;
       cResult[12] = tmp17;
@@ -97,21 +97,21 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
     cResult[8] = tmp4.border;
     cResult[9] = items;
     tmp13 = items;
-    const tmpResult2 = tmp(4945);
+    const tmpResult2 = tmp(5014);
   }
   const items1 = [key, sharedValue];
   cResult[2] = key;
   cResult[3] = sharedValue;
   cResult[4] = items1;
   tmp7 = items1;
-  const tmpResult = num(4945);
+  const tmpResult = num(5014);
 }) : (function usePinnedSearchBarBottomBorder(arg0) {
   ({ key, triggerScrollHeight } = arg0);
   if (triggerScrollHeight === undefined) {
     triggerScrollHeight = 1;
   }
   const tmp = closure_5();
-  const sharedValue = triggerScrollHeight(4945).useSharedValue(0);
+  const sharedValue = triggerScrollHeight(5014).useSharedValue(0);
   const items = [key, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(0);
@@ -120,7 +120,7 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
   const callback = noop.useCallback((offset) => {
     const result = sharedValue.set(offset.offset);
   }, items1);
-  let obj = triggerScrollHeight(4945);
+  let obj = triggerScrollHeight(5014);
   const fn = function p() {
     let num = 0;
     if (sharedValue.get() > triggerScrollHeight) {
@@ -128,8 +128,8 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
     }
     return { opacity: spring.withSpring(num, springPresets.springStandard) };
   };
-  const obj2 = triggerScrollHeight(4945);
-  fn.__closure = { withSpring: triggerScrollHeight(5478).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(5482).springStandard };
+  const obj2 = triggerScrollHeight(5014);
+  fn.__closure = { withSpring: triggerScrollHeight(5208).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(5209).springStandard };
   fn.__workletHash = 17305021520857;
   fn.__initData = __initData2;
   const obj4 = { scrollHandler: callback, bottomBorderComponent: null };
@@ -137,6 +137,6 @@ export const usePinnedSearchBarBottomBorder = ReactCompilerGating.isReactCompile
   const obj5 = { style: null };
   const items2 = [tmp.border, animatedStyle];
   obj5.style = items2;
-  obj4.bottomBorderComponent = jsx(sharedValue(4945).View, { style: null }, key);
+  obj4.bottomBorderComponent = jsx(sharedValue(5014).View, { style: null }, key);
   return obj4;
 });

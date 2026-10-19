@@ -1,18 +1,18 @@
-// === Module 16853: UserSettingsDesignSystemTabs ===
+// === Module 16882: UserSettingsDesignSystemTabs ===
 
-// Module 16853 (UserSettingsDesignSystemTabs)
+// Module 16882 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4913 */;
-import ColorUtils from "ColorUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Stack_Stack from "Stack/Stack" /* 5477 */;
-import components_Button_Button from "components/Button/Button" /* 5479 */;
-import TableSwitchRow from "TableSwitchRow" /* 7172 */;
-import SegmentedControlState from "SegmentedControlState" /* 8805 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 10927 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 11678 */;
-import TabsGradientDefault from "TabsGradient" /* 13470 */;
+import ColorUtils from "ColorUtils" /* 4942 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import components_Button_Button from "components/Button/Button" /* 5205 */;
+import useToken from "useToken" /* 5213 */;
+import Stack_Stack from "Stack/Stack" /* 5932 */;
+import TableSwitchRow from "TableSwitchRow" /* 7241 */;
+import SegmentedControlState from "SegmentedControlState" /* 8821 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 10939 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11699 */;
+import TabsGradientDefault from "TabsGradient" /* 13504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

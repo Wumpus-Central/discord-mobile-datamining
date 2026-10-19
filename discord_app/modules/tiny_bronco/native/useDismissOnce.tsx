@@ -1,12 +1,12 @@
-// === Module 15765: useDismissOnce ===
+// === Module 15794: useDismissOnce ===
 
-// Module 15765 (useDismissOnce)
+// Module 15794 (useDismissOnce)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/useDismissOnce.tsx");

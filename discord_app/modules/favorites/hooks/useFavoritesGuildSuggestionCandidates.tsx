@@ -1,14 +1,14 @@
-// === Module 17421: useFavoritesGuildSuggestionCandidates ===
+// === Module 17450: useFavoritesGuildSuggestionCandidates ===
 
-// Module 17421 (useFavoritesGuildSuggestionCandidates)
+// Module 17450 (useFavoritesGuildSuggestionCandidates)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import sortByMatchScore from "sortByMatchScore" /* 8972 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 8984 */;
+import sortByMatchScore from "sortByMatchScore" /* 8988 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9000 */;
 import noop from "module_19" /* 19 */;
-import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 17422 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7613 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 17451 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7676 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
 
 const require = globalThis.__r;
 
@@ -19,8 +19,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(17330).NO_SUGGESTIONS;
-const isAllowedType = fn(12694).isAllowedType;
+const NO_SUGGESTIONS = fn(17359).NO_SUGGESTIONS;
+const isAllowedType = fn(12714).isAllowedType;
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelAffinities() {
   const cResult = c.c(7);

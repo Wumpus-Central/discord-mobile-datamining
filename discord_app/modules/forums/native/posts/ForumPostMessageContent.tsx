@@ -1,14 +1,14 @@
-// === Module 12886: ForumPostMessageContent ===
+// === Module 12918: ForumPostMessageContent ===
 
-// Module 12886 (ForumPostMessageContent)
+// Module 12918 (ForumPostMessageContent)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12887 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_4 = createStyles.createStyles({ text: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

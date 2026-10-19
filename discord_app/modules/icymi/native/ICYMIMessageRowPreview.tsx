@@ -1,16 +1,16 @@
-// === Module 17640: ICYMIMessageRowPreview ===
+// === Module 17669: ICYMIMessageRowPreview ===
 
-// Module 17640 (ICYMIMessageRowPreview)
+// Module 17669 (ICYMIMessageRowPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import useThemeDefault from "useTheme" /* 5127 */;
-import createStyles from "createStyles" /* 5191 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7278 */;
-import RowGeneratorDefault from "RowGenerator" /* 8013 */;
-import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 8015 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8536 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9615 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import createStyles from "createStyles" /* 4945 */;
+import useThemeDefault from "useTheme" /* 5166 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5563 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5604 */;
+import RowGeneratorDefault from "RowGenerator" /* 8076 */;
+import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 8078 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8552 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -308,11 +308,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
   const tmp5 = useThemeDefault();
   if (cResult[0] !== tmp5) {
     const obj2 = { seeMoreLabelColor: tmp4(587).colors.TEXT_DEFAULT };
-    const tmp7 = lineClamp(5191).createNativeStyleProperties(obj2)(tmp5);
+    const tmp7 = lineClamp(4945).createNativeStyleProperties(obj2)(tmp5);
     cResult[0] = tmp5;
     cResult[1] = tmp7;
     let tmp6 = tmp7;
-    const tmpResult = lineClamp(5191);
+    const tmpResult = lineClamp(4945);
   } else {
     tmp6 = cResult[1];
   }
@@ -323,7 +323,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const RenderEmbeds = lineClamp(2044).RenderEmbeds;
+      const RenderEmbeds = lineClamp(4776).RenderEmbeds;
       const setting = RenderEmbeds.getSetting();
       cResult[5] = setting;
       let tmp10 = setting;
@@ -332,7 +332,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     }
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const InlineEmbedMedia = lineClamp(2044).InlineEmbedMedia;
+      const InlineEmbedMedia = lineClamp(4776).InlineEmbedMedia;
       const setting1 = InlineEmbedMedia.getSetting();
       cResult[6] = setting1;
       let tmp12 = setting1;
@@ -341,7 +341,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     }
     const _Symbol3 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const InlineAttachmentMedia = lineClamp(2044).InlineAttachmentMedia;
+      const InlineAttachmentMedia = lineClamp(4776).InlineAttachmentMedia;
       const setting2 = InlineAttachmentMedia.getSetting();
       cResult[7] = setting2;
       let tmp14 = setting2;
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       tmp14 = cResult[7];
     }
     if (cResult[8] !== messageOptions) {
-      const obj4 = new tmp4(8013)();
+      const obj4 = new tmp4(8076)();
       const obj3 = { renderEmbeds: tmp10, inlineEmbedMedia: tmp12, inlineAttachmentMedia: tmp14, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       const merged = Object.assign(messageOptions);
       obj4.setOptions(obj3);
@@ -374,7 +374,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       }
     }
     const obj5 = { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight };
-    const tmp26 = jsx(tmp4(9673), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
+    const tmp26 = jsx(tmp4(9687), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
     cResult[10] = maxHeight;
     cResult[11] = message;
     cResult[12] = messageSizeCacheRef;
@@ -406,7 +406,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
   if (str === undefined) {
     str = "none";
   }
-  const tmp = messageOptions(5127)();
+  const tmp = messageOptions(5166)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(587).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
@@ -422,7 +422,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return jsx(messageOptions(9673), {
+  return jsx(messageOptions(9687), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -544,11 +544,11 @@ export const MessageRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEn
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(7278)(message);
+  const tmp3 = merged(5563)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(8015).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8078).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

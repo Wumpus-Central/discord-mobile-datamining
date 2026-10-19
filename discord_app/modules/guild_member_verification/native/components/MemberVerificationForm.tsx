@@ -1,22 +1,22 @@
-// === Module 6446: MemberVerificationForm ===
+// === Module 6841: MemberVerificationForm ===
 
-// Module 6446 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5037 */;
-import useInitialValueDefault from "useInitialValue" /* 6447 */;
+// Module 6841 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4974 */;
+import useInitialValueDefault from "useInitialValue" /* 5560 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6428 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6823 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6428).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6823).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1087).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredVerificationFields(id) {
@@ -32,7 +32,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReq
     if (cResult[1] === phone) {
       let tmp6 = cResult[2];
     }
-    return initialVerification(6447)(tmp6);
+    return initialVerification(5560)(tmp6);
   }
   cResult[0] = id.verificationLevel;
   let phone1;
@@ -379,7 +379,7 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1128).intl;
                   obj2.text = intl.string(closure_1_0(1128).t.StC497);
-                  closure_1_1(4904).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(5625).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
                 return { value: "IconComponent", done: null };

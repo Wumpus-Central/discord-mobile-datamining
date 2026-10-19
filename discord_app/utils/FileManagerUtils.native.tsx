@@ -1,6 +1,6 @@
-// === Module 8605: FileManagerUtils ===
+// === Module 8621: FileManagerUtils ===
 
-// Module 8605 (FileManagerUtils)
+// Module 8621 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1164 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -136,8 +136,8 @@ export const moveFile = function moveFile(arg0, arg1, arg2) {
 export const removeFile = function removeFile(cache, combined) {
   return NativeFileModuleDefault.removeFile(cache, combined);
 };
-export const clearFolder = function clearFolder(cache, c3) {
-  return NativeFileModuleDefault.clearFolder(cache, c3);
+export const clearFolder = function clearFolder(cache, c5) {
+  return NativeFileModuleDefault.clearFolder(cache, c5);
 };
 export const readFile = function readFile() {
   const self = this;

@@ -1,8 +1,8 @@
-// === Module 11910: useFormattedTimestamp ===
+// === Module 11930: useFormattedTimestamp ===
 
-// Module 11910 (useFormattedTimestamp)
+// Module 11930 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1104 */;
-import _modDef4797 from "module_4797" /* 4797 */;
+import _modDef2050 from "module_2050" /* 2050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
     const effect = noop.useEffect(tmp6, tmp7);
     if ("R" === parsed.format) {
       if (null == tmp5) {
-        let TIMESTAMP_FORMATS = tmp(8428).TIMESTAMP_FORMATS;
+        let TIMESTAMP_FORMATS = tmp(8444).TIMESTAMP_FORMATS;
         let formatted = TIMESTAMP_FORMATS.R(parsed.parsed);
         parsed = parsed.parsed;
         cResult[4] = parsed;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(_modDef4797()));
+      const absolute = Math.abs(parsed.diff(_modDef2050()));
       let obj = dependencyMap2[Symbol.iterator]();
       while (obj !== undefined) {
         let tmp14 = _slicedToArray(tmp11, 2);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
         let _setInterval = setInterval;
         format = setInterval(() => {
           const obj = { parsed: closure_0.parsed, formatted: null };
-          const TIMESTAMP_FORMATS = closure_0(8428).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = closure_0(8444).TIMESTAMP_FORMATS;
           obj.formatted = TIMESTAMP_FORMATS.R(closure_0.parsed);
           closure_1_1(obj);
         }, result);
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(_modDef4797()));
+      const absolute = Math.abs(parsed.diff(_modDef2050()));
       let obj = dependencyMap2[Symbol.iterator]();
       while (obj !== undefined) {
         let tmp14 = _slicedToArray(tmp11, 2);
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
         let _setInterval = setInterval;
         format = setInterval(() => {
           const obj = { parsed: closure_0.parsed, formatted: null };
-          const TIMESTAMP_FORMATS = closure_0(8428).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = closure_0(8444).TIMESTAMP_FORMATS;
           obj.formatted = TIMESTAMP_FORMATS.R(closure_0.parsed);
           closure_1_1(obj);
         }, result);

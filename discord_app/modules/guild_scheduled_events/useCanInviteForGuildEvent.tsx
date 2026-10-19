@@ -1,13 +1,13 @@
-// === Module 8807: useCanInviteForGuildEvent ===
+// === Module 8823: useCanInviteForGuildEvent ===
 
-// Module 8807 (useCanInviteForGuildEvent)
-import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
-import canViewInviteModal from "canViewInviteModal" /* 8808 */;
-import StageInstanceStore from "StageInstanceStore" /* 2073 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+// Module 8823 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4885 */;
+import canViewInviteModal from "canViewInviteModal" /* 8824 */;
+import StageInstanceStore from "StageInstanceStore" /* 4805 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import GuildChannelStore from "GuildChannelStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(6332).isGuildEventEnded;
-const constants = fn(2074).GuildScheduledEventEntityTypes;
+const isGuildEventEnded = fn(6732).isGuildEventEnded;
+const constants = fn(4806).GuildScheduledEventEntityTypes;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,20 +1,20 @@
-// === Module 18581: PresetAvatarSelect ===
+// === Module 18616: PresetAvatarSelect ===
 
-// Module 18581 (PresetAvatarSelect)
+// Module 18616 (PresetAvatarSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Pressables from "Pressables" /* 6462 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 18582 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 18583 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 18584 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 18585 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 18586 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 18587 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 18588 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 18589 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import Pressables from "Pressables" /* 6856 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 18617 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 18618 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 18619 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 18620 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 18621 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 18622 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 18623 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 18624 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -138,7 +138,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   }
 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 const obj10 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
 obj10.defaultAvatarButton = size;
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PresetAv
     let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
     let intl = tmp(1128).intl;
     obj2.children = intl.string(tmp(1128).t.yP28YL);
-    const tmp7 = closure_4(tmp(5187).Text, obj2);
+    const tmp7 = closure_4(tmp(5195).Text, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
   } else {

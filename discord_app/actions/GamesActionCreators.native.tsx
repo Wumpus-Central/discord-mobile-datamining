@@ -1,7 +1,7 @@
-// === Module 11219: GamesActionCreators ===
+// === Module 11234: GamesActionCreators ===
 
-// Module 11219 (GamesActionCreators)
-import LinkingDefault from "Linking" /* 4901 */;
+// Module 11234 (GamesActionCreators)
+import LinkingDefault from "Linking" /* 5622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -49,12 +49,6 @@ export default {
     return Promise.reject(error);
   },
   getDetectableGames() {
-
-  },
-  reportUnverifiedGame() {
-
-  },
-  uploadIcon() {
 
   },
   deleteEntry() {
@@ -120,8 +114,8 @@ export default {
                       const join_url = body.body.join_url;
                       const secret = body.body.secret;
                       if (null != join_url) {
-                        activityChannelId(4901).openURL(join_url, constants2.SAFARI);
-                        const obj3 = activityChannelId(4901);
+                        activityChannelId(5622).openURL(join_url, constants2.SAFARI);
+                        const obj3 = activityChannelId(5622);
                         const obj2 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
                         ({ id: obj5.applicationId, parent_id: obj5.parentApplicationId } = application);
                         obj2.secret = secret;
@@ -142,8 +136,8 @@ export default {
                       } else {
                         const _HermesInternal = HermesInternal;
                         const combined = "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                        activityChannelId(4901).openURL(combined, constants2.SAFARI);
-                        const obj6 = activityChannelId(4901);
+                        activityChannelId(5622).openURL(combined, constants2.SAFARI);
+                        const obj6 = activityChannelId(5622);
                         const obj12 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
                         ({ id: obj8.applicationId, parent_id: obj8.parentApplicationId } = application);
                         obj12.secret = secret;

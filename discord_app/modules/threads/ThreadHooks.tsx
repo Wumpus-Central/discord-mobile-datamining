@@ -1,25 +1,25 @@
-// === Module 7246: ThreadHooks ===
+// === Module 7315: ThreadHooks ===
 
-// Module 7246 (ThreadHooks)
+// Module 7315 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6164 */;
-import AgeGateUtils from "AgeGateUtils" /* 6180 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6364 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7252 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7254 */;
-import useIsRemoteDefault from "useIsRemote" /* 7255 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7256 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6601 */;
+import AgeGateUtils from "AgeGateUtils" /* 6610 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6764 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7321 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7323 */;
+import useIsRemoteDefault from "useIsRemote" /* 7324 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5111 */;
+import createExperiment from "createExperiment" /* 5150 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6290 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7247 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6718 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7316 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {
@@ -59,7 +59,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(2072).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(4804).THREADED_CHANNEL_TYPES;
 const Constants = fn(1087);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = { id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: null };

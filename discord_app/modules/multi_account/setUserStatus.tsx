@@ -1,9 +1,9 @@
-// === Module 13520: setUserStatus ===
+// === Module 13554: setUserStatus ===
 
-// Module 13520 (setUserStatus)
+// Module 13554 (setUserStatus)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7082 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6015 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7159 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6452 */;
 
 const require = fn;
 let closure_7 = async function _setUserStatus() {
@@ -34,13 +34,13 @@ let closure_7 = async function _setUserStatus() {
     const obj2 = { value: "" + Date.now() };
   }, closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION);
   closure_129_6 = (function getStatusUpdateAnnouncement(status, arg1) {
-    const humanizeStatusResult = value(5057).humanizeStatus(status);
+    const humanizeStatusResult = value(4994).humanizeStatus(status);
     if ("0" === arg1) {
       const intl3 = value(1128).intl;
       const obj2 = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1128).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(13521).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(13555).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1128).intl;
@@ -53,7 +53,7 @@ let closure_7 = async function _setUserStatus() {
       }
       return formatToPlainStringResult;
     }
-    const obj = value(5057);
+    const obj = value(4994);
   })(closure_129_0, closure_129_5);
   const AccessibilityAnnouncer = closure_130_0(closure_130_2[9]).AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(closure_129_6);
@@ -85,7 +85,7 @@ let closure_7 = async function _setUserStatus() {
     disableTracking = false;
   }
   closure_129_4 = disableTracking;
-  return "Reflect";
+  return "test";
 };
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);

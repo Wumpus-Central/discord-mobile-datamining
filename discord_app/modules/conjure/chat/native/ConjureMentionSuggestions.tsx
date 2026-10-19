@@ -1,10 +1,10 @@
-// === Module 12341: ConjureMentionSuggestions ===
+// === Module 12361: ConjureMentionSuggestions ===
 
-// Module 12341 (ConjureMentionSuggestions)
+// Module 12361 (ConjureMentionSuggestions)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import TableRowGroup from "TableRowGroup" /* 6542 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import TableRowGroup from "TableRowGroup" /* 6935 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { fileThumbnail: null };
 let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xs };
 obj2.fileThumbnail = size;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
       }
       const obj3 = { title: null, hasIcons: true, children: null };
       const intl = tmp(1128).intl;
-      obj3.title = intl.string(onSelect(3883).Vb3sUg);
+      obj3.title = intl.string(onSelect(3820).Vb3sUg);
       obj3.children = found.map((user) => {
         closure_0 = user;
         const obj = { icon: closure_1_3(projectId(fileThumbnail[10]).Avatar, { user: user.user, size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null };
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
         };
         return closure_1_3(projectId(fileThumbnail[9]).TableRow, obj, user.user.id);
       });
-      const tmp15 = closure_3(tmp(6542).TableRowGroup, obj3);
+      const tmp15 = closure_3(tmp(6935).TableRowGroup, obj3);
     }
     let tmp16 = null;
     if (found1.length > 0) {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
       }
       const obj4 = { title: null, hasIcons: true, children: null };
       const intl2 = tmp(1128).intl;
-      obj4.title = intl2.string(onSelect(3883).zA5KLM);
+      obj4.title = intl2.string(onSelect(3820).zA5KLM);
       obj4.children = found1.map((file) => {
         projectId = file;
         const obj = {
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
         };
         return closure_1_3(projectId(fileThumbnail[9]).TableRow, obj, file.file.id);
       });
-      tmp16 = closure_3(tmp(6542).TableRowGroup, obj4);
+      tmp16 = closure_3(tmp(6935).TableRowGroup, obj4);
     }
     tmp12 = tmp16;
     tmp11 = forResult;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
     if (found.length > 0) {
       let obj = { title: null, hasIcons: true, children: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef3883.Vb3sUg);
+      obj.title = intl.string(_modDef3820.Vb3sUg);
       obj.children = found.map((user) => {
         closure_0 = user;
         const obj = { icon: closure_1_3(projectId(fileThumbnail[10]).Avatar, { user: user.user, size: projectId(fileThumbnail[10]).AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null };
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
     if (found1.length > 0) {
       let obj2 = { title: null, hasIcons: true, children: null };
       const intl2 = util.intl;
-      obj2.title = intl2.string(_modDef3883.zA5KLM);
+      obj2.title = intl2.string(_modDef3820.zA5KLM);
       obj2.children = found1.map((file) => {
         projectId = file;
         const obj = {

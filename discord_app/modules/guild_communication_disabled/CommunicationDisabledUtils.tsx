@@ -1,6 +1,6 @@
-// === Module 4832: CommunicationDisabledUtils ===
+// === Module 4867: CommunicationDisabledUtils ===
 
-// Module 4832 (CommunicationDisabledUtils)
+// Module 4867 (CommunicationDisabledUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");

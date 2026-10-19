@@ -1,7 +1,7 @@
-// === Module 15631: useUploadAvatar ===
+// === Module 15660: useUploadAvatar ===
 
-// Module 15631 (useUploadAvatar)
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9571 */;
+// Module 15660 (useUploadAvatar)
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -100,12 +100,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             let originalMd5;
             closure_128_3 = undefined;
             closure_128_4 = undefined;
-            analyticsLocations(5155).hideActionSheet();
-            const obj13 = analyticsLocations(5155);
+            analyticsLocations(5171).hideActionSheet();
+            const obj13 = analyticsLocations(5171);
             const obj6 = { size };
             c2 = 1;
             c3 = 1;
-            const obj8 = { value: analyticsLocations(8035).openImagePicker(obj6), done: false };
+            const obj8 = { value: analyticsLocations(8098).openImagePicker(obj6), done: false };
             return obj8;
           }
         } else if (arg0 === 1) {
@@ -124,8 +124,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
           } else {
             let canUseAnimatedAvatarResult = c2;
             if (!c2) {
-              canUseAnimatedAvatarResult = analyticsLocations(4864).canUseAnimatedAvatar(c3);
-              const obj = analyticsLocations(4864);
+              canUseAnimatedAvatarResult = analyticsLocations(2054).canUseAnimatedAvatar(c3);
+              const obj = analyticsLocations(2054);
             }
             closure_128_3 = canUseAnimatedAvatarResult;
             if (isGIF(base64)) {
@@ -135,21 +135,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             }
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
-          const obj2 = guildId(15611);
-          obj10.description = guildId(8567).generateAvatarDescription();
+          const obj2 = guildId(15640);
+          obj10.description = guildId(8583).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);
           if (c2) {
-            tmp30(8565).setTryItOutAvatar(closure_128_4);
-            const tmp30Result = tmp30(8565);
+            tmp30(8581).setTryItOutAvatar(closure_128_4);
+            const tmp30Result = tmp30(8581);
           } else {
             const obj11 = { guildId, avatar: closure_128_4 };
-            tmp30(8562).setPendingChanges(obj11);
-            const tmp30Result2 = tmp30(8562);
-            const result = guildId(8564).announcePendingAvatarChange("set");
-            const obj7 = guildId(8564);
+            tmp30(8578).setPendingChanges(obj11);
+            const tmp30Result2 = tmp30(8578);
+            const result = guildId(8580).announcePendingAvatarChange("set");
+            const obj7 = guildId(8580);
           }
-          const obj4 = guildId(8567);
+          const obj4 = guildId(8583);
         }
       } catch (tmp40) {
         c3 = tmp;
@@ -222,12 +222,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             let originalMd5;
             closure_128_3 = undefined;
             closure_128_4 = undefined;
-            tmp2(5155).hideActionSheet();
-            const obj13 = tmp2(5155);
+            tmp2(5171).hideActionSheet();
+            const obj13 = tmp2(5171);
             const obj6 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj8 = { value: tmp2(8035).openImagePicker(obj6), done: false };
+            const obj8 = { value: tmp2(8098).openImagePicker(obj6), done: false };
             return obj8;
           }
         } else if (arg0 === 1) {
@@ -246,8 +246,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
           } else {
             let canUseAnimatedAvatarResult = closure_129_1;
             if (!closure_129_1) {
-              canUseAnimatedAvatarResult = tmp2(4864).canUseAnimatedAvatar(closure_129_3);
-              const obj = tmp2(4864);
+              canUseAnimatedAvatarResult = tmp2(2054).canUseAnimatedAvatar(closure_129_3);
+              const obj = tmp2(2054);
             }
             closure_128_3 = canUseAnimatedAvatarResult;
             if (isGIF(base64)) {
@@ -257,21 +257,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             }
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
-          const obj2 = v0(15611);
-          obj10.description = v0(8567).generateAvatarDescription();
+          const obj2 = v0(15640);
+          obj10.description = v0(8583).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);
           if (closure_129_1) {
-            tmp30(8565).setTryItOutAvatar(closure_128_4);
-            const tmp30Result = tmp30(8565);
+            tmp30(8581).setTryItOutAvatar(closure_128_4);
+            const tmp30Result = tmp30(8581);
           } else {
             const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-            tmp30(8562).setPendingChanges(obj11);
-            const tmp30Result2 = tmp30(8562);
-            const result = v0(8564).announcePendingAvatarChange("set");
-            const obj7 = v0(8564);
+            tmp30(8578).setPendingChanges(obj11);
+            const tmp30Result2 = tmp30(8578);
+            const result = v0(8580).announcePendingAvatarChange("set");
+            const obj7 = v0(8580);
           }
-          const obj4 = v0(8567);
+          const obj4 = v0(8583);
         }
       } catch (tmp40) {
         c3 = tmp;

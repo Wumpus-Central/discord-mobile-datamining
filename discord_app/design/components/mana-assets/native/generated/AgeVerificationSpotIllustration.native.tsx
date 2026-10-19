@@ -1,23 +1,23 @@
-// === Module 7830: AgeVerificationSpotIllustration ===
+// === Module 7893: AgeVerificationSpotIllustration ===
 
-// Module 7830 (AgeVerificationSpotIllustration)
+// Module 7893 (AgeVerificationSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import assetHelpers from "assetHelpers" /* 6550 */;
-import _modDef7831 from "module_7831" /* 7831 */;
-import _modDef7832 from "module_7832" /* 7832 */;
-import _modDef7833 from "module_7833" /* 7833 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import assetHelpers from "assetHelpers" /* 6943 */;
+import _modDef7894 from "module_7894" /* 7894 */;
+import _modDef7895 from "module_7895" /* 7895 */;
+import _modDef7896 from "module_7896" /* 7896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7831 }, 3: null };
-let obj2 = { uri: _modDef7831 };
-obj[2] = { uri: _modDef7832 };
-const obj3 = { uri: _modDef7832 };
-obj[3] = { uri: _modDef7833 };
+let obj = { 1: null, 2: { uri: _modDef7894 }, 3: null };
+let obj2 = { uri: _modDef7894 };
+obj[2] = { uri: _modDef7895 };
+const obj3 = { uri: _modDef7895 };
+obj[3] = { uri: _modDef7896 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef7833 };
+const obj4 = { uri: _modDef7896 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx");
 

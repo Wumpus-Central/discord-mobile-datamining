@@ -1,6 +1,6 @@
-// === Module 5592: ? ===
+// === Module 6024: ? ===
 
-// Module 5592
+// Module 6024
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/iridescent.png.js");

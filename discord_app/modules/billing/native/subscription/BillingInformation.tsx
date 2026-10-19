@@ -1,6 +1,6 @@
-// === Module 14469: BillingInformation ===
+// === Module 14502: BillingInformation ===
 
-// Module 14469 (BillingInformation)
+// Module 14502 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   }
   const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
   let obj = require("c");
-  const appleSubscriptionOwnership = gknRR3(14461).useAppleSubscriptionOwnership(isPurchasedViaApple);
+  const appleSubscriptionOwnership = gknRR3(14494).useAppleSubscriptionOwnership(isPurchasedViaApple);
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
@@ -131,7 +131,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
         }
       }
     }
-    const gknRR3Result2 = gknRR3(4864);
+    const gknRR3Result2 = gknRR3(2054);
     const billingInformationString = gknRR3Result2.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp3, tmp4, fractionalPremiumInfo);
     cResult[2] = fractionalPremiumInfo;
     cResult[3] = tmp3;
@@ -141,7 +141,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
     cResult[7] = billingInformationString;
     tmp6 = billingInformationString;
   }
-  const gknRR3Result = gknRR3(14461);
+  const gknRR3Result = gknRR3(14494);
 }) : (function useBillingInformationNative(isPurchasedViaApple, subscriptionPeriodStart, arg2) {
   let tmp = arg2;
   if (arg2 === undefined) {
@@ -160,7 +160,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4864);
+    const tmp2Result = tmp2(2054);
     const billingInformationString = tmp2Result.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     if (tmp2Result2.isIOS()) {

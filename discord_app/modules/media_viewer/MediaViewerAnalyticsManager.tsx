@@ -1,13 +1,13 @@
-// === Module 8662: MediaViewerAnalyticsManager ===
+// === Module 8678: MediaViewerAnalyticsManager ===
 
-// Module 8662 (MediaViewerAnalyticsManager)
+// Module 8678 (MediaViewerAnalyticsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
 
 const Constants = fn(1087);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = { VIEWER_SWIPE: "number_viewer_swipes", THUMBNAIL_SWIPE: "number_thumbnail_swipes", SELECTED_ITEM_CHANGE: "number_selected_item_changes", ZOOM_IN_BUTTON_PRESSED: "number_zoom_in_button_pressed", ZOOM_IN_IMAGE_PRESSED: "number_zoom_in_image_pressed", ZOOM_OUT_BUTTON_PRESSED: "number_zoom_out_button_pressed", ZOOM_OUT_IMAGE_PRESSED: "number_zoom_out_image_pressed", FORWARD_PRESSED: "number_forward_button_pressed", SAVE_MEDIA_PRESSED: "number_save_media_button_pressed", OPEN_LINK_PRESSED: "number_open_link_button_pressed", MORE_BUTTON_PRESSED: "number_more_button_pressed", COPY_IMAGE_PRESSED: "number_copy_image_more_menu_pressed", COPY_LINK_PRESSED: "number_copy_link_more_menu_pressed", CONTEXT_MENU_OPENED: "number_context_menu_opened" };
-let obj2 = { guildId: "emoji", channelId: "toCharArray$esjava$1", channelType: "toCharArray$esjava$1", numMediaItems: "Array", hasMediaOptions: "application", source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001173924286404882, incrementableActions: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000978781049217039 };
+let obj2 = { guildId: "duration", channelId: "toCharArray$esjava$1", channelType: "toCharArray$esjava$1", numMediaItems: "Array", hasMediaOptions: "applicationId", source: "<string:17891333>", incrementableActions: 8 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(values.map((item) => {
   const items = [item, 0];

@@ -1,17 +1,17 @@
-// === Module 9378: useCollectiblesShopProducts ===
+// === Module 9394: useCollectiblesShopProducts ===
 
-// Module 9378 (useCollectiblesShopProducts)
+// Module 9394 (useCollectiblesShopProducts)
 import c from "c" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7529 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8617 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9380 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9381 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7595 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8633 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9396 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9379 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8618 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7531 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7532 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9395 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8634 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7597 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7598 */;
 
 const require = globalThis.__r;
 

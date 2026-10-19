@@ -1,8 +1,8 @@
-// === Module 12131: ConjureTimelineTree ===
+// === Module 12151: ConjureTimelineTree ===
 
-// Module 12131 (ConjureTimelineTree)
+// Module 12151 (ConjureTimelineTree)
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
+import _modDef3820 from "module_3820" /* 3820 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -496,7 +496,7 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { healthcheck_failed: _modDef3883.iwOTgo, preview_ready: _modDef3883.okkgSB, working: _modDef3883.t8skVB, error: _modDef3883.avt0ax };
+let obj = { healthcheck_failed: _modDef3820.iwOTgo, preview_ready: _modDef3820.okkgSB, working: _modDef3820.t8skVB, error: _modDef3820.avt0ax };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 const size = fn(2);
@@ -514,27 +514,9 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3883.t8skVB;
+    t8skVB = _modDef3820.t8skVB;
   }
   return intl.string(t8skVB);
-};
-export const describeTaskStatus = function describeTaskStatus(arg0) {
-  if ("running" === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(_modDef3883.jTwZFY);
-  } else if ("done" === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(_modDef3883.keYz9o);
-  } else if ("failed" === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(_modDef3883["RoY/lg"]);
-  } else if ("cancelled" === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(_modDef3883["HZw/I/"]);
-  } else if ("incomplete" === arg0) {
-    const intl = util.intl;
-    return intl.string(_modDef3883.sf2UHL);
-  }
 };
 export { buildTimelineTree };
 export const currentStep = function currentStep(productId) {

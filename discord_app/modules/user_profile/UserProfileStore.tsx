@@ -1,25 +1,25 @@
-// === Module 7586: UserProfileStore ===
+// === Module 7649: UserProfileStore ===
 
-// Module 7586 (UserProfileStore)
+// Module 7649 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import Timers from "Timers" /* 2063 */;
-import WidgetType from "WidgetType" /* 7587 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7588 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7591 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7592 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7594 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7595 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7596 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import Timers from "Timers" /* 4795 */;
+import WidgetType from "WidgetType" /* 7650 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7651 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7654 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7655 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7657 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7658 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7659 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2090 */;
+import GuildStore from "GuildStore" /* 4822 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
-import PresenceStore from "PresenceStore" /* 5207 */;
-import SortedGuildStore from "SortedGuildStore" /* 6219 */;
+import PresenceStore from "PresenceStore" /* 5674 */;
+import SortedGuildStore from "SortedGuildStore" /* 6649 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -523,7 +523,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "k" };
     value4 = obj;
   }
   const timestamp = Date.now();

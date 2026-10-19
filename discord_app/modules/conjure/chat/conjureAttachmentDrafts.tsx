@@ -1,10 +1,10 @@
-// === Module 12136: conjureAttachmentDrafts ===
+// === Module 12156: conjureAttachmentDrafts ===
 
-// Module 12136 (conjureAttachmentDrafts)
+// Module 12156 (conjureAttachmentDrafts)
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 11611 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11612 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 11632 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11633 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
@@ -131,17 +131,17 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10978).sendUserMessage;
+const sendUserMessage = fn(10990).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5085).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5124).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3883.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef3820.JZ59Bo, obj);
 }
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
@@ -172,7 +172,7 @@ export const uploadConjureAttachment = function uploadConjureAttachment(arg0, si
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3883.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3820.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }

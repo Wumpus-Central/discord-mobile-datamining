@@ -1,11 +1,11 @@
-// === Module 12739: onTapCheckpointCard ===
+// === Module 12759: onTapCheckpointCard ===
 
-// Module 12739 (onTapCheckpointCard)
+// Module 12759 (onTapCheckpointCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5206 */;
-import CheckpointExperiments from "CheckpointExperiments" /* 5560 */;
-import openCheckpointModalDefault from "openCheckpointModal" /* 12740 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
+import CheckpointExperiments from "CheckpointExperiments" /* 5992 */;
+import openCheckpoint from "openCheckpoint" /* 12760 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
@@ -26,8 +26,9 @@ export const onTapCheckpointCard = function onTapCheckpointCard(arg0) {
     }
     const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
     obj2.track(AnalyticEvents.CHECKPOINT_CARD_CLICKED, obj3);
-    openCheckpointModalDefault("message_component");
-    const tmpResult2 = AppAnalyticsUtils;
+    const tmpResult3 = AppAnalyticsUtils;
+    openCheckpoint.openCheckpoint("message_component");
+    const tmpResult4 = openCheckpoint;
   }
   obj = CheckpointExperiments;
 };

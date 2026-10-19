@@ -1,6 +1,6 @@
-// === Module 5872: ? ===
+// === Module 6304: ? ===
 
-// Module 5872
+// Module 6304
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/magnetic.png.js");

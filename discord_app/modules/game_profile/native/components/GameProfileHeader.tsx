@@ -1,26 +1,26 @@
-// === Module 9207: GameProfileHeader ===
+// === Module 9223: GameProfileHeader ===
 
-// Module 9207 (GameProfileHeader)
+// Module 9223 (GameProfileHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import LinearGradientDefault from "LinearGradient" /* 5491 */;
-import SKUUtils from "SKUUtils" /* 9208 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9209 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
+import LinearGradientDefault from "LinearGradient" /* 5219 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import SKUUtils from "SKUUtils" /* 9224 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9225 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9205);
+const GameProfileConstants = fn(9221);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 114;
 let c9 = "rgba(0,0,0,0.3)";
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;

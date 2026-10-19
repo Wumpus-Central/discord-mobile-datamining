@@ -1,11 +1,11 @@
-// === Module 16562: FriendAnniversaryNotificationSetting ===
+// === Module 16591: FriendAnniversaryNotificationSetting ===
 
-// Module 16562 (FriendAnniversaryNotificationSetting)
+// Module 16591 (FriendAnniversaryNotificationSetting)
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import SettingsConstants from "SettingsConstants" /* 8260 */;
-import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 16563 */;
-import SettingBuilders from "SettingBuilders" /* 11084 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import SettingsConstants from "SettingsConstants" /* 8276 */;
+import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 16592 */;
+import SettingBuilders from "SettingBuilders" /* 11099 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

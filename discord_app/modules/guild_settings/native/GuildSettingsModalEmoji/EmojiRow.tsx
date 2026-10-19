@@ -1,22 +1,22 @@
-// === Module 18761: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 18796: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 18761 (GuildSettingsModalEmoji/EmojiRow)
+// Module 18796 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4863 */;
-import UserUtilsDefault from "UserUtils" /* 5057 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5462 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5509 */;
-import Pressables from "Pressables" /* 6462 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9845 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18762 */;
-import _modDef18764 from "module_18764" /* 18764 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4898 */;
+import UserUtilsDefault from "UserUtils" /* 4994 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5228 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5944 */;
+import Pressables from "Pressables" /* 6856 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9859 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18797 */;
+import _modDef18799 from "module_18799" /* 18799 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2090 */;
+import GuildStore from "GuildStore" /* 4822 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" }, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
 let PlatformUtils = fn(1384);
 let num = 4;

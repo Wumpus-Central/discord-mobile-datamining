@@ -1,19 +1,19 @@
-// === Module 7976: useAgeVerificationMethods ===
+// === Module 8039: useAgeVerificationMethods ===
 
-// Module 7976 (useAgeVerificationMethods)
+// Module 8039 (useAgeVerificationMethods)
 import util from "util" /* 1128 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5985 */;
-import MetricEvents from "MetricEvents" /* 5990 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6174 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7777 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 7977 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6422 */;
+import MetricEvents from "MetricEvents" /* 6427 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6605 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7840 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8040 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6172 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6603 */;
 
 require = fn;
-const AgeVerificationConstants = fn(6173);
+const AgeVerificationConstants = fn(6604);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -247,8 +247,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVe
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    const obj5 = id(6174);
-                    const result = obj5.trackAgeVerificationModalClicked(id, id(6174).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6174).AgeVerificationModalCta.METHOD_SELECT, id);
+                    const obj5 = id(6605);
+                    const result = obj5.trackAgeVerificationModalClicked(id, id(6605).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6605).AgeVerificationModalCta.METHOD_SELECT, id);
                     v1 = 1;
                     c1 = 1;
                     const obj4 = { value: v1(id), done: false };
@@ -613,8 +613,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVe
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(6174);
-                      const result = obj5.trackAgeVerificationModalClicked(id, id(6174).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6174).AgeVerificationModalCta.METHOD_SELECT, id);
+                      const obj5 = id(6605);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(6605).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(6605).AgeVerificationModalCta.METHOD_SELECT, id);
                       v1 = 1;
                       c1 = 1;
                       const obj4 = { value: v1(id), done: false };

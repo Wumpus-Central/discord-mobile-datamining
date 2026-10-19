@@ -1,8 +1,8 @@
-// === Module 5464: VisualEffectViewAnimated ===
+// === Module 5546: VisualEffectViewAnimated ===
 
-// Module 5464 (VisualEffectViewAnimated)
-import VisualEffectViewDefault from "VisualEffectView" /* 5465 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+// Module 5546 (VisualEffectViewAnimated)
+import VisualEffectViewDefault from "VisualEffectView" /* 5547 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 
 const VisualEffectView = ReanimatedRexport.createAnimatedComponent(VisualEffectViewDefault);
 const size = fn(2);

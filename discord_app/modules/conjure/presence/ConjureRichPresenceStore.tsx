@@ -1,18 +1,18 @@
-// === Module 10977: ConjureRichPresenceStore ===
+// === Module 10989: ConjureRichPresenceStore ===
 
-// Module 10977 (ConjureRichPresenceStore)
+// Module 10989 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6356 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10550 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6756 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10564 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import IdleStore from "IdleStore" /* 6144 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
+import IdleStore from "IdleStore" /* 6581 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6721 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -204,7 +204,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F107226 */ function() { ... });
+                        let found = prop.filter(/* F107661 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -315,7 +315,7 @@ let closure_18 = async function _resumeRunningProjects() {
 };
 const Constants = fn(1087);
 ({ ActivityTypes: closure_8, Endpoints: closure_9 } = Constants);
-const StaticChannelRoute = fn(2075).StaticChannelRoute;
+const StaticChannelRoute = fn(4807).StaticChannelRoute;
 let c11 = 300000;
 let c12 = null;
 let c13 = null;

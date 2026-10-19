@@ -1,12 +1,12 @@
-// === Module 13641: getChannelListRecord ===
+// === Module 13675: getChannelListRecord ===
 
-// Module 13641 (getChannelListRecord)
-import FavoritesUtils from "FavoritesUtils" /* 2093 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4843 */;
+// Module 13675 (getChannelListRecord)
+import FavoritesUtils from "FavoritesUtils" /* 4825 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4878 */;
 
 require = fn;
-let GuildChannelStore = fn(4843);
+let GuildChannelStore = fn(4878);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const ChannelTypes = fn(1087).ChannelTypes;

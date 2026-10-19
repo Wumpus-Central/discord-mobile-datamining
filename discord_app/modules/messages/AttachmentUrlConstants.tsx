@@ -1,6 +1,6 @@
-// === Module 5526: AttachmentUrlConstants ===
+// === Module 5959: AttachmentUrlConstants ===
 
-// Module 5526 (AttachmentUrlConstants)
+// Module 5959 (AttachmentUrlConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/AttachmentUrlConstants.tsx");

@@ -1,6 +1,6 @@
-// === Module 7028: FastestListPropsPlaceholder ===
+// === Module 7105: FastestListPropsPlaceholder ===
 
-// Module 7028 (FastestListPropsPlaceholder)
+// Module 7105 (FastestListPropsPlaceholder)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/fastest_list/props/FastestListPropsPlaceholder.tsx");

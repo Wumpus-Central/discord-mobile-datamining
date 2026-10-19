@@ -1,8 +1,8 @@
-// === Module 12351: ConjurePerfTraceFormat ===
+// === Module 12371: ConjurePerfTraceFormat ===
 
-// Module 12351 (ConjurePerfTraceFormat)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11009 */;
-import ConjureTimeFormat from "ConjureTimeFormat" /* 12352 */;
+// Module 12371 (ConjurePerfTraceFormat)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11025 */;
+import ConjureTimeFormat from "ConjureTimeFormat" /* 12372 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -375,21 +375,17 @@ export const perfTraceDuration = function perfTraceDuration(trace) {
     end = perfTraceRootResult.end;
   }
   if (null != end) {
-    if (end < 1000) {
-      const _HermesInternal2 = HermesInternal;
-      let combined = "" + end + "ms";
-    } else {
-      const result = end / 1000;
-      const _HermesInternal = HermesInternal;
-      combined = "" + result.toFixed(1) + "s";
-    }
+    const result = end / 1000;
+    const _HermesInternal = HermesInternal;
+    let str = "" + result.toFixed(2) + "s";
   } else {
-    let str = "still running";
+    str = "still running";
     if (tmpResult.perfTraceInterrupted(trace)) {
       str = "interrupted";
     }
-    return str;
+    tmpResult = ConjurePerfTraceLayout;
   }
+  return str;
 };
 export const perfTraceSummary = function perfTraceSummary(trace) {
   const obj = ConjureTimeFormat;

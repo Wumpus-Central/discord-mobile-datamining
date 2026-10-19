@@ -1,6 +1,6 @@
-// === Module 8297: AppliedGuildBoostRecord ===
+// === Module 8313: AppliedGuildBoostRecord ===
 
-// Module 8297 (AppliedGuildBoostRecord)
+// Module 8313 (AppliedGuildBoostRecord)
 import Record from "Record" /* 1407 */;
 
 const prototype = function AppliedGuildBoostRecord(endsAt) {

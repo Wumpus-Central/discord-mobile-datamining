@@ -1,31 +1,31 @@
-// === Module 13381: GuildTemplates ===
+// === Module 13415: GuildTemplates ===
 
-// Module 13381 (GuildTemplates)
+// Module 13415 (GuildTemplates)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 12982 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13353 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 13382 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 13014 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13387 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 13416 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(13378);
+let CreateGuildConstants = fn(13412);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6939);
+CreateGuildConstants = fn(7021);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5191);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6536).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-let obj3 = { marginTop: fn(6536).NAV_BAR_HEIGHT };
+const createStyles = fn(4945);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5229).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
+let obj3 = { marginTop: fn(5229).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
@@ -196,7 +196,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
             return;
           }
         }
-        let obj4 = { style: footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: tmp15 };
+        let obj4 = { style: footerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: tmp15 };
         const tmp18 = closure_14(tmp(tmp2[13]).Text, obj4);
         cResult[10] = tmp4.footerTitle;
         cResult[11] = tmp18;
@@ -288,12 +288,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1633)().bottom }];
   obj2.style = items1;
   let obj3 = { style: tmp.footerContainer, children: null };
-  let obj4 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = { style: tmp.footerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1128).intl;
   obj4.children = intl3.string(trigger(1128).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(5187).Text, obj4),
-    closure_14(trigger(5479).Button, {
+    closure_14(trigger(5195).Text, obj4),
+    closure_14(trigger(5205).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,

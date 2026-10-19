@@ -1,19 +1,19 @@
-// === Module 17513: useYouBarAccessibilityLabel ===
+// === Module 17542: useYouBarAccessibilityLabel ===
 
-// Module 17513 (useYouBarAccessibilityLabel)
+// Module 17542 (useYouBarAccessibilityLabel)
 import util from "util" /* 1128 */;
-import UserUtils from "UserUtils" /* 5057 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10540 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10541 */;
-import isGameActivityDefault from "isGameActivity" /* 10548 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10552 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import PresenceStore from "PresenceStore" /* 5207 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6015 */;
-import VoiceStateStore from "VoiceStateStore" /* 5212 */;
+import UserUtils from "UserUtils" /* 4994 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10554 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10555 */;
+import isGameActivityDefault from "isGameActivity" /* 10562 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10566 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import PresenceStore from "PresenceStore" /* 5674 */;
+import RelationshipStore from "RelationshipStore" /* 4890 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6452 */;
+import VoiceStateStore from "VoiceStateStore" /* 5591 */;
 
 const require = globalThis.__r;
 
@@ -187,7 +187,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   tmp21 = A;
   const tmpResult3 = name(gameMentionsAsPlainText[13]);
 }) : (function useYouBarAccessibilityLabel(id) {
-  _require = id(5057).useName(id);
+  _require = id(4994).useName(id);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -198,7 +198,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(5057);
+  let obj = id(4994);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;

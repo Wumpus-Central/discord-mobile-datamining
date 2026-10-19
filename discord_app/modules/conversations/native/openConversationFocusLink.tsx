@@ -1,6 +1,6 @@
-// === Module 9974: openConversationFocusLink ===
+// === Module 9988: openConversationFocusLink ===
 
-// Module 9974 (openConversationFocusLink)
+// Module 9988 (openConversationFocusLink)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -38,7 +38,7 @@ let closure_3 = async function _openConversationFocusLink(arg0) {
           ({ guildId: closure_129_0, channelId: closure_129_1, conversationId: closure_129_2, messageId: closure_129_3 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

@@ -1,31 +1,31 @@
-// === Module 17541: ConnectionBanner ===
+// === Module 17570: ConnectionBanner ===
 
-// Module 17541 (ConnectionBanner)
+// Module 17570 (ConnectionBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useToken from "useToken" /* 4913 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import spring from "spring" /* 5478 */;
-import LinearGradientDefault from "LinearGradient" /* 5491 */;
-import _modDef6520 from "module_6520" /* 6520 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 14766 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 17542 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 17544 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import spring from "spring" /* 5208 */;
+import useToken from "useToken" /* 5213 */;
+import LinearGradientDefault from "LinearGradient" /* 5219 */;
+import _modDef6914 from "module_6914" /* 6914 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 14799 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 17571 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 17573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 14765 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 14798 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(14765).ConnectivityIndicatorState;
-const YouBarConstants = fn(16140);
+const constants = fn(14798).ConnectivityIndicatorState;
+const YouBarConstants = fn(16169);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1087).AnalyticEvents;
@@ -38,7 +38,7 @@ const end = { x: 1, y: 0.5 };
 const locations2 = [0, 0.4, 0.75, 1];
 const start2 = { x: 0, y: 0 };
 const end2 = { x: 0, y: 1 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0 }, glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, glowMaskGradient: { flex: 1 }, content: null, leadingSlot: null, spinner: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.content = rect;
@@ -308,7 +308,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackOn
               }
             }
             const obj7 = { style: tmp3.glow, maskElement: tmp17, children: tmp24 };
-            const tmp32 = __initData(_modDef6520, obj7);
+            const tmp32 = __initData(_modDef6914, obj7);
             cResult[20] = tmp3.glow;
             cResult[21] = tmp17;
             cResult[22] = tmp24;
@@ -340,7 +340,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackOn
 }) : (function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(4913).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(5213).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef683(token);
@@ -357,10 +357,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackOn
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(4913);
+  let obj = token(5213);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 });
-  obj2.children = closure_12(_modDef6520, obj3);
+  obj2.children = closure_12(_modDef6914, obj3);
   return closure_12(ReanimatedRexportDefault.View, obj2);
 });
 ReactCompilerGating = fn(558);

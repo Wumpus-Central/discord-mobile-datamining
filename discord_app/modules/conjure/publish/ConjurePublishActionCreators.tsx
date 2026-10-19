@@ -1,16 +1,16 @@
-// === Module 11057: ConjurePublishActionCreators ===
+// === Module 11071: ConjurePublishActionCreators ===
 
-// Module 11057 (ConjurePublishActionCreators)
+// Module 11071 (ConjurePublishActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6357 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10997 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11015 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11058 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 11061 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11009 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11011 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11031 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11072 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 11075 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10993 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6721 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11005 */;
 
 require = fn;
 function unpublishProject() {
@@ -56,7 +56,7 @@ let closure_9 = async function _unpublishProject(arg0) {
           ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -182,7 +182,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
           closure_130_12 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -333,7 +333,7 @@ let closure_13 = async function _refreshPublishedApplication() {
             closure_131_2 = closure_2;
             const obj4 = { type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId };
             DispatcherDefault.dispatch(obj4);
-            const items = [ApplicationActionCreators.fetchApplication(applicationId), ];
+            const items = [ConjureActionCreators.fetchConjureApplication(applicationId), ];
             const widgetConfigs = ApplicationWidgetConfigActions.fetchWidgetConfigs(applicationId, { force: true });
             items[1] = widgetConfigs.catch(() => {
 
@@ -413,4 +413,7 @@ export const refreshPublishedProject = function refreshPublishedProject() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+};
+export const refreshPreviewApplication = function refreshPreviewApplication(prop) {
+  return refreshPublishedApplication(prop, true, null);
 };

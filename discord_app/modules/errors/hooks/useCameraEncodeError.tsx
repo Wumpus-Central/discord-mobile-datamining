@@ -1,9 +1,9 @@
-// === Module 18262: useCameraEncodeError ===
+// === Module 18291: useCameraEncodeError ===
 
-// Module 18262 (useCameraEncodeError)
-import AVError from "AVError" /* 5389 */;
+// Module 18291 (useCameraEncodeError)
+import AVError from "AVError" /* 5853 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11282 */;
+import AVErrorStore from "AVErrorStore" /* 11296 */;
 
 const require = globalThis.__r;
 

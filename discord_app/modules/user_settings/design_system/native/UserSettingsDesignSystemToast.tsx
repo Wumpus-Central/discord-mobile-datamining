@@ -1,18 +1,18 @@
-// === Module 16859: UserSettingsDesignSystemToast ===
+// === Module 16888: UserSettingsDesignSystemToast ===
 
-// Module 16859 (UserSettingsDesignSystemToast)
+// Module 16888 (UserSettingsDesignSystemToast)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import EmojiUtils from "EmojiUtils" /* 4863 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
-import toastUtils from "toastUtils" /* 4905 */;
-import CopyIcon from "CopyIcon" /* 5141 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5145 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Stack_Stack from "Stack/Stack" /* 5477 */;
-import components_Button_Button from "components/Button/Button" /* 5479 */;
-import Card from "Card" /* 6459 */;
-import Toast from "Toast" /* 15050 */;
+import EmojiUtils from "EmojiUtils" /* 4898 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import components_Button_Button from "components/Button/Button" /* 5205 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
+import toastUtils from "toastUtils" /* 5626 */;
+import CopyIcon from "CopyIcon" /* 5644 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5648 */;
+import Stack_Stack from "Stack/Stack" /* 5932 */;
+import Card from "Card" /* 6853 */;
+import Toast from "Toast" /* 15082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 let c6 = "This is a toast message";
 let c7 = "https://cdn.discordapp.com/embed/avatars/0.png";
 let sum2 = 0;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, previews: { alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

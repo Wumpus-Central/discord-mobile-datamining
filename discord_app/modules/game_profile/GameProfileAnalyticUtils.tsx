@@ -1,14 +1,14 @@
-// === Module 9150: GameProfileAnalyticUtils ===
+// === Module 9166: GameProfileAnalyticUtils ===
 
-// Module 9150 (GameProfileAnalyticUtils)
+// Module 9166 (GameProfileAnalyticUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import v1 from "v1" /* 1281 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8728 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8744 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8743).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8759).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 

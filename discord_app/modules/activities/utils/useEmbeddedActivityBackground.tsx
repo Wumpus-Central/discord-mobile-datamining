@@ -1,6 +1,6 @@
-// === Module 11354: useEmbeddedActivityBackground ===
+// === Module 11375: useEmbeddedActivityBackground ===
 
-// Module 11354 (useEmbeddedActivityBackground)
+// Module 11375 (useEmbeddedActivityBackground)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,8 +1,8 @@
-// === Module 7704: DCDSendUtils ===
+// === Module 7767: DCDSendUtils ===
 
-// Module 7704 (DCDSendUtils)
+// Module 7767 (DCDSendUtils)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 7705 */;
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 7768 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

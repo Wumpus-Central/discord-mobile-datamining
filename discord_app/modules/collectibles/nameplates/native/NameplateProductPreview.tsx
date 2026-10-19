@@ -1,29 +1,29 @@
-// === Module 14220: NameplateProductPreview ===
+// === Module 14253: NameplateProductPreview ===
 
-// Module 14220 (NameplateProductPreview)
+// Module 14253 (NameplateProductPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import utils from "utils" /* 1992 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import LinearGradientDefault from "LinearGradient" /* 5491 */;
-import TableRow from "TableRow" /* 6457 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8564 */;
-import useShopProductItems from "useShopProductItems" /* 8569 */;
-import useCurrentUser from "useCurrentUser" /* 8576 */;
-import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8657 */;
-import types from "types" /* 10566 */;
-import UserNameplateRow from "UserNameplateRow" /* 10590 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import LinearGradientDefault from "LinearGradient" /* 5219 */;
+import TableRow from "TableRow" /* 6851 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8580 */;
+import useShopProductItems from "useShopProductItems" /* 8585 */;
+import useCurrentUser from "useCurrentUser" /* 8592 */;
+import useAvatarDecorationIfNotExpiredDefault from "useAvatarDecorationIfNotExpired" /* 8673 */;
+import types from "types" /* 10580 */;
+import UserNameplateRow from "UserNameplateRow" /* 10604 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 }, memberListTitle: null, memberListGradient: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberListTitle = { paddingVertical: nativeDefault.space.PX_8 };
@@ -63,11 +63,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     }
     const stateFromStores = initialize.useStateFromStores(tmp11, tmp12);
     if (cResult[5] !== currentUser) {
-      const name = tmp8(5057).getName(currentUser);
+      const name = tmp8(4994).getName(currentUser);
       cResult[5] = currentUser;
       cResult[6] = name;
       let id = name;
-      const tmp8Result = tmp8(5057);
+      const tmp8Result = tmp8(4994);
     } else {
       id = cResult[6];
     }
@@ -79,7 +79,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     } else {
       tmp16 = cResult[8];
     }
-    if (null == tmp8(5884)(tmp16)) {
+    if (null == tmp8(6321)(tmp16)) {
       if (cResult[12] === tmp9) {
         if (cResult[13] === tmp22) {
           if (cResult[14] === currentUser) {
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepla
     } else {
       if (cResult[9] === id) {
       }
-      tmp8 = tmp8(10565);
+      tmp8 = tmp8(10579);
       const obj6 = { userId: currentUser.id, userName: id, effectDisplayType: types.EffectDisplayType.STATIC, lineClamp: 1, variant: "text-md/semibold" };
       const tmp20 = timestampProducer(tmp8, obj6);
       cResult[9] = id;

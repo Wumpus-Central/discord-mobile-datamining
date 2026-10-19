@@ -1,14 +1,14 @@
-// === Module 16990: GuildSettingActivityJoining ===
+// === Module 17019: GuildSettingActivityJoining ===
 
-// Module 16990 (GuildSettingActivityJoining)
+// Module 17019 (GuildSettingActivityJoining)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6961 */;
-import SettingsConstants from "SettingsConstants" /* 8260 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 16976 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7039 */;
+import SettingsConstants from "SettingsConstants" /* 8276 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 17005 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11084 */;
+import SettingBuilders from "SettingBuilders" /* 11099 */;
 import size from "module_2" /* 2 */;
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);

@@ -1,9 +1,9 @@
-// === Module 2123: GuildRoleRecord ===
+// === Module 4855: GuildRoleRecord ===
 
-// Module 2123 (GuildRoleRecord)
+// Module 4855 (GuildRoleRecord)
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtils from "BigFlagUtils" /* 1099 */;
-import PlainRecord from "PlainRecord" /* 2083 */;
+import PlainRecord from "PlainRecord" /* 4815 */;
 import size from "module_2" /* 2 */;
 
 const TypeTag = PlainRecord.TypeTag;

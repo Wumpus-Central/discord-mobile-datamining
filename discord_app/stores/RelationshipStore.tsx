@@ -1,11 +1,11 @@
-// === Module 4855: RelationshipStore ===
+// === Module 4890: RelationshipStore ===
 
-// Module 4855 (RelationshipStore)
+// Module 4890 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4833 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4868 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4856 */;
+import MessageRecord from "MessageRecord" /* 4891 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -96,7 +96,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "ix", blocked: "channelId", ignored: "shapes", blockedOrIgnored: "Array" };
+let closure_20 = { friends: "toCharArray$esjava$1", blocked: "Symbol", ignored: "unicodeVersion", blockedOrIgnored: "np" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

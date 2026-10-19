@@ -1,24 +1,24 @@
-// === Module 17538: YouBarNotificationsButton ===
+// === Module 17567: YouBarNotificationsButton ===
 
-// Module 17538 (YouBarNotificationsButton)
+// Module 17567 (YouBarNotificationsButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import spring from "spring" /* 5478 */;
-import BellIcon from "BellIcon" /* 9045 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 17539 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
+import spring from "spring" /* 5208 */;
+import BellIcon from "BellIcon" /* 9061 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 17568 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9980 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9994 */;
 
-const ReanimatedRexportDefault = tmp5(4945);
+const ReanimatedRexportDefault = tmp5(5014);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16140);
+const YouBarConstants = fn(16169);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, overdueReminderDot: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION } };
 let closure_10 = createStyles.createStyles(obj);
 const __initData = { code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}" };
@@ -77,9 +77,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn3 = function f() {
-      const result = value(5156).triggerHapticFeedback(value(5156).HapticFeedbackTypes.SOFT);
-      const obj = value(5156);
-      value(13586).showForLaterModal(value(9981).SavedMessageSortTypes.BOOKMARK);
+      const result = value(5173).triggerHapticFeedback(value(5173).HapticFeedbackTypes.SOFT);
+      const obj = value(5173);
+      value(13620).showForLaterModal(value(9995).SavedMessageSortTypes.BOOKMARK);
     };
     cResult[2] = fn3;
     let tmp12 = fn3;
@@ -204,8 +204,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   }
                   const obj7 = { children: null };
                   const obj9 = { accessibilityLabel: tmp19, accessibilityActions: tmp13, onAccessibilityAction: tmp14, variant: str4, size: "sm", icon: tmp30, onPress: H, onLongPress: tmp12, hitSlop };
-                  obj7.children = closure_8(tmp(7840).IconButton, obj9);
-                  const tmp38 = closure_8(tmp(17537).YouBarButtonContainer, obj7);
+                  obj7.children = closure_8(tmp(7903).IconButton, obj9);
+                  const tmp38 = closure_8(tmp(17566).YouBarButtonContainer, obj7);
                   cResult[28] = tmp19;
                   cResult[29] = str4;
                   cResult[30] = tmp30;
@@ -231,7 +231,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         const obj12 = { icon: tmp15, hasBadge: tmp11, badgeStyle: tmp4.overdueReminderDot };
-        const tmp23 = closure_8(tmp(17537).YouBarButtonIcon, obj12);
+        const tmp23 = closure_8(tmp(17566).YouBarButtonIcon, obj12);
         cResult[14] = tmp15;
         cResult[15] = tmp11;
         cResult[16] = tmp4.overdueReminderDot;
@@ -273,7 +273,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   hasNameplate = hasNameplate.hasNameplate;
   let onLongPress;
   const tmp = closure_10();
-  value = onLongPress(17539)().value;
+  value = onLongPress(17568)().value;
   _require = value;
   const fn = function u() {
     let num = 0;
@@ -307,9 +307,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let items = [SavedMessagesStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
   onLongPress = noop.useCallback(() => {
-    const result = _undefined(5156).triggerHapticFeedback(_undefined(5156).HapticFeedbackTypes.SOFT);
-    const obj = _undefined(5156);
-    _undefined(13586).showForLaterModal(_undefined(9981).SavedMessageSortTypes.BOOKMARK);
+    const result = _undefined(5173).triggerHapticFeedback(_undefined(5173).HapticFeedbackTypes.SOFT);
+    const obj = _undefined(5173);
+    _undefined(13620).showForLaterModal(_undefined(9995).SavedMessageSortTypes.BOOKMARK);
   }, []);
   const items1 = [onLongPress];
   const memo = noop.useMemo(() => {
@@ -355,11 +355,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp11Result = closure_8(require("BellIcon").BellIcon, obj4);
   const items2 = [closure_8(require("YouBarButton").YouBarButtonIcon, { icon: closure_8(require("BellIcon").BellIcon, obj4), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
   const obj9 = { icon: closure_8(require("BellIcon").BellIcon, obj4), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
-  items2[1] = closure_8(tmp2(4945).View, { style: animatedStyle, children: closure_8(require("native").Badge, { value }) });
+  items2[1] = closure_8(tmp2(5014).View, { style: animatedStyle, children: closure_8(require("native").Badge, { value }) });
   obj8.children = items2;
   obj6.icon = closure_9(View, obj8);
   obj6.onPress = function onPress() {
-    const rootNavigationRef = _undefined(5073).getRootNavigationRef();
+    const rootNavigationRef = _undefined(5112).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
     }

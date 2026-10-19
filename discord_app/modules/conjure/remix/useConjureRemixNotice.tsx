@@ -1,10 +1,10 @@
-// === Module 12127: useConjureRemixNotice ===
+// === Module 12147: useConjureRemixNotice ===
 
-// Module 12127 (useConjureRemixNotice)
-import _modDef3883 from "module_3883" /* 3883 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 11068 */;
+// Module 12147 (useConjureRemixNotice)
+import _modDef3820 from "module_3820" /* 3820 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 11082 */;
 import noop from "module_19" /* 19 */;
-import ConjureRemixStore from "ConjureRemixStore" /* 10994 */;
+import ConjureRemixStore from "ConjureRemixStore" /* 11006 */;
 
 const require = globalThis.__r;
 
@@ -49,7 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
     if (cResult[5] !== stateFromStores) {
       const intl = tmp(1128).intl;
       const obj2 = { reason: stateFromStores };
-      const formatResult = intl.format(_modDef3883.Up6Ssw, obj2);
+      const formatResult = intl.format(_modDef3820.Up6Ssw, obj2);
       cResult[5] = stateFromStores;
       cResult[6] = formatResult;
       let tmp9 = formatResult;
@@ -59,7 +59,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl2 = tmp(1128).intl;
-      const stringResult = intl2.string(_modDef3883["ywA+ET"]);
+      const stringResult = intl2.string(_modDef3820["ywA+ET"]);
       cResult[7] = stringResult;
       let tmp12 = stringResult;
     } else {
@@ -91,10 +91,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
     const obj2 = { message: null, retry: null };
     const intl = tmp(1128).intl;
     const obj3 = { reason: stateFromStores };
-    obj2.message = intl.format(_modDef3883.Up6Ssw, obj3);
+    obj2.message = intl.format(_modDef3820.Up6Ssw, obj3);
     const obj4 = { text: null, onClick: null };
     const intl2 = tmp(1128).intl;
-    obj4.text = intl2.string(_modDef3883["ywA+ET"]);
+    obj4.text = intl2.string(_modDef3820["ywA+ET"]);
     obj4.onClick = tmp4;
     obj2.retry = obj4;
     tmp5 = obj2;

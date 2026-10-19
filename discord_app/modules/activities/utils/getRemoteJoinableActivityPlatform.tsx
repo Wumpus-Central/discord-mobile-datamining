@@ -1,11 +1,11 @@
-// === Module 11214: getRemoteJoinableActivityPlatform ===
+// === Module 11229: getRemoteJoinableActivityPlatform ===
 
-// Module 11214 (getRemoteJoinableActivityPlatform)
+// Module 11229 (getRemoteJoinableActivityPlatform)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11078 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 7075 */;
-import SessionsStore from "SessionsStore" /* 5211 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11093 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 7152 */;
+import SessionsStore from "SessionsStore" /* 5678 */;
 
 require = fn;
 const Constants = fn(1087);

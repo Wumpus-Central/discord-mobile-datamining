@@ -1,15 +1,15 @@
-// === Module 11987: ApplicationCommandValidators ===
+// === Module 12007: ApplicationCommandValidators ===
 
-// Module 11987 (ApplicationCommandValidators)
+// Module 12007 (ApplicationCommandValidators)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7509 */;
-import ApplicationCommandOptionUtilsAll from "ApplicationCommandOptionUtils" /* 10102 */;
-import ApplicationCommandChoiceUtils from "ApplicationCommandChoiceUtils" /* 10104 */;
-import PlaintextResolvers from "PlaintextResolvers" /* 10105 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8175 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7576 */;
+import ApplicationCommandOptionUtilsAll from "ApplicationCommandOptionUtils" /* 10116 */;
+import ApplicationCommandChoiceUtils from "ApplicationCommandChoiceUtils" /* 10118 */;
+import PlaintextResolvers from "PlaintextResolvers" /* 10119 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8237 */;
 
 require = fn;
 function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3Q_S) {

@@ -1,6 +1,6 @@
-// === Module 15429: MemoryExperiment ===
+// === Module 15457: MemoryExperiment ===
 
-// Module 15429 (MemoryExperiment)
+// Module 15457 (MemoryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

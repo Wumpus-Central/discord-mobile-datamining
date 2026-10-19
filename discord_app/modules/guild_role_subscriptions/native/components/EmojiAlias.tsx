@@ -1,15 +1,15 @@
-// === Module 18967: EmojiAlias ===
+// === Module 19002: EmojiAlias ===
 
-// Module 18967 (EmojiAlias)
+// Module 19002 (EmojiAlias)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5187 */;
+import Text_Text from "Text/Text" /* 5195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({ emojiAlias: { alignItems: "center", flexDirection: "row" }, emojiColon: { width: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

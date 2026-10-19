@@ -1,6 +1,6 @@
-// === Module 16746: ClipboardCopyInput ===
+// === Module 16775: ClipboardCopyInput ===
 
-// Module 16746 (ClipboardCopyInput)
+// Module 16775 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1087).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 9455: marketing_page_bento_box ===
+// === Module 9471: marketing_page_bento_box ===
 
-// Module 9455 (marketing_page_bento_box)
+// Module 9471 (marketing_page_bento_box)
 import _mod1212 from "module_1212" /* 1212 */;
-import theme_aware_asset from "theme_aware_asset" /* 9436 */;
+import theme_aware_asset from "theme_aware_asset" /* 9452 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

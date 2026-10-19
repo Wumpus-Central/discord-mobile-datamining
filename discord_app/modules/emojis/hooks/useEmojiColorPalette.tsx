@@ -1,10 +1,10 @@
-// === Module 9885: useEmojiColorPalette ===
+// === Module 9899: useEmojiColorPalette ===
 
-// Module 9885 (useEmojiColorPalette)
+// Module 9899 (useEmojiColorPalette)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import EmojiColorUtils from "EmojiColorUtils" /* 8243 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 8259 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
 const require = globalThis.__r;

@@ -1,22 +1,22 @@
-// === Module 17120: RedesignNotificationModal ===
+// === Module 17149: RedesignNotificationModal ===
 
-// Module 17120 (RedesignNotificationModal)
+// Module 17149 (RedesignNotificationModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13077 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13078 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13358 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13109 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13110 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13392 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PermissionStateType = fn(13075).PermissionStateType;
-const NotificationPermissionConstants = fn(13076);
+const PermissionStateType = fn(13107).PermissionStateType;
+const NotificationPermissionConstants = fn(13108);
 ({ EventActionLocation: metroRequire, EventActionType: closure_7 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_48 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -92,7 +92,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
         return;
       }
     }
-    const tmp8 = jsx(tmp(17121).BellSpotIllustration, { width: 245, accessible: false });
+    const tmp8 = jsx(tmp(17150).BellSpotIllustration, { width: 245, accessible: false });
     cResult[4] = tmp8;
     const tmp7 = tmp8;
   } else {
@@ -227,7 +227,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
   }, items1);
   let obj2 = { onAllow: callback, onDontAllow: callback1, header: null, headerInsideCard: true, title: null, subtitle: null };
   const tmp = closure_10();
-  obj2.header = jsx(onComplete(17121).BellSpotIllustration, { width: 245, accessible: false });
+  obj2.header = jsx(onComplete(17150).BellSpotIllustration, { width: 245, accessible: false });
   const intl = onComplete(1128).intl;
   obj2.title = intl.string(onComplete(1128).t["3nx0b5"]);
   const intl2 = onComplete(1128).intl;

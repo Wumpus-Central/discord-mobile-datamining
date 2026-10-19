@@ -1,7 +1,7 @@
-// === Module 8551: CheckpointCardColors ===
+// === Module 8567: CheckpointCardColors ===
 
-// Module 8551 (CheckpointCardColors)
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 5563 */;
+// Module 8567 (CheckpointCardColors)
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 5995 */;
 import size from "module_2" /* 2 */;
 
 const obj = { primaryBackgroundColor: "#7D53DE", secondaryBackgroundColor: "#BCB1D5", tertiaryBackgroundColor: "#CFC3EB", shadowColor: "#411D96", backgroundGradientStartColor: "#2F156B" };

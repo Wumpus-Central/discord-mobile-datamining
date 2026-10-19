@@ -1,13 +1,13 @@
-// === Module 8644: UserProfileOverscrollBanner ===
+// === Module 8660: UserProfileOverscrollBanner ===
 
-// Module 8644 (UserProfileOverscrollBanner)
+// Module 8660 (UserProfileOverscrollBanner)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8645 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8646 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8661 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8662 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 
 require = fn;
 let closure_3 = ["bannerAnimatedStyle", "bannerImageAnimatedStyle", "blurAnimatedProps", "showBlur"];

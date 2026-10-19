@@ -1,12 +1,12 @@
-// === Module 17859: LinksScreen ===
+// === Module 17888: LinksScreen ===
 
-// Module 17859 (LinksScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12988 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 17852 */;
+// Module 17888 (LinksScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13020 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 17881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SearchConstants = fn(9614);
+const SearchConstants = fn(9629);
 ({ SearchListItemTypes: closure_4, CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty, FILES_OR_LINKS_NUM_COLUMNS: metroRequire, FILES_OR_LINKS_GAP_WIDTH: closure_7 } = SearchConstants);
 let jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

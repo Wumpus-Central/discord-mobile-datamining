@@ -1,16 +1,16 @@
-// === Module 16197: VideoQuestModalHeader ===
+// === Module 16226: VideoQuestModalHeader ===
 
-// Module 16197 (VideoQuestModalHeader)
+// Module 16226 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 587 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7678 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useVideoQuestUIStore = fn(7658).useVideoQuestUIStore;
+const useVideoQuestUIStore = fn(7721).useVideoQuestUIStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { videoContentHeaderWrapper: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }, videoContentHeading: { flexDirection: "column", flexShrink: 1, gap: nativeDefault.space.PX_4 }, textShadow: null };
 let obj3 = { flexDirection: "column", flexShrink: 1, gap: nativeDefault.space.PX_4 };
 obj2.textShadow = { margin: -15, padding: 15, textShadowColor: nativeDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
@@ -26,14 +26,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp5 = closure_7();
   let obj = quest(576);
-  quest = quest(16170).useVideoQuestModalContext().quest;
-  const tmpResult = quest(16170);
-  const questTaskDetails = quest(9473).useQuestTaskDetails(quest);
+  quest = quest(16199).useVideoQuestModalContext().quest;
+  const tmpResult = quest(16199);
+  const questTaskDetails = quest(9485).useQuestTaskDetails(quest);
   if (cResult[0] === quest.id) {
     if (cResult[1] === questTaskDetails) {
       let tmp7 = cResult[2];
     }
-    const tmp9 = useVideoQuestUIStore(tmp7, tmp(4828).shallow);
+    const tmp9 = useVideoQuestUIStore(tmp7, tmp(4863).shallow);
     const userStatus = quest.userStatus;
     let completedAt;
     if (userStatus != null) {
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
                       tmp34 = tmp37;
                     }
                     const obj4 = { iconColor: closeButtonIconColor, onClose };
-                    const tmp33 = closure_5(questTaskDetails(16192), obj4);
+                    const tmp33 = closure_5(questTaskDetails(16221), obj4);
                     cResult[23] = closeButtonIconColor;
                     cResult[24] = onClose;
                     cResult[25] = tmp33;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
               }
             }
             const obj6 = { variant: "heading-sm/semibold", color: "text-overlay-light", accessibilityLabel: tmp15, style: textShadow, children: gamePublisher };
-            const tmp25 = closure_5(tmp(5187).Text, obj6);
+            const tmp25 = closure_5(tmp(5195).Text, obj6);
             cResult[15] = gamePublisher;
             cResult[16] = textShadow;
             cResult[17] = tmp15;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
             tmp23 = tmp25;
           }
           const obj7 = { variant: "heading-md/semibold", color: "text-overlay-light", style: textShadow2, children: tmp18 };
-          const tmp22 = closure_5(tmp(5187).Text, obj7);
+          const tmp22 = closure_5(tmp(5195).Text, obj7);
           cResult[12] = textShadow2;
           cResult[13] = tmp18;
           cResult[14] = tmp22;
@@ -155,8 +155,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
     }
     let videoQuestProgressRemainingAccessibilityLabel;
     if (!tmp13) {
-      videoQuestProgressRemainingAccessibilityLabel = tmp(13902).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp12);
-      const tmpResult4 = tmp(13902);
+      videoQuestProgressRemainingAccessibilityLabel = tmp(13936).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp12);
+      const tmpResult4 = tmp(13936);
     }
     cResult[3] = null != completedAt;
     cResult[4] = !tmp13;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
   cResult[1] = questTaskDetails;
   cResult[2] = fn;
   tmp7 = fn;
-  const tmpResult3 = quest(9473);
+  const tmpResult3 = quest(9485);
 }) : (function VideoQuestModalHeader(showCurrentVideoTime) {
   showCurrentVideoTime = showCurrentVideoTime.showCurrentVideoTime;
   let tmp = undefined !== showCurrentVideoTime;
@@ -189,9 +189,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(16170).useVideoQuestModalContext().quest;
-  let obj = quest(16170);
-  const questTaskDetails = quest(9473).useQuestTaskDetails(quest);
+  quest = quest(16199).useVideoQuestModalContext().quest;
+  let obj = quest(16199);
+  const questTaskDetails = quest(9485).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
     if (tmp == null) {
@@ -201,15 +201,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
     }
     const time = QuestTaskUtils.parseMinutesAndSecondsFromSeconds(tmp.duration - tmp.timestampSec);
     return QuestTaskUtils.formatWatchTaskTime(time.minutes, time.seconds);
-  }, quest(4828).shallow);
+  }, quest(4863).shallow);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(13902).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
-    const tmp3Result = tmp3(13902);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(13936).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const tmp3Result = tmp3(13936);
   }
   const obj3 = { style: null, children: null };
   const items = [tmp2.videoContentHeaderWrapper, style];
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
   const obj5 = { variant: "heading-md/semibold", color: "text-overlay-light", style: textShadow2, children: null };
   const intl = tmp3(1128).intl;
   obj5.children = intl.formatToPlainString(quest(1128).t.EQa7os, { questName: quest.config.messages.questName });
-  const items1 = [closure_5(quest(5187).Text, obj5), ];
+  const items1 = [closure_5(quest(5195).Text, obj5), ];
   const obj7 = { variant: "heading-sm/semibold", color: "text-overlay-light", accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel, style: null, children: null };
   if (textShadow) {
     textShadow = tmp2.textShadow;
@@ -236,9 +236,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQue
     }
   }
   obj7.children = gamePublisher;
-  items1[1] = closure_5(quest(5187).Text, obj7);
+  items1[1] = closure_5(quest(5195).Text, obj7);
   obj4.children = items1;
-  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16192), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(16221), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;
   return closure_6(View, obj3);
 });

@@ -1,10 +1,10 @@
-// === Module 7838: WarningIcon ===
+// === Module 7901: WarningIcon ===
 
-// Module 7838 (WarningIcon)
+// Module 7901 (WarningIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4912 */;
-import _mod7839 from "module_7839" /* 7839 */;
+import BaseIconImage from "BaseIconImage" /* 5630 */;
+import _mod7902 from "module_7902" /* 7902 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const WarningIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod7839;
+    const tmpResult = _mod7902;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const WarningIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7839, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7902, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,17 +1,17 @@
-// === Module 17590: ForYouEmptyState ===
+// === Module 17619: ForYouEmptyState ===
 
-// Module 17590 (ForYouEmptyState)
+// Module 17619 (ForYouEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 17591 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 17620 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

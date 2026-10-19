@@ -1,13 +1,13 @@
-// === Module 7250: GuildSubscriptions ===
+// === Module 7319: GuildSubscriptions ===
 
-// Module 7250 (GuildSubscriptions)
+// Module 7319 (GuildSubscriptions)
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1087 */;
-import Timers from "Timers" /* 2063 */;
-import FavoritesUtils from "FavoritesUtils" /* 2093 */;
-import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 7251 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7252 */;
-import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 7253 */;
+import Timers from "Timers" /* 4795 */;
+import FavoritesUtils from "FavoritesUtils" /* 4825 */;
+import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 7320 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7321 */;
+import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 7322 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;

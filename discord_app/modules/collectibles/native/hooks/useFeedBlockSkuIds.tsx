@@ -1,11 +1,11 @@
-// === Module 16900: useFeedBlockSkuIds ===
+// === Module 16929: useFeedBlockSkuIds ===
 
-// Module 16900 (useFeedBlockSkuIds)
+// Module 16929 (useFeedBlockSkuIds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ShopHomeSortType from "ShopHomeSortType" /* 16901 */;
+import ShopHomeSortType from "ShopHomeSortType" /* 16930 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6188 */;
+import ConsentStore from "ConsentStore" /* 6618 */;
 
 const require = globalThis.__r;
 

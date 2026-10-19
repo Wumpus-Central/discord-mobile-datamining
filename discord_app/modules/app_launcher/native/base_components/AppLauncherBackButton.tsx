@@ -1,10 +1,10 @@
-// === Module 11962: AppLauncherBackButton ===
+// === Module 11982: AppLauncherBackButton ===
 
-// Module 11962 (AppLauncherBackButton)
+// Module 11982 (AppLauncherBackButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Link from "Link" /* 1506 */;
-import IconButton from "IconButton" /* 7840 */;
+import IconButton from "IconButton" /* 7903 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   } else {
     tmp4 = cResult[1];
   }
-  const tmp6 = importDefault(tmp4 ? 6483 : 6486);
+  const tmp6 = importDefault(tmp4 ? 6877 : 6880);
   if (cResult[2] !== tmp4) {
     const intl = util.intl;
     const t = util.t;
@@ -52,10 +52,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
 }) : (function AppLauncherBackButton(onPress) {
   const navigation = Link.useNavigation();
   const canGoBackResult = navigation.canGoBack();
-  const obj2 = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6483 : 6486), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6877 : 6880), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   const t = util.t;
   obj2.accessibilityLabel = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
-  return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6483 : 6486), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
+  return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6877 : 6880), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
 });
 export const BACK_BUTTON_SIZE = 32;

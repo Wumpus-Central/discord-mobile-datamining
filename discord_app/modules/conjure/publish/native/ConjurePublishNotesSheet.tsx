@@ -1,29 +1,29 @@
-// === Module 12198: ConjurePublishNotesSheet ===
+// === Module 12218: ConjurePublishNotesSheet ===
 
-// Module 12198 (ConjurePublishNotesSheet)
+// Module 12218 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
-import ConjureUtils from "ConjureUtils" /* 7222 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11667 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12199 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5171 */;
+import ConjureUtils from "ConjureUtils" /* 7291 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11688 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import GuildChannelStore from "GuildChannelStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5185).MessageSendLocation;
+let closure_8 = fn(4878).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(4950).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_16 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, notesSection: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -176,7 +176,7 @@ export default function ConjurePublishNotesSheet(projectName) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3883.Gd63Fl);
+    obj4.title = intl.string(_modDef3820.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStoresArray;
@@ -230,8 +230,8 @@ export default function ConjurePublishNotesSheet(projectName) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp43;
                 }
-                const parsed = tmp3(7635).parse(found, combined);
-                const tmp40Result = tmp3(7445);
+                const parsed = tmp3(7698).parse(found, combined);
+                const tmp40Result = tmp3(7512);
                 const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -260,7 +260,7 @@ export default function ConjurePublishNotesSheet(projectName) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = projectId(12199).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
+              const result = projectId(12219).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
               let id;
               if (closure_128_0 != null) {
                 const body = closure_128_0.body;
@@ -271,12 +271,12 @@ export default function ConjurePublishNotesSheet(projectName) {
               closure_128_1 = id;
               if (null != closure_128_1) {
                 const obj8 = { publishedRevision: closure_129_3, guildId: closure_129_1, channelId: closure_129_18.id, messageId: closure_128_1 };
-                projectId(11065).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
-                const obj = projectId(11065);
+                projectId(11079).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
+                const obj = projectId(11079);
               }
               closure_129_21();
               dependencyMap = 0;
-              const obj10 = projectId(12199);
+              const obj10 = projectId(12219);
             }
           }
           const _Error = Error;

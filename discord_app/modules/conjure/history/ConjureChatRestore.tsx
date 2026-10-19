@@ -1,6 +1,6 @@
-// === Module 12182: ConjureChatRestore ===
+// === Module 12202: ConjureChatRestore ===
 
-// Module 12182 (ConjureChatRestore)
+// Module 12202 (ConjureChatRestore)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/history/ConjureChatRestore.tsx");

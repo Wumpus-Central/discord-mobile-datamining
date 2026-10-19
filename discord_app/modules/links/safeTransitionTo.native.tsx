@@ -1,12 +1,12 @@
-// === Module 7224: safeTransitionTo ===
+// === Module 7293: safeTransitionTo ===
 
-// Module 7224 (safeTransitionTo)
+// Module 7293 (safeTransitionTo)
 import router_utils from "router_utils" /* 1114 */;
-import LinkUtils from "LinkUtils" /* 5522 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7225 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7226 */;
+import LinkUtils from "LinkUtils" /* 5567 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7294 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2090 */;
+import GuildStore from "GuildStore" /* 4822 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {

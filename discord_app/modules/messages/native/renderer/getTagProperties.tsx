@@ -1,12 +1,12 @@
-// === Module 8332: getTagProperties ===
+// === Module 8348: getTagProperties ===
 
-// Module 8332 (getTagProperties)
+// Module 8348 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1128 */;
-import MessageConstants from "MessageConstants" /* 5185 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8333 */;
-import isCrosspostDefault from "isCrosspost" /* 8335 */;
-import _modDef8337 from "module_8337" /* 8337 */;
+import MessageConstants from "MessageConstants" /* 4950 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8349 */;
+import isCrosspostDefault from "isCrosspost" /* 8351 */;
+import _modDef8353 from "module_8353" /* 8353 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8337).uri;
+            uri = Image.resolveAssetSource(_modDef8353).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "backgroundColor", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000467202498948176, opTagBackgroundColor: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000481595432796328 };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "enabled", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

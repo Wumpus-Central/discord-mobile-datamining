@@ -1,8 +1,8 @@
-// === Module 18705: guild_automod/ExperimentUtils ===
+// === Module 18740: guild_automod/ExperimentUtils ===
 
-// Module 18705 (guild_automod/ExperimentUtils)
+// Module 18740 (guild_automod/ExperimentUtils)
 import c from "c" /* 576 */;
-import AutomodExperiment from "AutomodExperiment" /* 18706 */;
+import AutomodExperiment from "AutomodExperiment" /* 18741 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

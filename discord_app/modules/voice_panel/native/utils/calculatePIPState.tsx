@@ -1,12 +1,12 @@
-// === Module 18358: calculatePIPState ===
+// === Module 18387: calculatePIPState ===
 
-// Module 18358 (calculatePIPState)
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18186 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
+// Module 18387 (calculatePIPState)
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18169 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
 
 require = fn;
-const VoicePanelModes = fn(10680).VoicePanelModes;
-const ParticipantTypes = fn(5214).ParticipantTypes;
+const VoicePanelModes = fn(10693).VoicePanelModes;
+const ParticipantTypes = fn(5593).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
@@ -21,7 +21,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
     tmp = type === ParticipantTypes.ACTIVITY;
   }
   const pIPBlockList = VoicePanelPIPUtils.createPIPBlockList(focusedId.mode, focusedId.focusedId);
-  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow({ channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: pIPBlockList, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP });
+  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow({ channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: pIPBlockList, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP, canShowActivities: true });
   let type1;
   if (pIPParticipantToShow != null) {
     type1 = pIPParticipantToShow.type;
@@ -45,7 +45,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
     }
     tmp12 = tmp14;
   }
-  const obj3 = { channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: pIPBlockList, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP };
+  const obj3 = { channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: pIPBlockList, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP, canShowActivities: true };
   let id1;
   if (pIPParticipantToShow != null) {
     id1 = pIPParticipantToShow.id;

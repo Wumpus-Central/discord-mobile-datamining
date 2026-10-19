@@ -1,11 +1,11 @@
-// === Module 10696: useSafeAreaInsetsSharedValue ===
+// === Module 10709: useSafeAreaInsetsSharedValue ===
 
-// Module 10696 (useSafeAreaInsetsSharedValue)
+// Module 10709 (useSafeAreaInsetsSharedValue)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1502 */;
 import AppEntryKey from "AppEntryKey" /* 1646 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10684 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 10697 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4945 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10697 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 10710 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 5014 */;
 import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1633 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

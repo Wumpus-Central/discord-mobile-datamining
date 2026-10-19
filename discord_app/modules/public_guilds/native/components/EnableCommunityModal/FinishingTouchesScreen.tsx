@@ -1,17 +1,17 @@
-// === Module 18878: FinishingTouchesScreen ===
+// === Module 18913: FinishingTouchesScreen ===
 
-// Module 18878 (FinishingTouchesScreen)
+// Module 18913 (FinishingTouchesScreen)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4885 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8911 */;
-import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8927 */;
+import GuildRoleStore from "GuildRoleStore" /* 4854 */;
 
 const require = fn;
 const View = fn(17).View;
-const PublicGuildsConstants = fn(8334);
+const PublicGuildsConstants = fn(8350);
 ({ CREATE_NEW_CHANNEL_VALUE: closure_9, MODERATOR_PERMISSIONS: c10, MODERATOR_PERMISSIONS_FLAG: closure_11 } = PublicGuildsConstants);
 const Constants = fn(1087);
 ({ GuildFeatures: closure_12, HelpdeskArticles: map1, UserNotificationSettings: closure_14 } = Constants);
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
   const cResult = guild(576).c(59);
   const ref = noop.useRef(null);
   let obj = guild(576);
-  const token = guild(4913).useToken(defaultMessageNotifications(587).modules.mobile.TABLE_ROW_PADDING);
+  const token = guild(5213).useToken(defaultMessageNotifications(587).modules.mobile.TABLE_ROW_PADDING);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [GuildSettingsStore];
     const fn = function b() {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
   } else {
     [tmp7, tmp8] = cResult;
   }
-  let obj3 = guild(4913);
+  let obj3 = guild(5213);
   guild = guild(504).useStateFromStoresObject(tmp7, tmp8).guild;
   let prop;
   if (guild != null) {
@@ -93,13 +93,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
           }
           obj4.publicUpdatesChannelId = publicUpdatesChannelId;
           obj4.defaultMessageNotifications = features.defaultMessageNotifications;
-          first(8910).saveGuild(features.id, obj4);
+          first(8926).saveGuild(features.id, obj4);
           if (removeResult !== everyoneRole.permissions) {
             const items = [obj2];
-            guild(18820).saveRoleSettings(features.id, items);
-            const obj = guild(18820);
+            guild(18855).saveRoleSettings(features.id, items);
+            const obj = guild(18855);
           }
-          const obj5 = first(8910);
+          const obj5 = first(8926);
         }
       };
       cResult[7] = fn2;
@@ -107,8 +107,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
     } else {
       tmp27 = cResult[7];
     }
-    const tmp28 = tmp5(18867)();
-    const enableCommunitySharedStyles = tmp(18866).useEnableCommunitySharedStyles();
+    const tmp28 = tmp5(18902)();
+    const enableCommunitySharedStyles = tmp(18901).useEnableCommunitySharedStyles();
     const _Symbol2 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1128).intl;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
       let obj4 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
       const intl2 = tmp(1128).intl;
       obj4.children = intl2.formatToPlainString(tmp(1128).t.tInpJj, { number: 3, total: 3 });
-      const tmp35 = closure_15(tmp(5187).Text, obj4);
+      const tmp35 = closure_15(tmp(5195).Text, obj4);
       cResult[9] = tmp35;
       let tmp33 = tmp35;
     } else {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
     }
     if (cResult[10] !== tmp28.finishingTouches) {
       let obj5 = { resizeMode: "contain", source: tmp28.finishingTouches };
-      const tmp38 = closure_15(tmp5(5128), obj5);
+      const tmp38 = closure_15(tmp5(5631), obj5);
       cResult[10] = tmp28.finishingTouches;
       cResult[11] = tmp38;
       let tmp36 = tmp38;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
     }
     if (cResult[13] !== enableCommunitySharedStyles.header) {
       const obj6 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp39 };
-      const tmp43 = closure_15(tmp(5187).Heading, obj6);
+      const tmp43 = closure_15(tmp(5195).Heading, obj6);
       cResult[13] = enableCommunitySharedStyles.header;
       cResult[14] = tmp43;
       let tmp41 = tmp43;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
     }
     if (cResult[16] !== enableCommunitySharedStyles.description) {
       const obj7 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: tmp44 };
-      const tmp48 = closure_15(tmp(5187).Text, obj7);
+      const tmp48 = closure_15(tmp(5195).Text, obj7);
       cResult[16] = enableCommunitySharedStyles.description;
       cResult[17] = tmp48;
       let tmp46 = tmp48;
@@ -262,8 +262,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
                       if (cResult[45] !== tmp15) {
                         const obj11 = { title: tmp76, hasIcons: false, children: null };
                         const obj12 = { label: tmp78, value: tmp15, onValueChange: tmp16 };
-                        obj11.children = closure_15(tmp(7172).TableSwitchRow, obj12);
-                        const tmp82 = closure_15(tmp(6542).TableRowGroup, obj11);
+                        obj11.children = closure_15(tmp(7241).TableSwitchRow, obj12);
+                        const tmp82 = closure_15(tmp(6935).TableRowGroup, obj11);
                         cResult[45] = tmp15;
                         cResult[46] = tmp82;
                         let tmp80 = tmp82;
@@ -278,19 +278,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
                           const _Symbol10 = Symbol;
                           if (cResult[51] === Symbol.for("react.memo_cache_sentinel")) {
                             const intl9 = tmp(1128).intl;
-                            const obj13 = { communityGuidelines: tmp5(2131).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES), typesOfGuilds: null };
-                            const tmp5Result = tmp5(2131);
-                            obj13.typesOfGuilds = tmp5(2131).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
+                            const obj13 = { communityGuidelines: tmp5(2068).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES), typesOfGuilds: null };
+                            const tmp5Result = tmp5(2068);
+                            obj13.typesOfGuilds = tmp5(2068).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
                             const formatResult2 = intl9.format(tmp(1128).t["BwbW/Q"], obj13);
                             cResult[51] = formatResult2;
                             let tmp86 = formatResult2;
-                            const tmp5Result2 = tmp5(2131);
+                            const tmp5Result2 = tmp5(2068);
                           } else {
                             tmp86 = cResult[51];
                           }
                           if (cResult[52] !== enableCommunitySharedStyles.formHint) {
                             const obj14 = { style: enableCommunitySharedStyles.formHint, variant: "text-xs/medium", color: "text-subtle", children: tmp86 };
-                            const tmp91 = closure_15(tmp(5187).Text, obj14);
+                            const tmp91 = closure_15(tmp(5195).Text, obj14);
                             cResult[52] = enableCommunitySharedStyles.formHint;
                             cResult[53] = tmp91;
                             let tmp89 = tmp91;
@@ -307,10 +307,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
                               }
                             }
                           }
-                          const obj15 = { headerRef: ref, currentStep: tmp(18864).EnableCommunityModalSteps.STEP_3, onSuccess: tmp27, disableNextStep: tmp30, buttonText: tmp31, children: null };
+                          const obj15 = { headerRef: ref, currentStep: tmp(18899).EnableCommunityModalSteps.STEP_3, onSuccess: tmp27, disableNextStep: tmp30, buttonText: tmp31, children: null };
                           const items1 = [tmp49, tmp83, tmp89];
                           obj15.children = items1;
-                          const tmp94 = closure_16(tmp(18864).EnableCommunityModalScreen, obj15);
+                          const tmp94 = closure_16(tmp(18899).EnableCommunityModalScreen, obj15);
                           cResult[54] = tmp49;
                           cResult[55] = tmp83;
                           cResult[56] = tmp89;
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
                       const obj16 = { spacing: 24, style: tmp53, children: null };
                       const items2 = [tmp73, tmp80];
                       obj16.children = items2;
-                      const tmp85 = closure_16(tmp(5477).Stack, obj16);
+                      const tmp85 = closure_16(tmp(5932).Stack, obj16);
                       cResult[47] = tmp53;
                       cResult[48] = tmp73;
                       cResult[49] = tmp80;
@@ -332,28 +332,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
                     const obj17 = { hasIcons: false, children: null };
                     const items3 = [tmp62, tmp70];
                     obj17.children = items3;
-                    const tmp75 = closure_16(tmp(6542).TableRowGroup, obj17);
+                    const tmp75 = closure_16(tmp(6935).TableRowGroup, obj17);
                     cResult[40] = tmp62;
                     cResult[41] = tmp70;
                     cResult[42] = tmp75;
                     tmp73 = tmp75;
                   }
                   const obj18 = { formSwitchDisabled: first1, children: tmp67 };
-                  const tmp72 = closure_15(tmp5(18876), obj18);
+                  const tmp72 = closure_15(tmp5(18911), obj18);
                   cResult[37] = first1;
                   cResult[38] = tmp67;
                   cResult[39] = tmp72;
                   tmp70 = tmp72;
                 }
                 const obj19 = { label: tmp65, value: tmp21, disabled: first1, onValueChange: tmp22 };
-                const tmp69 = closure_15(tmp(7172).TableSwitchRow, obj19);
+                const tmp69 = closure_15(tmp(7241).TableSwitchRow, obj19);
                 cResult[34] = first1;
                 cResult[35] = tmp21;
                 cResult[36] = tmp69;
                 tmp67 = tmp69;
               }
               const obj20 = { formSwitchDisabled: tmp57, children: tmp59 };
-              const tmp64 = closure_15(tmp5(18876), obj20);
+              const tmp64 = closure_15(tmp5(18911), obj20);
               cResult[30] = tmp57;
               cResult[31] = tmp59;
               cResult[32] = tmp64;
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
             }
           }
           const obj21 = { label: tmp54, value: prop2 === constants2.ONLY_MENTIONS, disabled: defaultMessageNotifications === constants2.ONLY_MENTIONS, onValueChange: tmp25 };
-          const tmp61 = closure_15(tmp(7172).TableSwitchRow, obj21);
+          const tmp61 = closure_15(tmp(7241).TableSwitchRow, obj21);
           cResult[26] = defaultMessageNotifications === constants2.ONLY_MENTIONS;
           cResult[27] = tmp25;
           cResult[28] = prop2 === constants2.ONLY_MENTIONS;
@@ -416,7 +416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
     }
     cResult[22] = tmp52;
     tmp49 = tmp52;
-    const tmpResult2 = tmp(18866);
+    const tmpResult2 = tmp(18901);
   }
   let prop3;
   if (guild != null) {
@@ -465,8 +465,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
   const tmp11Result = _slicedToArray(noop.useState(!tmp17), 2);
 }) : (function FinishingTouchesScreen() {
   const ref = noop.useRef(null);
-  const token = guild(4913).useToken(defaultMessageNotifications(587).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(4913);
+  const token = guild(5213).useToken(defaultMessageNotifications(587).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(5213);
   let items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   let prop;
@@ -528,40 +528,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
       }
       obj4.publicUpdatesChannelId = publicUpdatesChannelId;
       obj4.defaultMessageNotifications = features.defaultMessageNotifications;
-      first(8910).saveGuild(features.id, obj4);
+      first(8926).saveGuild(features.id, obj4);
       if (removeResult !== everyoneRole.permissions) {
         const items = [obj2];
-        guild(18820).saveRoleSettings(features.id, items);
-        const obj = guild(18820);
+        guild(18855).saveRoleSettings(features.id, items);
+        const obj = guild(18855);
       }
-      const obj5 = first(8910);
+      const obj5 = first(8926);
     }
   }, []);
   const tmp11 = _slicedToArray(noop.useState(!closure_10.some((item) => PermissionUtilsAll.canEveryone(item, guild))), 2);
-  const tmp19 = defaultMessageNotifications(18867)();
-  const enableCommunitySharedStyles = guild(18866).useEnableCommunitySharedStyles();
-  let obj4 = { headerRef: ref, currentStep: guild(18864).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
+  const tmp19 = defaultMessageNotifications(18902)();
+  const enableCommunitySharedStyles = guild(18901).useEnableCommunitySharedStyles();
+  let obj4 = { headerRef: ref, currentStep: guild(18899).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
   const intl = tmp2(1128).intl;
   obj4.buttonText = intl.string(guild(1128).t.XGl4ba);
   let obj5 = { style: enableCommunitySharedStyles.content, children: null };
   const obj6 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
   const intl2 = tmp2(1128).intl;
   obj6.children = intl2.formatToPlainString(guild(1128).t.tInpJj, { number: 3, total: 3 });
-  const items2 = [closure_15(guild(5187).Text, obj6), closure_15(defaultMessageNotifications(5128), { resizeMode: "contain", source: tmp19.finishingTouches }), , ];
+  const items2 = [closure_15(guild(5195).Text, obj6), closure_15(defaultMessageNotifications(5631), { resizeMode: "contain", source: tmp19.finishingTouches }), , ];
   const obj8 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1128).intl;
   obj8.children = intl3.string(guild(1128).t["Pj/s/a"]);
-  items2[2] = closure_15(guild(5187).Heading, obj8);
+  items2[2] = closure_15(guild(5195).Heading, obj8);
   const obj9 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
   const intl4 = tmp2(1128).intl;
   obj9.children = intl4.string(guild(1128).t["IL7/no"]);
-  items2[3] = closure_15(guild(5187).Text, obj9);
+  items2[3] = closure_15(guild(5195).Text, obj9);
   obj5.children = items2;
   const items3 = [closure_16(View, obj5), , ];
   const obj10 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj11 = { formSwitchDisabled: defaultMessageNotifications === constants2.ONLY_MENTIONS, children: null };
   const obj7 = { resizeMode: "contain", source: tmp19.finishingTouches };
-  const tmp2Result = guild(18866);
+  const tmp2Result = guild(18901);
   const obj12 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1128).intl;
   obj12.label = intl5.format(guild(1128).t.K8Eg4P, {
@@ -577,15 +577,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
   obj12.value = prop2 === constants2.ONLY_MENTIONS;
   obj12.disabled = defaultMessageNotifications === constants2.ONLY_MENTIONS;
   obj12.onValueChange = callback;
-  obj11.children = closure_15(guild(7172).TableSwitchRow, obj12);
-  const items4 = [closure_15(defaultMessageNotifications(18876), obj11), ];
+  obj11.children = closure_15(guild(7241).TableSwitchRow, obj12);
+  const items4 = [closure_15(defaultMessageNotifications(18911), obj11), ];
   const obj15 = { formSwitchDisabled: first2, children: null };
   const obj13 = {
     infoHook() {
       return null;
     }
   };
-  const tmp4Result = defaultMessageNotifications(18876);
+  const tmp4Result = defaultMessageNotifications(18911);
   const obj16 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1128).intl;
   obj16.label = intl6.format(guild(1128).t.v8qCoG, {
@@ -596,10 +596,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
   obj16.value = tmp12;
   obj16.disabled = first2;
   obj16.onValueChange = tmp13;
-  obj15.children = closure_15(guild(7172).TableSwitchRow, obj16);
-  items4[1] = closure_15(defaultMessageNotifications(18876), obj15);
+  obj15.children = closure_15(guild(7241).TableSwitchRow, obj16);
+  items4[1] = closure_15(defaultMessageNotifications(18911), obj15);
   obj14.children = items4;
-  const items5 = [closure_16(guild(6542).TableRowGroup, obj14), ];
+  const items5 = [closure_16(guild(6935).TableRowGroup, obj14), ];
   const obj18 = { title: null, hasIcons: false, children: null };
   const intl7 = tmp2(1128).intl;
   obj18.title = intl7.string(guild(1128).t["k+b2Cf"]);
@@ -607,10 +607,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
   const intl8 = tmp2(1128).intl;
   obj19.label = intl8.string(guild(1128).t["9AG3wI"]);
   obj19.value = first1;
-  obj18.children = closure_15(guild(7172).TableSwitchRow, obj19);
-  items5[1] = closure_15(guild(6542).TableRowGroup, obj18);
+  obj18.children = closure_15(guild(7241).TableSwitchRow, obj19);
+  items5[1] = closure_15(guild(6935).TableRowGroup, obj18);
   obj10.children = items5;
-  items3[1] = closure_16(guild(5477).Stack, obj10);
+  items3[1] = closure_16(guild(5932).Stack, obj10);
   const obj20 = { style: enableCommunitySharedStyles.formHint, variant: "text-xs/medium", color: "text-subtle", children: null };
   const intl9 = tmp2(1128).intl;
   const obj21 = { communityGuidelines: null, typesOfGuilds: null };
@@ -619,12 +619,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finishin
       return null;
     }
   };
-  const tmp4Result4 = defaultMessageNotifications(18876);
-  obj21.communityGuidelines = defaultMessageNotifications(2131).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
-  const tmp4Result5 = defaultMessageNotifications(2131);
-  obj21.typesOfGuilds = defaultMessageNotifications(2131).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
+  const tmp4Result4 = defaultMessageNotifications(18911);
+  obj21.communityGuidelines = defaultMessageNotifications(2068).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
+  const tmp4Result5 = defaultMessageNotifications(2068);
+  obj21.typesOfGuilds = defaultMessageNotifications(2068).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
   obj20.children = intl9.format(guild(1128).t["BwbW/Q"], obj21);
-  items3[2] = closure_15(guild(5187).Text, obj20);
+  items3[2] = closure_15(guild(5195).Text, obj20);
   obj4.children = items3;
-  return closure_16(guild(18864).EnableCommunityModalScreen, obj4);
+  return closure_16(guild(18899).EnableCommunityModalScreen, obj4);
 });

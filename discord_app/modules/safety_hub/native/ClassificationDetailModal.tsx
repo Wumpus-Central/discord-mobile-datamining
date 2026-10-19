@@ -1,15 +1,15 @@
-// === Module 12619: ClassificationDetailModal ===
+// === Module 12639: ClassificationDetailModal ===
 
-// Module 12619 (ClassificationDetailModal)
+// Module 12639 (ClassificationDetailModal)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6478 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12622 */;
+import NavigatorHeader from "NavigatorHeader" /* 6872 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const constants = { CLASSIFICATION_DETAIL: "CLASSIFICATION_DETAIL" };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
   ({ classificationId, source, shouldRedirectToAccountStanding } = arg0);
   const tmp5 = closure_7();
   let obj = safetyHubInitialized(576);
-  safetyHubInitialized = safetyHubInitialized(12657).useSafetyHubInitialized();
+  safetyHubInitialized = safetyHubInitialized(12677).useSafetyHubInitialized();
   if (cResult[0] !== safetyHubInitialized) {
     const fn = function l() {
       if (!safetyHubInitialized) {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
     tmp8 = cResult[2];
   }
   const effect = noop.useEffect(tmp7, tmp8);
-  const tmpResult = safetyHubInitialized(12657);
+  const tmpResult = safetyHubInitialized(12677);
   const isFocused = safetyHubInitialized(1506).useIsFocused();
   if (cResult[3] === classificationId) {
     if (cResult[4] === tmp4) {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
         }
         if (cResult[9] !== tmp11) {
           const obj2 = { screens: tmp11, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: tmp13 };
-          const tmp18 = jsx(tmp(6965).Navigator, { screens: tmp11, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: tmp13 });
+          const tmp18 = jsx(tmp(7043).Navigator, { screens: tmp11, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: tmp13 });
           cResult[9] = tmp11;
           cResult[10] = tmp18;
           let tmp15 = tmp18;
@@ -83,25 +83,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
     render: null
   };
   const tmpResult3 = safetyHubInitialized(1506);
-  obj4.headerLeft = safetyHubInitialized(6478).getHeaderCloseButton(function closeModal() {
-    return closure_1(6190).pop();
+  obj4.headerLeft = safetyHubInitialized(6872).getHeaderCloseButton(function closeModal() {
+    return closure_1(6620).pop();
   });
   obj4.render = function render() {
-    return jsx(source(12620), {
+    return jsx(source(12640), {
       classificationId,
       source,
       onClose() {
-        closure_1(6190).pop();
+        closure_1(6620).pop();
         if (closure_1_1) {
-          closure_0(12656).openAccountStanding();
-          const obj = closure_0(12656);
+          closure_0(12676).openAccountStanding();
+          const obj = closure_0(12676);
         }
-        const arr = closure_1(6190);
+        const arr = closure_1(6620);
       },
       onError() {
-        closure_1_1(6190).pop();
-        const arr = closure_1_1(6190);
-        classificationId(12656).openAccountStanding();
+        closure_1_1(6620).pop();
+        const arr = closure_1_1(6620);
+        classificationId(12676).openAccountStanding();
       }
     });
   };
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
   cResult[6] = tmp5;
   cResult[7] = obj3;
   tmp11 = obj3;
-  const tmpResult4 = safetyHubInitialized(6478);
+  const tmpResult4 = safetyHubInitialized(6872);
 }) : (function ClassificationDetailModal(classificationId) {
   classificationId = classificationId.classificationId;
   const source = classificationId.source;
@@ -122,14 +122,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
   }
   const tmp = closure_7();
   dependencyMap = tmp;
-  const safetyHubInitialized = classificationId(12657).useSafetyHubInitialized();
+  const safetyHubInitialized = classificationId(12677).useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
     if (!safetyHubInitialized) {
       const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
     }
   }, items);
-  let obj = classificationId(12657);
+  let obj = classificationId(12677);
   const isFocused = classificationId(1506).useIsFocused();
   const items1 = [classificationId, flag, tmp, source];
   const memo = safetyHubInitialized.useMemo(() => {
@@ -141,24 +141,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
         return null;
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(function closeModal() {
-        return closure_1(6190).pop();
+        return closure_1(6620).pop();
       }),
       render() {
-        return jsx(source(12620), {
+        return jsx(source(12640), {
           classificationId,
           source,
           onClose() {
-            closure_1(6190).pop();
+            closure_1(6620).pop();
             if (closure_1_1) {
-              closure_0(12656).openAccountStanding();
-              const obj = closure_0(12656);
+              closure_0(12676).openAccountStanding();
+              const obj = closure_0(12676);
             }
-            const arr = closure_1(6190);
+            const arr = closure_1(6620);
           },
           onError() {
-            closure_1_1(6190).pop();
-            const arr = closure_1_1(6190);
-            classificationId(12656).openAccountStanding();
+            closure_1_1(6620).pop();
+            const arr = closure_1_1(6620);
+            classificationId(12676).openAccountStanding();
           }
         });
       }
@@ -169,5 +169,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
   const obj3 = { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null };
   const intl = classificationId(1128).intl;
   obj3.headerBackTitle = intl.string(classificationId(1128).t["13/7kX"]);
-  return jsx(classificationId(6965).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
+  return jsx(classificationId(7043).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
 });

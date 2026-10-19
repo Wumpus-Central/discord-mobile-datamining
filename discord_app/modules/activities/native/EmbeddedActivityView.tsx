@@ -1,17 +1,17 @@
-// === Module 11319: EmbeddedActivityView ===
+// === Module 11333: EmbeddedActivityView ===
 
-// Module 11319 (EmbeddedActivityView)
+// Module 11333 (EmbeddedActivityView)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11046 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11320 */;
-import DiscordEnvironment from "DiscordEnvironment" /* 11321 */;
-import activityWebViewController from "activityWebViewController" /* 11323 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11061 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11334 */;
+import DiscordEnvironment from "DiscordEnvironment" /* 11335 */;
+import activityWebViewController from "activityWebViewController" /* 11337 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
 
 require = fn;
 function useQueryParams(arg0) {
@@ -76,7 +76,7 @@ const Constants = fn(2026);
 fn(1375).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const EmbeddedActivities = "EmbeddedActivities";
 let ReactCompilerGating = fn(558);
@@ -376,7 +376,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivity
 let closure_21 = tmp7;
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityWebView(arg0) {
-  const cResult = require("c").c(11);
+  const cResult = require("c").c(12);
   if (cResult[0] !== arg0) {
     ({ deepLinkQueryParams, applicationId } = arg0);
     _require = applicationId;
@@ -402,32 +402,36 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Embedd
   } else {
     tmp10 = cResult[5];
   }
-  const first = _slicedToArray(noop.useState(tmp10), 1)[0];
+  ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(tmp10), 1)[0]);
   if (cResult[6] === applicationId) {
     if (cResult[7] === tmp5) {
-      if (cResult[8] === first) {
+      if (cResult[8] === iframeId) {
         if (cResult[9] === tmp6) {
-          let tmp12 = cResult[10];
+          if (cResult[10] === shellBridgeSecret) {
+            let tmp11 = cResult[11];
+          }
+          return tmp11;
         }
-        return tmp12;
       }
     }
   }
   const merged = Object.assign(tmp6);
-  const tmp14 = closure_14(require("BaseEmbeddedAppWebView").BaseEmbeddedAppWebView, { iframeId: first, deepLinkQueryParams: tmp5, applicationId });
+  const tmp13 = closure_14(require("BaseEmbeddedAppWebView").BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: tmp5, applicationId });
   cResult[6] = applicationId;
   cResult[7] = tmp5;
-  cResult[8] = first;
+  cResult[8] = iframeId;
   cResult[9] = tmp6;
-  cResult[10] = tmp14;
-  tmp12 = tmp14;
+  cResult[10] = shellBridgeSecret;
+  cResult[11] = tmp13;
+  tmp11 = tmp13;
   const obj = require("c");
-  const obj2 = { iframeId: first, deepLinkQueryParams: tmp5, applicationId };
+  const obj2 = { iframeId, shellBridgeSecret, deepLinkQueryParams: tmp5, applicationId };
 }) : (function EmbeddedActivityWebView(applicationId) {
   applicationId = applicationId.applicationId;
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
+  ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_14(applicationId(11343).BaseEmbeddedAppWebView, { iframeId: _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0], deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_14(applicationId(11362).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 });
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityViewInner(channel) {
@@ -539,7 +543,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   tmp7(first[20])(tmp20);
   if (cResult[8] !== layoutMode) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -556,11 +560,11 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
     const items2 = [layoutMode, first];
     cResult[8] = layoutMode;
-    cResult[9] = M;
+    cResult[9] = Q;
     cResult[10] = items2;
     let tmp23 = items2;
   } else {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -577,9 +581,9 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
     tmp23 = cResult[10];
   }
-  const layoutEffect = noop.useLayoutEffect(M, tmp23);
+  const layoutEffect = noop.useLayoutEffect(Q, tmp23);
   if (tmp8 != null) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -596,7 +600,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   if (cResult[11] !== undefined) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -612,7 +616,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       }
     }
     if (tmp8 != null) {
-      class M {
+      class Q {
         constructor() {
           if (null != closure_2) {
             tmp2 = closure_1;
@@ -628,7 +632,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
         }
       }
     }
-    class W {
+    class U {
       constructor() {
         obj = closure_0(closure_2[21]);
         _location = undefined;
@@ -646,9 +650,9 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       }
     }
     cResult[11] = tmp26;
-    cResult[12] = W;
+    cResult[12] = U;
   } else {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -665,7 +669,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   if (tmp8 != null) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -683,7 +687,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   c4 = undefined;
   if (null != first) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -699,7 +703,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       }
     }
     if (first != null) {
-      class M {
+      class Q {
         constructor() {
           if (null != closure_2) {
             tmp2 = closure_1;
@@ -715,7 +719,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
         }
       }
     }
-    class W {
+    class U {
       constructor() {
         obj = closure_0(closure_2[21]);
         _location = undefined;
@@ -734,7 +738,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   if (null != first) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -751,7 +755,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   if (null != first) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -768,7 +772,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   if (null != first) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;
@@ -785,7 +789,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   if (cResult[13] === tmp8) {
-    class M {
+    class Q {
       constructor() {
         if (null != closure_2) {
           tmp2 = closure_1;

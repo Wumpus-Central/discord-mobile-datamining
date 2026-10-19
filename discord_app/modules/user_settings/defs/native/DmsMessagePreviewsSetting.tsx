@@ -1,11 +1,11 @@
-// === Module 16376: DmsMessagePreviewsSetting ===
+// === Module 16405: DmsMessagePreviewsSetting ===
 
-// Module 16376 (DmsMessagePreviewsSetting)
+// Module 16405 (DmsMessagePreviewsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9615 */;
-import useMessagePreviews from "useMessagePreviews" /* 16377 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5604 */;
+import useMessagePreviews from "useMessagePreviews" /* 16406 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ ReactCompilerGating = fn(558);
 function useDMsMessagePreviewsValue() {
   return useMessagePreviews.useMessagePreviewSetting();
 }
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDMsMessagePreviewsOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(8260).MobileUserSettings.APPEARANCE,
+  parent: fn(8276).MobileUserSettings.APPEARANCE,
   useValue: useDMsMessagePreviewsValue,
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
     const MessagePreviewSetting = UserSettings.MessagePreviewSetting;

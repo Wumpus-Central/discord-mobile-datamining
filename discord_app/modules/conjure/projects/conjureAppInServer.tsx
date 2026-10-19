@@ -1,15 +1,15 @@
-// === Module 11006: conjureAppInServer ===
+// === Module 11022: conjureAppInServer ===
 
-// Module 11006 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7222 */;
-import ApplicationStore from "ApplicationStore" /* 5540 */;
-import UserProfileStore from "UserProfileStore" /* 7586 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+// Module 11022 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7291 */;
+import ApplicationStore from "ApplicationStore" /* 2046 */;
+import UserProfileStore from "UserProfileStore" /* 7649 */;
+import GuildChannelStore from "GuildChannelStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 
 require = fn;
-let closure_5 = fn(4843).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_5 = fn(4878).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1087).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureAppInServer.tsx");
@@ -135,7 +135,7 @@ export const readConjureAppServerPresence = function readConjureAppServerPresenc
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6294);
+              obj2 = application_id(6722);
             }
             str2 = tmp7;
           }

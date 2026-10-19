@@ -1,21 +1,21 @@
-// === Module 11888: ApplicationDirectoryActionCreators ===
+// === Module 11908: ApplicationDirectoryActionCreators ===
 
-// Module 11888 (ApplicationDirectoryActionCreators)
+// Module 11908 (ApplicationDirectoryActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 11894 */;
-import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 11895 */;
+import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 11914 */;
+import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 11915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5190 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import DevSettingsStore from "DevSettingsStore" /* 5198 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6358 */;
-import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 11889 */;
-import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 11890 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11885 */;
-import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 11891 */;
-import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 11892 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6758 */;
+import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 11909 */;
+import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 11910 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11905 */;
+import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 11911 */;
+import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 11912 */;
 
 require = fn;
 let closure_20 = async function _getEmbedApplication() {
@@ -172,7 +172,7 @@ let closure_21 = async function _getApplication(arg0) {
           closure_131_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -346,7 +346,7 @@ let closure_23 = async function _getSimilarApplications(arg0) {
           closure_131_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -471,7 +471,7 @@ let closure_24 = async function _search(arg0) {
           closure_131_18 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -623,7 +623,7 @@ let closure_25 = async function _fetchCollections() {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -812,11 +812,11 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
     }
   }
 };
-fn(6358).FetchState;
-fn(11890).FetchState;
-fn(11885).FetchState;
-fn(11891).FetchState;
-const FetchState = fn(11892).FetchState;
+fn(6758).FetchState;
+fn(11910).FetchState;
+fn(11905).FetchState;
+fn(11911).FetchState;
+const FetchState = fn(11912).FetchState;
 const Endpoints = fn(1087).Endpoints;
 let c18 = 600000;
 const map = new Map();

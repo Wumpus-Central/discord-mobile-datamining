@@ -1,16 +1,16 @@
-// === Module 15885: useDerivedDMSpamFilterSetting ===
+// === Module 15914: useDerivedDMSpamFilterSetting ===
 
-// Module 15885 (useDerivedDMSpamFilterSetting)
+// Module 15914 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7274 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5612 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-let closure_3 = fn(2046).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(4778).ExplicitContentFilterToDmSpamFilterV2;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");

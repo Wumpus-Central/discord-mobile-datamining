@@ -1,6 +1,6 @@
-// === Module 11855: getPlatform ===
+// === Module 5594: getPlatform ===
 
-// Module 11855 (getPlatform)
+// Module 5594 (getPlatform)
 import Server from "Server" /* 2000 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 8787: GuildScheduledEventModalActionCreators ===
+// === Module 8803: GuildScheduledEventModalActionCreators ===
 
-// Module 8787 (GuildScheduledEventModalActionCreators)
+// Module 8803 (GuildScheduledEventModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
-import ScheduleUtils from "ScheduleUtils" /* 8794 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
+import ScheduleUtils from "ScheduleUtils" /* 8810 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,8 +17,8 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = ScheduleUtils;
   }
   obj2.recurrenceId = recurrenceId;
-  obj.openLazy(asyncRequireImpl(8789, dependencyMap.paths), closure_5, obj2, "stack");
-  const tmp3 = asyncRequireImpl(8789, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(8805, dependencyMap.paths), closure_5, obj2, "stack");
+  const tmp3 = asyncRequireImpl(8805, dependencyMap.paths);
 }
 let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
@@ -78,8 +78,8 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let closure_4 = fn(2074).EXPLICIT_END_EVENT_SHEET_KEY;
-let closure_5 = fn(8788).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_4 = fn(4806).EXPLICIT_END_EVENT_SHEET_KEY;
+let closure_5 = fn(8804).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx");
 
@@ -95,5 +95,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9057, dependencyMap.paths), closure_4, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9073, dependencyMap.paths), closure_4, { channel });
 };

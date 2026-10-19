@@ -1,6 +1,6 @@
-// === Module 16913: CollectiblesCoachmarkScrollDismissContext ===
+// === Module 16942: CollectiblesCoachmarkScrollDismissContext ===
 
-// Module 16913 (CollectiblesCoachmarkScrollDismissContext)
+// Module 16942 (CollectiblesCoachmarkScrollDismissContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

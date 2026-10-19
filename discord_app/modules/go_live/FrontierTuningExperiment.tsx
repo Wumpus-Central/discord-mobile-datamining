@@ -1,7 +1,7 @@
-// === Module 5338: FrontierTuningExperiment ===
+// === Module 5802: FrontierTuningExperiment ===
 
-// Module 5338 (FrontierTuningExperiment)
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5311 */;
+// Module 5802 (FrontierTuningExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5775 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1456 */;
 import size from "module_2" /* 2 */;
 

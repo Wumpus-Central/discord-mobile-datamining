@@ -1,6 +1,6 @@
-// === Module 18813: GuildSettingsModalRolesActionCreators ===
+// === Module 18848: GuildSettingsModalRolesActionCreators ===
 
-// Module 18813 (GuildSettingsModalRolesActionCreators)
+// Module 18848 (GuildSettingsModalRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -53,7 +53,7 @@ let closure_6 = async function _updateGuildRole(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

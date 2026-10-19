@@ -1,6 +1,6 @@
-// === Module 7744: SurveyActionTypes ===
+// === Module 7807: SurveyActionTypes ===
 
-// Module 7744 (SurveyActionTypes)
+// Module 7807 (SurveyActionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx");

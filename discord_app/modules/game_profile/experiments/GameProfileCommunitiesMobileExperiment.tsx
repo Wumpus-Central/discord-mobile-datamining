@@ -1,6 +1,6 @@
-// === Module 13939: GameProfileCommunitiesMobileExperiment ===
+// === Module 13972: GameProfileCommunitiesMobileExperiment ===
 
-// Module 13939 (GameProfileCommunitiesMobileExperiment)
+// Module 13972 (GameProfileCommunitiesMobileExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

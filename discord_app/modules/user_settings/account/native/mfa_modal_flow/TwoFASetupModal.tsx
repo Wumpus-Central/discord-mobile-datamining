@@ -1,22 +1,22 @@
-// === Module 15801: TwoFASetupModal ===
+// === Module 15830: TwoFASetupModal ===
 
-// Module 15801 (TwoFASetupModal)
+// Module 15830 (TwoFASetupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useInitialValueDefault from "useInitialValue" /* 6447 */;
-import Navigator from "Navigator" /* 6965 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 15800 */;
-import TwoFASetupScanDefault from "TwoFASetupScan" /* 15807 */;
-import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 15808 */;
+import useInitialValueDefault from "useInitialValue" /* 5560 */;
+import Navigator from "Navigator" /* 7043 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 15829 */;
+import TwoFASetupScanDefault from "TwoFASetupScan" /* 15836 */;
+import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 15837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(15802).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(15831).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, floatingButton: { position: "absolute", bottom: 12, left: 12, right: 12 } };
 let closure_8 = createStyles.createStyles(obj2);
 let closure_9 = { [TwoFAModalSetupSections.LANDING]: 1, [TwoFAModalSetupSections.SCAN]: 2, [TwoFAModalSetupSections.ENTER_CODE]: 3 };
@@ -81,9 +81,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupMo
         stringResult = intl.string(tmp(1128).t.XiOHRX);
       }
       obj6.text = stringResult;
-      obj6 = closure_6(tmp(5479).Button, obj6);
+      obj6 = closure_6(tmp(5205).Button, obj6);
       obj5.children = obj6;
-      closure_6(tmp(7092).SafeAreaPaddingView, obj5);
+      closure_6(tmp(7169).SafeAreaPaddingView, obj5);
     }
   }
   const fn = function l() {
@@ -128,9 +128,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupMo
       stringResult = intl.string(tmp2(1128).t.XiOHRX);
     }
     obj5.text = stringResult;
-    obj5 = closure_6(tmp2(5479).Button, obj5);
+    obj5 = closure_6(tmp2(5205).Button, obj5);
     obj4.children = obj5;
-    closure_6(tmp2(7092).SafeAreaPaddingView, obj4);
+    closure_6(tmp2(7169).SafeAreaPaddingView, obj4);
   }
   const obj2 = navigation(1506);
 });
@@ -145,21 +145,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      closure_0 = closure_0(6910).generateTotpSecret();
+      closure_0 = closure_0(6992).generateTotpSecret();
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
-      const obj = closure_0(6910);
-      obj3.headerLeft = closure_0(6478).getHeaderCloseButton(closure_1(15800).close);
+      const obj = closure_0(6992);
+      obj3.headerLeft = closure_0(6872).getHeaderCloseButton(closure_1(15829).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(15832).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(15804), {});
+        return closure_1_6(closure_1_1(15833), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15832).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -167,20 +167,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15832).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
         }
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = closure_0(6478);
-      obj5.headerLeft = closure_0(6478).getHeaderCloseButton(closure_1(15800).close);
+      const obj4 = closure_0(6872);
+      obj5.headerLeft = closure_0(6872).getHeaderCloseButton(closure_1(15829).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(15811), {});
+        return closure_1_6(closure_1_1(15840), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;
@@ -218,21 +218,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   let obj = {
     initialRouteName: LANDING,
     screens: useInitialValueDefault(() => {
-      totpSecret = totpSecret(6910).generateTotpSecret();
+      totpSecret = totpSecret(6992).generateTotpSecret();
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
-      const obj = totpSecret(6910);
-      obj3.headerLeft = totpSecret(6478).getHeaderCloseButton(closure_1(15800).close);
+      const obj = totpSecret(6992);
+      obj3.headerLeft = totpSecret(6872).getHeaderCloseButton(closure_1(15829).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(15832).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(15804), {});
+        return closure_1_6(closure_1_1(15833), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15832).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -240,20 +240,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15832).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
         }
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = totpSecret(6478);
-      obj5.headerLeft = totpSecret(6478).getHeaderCloseButton(closure_1(15800).close);
+      const obj4 = totpSecret(6872);
+      obj5.headerLeft = totpSecret(6872).getHeaderCloseButton(closure_1(15829).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(15811), {});
+        return closure_1_6(closure_1_1(15840), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;

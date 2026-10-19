@@ -1,6 +1,6 @@
-// === Module 6941: ManaTypeConsolidationExperiment ===
+// === Module 7023: ManaTypeConsolidationExperiment ===
 
-// Module 6941 (ManaTypeConsolidationExperiment)
+// Module 7023 (ManaTypeConsolidationExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

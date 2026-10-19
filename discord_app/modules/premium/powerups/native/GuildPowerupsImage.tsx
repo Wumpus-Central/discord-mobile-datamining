@@ -1,16 +1,16 @@
-// === Module 13212: GuildPowerupsImage ===
+// === Module 13244: GuildPowerupsImage ===
 
-// Module 13212 (GuildPowerupsImage)
+// Module 13244 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9304 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9320 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

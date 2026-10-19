@@ -1,13 +1,12 @@
-// === Module 6294: ConjureProjectTypes ===
+// === Module 6722: ConjureProjectTypes ===
 
-// Module 6294 (ConjureProjectTypes)
+// Module 6722 (ConjureProjectTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7, ACTIVITY: 8 });
 const frozen1 = Object.freeze({ GUILD_COLLABORATION: 1, PUBLIC: 2 });
 const result = size.fileFinishedImporting("modules/conjure/projects/ConjureProjectTypes.tsx");
 
-export const UNNAMED_PROJECT_NAME = "Untitled App";
 export const ConjureSupportedSurface = frozen;
 export const MIN_PROJECT_NAME_LENGTH = 2;
 export const MAX_PROJECT_NAME_LENGTH = 128;

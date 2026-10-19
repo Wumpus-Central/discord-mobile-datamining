@@ -1,13 +1,13 @@
-// === Module 18570: MultiAccountManagerNative ===
+// === Module 18605: MultiAccountManagerNative ===
 
-// Module 18570 (MultiAccountManagerNative)
+// Module 18605 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
-import Constants2 from "Constants" /* 13080 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
+import Constants2 from "Constants" /* 13112 */;
 import Constants from "Constants" /* 1087 */;
-import MultiAccountManager from "MultiAccountManager" /* 18572 */;
+import MultiAccountManager from "MultiAccountManager" /* 18607 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants2.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -21,7 +21,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj.cancelled = false;
   obj.push = function push() {
     obj = ModalActionCreatorsDefault;
-    obj.pushLazy(obj(2002)(18571, dependencyMap.paths), {}, c7);
+    obj.pushLazy(obj(2002)(18606, dependencyMap.paths), {}, c7);
     if (obj.cancelled) {
       ModalActionCreatorsDefault.popWithKey(c7);
       const tmpResult = ModalActionCreatorsDefault;
@@ -29,7 +29,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   };
   obj.enqueue = function enqueue() {
     obj.cancelled = false;
-    obj = obj(5073);
+    obj = obj(5112);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -54,7 +54,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(2002)(18571, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(2002)(18606, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -62,7 +62,7 @@ obj.push = function push() {
 };
 obj.enqueue = function enqueue() {
   obj.cancelled = false;
-  obj = obj(5073);
+  obj = obj(5112);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -104,10 +104,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   const user = currentUser;
   if (navigateHome) {
     user(1114).transitionTo(constants2.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = user(5078).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = user(5117).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(5072).setHomeDrawerState(false);
-      const tmpResult = tmp(5072);
+      tmp(5111).setHomeDrawerState(false);
+      const tmpResult = tmp(5111);
     }
     obj = user(1114);
     tmp = user;
@@ -117,7 +117,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { text: null, icon: null };
     const intl = obj(1128).intl;
     obj2.text = intl.formatToPlainString(obj(1128).t.wx7O3L, { username: user.username });
-    obj2.icon = obj(18573).ArrowsLeftRightIcon;
+    obj2.icon = obj(18608).ArrowsLeftRightIcon;
     obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", obj2);
   }, 100);
 };
@@ -126,7 +126,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { text: null, icon: null };
   const intl = obj(1128).intl;
   obj2.text = intl.string(obj(1128).t.pqvKWA);
-  obj2.icon = obj(18573).ArrowsLeftRightIcon;
+  obj2.icon = obj(18608).ArrowsLeftRightIcon;
   obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

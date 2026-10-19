@@ -1,10 +1,10 @@
-// === Module 11249: fetchShelf ===
+// === Module 11263: fetchShelf ===
 
-// Module 11249 (fetchShelf)
+// Module 11263 (fetchShelf)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5540 */;
+import ApplicationStore from "ApplicationStore" /* 2046 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
 
 const require = fn;
 function handleFetchDone(arg0, fn, guildId) {
@@ -65,7 +65,7 @@ let closure_9 = async function _fetchShelf(arg0) {
           closure_132_12 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {

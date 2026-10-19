@@ -1,35 +1,35 @@
-// === Module 7589: UserProfileWidgetConstants ===
+// === Module 7652: UserProfileWidgetConstants ===
 
-// Module 7589 (UserProfileWidgetConstants)
+// Module 7652 (UserProfileWidgetConstants)
 import util from "util" /* 1128 */;
-import ApplicationStore from "ApplicationStore" /* 5540 */;
+import ApplicationStore from "ApplicationStore" /* 2046 */;
 
 require = fn;
-const items = [fn(7587).WidgetType.PERSONAL, fn(7587).WidgetType.CLIPS_GALLERY, fn(7587).WidgetType.APPLICATION, fn(7587).WidgetType.FAVORITE_GAMES, fn(7587).WidgetType.PLAYED_GAMES, fn(7587).WidgetType.CURRENT_GAMES, fn(7587).WidgetType.WANT_TO_PLAY_GAMES];
-const items1 = [fn(7587).WidgetType.FAVORITE_GAMES];
-const items2 = [fn(7587).WidgetType.CURRENT_GAMES, fn(7587).WidgetType.FAVORITE_GAMES, fn(7587).WidgetType.CLIPS_GALLERY];
+const items = [fn(7650).WidgetType.PERSONAL, fn(7650).WidgetType.CLIPS_GALLERY, fn(7650).WidgetType.APPLICATION, fn(7650).WidgetType.FAVORITE_GAMES, fn(7650).WidgetType.PLAYED_GAMES, fn(7650).WidgetType.CURRENT_GAMES, fn(7650).WidgetType.WANT_TO_PLAY_GAMES];
+const items1 = [fn(7650).WidgetType.FAVORITE_GAMES];
+const items2 = [fn(7650).WidgetType.CURRENT_GAMES, fn(7650).WidgetType.FAVORITE_GAMES, fn(7650).WidgetType.CLIPS_GALLERY];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
 
 export const WIDGET_SORT_ORDER = items;
 export const WIDGET_TITLES_BY_TYPE = {
-  [fn(7587).WidgetType.FAVORITE_GAMES]: () => {
+  [fn(7650).WidgetType.FAVORITE_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.Rpf6Ak);
   },
-  [fn(7587).WidgetType.CURRENT_GAMES]: () => {
+  [fn(7650).WidgetType.CURRENT_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.zs6NsE);
   },
-  [fn(7587).WidgetType.WANT_TO_PLAY_GAMES]: () => {
+  [fn(7650).WidgetType.WANT_TO_PLAY_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.I509Dl);
   },
-  [fn(7587).WidgetType.PLAYED_GAMES]: () => {
+  [fn(7650).WidgetType.PLAYED_GAMES]: () => {
     const intl = util.intl;
     return intl.string(util.t.QTq6Pf);
   },
-  [fn(7587).WidgetType.APPLICATION]: (applicationId) => {
+  [fn(7650).WidgetType.APPLICATION]: (applicationId) => {
     const application = ApplicationStore.getApplication(applicationId.applicationId);
     let str;
     if (application != null) {
@@ -40,11 +40,11 @@ export const WIDGET_TITLES_BY_TYPE = {
     }
     return str;
   },
-  [fn(7587).WidgetType.PERSONAL]: () => {
+  [fn(7650).WidgetType.PERSONAL]: () => {
     const intl = util.intl;
     return intl.string(util.t.AVkYMx);
   },
-  [fn(7587).WidgetType.CLIPS_GALLERY]: () => {
+  [fn(7650).WidgetType.CLIPS_GALLERY]: () => {
     const intl = util.intl;
     return intl.string(util.t.zY8Ghg);
   }

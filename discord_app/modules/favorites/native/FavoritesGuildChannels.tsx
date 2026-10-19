@@ -1,22 +1,22 @@
-// === Module 17418: FavoritesGuildChannels ===
+// === Module 17447: FavoritesGuildChannels ===
 
-// Module 17418 (FavoritesGuildChannels)
+// Module 17447 (FavoritesGuildChannels)
 import c from "c" /* 576 */;
-import useFontScale from "useFontScale" /* 5486 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7015 */;
-import RedesignChannelList from "RedesignChannelList" /* 17233 */;
-import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 17329 */;
-import useShouldRenderChannelList from "useShouldRenderChannelList" /* 17389 */;
-import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 17419 */;
+import useFontScale from "useFontScale" /* 5214 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7092 */;
+import RedesignChannelList from "RedesignChannelList" /* 17262 */;
+import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 17358 */;
+import useShouldRenderChannelList from "useShouldRenderChannelList" /* 17418 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 17448 */;
 import noop from "module_19" /* 19 */;
 
-const ChannelListPanelBackdropDefault = tmp4(17231);
-const ChannelListStickyHeaderDefault = tmp4(17265);
-const FavoritesGuildSuggestedChannelsDefault = tmp4(17329);
-const FavoritesGuildSuggestionsLoaderDefault = tmp4(17420);
-const FavoritesGuildSidebarHeaderDefault = tmp4(17425);
+const ChannelListPanelBackdropDefault = tmp4(17260);
+const ChannelListStickyHeaderDefault = tmp4(17294);
+const FavoritesGuildSuggestedChannelsDefault = tmp4(17358);
+const FavoritesGuildSuggestionsLoaderDefault = tmp4(17449);
+const FavoritesGuildSidebarHeaderDefault = tmp4(17454);
 require = fn;
-let closure_3 = fn(17330).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(17359).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);

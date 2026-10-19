@@ -1,6 +1,6 @@
-// === Module 18205: GuildScheduledEventsNoticesActionCreators ===
+// === Module 18234: GuildScheduledEventsNoticesActionCreators ===
 
-// Module 18205 (GuildScheduledEventsNoticesActionCreators)
+// Module 18234 (GuildScheduledEventsNoticesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

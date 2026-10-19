@@ -1,6 +1,6 @@
-// === Module 10718: Constants ===
+// === Module 10731: Constants ===
 
-// Module 10718 (Constants)
+// Module 10731 (Constants)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

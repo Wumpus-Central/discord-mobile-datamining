@@ -1,6 +1,6 @@
-// === Module 13097: useEmojiSuggestionNuxCoachmark ===
+// === Module 13129: useEmojiSuggestionNuxCoachmark ===
 
-// Module 13097 (useEmojiSuggestionNuxCoachmark)
+// Module 13129 (useEmojiSuggestionNuxCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,17 +8,17 @@ import PlatformUtils from "PlatformUtils" /* 1384 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1647 */;
-import useToken from "useToken" /* 4913 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5083 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6945 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12827 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5122 */;
+import useToken from "useToken" /* 5213 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5557 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const EmojiSuggestionNuxCoachmark = "EmojiSuggestionNuxCoachmark";
 let ReactCompilerGating = fn(558);
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
   }
   if (cResult[0] !== tmp7) {
     if (tmp7) {
-      const items = [tmp2(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+      const items = [tmp2(4784).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
       let items1 = items;
     } else {
       items1 = [];
@@ -92,11 +92,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
     cResult[0] = tmp7;
     cResult[1] = items1;
   } else {
-    const tmp5Result = _slicedToArray(tmp2(7376).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp5Result = _slicedToArray(tmp2(7442).useSelectedDismissibleContent(cResult[1]), 2);
     _require = tmp12;
-    const tmp13 = tmp5Result[0] === tmp2(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
+    const tmp13 = tmp5Result[0] === tmp2(4784).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK;
     closure_1 = tmp13;
-    const tmp2Result = tmp2(7376);
+    const tmp2Result = tmp2(7442);
     if (cResult[2] !== tmp13) {
       const fn = function f() {
         if (closure_1) {
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
   }
   const tmp3 = _slicedToArray(noop.useState(arg1), 2);
   if (tmp4) {
-    const items = [tmp7(2052).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+    const items = [tmp7(4784).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];

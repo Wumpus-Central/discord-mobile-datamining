@@ -1,14 +1,14 @@
-// === Module 7386: EntitlementStore ===
+// === Module 7452: EntitlementStore ===
 
-// Module 7386 (EntitlementStore)
+// Module 7452 (EntitlementStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1090 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 6309 */;
-import EntitlementRecord from "EntitlementRecord" /* 6303 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6301 */;
-import SKUStore from "SKUStore" /* 6310 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7453 */;
+import EntitlementRecord from "EntitlementRecord" /* 2047 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2044 */;
+import SKUStore from "SKUStore" /* 6772 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -167,7 +167,7 @@ prototype["getForSubscription"] = function getForSubscription(arg0) {
     return set;
   }
 };
-prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
+prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationId) {
   let tmp = item;
   if (item === undefined) {
     tmp = null;
@@ -186,13 +186,13 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
       continue;
     }
   }
-  if (set1.has(id)) {
+  if (set1.has(applicationId)) {
     return false;
   } else {
     if (null != tmp) {
-      let libraryApplication = LibraryApplicationStore.getLibraryApplication(id, tmp);
+      let libraryApplication = LibraryApplicationStore.getLibraryApplication(applicationId, tmp);
     } else {
-      libraryApplication = LibraryApplicationStore.getActiveLibraryApplication(id);
+      libraryApplication = LibraryApplicationStore.getActiveLibraryApplication(applicationId);
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {

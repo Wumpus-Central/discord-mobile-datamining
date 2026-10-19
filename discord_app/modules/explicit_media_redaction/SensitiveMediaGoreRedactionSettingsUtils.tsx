@@ -1,10 +1,10 @@
-// === Module 7276: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 7344: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 7276 (SensitiveMediaGoreRedactionSettingsUtils)
+// Module 7344 (SensitiveMediaGoreRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7274 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5612 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

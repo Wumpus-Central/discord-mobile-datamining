@@ -1,17 +1,17 @@
-// === Module 12627: AppealIngestionModal ===
+// === Module 12647: AppealIngestionModal ===
 
-// Module 12627 (AppealIngestionModal)
+// Module 12647 (AppealIngestionModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12626 */;
-import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 12628 */;
-import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 12648 */;
-import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 12650 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12646 */;
+import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 12648 */;
+import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 12668 */;
+import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 12670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7803 */;
+import SafetyHubStore from "SafetyHubStore" /* 7866 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj2 = {
     headerLeft: require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
     headerTitle() {
-      return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+      return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
     },
     render() {
       return __initData(AppealIngestionSpeedBumpDefault, { isDsaEligible, isSpam, isCoppa, isDeveloperClassification });
@@ -37,7 +37,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj3 = require("NavigatorHeader");
   obj4.headerLeft = require("NavigatorHeader").getHeaderBackButton();
   obj4.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj4.render = function render() {
     return __initData(AppealIngestionCollectSignalDefault, { isDsaEligible });
@@ -49,7 +49,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj5 = require("NavigatorHeader");
   obj6.headerLeft = require("NavigatorHeader").getHeaderBackButton();
   obj6.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj6.render = function render() {
     return __initData(AppealIngestionConfirmSubmissionDefault, { isDsaEligible });
@@ -61,7 +61,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj7 = require("NavigatorHeader");
   obj8.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj8.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj8.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[28]), {});
@@ -73,7 +73,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj9 = require("NavigatorHeader");
   obj10.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj10.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj10.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[29]), {});
@@ -85,7 +85,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj11 = require("NavigatorHeader");
   obj12.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj12.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj12.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[30]), {});
@@ -96,12 +96,12 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(7779);
+const SafetyHubConstants = fn(7842);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, separator: null, footerContainer: null, footerText: null, footerButton: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
@@ -571,7 +571,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngest
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(12622).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(12642).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }
@@ -584,8 +584,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngest
             if (body != null) {
               code = body.code;
             }
-            closure_129_4(safetyHubAppealSignal(7778).getRequestReviewErrorFromCode(code));
-            const obj2 = safetyHubAppealSignal(7778);
+            closure_129_4(safetyHubAppealSignal(7841).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(7841);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

@@ -1,14 +1,14 @@
-// === Module 12190: ConjureAttachmentPills ===
+// === Module 12210: ConjureAttachmentPills ===
 
-// Module 12190 (ConjureAttachmentPills)
+// Module 12210 (ConjureAttachmentPills)
 import nativeDefault from "native" /* 587 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11612 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 11633 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { attachmentPills: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 }, attachmentPill: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
 obj2.attachmentPill = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
@@ -130,10 +130,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
       };
       const intl = projectId(1128).intl;
       const obj2 = { name: id.name };
-      obj.accessibilityLabel = intl.formatToPlainString(closure_1(3883).GtNukg, obj2);
+      obj.accessibilityLabel = intl.formatToPlainString(closure_1(3820).GtNukg, obj2);
       const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-      obj.children = jsx(projectId(5187).Text, { variant: "text-xs/medium", color: "text-default", children: id.name });
-      let tmp12 = jsx(projectId(6459).Card, {
+      obj.children = jsx(projectId(5195).Text, { variant: "text-xs/medium", color: "text-default", children: id.name });
+      let tmp12 = jsx(projectId(6853).Card, {
         style: closure_1.attachmentPill,
         onPress() {
             return closure_2(id.id);
@@ -146,8 +146,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
       const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl2 = projectId(1128).intl;
       const obj6 = { name: id.name };
-      obj5.children = intl2.formatToPlainString(closure_1(3883).nd81jR, obj6);
-      obj4.children = jsx(projectId(5187).Text, { variant: "text-xs/medium", color: "text-muted", children: null });
+      obj5.children = intl2.formatToPlainString(closure_1(3820).nd81jR, obj6);
+      obj4.children = jsx(projectId(5195).Text, { variant: "text-xs/medium", color: "text-muted", children: null });
       const _HermesInternal = HermesInternal;
       tmp12 = <View key={"" + id.name + "-" + index} style={closure_1.attachmentPill}>{null}</View>;
     }

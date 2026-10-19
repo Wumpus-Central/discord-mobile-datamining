@@ -1,12 +1,12 @@
-// === Module 11562: useFetchStreamPreview ===
+// === Module 11583: useFetchStreamPreview ===
 
-// Module 11562 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 7710 */;
+// Module 11583 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 7773 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7712 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7775 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
 const require = globalThis.__r;
 
@@ -197,5 +197,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     }
     return obj5;
   }
-  obj5 = { previewUrl: "Reflect", isLoading: true };
+  obj5 = { previewUrl: "test", isLoading: true };
 });

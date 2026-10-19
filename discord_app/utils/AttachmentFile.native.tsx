@@ -1,10 +1,10 @@
-// === Module 8034: AttachmentFile ===
+// === Module 8097: AttachmentFile ===
 
-// Module 8034 (AttachmentFile)
+// Module 8097 (AttachmentFile)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import UploadPlatform from "UploadPlatform" /* 8025 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8035 */;
+import UploadPlatform from "UploadPlatform" /* 8088 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8098 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

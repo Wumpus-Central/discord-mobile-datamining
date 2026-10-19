@@ -1,9 +1,9 @@
-// === Module 8379: PremiumGiftingUtils ===
+// === Module 8395: PremiumGiftingUtils ===
 
-// Module 8379 (PremiumGiftingUtils)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
+// Module 8395 (PremiumGiftingUtils)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7357 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
 
 const require = fn;
 let closure_6 = async function _sendGiftMessage(arg0, arg1) {
@@ -44,7 +44,7 @@ let closure_6 = async function _sendGiftMessage(arg0, arg1) {
     return closure_131_1(closure_131_2[6]).sendMessage(id, closure_131_1(closure_131_2[7]).parse(closure_130_1, giftCodeURL), undefined, { isGiftLinkSentOnBehalfOfUser: true, location: closure_131_5.GIFTING });
   })();
 };
-const MessageSendLocation = fn(5185).MessageSendLocation;
+const MessageSendLocation = fn(4950).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/PremiumGiftingUtils.tsx");
 

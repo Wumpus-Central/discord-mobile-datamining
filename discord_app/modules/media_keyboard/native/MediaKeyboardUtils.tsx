@@ -1,24 +1,24 @@
-// === Module 10322: MediaKeyboardUtils ===
+// === Module 10336: MediaKeyboardUtils ===
 
-// Module 10322 (MediaKeyboardUtils)
+// Module 10336 (MediaKeyboardUtils)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DeviceUtils from "DeviceUtils" /* 5167 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5471 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7766 */;
-import Upload from "Upload" /* 8024 */;
-import UploadPlatform from "UploadPlatform" /* 8025 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8033 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8035 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9564 */;
-import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10323 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13114 */;
+import DeviceUtils from "DeviceUtils" /* 4902 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5926 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7829 */;
+import Upload from "Upload" /* 8087 */;
+import UploadPlatform from "UploadPlatform" /* 8088 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8096 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8098 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9579 */;
+import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10337 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13146 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8175 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8237 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ let closure_21 = async function _handleLimitedPickerDialog() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ onDismissKeyboard: closure_129_0, onRestoreKeyboard: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "test";
 };
 function handleAttachFile() {
   const self = this;
@@ -90,7 +90,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
           closure_129_7 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -141,7 +141,7 @@ let closure_23 = async function _handleAttachFile(arg0) {
                                     if (name2 == null) {
                                       c1 = undefined;
                                     }
-                                    yield closure_0(8035).getImageDimensionsIfMissing(uri, undefined, undefined, c1);
+                                    yield closure_0(8098).getImageDimensionsIfMissing(uri, undefined, undefined, c1);
                                     closure_132_2 = value;
                                     const width = closure_132_2.width;
                                     const height = closure_132_2.height;
@@ -160,8 +160,8 @@ let closure_23 = async function _handleAttachFile(arg0) {
                                     }
                                     size.mimeType = mimeType;
                                     size.channelId = closure_0.id;
-                                    size.platform = closure_0(8025).UploadPlatform.REACT_NATIVE;
-                                    size.origin = closure_0(8024).UploadOrigin.FILE_ATTACHMENT;
+                                    size.platform = closure_0(8088).UploadPlatform.REACT_NATIVE;
+                                    size.origin = closure_0(8087).UploadOrigin.FILE_ATTACHMENT;
                                     size.width = width;
                                     size.height = height;
                                     return size;
@@ -215,9 +215,9 @@ function handleSelectKeyboardItem(channelId, node, isIncluded, createdUsingInApp
     if (uri == null) {
       uri = image.uri;
     }
-    const size = { id: uri, origin: image(8024).UploadOrigin.IMAGE_PICKER, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
+    const size = { id: uri, origin: image(8087).UploadOrigin.IMAGE_PICKER, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
     ({ uri: obj3.uri, uri: obj3.originalUri, mimeType: obj3.mimeType, width: obj3.width, height: obj3.height, filename: obj3.filename, playableDuration: obj3.playableDuration } = image);
-    size.platform = image(8025).UploadPlatform.REACT_NATIVE;
+    size.platform = image(8088).UploadPlatform.REACT_NATIVE;
     let tmp6 = null != createdUsingInAppCamera;
     if (tmp6) {
       const obj4 = { createdUsingInAppCamera };
@@ -229,12 +229,12 @@ function handleSelectKeyboardItem(channelId, node, isIncluded, createdUsingInApp
     UploadAttachmentActionCreatorsDefault.addFile(obj2);
   }
 }
-const DraftType = fn(7510).DraftType;
+const DraftType = fn(7577).DraftType;
 const MediaKeyboardConstants = fn(1629);
 ({ MediaKeyboardTarget: closure_9, InAppCameraUsedViews: c10 } = MediaKeyboardConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, AnalyticsPages: closure_14, AnalyticsSections: closure_15, ChatInputComponentViewedTypes: closure_16, ComponentActions: closure_17, MAX_UPLOAD_COUNT: closure_18 } = Constants);
-const NativePermissionTypes = fn(7749).NativePermissionTypes;
+const NativePermissionTypes = fn(7812).NativePermissionTypes;
 function animatedIndexThreshold(get, arg1) {
   if (1 === get.get().length) {
     let diff = arg1 - 1;
@@ -267,7 +267,7 @@ function showSimpleMediaKeyboard(channel) {
     uploadLimit,
     disableWhenReachedLimit: true,
     onAttachPress() {
-      const FILE_ATTACHMENT = channel(8024).UploadOrigin.FILE_ATTACHMENT;
+      const FILE_ATTACHMENT = channel(8087).UploadOrigin.FILE_ATTACHMENT;
       const merged = Object.assign({
         channel: FILE_ATTACHMENT,
         uploadLimit,
@@ -313,7 +313,7 @@ function showSimpleMediaKeyboard(channel) {
     },
     onPressCamera(previewType) {
       let obj = {};
-      channel = channel(8024).UploadOrigin.IMAGE_PICKER;
+      channel = channel(8087).UploadOrigin.IMAGE_PICKER;
       const merged = Object.assign({
         channel,
         uploadLimit,
@@ -362,7 +362,7 @@ function showSimpleMediaKeyboard(channel) {
       c3 = undefined;
       c4 = undefined;
       ({ channel: c0, previewType: c1, onDismissKeyboard: c2, onRestoreKeyboard: c3, onSelectFiles: c4 } = obj);
-      const permission = InteractionModal(7766).requestPermission(constants3.CAMERA);
+      const permission = InteractionModal(7829).requestPermission(constants3.CAMERA);
       permission.then((result) => {
         if (result) {
           const obj4 = { type: constants2.CAMERA, channel_id: null, guild_id: null };
@@ -371,8 +371,8 @@ function showSimpleMediaKeyboard(channel) {
           _undefined2();
           const obj = InteractionModal(1267);
           const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
-          let obj3 = InteractionModal(8036);
-          obj7.quality = _undefined(8035).getImageCompressionQuality();
+          let obj3 = InteractionModal(8099);
+          obj7.quality = _undefined(8098).getImageCompressionQuality();
           obj7.saveToPhotos = UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
           obj3.launchCamera(obj7, (didCancel) => {
             if (didCancel.didCancel) {
@@ -411,7 +411,7 @@ function showSimpleMediaKeyboard(channel) {
                             }
                             size1.filename = fileName;
                             size1.playableDuration = size.duration;
-                            size1.platform = c0(8025).UploadPlatform.REACT_NATIVE;
+                            size1.platform = c0(8088).UploadPlatform.REACT_NATIVE;
                             size1.mimeType = str8;
                             const items = [size1];
                             closure_1_4(items);
@@ -434,18 +434,18 @@ function showSimpleMediaKeyboard(channel) {
               }
             }
           });
-          const obj5 = _undefined(8035);
+          const obj5 = _undefined(8098);
         }
       });
     },
     onPressItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      const result = channel(10323).hideMediaKeyboardActionSheet();
+      const result = channel(10337).hideMediaKeyboardActionSheet();
       handleSelectKeyboardItem(channelId, item, isIncluded);
     },
     onViewAll() {
       let obj = {};
-      channel = channel(8024).UploadOrigin.IMAGE_PICKER;
+      channel = channel(8087).UploadOrigin.IMAGE_PICKER;
       let merged = Object.assign({
         channel,
         uploadLimit,
@@ -536,7 +536,7 @@ function showSimpleMediaKeyboard(channel) {
                       if (didCancel.replaceSelection) {
                         const item = found.forEach((origin) => {
                           didCancel = origin;
-                          let tmp2 = origin.origin !== didCancel(8024).UploadOrigin.IMAGE_PICKER;
+                          let tmp2 = origin.origin !== didCancel(8087).UploadOrigin.IMAGE_PICKER;
                           if (!tmp2) {
                             const assets = didCancel.assets;
                             let someResult;
@@ -546,8 +546,8 @@ function showSimpleMediaKeyboard(channel) {
                             tmp2 = someResult;
                           }
                           if (!tmp2) {
-                            c1(9564).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                            const obj = c1(9564);
+                            c1(9579).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                            const obj = c1(9579);
                           }
                         });
                       }
@@ -557,7 +557,7 @@ function showSimpleMediaKeyboard(channel) {
                         if (null != item10018.uri) {
                           let size = { id: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
                           ({ id: obj.id, uri: obj.uri, uri: obj.originalUri, mimeType: obj.mimeType, width: obj.width, height: obj.height, fileName: obj.filename, duration: obj.playableDuration } = item10018);
-                          size.platform = didCancel(8025).UploadPlatform.REACT_NATIVE;
+                          size.platform = didCancel(8088).UploadPlatform.REACT_NATIVE;
                           let arr = items.push(size);
                         }
                         continue;
@@ -582,7 +582,7 @@ function showSimpleMediaKeyboard(channel) {
             obj3 = _undefined(_undefined3[17]);
           }
         });
-        tmpResult = tmp(5167);
+        tmpResult = tmp(4902);
       }
       let obj2 = {
         channel,
@@ -627,8 +627,8 @@ function showSimpleMediaKeyboard(channel) {
       };
       obj3 = channel(1384);
       tmp = channel;
-      resolved = InteractionModal(7766).requestPermission(constants3.PHOTOS);
-      let obj5 = InteractionModal(7766);
+      resolved = InteractionModal(7829).requestPermission(constants3.PHOTOS);
+      let obj5 = InteractionModal(7829);
     },
     onManageLimited() {
       handleLimitedPickerDialog({
@@ -647,7 +647,7 @@ function showSimpleMediaKeyboard(channel) {
     uploadLimit,
     disableWhenReachedLimit: true,
     onAttachPress() {
-      const FILE_ATTACHMENT = channel(8024).UploadOrigin.FILE_ATTACHMENT;
+      const FILE_ATTACHMENT = channel(8087).UploadOrigin.FILE_ATTACHMENT;
       const merged = Object.assign({
         channel: FILE_ATTACHMENT,
         uploadLimit,
@@ -693,7 +693,7 @@ function showSimpleMediaKeyboard(channel) {
     },
     onPressCamera(previewType) {
       let obj = {};
-      channel = channel(8024).UploadOrigin.IMAGE_PICKER;
+      channel = channel(8087).UploadOrigin.IMAGE_PICKER;
       const merged = Object.assign({
         channel,
         uploadLimit,
@@ -742,7 +742,7 @@ function showSimpleMediaKeyboard(channel) {
       c3 = undefined;
       c4 = undefined;
       ({ channel: c0, previewType: c1, onDismissKeyboard: c2, onRestoreKeyboard: c3, onSelectFiles: c4 } = obj);
-      const permission = InteractionModal(7766).requestPermission(constants3.CAMERA);
+      const permission = InteractionModal(7829).requestPermission(constants3.CAMERA);
       permission.then((result) => {
         if (result) {
           const obj4 = { type: constants2.CAMERA, channel_id: null, guild_id: null };
@@ -751,8 +751,8 @@ function showSimpleMediaKeyboard(channel) {
           _undefined2();
           const obj = InteractionModal(1267);
           const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
-          let obj3 = InteractionModal(8036);
-          obj7.quality = _undefined(8035).getImageCompressionQuality();
+          let obj3 = InteractionModal(8099);
+          obj7.quality = _undefined(8098).getImageCompressionQuality();
           obj7.saveToPhotos = UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
           obj3.launchCamera(obj7, (didCancel) => {
             if (didCancel.didCancel) {
@@ -791,7 +791,7 @@ function showSimpleMediaKeyboard(channel) {
                             }
                             size1.filename = fileName;
                             size1.playableDuration = size.duration;
-                            size1.platform = c0(8025).UploadPlatform.REACT_NATIVE;
+                            size1.platform = c0(8088).UploadPlatform.REACT_NATIVE;
                             size1.mimeType = str8;
                             const items = [size1];
                             closure_1_4(items);
@@ -814,18 +814,18 @@ function showSimpleMediaKeyboard(channel) {
               }
             }
           });
-          const obj5 = _undefined(8035);
+          const obj5 = _undefined(8098);
         }
       });
     },
     onPressItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      const result = channel(10323).hideMediaKeyboardActionSheet();
+      const result = channel(10337).hideMediaKeyboardActionSheet();
       handleSelectKeyboardItem(channelId, item, isIncluded);
     },
     onViewAll() {
       let obj = {};
-      channel = channel(8024).UploadOrigin.IMAGE_PICKER;
+      channel = channel(8087).UploadOrigin.IMAGE_PICKER;
       let merged = Object.assign({
         channel,
         uploadLimit,
@@ -916,7 +916,7 @@ function showSimpleMediaKeyboard(channel) {
                       if (didCancel.replaceSelection) {
                         const item = found.forEach((origin) => {
                           didCancel = origin;
-                          let tmp2 = origin.origin !== didCancel(8024).UploadOrigin.IMAGE_PICKER;
+                          let tmp2 = origin.origin !== didCancel(8087).UploadOrigin.IMAGE_PICKER;
                           if (!tmp2) {
                             const assets = didCancel.assets;
                             let someResult;
@@ -926,8 +926,8 @@ function showSimpleMediaKeyboard(channel) {
                             tmp2 = someResult;
                           }
                           if (!tmp2) {
-                            c1(9564).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                            const obj = c1(9564);
+                            c1(9579).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                            const obj = c1(9579);
                           }
                         });
                       }
@@ -937,7 +937,7 @@ function showSimpleMediaKeyboard(channel) {
                         if (null != item10018.uri) {
                           let size = { id: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
                           ({ id: obj.id, uri: obj.uri, uri: obj.originalUri, mimeType: obj.mimeType, width: obj.width, height: obj.height, fileName: obj.filename, duration: obj.playableDuration } = item10018);
-                          size.platform = didCancel(8025).UploadPlatform.REACT_NATIVE;
+                          size.platform = didCancel(8088).UploadPlatform.REACT_NATIVE;
                           let arr = items.push(size);
                         }
                         continue;
@@ -962,7 +962,7 @@ function showSimpleMediaKeyboard(channel) {
             obj3 = _undefined(_undefined3[17]);
           }
         });
-        tmpResult = tmp(5167);
+        tmpResult = tmp(4902);
       }
       let obj2 = {
         channel,
@@ -1007,8 +1007,8 @@ function showSimpleMediaKeyboard(channel) {
       };
       obj3 = channel(1384);
       tmp = channel;
-      resolved = InteractionModal(7766).requestPermission(constants3.PHOTOS);
-      let obj5 = InteractionModal(7766);
+      resolved = InteractionModal(7829).requestPermission(constants3.PHOTOS);
+      let obj5 = InteractionModal(7829);
     },
     onManageLimited() {
       handleLimitedPickerDialog({
@@ -1097,8 +1097,8 @@ export const handleCameraDialog = function handleCameraDialog(arg0) {
       _undefined2();
       const obj = InteractionModal(1267);
       const obj7 = { mediaType: "mixed", includeBase64: false, quality: null, videoQuality: "high", saveToPhotos: null, skipProcessing: true };
-      let obj3 = InteractionModal(8036);
-      obj7.quality = _undefined(8035).getImageCompressionQuality();
+      let obj3 = InteractionModal(8099);
+      obj7.quality = _undefined(8098).getImageCompressionQuality();
       obj7.saveToPhotos = UnsyncedUserSettingsStore.saveCameraUploadsToDevice;
       obj3.launchCamera(obj7, (didCancel) => {
         if (didCancel.didCancel) {
@@ -1137,7 +1137,7 @@ export const handleCameraDialog = function handleCameraDialog(arg0) {
                         }
                         size1.filename = fileName;
                         size1.playableDuration = size.duration;
-                        size1.platform = c0(8025).UploadPlatform.REACT_NATIVE;
+                        size1.platform = c0(8088).UploadPlatform.REACT_NATIVE;
                         size1.mimeType = str8;
                         const items = [size1];
                         closure_1_4(items);
@@ -1160,7 +1160,7 @@ export const handleCameraDialog = function handleCameraDialog(arg0) {
           }
         }
       });
-      const obj5 = _undefined(8035);
+      const obj5 = _undefined(8098);
     }
   });
 };
@@ -1206,18 +1206,18 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
                   if (didCancel.replaceSelection) {
                     const item = found.forEach((origin) => {
                       didCancel = origin;
-                      let tmp2 = origin.origin !== didCancel(8024).UploadOrigin.IMAGE_PICKER;
+                      let tmp2 = origin.origin !== didCancel(8087).UploadOrigin.IMAGE_PICKER;
                       if (!tmp2) {
                         const assets = didCancel.assets;
                         let someResult;
                         if (assets != null) {
-                          someResult = assets.some((item) => origin(8033).doesImageMatchUpload(item, origin));
+                          someResult = assets.some((item) => origin(8096).doesImageMatchUpload(item, origin));
                         }
                         tmp2 = someResult;
                       }
                       if (!tmp2) {
-                        c1(9564).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                        const obj = c1(9564);
+                        c1(9579).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                        const obj = c1(9579);
                       }
                     });
                   }
@@ -1227,7 +1227,7 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
                     if (null != item10018.uri) {
                       let size = { id: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
                       ({ id: obj.id, uri: obj.uri, uri: obj.originalUri, mimeType: obj.mimeType, width: obj.width, height: obj.height, fileName: obj.filename, duration: obj.playableDuration } = item10018);
-                      size.platform = didCancel(8025).UploadPlatform.REACT_NATIVE;
+                      size.platform = didCancel(8088).UploadPlatform.REACT_NATIVE;
                       let arr = items.push(size);
                     }
                     continue;

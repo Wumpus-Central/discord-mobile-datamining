@@ -1,9 +1,9 @@
-// === Module 16066: bountyError ===
+// === Module 16095: bountyError ===
 
-// Module 16066 (bountyError)
+// Module 16095 (bountyError)
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
-import BountiesModalConstants from "BountiesModalConstants" /* 16052 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
+import BountiesModalConstants from "BountiesModalConstants" /* 16081 */;
 import size from "module_2" /* 2 */;
 
 const duration = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;

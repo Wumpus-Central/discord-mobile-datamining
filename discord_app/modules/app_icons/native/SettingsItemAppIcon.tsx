@@ -1,18 +1,18 @@
-// === Module 16587: SettingsItemAppIcon ===
+// === Module 16616: SettingsItemAppIcon ===
 
-// Module 16587 (SettingsItemAppIcon)
+// Module 16616 (SettingsItemAppIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AppIconDefault from "AppIcon" /* 16588 */;
+import AppIconDefault from "AppIcon" /* 16617 */;
 import noop from "module_19" /* 19 */;
 
-const AppIconTypes = ClydeIcon(9768);
-const ClydeIcon2 = ClydeIcon(10475);
-const AppIconUtils = ClydeIcon(14532);
+const AppIconTypes = ClydeIcon(9782);
+const ClydeIcon2 = ClydeIcon(10489);
+const AppIconUtils = ClydeIcon(14565);
 require = fn;
-const getIconById = fn(9767).getIconById;
+const getIconById = fn(9781).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

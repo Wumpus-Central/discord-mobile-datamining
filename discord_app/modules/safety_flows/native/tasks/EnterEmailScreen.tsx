@@ -1,9 +1,9 @@
-// === Module 19093: EnterEmailScreen ===
+// === Module 19132: EnterEmailScreen ===
 
-// Module 19093 (EnterEmailScreen)
-import _modDef2885 from "module_2885" /* 2885 */;
-import types from "types" /* 19085 */;
-import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 19094 */;
+// Module 19132 (EnterEmailScreen)
+import _modDef2822 from "module_2822" /* 2822 */;
+import types from "types" /* 19124 */;
+import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 19133 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,9 +23,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEma
   const first = tmp5[0];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
-    const stringResult = intl.string(_modDef2885.bFbsV6);
+    const stringResult = intl.string(_modDef2822.bFbsV6);
     const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(_modDef2885.RRBNpv);
+    const stringResult1 = intl2.string(_modDef2822.RRBNpv);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp7 = stringResult;
@@ -46,8 +46,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEma
   if (cResult[4] !== first) {
     const obj3 = { children: null };
     const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-    obj3.children = jsx(tmp(6563).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-    const tmp15 = jsx(tmp(5477).Stack, { children: null });
+    obj3.children = jsx(tmp(6956).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
+    const tmp15 = jsx(tmp(5932).Stack, { children: null });
     cResult[4] = first;
     cResult[5] = tmp15;
     let tmp13 = tmp15;
@@ -73,9 +73,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEma
   const obj2 = { title: null, action: null, onAction: null, children: null };
   const tmp = _slicedToArray(noop.useState(""), 2);
   const intl = require("util").intl;
-  obj2.title = intl.string(_modDef2885.bFbsV6);
+  obj2.title = intl.string(_modDef2822.bFbsV6);
   const intl2 = require("util").intl;
-  obj2.action = intl2.string(_modDef2885.RRBNpv);
+  obj2.action = intl2.string(_modDef2822.RRBNpv);
   obj2.onAction = function onAction() {
     closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
   };

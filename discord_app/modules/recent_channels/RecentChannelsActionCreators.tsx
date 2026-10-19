@@ -1,7 +1,7 @@
-// === Module 11130: RecentChannelsActionCreators ===
+// === Module 11145: RecentChannelsActionCreators ===
 
-// Module 11130 (RecentChannelsActionCreators)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2049 */;
+// Module 11145 (RecentChannelsActionCreators)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4781 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

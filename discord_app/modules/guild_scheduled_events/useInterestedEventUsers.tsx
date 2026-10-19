@@ -1,9 +1,9 @@
-// === Module 8803: useInterestedEventUsers ===
+// === Module 8819: useInterestedEventUsers ===
 
-// Module 8803 (useInterestedEventUsers)
+// Module 8819 (useInterestedEventUsers)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2074 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6332 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4806 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6732 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

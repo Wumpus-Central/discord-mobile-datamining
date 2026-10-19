@@ -1,8 +1,8 @@
-// === Module 10471: useMobileSocialLayerPurchaseSKU ===
+// === Module 10485: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10471 (useMobileSocialLayerPurchaseSKU)
-import GPlayActionCreators from "GPlayActionCreators" /* 9699 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10472 */;
+// Module 10485 (useMobileSocialLayerPurchaseSKU)
+import GPlayActionCreators from "GPlayActionCreators" /* 9713 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10486 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

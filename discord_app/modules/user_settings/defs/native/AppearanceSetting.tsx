@@ -1,14 +1,14 @@
-// === Module 16319: AppearanceSetting ===
+// === Module 16348: AppearanceSetting ===
 
-// Module 16319 (AppearanceSetting)
+// Module 16348 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
-import _modDef2821 from "module_2821" /* 2821 */;
-import useThemeDefault from "useTheme" /* 5127 */;
-import useActiveTheme from "useActiveTheme" /* 9610 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5032 */;
+import _modDef2758 from "module_2758" /* 2758 */;
+import useThemeDefault from "useTheme" /* 5166 */;
+import useActiveTheme from "useActiveTheme" /* 9625 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4969 */;
 
 require = fn;
 const ActiveThemeType = fn(1210).ActiveThemeType;
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     const _Symbol2 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const intl2 = util.intl;
-      const stringResult = intl2.string(_modDef2821.KSBBpC);
+      const stringResult = intl2.string(_modDef2758.KSBBpC);
       cResult[4] = stringResult;
       let tmp19 = stringResult;
     } else {
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
   const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2821.KSBBpC);
+    return intl2.string(_modDef2758.KSBBpC);
   } else if (ActiveThemeType.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 });
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16320).PaintPaletteIcon,
+  IconComponent: fn(16349).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1087).UserSettingsSections.APPEARANCE,

@@ -1,10 +1,10 @@
-// === Module 18199: useVoicePanelNavArrowPressed ===
+// === Module 18228: useVoicePanelNavArrowPressed ===
 
-// Module 18199 (useVoicePanelNavArrowPressed)
+// Module 18228 (useVoicePanelNavArrowPressed)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");

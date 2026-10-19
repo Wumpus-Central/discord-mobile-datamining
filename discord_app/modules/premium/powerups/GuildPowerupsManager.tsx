@@ -1,21 +1,21 @@
-// === Module 18512: GuildPowerupsManager ===
+// === Module 18547: GuildPowerupsManager ===
 
-// Module 18512 (GuildPowerupsManager)
-import FavoritesUtils from "FavoritesUtils" /* 2093 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5108 */;
-import ServerThemeExperiment2 from "ServerThemeExperiment" /* 5109 */;
-import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5121 */;
-import GameServerExperiment2 from "GameServerExperiment" /* 5122 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5394 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8296 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13179 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 13202 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 17294 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5103 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;
+// Module 18547 (GuildPowerupsManager)
+import FavoritesUtils from "FavoritesUtils" /* 4825 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5147 */;
+import ServerThemeExperiment2 from "ServerThemeExperiment" /* 5148 */;
+import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5160 */;
+import GameServerExperiment2 from "GameServerExperiment" /* 5161 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5858 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8312 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13211 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 13234 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 17323 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5142 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
 
 require = fn;
 class GuildPowerupsManager extends tmp2 {

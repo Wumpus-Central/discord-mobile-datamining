@@ -1,9 +1,9 @@
-// === Module 17298: GuildPowerupsBoostToUnlockCoachmark ===
+// === Module 17327: GuildPowerupsBoostToUnlockCoachmark ===
 
-// Module 17298 (GuildPowerupsBoostToUnlockCoachmark)
+// Module 17327 (GuildPowerupsBoostToUnlockCoachmark)
 import c from "c" /* 576 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 13186 */;
-import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 17299 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 13218 */;
+import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 17328 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,6 +32,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   const items = [powerup, markAsDismissed];
   ({ guildId, targetRef } = powerup);
   const memo = noop.useMemo(() => ({ type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK, powerup, markAsDismissed }), items);
-  markAsDismissed(17299)(targetRef, guildId, memo);
+  markAsDismissed(17328)(targetRef, guildId, memo);
   return null;
 });

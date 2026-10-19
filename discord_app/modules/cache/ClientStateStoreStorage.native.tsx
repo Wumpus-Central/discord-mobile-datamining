@@ -1,7 +1,7 @@
-// === Module 15219: ClientStateStoreStorage ===
+// === Module 15247: ClientStateStoreStorage ===
 
-// Module 15219 (ClientStateStoreStorage)
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15220 */;
+// Module 15247 (ClientStateStoreStorage)
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15248 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");

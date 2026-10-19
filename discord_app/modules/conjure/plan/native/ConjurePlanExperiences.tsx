@@ -1,17 +1,17 @@
-// === Module 12282: ConjurePlanExperiences ===
+// === Module 12302: ConjurePlanExperiences ===
 
-// Module 12282 (ConjurePlanExperiences)
+// Module 12302 (ConjurePlanExperiences)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import AppsIcon2 from "AppsIcon" /* 8506 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12272 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12285 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import AppsIcon2 from "AppsIcon" /* 8522 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12292 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12305 */;
 import noop from "module_19" /* 19 */;
 
-const ConjurePlanCommandText2 = ConjurePlanCommandText(12281);
+const ConjurePlanCommandText2 = ConjurePlanCommandText(12301);
 require = fn;
 function frameBlocks(proposal, experience, infoRows) {
   const result = conjurePlanExperienceSurfaces.conjurePlanExperiencePlacement(proposal, experience);
@@ -23,7 +23,7 @@ function frameBlocks(proposal, experience, infoRows) {
       const obj2 = { channels: true, caption: null, children: null };
       const intl2 = util.intl;
       const obj3 = { count: result.channels.length };
-      obj2.caption = intl2.formatToPlainString(_modDef3883.w8F5sy, obj3);
+      obj2.caption = intl2.formatToPlainString(_modDef3820.w8F5sy, obj3);
       const obj4 = { style: infoRows.infoRows, children: null };
       const channels = result.channels;
       obj4.children = channels.map((description) => {
@@ -37,7 +37,7 @@ function frameBlocks(proposal, experience, infoRows) {
     if (result1.length > 0) {
       const obj5 = { caption: null, children: null };
       const intl = util.intl;
-      obj5.caption = intl.string(_modDef3883.MY6UGJ);
+      obj5.caption = intl.string(_modDef3820.MY6UGJ);
       const obj6 = { labels: result1 };
       obj5.children = hasOwnProperty(closure_10, obj6);
       items.push(hasOwnProperty(closure_9, obj5, "features"));
@@ -48,8 +48,8 @@ function frameBlocks(proposal, experience, infoRows) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { frame: fn(9514).GameControllerIcon, overlay_widget: fn(12283).WindowTopIcon, user_widget: fn(10598).UserCircleIcon, bot: fn(11643).RobotIcon, commands: fn(11643).RobotIcon, automod: fn(10733).ShieldIcon };
-const createStyles = fn(5191);
+let obj = { frame: fn(9530).GameControllerIcon, overlay_widget: fn(12303).WindowTopIcon, user_widget: fn(10612).UserCircleIcon, bot: fn(11664).RobotIcon, commands: fn(11664).RobotIcon, automod: fn(10746).ShieldIcon };
+const createStyles = fn(4945);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.divider = { marginVertical: nativeDefault.space.PX_24, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -669,7 +669,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Compon
     const intl = util.intl;
     let kind = intl.string;
     if (tmp4) {
-      let BM4Ymz = _modDef3883.BM4Ymz;
+      let BM4Ymz = _modDef3820.BM4Ymz;
     } else {
       BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
     }
@@ -701,7 +701,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Compon
   const items = [hasOwnProperty(View, obj4), ];
   const intl = util.intl;
   if (result) {
-    let BM4Ymz = _modDef3883.BM4Ymz;
+    let BM4Ymz = _modDef3820.BM4Ymz;
   } else {
     BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
   }

@@ -1,22 +1,22 @@
-// === Module 12828: TypingIndicator ===
+// === Module 12860: TypingIndicator ===
 
-// Module 12828 (TypingIndicator)
+// Module 12860 (TypingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import native from "native" /* 4922 */;
-import spring from "spring" /* 5478 */;
-import springPresets from "springPresets" /* 5482 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5509 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 12830 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12833 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 12834 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 12835 */;
+import native from "native" /* 4999 */;
+import spring from "spring" /* 5208 */;
+import springPresets from "springPresets" /* 5209 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5944 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 12862 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12865 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 12866 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 12867 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5190 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6245 */;
-import TypingStore from "TypingStore" /* 12829 */;
+import DevSettingsStore from "DevSettingsStore" /* 5198 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6674 */;
+import TypingStore from "TypingStore" /* 12861 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -28,8 +28,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return __initData(closure_23, obj, arg0);
 }
 const View = fn(17).View;
-let style_owner_user_id = fn(9683).useChatShowingAutoComplete;
-const SlowmodeType = fn(7640).SlowmodeType;
+let style_owner_user_id = fn(9697).useChatShowingAutoComplete;
+const SlowmodeType = fn(7703).SlowmodeType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -120,7 +120,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTypingUse
   }, items2);
 });
 let closure_15 = tmp3;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_16 = createStyles.createStyles((arg0) => {
   const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
   const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };

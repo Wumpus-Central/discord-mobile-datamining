@@ -1,9 +1,9 @@
-// === Module 9422: PromotionRecord ===
+// === Module 9438: PromotionRecord ===
 
-// Module 9422 (PromotionRecord)
+// Module 9438 (PromotionRecord)
 import FlagUtils from "FlagUtils" /* 1405 */;
 import Record from "Record" /* 1407 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 9423 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 9439 */;
 
 require = fn;
 let PromotionRecord;

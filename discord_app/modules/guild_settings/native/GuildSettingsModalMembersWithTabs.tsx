@@ -1,20 +1,20 @@
-// === Module 17720: GuildSettingsModalMembersWithTabs ===
+// === Module 17749: GuildSettingsModalMembersWithTabs ===
 
-// Module 17720 (GuildSettingsModalMembersWithTabs)
+// Module 17749 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5037 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7242 */;
-import ContextMenu from "ContextMenu" /* 9662 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 17721 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 17722 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 17724 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 17729 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4974 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7311 */;
+import ContextMenu from "ContextMenu" /* 9676 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 17750 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 17751 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 17753 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 17758 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ let closure_3 = ["ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { flex: 1 }, tabContainer: { marginTop: 12, minHeight: 32 } };
 let closure_13 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -485,12 +485,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return closure_2_11(ContextMenu.ContextMenu, {
               items: membersManagementActions,
               children(ref) {
-                const obj = { source: closure_1_1(8937), accessibilityLabel: null, ref: null };
+                const obj = { source: closure_1_1(8953), accessibilityLabel: null, ref: null };
                 const intl = guildId(1128).intl;
                 obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
                 obj.ref = ref.ref;
                 const merged = Object.assign(navigation(ref, stateFromStores1));
-                return closure_1_11(guildId(7365).HeaderActionButton, obj);
+                return closure_1_11(guildId(7431).HeaderActionButton, obj);
               }
             });
           };
@@ -602,12 +602,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(8937), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(8953), accessibilityLabel: null, ref: null };
         const intl = guildId(1128).intl;
         obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_11(guildId(7365).HeaderActionButton, obj);
+        return closure_1_11(guildId(7431).HeaderActionButton, obj);
       }
     });
   }, items5);

@@ -1,10 +1,10 @@
-// === Module 7047: EnvelopeIcon ===
+// === Module 7124: EnvelopeIcon ===
 
-// Module 7047 (EnvelopeIcon)
+// Module 7124 (EnvelopeIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4912 */;
-import _mod7048 from "module_7048" /* 7048 */;
+import BaseIconImage from "BaseIconImage" /* 5630 */;
+import _mod7125 from "module_7125" /* 7125 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EnvelopeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod7048;
+    const tmpResult = _mod7125;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EnvelopeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7048, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7125, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,19 +1,19 @@
-// === Module 13486: useCreateGameInvitePost ===
+// === Module 13520: useCreateGameInvitePost ===
 
-// Module 13486 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7256 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11215 */;
+// Module 13520 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7325 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 10974 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6015 */;
-import SlowmodeStore from "SlowmodeStore" /* 7640 */;
+import LocalActivityStore from "LocalActivityStore" /* 10986 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6452 */;
+import SlowmodeStore from "SlowmodeStore" /* 7703 */;
 
 require = fn;
-const SlowmodeType = fn(7640).SlowmodeType;
+const SlowmodeType = fn(7703).SlowmodeType;
 const ActivityActionTypes = fn(1087).ActivityActionTypes;
-const ChannelFlags = fn(2075).ChannelFlags;
+const ChannelFlags = fn(4807).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/useCreateGameInvitePost.tsx");

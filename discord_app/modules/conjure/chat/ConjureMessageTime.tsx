@@ -1,7 +1,7 @@
-// === Module 12177: ConjureMessageTime ===
+// === Module 12197: ConjureMessageTime ===
 
-// Module 12177 (ConjureMessageTime)
-import DateUtils from "DateUtils" /* 4888 */;
+// Module 12197 (ConjureMessageTime)
+import DateUtils from "DateUtils" /* 4773 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMessageTime.tsx");

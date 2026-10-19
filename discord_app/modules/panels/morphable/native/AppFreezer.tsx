@@ -1,9 +1,9 @@
-// === Module 17666: AppFreezer ===
+// === Module 17695: AppFreezer ===
 
-// Module 17666 (AppFreezer)
-import NativeViewDefault from "NativeView" /* 6439 */;
+// Module 17695 (AppFreezer)
+import NativeViewDefault from "NativeView" /* 6834 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8690 */;
+import AppFreezeStore from "AppFreezeStore" /* 8706 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppFreez
       return tmp7;
     }
   }
-  const tmp8 = jsx(lockKeys(5430).Freeze, { freeze: tmp6, placeholder, children });
+  const tmp8 = jsx(lockKeys(5894).Freeze, { freeze: tmp6, placeholder, children });
   cResult[2] = children;
   cResult[3] = placeholder;
   cResult[4] = tmp6;
@@ -73,5 +73,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppFreez
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(5430).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(5894).Freeze, { freeze, placeholder, children: children.children });
 });

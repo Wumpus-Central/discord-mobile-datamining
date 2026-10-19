@@ -1,11 +1,11 @@
-// === Module 16863: UserSettingsDesignSystemTooltip ===
+// === Module 16892: UserSettingsDesignSystemTooltip ===
 
-// Module 16863 (UserSettingsDesignSystemTooltip)
+// Module 16892 (UserSettingsDesignSystemTooltip)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7092 */;
-import LayerScope from "LayerScope" /* 7124 */;
-import DeviceOrientation from "DeviceOrientation" /* 8724 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import LayerScope from "LayerScope" /* 5558 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7169 */;
+import DeviceOrientation from "DeviceOrientation" /* 8740 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
 let closure_9 = ["top", "bottom", "left", "right"];
 let ReactCompilerGating = fn(558);
@@ -103,7 +103,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     if (cResult[2] === visible) {
       let tmp14 = cResult[3];
     }
-    const tooltip = tmp(9743).useTooltip(ref, tmp14);
+    const tooltip = tmp(9757).useTooltip(ref, tmp14);
     if (cResult[4] !== visible) {
       class U {
         constructor() {
@@ -150,7 +150,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
                 return;
               }
             }
-            const mapped = closure_9.map((label) => closure_1_5(first(6539).TableRadioRow, { label, value: label }, label));
+            const mapped = closure_9.map((label) => closure_1_5(first(6932).TableRadioRow, { label, value: label }, label));
             cResult[15] = mapped;
             const tmp27 = mapped;
           } else {
@@ -169,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
               }
             }
             const obj3 = { title: "Position", value: first1, onChange: tmp10[1], hasIcons: false, children: tmp27 };
-            const tmp30 = closure_5(tmp(6540).TableRadioGroup, obj3);
+            const tmp30 = closure_5(tmp(6933).TableRadioGroup, obj3);
             cResult[16] = first1;
             cResult[17] = tmp30;
           } else {
@@ -217,7 +217,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
           cResult[22] = tmp37;
         }
         const obj5 = { label: "Unlock Orientation", value: tmp8, onValueChange: tmp9 };
-        const tmp26 = closure_5(tmp(7172).TableSwitchRow, obj5);
+        const tmp26 = closure_5(tmp(7241).TableSwitchRow, obj5);
         cResult[12] = tmp8;
         cResult[13] = tmp9;
         cResult[14] = tmp26;
@@ -229,11 +229,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       cResult[11] = tmp23;
     }
     const obj7 = { ref, onPress: U, variant: "primary", text: str, size: "md" };
-    const tmp19 = closure_5(tmp(5479).Button, obj7);
+    const tmp19 = closure_5(tmp(5205).Button, obj7);
     cResult[6] = U;
     cResult[7] = str;
     cResult[8] = tmp19;
-    const tmpResult = tmp(9743);
+    const tmpResult = tmp(9757);
   }
   const obj8 = { label: "NEW", position: first1, visible, onPress: first2 };
   cResult[1] = first1;
@@ -264,11 +264,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     }
   }), items);
   const tmp4 = first1(closure_10(), 2);
-  const tooltip = visible(9743).useTooltip(ref, memo);
+  const tooltip = visible(9757).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(visible(5479).Button, {
+    children: closure_5(visible(5205).Button, {
       ref,
       onPress() {
         dependencyMap(!first);
@@ -278,8 +278,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       size: "md"
     })
   };
-  const items1 = [closure_5(View, obj4), closure_5(visible(7172).TableSwitchRow, { label: "Unlock Orientation", value: tmp5, onValueChange: tmp6 }), , ];
-  const obj2 = visible(9743);
+  const items1 = [closure_5(View, obj4), closure_5(visible(7241).TableSwitchRow, { label: "Unlock Orientation", value: tmp5, onValueChange: tmp6 }), , ];
+  const obj2 = visible(9757);
   const obj5 = {
     ref,
     onPress() {
@@ -289,7 +289,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     text: str,
     size: "md"
   };
-  items1[2] = closure_5(visible(6540).TableRadioGroup, { title: "Position", value: first1, onChange: tmp7[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(6539).TableRadioRow, { label, value: label }, label)) });
+  items1[2] = closure_5(visible(6933).TableRadioGroup, { title: "Position", value: first1, onChange: tmp7[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(6932).TableRadioRow, { label, value: label }, label)) });
   items1[3] = closure_5(closure_12, {});
   obj3.children = items1;
   return closure_7(closure_6, obj3);

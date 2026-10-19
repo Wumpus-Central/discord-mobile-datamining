@@ -1,15 +1,15 @@
-// === Module 11012: conjureLiveReloadConnection ===
+// === Module 11028: conjureLiveReloadConnection ===
 
-// Module 11012 (conjureLiveReloadConnection)
+// Module 11028 (conjureLiveReloadConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10998 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11010 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveReloadConnection.tsx");
 
 export const liveReloadFrameHandlers = {
   live_reload(enabled, projectId) {
-    const obj2 = { type: "CONJURE_LIVE_RELOAD_SET", projectId: projectId.projectId, enabled: enabled.enabled, error: null, phase: null, step: null };
+    const obj2 = { type: "CONJURE_LIVE_RELOAD_SET", projectId: projectId.projectId, enabled: enabled.enabled, error: null, phase: null, step: null, background: null };
     let error = enabled.error;
     if (error == null) {
       error = null;
@@ -25,6 +25,7 @@ export const liveReloadFrameHandlers = {
       step = null;
     }
     obj2.step = step;
+    obj2.background = true === enabled.background;
     DispatcherDefault.dispatch(obj2);
   }
 };

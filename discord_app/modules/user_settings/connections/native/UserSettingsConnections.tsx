@@ -1,29 +1,29 @@
-// === Module 16007: UserSettingsConnections ===
+// === Module 16036: UserSettingsConnections ===
 
-// Module 16007 (UserSettingsConnections)
+// Module 16036 (UserSettingsConnections)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import useThemeDefault from "useTheme" /* 5127 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7136 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9507 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14184 */;
-import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 16011 */;
-import ConnectedAccountDefault from "ConnectedAccount" /* 16012 */;
+import useThemeDefault from "useTheme" /* 5166 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7205 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9523 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14217 */;
+import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 16040 */;
+import ConnectedAccountDefault from "ConnectedAccount" /* 16041 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7074 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7151 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6017 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6454 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 
-const ConnectionsEmptyStateUpsellDefault = tmp2(16008);
+const ConnectionsEmptyStateUpsellDefault = tmp2(16037);
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const FetchState = fn(7074).FetchState;
+const FetchState = fn(7151).FetchState;
 const AnalyticsLocations = fn(1087).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { flex: { flex: 1 }, form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -61,7 +61,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16006, dependencyMap.paths), "AddConnection");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16035, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);
@@ -85,8 +85,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id))
       ];
       obj5.children = items5;
-      obj4.children = closure_12(tmp4(5477).Stack, obj5);
-      tmp14 = closure_11(tmp4(8855).Form, obj4);
+      obj4.children = closure_12(tmp4(5932).Stack, obj5);
+      tmp14 = closure_11(tmp4(8871).Form, obj4);
     }
     return tmp14;
   }

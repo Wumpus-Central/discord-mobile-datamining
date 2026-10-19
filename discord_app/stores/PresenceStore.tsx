@@ -1,12 +1,12 @@
-// === Module 5207: PresenceStore ===
+// === Module 5674: PresenceStore ===
 
-// Module 5207 (PresenceStore)
+// Module 5674 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1357 from "module_1357" /* 1357 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5208 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5675 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1392 */;
 

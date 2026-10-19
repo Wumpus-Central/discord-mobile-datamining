@@ -1,6 +1,6 @@
-// === Module 7220: OrderConstants ===
+// === Module 7289: OrderConstants ===
 
-// Module 7220 (OrderConstants)
+// Module 7289 (OrderConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/payments/OrderConstants.tsx");

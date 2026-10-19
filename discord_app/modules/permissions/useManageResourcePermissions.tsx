@@ -1,10 +1,10 @@
-// === Module 8848: useManageResourcePermissions ===
+// === Module 8864: useManageResourcePermissions ===
 
-// Module 8848 (useManageResourcePermissions)
+// Module 8864 (useManageResourcePermissions)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -60,7 +60,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8847);
+const PermissionsConstants = fn(8863);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
 const Permissions = fn(1098).Permissions;
 let closure_11 = {
@@ -123,7 +123,7 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
     }
     cResult[0] = isGuildStageVoice;
     cResult[1] = items2;
-    tmpResult = tmp(2082);
+    tmpResult = tmp(4814);
   } else {
     const tmp12 = first1(cResult[1], 2);
     first = tmp12[0];

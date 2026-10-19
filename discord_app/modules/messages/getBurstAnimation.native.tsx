@@ -1,189 +1,189 @@
-// === Module 8194: getBurstAnimation ===
+// === Module 4904: getBurstAnimation ===
 
-// Module 8194 (getBurstAnimation)
+// Module 4904 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
   {
     load() {
-      return closure_0(8195);
+      return closure_0(4905);
     }
   },
   {
     load() {
-      return closure_0(8196);
+      return closure_0(4906);
     }
   },
   {
     load() {
-      return closure_0(8197);
+      return closure_0(4907);
     }
   },
   {
     load() {
-      return closure_0(8198);
+      return closure_0(4908);
     }
   },
   {
     load() {
-      return closure_0(8199);
+      return closure_0(4909);
     }
   },
   {
     load() {
-      return closure_0(8200);
+      return closure_0(4910);
     }
   },
   {
     load() {
-      return closure_0(8201);
+      return closure_0(4911);
     }
   },
   {
     load() {
-      return closure_0(8202);
+      return closure_0(4912);
     }
   },
   {
     load() {
-      return closure_0(8203);
+      return closure_0(4913);
     }
   },
   {
     load() {
-      return closure_0(8204);
+      return closure_0(4914);
     }
   },
   {
     load() {
-      return closure_0(8205);
+      return closure_0(4915);
     }
   },
   {
     load() {
-      return closure_0(8206);
+      return closure_0(4916);
     }
   },
   {
     load() {
-      return closure_0(8207);
+      return closure_0(4917);
     }
   },
   {
     load() {
-      return closure_0(8208);
+      return closure_0(4918);
     }
   },
   {
     load() {
-      return closure_0(8209);
+      return closure_0(4919);
     }
   },
   {
     load() {
-      return closure_0(8210);
+      return closure_0(4920);
     }
   },
   {
     load() {
-      return closure_0(8211);
+      return closure_0(4921);
     }
   },
   {
     load() {
-      return closure_0(8212);
+      return closure_0(4922);
     }
   }
 ];
 const items1 = [
   {
     load() {
-      return closure_0(8213);
+      return closure_0(4923);
     }
   },
   {
     load() {
-      return closure_0(8214);
+      return closure_0(4924);
     }
   },
   {
     load() {
-      return closure_0(8215);
+      return closure_0(4925);
     }
   },
   {
     load() {
-      return closure_0(8216);
+      return closure_0(4926);
     }
   },
   {
     load() {
-      return closure_0(8217);
+      return closure_0(4927);
     }
   },
   {
     load() {
-      return closure_0(8218);
+      return closure_0(4928);
     }
   },
   {
     load() {
-      return closure_0(8219);
+      return closure_0(4929);
     }
   },
   {
     load() {
-      return closure_0(8220);
+      return closure_0(4930);
     }
   },
   {
     load() {
-      return closure_0(8221);
+      return closure_0(4931);
     }
   },
   {
     load() {
-      return closure_0(8222);
+      return closure_0(4932);
     }
   },
   {
     load() {
-      return closure_0(8223);
+      return closure_0(4933);
     }
   },
   {
     load() {
-      return closure_0(8224);
+      return closure_0(4934);
     }
   },
   {
     load() {
-      return closure_0(8225);
+      return closure_0(4935);
     }
   },
   {
     load() {
-      return closure_0(8226);
+      return closure_0(4936);
     }
   },
   {
     load() {
-      return closure_0(8227);
+      return closure_0(4937);
     }
   },
   {
     load() {
-      return closure_0(8228);
+      return closure_0(4938);
     }
   },
   {
     load() {
-      return closure_0(8229);
+      return closure_0(4939);
     }
   },
   {
     load() {
-      return closure_0(8230);
+      return closure_0(4940);
     }
   }
 ];
@@ -226,7 +226,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
           let burstAnimationHash;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (arg0 === 1) {
         c7 = 3;

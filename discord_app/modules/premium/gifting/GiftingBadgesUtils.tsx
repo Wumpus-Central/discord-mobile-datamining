@@ -1,19 +1,19 @@
-// === Module 10406: GiftingBadgesUtils ===
+// === Module 10420: GiftingBadgesUtils ===
 
-// Module 10406 (GiftingBadgesUtils)
+// Module 10420 (GiftingBadgesUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef2685 from "module_2685" /* 2685 */;
-import BadgeId from "BadgeId" /* 8582 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8595 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10400 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10407 */;
+import _modDef2622 from "module_2622" /* 2622 */;
+import BadgeId from "BadgeId" /* 8598 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8611 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10414 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10421 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8590 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-let closure_5 = fn(8590).getSingleRequirementThreshold;
+let closure_5 = fn(8606).getSingleRequirementThreshold;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGiftingBadgesDesktopEnabled(location) {
@@ -68,7 +68,7 @@ export const getGiftingBadgeAccessibilityLabel = function getGiftingBadgeAccessi
     str = "";
   }
   const intl = util.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2685.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2622.qvx9E4, { count });
 };
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = closure_5(currentTier);
@@ -128,7 +128,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   } else {
     tmp5 = cResult[1];
   }
-  const GiftingBadgeExperiment = tmp(10400).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp(10414).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig(tmp5).enabled;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
@@ -144,7 +144,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   } else {
     tmp8 = cResult[3];
   }
-  const GiftingBadgeDesktopExperiment = tmp(10407).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = tmp(10421).GiftingBadgeDesktopExperiment;
   let enabled3 = GiftingBadgeDesktopExperiment.useConfig(tmp8).enabled;
   let tmp9 = enabled2;
   if ("web" === platform.platform) {
@@ -165,7 +165,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   } else {
     tmp11 = cResult[5];
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10408).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10422).GiftingBadgeCoachmarkAudienceExperiment;
   const enabled4 = GiftingBadgeCoachmarkAudienceExperiment.useConfig(tmp11).enabled;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -191,7 +191,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp12, tmp13);
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5033).useIsDismissibleContentDismissed_UNSAFE(tmp(2052).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const result = stateFromStores(4970).useIsDismissibleContentDismissed_UNSAFE(tmp(4784).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [BadgeDirectoryStore];
     class A {
@@ -207,7 +207,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
     tmp17 = cResult[8];
     tmp18 = cResult[9];
   }
-  const tmpResult3 = stateFromStores(5033);
+  const tmpResult3 = stateFromStores(4970);
   const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp18, tmp17);
   if (tmp9) {
     tmp9 = !result;
@@ -294,9 +294,9 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10400).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10414).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = stateFromStores(10407).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10421).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
   if ("web" === platform.platform) {
@@ -310,7 +310,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
     }
     tmp4 = enabled3;
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10408).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10422).GiftingBadgeCoachmarkAudienceExperiment;
   if (tmp4) {
     str = "";
   }
@@ -330,8 +330,8 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5033).useIsDismissibleContentDismissed_UNSAFE(tmp(2052).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  const tmpResult3 = stateFromStores(5033);
+  const result = stateFromStores(4970).useIsDismissibleContentDismissed_UNSAFE(tmp(4784).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const tmpResult3 = stateFromStores(4970);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[13]).BadgeId.GIFTING));
   if (tmp4) {

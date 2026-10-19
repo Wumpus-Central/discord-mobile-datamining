@@ -1,10 +1,10 @@
-// === Module 11695: conjurePublishAction ===
+// === Module 11716: conjurePublishAction ===
 
-// Module 11695 (conjurePublishAction)
+// Module 11716 (conjurePublishAction)
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 11696 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11698 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11717 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11719 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -48,7 +48,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           str5 = "";
         }
         const obj4 = { server: str5 };
-        formatResult = intl.format(_modDef3883.N4NkyR, obj4);
+        formatResult = intl.format(_modDef3820.N4NkyR, obj4);
       }
     }
     const obj6 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -90,7 +90,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
               str9 = "";
             }
             const obj8 = { server: str9 };
-            formatResult1 = intl2.format(_modDef3883.eHYXFg, obj8);
+            formatResult1 = intl2.format(_modDef3820.eHYXFg, obj8);
           }
         }
       }
@@ -115,7 +115,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
         const obj9 = {};
         const merged2 = Object.assign(obj7);
         const intl4 = util.intl;
-        obj9.label = intl4.string(_modDef3883["tUeY/h"]);
+        obj9.label = intl4.string(_modDef3820["tUeY/h"]);
         obj9.action = "review_permissions";
         let obj10 = obj9;
       }
@@ -124,7 +124,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     obj10 = {};
     const merged3 = Object.assign(obj7);
     const intl3 = util.intl;
-    obj10.label = intl3.string(_modDef3883["120EFN"]);
+    obj10.label = intl3.string(_modDef3820["120EFN"]);
     obj10.action = "publish";
   } else if ("activity" === status2.surface) {
     let tmp8 = null == appChannelName;
@@ -163,7 +163,7 @@ export const conjurePublishTooltip = function conjurePublishTooltip(status) {
       if (null != publishedRevision) {
         const intl = util.intl;
         const obj2 = { time: ConjureHistoryFormat.formatHistoryDateTime(parseTimestampMsResult), version: publishedRevision };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3883.D9erxW, obj2);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3820.D9erxW, obj2);
       }
     }
   }

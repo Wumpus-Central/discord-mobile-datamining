@@ -1,7 +1,7 @@
-// === Module 5036: GuildJoinRequestUtils ===
+// === Module 4973: GuildJoinRequestUtils ===
 
-// Module 5036 (GuildJoinRequestUtils)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5037 */;
+// Module 4973 (GuildJoinRequestUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4974 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");

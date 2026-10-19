@@ -1,10 +1,10 @@
-// === Module 18850: GuildSettingsModalMembersWrapper ===
+// === Module 18885: GuildSettingsModalMembersWrapper ===
 
-// Module 18850 (GuildSettingsModalMembersWrapper)
+// Module 18885 (GuildSettingsModalMembersWrapper)
 import c from "c" /* 576 */;
-import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 7241 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 17720 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 17722 */;
+import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 7310 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 17749 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 17751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,5 +39,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj2 = canReviewGuildMemberApplications;
 }) : (function GuildSettingsModalMembersWrapper(guildId) {
   guildId = guildId.guildId;
-  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 17720 : 17722), { guildId });
+  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 17749 : 17751), { guildId });
 }));

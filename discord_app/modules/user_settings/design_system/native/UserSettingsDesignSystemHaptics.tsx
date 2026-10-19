@@ -1,20 +1,20 @@
-// === Module 16885: UserSettingsDesignSystemHaptics ===
+// === Module 16914: UserSettingsDesignSystemHaptics ===
 
-// Module 16885 (UserSettingsDesignSystemHaptics)
+// Module 16914 (UserSettingsDesignSystemHaptics)
 import c from "c" /* 576 */;
-import HapticUtils from "HapticUtils" /* 5156 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5157 */;
-import Patterns from "Patterns" /* 5158 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Stack_Stack from "Stack/Stack" /* 5477 */;
-import Card from "Card" /* 6459 */;
+import HapticUtils from "HapticUtils" /* 5173 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5174 */;
+import Patterns from "Patterns" /* 5175 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import Stack_Stack from "Stack/Stack" /* 5932 */;
+import Card from "Card" /* 6853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HapticButton(type) {
@@ -37,7 +37,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HapticB
     }
     return tmp5;
   }
-  const tmp6 = closure_3(type(5479).Button, { variant: "secondary", onPress: tmp4, text: label });
+  const tmp6 = closure_3(type(5205).Button, { variant: "secondary", onPress: tmp4, text: label });
   cResult[2] = label;
   cResult[3] = tmp4;
   cResult[4] = tmp6;
@@ -45,7 +45,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HapticB
   const obj = type(576);
 }) : (function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(5479).Button, {
+  return closure_3(type(5205).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
       items4.map((description) => {
           ({ label, pattern: closure_0 } = description);
-          return closure_3(closure_0(5479).Button, {
+          return closure_3(closure_0(5205).Button, {
             variant: "secondary",
             onPress() {
               return Patterns.triggerPattern(Patterns.Patterns[closure_1_0]);
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
-      return closure_3(closure_0(5479).Button, {
+      return closure_3(closure_0(5205).Button, {
         variant: "secondary",
         onPress() {
           return Patterns.triggerPattern(Patterns.Patterns[closure_1_0]);

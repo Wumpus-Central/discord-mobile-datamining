@@ -1,8 +1,8 @@
-// === Module 6208: GuildMemberRequester ===
+// === Module 6638: GuildMemberRequester ===
 
-// Module 6208 (GuildMemberRequester)
+// Module 6638 (GuildMemberRequester)
 import _modDef12 from "module_12" /* 12 */;
-import Timers from "Timers" /* 2063 */;
+import Timers from "Timers" /* 4795 */;
 import size from "module_2" /* 2 */;
 
 class GuildMemberRequestState {

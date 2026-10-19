@@ -1,8 +1,8 @@
-// === Module 9160: GameUtils ===
+// === Module 9176: GameUtils ===
 
-// Module 9160 (GameUtils)
-import waitForFrameSubscriptionDefault from "waitForFrameSubscription" /* 9161 */;
-import NativeRPCServerDefault from "NativeRPCServer" /* 9164 */;
+// Module 9176 (GameUtils)
+import waitForFrameSubscriptionDefault from "waitForFrameSubscription" /* 9177 */;
+import NativeRPCServerDefault from "NativeRPCServer" /* 9180 */;
 import size from "module_2" /* 2 */;
 
 let c2 = "not supported";

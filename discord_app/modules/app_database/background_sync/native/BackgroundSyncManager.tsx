@@ -1,10 +1,10 @@
-// === Module 18453: BackgroundSyncManager ===
+// === Module 18482: BackgroundSyncManager ===
 
-// Module 18453 (BackgroundSyncManager)
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 18454 */;
+// Module 18482 (BackgroundSyncManager)
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 18483 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1392 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
 
 require = fn;
 class BackgroundSyncManager extends tmp2 {

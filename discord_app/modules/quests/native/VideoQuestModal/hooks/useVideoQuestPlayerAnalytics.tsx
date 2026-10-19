@@ -1,21 +1,21 @@
-// === Module 16178: useVideoQuestPlayerAnalytics ===
+// === Module 16207: useVideoQuestPlayerAnalytics ===
 
-// Module 16178 (useVideoQuestPlayerAnalytics)
-import MonitoringAgentDefault from "MonitoringAgent" /* 5985 */;
-import MetricEvents from "MetricEvents" /* 5990 */;
-import QuestTypes from "QuestTypes" /* 6231 */;
-import QuestContent from "QuestContent" /* 6233 */;
-import AdCreativeType from "AdCreativeType" /* 6235 */;
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7659 */;
-import AnalyticsActions from "AnalyticsActions" /* 7672 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7681 */;
-import AdDataUtils from "AdDataUtils" /* 7682 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 13902 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16060 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 16070 */;
+// Module 16207 (useVideoQuestPlayerAnalytics)
+import MonitoringAgentDefault from "MonitoringAgent" /* 6422 */;
+import MetricEvents from "MetricEvents" /* 6427 */;
+import QuestTypes from "QuestTypes" /* 6661 */;
+import QuestContent from "QuestContent" /* 6663 */;
+import AdCreativeType from "AdCreativeType" /* 6665 */;
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7722 */;
+import AnalyticsActions from "AnalyticsActions" /* 7735 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7744 */;
+import AdDataUtils from "AdDataUtils" /* 7745 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 13936 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16089 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 16099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 5382 */;
+import NetworkStore from "NetworkStore" /* 5846 */;
 
 require = fn;
 const AppState = fn(17).AppState;
@@ -78,14 +78,14 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               closure_131_1 = undefined;
               closure_131_2 = undefined;
               closure_131_3 = undefined;
-              const VIDEO_MODAL_MOBILE = closure_0(6233).QuestContent.VIDEO_MODAL_MOBILE;
+              const VIDEO_MODAL_MOBILE = closure_0(6663).QuestContent.VIDEO_MODAL_MOBILE;
               closure_131_1 = VIDEO_MODAL_MOBILE;
               c6 = 1;
               closure_131_2 = getQuestImpressionId();
               if (null == ref.current) {
-                const obj8 = closure_0(7682);
-                ref.current = obj8.getAdUser(closure_0(7681).getQuestContentName(VIDEO_MODAL_MOBILE));
-                const obj9 = closure_0(7681);
+                const obj8 = closure_0(7745);
+                ref.current = obj8.getAdUser(closure_0(7744).getQuestContentName(VIDEO_MODAL_MOBILE));
+                const obj9 = closure_0(7744);
               }
               c7 = 2;
               c8 = 1;
@@ -95,7 +95,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           } else if (1 === tmp8) {
             c6 = 0;
             closure_131_4 = closure_5;
-            const questLogger = closure_0(7663).getQuestLogger();
+            const questLogger = closure_0(7726).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_131_4);
             throw closure_131_4;
           } else if (arg0 === 1) {
@@ -110,9 +110,9 @@ export default function useVideoQuestPlayerAnalytics(duration) {
             closure_131_3 = value;
             const obj12 = { questId, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
             const obj14 = {};
-            const obj13 = closure_0(7672);
-            const merged = Object.assign(closure_0(7681).getContentProperties(closure_131_1));
-            const merged1 = Object.assign(engagedViewEmitter(7630)());
+            const obj13 = closure_0(7735);
+            const merged = Object.assign(closure_0(7744).getContentProperties(closure_131_1));
+            const merged1 = Object.assign(engagedViewEmitter(7693)());
             obj14.impression_id = closure_131_2;
             obj14.video_watch_seconds = closure_131_0.video_watch_seconds;
             obj14.video_position_seconds = closure_131_0.video_position_seconds;
@@ -135,15 +135,15 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               obj2 = closure_0(1384);
             }
             obj14.android_advertising_id = advertisingId1;
-            const obj16 = closure_0(7681);
-            const adMetadataSealed = closure_0(7652).getAdMetadataSealed(sourceQuestContent, questId);
+            const obj16 = closure_0(7744);
+            const adMetadataSealed = closure_0(7715).getAdMetadataSealed(sourceQuestContent, questId);
             let metadata_sealed = adMetadataSealed;
             if (adMetadataSealed == null) {
               metadata_sealed = null;
             }
             obj14.metadata_sealed = metadata_sealed;
-            const obj3 = closure_0(7652);
-            const adTrafficMetadataSealed = closure_0(7652).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+            const obj3 = closure_0(7715);
+            const adTrafficMetadataSealed = closure_0(7715).getAdTrafficMetadataSealed(sourceQuestContent, questId);
             let traffic_metadata_sealed = adTrafficMetadataSealed;
             if (adTrafficMetadataSealed == null) {
               traffic_metadata_sealed = null;

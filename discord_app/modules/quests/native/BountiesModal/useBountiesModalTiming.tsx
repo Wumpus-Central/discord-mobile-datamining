@@ -1,11 +1,11 @@
-// === Module 16064: useBountiesModalTiming ===
+// === Module 16093: useBountiesModalTiming ===
 
-// Module 16064 (useBountiesModalTiming)
+// Module 16093 (useBountiesModalTiming)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(6228).BOUNTY_CTA_TIMER_MILLISECONDS;
+let closure_4 = fn(6658).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

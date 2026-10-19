@@ -1,11 +1,11 @@
-// === Module 10927: SegmentedControlPages ===
+// === Module 10939: SegmentedControlPages ===
 
-// Module 10927 (SegmentedControlPages)
+// Module 10939 (SegmentedControlPages)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4945 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5471 */;
-import MathUtils from "MathUtils" /* 10928 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5926 */;
+import MathUtils from "MathUtils" /* 10940 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -326,7 +326,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function Segmen
     A.__closure = obj6;
     A.__workletHash = 6740536171688;
     A.__initData = __initData17;
-    const animatedStyle = tmp(4945).useAnimatedStyle(A);
+    const animatedStyle = tmp(5014).useAnimatedStyle(A);
     if (cResult[15] === tmp4) {
       class H {
         constructor() {
@@ -371,7 +371,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function Segmen
     cResult[16] = tmp12;
     cResult[17] = tmp6;
     cResult[18] = N;
-    const tmpResult4 = tmp(4945);
+    const tmpResult4 = tmp(5014);
   }
   class C {
     constructor() {

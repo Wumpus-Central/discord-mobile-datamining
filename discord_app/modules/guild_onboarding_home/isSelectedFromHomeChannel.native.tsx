@@ -1,13 +1,13 @@
-// === Module 10691: isSelectedFromHomeChannel ===
+// === Module 10704: isSelectedFromHomeChannel ===
 
-// Module 10691 (isSelectedFromHomeChannel)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
-import RootNavigationRef from "RootNavigationRef" /* 5073 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6339 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+// Module 10704 (isSelectedFromHomeChannel)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5111 */;
+import RootNavigationRef from "RootNavigationRef" /* 5112 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6739 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
 require = fn;
-const isGuildHomeChannel = fn(2075).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4807).isGuildHomeChannel;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
 

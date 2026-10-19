@@ -1,6 +1,6 @@
-// === Module 14375: ? ===
+// === Module 14408: ? ===
 
-// Module 14375
+// Module 14408
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerChannelsAbstractUI-3x.png.js");

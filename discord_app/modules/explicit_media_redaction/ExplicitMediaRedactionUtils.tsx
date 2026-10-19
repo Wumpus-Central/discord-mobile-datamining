@@ -1,23 +1,23 @@
-// === Module 8515: ExplicitMediaRedactionUtils ===
+// === Module 8531: ExplicitMediaRedactionUtils ===
 
-// Module 8515 (ExplicitMediaRedactionUtils)
+// Module 8531 (ExplicitMediaRedactionUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5985 */;
-import MetricEvents from "MetricEvents" /* 5990 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6165 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6176 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
-import SelfModUtils from "SelfModUtils" /* 7265 */;
-import DevSettingsStore from "DevSettingsStore" /* 5190 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7267 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6422 */;
+import MetricEvents from "MetricEvents" /* 6427 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6602 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6607 */;
+import SelfModUtils from "SelfModUtils" /* 7334 */;
+import DevSettingsStore from "DevSettingsStore" /* 5198 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7336 */;
 
-const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7271);
+const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7340);
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7269);
+const ExplicitMediaRedactionConstants = fn(7338);
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire, EXPLICIT_MEDIA_MIN_WIDTH: closure_7, MESSAGE_SCAN_TIMEOUT: closure_8 } = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 8398: ChangelogImageUtils ===
+// === Module 8414: ChangelogImageUtils ===
 
-// Module 8398 (ChangelogImageUtils)
+// Module 8414 (ChangelogImageUtils)
 import size from "module_2" /* 2 */;
 
 function toURL(target) {

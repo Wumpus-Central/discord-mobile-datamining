@@ -1,9 +1,9 @@
-// === Module 14942: GuildBadgeCompass ===
+// === Module 14974: GuildBadgeCompass ===
 
-// Module 14942 (GuildBadgeCompass)
+// Module 14974 (GuildBadgeCompass)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7843 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14932 */;
+import inlineStyles from "inlineStyles" /* 7906 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14964 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

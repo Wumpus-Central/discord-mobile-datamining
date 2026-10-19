@@ -1,9 +1,9 @@
-// === Module 13779: openAppChannelReportModal ===
+// === Module 13813: openAppChannelReportModal ===
 
-// Module 13779 (openAppChannelReportModal)
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6357 */;
+// Module 13813 (openAppChannelReportModal)
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6757 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5540 */;
+import ApplicationStore from "ApplicationStore" /* 2046 */;
 
 const require = fn;
 let closure_5 = async function _getApplication(arg0) {

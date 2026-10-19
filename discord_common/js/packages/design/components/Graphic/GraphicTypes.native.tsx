@@ -1,6 +1,6 @@
-// === Module 5030: GraphicTypes ===
+// === Module 5098: GraphicTypes ===
 
-// Module 5030 (GraphicTypes)
+// Module 5098 (GraphicTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx");

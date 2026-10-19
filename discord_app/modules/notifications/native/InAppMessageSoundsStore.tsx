@@ -1,9 +1,9 @@
-// === Module 13529: InAppMessageSoundsStore ===
+// === Module 13563: InAppMessageSoundsStore ===
 
-// Module 13529 (InAppMessageSoundsStore)
+// Module 13563 (InAppMessageSoundsStore)
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
-import _mod4828 from "module_4828" /* 4828 */;
+import _mod4863 from "module_4863" /* 4863 */;
 import identity from "module_1269" /* 1269 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -38,7 +38,7 @@ export const useInAppMessageSoundsEnabled = ReactCompilerGating.isReactCompilerE
   } else {
     first = cResult[0];
   }
-  return closure_3(first, _mod4828.shallow);
+  return closure_3(first, _mod4863.shallow);
 }) : (function useInAppMessageSoundsEnabled() {
-  return closure_3((isEnabled) => isEnabled.isEnabled, _mod4828.shallow);
+  return closure_3((isEnabled) => isEnabled.isEnabled, _mod4863.shallow);
 });

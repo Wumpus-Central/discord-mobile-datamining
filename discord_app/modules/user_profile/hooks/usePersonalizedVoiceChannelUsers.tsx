@@ -1,10 +1,10 @@
-// === Module 14080: usePersonalizedVoiceChannelUsers ===
+// === Module 14113: usePersonalizedVoiceChannelUsers ===
 
-// Module 14080 (usePersonalizedVoiceChannelUsers)
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7613 */;
-import ConsentStore from "ConsentStore" /* 6188 */;
+// Module 14113 (usePersonalizedVoiceChannelUsers)
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7676 */;
+import ConsentStore from "ConsentStore" /* 6618 */;
 import UserStore from "UserStore" /* 1392 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5215 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5679 */;
 
 const require = globalThis.__r;
 

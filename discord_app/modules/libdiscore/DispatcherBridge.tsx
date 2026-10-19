@@ -1,16 +1,16 @@
-// === Module 19147: DispatcherBridge ===
+// === Module 19186: DispatcherBridge ===
 
-// Module 19147 (DispatcherBridge)
+// Module 19186 (DispatcherBridge)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import DevSettingsStore from "DevSettingsStore" /* 5190 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6245 */;
-import GuildStickersStore from "GuildStickersStore" /* 6287 */;
-import NoteStore from "NoteStore" /* 14108 */;
+import DevSettingsStore from "DevSettingsStore" /* 5198 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6674 */;
+import GuildStickersStore from "GuildStickersStore" /* 6715 */;
+import NoteStore from "NoteStore" /* 14141 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoleStore from "GuildRoleStore" /* 2122 */;
-import GuildStore from "GuildStore" /* 2090 */;
+import GuildRoleStore from "GuildRoleStore" /* 4854 */;
+import GuildStore from "GuildStore" /* 4822 */;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;

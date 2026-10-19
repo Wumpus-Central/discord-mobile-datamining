@@ -1,17 +1,17 @@
-// === Module 18292: VoiceChannelAppSurface ===
+// === Module 18321: VoiceChannelAppSurface ===
 
-// Module 18292 (VoiceChannelAppSurface)
+// Module 18321 (VoiceChannelAppSurface)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _modDef3981 from "module_3981" /* 3981 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11717 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11718 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11719 */;
-import FrameStackLevel from "FrameStackLevel" /* 11724 */;
-import useFrameLifecycle from "useFrameLifecycle" /* 17738 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 17744 */;
+import _modDef3918 from "module_3918" /* 3918 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11738 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11739 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11740 */;
+import FrameStackLevel from "FrameStackLevel" /* 11744 */;
+import useFrameLifecycle from "useFrameLifecycle" /* 17771 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 17777 */;
 import noop from "module_19" /* 19 */;
 
 const useFrameLifecycleDefault = useFrameLifecycle;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { description: null };
             const intl4 = util.intl;
-            obj4.description = intl4.string(_modDef3981.TQptZV);
+            obj4.description = intl4.string(_modDef3918.TQptZV);
             const tmp29 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
             cResult[13] = tmp29;
             let tmp27 = tmp29;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             const obj5 = { description: null };
             const intl3 = util.intl;
-            obj5.description = intl3.string(_modDef3981["13FYwI"]);
+            obj5.description = intl3.string(_modDef3918["13FYwI"]);
             const tmp25 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
             cResult[14] = tmp25;
             let tmp23 = tmp25;

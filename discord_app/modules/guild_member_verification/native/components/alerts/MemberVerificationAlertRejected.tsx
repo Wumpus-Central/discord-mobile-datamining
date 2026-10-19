@@ -1,12 +1,12 @@
-// === Module 6399: MemberVerificationAlertRejected ===
+// === Module 6794: MemberVerificationAlertRejected ===
 
-// Module 6399 (MemberVerificationAlertRejected)
+// Module 6794 (MemberVerificationAlertRejected)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5035 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4972 */;
 
 const require = globalThis.__r;
 
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6396);
+            const obj4 = v1(6791);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           if (closure_128_1 != null) {
             tmp6();
           }
-          const result = guildId(6424).openMemberVerificationModal(closure_128_0);
+          const result = guildId(6819).openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -464,7 +464,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6396);
+            const obj4 = v1(6791);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           if (closure_128_1 != null) {
             tmp6();
           }
-          const result = guildId(6424).openMemberVerificationModal(closure_128_0);
+          const result = guildId(6819).openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }

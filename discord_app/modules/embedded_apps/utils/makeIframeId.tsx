@@ -1,6 +1,6 @@
-// === Module 11324: makeIframeId ===
+// === Module 11338: makeIframeId ===
 
-// Module 11324 (makeIframeId)
+// Module 11338 (makeIframeId)
 import v1 from "v1" /* 1281 */;
 import size from "module_2" /* 2 */;
 

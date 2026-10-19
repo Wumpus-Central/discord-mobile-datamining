@@ -1,28 +1,28 @@
-// === Module 16624: ViewDebugLogsSetting ===
+// === Module 16653: ViewDebugLogsSetting ===
 
-// Module 16624 (ViewDebugLogsSetting)
+// Module 16653 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import ClockIcon from "ClockIcon" /* 5150 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
-import ActionSheetRow from "ActionSheetRow" /* 7171 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9933 */;
-import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10656 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14851 */;
-import WrenchIcon from "WrenchIcon" /* 16625 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 16627 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 16630 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 16631 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
+import ClockIcon from "ClockIcon" /* 5653 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7194 */;
+import ActionSheetRow from "ActionSheetRow" /* 7240 */;
+import ActionSheet from "ActionSheet" /* 7244 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9947 */;
+import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10669 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14883 */;
+import WrenchIcon from "WrenchIcon" /* 16654 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 16656 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 16659 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 16660 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11084 */;
+import SettingBuilders from "SettingBuilders" /* 11099 */;
 import size from "module_2" /* 2 */;
 
 const Suspense = _mod19.Suspense;
@@ -75,7 +75,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewDeb
 }) : (function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(7171).ActionSheetRow, {
+  return closure_5(title(7240).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {

@@ -1,8 +1,8 @@
-// === Module 11304: useVadColors ===
+// === Module 11318: useVadColors ===
 
-// Module 11304 (useVadColors)
+// Module 11318 (useVadColors)
 import initialize from "initialize" /* 504 */;
-import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

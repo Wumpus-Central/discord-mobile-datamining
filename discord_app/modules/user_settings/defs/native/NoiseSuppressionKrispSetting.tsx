@@ -1,11 +1,11 @@
-// === Module 16313: NoiseSuppressionKrispSetting ===
+// === Module 16342: NoiseSuppressionKrispSetting ===
 
-// Module 16313 (NoiseSuppressionKrispSetting)
+// Module 16342 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11476 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11477 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11497 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11498 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
@@ -93,7 +93,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoiseSu
   items[2] = obj4;
   return items;
 });
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNoiseSuppressionKrispSetting() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -118,7 +118,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8260).MobileUserSettings.VOICE,
+  parent: fn(8276).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },

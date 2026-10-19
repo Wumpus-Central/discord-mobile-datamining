@@ -1,21 +1,21 @@
-// === Module 13800: GroupDMNitroCapCoachmark ===
+// === Module 13834: GroupDMNitroCapCoachmark ===
 
-// Module 13800 (GroupDMNitroCapCoachmark)
+// Module 13834 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9327 */;
-import _modDef10640 from "module_10640" /* 10640 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11165 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11166 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9343 */;
+import _modDef10653 from "module_10653" /* 10653 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11180 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11181 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let number = fn(11168).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+let number = fn(11183).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_9 = createStyles.createStyles({ nitroWheelIcon: { width: 16, height: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,13 +28,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
   const tmp4 = closure_9();
   noop.useRef(null);
   let obj = channelId(576);
-  const groupDMNitroAudience = channelId(11166).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11181).useGroupDMNitroAudience();
   dependencyMap = tmp7;
   if (cResult[0] === groupDMNitroAudience) {
     if (cResult[1] === _location) {
       let tmp8 = cResult[2];
     }
-    _slicedToArray = _location(11173)(tmp8);
+    _slicedToArray = _location(11188)(tmp8);
     if (cResult[3] !== _location) {
       const obj3 = { location: _location };
       cResult[3] = _location;
@@ -43,15 +43,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     } else {
       tmp11 = cResult[4];
     }
-    const tmp10 = _location(11173)(tmp8);
-    const enabled = _location(11169).useConfig(tmp11).enabled;
+    const tmp10 = _location(11188)(tmp8);
+    const enabled = _location(11184).useConfig(tmp11).enabled;
     if (cResult[5] === enabled) {
       if (cResult[6] === tmp12) {
-        const tmp15 = _slicedToArray(channelId(7376).useSelectedDismissibleContent(cResult[7]), 2);
+        const tmp15 = _slicedToArray(channelId(7442).useSelectedDismissibleContent(cResult[7]), 2);
         noop = tmp17;
         const first = tmp15[0];
         const _Symbol = Symbol;
-        const NITRO_GDM_CAP_COACHMARK = channelId(2052).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
+        const NITRO_GDM_CAP_COACHMARK = channelId(4784).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           let intl = channelId(1128).intl;
           const stringResult = intl.string(channelId(1128).t.d8Spvj);
@@ -93,10 +93,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
               return closure_4(ContentDismissActionType.USER_DISMISS);
             }
           }
-          const stringResult1 = obj8.string(channelId(11166).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+          const stringResult1 = obj8.string(channelId(11181).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
           cResult[13] = groupDMNitroAudience;
           cResult[14] = stringResult1;
-          const tmpResult2 = channelId(11166);
+          const tmpResult2 = channelId(11181);
         } else {
           class P {
             constructor() {
@@ -124,12 +124,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
             }
           }
           const obj5 = { size: "custom", style: tmp4.nitroWheelIcon, color: tmp9(587).unsafe_rawColors.WHITE };
-          const tmp28 = jsx(channelId(9327).NitroWheelIcon, { size: "custom", style: tmp4.nitroWheelIcon, color: tmp9(587).unsafe_rawColors.WHITE });
+          const tmp28 = jsx(channelId(9343).NitroWheelIcon, { size: "custom", style: tmp4.nitroWheelIcon, color: tmp9(587).unsafe_rawColors.WHITE });
         }
         cResult[15] = tmp7;
         cResult[16] = tmp4;
         cResult[17] = tmp28;
-        const tmpResult = channelId(7376);
+        const tmpResult = channelId(7442);
       }
     }
     if (enabled) {
@@ -143,14 +143,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       cResult[7] = items;
     }
     items = [];
-    const tmp9Result = _location(11169);
+    const tmp9Result = _location(11184);
   }
-  const obj6 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: channelId(11166).GroupDMNitroAcquisitionStrategy.MARKETING };
+  const obj6 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: channelId(11181).GroupDMNitroAcquisitionStrategy.MARKETING };
   cResult[0] = groupDMNitroAudience;
   cResult[1] = _location;
   cResult[2] = obj6;
   tmp8 = obj6;
-  const obj2 = channelId(11166);
+  const obj2 = channelId(11181);
 }) : (function GroupDMNitroCapCoachmark(channelId) {
   channelId = channelId.channelId;
   const _location = channelId.location;
@@ -160,23 +160,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11166).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11181).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11166);
-  obj3.acquisitionStrategy = channelId(11166).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11173)(obj3);
+  const obj2 = channelId(11181);
+  obj3.acquisitionStrategy = channelId(11181).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11188)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11173);
-  channelId(7376);
+  let tmp7 = _location(11188);
+  channelId(7442);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
-      const items = [tmp3(2052).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
+      const items = [tmp3(4784).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
     }
     const tmp13 = groupDMNitroAudience(tmp10([]), 2);
     number = tmp14;
-    const tmp15 = tmp13[0] === tmp3(2052).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
+    const tmp15 = tmp13[0] === tmp3(4784).DismissibleContent.NITRO_GDM_CAP_COACHMARK;
     visible = tmp15;
     const items1 = [groupDMNitroAudience, tmp6, tmp15, tmp13[1], channelId, _location, tmp, tmp7Result];
     const memo = obj.useMemo(() => {
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
       if (closure_4) {
-        let tmp7 = _modDef10640;
+        let tmp7 = _modDef10653;
       } else {
         const obj4 = { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE };
         tmp7 = jsx(NitroWheelIcon.NitroWheelIcon, { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE });
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11165)(channelId, closure_1_1);
+          _location(11180)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -221,9 +221,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
       };
       return obj;
     }, items1);
-    const coachmark = tmp3(9742).useCoachmark(ref, memo);
+    const coachmark = tmp3(9756).useCoachmark(ref, memo);
     const obj5 = { ref, collapsable: false, children: channelId.children };
     return <closure_5 ref={ref} collapsable={false}>{channelId.children}</closure_5>;
   }
-  obj4 = _location(11169);
+  obj4 = _location(11184);
 });

@@ -1,20 +1,20 @@
-// === Module 8589: UserProfileAnalyticsUtils ===
+// === Module 8605: UserProfileAnalyticsUtils ===
 
-// Module 8589 (UserProfileAnalyticsUtils)
+// Module 8605 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5206 */;
-import useDisplayProfile from "useDisplayProfile" /* 8584 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8596 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8590 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7074 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7613 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
-import GuildMemberStore from "GuildMemberStore" /* 2128 */;
-import PresenceStore from "PresenceStore" /* 5207 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
+import useDisplayProfile from "useDisplayProfile" /* 8600 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8612 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7151 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7676 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import GuildMemberStore from "GuildMemberStore" /* 4860 */;
+import PresenceStore from "PresenceStore" /* 5674 */;
+import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserProfileStore from "UserProfileStore" /* 7586 */;
+import UserProfileStore from "UserProfileStore" /* 7649 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -259,8 +259,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7074).FetchState;
-const constants = fn(8581).TrackUserProfileProperties;
+const FetchState = fn(7151).FetchState;
+const constants = fn(8597).TrackUserProfileProperties;
 const Constants = fn(1087);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
 const StatusTypes = fn(1098).StatusTypes;

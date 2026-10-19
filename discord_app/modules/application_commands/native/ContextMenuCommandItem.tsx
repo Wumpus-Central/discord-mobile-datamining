@@ -1,21 +1,21 @@
-// === Module 18019: ContextMenuCommandItem ===
+// === Module 18048: ContextMenuCommandItem ===
 
-// Module 18019 (ContextMenuCommandItem)
+// Module 18048 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import SendMessageIcon from "SendMessageIcon" /* 5139 */;
-import TableRow from "TableRow" /* 6457 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12893 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import SendMessageIcon from "SendMessageIcon" /* 5642 */;
+import TableRow from "TableRow" /* 6851 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12925 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -330,18 +330,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(12893).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(12925).getApplicationCommandsIconSource(section);
   const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
     const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp8Result = jsx(section(5128), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+    tmp8Result = jsx(section(5631), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj2.icon = tmp8Result;
-  obj2.trailing = jsx(tmp5(5139).SendMessageIcon, {});
+  obj2.trailing = jsx(tmp5(5642).SendMessageIcon, {});
   obj2.start = start;
   obj2.end = end;
-  return jsx(item(6457).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  return jsx(item(6851).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 });
 export const ContextMenuCommandLoadingItem = tmp2;
 export const ContextMenuCommandEmptyItem = tmp3;

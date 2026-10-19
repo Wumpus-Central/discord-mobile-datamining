@@ -1,12 +1,12 @@
-// === Module 6205: useStageSpeakingForCurrentUser ===
+// === Module 6635: useStageSpeakingForCurrentUser ===
 
-// Module 6205 (useStageSpeakingForCurrentUser)
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6165 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6176 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+// Module 6635 (useStageSpeakingForCurrentUser)
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6602 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6607 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
 require = fn;
 const Permissions = fn(1098).Permissions;
@@ -108,10 +108,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldA
     return canResult;
   }, items1);
   const obj = channelId(504);
-  const isVerifiedAdult = channelId(6165).useIsVerifiedAdult();
-  const obj2 = channelId(6165);
-  const obj3 = channelId(6177);
-  return channelId(6177).useIsFeatureAgeGated(channelId(6176).AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult && stateFromStores;
+  const isVerifiedAdult = channelId(6602).useIsVerifiedAdult();
+  const obj2 = channelId(6602);
+  const obj3 = channelId(5605);
+  return channelId(5605).useIsFeatureAgeGated(channelId(6607).AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult && stateFromStores;
 });
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowAgeVerificationPopover(arg0) {
@@ -202,10 +202,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldSho
     return canResult;
   }, items1);
   const obj = channelId(504);
-  const isAgeVerified = channelId(6165).useIsAgeVerified();
-  const obj2 = channelId(6165);
-  const obj3 = channelId(6177);
-  return channelId(6177).useIsFeatureAgeGated(channelId(6176).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
+  const isAgeVerified = channelId(6602).useIsAgeVerified();
+  const obj2 = channelId(6602);
+  const obj3 = channelId(5605);
+  return channelId(5605).useIsFeatureAgeGated(channelId(6607).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageSpeakingForCurrentUser.tsx");

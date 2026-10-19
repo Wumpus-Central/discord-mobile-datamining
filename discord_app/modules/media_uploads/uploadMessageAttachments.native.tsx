@@ -1,8 +1,8 @@
-// === Module 14410: uploadMessageAttachments ===
+// === Module 14443: uploadMessageAttachments ===
 
-// Module 14410 (uploadMessageAttachments)
+// Module 14443 (uploadMessageAttachments)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploadStore from "UploadStore" /* 8154 */;
+import UploadStore from "UploadStore" /* 8217 */;
 
 const require = fn;
 let closure_6 = async function _uploadMessageAttachments(arg0) {
@@ -43,7 +43,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

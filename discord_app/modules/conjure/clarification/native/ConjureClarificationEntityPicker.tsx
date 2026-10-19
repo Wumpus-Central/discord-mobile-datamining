@@ -1,22 +1,22 @@
-// === Module 12295: ConjureClarificationEntityPicker ===
+// === Module 12315: ConjureClarificationEntityPicker ===
 
-// Module 12295 (ConjureClarificationEntityPicker)
+// Module 12315 (ConjureClarificationEntityPicker)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
-import TableRow from "TableRow" /* 6457 */;
-import TableRowGroup from "TableRowGroup" /* 6542 */;
-import ConjureUtils from "ConjureUtils" /* 7222 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11667 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11669 */;
-import ConjureClarification from "ConjureClarification" /* 12289 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12296 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12298 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5171 */;
+import TableRow from "TableRow" /* 6851 */;
+import TableRowGroup from "TableRowGroup" /* 6935 */;
+import ConjureUtils from "ConjureUtils" /* 7291 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11688 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11690 */;
+import ConjureClarification from "ConjureClarification" /* 12309 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12316 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12318 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import GuildChannelStore from "GuildChannelStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -281,7 +281,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                         let obj = { content: null, key: null, stackingBehavior: "stack" };
                         obj4.selectedChannel = found;
                         const intl = util.intl;
-                        obj4.noChannelOptionLabel = intl.string(_modDef3883["jtBVV+"]);
+                        obj4.noChannelOptionLabel = intl.string(_modDef3820["jtBVV+"]);
                         obj4.onSelect = function onSelect(id) {
                           closure_0 = id;
                           if (null == id) {
@@ -289,7 +289,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                           } else {
                             const obj = question(onChange[11]);
                             const items1 = [id.id];
-                            items = obj.clarificationEntities(input, items1, () => question(5521).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                            items = obj.clarificationEntities(input, items1, () => question(5565).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
                           }
                           return dependencyMap(items, conjureSettingsGuildId);
                         };
@@ -427,7 +427,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                               let obj = { content: null, key: null, stackingBehavior: "stack" };
                               obj4.selectedChannel = found;
                               const intl = util.intl;
-                              obj4.noChannelOptionLabel = intl.string(_modDef3883["jtBVV+"]);
+                              obj4.noChannelOptionLabel = intl.string(_modDef3820["jtBVV+"]);
                               obj4.onSelect = function onSelect(id) {
                                 closure_0 = id;
                                 if (null == id) {
@@ -435,7 +435,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                 } else {
                                   const obj = question(onChange[11]);
                                   const items1 = [id.id];
-                                  items = obj.clarificationEntities(input, items1, () => question(5521).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                                  items = obj.clarificationEntities(input, items1, () => question(5565).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
                                 }
                                 return dependencyMap(items, conjureSettingsGuildId);
                               };
@@ -507,7 +507,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                               let obj = { content: null, key: null, stackingBehavior: "stack" };
                               obj4.selectedChannel = found;
                               const intl = util.intl;
-                              obj4.noChannelOptionLabel = intl.string(_modDef3883["jtBVV+"]);
+                              obj4.noChannelOptionLabel = intl.string(_modDef3820["jtBVV+"]);
                               obj4.onSelect = function onSelect(id) {
                                 closure_0 = id;
                                 if (null == id) {
@@ -515,7 +515,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                 } else {
                                   const obj = question(onChange[11]);
                                   const items1 = [id.id];
-                                  items = obj.clarificationEntities(input, items1, () => question(5521).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                                  items = obj.clarificationEntities(input, items1, () => question(5565).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
                                 }
                                 return dependencyMap(items, conjureSettingsGuildId);
                               };

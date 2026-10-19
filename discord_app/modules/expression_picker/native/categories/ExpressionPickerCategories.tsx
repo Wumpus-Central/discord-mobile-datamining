@@ -1,15 +1,15 @@
-// === Module 9876: ExpressionPickerCategories ===
+// === Module 9890: ExpressionPickerCategories ===
 
-// Module 9876 (ExpressionPickerCategories)
+// Module 9890 (ExpressionPickerCategories)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Portal from "Portal" /* 5088 */;
+import Portal from "Portal" /* 5127 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" }, containerRefresh: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj2.containerRefresh = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };

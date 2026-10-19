@@ -1,24 +1,24 @@
-// === Module 17806: SearchListCard ===
+// === Module 17835: SearchListCard ===
 
-// Module 17806 (SearchListCard)
+// Module 17835 (SearchListCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import UserUtilsDefault from "UserUtils" /* 5057 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import useChannelNameDefault from "useChannelName" /* 5521 */;
-import Card from "Card" /* 6459 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
-import ForumIcon from "ForumIcon" /* 8488 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10592 */;
+import UserUtilsDefault from "UserUtils" /* 4994 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import useChannelNameDefault from "useChannelName" /* 5565 */;
+import Card from "Card" /* 6853 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8447 */;
+import ForumIcon from "ForumIcon" /* 8504 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.container = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

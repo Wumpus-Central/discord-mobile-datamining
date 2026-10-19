@@ -1,10 +1,10 @@
-// === Module 5025: TeenScreenTimeRive ===
+// === Module 5094: TeenScreenTimeRive ===
 
-// Module 5025 (TeenScreenTimeRive)
+// Module 5094 (TeenScreenTimeRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 4939 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4992 */;
-import _modDef5026 from "module_5026" /* 5026 */;
+import BaseRive from "BaseRive" /* 5008 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5061 */;
+import _modDef5095 from "module_5095" /* 5095 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -59,7 +59,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenScr
     }
   }
   const merged = Object.assign(tmp5);
-  const tmp15 = jsx(BaseRive.BaseRive, { ref: tmp4, src: _modDef5026, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 });
+  const tmp15 = jsx(BaseRive.BaseRive, { ref: tmp4, src: _modDef5095, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 });
   cResult[6] = str;
   cResult[7] = tmp12;
   cResult[8] = tmp4;
@@ -67,7 +67,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenScr
   cResult[10] = tmp6;
   cResult[11] = tmp15;
   tmp13 = tmp15;
-  const obj2 = { ref: tmp4, src: _modDef5026, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 };
+  const obj2 = { ref: tmp4, src: _modDef5095, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp12, stateMachine: tmp6 };
 }) : (function TeenScreenTimeRiveInner(defaultViewModelInstance) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Teen Screen Time Illo";
@@ -81,7 +81,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenScr
   }
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_4);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef5026, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef5095, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

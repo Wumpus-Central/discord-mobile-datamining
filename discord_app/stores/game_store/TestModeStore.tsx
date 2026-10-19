@@ -1,12 +1,12 @@
-// === Module 6300: TestModeStore ===
+// === Module 5585: TestModeStore ===
 
-// Module 6300 (TestModeStore)
+// Module 5585 (TestModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserSettings from "UserSettings" /* 2044 */;
+import UserSettings from "UserSettings" /* 4776 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6301 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2044 */;
 
 require = fn;
 function reset() {

@@ -1,28 +1,28 @@
-// === Module 9419: YouBannerDecorations ===
+// === Module 9435: YouBannerDecorations ===
 
-// Module 9419 (YouBannerDecorations)
+// Module 9435 (YouBannerDecorations)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import dismissible_content from "dismissible_content" /* 2052 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5033 */;
-import QuestTypes from "QuestTypes" /* 6231 */;
-import useTrialOffer from "useTrialOffer" /* 7438 */;
-import PromotionsHooks from "PromotionsHooks" /* 9420 */;
-import tracking_Tracking from "tracking/Tracking" /* 9469 */;
-import QuestUtils from "QuestUtils" /* 9470 */;
+import dismissible_content from "dismissible_content" /* 4784 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4970 */;
+import QuestTypes from "QuestTypes" /* 6661 */;
+import useTrialOffer from "useTrialOffer" /* 7505 */;
+import PromotionsHooks from "PromotionsHooks" /* 9436 */;
+import tracking_Tracking from "tracking/Tracking" /* 9481 */;
+import QuestUtils from "QuestUtils" /* 9482 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2133).useIntlLoaderStore;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const useIntlLoaderStore = fn(2070).useIntlLoaderStore;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 let closure_9 = fn(1394).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, containerFloatingContent: null, endcap: null, buttonsFloating: null };
   const obj2 = {};
@@ -231,7 +231,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
     const tmp5Result6 = tmp5(tmp3[32]);
   }
   items5[3] = tmp29Result;
-  const obj6 = { ref: settingsButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
+  const obj6 = { ref: settingsButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null, testID: "you_tab_settings_button" };
   const tmp2Result10 = navigateToSettings(gradientSecondaryBackground[12]);
   obj6.IconComponent = navigateToSettings(gradientSecondaryBackground[38]).SettingsIcon;
   const intl5 = tmp2(tmp3[15]).intl;

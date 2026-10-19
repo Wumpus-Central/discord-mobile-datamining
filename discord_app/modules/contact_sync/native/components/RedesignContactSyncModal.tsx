@@ -1,6 +1,6 @@
-// === Module 13355: RedesignContactSyncModal ===
+// === Module 13389: RedesignContactSyncModal ===
 
-// Module 13355 (RedesignContactSyncModal)
+// Module 13389 (RedesignContactSyncModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
@@ -9,13 +9,13 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import NavigatorHeader from "NavigatorHeader" /* 6478 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13346 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13350 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13356 */;
-import ContactSyncBackToLandingDefault from "ContactSyncBackToLanding" /* 13373 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import NavigatorHeader from "NavigatorHeader" /* 6872 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13380 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13384 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13390 */;
+import ContactSyncBackToLandingDefault from "ContactSyncBackToLanding" /* 13407 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -101,7 +101,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               obj5.phone = tmp15;
               dependencyMap = 2;
               c3 = 1;
-              const obj7 = { value: tmp2(13354).updateDiscoverability(obj5), done: false };
+              const obj7 = { value: tmp2(13388).updateDiscoverability(obj5), done: false };
               return obj7;
             }
           } else if (1 === tmp5) {
@@ -128,7 +128,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           }
           dependencyMap = 1;
           c3 = 1;
-          const obj9 = { value: tmp2(13346).startContactSync(closure_129_3), done: false };
+          const obj9 = { value: tmp2(13380).startContactSync(closure_129_3), done: false };
           return obj9;
         } catch (tmp2) {
           c3 = tmp;
@@ -156,7 +156,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     if (openSettingsSheet) {
       const obj2 = { type: "Contact Sync", location: { page: "Contact Sync" } };
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13357, dependencyMap.paths), "Contact Sync Info Settings");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13391, dependencyMap.paths), "Contact Sync Info Settings");
     }
   }, items4);
   const items5 = [onNext, onComplete];
@@ -187,7 +187,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(7766).requestPermission(constants.CONTACTS), done: false };
+            const obj5 = { value: v1(7829).requestPermission(constants.CONTACTS), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -202,8 +202,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             closure_128_8();
           } else {
             const obj7 = { onComplete: closure_128_2, skip: true };
-            const result = tmp4(13346).closeContactSyncModal(obj7);
-            const obj = tmp4(13346);
+            const result = tmp4(13380).closeContactSyncModal(obj7);
+            const obj = tmp4(13380);
           }
           dependencyMap = 3;
         }
@@ -327,16 +327,16 @@ function getScreens(isOnboarding) {
   return obj3;
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(13347);
+const ContactSyncModalStore = fn(13381);
 ({ setName: closure_9, useContactSyncModalStore: c10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(13348);
+const ContactSyncConstants = fn(13382);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const NativePermissionTypes = fn(7749).NativePermissionTypes;
+const NativePermissionTypes = fn(7812).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5191);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6536).NAV_BAR_HEIGHT + 32 }, landingTrailing: { textAlign: "center" } };
+const createStyles = fn(4945);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5229).NAV_BAR_HEIGHT + 32 }, landingTrailing: { textAlign: "center" } };
 let closure_19 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function OnboardingTrailingLanding() {
@@ -411,7 +411,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
   [loading, dependencyMap] = noop.useState(false);
   const obj2 = require("useNavigation");
   ({ name, error, isNameFromContactBook } = closure_10());
-  loading(13366)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(13400)(navigation, navigateToLandingPage.navigateToLandingPage);
   if (cResult[0] !== navigation) {
     _require = asyncGeneratorStep(async (arg0) => {
       if (c3 === 2) {
@@ -443,7 +443,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
               React6(options);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: options(13346).startContactSync(options), done: false };
+              const obj5 = { value: options(13380).startContactSync(options), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -524,7 +524,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
         }
       }
       let obj5 = { onNext: tmp10, error, loading, initialName: str, prefilledFromContactBook: tmp16 };
-      const tmp19 = closure_16(tmp8(13368), obj5);
+      const tmp19 = closure_16(tmp8(13402), obj5);
       cResult[7] = error;
       cResult[8] = loading;
       cResult[9] = tmp10;
@@ -572,7 +572,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(13366)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(13400)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -603,7 +603,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
             React6(options);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: options(13346).startContactSync(options), done: false };
+            const obj5 = { value: options(13380).startContactSync(options), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -666,7 +666,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     tmp12 = isNameFromContactBook;
   }
   obj3.prefilledFromContactBook = tmp12;
-  obj2.children = closure_16(loading(13368), obj3);
+  obj2.children = closure_16(loading(13402), obj3);
   return closure_16(View, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -796,7 +796,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
   return tmp10;
 });
 fn(558);
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6536).NAV_BAR_HEIGHT + 32 };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5229).NAV_BAR_HEIGHT + 32 };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncModal(arg0) {
   const cResult = require("c").c(20);
@@ -885,7 +885,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ContactSyncM
             return tmp21;
           }
           const obj3 = { screens: tmp12, initialRouteStack: tmp17, headerBackTitle: tmp19 };
-          const tmp23 = closure_16(tmp(6965).Navigator, obj3);
+          const tmp23 = closure_16(tmp(7043).Navigator, obj3);
           cResult[17] = tmp12;
           cResult[18] = tmp17;
           cResult[19] = tmp23;

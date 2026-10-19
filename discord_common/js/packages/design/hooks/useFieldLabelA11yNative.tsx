@@ -1,8 +1,8 @@
-// === Module 4928: useFieldLabelA11yNative ===
+// === Module 5002: useFieldLabelA11yNative ===
 
-// Module 4928 (useFieldLabelA11yNative)
+// Module 5002 (useFieldLabelA11yNative)
 import c from "c" /* 576 */;
-import utils_getNodeText from "utils/getNodeText" /* 4917 */;
+import getNodeText from "getNodeText" /* 5003 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,8 +48,8 @@ export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnable
   if (!tmp6) {
     let nodeText = accessibilityLabel;
     if (accessibilityLabel == null) {
-      nodeText = utils_getNodeText.getNodeText(label);
-      const tmpResult = utils_getNodeText;
+      nodeText = getNodeText.getNodeText(label);
+      const tmpResult = getNodeText;
     }
     tmp9 = nodeText;
   }
@@ -73,7 +73,7 @@ export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnable
   let tmp5;
   if (!tmp3) {
     if (accessibilityLabel == null) {
-      accessibilityLabel = utils_getNodeText.getNodeText(label);
+      accessibilityLabel = getNodeText.getNodeText(label);
     }
     tmp5 = accessibilityLabel;
   }

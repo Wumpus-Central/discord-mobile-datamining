@@ -1,17 +1,17 @@
-// === Module 11528: SingleScreenshare ===
+// === Module 11549: SingleScreenshare ===
 
-// Module 11528 (SingleScreenshare)
+// Module 11549 (SingleScreenshare)
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
-import useMountEffectDefault from "useMountEffect" /* 5496 */;
-import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11529 */;
+import useMountEffectDefault from "useMountEffect" /* 5224 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
+import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11550 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(10662);
+const ChannelCallStore = fn(10675);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { stageStreamContainer: { backgroundColor: nativeDefault.colors.BLACK } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

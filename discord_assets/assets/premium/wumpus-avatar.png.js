@@ -1,6 +1,6 @@
-// === Module 13623: ? ===
+// === Module 13657: ? ===
 
-// Module 13623
+// Module 13657
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/wumpus-avatar.png.js");

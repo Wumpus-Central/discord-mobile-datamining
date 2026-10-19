@@ -1,16 +1,16 @@
-// === Module 11433: StageActionBar ===
+// === Module 11454: StageActionBar ===
 
-// Module 11433 (StageActionBar)
-import StageActionBarButtons from "StageActionBarButtons" /* 11368 */;
-import ChannelCallActionBar from "ChannelCallActionBar" /* 11434 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 11489 */;
+// Module 11454 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 11389 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 11455 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 11510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,7 +21,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   channel = channel.channel;
   let tmp4 = closure_8();
   let obj = channel(576);
-  const canModerateRequestToSpeak = channel(6149).useCanModerateRequestToSpeak(channel.id);
+  const canModerateRequestToSpeak = channel(6586).useCanModerateRequestToSpeak(channel.id);
   if (cResult[0] !== channel) {
     const obj3 = { channel };
     cResult[0] = channel;
@@ -30,19 +30,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp6 = cResult[1];
   }
-  let obj2 = channel(6149);
-  const actionBarPrimaryButton = channel(11434).useActionBarPrimaryButton(tmp6);
-  const tmpResult = channel(11434);
-  const getActionBarHeight = channel(11412).useGetActionBarHeight(channel.id);
-  const tmp9 = actionBarPrimaryButton(11250)(channel.id);
-  const tmpResult5 = channel(11412);
-  const tmp10 = channel(11371).useShowStageMusicMuteButton(channel.id) && !tmp9;
+  let obj2 = channel(6586);
+  const actionBarPrimaryButton = channel(11455).useActionBarPrimaryButton(tmp6);
+  const tmpResult = channel(11455);
+  const getActionBarHeight = channel(11433).useGetActionBarHeight(channel.id);
+  const tmp9 = actionBarPrimaryButton(11264)(channel.id);
+  const tmpResult5 = channel(11433);
+  const tmp10 = channel(11392).useShowStageMusicMuteButton(channel.id) && !tmp9;
   if (cResult[2] !== channel.guild_id) {
-    const isStageVideoEnabledResult = tmp(6151).isStageVideoEnabled(channel.guild_id);
+    const isStageVideoEnabledResult = tmp(6588).isStageVideoEnabled(channel.guild_id);
     cResult[2] = channel.guild_id;
     cResult[3] = isStageVideoEnabledResult;
     let tmp11 = isStageVideoEnabledResult;
-    const tmpResult7 = tmp(6151);
+    const tmpResult7 = tmp(6588);
   } else {
     tmp11 = cResult[3];
   }
@@ -97,7 +97,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     tmp46 = tmp13Result;
                   }
                   const obj5 = { channel, isSmallSize: tmp11 };
-                  const tmp45 = closure_5(tmp(11368).ChatButton, obj5);
+                  const tmp45 = closure_5(tmp(11389).ChatButton, obj5);
                   cResult[18] = channel;
                   cResult[19] = tmp11;
                   cResult[20] = tmp45;
@@ -105,7 +105,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
             }
-            let tmpResult8 = tmp(11368);
+            let tmpResult8 = tmp(11389);
             const obj6 = { channel, isSmallSize: tmp11 };
             tmpResult8 = closure_5(canModerateRequestToSpeak ? tmpResult8.RequestToSpeakListButton : tmpResult8.MoveToAudienceButton, obj6);
             cResult[14] = channel;
@@ -114,7 +114,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[17] = tmpResult8;
           }
           const obj7 = { channel, isSmallSize: tmp11 };
-          const tmp38 = closure_5(tmp(11489).ChannelCallMicButton, obj7);
+          const tmp38 = closure_5(tmp(11510).ChannelCallMicButton, obj7);
           cResult[11] = channel;
           cResult[12] = tmp11;
           cResult[13] = tmp38;
@@ -124,7 +124,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp34 = tmp11;
       if (tmp11) {
         const obj8 = { channel, isSmallSize: tmp11 };
-        tmp34 = closure_5(tmp(11434).VideoButton, obj8);
+        tmp34 = closure_5(tmp(11455).VideoButton, obj8);
       }
       cResult[7] = channel;
       cResult[8] = tmp11;
@@ -218,7 +218,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   tmp27 = tmp13Result2;
                 }
                 const obj12 = { channel, isSmallSize: tmp14 };
-                const tmp26 = closure_5(tmp(11368).ChatButton, obj12);
+                const tmp26 = closure_5(tmp(11389).ChatButton, obj12);
                 cResult[41] = channel;
                 cResult[42] = tmp14;
                 cResult[43] = tmp26;
@@ -228,7 +228,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             let tmp22 = canModerateRequestToSpeak;
             if (canModerateRequestToSpeak) {
               const obj13 = { channel, isSmallSize: tmp14 };
-              tmp22 = closure_5(tmp(11368).RequestToSpeakListButton, obj13);
+              tmp22 = closure_5(tmp(11389).RequestToSpeakListButton, obj13);
             }
             cResult[37] = channel;
             cResult[38] = canModerateRequestToSpeak;
@@ -237,7 +237,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             tmp21 = tmp22;
           }
           const obj14 = { channel, isSmallSize: tmp14 };
-          const tmp20 = closure_5(tmp(11368).RequestToSpeakButton, obj14);
+          const tmp20 = closure_5(tmp(11389).RequestToSpeakButton, obj14);
           cResult[34] = channel;
           cResult[35] = tmp14;
           cResult[36] = tmp20;
@@ -247,7 +247,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp16 = tmp10;
       if (tmp10) {
         const obj15 = { channel, isSmallSize: tmp14 };
-        tmp16 = closure_5(tmp(11368).MusicMuteButton, obj15);
+        tmp16 = closure_5(tmp(11389).MusicMuteButton, obj15);
       }
       cResult[30] = channel;
       cResult[31] = tmp14;
@@ -273,7 +273,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[5] = actionBarPrimaryButton;
   cResult[6] = fn;
   tmp13 = fn;
-  const tmpResult6 = channel(11371);
+  const tmpResult6 = channel(11392);
 }) : (function StageActionBar(channel) {
   channel = channel.channel;
   let actionBarPrimaryButton;

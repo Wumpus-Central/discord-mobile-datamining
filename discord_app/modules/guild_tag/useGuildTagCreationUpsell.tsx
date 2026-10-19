@@ -1,18 +1,18 @@
-// === Module 13948: useGuildTagCreationUpsell ===
+// === Module 13981: useGuildTagCreationUpsell ===
 
-// Module 13948 (useGuildTagCreationUpsell)
+// Module 13981 (useGuildTagCreationUpsell)
 import _modDef12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5980 */;
-import ServerTagUpsellOnProfileExperimentDefault from "ServerTagUpsellOnProfileExperiment" /* 13949 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6417 */;
+import ServerTagUpsellOnProfileExperimentDefault from "ServerTagUpsellOnProfileExperiment" /* 13982 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 import UserStore from "UserStore" /* 1392 */;
-import BillingInfoStore from "BillingInfoStore" /* 4866 */;
-import SubscriptionStore from "SubscriptionStore" /* 4870 */;
+import BillingInfoStore from "BillingInfoStore" /* 2055 */;
+import SubscriptionStore from "SubscriptionStore" /* 2059 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

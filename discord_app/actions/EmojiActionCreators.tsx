@@ -1,19 +1,19 @@
-// === Module 9845: EmojiActionCreators ===
+// === Module 9859: EmojiActionCreators ===
 
-// Module 9845 (EmojiActionCreators)
+// Module 9859 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import wrappers from "wrappers" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6250 */;
-import InlineUploaderDefault from "InlineUploader" /* 6949 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5863 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6678 */;
+import InlineUploaderDefault from "InlineUploader" /* 7027 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 6243 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6013 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6221 */;
+import EmojiStore from "EmojiStore" /* 6673 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6450 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6651 */;
 
 const require = globalThis.__r;
 
@@ -52,7 +52,7 @@ let closure_10 = async function _updateEmoji(arg0) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -198,7 +198,7 @@ export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2049).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4781).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;
@@ -263,7 +263,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2049).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4781).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;

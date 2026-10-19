@@ -1,6 +1,6 @@
-// === Module 12808: playFrameFromEmbed ===
+// === Module 12840: playFrameFromEmbed ===
 
-// Module 12808 (playFrameFromEmbed)
+// Module 12840 (playFrameFromEmbed)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ let closure_4 = async function _playFrameFromEmbed(arg0) {
   await "IconComponent";
   closure_1 = tmp2;
   ({ application: closure_129_0, analyticsContext: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "test";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/playFrameFromEmbed.tsx");

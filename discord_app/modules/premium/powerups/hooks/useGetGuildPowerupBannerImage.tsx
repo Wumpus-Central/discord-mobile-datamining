@@ -1,9 +1,9 @@
-// === Module 13209: useGetGuildPowerupBannerImage ===
+// === Module 13241: useGetGuildPowerupBannerImage ===
 
-// Module 13209 (useGetGuildPowerupBannerImage)
+// Module 13241 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

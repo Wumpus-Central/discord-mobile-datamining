@@ -1,12 +1,12 @@
-// === Module 9107: useSecureFramesPairwiseFingerprint ===
+// === Module 9123: useSecureFramesPairwiseFingerprint ===
 
-// Module 9107 (useSecureFramesPairwiseFingerprint)
+// Module 9123 (useSecureFramesPairwiseFingerprint)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
 
 const require = globalThis.__r;
 
@@ -94,8 +94,8 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(9102).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-let Features = fn(5216).Features;
+let closure_9 = fn(9118).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let Features = fn(5680).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

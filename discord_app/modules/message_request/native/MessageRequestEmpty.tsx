@@ -1,9 +1,9 @@
-// === Module 18036: MessageRequestEmpty ===
+// === Module 18065: MessageRequestEmpty ===
 
-// Module 18036 (MessageRequestEmpty)
+// Module 18065 (MessageRequestEmpty)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
-import Pending from "Pending" /* 18037 */;
+import Pending from "Pending" /* 18066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

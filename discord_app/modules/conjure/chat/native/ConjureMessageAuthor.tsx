@@ -1,24 +1,24 @@
-// === Module 12176: ConjureMessageAuthor ===
+// === Module 12196: ConjureMessageAuthor ===
 
-// Module 12176 (ConjureMessageAuthor)
+// Module 12196 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Pressables from "Pressables" /* 6462 */;
-import AppsIcon from "AppsIcon" /* 8506 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 12177 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12178 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import Pressables from "Pressables" /* 6856 */;
+import AppsIcon from "AppsIcon" /* 8522 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 12197 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(12162).MESSAGE_AVATAR_SIZE, height: fn(12162).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(12182).MESSAGE_AVATAR_SIZE, height: fn(12182).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -138,9 +138,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
   const cResult = messageAuthorUser(576).c(6);
   ({ at, userId } = arg0);
   let obj = messageAuthorUser(576);
-  messageAuthorUser = messageAuthorUser(12173).useMessageAuthorUser(userId);
-  const obj2 = messageAuthorUser(12173);
-  const name = messageAuthorUser(5057).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12193).useMessageAuthorUser(userId);
+  const obj2 = messageAuthorUser(12193);
+  const name = messageAuthorUser(4994).useName(messageAuthorUser);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -173,9 +173,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
 }) : (function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(12173).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(12173);
-  const name = messageAuthorUser(5057).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12193).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(12193);
+  const name = messageAuthorUser(4994).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {
@@ -193,7 +193,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeade
   const at = arg0.at;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3883.uk6jhJ);
+    const stringResult = intl.string(_modDef3820.uk6jhJ);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -212,7 +212,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeade
 }) : (function ConjureHeader(arg0) {
   const obj = { name: null, color: "text-brand", at: null };
   const intl = util.intl;
-  obj.name = intl.string(_modDef3883.uk6jhJ);
+  obj.name = intl.string(_modDef3820.uk6jhJ);
   obj.at = arg0.at;
   return hasOwnProperty(closure_8, obj);
 });
@@ -226,7 +226,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     size = PressableOpacity(1202).AvatarSizes.NORMAL;
   }
   let obj = messageAuthorUser(576);
-  messageAuthorUser = PressableOpacity(12173).useMessageAuthorUser(userId);
+  messageAuthorUser = PressableOpacity(12193).useMessageAuthorUser(userId);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -257,7 +257,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       }
       if (cResult[6] === tmp4) {
       }
-      PressableOpacity = PressableOpacity(6462).PressableOpacity;
+      PressableOpacity = PressableOpacity(6856).PressableOpacity;
       const obj2 = { onPress: tmp4, onLongPress: tmp4, accessibilityRole: "button", accessibilityLabel: tmp6, children: tmp8 };
       tmp = closure_5(PressableOpacity, obj2);
       cResult[6] = tmp4;
@@ -271,14 +271,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     cResult[5] = tmp10;
     tmp8 = tmp10;
   }
-  const PressableOpacityResult = PressableOpacity(12173);
+  const PressableOpacityResult = PressableOpacity(12193);
 }) : (function ConjureUserAvatar(size) {
   let NORMAL = size.size;
   if (NORMAL === undefined) {
     NORMAL = messageAuthorUser(1202).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(12173).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(12193).useMessageAuthorUser(size.userId);
   const items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
@@ -292,7 +292,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     obj2.accessibilityLabel = intl.string(tmp3(1128).t.iXAna6);
     const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "r" };
     obj2.children = closure_5(tmp3(1202).Avatar, obj3);
-    tmp7 = closure_5(tmp3(6462).PressableOpacity, obj2);
+    tmp7 = closure_5(tmp3(6856).PressableOpacity, obj2);
   }
   return tmp7;
 });

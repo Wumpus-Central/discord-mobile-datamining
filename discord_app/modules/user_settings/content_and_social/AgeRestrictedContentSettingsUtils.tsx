@@ -1,12 +1,12 @@
-// === Module 7193: AgeRestrictedContentSettingsUtils ===
+// === Module 7262: AgeRestrictedContentSettingsUtils ===
 
-// Module 7193 (AgeRestrictedContentSettingsUtils)
+// Module 7262 (AgeRestrictedContentSettingsUtils)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6165 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6176 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 7194 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6602 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6607 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 7263 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

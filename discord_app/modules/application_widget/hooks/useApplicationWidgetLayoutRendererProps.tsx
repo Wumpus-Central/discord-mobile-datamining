@@ -1,19 +1,19 @@
-// === Module 11832: useApplicationWidgetLayoutRendererProps ===
+// === Module 11853: useApplicationWidgetLayoutRendererProps ===
 
-// Module 11832 (useApplicationWidgetLayoutRendererProps)
+// Module 11853 (useApplicationWidgetLayoutRendererProps)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11738 */;
-import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 11834 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11759 */;
+import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 11855 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 11833 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 11705 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 11854 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 11726 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(11705).FetchState;
+const FetchState = fn(11726).FetchState;
 const localizedStrings = [];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 8947: LiveStageNotificationsUtils ===
+// === Module 8963: LiveStageNotificationsUtils ===
 
-// Module 8947 (LiveStageNotificationsUtils)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5116 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+// Module 8963 (LiveStageNotificationsUtils)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 
 const require = fn;
 const Permissions = fn(1098).Permissions;

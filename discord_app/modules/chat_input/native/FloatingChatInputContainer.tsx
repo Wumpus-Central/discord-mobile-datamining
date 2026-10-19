@@ -1,18 +1,18 @@
-// === Module 13073: FloatingChatInputContainer ===
+// === Module 13105: FloatingChatInputContainer ===
 
-// Module 13073 (FloatingChatInputContainer)
+// Module 13105 (FloatingChatInputContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4945 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5083 */;
-import timing from "timing" /* 5192 */;
-import timingPresets from "timingPresets" /* 5195 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5122 */;
+import timing from "timing" /* 5167 */;
+import timingPresets from "timingPresets" /* 5170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const Easing = fn(4945).Easing;
+const Easing = fn(5014).Easing;
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
 fn(558);
 const __initData = { code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}" };
@@ -21,7 +21,7 @@ const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardOpenPaddingStyle() {
   const cResult = token(576).c(8);
   let obj = token(576);
-  token = token(4913).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  token = token(5213).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
       const KeyboardController = token(1647).KeyboardController;
@@ -40,7 +40,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
   } else {
     first = cResult[0];
   }
-  let obj2 = token(4913);
+  let obj2 = token(5213);
   [tmp8, importDefault] = sharedValue(noop.useState(first), 2);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function c() {
@@ -64,7 +64,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
   }
   const effect = noop.useEffect(tmp9, tmp10);
   const tmp7 = sharedValue(noop.useState(first), 2);
-  const tmpResult = token(5083);
+  const tmpResult = token(5122);
   if (!tmp8) {
     tmp8 = true === tmpResult.useKeyboardContextForType(tmp(1631).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -77,7 +77,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
   if (tmp8) {
     num3 = token;
   }
-  sharedValue = token(4945).useSharedValue(num3);
+  sharedValue = token(5014).useSharedValue(num3);
   if (cResult[3] === tmp8) {
     if (cResult[4] === sharedValue) {
       if (cResult[5] === token) {
@@ -92,7 +92,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
       fn4.__closure = obj4;
       fn4.__workletHash = 5673482424037;
       fn4.__initData = __initData;
-      return tmp(4945).useAnimatedStyle(fn4);
+      return tmp(5014).useAnimatedStyle(fn4);
     }
   }
   const fn3 = function h() {
@@ -112,10 +112,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
   cResult[7] = items1;
   tmp15 = items1;
   tmp14 = fn3;
-  const tmpResult3 = token(4945);
+  const tmpResult3 = token(5014);
 }) : (function useKeyboardOpenPaddingStyle() {
-  token = token(4913).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
-  let obj = token(4913);
+  token = token(5213).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  let obj = token(5213);
   [tmp5, importDefault] = sharedValue(noop.useState(() => {
     const KeyboardController = token(1647).KeyboardController;
     const stateResult = KeyboardController.state();
@@ -150,7 +150,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
     }
     return num > 0;
   }), 2);
-  const obj3 = token(5083);
+  const obj3 = token(5122);
   if (!tmp5) {
     tmp5 = true === obj3.useKeyboardContextForType(token(1631).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -163,7 +163,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
   if (tmp5) {
     num = token;
   }
-  sharedValue = token(4945).useSharedValue(num);
+  sharedValue = token(5014).useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = noop.useEffect(() => {
     let num = 0;
@@ -174,14 +174,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKeyboardO
     const result = sharedValue.set(obj.withTiming(num, { duration: timingPresets.timingStandardDuration, easing }));
     const obj2 = { duration: timingPresets.timingStandardDuration, easing };
   }, items);
-  const tmpResult = token(4945);
+  const tmpResult = token(5014);
   const fn = function p() {
     return { paddingBottom: sharedValue.get() };
   };
   fn.__closure = { paddingSV: sharedValue };
   fn.__workletHash = 12921006654950;
   fn.__initData = __initData2;
-  return token(4945).useAnimatedStyle(fn);
+  return token(5014).useAnimatedStyle(fn);
 });
 let closure_9 = tmp3;
 const size = fn(2);

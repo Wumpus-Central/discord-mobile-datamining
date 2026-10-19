@@ -1,12 +1,12 @@
-// === Module 17086: RegisterDisplayName ===
+// === Module 17115: RegisterDisplayName ===
 
-// Module 17086 (RegisterDisplayName)
+// Module 17115 (RegisterDisplayName)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 15753 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 15782 */;
 
 const require = globalThis.__r;
 
@@ -28,13 +28,13 @@ function getGlobalNameError(first1) {
   }
 }
 const View = fn(17).View;
-const RegistrationUIStore = fn(17065);
+const RegistrationUIStore = fn(17094);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17066);
+const RegistrationConstants = fn(17095);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { globalName: { marginTop: nativeDefault.space.PX_24 }, button: null, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.button = { marginTop: nativeDefault.space.PX_24 };

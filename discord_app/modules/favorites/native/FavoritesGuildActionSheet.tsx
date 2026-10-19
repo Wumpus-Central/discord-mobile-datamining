@@ -1,12 +1,12 @@
-// === Module 17267: FavoritesGuildActionSheet ===
+// === Module 17296: FavoritesGuildActionSheet ===
 
-// Module 17267 (FavoritesGuildActionSheet)
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 17268 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 17269 */;
-import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 17270 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 17271 */;
+// Module 17296 (FavoritesGuildActionSheet)
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 17297 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 17298 */;
+import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 17299 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 17300 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 2071 */;
+import FavoriteStore from "FavoriteStore" /* 4803 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     const obj2 = { title: null };
     const intl = tmp(1128).intl;
     obj2.title = intl.string(tmp(1128).t.wMWyci);
-    const tmp13 = closure_4(tmp(7117).BottomSheetTitleHeader, obj2);
+    const tmp13 = closure_4(tmp(7194).BottomSheetTitleHeader, obj2);
     cResult[2] = tmp13;
     let tmp11 = tmp13;
   } else {
@@ -60,8 +60,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
             }
             const _Symbol = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj3 = { IconComponent: tmp(6927).EyeSlashIcon };
-              const tmp22 = closure_4(tmp(7171).ActionSheetRow.Icon, obj3);
+              const obj3 = { IconComponent: tmp(7009).EyeSlashIcon };
+              const tmp22 = closure_4(tmp(7240).ActionSheetRow.Icon, obj3);
               class R {
                 constructor() {
                   tmp = onClose();
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
                       tmp36[1] = tmp17;
                       tmp36[2] = tmp31;
                       obj4.children = tmp36;
-                      const tmp37 = closure_5(tmp(7175).ActionSheet, obj4);
+                      const tmp37 = closure_5(tmp(7244).ActionSheet, obj4);
                       cResult[26] = tmp31;
                       cResult[27] = tmp14;
                       cResult[28] = tmp17;
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
                     }
                     items1[1] = tmp27;
                     obj6.children = items1;
-                    const tmp33 = closure_5(tmp(7171).ActionSheetRow.Group, obj6);
+                    const tmp33 = closure_5(tmp(7240).ActionSheetRow.Group, obj6);
                     cResult[23] = tmp24;
                     cResult[24] = tmp27;
                     cResult[25] = tmp33;
@@ -146,13 +146,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
                         return;
                       }
                     }
-                    tmp30[0] = tmp(5148).TrashIcon;
-                    obj7.icon = closure_4(tmp(7171).ActionSheetRow.Icon, tmp30);
+                    tmp30[0] = tmp(5651).TrashIcon;
+                    obj7.icon = closure_4(tmp(7240).ActionSheetRow.Icon, tmp30);
                     obj7.onPress = function onPress() {
                       onClose();
                       closure_2.perform();
                     };
-                    tmp28 = closure_4(tmp(7171).ActionSheetRow, obj7);
+                    tmp28 = closure_4(tmp(7240).ActionSheetRow, obj7);
                   }
                   class R {
                     constructor() {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
               }
               obj8.icon = tmp20;
               obj8.onPress = tmp23;
-              const tmp26 = closure_4(tmp(7171).ActionSheetRow, obj8);
+              const tmp26 = closure_4(tmp(7240).ActionSheetRow, obj8);
               cResult[16] = tmp4.label;
               cResult[17] = tmp4.subLabel;
               cResult[18] = tmp23;
@@ -207,14 +207,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
               }
             }
             obj11.label = obj9.string(tmp(1128).t["0dOFq+"]);
-            const obj12 = { IconComponent: tmp(11982).ArrowsUpDownIcon };
-            obj11.icon = closure_4(tmp(7171).ActionSheetRow.Icon, obj12);
+            const obj12 = { IconComponent: tmp(12002).ArrowsUpDownIcon };
+            obj11.icon = closure_4(tmp(7240).ActionSheetRow.Icon, obj12);
             obj11.onPress = function onPress() {
               onClose();
               openFavoritesGuildChannelSortModalDefault();
             };
-            obj10.children = closure_4(tmp(7171).ActionSheetRow, obj11);
-            tmp18 = closure_4(tmp(7171).ActionSheetRow.Group, obj10);
+            obj10.children = closure_4(tmp(7240).ActionSheetRow, obj11);
+            tmp18 = closure_4(tmp(7240).ActionSheetRow.Group, obj10);
           }
           cResult[10] = onClose;
           cResult[11] = tmp18;
@@ -234,11 +234,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
         return;
       }
     }
-    const obj27 = { IconComponent: tmp(8473).ThreadIcon };
-    obj15.icon = closure_4(tmp(7171).ActionSheetRow.Icon, obj27);
+    const obj27 = { IconComponent: tmp(8489).ThreadIcon };
+    obj15.icon = closure_4(tmp(7240).ActionSheetRow.Icon, obj27);
     ({ isEnabled: obj5.value, toggle: obj5.onValueChange } = tmp6);
-    obj14.children = closure_4(tmp(7171).ActionSheetSwitchRow, obj15);
-    tmp15 = closure_4(tmp(7171).ActionSheetRow.Group, obj14);
+    obj14.children = closure_4(tmp(7240).ActionSheetSwitchRow, obj15);
+    tmp15 = closure_4(tmp(7240).ActionSheetRow.Group, obj14);
   }
   cResult[3] = tmp6.isAvailable;
   cResult[4] = tmp6.isEnabled;
@@ -261,17 +261,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const obj3 = { title: null };
   const intl = onClose(1128).intl;
   obj3.title = intl.string(onClose(1128).t.wMWyci);
-  obj2.header = closure_4(onClose(7117).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_4(onClose(7194).BottomSheetTitleHeader, obj3);
   let tmp8Result = null;
   if (tmp4.isAvailable) {
     const obj4 = { hasIcons: true, children: null };
     const obj6 = { label: null, subLabel: null, icon: null, value: null, onValueChange: null };
     ({ label: obj5.label, subLabel: obj5.subLabel } = tmp4);
-    const obj7 = { IconComponent: tmp5(8473).ThreadIcon };
-    obj6.icon = closure_4(tmp5(7171).ActionSheetRow.Icon, obj7);
+    const obj7 = { IconComponent: tmp5(8489).ThreadIcon };
+    obj6.icon = closure_4(tmp5(7240).ActionSheetRow.Icon, obj7);
     ({ isEnabled: obj5.value, toggle: obj5.onValueChange } = tmp4);
-    obj4.children = closure_4(tmp5(7171).ActionSheetSwitchRow, obj6);
-    tmp8Result = closure_4(tmp5(7171).ActionSheetRow.Group, obj4);
+    obj4.children = closure_4(tmp5(7240).ActionSheetSwitchRow, obj6);
+    tmp8Result = closure_4(tmp5(7240).ActionSheetRow.Group, obj4);
   }
   const items1 = [tmp8Result, , ];
   let tmp8Result3 = null;
@@ -280,38 +280,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     const obj9 = { label: null, icon: null, onPress: null };
     const intl2 = tmp5(1128).intl;
     obj9.label = intl2.string(tmp5(1128).t["0dOFq+"]);
-    const obj10 = { IconComponent: tmp5(11982).ArrowsUpDownIcon };
-    obj9.icon = closure_4(tmp5(7171).ActionSheetRow.Icon, obj10);
+    const obj10 = { IconComponent: tmp5(12002).ArrowsUpDownIcon };
+    obj9.icon = closure_4(tmp5(7240).ActionSheetRow.Icon, obj10);
     obj9.onPress = function onPress() {
       onClose();
       openFavoritesGuildChannelSortModalDefault();
     };
-    obj8.children = closure_4(tmp5(7171).ActionSheetRow, obj9);
-    tmp8Result3 = closure_4(tmp5(7171).ActionSheetRow.Group, obj8);
+    obj8.children = closure_4(tmp5(7240).ActionSheetRow, obj9);
+    tmp8Result3 = closure_4(tmp5(7240).ActionSheetRow.Group, obj8);
   }
   items1[1] = tmp8Result3;
   const obj11 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: "danger", onPress: null };
   const obj = onClose(504);
-  obj11.icon = closure_4(onClose(7171).ActionSheetRow.Icon, { IconComponent: onClose(6927).EyeSlashIcon });
+  obj11.icon = closure_4(onClose(7240).ActionSheetRow.Icon, { IconComponent: onClose(7009).EyeSlashIcon });
   obj11.onPress = function onPress() {
     onClose();
     closure_1.perform();
   };
-  const items2 = [closure_4(onClose(7171).ActionSheetRow, obj11), ];
+  const items2 = [closure_4(onClose(7240).ActionSheetRow, obj11), ];
   let tmp8Result4 = null;
   if (tmp3.isAvailable) {
     const obj25 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj12.label, subLabel: obj12.subLabel } = tmp3);
-    const obj26 = { IconComponent: tmp5(5148).TrashIcon };
-    obj25.icon = closure_4(tmp5(7171).ActionSheetRow.Icon, obj26);
+    const obj26 = { IconComponent: tmp5(5651).TrashIcon };
+    obj25.icon = closure_4(tmp5(7240).ActionSheetRow.Icon, obj26);
     obj25.onPress = function onPress() {
       onClose();
       closure_2.perform();
     };
-    tmp8Result4 = closure_4(tmp5(7171).ActionSheetRow, obj25);
+    tmp8Result4 = closure_4(tmp5(7240).ActionSheetRow, obj25);
   }
   items2[1] = tmp8Result4;
-  items1[2] = closure_5(onClose(7171).ActionSheetRow.Group, { hasIcons: true, children: items2 });
+  items1[2] = closure_5(onClose(7240).ActionSheetRow.Group, { hasIcons: true, children: items2 });
   obj2.children = items1;
-  return closure_5(onClose(7175).ActionSheet, obj2);
+  return closure_5(onClose(7244).ActionSheet, obj2);
 });

@@ -1,21 +1,21 @@
-// === Module 7201: OnboardingHomeUtils ===
+// === Module 7270: OnboardingHomeUtils ===
 
-// Module 7201 (OnboardingHomeUtils)
-import FavoritesUtils from "FavoritesUtils" /* 2093 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7072 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7203 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7204 */;
-import ImpersonateStore from "ImpersonateStore" /* 2121 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7202 */;
+// Module 7270 (OnboardingHomeUtils)
+import FavoritesUtils from "FavoritesUtils" /* 4825 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7149 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7272 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7273 */;
+import ImpersonateStore from "ImpersonateStore" /* 4853 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7271 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(2075).ChannelFlags;
+const ChannelFlags = fn(4807).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");

@@ -1,27 +1,27 @@
-// === Module 18293: VoicePanelPIP ===
+// === Module 18322: VoicePanelPIP ===
 
-// Module 18293 (VoicePanelPIP)
+// Module 18322 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
-import native from "native" /* 4922 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import ExternalPipDefault from "ExternalPip" /* 5320 */;
-import spring from "spring" /* 5478 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10679 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10684 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 10688 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11042 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11254 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18185 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18186 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18188 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 18294 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4869 */;
+import native from "native" /* 4999 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
+import spring from "spring" /* 5208 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
+import ExternalPipDefault from "ExternalPip" /* 5784 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10692 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10697 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 10701 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11057 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11268 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18169 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18216 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18217 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 18323 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import FramesStore from "FramesStore" /* 6295 */;
-import VoicePanelStore from "VoicePanelStore" /* 6352 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
+import FramesStore from "FramesStore" /* 6723 */;
+import VoicePanelStore from "VoicePanelStore" /* 6752 */;
 
 require = fn;
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
@@ -29,15 +29,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10680);
+const VoicePanelConstants = fn(10693);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18187).VoicePanelPIPModes;
-const ActivityPanelModes = fn(6298).ActivityPanelModes;
-const isLaunched = fn(6296).isLaunched;
+const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18170).VoicePanelPIPModes;
+const ActivityPanelModes = fn(5570).ActivityPanelModes;
+const isLaunched = fn(6724).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

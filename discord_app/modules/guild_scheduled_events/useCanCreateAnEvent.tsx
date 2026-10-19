@@ -1,16 +1,16 @@
-// === Module 8926: useCanCreateAnEvent ===
+// === Module 8942: useCanCreateAnEvent ===
 
-// Module 8926 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8848 */;
+// Module 8942 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8864 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import GuildChannelStore from "GuildChannelStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4843).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4878).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

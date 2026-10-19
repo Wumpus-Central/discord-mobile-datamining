@@ -1,6 +1,6 @@
-// === Module 12971: directory_channels/GuildDirectoryUtils ===
+// === Module 13003: directory_channels/GuildDirectoryUtils ===
 
-// Module 12971 (directory_channels/GuildDirectoryUtils)
+// Module 13003 (directory_channels/GuildDirectoryUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ let closure_6 = async function _onAddDirectoryGuildEntry() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ directoryChannelId: closure_129_0, directoryGuildName: closure_129_1, guild: closure_129_2, description: closure_129_3, category: closure_129_4, onClose: closure_129_5 } = closure_0);
-  return "Reflect";
+  return "test";
 };
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 17366: useStageChannelSpeakerVoiceStates ===
+// === Module 17395: useStageChannelSpeakerVoiceStates ===
 
-// Module 17366 (useStageChannelSpeakerVoiceStates)
+// Module 17395 (useStageChannelSpeakerVoiceStates)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 2071 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6152 */;
+import FavoriteStore from "FavoriteStore" /* 4803 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6589 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const getComparator = fn(5215).getComparator;
+const getComparator = fn(5679).getComparator;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");

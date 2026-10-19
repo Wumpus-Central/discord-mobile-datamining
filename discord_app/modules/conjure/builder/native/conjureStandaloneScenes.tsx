@@ -1,9 +1,9 @@
-// === Module 11592: conjureStandaloneScenes ===
+// === Module 11613: conjureStandaloneScenes ===
 
-// Module 11592 (conjureStandaloneScenes)
+// Module 11613 (conjureStandaloneScenes)
 import Constants from "Constants" /* 1087 */;
 import router_utils from "router_utils" /* 1114 */;
-import ChannelConstants from "ChannelConstants" /* 2075 */;
+import ChannelConstants from "ChannelConstants" /* 4807 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

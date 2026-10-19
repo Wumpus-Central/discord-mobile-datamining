@@ -1,13 +1,13 @@
-// === Module 14629: usePremiumTier2DeltaPriceString ===
+// === Module 14662: usePremiumTier2DeltaPriceString ===
 
-// Module 14629 (usePremiumTier2DeltaPriceString)
+// Module 14662 (usePremiumTier2DeltaPriceString)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import BillingUtils from "BillingUtils" /* 4879 */;
-import PriceUtils from "PriceUtils" /* 7216 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7397 */;
-import ProductIds from "ProductIds" /* 7398 */;
+import BillingUtils from "BillingUtils" /* 4764 */;
+import PriceUtils from "PriceUtils" /* 7285 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7464 */;
+import ProductIds from "ProductIds" /* 7465 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7403 */;
+import IAPStore from "IAPStore" /* 7470 */;
 
 const require = globalThis.__r;
 
@@ -121,7 +121,7 @@ function computeAcomDeltaResult(productId, checkoutContext, viewerProductId) {
     }
   }
 }
-const useNativeCheckoutStore = fn(7415).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7482).useNativeCheckoutStore;
 const PremiumTypes = fn(1394).PremiumTypes;
 let closure_6 = { priceString: null, failure: null };
 let ReactCompilerGating = fn(558);
@@ -463,7 +463,7 @@ export const usePremiumTier2DeltaPriceString = ReactCompilerGating.isReactCompil
         const tmp2Result = getViewerProductId(subscription);
         let tmp11 = null;
         if (null != tmp2Result) {
-          tmp11 = tmp4(7398).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
+          tmp11 = tmp4(7465).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
         }
         flag = null != tmp11 && tmp11.basePlanId === premiumTier.basePlanId && tmp11.numPremiumGuild < premiumTier.numPremiumGuild;
         const tmp12 = null != tmp11 && tmp11.basePlanId === premiumTier.basePlanId && tmp11.numPremiumGuild < premiumTier.numPremiumGuild;

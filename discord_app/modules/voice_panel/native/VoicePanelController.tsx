@@ -1,45 +1,46 @@
-// === Module 18352: VoicePanelController ===
+// === Module 18381: VoicePanelController ===
 
-// Module 18352 (VoicePanelController)
+// Module 18381 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1104 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import useWindowDimensions from "useWindowDimensions" /* 1499 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
-import native from "native" /* 4922 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5206 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5343 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6315 */;
-import DeviceOrientation from "DeviceOrientation" /* 8724 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9078 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 10682 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10684 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11254 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 14101 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 18143 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18188 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18203 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 18284 */;
-import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 18353 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 18354 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4869 */;
+import native from "native" /* 4999 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
+import ChatInputUtils from "ChatInputUtils" /* 5120 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5807 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6728 */;
+import DeviceOrientation from "DeviceOrientation" /* 8740 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9094 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9892 */;
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 10695 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10697 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11268 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 14134 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 18174 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18217 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18232 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 18313 */;
+import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 18382 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 18383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
-import AppFreezeStore from "AppFreezeStore" /* 8690 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11361 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11232 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+import AppFreezeStore from "AppFreezeStore" /* 8706 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11382 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11246 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import VoicePanelStore from "VoicePanelStore" /* 6352 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
+import VoicePanelStore from "VoicePanelStore" /* 6752 */;
 
 require = fn;
 function useCoreSharedState(channelId, isConnected, items, stateFromStores) {
@@ -313,7 +314,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
       }
       return setControlsMode({ mode, debounce });
     }, items4);
-    obj2.runOnJS = tmp(4945).runOnJS;
+    obj2.runOnJS = tmp(5014).runOnJS;
     obj2._queueHideControls = callback1;
     fn.__closure = obj2;
     fn.__workletHash = 9447192071204;
@@ -336,11 +337,11 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
         ReanimatedRexport.runOnJS(callback)();
       }
     };
-    const obj4 = { VoicePanelModes, runOnJS: tmp(4945).runOnJS, _queueHideControls: callback1, _clearHideControlsQueue };
+    const obj4 = { VoicePanelModes, runOnJS: tmp(5014).runOnJS, _queueHideControls: callback1, _clearHideControlsQueue };
     fn2.__closure = obj4;
     fn2.__workletHash = 9080436423990;
     fn2.__initData = __initData13;
-    const animatedReaction = tmp(4945).useAnimatedReaction(S, fn2);
+    const animatedReaction = tmp(5014).useAnimatedReaction(S, fn2);
     const items6 = [stateFromStores, tmp4Result, isConnected];
     const layoutEffect = noop.useLayoutEffect(() => {
       if (closure_3) {
@@ -352,7 +353,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
       }
       tmp5 = CONTROLS_HEIGHT;
     }, items6);
-    const tmpResult = tmp(4945);
+    const tmpResult = tmp(5014);
     const fn3 = function f() {
       return connected.get();
     };
@@ -374,7 +375,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
     fn4.__closure = obj6;
     fn4.__workletHash = 14172278286591;
     fn4.__initData = __initData15;
-    const animatedReaction1 = tmp(4945).useAnimatedReaction(fn3, fn4);
+    const animatedReaction1 = tmp(5014).useAnimatedReaction(fn3, fn4);
     const items7 = [cancelControlsDebounce, _clearHideControlsQueue];
     const layoutEffect1 = noop.useLayoutEffect(() => () => {
       cancelControlsDebounce();
@@ -398,16 +399,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(10680);
+const VoicePanelConstants = fn(10693);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(10678);
+const VoicePanelControlsConstants = fn(10691);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2026).OrientationLockState;
-const ActivityPanelModes = fn(6298).ActivityPanelModes;
-const isActivityParticipant = fn(5214).isActivityParticipant;
-const MorphablePanelModes = fn(10681).MorphablePanelModes;
+const ActivityPanelModes = fn(5570).ActivityPanelModes;
+const isActivityParticipant = fn(5593).isActivityParticipant;
+const MorphablePanelModes = fn(10694).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {
@@ -2444,7 +2445,7 @@ let closure_65 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMan
 });
 ReactCompilerGating = fn(558);
 let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedMode(channelId) {
-  const cResult = channelId(mode[23]).c(17);
+  const cResult = channelId(mode[23]).c(21);
   channelId = channelId.channelId;
   const isConnected = channelId.isConnected;
   mode = channelId.mode;
@@ -2464,81 +2465,153 @@ let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
     tmp2 = cResult[1];
   }
   const tmp3 = connected(transitionState.useState(tmp2), 2);
-  const selectedMode = tmp3[0];
-  closure_8 = tmp5;
-  if (cResult[2] === connected) {
-    if (cResult[3] === isConnected) {
-      if (cResult[4] === mode) {
-        if (cResult[5] === selectedMode) {
-          if (cResult[6] === transitionState) {
-            let tmp6 = cResult[7];
+  const first = tmp3[0];
+  closure_8 = tmp3[1];
+  if (cResult[2] !== mode) {
+    const fn2 = function v(arg0) {
+      let tmp2 = arg0 === VoicePanelModes.PANEL;
+      if (tmp2) {
+        tmp2 = mode.get() === tmp.PIP;
+      }
+      if (tmp2) {
+        ChatInputUtils.dismissKeyboard();
+      }
+      closure_8(arg0);
+    };
+    cResult[2] = mode;
+    cResult[3] = fn2;
+    let tmp5 = fn2;
+  } else {
+    tmp5 = cResult[3];
+  }
+  AppFreezeStore = tmp5;
+  if (cResult[4] === connected) {
+    if (cResult[5] === isConnected) {
+      if (cResult[6] === mode) {
+        if (cResult[7] === first) {
+          if (cResult[8] === transitionState) {
+            let tmp6 = cResult[9];
           }
           const layoutEffect = transitionState.useLayoutEffect(tmp6);
-          if (cResult[8] === channelId) {
-            if (cResult[9] === connected) {
-              if (cResult[10] === controlsSpecs) {
-                if (cResult[11] === mode) {
-                  if (cResult[12] === setControlsMode) {
-                    let tmp8 = cResult[13];
-                  }
-                  if (cResult[14] === tmp8) {
-                    if (cResult[15] === selectedMode) {
-                      let tmp9 = cResult[16];
+          if (cResult[10] === channelId) {
+            if (cResult[11] === connected) {
+              if (cResult[12] === controlsSpecs) {
+                if (cResult[13] === mode) {
+                  if (cResult[14] === setControlsMode) {
+                    if (cResult[15] === tmp5) {
+                      let tmp8 = cResult[16];
                     }
-                    return tmp9;
+                    if (cResult[17] === tmp8) {
+                      if (cResult[18] === first) {
+                        if (cResult[19] === tmp5) {
+                          let tmp9 = cResult[20];
+                        }
+                        return tmp9;
+                      }
+                    }
+                    const obj3 = { selectedMode: null, setMode: null, dismissPanel: null };
+                    class T {
+                      constructor() {
+                        if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
+                          tmp10 = setControlsMode;
+                          obj1 = { mode: null };
+                          obj1.mode = tmp.FLOATING_DEFAULT;
+                          tmp11 = setControlsMode(obj1);
+                          flag = true;
+                        } else {
+                          tmp2 = connected;
+                          if (connected.get()) {
+                            tmp6 = mode;
+                            flag2 = mode.get() === VoicePanelModes.PANEL;
+                            if (flag2) {
+                              tmp8 = closure_9;
+                              tmp9 = closure_9(tmp7.PIP);
+                              flag2 = true;
+                            }
+                            flag = flag2;
+                          } else {
+                            tmp3 = closure_16;
+                            state = closure_16.getState();
+                            tmp4 = channelId;
+                            closeChannelResult = state.closeChannel(channelId);
+                            flag = true;
+                          }
+                        }
+                        return flag;
+                      }
+                    }
+                    obj3.setMode = tmp5;
+                    obj3.dismissPanel = tmp8;
+                    cResult[17] = tmp8;
+                    cResult[18] = first;
+                    cResult[19] = tmp5;
+                    cResult[20] = obj3;
+                    tmp9 = obj3;
                   }
-                  const obj3 = { selectedMode, setMode: tmp5, dismissPanel: tmp8 };
-                  cResult[14] = tmp8;
-                  cResult[15] = selectedMode;
-                  cResult[16] = obj3;
-                  tmp9 = obj3;
                 }
               }
             }
           }
-          const fn3 = function w() {
-            if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
-              const obj = { mode: tmp.FLOATING_DEFAULT };
-              setControlsMode(obj);
-              let flag = true;
-            } else if (connected.get()) {
-              let flag2 = mode.get() === VoicePanelModes.PANEL;
-              if (flag2) {
-                closure_8(tmp7.PIP);
-                flag2 = true;
+          class T {
+            constructor() {
+              if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
+                tmp10 = setControlsMode;
+                obj1 = { mode: null };
+                obj1.mode = tmp.FLOATING_DEFAULT;
+                tmp11 = setControlsMode(obj1);
+                flag = true;
+              } else {
+                tmp2 = connected;
+                if (connected.get()) {
+                  tmp6 = mode;
+                  flag2 = mode.get() === VoicePanelModes.PANEL;
+                  if (flag2) {
+                    tmp8 = closure_9;
+                    tmp9 = closure_9(tmp7.PIP);
+                    flag2 = true;
+                  }
+                  flag = flag2;
+                } else {
+                  tmp3 = closure_16;
+                  state = closure_16.getState();
+                  tmp4 = channelId;
+                  closeChannelResult = state.closeChannel(channelId);
+                  flag = true;
+                }
               }
-              flag = flag2;
-            } else {
-              const state = VoicePanelStore.getState();
-              state.closeChannel(channelId);
-              flag = true;
+              return flag;
             }
-            return flag;
-          };
-          cResult[8] = channelId;
-          cResult[9] = connected;
-          cResult[10] = controlsSpecs;
-          cResult[11] = mode;
-          cResult[12] = setControlsMode;
-          cResult[13] = fn3;
-          tmp8 = fn3;
+          }
+          cResult[10] = channelId;
+          cResult[11] = connected;
+          cResult[12] = controlsSpecs;
+          cResult[13] = mode;
+          cResult[14] = setControlsMode;
+          cResult[15] = tmp5;
+          cResult[16] = T;
+          tmp8 = T;
         }
       }
     }
   }
-  const fn2 = function v() {
-    const result = mode.set(first);
-    if (transitionState !== native.TransitionStates.YEETED) {
-      const result1 = connected.set(isConnected);
+  class M {
+    constructor() {
+      result = mode.set(closure_7);
+      if (transitionState !== closure_0(closure_2[54]).TransitionStates.YEETED) {
+        tmp2 = connected;
+        tmp3 = isConnected;
+        result1 = connected.set(isConnected);
+      }
+      return;
     }
-  };
-  cResult[2] = connected;
-  cResult[3] = isConnected;
-  cResult[4] = mode;
-  cResult[5] = selectedMode;
-  cResult[6] = transitionState;
-  cResult[7] = fn2;
-  tmp6 = fn2;
+  }
+  cResult[4] = connected;
+  cResult[5] = isConnected;
+  cResult[6] = mode;
+  cResult[7] = first;
+  cResult[8] = transitionState;
+  cResult[9] = M;
+  tmp6 = M;
 }) : (function useSelectedMode(channelId) {
   channelId = channelId.channelId;
   ({ isConnected: importDefault, mode } = channelId);
@@ -2550,17 +2623,28 @@ let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
     return voicePanelsPIP.has(channelId) ? VoicePanelModes.PIP : VoicePanelModes.PANEL;
   }), 2);
   const selectedMode = tmp[0];
-  closure_8 = tmp3;
+  closure_8 = tmp[1];
+  const items = [mode];
+  const setMode = noop.useCallback((arg0) => {
+    let tmp2 = arg0 === VoicePanelModes.PANEL;
+    if (tmp2) {
+      tmp2 = mode.get() === tmp.PIP;
+    }
+    if (tmp2) {
+      ChatInputUtils.dismissKeyboard();
+    }
+    closure_8(arg0);
+  }, items);
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = mode.set(first);
     if (noop !== native.TransitionStates.YEETED) {
       const result1 = connected.set(importDefault);
     }
   });
-  const items = [channelId, connected, mode, controlsSpecs, setControlsMode];
+  const items1 = [channelId, connected, mode, controlsSpecs, setControlsMode, setMode];
   return {
     selectedMode,
-    setMode: tmp[1],
+    setMode,
     dismissPanel: noop.useCallback(() => {
       if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
         const obj = { mode: tmp.FLOATING_DEFAULT };
@@ -2569,7 +2653,7 @@ let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
       } else if (connected.get()) {
         let flag2 = mode.get() === VoicePanelModes.PANEL;
         if (flag2) {
-          closure_8(tmp7.PIP);
+          callback(tmp7.PIP);
           flag2 = true;
         }
         flag = flag2;
@@ -2579,7 +2663,7 @@ let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         flag = true;
       }
       return flag;
-    }, items)
+    }, items1)
   };
 });
 ReactCompilerGating = fn(558);
@@ -2665,7 +2749,7 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
         tmp8 = first === constants.PANEL;
       }
       if (!tmp8) {
-        mode(dependencyMap[25]).runOnJS(mode(dependencyMap[58]).dismissKeyboard)();
+        mode(dependencyMap[25]).runOnJS(mode(dependencyMap[57]).dismissKeyboard)();
         const tmpResult = mode(dependencyMap[25]);
       }
       const tmp5 = _slicedToArray(arg0, 2);
@@ -2673,8 +2757,8 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     obj = mode(dependencyMap[26]);
     tmp3 = arg1;
   };
-  let obj = mode(4945);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9878).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4945).runOnJS, dismissKeyboard: mode(5081).dismissKeyboard };
+  let obj = mode(5014);
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9892).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5014).runOnJS, dismissKeyboard: mode(5120).dismissKeyboard };
   fn2.__workletHash = 9634019064864;
   fn2.__initData = __initData21;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -2702,7 +2786,7 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
         tmp8 = first === constants.PANEL;
       }
       if (!tmp8) {
-        mode(dependencyMap[25]).runOnJS(mode(dependencyMap[58]).dismissKeyboard)();
+        mode(dependencyMap[25]).runOnJS(mode(dependencyMap[57]).dismissKeyboard)();
         const tmpResult = mode(dependencyMap[25]);
       }
       const tmp5 = _slicedToArray(arg0, 2);
@@ -2710,8 +2794,8 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     obj = mode(dependencyMap[26]);
     tmp3 = arg1;
   };
-  let obj = mode(4945);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9878).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4945).runOnJS, dismissKeyboard: mode(5081).dismissKeyboard };
+  let obj = mode(5014);
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9892).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5014).runOnJS, dismissKeyboard: mode(5120).dismissKeyboard };
   fn2.__workletHash = 12442886667392;
   fn2.__initData = __initData23;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

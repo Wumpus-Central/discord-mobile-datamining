@@ -1,6 +1,6 @@
-// === Module 14254: CollectiblesRecommendationStore ===
+// === Module 14287: CollectiblesRecommendationStore ===
 
-// Module 14254 (CollectiblesRecommendationStore)
+// Module 14287 (CollectiblesRecommendationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;

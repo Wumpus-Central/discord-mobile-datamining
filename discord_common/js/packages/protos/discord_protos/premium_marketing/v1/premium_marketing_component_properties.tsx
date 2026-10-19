@@ -1,34 +1,34 @@
-// === Module 9424: premium_marketing_component_properties ===
+// === Module 9440: premium_marketing_component_properties ===
 
-// Module 9424 (premium_marketing_component_properties)
+// Module 9440 (premium_marketing_component_properties)
 import _mod1212 from "module_1212" /* 1212 */;
-import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9425 */;
-import premium_tab from "premium_tab" /* 9429 */;
-import marketing_page_banner from "marketing_page_banner" /* 9430 */;
-import payment_modal_banner from "payment_modal_banner" /* 9431 */;
-import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9432 */;
-import gift_icon from "gift_icon" /* 9433 */;
-import gift_icon_coachmark from "gift_icon_coachmark" /* 9435 */;
-import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9437 */;
-import gift_customization_banner from "gift_customization_banner" /* 9438 */;
-import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9439 */;
-import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9440 */;
-import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9441 */;
-import premium_tab_tooltip from "premium_tab_tooltip" /* 9442 */;
-import premium_tab_popover from "premium_tab_popover" /* 9443 */;
-import nagbar from "nagbar" /* 9444 */;
-import plan_select_card_banner from "plan_select_card_banner" /* 9445 */;
-import billing_settings_banner from "billing_settings_banner" /* 9446 */;
-import shop_nagbar from "shop_nagbar" /* 9447 */;
-import admin_editor_test_component from "admin_editor_test_component" /* 9448 */;
-import guild_header_coachmark from "guild_header_coachmark" /* 9449 */;
-import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9450 */;
-import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9451 */;
-import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9452 */;
-import shop_tab_tooltip from "shop_tab_tooltip" /* 9453 */;
-import premium_home_perk_card from "premium_home_perk_card" /* 9454 */;
-import marketing_page_bento_box from "marketing_page_bento_box" /* 9455 */;
-import outbound_promotion_popover from "outbound_promotion_popover" /* 9456 */;
+import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9441 */;
+import premium_tab from "premium_tab" /* 9445 */;
+import marketing_page_banner from "marketing_page_banner" /* 9446 */;
+import payment_modal_banner from "payment_modal_banner" /* 9447 */;
+import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9448 */;
+import gift_icon from "gift_icon" /* 9449 */;
+import gift_icon_coachmark from "gift_icon_coachmark" /* 9451 */;
+import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9453 */;
+import gift_customization_banner from "gift_customization_banner" /* 9454 */;
+import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9455 */;
+import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9456 */;
+import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9457 */;
+import premium_tab_tooltip from "premium_tab_tooltip" /* 9458 */;
+import premium_tab_popover from "premium_tab_popover" /* 9459 */;
+import nagbar from "nagbar" /* 9460 */;
+import plan_select_card_banner from "plan_select_card_banner" /* 9461 */;
+import billing_settings_banner from "billing_settings_banner" /* 9462 */;
+import shop_nagbar from "shop_nagbar" /* 9463 */;
+import admin_editor_test_component from "admin_editor_test_component" /* 9464 */;
+import guild_header_coachmark from "guild_header_coachmark" /* 9465 */;
+import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9466 */;
+import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9467 */;
+import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9468 */;
+import shop_tab_tooltip from "shop_tab_tooltip" /* 9469 */;
+import premium_home_perk_card from "premium_home_perk_card" /* 9470 */;
+import marketing_page_bento_box from "marketing_page_bento_box" /* 9471 */;
+import outbound_promotion_popover from "outbound_promotion_popover" /* 9472 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

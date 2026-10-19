@@ -1,19 +1,19 @@
-// === Module 11571: AudienceTile ===
+// === Module 11592: AudienceTile ===
 
-// Module 11571 (AudienceTile)
+// Module 11592 (AudienceTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5516 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7759 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5951 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7822 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2128 */;
+import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { touchableContainer: { overflow: "visible" }, container: { alignItems: "center" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 }, raisedHandContainer: null, activeBackground: null, raisedHand: null, nameplateContainer: null, usernameText: null, faded: null };
 let size = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: nativeDefault.colors.WHITE };
 obj.raisedHandContainer = size;
@@ -61,7 +61,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function RaisedH
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const obj3 = { style: tmp4.raisedHand, source: tmp6(11407), color: PRIMARY_800 };
+    const obj3 = { style: tmp4.raisedHand, source: tmp6(11428), color: PRIMARY_800 };
     const tmp10 = hasOwnProperty(native.Icon, obj3);
     cResult[3] = PRIMARY_800;
     cResult[4] = tmp4.raisedHand;
@@ -88,7 +88,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function RaisedH
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11407), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11428), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 });
@@ -131,11 +131,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const stateFromStores = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
     if (cResult[7] !== rtsState) {
-      const result = tmp(6206).isRequestedToSpeakAll(rtsState);
+      const result = tmp(6636).isRequestedToSpeakAll(rtsState);
       cResult[7] = rtsState;
       cResult[8] = result;
       let tmp14 = result;
-      const tmpResult3 = tmp(6206);
+      const tmpResult3 = tmp(6636);
     } else {
       tmp14 = cResult[8];
     }
@@ -188,7 +188,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             if (cResult[38] !== blocked) {
                               let tmp41 = blocked;
                               if (blocked) {
-                                tmp41 = closure_5(tmp(11551).BlockedStatus, {});
+                                tmp41 = closure_5(tmp(11572).BlockedStatus, {});
                               }
                               cResult[38] = blocked;
                               cResult[39] = tmp41;
@@ -199,7 +199,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             if (cResult[40] !== ignored) {
                               let tmp44 = ignored;
                               if (ignored) {
-                                tmp44 = closure_5(tmp(11551).IgnoredStatus, {});
+                                tmp44 = closure_5(tmp(11572).IgnoredStatus, {});
                               }
                               cResult[40] = ignored;
                               cResult[41] = tmp44;
@@ -218,12 +218,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     cResult[47] = tmp49;
                                     let tmp48 = tmp49;
                                   } else {
-                                    const tmpResult4 = tmp(5065);
+                                    const tmpResult4 = tmp(4952);
                                     tmp5(587).unsafe_rawColors;
-                                    const isThemeDarkResult = tmp(5065).isThemeDark(theme);
+                                    const isThemeDarkResult = tmp(4952).isThemeDark(theme);
                                     const unsafe_rawColors = { color: null };
-                                    unsafe_rawColors.color = tmp(5065).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-                                    const tmp51 = tmp(5065).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
+                                    unsafe_rawColors.color = tmp(4952).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
+                                    const tmp51 = tmp(4952).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
                                   }
                                 } else {
                                   tmp48 = cResult[47];
@@ -240,7 +240,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                       if (cResult[55] !== stateFromStores) {
                                         let tmp58 = stateFromStores;
                                         if (stateFromStores) {
-                                          const obj3 = { source: tmp5(11572), size: tmp(1202).Icon.Sizes.SMALL, color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK };
+                                          const obj3 = { source: tmp5(11593), size: tmp(1202).Icon.Sizes.SMALL, color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK };
                                           tmp58 = closure_5(tmp(1202).Icon, obj3);
                                         }
                                         cResult[55] = stateFromStores;
@@ -378,15 +378,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
       }
-      const name = tmp5(5509).getName(tmp7, channel.id, user);
+      const name = tmp5(5944).getName(tmp7, channel.id, user);
       let tmp22 = blocked;
       if (!blocked) {
         tmp22 = ignored;
       }
-      const LegacyPressable = tmp(6612).LegacyPressable;
+      const LegacyPressable = tmp(5258).LegacyPressable;
       const intl = tmp(1128).intl;
       const obj11 = { name };
-      const tmp5Result = tmp5(5509);
+      const tmp5Result = tmp5(5944);
       cResult[12] = blocked;
       cResult[13] = channel.id;
       cResult[14] = tmp7;

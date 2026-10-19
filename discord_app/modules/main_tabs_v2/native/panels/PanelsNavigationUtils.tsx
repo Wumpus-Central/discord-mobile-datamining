@@ -1,10 +1,10 @@
-// === Module 17128: PanelsNavigationUtils ===
+// === Module 17157: PanelsNavigationUtils ===
 
-// Module 17128 (PanelsNavigationUtils)
+// Module 17157 (PanelsNavigationUtils)
 import v1 from "v1" /* 1281 */;
 import CommonActions2 from "CommonActions" /* 1510 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
-import RootNavigationRef from "RootNavigationRef" /* 5073 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5111 */;
+import RootNavigationRef from "RootNavigationRef" /* 5112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");

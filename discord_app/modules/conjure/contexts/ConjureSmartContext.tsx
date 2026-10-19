@@ -1,12 +1,12 @@
-// === Module 11653: ConjureSmartContext ===
+// === Module 11674: ConjureSmartContext ===
 
-// Module 11653 (ConjureSmartContext)
-import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11070 */;
+// Module 11674 (ConjureSmartContext)
+import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10979 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
-import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10987 */;
+import ConjureChatStore from "ConjureChatStore" /* 10991 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10990 */;
+import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10999 */;
 
 const require = globalThis.__r;
 
@@ -145,9 +145,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
   } else if ("reverted" === status) {
     const obj3 = { label: null, body: null, note: null, action: null };
     const intl5 = tmp(tmp2[9]).intl;
-    obj3.label = intl5.string(require("module_3883").uQRAzS);
+    obj3.label = intl5.string(require("module_3820").uQRAzS);
     const intl6 = tmp(tmp2[9]).intl;
-    obj3.body = intl6.string(require("module_3883")["24OcbD"]);
+    obj3.body = intl6.string(require("module_3820")["24OcbD"]);
     return obj3;
   } else {
     let tmp13 = "failed" === error;
@@ -160,9 +160,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
     }
     const obj4 = { label: null, body: null, note: null, action: null };
     const intl = tmp(tmp2[9]).intl;
-    obj4.label = intl.string(require("module_3883").iBrh0c);
+    obj4.label = intl.string(require("module_3820").iBrh0c);
     const intl2 = tmp(tmp2[9]).intl;
-    obj4.body = intl2.string(require("module_3883").sRY8wn);
+    obj4.body = intl2.string(require("module_3820").sRY8wn);
     if ("busy" === error) {
       const intl4 = tmp(tmp2[9]).intl;
       let stringResult = intl4.string(tmp14(tmp2[10]).QoixaY);

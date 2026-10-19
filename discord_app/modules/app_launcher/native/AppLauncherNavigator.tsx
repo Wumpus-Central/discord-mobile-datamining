@@ -1,14 +1,14 @@
-// === Module 11896: AppLauncherNavigator ===
+// === Module 11916: AppLauncherNavigator ===
 
-// Module 11896 (AppLauncherNavigator)
+// Module 11916 (AppLauncherNavigator)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5206 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7130 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
-import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 11897 */;
-import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 11958 */;
-import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 11984 */;
-import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12046 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7199 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
+import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 11917 */;
+import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 11978 */;
+import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12004 */;
+import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12066 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,9 +19,9 @@ const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9644);
+const NativeStackNavigator = fn(9658);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { navigator: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingTop: 16, overflow: "visible", flex: 1 } };
 let closure_12 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -37,14 +37,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_LAUNCHER).analyticsLocations;
   const navigationContainerRef = entrypoint(1506).useNavigationContainerRef();
   const obj2 = entrypoint(1506);
-  const trackNavigationBackPress = entrypoint(5475).useTrackNavigationBackPress(navigationContainerRef);
+  const trackNavigationBackPress = entrypoint(5930).useTrackNavigationBackPress(navigationContainerRef);
   const tmp8 = closure_12();
-  const obj3 = entrypoint(5475);
+  const obj3 = entrypoint(5930);
   if (overrideParams == null) {
     overrideParams = obj4.useKeyboardContextForType(entrypoint(1631).KeyboardTypes.APP_LAUNCHER);
   }
-  obj4 = entrypoint(5083);
-  const accessibilityNativeStackOptions = entrypoint(6965).useAccessibilityNativeStackOptions();
+  obj4 = entrypoint(5122);
+  const accessibilityNativeStackOptions = entrypoint(7043).useAccessibilityNativeStackOptions();
   if (cResult[0] !== overrideParams) {
     const initialRouteName = overrideParams.initialRouteName;
     const tmp14 = _objectWithoutProperties(overrideParams, closure_3);
@@ -177,7 +177,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                             return tmp71;
                                                           }
                                                           const obj5 = { value: tmp70, children: tmp61 };
-                                                          const tmp73 = closure_9(entrypoint(10948).AppLauncherContext.Provider, obj5);
+                                                          const tmp73 = closure_9(entrypoint(10960).AppLauncherContext.Provider, obj5);
                                                           cResult[66] = tmp70;
                                                           cResult[67] = tmp61;
                                                           cResult[68] = tmp73;
@@ -225,7 +225,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     tmp61 = tmp63;
                                   }
                                   const obj10 = { value: analyticsLocations, children: tmp54 };
-                                  const tmp60 = closure_9(entrypoint(7130).AnalyticsLocationProvider, obj10);
+                                  const tmp60 = closure_9(entrypoint(7199).AnalyticsLocationProvider, obj10);
                                   cResult[42] = analyticsLocations;
                                   cResult[43] = tmp54;
                                   cResult[44] = tmp60;
@@ -332,7 +332,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp8.navigator;
   cResult[8] = items2;
   tmp18 = items2;
-  const tmpResult = entrypoint(6965);
+  const tmpResult = entrypoint(7043);
 }) : (function AppLauncherNavigator(bottomSheetExpandReasonRef) {
   bottomSheetExpandReasonRef = bottomSheetExpandReasonRef.bottomSheetExpandReasonRef;
   const bottomSheetIndex = bottomSheetExpandReasonRef.bottomSheetIndex;

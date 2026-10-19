@@ -1,16 +1,16 @@
-// === Module 16809: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 16838: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 16809 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 16838 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef2981 from "module_2981" /* 2981 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Stack_Stack from "Stack/Stack" /* 5477 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10565 */;
-import types from "types" /* 10566 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10568 */;
-import _mod10572 from "module_10572" /* 10572 */;
+import _modDef2918 from "module_2918" /* 2918 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import Stack_Stack from "Stack/Stack" /* 5932 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10579 */;
+import types from "types" /* 10580 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10582 */;
+import _mod10586 from "module_10586" /* 10586 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -22,7 +22,7 @@ function effectName(arg0) {
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef2981.OpWJ3f;
+    OpWJ3f = _modDef2918.OpWJ3f;
   }
   return intl.string(OpWJ3f);
 }
@@ -34,7 +34,7 @@ let items = [...fn(1410).EFFECT_ORDER, fn(1411).DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let closure_13 = { overrideSettings: true };
 let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.container = { paddingVertical: nativeDefault.space.PX_16 };
@@ -50,7 +50,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Option
   const tmp4 = closure_15();
   if (cResult[0] !== caption) {
     const obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: caption };
-    const tmp7 = closure_8(tmp(5187).Text, obj2);
+    const tmp7 = closure_8(tmp(5195).Text, obj2);
     cResult[0] = caption;
     cResult[1] = tmp7;
     let tmp5 = tmp7;
@@ -73,14 +73,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Option
           const obj3 = { spacing: 8, children: null };
           items = [tmp5, tmp13];
           obj3.children = items;
-          const tmp18 = closure_9(tmp(5477).Stack, obj3);
+          const tmp18 = closure_9(tmp(5932).Stack, obj3);
           cResult[12] = tmp5;
           cResult[13] = tmp13;
           cResult[14] = tmp18;
           tmp16 = tmp18;
         }
         const obj4 = { direction: "horizontal", spacing: 8, style: tmp8, children: cResult[5] };
-        const tmp15 = closure_8(tmp(5477).Stack, obj4);
+        const tmp15 = closure_8(tmp(5932).Stack, obj4);
         cResult[9] = tmp4.optionButtons;
         cResult[10] = cResult[5];
         cResult[11] = tmp15;
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10572.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10586.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10572.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10586.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

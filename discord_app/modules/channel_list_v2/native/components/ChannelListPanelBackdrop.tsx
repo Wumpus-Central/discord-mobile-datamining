@@ -1,11 +1,11 @@
-// === Module 17231: ChannelListPanelBackdrop ===
+// === Module 17260: ChannelListPanelBackdrop ===
 
-// Module 17231 (ChannelListPanelBackdrop)
+// Module 17260 (ChannelListPanelBackdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import QuestHooks from "QuestHooks" /* 16133 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17152 */;
+import QuestHooks from "QuestHooks" /* 16162 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17181 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const DM_WIDTH = fn(1087).DM_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
                 tmp19 = tmp22;
               }
             }
-            let tmp12Result = 17232;
+            let tmp12Result = 17261;
             if (isHomeDrawerEnabled) {
               let ScreenAlignedThemedGradientSliding = tmp(tmp12Result).ScreenAlignedThemedGradientSliding;
             } else {

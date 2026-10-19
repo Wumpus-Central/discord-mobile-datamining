@@ -1,8 +1,8 @@
-// === Module 18343: HideSelfStreamAndVideoConfirmDialog ===
+// === Module 18372: HideSelfStreamAndVideoConfirmDialog ===
 
-// Module 18343 (HideSelfStreamAndVideoConfirmDialog)
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5360 */;
-import common_AlertDefault from "common/Alert" /* 5498 */;
+// Module 18372 (HideSelfStreamAndVideoConfirmDialog)
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5824 */;
+import common_AlertDefault from "common/Alert" /* 5933 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,10 +11,10 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["type", "onConfirm"];
 const View = fn(17).View;
-const constants = fn(18342).SelfStreamAndVideoAlertType;
+const constants = fn(18371).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_9 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HideSelf
           tmp36 = tmp39;
         }
         const obj4 = { accessibilityRole: "link", style: tmp30, onPress: tmp11, variant: "text-sm/medium", children: tmp31 };
-        const tmp35 = closure_7(tmp(5187).Text, obj4);
+        const tmp35 = closure_7(tmp(5195).Text, obj4);
         cResult[19] = tmp11;
         cResult[20] = tmp30;
         cResult[21] = tmp35;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HideSelf
       tmp30 = items1;
     }
     const obj5 = { style: tmp10.description, variant: "text-sm/medium", children: cResult[9] };
-    const tmp29 = closure_7(tmp(5187).Text, obj5);
+    const tmp29 = closure_7(tmp(5195).Text, obj5);
     cResult[12] = cResult[9];
     cResult[13] = tmp10.description;
     cResult[14] = tmp29;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HideSelf
   obj.confirmText = intl6.string(tmp6(1128).t["cY+Oob"]);
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
-  const items = [closure_7(tmp6(5187).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }), ];
+  const items = [closure_7(tmp6(5195).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }), ];
   const obj4 = {
     accessibilityRole: "link",
     style: null,
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HideSelf
   obj4.style = items1;
   const intl7 = tmp6(1128).intl;
   obj4.children = intl7.string(tmp6(1128).t["JdIQ/Y"]);
-  items[1] = closure_7(tmp6(5187).Text, obj4);
+  items[1] = closure_7(tmp6(5195).Text, obj4);
   obj2.children = items;
   obj.children = closure_8(View, obj2);
   return closure_7(common_AlertDefault, obj);

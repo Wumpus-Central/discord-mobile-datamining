@@ -1,9 +1,9 @@
-// === Module 18119: useNitroFileUploadMarketingEligible ===
+// === Module 18148: useNitroFileUploadMarketingEligible ===
 
-// Module 18119 (useNitroFileUploadMarketingEligible)
+// Module 18148 (useNitroFileUploadMarketingEligible)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8027 */;
-import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 10862 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8090 */;
+import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 10874 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

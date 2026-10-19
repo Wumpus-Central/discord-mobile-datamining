@@ -1,14 +1,14 @@
-// === Module 15074: trackDismissibleContentActioned ===
+// === Module 5603: trackDismissibleContentActioned ===
 
-// Module 15074 (trackDismissibleContentActioned)
+// Module 5603 (trackDismissibleContentActioned)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import dismissible_content from "dismissible_content" /* 2052 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2056 */;
+import dismissible_content from "dismissible_content" /* 4784 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4788 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2055 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4787 */;
 
 require = fn;
-const getCurrentlyShownCounts = fn(2060).getCurrentlyShownCounts;
+const getCurrentlyShownCounts = fn(4792).getCurrentlyShownCounts;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/trackDismissibleContentActioned.tsx");

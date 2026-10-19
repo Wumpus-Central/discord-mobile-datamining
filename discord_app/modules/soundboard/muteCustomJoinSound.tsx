@@ -1,6 +1,6 @@
-// === Module 14840: muteCustomJoinSound ===
+// === Module 14872: muteCustomJoinSound ===
 
-// Module 14840 (muteCustomJoinSound)
+// Module 14872 (muteCustomJoinSound)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

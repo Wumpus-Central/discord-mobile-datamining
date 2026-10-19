@@ -1,10 +1,10 @@
-// === Module 11628: ConjureRemix ===
+// === Module 11649: ConjureRemix ===
 
-// Module 11628 (ConjureRemix)
+// Module 11649 (ConjureRemix)
 import util from "util" /* 1128 */;
-import _modDef3883 from "module_3883" /* 3883 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10999 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11004 */;
+import _modDef3820 from "module_3820" /* 3820 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11011 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11016 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -46,7 +46,7 @@ let closure_8 = async function _remixConjureProjectInto(arg0) {
             closure_130_3 = undefined;
             const obj6 = { ok: false, message: null };
             const intl2 = util.intl;
-            obj6.message = intl2.string(_modDef3883.Cn8H0Y);
+            obj6.message = intl2.string(_modDef3820.Cn8H0Y);
             closure_130_1 = obj6;
             const mintRemixTicketResult = ConjureWorkerTickets.mintRemixTicket(user.id);
             closure_130_2 = mintRemixTicketResult;
@@ -139,7 +139,7 @@ let closure_8 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10978);
+const ConjureConnectionStore = fn(10990);
 ({ closeConnection: closure_4, ensureConnection: hasOwnProperty, sendUserMessage: metroRequire } = ConjureConnectionStore);
 let c7 = " (Remix)";
 const size = fn(2);

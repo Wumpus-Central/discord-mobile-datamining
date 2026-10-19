@@ -1,7 +1,7 @@
-// === Module 12290: conjureClarificationLinks ===
+// === Module 12310: conjureClarificationLinks ===
 
-// Module 12290 (conjureClarificationLinks)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11063 */;
+// Module 12310 (conjureClarificationLinks)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 11077 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

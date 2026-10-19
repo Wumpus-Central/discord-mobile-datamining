@@ -1,9 +1,9 @@
-// === Module 5052: RouteUtils ===
+// === Module 4989: RouteUtils ===
 
-// Module 5052 (RouteUtils)
+// Module 4989 (RouteUtils)
 import RouteConstants from "RouteConstants" /* 1088 */;
-import ChannelConstants from "ChannelConstants" /* 2075 */;
-import RouteParam from "RouteParam" /* 5053 */;
+import ChannelConstants from "ChannelConstants" /* 4807 */;
+import RouteParam from "RouteParam" /* 4990 */;
 import size from "module_2" /* 2 */;
 
 const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;

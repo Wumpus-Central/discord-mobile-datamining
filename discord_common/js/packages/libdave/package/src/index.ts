@@ -1,10 +1,10 @@
-// === Module 9087: generateDisplayableCode ===
+// === Module 9103: generateDisplayableCode ===
 
-// Module 9087 (generateDisplayableCode)
-import DisplayableCode from "DisplayableCode" /* 9088 */;
-import KeyFingerprint from "KeyFingerprint" /* 9089 */;
-import PairwiseFingerprint from "PairwiseFingerprint" /* 9090 */;
-import KeySerialization from "KeySerialization" /* 9099 */;
+// Module 9103 (generateDisplayableCode)
+import DisplayableCode from "DisplayableCode" /* 9104 */;
+import KeyFingerprint from "KeyFingerprint" /* 9105 */;
+import PairwiseFingerprint from "PairwiseFingerprint" /* 9106 */;
+import KeySerialization from "KeySerialization" /* 9115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");

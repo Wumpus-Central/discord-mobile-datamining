@@ -1,19 +1,19 @@
-// === Module 17508: usePrivateProfileCoachmarkProps ===
+// === Module 17537: usePrivateProfileCoachmarkProps ===
 
-// Module 17508 (usePrivateProfileCoachmarkProps)
+// Module 17537 (usePrivateProfileCoachmarkProps)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import dismissible_content from "dismissible_content" /* 2052 */;
-import openUserSettings from "openUserSettings" /* 7370 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17509 */;
+import dismissible_content from "dismissible_content" /* 4784 */;
+import openUserSettings from "openUserSettings" /* 7436 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17538 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivateProfileCoachmarkImage() {
@@ -47,8 +47,8 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
   const cResult = markAsDismissed(576).c(15);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const obj = markAsDismissed(576);
-  let userIsTeen = markAsDismissed(8004).useUserIsTeen();
-  const ProfileVisibility = markAsDismissed(2044).ProfileVisibility;
+  let userIsTeen = markAsDismissed(8067).useUserIsTeen();
+  const ProfileVisibility = markAsDismissed(4776).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
   if (userIsTeen) {
     userIsTeen = setting !== tmp(1211).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
@@ -114,7 +114,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
           }
         }
       }
-      const tmp20 = markAsDismissed.visibleContent === tmp(2052).DismissibleContent.PRIVATE_PROFILE_COACHMARK;
+      const tmp20 = markAsDismissed.visibleContent === tmp(4784).DismissibleContent.PRIVATE_PROFILE_COACHMARK;
       if (cResult[10] === cResult[2]) {
         class S {
           constructor() {
@@ -156,7 +156,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
     }
     obj4.string(tmp(1128).t["6hEfm1"]);
   }
-  const obj2 = markAsDismissed(8004);
+  const obj2 = markAsDismissed(8067);
 }) : (function usePrivateProfileCoachmarkProps(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;

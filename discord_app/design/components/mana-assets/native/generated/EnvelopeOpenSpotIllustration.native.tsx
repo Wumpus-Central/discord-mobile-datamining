@@ -1,23 +1,23 @@
-// === Module 6553: EnvelopeOpenSpotIllustration ===
+// === Module 6946: EnvelopeOpenSpotIllustration ===
 
-// Module 6553 (EnvelopeOpenSpotIllustration)
+// Module 6946 (EnvelopeOpenSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import assetHelpers from "assetHelpers" /* 6550 */;
-import _modDef6554 from "module_6554" /* 6554 */;
-import _modDef6555 from "module_6555" /* 6555 */;
-import _modDef6556 from "module_6556" /* 6556 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import assetHelpers from "assetHelpers" /* 6943 */;
+import _modDef6947 from "module_6947" /* 6947 */;
+import _modDef6948 from "module_6948" /* 6948 */;
+import _modDef6949 from "module_6949" /* 6949 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef6554 }, 3: null };
-let obj2 = { uri: _modDef6554 };
-obj[2] = { uri: _modDef6555 };
-const obj3 = { uri: _modDef6555 };
-obj[3] = { uri: _modDef6556 };
+let obj = { 1: null, 2: { uri: _modDef6947 }, 3: null };
+let obj2 = { uri: _modDef6947 };
+obj[2] = { uri: _modDef6948 };
+const obj3 = { uri: _modDef6948 };
+obj[3] = { uri: _modDef6949 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef6556 };
+const obj4 = { uri: _modDef6949 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeOpenSpotIllustration.native.tsx");
 

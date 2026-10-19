@@ -1,6 +1,6 @@
-// === Module 6009: EnsureReceivedMessagesAddedInOrderExperiment ===
+// === Module 6446: EnsureReceivedMessagesAddedInOrderExperiment ===
 
-// Module 6009 (EnsureReceivedMessagesAddedInOrderExperiment)
+// Module 6446 (EnsureReceivedMessagesAddedInOrderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

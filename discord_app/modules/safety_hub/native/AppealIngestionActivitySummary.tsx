@@ -1,14 +1,14 @@
-// === Module 12630: AppealIngestionActivitySummary ===
+// === Module 12650: AppealIngestionActivitySummary ===
 
-// Module 12630 (AppealIngestionActivitySummary)
+// Module 12650 (AppealIngestionActivitySummary)
 import c from "c" /* 576 */;
-import ClassificationEvidenceDefault from "ClassificationEvidence" /* 12631 */;
+import ClassificationEvidenceDefault from "ClassificationEvidence" /* 12651 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({ activity: { marginBottom: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 18758: GuildSettingsModalEmoji ===
+// === Module 18793: GuildSettingsModalEmoji ===
 
-// Module 18758 (GuildSettingsModalEmoji)
+// Module 18793 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 6248 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18761 */;
-import HeaderRow from "HeaderRow" /* 18765 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18766 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 4899 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18796 */;
+import HeaderRow from "HeaderRow" /* 18800 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18801 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18759 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18794 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -25,8 +25,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(9845).fetchEmoji, 1000);
-const createStyles = fn(5191);
+let closure_11 = apply.throttle(fn(9859).fetchEmoji, 1000);
+const createStyles = fn(4945);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.section = { paddingVertical: nativeDefault.space.PX_16 };

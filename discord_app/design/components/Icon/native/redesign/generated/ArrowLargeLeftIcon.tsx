@@ -1,10 +1,10 @@
-// === Module 6482: ArrowLargeLeftIcon ===
+// === Module 6876: ArrowLargeLeftIcon ===
 
-// Module 6482 (ArrowLargeLeftIcon)
+// Module 6876 (ArrowLargeLeftIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4912 */;
-import _mod6483 from "module_6483" /* 6483 */;
+import BaseIconImage from "BaseIconImage" /* 5630 */;
+import _mod6877 from "module_6877" /* 6877 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ArrowLargeLeftIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod6483;
+    const tmpResult = _mod6877;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ArrowLargeLeftIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6483, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod6877, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

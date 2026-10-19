@@ -1,6 +1,6 @@
-// === Module 2052: dismissible_content ===
+// === Module 4784: dismissible_content ===
 
-// Module 2052 (dismissible_content)
+// Module 4784 (dismissible_content)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx");

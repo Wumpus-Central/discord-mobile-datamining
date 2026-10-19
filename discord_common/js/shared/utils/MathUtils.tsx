@@ -1,18 +1,18 @@
-// === Module 10928: MathUtils ===
+// === Module 10940: MathUtils ===
 
-// Module 10928 (MathUtils)
+// Module 10940 (MathUtils)
 import size from "module_2" /* 2 */;
 
-function roundIfClose(endImportTime, arg1) {
-  const diff = endImportTime - Math.floor(endImportTime);
+function roundIfClose(arg0, arg1) {
+  const diff = arg0 - Math.floor(arg0);
   if (diff >= 1 - arg1) {
     const _Math2 = Math;
-    let rounded = Math.ceil(endImportTime);
+    let rounded = Math.ceil(arg0);
   } else {
-    rounded = endImportTime;
+    rounded = arg0;
     if (diff <= arg1) {
       const _Math = Math;
-      rounded = Math.floor(endImportTime);
+      rounded = Math.floor(arg0);
     }
   }
   return rounded;

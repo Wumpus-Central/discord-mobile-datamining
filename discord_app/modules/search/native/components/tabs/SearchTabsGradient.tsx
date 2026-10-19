@@ -1,11 +1,11 @@
-// === Module 17871: SearchTabsGradient ===
+// === Module 17900: SearchTabsGradient ===
 
-// Module 17871 (SearchTabsGradient)
+// Module 17900 (SearchTabsGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4913 */;
-import ColorUtils from "ColorUtils" /* 5063 */;
-import TabsGradientDefault from "TabsGradient" /* 13470 */;
+import ColorUtils from "ColorUtils" /* 4942 */;
+import useToken from "useToken" /* 5213 */;
+import TabsGradientDefault from "TabsGradient" /* 13504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGrad
   cResult[4] = items;
   tmp7 = items;
 }) : (function useGradientColors() {
-  token = token(4913).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  token = token(5213).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let items = [token];
   return noop.useMemo(() => {
     const items = [token, ColorUtils.hexWithOpacity(token, 0)];

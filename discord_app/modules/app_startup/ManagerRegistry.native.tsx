@@ -1,7 +1,7 @@
-// === Module 18431: ManagerRegistry ===
+// === Module 18460: ManagerRegistry ===
 
-// Module 18431 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 19116 */;
+// Module 18460 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 19155 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -183,6 +183,13 @@ const obj = {
     inlineRequire() {
       return require("TopEmojisDataManager").default;
     }
+  },
+  EmbeddedAppShimManager: {
+    actions: ["EMBEDDED_APP_SHIM_PIPE_OPEN"],
+    inlineRequire() {
+      return require("EmbeddedAppShimManager").default;
+    },
+    hasStoreChangeListeners: true
   },
   EntityVersionsManager: {
     actions: ["GUILD_CREATE", "DELETED_ENTITY_IDS"],
@@ -727,6 +734,14 @@ const obj = {
     inlineRequire() {
       return require("ContentInventoryManager").default;
     },
+    neverLoadBeforeConnectionOpen: true
+  },
+  OrbsArcadeFetchManager: {
+    actions: ["POST_CONNECTION_OPEN", "USER_SETTINGS_PROTO_UPDATE", "ORBS_ARCADE_GAME_STATE_UPDATE", "LOGOUT"],
+    inlineRequire() {
+      return require("OrbsArcadeFetchManager").default;
+    },
+    hasStoreChangeListeners: true,
     neverLoadBeforeConnectionOpen: true
   },
   QuestFetchManager: {

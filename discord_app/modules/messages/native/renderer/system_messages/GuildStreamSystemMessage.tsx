@@ -1,12 +1,12 @@
-// === Module 8305: GuildStreamSystemMessage ===
+// === Module 8321: GuildStreamSystemMessage ===
 
-// Module 8305 (GuildStreamSystemMessage)
+// Module 8321 (GuildStreamSystemMessage)
 import util from "util" /* 1128 */;
-import Constants from "Constants" /* 6154 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8246 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8248 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8250 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8265 */;
+import Constants from "Constants" /* 6591 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8262 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8264 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8266 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8281 */;
 import size from "module_2" /* 2 */;
 
 const StreamTypes = Constants.StreamTypes;

@@ -1,6 +1,6 @@
-// === Module 5779: ? ===
+// === Module 6211: ? ===
 
-// Module 5779
+// Module 6211
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/face/sparkly.png.js");

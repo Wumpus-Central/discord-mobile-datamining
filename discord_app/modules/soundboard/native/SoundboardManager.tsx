@@ -1,16 +1,16 @@
-// === Module 15575: SoundboardManager ===
+// === Module 15604: SoundboardManager ===
 
-// Module 15575 (SoundboardManager)
+// Module 15604 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7324 */;
-import SoundUtils from "SoundUtils" /* 11372 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 15577 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 15578 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7390 */;
+import SoundUtils from "SoundUtils" /* 11393 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 15606 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 15607 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import SoundboardStore from "SoundboardStore" /* 5528 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 15576 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
+import SoundboardStore from "SoundboardStore" /* 5961 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 15605 */;
 
 require = fn;
 let map = new Map();
@@ -76,7 +76,7 @@ const prototype = function SoundboardManager() {
     }
     await "IconComponent";
     ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
-    return "Reflect";
+    return "test";
   });
   applyArgumentsResult._playSoundWithListener = function() {
     const self = this;

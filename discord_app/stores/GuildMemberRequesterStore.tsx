@@ -1,14 +1,14 @@
-// === Module 6207: GuildMemberRequesterStore ===
+// === Module 6637: GuildMemberRequesterStore ===
 
-// Module 6207 (GuildMemberRequesterStore)
+// Module 6637 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageTypes from "MessageTypes" /* 1103 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4833 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 6208 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildMemberStore from "GuildMemberStore" /* 2128 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4868 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 6638 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import GuildMemberStore from "GuildMemberStore" /* 4860 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
 require = fn;
 function handleConnectionReset() {

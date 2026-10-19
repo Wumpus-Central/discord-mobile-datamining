@@ -1,6 +1,6 @@
-// === Module 5532: MessageStore ===
+// === Module 5965: MessageStore ===
 
-// Module 5532 (MessageStore)
+// Module 5965 (MessageStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -8,32 +8,32 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import Server from "Server" /* 2000 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2094 */;
-import ReactionUtils from "ReactionUtils" /* 4857 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5534 */;
-import InteractionTypes from "InteractionTypes" /* 5542 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 6008 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6011 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6013 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7585 */;
-import MessageQueue from "MessageQueue" /* 8020 */;
-import canEditMessageDefault from "canEditMessage" /* 11199 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 14841 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4826 */;
+import ReactionUtils from "ReactionUtils" /* 4892 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5967 */;
+import InteractionTypes from "InteractionTypes" /* 5974 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 6445 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6448 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6450 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7648 */;
+import MessageQueue from "MessageQueue" /* 8083 */;
+import canEditMessageDefault from "canEditMessage" /* 11214 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 14873 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 2121 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 5533 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
+import ImpersonateStore from "ImpersonateStore" /* 4853 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 5966 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import DimensionStore from "DimensionStore" /* 6007 */;
-import GuildChannelStore from "GuildChannelStore" /* 4843 */;
-import GuildMemberStore from "GuildMemberStore" /* 2128 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import DimensionStore from "DimensionStore" /* 6444 */;
+import GuildChannelStore from "GuildChannelStore" /* 4878 */;
+import GuildMemberStore from "GuildMemberStore" /* 4860 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import RelationshipStore from "RelationshipStore" /* 4890 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -956,7 +956,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6008).getOrCreate(ids.channelId);
+    const orCreate = mutation(6445).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1005,14 +1005,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6008).commit(tmp3);
+        tmp(6445).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6008);
+        const tmpResult2 = tmp(6445);
       }
     }
-    let obj = mutation(6008);
+    let obj = mutation(6445);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

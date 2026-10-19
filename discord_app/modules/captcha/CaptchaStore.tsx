@@ -1,9 +1,9 @@
-// === Module 5984: CaptchaStore ===
+// === Module 6421: CaptchaStore ===
 
-// Module 5984 (CaptchaStore)
+// Module 6421 (CaptchaStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5985 */;
-import MetricEvents from "MetricEvents" /* 5990 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6422 */;
+import MetricEvents from "MetricEvents" /* 6427 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;

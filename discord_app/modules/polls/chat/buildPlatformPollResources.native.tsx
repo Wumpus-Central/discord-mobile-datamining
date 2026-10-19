@@ -1,15 +1,15 @@
-// === Module 12065: buildPlatformPollResources ===
+// === Module 12085: buildPlatformPollResources ===
 
-// Module 12065 (buildPlatformPollResources)
+// Module 12085 (buildPlatformPollResources)
 import nativeDefault from "native" /* 587 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
-import _modDef6456 from "module_6456" /* 6456 */;
-import _modDef7113 from "module_7113" /* 7113 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8158 */;
+import _modDef6850 from "module_6850" /* 6850 */;
+import _modDef7190 from "module_7190" /* 7190 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8221 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_3 = apply.mapValues(fn(12066).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(12086).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
@@ -41,8 +41,8 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
   closure_0 = theme;
   closure_1 = layoutType;
   const obj = { styles: apply.mapValues(closure_3, (fn) => fn(closure_0, closure_1)), selectedIcon: null, checkmarkIcon: null };
-  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7113);
-  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6456);
+  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7190);
+  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6850);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {

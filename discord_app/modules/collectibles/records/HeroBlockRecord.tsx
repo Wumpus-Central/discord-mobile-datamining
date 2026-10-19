@@ -1,8 +1,8 @@
-// === Module 7567: HeroBlockRecord ===
+// === Module 7631: HeroBlockRecord ===
 
-// Module 7567 (HeroBlockRecord)
-import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
-import ShopBlockType from "ShopBlockType" /* 7561 */;
+// Module 7631 (HeroBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 5601 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7608 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function HeroBlockRecord(unpublished_at) {

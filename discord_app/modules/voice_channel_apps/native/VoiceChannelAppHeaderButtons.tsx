@@ -1,10 +1,10 @@
-// === Module 18247: VoiceChannelAppHeaderButtons ===
+// === Module 18276: VoiceChannelAppHeaderButtons ===
 
-// Module 18247 (VoiceChannelAppHeaderButtons)
-import _modDef3981 from "module_3981" /* 3981 */;
-import _modDef11385 from "module_11385" /* 11385 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18169 */;
-import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 18251 */;
+// Module 18276 (VoiceChannelAppHeaderButtons)
+import _modDef3918 from "module_3918" /* 3918 */;
+import _modDef11406 from "module_11406" /* 11406 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18200 */;
+import VoiceChannelAppActionCreators from "VoiceChannelAppActionCreators" /* 18280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,20 +18,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
   const cResult = id(576).c(14);
   ({ channel, inCall } = arg0);
   const obj = id(576);
-  const voiceChannelAppAvailable = id(18248).useVoiceChannelAppAvailable(channel, inCall);
-  const obj2 = id(18248);
-  const voiceChannelAppOpen = id(18248).useVoiceChannelAppOpen(channel, inCall);
-  const obj3 = id(18248);
-  const voiceChannelAppVisible = id(18248).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(18277).useVoiceChannelAppAvailable(channel, inCall);
+  const obj2 = id(18277);
+  const voiceChannelAppOpen = id(18277).useVoiceChannelAppOpen(channel, inCall);
+  const obj3 = id(18277);
+  const voiceChannelAppVisible = id(18277).useVoiceChannelAppVisible(channel);
   id = channel.id;
   if (voiceChannelAppAvailable) {
-    const tmp8Result = importDefault(voiceChannelAppVisible ? 16856 : 8436);
+    const tmp8Result = importDefault(voiceChannelAppVisible ? 16885 : 8452);
     if (cResult[0] !== voiceChannelAppVisible) {
       const intl = tmp(1128).intl;
       if (voiceChannelAppVisible) {
         let ZtYyOx = tmp(1128).t["3jrUBj"];
       } else {
-        ZtYyOx = _modDef3981.ZtYyOx;
+        ZtYyOx = _modDef3918.ZtYyOx;
       }
       const stringResult = intl.string(ZtYyOx);
       cResult[0] = voiceChannelAppVisible;
@@ -73,9 +73,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
           }
           let tmp18 = null;
           if (voiceChannelAppOpen) {
-            const obj6 = { icon: _modDef11385, accessibilityLabel: null, onPress: null };
+            const obj6 = { icon: _modDef11406, accessibilityLabel: null, onPress: null };
             const intl2 = tmp(1128).intl;
-            obj6.accessibilityLabel = intl2.string(_modDef3981["D+wwh8"]);
+            obj6.accessibilityLabel = intl2.string(_modDef3918["D+wwh8"]);
             obj6.onPress = function onPress() {
               return VoiceChannelAppActionCreators.closeVoiceChannelApp(id);
             };
@@ -99,24 +99,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
   } else {
     return null;
   }
-  const obj4 = id(18248);
+  const obj4 = id(18277);
 }) : (function VoiceChannelAppHeaderButtons(arg0) {
   ({ channel, inCall } = arg0);
   let id;
-  const voiceChannelAppAvailable = id(18248).useVoiceChannelAppAvailable(channel, inCall);
-  const obj = id(18248);
-  const voiceChannelAppOpen = id(18248).useVoiceChannelAppOpen(channel, inCall);
-  const obj2 = id(18248);
-  const voiceChannelAppVisible = id(18248).useVoiceChannelAppVisible(channel);
+  const voiceChannelAppAvailable = id(18277).useVoiceChannelAppAvailable(channel, inCall);
+  const obj = id(18277);
+  const voiceChannelAppOpen = id(18277).useVoiceChannelAppOpen(channel, inCall);
+  const obj2 = id(18277);
+  const voiceChannelAppVisible = id(18277).useVoiceChannelAppVisible(channel);
   id = channel.id;
   let tmp7Result = null;
   if (voiceChannelAppAvailable) {
-    const obj4 = { icon: importDefault(voiceChannelAppVisible ? 16856 : 8436), accessibilityLabel: null, onPress: null };
+    const obj4 = { icon: importDefault(voiceChannelAppVisible ? 16885 : 8452), accessibilityLabel: null, onPress: null };
     const intl = tmp(1128).intl;
     if (voiceChannelAppVisible) {
       let ZtYyOx = tmp(1128).t["3jrUBj"];
     } else {
-      ZtYyOx = _modDef3981.ZtYyOx;
+      ZtYyOx = _modDef3918.ZtYyOx;
     }
     obj4.accessibilityLabel = intl.string(ZtYyOx);
     obj4.onPress = function onPress() {
@@ -125,9 +125,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
     const items = [closure_3(VoicePanelIconButtonDefault, obj4), ];
     let tmp9Result = null;
     if (voiceChannelAppOpen) {
-      const obj5 = { icon: _modDef11385, accessibilityLabel: null, onPress: null };
+      const obj5 = { icon: _modDef11406, accessibilityLabel: null, onPress: null };
       const intl2 = tmp(1128).intl;
-      obj5.accessibilityLabel = intl2.string(_modDef3981["D+wwh8"]);
+      obj5.accessibilityLabel = intl2.string(_modDef3918["D+wwh8"]);
       obj5.onPress = function onPress() {
         return VoiceChannelAppActionCreators.closeVoiceChannelApp(id);
       };

@@ -1,15 +1,15 @@
-// === Module 8394: useCurrentChangelog ===
+// === Module 8410: useCurrentChangelog ===
 
-// Module 8394 (useCurrentChangelog)
+// Module 8410 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8395 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8411 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2132 */;
-import ChangelogStore from "ChangelogStore" /* 7291 */;
+import LocaleStore from "LocaleStore" /* 2069 */;
+import ChangelogStore from "ChangelogStore" /* 7358 */;
 
 require = fn;
-const ChangelogLoadState = fn(2118).ChangelogLoadState;
+const ChangelogLoadState = fn(4850).ChangelogLoadState;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChangelog(id, arg1) {
   _require = id;

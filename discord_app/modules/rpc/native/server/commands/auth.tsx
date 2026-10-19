@@ -1,11 +1,11 @@
-// === Module 15548: auth ===
+// === Module 15577: auth ===
 
-// Module 15548 (auth)
+// Module 15577 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
-import RPCErrorDefault from "RPCError" /* 9169 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 15549 */;
-import ApplicationStore from "ApplicationStore" /* 5540 */;
+import RPCErrorDefault from "RPCError" /* 9185 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 15578 */;
+import ApplicationStore from "ApplicationStore" /* 2046 */;
 
 require = fn;
 const Constants = fn(1087);

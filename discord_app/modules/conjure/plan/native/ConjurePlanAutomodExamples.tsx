@@ -1,12 +1,12 @@
-// === Module 12275: ConjurePlanAutomodExamples ===
+// === Module 12295: ConjurePlanAutomodExamples ===
 
-// Module 12275 (ConjurePlanAutomodExamples)
+// Module 12295 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12276 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
 const dependencyMap = { blurple: "text-brand", red: "text-feedback-critical", green: "text-feedback-positive" };
 let closure_7 = ["glazedgamer", "sprinkles", "donutking"];
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { card: { gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" }, rule: null, section: null, caption: null, dot: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 obj2.rule = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };

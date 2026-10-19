@@ -1,8 +1,8 @@
-// === Module 9904: VoiceChannelListInviteExperiment ===
+// === Module 9918: VoiceChannelListInviteExperiment ===
 
-// Module 9904 (VoiceChannelListInviteExperiment)
+// Module 9918 (VoiceChannelListInviteExperiment)
 import c from "c" /* 576 */;
-import createExperiment from "module_5110" /* 5110 */;
+import createExperiment from "module_5149" /* 5149 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

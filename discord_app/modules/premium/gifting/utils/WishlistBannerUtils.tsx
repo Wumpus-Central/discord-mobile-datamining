@@ -1,6 +1,6 @@
-// === Module 10458: WishlistBannerUtils ===
+// === Module 10472: WishlistBannerUtils ===
 
-// Module 10458 (WishlistBannerUtils)
+// Module 10472 (WishlistBannerUtils)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;

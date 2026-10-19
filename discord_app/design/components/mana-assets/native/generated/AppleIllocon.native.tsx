@@ -1,23 +1,23 @@
-// === Module 13394: AppleIllocon ===
+// === Module 13428: AppleIllocon ===
 
-// Module 13394 (AppleIllocon)
+// Module 13428 (AppleIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import assetHelpers from "assetHelpers" /* 6550 */;
-import _modDef13395 from "module_13395" /* 13395 */;
-import _modDef13396 from "module_13396" /* 13396 */;
-import _modDef13397 from "module_13397" /* 13397 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import assetHelpers from "assetHelpers" /* 6943 */;
+import _modDef13429 from "module_13429" /* 13429 */;
+import _modDef13430 from "module_13430" /* 13430 */;
+import _modDef13431 from "module_13431" /* 13431 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13395 }, 3: null };
-const obj2 = { uri: _modDef13395 };
-obj[2] = { uri: _modDef13396 };
-const obj3 = { uri: _modDef13396 };
-obj[3] = { uri: _modDef13397 };
+let obj = { 1: null, 2: { uri: _modDef13429 }, 3: null };
+const obj2 = { uri: _modDef13429 };
+obj[2] = { uri: _modDef13430 };
+const obj3 = { uri: _modDef13430 };
+obj[3] = { uri: _modDef13431 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13397 };
+const obj4 = { uri: _modDef13431 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AppleIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const AppleIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6550).getAssetSource(obj);
+  obj.source = num(6943).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

@@ -1,11 +1,11 @@
-// === Module 7982: ManualReviewFallbackAlertModal ===
+// === Module 8045: ManualReviewFallbackAlertModal ===
 
-// Module 7982 (ManualReviewFallbackAlertModal)
+// Module 8045 (ManualReviewFallbackAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef3207 from "module_3207" /* 3207 */;
-import AlertModal from "AlertModal" /* 5405 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7983 */;
+import _modDef3144 from "module_3144" /* 3144 */;
+import AlertModal from "AlertModal" /* 5869 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,9 +19,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3207["+c5sxg"]);
+    const stringResult = intl.string(_modDef3144["+c5sxg"]);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3207["RFLH++"]);
+    const stringResult1 = intl2.string(_modDef3144["RFLH++"]);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
     const items = [tmp9, ];
     const obj5 = { variant: "secondary", text: null, onPress: null };
     const intl4 = util.intl;
-    obj5.text = intl4.string(_modDef3207.Z61nkt);
+    obj5.text = intl4.string(_modDef3144.Z61nkt);
     obj5.onPress = function onPress() {
       return ManualReviewActionCreators.handleManualReviewCta();
     };
@@ -62,9 +62,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
 }) : (function ManualReviewFallbackAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3207["+c5sxg"]);
+  obj.title = intl.string(_modDef3144["+c5sxg"]);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3207["RFLH++"]);
+  obj.content = intl2.string(_modDef3144["RFLH++"]);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
   const items = [React3(AlertModal.AlertActionButton, obj3, "got-it"), ];
   const obj4 = { variant: "secondary", text: null, onPress: null };
   const intl4 = util.intl;
-  obj4.text = intl4.string(_modDef3207.Z61nkt);
+  obj4.text = intl4.string(_modDef3144.Z61nkt);
   obj4.onPress = function onPress() {
     return ManualReviewActionCreators.handleManualReviewCta();
   };

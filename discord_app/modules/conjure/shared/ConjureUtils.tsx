@@ -1,14 +1,14 @@
-// === Module 7222: ConjureUtils ===
+// === Module 7291: ConjureUtils ===
 
-// Module 7222 (ConjureUtils)
+// Module 7291 (ConjureUtils)
 import c from "c" /* 576 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6294 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6356 */;
-import ApplicationStore from "ApplicationStore" /* 5540 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4843 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6722 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6756 */;
+import ApplicationStore from "ApplicationStore" /* 2046 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4843);
+let GuildChannelStore = fn(4878);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
@@ -341,7 +341,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     if (cResult[4] === guild_id2) {
       let tmp12 = cResult[5];
     }
-    const isConjureGuildEnabled = tmp(6356).useIsConjureGuildEnabled(tmp12);
+    const isConjureGuildEnabled = tmp(6756).useIsConjureGuildEnabled(tmp12);
     if (cResult[6] === appChannelApplication) {
       if (cResult[7] === guild_id) {
         if (cResult[8] === stateFromStores) {
@@ -381,7 +381,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     cResult[9] = isConjureGuildEnabled;
     cResult[10] = tmp17;
     tmp14 = tmp17;
-    const tmpResult4 = tmp(6356);
+    const tmpResult4 = tmp(6756);
   }
   const obj2 = { guildId: guild_id2, location };
   cResult[3] = location;

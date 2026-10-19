@@ -1,11 +1,11 @@
-// === Module 11267: confirmActivityChangeAlert ===
+// === Module 11281: confirmActivityChangeAlert ===
 
-// Module 11267 (confirmActivityChangeAlert)
+// Module 11281 (confirmActivityChangeAlert)
 import util from "util" /* 1128 */;
 import StringUtils from "StringUtils" /* 2034 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import useChannelName from "useChannelName" /* 5521 */;
-import RelationshipStore from "RelationshipStore" /* 4855 */;
+import useChannelName from "useChannelName" /* 5565 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5863 */;
+import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

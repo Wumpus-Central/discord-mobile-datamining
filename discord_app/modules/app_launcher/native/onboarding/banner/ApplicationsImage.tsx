@@ -1,17 +1,17 @@
-// === Module 11865: ApplicationsImage ===
+// === Module 11885: ApplicationsImage ===
 
-// Module 11865 (ApplicationsImage)
+// Module 11885 (ApplicationsImage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11866 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11886 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { appIconContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.sm + 3, position: "absolute", padding: 3 }, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-10deg" }];

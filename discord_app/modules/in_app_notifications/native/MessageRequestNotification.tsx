@@ -1,13 +1,13 @@
-// === Module 13627: MessageRequestNotification ===
+// === Module 13661: MessageRequestNotification ===
 
-// Module 13627 (MessageRequestNotification)
+// Module 13661 (MessageRequestNotification)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import RootNavigationRef from "RootNavigationRef" /* 5073 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13525 */;
-import MessagePreviewText from "MessagePreviewText" /* 13532 */;
-import Notification from "Notification" /* 13560 */;
+import RootNavigationRef from "RootNavigationRef" /* 5112 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13559 */;
+import MessagePreviewText from "MessagePreviewText" /* 13566 */;
+import Notification from "Notification" /* 13594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -101,9 +101,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(13525).clearNotification();
-    const obj = numMutualGuilds(13525);
-    const rootNavigationRef = author(5073).getRootNavigationRef();
+    numMutualGuilds(13559).clearNotification();
+    const obj = numMutualGuilds(13559);
+    const rootNavigationRef = author(5112).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   const obj3 = { text: null };
   let intl = author(1128).intl;
   obj3.text = intl.string(author(1128).t["Bx4/Lf"]);
-  obj.children = jsx(author(13532).SystemMessageText, { text: null });
+  obj.children = jsx(author(13566).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(13560).NotificationPressable, { icon: jsx(author(1202).Avatar, { user: author, size: author(1202).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(13594).NotificationPressable, { icon: jsx(author(1202).Avatar, { user: author, size: author(1202).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null });
 });

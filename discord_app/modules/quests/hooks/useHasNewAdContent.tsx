@@ -1,249 +1,108 @@
-// === Module 9462: useHasNewAdContent ===
+// === Module 9478: useHasNewAdContent ===
 
-// Module 9462 (useHasNewAdContent)
+// Module 9478 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1104 */;
-import AdCreativeType from "AdCreativeType" /* 6235 */;
+import AdCreativeType from "AdCreativeType" /* 6665 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 9463 */;
-import QuestStore from "QuestStore" /* 7656 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 9479 */;
+import QuestStore from "QuestStore" /* 7719 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(6228).QuestsExperimentLocations;
 const DAY = DurationsDefault.Millis.DAY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNewAdContent() {
-  const cResult = enabled(stateFromStoresArray[6]).c(13);
+  const cResult = stateFromStoresArray(576).c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  const MobileQuestHomeRedDotNotificationExperiment = tmp(tmp2[7]).MobileQuestHomeRedDotNotificationExperiment;
-  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig(first).enabled;
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [QuestStore];
-    cResult[1] = items;
-    let tmp6 = items;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] !== enabled) {
-    const fn = function f() {
-      if (enabled) {
-        const _Array = Array;
-        const quests = QuestStore.quests;
-        const found = Array.from(quests.values()).filter((item) => !enabled(stateFromStoresArray[8]).isQuestExpired(item));
-        let mapped = found.map((id) => id.id);
-        const arr = Array.from(quests.values());
-      } else {
-        mapped = [];
-      }
-      return mapped;
+    const fn = function l() {
+      quests = quests.quests;
+      const found = Array.from(quests.values()).filter((item) => !stateFromStoresArray(closure_1_1[6]).isQuestExpired(item));
+      return found.map((id) => id.id);
     };
-    const items1 = [enabled];
-    cResult[2] = enabled;
-    cResult[3] = fn;
-    cResult[4] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    const items1 = [];
+    cResult[0] = items;
+    cResult[1] = fn;
+    cResult[2] = items1;
+    tmp4 = items;
+    tmp5 = fn;
+    tmp6 = items1;
   } else {
-    tmp8 = cResult[3];
-    tmp9 = cResult[4];
+    [tmp4, tmp5, tmp6] = cResult;
   }
-  const obj = enabled(stateFromStoresArray[6]);
-  stateFromStoresArray = enabled(stateFromStoresArray[9]).useStateFromStoresArray(tmp6, tmp8, tmp9);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+  const obj = stateFromStoresArray(576);
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(tmp4, tmp5, tmp6);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [AdContentSeenStore];
-    cResult[5] = items2;
-    let tmp11 = items2;
+    cResult[3] = items2;
+    let tmp9 = items2;
+  } else {
+    tmp9 = cResult[3];
+  }
+  if (cResult[4] !== stateFromStoresArray) {
+    const fn2 = function _() {
+      for (const item10005 of stateFromStoresArray) {
+        if (AdContentSeenStore.hasSeen(AdCreativeType.AdCreativeType.QUEST, item10005)) {
+          continue;
+        } else {
+          obj.return();
+          let flag = true;
+          return true;
+        }
+      }
+      return false;
+    };
+    const items3 = [stateFromStoresArray];
+    cResult[4] = stateFromStoresArray;
+    cResult[5] = fn2;
+    cResult[6] = items3;
+    let tmp12 = items3;
+    let tmp11 = fn2;
   } else {
     tmp11 = cResult[5];
+    tmp12 = cResult[6];
   }
-  if (cResult[6] !== stateFromStoresArray) {
-    class A {
-      constructor() {
-        for (const item10005 of closure_1) {
-          tmp = closure_3;
-          tmp2 = closure_0;
-          tmp3 = closure_1;
-          if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-            continue;
-          } else {
-            tmp4 = obj;
-            obj.return();
-            flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
-    }
-    const items3 = [stateFromStoresArray];
-    cResult[6] = stateFromStoresArray;
-    cResult[7] = A;
-    cResult[8] = items3;
-    let tmp14 = items3;
+  const tmpResult = stateFromStoresArray(504);
+  const stateFromStores = stateFromStoresArray(504).useStateFromStores(tmp9, tmp11, tmp12);
+  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { cooldownDurationMs: DAY };
+    cResult[7] = obj2;
+    let tmp14 = obj2;
   } else {
-    class A {
-      constructor() {
-        for (const item10005 of closure_1) {
-          tmp = closure_3;
-          tmp2 = closure_0;
-          tmp3 = closure_1;
-          if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-            continue;
-          } else {
-            tmp4 = obj;
-            obj.return();
-            flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
-    }
-    tmp14 = cResult[8];
+    tmp14 = cResult[7];
   }
-  const tmpResult = enabled(stateFromStoresArray[9]);
-  const stateFromStores = enabled(stateFromStoresArray[9]).useStateFromStores(tmp11, A, tmp14);
-  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    class A {
-      constructor() {
-        for (const item10005 of closure_1) {
-          tmp = closure_3;
-          tmp2 = closure_0;
-          tmp3 = closure_1;
-          if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-            continue;
-          } else {
-            tmp4 = obj;
-            obj.return();
-            flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
-    }
-    tmp17[0] = DAY;
-    cResult[9] = tmp17;
-  } else {
-    class A {
-      constructor() {
-        for (const item10005 of closure_1) {
-          tmp = closure_3;
-          tmp2 = closure_0;
-          tmp3 = closure_1;
-          if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-            continue;
-          } else {
-            tmp4 = obj;
-            obj.return();
-            flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
-    }
-  }
-  const tmpResult3 = enabled(stateFromStoresArray[9]);
+  const tmpResult3 = stateFromStoresArray(504);
+  let prop = null;
   if (stateFromStores) {
-    class A {
-      constructor() {
-        for (const item10005 of closure_1) {
-          tmp = closure_3;
-          tmp2 = closure_0;
-          tmp3 = closure_1;
-          if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-            continue;
-          } else {
-            tmp4 = obj;
-            obj.return();
-            flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
-    }
-    if (enabled) {
-      class A {
-        constructor() {
-          for (const item10005 of closure_1) {
-            tmp = closure_3;
-            tmp2 = closure_0;
-            tmp3 = closure_1;
-            if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-              continue;
-            } else {
-              tmp4 = obj;
-              obj.return();
-              flag = true;
-              return true;
-            }
-          }
-          return false;
-        }
-      }
-    }
+    prop = tmp(4784).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp20 = _slicedToArray(enabled(stateFromStoresArray[11]).useSelectedTimeRecurringDismissibleContent(null, tmp17, undefined, true), 2);
-  if (cResult[10] === tmp20[1]) {
-    class A {
-      constructor() {
-        for (const item10005 of closure_1) {
-          tmp = closure_3;
-          tmp2 = closure_0;
-          tmp3 = closure_1;
-          if (closure_3.hasSeen(closure_0(closure_1[10]).AdCreativeType.QUEST, item10005)) {
-            continue;
-          } else {
-            tmp4 = obj;
-            obj.return();
-            flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
+  const tmp17 = _slicedToArray(stateFromStoresArray(7442).useSelectedTimeRecurringDismissibleContent(prop, tmp14, undefined, true), 2);
+  if (cResult[8] === tmp17[1]) {
+    if (cResult[9] === tmp19) {
+      let tmp20 = cResult[10];
     }
-    return obj3;
+    return tmp20;
   }
-  obj3 = { showBadge: null != tmp20[0], dismissBadge: tmp20[1] };
-  cResult[10] = tmp20[1];
-  cResult[11] = null != tmp20[0];
-  cResult[12] = obj3;
-  const tmpResult4 = enabled(stateFromStoresArray[11]);
+  const obj3 = { showBadge: null != tmp17[0], dismissBadge: tmp17[1] };
+  cResult[8] = tmp17[1];
+  cResult[9] = null != tmp17[0];
+  cResult[10] = obj3;
+  tmp20 = obj3;
+  const tmpResult4 = stateFromStoresArray(7442);
 }) : (function useHasNewAdContent() {
-  const MobileQuestHomeRedDotNotificationExperiment = enabled(stateFromStoresArray[7]).MobileQuestHomeRedDotNotificationExperiment;
-  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig({ location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER }).enabled;
   const items = [QuestStore];
-  const items1 = [enabled];
-  stateFromStoresArray = enabled(stateFromStoresArray[9]).useStateFromStoresArray(items, () => {
-    if (enabled) {
-      const _Array = Array;
-      const quests = QuestStore.quests;
-      const found = Array.from(quests.values()).filter((item) => !enabled(stateFromStoresArray[8]).isQuestExpired(item));
-      let mapped = found.map((id) => id.id);
-      const arr = Array.from(quests.values());
-    } else {
-      mapped = [];
-    }
-    return mapped;
-  }, items1);
-  const obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
-  const obj2 = enabled(stateFromStoresArray[9]);
-  const tmp = enabled;
-  const tmp2 = stateFromStoresArray;
-  const items2 = [AdContentSeenStore];
-  const items3 = [stateFromStoresArray];
-  const stateFromStores = enabled(stateFromStoresArray[9]).useStateFromStores(items2, () => {
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
+    quests = quests.quests;
+    const found = Array.from(quests.values()).filter((item) => !stateFromStoresArray(closure_1_1[6]).isQuestExpired(item));
+    return found.map((id) => id.id);
+  }, []);
+  const obj = stateFromStoresArray(504);
+  const tmp = stateFromStoresArray;
+  const items1 = [AdContentSeenStore];
+  const items2 = [stateFromStoresArray];
+  const stateFromStores = stateFromStoresArray(504).useStateFromStores(items1, () => {
     for (const item10005 of stateFromStoresArray) {
       if (AdContentSeenStore.hasSeen(AdCreativeType.AdCreativeType.QUEST, item10005)) {
         continue;
@@ -254,15 +113,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNe
       }
     }
     return false;
-  }, items3);
-  const obj3 = enabled(stateFromStoresArray[9]);
+  }, items2);
+  const obj2 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = null;
-    if (enabled) {
-      prop = tmp(tmp2[12]).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
-    }
+    prop = tmp(4784).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp6 = _slicedToArray(enabled(stateFromStoresArray[11]).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  const tmp6 = _slicedToArray(stateFromStoresArray(7442).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
   return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 });

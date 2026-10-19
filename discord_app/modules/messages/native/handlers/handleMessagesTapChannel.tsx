@@ -1,11 +1,11 @@
-// === Module 11117: handleMessagesTapChannel ===
+// === Module 11132: handleMessagesTapChannel ===
 
-// Module 11117 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7328 */;
+// Module 11132 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7394 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2068 */;
-import GuildStore from "GuildStore" /* 2090 */;
-import PermissionStore from "PermissionStore" /* 4845 */;
+import ChannelStore from "ChannelStore" /* 4800 */;
+import GuildStore from "GuildStore" /* 4822 */;
+import PermissionStore from "PermissionStore" /* 4880 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -269,10 +269,10 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   }
   closure_129_1 = navigationReplace;
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
-  return "Reflect";
+  return "test";
 };
-const isGuildVocalChannelType = fn(2072).isGuildVocalChannelType;
-const isGuildLurker = fn(2086).isGuildLurker;
+const isGuildVocalChannelType = fn(4804).isGuildVocalChannelType;
+const isGuildLurker = fn(4818).isGuildLurker;
 const Constants = fn(1087);
 ({ ChannelTypes: c10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);

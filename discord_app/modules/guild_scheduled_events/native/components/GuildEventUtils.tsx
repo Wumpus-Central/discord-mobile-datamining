@@ -1,16 +1,16 @@
-// === Module 8921: GuildEventUtils ===
+// === Module 8937: GuildEventUtils ===
 
-// Module 8921 (GuildEventUtils)
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
-import _modDef8833 from "module_8833" /* 8833 */;
-import LocationIcon2 from "LocationIcon" /* 8834 */;
+// Module 8937 (GuildEventUtils)
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8447 */;
+import _modDef8849 from "module_8849" /* 8849 */;
+import LocationIcon2 from "LocationIcon" /* 8850 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 
 export const getEventLocationIconSource = function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
-    let tmp4 = _modDef8833;
+    let tmp4 = _modDef8849;
   } else {
     tmp4 = null;
     if (null != channel) {

@@ -1,6 +1,6 @@
-// === Module 15144: WindowsMediaFoundationCpuEncodeIntel ===
+// === Module 15172: WindowsMediaFoundationCpuEncodeIntel ===
 
-// Module 15144 (WindowsMediaFoundationCpuEncodeIntel)
+// Module 15172 (WindowsMediaFoundationCpuEncodeIntel)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

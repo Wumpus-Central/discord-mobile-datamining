@@ -1,8 +1,8 @@
-// === Module 10356: useGiftOptionsSyncDebounce ===
+// === Module 10370: useGiftOptionsSyncDebounce ===
 
-// Module 10356 (useGiftOptionsSyncDebounce)
+// Module 10370 (useGiftOptionsSyncDebounce)
 import _modDef12 from "module_12" /* 12 */;
-import useInitialValueDefault from "useInitialValue" /* 6447 */;
+import useInitialValueDefault from "useInitialValue" /* 5560 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

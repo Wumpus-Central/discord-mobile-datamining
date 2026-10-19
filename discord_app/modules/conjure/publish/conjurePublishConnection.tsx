@@ -1,11 +1,10 @@
-// === Module 11065: conjurePublishConnection ===
+// === Module 11079: conjurePublishConnection ===
 
-// Module 11065 (conjurePublishConnection)
+// Module 11079 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10998 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11057 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10993 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11010 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11071 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11005 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -288,12 +287,7 @@ export const draftPatchNotes = function draftPatchNotes(c0) {
       };
       const result = map1.set(closure_0, obj4);
       try {
-        const project = ConjureProjectStore.getProject(closure_0);
-        let name;
-        if (project != null) {
-          name = project.name;
-        }
-        conjureSocket.sendDraftPatchNotes(combined, name);
+        conjureSocket.sendDraftPatchNotes(combined);
       } catch (error) {
         obj2.delete(tmp4);
         obj.clearTimeout(tmp3);

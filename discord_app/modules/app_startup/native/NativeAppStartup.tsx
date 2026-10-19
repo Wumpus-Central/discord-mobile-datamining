@@ -1,6 +1,6 @@
-// === Module 18404: NativeAppStartup ===
+// === Module 18433: NativeAppStartup ===
 
-// Module 18404 (NativeAppStartup)
+// Module 18433 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -8,14 +8,14 @@ import Storage4 from "Storage" /* 510 */;
 import TokenManagerAll from "TokenManager" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 2111 */;
-import timeRequireDefault from "timeRequire" /* 7480 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15220 */;
-import DeepLinkEventMapping from "DeepLinkEventMapping" /* 19120 */;
-import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 19121 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4843 */;
+import timeRequireDefault from "timeRequire" /* 7547 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 15248 */;
+import DeepLinkEventMapping from "DeepLinkEventMapping" /* 19159 */;
+import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 19160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
 
 require = fn;
@@ -383,7 +383,7 @@ let closure_36 = async function _initializeIntl(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     log2 = log.log;
-    return "Reflect";
+    return "test";
   })();
   iter.next();
   return iter;
@@ -689,11 +689,11 @@ let closure_39 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[44])(paths[54], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[55]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(15467).updateSaturation(closure_0(5181).default.saturation);
-            obj = closure_0(15467);
-            closure_0(18122).updateVisualRefresh(true);
-            const obj2 = closure_0(18122);
-            closure_0(18123).updateTheme(closure_0(1207).default.theme);
+            closure_0(15495).updateSaturation(closure_0(4946).default.saturation);
+            obj = closure_0(15495);
+            closure_0(18151).updateVisualRefresh(true);
+            const obj2 = closure_0(18151);
+            closure_0(18152).updateTheme(closure_0(1207).default.theme);
             closure_1_0();
           }));
         });
@@ -836,14 +836,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(constants), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_18405 = fn(18405);
-const superagentPatch = fn(18407);
+const module_18434 = fn(18434);
+const superagentPatch = fn(18436);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(18430);
-let closure_11 = fn(2133).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7449);
-const ManagerRegistry = fn(18431);
+const logThirdPartyImportsDone = fn(18459);
+let closure_11 = fn(2070).subscribeToIntlLoadingSuccess;
+const AnalyticsTrackingStore = fn(7516);
+const ManagerRegistry = fn(18460);
 const Constants = fn(1087);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -866,7 +866,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(9552).Future();
+const future = new fn(9567).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

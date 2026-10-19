@@ -1,13 +1,13 @@
-// === Module 11202: SpotifyUtils ===
+// === Module 11217: SpotifyUtils ===
 
-// Module 11202 (SpotifyUtils)
+// Module 11217 (SpotifyUtils)
 import DurationsDefault from "Durations" /* 1104 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11204 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11205 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11219 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11220 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11203 */;
-import SpotifyStore from "SpotifyStore" /* 6016 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11218 */;
+import SpotifyStore from "SpotifyStore" /* 6453 */;
 
 require = fn;
 function asString(str) {
@@ -109,7 +109,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     }
   }
 };
-const SpotifyConstants = fn(8732);
+const SpotifyConstants = fn(8748);
 ({ SPOTIFY_APP_PROTOCOL: closure_7, SpotifyResourceTypes: closure_8, getSpotifyResourceType: closure_9 } = SpotifyConstants);
 const PlatformTypes = fn(1087).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
@@ -132,7 +132,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11204).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11219).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }

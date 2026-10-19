@@ -1,21 +1,21 @@
-// === Module 12910: GiftIconTrinketsAnimation ===
+// === Module 12942: GiftIconTrinketsAnimation ===
 
-// Module 12910 (GiftIconTrinketsAnimation)
+// Module 12942 (GiftIconTrinketsAnimation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4913 */;
-import FastImageDefault from "FastImage" /* 5128 */;
+import useToken from "useToken" /* 5213 */;
+import FastImageDefault from "FastImage" /* 5631 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 const initialize = APNGPlayer(504);
 const PlatformUtils = APNGPlayer(1384);
 const StringUtils = APNGPlayer(2034);
-const APNGPlayer2 = APNGPlayer(9303);
+const APNGPlayer2 = APNGPlayer(9319);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_6 = createStyles.createStyles((width) => ({ containerRefresh: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

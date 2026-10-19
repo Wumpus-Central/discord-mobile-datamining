@@ -1,21 +1,21 @@
-// === Module 6015: SelfPresenceStore ===
+// === Module 6452: SelfPresenceStore ===
 
-// Module 6015 (SelfPresenceStore)
+// Module 6452 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1357 from "module_1357" /* 1357 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 6309 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10555 */;
-import SpotifyStore from "SpotifyStore" /* 6016 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7453 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10569 */;
+import SpotifyStore from "SpotifyStore" /* 6453 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import DetectableGameStore from "DetectableGameStore" /* 2040 */;
-import IdleStore from "IdleStore" /* 6144 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6301 */;
-import LocalActivityStore from "LocalActivityStore" /* 10974 */;
-import PresenceStore from "PresenceStore" /* 5207 */;
-import SessionsStore from "SessionsStore" /* 5211 */;
+import IdleStore from "IdleStore" /* 6581 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2044 */;
+import LocalActivityStore from "LocalActivityStore" /* 10986 */;
+import PresenceStore from "PresenceStore" /* 5674 */;
+import SessionsStore from "SessionsStore" /* 5678 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -146,7 +146,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5207).sortActivity;
+const sortActivity = fn(5674).sortActivity;
 const Constants = fn(1087);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityTypes: map1, AppStates: closure_14 } = Constants);

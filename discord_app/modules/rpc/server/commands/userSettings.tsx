@@ -1,13 +1,13 @@
-// === Module 15538: userSettings ===
+// === Module 15566: userSettings ===
 
-// Module 15538 (userSettings)
-import LocaleStore from "LocaleStore" /* 2132 */;
+// Module 15566 (userSettings)
+import LocaleStore from "LocaleStore" /* 2069 */;
 
 const RPCCommands = fn(1087).RPCCommands;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15503);
+const CONTEXT_MENU_ICON_NAMES = fn(15531);
 obj[RPCCommands.USER_SETTINGS_GET_LOCALE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.USER_SETTINGS_GET_LOCALE, {
-  scope: fn(8731).OAuth2Scopes.IDENTIFY,
+  scope: fn(8747).OAuth2Scopes.IDENTIFY,
   handler() {
     return { locale: LocaleStore.locale };
   }

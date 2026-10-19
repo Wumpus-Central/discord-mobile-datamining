@@ -1,6 +1,6 @@
-// === Module 7420: payments/OrderActionCreators ===
+// === Module 7487: payments/OrderActionCreators ===
 
-// Module 7420 (payments/OrderActionCreators)
+// Module 7487 (payments/OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -189,7 +189,7 @@ let closure_10 = async function _createOrder(arg0) {
           let body;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -400,7 +400,7 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
           closure_129_10 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -500,7 +500,7 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
           closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -628,7 +628,7 @@ let closure_14 = async function _patchOrder(arg0) {
           let body;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -764,7 +764,7 @@ let closure_15 = async function _updateOrder(arg0) {
           closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1306,7 +1306,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(5171).OrderStatus;
+const OrderStatus = fn(5660).OrderStatus;
 const Endpoints = fn(1087).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

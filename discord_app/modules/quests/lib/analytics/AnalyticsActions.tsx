@@ -1,20 +1,20 @@
-// === Module 7672: AnalyticsActions ===
+// === Module 7735: AnalyticsActions ===
 
-// Module 7672 (AnalyticsActions)
+// Module 7735 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
-import QuestTypes from "QuestTypes" /* 6231 */;
-import AdCreativeType from "AdCreativeType" /* 6235 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7450 */;
-import QuestDataUtils from "QuestDataUtils" /* 7652 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7675 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7676 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7678 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7681 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
+import QuestTypes from "QuestTypes" /* 6661 */;
+import AdCreativeType from "AdCreativeType" /* 6665 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7517 */;
+import QuestDataUtils from "QuestDataUtils" /* 7715 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7738 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7739 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7741 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7673 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7736 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
-import QuestStore from "QuestStore" /* 7656 */;
+import QuestStore from "QuestStore" /* 7719 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -229,7 +229,7 @@ let closure_12 = async function _getCommonClickEventProperties(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -331,7 +331,7 @@ let closure_13 = async function _trackQuestContentClicked() {
   await "IconComponent";
   closure_7 = tmp2;
   ({ questId: closure_135_0, questContent: closure_135_1, questContentCTA: closure_135_2, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, impressionId: closure_135_5, clickId: closure_135_6, trackGuildAndChannelMetadata: closure_135_7, sourceQuestContent: closure_135_8 } = closure_0);
-  return "Reflect";
+  return "test";
 };
 let closure_14 = async function _trackAdContentClicked() {
   dependencyMap = closure_131_10;
@@ -345,7 +345,7 @@ let closure_14 = async function _trackAdContentClicked() {
   await "IconComponent";
   closure_4 = tmp2;
   ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
-  return "Reflect";
+  return "test";
 };
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const items = [, , ];

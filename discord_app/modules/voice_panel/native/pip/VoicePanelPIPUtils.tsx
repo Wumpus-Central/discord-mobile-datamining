@@ -1,24 +1,24 @@
-// === Module 18186: VoicePanelPIPUtils ===
+// === Module 18169: VoicePanelPIPUtils ===
 
-// Module 18186 (VoicePanelPIPUtils)
+// Module 18169 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 587 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6156 */;
-import participantHasVideo from "participantHasVideo" /* 10685 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 15071 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5588 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
+import participantHasVideo from "participantHasVideo" /* 10698 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(10680);
+const VoicePanelConstants = fn(10693);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(18187);
+const VoicePanelPIPConstants = fn(18170);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(5214).ParticipantTypes;
-const MorphablePanelConstants = fn(10681);
+const ParticipantTypes = fn(5593).ParticipantTypes;
+const MorphablePanelConstants = fn(10694);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 let set = new Set();
@@ -350,30 +350,30 @@ export const computePIPSize = function computePIPSize(SquarePIPReferenceDimensio
   }
   ({ width: width3, height: height3 } = arg2 ? SquareActivityPIPReferenceDimensions : SquarePIPReferenceDimensions);
 };
-export const createPIPBlockList = function createPIPBlockList(mode, focusedId) {
+export const createPIPBlockList = function createPIPBlockList(PIP, stateFromStores1) {
   set = new Set();
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
     set.add(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
   }
-  let tmp5 = null != focusedId;
+  let tmp5 = null != stateFromStores1;
   if (tmp5) {
-    tmp5 = mode === VoicePanelModes.PANEL;
+    tmp5 = PIP === VoicePanelModes.PANEL;
   }
   if (tmp5) {
-    set.add(focusedId);
+    set.add(stateFromStores1);
   }
   return set;
 };
-export const computePIPParticipantToShow = function computePIPParticipantToShow(showSecondaryPIP) {
-  ({ channelId, panelMode, lastParticipantId, speakingUserId, focusedParticipantId, blockList } = showSecondaryPIP);
+export const computePIPParticipantToShow = function computePIPParticipantToShow(canShowActivities) {
+  ({ channelId, panelMode, lastParticipantId, speakingUserId, focusedParticipantId, blockList } = canShowActivities);
   if (blockList === undefined) {
     blockList = set;
   }
+  canShowActivities = canShowActivities.canShowActivities;
   const id = AuthenticationStore.getId();
-  let participant;
   if (null != focusedParticipantId) {
-    participant = ChannelRTCStore.getParticipant(channelId, focusedParticipantId);
+    const participant = ChannelRTCStore.getParticipant(channelId, focusedParticipantId);
   }
   if (panelMode === VoicePanelModes.PANEL) {
     if (null != focusedParticipantId) {
@@ -409,33 +409,35 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
       }
     }
   }
-  let type2;
-  if (participant != null) {
-    type2 = participant.type;
-  }
-  if (type2 !== ParticipantTypes.ACTIVITY) {
-    if (!showSecondaryPIP.showSecondaryPIP) {
-      const activityParticipants = ChannelRTCStore.getActivityParticipants(channelId);
-      for (const item10060 of activityParticipants) {
-        let participants = item10060.participants;
-        if (participants.some((item) => isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item))) {
-          if (!blockList.has(item10060.id)) {
-            let obj8 = { id: null, type: null };
-            ({ id: obj5.id, type: obj5.type } = item10060);
-            obj4.return();
-            return obj8;
+  if (canShowActivities) {
+    let type2;
+    if (participant != null) {
+      type2 = participant.type;
+    }
+    if (type2 !== ParticipantTypes.ACTIVITY) {
+      if (!canShowActivities.showSecondaryPIP) {
+        const activityParticipants = ChannelRTCStore.getActivityParticipants(channelId);
+        for (const item10064 of activityParticipants) {
+          let participants = item10064.participants;
+          if (participants.some((item) => isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item))) {
+            if (!blockList.has(item10064.id)) {
+              let obj8 = { id: null, type: null };
+              ({ id: obj5.id, type: obj5.type } = item10064);
+              obj4.return();
+              return obj8;
+            }
           }
+          continue;
         }
-        continue;
       }
     }
   }
   const streamParticipants = ChannelRTCStore.getStreamParticipants(channelId);
-  for (const item10083 of streamParticipants) {
-    if (!blockList.has(item10083.id)) {
-      if (null != ApplicationStreamingStore.getActiveStreamForUser(item10083.user.id, item10083.stream.guildId)) {
+  for (const item10087 of streamParticipants) {
+    if (!blockList.has(item10087.id)) {
+      if (null != ApplicationStreamingStore.getActiveStreamForUser(item10087.user.id, item10087.stream.guildId)) {
         let obj14 = { id: null, type: null };
-        ({ id: obj7.id, type: obj7.type } = item10083);
+        ({ id: obj7.id, type: obj7.type } = item10087);
         obj6.return();
         return obj14;
       }
@@ -466,10 +468,12 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
           obj10 = participantHasVideo;
         }
       } else if (ParticipantTypes.ACTIVITY === type) {
-        const participants2 = participant2.participants;
-        if (participants2.some((item) => isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item))) {
-          ({ id: obj9.id, type: obj9.type } = participant2);
-          return { id: null, type: null };
+        if (canShowActivities) {
+          const participants2 = participant2.participants;
+          if (participants2.some((item) => isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item))) {
+            ({ id: obj9.id, type: obj9.type } = participant2);
+            return { id: null, type: null };
+          }
         }
       } else if (ParticipantTypes.USER === type) {
         ({ id: obj19.id, type: obj19.type } = participant2);
@@ -488,24 +492,24 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     }
   }
   const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
-  for (const item10162 of videoParticipants) {
-    if (!blockList.has(item10162.id)) {
+  for (const item10166 of videoParticipants) {
+    if (!blockList.has(item10166.id)) {
       let obj16 = participantHasVideo;
-      if (obj16.canRenderParticipantVideo(item10162)) {
+      if (obj16.canRenderParticipantVideo(item10166)) {
         let obj34 = { id: null, type: null };
-        ({ id: obj17.id, type: obj17.type } = item10162);
+        ({ id: obj17.id, type: obj17.type } = item10166);
         obj15.return();
         return obj34;
       }
     }
     continue;
   }
-  let tmp46;
+  let tmp48;
   if (!blockList.has(id)) {
     if (null != participant3) {
       if (panelMode !== VoicePanelModes.PANEL) {
         const obj35 = { id, type: ParticipantTypes.USER };
-        tmp46 = obj35;
+        tmp48 = obj35;
       } else {
         let type3;
         if (participant != null) {
@@ -514,7 +518,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
       }
     }
   }
-  return tmp46;
+  return tmp48;
 };
 export const getPIPMode = function getPIPMode(connected) {
   ({ channelId, manuallyFocusedId, mode } = connected);

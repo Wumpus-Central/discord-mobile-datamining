@@ -1,23 +1,23 @@
-// === Module 12252: BotIllocon ===
+// === Module 12272: BotIllocon ===
 
-// Module 12252 (BotIllocon)
+// Module 12272 (BotIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import assetHelpers from "assetHelpers" /* 6550 */;
-import _modDef12253 from "module_12253" /* 12253 */;
-import _modDef12254 from "module_12254" /* 12254 */;
-import _modDef12255 from "module_12255" /* 12255 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import assetHelpers from "assetHelpers" /* 6943 */;
+import _modDef12273 from "module_12273" /* 12273 */;
+import _modDef12274 from "module_12274" /* 12274 */;
+import _modDef12275 from "module_12275" /* 12275 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12253 }, 3: null };
-const obj2 = { uri: _modDef12253 };
-obj[2] = { uri: _modDef12254 };
-const obj3 = { uri: _modDef12254 };
-obj[3] = { uri: _modDef12255 };
+let obj = { 1: null, 2: { uri: _modDef12273 }, 3: null };
+const obj2 = { uri: _modDef12273 };
+obj[2] = { uri: _modDef12274 };
+const obj3 = { uri: _modDef12274 };
+obj[3] = { uri: _modDef12275 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12255 };
+const obj4 = { uri: _modDef12275 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const BotIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6550).getAssetSource(obj);
+  obj.source = num(6943).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

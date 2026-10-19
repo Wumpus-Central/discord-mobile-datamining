@@ -1,23 +1,23 @@
-// === Module 15921: FamilyCenterActivityBanner ===
+// === Module 15950: FamilyCenterActivityBanner ===
 
-// Module 15921 (FamilyCenterActivityBanner)
+// Module 15950 (FamilyCenterActivityBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef2589 from "module_2589" /* 2589 */;
-import FastImageDefault from "FastImage" /* 5128 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import useUserLinks from "useUserLinks" /* 8005 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8006 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12670 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15922 */;
+import _modDef2526 from "module_2526" /* 2526 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import FastImageDefault from "FastImage" /* 5631 */;
+import useUserLinks from "useUserLinks" /* 8068 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8069 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12690 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterActivityBannerButton() {
@@ -64,7 +64,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   }
   return tmp6;
 });
-createStyles = fn(5191);
+createStyles = fn(4945);
 let obj4 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 }, art: null, header: null, description: null };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
 obj4.art = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
@@ -84,9 +84,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const hasMaxConnections = useUserLinks.useHasMaxConnections();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2589["T7GyW+"]);
+    const stringResult = intl.string(_modDef2526["T7GyW+"]);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef2589.goKE2b);
+    const stringResult1 = intl2.string(_modDef2526.goKE2b);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp8 = stringResult;
@@ -97,9 +97,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText = useAgeSpecificText.useAgeSpecificText(tmp8, tmp9);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = util.intl;
-    const formatResult = intl3.format(_modDef2589.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
+    const formatResult = intl3.format(_modDef2526.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
     const intl4 = util.intl;
-    const formatResult1 = intl4.format(_modDef2589.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" });
+    const formatResult1 = intl4.format(_modDef2526.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" });
     cResult[2] = formatResult;
     cResult[3] = formatResult1;
     let tmp14 = formatResult1;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   }
   const tmpResult = useAgeSpecificText;
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-  const tmp4Result = importDefault(tmp5 ? 15929 : 15930);
+  const tmp4Result = importDefault(tmp5 ? 15958 : 15959);
   if (cResult[4] === tmp6.art) {
     if (cResult[5] === tmp4Result) {
       let tmp19 = cResult[6];
@@ -186,16 +186,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const intl = util.intl;
   const obj2 = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2589["T7GyW+"]), intl2.string(_modDef2589.goKE2b));
-  const stringResult = intl.string(_modDef2589["T7GyW+"]);
+  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2526["T7GyW+"]), intl2.string(_modDef2526.goKE2b));
+  const stringResult = intl.string(_modDef2526["T7GyW+"]);
   const intl3 = util.intl;
   const obj3 = useAgeSpecificText;
   const intl4 = util.intl;
   const obj4 = { style: tmp4.container, children: null };
-  const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2589.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2589.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
+  const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2526.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2526.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
-  const formatResult = intl3.format(_modDef2589.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 15929 : 15930);
+  const formatResult = intl3.format(_modDef2526.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
+  obj5.source = importDefault(tmp3 ? 15958 : 15959);
   obj5.style = tmp4.art;
   const items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

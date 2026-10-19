@@ -1,12 +1,12 @@
-// === Module 8024: Upload ===
+// === Module 8087: Upload ===
 
-// Module 8024 (Upload)
+// Module 8087 (Upload)
 import _modDef12 from "module_12" /* 12 */;
 import _mod580 from "module_580" /* 580 */;
 import v1 from "v1" /* 1281 */;
-import UploadPlatform from "UploadPlatform" /* 8025 */;
-import UploadUtils from "UploadUtils" /* 8026 */;
-import FileUtilsAll from "FileUtils" /* 8031 */;
+import UploadPlatform from "UploadPlatform" /* 8088 */;
+import UploadUtils from "UploadUtils" /* 8089 */;
+import FileUtilsAll from "FileUtils" /* 8094 */;
 import size from "module_2" /* 2 */;
 
 const EventEmitter = _mod580.EventEmitter;

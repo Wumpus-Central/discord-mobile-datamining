@@ -1,6 +1,6 @@
-// === Module 10695: useChannelSafeAreaHeightSharedValue ===
+// === Module 10708: useChannelSafeAreaHeightSharedValue ===
 
-// Module 10695 (useChannelSafeAreaHeightSharedValue)
+// Module 10708 (useChannelSafeAreaHeightSharedValue)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

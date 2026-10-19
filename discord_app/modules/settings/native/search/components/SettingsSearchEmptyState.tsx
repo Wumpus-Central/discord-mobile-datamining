@@ -1,19 +1,19 @@
-// === Module 15745: SettingsSearchEmptyState ===
+// === Module 15774: SettingsSearchEmptyState ===
 
-// Module 15745 (SettingsSearchEmptyState)
+// Module 15774 (SettingsSearchEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4923 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import Stack_Stack from "Stack/Stack" /* 5477 */;
-import NoResultsAlt from "NoResultsAlt" /* 8903 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4954 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import Stack_Stack from "Stack/Stack" /* 5932 */;
+import NoResultsAlt from "NoResultsAlt" /* 8919 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_6 = createStyles.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

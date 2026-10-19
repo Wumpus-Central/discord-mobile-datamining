@@ -1,10 +1,10 @@
-// === Module 13613: ForLaterMessageRow ===
+// === Module 13647: ForLaterMessageRow ===
 
-// Module 13613 (ForLaterMessageRow)
+// Module 13647 (ForLaterMessageRow)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import useThemeDefault from "useTheme" /* 5127 */;
-import RowGeneratorDefault from "RowGenerator" /* 8013 */;
+import useThemeDefault from "useTheme" /* 5166 */;
+import RowGeneratorDefault from "RowGenerator" /* 8076 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" }, flushToCardBottom: { marginBottom: -16, borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS }, footer: { paddingHorizontal: 16, paddingTop: 8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -29,11 +29,11 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
   const tmp6 = useThemeDefault();
   if (cResult[0] !== tmp6) {
     let obj2 = { seeMoreLabelColor: tmp5(587).colors.TEXT_DEFAULT };
-    const tmp8 = lineClamp(5191).createNativeStyleProperties(obj2)(tmp6);
+    const tmp8 = lineClamp(4945).createNativeStyleProperties(obj2)(tmp6);
     cResult[0] = tmp6;
     cResult[1] = tmp8;
     let tmp7 = tmp8;
-    const tmpResult = lineClamp(5191);
+    const tmpResult = lineClamp(4945);
   } else {
     tmp7 = cResult[1];
   }
@@ -44,7 +44,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const RenderEmbeds = lineClamp(2044).RenderEmbeds;
+      const RenderEmbeds = lineClamp(4776).RenderEmbeds;
       const setting = RenderEmbeds.getSetting();
       cResult[5] = setting;
       let tmp11 = setting;
@@ -53,7 +53,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const InlineEmbedMedia = lineClamp(2044).InlineEmbedMedia;
+      const InlineEmbedMedia = lineClamp(4776).InlineEmbedMedia;
       const setting1 = InlineEmbedMedia.getSetting();
       cResult[6] = setting1;
       let tmp13 = setting1;
@@ -62,7 +62,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     const _Symbol3 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const InlineAttachmentMedia = lineClamp(2044).InlineAttachmentMedia;
+      const InlineAttachmentMedia = lineClamp(4776).InlineAttachmentMedia;
       const setting2 = InlineAttachmentMedia.getSetting();
       cResult[7] = setting2;
       let tmp15 = setting2;
@@ -71,7 +71,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     const _Symbol4 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = new tmp5(8013)();
+      const obj4 = new tmp5(8076)();
       let obj3 = { renderEmbeds: tmp11, inlineEmbedMedia: tmp13, inlineAttachmentMedia: tmp15, renderReplies: false, renderExecutedCommands: false, animateEmoji: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, shouldDisableInteractiveComponents: true };
       obj4.setOptions(obj3);
       cResult[8] = obj4;
@@ -126,7 +126,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
         }
       }
       const obj7 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp9, message, rowGenerator: tmp17, maxHeight };
-      const tmp27 = closure_5(tmp5(9673), obj7);
+      const tmp27 = closure_5(tmp5(9687), obj7);
       cResult[12] = maxHeight;
       cResult[13] = message;
       cResult[14] = tmp9;

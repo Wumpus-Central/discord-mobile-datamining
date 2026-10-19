@@ -1,9 +1,9 @@
-// === Module 16522: ImageDescriptionsSetting ===
+// === Module 16551: ImageDescriptionsSetting ===
 
-// Module 16522 (ImageDescriptionsSetting)
+// Module 16551 (ImageDescriptionsSetting)
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 2044 */;
-import UserSettingsText from "UserSettingsText" /* 16523 */;
+import UserSettings from "UserSettings" /* 4776 */;
+import UserSettingsText from "UserSettingsText" /* 16552 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 
 require = fn;
@@ -12,13 +12,13 @@ function onImageDescriptionSettingValueChange(viewImageDescriptions) {
 }
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
   },
-  parent: fn(8260).MobileUserSettings.CHAT,
+  parent: fn(8276).MobileUserSettings.CHAT,
   useValue: function useImageDescriptionSettingValue() {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();

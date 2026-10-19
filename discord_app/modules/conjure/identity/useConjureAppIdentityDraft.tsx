@@ -1,142 +1,172 @@
-// === Module 11651: useConjureAppIdentityDraft ===
+// === Module 11672: useConjureAppIdentityDraft ===
 
-// Module 11651 (useConjureAppIdentityDraft)
-import c from "c" /* 576 */;
-import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 11652 */;
+// Module 11672 (useConjureAppIdentityDraft)
+import ConjureActionCreators from "ConjureActionCreators" /* 11011 */;
+import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 11673 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/identity/useConjureAppIdentityDraft.tsx");
+let result = size.fileFinishedImporting("modules/conjure/identity/useConjureAppIdentityDraft.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppIdentityDraft(arg0) {
-  const cResult = c.c(18);
+  _require = arg0;
+  const cResult = require("c").c(21);
   const tmp2 = useConjureAppIdentityDefault(arg0);
-  [tmp4, tmp5] = noop.useState(null);
-  const require = tmp5;
-  const tmp3 = _slicedToArray(noop.useState(null), 2);
-  [str, tmp7] = noop.useState(null);
-  importDefault = tmp7;
-  if (cResult[0] !== str) {
-    const trimmed = str.trim();
-    cResult[0] = str;
-    cResult[1] = trimmed;
-    let tmp8 = trimmed;
+  if (cResult[0] !== arg0) {
+    const fn = function c() {
+      const result = ConjureActionCreators.refreshPreviewApplication(closure_0);
+      result.catch(() => {
+
+      });
+    };
+    const items = [arg0];
+    cResult[0] = arg0;
+    cResult[1] = fn;
+    cResult[2] = items;
+    let tmp4 = items;
+    let tmp3 = fn;
   } else {
-    tmp8 = cResult[1];
+    tmp3 = cResult[1];
+    tmp4 = cResult[2];
   }
-  if (cResult[2] === tmp2.description) {
-    if (cResult[3] === tmp8) {
-      let tmp10 = cResult[4];
+  const effect = noop.useEffect(tmp3, tmp4);
+  const obj = require("c");
+  [tmp7, tmp8] = noop.useState(null);
+  importDefault = tmp8;
+  const tmp6 = _slicedToArray(noop.useState(null), 2);
+  [str, tmp10] = noop.useState(null);
+  dependencyMap = tmp10;
+  if (cResult[3] !== str) {
+    const trimmed = str.trim();
+    cResult[3] = str;
+    cResult[4] = trimmed;
+    let tmp11 = trimmed;
+  } else {
+    tmp11 = cResult[4];
+  }
+  if (cResult[5] === tmp2.description) {
+    if (cResult[6] === tmp11) {
+      let tmp13 = cResult[7];
     }
-    if (cResult[5] !== tmp4) {
-      if (null != tmp4) {
-        const obj2 = { icon: tmp4 };
+    if (cResult[8] !== tmp7) {
+      if (null != tmp7) {
+        const obj2 = { icon: tmp7 };
         let obj3 = obj2;
       } else {
         obj3 = {};
       }
-      cResult[5] = tmp4;
-      cResult[6] = obj3;
-    } else if (cResult[7] !== tmp10) {
-      if (null != tmp10) {
-        const obj4 = { description: tmp10 };
+      cResult[8] = tmp7;
+      cResult[9] = obj3;
+    } else if (cResult[10] !== tmp13) {
+      if (null != tmp13) {
+        const obj4 = { description: tmp13 };
         let obj5 = obj4;
       } else {
         obj5 = {};
       }
-      cResult[7] = tmp10;
-      cResult[8] = obj5;
+      cResult[10] = tmp13;
+      cResult[11] = obj5;
     } else {
-      if (cResult[9] === tmp12) {
-        if (cResult[10] === tmp14) {
-          let tmp16 = cResult[11];
+      if (cResult[12] === tmp15) {
+        if (cResult[13] === tmp17) {
+          let tmp19 = cResult[14];
         }
         const _Symbol = Symbol;
-        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          class U {
+        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+          class E {
             constructor() {
-              tmp = closure_0(null);
-              tmp2 = closure_1(null);
+              tmp = closure_1(null);
+              tmp2 = closure_2(null);
               return;
             }
           }
-          cResult[12] = U;
+          cResult[15] = E;
         } else {
-          class U {
+          class E {
             constructor() {
-              tmp = closure_0(null);
-              tmp2 = closure_1(null);
+              tmp = closure_1(null);
+              tmp2 = closure_2(null);
               return;
             }
           }
         }
-        if (tmp4 == null) {
-          class U {
+        if (tmp7 == null) {
+          class E {
             constructor() {
-              tmp = closure_0(null);
-              tmp2 = closure_1(null);
+              tmp = closure_1(null);
+              tmp2 = closure_2(null);
               return;
             }
           }
         }
-        if (cResult[13] === tmp16) {
-          class U {
+        if (cResult[16] === tmp19) {
+          class E {
             constructor() {
-              tmp = closure_0(null);
-              tmp2 = closure_1(null);
+              tmp = closure_1(null);
+              tmp2 = closure_2(null);
               return;
             }
           }
         }
-        const obj6 = { iconURL: tmp4, setIcon: tmp5, description: str, setDescription: tmp7, changes: tmp16, changed: null != tmp4 || null != tmp10, commit: U };
-        cResult[13] = tmp16;
-        cResult[14] = str;
-        cResult[15] = tmp4;
-        cResult[16] = null != tmp4 || null != tmp10;
-        cResult[17] = obj6;
+        const obj6 = { iconURL: tmp7, setIcon: tmp8, description: str, setDescription: tmp10, changes: tmp19, changed: null != tmp7 || null != tmp13, commit: E };
+        cResult[16] = tmp19;
+        cResult[17] = str;
+        cResult[18] = tmp7;
+        cResult[19] = null != tmp7 || null != tmp13;
+        cResult[20] = obj6;
       }
       const obj7 = {};
-      const merged = Object.assign(tmp12);
-      const merged1 = Object.assign(tmp14);
-      cResult[9] = tmp12;
-      cResult[10] = cResult[8];
-      cResult[11] = obj7;
-      tmp16 = obj7;
+      const merged = Object.assign(tmp15);
+      const merged1 = Object.assign(tmp17);
+      cResult[12] = tmp15;
+      cResult[13] = cResult[11];
+      cResult[14] = obj7;
+      tmp19 = obj7;
     }
   }
-  if (tmp8 !== str2.trim()) {
-    class U {
+  if (tmp11 !== str2.trim()) {
+    class E {
       constructor() {
-        tmp = closure_0(null);
-        tmp2 = closure_1(null);
+        tmp = closure_1(null);
+        tmp2 = closure_2(null);
         return;
       }
     }
   }
-  cResult[2] = tmp2.description;
-  cResult[3] = tmp8;
-  cResult[4] = null;
-  tmp10 = tmp11;
+  cResult[5] = tmp2.description;
+  cResult[6] = tmp11;
+  cResult[7] = null;
+  tmp13 = tmp14;
   str2 = tmp2.description;
-  const tmp6 = _slicedToArray(noop.useState(null), 2);
+  const tmp9 = _slicedToArray(noop.useState(null), 2);
 }) : (function useConjureAppIdentityDraft(arg0) {
-  const tmp = useConjureAppIdentityDefault(arg0);
-  const tmp2 = _slicedToArray(noop.useState(null), 2);
-  const first = tmp2[0];
-  closure_1 = tmp4;
-  [str, tmp6] = noop.useState(null);
-  dependencyMap = tmp6;
-  let trimmed = str.trim();
-  let tmp8 = null;
+  closure_0 = arg0;
+  const tmp = first(11673)(arg0);
+  const items = [arg0];
+  const effect = trimmed.useEffect(() => {
+    const result = ConjureActionCreators.refreshPreviewApplication(closure_0);
+    result.catch(() => {
+
+    });
+  }, items);
+  const tmp3 = _slicedToArray(trimmed.useState(null), 2);
+  first = tmp3[0];
+  dependencyMap = tmp5;
+  [str, tmp7] = trimmed.useState(null);
+  _slicedToArray = tmp7;
+  trimmed = str.trim();
+  let tmp9 = null;
   if (trimmed !== str2.trim()) {
-    tmp8 = trimmed;
+    tmp9 = trimmed;
   }
-  trimmed = tmp8;
-  const items = [first, tmp8];
-  const memo = noop.useMemo(() => {
+  trimmed = tmp9;
+  const items1 = [first, tmp9];
+  const memo = obj.useMemo(() => {
     if (null != first) {
       const obj2 = { icon: tmp };
       let obj = obj2;
@@ -152,14 +182,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }
     const merged1 = Object.assign(obj5);
     return {};
-  }, items);
+  }, items1);
   let iconURL = first;
-  const callback = noop.useCallback(() => {
-    closure_1(null);
-    tmp6(null);
+  const callback = obj.useCallback(() => {
+    closure_2(null);
+    tmp7(null);
   }, []);
   if (first == null) {
     iconURL = tmp.iconURL;
   }
-  return { iconURL, setIcon: tmp2[1], description: str, setDescription: tmp6, changes: memo, changed: null != first || null != tmp8, commit: callback };
+  return { iconURL, setIcon: tmp3[1], description: str, setDescription: tmp7, changes: memo, changed: null != first || null != tmp9, commit: callback };
 });

@@ -1,20 +1,20 @@
-// === Module 13717: PremiumGiftDMPurchaseSuccess ===
+// === Module 13751: PremiumGiftDMPurchaseSuccess ===
 
-// Module 13717 (PremiumGiftDMPurchaseSuccess)
+// Module 13751 (PremiumGiftDMPurchaseSuccess)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5187 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10351 */;
-import NativeGiftContext from "NativeGiftContext" /* 10354 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10490 */;
+import Text_Text from "Text/Text" /* 5195 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10365 */;
+import NativeGiftContext from "NativeGiftContext" /* 10368 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { title: { marginTop: nativeDefault.space.PX_24, textAlign: "center" }, description: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
 obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };

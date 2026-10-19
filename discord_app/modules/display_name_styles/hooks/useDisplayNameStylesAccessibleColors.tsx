@@ -1,11 +1,11 @@
-// === Module 10567: useDisplayNameStylesAccessibleColors ===
+// === Module 10581: useDisplayNameStylesAccessibleColors ===
 
-// Module 10567 (useDisplayNameStylesAccessibleColors)
+// Module 10581 (useDisplayNameStylesAccessibleColors)
 import _modDef683 from "module_683" /* 683 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
-import ColorUtils from "ColorUtils" /* 5063 */;
+import ColorUtils from "ColorUtils" /* 4942 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5181 */;
+import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

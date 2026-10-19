@@ -1,8 +1,8 @@
-// === Module 15073: WideBannerDismissibleContentVersion ===
+// === Module 5599: WideBannerDismissibleContentVersion ===
 
-// Module 15073 (WideBannerDismissibleContentVersion)
-import ShopBlockType from "ShopBlockType" /* 7561 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7572 */;
+// Module 5599 (WideBannerDismissibleContentVersion)
+import ShopBlockType from "ShopBlockType" /* 5601 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5600 */;
 
 require = fn;
 const CollectibleShopTab = fn(1089).CollectibleShopTab;

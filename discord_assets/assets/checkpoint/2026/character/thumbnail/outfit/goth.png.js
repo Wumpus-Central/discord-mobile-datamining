@@ -1,6 +1,6 @@
-// === Module 5637: ? ===
+// === Module 6069: ? ===
 
-// Module 5637
+// Module 6069
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/goth.png.js");

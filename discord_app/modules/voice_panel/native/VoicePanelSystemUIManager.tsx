@@ -1,17 +1,17 @@
-// === Module 18191: VoicePanelSystemUIManager ===
+// === Module 18220: VoicePanelSystemUIManager ===
 
-// Module 18191 (VoicePanelSystemUIManager)
+// Module 18220 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9892 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
 
 require = fn;
-const VoicePanelModes = fn(10680).VoicePanelModes;
-const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
-const ParticipantTypes = fn(5214).ParticipantTypes;
+const VoicePanelModes = fn(10693).VoicePanelModes;
+const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
+const ParticipantTypes = fn(5593).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const __initData = { code: "function VoicePanelSystemUIManagerTsx1(){const{focused,mode,controlsSpecs,windowDimensions}=this.__closure;var _focused$get;return{focusedId:(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode:mode.get(),controlsMode:controlsSpecs.get().mode,landscape:windowDimensions.get().landscape};}" };

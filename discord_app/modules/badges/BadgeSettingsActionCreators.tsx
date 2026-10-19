@@ -1,6 +1,6 @@
-// === Module 15627: BadgeSettingsActionCreators ===
+// === Module 15656: BadgeSettingsActionCreators ===
 
-// Module 15627 (BadgeSettingsActionCreators)
+// Module 15656 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -37,7 +37,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           closure_129_2 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

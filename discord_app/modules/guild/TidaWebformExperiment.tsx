@@ -1,7 +1,7 @@
-// === Module 7161: TidaWebformExperiment ===
+// === Module 7230: TidaWebformExperiment ===
 
-// Module 7161 (TidaWebformExperiment)
-import createExperiment from "module_5110" /* 5110 */;
+// Module 7230 (TidaWebformExperiment)
+import createExperiment from "module_5149" /* 5149 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", id: "2025-11_tida_webform", label: "Tida Webform", defaultConfig: { tidaWebformEnabled: false }, treatments: null };

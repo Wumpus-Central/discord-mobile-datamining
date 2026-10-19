@@ -1,10 +1,10 @@
-// === Module 5179: MarkupUtils ===
+// === Module 5667: MarkupUtils ===
 
-// Module 5179 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 5180 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5501 */;
-import MarkupRulesDefault from "MarkupRules" /* 5502 */;
-import MarkupParserAll from "MarkupParser" /* 8272 */;
+// Module 5667 (MarkupUtils)
+import MarkupReactRules from "MarkupReactRules" /* 5668 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5936 */;
+import MarkupRulesDefault from "MarkupRules" /* 5937 */;
+import MarkupParserAll from "MarkupParser" /* 8288 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;

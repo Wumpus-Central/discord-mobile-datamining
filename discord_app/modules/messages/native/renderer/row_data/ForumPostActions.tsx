@@ -1,11 +1,11 @@
-// === Module 8160: ForumPostActions ===
+// === Module 8223: ForumPostActions ===
 
-// Module 8160 (ForumPostActions)
+// Module 8223 (ForumPostActions)
 import Constants from "Constants" /* 1087 */;
-import ReactionUtils from "ReactionUtils" /* 4857 */;
-import _modDef6474 from "module_6474" /* 6474 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8158 */;
-import _modDef8161 from "module_8161" /* 8161 */;
+import ReactionUtils from "ReactionUtils" /* 4892 */;
+import _modDef6868 from "module_6868" /* 6868 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8221 */;
+import _modDef8224 from "module_8224" /* 8224 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: null, displayName: "a" };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: true, displayName: true };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -72,17 +72,17 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(_modDef6474);
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef6868);
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef8161);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef8224);
     tmp6 = importDefault;
     tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(8158).getAssetUriForEmbed(tmp6(5138));
+    const assetUriForEmbed1 = tmp8(8221).getAssetUriForEmbed(tmp6(5641));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -100,17 +100,17 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       obj.title = intl2.string(tmp8(1128).t["5uAO7d"]);
       const intl3 = tmp8(1128).intl;
       const obj2 = { helpArticleUrl: null };
-      const obj3 = { url: tmp6(2131).getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
+      const obj3 = { url: tmp6(2068).getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL) };
       obj2.helpArticleUrl = obj3;
       obj.subtitle = intl3.formatToParts(tmp8(1128).t.YtCu5p, obj2);
       const intl4 = tmp8(1128).intl;
       obj.cta = intl4.string(tmp8(1128).t.C5UQC9);
-      const tmp6Result = tmp6(2131);
-      obj.icon = tmp8(8158).getAssetUriForEmbed(tmp6(8162));
-      const tmp8Result3 = tmp8(8158);
-      obj.closeIcon = tmp8(8158).getAssetUriForEmbed(tmp6(7055));
+      const tmp6Result = tmp6(2068);
+      obj.icon = tmp8(8221).getAssetUriForEmbed(tmp6(8225));
+      const tmp8Result3 = tmp8(8221);
+      obj.closeIcon = tmp8(8221).getAssetUriForEmbed(tmp6(7132));
       tmp14 = obj;
-      const tmp8Result4 = tmp8(8158);
+      const tmp8Result4 = tmp8(8221);
     }
     const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     const intl5 = tmp8(1128).intl;
@@ -131,7 +131,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1257).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6474 : 8161));
+    tmp6(1257).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6868 : 8224));
     const tmp6Result2 = tmp6(1257);
   }
 };

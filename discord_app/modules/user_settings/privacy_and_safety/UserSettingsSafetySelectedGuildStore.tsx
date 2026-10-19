@@ -1,6 +1,6 @@
-// === Module 16976: UserSettingsSafetySelectedGuildStore ===
+// === Module 17005: UserSettingsSafetySelectedGuildStore ===
 
-// Module 16976 (UserSettingsSafetySelectedGuildStore)
+// Module 17005 (UserSettingsSafetySelectedGuildStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

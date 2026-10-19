@@ -1,7 +1,7 @@
-// === Module 19120: DeepLinkEventMapping ===
+// === Module 19159: DeepLinkEventMapping ===
 
-// Module 19120 (DeepLinkEventMapping)
-import DeepLinkTypes from "DeepLinkTypes" /* 19117 */;
+// Module 19159 (DeepLinkEventMapping)
+import DeepLinkTypes from "DeepLinkTypes" /* 19156 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_startup/native/DeepLinkProcessor/DeepLinkEventMapping.tsx");

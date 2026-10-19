@@ -1,9 +1,9 @@
-// === Module 18030: useMutualGuilds ===
+// === Module 18059: useMutualGuilds ===
 
-// Module 18030 (useMutualGuilds)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8585 */;
+// Module 18059 (useMutualGuilds)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8601 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7586 */;
+import UserProfileStore from "UserProfileStore" /* 7649 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;

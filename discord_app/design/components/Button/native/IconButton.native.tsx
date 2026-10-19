@@ -1,19 +1,19 @@
-// === Module 7840: IconButton ===
+// === Module 7903: IconButton ===
 
-// Module 7840 (IconButton)
+// Module 7903 (IconButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = BaseButton(5187);
-const Button_BaseButton = BaseButton(5487);
-const BaseIconButton = BaseButton(7841);
+const Text_Text = BaseButton(5195);
+const Button_BaseButton = BaseButton(5215);
+const BaseIconButton = BaseButton(7904);
 require = fn;
 let closure_3 = ["label", "grow", "accessibilityLabel", "maxFontSizeMultiplier", "accessibilityHint", "ref"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles((arg0) => {
   const labelPressable = { paddingBottom: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;

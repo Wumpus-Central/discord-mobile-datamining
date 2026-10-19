@@ -1,7 +1,7 @@
-// === Module 12636: useNavigationTTIContentPainted ===
+// === Module 12656: useNavigationTTIContentPainted ===
 
-// Module 12636 (useNavigationTTIContentPainted)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12638 */;
+// Module 12656 (useNavigationTTIContentPainted)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12658 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation
 export const useNavigationTTIContentPainted = ReactCompilerGating.isReactCompilerEnabled() ? (function useNavigationTTIContentPainted() {
   const cResult = navTTISurface(576).c(14);
   let obj = navTTISurface(576);
-  navTTISurface = navTTISurface(12637).useNavTTISurface();
+  navTTISurface = navTTISurface(12657).useNavTTISurface();
   noop.useRef(null);
   let navigationKey;
   if (navTTISurface != null) {
@@ -164,7 +164,7 @@ export const useNavigationTTIContentPainted = ReactCompilerGating.isReactCompile
   cResult[4] = fn2;
   tmp7 = fn2;
 }) : (function useNavigationTTIContentPainted() {
-  navTTISurface = navTTISurface(12637).useNavTTISurface();
+  navTTISurface = navTTISurface(12657).useNavTTISurface();
   noop.useRef(null);
   let navigationKey;
   if (navTTISurface != null) {

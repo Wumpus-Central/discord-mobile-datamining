@@ -1,11 +1,11 @@
-// === Module 17984: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 18013: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 17984 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 18013 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 587 */;
-import PermissionUtils from "PermissionUtils" /* 4850 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9121 */;
-import DenyIcon from "DenyIcon" /* 9671 */;
-import SlashIcon from "SlashIcon" /* 17985 */;
+import PermissionUtils from "PermissionUtils" /* 4885 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9137 */;
+import DenyIcon from "DenyIcon" /* 9685 */;
+import SlashIcon from "SlashIcon" /* 18014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { ternaryCheckBox: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" }, iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" }, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
@@ -52,7 +52,7 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_6 = createStyles.createStyles(obj);
-let items = [fn(4850).DENY, fn(4850).PASSTHROUGH, fn(4850).ALLOW];
+let items = [fn(4885).DENY, fn(4885).PASSTHROUGH, fn(4885).ALLOW];
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OverrideOption(selected) {
   let v6639O5 = styles;

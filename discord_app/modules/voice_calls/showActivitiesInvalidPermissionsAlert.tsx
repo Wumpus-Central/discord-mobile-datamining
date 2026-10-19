@@ -1,8 +1,8 @@
-// === Module 11273: showActivitiesInvalidPermissionsAlert ===
+// === Module 11287: showActivitiesInvalidPermissionsAlert ===
 
-// Module 11273 (showActivitiesInvalidPermissionsAlert)
+// Module 11287 (showActivitiesInvalidPermissionsAlert)
 import util from "util" /* 1128 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5863 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");

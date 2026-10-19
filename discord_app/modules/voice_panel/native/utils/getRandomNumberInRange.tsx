@@ -1,6 +1,6 @@
-// === Module 18263: getRandomNumberInRange ===
+// === Module 18292: getRandomNumberInRange ===
 
-// Module 18263 (getRandomNumberInRange)
+// Module 18292 (getRandomNumberInRange)
 import size from "module_2" /* 2 */;
 
 const fn = function n(arg0, arg1) {

@@ -1,6 +1,6 @@
-// === Module 10034: GIFPickerViewStore ===
+// === Module 10048: GIFPickerViewStore ===
 
-// Module 10034 (GIFPickerViewStore)
+// Module 10048 (GIFPickerViewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;

@@ -1,10 +1,10 @@
-// === Module 8355: useIsEligibleSenderForReferralProgram ===
+// === Module 8371: useIsEligibleSenderForReferralProgram ===
 
-// Module 8355 (useIsEligibleSenderForReferralProgram)
+// Module 8371 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8356 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7441 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8372 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7508 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

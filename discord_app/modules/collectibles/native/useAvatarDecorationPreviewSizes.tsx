@@ -1,9 +1,9 @@
-// === Module 13723: useAvatarDecorationPreviewSizes ===
+// === Module 13757: useAvatarDecorationPreviewSizes ===
 
-// Module 13723 (useAvatarDecorationPreviewSizes)
+// Module 13757 (useAvatarDecorationPreviewSizes)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9305 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9321 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

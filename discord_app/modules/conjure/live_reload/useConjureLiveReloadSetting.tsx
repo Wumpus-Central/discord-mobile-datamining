@@ -1,10 +1,10 @@
-// === Module 11648: useConjureLiveReloadSetting ===
+// === Module 11669: useConjureLiveReloadSetting ===
 
-// Module 11648 (useConjureLiveReloadSetting)
-import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 11012 */;
+// Module 11669 (useConjureLiveReloadSetting)
+import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 11028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 10990 */;
+import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 11002 */;
 
 const require = globalThis.__r;
 

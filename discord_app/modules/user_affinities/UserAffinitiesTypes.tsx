@@ -1,6 +1,6 @@
-// === Module 8989: UserAffinitiesTypes ===
+// === Module 9005: UserAffinitiesTypes ===
 
-// Module 8989 (UserAffinitiesTypes)
+// Module 9005 (UserAffinitiesTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesTypes.tsx");

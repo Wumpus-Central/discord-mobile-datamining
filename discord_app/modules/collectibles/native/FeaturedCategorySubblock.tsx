@@ -1,22 +1,22 @@
-// === Module 16934: FeaturedCategorySubblock ===
+// === Module 16963: FeaturedCategorySubblock ===
 
-// Module 16934 (FeaturedCategorySubblock)
+// Module 16963 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7529 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 16932 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7595 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 16961 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7530 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7596 */;
 
-const FastImageDefault = tmp12(5128);
+const FastImageDefault = tmp12(5631);
 require = fn;
 let closure_4 = fn(1089).CollectiblesMobileShopScreen;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_9 = createStyles.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
   const tmp = closure_9();
   importDefault = subblock(1505).useNavigation();
   let obj = subblock(1505);
-  dependencyMap = subblock(9262).useCollectiblesAnalyticsContext();
+  dependencyMap = subblock(9278).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(9262);
+  let obj2 = subblock(9278);
   let items = [stateFromStores];
   stateFromStores = subblock(504).useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
   let obj3 = subblock(504);
@@ -130,8 +130,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  let obj5 = { onChange: subblock(16914).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  let obj4 = subblock(16914);
+  let obj5 = { onChange: subblock(16943).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj4 = subblock(16943);
   const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1128).intl;
   obj6.accessibilityLabel = intl.formatToPlainString(subblock(1128).t.FNtLb3, { category: subblock.name });
@@ -187,13 +187,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
   }
   const items1 = [tmp11Result, ];
   const obj8 = { radius: nativeDefault.radii.lg };
-  let result = subblock(7542).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7608).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj11 = { style: tmp.limitedTimeBadge };
-    result = closure_7(tmp2(9325).LimitedTimeBadge, obj11);
+    result = closure_7(tmp2(9341).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
   obj6.children = items1;
-  obj5.children = closure_8(subblock(6462).PressableOpacity, obj6);
+  obj5.children = closure_8(subblock(6856).PressableOpacity, obj6);
   return closure_7(tmp13, obj5);
 });

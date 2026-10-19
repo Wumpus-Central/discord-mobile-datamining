@@ -1,15 +1,15 @@
-// === Module 11235: useShouldForcePipOrientation ===
+// === Module 11249: useShouldForcePipOrientation ===
 
-// Module 11235 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6315 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11236 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
+// Module 11249 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6728 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11250 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const OrientationLockState = fn(2026).OrientationLockState;
-const CallConstants = fn(5214);
+const CallConstants = fn(5593);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -384,17 +384,17 @@ export const useShouldForcePipOrientation = ReactCompilerGating.isReactCompilerE
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8724).OrientationType.LANDSCAPE;
+        return tmp2(8740).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8724).OrientationType;
+    OrientationType = tmp2(8740).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8724).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8740).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

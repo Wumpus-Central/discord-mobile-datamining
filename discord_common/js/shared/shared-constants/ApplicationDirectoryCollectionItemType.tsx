@@ -1,6 +1,6 @@
-// === Module 11953: ApplicationDirectoryCollectionItemType ===
+// === Module 11973: ApplicationDirectoryCollectionItemType ===
 
-// Module 11953 (ApplicationDirectoryCollectionItemType)
+// Module 11973 (ApplicationDirectoryCollectionItemType)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1, 2, 3]) };

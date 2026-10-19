@@ -1,6 +1,6 @@
-// === Module 6157: windowSourceMatches ===
+// === Module 6594: windowSourceMatches ===
 
-// Module 6157 (windowSourceMatches)
+// Module 6594 (windowSourceMatches)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);

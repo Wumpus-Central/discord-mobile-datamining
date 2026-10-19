@@ -1,13 +1,13 @@
-// === Module 7401: PremiumModal ===
+// === Module 7468: PremiumModal ===
 
-// Module 7401 (PremiumModal)
+// Module 7468 (PremiumModal)
 import c from "c" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 6478 */;
-import Navigator from "Navigator" /* 6965 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7130 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7402 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14617 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14633 */;
+import NavigatorHeader from "NavigatorHeader" /* 6872 */;
+import Navigator from "Navigator" /* 7043 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7199 */;
+import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7469 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14650 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14666 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -22,7 +22,7 @@ function getScreens(analyticsLocation) {
   ({ predicate, showCurrentPlan, isBoostPurchaseFlow } = analyticsLocation);
   const intl = analyticsLocation(1128).intl;
   obj2.title = intl.string(analyticsLocation(1128).t.lpNrPu);
-  obj2.headerLeft = analyticsLocation(6478).getHeaderCloseButton(onClose);
+  obj2.headerLeft = analyticsLocation(6872).getHeaderCloseButton(onClose);
   obj2.initialParams = { analyticsLocation };
   obj2.render = function render() {
     return jsx(UserSettingsPremiumDefault, { applicationId, onClose, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation: true });
@@ -32,16 +32,16 @@ function getScreens(analyticsLocation) {
   const intl2 = analyticsLocation(1128).intl;
   obj4.title = intl2.string(analyticsLocation(1128).t["8jmdON"]);
   obj4.render = function render() {
-    return planId(onClose(14572), {});
+    return planId(onClose(14605), {});
   };
   obj[UserSettingsSections.PREMIUM_MANAGE_PLAN] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
   const intl3 = analyticsLocation(1128).intl;
   obj5.title = intl3.string(analyticsLocation(1128).t["+CbP2v"]);
-  const obj3 = analyticsLocation(6478);
-  obj5.headerLeft = analyticsLocation(6478).getHeaderCloseButton(onClose);
+  const obj3 = analyticsLocation(6872);
+  obj5.headerLeft = analyticsLocation(6872).getHeaderCloseButton(onClose);
   obj5.render = function render() {
-    return planId(onClose(14575), {});
+    return planId(onClose(14608), {});
   };
   obj[UserSettingsSections.GUILD_BOOSTING] = obj5;
   const obj7 = { title: null, headerLeft: null, initialParams: null, render: null };
@@ -65,8 +65,8 @@ function getScreens(analyticsLocation) {
   const obj8 = { title: null, headerLeft: null, render: null };
   const intl5 = analyticsLocation(1128).intl;
   obj8.title = intl5.string(analyticsLocation(1128).t.Oba8Sh);
-  const obj6 = analyticsLocation(6478);
-  obj8.headerLeft = analyticsLocation(6478).getHeaderCloseButton(onClose);
+  const obj6 = analyticsLocation(6872);
+  obj8.headerLeft = analyticsLocation(6872).getHeaderCloseButton(onClose);
   obj8.render = function render() {
     return jsx(UserSettingsPremiumGiftingDefault, { recipientUserId, analyticsLocation });
   };

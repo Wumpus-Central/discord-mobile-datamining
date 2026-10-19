@@ -1,10 +1,10 @@
-// === Module 18734: ExemptRolesActionSheet ===
+// === Module 18769: ExemptRolesActionSheet ===
 
-// Module 18734 (ExemptRolesActionSheet)
-import RoleNameDefault from "RoleName" /* 12571 */;
-import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 18735 */;
+// Module 18769 (ExemptRolesActionSheet)
+import RoleNameDefault from "RoleName" /* 12591 */;
+import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 18770 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2122 */;
+import GuildRoleStore from "GuildRoleStore" /* 4854 */;
 
 const require = fn;
 function renderRoleName(role) {
@@ -16,7 +16,7 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(2123).isEveryoneRole;
+const isEveryoneRole = fn(4855).isEveryoneRole;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -131,5 +131,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptRo
   obj2.getSearchText = getRoleName;
   obj2.renderLabel = renderRoleName;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(18735), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
+  return jsx(stateFromStores(18770), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
 });

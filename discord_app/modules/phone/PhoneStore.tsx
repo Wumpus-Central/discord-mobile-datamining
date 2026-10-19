@@ -1,9 +1,9 @@
-// === Module 6901: PhoneStore ===
+// === Module 6983: PhoneStore ===
 
-// Module 6901 (PhoneStore)
+// Module 6983 (PhoneStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CountryCodeUtils from "CountryCodeUtils" /* 6167 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 5607 */;
 import size from "module_2" /* 2 */;
 
 function handleSetLocationMetadata(countryCode) {

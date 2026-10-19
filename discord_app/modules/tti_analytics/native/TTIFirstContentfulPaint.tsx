@@ -1,9 +1,9 @@
-// === Module 12642: TTIFirstContentfulPaint ===
+// === Module 12662: TTIFirstContentfulPaint ===
 
-// Module 12642 (TTIFirstContentfulPaint)
+// Module 12662 (TTIFirstContentfulPaint)
 import TTITrackerDefault from "TTITracker" /* 9 */;
-import RootNavigationRef from "RootNavigationRef" /* 5073 */;
-import PostTTIScheduler from "PostTTIScheduler" /* 7621 */;
+import RootNavigationRef from "RootNavigationRef" /* 5112 */;
+import PostTTIScheduler from "PostTTIScheduler" /* 7684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export const TTIFirstContentfulPaint = ReactCompilerGating.isReactCompilerEnable
   }
   if (cResult[2] !== tmp4) {
     const obj2 = { onMeasurement: tmp4 };
-    const tmp7 = jsx(checkFocusedScreen(12643).TTIMeasurementView, { onMeasurement: tmp4 });
+    const tmp7 = jsx(checkFocusedScreen(12663).TTIMeasurementView, { onMeasurement: tmp4 });
     cResult[2] = tmp4;
     cResult[3] = tmp7;
     let tmp5 = tmp7;
@@ -59,5 +59,5 @@ export const TTIFirstContentfulPaint = ReactCompilerGating.isReactCompilerEnable
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     PostTTIScheduler.notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(12643).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(12663).TTIMeasurementView, { onMeasurement });
 });

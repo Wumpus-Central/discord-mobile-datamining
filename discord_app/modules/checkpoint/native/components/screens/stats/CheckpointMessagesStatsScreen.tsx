@@ -1,27 +1,27 @@
-// === Module 12772: CheckpointMessagesStatsScreen ===
+// === Module 12788: CheckpointMessagesStatsScreen ===
 
-// Module 12772 (CheckpointMessagesStatsScreen)
+// Module 12788 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3109 from "module_3109" /* 3109 */;
-import _modDef3141 from "module_3141" /* 3141 */;
-import CheckpointConstants from "CheckpointConstants" /* 5537 */;
-import CheckpointTextDefault from "CheckpointText" /* 12764 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12766 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12768 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12770 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12771 */;
-import _modDef12773 from "module_12773" /* 12773 */;
-import CheckpointStore from "CheckpointStore" /* 12742 */;
+import _modDef3046 from "module_3046" /* 3046 */;
+import _modDef3078 from "module_3078" /* 3078 */;
+import CheckpointConstants from "CheckpointConstants" /* 5970 */;
+import CheckpointTextDefault from "CheckpointText" /* 12780 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12782 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12784 */;
+import NumberAnimationDefault from "NumberAnimation" /* 12786 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12787 */;
+import _modDef12789 from "module_12789" /* 12789 */;
+import CheckpointStore from "CheckpointStore" /* 12762 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5191 */;
+import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const initialize = TOMBAW(504);
 const util = TOMBAW(1128);
-const ChatIcon = TOMBAW(8471);
+const ChatIcon = TOMBAW(8487);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                 }
                                 if (null != tmp25) {
                                   const intl4 = util.intl;
-                                  TOMBAW = _modDef3141.TOMBAW;
+                                  TOMBAW = _modDef3078.TOMBAW;
                                   const obj7 = {
                                     numMessages: tmp15,
                                     percent: tmp25,
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                 } else {
                                   const intl3 = util.intl;
                                   const obj8 = { numMessages: tmp15 };
-                                  formatResult = intl3.format(_modDef3141.cYCqz8, obj8);
+                                  formatResult = intl3.format(_modDef3078.cYCqz8, obj8);
                                 }
                                 cResult[49] = tmp15;
                                 cResult[50] = tmp25;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
   }
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3109.wWKySP);
+  const stringResult = intl.string(_modDef3046.wWKySP);
   if (null != bound) {
     const intl2 = util.intl;
     const obj12 = {
@@ -281,12 +281,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return arg0;
         }
     };
-    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3141.TOMBAW, obj12);
+    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3078.TOMBAW, obj12);
   }
   const tmp29Result = CheckpointScreenDefault;
   const container = tmp3.container;
   if (cResult[27] !== tmp3.image) {
-    const obj13 = { uri: _modDef12773, style: tmp3.image };
+    const obj13 = { uri: _modDef12789, style: tmp3.image };
     const tmp36 = timestampProducer(CheckpointApngPlayerDefault, obj13);
     cResult[27] = tmp3.image;
     cResult[28] = tmp36;
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
   }
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3109.wWKySP);
+  const stringResult = intl.string(_modDef3046.wWKySP);
   let formatToPlainStringResult;
   if (null != bound) {
     const intl2 = util.intl;
@@ -414,13 +414,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return arg0;
         }
     };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3141.TOMBAW, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3078.TOMBAW, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
   const obj5 = { uri: null, style: null };
   const tmp8Result = CheckpointScreenDefault;
-  obj5.uri = _modDef12773;
+  obj5.uri = _modDef12789;
   obj5.style = tmp.image;
   obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
   const items1 = [timestampProducer(View, obj4), ];
@@ -447,11 +447,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3141.TOMBAW, obj12);
+    let formatResult = intl4.format(_modDef3078.TOMBAW, obj12);
   } else {
     const intl3 = util.intl;
     const obj13 = { numMessages: rounded };
-    formatResult = intl3.format(_modDef3141.cYCqz8, obj13);
+    formatResult = intl3.format(_modDef3078.cYCqz8, obj13);
   }
   const obj14 = { children: null };
   obj11.children = formatResult;
