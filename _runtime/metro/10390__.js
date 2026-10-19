@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 277, height: 44, scales: [2, 3], hash: "80b2b0d70a370a3545b5c6b85cfa62d7", name: "img_boost_activated_border", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 106, height: 80, scales: [2, 3], hash: "f9a535d371ee710b8f1909e45896c667", name: "img_wumpus_nitro_rev", type: "png" });

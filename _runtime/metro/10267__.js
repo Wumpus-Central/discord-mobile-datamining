@@ -1,16 +1,14 @@
 // === Module 10267: ? ===
 
 // Module 10267
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10119 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10126 */;
-import _mod10263 from "module_10263" /* 10263 */;
+import _mod10264 from "module_10264" /* 10264 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ESMonthNameLittleEndianParser = require;
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10263.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10263.YEAR_PATTERN + "))?(?=\\W|$)", "i");
-class ESMonthNameLittleEndianParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ESMonthNameLittleEndianParser);
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ESMonthNameLittleEndianParser);
+    obj = closure_4(RUTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,48 +48,23 @@ class ESMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, _mod10264.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + RUTimeUnitAgoFormatParser(10262).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = ESMonthNameLittleEndianParser(10263).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", ESMonthNameLittleEndianParser(10263).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", ESMonthNameLittleEndianParser(10120).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
-        }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
-      }
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10262).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10136).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10135).reverseDuration(RUTimeUnitAgoFormatParser(10262).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(ESMonthNameLittleEndianParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

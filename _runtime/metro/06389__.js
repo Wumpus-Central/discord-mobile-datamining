@@ -1,33 +1,43 @@
 // === Module 6389: ? ===
 
 // Module 6389
-import _mod17 from "module_17" /* 17 */;
+import _mod1308 from "module_1308" /* 1308 */;
+import _mod1309 from "module_1309" /* 1309 */;
+import callBindBasic from "callBindBasic" /* 1318 */;
 
-const Image = _mod17.Image;
-
-export const parsePossibleSources = function parsePossibleSources(source) {
-  const uri = source.uri;
-  if (typeof source === "string") {
-    const obj2 = { sourceName: source };
-    let obj = obj2;
-  } else {
-    if (typeof source === "object") {
-      if (!uri) {
-        obj = { sourceJson: null };
-        const _JSON = JSON;
-        obj.sourceJson = JSON.stringify(source);
-      }
-    }
-    if (typeof source !== "object") {
-      if (typeof source === "number") {
-        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
-      }
-    }
-    if (uri.includes(".lottie")) {
-      const obj4 = { sourceDotLottieURI: uri };
-    } else {
-      const obj5 = { sourceURL: uri };
-    }
+const obj = {};
+try {
+  obj.__proto__ = null;
+  let _module = _mod1309;
+  if (_module) {
+    const _Object = Object;
+    _module = _mod1309(Object.prototype, "__proto__");
   }
-  return obj;
-};
+  let tmp6 = !("toString" in obj);
+  if (tmp6) {
+    let setDunder = _module;
+    if (setDunder) {
+      setDunder = typeof _module.set === "function";
+    }
+    if (setDunder) {
+      const items = [_module.set];
+      setDunder = callBindBasic(items);
+    }
+    if (!setDunder) {
+      setDunder = function setDunder(arg0, arg1) {
+        if (null == arg0) {
+          const tmp6 = new _mod1308("set Object.prototype.__proto__ called on null or undefined");
+          throw tmp6;
+        } else {
+          arg0.__proto__ = arg1;
+          return arg1;
+        }
+      };
+    }
+    tmp6 = setDunder;
+  }
+  module.exports = tmp6;
+  const tmp3 = "toString" in obj;
+} catch (tmp2) {
+  throw tmp2;
+}

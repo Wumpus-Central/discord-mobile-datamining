@@ -1,7 +1,15 @@
 // === Module 18917: ? ===
 
 // Module 18917
-import registerAsset from "module_1134" /* 1134 */;
+import _mod18918 from "module_18918" /* 18918 */;
+import capitalize from "capitalize" /* 18926 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "0ddefd9d8828364a18e4207ffcdf1e76", name: "ic_close_circle", type: "png" });
+export default _mod18918((arg0, str, arg2) => {
+  const formatted = str.toLowerCase();
+  let tmp2 = formatted;
+  if (arg2) {
+    tmp2 = capitalize(formatted);
+  }
+  return arg0 + tmp2;
+});

@@ -1,16 +1,16 @@
 // === Module 10306: ? ===
 
 // Module 10306
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10119 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10126 */;
-import _mod10307 from "module_10307" /* 10307 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10133 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10140 */;
+import _mod10302 from "module_10302" /* 10302 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const SVWeekdayParser = require;
+const ENCasualYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:p\u00E5\\s*?)?(?:(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10307.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*vecka)?(?=\\W|$)", "i");
-class SVWeekdayParser {
+const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10302.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
+class ENCasualYearMonthDayParser {
   constructor() {
     self = this;
-    tmp = c2(this, SVWeekdayParser);
+    tmp = c2(this, ENCasualYearMonthDayParser);
     tmp2 = closure_4;
-    obj = closure_4(SVWeekdayParser);
+    obj = closure_4(ENCasualYearMonthDayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class SVWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SVWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,26 +62,28 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
+    value: function innerExtract(arg0, arg1) {
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(arg1[3]);
+      } else {
+        parsed = ENCasualYearMonthDayParser(10302).MONTH_DICTIONARY[str.toLowerCase(str)];
       }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/förra|senaste/)) {
-        str4 = null;
-        if (str3.match(/nästa|kommande/)) {
-          str4 = "next";
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          const _parseInt2 = parseInt;
+          const date = { day: null, month: null, year: null };
+          const _parseInt3 = parseInt;
+          const parsed1 = parseInt(arg1[1]);
+          date.day = parseInt(arg1[4]);
+          date.month = parsed;
+          date.year = parsed1;
+          return date;
         }
       }
-      return SVWeekdayParser(10146).createParsingComponentsAtWeekday(reference.reference, SVWeekdayParser(10307).WEEKDAY_DICTIONARY[formatted], str4);
+      return null;
     }
   }
 ];
 
-export default _createClass(SVWeekdayParser, items);
+export default _createClass(ENCasualYearMonthDayParser, items);

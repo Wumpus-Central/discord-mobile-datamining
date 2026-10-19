@@ -1,9 +1,38 @@
 // === Module 4385: ? ===
 
 // Module 4385
-let closure_0 = { lastWeek: "'afgelopen' eeee 'om' p", yesterday: "'gisteren om' p", today: "'vandaag om' p", tomorrow: "'morgen om' p", nextWeek: "eeee 'om' p", other: "P" };
+import module_4235_mod from "module_4235" /* 4235 */;
+import module_4386_mod from "module_4386" /* 4386 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let module_4235 = module_4235_mod;
+if (!module_4235) {
+  const obj = { default: module_4235 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4235;
+}
+module_4235 = tmp3;
+let module_4386 = module_4386_mod;
+if (!module_4386) {
+  const obj2 = { default: module_4386 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4386;
+}
+module_4386 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 3600000;
+
+export default function addHours(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4386.default(interval, module_4235.default(arg1) * c3);
 };
 export default exports.default;

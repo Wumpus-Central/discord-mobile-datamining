@@ -1,26 +1,30 @@
 // === Module 4323: ? ===
 
 // Module 4323
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    let str = "'\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7' eeee '\u03C3\u03C4\u03B9\u03C2' p";
-    if (6 === getUTCDay.getUTCDay()) {
-      str = "'\u03C4\u03BF \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03BF' eeee '\u03C3\u03C4\u03B9\u03C2' p";
-    }
-    return str;
+import module_2077 from "module_2077" /* 2077 */;
+
+if (!module_2077) {
+  const obj2 = { default: module_2077 };
+  let obj = obj2;
+} else {
+  obj = module_2077;
+}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + "e";
   },
-  yesterday: "'\u03C7\u03B8\u03B5\u03C2 \u03C3\u03C4\u03B9\u03C2' p",
-  today: "'\u03C3\u03AE\u03BC\u03B5\u03C1\u03B1 \u03C3\u03C4\u03B9\u03C2' p",
-  tomorrow: "'\u03B1\u03CD\u03C1\u03B9\u03BF \u03C3\u03C4\u03B9\u03C2' p",
-  nextWeek: "eeee '\u03C3\u03C4\u03B9\u03C2' p",
-  other: "P"
+  era: obj.default({ values: { narrow: ["v.C.", "n.C."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["voor Christus", "na Christus"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["K1", "K2", "K3", "K4"], wide: ["1e kwartaal", "2e kwartaal", "3e kwartaal", "4e kwartaal"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mrt.", "apr.", "mei", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["Z", "M", "D", "W", "D", "V", "Z"], short: ["zo", "ma", "di", "wo", "do", "vr", "za"], abbreviated: ["zon", "maa", "din", "woe", "don", "vri", "zat"], wide: ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" }, abbreviated: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" }, wide: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" } }, defaultWidth: "wide" })
 };
 
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
+export default date;
 export default exports.default;

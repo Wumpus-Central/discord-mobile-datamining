@@ -1,14 +1,13 @@
 // === Module 10278: ? ===
 
 // Module 10278
-import _mod10275 from "module_10275" /* 10275 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10147 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +27,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeUnitAgoFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class ESTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ESTimeExpressionParser);
+    tmp2 = c2;
+    obj = c2(ESTimeExpressionParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,23 +49,22 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10275.AbstractParserWithLeftBoundaryChecking);
+_classCallCheck = ESTimeExpressionParser;
+_inherits(ESTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(10273).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
   }
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(10273).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(10122).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitAgoFormatParser(10121).reverseDuration(UKTimeUnitAgoFormatParser(10273).parseDuration(arg1[1])));
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
     }
   }
 ];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(ESTimeExpressionParser, items);

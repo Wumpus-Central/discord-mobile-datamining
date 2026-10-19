@@ -1,14 +1,30 @@
 // === Module 15334: ? ===
 
 // Module 15334
-import _mod15335 from "module_15335" /* 15335 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0) => {
-  if (_mod15335(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
+export const getSupportedCalendars = function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("module_15335").calendars;
+  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-ca-");
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+      if ("gregory" === item) {
+        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
 };

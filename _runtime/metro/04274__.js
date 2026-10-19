@@ -1,7 +1,9 @@
 // === Module 4274: ? ===
 
 // Module 4274
-import registerAsset from "module_1134" /* 1134 */;
+let closure_0 = { lastWeek: "'viime' eeee 'klo' p", yesterday: "'eilen klo' p", today: "'t\u00E4n\u00E4\u00E4n klo' p", tomorrow: "'huomenna klo' p", nextWeek: "'ensi' eeee 'klo' p", other: "P" };
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==", scales: [1], hash: "b5aa88b0863af1ad236e39b33c4c4f72", name: "lt.messages.b5aa88b0863af1ad236e39b33c4c4f72.compiled.messages", type: "jsona" });
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
+export default exports.default;

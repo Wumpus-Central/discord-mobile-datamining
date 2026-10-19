@@ -1,95 +1,56 @@
 // === Module 15134: ? ===
 
 // Module 15134
-const require = globalThis.__r;
+import _mod15124 from "module_15124" /* 15124 */;
 
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj;
-  _require = arg3;
-  let tmp3 = new require("module_15097")(arg0, arg3);
-  const tmp4 = new require("module_15126")(arg1, arg3);
-  if (">" === arg2) {
-    dependencyMap = tmp(15117);
-    let tmpResult = tmp(15122);
-    const tmpResult3 = tmp(15118);
-    closure_2 = tmpResult3;
-    let str3 = ">=";
-    let str = ">";
-    let tmpResult4 = tmpResult3;
+export default (arg0, arg1) => {
+  const obj = _mod15124(arg0, null, true);
+  const tmp = _mod15124(arg1, null, true);
+  const compareResult = obj.compare(tmp);
+  if (0 === compareResult) {
+    return null;
   } else {
-    str = "<";
-    if ("<" === arg2) {
-      dependencyMap = tmp(15118);
-      tmpResult = tmp(15121);
-      tmpResult4 = tmp(15117);
-      closure_2 = tmpResult4;
-      str3 = "<=";
-    } else {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
-      throw typeError;
+    let tmp3 = tmp;
+    if (compareResult > 0) {
+      tmp3 = obj;
     }
-  }
-  if (require("module_15128")(tmp3, tmp4, arg3)) {
-    return false;
-  } else {
-    let num = 0;
-    let num3 = 0;
-    if (0 < tmp4.set.length) {
-      while (true) {
-        let arr = tmp4.set[num3];
-        _require = null;
-        dependencyMap = null;
-        let item = arr.forEach((semver) => {
-          let tmp = semver;
-          if (semver.semver === closure_0(semver[7]).ANY) {
-            tmp = new tmp2(tmp3[7])(">=0.0.0");
-          }
-          let tmp6 = closure_0;
-          if (!closure_0) {
-            tmp6 = tmp;
-          }
-          closure_0 = tmp6;
-          let tmp7 = semver;
-          if (!semver) {
-            tmp7 = tmp;
-          }
-          semver = tmp7;
-          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
-            closure_0 = tmp;
-          } else if (React2(tmp.semver, semver.semver, require)) {
-            semver = tmp;
-          }
-          tmp2 = closure_0;
-          tmp3 = semver;
-        });
-        if (_require.operator !== str) {
-          if (_require.operator !== str3) {
-            if (!dependencyMap.operator) {
-              if (tmpResult(tmp3, dependencyMap.semver)) {
-                obj = { v: false };
-              }
+    let tmp4 = obj;
+    if (compareResult > 0) {
+      tmp4 = tmp;
+    }
+    if (tmp4.prerelease.length) {
+      if (!length) {
+        if (tmp4.patch) {
+          let str2 = "patch";
+          if (!tmp3.patch) {
+            let str3 = "major";
+            if (tmp3.minor) {
+              str3 = "minor";
             }
-            let obj2;
-            if (dependencyMap.operator === str3) {
-              if (tmpResult4(tmp3, dependencyMap.semver)) {
-                obj2 = { v: false };
-              }
-            }
-            obj = obj2;
+            str2 = str3;
           }
-          if (obj) {
-            break;
-          } else {
-            num3 = num + 1;
-            num = num3;
-          }
+          let str = str2;
+        } else {
+          str = "major";
         }
-        obj = { v: false };
+        return str;
       }
-      return obj.v;
     }
-    return true;
+    let str4 = "";
+    if (tmp3.prerelease.length) {
+      str4 = "pre";
+    }
+    if (obj.major !== tmp.major) {
+      let str5 = `${str4}major`;
+    } else if (obj.minor !== tmp.minor) {
+      str5 = `${str4}minor`;
+    } else {
+      str5 = "prerelease";
+      if (obj.patch !== tmp.patch) {
+        str5 = `${str4}patch`;
+      }
+    }
+    return str5;
   }
 };

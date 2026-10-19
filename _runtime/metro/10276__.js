@@ -1,14 +1,16 @@
 // === Module 10276: ? ===
 
 // Module 10276
-import _mod10275 from "module_10275" /* 10275 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10133 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10140 */;
+import _mod10277 from "module_10277" /* 10277 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UkMonthNameParser = require;
+const ESWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UkMonthNameParser {
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|pasado|pr[o\u00F3]ximo)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10277.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|pasado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)", "i");
+class ESWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, UkMonthNameParser);
+    tmp = c2(this, ESWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(UkMonthNameParser);
+    obj = closure_4(ESWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,40 +51,41 @@ class UkMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UkMonthNameParser, _mod10275.AbstractParserWithLeftBoundaryChecking);
+_inherits(ESWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "((?:\u0432|\u0443)\\s*)?(" + UkMonthNameParser(10119).matchAnyPattern(UkMonthNameParser(10273).MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + UkMonthNameParser(10273).YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!UkMonthNameParser(10273).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = UkMonthNameParser(10273).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", UkMonthNameParser(10273).parseYearPattern(index[3]));
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      const tmp4 = ESWeekdayParser(10277).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
       } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", UkMonthNameParser(10120).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9));
+        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
+        let str5 = "this";
+        if ("pasado" != formatted1) {
+          str5 = "next";
+          if ("pr\u00F3ximo" != formatted1) {
+            str5 = "next";
+            if ("proximo" != formatted1) {
+              str5 = null;
+              if ("este" == formatted1) {
+                str5 = "this";
+              }
+            }
+          }
+        }
+        return ESWeekdayParser(10160).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
-      return parsingResult;
     }
   }
 ];
 
-export default _createClass(UkMonthNameParser, items);
+export default _createClass(ESWeekdayParser, items);

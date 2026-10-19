@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_2hzotq2fhhtzqjz6caubttu6v4/node_modules/@react-navigation/elements/lib/module/assets", width: 96, height: 96, scales: [1, 1, 2, 3, 4], hash: "3162e8a244d8f6fbd259e79043e23ce4", name: "close-icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "6d22344f328170a77fc1da6d56f802d8", name: "img_account_sync_reddit_light_and_dark", type: "png" });

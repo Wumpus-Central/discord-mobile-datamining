@@ -1,34 +1,52 @@
 // === Module 12448: ? ===
 
 // Module 12448
-import _mod12386 from "module_12386" /* 12386 */;
-import _mod12413 from "module_12413" /* 12413 */;
-import _mod12414 from "module_12414" /* 12414 */;
+import _mod12406 from "module_12406" /* 12406 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12411 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 12421 */;
+import _mod12434 from "module_12434" /* 12434 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const initAndBind = function initAndBind(arg0, debug) {
-  if (true === debug.debug) {
-    const obj = _mod12386;
-    if (_mod12414.DEBUG_BUILD) {
-      const logger = obj.logger;
-      logger.enable();
-    } else {
-      obj.consoleSandbox(() => {
-        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+  }
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  }
+  if (rootSpan) {
+    if (_mod12434.DEBUG_BUILD) {
+      const logger = _mod12406.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+    }
+    const obj2 = {};
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
+  }
+};
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
+        }
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
       });
+      return obj;
     }
   }
-  const currentScope = _mod12413.getCurrentScope();
-  currentScope.update(debug.initialScope);
-  const obj4 = new arg0(debug);
-  const currentScope1 = _mod12413.getCurrentScope();
-  currentScope1.setClient(obj4);
-  obj4.init();
-  return obj4;
-};
-export const setCurrentClient = function setCurrentClient(arg0) {
-  const currentScope = _mod12413.getCurrentScope();
-  currentScope.setClient(arg0);
 };

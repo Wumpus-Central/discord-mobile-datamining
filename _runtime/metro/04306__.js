@@ -1,30 +1,71 @@
 // === Module 4306: ? ===
 
 // Module 4306
-import module_2140 from "module_2140" /* 2140 */;
+import module_2080 from "module_2080" /* 2080 */;
+import module_2079 from "module_2079" /* 2079 */;
 
-if (!module_2140) {
-  const obj2 = { default: module_2140 };
+if (!module_2080) {
+  const obj2 = { default: module_2080 };
   let obj = obj2;
 } else {
-  obj = module_2140;
+  obj = module_2080;
+}
+if (!module_2079) {
+  const obj4 = { default: module_2079 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2079;
 }
 const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
-  },
-  era: obj.default({ values: { narrow: ["p\u0159. n. l.", "n. l."], abbreviated: ["p\u0159. n. l.", "n. l."], wide: ["p\u0159ed na\u0161\u00EDm letopo\u010Dtem", "na\u0161eho letopo\u010Dtu"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1. \u010Dtvrtlet\u00ED", "2. \u010Dtvrtlet\u00ED", "3. \u010Dtvrtlet\u00ED", "4. \u010Dtvrtlet\u00ED"], wide: ["1. \u010Dtvrtlet\u00ED", "2. \u010Dtvrtlet\u00ED", "3. \u010Dtvrtlet\u00ED", "4. \u010Dtvrtlet\u00ED"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+  ordinalNumber: obj.default({
+    matchPattern: /^第?\d+(年|四半期|月|週|日|時|分|秒)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
   }),
-  month: obj.default({ values: { narrow: ["L", "\u00DA", "B", "D", "K", "\u010C", "\u010C", "S", "Z", "\u0158", "L", "P"], abbreviated: ["led", "\u00FAno", "b\u0159e", "dub", "kv\u011B", "\u010Dvn", "\u010Dvc", "srp", "z\u00E1\u0159", "\u0159\u00EDj", "lis", "pro"], wide: ["leden", "\u00FAnor", "b\u0159ezen", "duben", "kv\u011Bten", "\u010Derven", "\u010Dervenec", "srpen", "z\u00E1\u0159\u00ED", "\u0159\u00EDjen", "listopad", "prosinec"] }, defaultWidth: "wide", formattingValues: { narrow: ["L", "\u00DA", "B", "D", "K", "\u010C", "\u010C", "S", "Z", "\u0158", "L", "P"], abbreviated: ["led", "\u00FAno", "b\u0159e", "dub", "kv\u011B", "\u010Dvn", "\u010Dvc", "srp", "z\u00E1\u0159", "\u0159\u00EDj", "lis", "pro"], wide: ["ledna", "\u00FAnora", "b\u0159ezna", "dubna", "kv\u011Btna", "\u010Dervna", "\u010Dervence", "srpna", "z\u00E1\u0159\u00ED", "\u0159\u00EDjna", "listopadu", "prosince"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["ne", "po", "\u00FAt", "st", "\u010Dt", "p\u00E1", "so"], short: ["ne", "po", "\u00FAt", "st", "\u010Dt", "p\u00E1", "so"], abbreviated: ["ned", "pon", "\u00FAte", "st\u0159", "\u010Dtv", "p\u00E1t", "sob"], wide: ["ned\u011Ble", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159eda", "\u010Dtvrtek", "p\u00E1tek", "sobota"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, abbreviated: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, wide: { am: "dopoledne", pm: "odpoledne", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, abbreviated: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, wide: { am: "dopoledne", pm: "odpoledne", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" } }, defaultFormattingWidth: "wide" })
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
+const obj6 = { matchPatterns: { narrow: /^(B\.?C\.?|A\.?D\.?)/i, abbreviated: /^(紀元[前後]|西暦)/i, wide: /^(紀元[前後]|西暦)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { narrow: null, any: null };
+const items = [/^B/i, /^A/i];
+obj7.narrow = items;
+const items1 = [/^(紀元前)/i, /^(西暦|紀元後)/i];
+obj7.any = items1;
+obj6.parsePatterns = obj7;
+date.era = obj3.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^Q[1234]/i, wide: /^第[1234一二三四１２３４]四半期/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { any: null };
+const items2 = [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i];
+obj9.any = items2;
+obj8.parsePatterns = obj9;
+date.quarter = obj3.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^([123456789]|1[012])/, abbreviated: /^([123456789]|1[012])月/i, wide: /^([123456789]|1[012])月/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { any: null };
+const items3 = [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj3.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[日月火水木金土]/, short: /^[日月火水木金土]/, abbreviated: /^[日月火水木金土]/, wide: /^[日月火水木金土]曜日/ }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { any: null };
+const items4 = [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/];
+obj13.any = items4;
+obj12.parsePatterns = obj13;
+date.day = obj3.default(obj12);
+const obj14 = { matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^(A|午前)/i, pm: /^(P|午後)/i, midnight: /^深夜|真夜中/i, noon: /^正午/i, morning: /^朝/i, afternoon: /^午後/i, evening: /^夜/i, night: /^深夜/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj3.default(obj14);
 
 export default date;
 export default exports.default;

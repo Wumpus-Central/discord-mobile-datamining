@@ -1,8 +1,5 @@
 // === Module 8719: ? ===
 
 // Module 8719
-import emptyFunction from "module_5042" /* 5042 */;
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
-
-export default emptyFunction.shape(point);
+export default { NONE: "", INVERT: "CIColorInvert", MONOCHROME: "CIColorMonochrome", POSTERIZE: "CIColorPosterize", FALSE: "CIFalseColor", MAXIMUMCOMPONENT: "CIMaximumComponent", MINIMUMCOMPONENT: "CIMinimumComponent", CHROME: "CIPhotoEffectChrome", FADE: "CIPhotoEffectFade", INSTANT: "CIPhotoEffectInstant", MONO: "CIPhotoEffectMono", NOIR: "CIPhotoEffectNoir", PROCESS: "CIPhotoEffectProcess", TONAL: "CIPhotoEffectTonal", TRANSFER: "CIPhotoEffectTransfer", SEPIA: "CISepiaTone" };

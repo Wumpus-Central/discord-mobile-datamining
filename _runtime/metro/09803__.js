@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "d6c65250c1813722d34dd286c312a88f", name: "img_nitro_classic_icon_white_80px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon", width: 60, height: 60, scales: [2, 3], hash: "def0b6d35103453cf4894471df6b84ad", name: "BlushIcon", type: "png" });

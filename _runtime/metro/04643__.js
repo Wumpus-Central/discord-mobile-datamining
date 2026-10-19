@@ -1,30 +1,107 @@
 // === Module 4643: ? ===
 
 // Module 4643
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4455 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import _typeof_mod from "module_4231" /* 4231 */;
+import module_4644_mod from "module_4644" /* 4644 */;
+import module_4235_mod from "module_4235" /* 4235 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = _typeof;
 }
-startOfISOWeekYear = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+_typeof = tmp3;
+let module_4644 = module_4644_mod;
+if (!module_4644) {
+  const obj2 = { default: module_4644 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4644;
 }
-requiredArgs = tmp5;
+module_4644 = tmp5;
+let module_4235 = module_4235_mod;
+if (!module_4235) {
+  const obj3 = { default: module_4235 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4235;
+}
+module_4235 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function isSameISOWeekYear(arg0, arg1) {
+export default function set(arg0, year) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfISOWeekYear.default(arg1).getTime();
+  if ("object" === _typeof(year)) {
+    if (null !== year) {
+      const defaultResult1 = _typeof.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult1.getTime())) {
+        const _Date = Date;
+        const date = new Date(NaN);
+        return date;
+      } else {
+        if (null != year.year) {
+          defaultResult1.setFullYear(year.year);
+        }
+        let defaultResult2 = defaultResult1;
+        if (null != year.month) {
+          defaultResult2 = module_4644.default(defaultResult1, year.month);
+        }
+        if (null != year.date) {
+          defaultResult2.setDate(module_4235.default(year.date));
+        }
+        if (null != year.hours) {
+          defaultResult2.setHours(module_4235.default(year.hours));
+        }
+        if (null != year.minutes) {
+          defaultResult2.setMinutes(module_4235.default(year.minutes));
+        }
+        if (null != year.seconds) {
+          defaultResult2.setSeconds(module_4235.default(year.seconds));
+        }
+        if (null != year.milliseconds) {
+          defaultResult2.setMilliseconds(module_4235.default(year.milliseconds));
+        }
+        return defaultResult2;
+      }
+    }
+  }
+  const rangeError = new RangeError("values parameter must be an object");
+  throw rangeError;
 };
 export default exports.default;

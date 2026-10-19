@@ -1,73 +1,95 @@
 // === Module 4739: ? ===
 
 // Module 4739
-import module_2142 from "module_2142" /* 2142 */;
-import module_2143 from "module_2143" /* 2143 */;
+import _mod2050 from "module_2050" /* 2050 */;
 
-if (!module_2142) {
-  const obj2 = { default: module_2142 };
-  let obj = obj2;
-} else {
-  obj = module_2142;
-}
-if (!module_2143) {
-  const obj4 = { default: module_2143 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2143;
-}
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(-?(е|й|є|а|я))?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+const fn = function n(moment) {
+  closure_0 = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_");
+  closure_1 = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
+  const items = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i];
+  const tmp = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+  let obj = {
+    months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
+    monthsShort(arg0, arg1) {
+      if (arg0) {
+        if (obj.test(arg1)) {
+          let tmp3 = closure_1[arg0.month(arg0)];
+        } else {
+          tmp3 = closure_0[arg0.month(arg0)];
+        }
+        obj = /-MMM-/;
+      } else {
+        return closure_0;
+      }
+    },
+    monthsRegex: tmp,
+    monthsShortRegex: tmp,
+    monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
+    monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
+    monthsParse: items,
+    longMonthsParse: items,
+    shortMonthsParse: items,
+    weekdays: "domingo_lunes_martes_mi\u00E9rcoles_jueves_viernes_s\u00E1bado".split("_"),
+    weekdaysShort: "dom._lun._mar._mi\u00E9._jue._vie._s\u00E1b.".split("_"),
+    weekdaysMin: "do_lu_ma_mi_ju_vi_s\u00E1".split("_"),
+    weekdaysParseExact: true,
+    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD/MM/YYYY", LL: "D [de] MMMM [de] YYYY", LLL: "D [de] MMMM [de] YYYY H:mm", LLLL: "dddd, D [de] MMMM [de] YYYY H:mm" },
+    calendar: {
+      sameDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[hoy a la" + str + "] LT";
+      },
+      nextDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[ma\u00F1ana a la" + str + "] LT";
+      },
+      nextWeek() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "dddd [a la" + str + "] LT";
+      },
+      lastDay() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[ayer a la" + str + "] LT";
+      },
+      lastWeek() {
+        let str = "";
+        if (1 !== this.hours()) {
+          str = "s";
+        }
+        return "[el] dddd [pasado a la" + str + "] LT";
+      },
+      sameElse: "L"
+    },
+    relativeTime: { future: "en %s", past: "hace %s", s: "unos segundos", ss: "%d segundos", m: "un minuto", mm: "%d minutos", h: "una hora", hh: "%d horas", d: "un d\u00EDa", dd: "%d d\u00EDas", w: "una semana", ww: "%d semanas", M: "un mes", MM: "%d meses", y: "un a\u00F1o", yy: "%d a\u00F1os" },
+    dayOfMonthOrdinalParse: /\d{1,2}º/,
+    ordinal: "%d\u00BA",
+    week: { dow: 1, doy: 4 },
+    invalidDate: "Fecha inv\u00E1lida"
+  };
+  return moment.defineLocale("es", obj);
+};
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      fn(_mod2050);
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^((до )?н\.?\s?е\.?)/i, abbreviated: /^((до )?н\.?\s?е\.?)/i, wide: /^(до нашої ери|нашої ери|наша ера)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^д/i, /^н/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[иі]?й?)? кв.?/i, wide: /^[1234](-?[иі]?й?)? квартал/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
   }
-};
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[слбктчвжг]/i, abbreviated: /^(січ|лют|бер(ез)?|квіт|трав|черв|лип|серп|вер(ес)?|жовт|лис(топ)?|груд)\.?/i, wide: /^(січень|січня|лютий|лютого|березень|березня|квітень|квітня|травень|травня|червня|червень|липень|липня|серпень|серпня|вересень|вересня|жовтень|жовтня|листопад[а]?|грудень|грудня)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^с/i, /^л/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^л/i, /^с/i, /^в/i, /^ж/i, /^л/i, /^г/i];
-obj11.narrow = items2;
-const items3 = [/^сі/i, /^лю/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^лип/i, /^се/i, /^в/i, /^ж/i, /^лис/i, /^г/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)\.?/i, abbreviated: /^(нед|пон|вів|сер|че?тв|птн?|суб)\.?/i, wide: /^(неділ[яі]|понеділ[ок][ка]|вівтор[ок][ка]|серед[аи]|четвер(га)?|п\W*?ятниц[яі]|субот[аи])/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, any: null };
-const items4 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
-obj13.narrow = items4;
-const items5 = [/^н/i, /^п[он]/i, /^в/i, /^с[ер]/i, /^ч/i, /^п\W*?[ят]/i, /^с[уб]/i];
-obj13.any = items5;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, abbreviated: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, wide: /^([дп]п|північ|полудень|ранок|ранку|день|дня|вечір|вечора|ніч|ночі)/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^дп/i, pm: /^пп/i, midnight: /^півн/i, noon: /^пол/i, morning: /^р/i, afternoon: /^д[ен]/i, evening: /^в/i, night: /^н/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
-export default exports.default;
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], fn);
+  }
+}
+fn(this.moment);

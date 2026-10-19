@@ -39,7 +39,7 @@ const obj = {
   },
   poly(arg0) {
     closure_0 = arg0;
-    return (sum) => Math.pow(sum, closure_0);
+    return (arg0) => Math.pow(arg0, closure_0);
   },
   sin(arg0) {
     return 1 - Math.cos(arg0 * Math.PI / 2);

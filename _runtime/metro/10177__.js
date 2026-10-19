@@ -2,7 +2,7 @@
 
 // Module 10177
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10133 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10147 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-class FRTimeExpressionParser {
+class DETimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, FRTimeExpressionParser);
+    tmp = closure_0(this, DETimeExpressionParser);
     tmp2 = c2;
-    obj = c2(FRTimeExpressionParser);
+    obj = c2(DETimeExpressionParser);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp7 = globalThis;
@@ -50,12 +50,12 @@ class FRTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FRTimeExpressionParser;
-_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = DETimeExpressionParser;
+_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
   key: "primaryPrefix",
   value: function primaryPrefix() {
-    return "(?:(?:[\u00E0a])\\s*)?";
+    return "(?:(?:um|von)\\s*)?";
   }
 };
 let items = [
@@ -63,7 +63,7 @@ let items = [
   {
     key: "followingPhase",
     value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
     }
   },
   {
@@ -84,4 +84,4 @@ let items = [
   }
 ];
 
-export default _createClass(FRTimeExpressionParser, items);
+export default _createClass(DETimeExpressionParser, items);

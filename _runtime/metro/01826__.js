@@ -68,8 +68,8 @@ const fn2 = function t(arr, arg1) {
 fn2.__closure = {};
 fn2.__workletHash = 16826369876333;
 fn2.__initData = { code: "function pnpm_interpolateColorTs2(x,gamma){return x.map(function(v){return Math.pow(v/255,gamma);});}" };
-const fn3 = function r(sum, arg1) {
-  return Math.round(255 * Math.pow(sum, 1 / arg1));
+const fn3 = function r(arg0, arg1) {
+  return Math.round(255 * Math.pow(arg0, 1 / arg1));
 };
 fn3.__closure = {};
 fn3.__workletHash = 5856560656141;

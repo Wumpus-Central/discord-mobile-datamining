@@ -2,14 +2,7 @@
 
 // Module 5417
 import _mod17 from "module_17" /* 17 */;
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsHostAndroid", directEventTypes: { topTabSelected: { registrationName: "onTabSelected" }, topTabSelectionRejected: { registrationName: "onTabSelectionRejected" }, topTabSelectionPrevented: { registrationName: "onTabSelectionPrevented" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onTabSelected: true, onTabSelectionRejected: true, onTabSelectionPrevented: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { navStateRequest: true, rejectStaleNavStateUpdates: true, tabBarHidden: true, nativeContainerBackgroundColor: _mod26.colorAttribute, colorScheme: true, tabBarRespectsIMEInsets: true };
+const StyleSheet = _mod17.StyleSheet;
 
-export default module_65.get("RNSTabsHostAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });

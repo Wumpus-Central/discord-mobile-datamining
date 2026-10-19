@@ -1,11 +1,7 @@
 // === Module 6508: ? ===
 
 // Module 6508
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "11d22afa82357c17306bb835b9fe7074", name: "img_account_sync_x_white", type: "svg" });

@@ -1,40 +1,80 @@
 // === Module 4404: ? ===
 
 // Module 4404
-import module_2140 from "module_2140" /* 2140 */;
+import _typeof_mod from "module_4231" /* 4231 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-if (!module_2140) {
-  const obj2 = { default: module_2140 };
-  let obj = obj2;
-} else {
-  obj = module_2140;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
-const date = {
-  ordinalNumber(arg0, unit) {
-    Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    if ("week" === unit) {
-      let text = `${tmp}ª`;
-    } else {
-      text = `${tmp}º`;
-    }
-    return text;
-  },
-  era: obj.default({ values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "depois de cristo"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
-    }
-  }),
-  month: obj.default({ values: { narrow: ["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], abbreviated: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"], wide: ["janeiro", "fevereiro", "mar\u00E7o", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["D", "S", "T", "Q", "Q", "S", "S"], short: ["dom", "seg", "ter", "qua", "qui", "sex", "sab"], abbreviated: ["domingo", "segunda", "ter\u00E7a", "quarta", "quinta", "sexta", "s\u00E1bado"], wide: ["domingo", "segunda-feira", "ter\u00E7a-feira", "quarta-feira", "quinta-feira", "sexta-feira", "s\u00E1bado"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" }, abbreviated: { am: "AM", pm: "PM", midnight: "meia-noite", noon: "meio-dia", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" }, wide: { am: "a.m.", pm: "p.m.", midnight: "meia-noite", noon: "meio-dia", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" }, abbreviated: { am: "AM", pm: "PM", midnight: "meia-noite", noon: "meio-dia", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" }, wide: { am: "a.m.", pm: "p.m.", midnight: "meia-noite", noon: "meio-dia", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" } }, defaultFormattingWidth: "wide" })
-};
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default date;
+export default function min(arg0) {
+  requiredArgs.default(1, arguments);
+  if (!arg0) {
+    if ("object" === _typeof(arg0)) {
+      if (null !== arg0) {
+        const _Array = Array;
+        const call = slice.call;
+        let arr = typeof call === "unknown" ? slice() : call(arg0);
+      }
+    }
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    arr = arg0;
+  }
+  const item = arr.forEach((item) => {
+    defaultResult = _typeof.default(item);
+    let isNaNResult = undefined === defaultResult || defaultResult > defaultResult;
+    if (!isNaNResult) {
+      const _isNaN = isNaN;
+      isNaNResult = isNaN(defaultResult.getDate());
+    }
+  });
+  let date1 = _typeof;
+  if (!_typeof) {
+    const _Date2 = Date;
+    date1 = new Date(NaN);
+  }
+  return date1;
+};
 export default exports.default;

@@ -1,17 +1,17 @@
 // === Module 4594: ? ===
 
 // Module 4594
-import _typeof_mod from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_4586_mod from "module_4586" /* 4586 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4586 = module_4586_mod;
+if (!module_4586) {
+  const obj = { default: module_4586 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4586;
 }
-_typeof = tmp3;
+module_4586 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,9 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFuture(arg0) {
+export default function isThisYear(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+  return module_4586.default(arg0, Date.now());
 };
 export default exports.default;

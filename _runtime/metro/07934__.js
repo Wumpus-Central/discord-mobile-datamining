@@ -1,15 +1,16 @@
 // === Module 7934: ? ===
 
 // Module 7934
-import _modDef7867 from "module_7867" /* 7867 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7930 from "module_7930" /* 7930 */;
+import _modDef7935 from "module_7935" /* 7935 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const RadialGradient = importDefault;
+const Circle = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class RadialGradient {
+class Circle {
   constructor() {
     self = this;
-    tmp = c2(this, RadialGradient);
-    tmp2 = closure_4;
-    obj = closure_4(RadialGradient);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Circle);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Circle);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,35 +52,26 @@ class RadialGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RadialGradient, _modDef7867);
+_inherits(Circle, _modDef7930);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ rx, ry, r, cx, cy, fx } = props);
-    if (undefined === fx) {
-      fx = cx;
-    }
-    let fy = props.fy;
-    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
-    if (undefined === fy) {
-      fy = cy;
-    }
-    obj.fy = fy;
-    if (!rx) {
-      rx = r;
-    }
-    obj.rx = rx;
-    if (!ry) {
-      ry = r;
-    }
-    obj.ry = ry;
+    const obj = {};
+    ({ cx, cy, r } = props);
+    const merged = Object.assign(Circle(7921).extract(this, props));
     obj.cx = cx;
     obj.cy = cy;
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(RadialGradient(7920)(props, this));
-    return jsx(RadialGradient(7935), {
+    obj.r = r;
+    const obj2 = Circle(7921);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef7935, {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -86,8 +79,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(RadialGradient, items);
-importDefaultResultResult.displayName = "RadialGradient";
-importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+const importDefaultResultResult = _createClass(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

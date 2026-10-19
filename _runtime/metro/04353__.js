@@ -1,40 +1,44 @@
 // === Module 4353: ? ===
 
 // Module 4353
-let closure_0 = { about: "k\u00F6r\u00FClbel\u00FCl", over: "t\u00F6bb mint", almost: "majdnem", lessthan: "kevesebb mint" };
-let closure_1 = { xseconds: " m\u00E1sodperc", halfaminute: "f\u00E9l perc", xminutes: " perc", xhours: " \u00F3ra", xdays: " nap", xweeks: " h\u00E9t", xmonths: " h\u00F3nap", xyears: " \u00E9v" };
-let closure_2 = { xseconds: { "-1": " m\u00E1sodperccel ezel\u0151tt", 1: " m\u00E1sodperc m\u00FAlva", 0: " m\u00E1sodperce" }, halfaminute: { "-1": "f\u00E9l perccel ezel\u0151tt", 1: "f\u00E9l perc m\u00FAlva", 0: "f\u00E9l perce" }, xminutes: { "-1": " perccel ezel\u0151tt", 1: " perc m\u00FAlva", 0: " perce" }, xhours: { "-1": " \u00F3r\u00E1val ezel\u0151tt", 1: " \u00F3ra m\u00FAlva", 0: " \u00F3r\u00E1ja" }, xdays: { "-1": " nappal ezel\u0151tt", 1: " nap m\u00FAlva", 0: " napja" }, xweeks: { "-1": " h\u00E9ttel ezel\u0151tt", 1: " h\u00E9t m\u00FAlva", 0: " hete" }, xmonths: { "-1": " h\u00F3nappal ezel\u0151tt", 1: " h\u00F3nap m\u00FAlva", 0: " h\u00F3napja" }, xyears: { "-1": " \u00E9vvel ezel\u0151tt", 1: " \u00E9v m\u00FAlva", 0: " \u00E9ve" } };
+import module_2077 from "module_2077" /* 2077 */;
 
-export default function formatDistance(str, arg1, addSuffix) {
-  const match = str.match(/about|over|almost|lessthan/i);
-  if (match) {
-    str = str.replace(match[0], "");
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  const formatted = str.toLowerCase();
-  let num;
-  if (null != addSuffix) {
-    num = addSuffix.comparison;
-  }
-  if (!num) {
-    num = 0;
-  }
-  if (true === addSuffix) {
-    let tmp5 = closure_2[formatted][num];
-  } else {
-    tmp5 = closure_1[formatted];
-  }
-  let sum = tmp5;
-  if ("halfaminute" !== formatted) {
-    sum = arg1 + tmp5;
-  }
-  let text = sum;
-  if (match) {
-    text = `${closure_0[str3.toLowerCase(str3)]} ${tmp7}`;
-  }
-  return text;
+if (!module_2077) {
+  const obj2 = { default: module_2077 };
+  let obj = obj2;
+} else {
+  obj = module_2077;
+}
+const date = {
+  ordinalNumber(arg0, unit) {
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    let str = "-\u0435";
+    if ("date" !== unit) {
+      if ("week" !== unit) {
+        if ("minute" !== unit) {
+          let str4 = "-\u0439";
+        }
+        str = str4;
+      }
+      str4 = "-\u044F";
+    }
+    return Number(arg0) + str;
+  },
+  era: obj.default({ values: { narrow: ["\u0434\u043E \u043D.\u044D.", "\u043D.\u044D."], abbreviated: ["\u0434\u043E \u043D. \u044D.", "\u043D. \u044D."], wide: ["\u0434\u043E \u043D\u0430\u0448\u0435\u0439 \u044D\u0440\u044B", "\u043D\u0430\u0448\u0435\u0439 \u044D\u0440\u044B"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1-\u0439 \u043A\u0432.", "2-\u0439 \u043A\u0432.", "3-\u0439 \u043A\u0432.", "4-\u0439 \u043A\u0432."], wide: ["1-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "2-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "3-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "4-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["\u042F", "\u0424", "\u041C", "\u0410", "\u041C", "\u0418", "\u0418", "\u0410", "\u0421", "\u041E", "\u041D", "\u0414"], abbreviated: ["\u044F\u043D\u0432.", "\u0444\u0435\u0432.", "\u043C\u0430\u0440\u0442", "\u0430\u043F\u0440.", "\u043C\u0430\u0439", "\u0438\u044E\u043D\u044C", "\u0438\u044E\u043B\u044C", "\u0430\u0432\u0433.", "\u0441\u0435\u043D\u0442.", "\u043E\u043A\u0442.", "\u043D\u043E\u044F\u0431.", "\u0434\u0435\u043A."], wide: ["\u044F\u043D\u0432\u0430\u0440\u044C", "\u0444\u0435\u0432\u0440\u0430\u043B\u044C", "\u043C\u0430\u0440\u0442", "\u0430\u043F\u0440\u0435\u043B\u044C", "\u043C\u0430\u0439", "\u0438\u044E\u043D\u044C", "\u0438\u044E\u043B\u044C", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044C", "\u043E\u043A\u0442\u044F\u0431\u0440\u044C", "\u043D\u043E\u044F\u0431\u0440\u044C", "\u0434\u0435\u043A\u0430\u0431\u0440\u044C"] }, defaultWidth: "wide", formattingValues: { narrow: ["\u042F", "\u0424", "\u041C", "\u0410", "\u041C", "\u0418", "\u0418", "\u0410", "\u0421", "\u041E", "\u041D", "\u0414"], abbreviated: ["\u044F\u043D\u0432.", "\u0444\u0435\u0432.", "\u043C\u0430\u0440.", "\u0430\u043F\u0440.", "\u043C\u0430\u044F", "\u0438\u044E\u043D.", "\u0438\u044E\u043B.", "\u0430\u0432\u0433.", "\u0441\u0435\u043D\u0442.", "\u043E\u043A\u0442.", "\u043D\u043E\u044F\u0431.", "\u0434\u0435\u043A."], wide: ["\u044F\u043D\u0432\u0430\u0440\u044F", "\u0444\u0435\u0432\u0440\u0430\u043B\u044F", "\u043C\u0430\u0440\u0442\u0430", "\u0430\u043F\u0440\u0435\u043B\u044F", "\u043C\u0430\u044F", "\u0438\u044E\u043D\u044F", "\u0438\u044E\u043B\u044F", "\u0430\u0432\u0433\u0443\u0441\u0442\u0430", "\u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F", "\u043E\u043A\u0442\u044F\u0431\u0440\u044F", "\u043D\u043E\u044F\u0431\u0440\u044F", "\u0434\u0435\u043A\u0430\u0431\u0440\u044F"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u0412", "\u041F", "\u0412", "\u0421", "\u0427", "\u041F", "\u0421"], short: ["\u0432\u0441", "\u043F\u043D", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043F\u0442", "\u0441\u0431"], abbreviated: ["\u0432\u0441\u043A", "\u043F\u043D\u0434", "\u0432\u0442\u0440", "\u0441\u0440\u0434", "\u0447\u0442\u0432", "\u043F\u0442\u043D", "\u0441\u0443\u0431"], wide: ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0430", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0430", "\u0441\u0443\u0431\u0431\u043E\u0442\u0430"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u043E", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u044C" }, abbreviated: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u043E", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u044C" }, wide: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D\u043E\u0447\u044C", noon: "\u043F\u043E\u043B\u0434\u0435\u043D\u044C", morning: "\u0443\u0442\u0440\u043E", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447\u0435\u0440", night: "\u043D\u043E\u0447\u044C" } }, defaultWidth: "any", formattingValues: { narrow: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u0430", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0438" }, abbreviated: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u0430", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0438" }, wide: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D\u043E\u0447\u044C", noon: "\u043F\u043E\u043B\u0434\u0435\u043D\u044C", morning: "\u0443\u0442\u0440\u0430", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447\u0435\u0440\u0430", night: "\u043D\u043E\u0447\u0438" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

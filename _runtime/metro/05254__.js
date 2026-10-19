@@ -1,9 +1,7 @@
 // === Module 5254: ? ===
 
 // Module 5254
-import baseClone from "baseClone" /* 5255 */;
+import _mod17 from "module_17" /* 17 */;
 
 
-export default function cloneDeep(arg0) {
-  return baseClone(arg0, 5);
-};
+export const findNodeHandle = _mod17.findNodeHandle;

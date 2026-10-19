@@ -1,7 +1,60 @@
 // === Module 6928: ? ===
 
 // Module 6928
-import registerAsset from "module_1134" /* 1134 */;
+import _mod1636 from "module_1636" /* 1636 */;
+import FrameSizeProvider from "FrameSizeProvider" /* 6905 */;
+import noop from "module_19" /* 19 */;
 
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = Dimensions.get("window");
+const width = size.width;
+let num = 0;
+if (undefined !== width) {
+  num = width;
+}
+const height = size.height;
+let num2 = 0;
+if (undefined !== height) {
+  num2 = height;
+}
+if (null == fn(1636).initialWindowMetrics) {
+  let obj = { frame: null, insets: null };
+  const size1 = { x: 0, y: 0, width: num, height: num2 };
+  obj.frame = size1;
+  obj.insets = { top: 0, left: 0, right: 0, bottom: 0 };
+  let initialWindowMetrics = obj;
+} else {
+  initialWindowMetrics = fn(1636).initialWindowMetrics;
+}
+class SafeAreaProviderCompat {
+  constructor(arg0) {
+    ({ children, style } = global);
+    closure_2 = undefined;
+    closure_2 = closure_2.useContext(children(style[3]).SafeAreaInsetsContext);
+    obj = {
+      initialFrame: initialWindowMetrics.frame,
+      render(onLayout) {
+            onLayout = onLayout.onLayout;
+            if (closure_2) {
+              const obj2 = { ref: tmp, onLayout, style: null, children: null };
+              const items = [container.container, style];
+              obj2.style = items;
+              obj2.children = children;
+              let tmp2Result = <React3 ref={tmp} onLayout={onLayout} style={null}>{null}</React3>;
+            } else {
+              const obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
+              tmp2Result = jsx(_mod1636.SafeAreaProvider, { initialMetrics: initialWindowMetrics, style, onLayout, children });
+            }
+            return tmp2Result;
+          }
+    };
+    return jsx(children(style[4]).FrameSizeProvider, obj);
+  }
+}
+SafeAreaProviderCompat.initialMetrics = initialWindowMetrics;
+const styles = StyleSheet.create({ container: { flex: 1 } });
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "14a4fdad987e2761599ba055042fdafa", name: "EyeSlashIcon", type: "png" });
+export { SafeAreaProviderCompat };

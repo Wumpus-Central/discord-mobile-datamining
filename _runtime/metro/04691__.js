@@ -1,63 +1,14 @@
 // === Module 4691: ? ===
 
 // Module 4691
-import _typeof_mod from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_2074 from "module_2074" /* 2074 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2074) {
+  const obj2 = { default: module_2074 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2074;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function parseJSON(str) {
-  requiredArgs.default(1, arguments);
-  if (typeof str === "string") {
-    const match = str.match(/(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2}):(\d{2})(?:\.(\d{0,7}))?(?:Z|(.)(\d{2}):?(\d{2})?)?/);
-    const _Date = Date;
-    if (match) {
-      const _Date2 = Date;
-      let num2 = +match[9];
-      if (!num2) {
-        num2 = 0;
-      }
-      let num3 = 1;
-      if ("-" == match[8]) {
-        num3 = -1;
-      }
-      let num4 = +match[10];
-      if (!num4) {
-        num4 = 0;
-      }
-      let num5 = 1;
-      if ("-" == match[8]) {
-        num5 = -1;
-      }
-      const diff = +match[2] - 1;
-      const text = `${tmp13}00`;
-      const diff1 = +match[4] - num2 * num3;
-      const diff2 = +match[5] - num4 * num5;
-      let _Date1 = new _Date(Date.UTC(tmp7, diff, tmp9, diff1, diff2, tmp12, +`${tmp13}00`.substring(0, 3)));
-      const tmp10 = +match[4];
-      const tmp11 = +match[5];
-      const tmp8 = +match[2];
-    } else {
-      _Date1 = new _Date(NaN);
-    }
-    return _Date1;
-  } else {
-    return _typeof.default(str);
-  }
-};
+export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

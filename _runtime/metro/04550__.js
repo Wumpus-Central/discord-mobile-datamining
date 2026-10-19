@@ -1,127 +1,274 @@
 // === Module 4550: ? ===
 
 // Module 4550
-import _typeof_mod from "module_4294" /* 4294 */;
-import module_4476_mod from "module_4476" /* 4476 */;
-import module_4537_mod from "module_4537" /* 4537 */;
+import _mod4537 from "module_4537" /* 4537 */;
+import module_4551_mod from "module_4551" /* 4551 */;
+import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 4468 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let _createSuperInternal = require;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+function _setPrototypeOf(ISOWeekParser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
+      ISOWeekParser.__proto__ = Parser;
+      return ISOWeekParser;
+    };
+  }
+  return _setPrototypeOf(ISOWeekParser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+let module_4551 = module_4551_mod;
+if (!module_4551) {
+  let obj = { default: module_4551 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4551;
 }
-_typeof = tmp3;
-let module_4476 = module_4476_mod;
-if (!module_4476) {
-  const obj2 = { default: module_4476 };
+module_4551 = tmp3;
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
+if (!startOfUTCISOWeek) {
+  const obj2 = { default: startOfUTCISOWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4476;
+  tmp5 = startOfUTCISOWeek;
 }
-module_4476 = tmp5;
-let module_4537 = module_4537_mod;
-if (!module_4537) {
-  const obj3 = { default: module_4537 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4537;
+startOfUTCISOWeek = tmp5;
+const Parser = _mod4537.Parser;
+_createSuperInternal = undefined;
+class ISOWeekParser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
+      }
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
+      } else {
+        str2 = "priority";
+        if ("priority" in applyResult) {
+          _Object = Object;
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
+        } else {
+          num3 = 100;
+          applyResult.priority = 100;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
+            _Object2 = Object;
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          } else {
+            applyResult.incompatibleTokens = items1;
+          }
+          return applyResult;
+        }
+      }
+    } else {
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
+    }
+  }
 }
-module_4537 = tmp7;
-
-export default function formatISO9075(arg0, format) {
-  if (arguments.length < 1) {
-    const _TypeError = TypeError;
-    const concat2 = "1 argument required, but only ".concat;
-    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+let dependencyMap = ISOWeekParser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
     throw typeError;
-  } else {
-    const defaultResult = _typeof.default(arg0);
-    if (module_4476.default(defaultResult)) {
-      format = undefined;
-      if (null != format) {
-        format = format.format;
-      }
-      let str3 = "extended";
-      if (null !== format) {
-        str3 = "extended";
-        if (undefined !== format) {
-          str3 = format;
-        }
-      }
-      const StringResult = String(str3);
-      let representation;
-      if (null != format) {
-        representation = format.representation;
-      }
-      let str5 = "complete";
-      if (null !== representation) {
-        str5 = "complete";
-        if (undefined !== representation) {
-          str5 = representation;
-        }
-      }
-      const StringResult1 = String(str5);
-      if ("extended" !== StringResult) {
-        if ("basic" !== StringResult) {
-          const _RangeError3 = RangeError;
-          const rangeError = new RangeError("format must be 'extended' or 'basic'");
-          throw rangeError;
-        }
-      }
-      if ("date" !== StringResult1) {
-        if ("time" !== StringResult1) {
-          if ("complete" !== StringResult1) {
-            const _RangeError2 = RangeError;
-            const rangeError1 = new RangeError("representation must be 'date', 'time', or 'complete'");
-            throw rangeError1;
+  }
+}
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+ISOWeekParser.prototype = Object.create(prototype, { constructor: { value: ISOWeekParser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(ISOWeekParser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
+            } else {
+              call(constructResult);
+            }
+            return true;
+          } catch (err) {
+            return false;
           }
         }
       }
-      let str10 = "";
-      if ("extended" === StringResult) {
-        str10 = "-";
-      }
-      let str11 = "";
-      if ("extended" === StringResult) {
-        str11 = ":";
-      }
-      let str13 = "";
-      if ("time" !== StringResult1) {
-        const defaultResult1 = module_4537.default(defaultResult.getDate(), 2);
-        const concat3 = "".concat;
-        const combined = "".concat(module_4537.default(defaultResult.getFullYear(), 4));
-        const combined1 = combined.concat(str10);
-        const combined2 = combined1.concat(module_4537.default(defaultResult.getMonth() + 1, 2));
-        const combined3 = combined2.concat(str10);
-        str13 = combined3.concat(defaultResult1);
-        const defaultResult2 = module_4537.default(defaultResult.getMonth() + 1, 2);
-      }
-      let combined10 = str13;
-      if ("date" !== StringResult1) {
-        const defaultResult3 = module_4537.default(defaultResult.getHours(), 2);
-        let str14 = " ";
-        const defaultResult4 = module_4537.default(defaultResult.getMinutes(), 2);
-        if ("" === str13) {
-          str14 = "";
-        }
-        const concat = "".concat;
-        const combined4 = "".concat(str13);
-        const combined5 = combined4.concat(str14);
-        const combined6 = combined5.concat(defaultResult3);
-        const combined7 = combined6.concat(str11);
-        const combined8 = combined7.concat(defaultResult4);
-        const combined9 = combined8.concat(str11);
-        combined10 = combined9.concat(module_4537.default(defaultResult.getSeconds(), 2));
-        const defaultResult5 = module_4537.default(defaultResult.getSeconds(), 2);
-      }
-      return combined10;
+    }
+  }
+  return false;
+})();
+_createSuperInternal = function _createSuperInternal() {
+  const self = this;
+  const obj = metroRequire(_createSuperInternal);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, metroRequire(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
+  }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
+    }
+  } else {
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
+    }
+  }
+  return tmp8;
+};
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("I" === arg1) {
+      return _createSuperInternal(4539).parseNumericPattern(_createSuperInternal(4540).numericPatterns.week, arg0);
+    } else if ("Io" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
     } else {
-      const _RangeError = RangeError;
-      const rangeError2 = new RangeError("Invalid time value");
-      throw rangeError2;
+      return _createSuperInternal(4539).parseNDigits(arg1.length, arg0);
     }
   }
 };
-export default exports.default;
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 53;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2) {
+      return startOfUTCISOWeek.default(module_4551.default(arg0, arg2));
+    }
+  }
+];
+if (0 < items.length) {
+  do {
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
+    num = num + 1;
+  } while (num < items.length);
+}
+
+export { ISOWeekParser };

@@ -1,23 +1,9 @@
 // === Module 12405: ? ===
 
 // Module 12405
-import _mod12404 from "module_12404" /* 12404 */;
-import _mod12406 from "module_12406" /* 12406 */;
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod12404.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12406.getStackAsyncContextStrategy();
-    const tmpResult = _mod12406;
-  }
-  return acs;
-};
-export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12404.getMainCarrier();
-  _mod12404.getSentryCarrier(mainCarrier).acs = acs;
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

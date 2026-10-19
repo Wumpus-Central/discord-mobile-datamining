@@ -1,86 +1,49 @@
 // === Module 4551: ? ===
 
 // Module 4551
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import module_4235_mod from "module_4235" /* 4235 */;
+import _typeof_mod from "module_4231" /* 4231 */;
+import module_4467_mod from "module_4467" /* 4467 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+let module_4235 = module_4235_mod;
+if (!module_4235) {
+  const obj = { default: module_4235 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_4235;
 }
-requiredArgs = tmp3;
+module_4235 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let module_4467 = module_4467_mod;
+if (!module_4467) {
+  const obj3 = { default: module_4467 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4467;
+}
+module_4467 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function formatISODuration(years) {
-  requiredArgs.default(1, arguments);
-  if ("object" !== _typeof(years)) {
-    const _Error = Error;
-    const error = new Error("Duration must be an object");
-    throw error;
-  } else {
-    years = years.years;
-    let num = 0;
-    if (undefined !== years) {
-      num = years;
-    }
-    const months = years.months;
-    let num2 = 0;
-    if (undefined !== months) {
-      num2 = months;
-    }
-    const days = years.days;
-    let num3 = 0;
-    if (undefined !== days) {
-      num3 = days;
-    }
-    const hours = years.hours;
-    let num4 = 0;
-    if (undefined !== hours) {
-      num4 = hours;
-    }
-    const minutes = years.minutes;
-    let num5 = 0;
-    if (undefined !== minutes) {
-      num5 = minutes;
-    }
-    const seconds = years.seconds;
-    let num6 = 0;
-    if (undefined !== seconds) {
-      num6 = seconds;
-    }
-    const concat = "P".concat;
-    const combined = "P".concat(num, "Y");
-    const combined1 = combined.concat(num2, "M");
-    const combined2 = combined1.concat(num3, "DT");
-    const combined3 = combined2.concat(num4, "H");
-    const combined4 = combined3.concat(num5, "M");
-    return combined4.concat(num6, "S");
-  }
+export default function setUTCISOWeek(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4467.default(defaultResult1) - module_4235.default(arg1);
+  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

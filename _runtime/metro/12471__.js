@@ -1,71 +1,102 @@
 // === Module 12471: ? ===
 
 // Module 12471
-import _mod12413 from "module_12413" /* 12413 */;
-import _mod12473 from "module_12473" /* 12473 */;
-import setupIntegration from "module_12442" /* 12442 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+function parseRetryAfterHeader(arg0) {
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
   }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod12413.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod12473.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod12473;
-            _mod12413.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(12434).captureException(found, obj2);
-                  const tmp14Result = args(12434);
-                } else {
-                  const tmp14Result2 = args(12395);
-                  const safeJoinResult = args(12395).safeJoin(args, " ");
-                  args(12434).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(12434);
-                }
-              } else if (!args[0]) {
-                const obj = args(12395);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(12395).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(12434);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(12395).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod12413;
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
-      }
+  const parsed = parseInt("" + arg0, 10);
+  if (isNaN(parsed)) {
+    const _Date2 = Date;
+    const _HermesInternal = HermesInternal;
+    const parsed1 = Date.parse("" + arg0);
+    const _isNaN = isNaN;
+    let num2 = 60000;
+    if (!isNaN(parsed1)) {
+      num2 = parsed1 - timestamp;
     }
-  };
-});
+    return num2;
+  } else {
+    return 1000 * parsed;
+  }
+}
+
+export const DEFAULT_RETRY_AFTER = 60000;
+export const disabledUntil = function disabledUntil(all, arg1) {
+  return all[arg1] || all.all || 0;
+};
+export const isRateLimited = function isRateLimited(all, result) {
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  return (all[result] || all.all || 0) > timestamp;
+};
+export { parseRetryAfterHeader };
+export const updateRateLimits = function updateRateLimits(arg0, headers) {
+  headers = headers.headers;
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const obj = {};
+  const merged = Object.assign(arg0);
+  let str = headers;
+  if (headers) {
+    str = headers["x-sentry-rate-limits"];
+  }
+  let prop = headers;
+  if (headers) {
+    prop = headers["retry-after"];
+  }
+  if (str) {
+    const parts = str.trim().split(",");
+    const iter = parts[Symbol.iterator]();
+    const str2 = str.trim();
+    while (iter !== undefined) {
+      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
+      let str9 = tmp12[1];
+      let str10 = tmp12[4];
+      let _parseInt = parseInt;
+      let parsed = parseInt(tmp12[0], 10);
+      let _isNaN = isNaN;
+      let num6 = 60;
+      if (!isNaN(parsed)) {
+        num6 = parsed;
+      }
+      let result = 1000 * num6;
+      if (str9) {
+        let parts1 = str9.split(";");
+        for (const item10065 of parts1) {
+          let tmp23 = "metric_bucket" === item10065;
+          if (tmp23) {
+            tmp23 = str10;
+          }
+          if (tmp23) {
+            let parts2 = str10.split(";");
+            tmp23 = !parts2.includes("custom");
+          }
+          if (!tmp23) {
+            obj[item10065] = timestamp + result;
+          }
+          continue;
+        }
+      } else {
+        obj.all = timestamp + result;
+      }
+      continue;
+    }
+    str8 = iter.next();
+  } else if (prop) {
+    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
+  } else if (429 === headers.statusCode) {
+    obj.all = timestamp + 60000;
+  }
+  return obj;
+};

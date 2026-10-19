@@ -1,13 +1,14 @@
 // === Module 10154: ? ===
 
 // Module 10154
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import Filter from "Filter" /* 10138 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10152 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const AbstractMergeDateTimeRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,63 +28,65 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class ENUnlikelyFormatFilter {
+class AbstractMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENUnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(ENUnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = c2(this, AbstractMergeDateTimeRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractMergeDateTimeRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENUnlikelyFormatFilter;
-_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+_inherits(AbstractMergeDateTimeRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "isValid",
-  value: function isValid(text, text2) {
-    closure_0 = text2;
-    const str2 = text2.text.trim();
-    if (str2 === str3.trim()) {
-      return true;
-    } else {
-      if ("may" === str2.toLowerCase()) {
-        const str5 = text.text.substring(0, text2.index);
-        if (!str6.match(/\b(in)$/i)) {
-          text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
-          });
-          return false;
-        }
-        str6 = text.text.substring(0, text2.index).trim();
-      }
-      const formatted = str2.toLowerCase();
-      const endsWithResult = formatted.endsWith("the second");
-      let flag2 = !endsWithResult;
-      if (endsWithResult) {
-        flag2 = false;
-        if (str9.trim().length > 0) {
-          text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
-          });
-          flag2 = false;
-        }
-        str9 = text.text.substring(text2.index + text2.text.length);
-      }
-      return flag2;
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, start, start2) {
+    start = start.start;
+    let isOnlyDateResult = start.isOnlyDate();
+    if (isOnlyDateResult) {
+      start2 = start2.start;
+      isOnlyDateResult = start2.isOnlyTime();
     }
-    str3 = text.text;
+    if (!isOnlyDateResult) {
+      const start3 = start2.start;
+      let isOnlyDateResult1 = start3.isOnlyDate();
+      if (isOnlyDateResult1) {
+        const start4 = start.start;
+        isOnlyDateResult1 = start4.isOnlyTime();
+      }
+      isOnlyDateResult = isOnlyDateResult1;
+    }
+    if (isOnlyDateResult) {
+      const self = this;
+      isOnlyDateResult = null != str.match(this.patternBetween());
+    }
+    return isOnlyDateResult;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text) {
+      start = start.start;
+      const mergeDateTimeResult = AbstractMergeDateTimeRefiner(10155).mergeDateTimeResult;
+      const tmp2 = start.isOnlyDate() ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
+      tmp2.index = start.index;
+      tmp2.text = start.text + arg0 + text.text;
+      return tmp2;
+    }
+  }
+];
 
-export default _createClass(ENUnlikelyFormatFilter, items);
+export default _createClass(AbstractMergeDateTimeRefiner, items);

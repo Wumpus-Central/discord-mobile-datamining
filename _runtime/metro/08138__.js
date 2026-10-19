@@ -1,47 +1,69 @@
 // === Module 8138: ? ===
 
 // Module 8138
-import _mod8095 from "module_8095" /* 8095 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 8115 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 8116 */;
+import _mod8130 from "module_8130" /* 8130 */;
+import _mod8131 from "module_8131" /* 8131 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      const obj2 = {};
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj3.description = str;
-        obj2.AutoRotate = obj3;
-      }
-      const tmp3Result = _mod8095;
-      delete tmp[tmp2];
-      tmp6 = _mod8095.objectAssign({}, ifd, obj2);
-      const objectAssignResult = _mod8095.objectAssign({}, ifd, obj2);
+export const isAVI = function isAVI(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avi");
+};
+export const isFLV = function isFLV(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flv") && _mod8130.isFlvStringIncluded(fileChunk);
+};
+export const isM4V = function isM4V(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod8130.isftypStringIncluded(fileChunk);
+};
+export const isMKV = function isMKV(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod8130.findMatroskaDocTypeElements(fileChunk);
+};
+export const isMOV = function isMOV(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mov");
+};
+export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
+  if (!checkByFileTypeResult) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
     }
-    return tmp6;
-  },
-  SHOT_INFO_AUTO_ROTATE: 27
+    let tmp8 = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8130.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8131.FileTypes;
+      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8130.isftypStringIncluded(fileChunk1);
+      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8130.isftypStringIncluded(fileChunk1);
+    }
+    checkByFileTypeResult = tmp8;
+  }
+  return checkByFileTypeResult;
+};
+export const isOGG = function isOGG(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ogg");
+};
+export const isSWF = function isSWF(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "swf");
+};
+export const isWEBM = function isWEBM(fileChunk) {
+  fileChunk = _mod8130.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod8131.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod8130.findMatroskaDocTypeElements(fileChunk);
 };

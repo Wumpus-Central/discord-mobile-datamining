@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/images", width: 608, height: 608, scales: [2, 3], hash: "6936c050862daceed7175a327466cd4a", name: "quests_embed_mobile_missing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 132, height: 145, scales: [1, 2, 3], hash: "79c6466cf28ca8f6510b4a84fb435a2a", name: "wumpus_snowglobe_premium120", type: "png" });

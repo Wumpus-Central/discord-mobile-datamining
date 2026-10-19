@@ -1,7 +1,14 @@
 // === Module 4279: ? ===
 
 // Module 4279
-import registerAsset from "module_1134" /* 1134 */;
+import module_2074 from "module_2074" /* 2074 */;
 
+if (!module_2074) {
+  const obj2 = { default: module_2074 };
+  let obj = obj2;
+} else {
+  obj = module_2074;
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==", scales: [1], hash: "2dbecd5db33541d4a2d30e5ba1e1406c", name: "ro.messages.2dbecd5db33541d4a2d30e5ba1e1406c.compiled.messages", type: "jsona" });
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u00E0' {{time}}", long: "{{date}} '\u00E0' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default exports.default;

@@ -1,51 +1,18 @@
 // === Module 6888: ? ===
 
 // Module 6888
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6589 from "module_6589" /* 6589 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
-import noop_mod from "module_19" /* 19 */;
+import Link from "Link" /* 1506 */;
+import noop from "module_19" /* 19 */;
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(forwardRef((onFocus, ref) => {
-  onFocus = onFocus.onFocus;
-  const onBlur = onFocus.onBlur;
-  const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-  const shouldHandleKeyboardEvents = _mod6589.useBottomSheetInternal().shouldHandleKeyboardEvents;
-  const items = [onFocus, shouldHandleKeyboardEvents];
-  const items1 = [onBlur, shouldHandleKeyboardEvents];
-  const items2 = [shouldHandleKeyboardEvents];
-  const tmp2 = React2((arg0) => {
-    shouldHandleKeyboardEvents.value = true;
-    if (onFocus) {
-      tmp(arg0);
-    }
-  }, items);
-  React3(() => () => {
-    shouldHandleKeyboardEvents.value = false;
-  }, items2);
-  const tmp3 = React2((arg0) => {
-    shouldHandleKeyboardEvents.value = false;
-    if (onBlur) {
-      tmp(arg0);
-    }
-  }, items1);
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
+
+export const Background = function Background(style) {
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  return jsx(LegacyBaseButton.TextInput, {
-    ref,
-    onFocus: tmp2,
-    onBlur: React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1)
-  });
-}));
-memoResult.displayName = "BottomSheetTextInput";
-
-export default memoResult;
+  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
+  obj2.style = items;
+  return <Animated.View />;
+};

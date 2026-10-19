@@ -1,0 +1,8 @@
+// === Module 8735: ? ===
+
+// Module 8735
+import emptyFunction from "module_4979" /* 4979 */;
+
+const point = { x: emptyFunction.number, y: emptyFunction.number };
+
+export default emptyFunction.shape(point);

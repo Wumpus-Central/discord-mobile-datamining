@@ -1,23 +1,7 @@
 // === Module 2137: ? ===
 
 // Module 2137
+import registerAsset from "module_1134" /* 1134 */;
 
-export default function buildFormatLongFn(arg0) {
-  closure_0 = arg0;
-  return () => {
-    if (arguments.length > 0) {
-      if (undefined !== arguments[0]) {
-        let first = arguments[0];
-      }
-      if (first.width) {
-        const _String = String;
-        let defaultWidth = String(first.width);
-      } else {
-        defaultWidth = closure_0.defaultWidth;
-      }
-      return closure_0.formats[defaultWidth] || closure_0.formats[closure_0.defaultWidth];
-    }
-    first = {};
-  };
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", scales: [1], hash: "c5a225594b86925b3edc5bbffd3ccd00", name: "ru.messages.c5a225594b86925b3edc5bbffd3ccd00.compiled.messages", type: "jsona" });

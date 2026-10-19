@@ -1,17 +1,17 @@
 // === Module 4581: ? ===
 
 // Module 4581
-import _typeof_mod from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import startOfMinute_mod from "startOfMinute" /* 4440 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfMinute = startOfMinute_mod;
+if (!startOfMinute) {
+  const obj = { default: startOfMinute };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfMinute;
 }
-_typeof = tmp3;
+startOfMinute = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getYear(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getFullYear();
+export default function isSameMinute(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfMinute.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfMinute.default(arg1).getTime();
 };
 export default exports.default;

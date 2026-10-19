@@ -1,7 +1,23 @@
 // === Module 8436: ? ===
 
 // Module 8436
-import registerAsset from "module_1134" /* 1134 */;
+import reviveBigInts from "reviveBigInts" /* 8437 */;
+import DiscordMarkdownDefault from "DiscordMarkdown" /* 8438 */;
 
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5e2fd14b31cdd1bad77d12d7b0ab7334", name: "AppsIcon", type: "png" });
+export const parse = function parse(arg0, arg1, arg2) {
+  const obj = reviveBigInts;
+  let json;
+  if (null != arg1) {
+    const _JSON = JSON;
+    json = JSON.stringify(arg1);
+  }
+  return obj.decodeAstJson(DiscordMarkdownDefault.parseToAstString(arg0, json, arg2));
+};
+export const unparse = function unparse(arg0) {
+  const obj = DiscordMarkdownDefault;
+  return obj.unparseFromAstString(reviveBigInts.encodeAstJson(arg0));
+};

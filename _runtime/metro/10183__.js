@@ -1,16 +1,17 @@
 // === Module 10183: ? ===
 
 // Module 10183
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10119 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10126 */;
-import _mod10181 from "module_10181" /* 10181 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10140 */;
+import now from "now" /* 10157 */;
+import _mod10184 from "module_10184" /* 10184 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FRMonthNameLittleEndianParser = require;
+let self = this;
+const DECasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,68 +31,177 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:on\\s*?)?(" + _mod10181.ORDINAL_NUMBER_PATTERN + ")(?:\\s*(?:au|\\-|\\\u2013|jusqu'au?|\\s)\\s*(" + _mod10181.ORDINAL_NUMBER_PATTERN + "))?(?:-|/|\\s*(?:de)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10181.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s*)(" + _mod10181.YEAR_PATTERN + "(?![^\\s]\\d)))?(?=\\W|$)", "i");
-class FRMonthNameLittleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, FRMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(FRMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = FRMonthNameLittleEndianParser(10181).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = FRMonthNameLittleEndianParser(10181).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", FRMonthNameLittleEndianParser(10181).parseYear(index[4]));
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function u(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__importDefault;
+    }
+    if (!fn2) {
+      fn2 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: __esModule };
+          let tmp = obj;
         } else {
-          const start = parsingResult.start;
-          start.imply("year", FRMonthNameLittleEndianParser(10120).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
+          tmp = __esModule;
         }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = FRMonthNameLittleEndianParser(10181).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    let closure_9 = fn2(_mod10184);
+    let closure_10 = fn(now);
+    const _RegExp = RegExp;
+    const regExp = new RegExp("(jetzt|heute|morgen|\u00FCbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)", "i");
+    class DECasualDateParser {
+      constructor() {
+        self = this;
+        tmp = c2(this, DECasualDateParser);
+        tmp2 = closure_4;
+        obj = closure_4(DECasualDateParser);
+        tmp3 = closure_3;
+        if (hasOwnProperty()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
         }
-        return parsingResult;
+        return tmp3(self, constructResult);
       }
     }
+    _inherits(DECasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+            return regExp;
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            reference = reference.reference;
+            const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+            const str2 = arg1[1] || "".toLowerCase();
+            const formatted = arg1[2] || "".toLowerCase();
+            const parsingComponents = reference.createParsingComponents();
+            if ("jetzt" === str2) {
+              let nowResult = closure_10.now(reference.reference);
+            } else if ("heute" === str2) {
+              nowResult = closure_10.today(reference.reference);
+            } else if ("morgen" === str2) {
+              const addDurationResult = DECasualDateParser(10135).addDuration(dateWithAdjustedTimezone, { day: 1 });
+              DECasualDateParser(10139).assignSimilarDate(parsingComponents, addDurationResult);
+              DECasualDateParser(10139).implySimilarTime(parsingComponents, addDurationResult);
+              nowResult = parsingComponents;
+            } else {
+              if ("\u00FCbermorgen" !== str2) {
+                if ("uebermorgen" !== str2) {
+                  if ("gestern" === str2) {
+                    const addDurationResult1 = DECasualDateParser(10135).addDuration(dateWithAdjustedTimezone, { day: -1 });
+                    DECasualDateParser(10139).assignSimilarDate(parsingComponents, addDurationResult1);
+                    DECasualDateParser(10139).implySimilarTime(parsingComponents, addDurationResult1);
+                    nowResult = parsingComponents;
+                  } else if ("vorgestern" === str2) {
+                    const addDurationResult2 = DECasualDateParser(10135).addDuration(dateWithAdjustedTimezone, { day: -2 });
+                    DECasualDateParser(10139).assignSimilarDate(parsingComponents, addDurationResult2);
+                    DECasualDateParser(10139).implySimilarTime(parsingComponents, addDurationResult2);
+                    nowResult = parsingComponents;
+                  } else {
+                    nowResult = parsingComponents;
+                    if (str2.match(/letzte\s*nacht/)) {
+                      let addDurationResult3 = dateWithAdjustedTimezone;
+                      if (dateWithAdjustedTimezone.getHours() > 6) {
+                        addDurationResult3 = DECasualDateParser(10135).addDuration(dateWithAdjustedTimezone, { day: -1 });
+                      }
+                      DECasualDateParser(10139).assignSimilarDate(parsingComponents, addDurationResult3);
+                      parsingComponents.imply("hour", 0);
+                      nowResult = parsingComponents;
+                    }
+                  }
+                }
+              }
+              const addDurationResult4 = DECasualDateParser(10135).addDuration(dateWithAdjustedTimezone, { day: 2 });
+              DECasualDateParser(10139).assignSimilarDate(parsingComponents, addDurationResult4);
+              DECasualDateParser(10139).implySimilarTime(parsingComponents, addDurationResult4);
+              nowResult = parsingComponents;
+            }
+            let result = nowResult;
+            if (formatted) {
+              result = closure_9.default.extractTimeComponents(nowResult, formatted);
+              const _default = closure_9.default;
+            }
+            return result;
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(DECasualDateParser, items);
+  } else {
+    const _Object2 = Object;
   }
-];
-
-export default _createClass(FRMonthNameLittleEndianParser, items);
+} else {
+  let _Object = Object;
+}

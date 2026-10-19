@@ -1,40 +1,24 @@
 // === Module 15368: ? ===
 
 // Module 15368
-import _mod15329 from "module_15329" /* 15329 */;
-import _mod15331 from "module_15331" /* 15331 */;
-import _mod15347 from "module_15347" /* 15347 */;
+import _mod15352 from "module_15352" /* 15352 */;
+import _mod15353 from "module_15353" /* 15353 */;
 import _mod15369 from "module_15369" /* 15369 */;
-import _mod15370 from "module_15370" /* 15370 */;
 
-let closure_2 = _mod15331([].push);
-
-export default (arg0, arg1) => {
-  const tmp = _mod15329(arg0);
+let prop = _mod15352["__core-js_shared__"];
+if (!prop) {
+  prop = _mod15353("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
   const items = [];
-  for (const key10010 in tmp) {
-    let tmp14 = _mod15347;
-    let tmp14Result = tmp14(_mod15369, key10010);
-    let tmp2 = !tmp14Result;
-    if (!tmp14Result) {
-      tmp2 = _mod15347(tmp, key10010);
-    }
-    if (!tmp2) {
-      continue;
-    } else {
-      let tmp4 = closure_2(items, key10010);
-      continue;
-    }
-    continue;
-  }
-  for (let num = 0; arg1.length > num; num = num + 1) {
-    let tmp7 = arg1[num];
-    if (_mod15347(tmp, tmp7)) {
-      let tmp5Result = _mod15370;
-      if (!~tmp5Result.indexOf(items, tmp7)) {
-        let tmp10 = closure_2(items, tmp7);
-      }
-    }
-  }
-  return items;
-};
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod15369) {
+  str2 = "pure";
+}
+versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
+
+export default prop;

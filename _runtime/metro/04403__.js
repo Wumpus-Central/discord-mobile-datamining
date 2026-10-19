@@ -1,28 +1,81 @@
 // === Module 4403: ? ===
 
 // Module 4403
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      let str = "\u00FAltimo";
-    } else {
-      str = "\u00FAltima";
-    }
-    return "'" + str + "' eeee '\u00E0s' p";
-  },
-  yesterday: "'ontem \u00E0s' p",
-  today: "'hoje \u00E0s' p",
-  tomorrow: "'amanh\u00E3 \u00E0s' p",
-  nextWeek: "eeee '\u00E0s' p",
-  other: "P"
-};
+import _typeof_mod from "module_4231" /* 4231 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
   }
-  return tmpResult;
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function max(arg0) {
+  requiredArgs.default(1, arguments);
+  if (!arg0) {
+    if ("object" === _typeof(arg0)) {
+      if (null !== arg0) {
+        const _Array = Array;
+        const call = slice.call;
+        let arr = typeof call === "unknown" ? slice() : call(arg0);
+      }
+    }
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    arr = arg0;
+  }
+  const item = arr.forEach((item) => {
+    defaultResult = _typeof.default(item);
+    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
+    if (!isNaNResult) {
+      const _isNaN = isNaN;
+      const _Number = Number;
+      isNaNResult = isNaN(Number(defaultResult));
+    }
+  });
+  let date1 = _typeof;
+  if (!_typeof) {
+    const _Date2 = Date;
+    date1 = new Date(NaN);
+  }
+  return date1;
 };
 export default exports.default;

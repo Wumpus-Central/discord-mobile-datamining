@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ae39bece93fb2e7db2a552f53a1d8fa1", name: "TwitterNeutralIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/create_guild/native/images", width: 48, height: 48, scales: [2, 3], hash: "85eeca45f06e729242432730811186c4", name: "img_local_community", type: "png" });

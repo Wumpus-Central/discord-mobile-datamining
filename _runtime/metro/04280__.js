@@ -1,7 +1,9 @@
 // === Module 4280: ? ===
 
 // Module 4280
-import registerAsset from "module_1134" /* 1134 */;
+let closure_0 = { lastWeek: "eeee 'dernier \u00E0' p", yesterday: "'hier \u00E0' p", today: "'aujourd\u2019hui \u00E0' p", tomorrow: "'demain \u00E0' p'", nextWeek: "eeee 'prochain \u00E0' p", other: "P" };
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==", scales: [1], hash: "19847868c0e0673839e6bf8c7e46fb8b", name: "ru.messages.19847868c0e0673839e6bf8c7e46fb8b.compiled.messages", type: "jsona" });
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
+export default exports.default;

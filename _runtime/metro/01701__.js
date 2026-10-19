@@ -1023,8 +1023,8 @@ rgbaArrayToRGBAColor.__closure = {};
 rgbaArrayToRGBAColor.__workletHash = 9717764015913;
 rgbaArrayToRGBAColor.__initData = { code: "function rgbaArrayToRGBAColor_Pnpm_ColorsTs23(RGBA){const alpha=RGBA[3]<0.001?0:RGBA[3];return\"rgba(\"+Math.round(RGBA[0]*255)+\", \"+Math.round(RGBA[1]*255)+\", \"+Math.round(RGBA[2]*255)+\", \"+alpha+\")\";}" };
 function toLinearSpace(tmp3Result14) {
-  let num = exponent;
-  if (exponent === undefined) {
+  let num = arg1;
+  if (arg1 === undefined) {
     num = 2.2;
   }
   const items = [];

@@ -1,40 +1,26 @@
 // === Module 4710: ? ===
 
 // Module 4710
-import module_4298_mod from "module_4298" /* 4298 */;
-import _typeof_mod from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
-
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj = { default: module_4298 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4298;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "fi" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, short: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, narrow: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, short: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
 }
-module_4298 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function setDayOfYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  defaultResult1.setMonth(0);
-  defaultResult1.setDate(module_4298.default(arg1));
-  return defaultResult1;
-};
-export default exports.default;
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, short: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, narrow: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" }, short: { end: "{0} tai {1}", middle: "{0}, {1}", pair: "{0} tai {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} ja {1}", middle: "{0}, {1}", pair: "{0} ja {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "fi" };
+prop.push(obj);

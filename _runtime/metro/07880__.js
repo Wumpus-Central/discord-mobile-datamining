@@ -1,9 +1,7 @@
 // === Module 7880: ? ===
 
 // Module 7880
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeBlend", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true } };
 
-export default module_65.get("RNSVGFeBlend", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7b2d2e9a77a15fa8da20d6c6b46e3600", name: "VideoSelfieIcon", type: "png" });

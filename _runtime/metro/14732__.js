@@ -1,12 +1,7 @@
 // === Module 14732: ? ===
 
 // Module 14732
-import _mod14746 from "module_14746" /* 14746 */;
-import assign from "module_14733" /* 14733 */;
-import Deflate from "Deflate" /* 14734 */;
-import Inflate from "Inflate" /* 14742 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14746);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 215, height: 128, scales: [2, 3], hash: "91b8f5f85a023591658822c0d3091e54", name: "guild_subscription_removal_darker", type: "png" });

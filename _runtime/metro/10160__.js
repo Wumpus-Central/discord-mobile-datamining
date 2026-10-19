@@ -1,105 +1,117 @@
 // === Module 10160: ? ===
 
 // Module 10160
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10126 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10136 */;
+import Meridiem from "Meridiem" /* 10138 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = arg1;
+const dependencyMap = arg6;
+function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
+  const day = dateWithAdjustedTimezone.getDay();
+  if ("this" === next) {
+    const diff = sum - dateWithAdjustedTimezone.getDay();
+    sum = diff;
+    if (diff < 0) {
+      sum = diff + 7;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-const regExp = new RegExp("([0-9]{4})\\-([0-9]{1,2})\\-([0-9]{1,2})(?:T([0-9]{1,2}):([0-9]{1,2})(?::([0-9]{1,2})(?:\\.(\\d{1,4}))?)?(Z|([+-]\\d{2}):?(\\d{2})?)?)?(?=\\W|$)", "i");
-class ISOFormatParser {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ISOFormatParser);
-    tmp2 = c2;
-    obj = c2(ISOFormatParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+    return sum;
+  } else if ("last" === next) {
+    const diff1 = sum - dateWithAdjustedTimezone.getDay();
+    let diff2 = diff1;
+    if (diff1 >= 0) {
+      diff2 = diff1 - 7;
     }
-    return tmp3(self, constructResult);
-  }
-}
-_classCallCheck = ISOFormatParser;
-_inherits(ISOFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents({ year: parseInt(arg1[1]), month: parseInt(arg1[2]), day: parseInt(arg1[3]) });
-      if (null != arg1[4]) {
-        const _parseInt5 = parseInt;
-        parsingComponents.assign("hour", parseInt(arg1[4]));
-        const _parseInt6 = parseInt;
-        parsingComponents.assign("minute", parseInt(arg1[5]));
-        if (null != arg1[6]) {
-          const _parseInt = parseInt;
-          parsingComponents.assign("second", parseInt(arg1[6]));
+    return diff2;
+  } else if ("next" === next) {
+    if (day == Meridiem.Weekday.SUNDAY) {
+      let num12 = 7;
+      if (sum != Meridiem.Weekday.SUNDAY) {
+        num12 = sum;
+      }
+      let sum3 = num12;
+    } else if (day == Meridiem.Weekday.SATURDAY) {
+      let num9 = 7;
+      if (sum != Meridiem.Weekday.SATURDAY) {
+        let num10 = 8;
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          num10 = 1 + sum;
         }
-        if (null != arg1[7]) {
-          const _parseInt2 = parseInt;
-          parsingComponents.assign("millisecond", parseInt(arg1[7]));
-        }
-        if (null != arg1[8]) {
-          let num2 = 0;
-          if (!arg1[9]) {
-            let num3 = parsingComponents.assign("timezoneOffset", num2);
-          } else {
-            const _parseInt3 = parseInt;
-            num3 = 0;
-            const parsed = parseInt(arg1[9]);
-            if (null != arg1[10]) {
-              const _parseInt4 = parseInt;
-              num3 = parseInt(arg1[10]);
-            }
-            const result = 60 * parsed;
-            if (result >= 0) {
-              num2 = result + num3;
-            }
+        num9 = num10;
+      }
+      sum3 = num9;
+    } else {
+      if (sum < day) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          const diff3 = sum - dateWithAdjustedTimezone.getDay();
+          let sum1 = diff3;
+          if (diff3 < 0) {
+            sum1 = diff3 + 7;
           }
-          num2 = result - num3;
+          sum3 = sum1;
         }
       }
-      return parsingComponents.addTag("parser/ISOFormatParser");
+      const diff4 = sum - dateWithAdjustedTimezone.getDay();
+      let sum2 = diff4;
+      if (diff4 < 0) {
+        sum2 = diff4 + 7;
+      }
+      sum3 = sum2 + 7;
     }
+    return sum3;
+  } else {
+    const diff5 = sum - dateWithAdjustedTimezone.getDay();
+    let diff6 = diff5;
+    if (diff5 >= 0) {
+      diff6 = diff5 - 7;
+    }
+    const diff7 = sum - dateWithAdjustedTimezone.getDay();
+    let sum4 = diff7;
+    if (diff7 < 0) {
+      sum4 = diff7 + 7;
+    }
+    if (sum4 < -diff6) {
+      diff6 = sum4;
+    }
+    return diff6;
   }
-];
+}
 
-export default _createClass(ISOFormatParser, items);
+export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
+  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({ day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next) });
+  addDurationAsImpliedResult.assign("weekday", sum);
+  return addDurationAsImpliedResult;
+};
+export { getDaysToWeekday };
+export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  const diff2 = arg1 - getDay.getDay();
+  let sum = diff2;
+  if (diff2 < 0) {
+    sum = diff2 + 7;
+  }
+  if (sum < -diff1) {
+    diff1 = sum;
+  }
+  return diff1;
+};
+export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let sum = diff;
+  if (diff < 0) {
+    sum = diff + 7;
+  }
+  return sum;
+};
+export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  return diff1;
+};

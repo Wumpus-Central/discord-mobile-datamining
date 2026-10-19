@@ -1,25 +1,36 @@
 // === Module 4359: ? ===
 
 // Module 4359
-let closure_0 = { lessThanXSeconds: { one: "meno di un secondo", other: "meno di {{count}} secondi" }, xSeconds: { one: "un secondo", other: "{{count}} secondi" }, halfAMinute: "alcuni secondi", lessThanXMinutes: { one: "meno di un minuto", other: "meno di {{count}} minuti" }, xMinutes: { one: "un minuto", other: "{{count}} minuti" }, aboutXHours: { one: "circa un'ora", other: "circa {{count}} ore" }, xHours: { one: "un'ora", other: "{{count}} ore" }, xDays: { one: "un giorno", other: "{{count}} giorni" }, aboutXWeeks: { one: "circa una settimana", other: "circa {{count}} settimane" }, xWeeks: { one: "una settimana", other: "{{count}} settimane" }, aboutXMonths: { one: "circa un mese", other: "circa {{count}} mesi" }, xMonths: { one: "un mese", other: "{{count}} mesi" }, aboutXYears: { one: "circa un anno", other: "circa {{count}} anni" }, xYears: { one: "un anno", other: "{{count}} anni" }, overXYears: { one: "pi\u00F9 di un anno", other: "pi\u00F9 di {{count}} anni" }, almostXYears: { one: "quasi un anno", other: "quasi {{count}} anni" } };
+import module_2077 from "module_2077" /* 2077 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp5 = tmp;
-    if (null != addSuffix) {
-      tmp5 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} fa`;
-        }
-        text = `tra ${tmp}`;
-      }
+if (!module_2077) {
+  const obj2 = { default: module_2077 };
+  let obj = obj2;
+} else {
+  obj = module_2077;
+}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    const NumberResult = Number(arg0);
+    const result = NumberResult % 100;
+    if (20 < result) {
+      const result1 = result % 10;
+      return NumberResult + ":a";
     }
-    return tmp5;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    one = tmp.other.replace("{{count}}", arg1.toString());
-  }
+    return NumberResult + ":e";
+  },
+  era: obj.default({ values: { narrow: ["f.Kr.", "e.Kr."], abbreviated: ["f.Kr.", "e.Kr."], wide: ["f\u00F6re Kristus", "efter Kristus"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1:a kvartalet", "2:a kvartalet", "3:e kvartalet", "4:e kvartalet"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mars", "apr.", "maj", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["S", "M", "T", "O", "T", "F", "L"], short: ["s\u00F6", "m\u00E5", "ti", "on", "to", "fr", "l\u00F6"], abbreviated: ["s\u00F6n", "m\u00E5n", "tis", "ons", "tors", "fre", "l\u00F6r"], wide: ["s\u00F6ndag", "m\u00E5ndag", "tisdag", "onsdag", "torsdag", "fredag", "l\u00F6rdag"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "morg.", afternoon: "efterm.", evening: "kv\u00E4ll", night: "natt" }, abbreviated: { am: "f.m.", pm: "e.m.", midnight: "midnatt", noon: "middag", morning: "morgon", afternoon: "efterm.", evening: "kv\u00E4ll", night: "natt" }, wide: { am: "f\u00F6rmiddag", pm: "eftermiddag", midnight: "midnatt", noon: "middag", morning: "morgon", afternoon: "eftermiddag", evening: "kv\u00E4ll", night: "natt" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 efterm.", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" }, abbreviated: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 efterm.", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" }, wide: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morgonen", afternoon: "p\u00E5 eftermiddagen", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

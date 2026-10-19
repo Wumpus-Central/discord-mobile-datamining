@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", scales: [1], hash: "a4173559ed55457ae244ed5cbf6c5438", name: "pl.messages.a4173559ed55457ae244ed5cbf6c5438.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/virtual_currency/web/orb_wallet/messages", scales: [1], hash: "8b653ad07b8967a77e48f82288144586", name: "OrbWallet.compiled.messages", type: "jsona" });

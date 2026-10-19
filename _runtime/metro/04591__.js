@@ -1,16 +1,28 @@
 // === Module 4591: ? ===
 
 // Module 4591
+import module_4583_mod from "module_4583" /* 4583 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-export default function isExists(arg0, arg1, arg2) {
-  if (arguments.length < 3) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("3 argument required, but only " + arguments.length + " present");
-    throw typeError;
-  } else {
-    const _Date = Date;
-    const date = new Date(arg0, arg1, arg2);
-    return date.getFullYear() === arg0 && date.getMonth() === arg1 && date.getDate() === arg2;
-  }
+let module_4583 = module_4583_mod;
+if (!module_4583) {
+  const obj = { default: module_4583 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4583;
+}
+module_4583 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function isThisQuarter(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4583.default(Date.now(), arg0);
 };
 export default exports.default;

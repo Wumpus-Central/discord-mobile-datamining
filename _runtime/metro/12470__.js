@@ -1,45 +1,78 @@
 // === Module 12470: ? ===
 
 // Module 12470
+import _mod12430 from "module_12430" /* 12430 */;
 
-export const parseCookie = function parseCookie(arr) {
-  const obj = {};
-  let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
-    while (-1 !== index) {
-      let length = arr.indexOf(";", num);
-      if (-1 === length) {
-        length = arr.length;
-      } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
-        num = sum;
-        if (sum >= arr.length) {
-          break;
-        }
+require = arg1;
+const dependencyMap = arg6;
+
+export function makePromiseBuffer(bufferSize) {
+  const items = [];
+  return {
+    $: items,
+    add(fn) {
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
       }
-      let str = arr.slice(num, index);
-      let trimmed = str.trim();
-      if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
-        let trimmed1 = str2.trim();
-        index = trimmed1;
-        if (34 === trimmed1.charCodeAt(0)) {
-          index = trimmed1.slice(1, -1);
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
         }
-        try {
-          let decodeURIComponentResult = index;
-          if (-1 !== index.indexOf("%")) {
-            let _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(index);
+        promise.then(() => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
           }
-          obj[trimmed] = decodeURIComponentResult;
-        } catch (err) {
-          obj[trimmed] = index;
-        }
+          return first;
+        }).then(null, () => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first.then(null, () => {
+
+          });
+        });
+        return promise;
+      } else {
+        const sentryError = new bufferSize(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
       }
-      let sum1 = length + 1;
+    },
+    drain(arg0) {
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
+        closure_0 = fn;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
+            }
+            if (tmp2) {
+              closure_0(false);
+            }
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            _mod12430.resolvedSyncPromise(item).then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
+        } else {
+          return fn(true);
+        }
+        arr = length;
+      });
     }
-  }
-  return obj;
-};
+  };
+}

@@ -1,15 +1,9 @@
 // === Module 5280: ? ===
 
 // Module 5280
-import _process from "_process" /* 539 */;
-import baseUnary from "baseUnary" /* 540 */;
-import baseIsMap from "baseIsMap" /* 5281 */;
+let closure_0 = 1;
 
-const tmp = _process && _process.isMap;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsMap;
-}
-
-export default _module;
+export const getNextHandlerTag = function getNextHandlerTag() {
+  closure_0 = tmp + 1;
+  return +closure_0;
+};

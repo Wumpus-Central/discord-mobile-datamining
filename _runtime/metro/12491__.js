@@ -1,262 +1,71 @@
 // === Module 12491: ? ===
 
 // Module 12491
-import errorCallback from "errorCallback" /* 12382 */;
-import _mod12393 from "module_12393" /* 12393 */;
-import _mod12410 from "module_12410" /* 12410 */;
-import _mod12418 from "module_12418" /* 12418 */;
-import _mod12457 from "module_12457" /* 12457 */;
-import _toArray from "_toArray" /* 729 */;
-import "module_12385";
-import consoleSandbox from "module_12386" /* 12386 */;
-import dateTimestampInSeconds from "module_12400" /* 12400 */;
-import __SENTRY_DEBUG__ from "module_12414" /* 12414 */;
+import _mod12433 from "module_12433" /* 12433 */;
+import _mod12493 from "module_12493" /* 12493 */;
+import setupIntegration from "module_12462" /* 12462 */;
 
-function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  const traceData = _mod12457.getTraceData({ span });
-  ({ sentry-trace: tmp4, baggage } = traceData);
-  if (tmp4) {
-    headers = headers2.headers;
-    if (!headers) {
-      const _Request = Request;
-      let isInstanceOfResult = typeof Request !== "undefined";
-      if (typeof Request !== "undefined") {
-        const _Request2 = Request;
-        isInstanceOfResult = _mod12393.isInstanceOf(headers, Request);
-        const tmpResult = _mod12393;
-      }
-      let headers1;
-      if (isInstanceOfResult) {
-        headers1 = headers.headers;
-      }
-      headers = headers1;
-    }
-    if (headers) {
-      const _Headers = Headers;
-      let isInstanceOfResult1 = typeof Headers !== "undefined";
-      if (typeof Headers !== "undefined") {
-        const _Headers3 = Headers;
-        isInstanceOfResult1 = _mod12393.isInstanceOf(headers, Headers);
-        const tmpResult2 = _mod12393;
-      }
-      if (isInstanceOfResult1) {
-        const _Headers2 = Headers;
-        headers2 = new Headers(headers);
-        const result = headers2.set("sentry-trace", tmp4);
-        if (baggage) {
-          const str6 = headers2.get("baggage");
-          if (str6) {
-            let parts = str6.split(",");
-            let found = parts.filter((item) => {
-              const first = item.split("=")[0];
-              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-            });
-            let joined = found.join(",");
-            let combined = baggage;
-            if (joined) {
-              const _HermesInternal = HermesInternal;
-              combined = "" + joined + "," + baggage;
-            }
-            const result1 = headers2.set("baggage", combined);
-          } else {
-            const result2 = headers2.set("baggage", baggage);
+
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
+  return {
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod12433.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
           }
-        }
-        return headers2;
-      } else {
-        const _Array = Array;
-        if (Array.isArray(headers)) {
-          const found1 = headers.filter((item) => {
-            let isArray = Array.isArray(item);
-            if (isArray) {
-              isArray = "sentry-trace" === item[0];
-            }
-            return !isArray;
-          });
-          let items = [];
-          const items1 = ["sentry-trace", tmp4];
-          items[HermesBuiltin.arraySpread(found1.map((item) => {
-            if (Array.isArray(item)) {
-              if ("baggage" === item[0]) {
-                if (typeof item[1] === "string") {
-                  const arr = _toArray(item);
-                  const items = [arr[0], ];
-                  const substr = arr.slice(2);
-                  const parts = arr[1].split(",");
-                  const found = parts.filter((item) => {
-                    const first = item.split("=")[0];
-                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                  });
-                  items[1] = found.join(",");
-                  HermesBuiltin.arraySpread(substr, 2);
-                  return items;
-                }
-              }
-            }
-            return item;
-          }), 0)] = items1;
-          if (baggage) {
-            const items2 = ["baggage", baggage];
-            items.push(items2);
-          }
-          return items;
-        } else {
-          let baggage1;
-          if ("baggage" in headers) {
-            baggage1 = headers.baggage;
-          }
-          const _Array2 = Array;
-          if (Array.isArray(baggage1)) {
-            const mapped = baggage1.map((item) => {
-              let joined = item;
-              if (typeof item === "string") {
-                const parts = item.split(",");
-                const found = parts.filter((item) => {
-                  const first = item.split("=")[0];
-                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                });
-                joined = found.join(",");
-              }
-              return joined;
-            });
-            let found2 = mapped.filter((item) => "" === item);
-          } else {
-            const items3 = [];
-            found2 = items3;
-            if (baggage1) {
-              const parts1 = baggage1.split(",");
-              const found3 = parts1.filter((item) => {
-                const first = item.split("=")[0];
-                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod12493.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod12493;
+            _mod12433.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
               });
-              items3.push(found3.join(","));
-              found2 = items3;
-            }
-          }
-          if (baggage) {
-            found2.push(baggage);
-          }
-          const obj3 = {};
-          const merged = Object.assign(headers);
-          obj3["sentry-trace"] = tmp4;
-          let joined1;
-          if (found2.length > 0) {
-            joined1 = found2.join(",");
-          }
-          obj3.baggage = joined1;
-          return obj3;
-        }
-      }
-    } else {
-      const obj4 = {};
-      const merged1 = Object.assign(traceData);
-      return obj4;
-    }
-  }
-  const obj2 = { span };
-}
-errorCallback;
-_mod12410;
-
-export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
-  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
-};
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
-  let str = arg4;
-  if (arg4 === undefined) {
-    str = "auto.http.browser";
-  }
-  let endResult = fetchData;
-  if (fetchData.fetchData) {
-    let setHttpStatus = require;
-    let headers = dependencyMap;
-    let hasTracingEnabledResult = _mod12418.hasTracingEnabled();
-    if (hasTracingEnabledResult) {
-      hasTracingEnabledResult = fn(endResult.fetchData.url);
-    }
-    if (endResult.endTimestamp) {
-      if (hasTracingEnabledResult) {
-        const __span = endResult.fetchData.__span;
-        if (__span) {
-          if (arg3[__span]) {
-            if (endResult.response) {
-              setHttpStatus = setHttpStatus(12403).setHttpStatus;
-              setHttpStatus(obj10, endResult.response.status);
-              headers = endResult.response;
-              if (headers) {
-                headers = endResult.response.headers;
-              }
-              if (headers) {
-                const headers2 = endResult.response.headers;
-                headers = headers2.get("content-length");
-              }
-              if (headers) {
-                const _parseInt = parseInt;
-                setHttpStatus = parseInt(headers);
-                if (setHttpStatus > 0) {
-                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  args(12454).captureException(found, obj2);
+                  const tmp14Result = args(12454);
+                } else {
+                  const tmp14Result2 = args(12415);
+                  const safeJoinResult = args(12415).safeJoin(args, " ");
+                  args(12454).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(12454);
                 }
+              } else if (!args[0]) {
+                const obj = args(12415);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(12415).safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                obj2 = args(12454);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(12415).safeJoin(args.slice(1), " ") || "console.assert";
               }
-              const setHttpStatusResult = setHttpStatus(12403);
-            } else if (endResult.error) {
-              const obj2 = { code: setHttpStatus(12403).SPAN_STATUS_ERROR, message: "internal_error" };
-              obj10.setStatus(obj2);
-            }
-            endResult = obj10.end();
-            delete tmp2[tmp];
+            });
+            const tmpResult2 = _mod12433;
           }
-        }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
     }
-    ({ method, url } = endResult.fetchData);
-    const tmp7 = (function getFullURL(url) {
-      try {
-        const _URL = URL;
-        const uRL = new URL(url);
-        return uRL.href;
-      } catch (err) {
-      }
-    })(url);
-    if (tmp7) {
-      const host = setHttpStatus(12468).parseUrl(tmp7).host;
-      const setHttpStatusResult2 = setHttpStatus(12468);
-    }
-    const activeSpan = setHttpStatus(12391).getActiveSpan();
-    if (hasTracingEnabledResult) {
-      if (activeSpan) {
-        const obj3 = { name: null, attributes: null };
-        const _HermesInternal = HermesInternal;
-        obj3.name = "" + method + " " + url;
-        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
-        obj4[setHttpStatus(12401).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-        obj4[setHttpStatus(12401).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
-        obj3.attributes = obj4;
-        let startInactiveSpanResult = setHttpStatus(12420).startInactiveSpan(obj3);
-        const setHttpStatusResult4 = setHttpStatus(12420);
-      }
-      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
-      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
-      if (fn2(endResult.fetchData.url)) {
-        let obj5 = endResult.args[1];
-        if (!obj5) {
-          obj5 = {};
-        }
-        let tmp14;
-        if (setHttpStatusResult5.hasTracingEnabled()) {
-          if (activeSpan) {
-            tmp14 = startInactiveSpanResult;
-          }
-        }
-        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
-        if (tmp13Result) {
-          endResult.args[1] = obj5;
-          obj5.headers = tmp13Result;
-        }
-        setHttpStatusResult5 = setHttpStatus(12418);
-      }
-      return startInactiveSpanResult;
-    }
-    startInactiveSpanResult = new setHttpStatus(12419).SentryNonRecordingSpan();
-    const setHttpStatusResult3 = setHttpStatus(12391);
-  }
-};
+  };
+});

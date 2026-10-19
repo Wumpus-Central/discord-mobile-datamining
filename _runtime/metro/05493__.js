@@ -1,14 +1,25 @@
 // === Module 5493: ? ===
 
 // Module 5493
-import _modDef5494 from "module_5494" /* 5494 */;
+import _mod5494 from "module_5494" /* 5494 */;
 
-const require = globalThis.__r;
 
-for (const key10016 in require("module_5494")) {
-  arg5[key10016] = require("module_5494")[key10016];
-  continue;
-}
-
-export default _modDef5494;
-export const LinearGradient = _modDef5494;
+export default function _inherits(value, fn) {
+  if (typeof fn !== "function") {
+    if (null !== fn) {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Super expression must either be null or a function");
+      throw typeError;
+    }
+  }
+  let prototype = fn;
+  if (fn) {
+    prototype = fn.prototype;
+  }
+  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
+  Object.defineProperty(value, "prototype", { writable: false });
+  if (fn) {
+    _mod5494(value, fn);
+  }
+  const obj = { constructor: { value, writable: true, configurable: true } };
+};

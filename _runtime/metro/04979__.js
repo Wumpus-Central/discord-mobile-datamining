@@ -1,30 +1,7 @@
 // === Module 4979: ? ===
 
 // Module 4979
-import c from "c" /* 576 */;
-import _mod4976 from "module_4976" /* 4976 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod4980 from "module_4980" /* 4980 */;
 
-require = arg1;
-function getBooleanProperty(booleanProperty, arg1) {
-  return booleanProperty.booleanProperty(arg1);
-}
 
-export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
-  const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4976.useRiveProperty(arg1, arg0, getBooleanProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
-  }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
-};
+export default _mod4980();

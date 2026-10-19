@@ -1,9 +1,10 @@
 // === Module 4555: ? ===
 
 // Module 4555
-import _typeof_mod from "module_4294" /* 4294 */;
-import module_4298_mod from "module_4298" /* 4298 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import _mod4236 from "module_4236" /* 4236 */;
+import _typeof_mod from "module_4231" /* 4231 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import module_4235_mod from "module_4235" /* 4235 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,25 +14,88 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj2 = { default: module_4298 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4298;
-}
-module_4298 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+let module_4235 = module_4235_mod;
+if (!module_4235) {
+  const obj3 = { default: module_4235 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4235;
 }
-requiredArgs = tmp7;
+module_4235 = tmp7;
 
-export default function fromUnixTime(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(1000 * module_4298.default(arg0));
+export default function setUTCDay(arg0, arg1, weekStartsOn) {
+  requiredArgs.default(2, arguments);
+  const defaultOptions = _mod4236.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult1 = module_4235.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = _typeof.default(arg0);
+      const defaultResult3 = module_4235.default(arg1);
+      let num4 = 0;
+      const uTCDay = defaultResult2.getUTCDay();
+      if ((defaultResult3 % 7 + 7) % 7 < defaultResult1) {
+        num4 = 7;
+      }
+      const diff = num4 + defaultResult3 - uTCDay;
+      defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff);
+      return defaultResult2;
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
 export default exports.default;

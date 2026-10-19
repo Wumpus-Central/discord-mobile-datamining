@@ -1,17 +1,17 @@
 // === Module 4574: ? ===
 
 // Module 4574
-import module_4573_mod from "module_4573" /* 4573 */;
-import requiredArgs_mod from "requiredArgs" /* 4295 */;
+import _typeof_mod from "module_4231" /* 4231 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-let module_4573 = module_4573_mod;
-if (!module_4573) {
-  const obj = { default: module_4573 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4573;
+  tmp3 = _typeof;
 }
-module_4573 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
+export default function isMonday(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(module_4573.default(arg0) / 1000);
+  return 1 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

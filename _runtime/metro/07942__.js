@@ -2,18 +2,15 @@
 
 // Module 7942
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 7851 */;
-import extractPropsDefault from "extractProps" /* 7858 */;
-import extractFontDefault from "extractFont" /* 7865 */;
-import _modDef7867 from "module_7867" /* 7867 */;
 import _modDef7943 from "module_7943" /* 7943 */;
+import _modDef7945 from "module_7945" /* 7945 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TSpan = fn;
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -35,68 +32,52 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class TSpan {
+class FeBlend {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, TSpan);
-    items1 = [...items];
+    tmp = closure_3(this, FeBlend);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(TSpan);
+    obj = hasOwnProperty(FeBlend);
     tmp3 = closure_4;
     if (closure_7()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = TSpan(7858).propsAndStyles(matrix);
-      const obj = TSpan(7858);
-      const merged = Object.assign(propsAndStylesResult, TSpan(7859).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = TSpan(7859);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(TSpan, _modDef7867);
+_inherits(FeBlend, _modDef7945);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = TSpan(7858).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = TSpan(7858);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef7943, {});
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeBlend(7944).extractFilter(this.props));
+    const obj2 = FeBlend(7944);
+    const merged1 = Object.assign(FeBlend(7944).extractIn(this.props));
+    const obj3 = FeBlend(7944);
+    const merged2 = Object.assign(FeBlend(7944).extractFeBlend(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-const extractFont = fn(7865);
-extractFont.setTSpan(importDefaultResultResult);
+const items = [entry];
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

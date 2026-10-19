@@ -1,9 +1,7 @@
 // === Module 7884: ? ===
 
 // Module 7884
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeColorMatrix", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, type: true, values: true } };
 
-export default module_65.get("RNSVGFeColorMatrix", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f6beefc7c46ba35914164c9b6ddbe0f6", name: "GoogleNeutralIcon", type: "png" });

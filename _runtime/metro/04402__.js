@@ -1,14 +1,36 @@
 // === Module 4402: ? ===
 
 // Module 4402
-import module_2137 from "module_2137" /* 2137 */;
+import _typeof_mod from "module_4403" /* 4403 */;
+import _typeof_mod from "module_4404" /* 4404 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
 
-if (!module_2137) {
-  const obj2 = { default: module_2137 };
-  let obj = obj2;
-} else {
-  obj = module_2137;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
 }
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default { date: obj.default({ formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u00E0s' {{time}}", long: "{{date}} '\u00E0s' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function clamp(arg0, arg1) {
+  ({ start, end } = arg1);
+  requiredArgs.default(2, arguments);
+  const items = [arg0, start];
+  const items1 = [_typeof.default(items), end];
+  return _typeof.default(items1);
+};
 export default exports.default;

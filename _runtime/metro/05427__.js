@@ -1,15 +1,8 @@
 // === Module 5427: ? ===
 
 // Module 5427
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
+const StyleSheet = _mod17.StyleSheet;
 
-export const usePrevious = function usePrevious(current) {
-  const tmp = framebus(undefined);
-  closure_1 = tmp;
-  React(() => {
-    closure_1.current = current;
-  });
-  return tmp.current;
-};
+export const styles = StyleSheet.create({ container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" } });

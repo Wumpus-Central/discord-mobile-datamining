@@ -1,16 +1,13 @@
 // === Module 10145: ? ===
 
 // Module 10145
-import _mod10118 from "module_10118" /* 10118 */;
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10119 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10126 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10140 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,15 +27,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10118.WEEKDAY_DICTIONARY) + "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)", "i");
-class ENWeekdayParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
+class ENSlashMonthFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ENSlashMonthFormatParser);
+    tmp2 = c2;
+    obj = c2(ENSlashMonthFormatParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -51,7 +50,8 @@ class ENWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = ENSlashMonthFormatParser;
+_inherits(ENSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,53 +62,14 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
-      let str2 = "last";
-      if ("last" != formatted) {
-        str2 = "last";
-        if ("past" != formatted) {
-          str2 = "next";
-          if ("next" != formatted) {
-            str2 = null;
-            if ("this" == formatted) {
-              str2 = "this";
-            }
-          }
-        }
-      }
-      const formatted1 = arg1[2].toLowerCase();
-      if (undefined !== ENWeekdayParser(10118).WEEKDAY_DICTIONARY[formatted1]) {
-        let sum = ENWeekdayParser(10118).WEEKDAY_DICTIONARY[formatted1];
-      } else if ("weekend" == formatted1) {
-        if ("last" == str2) {
-          let SATURDAY = ENWeekdayParser(10124).Weekday.SUNDAY;
-        } else {
-          SATURDAY = ENWeekdayParser(10124).Weekday.SATURDAY;
-        }
-        sum = SATURDAY;
-      } else if ("weekday" != formatted1) {
-        return null;
-      } else {
-        reference = reference.reference;
-        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-        const day = dateWithAdjustedTimezone.getDay();
-        if (day != ENWeekdayParser(10124).Weekday.SUNDAY) {
-          if (day != ENWeekdayParser(10124).Weekday.SATURDAY) {
-            const diff = day - 1;
-            sum = ("last" == str2 ? diff - 1 : diff + 1) % 5 + 1;
-          }
-        }
-        if ("last" == str2) {
-          let MONDAY = ENWeekdayParser(10124).Weekday.FRIDAY;
-        } else {
-          MONDAY = ENWeekdayParser(10124).Weekday.MONDAY;
-        }
-        sum = MONDAY;
-      }
-      return ENWeekdayParser(10146).createParsingComponentsAtWeekday(reference.reference, sum, str2);
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsed = parseInt(arg1[2]);
+      const parsed1 = parseInt(arg1[1]);
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const implyResult = parsingComponents.imply("day", 1);
+      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
     }
   }
 ];
 
-export default _createClass(ENWeekdayParser, items);
+export default _createClass(ENSlashMonthFormatParser, items);

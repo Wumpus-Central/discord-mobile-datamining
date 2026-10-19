@@ -1,79 +1,119 @@
 // === Module 4381: ? ===
 
 // Module 4381
-import module_2142 from "module_2142" /* 2142 */;
-import module_2143 from "module_2143" /* 2143 */;
+import module_4382_mod from "module_4382" /* 4382 */;
+import _typeof_mod from "module_4231" /* 4231 */;
+import module_4235_mod from "module_4235" /* 4235 */;
+import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import module_4383_mod from "module_4383" /* 4383 */;
+import module_4384_mod from "module_4384" /* 4384 */;
 
-if (!module_2142) {
-  const obj2 = { default: module_2142 };
-  let obj = obj2;
+let module_4382 = module_4382_mod;
+if (!module_4382) {
+  const obj = { default: module_4382 };
+  let tmp3 = obj;
 } else {
-  obj = module_2142;
+  tmp3 = module_4382;
 }
-if (!module_2143) {
-  const obj4 = { default: module_2143 };
-  let obj3 = obj4;
+module_4382 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  let obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
-  obj3 = module_2143;
+  tmp5 = _typeof;
 }
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(-oji)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+_typeof = tmp5;
+let module_4235 = module_4235_mod;
+if (!module_4235) {
+  const obj3 = { default: module_4235 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4235;
+}
+module_4235 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let module_4383 = module_4383_mod;
+if (!module_4383) {
+  const obj5 = { default: module_4383 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4383;
+}
+module_4383 = tmp11;
+let module_4384 = module_4384_mod;
+if (!module_4384) {
+  const obj6 = { default: module_4384 };
+  let tmp13 = obj6;
+} else {
+  tmp13 = module_4384;
+}
+module_4384 = tmp13;
+
+export default function addBusinessDays(arg0, arg1) {
+  let diff;
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  let obj2 = module_4382;
+  let defaultResult2 = module_4382.default(defaultResult1);
+  const defaultResult3 = module_4235.default(arg1);
+  if (isNaN(defaultResult3)) {
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    let num3 = 1;
+    const hours = defaultResult1.getHours();
+    if (defaultResult3 < 0) {
+      num3 = -1;
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^p(r|o)\.?\s?(kr\.?|me)/i, abbreviated: /^(pr\.\s?(kr\.|m\.\s?e\.)|po\s?kr\.|mūsų eroje)/i, wide: /^(prieš Kristų|prieš mūsų erą|po Kristaus|mūsų eroje)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { wide: null, any: null };
-const items = [/prieš/i, /(po|mūsų)/i];
-obj7.wide = items;
-const items1 = [/^pr/i, /^(po|m)/i];
-obj7.any = items1;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^([1234])/i, abbreviated: /^(I|II|III|IV)\s?ketv?\.?/i, wide: /^(I|II|III|IV)\s?ketvirtis/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_4235.default(defaultResult3 / 5));
+    const _Math = Math;
+    let absolute = Math.abs(defaultResult3 % 5);
+    if (absolute > 0) {
+      do {
+        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
+        diff = absolute;
+        if (!module_4382.default(defaultResult1)) {
+          diff = absolute - 1;
+        }
+        absolute = diff;
+        obj2 = module_4382;
+      } while (diff > 0);
+    }
+    if (defaultResult2) {
+      defaultResult2 = obj2.default(defaultResult1);
+    }
+    if (defaultResult2) {
+      defaultResult2 = 0 !== defaultResult3;
+    }
+    if (defaultResult2) {
+      if (module_4384.default(defaultResult1)) {
+        let num6 = -1;
+        if (num3 < 0) {
+          num6 = 2;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num6);
+        const date1 = defaultResult1.getDate();
+      }
+      if (module_4383.default(defaultResult1)) {
+        let num7 = -2;
+        if (num3 < 0) {
+          num7 = 1;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num7);
+        const date2 = defaultResult1.getDate();
+      }
+    }
+    defaultResult1.setHours(hours);
+    return defaultResult1;
   }
 };
-const obj9 = { narrow: null, any: null };
-const items2 = [/1/i, /2/i, /3/i, /4/i];
-obj9.narrow = items2;
-const items3 = [/I$/i, /II$/i, /III/i, /IV/i];
-obj9.any = items3;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[svkbglr]/i, abbreviated: /^(saus\.|vas\.|kov\.|bal\.|geg\.|birž\.|liep\.|rugp\.|rugs\.|spal\.|lapkr\.|gruod\.)/i, wide: /^(sausi(s|o)|vasari(s|o)|kov(a|o)s|balandž?i(s|o)|gegužės?|birželi(s|o)|liep(a|os)|rugpjū(t|č)i(s|o)|rugsėj(is|o)|spali(s|o)|lapkri(t|č)i(s|o)|gruodž?i(s|o))/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items4 = [/^s/i, /^v/i, /^k/i, /^b/i, /^g/i, /^b/i, /^l/i, /^r/i, /^r/i, /^s/i, /^l/i, /^g/i];
-obj11.narrow = items4;
-const items5 = [/^saus/i, /^vas/i, /^kov/i, /^bal/i, /^geg/i, /^birž/i, /^liep/i, /^rugp/i, /^rugs/i, /^spal/i, /^lapkr/i, /^gruod/i];
-obj11.any = items5;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[spatkš]/i, short: /^(sk|pr|an|tr|kt|pn|št)/i, abbreviated: /^(sk|pr|an|tr|kt|pn|št)/i, wide: /^(sekmadien(is|į)|pirmadien(is|į)|antradien(is|į)|trečiadien(is|į)|ketvirtadien(is|į)|penktadien(is|į)|šeštadien(is|į))/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, wide: null, any: null };
-const items6 = [/^s/i, /^p/i, /^a/i, /^t/i, /^k/i, /^p/i, /^š/i];
-obj13.narrow = items6;
-const items7 = [/^se/i, /^pi/i, /^an/i, /^tr/i, /^ke/i, /^pe/i, /^še/i];
-obj13.wide = items7;
-const items8 = [/^sk/i, /^pr/i, /^an/i, /^tr/i, /^kt/i, /^pn/i, /^št/i];
-obj13.any = items8;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(pr.\s?p.|pop.|vidurnaktis|(vidurdienis|perpiet)|rytas|(diena|popietė)|vakaras|naktis)/i, any: /^(priešpiet|popiet$|vidurnaktis|(vidurdienis|perpiet)|rytas|(diena|popietė)|vakaras|naktis)/i }, defaultMatchWidth: "any", parsePatterns: { narrow: { am: /^pr/i, pm: /^pop./i, midnight: /^vidurnaktis/i, noon: /^(vidurdienis|perp)/i, morning: /rytas/i, afternoon: /(die|popietė)/i, evening: /vakaras/i, night: /naktis/i }, any: { am: /^pr/i, pm: /^popiet$/i, midnight: /^vidurnaktis/i, noon: /^(vidurdienis|perp)/i, morning: /rytas/i, afternoon: /(die|popietė)/i, evening: /vakaras/i, night: /naktis/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
 export default exports.default;
