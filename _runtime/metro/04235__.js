@@ -1,11 +1,27 @@
 // _runtime/metro/04235__.js
-import registerAsset from "01134__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
-  scales: [1],
-  hash: "4d6d399242b89295976055c2734a9b5a",
-  name: "hr.messages.4d6d399242b89295976055c2734a9b5a.compiled.messages",
-  type: "jsona",
-});
+export default function toInteger(arg0) {
+  if (null !== arg0) {
+    if (true !== arg0) {
+      if (false !== arg0) {
+        const _Number = Number;
+        const NumberResult = Number(arg0);
+        const _isNaN = isNaN;
+        if (isNaN(NumberResult)) {
+          return NumberResult;
+        } else {
+          if (NumberResult < 0) {
+            const _Math2 = Math;
+            let rounded = Math.ceil(NumberResult);
+          } else {
+            const _Math = Math;
+            rounded = Math.floor(NumberResult);
+          }
+          return rounded;
+        }
+      }
+    }
+  }
+  return NaN;
+};
+export default exports.default;

@@ -1,12 +1,12 @@
 // _runtime/metro/10186__.js
-import AbstractParserWithWordBoundaryChecking from "../10126_AbstractParserWithWordBoundaryChecking.js";
+import AbstractParserWithWordBoundaryChecking from "../10140_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FRTimeUnitAgoFormatParser = require;
+const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FRTimeUnitAgoFormatParser {
+class DETimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, FRTimeUnitAgoFormatParser);
+    tmp = c2(this, DETimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitAgoFormatParser);
+    obj = closure_4(DETimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -42,16 +42,16 @@ class FRTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
     const regExp = new RegExp(
-      "(?:les?|la|l'|du|des?)\\s*(" +
-        FRTimeUnitAgoFormatParser(10181).NUMBER_PATTERN +
-        ")?(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?\\s*(" +
-        FRTimeUnitAgoFormatParser(10119).matchAnyPattern(FRTimeUnitAgoFormatParser(10181).TIME_UNIT_DICTIONARY) +
-        ")(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?",
+      "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
+        DETimeUnitAgoFormatParser(10179).NUMBER_PATTERN +
+        ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
+        DETimeUnitAgoFormatParser(10133).matchAnyPattern(DETimeUnitAgoFormatParser(10179).TIME_UNIT_DICTIONARY) +
+        ")",
       "i",
     );
     return regExp;
@@ -63,32 +63,32 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
       let num = 1;
-      if (arg1[1]) {
-        num = FRTimeUnitAgoFormatParser(10181).parseNumberPattern(arg1[1]);
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(10179).parseNumberPattern(arg1[2]);
       }
       const obj = {};
-      obj[FRTimeUnitAgoFormatParser(10181).TIME_UNIT_DICTIONARY[arg1[3].toLowerCase(arg1[3])]] = num;
-      const formatted = arg1[2] || arg1[4] || "".toLowerCase();
+      obj[DETimeUnitAgoFormatParser(10179).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
       if (formatted) {
-        let isMatch = /derni[eè]re?s?/.test(formatted);
+        let isMatch = /vor/.test(formatted);
         if (!isMatch) {
-          isMatch = /pass[ée]e?s?/.test(formatted);
-          const obj3 = /pass[ée]e?s?/;
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
         }
         if (!isMatch) {
-          isMatch = /pr[ée]c[ée]dents?/.test(formatted);
-          const obj4 = /pr[ée]c[ée]dents?/;
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
         }
         let reverseDurationResult = obj;
         if (isMatch) {
-          reverseDurationResult = FRTimeUnitAgoFormatParser(10121).reverseDuration(obj);
+          reverseDurationResult = DETimeUnitAgoFormatParser(10135).reverseDuration(obj);
         }
-        const ParsingComponents = FRTimeUnitAgoFormatParser(10122).ParsingComponents;
+        const ParsingComponents = DETimeUnitAgoFormatParser(10136).ParsingComponents;
         return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      const str2 = arg1[2] || arg1[4] || "";
+      const str2 = arg1[1] || arg1[3] || "";
     },
   },
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(DETimeUnitAgoFormatParser, items);

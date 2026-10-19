@@ -1,10 +1,28 @@
 // _runtime/metro/05048__.js
-let fn = Array.isArray;
-if (!fn) {
-  fn = (arg0) => {
-    const call = toString.call;
-    return "[object Array]" == (typeof call === "unknown" ? toString() : call(arg0));
-  };
+import c from "../00576_c.js";
+import _mod5045 from "05045__.js";
+import _slicedToArray from "00032__.js";
+
+require = arg1;
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
 }
 
-export default fn;
+export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod5045.useRiveProperty(arg1, arg0, getBooleanProperty);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
+      }
+      return tmp6;
+    }
+  }
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj3;
+  tmp6 = obj3;
+};

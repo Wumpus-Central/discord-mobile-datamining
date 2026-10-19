@@ -1,44 +1,28 @@
 // _runtime/metro/04579__.js
-import differenceInCalendarWeeks_mod from "../04483_differenceInCalendarWeeks.js";
-import lastDayOfMonth_mod from "../04580_lastDayOfMonth.js";
-import startOfMonth_mod from "../04510_startOfMonth.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import startOfWeek_mod from "../04390_startOfWeek.js";
+import requiredArgs_mod from "../04232_requiredArgs.js";
 
-let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
-if (!differenceInCalendarWeeks) {
-  const obj = { default: differenceInCalendarWeeks };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = startOfWeek;
 }
-differenceInCalendarWeeks = tmp3;
-let lastDayOfMonth = lastDayOfMonth_mod;
-if (!lastDayOfMonth) {
-  const obj2 = { default: lastDayOfMonth };
-  let tmp5 = obj2;
-} else {
-  tmp5 = lastDayOfMonth;
-}
-lastDayOfMonth = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfMonth;
-}
-startOfMonth = tmp7;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function getWeeksInMonth(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+export default function isSameWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

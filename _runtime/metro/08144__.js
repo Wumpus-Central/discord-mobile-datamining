@@ -1,52 +1,45 @@
 // _runtime/metro/08144__.js
-import _modDef8112 from "08112__.js";
+import _mod8145 from "08145__.js";
+import _mod8147 from "08147__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
-
-export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef8112.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
-    }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
-    }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
-    }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef8112.getByteAt(getUint8, sum);
-    const tmpResult = _modDef8112;
-    const sum1 = byteAt1 + 256 * _modDef8112.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef8112;
-    const sum2 = sum1 + 65536 * _modDef8112.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef8112;
-    const byteAt2 = _modDef8112.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef8112;
-    const sum4 = byteAt2 + 256 * _modDef8112.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef8112;
-    const sum5 = sum4 + 65536 * _modDef8112.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
-  },
-};
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(_mod8145, exports);
+  fn(_mod8147, exports);
+} else {
+  let _Object = Object;
+}

@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_settings/server_monetization/tags/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJlbnRfdG9vbHM=",
   scales: [1],
-  hash: "c3685a2fecec4fcf3399bcc8edd129b0",
-  name: "GuildSettingsTags.compiled.messages",
+  hash: "8d379c2358bb34b9c03e13e19e3fa986",
+  name: "zh-TW.messages.8d379c2358bb34b9c03e13e19e3fa986.compiled.messages",
   type: "jsona",
 });

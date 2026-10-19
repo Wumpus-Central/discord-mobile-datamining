@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 141,
-  height: 96,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "417f63594df34390f8816db66b0c9b6a",
-  name: "img_outbound_promotion_error",
+  hash: "b8e06ae6b6de6ac4efb5803ebe56348e",
+  name: "star",
   type: "png",
 });

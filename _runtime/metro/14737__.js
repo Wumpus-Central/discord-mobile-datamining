@@ -1,13 +1,13 @@
 // _runtime/metro/14737__.js
+import registerAsset from "01134__.js";
 
-export default {
-  2: "need dictionary",
-  1: "stream end",
-  0: "",
-  "-1": "file error",
-  "-2": "stream error",
-  "-3": "data error",
-  "-4": "insufficient memory",
-  "-5": "buffer error",
-  "-6": "incompatible version",
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 213.5,
+  height: 19,
+  scales: [2, 3],
+  hash: "5c483e491c3f377ab1cb686f9a6d4d3b",
+  name: "img_subscription_activated_light",
+  type: "png",
+});

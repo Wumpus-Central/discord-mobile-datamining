@@ -1,12 +1,40 @@
 // _runtime/metro/04286__.js
-import registerAsset from "01134__.js";
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'pro\u0161lu nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'pro\u0161lu srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'pro\u0161lu subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  yesterday: "'ju\u010Der u' p",
+  today: "'danas u' p",
+  tomorrow: "'sutra u' p",
+  nextWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'idu\u0107u nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'idu\u0107u srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'idu\u0107u subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  other: "P"
+};
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation:
-    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
-  scales: [1],
-  hash: "2fe60911e0fb25a4c46f91e6d023f5d2",
-  name: "zh-CN.messages.2fe60911e0fb25a4c46f91e6d023f5d2.compiled.messages",
-  type: "jsona",
-});
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
+};
+export default exports.default;

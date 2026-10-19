@@ -1,29 +1,19 @@
 // _runtime/metro/15306__.js
-const require = globalThis.__r;
+import _mod15296 from "15296__.js";
+import BestAvailableLocale from "../15299_BestAvailableLocale.js";
 
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
 
-export const getSupportedCalendars = function getSupportedCalendars(locale) {
-  _require = locale;
-  const calendars = require("15307__.js").calendars;
-  return calendars.filter((item) =>
-    (function isSupportedCalendar(item, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
-      }
-      try {
-        const concat = "".concat;
-        const combined = "".concat(str, "-u-ca-");
-        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
-        if ("gregory" === item) {
-          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
-            return false;
-          }
-        }
-        return true;
-      } catch (err) {}
-    })(item, closure_0),
-  );
+export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
+  const items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let replaced = str.replace(_mod15296.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
+    }
+  }
+  return items;
 };

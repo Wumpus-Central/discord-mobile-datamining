@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 251,
-  height: 120,
-  scales: [1, 2, 3],
-  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
-  name: "audience_welcome",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 30,
+  height: 30,
+  scales: [2, 3],
+  hash: "1e3b48d91e5d1a57c5c0dcf0e9c39aca",
+  name: "role_2",
   type: "png",
 });

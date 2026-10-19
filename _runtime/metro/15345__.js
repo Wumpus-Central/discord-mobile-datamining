@@ -1,11 +1,47 @@
 // _runtime/metro/15345__.js
-import _mod15324 from "15324__.js";
 
-const tmp = _mod15324.navigator && _mod15324.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
-
-export default str;
+export const units = [
+  "degree",
+  "acre",
+  "hectare",
+  "percent",
+  "bit",
+  "byte",
+  "gigabit",
+  "gigabyte",
+  "kilobit",
+  "kilobyte",
+  "megabit",
+  "megabyte",
+  "petabyte",
+  "terabit",
+  "terabyte",
+  "day",
+  "hour",
+  "millisecond",
+  "minute",
+  "month",
+  "second",
+  "week",
+  "year",
+  "centimeter",
+  "foot",
+  "inch",
+  "kilometer",
+  "meter",
+  "mile-scandinavian",
+  "mile",
+  "millimeter",
+  "yard",
+  "gram",
+  "kilogram",
+  "ounce",
+  "pound",
+  "stone",
+  "celsius",
+  "fahrenheit",
+  "fluid-ounce",
+  "gallon",
+  "liter",
+  "milliliter",
+];

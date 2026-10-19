@@ -1,105 +1,75 @@
 // _runtime/metro/04706__.js
-import _typeof_mod from "04294__.js";
-import module_4707_mod from "04707__.js";
-import module_4298_mod from "04298__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
-
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "el" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: {
+        end: "{0} \u03BA\u03B1\u03B9 {1}",
+        middle: "{0}, {1}",
+        pair: "{0} \u03BA\u03B1\u03B9 {1}",
+        start: "{0}, {1}",
+      },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: {
+        end: "{0} \u03BA\u03B1\u03B9 {1}",
+        middle: "{0}, {1}",
+        pair: "{0} \u03BA\u03B1\u03B9 {1}",
+        start: "{0}, {1}",
+      },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+      short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
 }
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
 }
-_typeof = tmp3;
-let module_4707 = module_4707_mod;
-if (!module_4707) {
-  const obj2 = { default: module_4707 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4707;
-}
-module_4707 = tmp5;
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj3 = { default: module_4298 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4298;
-}
-module_4298 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function set(arg0, year) {
-  requiredArgs.default(2, arguments);
-  if ("object" === _typeof(year)) {
-    if (null !== year) {
-      const defaultResult1 = _typeof.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult1.getTime())) {
-        const _Date = Date;
-        const date = new Date(NaN);
-        return date;
-      } else {
-        if (null != year.year) {
-          defaultResult1.setFullYear(year.year);
-        }
-        let defaultResult2 = defaultResult1;
-        if (null != year.month) {
-          defaultResult2 = module_4707.default(defaultResult1, year.month);
-        }
-        if (null != year.date) {
-          defaultResult2.setDate(module_4298.default(year.date));
-        }
-        if (null != year.hours) {
-          defaultResult2.setHours(module_4298.default(year.hours));
-        }
-        if (null != year.minutes) {
-          defaultResult2.setMinutes(module_4298.default(year.minutes));
-        }
-        if (null != year.seconds) {
-          defaultResult2.setSeconds(module_4298.default(year.seconds));
-        }
-        if (null != year.milliseconds) {
-          defaultResult2.setMilliseconds(module_4298.default(year.milliseconds));
-        }
-        return defaultResult2;
-      }
-    }
-  }
-  const rangeError = new RangeError("values parameter must be an object");
-  throw rangeError;
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: {
+        end: "{0} \u03BA\u03B1\u03B9 {1}",
+        middle: "{0}, {1}",
+        pair: "{0} \u03BA\u03B1\u03B9 {1}",
+        start: "{0}, {1}",
+      },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: {
+        end: "{0} \u03BA\u03B1\u03B9 {1}",
+        middle: "{0}, {1}",
+        pair: "{0} \u03BA\u03B1\u03B9 {1}",
+        start: "{0}, {1}",
+      },
+    },
+    disjunction: {
+      long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+      short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    },
+  },
+  locale: "el",
 };
-export default exports.default;
+prop.push(obj);

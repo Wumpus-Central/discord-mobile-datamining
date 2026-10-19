@@ -24,15 +24,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function formatToMarkdownString(_1Ww0Hi, arg1) {
+function formatToMarkdownString(JUvC0s, arg1) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = _moduleResult;
   }
-  let first = _1Ww0Hi;
-  if (typeof _1Ww0Hi !== "string") {
+  let first = JUvC0s;
+  if (typeof JUvC0s !== "string") {
     const self = this;
-    first = this.bindFormatValues(tmp, _1Ww0Hi, arg1)[0];
+    first = this.bindFormatValues(tmp, JUvC0s, arg1)[0];
   }
   return first;
 }

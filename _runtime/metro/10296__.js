@@ -1,13 +1,14 @@
 // _runtime/metro/10296__.js
-import AbstractParserWithWordBoundaryChecking from "../10126_AbstractParserWithWordBoundaryChecking.js";
-import _mod10288 from "10288__.js";
+import now from "../10157_now.js";
+import _mod10289 from "10289__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitLaterFormatParser = require;
+let self = this;
+const UKCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,49 +27,149 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(" + _mod10288.TIME_UNITS_PATTERN + ")\\s{0,5}(?:dopo|pi\u00F9 tardi|da adesso|avanti|oltre|a seguire)(?=(?:\\W|$))",
-  "i",
-);
-const regExp1 = new RegExp("(" + _mod10288.TIME_UNITS_PATTERN + ")(dopo|pi\u00F9 tardi)(?=(?:\\W|$))", "i");
-class ENTimeUnitLaterFormatParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeUnitLaterFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitLaterFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
-  }
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitLaterFormatParser(10122).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        ENTimeUnitLaterFormatParser(10288).parseDuration(arg1[1]),
-      );
-    },
-  },
-];
-
-export default _createClass(ENTimeUnitLaterFormatParser, items);
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function c(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_9 = fn(now);
+    class UKCasualTimeParser {
+      constructor() {
+        self = this;
+        tmp = c2(this, UKCasualTimeParser);
+        tmp2 = closure_4;
+        obj = closure_4(UKCasualTimeParser);
+        tmp3 = closure_3;
+        if (hasOwnProperty()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
+      }
+    }
+    _inherits(UKCasualTimeParser, _mod10289.AbstractParserWithLeftRightBoundaryChecking);
+    const entry = {
+      key: "innerPatternString",
+      value: function innerPatternString(arg0) {
+        return "(\u0437\u0430\u0440\u0430\u0437|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E\\s*\u0432\u0435\u0447\u043E\u0440\u0430|\u043C\u0438\u043D\u0443\u043B\u043E\u0457\\s*\u043D\u043E\u0447\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0457\\s*\u043D\u043E\u0447\u0456|\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456\\s*\u0432\u043D\u043E\u0447\u0456|\u0446\u0456\u0454\u0457\\s*\u043D\u043E\u0447\u0456|\u0446\u044C\u043E\u0433\u043E \u0440\u0430\u043D\u043A\u0443|\u0432\u0440\u0430\u043D\u0446\u0456|\u0440\u0430\u043D\u043A\u0443|\u0437\u0440\u0430\u043D\u043A\u0443|\u043E\u043F\u0456\u0432\u0434\u043D\u0456|\u0432\u0432\u0435\u0447\u0435\u0440\u0456|\u0432\u0435\u0447\u043E\u0440\u0430|\u043E\u043F\u0456\u0432\u043D\u043E\u0447\u0456|\u0432\u043D\u043E\u0447\u0456)";
+      },
+    };
+    let items = [entry];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(refDate, arg1) {
+        refDate = refDate.refDate;
+        const str2 = arg1[0].toLowerCase();
+        let parsingComponents = refDate.createParsingComponents();
+        if ("\u0437\u0430\u0440\u0430\u0437" === str2) {
+          return closure_9.now(refDate.reference);
+        } else {
+          if ("\u0432\u0432\u0435\u0447\u0435\u0440\u0456" !== str2) {
+            if ("\u0432\u0435\u0447\u043E\u0440\u0430" !== str2) {
+              if (!str2.endsWith("\u0432\u0440\u0430\u043D\u0446\u0456")) {
+                if (!str2.endsWith("\u0440\u0430\u043D\u043A\u0443")) {
+                  if (!str2.endsWith("\u0437\u0440\u0430\u043D\u043A\u0443")) {
+                    if (str2.endsWith("\u043E\u043F\u0456\u0432\u0434\u043D\u0456")) {
+                      return closure_9.noon(refDate.reference);
+                    } else if (str2.match(/минулої\s*ночі/)) {
+                      return closure_9.lastNight(refDate.reference);
+                    } else if (str2.match(/минулого\s*вечора/)) {
+                      return closure_9.yesterdayEvening(refDate.reference);
+                    } else {
+                      if (str2.match(/наступної\s*ночі/)) {
+                        let num2 = 2;
+                        if (refDate.getHours() < 22) {
+                          num2 = 1;
+                        }
+                        const _Date = Date;
+                        const date = new Date(refDate.getTime());
+                        date.setDate(date.getDate() + num2);
+                        UKCasualTimeParser(10139).assignSimilarDate(parsingComponents, date);
+                        parsingComponents.imply("hour", 1);
+                      }
+                      if (!str2.match(/цієї\s*ночі/)) {
+                        return parsingComponents;
+                      }
+                      parsingComponents = closure_9.midnight(refDate.reference);
+                    }
+                  }
+                }
+              }
+              return closure_9.morning(refDate.reference);
+            }
+          }
+          return closure_9.evening(refDate.reference);
+        }
+      },
+    };
+    items[1] = entry1;
+    exports.default = _createClass(UKCasualTimeParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

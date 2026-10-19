@@ -1,198 +1,165 @@
 // _runtime/metro/12453__.js
-import _mod12430 from "12430__.js";
-import _mod12433 from "12433__.js";
-import _mod12440 from "12440__.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod12406 from "12406__.js";
+import _slicedToArray from "00032__.js";
 
-function eventFromEnvelope(arg0, arg1) {
-  closure_0 = arg1;
-  _mod12430.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
-    }
-    return closure_1;
-  });
-  return dependencyMap;
-}
-
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
+function dsnFromString(arg0) {
   closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
+  const match = re3.exec(arg0);
+  if (match) {
+    const tmp5 = _slicedToArray(match.slice(1), 6);
+    let str = tmp5[1];
+    let str3 = "";
+    if (undefined !== tmp5[2]) {
+      str3 = tmp6;
+    }
+    let str4 = "";
+    if (undefined !== tmp5[3]) {
+      str4 = tmp7;
+    }
+    let str5 = "";
+    if (undefined !== tmp5[4]) {
+      str5 = tmp8;
+    }
+    let str6 = "";
+    if (undefined !== tmp5[5]) {
+      str6 = tmp9;
+    }
+    const parts = str6.split("/");
+    let str8 = str6;
+    let str9 = "";
+    if (parts.length > 1) {
+      const substr = parts.slice(0, -1);
+      str9 = substr.join("/");
+      str8 = parts.pop();
+    }
+    let first = str8;
+    if (str8) {
+      const match1 = str8.match(/^\d+/);
+      first = str8;
+      if (match1) {
+        first = match1[0];
       }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
-        return items;
+    }
+    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
+    if (!str) {
+      str = "";
+    }
+    url.publicKey = str;
+    if (!str3) {
+      str3 = "";
+    }
+    url.pass = str3;
+    url.host = str4;
+    if (!str5) {
+      str5 = "";
+    }
+    url.port = str5;
+    if (!str9) {
+      str9 = "";
+    }
+    url.path = str9;
+    url.projectId = first;
+    return url;
+  } else {
+    _mod12406.consoleSandbox(() => {
+      console.error("Invalid Sentry Dsn: " + closure_0);
+    });
+  }
+}
+const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
+
+export { dsnFromString };
+export const dsnToString = function dsnToString(url) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
+  let str = "";
+  if (flag) {
+    str = "";
+    if (pass) {
+      const _HermesInternal = HermesInternal;
+      str = ":" + pass;
+    }
+  }
+  let str3 = "";
+  if (port) {
+    const _HermesInternal2 = HermesInternal;
+    str3 = ":" + port;
+  }
+  let combined = path;
+  if (path) {
+    const _HermesInternal3 = HermesInternal;
+    combined = "" + path + "/";
+  }
+  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
+};
+export const makeDsn = function makeDsn(protocol) {
+  if (typeof protocol === "string") {
+    let url = dsnFromString(protocol);
+  } else {
+    url = {
+      protocol: protocol.protocol,
+      publicKey: protocol.publicKey || "",
+      pass: protocol.pass || "",
+      host: protocol.host,
+      port: protocol.port || "",
+      path: protocol.path || "",
+      projectId: protocol.projectId,
+    };
+  }
+  if (url) {
+    let error = url;
+    let flag = true;
+    if (url(12405).DEBUG_BUILD) {
+      ({ port, projectId, protocol } = url);
+      const items = ["protocol", "publicKey", "host", "projectId"];
+      const found = items.find((item) => {
+        let flag = !tmp;
+        if (!url[item]) {
+          const logger = _mod12406.logger;
+          const _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: " + item + " missing");
+          flag = true;
+        }
+        return flag;
+      });
+      if (found) {
+        flag = !found;
       } else {
-        const dsnFromStringResult = _mod12433.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod12440.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
+        if (!projectId.match(/^\d+$/)) {
+          let logger = error(12406).logger;
+          let _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
+        }
+        let tmp6 = "http" === protocol;
+        if (!tmp6) {
+          tmp6 = "https" === protocol;
+        }
+        if (tmp6) {
+          let num3 = port;
+          if (port) {
+            const _isNaN = isNaN;
+            const _parseInt = parseInt;
+            num3 = isNaN(parseInt(port, 10));
           }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod12440;
+          if (num3) {
+            const logger3 = error(12406).logger;
+            error = logger3.error;
+            const _HermesInternal3 = HermesInternal;
+            error("Invalid Sentry Dsn: Invalid port " + port);
+            num3 = 1;
+          }
+        } else {
+          const logger2 = error(12406).logger;
+          const _HermesInternal2 = HermesInternal;
+          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
         }
       }
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(12430).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
-        });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
-        }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(12430).createEnvelope(tmp4, 12430));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      }
-    };
-  };
-}
+    if (flag) {
+      return url;
+    }
+  }
+};

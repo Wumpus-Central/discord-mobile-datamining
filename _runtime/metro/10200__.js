@@ -1,84 +1,94 @@
 // _runtime/metro/10200__.js
+import AbstractParserWithWordBoundaryChecking from "../10140_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-export const parseYear = function parseYear(match) {
-  if (match.match(/^[0-9]{1,4}$/)) {
-    const _parseInt3 = parseInt;
-    const parsed = parseInt(match);
-    let sum = parsed;
-    if (parsed < 100) {
-      let num3 = 2000;
-      if (parsed > 50) {
-        num3 = 1900;
-      }
-      sum = parsed + num3;
+const FRTimeUnitAgoFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return sum;
-  } else if (match.match(/a\.?\s*c\.?/i)) {
-    const _parseInt2 = parseInt;
-    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(match);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class FRTimeUnitAgoFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, FRTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(FRTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    return tmp3(self, constructResult);
   }
+}
+_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:les?|la|l'|du|des?)\\s*(" +
+        FRTimeUnitAgoFormatParser(10195).NUMBER_PATTERN +
+        ")?(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?\\s*(" +
+        FRTimeUnitAgoFormatParser(10133).matchAnyPattern(FRTimeUnitAgoFormatParser(10195).TIME_UNIT_DICTIONARY) +
+        ")(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?",
+      "i",
+    );
+    return regExp;
+  },
 };
-export const WEEKDAY_DICTIONARY = {
-  domingo: 0,
-  dom: 0,
-  segunda: 1,
-  "segunda-feira": 1,
-  seg: 1,
-  terça: 2,
-  "terça-feira": 2,
-  ter: 2,
-  quarta: 3,
-  "quarta-feira": 3,
-  qua: 3,
-  quinta: 4,
-  "quinta-feira": 4,
-  qui: 4,
-  sexta: 5,
-  "sexta-feira": 5,
-  sex: 5,
-  sábado: 6,
-  sabado: 6,
-  sab: 6,
-};
-export const MONTH_DICTIONARY = {
-  janeiro: 1,
-  jan: 1,
-  "jan.": 1,
-  fevereiro: 2,
-  fev: 2,
-  "fev.": 2,
-  março: 3,
-  mar: 3,
-  "mar.": 3,
-  abril: 4,
-  abr: 4,
-  "abr.": 4,
-  maio: 5,
-  mai: 5,
-  "mai.": 5,
-  junho: 6,
-  jun: 6,
-  "jun.": 6,
-  julho: 7,
-  jul: 7,
-  "jul.": 7,
-  agosto: 8,
-  ago: 8,
-  "ago.": 8,
-  setembro: 9,
-  set: 9,
-  "set.": 9,
-  outubro: 10,
-  out: 10,
-  "out.": 10,
-  novembro: 11,
-  nov: 11,
-  "nov.": 11,
-  dezembro: 12,
-  dez: 12,
-  "dez.": 12,
-};
-export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[1]) {
+        num = FRTimeUnitAgoFormatParser(10195).parseNumberPattern(arg1[1]);
+      }
+      const obj = {};
+      obj[FRTimeUnitAgoFormatParser(10195).TIME_UNIT_DICTIONARY[arg1[3].toLowerCase(arg1[3])]] = num;
+      const formatted = arg1[2] || arg1[4] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /derni[eè]re?s?/.test(formatted);
+        if (!isMatch) {
+          isMatch = /pass[ée]e?s?/.test(formatted);
+          const obj3 = /pass[ée]e?s?/;
+        }
+        if (!isMatch) {
+          isMatch = /pr[ée]c[ée]dents?/.test(formatted);
+          const obj4 = /pr[ée]c[ée]dents?/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = FRTimeUnitAgoFormatParser(10135).reverseDuration(obj);
+        }
+        const ParsingComponents = FRTimeUnitAgoFormatParser(10136).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[2] || arg1[4] || "";
+    },
+  },
+];
+
+export default _createClass(FRTimeUnitAgoFormatParser, items);

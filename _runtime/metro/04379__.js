@@ -1,7 +1,46 @@
 // _runtime/metro/04379__.js
-let closure_0 = { lastWeek: "'Pra\u0117jus\u012F' eeee p", yesterday: "'Vakar' p", today: "'\u0160iandien' p", tomorrow: "'Rytoj' p", nextWeek: "eeee p", other: "P" };
+import module_4235_mod from "04235__.js";
+import _typeof_mod from "04231__.js";
+import requiredArgs_mod from "../04232_requiredArgs.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let module_4235 = module_4235_mod;
+if (!module_4235) {
+  const obj = { default: module_4235 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4235;
+}
+module_4235 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function addDays(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_4235.default(arg1);
+  if (isNaN(defaultResult2)) {
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else if (defaultResult2) {
+    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
+    return defaultResult1;
+  } else {
+    return defaultResult1;
+  }
 };
 export default exports.default;

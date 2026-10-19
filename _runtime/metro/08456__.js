@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "25920a620c4ba7278e587f1009b2fa3e",
-  name: "ImageWarningIcon",
+  hash: "38e1b93a52067f9cce24c90cbb1af007",
+  name: "StageIcon",
   type: "png",
 });

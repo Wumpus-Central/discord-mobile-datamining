@@ -681,8 +681,8 @@ export default {
   subtract(arg0, arg1) {
     return new _modDef368(arg0, arg1);
   },
-  divide(absResult, arg1) {
-    return new _modDef369(absResult, arg1);
+  divide(arg0, arg1) {
+    return new _modDef369(arg0, arg1);
   },
   multiply(arg0, arg1) {
     return new _modDef370(arg0, arg1);

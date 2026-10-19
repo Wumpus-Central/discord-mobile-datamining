@@ -1,19 +1,25 @@
 // _runtime/metro/15359__.js
-import _mod15328 from "15328__.js";
-import element from "../15360_element.js";
-import getOwnPropertyDescriptor from "15327__.js";
+import module_15360_mod from "15360__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod15328(
-    () =>
-      7 !==
-      Object.defineProperty(element("div"), "a", {
-        get() {
-          return 7;
-        },
-      }).a,
-  );
+const call = prototype.call;
+let module_15360 = module_15360_mod;
+if (module_15360) {
+  const bind = prototype.bind;
+  module_15360 = bind.bind(call, call);
+}
+if (!module_15360) {
+  module_15360 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
 }
 
-export default tmp2;
+export default module_15360;

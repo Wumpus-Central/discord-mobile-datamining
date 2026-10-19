@@ -1,165 +1,69 @@
 // _runtime/metro/12433__.js
-import _mod12386 from "12386__.js";
-import _slicedToArray from "00032__.js";
+import _mod12407 from "12407__.js";
+import _mod12412 from "12412__.js";
+import _mod12424 from "12424__.js";
+import _mod12425 from "12425__.js";
+import ScopeClass from "../12427_ScopeClass.js";
 
-function dsnFromString(arg0) {
-  closure_0 = arg0;
-  const match = re3.exec(arg0);
-  if (match) {
-    const tmp5 = _slicedToArray(match.slice(1), 6);
-    let str = tmp5[1];
-    let str3 = "";
-    if (undefined !== tmp5[2]) {
-      str3 = tmp6;
-    }
-    let str4 = "";
-    if (undefined !== tmp5[3]) {
-      str4 = tmp7;
-    }
-    let str5 = "";
-    if (undefined !== tmp5[4]) {
-      str5 = tmp8;
-    }
-    let str6 = "";
-    if (undefined !== tmp5[5]) {
-      str6 = tmp9;
-    }
-    const parts = str6.split("/");
-    let str8 = str6;
-    let str9 = "";
-    if (parts.length > 1) {
-      const substr = parts.slice(0, -1);
-      str9 = substr.join("/");
-      str8 = parts.pop();
-    }
-    let first = str8;
-    if (str8) {
-      const match1 = str8.match(/^\d+/);
-      first = str8;
-      if (match1) {
-        first = match1[0];
-      }
-    }
-    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    if (!str) {
-      str = "";
-    }
-    url.publicKey = str;
-    if (!str3) {
-      str3 = "";
-    }
-    url.pass = str3;
-    url.host = str4;
-    if (!str5) {
-      str5 = "";
-    }
-    url.port = str5;
-    if (!str9) {
-      str9 = "";
-    }
-    url.path = str9;
-    url.projectId = first;
-    return url;
-  } else {
-    _mod12386.consoleSandbox(() => {
-      console.error("Invalid Sentry Dsn: " + closure_0);
-    });
-  }
-}
-const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
+require = arg1;
+const dependencyMap = arg6;
 
-export { dsnFromString };
-export const dsnToString = function dsnToString(url) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
-  let str = "";
-  if (flag) {
-    str = "";
-    if (pass) {
-      const _HermesInternal = HermesInternal;
-      str = ":" + pass;
-    }
-  }
-  let str3 = "";
-  if (port) {
-    const _HermesInternal2 = HermesInternal;
-    str3 = ":" + port;
-  }
-  let combined = path;
-  if (path) {
-    const _HermesInternal3 = HermesInternal;
-    combined = "" + path + "/";
-  }
-  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
+export const getClient = function getClient() {
+  const mainCarrier = _mod12424.getMainCarrier();
+  const asyncContextStrategy = _mod12425.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
 };
-export const makeDsn = function makeDsn(protocol) {
-  if (typeof protocol === "string") {
-    let url = dsnFromString(protocol);
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12424.getMainCarrier();
+  const asyncContextStrategy = _mod12425.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12407.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12424.getMainCarrier();
+  const asyncContextStrategy = _mod12425.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12412.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12424.getMainCarrier();
+  const asyncContextStrategy = _mod12425.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
+    }
+    return result;
   } else {
-    url = {
-      protocol: protocol.protocol,
-      publicKey: protocol.publicKey || "",
-      pass: protocol.pass || "",
-      host: protocol.host,
-      port: protocol.port || "",
-      path: protocol.path || "",
-      projectId: protocol.projectId,
-    };
+    return asyncContextStrategy.withIsolationScope(items[0]);
   }
-  if (url) {
-    let error = url;
-    let flag = true;
-    if (url(12385).DEBUG_BUILD) {
-      ({ port, projectId, protocol } = url);
-      const items = ["protocol", "publicKey", "host", "projectId"];
-      const found = items.find((item) => {
-        let flag = !tmp;
-        if (!url[item]) {
-          const logger = _mod12386.logger;
-          const _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: " + item + " missing");
-          flag = true;
-        }
-        return flag;
-      });
-      if (found) {
-        flag = !found;
-      } else {
-        if (!projectId.match(/^\d+$/)) {
-          let logger = error(12386).logger;
-          let _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
-        }
-        let tmp6 = "http" === protocol;
-        if (!tmp6) {
-          tmp6 = "https" === protocol;
-        }
-        if (tmp6) {
-          let num3 = port;
-          if (port) {
-            const _isNaN = isNaN;
-            const _parseInt = parseInt;
-            num3 = isNaN(parseInt(port, 10));
-          }
-          if (num3) {
-            const logger3 = error(12386).logger;
-            error = logger3.error;
-            const _HermesInternal3 = HermesInternal;
-            error("Invalid Sentry Dsn: Invalid port " + port);
-            num3 = 1;
-          }
-        } else {
-          const logger2 = error(12386).logger;
-          const _HermesInternal2 = HermesInternal;
-          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
-        }
-      }
+};
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12424.getMainCarrier();
+  const asyncContextStrategy = _mod12425.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
     }
-    if (flag) {
-      return url;
-    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
   }
 };

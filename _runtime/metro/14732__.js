@@ -1,10 +1,13 @@
 // _runtime/metro/14732__.js
-import _mod14746 from "14746__.js";
-import assign from "14733__.js";
-import Deflate from "../14734_Deflate.js";
-import Inflate from "../14742_Inflate.js";
+import registerAsset from "01134__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14746);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 215,
+  height: 128,
+  scales: [2, 3],
+  hash: "91b8f5f85a023591658822c0d3091e54",
+  name: "guild_subscription_removal_darker",
+  type: "png",
+});

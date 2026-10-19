@@ -1,44 +1,55 @@
 // _runtime/metro/04721__.js
-import module_4298_mod from "04298__.js";
-import _typeof_mod from "04294__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
-
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj = { default: module_4298 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4298;
-}
-module_4298 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function setYear(date, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(date);
-  if (isNaN(defaultResult1.getTime())) {
-    const _Date = Date;
-    date = new Date(NaN);
-    return date;
-  } else {
-    defaultResult1.setFullYear(defaultResult2);
-    return defaultResult1;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "pt" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" },
+      short: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  defaultResult2 = module_4298.default(arg1);
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" },
+      short: { end: "{0} ou {1}", middle: "{0}, {1}", pair: "{0} ou {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+    },
+  },
+  locale: "pt",
 };
-export default exports.default;
+prop.push(obj);

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_automod/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "7508dd06eca0e95324ea1e11c69f1b63",
-  name: "ic_emoji_zipper_24px",
+  hash: "b4bc35e77125dd7a659435efd876e4cc",
+  name: "ChannelListIcon",
   type: "png",
 });

@@ -1,9 +1,19 @@
 // _runtime/metro/05444__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import _mod5235 from "05235__.js";
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
-const context = noop.createContext((children) => framebus(React, { children: children.children }));
+_mod19.useCallback;
 
-export const GHContext = context;
-export const RNSScreensRefContext = noop.createContext(null);
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod5235.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
+  }, items);
+  return obj2;
+};

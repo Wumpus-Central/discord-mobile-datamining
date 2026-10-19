@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fd096310d044f29ce2db7e98b6b0b4d7",
-  name: "AppsLockIcon",
+  hash: "321fcdfdc6f79caac89fae29f0991750",
+  name: "ForumWarningIcon",
   type: "png",
 });

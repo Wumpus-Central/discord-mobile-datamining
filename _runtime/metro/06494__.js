@@ -1,16 +1,13 @@
 // _runtime/metro/06494__.js
-import Link from "../01506_Link.js";
-import noop from "00019__.js";
+import registerAsset from "01134__.js";
 
-require = fn;
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
-
-export const Background = function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 24,
+  height: 24,
+  scales: [1],
+  hash: "5f8b57af5ab5fdfa6cf52708c91c3adb",
+  name: "img_account_sync_reddit_white",
+  type: "svg",
+});

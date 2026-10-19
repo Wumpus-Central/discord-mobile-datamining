@@ -1,15 +1,15 @@
 // _runtime/metro/04588__.js
-import _typeof_mod from "04294__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
+import module_4578_mod from "04578__.js";
+import requiredArgs_mod from "../04232_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4578 = module_4578_mod;
+if (!module_4578) {
+  const obj = { default: module_4578 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4578;
 }
-_typeof = tmp3;
+module_4578 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isAfter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time > _typeof.default(arg1).getTime();
+export default function isThisISOWeek(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4578.default(arg0, Date.now());
 };
 export default exports.default;

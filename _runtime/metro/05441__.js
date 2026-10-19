@@ -1,9 +1,25 @@
 // _runtime/metro/05441__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import _mod19 from "00019__.js";
+import value2 from "../05231_value2.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContainer", validAttributes: {} };
+const useMemo = _mod19.useMemo;
 
-export default module_65.get("RNSScreenContainer", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useBottomSheetTimingConfigs = (arg0) => {
+  const easing = arg0;
+  const items = [, ,];
+  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
+  return useMemo(() => {
+    let ANIMATION_EASING = easing.easing;
+    if (!ANIMATION_EASING) {
+      ANIMATION_EASING = value2.ANIMATION_EASING;
+    }
+    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
+    let ANIMATION_DURATION = easing.duration;
+    if (!ANIMATION_DURATION) {
+      ANIMATION_DURATION = value2.ANIMATION_DURATION;
+    }
+    obj.duration = ANIMATION_DURATION;
+    obj.reduceMotion = easing.reduceMotion;
+    return obj;
+  }, items);
+};

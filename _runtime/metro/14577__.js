@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 134,
+  height: 56,
   scales: [2, 3],
-  hash: "3b34529117c1d3db6d78cba92e0c94bb",
-  name: "member_list_badge_16px",
+  hash: "5491d41ca2212b1f11c074c452801d84",
+  name: "img_discord_nitro_logo_centered_dark",
   type: "png",
 });

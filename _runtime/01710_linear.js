@@ -52,8 +52,8 @@ const __initData7 = { code: "function circle_Pnpm_EasingTs8(t){return 1-Math.sqr
 const tmp7 = (() => {
   function poly(n) {
     closure_0 = n;
-    const fn = function n(sum) {
-      return Math.pow(sum, closure_0);
+    const fn = function n(arg0) {
+      return Math.pow(arg0, closure_0);
     };
     fn.__closure = { n };
     fn.__workletHash = 14203338349806;

@@ -1,45 +1,11 @@
 // _runtime/metro/02140__.js
+import registerAsset from "01134__.js";
 
-export default function buildLocalizeFn(arg0) {
-  const formattingValues = arg0;
-  return (arg0, context) => {
-    let str = "standalone";
-    if (null != context) {
-      str = "standalone";
-      if (context.context) {
-        const _String = String;
-        str = String(context.context);
-      }
-    }
-    if ("formatting" === str) {
-      if (formattingValues.formattingValues) {
-        let StringResult = tmp6;
-        if (null != context) {
-          StringResult = tmp6;
-          if (context.width) {
-            const _String3 = String;
-            StringResult = String(context.width);
-          }
-        }
-        let tmp5 = formattingValues.formattingValues[StringResult] || formattingValues.formattingValues[formattingValues.defaultFormattingWidth || formattingValues.defaultWidth];
-        let obj = formattingValues;
-        const tmp9 = formattingValues.formattingValues[StringResult] || formattingValues.formattingValues[formattingValues.defaultFormattingWidth || formattingValues.defaultWidth];
-      }
-      let argumentCallbackResult = arg0;
-      if (obj.argumentCallback) {
-        argumentCallbackResult = obj.argumentCallback(arg0);
-      }
-      return tmp5[argumentCallbackResult];
-    }
-    obj = formattingValues;
-    if (null != context) {
-      if (context.width) {
-        const _String2 = String;
-        let defaultWidth = String(context.width);
-      }
-      tmp5 = obj.values[defaultWidth] || obj.values[tmp3];
-    }
-    defaultWidth = obj.defaultWidth;
-  };
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZHM=",
+  scales: [1],
+  hash: "f570e680cdbbe142dfe0ca1d9c8cd67a",
+  name: "tr.messages.f570e680cdbbe142dfe0ca1d9c8cd67a.compiled.messages",
+  type: "jsona",
+});

@@ -1,12 +1,55 @@
 // _runtime/metro/04414__.js
-import 02137__ from "02137__.js";
+import requiredArgs_mod from "../04232_requiredArgs.js";
 
-if (!module_2137) {
-  const obj2 = { default: module_2137 };
-  let obj = obj2;
-} else {
-  obj = module_2137;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
 
-export default { date: obj.default({ formats: { full: "EEEE, d MMMM y '\u0433.'", long: "d MMMM y '\u0433.'", medium: "d MMM y '\u0433.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { any: "{{date}}, {{time}}" }, defaultWidth: "any" }) };
+export default function isDate(arg0) {
+  requiredArgs.default(1, arguments);
+  let tmp2 = arg0 instanceof Date;
+  if (!tmp2) {
+    const tmp4 = "object" === _typeof(arg0);
+    if (!tmp4) {
+      tmp2 = tmp4;
+    } else {
+      const _Object = Object;
+      let str2 = Object.prototype.toString;
+      const call = str2.call;
+      str2 = "[object Date]";
+      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
+    }
+  }
+  return tmp2;
+};
 export default exports.default;

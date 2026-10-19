@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "ix", left: "channelId", right: "shapes", bottom: "Array" };
+let closure_0 = { top: "toCharArray$esjava$1", left: "Symbol", right: "unicodeVersion", bottom: "np" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

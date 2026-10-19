@@ -1,49 +1,278 @@
 // _runtime/metro/04738__.js
-import 02140__ from "02140__.js";
+import _mod2050 from "02050__.js";
 
-if (!module_2140) {
-  const obj2 = { default: module_2140 };
-  let obj = obj2;
-} else {
-  obj = module_2140;
-}
-const date = {
-  ordinalNumber(arg0, unit) {
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    const StringResult = String(unit);
-    const NumberResult = Number(arg0);
-    if ("date" === StringResult) {
-      if (3 === NumberResult) {
-        let str5 = "-\u0454";
-      } else {
-        str5 = "-\u0435";
-      }
-      let str3 = str5;
-    } else {
-      if ("minute" !== StringResult) {
-        if ("second" !== StringResult) {
-          str3 = "-\u0439";
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      const _module = _mod2050;
+      const obj2 = {
+        months: null,
+        monthsShort: null,
+        weekdays: null,
+        weekdaysShort: null,
+        weekdaysMin: null,
+        longDateFormat: null,
+        calendar: null,
+        relativeTime: null,
+        dayOfMonthOrdinalParse: null,
+        ordinal: null,
+        week: null,
+      };
+      const split = "January_February_March_April_May_June_July_August_September_October_November_December".split;
+      obj2.months = "January_February_March_April_May_June_July_August_September_October_November_December".split("_");
+      const split2 = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split;
+      obj2.monthsShort = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_");
+      const split3 = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split;
+      obj2.weekdays = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
+      const split4 = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split;
+      obj2.weekdaysShort = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_");
+      const split5 = "Su_Mo_Tu_We_Th_Fr_Sa".split;
+      obj2.weekdaysMin = "Su_Mo_Tu_We_Th_Fr_Sa".split("_");
+      obj2.longDateFormat = {
+        LT: "HH:mm",
+        LTS: "HH:mm:ss",
+        L: "DD/MM/YYYY",
+        LL: "D MMMM YYYY",
+        LLL: "D MMMM YYYY HH:mm",
+        LLLL: "dddd, D MMMM YYYY HH:mm",
+      };
+      obj2.calendar = {
+        sameDay: "[Today at] LT",
+        nextDay: "[Tomorrow at] LT",
+        nextWeek: "dddd [at] LT",
+        lastDay: "[Yesterday at] LT",
+        lastWeek: "[Last] dddd [at] LT",
+        sameElse: "L",
+      };
+      obj2.relativeTime = {
+        future: "in %s",
+        past: "%s ago",
+        s: "a few seconds",
+        ss: "%d seconds",
+        m: "a minute",
+        mm: "%d minutes",
+        h: "an hour",
+        hh: "%d hours",
+        d: "a day",
+        dd: "%d days",
+        M: "a month",
+        MM: "%d months",
+        y: "a year",
+        yy: "%d years",
+      };
+      obj2.dayOfMonthOrdinalParse = /\d{1,2}(st|nd|rd|th)/;
+      obj2.ordinal = function ordinal(arg0) {
+        const result = arg0 % 10;
+        let str = "th";
+        let str2 = "th";
+        if (1 !== (~~arg0 % 100) / 10) {
+          let str3 = "st";
+          if (1 !== result) {
+            let str4 = "nd";
+            if (2 !== result) {
+              if (3 === result) {
+                str = "rd";
+              }
+              str4 = str;
+            }
+            str3 = str4;
+          }
+          str2 = str3;
         }
-      }
-      str3 = "-\u0430";
+        return arg0 + str2;
+      };
+      obj2.week = { dow: 1, doy: 4 };
+      _module.defineLocale("en-gb", obj2);
     }
-    return NumberResult + str3;
+  }
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], function n(defineLocale) {
+      return defineLocale.defineLocale("en-gb", {
+        months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+        monthsShort: "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
+        weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+        weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
+        weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
+        longDateFormat: {
+          LT: "HH:mm",
+          LTS: "HH:mm:ss",
+          L: "DD/MM/YYYY",
+          LL: "D MMMM YYYY",
+          LLL: "D MMMM YYYY HH:mm",
+          LLLL: "dddd, D MMMM YYYY HH:mm",
+        },
+        calendar: {
+          sameDay: "[Today at] LT",
+          nextDay: "[Tomorrow at] LT",
+          nextWeek: "dddd [at] LT",
+          lastDay: "[Yesterday at] LT",
+          lastWeek: "[Last] dddd [at] LT",
+          sameElse: "L",
+        },
+        relativeTime: {
+          future: "in %s",
+          past: "%s ago",
+          s: "a few seconds",
+          ss: "%d seconds",
+          m: "a minute",
+          mm: "%d minutes",
+          h: "an hour",
+          hh: "%d hours",
+          d: "a day",
+          dd: "%d days",
+          M: "a month",
+          MM: "%d months",
+          y: "a year",
+          yy: "%d years",
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+        ordinal(arg0) {
+          const result = arg0 % 10;
+          let str = "th";
+          let str2 = "th";
+          if (1 !== (~~arg0 % 100) / 10) {
+            let str3 = "st";
+            if (1 !== result) {
+              let str4 = "nd";
+              if (2 !== result) {
+                if (3 === result) {
+                  str = "rd";
+                }
+                str4 = str;
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          return arg0 + str2;
+        },
+        week: { dow: 1, doy: 4 },
+      });
+    });
+  }
+}
+const moment = this.moment;
+moment.defineLocale("en-gb", {
+  months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+  monthsShort: "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
+  weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+  weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
+  weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
+  longDateFormat: {
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "DD/MM/YYYY",
+    LL: "D MMMM YYYY",
+    LLL: "D MMMM YYYY HH:mm",
+    LLLL: "dddd, D MMMM YYYY HH:mm",
   },
-  era: obj.default({ values: { narrow: ["\u0434\u043E \u043D.\u0435.", "\u043D.\u0435."], abbreviated: ["\u0434\u043E \u043D. \u0435.", "\u043D. \u0435."], wide: ["\u0434\u043E \u043D\u0430\u0448\u043E\u0457 \u0435\u0440\u0438", "\u043D\u0430\u0448\u043E\u0457 \u0435\u0440\u0438"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1-\u0439 \u043A\u0432.", "2-\u0439 \u043A\u0432.", "3-\u0439 \u043A\u0432.", "4-\u0439 \u043A\u0432."], wide: ["1-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "2-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "3-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "4-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+  calendar: {
+    sameDay: "[Today at] LT",
+    nextDay: "[Tomorrow at] LT",
+    nextWeek: "dddd [at] LT",
+    lastDay: "[Yesterday at] LT",
+    lastWeek: "[Last] dddd [at] LT",
+    sameElse: "L",
+  },
+  relativeTime: {
+    future: "in %s",
+    past: "%s ago",
+    s: "a few seconds",
+    ss: "%d seconds",
+    m: "a minute",
+    mm: "%d minutes",
+    h: "an hour",
+    hh: "%d hours",
+    d: "a day",
+    dd: "%d days",
+    M: "a month",
+    MM: "%d months",
+    y: "a year",
+    yy: "%d years",
+  },
+  dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+  ordinal(arg0) {
+    const result = arg0 % 10;
+    let str = "th";
+    let str2 = "th";
+    if (1 !== (~~arg0 % 100) / 10) {
+      let str3 = "st";
+      if (1 !== result) {
+        let str4 = "nd";
+        if (2 !== result) {
+          if (3 === result) {
+            str = "rd";
+          }
+          str4 = str;
+        }
+        str3 = str4;
+      }
+      str2 = str3;
     }
-  }),
-  month: obj.default({ values: { narrow: ["\u0421", "\u041B", "\u0411", "\u041A", "\u0422", "\u0427", "\u041B", "\u0421", "\u0412", "\u0416", "\u041B", "\u0413"], abbreviated: ["\u0441\u0456\u0447.", "\u043B\u044E\u0442.", "\u0431\u0435\u0440\u0435\u0437.", "\u043A\u0432\u0456\u0442.", "\u0442\u0440\u0430\u0432.", "\u0447\u0435\u0440\u0432.", "\u043B\u0438\u043F.", "\u0441\u0435\u0440\u043F.", "\u0432\u0435\u0440\u0435\u0441.", "\u0436\u043E\u0432\u0442.", "\u043B\u0438\u0441\u0442\u043E\u043F.", "\u0433\u0440\u0443\u0434."], wide: ["\u0441\u0456\u0447\u0435\u043D\u044C", "\u043B\u044E\u0442\u0438\u0439", "\u0431\u0435\u0440\u0435\u0437\u0435\u043D\u044C", "\u043A\u0432\u0456\u0442\u0435\u043D\u044C", "\u0442\u0440\u0430\u0432\u0435\u043D\u044C", "\u0447\u0435\u0440\u0432\u0435\u043D\u044C", "\u043B\u0438\u043F\u0435\u043D\u044C", "\u0441\u0435\u0440\u043F\u0435\u043D\u044C", "\u0432\u0435\u0440\u0435\u0441\u0435\u043D\u044C", "\u0436\u043E\u0432\u0442\u0435\u043D\u044C", "\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434", "\u0433\u0440\u0443\u0434\u0435\u043D\u044C"] }, defaultWidth: "wide", formattingValues: { narrow: ["\u0421", "\u041B", "\u0411", "\u041A", "\u0422", "\u0427", "\u041B", "\u0421", "\u0412", "\u0416", "\u041B", "\u0413"], abbreviated: ["\u0441\u0456\u0447.", "\u043B\u044E\u0442.", "\u0431\u0435\u0440\u0435\u0437.", "\u043A\u0432\u0456\u0442.", "\u0442\u0440\u0430\u0432.", "\u0447\u0435\u0440\u0432.", "\u043B\u0438\u043F.", "\u0441\u0435\u0440\u043F.", "\u0432\u0435\u0440\u0435\u0441.", "\u0436\u043E\u0432\u0442.", "\u043B\u0438\u0441\u0442\u043E\u043F.", "\u0433\u0440\u0443\u0434."], wide: ["\u0441\u0456\u0447\u043D\u044F", "\u043B\u044E\u0442\u043E\u0433\u043E", "\u0431\u0435\u0440\u0435\u0437\u043D\u044F", "\u043A\u0432\u0456\u0442\u043D\u044F", "\u0442\u0440\u0430\u0432\u043D\u044F", "\u0447\u0435\u0440\u0432\u043D\u044F", "\u043B\u0438\u043F\u043D\u044F", "\u0441\u0435\u0440\u043F\u043D\u044F", "\u0432\u0435\u0440\u0435\u0441\u043D\u044F", "\u0436\u043E\u0432\u0442\u043D\u044F", "\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434\u0430", "\u0433\u0440\u0443\u0434\u043D\u044F"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u041D", "\u041F", "\u0412", "\u0421", "\u0427", "\u041F", "\u0421"], short: ["\u043D\u0434", "\u043F\u043D", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043F\u0442", "\u0441\u0431"], abbreviated: ["\u043D\u0435\u0434", "\u043F\u043E\u043D", "\u0432\u0456\u0432", "\u0441\u0435\u0440", "\u0447\u0442\u0432", "\u043F\u0442\u043D", "\u0441\u0443\u0431"], wide: ["\u043D\u0435\u0434\u0456\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0430", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044F", "\u0441\u0443\u0431\u043E\u0442\u0430"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u0456\u0432\u043D.", noon: "\u043F\u043E\u043B.", morning: "\u0440\u0430\u043D\u043E\u043A", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447.", night: "\u043D\u0456\u0447" }, abbreviated: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u0456\u0432\u043D.", noon: "\u043F\u043E\u043B.", morning: "\u0440\u0430\u043D\u043E\u043A", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447.", night: "\u043D\u0456\u0447" }, wide: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u0456\u0432\u043D\u0456\u0447", noon: "\u043F\u043E\u043B\u0443\u0434\u0435\u043D\u044C", morning: "\u0440\u0430\u043D\u043E\u043A", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447\u0456\u0440", night: "\u043D\u0456\u0447" } }, defaultWidth: "any", formattingValues: { narrow: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u0456\u0432\u043D.", noon: "\u043F\u043E\u043B.", morning: "\u0440\u0430\u043D\u043A\u0443", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0456" }, abbreviated: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u0456\u0432\u043D.", noon: "\u043F\u043E\u043B.", morning: "\u0440\u0430\u043D\u043A\u0443", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0456" }, wide: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u0456\u0432\u043D\u0456\u0447", noon: "\u043F\u043E\u043B\u0443\u0434\u0435\u043D\u044C", morning: "\u0440\u0430\u043D\u043A\u0443", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0456" } }, defaultFormattingWidth: "wide" })
+    return arg0 + str2;
+  },
+  week: { dow: 1, doy: 4 },
+});
+const obj = {
+  months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+  monthsShort: "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
+  weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+  weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
+  weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
+  longDateFormat: {
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "DD/MM/YYYY",
+    LL: "D MMMM YYYY",
+    LLL: "D MMMM YYYY HH:mm",
+    LLLL: "dddd, D MMMM YYYY HH:mm",
+  },
+  calendar: {
+    sameDay: "[Today at] LT",
+    nextDay: "[Tomorrow at] LT",
+    nextWeek: "dddd [at] LT",
+    lastDay: "[Yesterday at] LT",
+    lastWeek: "[Last] dddd [at] LT",
+    sameElse: "L",
+  },
+  relativeTime: {
+    future: "in %s",
+    past: "%s ago",
+    s: "a few seconds",
+    ss: "%d seconds",
+    m: "a minute",
+    mm: "%d minutes",
+    h: "an hour",
+    hh: "%d hours",
+    d: "a day",
+    dd: "%d days",
+    M: "a month",
+    MM: "%d months",
+    y: "a year",
+    yy: "%d years",
+  },
+  dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+  ordinal(arg0) {
+    const result = arg0 % 10;
+    let str = "th";
+    let str2 = "th";
+    if (1 !== (~~arg0 % 100) / 10) {
+      let str3 = "st";
+      if (1 !== result) {
+        let str4 = "nd";
+        if (2 !== result) {
+          if (3 === result) {
+            str = "rd";
+          }
+          str4 = str;
+        }
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    return arg0 + str2;
+  },
+  week: { dow: 1, doy: 4 },
 };
-
-export default date;
-export default exports.default;

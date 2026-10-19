@@ -1,6 +1,4 @@
 // _runtime/metro/05447__.js
-import _mod17 from "00017__.js";
+import _modDef5448 from "05448__.js";
 
-const Platform = _mod17.Platform;
-
-export const isIOS26OrHigher = false;
+export default _modDef5448;

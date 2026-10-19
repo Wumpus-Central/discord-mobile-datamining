@@ -1,318 +1,173 @@
 // _runtime/metro/12502__.js
-import stackParserFromStackParserOptions from "../12389_stackParserFromStackParserOptions.js";
+import errorCallback from "../12402_errorCallback.js";
+import _mod12406 from "12406__.js";
+import _mod12407 from "12407__.js";
+import spanTimeInputToSeconds from "../12411_spanTimeInputToSeconds.js";
+import _mod12420 from "12420__.js";
+import _mod12433 from "12433__.js";
+import _mod12434 from "12434__.js";
+import COUNTER_METRIC_TYPE from "../12503_COUNTER_METRIC_TYPE.js";
+import __SENTRY_DEBUG__ from "12405__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export const filenameIsInApp = function filenameIsInApp(str) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
+function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
+  let obj = arg4;
+  if (arg4 === undefined) {
+    obj = {};
   }
-  if (!flag) {
-    let tmp = str;
-    if (str) {
-      tmp = !str.startsWith("/");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[A-Z]:/);
-    }
-    if (tmp) {
-      tmp = !str.startsWith(".");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-    }
-    flag = tmp;
+  let client = obj.client;
+  if (!client) {
+    client = _mod12433.getClient();
   }
-  let tmp2 = !flag;
-  if (!flag) {
-    tmp2 = undefined !== str;
+  if (client) {
+    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
+    let rootSpan;
+    if (activeSpan) {
+      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+      const tmp3Result = spanTimeInputToSeconds;
+    }
+    let description = rootSpan;
+    if (rootSpan) {
+      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
+      const tmp3Result3 = spanTimeInputToSeconds;
+    }
+    ({ unit, tags, timestamp } = obj);
+    const options = client.getOptions();
+    ({ release, environment } = options);
+    const obj4 = {};
+    if (release) {
+      obj4.release = release;
+    }
+    if (environment) {
+      obj4.environment = environment;
+    }
+    if (description) {
+      obj4.transaction = description;
+    }
+    if (_mod12434.DEBUG_BUILD) {
+      const logger = _mod12406.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
+    }
+    const globalSingleton = _mod12407.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(client);
+    if (!value) {
+      const tmp20 = new arg0(client);
+      closure_0 = tmp20;
+      client.on("flush", () => closure_0.flush());
+      client.on("close", () => closure_0.close());
+      const result = globalSingleton.set(client, tmp20);
+      value = tmp20;
+    }
+    const obj5 = {};
+    const merged = Object.assign(obj4);
+    const merged1 = Object.assign(tags);
+    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
+    const tmp3Result4 = _mod12407;
   }
-  if (tmp2) {
-    tmp2 = !str.includes("node_modules/");
-  }
-  return tmp2;
+}
+errorCallback;
+
+export const metrics = {
+  increment(arg0, arg1) {
+    let num = match;
+    if (match === undefined) {
+      num = 1;
+    }
+    let parsed = num;
+    if (typeof num === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(num);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  distribution(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  set(arg0, arg1, parsed, arg3) {
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  gauge(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  timing(arg0, name, fn) {
+    _require = arg0;
+    dependencyMap = name;
+    addToMetricsAggregator = fn;
+    let str = arg3;
+    if (arg3 === undefined) {
+      str = "second";
+    }
+    closure_3 = arg4;
+    c4 = undefined;
+    if (typeof fn === "function") {
+      let timestampInSecondsResult = require("12420__.js").timestampInSeconds();
+      c4 = timestampInSecondsResult;
+      let obj = require("12420__.js");
+      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
+      return require("12440__.js").startSpanManual(obj3, (arg0) => {
+        closure_0 = arg0;
+        return closure_0(name[10]).handleCallbackErrors(
+          () => fn(),
+          () => {},
+          () => {
+            const timestampInSecondsResult = _mod12420.timestampInSeconds();
+            const diff = timestampInSecondsResult - c4;
+            const obj2 = {};
+            const merged = Object.assign(closure_3);
+            obj2.unit = "second";
+            let parsed = diff;
+            if (typeof diff === "string") {
+              const _parseInt = parseInt;
+              parsed = parseInt(diff);
+            }
+            addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
+            closure_0.end(timestampInSecondsResult);
+          },
+        );
+      });
+    } else {
+      const obj4 = {};
+      let merged = Object.assign(arg4);
+      obj4.unit = str;
+      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
+      let parsed = fn;
+      if (typeof fn === "string") {
+        let _parseInt = parseInt;
+        parsed = parseInt(fn);
+      }
+      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
+    }
+  },
+  getMetricsAggregatorForClient(on, arg1) {
+    const globalSingleton = _mod12407.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(on);
+    if (value) {
+      return value;
+    } else {
+      const tmp6 = new arg1(on);
+      closure_0 = tmp6;
+      on.on("flush", () => closure_0.flush());
+      on.on("close", () => closure_0.close());
+      const result = globalSingleton.set(on, tmp6);
+      return tmp6;
+    }
+  },
 };
-export function node(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  return (filename) => {
-    const match = filename.match(re2);
-    if (match) {
-      let tmp3;
-      let tmp4;
-      if (match[1]) {
-        const lastIndexOfResult = match[1].lastIndexOf(".");
-        let diff = lastIndexOfResult;
-        if ("." === match[1][lastIndexOfResult - 1]) {
-          diff = lastIndexOfResult - 1;
-        }
-        let substr2 = arr;
-        let tmp9;
-        let substr3;
-        if (diff > 0) {
-          const substr = arr.slice(0, diff);
-          const substr1 = arr.slice(diff + 1);
-          const index = substr.indexOf(".Module");
-          substr2 = arr;
-          tmp9 = substr1;
-          substr3 = substr;
-          if (index > 0) {
-            substr2 = arr.slice(index + 1);
-            substr3 = substr.slice(0, index);
-            tmp9 = substr1;
-          }
-        }
-        tmp3 = substr2;
-        tmp4 = tmp9;
-      }
-      if (tmp4) {
-        let UNKNOWN_FUNCTION = tmp4;
-      }
-      if (undefined === tmp3) {
-        if (!UNKNOWN_FUNCTION) {
-          UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-        }
-        let combined = UNKNOWN_FUNCTION;
-        if (tmp13) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-        }
-        tmp3 = combined;
-      }
-      if (match[2]) {
-        if (obj2.startsWith("file://")) {
-          let str7 = match[2].slice(7);
-        }
-        let match1 = str7;
-        if (str7) {
-          match1 = str7.match(/\/[A-Z]:/);
-        }
-        let substr4 = str7;
-        if (match1) {
-          substr4 = str7.slice(1);
-        }
-        let tmp20 = substr4;
-        if (!substr4) {
-          tmp20 = !match[5];
-        }
-        let tmp21 = "native" === match[5];
-        if (!tmp20) {
-          tmp20 = tmp21;
-        }
-        if (!tmp20) {
-          substr4 = match[5];
-        }
-        let decodeURIResult;
-        if (substr4) {
-          const _decodeURI = decodeURI;
-          decodeURIResult = decodeURI(substr4);
-        }
-        const obj3 = {
-          filename: decodeURIResult,
-          module: null,
-          function: null,
-          lineno: null,
-          colno: null,
-          in_app: null,
-        };
-        let tmp24;
-        if (closure_0) {
-          tmp24 = closure_0(substr4);
-        }
-        obj3.module = tmp24;
-        obj3.function = tmp3;
-        let str9 = match[3];
-        if (!str9) {
-          str9 = "";
-        }
-        obj3.lineno = parseInt(str9, 10) || undefined;
-        let str10 = match[4];
-        if (!str10) {
-          str10 = "";
-        }
-        obj2 = match[2];
-        const tmp26 = parseInt(str9, 10) || undefined;
-        obj3.colno = parseInt(str10, 10) || undefined;
-        let str11 = substr4;
-        if (!substr4) {
-          str11 = "";
-        }
-        if (!tmp21) {
-          let tmp28 = str11;
-          if (str11) {
-            tmp28 = !str11.startsWith("/");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[A-Z]:/);
-          }
-          if (tmp28) {
-            tmp28 = !str11.startsWith(".");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          }
-          tmp21 = tmp28;
-        }
-        let tmp29 = !tmp21;
-        if (!tmp21) {
-          tmp29 = undefined !== str11;
-        }
-        if (tmp29) {
-          tmp29 = !str11.includes("node_modules/");
-        }
-        obj3.in_app = tmp29;
-        return obj3;
-      }
-      str7 = match[2];
-    } else if (filename.match(re1)) {
-      const obj = { filename };
-      return obj;
-    }
-  };
-}
-export function nodeStackLineParser(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  const items = [
-    90,
-    (filename) => {
-      const match = filename.match(re2);
-      if (match) {
-        let tmp3;
-        let tmp4;
-        if (match[1]) {
-          const lastIndexOfResult = match[1].lastIndexOf(".");
-          let diff = lastIndexOfResult;
-          if ("." === match[1][lastIndexOfResult - 1]) {
-            diff = lastIndexOfResult - 1;
-          }
-          let substr2 = arr;
-          let tmp9;
-          let substr3;
-          if (diff > 0) {
-            const substr = arr.slice(0, diff);
-            const substr1 = arr.slice(diff + 1);
-            const index = substr.indexOf(".Module");
-            substr2 = arr;
-            tmp9 = substr1;
-            substr3 = substr;
-            if (index > 0) {
-              substr2 = arr.slice(index + 1);
-              substr3 = substr.slice(0, index);
-              tmp9 = substr1;
-            }
-          }
-          tmp3 = substr2;
-          tmp4 = tmp9;
-        }
-        if (tmp4) {
-          let UNKNOWN_FUNCTION = tmp4;
-        }
-        if (undefined === tmp3) {
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-          }
-          let combined = UNKNOWN_FUNCTION;
-          if (tmp13) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-          }
-          tmp3 = combined;
-        }
-        if (match[2]) {
-          if (obj2.startsWith("file://")) {
-            let str7 = match[2].slice(7);
-          }
-          let match1 = str7;
-          if (str7) {
-            match1 = str7.match(/\/[A-Z]:/);
-          }
-          let substr4 = str7;
-          if (match1) {
-            substr4 = str7.slice(1);
-          }
-          let tmp20 = substr4;
-          if (!substr4) {
-            tmp20 = !match[5];
-          }
-          let tmp21 = "native" === match[5];
-          if (!tmp20) {
-            tmp20 = tmp21;
-          }
-          if (!tmp20) {
-            substr4 = match[5];
-          }
-          let decodeURIResult;
-          if (substr4) {
-            const _decodeURI = decodeURI;
-            decodeURIResult = decodeURI(substr4);
-          }
-          const obj3 = {
-            filename: decodeURIResult,
-            module: null,
-            function: null,
-            lineno: null,
-            colno: null,
-            in_app: null,
-          };
-          let tmp24;
-          if (closure_0) {
-            tmp24 = closure_0(substr4);
-          }
-          obj3.module = tmp24;
-          obj3.function = tmp3;
-          let str9 = match[3];
-          if (!str9) {
-            str9 = "";
-          }
-          obj3.lineno = parseInt(str9, 10) || undefined;
-          let str10 = match[4];
-          if (!str10) {
-            str10 = "";
-          }
-          obj2 = match[2];
-          const tmp26 = parseInt(str9, 10) || undefined;
-          obj3.colno = parseInt(str10, 10) || undefined;
-          let str11 = substr4;
-          if (!substr4) {
-            str11 = "";
-          }
-          if (!tmp21) {
-            let tmp28 = str11;
-            if (str11) {
-              tmp28 = !str11.startsWith("/");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[A-Z]:/);
-            }
-            if (tmp28) {
-              tmp28 = !str11.startsWith(".");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-            }
-            tmp21 = tmp28;
-          }
-          let tmp29 = !tmp21;
-          if (!tmp21) {
-            tmp29 = undefined !== str11;
-          }
-          if (tmp29) {
-            tmp29 = !str11.includes("node_modules/");
-          }
-          obj3.in_app = tmp29;
-          return obj3;
-        }
-        str7 = match[2];
-      } else if (filename.match(re1)) {
-        const obj = { filename };
-        return obj;
-      }
-    },
-  ];
-  return items;
-}

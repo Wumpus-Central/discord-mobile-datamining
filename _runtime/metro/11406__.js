@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f9f36b748bcc7c6393cf056bc860ba1e",
-  name: "HandRequestSpeakIcon",
+  hash: "2deb3f64961131491b7db6bb10903f69",
+  name: "DoorExitIcon",
   type: "png",
 });

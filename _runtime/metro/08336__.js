@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/public_guilds",
-  width: 240,
-  height: 240,
-  scales: [1],
-  hash: "409ea8be644aaa2b6a1519af84a7b604",
-  name: "system-user-avatar",
+  httpServerLocation: "/assets/images/native/auto_moderation",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "9fc7a06bd709251a424bf9095d4f7ecf",
+  name: "ic_auto_moderation_shield",
   type: "png",
 });

@@ -3,12 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_2hzotq2fhhtzqjz6caubttu6v4/node_modules/@react-navigation/elements/lib/module/assets",
+  httpServerLocation: "/assets/images/platforms",
   width: 24,
   height: 24,
-  scales: [1, 2, 3, 4],
-  hash: "940453dc5cbfaa96cf907b3aa7791ece",
-  name: "search-icon",
-  type: "png",
+  scales: [1],
+  hash: "1008174ea69b007726dfb135130564cc",
+  name: "img_account_sync_steam_white",
+  type: "svg",
 });

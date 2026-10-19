@@ -1,42 +1,47 @@
 // _runtime/metro/04430__.js
-import 04431__ from "04431__.js";
-import 04432__ from "04432__.js";
-import 04433__ from "04433__.js";
-import date_mod from "04434__.js";
-import date_mod from "04435__.js";
+import _typeof_mod from "04231__.js";
+import endOfDay_mod from "../04431_endOfDay.js";
+import endOfMonth_mod from "../04432_endOfMonth.js";
+import requiredArgs_mod from "../04232_requiredArgs.js";
 
-if (!module_4431) {
-  const obj = { default: module_4431 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4431;
+  tmp3 = _typeof;
 }
-if (!module_4432) {
-  const obj2 = { default: module_4432 };
+_typeof = tmp3;
+let endOfDay = endOfDay_mod;
+if (!endOfDay) {
+  const obj2 = { default: endOfDay };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4432;
+  tmp5 = endOfDay;
 }
-if (!module_4433) {
-  const obj3 = { default: module_4433 };
+endOfDay = tmp5;
+let endOfMonth = endOfMonth_mod;
+if (!endOfMonth) {
+  const obj3 = { default: endOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4433;
+  tmp7 = endOfMonth;
 }
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
+endOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
   let tmp9 = obj4;
 } else {
-  tmp9 = date;
+  tmp9 = requiredArgs;
 }
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp9;
 
-export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function isLastDayOfMonth(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = endOfDay.default(defaultResult1).getTime();
+  const defaultResult2 = endOfDay.default(defaultResult1);
+  return time === endOfMonth.default(defaultResult1).getTime();
+};
 export default exports.default;

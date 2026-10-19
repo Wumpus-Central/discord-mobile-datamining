@@ -1,40 +1,42 @@
 // _runtime/metro/04349__.js
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      return "'pro\u0161lu nedjelju u' p";
-    } else if (3 === uTCDay) {
-      return "'pro\u0161lu srijedu u' p";
-    } else if (6 === uTCDay) {
-      return "'pro\u0161lu subotu u' p";
-    } else {
-      return "'pro\u0161li' EEEE 'u' p";
-    }
-  },
-  yesterday: "'ju\u010Der u' p",
-  today: "'danas u' p",
-  tomorrow: "'sutra u' p",
-  nextWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      return "'idu\u0107u nedjelju u' p";
-    } else if (3 === uTCDay) {
-      return "'idu\u0107u srijedu u' p";
-    } else if (6 === uTCDay) {
-      return "'idu\u0107u subotu u' p";
-    } else {
-      return "'pro\u0161li' EEEE 'u' p";
-    }
-  },
-  other: "P"
-};
+import 04350__ from "04350__.js";
+import 04351__ from "04351__.js";
+import 04352__ from "04352__.js";
+import date_mod from "04353__.js";
+import date_mod from "04354__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
+if (!module_4350) {
+  const obj = { default: module_4350 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4350;
+}
+if (!module_4351) {
+  const obj2 = { default: module_4351 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4351;
+}
+if (!module_4352) {
+  const obj3 = { default: module_4352 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4352;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "ru", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

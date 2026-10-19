@@ -1,194 +1,270 @@
 // _runtime/metro/04554__.js
-import _mod4299 from "04299__.js";
-import differenceInCalendarDays_mod from "../04456_differenceInCalendarDays.js";
-import format_mod from "04526__.js";
-import code_mod from "04540__.js";
-import subMilliseconds_mod from "../04527_subMilliseconds.js";
-import _typeof_mod from "04294__.js";
-import module_4457_mod from "04457__.js";
-import requiredArgs_mod from "../04295_requiredArgs.js";
-import module_4298_mod from "04298__.js";
+import _mod4537 from "04537__.js";
+import 04555__ from "04555__.js";
 
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  let obj = { default: differenceInCalendarDays };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+function _setPrototypeOf(DayParser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(DayParser, Parser) {
+      DayParser.__proto__ = Parser;
+      return DayParser;
+    };
+  }
+  return _setPrototypeOf(DayParser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+if (!module_4555) {
+  let obj = { default: module_4555 };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarDays;
+  tmp3 = module_4555;
 }
-differenceInCalendarDays = tmp3;
-let format = format_mod;
-if (!format) {
-  let obj2 = { default: format };
-  let tmp5 = obj2;
-} else {
-  tmp5 = format;
-}
-format = tmp5;
-let code = code_mod;
-if (!code) {
-  const obj3 = { default: code };
-  let tmp7 = obj3;
-} else {
-  tmp7 = code;
-}
-code = tmp7;
-let subMilliseconds = subMilliseconds_mod;
-if (!subMilliseconds) {
-  const obj4 = { default: subMilliseconds };
-  let tmp9 = obj4;
-} else {
-  tmp9 = subMilliseconds;
-}
-subMilliseconds = tmp9;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj5 = { default: _typeof };
-  let tmp11 = obj5;
-} else {
-  tmp11 = _typeof;
-}
-_typeof = tmp11;
-let module_4457 = module_4457_mod;
-if (!module_4457) {
-  const obj6 = { default: module_4457 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4457;
-}
-module_4457 = tmp13;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj7 = { default: requiredArgs };
-  let tmp15 = obj7;
-} else {
-  tmp15 = requiredArgs;
-}
-requiredArgs = tmp15;
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj8 = { default: module_4298 };
-  let tmp17 = obj8;
-} else {
-  tmp17 = module_4298;
-}
-module_4298 = tmp17;
-
-export default function formatRelative(arg0, arg1, locale) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
-  const defaultOptions = _mod4299.getDefaultOptions();
-  let locale1;
-  if (null != locale) {
-    locale1 = locale.locale;
-  }
-  if (null === locale1) {
-    locale1 = defaultOptions.locale;
-  }
-  if (null === locale1) {
-    locale1 = code.default;
-  }
-  let weekStartsOn;
-  if (null != locale) {
-    weekStartsOn = locale.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != locale) {
-      locale = locale.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
+let closure_1 = tmp3;
+const Parser = _mod4537.Parser;
+_typeof = undefined;
+class DayParser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
       }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult3 = module_4298.default(num);
-  if (locale1.localize) {
-    if (locale1.formatLong) {
-      if (locale1.formatRelative) {
-        const defaultResult4 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
-        const _isNaN = isNaN;
-        if (isNaN(defaultResult4)) {
-          const _RangeError4 = RangeError;
-          const rangeError = new RangeError("Invalid time value");
-          throw rangeError;
-        } else {
-          let str4 = "other";
-          let str5 = "other";
-          if (defaultResult4 >= -6) {
-            let str6 = "lastWeek";
-            if (defaultResult4 >= -1) {
-              let str7 = "yesterday";
-              if (defaultResult4 >= 0) {
-                let str8 = "today";
-                if (defaultResult4 >= 1) {
-                  let str9 = "tomorrow";
-                  if (defaultResult4 >= 2) {
-                    if (defaultResult4 < 7) {
-                      str4 = "nextWeek";
-                    }
-                    str9 = str4;
-                  }
-                  str8 = str9;
-                }
-                str7 = str8;
-              }
-              str6 = str7;
-            }
-            str5 = str6;
-          }
-          const defaultResult5 = subMilliseconds.default(defaultResult1, module_4457.default(defaultResult1));
-          const obj = { locale: locale1, weekStartsOn: defaultResult3 };
-          const obj2 = { locale: locale1, weekStartsOn: defaultResult3 };
-          return format.default(defaultResult1, locale1.formatRelative(str5, defaultResult5, subMilliseconds.default(defaultResult2, module_4457.default(defaultResult2)), obj), obj2);
-        }
+      tmp11 = _typeof;
+      call = _typeof.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_typeof, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
       } else {
-        const _RangeError3 = RangeError;
-        const rangeError1 = new RangeError("locale must contain formatRelative property");
-        throw rangeError1;
+        str2 = "priority";
+        if ("priority" in applyResult) {
+          _Object = Object;
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+        } else {
+          num3 = 90;
+          applyResult.priority = 90;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          items1 = ["D", "i", "e", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
+            _Object2 = Object;
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          } else {
+            applyResult.incompatibleTokens = items1;
+          }
+          return applyResult;
+        }
       }
     } else {
-      const _RangeError2 = RangeError;
-      const rangeError2 = new RangeError("locale must contain formatLong property");
-      throw rangeError2;
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
+    }
+  }
+}
+closure_1 = DayParser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
+  }
+}
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+DayParser.prototype = Object.create(prototype, { constructor: { value: DayParser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(DayParser, Parser);
+}
+let num = 0;
+closure_1 = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
+            } else {
+              call(constructResult);
+            }
+            return true;
+          } catch (err) {
+            return false;
+          }
+        }
+      }
+    }
+  }
+  return false;
+})();
+_typeof = function _createSuperInternal() {
+  const self = this;
+  const obj = _getPrototypeOf(_typeof);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
+  }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
     }
   } else {
-    const _RangeError = RangeError;
-    const rangeError3 = new RangeError("locale must contain localize property");
-    throw rangeError3;
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
+    }
+  }
+  return tmp8;
+};
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, day) {
+    if ("E" !== arg1) {
+      if ("EE" !== arg1) {
+        if ("EEE" !== arg1) {
+          if ("EEEEE" === arg1) {
+            return day.day(arg0, { width: "narrow", context: "formatting" });
+          } else if ("EEEEEE" === arg1) {
+            return day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
+          } else {
+            return day.day(arg0, { width: "wide", context: "formatting" }) || day.day(arg0, { width: "abbreviated", context: "formatting" }) || day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
+          }
+        }
+      }
+    }
+    return day.day(arg0, { width: "abbreviated", context: "formatting" }) || day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
   }
 };
-export default exports.default;
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 0;
+      if (tmp) {
+        tmp = arg1 <= 6;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2, arg3) {
+      const defaultResult = closure_1.default(arg0, arg2, arg3);
+      defaultResult.setUTCHours(0, 0, 0, 0);
+      return defaultResult;
+    }
+  }
+];
+if (0 < items.length) {
+  do {
+    let tmp7 = items[num];
+    let flag = tmp7.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp7.enumerable = flag;
+    tmp7.configurable = true;
+    if ("value" in tmp7) {
+      tmp7.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
+    num = num + 1;
+  } while (num < items.length);
+}
+
+export { DayParser };

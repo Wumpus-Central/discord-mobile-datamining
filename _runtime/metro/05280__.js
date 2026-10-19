@@ -1,13 +1,7 @@
 // _runtime/metro/05280__.js
-import _process from "../00539__process.js";
-import baseUnary from "../00540_baseUnary.js";
-import baseIsMap from "../05281_baseIsMap.js";
+let closure_0 = 1;
 
-const tmp = _process && _process.isMap;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsMap;
-}
-
-export default _module;
+export const getNextHandlerTag = function getNextHandlerTag() {
+  closure_0 = tmp + 1;
+  return +closure_0;
+};

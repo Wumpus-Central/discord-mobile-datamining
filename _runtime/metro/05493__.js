@@ -1,12 +1,22 @@
 // _runtime/metro/05493__.js
-import _modDef5494 from "05494__.js";
+import _mod5494 from "05494__.js";
 
-const require = globalThis.__r;
-
-for (const key10016 in require("05494__.js")) {
-  arg5[key10016] = require("05494__.js")[key10016];
-  continue;
+export default function _inherits(value, fn) {
+  if (typeof fn !== "function") {
+    if (null !== fn) {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Super expression must either be null or a function");
+      throw typeError;
+    }
+  }
+  let prototype = fn;
+  if (fn) {
+    prototype = fn.prototype;
+  }
+  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
+  Object.defineProperty(value, "prototype", { writable: false });
+  if (fn) {
+    _mod5494(value, fn);
+  }
+  const obj = { constructor: { value, writable: true, configurable: true } };
 }
-
-export default _modDef5494;
-export const LinearGradient = _modDef5494;

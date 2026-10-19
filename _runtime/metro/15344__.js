@@ -1,46 +1,25 @@
 // _runtime/metro/15344__.js
-import _mod15324 from "15324__.js";
-import _mod15345 from "15345__.js";
+const require = globalThis.__r;
 
-let tmp = _mod15324.process && _mod15324.process.versions;
-if (!tmp) {
-  tmp = _mod15324.Deno && _mod15324.Deno.version;
-  const tmp2 = _mod15324.Deno && _mod15324.Deno.version;
-}
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod15345;
-}
-if (_module) {
-  const match = _mod15345.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod15345.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
-}
+const require = arg1;
+const dependencyMap = arg6;
 
-export default tmp3;
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("15345__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
+};

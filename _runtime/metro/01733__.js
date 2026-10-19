@@ -90,10 +90,10 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "enabled",
+      current: "emoji",
       lastTimestamp: null,
-      startTimestamp: "premiumTabPopover",
-      reduceMotion: null,
+      startTimestamp: "star2",
+      reduceMotion: "glowing_star",
     };
     let num = obj.velocity;
     if (num == null) {

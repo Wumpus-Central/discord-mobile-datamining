@@ -1,12 +1,10 @@
 // _runtime/metro/15375__.js
-import _mod15373 from "15373__.js";
+import _mod15359 from "15359__.js";
+import _mod15376 from "15376__.js";
 
-export default (arg0, arg1) => {
-  const tmp = _mod15373(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+let closure_2 = _mod15359({}.hasOwnProperty);
+
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod15376(arg0), arg1);
+  };

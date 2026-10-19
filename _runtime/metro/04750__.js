@@ -1,43 +1,222 @@
 // _runtime/metro/04750__.js
-import 02140__ from "02140__.js";
+import _mod2050 from "02050__.js";
 
-if (!module_2140) {
-  const obj2 = { default: module_2140 };
-  let obj = obj2;
-} else {
-  obj = module_2140;
-}
-const date = {
-  ordinalNumber(arg0, unit) {
-    const str = Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
+const fn = function n(moment) {
+  function translate(arg0, arg1, arg2) {
+    const text = `${arg0} `;
+    if ("ss" === arg2) {
+      const result = arg0 % 10;
+      let tmp13 = result < 5;
+      if (result < 5) {
+        tmp13 = arg0 % 10 > 1;
+      }
+      if (tmp13) {
+        tmp13 = (~~arg0 / 10) % 10 !== 1;
+      }
+      let str9 = "sekund";
+      if (tmp13) {
+        str9 = "sekundy";
+      }
+      return text + str9;
+    } else if ("m" === arg2) {
+      let str8 = "minut\u0119";
+      if (arg1) {
+        str8 = "minuta";
+      }
+      return str8;
+    } else if ("mm" === arg2) {
+      const result1 = arg0 % 10;
+      let tmp11 = result1 < 5;
+      if (result1 < 5) {
+        tmp11 = arg0 % 10 > 1;
+      }
+      if (tmp11) {
+        tmp11 = (~~arg0 / 10) % 10 !== 1;
+      }
+      let str7 = "minut";
+      if (tmp11) {
+        str7 = "minuty";
+      }
+      return text + str7;
+    } else if ("h" === arg2) {
+      let str6 = "godzin\u0119";
+      if (arg1) {
+        str6 = "godzina";
+      }
+      return str6;
+    } else if ("hh" === arg2) {
+      const result2 = arg0 % 10;
+      let tmp9 = result2 < 5;
+      if (result2 < 5) {
+        tmp9 = arg0 % 10 > 1;
+      }
+      if (tmp9) {
+        tmp9 = (~~arg0 / 10) % 10 !== 1;
+      }
+      let str5 = "godzin";
+      if (tmp9) {
+        str5 = "godziny";
+      }
+      return text + str5;
+    } else if ("ww" === arg2) {
+      const result3 = arg0 % 10;
+      let tmp7 = result3 < 5;
+      if (result3 < 5) {
+        tmp7 = arg0 % 10 > 1;
+      }
+      if (tmp7) {
+        tmp7 = (~~arg0 / 10) % 10 !== 1;
+      }
+      let str4 = "tygodni";
+      if (tmp7) {
+        str4 = "tygodnie";
+      }
+      return text + str4;
+    } else if ("MM" === arg2) {
+      const result4 = arg0 % 10;
+      let tmp5 = result4 < 5;
+      if (result4 < 5) {
+        tmp5 = arg0 % 10 > 1;
+      }
+      if (tmp5) {
+        tmp5 = (~~arg0 / 10) % 10 !== 1;
+      }
+      let str3 = "miesi\u0119cy";
+      if (tmp5) {
+        str3 = "miesi\u0105ce";
+      }
+      return text + str3;
+    } else if ("yy" === arg2) {
+      const result5 = arg0 % 10;
+      let tmp3 = result5 < 5;
+      if (result5 < 5) {
+        tmp3 = arg0 % 10 > 1;
+      }
+      if (tmp3) {
+        tmp3 = (~~arg0 / 10) % 10 !== 1;
+      }
+      let str2 = "lat";
+      if (tmp3) {
+        str2 = "lata";
+      }
+      return text + str2;
     }
-    if ("date" === unit) {
-      return str.toString() + "\u65E5";
-    } else if ("hour" === unit) {
-      return str.toString() + "\u65F6";
-    } else if ("minute" === unit) {
-      return str.toString() + "\u5206";
-    } else if ("second" === unit) {
-      return str.toString() + "\u79D2";
-    } else {
-      return "\u7B2C " + str.toString();
-    }
-  },
-  era: obj.default({ values: { narrow: ["\u524D", "\u516C\u5143"], abbreviated: ["\u524D", "\u516C\u5143"], wide: ["\u516C\u5143\u524D", "\u516C\u5143"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["\u7B2C\u4E00\u5B63", "\u7B2C\u4E8C\u5B63", "\u7B2C\u4E09\u5B63", "\u7B2C\u56DB\u5B63"], wide: ["\u7B2C\u4E00\u5B63\u5EA6", "\u7B2C\u4E8C\u5B63\u5EA6", "\u7B2C\u4E09\u5B63\u5EA6", "\u7B2C\u56DB\u5B63\u5EA6"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
-    }
-  }),
-  month: obj.default({ values: { narrow: ["\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D", "\u5341", "\u5341\u4E00", "\u5341\u4E8C"], abbreviated: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], wide: ["\u4E00\u6708", "\u4E8C\u6708", "\u4E09\u6708", "\u56DB\u6708", "\u4E94\u6708", "\u516D\u6708", "\u4E03\u6708", "\u516B\u6708", "\u4E5D\u6708", "\u5341\u6708", "\u5341\u4E00\u6708", "\u5341\u4E8C\u6708"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D"], short: ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D"], abbreviated: ["\u5468\u65E5", "\u5468\u4E00", "\u5468\u4E8C", "\u5468\u4E09", "\u5468\u56DB", "\u5468\u4E94", "\u5468\u516D"], wide: ["\u661F\u671F\u65E5", "\u661F\u671F\u4E00", "\u661F\u671F\u4E8C", "\u661F\u671F\u4E09", "\u661F\u671F\u56DB", "\u661F\u671F\u4E94", "\u661F\u671F\u516D"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u4E0A", pm: "\u4E0B", midnight: "\u51CC\u6668", noon: "\u5348", morning: "\u65E9", afternoon: "\u4E0B\u5348", evening: "\u665A", night: "\u591C" }, abbreviated: { am: "\u4E0A\u5348", pm: "\u4E0B\u5348", midnight: "\u51CC\u6668", noon: "\u4E2D\u5348", morning: "\u65E9\u6668", afternoon: "\u4E2D\u5348", evening: "\u665A\u4E0A", night: "\u591C\u95F4" }, wide: { am: "\u4E0A\u5348", pm: "\u4E0B\u5348", midnight: "\u51CC\u6668", noon: "\u4E2D\u5348", morning: "\u65E9\u6668", afternoon: "\u4E2D\u5348", evening: "\u665A\u4E0A", night: "\u591C\u95F4" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u4E0A", pm: "\u4E0B", midnight: "\u51CC\u6668", noon: "\u5348", morning: "\u65E9", afternoon: "\u4E0B\u5348", evening: "\u665A", night: "\u591C" }, abbreviated: { am: "\u4E0A\u5348", pm: "\u4E0B\u5348", midnight: "\u51CC\u6668", noon: "\u4E2D\u5348", morning: "\u65E9\u6668", afternoon: "\u4E2D\u5348", evening: "\u665A\u4E0A", night: "\u591C\u95F4" }, wide: { am: "\u4E0A\u5348", pm: "\u4E0B\u5348", midnight: "\u51CC\u6668", noon: "\u4E2D\u5348", morning: "\u65E9\u6668", afternoon: "\u4E2D\u5348", evening: "\u665A\u4E0A", night: "\u591C\u95F4" } }, defaultFormattingWidth: "wide" })
+  }
+  closure_0 =
+    "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split(
+      "_",
+    );
+  closure_1 =
+    "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split(
+      "_",
+    );
+  const items = [
+    /^sty/i,
+    /^lut/i,
+    /^mar/i,
+    /^kwi/i,
+    /^maj/i,
+    /^cze/i,
+    /^lip/i,
+    /^sie/i,
+    /^wrz/i,
+    /^paź/i,
+    /^lis/i,
+    /^gru/i,
+  ];
+  return moment.defineLocale("pl", {
+    months(arg0, arg1) {
+      if (arg0) {
+        if (obj.test(arg1)) {
+          let tmp3 = closure_1[arg0.month(arg0)];
+        } else {
+          tmp3 = closure_0[arg0.month(arg0)];
+        }
+        obj = /D MMMM/;
+      } else {
+        return closure_0;
+      }
+    },
+    monthsShort: "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_pa\u017A_lis_gru".split("_"),
+    monthsParse: items,
+    longMonthsParse: items,
+    shortMonthsParse: items,
+    weekdays: "niedziela_poniedzia\u0142ek_wtorek_\u015Broda_czwartek_pi\u0105tek_sobota".split("_"),
+    weekdaysShort: "ndz_pon_wt_\u015Br_czw_pt_sob".split("_"),
+    weekdaysMin: "Nd_Pn_Wt_\u015Ar_Cz_Pt_So".split("_"),
+    longDateFormat: {
+      LT: "HH:mm",
+      LTS: "HH:mm:ss",
+      L: "DD.MM.YYYY",
+      LL: "D MMMM YYYY",
+      LLL: "D MMMM YYYY HH:mm",
+      LLLL: "dddd, D MMMM YYYY HH:mm",
+    },
+    calendar: {
+      sameDay: "[Dzi\u015B o] LT",
+      nextDay: "[Jutro o] LT",
+      nextWeek() {
+        const dayResult = this.day();
+        if (0 === dayResult) {
+          return "[W niedziel\u0119 o] LT";
+        } else if (2 === dayResult) {
+          return "[We wtorek o] LT";
+        } else if (3 === dayResult) {
+          return "[W \u015Brod\u0119 o] LT";
+        } else if (6 === dayResult) {
+          return "[W sobot\u0119 o] LT";
+        } else {
+          return "[W] dddd [o] LT";
+        }
+      },
+      lastDay: "[Wczoraj o] LT",
+      lastWeek() {
+        const dayResult = this.day();
+        if (0 === dayResult) {
+          return "[W zesz\u0142\u0105 niedziel\u0119 o] LT";
+        } else if (3 === dayResult) {
+          return "[W zesz\u0142\u0105 \u015Brod\u0119 o] LT";
+        } else if (6 === dayResult) {
+          return "[W zesz\u0142\u0105 sobot\u0119 o] LT";
+        } else {
+          return "[W zesz\u0142y] dddd [o] LT";
+        }
+      },
+      sameElse: "L",
+    },
+    relativeTime: {
+      future: "za %s",
+      past: "%s temu",
+      s: "kilka sekund",
+      ss: translate,
+      m: translate,
+      mm: translate,
+      h: translate,
+      hh: translate,
+      d: "1 dzie\u0144",
+      dd: "%d dni",
+      w: "tydzie\u0144",
+      ww: translate,
+      M: "miesi\u0105c",
+      MM: translate,
+      y: "rok",
+      yy: translate,
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinal: "%d.",
+    week: { dow: 1, doy: 4 },
+  });
 };
-
-export default date;
-export default exports.default;
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      fn(_mod2050);
+    }
+  }
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], fn);
+  }
+}
+fn(this.moment);

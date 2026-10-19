@@ -1,145 +1,131 @@
 // _runtime/metro/12449__.js
-import _mod12386 from "12386__.js";
-import _mod12410 from "12410__.js";
-import _mod12414 from "12414__.js";
-import _mod12430 from "12430__.js";
-import _mod12443 from "12443__.js";
-import _mod12451 from "12451__.js";
+import spanTimeInputToSeconds from "../12411_spanTimeInputToSeconds.js";
+import _mod12450 from "12450__.js";
+import _mod12453 from "12453__.js";
+import __SENTRY_DEBUG__ from "12405__.js";
+import consoleSandbox from "12406__.js";
 
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
+export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12450.getSdkMetadataForEnvelopeHeader(sdk);
+  let str = "event";
+  if (type.type) {
+    str = "event";
+    if ("replay_event" !== type.type) {
+      str = type.type;
     }
-    promiseBuffer = require("12450__.js").makePromiseBuffer(num);
-    let obj = require("12450__.js");
   }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod12430.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-        obj2 = _mod12451;
-      });
-      if (0 === items.length) {
-        return bufferSize(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {}
-        const tmpResult2 = bufferSize(tmp2[1]);
-        return recordEnvelopeLoss
-          .add(() => {
-            const obj = { body: _mod12430.serializeEnvelope(dependencyMap) };
-            return dependencyMap(obj).then(
-              (statusCode) => {
-                let DEBUG_BUILD = undefined !== statusCode.statusCode;
-                if (DEBUG_BUILD) {
-                  let tmp = statusCode.statusCode < 200;
-                  if (!tmp) {
-                    tmp = statusCode.statusCode >= 300;
-                  }
-                  DEBUG_BUILD = tmp;
-                }
-                if (DEBUG_BUILD) {
-                  DEBUG_BUILD = items(12414).DEBUG_BUILD;
-                }
-                if (DEBUG_BUILD) {
-                  const logger = items(12386).logger;
-                  const _HermesInternal = HermesInternal;
-                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-                }
-                closure_3 = items(12451).updateRateLimits(closure_3, statusCode);
-                return statusCode;
-              },
-              (arg0) => {
-                if (typeof recordEnvelopeLoss === "function") {
-                  const network_error = "network_error";
-                  closure_0(12430).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                    if ("event" === arg1) {
-                      const _Array = Array;
-                      let tmp4;
-                      if (Array.isArray(arg0)) {
-                        tmp4 = arg0[1];
-                      }
-                      const tmp = tmp4;
-                    }
-                    closure_2_0.recordDroppedEvent(
-                      network_error,
-                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
-                      tmp,
-                    );
-                  });
-                  throw arg0;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              },
-            );
-          })
-          .then(
-            (result) => result,
-            (arg0) => {
-              if (arg0 instanceof _mod12443.SentryError) {
-                if (_mod12414.DEBUG_BUILD) {
-                  const logger = _mod12386.logger;
-                  logger.error("Skipped sending event because buffer is full.");
-                }
-                if (typeof recordEnvelopeLoss === "function") {
-                  const queue_overflow = "queue_overflow";
-                  _mod12430.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                    if ("event" === arg1) {
-                      const _Array = Array;
-                      let tmp4;
-                      if (Array.isArray(arg0)) {
-                        tmp4 = arg0[1];
-                      }
-                      const tmp = tmp4;
-                    }
-                    closure_2_0.recordDroppedEvent(
-                      network_error,
-                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
-                      tmp,
-                    );
-                  });
-                  const tmpResult = _mod12430;
-                  return _mod12410.resolvedSyncPromise({});
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw arg0;
-              }
-            },
-          );
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    type.sdk = type.sdk || {};
+    let name = type.sdk.name;
+    if (!name) {
+      name = sdk.name;
+    }
+    type.sdk.name = name;
+    let version = type.sdk.version;
+    if (!version) {
+      version = sdk.version;
+    }
+    type.sdk.version = version;
+    let integrations = type.sdk.integrations;
+    if (!integrations) {
+      integrations = [];
+    }
+    const items = [];
+    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const tmp9 = sdk.integrations || [];
+    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    type.sdk.integrations = items;
+    let packages = type.sdk.packages;
+    if (!packages) {
+      packages = [];
+    }
+    const items1 = [];
+    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
+    const tmp17 = sdk.packages || [];
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
+    type.sdk.packages = items1;
+  }
+  const eventEnvelopeHeaders = _mod12450.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  delete tmp[tmp2];
+  const items2 = [{ type: str }, type];
+  const tmp3Result = _mod12450;
+  const items3 = [items2];
+  return _mod12450.createEnvelope(eventEnvelopeHeaders, items3);
+};
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod12450.getSdkMetadataForEnvelopeHeader(sdk);
+  const obj2 = { sent_at: null };
+  obj2.sent_at = new Date().toISOString();
+  let tmp4 = sdkMetadataForEnvelopeHeader;
+  if (sdkMetadataForEnvelopeHeader) {
+    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj3;
+  }
+  const merged = Object.assign(tmp4);
+  let tmp6 = arg3 && url;
+  if (tmp6) {
+    const obj4 = { dsn: _mod12453.dsnToString(url) };
+    tmp6 = obj4;
+    const tmpResult = _mod12453;
+  }
+  const merged1 = Object.assign(tmp6);
+  if ("aggregates" in toJSON) {
+    const items = [{ type: "sessions" }, toJSON];
+    let items1 = items;
+  } else {
+    items1 = [{ type: "session" }, toJSON.toJSON()];
+  }
+  const date = new Date();
+  const items2 = [items1];
+  return _mod12450.createEnvelope(obj2, items2);
+};
+export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
+  const dynamicSamplingContextFromSpan = beforeSendSpan(12442).getDynamicSamplingContextFromSpan(arg0[0]);
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  const obj = beforeSendSpan(12442);
+  const obj2 = { sent_at: new Date().toISOString() };
+  const tmp2 = beforeSendSpan;
+  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
+    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
+  })(dynamicSamplingContextFromSpan);
+  if (tmp7) {
+    const obj3 = { trace: dynamicSamplingContextFromSpan };
+    tmp7 = obj3;
+  }
+  const merged = Object.assign(tmp7);
+  let tmp9 = tunnel && dsn;
+  if (tmp9) {
+    const obj4 = { dsn: tmp2(12453).dsnToString(dsn) };
+    tmp9 = obj4;
+    const tmp2Result = tmp2(12453);
+  }
+  const merged1 = Object.assign(tmp9);
+  beforeSendSpan = getDsn;
+  if (getDsn) {
+    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
+  }
+  if (beforeSendSpan) {
+    const fn2 = (arg0) => {
+      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
+      if (!tmp3) {
+        spanTimeInputToSeconds.showSpanDropWarning();
+        const tmpResult = spanTimeInputToSeconds;
       }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
-    },
-  };
+      return tmp3;
+    };
+  } else {
+    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
+  }
+  arg0[Symbol.iterator]();
+  const date = new Date();
 };

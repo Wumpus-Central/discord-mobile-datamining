@@ -1,6 +1,4 @@
 // _runtime/metro/05254__.js
-import baseClone from "../05255_baseClone.js";
+import _mod17 from "00017__.js";
 
-export default function cloneDeep(arg0) {
-  return baseClone(arg0, 5);
-}
+export const findNodeHandle = _mod17.findNodeHandle;

@@ -1,8 +1,8 @@
 // _runtime/01279_read.js
 
-export const read = (self, arg1, arg2, exponent, arg4) => {
+export const read = (self, arg1, arg2, arg3, arg4) => {
   let num = 0;
-  const diff = 8 * arg4 - exponent;
+  const diff = 8 * arg4 - arg3;
   if (arg2) {
     num = arg4 - 1;
   }
@@ -29,7 +29,7 @@ export const read = (self, arg1, arg2, exponent, arg4) => {
     } while (0 < sum1);
   }
   let sum4 = tmp10 & ((num3 << tmp12) - num3);
-  let sum3 = tmp11 + exponent;
+  let sum3 = tmp11 + arg3;
   let tmp15 = sum4;
   if (sum3 > 0) {
     do {
@@ -55,18 +55,18 @@ export const read = (self, arg1, arg2, exponent, arg4) => {
     return num6;
   } else {
     const _Math = Math;
-    sum6 = tmp15 + Math.pow(2, exponent);
+    sum6 = tmp15 + Math.pow(2, arg3);
     diff3 = tmp18 - tmp17;
   }
   if (self[arg1 + num] >> 7) {
     num3 = -1;
   }
-  return num3 * sum6 * Math.pow(2, diff3 - exponent);
+  return num3 * sum6 * Math.pow(2, diff3 - arg3);
 };
-export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
+export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
   let num = 0;
-  const diff = 8 * arg5 - exponent;
-  if (23 === exponent) {
+  const diff = 8 * arg5 - arg4;
+  if (23 === arg4) {
     const _Math = Math;
     const _Math2 = Math;
     num = Math.pow(2, -24) - Math.pow(2, -77);
@@ -124,24 +124,24 @@ export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
         if (sum1 + tmp9 >= 1) {
           const _Math6 = Math;
           const diff4 = sum * result2 - 1;
-          num11 = diff4 * Math.pow(2, exponent);
+          num11 = diff4 * Math.pow(2, arg4);
           num12 = sum1 + tmp9;
         } else {
           const _Math4 = Math;
           const _Math5 = Math;
           const result3 = sum * Math.pow(2, tmp9 - 1);
-          num11 = result3 * Math.pow(2, exponent);
+          num11 = result3 * Math.pow(2, arg4);
           num12 = 0;
         }
       }
     }
     let result4 = num11;
     let sum2 = num5;
-    let diff5 = exponent;
+    let diff5 = arg4;
     let tmp21 = num5;
     let tmp22 = num11;
-    let tmp23 = exponent;
-    if (exponent >= 8) {
+    let tmp23 = arg4;
+    if (arg4 >= 8) {
       do {
         self[arg2 + sum2] = 255 & result4;
         sum2 = sum2 + num7;

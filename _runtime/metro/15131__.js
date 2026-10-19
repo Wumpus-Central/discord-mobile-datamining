@@ -1,31 +1,11 @@
 // _runtime/metro/15131__.js
-import _mod15097 from "15097__.js";
+import _mod15124 from "15124__.js";
 
-const require = globalThis.__r;
-
-export default (arr, arg1, arg2) => {
-  _require = arg2;
-  dependencyMap = null;
-  closure_2 = null;
-  let regex = null;
-  try {
-    let tmp9 = new require("15126__.js")(arg1, arg2);
-    regex = tmp9;
-    const item = arr.forEach((item) => {
-      if (regex.test(item)) {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = 1 !== closure_2.compare(item);
-        }
-        if (!tmp) {
-          closure_1 = item;
-          const tmp9 = new _mod15097(closure_1, closure_0);
-          closure_2 = tmp9;
-        }
-      }
-    });
-    return dependencyMap;
-  } catch (err) {
-    return tmp;
+export default (arg0, arg1) => {
+  const tmp = _mod15124(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
   }
+  return version;
 };

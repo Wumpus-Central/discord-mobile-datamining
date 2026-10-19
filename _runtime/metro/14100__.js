@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "7f6039bf3e89b748bf345decabdfb1bd",
-  name: "SoundboardSlashIcon",
+  hash: "ad50b5e2cb199dc282a7ce82f2fb5245",
+  name: "FlashIcon",
   type: "png",
 });

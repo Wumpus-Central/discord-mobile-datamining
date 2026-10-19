@@ -1,31 +1,71 @@
 // _runtime/metro/15130__.js
-import _mod15097 from "15097__.js";
+const re0 = /^[0-9]+$/;
 
-const require = globalThis.__r;
-
-export default (arr, arg1, arg2) => {
-  _require = arg2;
-  dependencyMap = null;
-  closure_2 = null;
-  let regex = null;
-  try {
-    let tmp9 = new require("15126__.js")(arg1, arg2);
-    regex = tmp9;
-    const item = arr.forEach((item) => {
-      if (regex.test(item)) {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = -1 !== closure_2.compare(item);
+export default {
+  compareIdentifiers(major, major2) {
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = major2;
+    let tmp5 = major;
+    if (tmp3) {
+      tmp5 = +major;
+      tmp4 = +major2;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
         }
-        if (!tmp) {
-          closure_1 = item;
-          const tmp9 = new _mod15097(closure_1, closure_0);
-          closure_2 = tmp9;
-        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
       }
-    });
-    return dependencyMap;
-  } catch (err) {
-    return tmp;
-  }
+      num = num2;
+    }
+    return num;
+  },
+  rcompareIdentifiers(arg0, arg1) {
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = arg0;
+    let tmp5 = arg1;
+    if (tmp3) {
+      tmp5 = +arg1;
+      tmp4 = +arg0;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
+      }
+      num = num2;
+    }
+    return num;
+  },
 };

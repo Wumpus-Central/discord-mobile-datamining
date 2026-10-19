@@ -1,123 +1,68 @@
 // _runtime/metro/12422__.js
-import spanTimeInputToSeconds from "../12391_spanTimeInputToSeconds.js";
-import _mod12392 from "12392__.js";
-import BAGGAGE_HEADER_NAME from "../12399_BAGGAGE_HEADER_NAME.js";
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../12401_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
-import _mod12413 from "12413__.js";
-import _mod12423 from "12423__.js";
+import _mod12412 from "12412__.js";
+import _slicedToArray from "00032__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getDynamicSamplingContextFromSpan(spanContext) {
-  const client = _mod12413.getClient();
-  if (client) {
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    if (rootSpan[_frozenDsc]) {
-      return tmp5;
-    } else {
-      const traceState = rootSpan.spanContext().traceState;
-      value = traceState;
-      if (traceState) {
-        value = traceState.get("sentry.dsc");
+const _sentryMetrics = "_sentryMetrics";
+
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
       }
-      let result = value;
-      if (value) {
-        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
-        const tmpResult6 = BAGGAGE_HEADER_NAME;
-      }
-      if (result) {
-        return result;
-      } else {
-        const options = client.getOptions();
-        const tmp9 = client.getDsn() || {};
-        let DEFAULT_ENVIRONMENT = options.environment;
-        if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = _mod12423.DEFAULT_ENVIRONMENT;
-        }
-        const obj2 = {
-          environment: DEFAULT_ENVIRONMENT,
-          release: options.release,
-          public_key: tmp9.publicKey,
-          trace_id: spanContext.spanContext().traceId,
-        };
-        const dropUndefinedKeysResult = _mod12392.dropUndefinedKeys(obj2);
-        client.emit("createDsc", dropUndefinedKeysResult);
-        const tmpResult7 = _mod12392;
-        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
-        const tmp13 = spanToJSONResult.data || {};
-        const tmp14 = tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
-        if (null != tmp14) {
-          const _HermesInternal = HermesInternal;
-          dropUndefinedKeysResult.sample_rate = "" + tmp14;
-        }
-        const description = spanToJSONResult.description;
-        const tmpResult8 = spanTimeInputToSeconds;
-        if (tmp17) {
-          dropUndefinedKeysResult.transaction = description;
-        }
-        tmp17 = "url" !== tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
-        if (tmpResult9.hasTracingEnabled()) {
-          const _String = String;
-          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
-          const tmpResult10 = spanTimeInputToSeconds;
-        }
-        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
-        return dropUndefinedKeysResult;
-      }
+      let obj2 = _mod12412;
+      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
     }
-    const tmpResult = spanTimeInputToSeconds;
-  } else {
-    return {};
+    return obj;
   }
-}
-const _frozenDsc = "_frozenDsc";
-
-export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
-  const result = _mod12392.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
 };
-export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
-  const options = getOptions.getOptions();
-  const tmp2 = getOptions.getDsn() || {};
-  let DEFAULT_ENVIRONMENT = options.environment;
-  if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = _mod12423.DEFAULT_ENVIRONMENT;
-  }
-  const dropUndefinedKeysResult = _mod12392.dropUndefinedKeys({
-    environment: DEFAULT_ENVIRONMENT,
-    release: options.release,
-    public_key: tmp2.publicKey,
-    trace_id,
-  });
-  getOptions.emit("createDsc", dropUndefinedKeysResult);
-  return dropUndefinedKeysResult;
-};
-export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(
-  getOptions,
-  getPropagationContext,
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
+  activeSpan,
+  metricType,
+  sanitizeMetricKeyResult,
+  min,
+  sanitizeUnitResult,
+  tags,
+  bucketKey,
 ) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  let dsc = propagationContext.dsc;
-  if (!dsc) {
-    const options = getOptions.getOptions();
-    const tmp4 = getOptions.getDsn() || {};
-    let DEFAULT_ENVIRONMENT = options.environment;
-    if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = _mod12423.DEFAULT_ENVIRONMENT;
-    }
-    const obj2 = {
-      environment: DEFAULT_ENVIRONMENT,
-      release: options.release,
-      public_key: tmp4.publicKey,
-      trace_id: propagationContext.traceId,
-    };
-    const dropUndefinedKeysResult = _mod12392.dropUndefinedKeys(obj2);
-    getOptions.emit("createDsc", dropUndefinedKeysResult);
-    dsc = dropUndefinedKeysResult;
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
   }
-  return dsc;
-};
-export { getDynamicSamplingContextFromSpan };
-export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
-  const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    const range = _slicedToArray(value, 2)[1];
+    const items = [combined];
+    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range1.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range1.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range1.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range1.sum = sum1;
+    range1.tags = range.tags;
+    items[1] = range1;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined];
+    const range2 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range2;
+    const result1 = obj.set(bucketKey, items1);
+  }
 };

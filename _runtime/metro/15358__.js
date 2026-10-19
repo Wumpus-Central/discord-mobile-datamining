@@ -1,36 +1,19 @@
 // _runtime/metro/15358__.js
-import _mod15349 from "15349__.js";
-import _mod15350 from "15350__.js";
-import _mod15357 from "15357__.js";
+import _mod15356 from "15356__.js";
+import _mod15359 from "15359__.js";
+import _mod15361 from "15361__.js";
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod15350(toString)) {
-      const tmp4 = _mod15357(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
-      }
-      tmpResult = _mod15349;
+let fn = Object;
+let closure_3 = _mod15359("".split);
+if (_mod15356(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod15361(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
     }
-  }
-  const valueOf = arg0.valueOf;
-  if (_mod15350(valueOf)) {
-    const tmp8 = _mod15357(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod15349;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod15350(toString2)) {
-      const tmp10 = _mod15357(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = _mod15349;
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
-};
+    return tmp2;
+  };
+}
+
+export default fn;

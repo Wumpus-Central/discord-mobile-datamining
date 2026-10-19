@@ -1,20 +1,4 @@
 // _runtime/metro/05277__.js
-import _mod523 from "00523__.js";
+import noop from "00019__.js";
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
-}
-
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
-  } else {
-    return {};
-  }
-}
+export default noop.createContext(false);

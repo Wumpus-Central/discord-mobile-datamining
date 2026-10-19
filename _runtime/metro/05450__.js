@@ -1,9 +1,11 @@
 // _runtime/metro/05450__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import cancelAnimation from "../01658_cancelAnimation.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_5443 = fn(5443);
+const memoResult = fn(19).memo(
+  module_5443.createBottomSheetScrollableComponent(fn(5231).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent),
+);
+memoResult.displayName = "BottomSheetSectionList";
 
-export default module_65.get("RNSScreenContentWrapper", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default memoResult;

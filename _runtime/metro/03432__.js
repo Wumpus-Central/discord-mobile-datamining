@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hangout_window",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mYXZvcml0ZXMvaW50bA==",
   scales: [1],
-  hash: "0ffaf58e78768b3ade273f3634f7892a",
-  name: "HangoutWindow.compiled.messages",
+  hash: "ca6c57948eead72ad8b895eca0bf7c21",
+  name: "zh-TW.messages.ca6c57948eead72ad8b895eca0bf7c21.compiled.messages",
   type: "jsona",
 });

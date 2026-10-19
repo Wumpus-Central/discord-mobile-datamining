@@ -1,66 +1,38 @@
 // _runtime/metro/04600__.js
-const Parser = arg1;
-const dependencyMap = arg6;
-class Parser {
-  constructor() {
-    if (this instanceof Parser) {
-      return;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-const entry = {
-  key: "run",
-  value: function run(arg0, arg1, arg2, arg3) {
-    const self = this;
-    const iter = this.parse(arg0, arg1, arg2, arg3);
-    let tmp = null;
-    if (iter) {
-      const obj = { setter: null, rest: null };
-      const valueSetter = new Parser(4597).ValueSetter(
-        iter.value,
-        self.validate,
-        self.set,
-        self.priority,
-        self.subPriority,
-      );
-      obj.setter = valueSetter;
-      obj.rest = iter.rest;
-      tmp = obj;
-    }
-    return tmp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "validate",
-    value: function validate(arg0, arg1, arg2) {
-      return true;
-    },
-  },
-];
-for (let num = 0; num < items.length; num = num + 1) {
-  let tmp3 = items[num];
-  let flag = tmp3.enumerable;
-  if (!flag) {
-    flag = false;
-  }
-  tmp3.enumerable = flag;
-  tmp3.configurable = true;
-  if ("value" in tmp3) {
-    tmp3.writable = true;
-  }
-  let _Object = Object;
-  let definePropertyResult1 = Object.defineProperty(tmp2, tmp3.key, tmp3);
-}
+import _typeof_mod from "04231__.js";
+import requiredArgs_mod from "../04232_requiredArgs.js";
 
-export { Parser };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function isWithinInterval(arg0, start) {
+  requiredArgs.default(2, arguments);
+  const time = _typeof.default(arg0).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  const time1 = _typeof.default(start.start).getTime();
+  const defaultResult2 = _typeof.default(start.start);
+  const time2 = _typeof.default(start.end).getTime();
+  if (time1 <= time2) {
+    return time >= time1 && time <= time2;
+  } else {
+    const _RangeError = RangeError;
+    const rangeError = new RangeError("Invalid interval");
+    throw rangeError;
+  }
+  const defaultResult3 = _typeof.default(start.end);
+};
+export default exports.default;

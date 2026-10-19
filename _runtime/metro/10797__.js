@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8f839a723b53700388132c9e91d8b71b",
-  name: "ArrowLargeUpIcon",
+  hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15",
+  name: "TagsIcon",
   type: "png",
 });

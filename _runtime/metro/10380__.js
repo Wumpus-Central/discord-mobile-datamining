@@ -1,13 +1,19 @@
 // _runtime/metro/10380__.js
-import registerAsset from "01134__.js";
+import _mod19 from "00019__.js";
+import _modDef10381 from "10381__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 179.5,
-  height: 70,
-  scales: [2, 3],
-  hash: "894749452230f66f12adff4cbc7b37d2",
-  name: "img_logo_nitro_classic",
-  type: "png",
-});
+const useRef = _mod19.useRef;
+let closure_3 = [];
+
+export default function useStableMemo(cResult, cResult2) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  } else if (!_modDef10381(cResult2, tmp2.current)) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  }
+  return tmp.current;
+}

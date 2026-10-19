@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "137c8d60debe14e8345280ef0c17818d",
-  name: "LightbulbIcon",
+  hash: "3246c14a68781de782d6622fffa7ce47",
+  name: "StarOutlineIcon",
   type: "png",
 });
