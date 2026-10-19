@@ -1,53 +1,71 @@
 // _runtime/metro/15102__.js
-import _mod15092 from "15092__.js";
+const re0 = /^[0-9]+$/;
 
-export default (arg0, arg1) => {
-  const obj = _mod15092(arg0, null, true);
-  const tmp = _mod15092(arg1, null, true);
-  const compareResult = obj.compare(tmp);
-  if (0 === compareResult) {
-    return null;
-  } else {
-    let tmp3 = tmp;
-    if (compareResult > 0) {
-      tmp3 = obj;
+export default {
+  compareIdentifiers(major, major2) {
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
     }
-    let tmp4 = obj;
-    if (compareResult > 0) {
-      tmp4 = tmp;
+    let tmp4 = major2;
+    let tmp5 = major;
+    if (tmp3) {
+      tmp5 = +major;
+      tmp4 = +major2;
     }
-    if (tmp4.prerelease.length) {
-      if (!length) {
-        if (tmp4.patch) {
-          let str2 = "patch";
-          if (!tmp3.patch) {
-            let str3 = "major";
-            if (tmp3.minor) {
-              str3 = "minor";
-            }
-            str2 = str3;
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
           }
-          let str = str2;
+          let num3 = num4;
         } else {
-          str = "major";
+          num3 = 1;
         }
-        return str;
+        let num2 = num3;
+      } else {
+        num2 = -1;
       }
+      num = num2;
     }
-    let str4 = "";
-    if (tmp3.prerelease.length) {
-      str4 = "pre";
+    return num;
+  },
+  rcompareIdentifiers(arg0, arg1) {
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
     }
-    if (obj.major !== tmp.major) {
-      let str5 = `${str4}major`;
-    } else if (obj.minor !== tmp.minor) {
-      str5 = `${str4}minor`;
-    } else {
-      str5 = "prerelease";
-      if (obj.patch !== tmp.patch) {
-        str5 = `${str4}patch`;
+    let tmp4 = arg0;
+    let tmp5 = arg1;
+    if (tmp3) {
+      tmp5 = +arg1;
+      tmp4 = +arg0;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
       }
+      num = num2;
     }
-    return str5;
-  }
+    return num;
+  },
 };

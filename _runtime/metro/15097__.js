@@ -1,2361 +1,411 @@
 // _runtime/metro/15097__.js
-import _mod15095 from "15095__.js";
-import _mod15096 from "15096__.js";
-import _slicedToArray from "00032__.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
 
-const obj = {};
-const items = [];
-obj.re = items;
-const items1 = [];
-obj.safeRe = items1;
-const items2 = [];
-obj.src = items2;
-const obj2 = {};
-obj.t = obj2;
-const items3 = [["\\s", 1], ,];
-const items4 = ["\\d", _mod15095.MAX_LENGTH];
-items3[1] = items4;
-const items5 = ["[a-zA-Z0-9-]", _mod15095.MAX_SAFE_BUILD_LENGTH];
-items3[2] = items5;
-_mod15096("NUMERICIDENTIFIER", 0, "0|[1-9]\\d*");
-obj2.NUMERICIDENTIFIER = 0;
-items2[0] = "0|[1-9]\\d*";
-const regExp = new RegExp("0|[1-9]\\d*", undefined);
-items[0] = regExp;
-const regExp1 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
+const SemVer = require;
+class SemVer {
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = c2(this, SemVer);
+    tmp2 = closure_0;
+    tmp3 = closure_1;
+    tmp4 = closure_0(closure_1[2])(require);
+    if (global instanceof SemVer) {
+      if (global.loose === tmp4.loose) {
+        if (global.includePrerelease === tmp4.includePrerelease) {
+          return global;
+        }
+      }
+      version = global.version;
+    } else {
+      version = global;
+      if (typeof global !== "string") {
+        tmp33 = globalThis;
+        _TypeError6 = TypeError;
+        _HermesInternal3 = HermesInternal;
+        str11 = '".';
+        str12 = 'Invalid version. Must be a string. Got type "';
+        tmp34 = new.target;
+        tmp35 = new.target;
+        typeError = new TypeError('Invalid version. Must be a string. Got type "' + typeof global + '".');
+        tmp37 = typeError;
+        throw typeError;
+      }
     }
-    return str;
-  })("0|[1-9]\\d*"),
-  undefined,
-);
-items1[0] = regExp1;
-const tmp = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
+    if (version.length > tmp2(tmp3[3]).MAX_LENGTH) {
+      tmp28 = globalThis;
+      _TypeError5 = TypeError;
+      _HermesInternal2 = HermesInternal;
+      str9 = " characters";
+      str10 = "version is longer than ";
+      tmp29 = new.target;
+      tmp30 = new.target;
+      typeError1 = new TypeError("version is longer than " + tmp2(tmp3[3]).MAX_LENGTH + " characters");
+      tmp32 = typeError1;
+      throw typeError1;
+    } else {
+      str13 = "SemVer";
+      tmp38 = tmp2(tmp3[4])("SemVer", version, tmp4);
+      self.options = tmp4;
+      self.loose = tmp4.loose;
+      self.includePrerelease = tmp4.includePrerelease;
+      str14 = version.trim();
+      safeRe = tmp2(tmp3[5]).safeRe;
+      t = tmp2(tmp3[5]).t;
+      if (tmp4.loose) {
+        tmp5 = safeRe[t.LOOSE];
+      } else {
+        tmp5 = safeRe[t.FULL];
+      }
+      match = str14.match(tmp5);
+      if (match) {
+        self.raw = version;
+        self.major = +match[1];
+        self.minor = +match[2];
+        self.patch = +match[3];
+        if (self.major <= tmp2(tmp3[3]).MAX_SAFE_INTEGER) {
+          num = 0;
+          if (self.major >= 0) {
+            if (self.minor <= tmp2(tmp3[3]).MAX_SAFE_INTEGER) {
+              if (self.minor >= 0) {
+                if (self.patch <= tmp2(tmp3[3]).MAX_SAFE_INTEGER) {
+                  if (self.patch >= 0) {
+                    if (match[4]) {
+                      str2 = match[4];
+                      str3 = ".";
+                      parts = str2.split(".");
+                      self.prerelease = parts.map((item) => {
+                        if (obj.test(item)) {
+                          if (0 <= +item) {
+                            if (tmp < SemVer(dependencyMap[3]).MAX_SAFE_INTEGER) {
+                              return tmp;
+                            }
+                          }
+                        }
+                        return item;
+                      });
+                    } else {
+                      self.prerelease = [];
+                    }
+                    if (match[5]) {
+                      str4 = match[5];
+                      str5 = ".";
+                      parts1 = str4.split(".");
+                    } else {
+                      parts1 = [];
+                    }
+                    self.build = parts1;
+                    formatResult = self.format();
+                    return;
+                  }
+                }
+                tmp13 = globalThis;
+                _TypeError2 = TypeError;
+                tmp14 = new.target;
+                str6 = "Invalid patch version";
+                tmp15 = new.target;
+                typeError2 = new TypeError("Invalid patch version");
+                tmp17 = typeError2;
+                throw typeError2;
+              }
+            }
+            tmp18 = globalThis;
+            _TypeError3 = TypeError;
+            tmp19 = new.target;
+            str7 = "Invalid minor version";
+            tmp20 = new.target;
+            typeError3 = new TypeError("Invalid minor version");
+            tmp22 = typeError3;
+            throw typeError3;
+          }
+        }
+        tmp23 = globalThis;
+        _TypeError4 = TypeError;
+        tmp24 = new.target;
+        str8 = "Invalid major version";
+        tmp25 = new.target;
+        typeError4 = new TypeError("Invalid major version");
+        tmp27 = typeError4;
+        throw typeError4;
+      } else {
+        tmp7 = globalThis;
+        _TypeError = TypeError;
+        _HermesInternal = HermesInternal;
+        str = "Invalid Version: ";
+        tmp8 = new.target;
+        tmp9 = new.target;
+        typeError5 = new TypeError("Invalid Version: " + version);
+        tmp11 = typeError5;
+        throw typeError5;
+      }
+    }
   }
-  return str;
-})("0|[1-9]\\d*");
-_mod15096("NUMERICIDENTIFIERLOOSE", 1, "\\d+");
-obj2.NUMERICIDENTIFIERLOOSE = 1;
-items2[1] = "\\d+";
-const regExp2 = new RegExp("\\d+", undefined);
-items[1] = regExp2;
-const regExp3 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
+}
+const entry = {
+  key: "format",
+  value: function format() {
+    const self = this;
+    this.version = "" + this.major + "." + this.minor + "." + this.patch;
+    if (this.prerelease.length) {
+      ({ prerelease, version } = self);
+      const _HermesInternal = HermesInternal;
+      self.version = version + "-" + prerelease.join(".");
     }
-    return str;
-  })("\\d+"),
-  undefined,
-);
-items1[1] = regExp3;
-const combined = "\\d*[a-zA-Z-]" + "[a-zA-Z0-9-]" + "*";
-let tmp5 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("\\d+");
-_mod15096("NONNUMERICIDENTIFIER", 2, combined);
-obj2.NONNUMERICIDENTIFIER = 2;
-items2[2] = combined;
-const regExp4 = new RegExp(combined, undefined);
-items[2] = regExp4;
-const regExp5 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined),
-  undefined,
-);
-items1[2] = regExp5;
-const combined1 =
-  "(" +
-  items2[obj2.NUMERICIDENTIFIER] +
-  ")\\.(" +
-  items2[obj2.NUMERICIDENTIFIER] +
-  ")\\.(" +
-  items2[obj2.NUMERICIDENTIFIER] +
-  ")";
-const tmp10 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined);
-_mod15096("MAINVERSION", 3, combined1);
-obj2.MAINVERSION = 3;
-items2[3] = combined1;
-const regExp6 = new RegExp(combined1, undefined);
-items[3] = regExp6;
-const regExp7 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined1),
-  undefined,
-);
-items1[3] = regExp7;
-const combined2 =
-  "(" +
-  items2[obj2.NUMERICIDENTIFIERLOOSE] +
-  ")\\.(" +
-  items2[obj2.NUMERICIDENTIFIERLOOSE] +
-  ")\\.(" +
-  items2[obj2.NUMERICIDENTIFIERLOOSE] +
-  ")";
-const tmp15 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined1);
-_mod15096("MAINVERSIONLOOSE", 4, combined2);
-obj2.MAINVERSIONLOOSE = 4;
-items2[4] = combined2;
-const regExp8 = new RegExp(combined2, undefined);
-items[4] = regExp8;
-const regExp9 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined2),
-  undefined,
-);
-items1[4] = regExp9;
-const combined3 = "(?:" + items2[obj2.NUMERICIDENTIFIER] + "|" + items2[obj2.NONNUMERICIDENTIFIER] + ")";
-const tmp20 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined2);
-_mod15096("PRERELEASEIDENTIFIER", 5, combined3);
-obj2.PRERELEASEIDENTIFIER = 5;
-items2[5] = combined3;
-const regExp10 = new RegExp(combined3, undefined);
-items[5] = regExp10;
-const regExp11 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined3),
-  undefined,
-);
-items1[5] = regExp11;
-const combined4 = "(?:" + items2[obj2.NUMERICIDENTIFIERLOOSE] + "|" + items2[obj2.NONNUMERICIDENTIFIER] + ")";
-const tmp25 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined3);
-_mod15096("PRERELEASEIDENTIFIERLOOSE", 6, combined4);
-obj2.PRERELEASEIDENTIFIERLOOSE = 6;
-items2[6] = combined4;
-const regExp12 = new RegExp(combined4, undefined);
-items[6] = regExp12;
-const regExp13 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined4),
-  undefined,
-);
-items1[6] = regExp13;
-const combined5 = "(?:-(" + items2[obj2.PRERELEASEIDENTIFIER] + "(?:\\." + items2[obj2.PRERELEASEIDENTIFIER] + ")*))";
-const tmp30 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined4);
-_mod15096("PRERELEASE", 7, combined5);
-obj2.PRERELEASE = 7;
-items2[7] = combined5;
-const regExp14 = new RegExp(combined5, undefined);
-items[7] = regExp14;
-const regExp15 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined5),
-  undefined,
-);
-items1[7] = regExp15;
-const combined6 =
-  "(?:-?(" + items2[obj2.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + items2[obj2.PRERELEASEIDENTIFIERLOOSE] + ")*))";
-const tmp35 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined5);
-_mod15096("PRERELEASELOOSE", 8, combined6);
-obj2.PRERELEASELOOSE = 8;
-items2[8] = combined6;
-const regExp16 = new RegExp(combined6, undefined);
-items[8] = regExp16;
-const regExp17 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined6),
-  undefined,
-);
-items1[8] = regExp17;
-const combined7 = "" + "[a-zA-Z0-9-]" + "+";
-const tmp40 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined6);
-_mod15096("BUILDIDENTIFIER", 9, combined7);
-obj2.BUILDIDENTIFIER = 9;
-items2[9] = combined7;
-const regExp18 = new RegExp(combined7, undefined);
-items[9] = regExp18;
-const regExp19 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined7),
-  undefined,
-);
-items1[9] = regExp19;
-const combined8 = "(?:\\+(" + items2[obj2.BUILDIDENTIFIER] + "(?:\\." + items2[obj2.BUILDIDENTIFIER] + ")*))";
-const tmp45 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined7);
-_mod15096("BUILD", 10, combined8);
-obj2.BUILD = 10;
-items2[10] = combined8;
-const regExp20 = new RegExp(combined8, undefined);
-items[10] = regExp20;
-const regExp21 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined8),
-  undefined,
-);
-items1[10] = regExp21;
-const combined9 = "v?" + items2[obj2.MAINVERSION] + items2[obj2.PRERELEASE] + "?" + items2[obj2.BUILD] + "?";
-const tmp50 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined8);
-_mod15096("FULLPLAIN", 11, combined9);
-obj2.FULLPLAIN = 11;
-items2[11] = combined9;
-const regExp22 = new RegExp(combined9, undefined);
-items[11] = regExp22;
-const regExp23 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined9),
-  undefined,
-);
-items1[11] = regExp23;
-const combined10 = "^" + items2[obj2.FULLPLAIN] + "$";
-const tmp55 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined9);
-_mod15096("FULL", 12, combined10);
-obj2.FULL = 12;
-items2[12] = combined10;
-const regExp24 = new RegExp(combined10, undefined);
-items[12] = regExp24;
-const regExp25 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined10),
-  undefined,
-);
-items1[12] = regExp25;
-const combined11 =
-  "[v=\\s]*" + items2[obj2.MAINVERSIONLOOSE] + items2[obj2.PRERELEASELOOSE] + "?" + items2[obj2.BUILD] + "?";
-const tmp60 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined10);
-_mod15096("LOOSEPLAIN", 13, combined11);
-obj2.LOOSEPLAIN = 13;
-items2[13] = combined11;
-const regExp26 = new RegExp(combined11, undefined);
-items[13] = regExp26;
-const regExp27 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined11),
-  undefined,
-);
-items1[13] = regExp27;
-const combined12 = "^" + items2[obj2.LOOSEPLAIN] + "$";
-const tmp65 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined11);
-_mod15096("LOOSE", 14, combined12);
-obj2.LOOSE = 14;
-items2[14] = combined12;
-const regExp28 = new RegExp(combined12, undefined);
-items[14] = regExp28;
-const regExp29 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined12),
-  undefined,
-);
-items1[14] = regExp29;
-const tmp70 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined12);
-_mod15096("GTLT", 15, "((?:<|>)?=?)");
-obj2.GTLT = 15;
-items2[15] = "((?:<|>)?=?)";
-const regExp30 = new RegExp("((?:<|>)?=?)", undefined);
-items[15] = regExp30;
-const regExp31 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })("((?:<|>)?=?)"),
-  undefined,
-);
-items1[15] = regExp31;
-const combined13 = "" + items2[obj2.NUMERICIDENTIFIERLOOSE] + "|x|X|\\*";
-const tmp74 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("((?:<|>)?=?)");
-_mod15096("XRANGEIDENTIFIERLOOSE", 16, combined13);
-obj2.XRANGEIDENTIFIERLOOSE = 16;
-items2[16] = combined13;
-const regExp32 = new RegExp(combined13, undefined);
-items[16] = regExp32;
-const regExp33 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined13),
-  undefined,
-);
-items1[16] = regExp33;
-const combined14 = "" + items2[obj2.NUMERICIDENTIFIER] + "|x|X|\\*";
-const tmp79 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined13);
-_mod15096("XRANGEIDENTIFIER", 17, combined14);
-obj2.XRANGEIDENTIFIER = 17;
-items2[17] = combined14;
-const regExp34 = new RegExp(combined14, undefined);
-items[17] = regExp34;
-const regExp35 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined14),
-  undefined,
-);
-items1[17] = regExp35;
-const combined15 =
-  "[v=\\s]*(" +
-  items2[obj2.XRANGEIDENTIFIER] +
-  ")(?:\\.(" +
-  items2[obj2.XRANGEIDENTIFIER] +
-  ")(?:\\.(" +
-  items2[obj2.XRANGEIDENTIFIER] +
-  ")(?:" +
-  items2[obj2.PRERELEASE] +
-  ")?" +
-  items2[obj2.BUILD] +
-  "?)?)?";
-const tmp84 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined14);
-_mod15096("XRANGEPLAIN", 18, combined15);
-obj2.XRANGEPLAIN = 18;
-items2[18] = combined15;
-const regExp36 = new RegExp(combined15, undefined);
-items[18] = regExp36;
-const regExp37 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined15),
-  undefined,
-);
-items1[18] = regExp37;
-const combined16 =
-  "[v=\\s]*(" +
-  items2[obj2.XRANGEIDENTIFIERLOOSE] +
-  ")(?:\\.(" +
-  items2[obj2.XRANGEIDENTIFIERLOOSE] +
-  ")(?:\\.(" +
-  items2[obj2.XRANGEIDENTIFIERLOOSE] +
-  ")(?:" +
-  items2[obj2.PRERELEASELOOSE] +
-  ")?" +
-  items2[obj2.BUILD] +
-  "?)?)?";
-const tmp89 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined15);
-_mod15096("XRANGEPLAINLOOSE", 19, combined16);
-obj2.XRANGEPLAINLOOSE = 19;
-items2[19] = combined16;
-const regExp38 = new RegExp(combined16, undefined);
-items[19] = regExp38;
-const regExp39 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined16),
-  undefined,
-);
-items1[19] = regExp39;
-const combined17 = "^" + items2[obj2.GTLT] + "\\s*" + items2[obj2.XRANGEPLAIN] + "$";
-const tmp94 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined16);
-_mod15096("XRANGE", 20, combined17);
-obj2.XRANGE = 20;
-items2[20] = combined17;
-const regExp40 = new RegExp(combined17, undefined);
-items[20] = regExp40;
-const regExp41 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined17),
-  undefined,
-);
-items1[20] = regExp41;
-const combined18 = "^" + items2[obj2.GTLT] + "\\s*" + items2[obj2.XRANGEPLAINLOOSE] + "$";
-const tmp99 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined17);
-_mod15096("XRANGELOOSE", 21, combined18);
-obj2.XRANGELOOSE = 21;
-items2[21] = combined18;
-const regExp42 = new RegExp(combined18, undefined);
-items[21] = regExp42;
-const regExp43 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined18),
-  undefined,
-);
-items1[21] = regExp43;
-const combined19 =
-  "(^|[^\\d])(\\d{1," +
-  _mod15095.MAX_SAFE_COMPONENT_LENGTH +
-  "})(?:\\.(\\d{1," +
-  _mod15095.MAX_SAFE_COMPONENT_LENGTH +
-  "}))?(?:\\.(\\d{1," +
-  _mod15095.MAX_SAFE_COMPONENT_LENGTH +
-  "}))?";
-const tmp104 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined18);
-_mod15096("COERCEPLAIN", 22, combined19);
-obj2.COERCEPLAIN = 22;
-items2[22] = combined19;
-const regExp44 = new RegExp(combined19, undefined);
-items[22] = regExp44;
-const regExp45 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined19),
-  undefined,
-);
-items1[22] = regExp45;
-const combined20 = "" + items2[obj2.COERCEPLAIN] + "(?:$|[^\\d])";
-const tmp109 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined19);
-_mod15096("COERCE", 23, combined20);
-obj2.COERCE = 23;
-items2[23] = combined20;
-const regExp46 = new RegExp(combined20, undefined);
-items[23] = regExp46;
-const regExp47 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined20),
-  undefined,
-);
-items1[23] = regExp47;
-const sum = items2[obj2.COERCEPLAIN] + "(?:" + items2[obj2.PRERELEASE] + ")?";
-const sum1 = sum + "(?:" + items2[obj2.BUILD] + ")?(?:$|[^\\d])";
-const tmp114 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined20);
-_mod15096("COERCEFULL", 24, sum1);
-obj2.COERCEFULL = 24;
-items2[24] = sum1;
-const regExp48 = new RegExp(sum1, undefined);
-items[24] = regExp48;
-const regExp49 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(sum1),
-  undefined,
-);
-items1[24] = regExp49;
-const tmp120 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(sum1);
-_mod15096("COERCERTL", 25, items2[obj2.COERCE]);
-obj2.COERCERTL = 25;
-items2[25] = items2[obj2.COERCE];
-const regExp50 = new RegExp(tmp124, "g");
-items[25] = regExp50;
-const regExp51 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(items2[obj2.COERCE]),
-  "g",
-);
-items1[25] = regExp51;
-const tmp125 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(items2[obj2.COERCE]);
-_mod15096("COERCERTLFULL", 26, items2[obj2.COERCEFULL]);
-obj2.COERCERTLFULL = 26;
-items2[26] = items2[obj2.COERCEFULL];
-const regExp52 = new RegExp(tmp129, "g");
-items[26] = regExp52;
-const regExp53 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(items2[obj2.COERCEFULL]),
-  "g",
-);
-items1[26] = regExp53;
-const tmp130 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(items2[obj2.COERCEFULL]);
-_mod15096("LONETILDE", 27, "(?:~>?)");
-obj2.LONETILDE = 27;
-items2[27] = "(?:~>?)";
-const regExp54 = new RegExp("(?:~>?)", undefined);
-items[27] = regExp54;
-const regExp55 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })("(?:~>?)"),
-  undefined,
-);
-items1[27] = regExp55;
-const combined21 = "(\\s*)" + items2[obj2.LONETILDE] + "\\s+";
-const tmp134 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("(?:~>?)");
-_mod15096("TILDETRIM", 28, combined21);
-obj2.TILDETRIM = 28;
-items2[28] = combined21;
-const regExp56 = new RegExp(combined21, "g");
-items[28] = regExp56;
-const regExp57 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined21),
-  "g",
-);
-items1[28] = regExp57;
-obj.tildeTrimReplace = "$1~";
-const combined22 = "^" + items2[obj2.LONETILDE] + items2[obj2.XRANGEPLAIN] + "$";
-const tmp139 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined21);
-_mod15096("TILDE", 29, combined22);
-obj2.TILDE = 29;
-items2[29] = combined22;
-const regExp58 = new RegExp(combined22, undefined);
-items[29] = regExp58;
-const regExp59 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined22),
-  undefined,
-);
-items1[29] = regExp59;
-const combined23 = "^" + items2[obj2.LONETILDE] + items2[obj2.XRANGEPLAINLOOSE] + "$";
-const tmp144 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined22);
-_mod15096("TILDELOOSE", 30, combined23);
-obj2.TILDELOOSE = 30;
-items2[30] = combined23;
-const regExp60 = new RegExp(combined23, undefined);
-items[30] = regExp60;
-const regExp61 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined23),
-  undefined,
-);
-items1[30] = regExp61;
-const tmp149 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined23);
-_mod15096("LONECARET", 31, "(?:\\^)");
-obj2.LONECARET = 31;
-items2[31] = "(?:\\^)";
-const regExp62 = new RegExp("(?:\\^)", undefined);
-items[31] = regExp62;
-const regExp63 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })("(?:\\^)"),
-  undefined,
-);
-items1[31] = regExp63;
-const combined24 = "(\\s*)" + items2[obj2.LONECARET] + "\\s+";
-const tmp153 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("(?:\\^)");
-_mod15096("CARETTRIM", 32, combined24);
-obj2.CARETTRIM = 32;
-items2[32] = combined24;
-const regExp64 = new RegExp(combined24, "g");
-items[32] = regExp64;
-const regExp65 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined24),
-  "g",
-);
-items1[32] = regExp65;
-obj.caretTrimReplace = "$1^";
-const combined25 = "^" + items2[obj2.LONECARET] + items2[obj2.XRANGEPLAIN] + "$";
-const tmp158 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined24);
-_mod15096("CARET", 33, combined25);
-obj2.CARET = 33;
-items2[33] = combined25;
-const regExp66 = new RegExp(combined25, undefined);
-items[33] = regExp66;
-const regExp67 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined25),
-  undefined,
-);
-items1[33] = regExp67;
-const combined26 = "^" + items2[obj2.LONECARET] + items2[obj2.XRANGEPLAINLOOSE] + "$";
-const tmp163 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined25);
-_mod15096("CARETLOOSE", 34, combined26);
-obj2.CARETLOOSE = 34;
-items2[34] = combined26;
-const regExp68 = new RegExp(combined26, undefined);
-items[34] = regExp68;
-const regExp69 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined26),
-  undefined,
-);
-items1[34] = regExp69;
-const combined27 = "^" + items2[obj2.GTLT] + "\\s*(" + items2[obj2.LOOSEPLAIN] + ")$|^$";
-const tmp168 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined26);
-_mod15096("COMPARATORLOOSE", 35, combined27);
-obj2.COMPARATORLOOSE = 35;
-items2[35] = combined27;
-const regExp70 = new RegExp(combined27, undefined);
-items[35] = regExp70;
-const regExp71 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined27),
-  undefined,
-);
-items1[35] = regExp71;
-const combined28 = "^" + items2[obj2.GTLT] + "\\s*(" + items2[obj2.FULLPLAIN] + ")$|^$";
-const tmp173 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined27);
-_mod15096("COMPARATOR", 36, combined28);
-obj2.COMPARATOR = 36;
-items2[36] = combined28;
-const regExp72 = new RegExp(combined28, undefined);
-items[36] = regExp72;
-const regExp73 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined28),
-  undefined,
-);
-items1[36] = regExp73;
-const combined29 =
-  "(\\s*)" + items2[obj2.GTLT] + "\\s*(" + items2[obj2.LOOSEPLAIN] + "|" + items2[obj2.XRANGEPLAIN] + ")";
-const tmp178 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined28);
-_mod15096("COMPARATORTRIM", 37, combined29);
-obj2.COMPARATORTRIM = 37;
-items2[37] = combined29;
-const regExp74 = new RegExp(combined29, "g");
-items[37] = regExp74;
-const regExp75 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined29),
-  "g",
-);
-items1[37] = regExp75;
-obj.comparatorTrimReplace = "$1$2$3";
-const combined30 = "^\\s*(" + items2[obj2.XRANGEPLAIN] + ")\\s+-\\s+(" + items2[obj2.XRANGEPLAIN] + ")\\s*$";
-const tmp183 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined29);
-_mod15096("HYPHENRANGE", 38, combined30);
-obj2.HYPHENRANGE = 38;
-items2[38] = combined30;
-const regExp76 = new RegExp(combined30, undefined);
-items[38] = regExp76;
-const regExp77 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined30),
-  undefined,
-);
-items1[38] = regExp77;
-const combined31 = "^\\s*(" + items2[obj2.XRANGEPLAINLOOSE] + ")\\s+-\\s+(" + items2[obj2.XRANGEPLAINLOOSE] + ")\\s*$";
-const tmp188 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined30);
-_mod15096("HYPHENRANGELOOSE", 39, combined31);
-obj2.HYPHENRANGELOOSE = 39;
-items2[39] = combined31;
-const regExp78 = new RegExp(combined31, undefined);
-items[39] = regExp78;
-const regExp79 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })(combined31),
-  undefined,
-);
-items1[39] = regExp79;
-const tmp193 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})(combined31);
-_mod15096("STAR", 40, "(<|>)?=?\\s*\\*");
-obj2.STAR = 40;
-items2[40] = "(<|>)?=?\\s*\\*";
-const regExp80 = new RegExp("(<|>)?=?\\s*\\*", undefined);
-items[40] = regExp80;
-const regExp81 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })("(<|>)?=?\\s*\\*"),
-  undefined,
-);
-items1[40] = regExp81;
-const tmp197 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("(<|>)?=?\\s*\\*");
-_mod15096("GTE0", 41, "^\\s*>=\\s*0\\.0\\.0\\s*$");
-obj2.GTE0 = 41;
-items2[41] = "^\\s*>=\\s*0\\.0\\.0\\s*$";
-const regExp82 = new RegExp("^\\s*>=\\s*0\\.0\\.0\\s*$", undefined);
-items[41] = regExp82;
-const regExp83 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })("^\\s*>=\\s*0\\.0\\.0\\s*$"),
-  undefined,
-);
-items1[41] = regExp83;
-const tmp201 = ((items2) => {
-  let str = items2;
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let _HermesInternal = HermesInternal;
-    let parts = str.split("" + tmp6 + "*");
-    let _HermesInternal2 = HermesInternal;
-    let str2 = "";
-    let str3 = "{0,";
-    let str4 = "}";
-    let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-    let _HermesInternal3 = HermesInternal;
-    let parts1 = str5.split("" + tmp6 + "+");
-    let _HermesInternal4 = HermesInternal;
-    let str6 = "";
-    let str7 = "{1,";
-    str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-    continue;
-  }
-  return str;
-})("^\\s*>=\\s*0\\.0\\.0\\s*$");
-_mod15096("GTE0PRE", 42, "^\\s*>=\\s*0\\.0\\.0-0\\s*$");
-obj2.GTE0PRE = 42;
-items2[42] = "^\\s*>=\\s*0\\.0\\.0-0\\s*$";
-const regExp84 = new RegExp("^\\s*>=\\s*0\\.0\\.0-0\\s*$", undefined);
-items[42] = regExp84;
-const regExp85 = new RegExp(
-  ((items2) => {
-    let str = items2;
-    while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      [tmp6, tmp7] = tmp5;
-      let _HermesInternal = HermesInternal;
-      let parts = str.split("" + tmp6 + "*");
-      let _HermesInternal2 = HermesInternal;
-      let str2 = "";
-      let str3 = "{0,";
-      let str4 = "}";
-      let str5 = parts.join("" + tmp6 + "{0," + tmp7 + "}");
-      let _HermesInternal3 = HermesInternal;
-      let parts1 = str5.split("" + tmp6 + "+");
-      let _HermesInternal4 = HermesInternal;
-      let str6 = "";
-      let str7 = "{1,";
-      str = parts1.join("" + tmp6 + "{1," + tmp7 + "}");
-      continue;
-    }
-    return str;
-  })("^\\s*>=\\s*0\\.0\\.0-0\\s*$"),
-  undefined,
-);
-items1[42] = regExp85;
+    return self.version;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "toString",
+    value: function toString() {
+      return this.version;
+    },
+  },
+  {
+    key: "compare",
+    value: function compare(tmp2Result) {
+      const self = this;
+      SemVer(15100)("SemVer.compare", this.version, this.options, tmp2Result);
+      if (!(tmp2Result instanceof SemVer)) {
+        if (typeof tmp2Result === "string") {
+          if (tmp2Result === self.version) {
+            return 0;
+          }
+        }
+        tmp2Result = SemVer(tmp2Result, self.options);
+      }
+      let num2 = 0;
+      if (tmp2Result.version !== self.version) {
+        num2 = self.compareMain(tmp2Result) || self.comparePre(tmp2Result);
+        const tmp4 = self.compareMain(tmp2Result) || self.comparePre(tmp2Result);
+      }
+      return num2;
+    },
+  },
+  {
+    key: "compareMain",
+    value: function compareMain(tmp2Result) {
+      const self = this;
+      let tmpResult = tmp2Result;
+      if (!(tmp2Result instanceof SemVer)) {
+        tmpResult = SemVer(tmp2Result, self.options);
+      }
+      let compareIdentifiersResult = SemVer(15102).compareIdentifiers(self.major, tmpResult.major);
+      if (!compareIdentifiersResult) {
+        compareIdentifiersResult = SemVer(15102).compareIdentifiers(self.minor, tmpResult.minor);
+        const tmp3Result = SemVer(15102);
+      }
+      if (!compareIdentifiersResult) {
+        compareIdentifiersResult = SemVer(15102).compareIdentifiers(self.patch, tmpResult.patch);
+        const tmp3Result2 = SemVer(15102);
+      }
+      return compareIdentifiersResult;
+    },
+  },
+  {
+    key: "comparePre",
+    value: function comparePre(tmp2Result) {
+      const self = this;
+      let tmpResult = tmp2Result;
+      if (!(tmp2Result instanceof SemVer)) {
+        tmpResult = SemVer(tmp2Result, self.options);
+      }
+      if (self.prerelease.length) {
+        if (!tmpResult.prerelease.length) {
+          return -1;
+        }
+      }
+      if (!self.prerelease.length) {
+        if (tmpResult.prerelease.length) {
+          return 1;
+        }
+      }
+      let num3 = 0;
+      if (!self.prerelease.length) {
+        num3 = 0;
+        if (!tmpResult.prerelease.length) {
+          return 0;
+        }
+      }
+      while (true) {
+        let tmp3 = self.prerelease[num3];
+        let tmp4 = tmpResult.prerelease[num3];
+        let str = "prerelease compare";
+        let tmp10 = SemVer(15100)("prerelease compare", num3, tmp3, tmp4);
+        let tmp11 = undefined === tmp3;
+        if (tmp11) {
+          if (undefined === tmp4) {
+            break;
+          }
+        }
+        if (undefined === tmp4) {
+          return 1;
+        } else if (tmp11) {
+          return -1;
+        } else if (tmp3 !== tmp4) {
+          let tmp5Result = SemVer(15102);
+          return tmp5Result.compareIdentifiers(tmp3, tmp4);
+        } else {
+          num3 = num3 + 1;
+        }
+      }
+      return 0;
+    },
+  },
+  {
+    key: "compareBuild",
+    value: function compareBuild(dependencyMap) {
+      const self = this;
+      let tmpResult = dependencyMap;
+      if (!(dependencyMap instanceof SemVer)) {
+        tmpResult = SemVer(dependencyMap, self.options);
+      }
+      let num = 0;
+      while (true) {
+        let tmp3 = self.build[num];
+        let tmp4 = tmpResult.build[num];
+        let str = "build compare";
+        let tmp10 = SemVer(15100)("build compare", num, tmp3, tmp4);
+        let tmp11 = undefined === tmp3;
+        if (tmp11) {
+          if (undefined === tmp4) {
+            break;
+          }
+        }
+        if (undefined === tmp4) {
+          return 1;
+        } else if (tmp11) {
+          return -1;
+        } else if (tmp3 !== tmp4) {
+          let tmp5Result = SemVer(15102);
+          return tmp5Result.compareIdentifiers(tmp3, tmp4);
+        } else {
+          num = num + 1;
+        }
+      }
+      return 0;
+    },
+  },
+  {
+    key: "inc",
+    value: function inc(pre, major2, major2) {
+      const self = this;
+      if ("premajor" === pre) {
+        self.prerelease.length = 0;
+        self.patch = 0;
+        self.minor = 0;
+        self.major = self.major + 1;
+        self.inc("pre", major2, major2);
+      } else if ("preminor" === pre) {
+        self.prerelease.length = 0;
+        self.patch = 0;
+        self.minor = self.minor + 1;
+        self.inc("pre", major2, major2);
+      } else if ("prepatch" === pre) {
+        self.prerelease.length = 0;
+        self.inc("patch", major2, major2);
+        self.inc("pre", major2, major2);
+      } else if ("prerelease" === pre) {
+        if (0 === self.prerelease.length) {
+          self.inc("patch", major2, major2);
+        }
+        self.inc("pre", major2, major2);
+      } else if ("major" === pre) {
+        if (!tmp22) {
+          self.major = self.major + 1;
+        }
+        self.minor = 0;
+        self.patch = 0;
+        self.prerelease = [];
+        tmp22 = 0 === self.minor && 0 === self.patch && 0 !== self.prerelease.length;
+      } else if ("minor" === pre) {
+        if (!tmp21) {
+          self.minor = self.minor + 1;
+        }
+        self.patch = 0;
+        self.prerelease = [];
+        tmp21 = 0 === self.patch && 0 !== self.prerelease.length;
+      } else if ("patch" === pre) {
+        if (0 === self.prerelease.length) {
+          self.patch = self.patch + 1;
+        }
+        self.prerelease = [];
+      } else if ("pre" === pre) {
+        const _Number = Number;
+        let num2 = 0;
+        if (Number(major2)) {
+          num2 = 1;
+        }
+        if (!major2) {
+          if (false === major2) {
+            const _Error2 = Error;
+            const error = new Error("invalid increment argument: identifier is empty");
+            throw error;
+          }
+        }
+        if (0 === self.prerelease.length) {
+          const items = [num2];
+          self.prerelease = items;
+        } else {
+          let diff = self.prerelease.length - 1;
+          let tmp13 = diff;
+          if (diff >= 0) {
+            do {
+              let num3 = diff;
+              if (typeof self.prerelease[diff] === "number") {
+                let prerelease2 = self.prerelease;
+                prerelease2[diff] = prerelease2[diff] + 1;
+                num3 = -2;
+              }
+              diff = num3 - 1;
+              tmp13 = diff;
+            } while (diff >= 0);
+          }
+          if (-1 === tmp13) {
+            const prerelease = self.prerelease;
+            if (major2 === prerelease.join(".")) {
+              if (false === major2) {
+                const _Error3 = Error;
+                const error1 = new Error("invalid increment argument: identifier already exists");
+                throw error1;
+              }
+            }
+            const prerelease1 = self.prerelease;
+            prerelease1.push(num2);
+          }
+        }
+        if (major2) {
+          let items1 = [major2, num2];
+          if (false === major2) {
+            const items2 = [major2];
+            items1 = items2;
+          }
+          if (0 === obj.compareIdentifiers(self.prerelease[0], major2)) {
+            const _isNaN = isNaN;
+            if (isNaN(self.prerelease[1])) {
+              self.prerelease = items1;
+            }
+          } else {
+            self.prerelease = items1;
+          }
+          obj = SemVer(15102);
+        }
+      } else {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error2 = new Error("invalid increment argument: " + pre);
+        throw error2;
+      }
+      self.raw = self.format();
+      if (self.build.length) {
+        const build = self.build;
+        const _HermesInternal2 = HermesInternal;
+        self.raw = self.raw + "+" + build.join(".");
+      }
+      return self;
+    },
+  },
+];
 
-export default obj;
+export default _createClass(SemVer, items);

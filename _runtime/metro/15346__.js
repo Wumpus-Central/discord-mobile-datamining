@@ -1,19 +1,16 @@
 // _runtime/metro/15346__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+import _mod15331 from "15331__.js";
+
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod15331(1.toString);
+
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+};

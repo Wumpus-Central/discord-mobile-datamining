@@ -631,12 +631,12 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   }
   return client[_sentry_idleSpan];
 };
-export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f138950, tmp2Result, arg2) {
-  f138950.emit("startPageLoadSpan", tmp2Result, arg2);
+export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f139047, tmp2Result, arg2) {
+  f139047.emit("startPageLoadSpan", tmp2Result, arg2);
   const currentScope = _mod693.getCurrentScope();
   currentScope.setTransactionName(tmp2Result.name);
-  if (f138950[_sentry_idleSpan]) {
-    f138950.emit("afterStartPageLoadSpan", tmp3);
+  if (f139047[_sentry_idleSpan]) {
+    f139047.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f138950[_sentry_idleSpan];
+  return f139047[_sentry_idleSpan];
 };

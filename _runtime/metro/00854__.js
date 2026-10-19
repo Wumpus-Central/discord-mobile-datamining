@@ -33,7 +33,7 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
     lc_attributes: "application",
-    lc_aliases: "v",
+    lc_aliases: "color",
     lc_serializable_keys: "disabled",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},

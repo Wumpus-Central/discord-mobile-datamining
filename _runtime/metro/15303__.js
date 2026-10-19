@@ -1,23 +1,8 @@
 // _runtime/metro/15303__.js
+const require = globalThis.__r;
 
-export const calendars = [
-  "buddhist",
-  "chinese",
-  "coptic",
-  "dangi",
-  "ethioaa",
-  "ethiopic",
-  "gregory",
-  "hebrew",
-  "indian",
-  "islamic",
-  "islamic-civil",
-  "islamic-rgsa",
-  "islamic-tbla",
-  "islamic-umalqura",
-  "islamicc",
-  "iso8601",
-  "japanese",
-  "persian",
-  "roc",
-];
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shouldPolyfill = require("15304__.js").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

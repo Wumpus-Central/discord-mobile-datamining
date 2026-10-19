@@ -1,4 +1,12 @@
 // _runtime/metro/15104__.js
-import _mod15093 from "15093__.js";
+import _mod15096 from "15096__.js";
 
-export default (arg0, arg1) => new _mod15093(arg0, arg1).minor;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod15096(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};

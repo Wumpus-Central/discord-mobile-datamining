@@ -1,0 +1,36 @@
+// _runtime/metro/12472__.js
+import _mod12384 from "12384__.js";
+import _mod12386 from "12386__.js";
+import _mod12387 from "12387__.js";
+
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod12387.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod12386.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(12387).GLOBAL_OBJ.console) {
+        tmp(12392).fill(tmp(12387).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod12386.originalConsoleMethods[level] = arg0;
+          return () => {
+            const items = [...arguments];
+            level(12384).triggerHandlers("console", { args: items, level });
+            const obj3 = level(12386).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(12387).GLOBAL_OBJ.console, items);
+            }
+            const obj = { args: items, level };
+            const obj2 = level(12384);
+          };
+        });
+        const tmpResult = tmp(12392);
+      }
+    });
+  }
+}
+
+export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
+  _mod12384.addHandler("console", errorCallback);
+  _mod12384.maybeInstrument("console", instrumentConsole);
+};

@@ -1,20 +1,19 @@
 // _runtime/metro/15096__.js
-if (typeof process === "object") {
-  const _process3 = process;
-  if (process.env) {
-    const _process = process;
-    if (process.env.NODE_DEBUG) {
-      const _process2 = process;
-      if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          const items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
-          return console.error.apply(items);
-        };
+import _mod15097 from "15097__.js";
+
+export default (arg0, arg1) => {
+  if (arg0 instanceof _mod15097) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod15097(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
       }
-      module.exports = fn;
-      obj = /\bsemver\b/i;
     }
   }
-}
-fn = () => {};
+};

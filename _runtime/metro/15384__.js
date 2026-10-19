@@ -1,40 +1,26 @@
 // _runtime/metro/15384__.js
-import _mod15323 from "15323__.js";
-import _mod15324 from "15324__.js";
-import _mod15326 from "15326__.js";
-import _mod15327 from "15327__.js";
-import _mod15344 from "15344__.js";
-import _mod15353 from "15353__.js";
-import _mod15373 from "15373__.js";
-import _mod15385 from "15385__.js";
+import _mod15347 from "15347__.js";
+import getOwnPropertyDescriptor_mod from "15327__.js";
 
-let closure_4 = _mod15327([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod15344(arg0);
-    const f = _mod15373.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod15326(arguments[num]);
-      if (f) {
-        let tmp8 = _mod15385(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod15385(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod15323;
-        if (tmp12) {
-          tmp12 = !_mod15353(tmp2, tmp5, tmp9);
-        }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
-        }
-      }
-    }
-    return tmp;
-  };
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = _mod15347(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {}.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
 }
 
-export default assign;
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

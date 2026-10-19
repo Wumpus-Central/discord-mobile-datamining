@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5dd78d279cf4e486538a5a399b9d186a",
-  name: "PlusMediumIcon",
+  hash: "eb549ee942b74daf232ce014560f92c6",
+  name: "ExperimentalCommonIcon",
   type: "png",
 });

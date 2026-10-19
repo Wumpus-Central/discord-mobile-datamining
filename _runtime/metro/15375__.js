@@ -1,6 +1,12 @@
 // _runtime/metro/15375__.js
-import _mod15323 from "15323__.js";
-import _mod15324 from "15324__.js";
+import _mod15373 from "15373__.js";
 
-export default _mod15323 &&
-  _mod15324(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);
+export default (arg0, arg1) => {
+  const tmp = _mod15373(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
+  }
+  return tmp3;
+};

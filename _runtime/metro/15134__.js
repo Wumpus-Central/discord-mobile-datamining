@@ -1,74 +1,92 @@
 // _runtime/metro/15134__.js
-import _mod15107 from "15107__.js";
-import _slicedToArray from "00032__.js";
-
 const require = globalThis.__r;
 
-export default (arr, arg1, arg2) => {
-  let tmp = arg1;
-  _require = arg2;
-  const items = [];
-  let tmp2 = null;
-  let tmp3 = null;
-  const sorted = arr.sort((arg0, arg1) => _mod15107(arg0, arg1, closure_0));
-  for (const item10017 of sorted) {
-    if (require("15124__.js")(item10017, tmp, arg2)) {
-      tmp3 = item10017;
-      if (!tmp2) {
-        tmp2 = item10017;
-      }
-    } else {
-      if (tmp3) {
-        let items1 = [tmp2];
-        items1[1] = tmp3;
-        arr = items.push(items1);
-      }
-      tmp3 = null;
-      tmp2 = null;
-    }
-    continue;
-  }
-  if (tmp2) {
-    const items2 = [tmp2, null];
-    items.push(items2);
-  }
-  const items3 = [];
-  while (tmp15 !== undefined) {
-    [first, tmp21] = tmp16;
-    let tmp20 = first;
-    let tmp22 = tmp21;
-    if (first === tmp21) {
-      let arr3 = items3.push(tmp20);
-    } else {
-      if (!tmp22) {
-        if (tmp20 === sorted[0]) {
-          let arr4 = items3.push("*");
-        }
-      }
-      if (tmp22) {
-        if (tmp20 === sorted[0]) {
-          let _HermesInternal3 = HermesInternal;
-          let arr5 = items3.push("<=" + tmp22);
-        } else {
-          let _HermesInternal2 = HermesInternal;
-          let arr6 = items3.push("" + tmp20 + " - " + tmp22);
-        }
-      } else {
-        let _HermesInternal = HermesInternal;
-        let arr13 = items3.push(">=" + tmp20);
-      }
-    }
-    continue;
-  }
-  const joined = items3.join(" || ");
-  if (typeof tmp.raw === "string") {
-    let raw = tmp.raw;
+export default (arg0, arg1, arg2, arg3) => {
+  let obj;
+  _require = arg3;
+  let tmp3 = new require("15097__.js")(arg0, arg3);
+  const tmp4 = new require("15126__.js")(arg1, arg3);
+  if (">" === arg2) {
+    dependencyMap = tmp(15117);
+    let tmpResult = tmp(15122);
+    const tmpResult3 = tmp(15118);
+    closure_2 = tmpResult3;
+    let str3 = ">=";
+    let str = ">";
+    let tmpResult4 = tmpResult3;
   } else {
-    const _String = String;
-    raw = String(tmp);
+    str = "<";
+    if ("<" === arg2) {
+      dependencyMap = tmp(15118);
+      tmpResult = tmp(15121);
+      tmpResult4 = tmp(15117);
+      closure_2 = tmpResult4;
+      str3 = "<=";
+    } else {
+      const _TypeError = TypeError;
+      const typeError = new TypeError('Must provide a hilo val of "<" or ">"');
+      throw typeError;
+    }
   }
-  if (joined.length < raw.length) {
-    tmp = joined;
+  if (require("15128__.js")(tmp3, tmp4, arg3)) {
+    return false;
+  } else {
+    let num = 0;
+    let num3 = 0;
+    if (0 < tmp4.set.length) {
+      while (true) {
+        let arr = tmp4.set[num3];
+        _require = null;
+        dependencyMap = null;
+        let item = arr.forEach((semver) => {
+          let tmp = semver;
+          if (semver.semver === closure_0(semver[7]).ANY) {
+            tmp = new tmp2(tmp3[7])(">=0.0.0");
+          }
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = tmp;
+          }
+          closure_0 = tmp6;
+          let tmp7 = semver;
+          if (!semver) {
+            tmp7 = tmp;
+          }
+          semver = tmp7;
+          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
+            closure_0 = tmp;
+          } else if (React2(tmp.semver, semver.semver, require)) {
+            semver = tmp;
+          }
+          tmp2 = closure_0;
+          tmp3 = semver;
+        });
+        if (_require.operator !== str) {
+          if (_require.operator !== str3) {
+            if (!dependencyMap.operator) {
+              if (tmpResult(tmp3, dependencyMap.semver)) {
+                obj = { v: false };
+              }
+            }
+            let obj2;
+            if (dependencyMap.operator === str3) {
+              if (tmpResult4(tmp3, dependencyMap.semver)) {
+                obj2 = { v: false };
+              }
+            }
+            obj = obj2;
+          }
+          if (obj) {
+            break;
+          } else {
+            num3 = num + 1;
+            num = num3;
+          }
+        }
+        obj = { v: false };
+      }
+      return obj.v;
+    }
+    return true;
   }
-  return tmp;
 };

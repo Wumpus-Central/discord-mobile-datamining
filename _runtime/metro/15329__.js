@@ -1,7 +1,5 @@
 // _runtime/metro/15329__.js
-import _mod15327 from "15327__.js";
+import _mod15330 from "15330__.js";
+import _mod15334 from "15334__.js";
 
-let closure_0 = _mod15327({}.toString);
-let closure_1 = _mod15327("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default (arg0) => _mod15330(_mod15334(arg0));

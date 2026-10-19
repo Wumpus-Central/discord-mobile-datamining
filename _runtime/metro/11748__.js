@@ -1,236 +1,181 @@
 // _runtime/metro/11748__.js
-import _mod11732 from "11732__.js";
+import _wrapNativeSuper from "00158__wrapNativeSuper.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+export function $ZodAsyncError() {
+  const self = this;
+  _classCallCheck(this, $ZodEncodeError);
+  const items = ["Encountered Promise during synchronous parse. Use .parseAsync() instead."];
+  const obj = _getPrototypeOf($ZodEncodeError);
+  if (metroRequire()) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  } else {
+    constructResult = obj.apply(self, items);
+  }
+  return _possibleConstructorReturn(self, constructResult);
+}
+_inherits($ZodAsyncError, _wrapNativeSuper(Error));
+export function $ZodEncodeError(name) {
+  const self = this;
+  _classCallCheck(this, $ZodEncodeError);
+  const items = ["Encountered unidirectional transform during encode: " + name];
+  const obj = _getPrototypeOf($ZodEncodeError);
+  if (metroRequire()) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  } else {
+    constructResult = obj.apply(self, items);
+  }
+  const tmp3Result = _possibleConstructorReturn(self, constructResult);
+  tmp3Result.name = "ZodEncodeError";
+  return tmp3Result;
+}
+_inherits($ZodEncodeError, _wrapNativeSuper(Error));
+
+export const $constructor = function $constructor(ZodError, initializer, Parent) {
+  closure_0 = ZodError;
+  _createClass = initializer;
+  _classCallCheck = Parent;
+  function init(_zod, def) {
+    if (!_zod._zod) {
+      const _Object = Object;
+      const obj = { value: null, enumerable: false };
+      const obj2 = { def, constr, traits: null };
+      const _Set = Set;
+      const set = new Set();
+      obj2.traits = set;
+      obj.value = obj2;
+      Object.defineProperty(_zod, "_zod", obj);
+    }
+    const traits = _zod._zod.traits;
+    if (!traits.has(closure_0)) {
+      const traits2 = _zod._zod.traits;
+      traits2.add(closure_0);
+      initializer(_zod, def);
+      const prototype = constr.prototype;
+      const _Object2 = Object;
+      const keys = Object.keys(prototype);
+      for (let num = 0; num < keys.length; num = num + 1) {
+        let tmp14 = keys[num];
+        if (!(tmp14 in _zod)) {
+          let obj3 = prototype[tmp14];
+          _zod[tmp14] = obj3.bind(_zod);
         }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
+      }
+    }
+  }
+  const constr = function _(Definition) {
+    Parent = undefined;
+    if (Parent != null) {
+      Parent = Parent.Parent;
+    }
+    let self = this;
+    if (Parent) {
+      self = new closure_4();
+    }
+    init(self, Definition);
+    const _zod = self._zod;
+    if (_zod.deferred == null) {
+      _zod.deferred = [];
+    }
+    for (const item10021 of tmp6) {
+      let item10021Result = item10021();
+      continue;
+    }
+    return self;
+  };
+  Parent = undefined;
+  if (Parent != null) {
+    Parent = Parent.Parent;
+  }
+  if (Parent == null) {
+    Parent = Object;
+  }
+  class Definition {
+    constructor() {
+      self = this;
+      tmp = closure_2(this, closure_0);
+      tmp2 = closure_4;
+      obj = closure_4(closure_0);
+      tmp3 = closure_3;
+      if (_isNativeReflectConstruct()) {
+        tmp7 = globalThis;
+        _Reflect = Reflect;
+        tmp8 = arguments;
+        constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      } else {
+        tmp4 = arguments;
+        tmp5 = arguments;
+        constructResult = obj(...arguments);
+      }
+      return tmp3(self, constructResult);
+    }
+  }
+  closure_129_0 = Definition;
+  constr(Definition, Parent);
+  const tmp4 = _createClass(Definition);
+  _getPrototypeOf = tmp4;
+  Object.defineProperty(tmp4, "name", { value: ZodError });
+  Object.defineProperty(constr, "init", { value: init });
+  Object.defineProperty(constr, Symbol.hasInstance, {
+    value(_zod) {
+      Parent = undefined;
+      if (Parent != null) {
+        Parent = Parent.Parent;
+      }
+      if (Parent) {
+        Parent = _zod instanceof Parent.Parent;
+      }
+      let tmp3 = Parent;
+      if (!tmp3) {
+        let hasItem;
+        if (_zod != null) {
+          _zod = _zod._zod;
+          if (_zod != null) {
+            const traits = _zod.traits;
+            if (traits != null) {
+              hasItem = traits.has(closure_0);
             }
           }
         }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        const obj = { localeError: null };
-        const obj2 = {
-          string: { unit: "karaktrojn", verb: "havi" },
-          file: { unit: "bajtojn", verb: "havi" },
-          array: { unit: "elementojn", verb: "havi" },
-          set: { unit: "elementojn", verb: "havi" },
-        };
-        closure_1 = {
-          regex: "enigo",
-          email: "retadreso",
-          url: "URL",
-          emoji: "emo\u011Dio",
-          uuid: "UUID",
-          uuidv4: "UUIDv4",
-          uuidv6: "UUIDv6",
-          nanoid: "nanoid",
-          guid: "GUID",
-          cuid: "cuid",
-          cuid2: "cuid2",
-          ulid: "ULID",
-          xid: "XID",
-          ksuid: "KSUID",
-          datetime: "ISO-datotempo",
-          date: "ISO-dato",
-          time: "ISO-tempo",
-          duration: "ISO-da\u016Dro",
-          ipv4: "IPv4-adreso",
-          ipv6: "IPv6-adreso",
-          cidrv4: "IPv4-rango",
-          cidrv6: "IPv6-rango",
-          base64: "64-ume kodita karaktraro",
-          base64url: "URL-64-ume kodita karaktraro",
-          json_string: "JSON-karaktraro",
-          e164: "E.164-nombro",
-          jwt: "JWT",
-          template_literal: "enigo",
-        };
-        closure_2 = { nan: "NaN", number: "nombro", array: "tabelo", null: "senvalora" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp50 = closure_2[parsedTypeResult];
-              if (tmp50 == null) {
-                tmp50 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined =
-                  "Nevalida enigo: atendi\u011Dis instanceof " + code.expected + ", ricevi\u011Dis " + tmp50;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Nevalida enigo: atendi\u011Dis " + expected + ", ricevi\u011Dis " + tmp50;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Nevalida enigo: atendi\u011Dis " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 = "Nevalida opcio: atendi\u011Dis unu el " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str26 = "<";
-              if (code.inclusive) {
-                str26 = "<=";
-              }
-              let tmp29 = obj2[code.origin];
-              if (tmp29 == null) {
-                tmp29 = null;
-              }
-              let str27 = code.origin;
-              if (tmp29) {
-                if (str27 == null) {
-                  str27 = "valoro";
-                }
-                const str1 = code.maximum.toString();
-                let str33 = tmp29.unit;
-                if (str33 == null) {
-                  str33 = "elementojn";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "Tro granda: atendi\u011Dis ke " + str27 + " havu " + str26 + str1 + " " + str33;
-              } else {
-                let str28 = str27;
-                if (str27 == null) {
-                  str28 = "valoro";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "Tro granda: atendi\u011Dis ke " + str28 + " havu " + str26 + code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp17 = obj2[code.origin];
-              if (tmp17 == null) {
-                tmp17 = null;
-              }
-              ({ origin, minimum } = code);
-              const str47 = minimum.toString();
-              if (tmp17) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 =
-                  "Tro malgranda: atendi\u011Dis ke " + origin + " havu " + str20 + str47 + " " + tmp17.unit;
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 = "Tro malgranda: atendi\u011Dis ke " + origin + " estu " + str20 + str47;
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 = 'Nevalida karaktraro: devas komenci\u011Di per "' + code.prefix + '"';
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 = 'Nevalida karaktraro: devas fini\u011Di per "' + code.suffix + '"';
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = 'Nevalida karaktraro: devas inkluzivi "' + code.includes + '"';
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "Nevalida karaktraro: devas kongrui kun la modelo " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Nevalida " + format;
-              }
-              return combined4;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return "Nevalida nombro: devas esti oblo de " + code.divisor;
-            case "unrecognized_keys":
-              let str3 = "";
-              let str4 = "";
-              if (code.keys.length > 1) {
-                str4 = "j";
-              }
-              if (code.keys.length > 1) {
-                str3 = "j";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return "Nekonata" + str4 + " \u015Dlosilo" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              const _HermesInternal2 = HermesInternal;
-              return "Nevalida \u015Dlosilo en " + code.origin;
-            case "invalid_union":
-              return "Nevalida enigo";
-            case "invalid_element":
-              const _HermesInternal = HermesInternal;
-              return "Nevalida valoro en " + code.origin;
-            default:
-              return "Nevalida enigo";
-          }
-        };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
+        tmp3 = hasItem;
       }
-    };
-    let closure_2 = fn(_mod11732);
-    function error() {}
-    module.exports = exports.default;
-  } else {
-    const _Object2 = Object;
+      return tmp3;
+    },
+  });
+  Object.defineProperty(constr, "name", { value: ZodError });
+  return constr;
+};
+export const config = function config(arg0) {
+  if (arg0) {
+    const _Object = Object;
+    const merged = Object.assign($ZodEncodeError.globalConfig, arg0);
   }
-} else {
-  let _Object = Object;
-}
+  return $ZodEncodeError.globalConfig;
+};
+export const NEVER = Object.freeze({ status: "aborted" });
+export const $brand = Symbol("zod_brand");
+export const globalConfig = {};

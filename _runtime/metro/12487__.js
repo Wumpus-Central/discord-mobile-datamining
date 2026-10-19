@@ -1,66 +1,136 @@
 // _runtime/metro/12487__.js
-import stackParserFromStackParserOptions from "../12372_stackParserFromStackParserOptions.js";
-import _mod12375 from "12375__.js";
-import _mod12485 from "12485__.js";
+import _mod12392 from "12392__.js";
+import _slicedToArray from "00032__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+let items = [
+  ["\n", "\\n"],
+  ["\r", "\\r"],
+  ["\t", "\\t"],
+  ["\\", "\\\\"],
+  ["|", "\\u{7c}"],
+  [",", "\\u{2c}"],
+];
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
-  }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  const obj = _mod12375;
-  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-  obj2.colno = sum;
-  obj2.lineno = sum1;
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod12485.filenameIsInApp(replaced);
-    const tmp4Result = _mod12485;
-  }
-  obj2.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj2);
+export const getBucketKey = function getBucketKey(
+  metricType,
+  sanitizeMetricKeyResult,
+  sanitizeUnitResult,
+  sanitizeTagsResult,
+) {
+  const entries = Object.entries(_mod12392.dropUndefinedKeys(sanitizeTagsResult));
+  return (
+    "" +
+    metricType +
+    sanitizeMetricKeyResult +
+    sanitizeUnitResult +
+    entries.sort((arg0, arg1) => {
+      const first = arg0[0];
+      return first.localeCompare(arg1[0]);
+    })
+  );
 };
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
+export const sanitizeMetricKey = function sanitizeMetricKey(str) {
+  return str.replace(/[^\w\-.]+/gi, "_");
+};
+export const sanitizeTags = function sanitizeTags(tags) {
+  let obj = {};
+  for (const key10007 in arg0) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10007);
+    } else {
+      hasOwnPropertyResult = call(arg0, key10007);
     }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
-      }
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      let _String = String;
+      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
+      items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
+      obj[replaced] = items.reduce(
+        (acc, item) =>
+          acc +
+          (function getCharOrReplacement(item) {
+            const obj = dependencyMap[Symbol.iterator]();
+            while (obj !== undefined) {
+              let tmp4 = closure_1_2(tmp2, 2);
+              if (item === tmp4[0]) {
+                obj.return();
+                return tmp5;
+              }
+            }
+            return item;
+          })(item),
+        "",
+      );
+      continue;
     }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
+    continue;
+  }
+  return obj;
+};
+export const sanitizeUnit = function sanitizeUnit(none) {
+  return none.replace(/[^\w]+/gi, "_");
+};
+export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
+  let str = "";
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let _Object = Object;
+    let entries = Object.entries(nextResult.tags);
+    let arr2 = entries;
+    let str2 = "";
+    if (entries.length > 0) {
+      let mapped = arr2.map((item) => {
+        [tmp, tmp2] = item;
+        return "" + tmp + ":" + tmp2;
+      });
+      let _HermesInternal = HermesInternal;
+      str2 = "|#" + mapped.join(",");
     }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    },
-  };
+    let _HermesInternal2 = HermesInternal;
+    let str3 = "";
+    let str4 = "@";
+    let str5 = ":";
+    let str6 = "|";
+    let str7 = "|T";
+    let str8 = "\n";
+    str =
+      str +
+      "" +
+      tmp2.name +
+      "@" +
+      tmp2.unit +
+      ":" +
+      tmp2.metric +
+      "|" +
+      tmp2.metricType +
+      str2 +
+      "|T" +
+      tmp2.timestamp +
+      "\n";
+    continue;
+  }
+  return str;
+};
+export const simpleHash = function simpleHash(item) {
+  let length;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < item.length) {
+    do {
+      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
+      num2 = sum & sum;
+      num = num + 1;
+      num3 = num2;
+      length = item.length;
+    } while (num < length);
+  }
+  return num3 >>> 0;
 };

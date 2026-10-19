@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d884288c334e9055542f154b2caf3b3e",
-  name: "TopicsIcon",
+  hash: "2ec8d4d40c93ceea32933ae4e505df6e",
+  name: "ChatPlusIcon",
   type: "png",
 });

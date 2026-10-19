@@ -1,11 +1,11 @@
 // _runtime/metro/15345__.js
-import _mod15346 from "15346__.js";
+import _mod15324 from "15324__.js";
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod15346(obj);
-  }
-  return tmp2;
-};
+const tmp = _mod15324.navigator && _mod15324.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
+
+export default str;

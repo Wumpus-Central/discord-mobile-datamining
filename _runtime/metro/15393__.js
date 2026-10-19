@@ -1,6 +1,4 @@
 // _runtime/metro/15393__.js
-import _mod15394 from "15394__.js";
-import _mod15401 from "15401__.js";
+import _mod17 from "00017__.js";
 
-export const URL = _mod15394;
-export const URLSearchParams = _mod15401;
+const parsed = parseInt(_mod17.Platform.Version, 10);

@@ -1,5 +1,7 @@
 // _runtime/metro/15224__.js
-
-export const CanonicalizeLocaleList = function CanonicalizeLocaleList(items) {
-  return Intl.getCanonicalLocales(items);
-};
+Object.defineProperty(Intl, "Locale", {
+  value: fn(15225).Locale,
+  writable: true,
+  enumerable: false,
+  configurable: true,
+});

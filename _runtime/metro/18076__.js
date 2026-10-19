@@ -1,13 +1,7 @@
 // _runtime/metro/18076__.js
-import registerAsset from "01134__.js";
+import _mod518 from "00518__.js";
+import _mod535 from "00535__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/app_icons/images",
-  width: 259,
-  height: 93,
-  scales: [2, 3],
-  hash: "b6b1b6176f7b7fe50aec94892b5609a1",
-  name: "app_icon_marketing",
-  type: "png",
-});
+export default function isArrayLikeObject(arg0) {
+  return _mod535(arg0) && _mod518(arg0);
+}
