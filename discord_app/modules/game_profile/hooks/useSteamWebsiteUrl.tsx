@@ -38,7 +38,7 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               const websites = game.websites;
               const found = websites.find(
-                (category) => category.category === closure_1_0(9178).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+                (category) => category.category === closure_1_0(9194).ThirdPartyGameApplicationWebsiteCategory.STEAM,
               );
               if (found != null) {
                 const url = found.url;
@@ -110,7 +110,7 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               const websites = game.websites;
               const found = websites.find(
-                (category) => category.category === closure_1_0(9178).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+                (category) => category.category === closure_1_0(9194).ThirdPartyGameApplicationWebsiteCategory.STEAM,
               );
               if (found != null) {
                 const url = found.url;

@@ -4,33 +4,33 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import getDevicePixelRatioDefault from "../../../../../utils/getDevicePixelRatio.native.tsx";
 import native2 from "../../../../../../discord_common/js/packages/design/native.tsx";
+import ApplicationCommandTypes from "../../../../application_commands/ApplicationCommandTypes.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import NativeViewDefault from "../../../../core/native/NativeView.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import ApplicationCommandTypes from "../../../../application_commands/ApplicationCommandTypes.tsx";
 import TestModeUtils from "../../../../game_store/TestModeUtils.tsx";
 import useEmbeddedActivityBackgroundDefault from "../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import useActivityShelfItem from "../../../../activities/utils/useActivityShelfItem.tsx";
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
-import _modDef13506 from "../../../../../../_runtime/metro/13506__.js";
+import _modDef13540 from "../../../../../../_runtime/metro/13540__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef18276 from "../../../../../../_runtime/metro/18276__.js";
+import _modDef18305 from "../../../../../../_runtime/metro/18305__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
 
 const util = getItemSubtitleForMaxPlayersShort(1128);
-const Text_Text = getItemSubtitleForMaxPlayersShort(5187);
-const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(11977);
+const Text_Text = getItemSubtitleForMaxPlayersShort(5195);
+const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(11997);
 require = fn;
 const ThemeTypes = fn(1087).ThemeTypes;
 const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.md,
@@ -55,7 +55,7 @@ let obj2 = {
   developerIconColor: null,
 };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(5063);
+const ColorUtils = fn(4942);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -287,7 +287,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { source: _modDef13506, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
+          const obj4 = { source: _modDef13540, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
           const tmp19 = timestampProducer(native.Icon, obj4);
           cResult[20] = tmp19;
           let tmp17 = tmp19;
@@ -357,7 +357,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const tmp2Result = NativeViewDefault;
       const items1 = [
-        timestampProducer(native.Icon, { source: _modDef13506, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+        timestampProducer(native.Icon, { source: _modDef13540, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
       ];
       const obj4 = {
         lineClamp: 1,
@@ -565,7 +565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             const obj5 = { style: tmp5.developerIconContainer, children: null };
                                             const obj6 = {
                                               size: native.Icon.Sizes.REFRESH_SMALL_16,
-                                              source: _modDef18276,
+                                              source: _modDef18305,
                                               color: tmp5.developerIconColor.color,
                                             };
                                             obj5.children = timestampProducer(native.Icon, obj6);
@@ -776,7 +776,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { style: tmp.developerIconContainer, children: null };
           const obj10 = {
             size: native.Icon.Sizes.REFRESH_SMALL_16,
-            source: _modDef18276,
+            source: _modDef18305,
             color: tmp.developerIconColor.color,
           };
           obj9.children = timestampProducer(native.Icon, obj10);

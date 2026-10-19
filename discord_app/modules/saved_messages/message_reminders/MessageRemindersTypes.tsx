@@ -1,13 +1,13 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersTypes.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4797 from "../../../../_runtime/metro/04797__.js";
+import _modDef2050 from "../../../../_runtime/metro/02050__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [
   {
     getDueAt() {
-      const obj = _modDef4797();
-      return _modDef4797().add(30, "minutes").toDate();
+      const obj = _modDef2050();
+      return _modDef2050().add(30, "minutes").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -16,8 +16,8 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4797();
-      return _modDef4797().add(1, "hour").toDate();
+      const obj = _modDef2050();
+      return _modDef2050().add(1, "hour").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -26,8 +26,8 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4797();
-      return _modDef4797().add(4, "hour").toDate();
+      const obj = _modDef2050();
+      return _modDef2050().add(4, "hour").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -36,9 +36,9 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4797();
-      const addResult = _modDef4797().startOf("day").add(9, "hours");
-      const startOfResult = _modDef4797().startOf("day");
+      const obj = _modDef2050();
+      const addResult = _modDef2050().startOf("day").add(9, "hours");
+      const startOfResult = _modDef2050().startOf("day");
       if (obj4.hour() >= 9) {
         let toDateResult = addResult.add(1, "day").toDate();
         const addResult1 = addResult.add(1, "day");
@@ -60,23 +60,23 @@ const items = [
   },
   {
     getDueAt() {
-      const dayResult = _modDef4797().day();
+      const dayResult = _modDef2050().day();
       if (0 === dayResult) {
         let num3 = 1;
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = _modDef4797();
-          _modDef4797().startOf("day").add(9, "hours");
+          const obj2 = _modDef2050();
+          _modDef2050().startOf("day").add(9, "hours");
           num3 = 8;
-          const startOfResult = _modDef4797().startOf("day");
+          const startOfResult = _modDef2050().startOf("day");
         }
       }
-      const obj = _modDef4797();
-      const obj5 = _modDef4797();
-      const dayResult1 = _modDef4797().day(num3);
-      const startOfResult1 = _modDef4797().day(num3).startOf("day");
-      return _modDef4797().day(num3).startOf("day").add(9, "hours").toDate();
+      const obj = _modDef2050();
+      const obj5 = _modDef2050();
+      const dayResult1 = _modDef2050().day(num3);
+      const startOfResult1 = _modDef2050().day(num3).startOf("day");
+      return _modDef2050().day(num3).startOf("day").add(9, "hours").toDate();
     },
     getLabel() {
       const intl = util.intl;

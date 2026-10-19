@@ -4,13 +4,13 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import AgeGateConstants from "AgeGateConstants.tsx";
 import util from "../../intl/index.native.tsx";
-import GuildRecord from "../../records/GuildRecord.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
+import GuildRecord from "../../records/GuildRecord.tsx";
+import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import getTinyBroncoWarningDescriptions2 from "../tiny_bronco/getTinyBroncoWarningDescriptions.tsx";
 import AgeGateModalActionCreators from "AgeGateModalActionCreators.tsx";
 import NSFWContentGate from "NSFWContentGate.tsx";
@@ -571,7 +571,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
       const tmpResult4 = require("initialize");
       let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-        tmp(6176).AgeGatedFeature.AGE_GATED_SPACES,
+        tmp(6607).AgeGatedFeature.AGE_GATED_SPACES,
       );
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];

@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import getGuildsBarGuildMenuItemsDefault from "utils/getGuildsBarGuildMenuItems.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
@@ -16,14 +16,14 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(2086);
+const GuildRecord = fn(4818);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(17432).useItemDragState;
-const TRANSITION_PHYSICS = fn(17429).TRANSITION_PHYSICS;
+const useItemDragState = fn(17461).useItemDragState;
+const TRANSITION_PHYSICS = fn(17458).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,

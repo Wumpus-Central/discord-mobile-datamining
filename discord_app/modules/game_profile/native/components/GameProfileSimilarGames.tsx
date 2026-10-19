@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod7091 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7168 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import GameProfileActionCreatorsDefault from "../../GameProfileActionCreators.native.tsx";
 import GameProfileSkeleton from "GameProfileSkeleton.tsx";
@@ -17,14 +17,14 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_7 = fn(9205).MOBILE_GAME_PROFILE_MAX_WIDTH;
-fn(9256).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_7 = fn(9221).MOBILE_GAME_PROFILE_MAX_WIDTH;
+fn(9272).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c12 = 1.34;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 },
   header: null,
@@ -127,7 +127,7 @@ let closure_18 = noop.memo(
             dependencyMap = tmp7;
             [, _slicedToArray] = shouldOpenGameProfile.useState(undefined);
             if (cResult[6] !== name.id) {
-              let obj2 = { gameId: name.id, source: tmp(9150).GameProfileSources.SimilarGames };
+              let obj2 = { gameId: name.id, source: tmp(9166).GameProfileSources.SimilarGames };
               cResult[6] = name.id;
               cResult[7] = obj2;
               let tmp15 = obj2;
@@ -135,7 +135,7 @@ let closure_18 = noop.memo(
               tmp15 = cResult[7];
             }
             let tmp16 = trackAction;
-            const tmp17 = trackAction(9152)(tmp15);
+            const tmp17 = trackAction(9168)(tmp15);
             shouldOpenGameProfile = tmp17.shouldOpenGameProfile;
             const gameId = tmp17.gameId;
             if (cResult[8] === name.id) {
@@ -230,11 +230,11 @@ let closure_18 = noop.memo(
                         }
                         const obj5 = { style: coverArtPlaceholder.coverArtPlaceholder, children: null };
                         const obj6 = { style: coverArtPlaceholder.coverArt };
-                        obj5.children = closure_9(tmp16(9237), obj6);
-                        tmp29 = closure_9(tmp(9237).GameProfileSkeletonContainer, obj5);
+                        obj5.children = closure_9(tmp16(9253), obj6);
+                        tmp29 = closure_9(tmp(9253).GameProfileSkeletonContainer, obj5);
                       }
                       const items1 = [tmp29];
-                      tmp16 = tmp16(5128);
+                      tmp16 = tmp16(5631);
                       const obj7 = { source: null, style: null, onLoadEnd: null };
                       const obj8 = { uri: tmp7 };
                       obj7.source = obj8;
@@ -290,7 +290,7 @@ let closure_18 = noop.memo(
                         lineClamp: 3,
                         children: name.name,
                       };
-                      obj9.children = closure_9(tmp(5187).Text, obj10);
+                      obj9.children = closure_9(tmp(5195).Text, obj10);
                       tmp26Result = closure_9(closure_6, obj9);
                     }
                     cResult[22] = tmp5;
@@ -588,7 +588,7 @@ let closure_20 = noop.memo(
             skeletonTitleWidth: 124,
             children: tmp8,
           };
-          const tmp12 = closure_9(tmp(9239).GameProfileSectionSkeleton, obj2);
+          const tmp12 = closure_9(tmp(9255).GameProfileSectionSkeleton, obj2);
           cResult[5] = tmp4.container;
           cResult[6] = tmp4.header;
           cResult[7] = tmp8;
@@ -627,7 +627,7 @@ let closure_20 = noop.memo(
           ),
         };
         obj.children = closure_9(GameProfileSkeletonCardRowDefault, obj2);
-        return closure_9(cardWidth(9239).GameProfileSectionSkeleton, obj);
+        return closure_9(cardWidth(9255).GameProfileSectionSkeleton, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -695,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return jsx(closure_18, obj);
                 }
               }
-              const tmp20 = closure_9(tmp5(9239), obj3);
+              const tmp20 = closure_9(tmp5(9255), obj3);
               cResult[10] = tmp4.container;
               cResult[11] = tmp4.header;
               cResult[12] = tmp13;
@@ -705,7 +705,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {
             horizontal: true,
-            renderScrollComponent: tmp5(9218),
+            renderScrollComponent: tmp5(9234),
             data: null,
             renderItem: null,
             showsHorizontalScrollIndicator: false,
@@ -726,7 +726,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj4.ListHeaderComponent = ListFooterComponent;
           obj4.ListFooterComponent = ListFooterComponent;
           obj4.snapToInterval = sum;
-          const tmp17 = closure_9(trackAction(7091).FlashList, obj4);
+          const tmp17 = closure_9(trackAction(7168).FlashList, obj4);
           cResult[6] = similarGames;
           cResult[7] = tmp11;
           cResult[8] = sum;
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.title = intl.string(util.t["6rLyQB"]);
         const obj5 = {
           horizontal: true,
-          renderScrollComponent: tmp2(9218),
+          renderScrollComponent: tmp2(9234),
           data: similarGames,
           renderItem(game) {
             return React6(closure_18, { game: game.item, trackAction, cardWidth });
@@ -776,9 +776,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           decelerationRate: "fast",
           snapToInterval: result + PX_12,
         };
-        obj3.children = closure_9(_mod7091.FlashList, obj5);
-        tmp7 = closure_9(tmp2(9239), obj3);
-        const tmp2Result = tmp2(9239);
+        obj3.children = closure_9(_mod7168.FlashList, obj5);
+        tmp7 = closure_9(tmp2(9255), obj3);
+        const tmp2Result = tmp2(9255);
       }
       const tmp4 = useSimilarGamesDefault(gameId);
     };

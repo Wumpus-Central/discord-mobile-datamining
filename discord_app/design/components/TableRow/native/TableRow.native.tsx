@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
 import TableRowDivider from "TableRowDivider.native.tsx";
 import TableRowGroupContext from "TableRowGroupContext.native.tsx";
@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const style = { padding: 0 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = {
     padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
@@ -408,9 +408,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     };
-tmp4.Icon = fn(6465).TableRowIcon;
-tmp4.Arrow = fn(6466).TableRowArrow;
-tmp4.TrailingText = fn(6468).TableRowTrailingText;
+tmp4.Icon = fn(6859).TableRowIcon;
+tmp4.Arrow = fn(6860).TableRowArrow;
+tmp4.TrailingText = fn(6862).TableRowTrailingText;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function TableRowInner(disabled) {

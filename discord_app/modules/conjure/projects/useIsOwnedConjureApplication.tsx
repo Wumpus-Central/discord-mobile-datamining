@@ -9,7 +9,7 @@ import ConjureProjectStore from "ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6293).isProjectOwner;
+const isProjectOwner = fn(6721).isProjectOwner;
 const useIsOwnedConjureApplication = "useIsOwnedConjureApplication";
 let closure_7 = new BackoffDefault(30000, 300000);
 const ReactCompilerGating = fn(558);

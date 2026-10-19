@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BaseConnectionEvent from "../../../../../discord_common/js/packages/media-engine/index.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import AVError from "../../../errors/av_errors/AVError.tsx";
-import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import VideoStreamReadyActionCreators from "../../../errors/VideoStreamReadyActionCreators.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const VideoToggleState = fn(1087).VideoToggleState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               const intl3 = tmp(1128).intl;
                               obj4.text = intl3.string(tmp(1128).t["hxmQ/e"]);
                               obj4.onPress = tmp13;
-                              tmp43 = closure_7(tmp(5479).Button, obj4);
+                              tmp43 = closure_7(tmp(5205).Button, obj4);
                             }
                             cResult[38] = tmp13;
                             cResult[39] = tmp6;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             AudioActionCreatorsDefault.setDisableLocalVideo(
               closure_1_0,
               constants.MANUAL_ENABLED,
-              closure_0(5236).MediaEngineContextTypes.DEFAULT,
+              closure_0(5700).MediaEngineContextTypes.DEFAULT,
               false,
             );
           }, 1000);
@@ -212,14 +212,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: formatToPlainString,
             children: ejOT95,
           };
-          const tmp29 = closure_7(tmp(5187).Text, obj6);
+          const tmp29 = closure_7(tmp(5195).Text, obj6);
           cResult[29] = tmp10.text;
           cResult[30] = tmp29;
           let tmp27 = tmp29;
         } else {
           tmp27 = cResult[30];
         }
-        const Text = tmp(5187).Text;
+        const Text = tmp(5195).Text;
         const text = tmp10.text;
         const intl2 = tmp(1128).intl;
         formatToPlainString = intl2.formatToPlainString;

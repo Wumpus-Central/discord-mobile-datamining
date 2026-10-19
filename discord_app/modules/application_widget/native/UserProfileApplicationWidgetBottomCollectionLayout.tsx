@@ -4,14 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5187);
-const resolvedValuesFromUserApplicationIdentityProfile = Text(11738);
-const UserProfileApplicationWidgetSkeletons = Text(11825);
+const Text_Text = Text(5195);
+const resolvedValuesFromUserApplicationIdentityProfile = Text(11759);
+const UserProfileApplicationWidgetSkeletons = Text(11846);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   grid: {
     flexDirection: "row",

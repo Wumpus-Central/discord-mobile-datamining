@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef11305 from "../../../../../_runtime/metro/11305__.js";
+import _modDef11319 from "../../../../../_runtime/metro/11319__.js";
 import GuildSettingsUtils from "../../GuildSettingsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const RoleFlags = fn(1087).RoleFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   promptRow: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const promptRow = tmp4.promptRow;
         if (tmpResult.isRolePowerful(role)) {
           if (cResult[0] !== tmp4.icon) {
-            const obj3 = { style: tmp4.icon, source: _modDef11305, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+            const obj3 = { style: tmp4.icon, source: _modDef11319, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
             const tmp23 = hasOwnProperty(native.Icon, obj3);
             cResult[0] = tmp4.icon;
             cResult[1] = tmp23;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = tmp33;
         } else {
           if (cResult[9] !== tmp4.icon) {
-            const obj6 = { style: tmp4.icon, source: _modDef11305 };
+            const obj6 = { style: tmp4.icon, source: _modDef11319 };
             const tmp9 = hasOwnProperty(native.Icon, obj6);
             cResult[9] = tmp4.icon;
             cResult[10] = tmp9;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = GuildSettingsUtils;
         let Icon = native.Icon;
         if (isRolePowerfulResult) {
-          const obj3 = { style: string.icon, source: _modDef11305, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+          const obj3 = { style: string.icon, source: _modDef11319, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
           const items = [hasOwnProperty(Icon, obj3)];
           const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
           const intl2 = util.intl;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = items;
           let tmp4Result = timestampProducer(View, obj2);
         } else {
-          const obj5 = { style: string.icon, source: _modDef11305 };
+          const obj5 = { style: string.icon, source: _modDef11319 };
           const items1 = [hasOwnProperty(Icon, obj5)];
           const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
           const intl = util.intl;

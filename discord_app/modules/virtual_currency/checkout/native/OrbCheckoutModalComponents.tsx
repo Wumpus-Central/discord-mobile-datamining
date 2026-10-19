@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import OrbCheckoutUtils from "../OrbCheckoutUtils.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   topRowWrapper: { width: "100%", marginBottom: 10 },
   rowWrapper: { width: "100%", marginVertical: 10 },
@@ -388,10 +388,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function OrbCheckoutLegalFinePrint() {
       const tmp = closure_8();
-      skuId = skuId(14239).useOrbCheckoutModalContext().skuId;
+      skuId = skuId(14272).useOrbCheckoutModalContext().skuId;
       const items = [skuId];
       const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
-      return closure_6(skuId(5187).Text, {
+      return closure_6(skuId(5195).Text, {
         style: tmp.disclaimer,
         variant: "text-xxs/normal",
         color: "interactive-text-active",

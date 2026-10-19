@@ -5,8 +5,8 @@ import util from "../../../../../../intl/index.native.tsx";
 import FavoritesUtils from "../../../../../favorites/FavoritesUtils.tsx";
 import getInitialNavigationState from "../../../getInitialNavigationState.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
+import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
 import CheersSpotIllustration from "../../../../../../design/components/mana-assets/native/generated/CheersSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -28,7 +28,7 @@ const Constants = fn(1087);
 ({ ME: c10, MOBILE_GUILD_UPSELL_LIST: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   scrollView: { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm },
   header: null,
@@ -79,7 +79,7 @@ let obj8 = {
 };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(5187).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(5195).TextStyleSheet["heading-md/bold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -363,16 +363,16 @@ export default noop.memo(
         } else {
           tmp11 = cResult[2];
         }
-        selectedGuildId(9263)(tmp11);
+        selectedGuildId(9279)(tmp11);
         if (cResult[3] === selectedGuildId) {
           if (cResult[4] === navigation) {
             let tmp13 = cResult[5];
             let tmp14 = cResult[6];
           }
           const effect = noop.useEffect(tmp13, tmp14);
-          const isScreenLandscape = tmp(8600).useIsScreenLandscape();
-          const tmpResult3 = tmp(8600);
-          const youBarTotalHeight = tmp(16142).useYouBarTotalHeight();
+          const isScreenLandscape = tmp(8616).useIsScreenLandscape();
+          const tmpResult3 = tmp(8616);
+          const youBarTotalHeight = tmp(16171).useYouBarTotalHeight();
           if (!stateFromStores) {
             return null;
           } else {
@@ -391,7 +391,7 @@ export default noop.memo(
                 };
                 const intl = tmp(1128).intl;
                 obj4.children = intl.string(tmp(1128).t["7hB4kg"]);
-                const tmp23 = closure_12(tmp(5187).Text, obj4);
+                const tmp23 = closure_12(tmp(5195).Text, obj4);
                 cResult[10] = tmp23;
                 let tmp21 = tmp23;
               } else {
@@ -459,7 +459,7 @@ export default noop.memo(
             cResult[9] = items2;
             tmp20 = items2;
           }
-          const tmpResult4 = tmp(16142);
+          const tmpResult4 = tmp(16171);
         }
         const fn2 = function w() {
           if (null != selectedGuildId) {
@@ -523,7 +523,7 @@ export default noop.memo(
         const obj2 = navigation(573);
         obj3.type = navigation(1275).ImpressionTypes.VIEW;
         obj3.name = navigation(1275).ImpressionNames.GUILDS_EMPTY_NUX;
-        selectedGuildId(9263)(obj3);
+        selectedGuildId(9279)(obj3);
         const items1 = [tmp6, navigation];
         const effect = noop.useEffect(() => {
           if (null != selectedGuildId) {
@@ -560,9 +560,9 @@ export default noop.memo(
             }
           }
         }, items1);
-        const tmp7 = selectedGuildId(9263);
-        const isScreenLandscape = navigation(8600).useIsScreenLandscape();
-        navigation(16142);
+        const tmp7 = selectedGuildId(9279);
+        const isScreenLandscape = navigation(8616).useIsScreenLandscape();
+        navigation(16171);
         let tmp14Result = null;
         if (stateFromStores) {
           const obj4 = { style: null, children: null };
@@ -579,7 +579,7 @@ export default noop.memo(
           };
           const intl = tmp2(1128).intl;
           obj7.children = intl.string(tmp2(1128).t["7hB4kg"]);
-          obj6.children = closure_12(tmp2(5187).Text, obj7);
+          obj6.children = closure_12(tmp2(5195).Text, obj7);
           obj5.children = closure_12(closure_5, obj6);
           const items3 = [closure_12(closure_5, obj5)];
           let tmp18;

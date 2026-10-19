@@ -13,13 +13,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const EMPTY_STATE_STICKERS = fn(2047).EMPTY_STATE_STICKERS;
+const EMPTY_STATE_STICKERS = fn(4779).EMPTY_STATE_STICKERS;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_13 = createStyles.createStyles({
   header: { marginBottom: 8, textAlign: "center" },
   blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 },
@@ -343,8 +343,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp;
       const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
       let obj = require("StickersHooks");
-      analyticsLocations = analyticsLocations(7130)(analyticsLocations(7155).EMPTY_STATE).analyticsLocations;
-      const tmp3 = analyticsLocations(7130);
+      analyticsLocations = analyticsLocations(7199)(analyticsLocations(7224).EMPTY_STATE).analyticsLocations;
+      const tmp3 = analyticsLocations(7199);
       const items = [StickersStore];
       const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
         const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (sticker != null) {
             id = sticker.id;
           }
-          return closure_1_11(sticker(6462).PressableOpacity, obj, id);
+          return closure_1_11(sticker(6856).PressableOpacity, obj, id);
         }),
       });
       const obj7 = { style: tmp.premiumButton, children: null };
@@ -415,16 +415,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (sticker != null) {
             id = sticker.id;
           }
-          return closure_1_11(sticker(6462).PressableOpacity, obj, id);
+          return closure_1_11(sticker(6856).PressableOpacity, obj, id);
         }),
       };
-      obj9.source = analyticsLocations(9803);
+      obj9.source = analyticsLocations(9817);
       obj9.style = tmp.nitroWheel;
-      obj8.icon = closure_11(analyticsLocations(5128), obj9);
+      obj8.icon = closure_11(analyticsLocations(5631), obj9);
       const intl3 = require("util").intl;
       obj8.text = intl3.string(require("util").t.pj0XBN);
       obj8.onPress = function onPress() {
-        return analyticsLocations(10082)({ section: constants.EXPRESSION_PICKER });
+        return analyticsLocations(10096)({ section: constants.EXPRESSION_PICKER });
       };
       obj7.children = closure_11(require("components/Button/Button").Button, obj8);
       items2[3] = closure_11(View, obj7);

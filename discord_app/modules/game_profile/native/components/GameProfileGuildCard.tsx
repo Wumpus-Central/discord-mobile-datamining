@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const sum = nativeDefault.space.PX_48 + nativeDefault.space.PX_8;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   card: {
     borderRadius: nativeDefault.radii.lg,

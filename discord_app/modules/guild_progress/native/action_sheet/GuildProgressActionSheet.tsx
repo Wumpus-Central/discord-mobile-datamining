@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(13157);
+const GuildProgressConstants = fn(13189);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1087);
 ({
@@ -33,7 +33,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -280,14 +280,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj3;
               } else {
                 let base64;
-                tmp5(8910).init(View);
-                const obj6 = tmp5(8910);
-                tmp2(13162).hideActionSheet(id.id);
-                const obj7 = tmp2(13162);
+                tmp5(8926).init(View);
+                const obj6 = tmp5(8926);
+                tmp2(13194).hideActionSheet(id.id);
+                const obj7 = tmp2(13194);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: tmp5(8035).openImagePicker(obj4), done: false };
+                const obj5 = { value: tmp5(8098).openImagePicker(obj4), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -300,8 +300,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               base64 = value.base64;
               if (null != base64) {
-                tmp5(8910).updateIcon(closure_129_5, base64);
-                const obj = tmp5(8910);
+                tmp5(8926).updateIcon(closure_129_5, base64);
+                const obj = tmp5(8926);
               }
               c3 = 3;
               return { value: "IconComponent", done: null };

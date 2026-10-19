@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/remix/ConjureRemix.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -44,7 +44,7 @@ let closure_8 = async function _remixConjureProjectInto(arg0) {
             closure_130_3 = undefined;
             const obj6 = { ok: false, message: null };
             const intl2 = util.intl;
-            obj6.message = intl2.string(_modDef3883.Cn8H0Y);
+            obj6.message = intl2.string(_modDef3820.Cn8H0Y);
             closure_130_1 = obj6;
             const mintRemixTicketResult = ConjureWorkerTickets.mintRemixTicket(user.id);
             closure_130_2 = mintRemixTicketResult;
@@ -137,7 +137,7 @@ let closure_8 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10978);
+const ConjureConnectionStore = fn(10990);
 ({ closeConnection: closure_4, ensureConnection: hasOwnProperty, sendUserMessage: metroRequire } = ConjureConnectionStore);
 let c7 = " (Remix)";
 const size = fn(2);

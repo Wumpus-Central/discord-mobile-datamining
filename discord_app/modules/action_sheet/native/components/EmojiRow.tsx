@@ -1,8 +1,8 @@
 // discord_app/modules/action_sheet/native/components/EmojiRow.tsx
 import ReactionUtils from "../../../reactions/ReactionUtils.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ActionSheetActionCreatorsDefault from "../ActionSheetActionCreators.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import ReactionActionCreators from "../../../reactions/ReactionActionCreators.tsx";
 import reactions_ReactionUtils from "../../../reactions/native/ReactionUtils.tsx";
@@ -16,10 +16,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7119).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5227).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({
   emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" },
   emojiRow: {
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
       };
       items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, {
-        location: channel(7155).MESSAGE_LONG_PRESS_MENU,
+        location: channel(7224).MESSAGE_LONG_PRESS_MENU,
       });
       obj7.children = items1;
       return closure_6(emojiFontSize, obj7);

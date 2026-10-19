@@ -4,10 +4,10 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
+import ApplicationCommandTypes from "../../../../../application_commands/ApplicationCommandTypes.tsx";
 import AppAnalyticsUtils from "../../../../../app_analytics/AppAnalyticsUtils.tsx";
 import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ApplicationCommandUtils from "../../../../../application_commands/ApplicationCommandUtils.tsx";
-import ApplicationCommandTypes from "../../../../../application_commands/ApplicationCommandTypes.tsx";
 import AppLauncherUtils from "../../../../utils/AppLauncherUtils.tsx";
 import AppLauncherContext from "../../../AppLauncherContext.tsx";
 import AppLauncherNativeUtils from "../../../AppLauncherNativeUtils.tsx";
@@ -20,18 +20,18 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9549);
+const ApplicationCommandIndexStore = fn(9564);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_12 = fn(5503).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(5938).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
-  headerSpacer: { height: fn(11961).EXPANDED_HEADER_HEIGHT - fn(11961).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(11981).EXPANDED_HEADER_HEIGHT - fn(11981).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,7 +49,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(11961).EXPANDED_HEADER_HEIGHT - fn(11961).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(11981).EXPANDED_HEADER_HEIGHT - fn(11981).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -634,7 +634,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = require("CommandRowButton");
-      return closure_13(tmp(6457).TableRow, {
+      return closure_13(tmp(6851).TableRow, {
         start: isFirstRow,
         end: isLastRow,
         label: command.displayName,

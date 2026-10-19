@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import SafetySettingsUtils from "../../../safety_common/SafetySettingsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7295);
+const Constants = fn(7362);
 ({ SafetySettingsNoticeAction: hasOwnProperty, SafetySettingsNoticeType: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -20,10 +20,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = sensitiveContentFilterHelpArticle(576).c(11);
       let obj = sensitiveContentFilterHelpArticle(576);
       sensitiveContentFilterHelpArticle =
-        sensitiveContentFilterHelpArticle(7276).useSensitiveContentFilterHelpArticle();
+        sensitiveContentFilterHelpArticle(7344).useSensitiveContentFilterHelpArticle();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          const result = sensitiveContentFilterHelpArticle(15731).trackSafetySettingsNoticeAnalytics(
+          const result = sensitiveContentFilterHelpArticle(15760).trackSafetySettingsNoticeAnalytics(
             constants2.AGE_CONFIRMATION_NOTICE,
             constants.VIEWED,
           );
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { style: tmp11, children: null };
         const obj6 = { type: "info", message: tmp13, role: "status", action: tmp16 };
-        obj5.children = jsx(tmp(7834).InlineNotice, { type: "info", message: tmp13, role: "status", action: tmp16 });
+        obj5.children = jsx(tmp(7897).InlineNotice, { type: "info", message: tmp13, role: "status", action: tmp16 });
         const tmp19 = <View style={tmp11}>{null}</View>;
         cResult[9] = tmp13;
         cResult[10] = tmp19;
@@ -230,9 +230,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function AgeConfirmationNotice() {
       sensitiveContentFilterHelpArticle =
-        sensitiveContentFilterHelpArticle(7276).useSensitiveContentFilterHelpArticle();
+        sensitiveContentFilterHelpArticle(7344).useSensitiveContentFilterHelpArticle();
       const effect = noop.useEffect(() => {
-        const result = sensitiveContentFilterHelpArticle(15731).trackSafetySettingsNoticeAnalytics(
+        const result = sensitiveContentFilterHelpArticle(15760).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.VIEWED,
         );
@@ -249,14 +249,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { style: null, children: null };
       const obj3 = { marginBottom: null };
       const callback = noop.useCallback(() => {
-        const obj = onPress(7764);
+        const obj = onPress(7827);
         const result = obj.showAgeVerificationGetStartedModal({
-          entryPoint: sensitiveContentFilterHelpArticle(6174).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+          entryPoint: sensitiveContentFilterHelpArticle(6605).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
         });
         const obj2 = {
-          entryPoint: sensitiveContentFilterHelpArticle(6174).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+          entryPoint: sensitiveContentFilterHelpArticle(6605).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
         };
-        const result1 = sensitiveContentFilterHelpArticle(15731).trackSafetySettingsNoticeAnalytics(
+        const result1 = sensitiveContentFilterHelpArticle(15760).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.CONFIRM_AGE,
         );
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.text = intl2.string(sensitiveContentFilterHelpArticle(1128).t.FDSSia);
       obj6.onPress = callback;
       obj4.action = obj6;
-      obj2.children = jsx(sensitiveContentFilterHelpArticle(7834).InlineNotice, {
+      obj2.children = jsx(sensitiveContentFilterHelpArticle(7897).InlineNotice, {
         type: "info",
         message: null,
         role: "status",

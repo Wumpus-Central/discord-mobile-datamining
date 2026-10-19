@@ -5,11 +5,11 @@ import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Server from "../../../flow/Server.tsx";
 import EmbeddedSurfaceUtils from "../../applications/utils/EmbeddedSurfaceUtils.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
+import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
 import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import ApplicationInstallUtils from "../../applications/utils/ApplicationInstallUtils.tsx";
-import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
@@ -65,8 +65,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1087).ApplicationFlags;
-const BuiltInSectionId = fn(5503).BuiltInSectionId;
-const MessageSendLocation = fn(5185).MessageSendLocation;
+const BuiltInSectionId = fn(5938).BuiltInSectionId;
+const MessageSendLocation = fn(4950).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

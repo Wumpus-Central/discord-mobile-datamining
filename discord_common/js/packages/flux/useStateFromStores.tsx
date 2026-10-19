@@ -27,7 +27,7 @@ function useStateFromStores(items, cResult, items1) {
       areStatesEqual: tmp,
       getStateFromStores: cResult,
       prevDeps: "Boolean",
-      state: "backgroundColor",
+      state: "enabled",
     };
     tmp2.current = obj;
   }

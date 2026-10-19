@@ -5,9 +5,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const COMMAND_SENTINEL = fn(5504).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(5939).COMMAND_SENTINEL;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 let closure_5 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -61,7 +61,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanC
   const cResult = size(576).c(4);
   ({ text, size, commandNames } = arg0);
   const obj = size(576);
-  const conjurePlanCommandPattern = size(12264).useConjurePlanCommandPattern(commandNames);
+  const conjurePlanCommandPattern = size(12284).useConjurePlanCommandPattern(commandNames);
   if (cResult[0] === conjurePlanCommandPattern) {
     if (cResult[1] === size) {
       if (cResult[2] === text) {
@@ -70,8 +70,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanC
       return tmp5;
     }
   }
-  const obj2 = size(12264);
-  const result = size(12264).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const obj2 = size(12284);
+  const result = size(12284).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   let mapped = text;
   if (null != result) {
     mapped = result.map((kind) => {
@@ -89,13 +89,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePlanC
   cResult[2] = text;
   cResult[3] = mapped;
   tmp5 = mapped;
-  const tmpResult = size(12264);
+  const tmpResult = size(12284);
 }) : (function ConjurePlanCommandText(text) {
   text = text.text;
   ({ commandNames, size } = text);
-  const conjurePlanCommandPattern = size(12264).useConjurePlanCommandPattern(commandNames);
-  const obj = size(12264);
-  const result = size(12264).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const conjurePlanCommandPattern = size(12284).useConjurePlanCommandPattern(commandNames);
+  const obj = size(12284);
+  const result = size(12284).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   if (null != result) {
     text = result.map((kind) => {
       if ("command" === kind.kind) {

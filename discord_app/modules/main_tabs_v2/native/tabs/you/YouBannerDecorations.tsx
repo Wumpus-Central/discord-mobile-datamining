@@ -15,12 +15,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2133).useIntlLoaderStore;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const useIntlLoaderStore = fn(2070).useIntlLoaderStore;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 let closure_9 = fn(1394).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -295,6 +295,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
     accessibilityLabel: null,
     onPress: null,
     showRedDot: null,
+    testID: "you_tab_settings_button",
   };
   const tmp2Result10 = navigateToSettings(gradientSecondaryBackground[12]);
   obj6.IconComponent = navigateToSettings(gradientSecondaryBackground[38]).SettingsIcon;

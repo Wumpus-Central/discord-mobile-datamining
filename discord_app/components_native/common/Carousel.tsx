@@ -1,6 +1,8 @@
 // discord_app/components_native/common/Carousel.tsx
+import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
+import LegacyBaseButton from "../../../_runtime/05258_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -8,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { alignItems: "center" },
   carouselContentWrapper: { flexDirection: "row" },
@@ -44,8 +46,50 @@ PageIndicator.prototype["render"] = function render() {
   obj3.style = items2;
   return React4(React2, obj3);
 };
-PageIndicator.contextType = fn(4922).ThemeContext;
+PageIndicator.contextType = fn(4999).ThemeContext;
 PageIndicator.defaultProps = { indicatorSpace: 10, indicatorSize: 20 };
+const ReactCompilerGating = fn(558);
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function CarouselScrollView(arg0) {
+      const cResult = c.c(6);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { disallowInterruption: true };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      const nativeGesture = LegacyBaseButton.useNativeGesture(first);
+      if (cResult[1] !== arg0) {
+        const obj3 = {};
+        const merged = Object.assign(arg0);
+        const tmp12 = React4(React3, obj3);
+        cResult[1] = arg0;
+        cResult[2] = tmp12;
+        let tmp6 = tmp12;
+      } else {
+        tmp6 = cResult[2];
+      }
+      if (cResult[3] === nativeGesture) {
+        if (cResult[4] === tmp6) {
+          let tmp13 = cResult[5];
+        }
+        return tmp13;
+      }
+      const tmp14 = React4(LegacyBaseButton.GestureDetector, { gesture: nativeGesture, children: tmp6 });
+      cResult[3] = nativeGesture;
+      cResult[4] = tmp6;
+      cResult[5] = tmp14;
+      tmp13 = tmp14;
+      const tmpResult = LegacyBaseButton;
+    }
+  : function CarouselScrollView(arg0) {
+      const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
+      const obj2 = { gesture: nativeGesture, children: null };
+      const merged = Object.assign(arg0);
+      obj2.children = React4(React3, {});
+      return React4(LegacyBaseButton.GestureDetector, obj2);
+    };
 const Component2 = noop.Component;
 class Carousel extends Component2 {
   constructor() {
@@ -104,11 +148,11 @@ Carousel.prototype["render"] = function render() {
     },
     children: self.props.children,
   });
-  const items1 = [React4(React3, obj3), tmp3];
+  const items1 = [React4(closure_8, obj3), tmp3];
   obj2.children = items1;
   return hasOwnProperty(React2, obj2);
 };
-Carousel.contextType = fn(4922).ThemeContext;
+Carousel.contextType = fn(4999).ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Carousel.tsx");

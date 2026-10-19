@@ -2,9 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ClientThemesUtils from "ClientThemesUtils.tsx";
+import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import UserUtils from "../../utils/UserUtils.tsx";
 import ThemeActionCreators from "../user_settings/ThemeActionCreators.tsx";
@@ -88,7 +88,7 @@ function handleUserSettingsProtoStoreUpdate() {
     _undefined = undefined;
   }
 }
-const isGuildTextChannelType = fn(2072).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4804).isGuildTextChannelType;
 const dependencyMap = fn(1255).BACKGROUND_GRADIENT_PRESETS_MAP;
 const SystemThemeState = fn(1210).SystemThemeState;
 let closure_14 = true;

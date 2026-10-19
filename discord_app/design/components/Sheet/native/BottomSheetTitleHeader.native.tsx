@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let closure_8 = createStyles.createStyles(() => {
   const obj = {
     container: {
@@ -99,7 +99,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = React5(View, obj2);
       return timestampProducer(View, obj);
     };
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_10 = createStyles.createStyles(() => ({
   container: { flexDirection: "column" },
   accessories: { flexDirection: "row", justifyContent: "space-between" },
@@ -243,7 +243,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items2;
       return React5(View, obj);
     };
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_12 = createStyles.createStyles(() => {
   const obj = {
     accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 },

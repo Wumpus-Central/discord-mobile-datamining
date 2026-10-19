@@ -1,17 +1,17 @@
 // discord_app/modules/safety_hub/native/AppealIngestionExternalLink.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod7999 from "../../../../_runtime/metro/07999__.js";
+import _mod8062 from "../../../../_runtime/metro/08062__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   childButton: { marginBottom: 8, borderRadius: nativeDefault.radii.xs },
   childContainer: null,
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp6 = cResult[5];
           }
           if (cResult[6] !== tmp4.chevron.color) {
-            const obj2 = { source: url(7999), color: tmp4.chevron.color };
+            const obj2 = { source: url(8062), color: tmp4.chevron.color };
             const tmp11 = closure_4(url(1202).Icon, obj2);
             cResult[6] = tmp4.chevron.color;
             cResult[7] = tmp11;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj3 = { style: tmp4.childButton, accessibilityRole: "button", onPress: tmp5, children: tmp12 };
-              const tmp18 = closure_4(url(6462).PressableHighlight, obj3);
+              const tmp18 = closure_4(url(6856).PressableHighlight, obj3);
               cResult[12] = tmp5;
               cResult[13] = tmp4.childButton;
               cResult[14] = tmp12;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: text,
         };
-        const tmp8 = closure_4(url(5187).Text, obj5);
+        const tmp8 = closure_4(url(5195).Text, obj5);
         cResult[3] = tmp4.childButtonText;
         cResult[4] = text;
         cResult[5] = tmp8;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: children.text,
         }),
-        closure_4(native.Icon, { source: _mod7999, color: tmp.chevron.color }),
+        closure_4(native.Icon, { source: _mod8062, color: tmp.chevron.color }),
       ];
       obj2.children = items;
       obj.children = closure_5(View, obj2);

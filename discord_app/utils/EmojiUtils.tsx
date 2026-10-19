@@ -1,9 +1,9 @@
 // discord_app/utils/EmojiUtils.tsx
 import AvatarUtilsDefault from "AvatarUtils.tsx";
 import ImageUtils from "ImageUtils.tsx";
+import PremiumUtilsDefault from "PremiumUtils.tsx";
 import CreatorMonetizationRestrictionsUtils from "../modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
 import EmojiTypes from "../modules/emojis/EmojiTypes.tsx";
-import PremiumUtilsDefault from "PremiumUtils.tsx";
 import RoleSubscriptionEmojiUtils from "../modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx";
 import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed.native.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -131,7 +131,7 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(2072);
+const ChannelRecord = fn(4804);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
 const Permissions = fn(1087).Permissions;
 const EmojiConstants = fn(1395);

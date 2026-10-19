@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/native/components/CallBarAction.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import CircleWithCutoutUtils from "../../../voice_panel/native/shared/CircleWithCutoutUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -15,16 +15,16 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10662).resetFocusTimer;
+const resetFocusTimer = fn(10675).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const ColorUtils = fn(5063);
+const ColorUtils = fn(4942);
 let closure_12 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let c13 = 45;
 let closure_14 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_16 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj3 = {
   buttonContainer: { position: "absolute" },
   iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" },
@@ -183,7 +183,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                       style: tmp16,
                                                       children: tmp42,
                                                     };
-                                                    const tmp48 = closure_10(onPress(6462).PressableOpacity, obj3);
+                                                    const tmp48 = closure_10(onPress(6856).PressableOpacity, obj3);
                                                     cResult[46] = accessibilityLabel;
                                                     cResult[47] = accessibilityState;
                                                     cResult[48] = tmp42;
@@ -218,15 +218,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                         width: result1,
                                         height: result1,
                                         borderRadius: tmp11.badgeRadius,
-                                        top: onPress(11244).getBadgeTop(
+                                        top: onPress(11258).getBadgeTop(
                                           tmp11.badgeRadius,
                                           tmp11.buttonRadius,
                                           cutoutPositionInDegrees,
                                         ),
                                         left: null,
                                       };
-                                      const tmpResult = onPress(11244);
-                                      size1.left = onPress(11244).getBadgeLeft(
+                                      const tmpResult = onPress(11258);
+                                      size1.left = onPress(11258).getBadgeLeft(
                                         tmp11.badgeRadius,
                                         tmp11.buttonRadius,
                                         cutoutPositionInDegrees,
@@ -234,7 +234,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       items1[1] = size1;
                                       obj5.style = items1;
                                       tmp38 = closure_10(View, obj5);
-                                      const tmpResult2 = onPress(11244);
+                                      const tmpResult2 = onPress(11258);
                                     }
                                     cResult[34] = tmp11.badgeRadius;
                                     cResult[35] = tmp11.buttonRadius;

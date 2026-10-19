@@ -1,6 +1,6 @@
 // discord_app/modules/image/native/BrokenImage.tsx
 import c from "../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../_runtime/07843_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07906_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

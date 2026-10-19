@@ -1,9 +1,9 @@
 // discord_app/modules/interaction_components/native/InteractionIframeModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import useBackPressHandlerDefault from "../../routing/native/useBackPressHandler.tsx";
-import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import makeIframeIdDefault from "../../embedded_apps/utils/makeIframeId.tsx";
 import closeIFrameModalDefault from "../closeIFrameModal.native.tsx";
@@ -18,7 +18,7 @@ const BotTagTypes = fn(1375).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const interaction_iframe_modal = "interaction_iframe_modal";
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -32,9 +32,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   ({ application, title, id } = arg0);
   id2 = application.id;
   const obj = id2(576);
-  const iframeModalState = id2(18528).useIframeModalState(arg0);
+  const iframeModalState = id2(18563).useIframeModalState(arg0);
   ({ queryParams, iframeUrl } = iframeModalState);
-  let obj2 = id2(18528);
+  let obj2 = id2(18563);
   [r10030, importDefault] = noop.useState(makeIframeIdDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { includeKeyboardHeight: true };
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             return true;
           }
         }
-        const tmp24 = closure_7(tmp(10561).XLargeIcon, {});
+        const tmp24 = closure_7(tmp(10575).XLargeIcon, {});
         cResult[17] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             }
           }
           const obj5 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name };
-          const tmp29 = closure_7(tmp(5187).Text, obj5);
+          const tmp29 = closure_7(tmp(5195).Text, obj5);
           cResult[21] = application.name;
           cResult[22] = tmp29;
         } else {
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
         cResult[25] = tmp35;
       }
       const obj9 = { accessibilityRole: "button", accessibilityLabel: tmp21, onPress: A, style: tmp4.closeButton, children: tmp23 };
-      const tmp27 = closure_7(tmp(6462).PressableOpacity, obj9);
+      const tmp27 = closure_7(tmp(6856).PressableOpacity, obj9);
       cResult[18] = A;
       cResult[19] = tmp4.closeButton;
       cResult[20] = tmp27;

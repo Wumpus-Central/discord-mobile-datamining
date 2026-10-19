@@ -2,12 +2,12 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import CheckmarkLargeIcon from "../../../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import WarningIcon from "../../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import SuspiciousDownloadModalActionCreatorsDefault from "../../../../suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx";
 import BlockedDomainModalActionCreatorsDefault from "../../../../blocked_domains/BlockedDomainModalActionCreators.native.tsx";
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   wrap: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -58,7 +58,7 @@ let items = [
     description: "Shows safety warning for inappropriate conversations",
     show() {
       return ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(16800, dependencyMap.paths),
+        asyncRequireImpl(16829, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",
@@ -93,7 +93,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { title: "Select Action Sheet", subtitle: null };
         const _HermesInternal = HermesInternal;
         obj2.subtitle = "" + items.length + " options";
-        const tmp8 = closure_7(tmp(7117).BottomSheetTitleHeader, obj2);
+        const tmp8 = closure_7(tmp(7194).BottomSheetTitleHeader, obj2);
         cResult[2] = tmp8;
         let tmp5 = tmp8;
       } else {
@@ -114,9 +114,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { header: tmp5, children: null };
           const obj5 = { style: tmp9, children: null };
           const obj6 = { hasIcons: true, children: tmp11 };
-          obj5.children = closure_7(tmp(6542).TableRowGroup, obj6);
+          obj5.children = closure_7(tmp(6935).TableRowGroup, obj6);
           obj4.children = closure_7(closure_5, obj5);
-          const tmp16 = closure_7(tmp(7118).BottomSheet, obj4);
+          const tmp16 = closure_7(tmp(5226).BottomSheet, obj4);
           cResult[7] = tmp11;
           cResult[8] = tmp16;
           let tmp13 = tmp16;
@@ -128,7 +128,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const mapped = items.map((type, index) => {
         closure_0 = type;
         const obj = {
-          icon: closure_1_7(selectedType(7838).WarningIcon, { size: "md" }),
+          icon: closure_1_7(selectedType(7901).WarningIcon, { size: "md" }),
           label: null,
           subLabel: null,
           onPress() {
@@ -141,7 +141,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         ({ label: obj.label, description: obj.subLabel } = type);
         let tmpResult;
         if (closure_0 === type.type) {
-          tmpResult = closure_1_7(selectedType(6473).CheckmarkLargeIcon, {
+          tmpResult = closure_1_7(selectedType(6867).CheckmarkLargeIcon, {
             size: "md",
             color: "text-feedback-positive",
           });
@@ -149,7 +149,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         obj.trailing = tmpResult;
         obj.start = 0 === index;
         obj.end = index === length.length - 1;
-        return closure_1_7(selectedType(6457).TableRow, obj, type.type);
+        return closure_1_7(selectedType(6851).TableRow, obj, type.type);
       });
       cResult[4] = tmp4;
       cResult[5] = selectedType;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_7(tmp(5187).Text, { variant: "heading-lg/medium", children: "Action Sheets" });
+        const tmp13 = closure_7(tmp(5195).Text, { variant: "heading-lg/medium", children: "Action Sheets" });
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -284,17 +284,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = {
         description: "Tap an option to launch the action sheet immediately",
         hasIcons: false,
-        children: closure_7(selectedType(6457).TableRow, {
+        children: closure_7(selectedType(6851).TableRow, {
           label: tmp7.label,
           subLabel: tmp7.description,
           arrow: true,
           onPress: tmp10,
         }),
       };
-      items[1] = closure_7(selectedType(6542).TableRowGroup, obj5);
+      items[1] = closure_7(selectedType(6935).TableRowGroup, obj5);
       obj4.children = items;
-      obj3.children = closure_8(selectedType(6459).Card, obj4);
-      const tmp15 = closure_7(selectedType(5477).Stack, obj3);
+      obj3.children = closure_8(selectedType(6853).Card, obj4);
+      const tmp15 = closure_7(selectedType(5932).Stack, obj3);
       cResult[5] = tmp10;
       cResult[6] = tmp7.description;
       cResult[7] = tmp7.label;
@@ -317,20 +317,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = { spacing: 16, children: null };
       const obj3 = { children: null };
-      const items1 = [closure_7(selectedType(5187).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
+      const items1 = [closure_7(selectedType(5195).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
       const obj4 = {
         description: "Tap an option to launch the action sheet immediately",
         hasIcons: false,
-        children: closure_7(selectedType(6457).TableRow, {
+        children: closure_7(selectedType(6851).TableRow, {
           label: found.label,
           subLabel: found.description,
           arrow: true,
           onPress: callback,
         }),
       };
-      items1[1] = closure_7(selectedType(6542).TableRowGroup, obj4);
+      items1[1] = closure_7(selectedType(6935).TableRowGroup, obj4);
       obj3.children = items1;
-      obj2.children = closure_8(selectedType(6459).Card, obj3);
-      obj.children = closure_7(selectedType(5477).Stack, obj2);
+      obj2.children = closure_8(selectedType(6853).Card, obj3);
+      obj.children = closure_7(selectedType(5932).Stack, obj2);
       return closure_7(closure_6, obj);
     };

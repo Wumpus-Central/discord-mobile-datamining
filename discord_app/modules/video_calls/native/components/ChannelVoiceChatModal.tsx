@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useColorThemeBackgroundDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import GuildThemeGuildIdOverrideContextDefault from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
-import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
+import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ModalStackNavigatorDefault from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import ChannelVoiceChatDefault from "ChannelVoiceChat.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = jsx(tmp(8497).StageIcon, { size: "sm" });
+        const tmp11 = jsx(tmp(8513).StageIcon, { size: "sm" });
         cResult[3] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         <tmp5
           screenKey="StageVoiceChat"
           title={str}
-          titleIcon={jsx(channel(8497).StageIcon, { size: "sm" })}
+          titleIcon={jsx(channel(8513).StageIcon, { size: "sm" })}
           render={function render() {
             let guild_id = channel.guild_id;
             if (guild_id == null) {

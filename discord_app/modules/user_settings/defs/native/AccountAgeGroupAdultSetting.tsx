@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import RegionalFeatureConfigUtils from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";

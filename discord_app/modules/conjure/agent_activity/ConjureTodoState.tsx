@@ -35,9 +35,6 @@ export const checklistLive = function checklistLive(memo) {
 export const todoProgress = function todoProgress(todos) {
   return { completed: todos.filter((status) => "completed" === status.status).length, total: todos.length };
 };
-export const unfinishedTodoCount = function unfinishedTodoCount(arr) {
-  return arr.filter((status) => "completed" !== status.status).length;
-};
 export const messageChecklist = function messageChecklist(role) {
   if ("assistant" !== role.role) {
     return null;

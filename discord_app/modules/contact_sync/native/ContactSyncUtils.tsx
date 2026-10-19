@@ -5,8 +5,8 @@ import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import UserSettings from "../../user_settings/UserSettings.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import TrackedHTTPUtilsDefault from "../../../utils/TrackedHTTPUtils.tsx";
@@ -53,7 +53,7 @@ let closure_18 = async function _uploadContacts(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -108,13 +108,13 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(13349);
+const ContactSyncPersistedStore = fn(13383);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(13348);
+const ContactSyncConstants = fn(13382);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,

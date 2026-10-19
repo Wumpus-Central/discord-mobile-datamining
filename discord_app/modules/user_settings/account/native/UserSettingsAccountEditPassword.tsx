@@ -4,16 +4,16 @@ import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef15797 from "../../../../../_runtime/metro/15797__.js";
+import _modDef15826 from "../../../../../_runtime/metro/15826__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -28,7 +28,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 },
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef15797, style: tmp.image };
+    const obj4 = { source: _modDef15826, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
@@ -260,7 +260,7 @@ prototype["render"] = function render() {
   obj13.children = __initData(React4, obj);
   return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(4922).ThemeContext;
+EditPassword.contextType = fn(4999).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 };
 const size = fn(2);
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EditPasswordWrapper() {
       const cResult = flag(576).c(6);
       let obj = flag(576);
-      const params = flag(6960).useSettingNavigationRoute().params;
+      const params = flag(7038).useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
         flag = params.isLoginRequiredAction;
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      let obj2 = flag(6960);
+      let obj2 = flag(7038);
       const stateFromStoresObject = flag(504).useStateFromStoresObject(first, tmp8);
       const tmpResult = flag(504);
       const navigation = flag(1505).useNavigation();
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult2 = flag(1505);
     }
   : function EditPasswordWrapper() {
-      const params = flag(6960).useSettingNavigationRoute().params;
+      const params = flag(7038).useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
         flag = params.isLoginRequiredAction;
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag == null) {
         flag = false;
       }
-      let obj = flag(6960);
+      let obj = flag(7038);
       let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
       const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
         const currentUser = UserStore.getCurrentUser();

@@ -6,13 +6,13 @@ import BrowserManager from "../../../links/native/BrowserManager.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(8260).MobileUserSettings.WEB_BROWSER,
+  parent: fn(8276).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -49,7 +49,7 @@ const pressable = SettingBuilders.createPressable({
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(5152).browserManagerClearWebsiteData(), done: false };
+              const obj5 = { value: tmp4(5655).browserManagerClearWebsiteData(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -63,7 +63,7 @@ const pressable = SettingBuilders.createPressable({
             const obj7 = { text: null };
             const intl = tmp4(1128).intl;
             obj7.text = intl.string(tmp4(1128).t["zaEQz+"]);
-            v1(4904).open("web-browser-data-cleared", obj7);
+            v1(5625).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
             return { value: "IconComponent", done: null };
           }

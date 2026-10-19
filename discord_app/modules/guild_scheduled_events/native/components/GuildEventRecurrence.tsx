@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 },
@@ -438,8 +438,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      let obj2 = guildEventId(8801)(recurrenceId, id);
-      const tmp6 = guildEventId(8801);
+      let obj2 = guildEventId(8817)(recurrenceId, id);
+      const tmp6 = guildEventId(8817);
       const items1 = [c6];
       stateFromStores1 = recurrenceId(504).useStateFromStores(items1, () => {
         let guild_id;
@@ -461,11 +461,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores2 == null) {
         stateFromStores2 = stateFromStores1;
       }
-      closure_5 = recurrenceId(8848)
+      closure_5 = recurrenceId(8864)
         .useManageResourcePermissions(stateFromStores2)
         .canManageGuildEvent(stateFromStores);
-      const tmp2Result5 = recurrenceId(8848);
-      const eventScheduleById = recurrenceId(8802).useEventScheduleById(guildEventId, recurrenceId);
+      const tmp2Result5 = recurrenceId(8864);
+      const eventScheduleById = recurrenceId(8818).useEventScheduleById(guildEventId, recurrenceId);
       let toISOStringResult;
       if (eventScheduleById != null) {
         const startTime = eventScheduleById.startTime;
@@ -526,14 +526,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
-        obj4.children = closure_8(tmp2(8806).GuildEventCardHeader, obj5);
-        const items5 = [closure_8(tmp2(6462).PressableOpacity, obj4)];
+        obj4.children = closure_8(tmp2(8822).GuildEventCardHeader, obj5);
+        const items5 = [closure_8(tmp2(6856).PressableOpacity, obj4)];
         const obj6 = { style: tmp.actions, children: null };
         if (tmp21Result) {
           const obj7 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
           const intl2 = tmp2(1128).intl;
           obj7.children = intl2.string(tmp2(1128).t.fyBVRm);
-          tmp21Result = closure_8(tmp2(5187).Text, obj7);
+          tmp21Result = closure_8(tmp2(5195).Text, obj7);
         }
         const items6 = [tmp21Result];
         const obj8 = {
@@ -562,16 +562,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         obj8.style = tmp.secondarySmallButton;
         const obj9 = {
-          source: tmp5(8937),
+          source: tmp5(8953),
           size: tmp2(1202).Icon.Sizes.REFRESH_SMALL_16,
           style: tmp.secondarySmallIcon,
         };
         obj8.children = closure_8(tmp2(1202).Icon, obj9);
-        items6[1] = closure_8(tmp2(6462).PressableOpacity, obj8);
+        items6[1] = closure_8(tmp2(6856).PressableOpacity, obj8);
         obj6.children = items6;
         items5[1] = closure_9(stateFromStores1, obj6);
         obj3.children = items5;
         return closure_9(stateFromStores1, obj3);
       }
-      const tmp2Result6 = recurrenceId(8802);
+      const tmp2Result6 = recurrenceId(8818);
     };

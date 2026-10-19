@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureStatusLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUsageTypes from "../usage/ConjureUsageTypes.tsx";
 
 require = fn;
@@ -42,19 +42,19 @@ function thinkingLabel(saving) {
     tmp = "end" !== activity.phase;
   }
   if (flag5) {
-    let xnCAaP = _modDef3883["1jqaAc"];
+    let xnCAaP = _modDef3820["1jqaAc"];
   } else if (flag6) {
-    xnCAaP = _modDef3883.xCdlEF;
+    xnCAaP = _modDef3820.xCdlEF;
   } else if (flag7) {
-    xnCAaP = _modDef3883.Rhx0rn;
+    xnCAaP = _modDef3820.Rhx0rn;
   } else if (flag2) {
-    xnCAaP = _modDef3883.M4KI5F;
+    xnCAaP = _modDef3820.M4KI5F;
   } else if (flag3) {
-    xnCAaP = _modDef3883.j8tmjK;
+    xnCAaP = _modDef3820.j8tmjK;
   } else if (flag4) {
     xnCAaP = items[0];
   } else {
-    const tmp4 = _modDef3883;
+    const tmp4 = _modDef3820;
     if (flag) {
       xnCAaP = tmp4.mKK6wB;
     } else if (compacting) {
@@ -66,11 +66,11 @@ function thinkingLabel(saving) {
   return xnCAaP;
 }
 const items = [
-  _modDef3883["AX+5lk"],
-  _modDef3883.VAU6A7,
-  _modDef3883["1emysd"],
-  _modDef3883.EXHX3L,
-  _modDef3883.ChslmX,
+  _modDef3820["AX+5lk"],
+  _modDef3820.VAU6A7,
+  _modDef3820["1emysd"],
+  _modDef3820.EXHX3L,
+  _modDef3820.ChslmX,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureStatusLabels.tsx");
@@ -80,16 +80,16 @@ export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const RECALLING_LINES = items;
 export const isPublishLineSwitch = function isPublishLineSwitch(line, text) {
   const intl = util.intl;
-  let tmp4 = line === intl.string(_modDef3883.xCdlEF);
+  let tmp4 = line === intl.string(_modDef3820.xCdlEF);
   if (!tmp4) {
     const intl2 = util.intl;
-    tmp4 = line === intl2.string(_modDef3883.Rhx0rn);
+    tmp4 = line === intl2.string(_modDef3820.Rhx0rn);
   }
   const intl3 = util.intl;
-  let tmp5 = text === intl3.string(_modDef3883.xCdlEF);
+  let tmp5 = text === intl3.string(_modDef3820.xCdlEF);
   if (!tmp5) {
     const intl4 = util.intl;
-    tmp5 = text === intl4.string(_modDef3883.Rhx0rn);
+    tmp5 = text === intl4.string(_modDef3820.Rhx0rn);
   }
   return tmp4 !== tmp5;
 };
@@ -107,13 +107,13 @@ export const isRecallingLine = function isRecallingLine(current) {
 export const connectionLabel = function connectionLabel(stateFromStores8) {
   if ("connecting" === stateFromStores8) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3883["ECl+Dx"]);
+    return intl3.string(_modDef3820["ECl+Dx"]);
   } else if ("closed" === stateFromStores8) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3883.mQZSp1);
+    return intl2.string(_modDef3820.mQZSp1);
   } else if ("failed" === stateFromStores8) {
     const intl = util.intl;
-    return intl.string(_modDef3883.xzJSZ6);
+    return intl.string(_modDef3820.xzJSZ6);
   }
 };
 export { thinkingLabel };
@@ -125,8 +125,8 @@ export const runesUsedLabels = function runesUsedLabels(projectUsage) {
   const runesFromUsdResult = ConjureUsageTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3883.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
+  obj2.text = intl.formatToPlainString(_modDef3820.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
   const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3883.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
+  obj2.aria = intl2.formatToPlainString(_modDef3820.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
   return obj2;
 };

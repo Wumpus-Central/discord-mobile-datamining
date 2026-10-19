@@ -3,14 +3,14 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
+import shared from "../../../design/shared.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import REAWorkaroundViewDefault from "../../reanimated/native/REAWorkaroundView.tsx";
-import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
@@ -27,7 +27,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11900);
+const RedesignChannelListConstants = fn(11920);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,
@@ -67,9 +67,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return isThemeDarkResult;
     };
 fn(558);
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = {
     bannerWrapper: { width: "100%", maxHeight: arg0 * collapsed, aspectRatio, overflow: "hidden" },
@@ -82,7 +82,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5191);
+createStyles = fn(4945);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -91,7 +91,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = {

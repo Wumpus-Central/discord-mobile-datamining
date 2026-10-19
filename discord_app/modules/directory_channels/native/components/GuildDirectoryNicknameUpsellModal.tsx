@@ -5,11 +5,11 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import GuildIcon from "../../../guild/native/GuildIcon.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import FreeFormInputGroupDefault from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import GuildPromptsActionCreatorsDefault from "../../../guild/GuildPromptsActionCreators.tsx";
 import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,12 +23,12 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(13492).GuildPrompts;
+const GuildPrompts = fn(13526).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
-  container: { flex: 1, flexGrow: 2, marginTop: fn(6536).NAV_BAR_HEIGHT },
+  container: { flex: 1, flexGrow: 2, marginTop: fn(5229).NAV_BAR_HEIGHT },
   guildIcon: { alignSelf: "center", marginTop: 16 },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -38,7 +38,7 @@ let obj2 = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6536).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5229).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -72,7 +72,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
-      const insets = handleClose(6942)().insets;
+      const insets = handleClose(5554)().insets;
       const tmpResult = require("initialize");
       [obj3, dependencyMap] = ref(noop.useState(null), 2);
       const tmp11 = ref(noop.useState(""), 2);
@@ -130,7 +130,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                       color: "text-default",
                       children: tmp30,
                     };
-                    const tmp34 = closure_10(tmp(5187).Text, obj4);
+                    const tmp34 = closure_10(tmp(5195).Text, obj4);
                     cResult[22] = tmp4.description;
                     cResult[23] = tmp34;
                     let tmp32 = tmp34;
@@ -244,13 +244,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                       obj5.error = tmp43;
                       obj5.onFocus = J;
                       obj5.onBlur = Q;
-                      const tmp50 = closure_10(tmp9(6562), obj5);
+                      const tmp50 = closure_10(tmp9(6955), obj5);
                       cResult[34] = first1;
                       cResult[35] = tmp4.input;
                       cResult[36] = tmp4.redesignTextInput;
                       cResult[37] = tmp43;
                       cResult[38] = tmp50;
-                      const tmp9Result = tmp9(6562);
+                      const tmp9Result = tmp9(6955);
                     }
                   }
                   const obj6 = { style: header, children: null };
@@ -269,18 +269,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "mobile-text-heading-primary",
                   children: tmp23,
                 };
-                const tmp29 = closure_10(tmp(5187).Text, obj7);
+                const tmp29 = closure_10(tmp(5195).Text, obj7);
                 cResult[18] = tmp4.title;
                 cResult[19] = tmp23;
                 cResult[20] = tmp29;
                 tmp27 = tmp29;
               }
-              const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6436).GuildIconSizes.XLARGE };
-              const tmp21 = closure_10(tmp9(6436), obj8);
+              const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6831).GuildIconSizes.XLARGE };
+              const tmp21 = closure_10(tmp9(6831), obj8);
               cResult[13] = stateFromStores;
               cResult[14] = tmp4.guildIcon;
               cResult[15] = tmp21;
-              const tmp9Result2 = tmp9(6436);
+              const tmp9Result2 = tmp9(6831);
             }
             const items2 = [tmp4.container, tmp16];
             cResult[10] = tmp4.container;
@@ -297,11 +297,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       _require = first1(function* () {
         tmp30(null);
         let nick = 1;
-        yield closure_0(7087).updateGuildSelfMember(closure_0, { nick });
+        yield closure_0(7164).updateGuildSelfMember(closure_0, { nick });
         if (1 === tmp7) {
           nick = 0;
           closure_128_0 = tmp30;
-          const aPIError = new closure_0(5891).APIError(closure_128_0);
+          const aPIError = new closure_0(6328).APIError(closure_128_0);
           tmp30(aPIError);
           c5 = 3;
         } else if (arg0 === 1) {

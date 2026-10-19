@@ -4,8 +4,8 @@ import debounceDefault from "../../_runtime/00551_debounce.js";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
-import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import DiscordNativeDefault from "../lib/DiscordNative.tsx";
+import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import SelectedChannelActionCreatorsDefault from "../actions/SelectedChannelActionCreators.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 
@@ -62,7 +62,7 @@ function checkIdleAFK() {
 }
 const Constants = fn(1087);
 ({ IDLE_DURATION: hasOwnProperty, AppStates: metroRequire } = Constants);
-const SpeakingFlags = fn(5216).SpeakingFlags;
+const SpeakingFlags = fn(5680).SpeakingFlags;
 const idleSince = Date.now();
 let idle = false;
 let afk = false;

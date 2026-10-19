@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ColorPickerUtils from "ColorPickerUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "#000000";
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   suggestedColor: null,
@@ -191,11 +191,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       _slicedToArray = tmp17;
       let int2hsvResult = onSelect(1105).int2hsv(color);
-      sharedValue = onSelect(4945).useSharedValue(h);
-      const tmp5Result11 = onSelect(4945);
-      const sharedValue1 = onSelect(4945).useSharedValue(s);
-      const tmp5Result12 = onSelect(4945);
-      const sharedValue2 = onSelect(4945).useSharedValue(v);
+      sharedValue = onSelect(5014).useSharedValue(h);
+      const tmp5Result11 = onSelect(5014);
+      const sharedValue1 = onSelect(5014).useSharedValue(s);
+      const tmp5Result12 = onSelect(5014);
+      const sharedValue2 = onSelect(5014).useSharedValue(v);
       if (cResult[6] === str) {
         if (cResult[7] === color) {
           if (cResult[8] === sharedValue) {
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           value: sharedValue2,
                                           onPanFinalize: tmp28,
                                         };
-                                        const tmp78 = sharedValue2(value(15617), obj4);
+                                        const tmp78 = sharedValue2(value(15646), obj4);
                                         cResult[69] = sharedValue;
                                         cResult[70] = tmp28;
                                         cResult[71] = sharedValue1;
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[47] === sharedValue2) {
                               let tmp41 = cResult[48];
                             }
-                            BottomSheet = onSelect(7118).BottomSheet;
+                            BottomSheet = onSelect(5226).BottomSheet;
                             const _Symbol3 = Symbol;
                             if (cResult[49] === Symbol.for("react.memo_cache_sentinel")) {
                               const intl = onSelect(1128).intl;
@@ -445,7 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 const obj17 = value(12);
                               }
                               const obj6 = { accessibilityLabel: tmp50, value, onChange: container, maxLength: 7 };
-                              const tmp54 = sharedValue2(onSelect(6563).TextInput, obj6);
+                              const tmp54 = sharedValue2(onSelect(6956).TextInput, obj6);
                               cResult[55] = value;
                               cResult[56] = container;
                               cResult[57] = tmp54;
@@ -453,8 +453,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                             const obj7 = { title: tmp42, trailing: null };
                             const obj8 = { variant: str, size: "sm", text: tmp44, onPress: tmp40 };
-                            obj7.trailing = sharedValue2(onSelect(5479).Button, obj8);
-                            const tmp48 = sharedValue2(onSelect(7117).BottomSheetTitleHeader, obj7);
+                            obj7.trailing = sharedValue2(onSelect(5205).Button, obj8);
+                            const tmp48 = sharedValue2(onSelect(7194).BottomSheetTitleHeader, obj7);
                             cResult[51] = str;
                             cResult[52] = tmp40;
                             cResult[53] = tmp48;
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[30] = sharedValue2;
       cResult[31] = onPanFinalize;
       tmp38 = onPanFinalize;
-      const tmp5Result13 = onSelect(4945);
+      const tmp5Result13 = onSelect(5014);
     }
   : function CustomColorPickerActionSheet(arg0) {
       ({ color, onSelect } = arg0);
@@ -575,11 +575,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       let int2hsvResult = onSelect(1105).int2hsv(color);
-      sharedValue = onSelect(4945).useSharedValue(h);
-      const obj4 = onSelect(4945);
-      const sharedValue1 = onSelect(4945).useSharedValue(s);
-      const obj6 = onSelect(4945);
-      const sharedValue2 = onSelect(4945).useSharedValue(v);
+      sharedValue = onSelect(5014).useSharedValue(h);
+      const obj4 = onSelect(5014);
+      const sharedValue1 = onSelect(5014).useSharedValue(s);
+      const obj6 = onSelect(5014);
+      const sharedValue2 = onSelect(5014).useSharedValue(v);
       let combined;
       if (suggestedColors != null) {
         const mapped = suggestedColors.map((item) => onSelect(1105).hex2int(item));
@@ -611,8 +611,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = onSelect(1128).intl;
       obj9.text = intl2.string(onSelect(1128).t.XqMe3N);
       obj9.onPress = callback1;
-      obj7.trailing = sharedValue2(onSelect(5479).Button, obj9);
-      obj5.header = sharedValue2(onSelect(7117).BottomSheetTitleHeader, obj7);
+      obj7.trailing = sharedValue2(onSelect(5205).Button, obj9);
+      obj5.header = sharedValue2(onSelect(7194).BottomSheetTitleHeader, obj7);
       const obj10 = { style: tmp.container, children: null };
       const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
       const intl3 = onSelect(1128).intl;
@@ -635,9 +635,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
         }
       };
-      const items3 = [sharedValue2(onSelect(6563).TextInput, obj11), ,];
+      const items3 = [sharedValue2(onSelect(6956).TextInput, obj11), ,];
       const obj12 = { suggestedColors: null, onSelect: null, color: null };
-      const obj8 = onSelect(4945);
+      const obj8 = onSelect(5014);
       const tmp13 = updateInputHexValueFromHsv;
       const tmp14 = sharedValue1;
       const tmp16 = value;
@@ -658,7 +658,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj12.color = memo;
       items3[1] = sharedValue2(closure_10, obj12);
-      items3[2] = sharedValue2(tmp16(15617), {
+      items3[2] = sharedValue2(tmp16(15646), {
         hue: sharedValue,
         saturation: sharedValue1,
         value: sharedValue2,
@@ -672,5 +672,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj10.children = items3;
       obj5.children = tmp13(tmp14, obj10);
-      return sharedValue2(onSelect(7118).BottomSheet, obj5);
+      return sharedValue2(onSelect(5226).BottomSheet, obj5);
     };

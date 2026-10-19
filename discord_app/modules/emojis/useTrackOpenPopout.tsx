@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/useTrackOpenPopout.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
+import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import emojis_EmojiActionCreators from "EmojiActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";

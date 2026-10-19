@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TextVariants from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";

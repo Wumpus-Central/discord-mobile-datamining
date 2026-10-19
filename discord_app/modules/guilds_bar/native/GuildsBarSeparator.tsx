@@ -1,8 +1,8 @@
 // discord_app/modules/guilds_bar/native/GuildsBarSeparator.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import ReanimatedNativeViewDefault from "../../core/native/ReanimatedNativeView.tsx";
 import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = {

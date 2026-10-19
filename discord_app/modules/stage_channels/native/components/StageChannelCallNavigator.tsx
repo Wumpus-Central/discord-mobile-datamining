@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
-import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import MessageManagerDefault from "../../../messages/MessageManager.tsx";
 import participantHasVideoDefault from "../../../video_calls/participantHasVideo.tsx";
 import StageActionBarButtons from "StageActionBarButtons.tsx";
@@ -254,8 +254,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, closure_11) };
       };
-      const obj3 = showOverlay(4945);
-      fn.__closure = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
+      const obj3 = showOverlay(5014);
+      fn.__closure = { withSpring: showOverlay(5208).withSpring, showOverlay, viewAnimationConfig };
       fn.__workletHash = 3866068723381;
       fn.__initData = __initData3;
       const animatedStyle = obj3.useAnimatedStyle(fn);
@@ -312,7 +312,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp13;
       cResult[9] = tmp18;
       tmp17 = tmp18;
-      const obj4 = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
+      const obj4 = { withSpring: showOverlay(5208).withSpring, showOverlay, viewAnimationConfig };
     }
   : function JoinStageOverlay(channel) {
       showOverlay = undefined;
@@ -325,8 +325,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, closure_11) };
       };
-      let obj = showOverlay(4945);
-      fn.__closure = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
+      let obj = showOverlay(5014);
+      fn.__closure = { withSpring: showOverlay(5208).withSpring, showOverlay, viewAnimationConfig };
       fn.__workletHash = 17555856853074;
       fn.__initData = __initData4;
       const animatedStyle = obj.useAnimatedStyle(fn);
@@ -340,7 +340,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj3 = { style: null, children: null };
       const items = [closure_5.absoluteFill, ,];
-      const obj2 = { withSpring: showOverlay(5478).withSpring, showOverlay, viewAnimationConfig };
+      const obj2 = { withSpring: showOverlay(5208).withSpring, showOverlay, viewAnimationConfig };
       items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
       items[2] = animatedStyle;
       obj3.style = items;
@@ -348,7 +348,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_8(ReanimatedRexportDefault.View, obj3);
     };
 ReactCompilerGating = fn(558);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj5 = { startStagePrompt: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function StageChannelCallNavigator(channel) {

@@ -6,8 +6,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const getIsOnboarding = fn(13347).getIsOnboarding;
-const ContactPermissions = fn(13348).ContactPermissions;
+const getIsOnboarding = fn(13381).getIsOnboarding;
+const ContactPermissions = fn(13382).ContactPermissions;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const Steps = {
   INITIALIZED: "Flow Initialized",

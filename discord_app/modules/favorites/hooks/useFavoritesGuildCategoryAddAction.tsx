@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx
-import _modDef3465 from "../intl/FavoritesGuild.messages.js";
+import _modDef3402 from "../intl/FavoritesGuild.messages.js";
 import openFavoritesGuildAddChannelModalDefault from "../utils/openFavoritesGuildAddChannelModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1128).intl;
-            const stringResult = intl.string(_modDef3465["1QJmIL"]);
+            const stringResult = intl.string(_modDef3402["1QJmIL"]);
             cResult[2] = stringResult;
             let tmp7 = stringResult;
           } else {
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (id.type === ChannelTypes.GUILD_CATEGORY) {
           const obj2 = { label: null, perform: null };
           const intl = require("util").intl;
-          obj2.label = intl.string(_modDef3465["1QJmIL"]);
+          obj2.label = intl.string(_modDef3402["1QJmIL"]);
           obj2.perform = callback;
           tmp4 = obj2;
         }

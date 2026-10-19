@@ -12,11 +12,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const DOT_UNICODE = fn(10539).DOT_UNICODE;
+const DOT_UNICODE = fn(10553).DOT_UNICODE;
 const ActivityTypes = fn(1087).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_13 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", gap: 4 },
   icon: { marginTop: 1 },
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [PresenceStore];
       const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
       const obj2 = userId(504);
-      const voiceChannel = stateFromStores1(10541)({ userId, guildId: guildId.guildId }).voiceChannel;
+      const voiceChannel = stateFromStores1(10555)({ userId, guildId: guildId.guildId }).voiceChannel;
       const items2 = [stateFromStores1];
       const memo = noop.useMemo(() => {
         let found;
@@ -370,13 +370,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp4;
         }
       }, items2);
-      const tmp6 = stateFromStores1(10540)(userId);
+      const tmp6 = stateFromStores1(10554)(userId);
       let state;
       if (memo != null) {
         state = memo.state;
       }
-      const gameMentionsAsPlainText = userId(10542).useGameMentionsAsPlainText(state);
-      const obj3 = userId(10542);
+      const gameMentionsAsPlainText = userId(10556).useGameMentionsAsPlainText(state);
+      const obj3 = userId(10556);
       const items3 = [RelationshipStore];
       if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
         return null;
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp6) {
           let found;
           if (stateFromStores1 != null) {
-            found = stateFromStores1.find(tmp5(10548));
+            found = stateFromStores1.find(tmp5(10562));
           }
           const obj4 = {
             game: found,
@@ -408,8 +408,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
           obj4.hideIcon = tmp12;
           obj4.hideText = tmp13;
-          let tmp18Result = closure_10(tmp5(10543), obj4);
-          const tmp5Result = tmp5(10543);
+          let tmp18Result = closure_10(tmp5(10557), obj4);
+          const tmp5Result = tmp5(10557);
         } else {
           let found1;
           if (stateFromStores1 != null) {
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
             obj5.hideIcon = tmp12;
             obj5.hideText = tmp13;
-            tmp18Result = closure_10(tmp5(10549), obj5);
+            tmp18Result = closure_10(tmp5(10563), obj5);
           } else {
             tmp18Result = null;
             if (null != voiceChannel) {
@@ -451,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
               obj6.hideIcon = tmp12;
               obj6.hideText = tmp13;
-              tmp18Result = closure_10(tmp5(10557), obj6);
+              tmp18Result = closure_10(tmp5(10571), obj6);
             }
           }
         }
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (tmp25) {
               const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-              tmp25 = closure_10(tmp5(10559), obj7);
+              tmp25 = closure_10(tmp5(10573), obj7);
             }
             const items7 = [tmp25];
             let tmp27 = null != memo.state;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 maxFontSizeMultiplier,
                 children: gameMentionsAsPlainText,
               };
-              tmp27 = closure_10(tmp5(10547), obj8);
+              tmp27 = closure_10(tmp5(10561), obj8);
             }
             const obj9 = { children: null };
             items7[1] = tmp27;
@@ -500,7 +500,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             importantForAccessibility: "no-hide-descendants",
             children: DOT_UNICODE,
           };
-          tmp31 = closure_10(tmp5(10547), obj11);
+          tmp31 = closure_10(tmp5(10561), obj11);
         }
         items8[1] = tmp31;
         items8[2] = tmp21;

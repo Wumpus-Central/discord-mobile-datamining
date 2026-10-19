@@ -29,9 +29,9 @@ let closure_13 = async function _navigateToGuild() {
     analyticsLocation: closure_129_4,
     options: closure_129_5,
   } = closure_0);
-  return "Reflect";
+  return "test";
 };
-const GlobalDiscoveryServersConstants = fn(8912);
+const GlobalDiscoveryServersConstants = fn(8928);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,

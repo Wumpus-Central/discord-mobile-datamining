@@ -31,7 +31,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1375).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   tag: {
     paddingLeft: 4,
@@ -70,10 +70,14 @@ let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function BotTag(arg0) {
-      const cResult = c.c(20);
-      ({ invertColor, type, style, verified } = arg0);
+      const cResult = c.c(22);
+      ({ invertColor, type, style, verified, size } = arg0);
       if (undefined === type) {
         type = BotTagTypes.BOT;
+      }
+      let str = "md";
+      if (undefined !== size) {
+        str = size;
       }
       const tmp6 = closure_7();
       if (cResult[0] !== type) {
@@ -88,119 +92,124 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         verified = tmp11;
       }
       if (!verified) {
-        const tmp18 = tmp4 ? tmp6.tagInverted : tmp6.tagNormal;
-        const tmp19 = tmp4 ? tmp6.tagTextInverted : tmp6.tagTextNormal;
+        const tmp17 = tmp4 ? tmp6.tagInverted : tmp6.tagNormal;
+        const tmp18 = tmp4 ? tmp6.tagTextInverted : tmp6.tagTextNormal;
         let prop = null;
         if (null != null) {
           prop = tmp6.verifiedTagLeftPadding;
         }
         if (tmp11) {
-          const _Symbol5 = Symbol;
-          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const _Symbol4 = Symbol;
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const intl4 = util.intl;
             const stringResult = intl4.string(util.t["7s687k"]);
-            cResult[3] = stringResult;
+            cResult[4] = stringResult;
           }
         } else {
           if (verified) {
-            const _Symbol4 = Symbol;
-            if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl3 = util.intl;
-              const stringResult1 = intl3.string(util.t.g76OcH);
-              cResult[4] = stringResult1;
-              let tmp28 = stringResult1;
-            } else {
-              tmp28 = cResult[4];
-            }
-            let tmp22 = tmp28;
-          } else if (type === BotTagTypes.SERVER) {
             const _Symbol3 = Symbol;
             if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = util.intl;
-              const stringResult2 = intl2.string(util.t["39trQT"]);
-              cResult[5] = stringResult2;
-              let tmp25 = stringResult2;
+              const intl3 = util.intl;
+              const stringResult1 = intl3.string(util.t.g76OcH);
+              cResult[5] = stringResult1;
+              let tmp27 = stringResult1;
             } else {
-              tmp25 = cResult[5];
+              tmp27 = cResult[5];
             }
-            tmp22 = tmp25;
-          } else {
+            let tmp21 = tmp27;
+          } else if (type === BotTagTypes.SERVER) {
             const _Symbol2 = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl2 = util.intl;
+              const stringResult2 = intl2.string(util.t["39trQT"]);
+              cResult[6] = stringResult2;
+              let tmp24 = stringResult2;
+            } else {
+              tmp24 = cResult[6];
+            }
+            tmp21 = tmp24;
+          } else {
+            const _Symbol = Symbol;
+            if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
               const intl = util.intl;
               const stringResult3 = intl.string(util.t.qwJHjo);
-              cResult[6] = stringResult3;
-              tmp22 = stringResult3;
+              cResult[7] = stringResult3;
+              tmp21 = stringResult3;
             } else {
-              tmp22 = cResult[6];
+              tmp21 = cResult[7];
             }
           }
-          if (cResult[7] === prop) {
-            if (cResult[8] === style) {
-              if (cResult[9] === tmp6.tag) {
-                if (cResult[10] === tmp18) {
-                  let tmp34 = cResult[11];
+          if (cResult[8] === prop) {
+            if (cResult[9] === style) {
+              if (cResult[10] === tmp6.tag) {
+                if (cResult[11] === tmp17) {
+                  let tmp33 = cResult[12];
                 }
-                if (cResult[12] === tmp7) {
-                  if (cResult[13] === tmp19) {
-                    let tmp35 = cResult[14];
-                  }
-                  if (cResult[15] === tmp22) {
-                    if (cResult[16] === tmp34) {
-                      if (cResult[17] === tmp35) {
-                        if (cResult[18] === null) {
-                          let tmp38 = cResult[19];
+                let str8 = "text-xs/semibold";
+                if ("sm" === str) {
+                  str8 = "text-xxs/semibold";
+                }
+                if (cResult[13] === str8) {
+                  if (cResult[14] === tmp7) {
+                    if (cResult[15] === tmp18) {
+                      let tmp34 = cResult[16];
+                    }
+                    if (cResult[17] === tmp21) {
+                      if (cResult[18] === tmp33) {
+                        if (cResult[19] === tmp34) {
+                          if (cResult[20] === null) {
+                            let tmp37 = cResult[21];
+                          }
+                          return tmp37;
                         }
-                        return tmp38;
                       }
                     }
+                    const obj2 = {
+                      style: tmp33,
+                      accessible: true,
+                      accessibilityRole: "image",
+                      accessibilityLabel: tmp21,
+                      children: null,
+                    };
+                    const items = [null, tmp34];
+                    obj2.children = items;
+                    const tmp40 = timestampProducer(View, obj2);
+                    cResult[17] = tmp21;
+                    cResult[18] = tmp33;
+                    cResult[19] = tmp34;
+                    cResult[20] = null;
+                    cResult[21] = tmp40;
+                    tmp37 = tmp40;
                   }
-                  const obj2 = {
-                    style: tmp34,
-                    accessible: true,
-                    accessibilityRole: "image",
-                    accessibilityLabel: tmp22,
-                    children: null,
-                  };
-                  const items = [null, tmp35];
-                  obj2.children = items;
-                  const tmp41 = timestampProducer(View, obj2);
-                  cResult[15] = tmp22;
-                  cResult[16] = tmp34;
-                  cResult[17] = tmp35;
-                  cResult[18] = null;
-                  cResult[19] = tmp41;
-                  tmp38 = tmp41;
                 }
-                const obj3 = {
-                  variant: "text-xs/semibold",
-                  lineClamp: 1,
-                  maxFontSizeMultiplier: 2,
-                  style: tmp19,
-                  children: tmp7,
-                };
-                const tmp37 = hasOwnProperty(Text_Text.Text, obj3);
-                cResult[12] = tmp7;
-                cResult[13] = tmp19;
-                cResult[14] = tmp37;
-                tmp35 = tmp37;
+                const obj3 = { variant: str8, lineClamp: 1, maxFontSizeMultiplier: 2, style: tmp18, children: tmp7 };
+                const tmp36 = hasOwnProperty(Text_Text.Text, obj3);
+                cResult[13] = str8;
+                cResult[14] = tmp7;
+                cResult[15] = tmp18;
+                cResult[16] = tmp36;
+                tmp34 = tmp36;
               }
             }
           }
-          const items1 = [tmp6.tag, tmp18, style, prop];
-          cResult[7] = prop;
-          cResult[8] = style;
-          cResult[9] = tmp6.tag;
-          cResult[10] = tmp18;
-          cResult[11] = items1;
-          tmp34 = items1;
+          const items1 = [tmp6.tag, tmp17, style, prop];
+          cResult[8] = prop;
+          cResult[9] = style;
+          cResult[10] = tmp6.tag;
+          cResult[11] = tmp17;
+          cResult[12] = items1;
+          tmp33 = items1;
         }
       } else {
-        const _Symbol = Symbol;
-        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { size: "xs", color: nativeDefault.colors.WHITE };
-          const tmp16 = hasOwnProperty(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, obj4);
-          cResult[2] = tmp16;
+        let str2 = "xs";
+        if ("sm" === str) {
+          str2 = "xxs";
+        }
+        if (cResult[2] !== str2) {
+          const obj4 = { size: str2, color: nativeDefault.colors.WHITE };
+          const tmp15 = hasOwnProperty(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, obj4);
+          cResult[2] = str2;
+          cResult[3] = tmp15;
         }
       }
     }
@@ -213,7 +222,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (BOT === undefined) {
         BOT = BotTagTypes.BOT;
       }
-      let verified = invertColor.verified;
+      ({ verified, size, style } = invertColor);
+      if (size === undefined) {
+        size = "md";
+      }
       const tmp2 = closure_7();
       let tmp5 = BOT === BotTagTypes.OFFICIAL;
       if (!tmp5) {
@@ -222,13 +234,17 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (!verified) {
         verified = tmp5;
       }
-      let tmp6 = null;
+      let tmp7Result = null;
       if (verified) {
-        const obj = { size: "xs", color: nativeDefault.colors.WHITE };
-        tmp6 = hasOwnProperty(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, obj);
+        let str = "xs";
+        if ("sm" === size) {
+          str = "xxs";
+        }
+        const obj = { size: str, color: nativeDefault.colors.WHITE };
+        tmp7Result = hasOwnProperty(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, obj);
       }
       let prop = null;
-      if (null != tmp6) {
+      if (null != tmp7Result) {
         prop = tmp2.verifiedTagLeftPadding;
       }
       if (tmp5) {
@@ -255,18 +271,20 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: stringResult,
         children: null,
       };
-      const items = [tmp2.tag, flag ? tmp2.tagInverted : tmp2.tagNormal, invertColor.style, prop];
+      const items = [tmp2.tag, flag ? tmp2.tagInverted : tmp2.tagNormal, style, prop];
       obj2.style = items;
-      const items1 = [
-        tmp6,
-        hasOwnProperty(tmp17(5187).Text, {
-          variant: "text-xs/semibold",
-          lineClamp: 1,
-          maxFontSizeMultiplier: 2,
-          style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal,
-          children: getBotLabel(BOT),
-        }),
-      ];
+      const items1 = [tmp7Result];
+      let str3 = "text-xs/semibold";
+      if ("sm" === size) {
+        str3 = "text-xxs/semibold";
+      }
+      items1[1] = hasOwnProperty(tmp17(5195).Text, {
+        variant: str3,
+        lineClamp: 1,
+        maxFontSizeMultiplier: 2,
+        style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal,
+        children: getBotLabel(BOT),
+      });
       obj2.children = items1;
       return timestampProducer(View, obj2);
     };

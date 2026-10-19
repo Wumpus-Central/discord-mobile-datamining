@@ -2,9 +2,9 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import ActivitiesInTextUtils from "../../activities/ActivitiesInTextUtils.tsx";
 import getEmbeddedActivityLaunchability from "../../activities/utils/getEmbeddedActivityLaunchability.tsx";
-import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import useActivityShelfItem from "../../activities/utils/useActivityShelfItem.tsx";
 import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 

@@ -3,8 +3,8 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
+import BottomSheetModal from "../../../_runtime/05230_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
-import BottomSheetModal from "../../../_runtime/06584_BottomSheetModal.js";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -2114,7 +2114,7 @@ prototype4["computeScrollPosition"] = function computeScrollPosition(arg0, arg1)
   const fastListComputer = this.state.fastListComputer;
   return fastListComputer.computeScrollPosition(false, arg0, arg1);
 };
-prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo, isFirstLayout) {
+prototype4["getInitialState"] = function getInitialState(containerSize, setInfo, isFirstLayout) {
   let items = arg3;
   if (arg3 === undefined) {
     items = [];
@@ -2138,7 +2138,7 @@ prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo,
   }
   const horizontal = props.horizontal;
   const scrollPosValue = props.scrollPosValue;
-  setInfo.setInfo(endImportTime);
+  setInfo.setInfo(containerSize);
   let num2 = initialScrollStart;
   if (initialScrollStart == null) {
     num2 = 0;
@@ -2148,7 +2148,7 @@ prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo,
     let tmp3 = num2;
   } else if (num > 0) {
     tmp3 = num2;
-    if (endImportTime > 0) {
+    if (containerSize > 0) {
       const scrollPosition = setInfo.computeScrollPosition("default" === str2, num, initialScrollItem);
       tmp3 = num2;
       if (null != scrollPosition) {
@@ -2169,12 +2169,12 @@ prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo,
     tmp3 = num2;
   }
   if (isFirstLayout) {
-    if (endImportTime > 0) {
-      if (0 === endImportTime) {
+    if (containerSize > 0) {
+      if (0 === containerSize) {
         let obj2 = { batchSize: 0, blockStart: 0, blockEnd: 0 };
       } else {
         const _Math = Math;
-        const rounded = Math.ceil(endImportTime);
+        const rounded = Math.ceil(containerSize);
         const _Math2 = Math;
         const _Math3 = Math;
         const rounded1 = Math.floor(tmp3);
@@ -2187,8 +2187,8 @@ prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo,
       ({ batchSize, blockStart, blockEnd } = obj2);
     }
   }
-  const sum = tmp3 + endImportTime;
-  const rounded3 = Math.ceil(endImportTime / 4);
+  const sum = tmp3 + containerSize;
+  const rounded3 = Math.ceil(containerSize / 4);
   if (point == null) {
     point = { x: 0, y: 0 };
   }
@@ -2200,7 +2200,7 @@ prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo,
   } else {
     self.scrollPosValue = ReanimatedRexport2.makeMutable(tmp10);
   }
-  if (endImportTime > 0) {
+  if (containerSize > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);
   } else {
     computeResult = { size: 0, items: [] };

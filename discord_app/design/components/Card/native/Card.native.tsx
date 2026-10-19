@@ -1,10 +1,10 @@
 // discord_app/design/components/Card/native/Card.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import CardTokens from "CardTokens.native.tsx";
 import AnimatedPressableHighlight from "../../experimental/Pressables/native/AnimatedPressableHighlight.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -30,7 +30,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c10, Pressable } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let closure_12 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let closure_13 = createStyles.createStyleProperties((arg0) => {
   if ("primary" === arg0) {
     let backgroundColor = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -60,7 +60,7 @@ let closure_13 = createStyles.createStyleProperties((arg0) => {
   }
   return { backgroundColor, backgroundColorPressed };
 });
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_14 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
   if ("primary" === arg2) {
     let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;

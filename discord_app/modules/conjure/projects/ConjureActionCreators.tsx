@@ -1,7 +1,13 @@
 // discord_app/modules/conjure/projects/ConjureActionCreators.tsx
 import BackoffDefault from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ConjureProjectTypes from "ConjureProjectTypes.tsx";
+import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
+import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
+import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
+import conjurePreviewTicket from "../preview/conjurePreviewTicket.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -9,8 +15,6 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore.tsx";
 import ConjureProjectStore from "ConjureProjectStore.tsx";
-
-const require = globalThis.__r;
 
 require = fn;
 function updateIntegrationStatus(projectId, integrationStatus) {
@@ -75,7 +79,7 @@ let closure_17 = async function _listProjects() {
               const obj5 = { type: "CONJURE_PROJECTS_FETCH_START", guildId: tmp37 };
               DispatcherDefault.dispatch(obj5);
               c4 = 1;
-              const HTTP = require("HTTPUtils").HTTP;
+              const HTTP = HTTPUtils.HTTP;
               const request = { url: constants.CONJURE_PROJECTS, query: null, rejectWithError: true };
               let tmp50;
               if (null != guild_id) {
@@ -229,7 +233,7 @@ let closure_19 = async function _forgetMissingProjects() {
           c5 = 2;
           c6 = 4;
           c7 = 1;
-          let obj9 = { value: closure_131_32(closure_130_0), done: false };
+          let obj9 = { value: closure_131_31(closure_130_0), done: false };
           return obj9;
         }
       } else if (3 === tmp4) {
@@ -334,7 +338,7 @@ let closure_27 = async function _drainMissingProjects() {
                 c5 = 2;
                 c6 = 3;
                 c7 = 1;
-                let obj5 = { value: closure_131_32(closure_130_1), done: false };
+                let obj5 = { value: closure_131_31(closure_130_1), done: false };
                 return obj5;
               }
             }
@@ -422,7 +426,7 @@ let closure_29 = async function _fetchProjectLimit() {
                 closure_28 = tmp18;
                 max_projects = null;
                 c3 = 1;
-                const HTTP = require("HTTPUtils").HTTP;
+                const HTTP = HTTPUtils.HTTP;
                 const obj4 = { url: constants.CONJURE_PROJECT_LIMIT, rejectWithError: true };
                 c4 = 2;
                 c5 = 1;
@@ -475,7 +479,7 @@ let closure_29 = async function _fetchProjectLimit() {
 };
 function getProject() {
   const self = this;
-  const apply = closure_33.apply;
+  const apply = closure_32.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -483,7 +487,7 @@ function getProject() {
   }
   return applyArgumentsResult;
 }
-let closure_33 = async function _getProject(arg0) {
+let closure_32 = async function _getProject(arg0) {
   closure_0 = arg0;
   closure_2 = arg2;
   c5 = 0;
@@ -494,7 +498,7 @@ let closure_33 = async function _getProject(arg0) {
     closure_131_0 = closure_0;
     closure_131_1 = signal;
     closure_131_2 = closure_2;
-    const HTTP = require("HTTPUtils").HTTP;
+    const HTTP = HTTPUtils.HTTP;
     await HTTP.get({ url: Endpoints.CONJURE_PROJECT(closure_0), rejectWithError: false, signal });
     closure_131_3 = value;
     let tmp14 = undefined !== closure_131_2;
@@ -530,7 +534,7 @@ let closure_33 = async function _getProject(arg0) {
     return closure_131_3;
   })();
 };
-let closure_34 = async function _createProject(arg0) {
+let closure_33 = async function _createProject(arg0) {
   let flags = arg0;
   c6 = 0;
   c7 = 0;
@@ -568,10 +572,10 @@ let closure_34 = async function _createProject(arg0) {
             flags = flags.flags;
             GUILD_COLLABORATION = flags;
             if (flags == null) {
-              GUILD_COLLABORATION = require("ConjureProjectTypes").ConjureProjectFlags.GUILD_COLLABORATION;
+              GUILD_COLLABORATION = ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION;
             }
             c5 = 1;
-            const HTTP = require("HTTPUtils").HTTP;
+            const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.CONJURE_PROJECTS, body: null, rejectWithError: false };
             const obj5 = {};
             const merged = Object.assign(tmp64);
@@ -629,7 +633,7 @@ let closure_34 = async function _createProject(arg0) {
 };
 function patchProject() {
   const self = this;
-  const apply = closure_36.apply;
+  const apply = closure_35.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -637,14 +641,14 @@ function patchProject() {
   }
   return applyArgumentsResult;
 }
-let closure_36 = async function _patchProject(arg0) {
+let closure_35 = async function _patchProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
   return (async (arg0, value) => {
     closure_3 = tmp2;
     closure_2 = tmp5;
-    const HTTP = require("HTTPUtils").HTTP;
+    const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.CONJURE_PROJECT(closure_0), body, rejectWithError: false };
     await HTTP.patch(request);
     closure_130_0 = value;
@@ -652,9 +656,9 @@ let closure_36 = async function _patchProject(arg0) {
     return closure_130_0;
   })();
 };
-function updateProjectSettings() {
+function fetchConjureApplication() {
   const self = this;
-  const apply = closure_39.apply;
+  const apply = closure_37.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -662,6 +666,115 @@ function updateProjectSettings() {
   }
   return applyArgumentsResult;
 }
+let closure_37 = async function _fetchConjureApplication(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          let bot;
+          c3 = 1;
+          c4 = 1;
+          const obj5 = { value: ApplicationActionCreators.fetchApplication(closure_0), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        bot = value.bot;
+        if (null != bot) {
+          const obj7 = { type: "USER_UPDATE", user: bot };
+          closure_130_1(closure_130_2[8]).dispatch(obj7);
+          const obj = closure_130_1(closure_130_2[8]);
+        }
+        c4 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
+  }
+};
+let closure_38 = async function _refreshPreviewApplication(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          project = project.getProject(closure_0);
+          let prop;
+          if (project != null) {
+            prop = project.preview_application_id;
+          }
+          if (null != prop) {
+            c2 = 1;
+            c1 = 1;
+            const obj4 = { value: fetchConjureApplication(prop), done: false };
+            return obj4;
+          }
+        }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+      c1 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp11) {
+      c1 = tmp;
+      throw tmp11;
+    }
+  }
+};
 let closure_39 = async function _updateProjectSettings() {
   closure_3 = tmp5;
   closure_2 = tmp2;
@@ -669,18 +782,23 @@ let closure_39 = async function _updateProjectSettings() {
   await patchProject(closure_0, closure_1);
   closure_130_1 = value;
   closure_130_2 = closure_130_1.body.preview_application_id;
-  if (null != closure_130_2) {
-    const application = closure_131_0(closure_131_2[17]).fetchApplication(closure_130_2);
-    closure_131_0(closure_131_2[17]);
-    closure_130_3 = application
-      .catch(() => {})
-      .then(() => {
-        if (map.get(closure_1_2) === closure_1_3) {
-          map.delete(closure_1_2);
-        }
-      });
-    const result = closure_131_37.set(closure_130_2, closure_130_3);
-    application.catch(() => {});
+  let tmp15 = null == closure_130_2;
+  if (!tmp15) {
+    let tmp8 = null == closure_130_0.name;
+    if (tmp8) {
+      tmp8 = null == closure_130_0.icon;
+    }
+    if (tmp8) {
+      tmp8 = null == closure_130_0.description;
+    }
+    if (tmp8) {
+      tmp8 = !("cover_image" in closure_130_0);
+    }
+    tmp15 = tmp8;
+  }
+  if (!tmp15) {
+    closure_131_36(closure_130_2).catch(() => {});
+    closure_131_36(closure_130_2);
   }
   return closure_130_1;
 };
@@ -710,7 +828,7 @@ let closure_40 = async function _fetchApplicationChannels(arg0) {
           return obj3;
         } else {
           c3 = 1;
-          const HTTP = require("HTTPUtils").HTTP;
+          const HTTP = HTTPUtils.HTTP;
           const obj4 = { url: Endpoints.CONJURE_APPLICATION_CHANNELS(closure_0), rejectWithError: true };
           c2 = 2;
           c1 = 1;
@@ -792,7 +910,7 @@ let closure_42 = async function _deleteProject() {
             const obj4 = { type: "CONJURE_PROJECT_DELETE_START", projectId };
             DispatcherDefault.dispatch(obj4);
             c4 = 1;
-            const HTTP = require("HTTPUtils").HTTP;
+            const HTTP = HTTPUtils.HTTP;
             const obj6 = { url: Endpoints.CONJURE_PROJECT(projectId), rejectWithError: false };
             c5 = 2;
             c6 = 1;
@@ -836,7 +954,7 @@ let closure_42 = async function _deleteProject() {
 };
 let closure_3 = ["ws_ticket"];
 const Endpoints = fn(1087).Endpoints;
-const ReadStateTypes = fn(6223).ReadStateTypes;
+const ReadStateTypes = fn(6653).ReadStateTypes;
 let c13 = null;
 let c14 = null;
 let c15 = false;
@@ -847,8 +965,6 @@ const set = new Set();
 const set1 = new Set();
 let c25 = false;
 let c28 = null;
-const set2 = new Set();
-let c31 = null;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/ConjureActionCreators.tsx");
@@ -930,7 +1046,10 @@ export const fetchProjectLimit = function fetchProjectLimit() {
   return applyArgumentsResult;
 };
 export const prefetchProject = function prefetchProject(projectId) {
-  _require = projectId;
+  if (null == obj.getConjureSocket(projectId)) {
+    ConjureWorkerTickets.prefetchWorkerTicket(projectId);
+    const tmpResult = ConjureWorkerTickets;
+  }
   const currentUser = UserStore.getCurrentUser();
   id = undefined;
   if (currentUser != null) {
@@ -939,29 +1058,43 @@ export const prefetchProject = function prefetchProject(projectId) {
   if (id == null) {
     id = null;
   }
-  if (id !== id) {
-    set2.clear();
+  const promise = getProject(projectId, undefined, id);
+  promise.catch(() => {});
+  obj = conjureProjectSockets;
+  const result = map.set(projectId, { read: promise, at: Date.now(), userId: id });
+  const obj2 = { read: promise, at: Date.now(), userId: id };
+  const result1 = conjurePreviewTicket.prefetchConjurePreviewTicket(projectId);
+  const tmpResult2 = conjurePreviewTicket;
+};
+export const takePrefetchedRead = function takePrefetchedRead(arg0) {
+  value = map.get(arg0);
+  map.delete(arg0);
+  let tmp3 = null;
+  if (null != value) {
+    const currentUser = UserStore.getCurrentUser();
+    id = undefined;
+    if (currentUser != null) {
+      id = currentUser.id;
+    }
+    if (id == null) {
+      id = null;
+    }
+    tmp3 = null;
+    if (value.userId === id) {
+      const _Date = Date;
+      let read = null;
+      if (Date.now() - value.at < 5000) {
+        read = value.read;
+      }
+      tmp3 = read;
+    }
   }
-  if (null == obj.getConjureSocket(projectId)) {
-    tmp5(11004).prefetchWorkerTicket(projectId);
-    const tmp5Result = tmp5(11004);
-  }
-  let hasItem = set2.has(projectId);
-  if (!hasItem) {
-    hasItem = null != ConjureProjectStore.getIntegrationStatus(projectId);
-  }
-  if (!hasItem) {
-    set2.add(projectId);
-    getProject(projectId, undefined, id).catch(() => set2.delete(closure_0));
-    const promise = getProject(projectId, undefined, id);
-  }
-  obj = require("conjureProjectSockets");
-  tmp5 = _require;
+  return tmp3;
 };
 export { getProject };
 export const createProject = function createProject() {
   const self = this;
-  const apply = closure_34.apply;
+  const apply = closure_33.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -969,19 +1102,26 @@ export const createProject = function createProject() {
   }
   return applyArgumentsResult;
 };
-export const previewApplicationReread = function previewApplicationReread(prop) {
-  let resolved = map.get(prop);
-  if (resolved == null) {
-    resolved = Promise.resolve();
+export { fetchConjureApplication };
+export const refreshPreviewApplication = function refreshPreviewApplication() {
+  const self = this;
+  const apply = closure_38.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  return resolved;
+  return applyArgumentsResult;
 };
-export { updateProjectSettings };
-export const setProjectIcon = function setProjectIcon(arg0, icon) {
-  return updateProjectSettings(arg0, { icon });
-};
-export const setProjectCover = function setProjectCover(arg0, cover_image) {
-  return updateProjectSettings(arg0, { cover_image });
+export const updateProjectSettings = function updateProjectSettings() {
+  const self = this;
+  const apply = closure_39.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const setGuildHints = function setGuildHints(first2, arg1) {
   return patchProject(first2, arg1);

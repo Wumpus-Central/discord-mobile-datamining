@@ -14,7 +14,7 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(2123).isEveryoneRole;
+const isEveryoneRole = fn(4855).isEveryoneRole;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.getSearchText = getRoleName;
       obj2.renderLabel = renderRoleName;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(18735), {
+      return jsx(stateFromStores(18770), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-roles",

@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -1040,7 +1040,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items2;
       return hasOwnProperty(React4, obj);
     };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 const obj45 = {
   comboRow: null,
   darkText: null,

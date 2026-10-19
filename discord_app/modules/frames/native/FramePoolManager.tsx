@@ -1,7 +1,7 @@
 // discord_app/modules/frames/native/FramePoolManager.tsx
 import leaveFrame from "../leaveFrame.tsx";
 import FrameStackLevel from "../FrameStackLevel.tsx";
-import FrameVisibilityStore from "../FrameVisibilityStore.tsx";
+import FramePoolActionCreators from "../FramePoolActionCreators.tsx";
 import AbstractFramePoolManager from "../AbstractFramePoolManager.tsx";
 
 require = fn;
@@ -13,7 +13,8 @@ class FramePoolManager extends tmp4 {
   }
   removeFrameEntry(arg0) {
     removeFrameEntryResult = super.removeFrameEntry(global);
-    removeFrameResult = closure_2.removeFrame(global);
+    obj = closure_0(closure_1[1]);
+    result = obj.updateFramePoolVisibility(global, "unpooled");
     return;
   }
 }
@@ -29,10 +30,14 @@ prototype["getPoolNodeTag"] = function getPoolNodeTag() {
   return this.poolNodeTag;
 };
 prototype["place"] = function place(id, target, level) {
-  FrameVisibilityStore.setFrameVisible(id, level !== FrameStackLevel.FrameStackLevel.Backstage);
+  let str = "hidden";
+  if (level !== FrameStackLevel.FrameStackLevel.Backstage) {
+    str = "visible";
+  }
+  const result = FramePoolActionCreators.updateFramePoolVisibility(id, str);
 };
 prototype["unplace"] = function unplace(id) {
-  FrameVisibilityStore.setFrameVisible(id, false);
+  const result = FramePoolActionCreators.updateFramePoolVisibility(id, "hidden");
 };
 function destroyFrame(id) {
   leaveFrame.leaveFrame(id);
@@ -42,13 +47,13 @@ const destroyFrame1 = new destroyFrame(
   { maxBackgrounded: 1, timeoutMs: 90000 },
   tmp2,
   tmp,
-  Object,
   "destroyFrame",
   FramePoolManager,
   destroyFrame,
+  new.target,
 );
 destroyFrame1.poolNodeTag = 0;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/frames/native/FramePoolManager.tsx");
+let result = size.fileFinishedImporting("modules/frames/native/FramePoolManager.tsx");
 
 export default destroyFrame1;

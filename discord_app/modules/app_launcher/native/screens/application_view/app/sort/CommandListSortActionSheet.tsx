@@ -1,17 +1,17 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
+import Sheet_BottomSheet from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import TableRadioRow from "../../../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableRadioGroup from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import Sheet_BottomSheet from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ArrowsUpDownIcon from "../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const CommandListSortOrder = fn(11966).CommandListSortOrder;
+const CommandListSortOrder = fn(11986).CommandListSortOrder;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -32,13 +32,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { leading: null, title: null };
           const obj3 = { size: "sm", color: onSortOptionPress(587).colors.TEXT_DEFAULT };
-          obj2.leading = jsx(tmp(11982).ArrowsUpDownIcon, {
+          obj2.leading = jsx(tmp(12002).ArrowsUpDownIcon, {
             size: "sm",
             color: onSortOptionPress(587).colors.TEXT_DEFAULT,
           });
           const intl = tmp(1128).intl;
           obj2.title = intl.string(tmp(1128).t.yeYaHf);
-          const tmp9 = jsx(tmp(7117).BottomSheetTitleHeader, { leading: null, title: null });
+          const tmp9 = jsx(tmp(7194).BottomSheetTitleHeader, { leading: null, title: null });
           cResult[3] = tmp9;
           let tmp6 = tmp9;
         } else {
@@ -73,13 +73,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj6 = { startExpanded: true, header: tmp6, children: null };
         const obj7 = { hasIcons: false, value: sortOrder, onChange: tmp4, children: tmp10 };
-        obj6.children = jsx(tmp(6540).TableRadioGroup, {
+        obj6.children = jsx(tmp(6933).TableRadioGroup, {
           hasIcons: false,
           value: sortOrder,
           onChange: tmp4,
           children: tmp10,
         });
-        const tmp15 = jsx(tmp(7118).BottomSheet, { startExpanded: true, header: tmp6, children: null });
+        const tmp15 = jsx(tmp(5226).BottomSheet, { startExpanded: true, header: tmp6, children: null });
         cResult[5] = tmp4;
         cResult[6] = sortOrder;
         cResult[7] = tmp15;

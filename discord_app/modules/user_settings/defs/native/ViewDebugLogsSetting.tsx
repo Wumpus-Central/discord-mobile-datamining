@@ -5,8 +5,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
@@ -77,7 +77,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   : function ViewDebugLogsActionSheetRow(icon) {
       const title = icon.title;
       ({ screenKey: importDefault, render: dependencyMap } = icon);
-      return closure_5(title(7171).ActionSheetRow, {
+      return closure_5(title(7240).ActionSheetRow, {
         icon: icon.icon,
         label: title,
         onPress() {

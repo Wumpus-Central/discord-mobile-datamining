@@ -164,7 +164,7 @@ prototype["getForSubscription"] = function getForSubscription(arg0) {
     return set;
   }
 };
-prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
+prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationId) {
   let tmp = item;
   if (item === undefined) {
     tmp = null;
@@ -183,13 +183,13 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
       continue;
     }
   }
-  if (set1.has(id)) {
+  if (set1.has(applicationId)) {
     return false;
   } else {
     if (null != tmp) {
-      let libraryApplication = LibraryApplicationStore.getLibraryApplication(id, tmp);
+      let libraryApplication = LibraryApplicationStore.getLibraryApplication(applicationId, tmp);
     } else {
-      libraryApplication = LibraryApplicationStore.getActiveLibraryApplication(id);
+      libraryApplication = LibraryApplicationStore.getActiveLibraryApplication(applicationId);
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {

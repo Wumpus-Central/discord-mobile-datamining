@@ -1,4 +1,4 @@
-// discord_app/modules/jank_stats/native/JankNavigationReporter.android.tsx
+// discord_app/modules/jank_stats/native/JankNavigationReporter.native.tsx
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import useChatLayout from "../../chat/native/useChatLayout.tsx";
 import getJankScreenName from "getJankScreenName.tsx";
@@ -10,7 +10,11 @@ const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "end" });
+    return Object.assign({
+      _isAttached: false,
+      _routeKeyAtDispatch: "Boolean",
+      _screensBeforeDispatch: "unicodeVersion",
+    });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -104,6 +108,10 @@ prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute, _screens
   }
   return tmp2;
 };
-let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.android.tsx");
+let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.native.tsx");
 
-export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "end" });
+export default Object.assign({
+  _isAttached: false,
+  _routeKeyAtDispatch: "Boolean",
+  _screensBeforeDispatch: "unicodeVersion",
+});

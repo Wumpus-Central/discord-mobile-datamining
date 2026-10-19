@@ -2,8 +2,8 @@
 import _modDef38 from "../../../../../../../_runtime/metro/00038__.js";
 import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
-import LinkIcon from "../../../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
+import LinkIcon from "../../../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import renderMessageMarkup from "../../../../../messages/renderMessageMarkup.tsx";
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import MaskedLinkUtils from "../../../../../../utils/MaskedLinkUtils.tsx";
@@ -4739,11 +4739,11 @@ function LinkParsedGridItem(author) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchConstants = fn(9614);
+const SearchConstants = fn(9629);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_9, SearchLinkTypes: c10 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_13 = createStyles.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkEmbedGridItem(channelId) {

@@ -1,9 +1,9 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx
 import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;

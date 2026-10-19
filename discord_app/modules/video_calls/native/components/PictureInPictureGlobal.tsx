@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native2 from "../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
 import PictureInPictureDefault from "PictureInPicture.tsx";
@@ -20,17 +20,17 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11238);
+const usePipDimensionsDefault = tmp5(11252);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9683).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9697).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
-const ParticipantTypes = fn(5214).ParticipantTypes;
+const ParticipantTypes = fn(5593).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,
@@ -376,8 +376,8 @@ let closure_19 = noop.memo(
             }
           }
           const tmpResult8 = tmp(504);
-          const shouldForcePipOrientation = tmp(11235).useShouldForcePipOrientation(tmp31);
-          tmp(8600);
+          const shouldForcePipOrientation = tmp(11249).useShouldForcePipOrientation(tmp31);
+          tmp(8616);
           if (cResult[20] === channel.id) {
             class M {
               constructor() {
@@ -425,7 +425,7 @@ let closure_19 = noop.memo(
           cResult[21] = shouldForcePipOrientation;
           cResult[22] = obj2;
           tmp35 = obj2;
-          const tmpResult9 = tmp(11235);
+          const tmpResult9 = tmp(11249);
         }
         let tmp19 = stateFromStores1;
         if (null != tmp6) {

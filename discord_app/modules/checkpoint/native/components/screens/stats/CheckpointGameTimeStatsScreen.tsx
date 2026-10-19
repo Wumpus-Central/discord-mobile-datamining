@@ -2,14 +2,14 @@
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3141 from "../../../../Checkpoint2026.messages.js";
+import _modDef3078 from "../../../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../../../CheckpointConstants.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
 import NumberAnimationDefault from "../../NumberAnimation.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12780 from "../../../../../../../discord_assets/assets/checkpoint/game-time.png.js";
+import _modDef12812 from "../../../../../../../discord_assets/assets/checkpoint/game-time.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -18,7 +18,7 @@ import size from "../../../../../../../_runtime/metro/00002__.js";
 
 const initialize = prop1(504);
 const util = prop1(1128);
-const CalendarIcon = prop1(8952);
+const CalendarIcon = prop1(8968);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                     if (null != tmp26) {
                                       const intl4 = util.intl;
-                                      prop1 = _modDef3141["4FXB/m"];
+                                      prop1 = _modDef3078["4FXB/m"];
                                       const obj7 = {
                                         numDays: tmp16,
                                         percent: tmp26,
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     } else {
                                       const intl3 = util.intl;
                                       const obj8 = { numDays: tmp16 };
-                                      formatResult = intl3.format(_modDef3141.iCKjh6, obj8);
+                                      formatResult = intl3.format(_modDef3078.iCKjh6, obj8);
                                     }
                                     cResult[49] = tmp16;
                                     cResult[50] = tmp26;
@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3141["4N5p4D"]);
+      const stringResult = intl.string(_modDef3078["4N5p4D"]);
       if (null != bound) {
         const intl2 = util.intl;
         const obj12 = {
@@ -298,12 +298,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return arg0;
           },
         };
-        const formatToPlainStringResult = intl2.formatToPlainString(_modDef3141["4FXB/m"], obj12);
+        const formatToPlainStringResult = intl2.formatToPlainString(_modDef3078["4FXB/m"], obj12);
       }
       const tmp30Result = CheckpointScreenDefault;
       const container = tmp4.container;
       if (cResult[27] !== tmp4.image) {
-        const obj13 = { uri: _modDef12780, style: tmp4.image };
+        const obj13 = { uri: _modDef12812, style: tmp4.image };
         const tmp37 = timestampProducer(CheckpointApngPlayerDefault, obj13);
         cResult[27] = tmp4.image;
         cResult[28] = tmp37;
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3141["4N5p4D"]);
+      const stringResult = intl.string(_modDef3078["4N5p4D"]);
       let formatToPlainStringResult;
       if (null != bound) {
         const intl2 = util.intl;
@@ -432,13 +432,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return arg0;
           },
         };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef3141["4FXB/m"], obj2);
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef3078["4FXB/m"], obj2);
       }
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { style: tmp.imageContainer, children: null };
       const obj5 = { uri: null, style: null };
       const tmp8Result = CheckpointScreenDefault;
-      obj5.uri = _modDef12780;
+      obj5.uri = _modDef12812;
       obj5.style = tmp.image;
       obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
       const items1 = [timestampProducer(View, obj4)];
@@ -475,11 +475,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
           },
         };
-        let formatResult = intl4.format(_modDef3141["4FXB/m"], obj12);
+        let formatResult = intl4.format(_modDef3078["4FXB/m"], obj12);
       } else {
         const intl3 = util.intl;
         const obj13 = { numDays: rounded };
-        formatResult = intl3.format(_modDef3141.iCKjh6, obj13);
+        formatResult = intl3.format(_modDef3078.iCKjh6, obj13);
       }
       const obj14 = { children: null };
       obj11.children = formatResult;

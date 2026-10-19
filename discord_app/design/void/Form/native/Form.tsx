@@ -1,13 +1,13 @@
 // discord_app/design/void/Form/native/Form.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 const context = noop.createContext({ isForm: false });
 const value = { isForm: true };

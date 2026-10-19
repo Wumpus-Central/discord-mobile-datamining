@@ -26,16 +26,16 @@ import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ChannelRecord = fn(2072);
+const ChannelRecord = fn(4804);
 ({ THREADED_CHANNEL_TYPES: hasOwnProperty, isChannelChatInSidebar: metroRequire } = ChannelRecord);
-let closure_9 = fn(9612).setIsChannelDetailsSearchActive;
+let closure_9 = fn(9627).setIsChannelDetailsSearchActive;
 const Constants = fn(1087);
 ({ ChannelTypes: c10, ChannelTypesSets: closure_11, ComponentActions: closure_12 } = Constants);
-let closure_13 = fn(9613).SearchEntrypointAnalyticsLocations;
+let closure_13 = fn(9628).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_17 = createStyles.createStyles({
   actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
 });
@@ -73,7 +73,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[4];
         }
         const obj3 = {
-          IconComponent: tmp(8471).ChatIcon,
+          IconComponent: tmp(8487).ChatIcon,
           onPress() {
             openChannelSecondaryViewChatDefault(id.guild_id, id.id);
           },
@@ -113,7 +113,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           hasUnread = mentionCount > 0;
         }
         const obj2 = {
-          IconComponent: tmp(8471).ChatIcon,
+          IconComponent: tmp(8487).ChatIcon,
           onPress() {
             openChannelSecondaryViewChatDefault(id.guild_id, id.id);
           },
@@ -841,7 +841,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channelId(576);
       const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
-      channelId(6180);
+      channelId(6610);
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -865,7 +865,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       ({ screenIndex, showCreateThread } = channelId);
       const items = [ChannelStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-      channelId(6180);
+      channelId(6610);
       let tmp4 = null;
       if (null != stateFromStores) {
         tmp4 = null;
@@ -928,7 +928,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const result = ForumChannelCloseSearchButton(504);
       const stateFromStoresObject = result.useStateFromStoresObject(first, tmp4);
       ({ isMultiUserDM, isDM } = stateFromStoresObject);
-      const result1 = ForumChannelCloseSearchButton(9626);
+      const result1 = ForumChannelCloseSearchButton(9640);
       const hasForumSearchQuery = result1.useHasForumSearchQuery(channelId);
       if (cResult[3] === channelId) {
         if (cResult[4] === hasForumSearchQuery) {
@@ -955,7 +955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (hasForumSearchQuery) {
-        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13783).ForumChannelCloseSearchButton;
+        ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13817).ForumChannelCloseSearchButton;
         obj = { channelId };
         let tmp10 = closure_14(ForumChannelCloseSearchButton, obj);
       } else {
@@ -1009,7 +1009,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: containerStyle, children: null };
       if (obj2.useHasForumSearchQuery(channelId)) {
         const obj4 = { channelId };
-        let tmp4Result = closure_14(tmp(13783).ForumChannelCloseSearchButton, obj4);
+        let tmp4Result = closure_14(tmp(13817).ForumChannelCloseSearchButton, obj4);
       } else {
         if (!isDM) {
           if (!isMultiUserDM) {

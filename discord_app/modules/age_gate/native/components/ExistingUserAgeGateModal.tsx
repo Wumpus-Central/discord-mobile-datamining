@@ -89,12 +89,12 @@ function getScreens(source, arg1, arg2) {
           return jsx(ExistingUserAgeGateDefault, { onSuccess, onClose, source: tmp });
         }
         onSuccess = () => {
-          closure_0(6185).closeAgeGateModal();
-          const obj = closure_0(6185);
+          closure_0(6615).closeAgeGateModal();
+          const obj = closure_0(6615);
           const obj3 = { text: null, variant: "success" };
           const intl = closure_0(1128).intl;
           obj3.text = intl.string(closure_0(1128).t.gUiIGZ);
-          closure_1_1(4904).open("AGE_GATE_AGE_VERIFIED", obj3);
+          closure_1_1(5625).open("AGE_GATE_AGE_VERIFIED", obj3);
         };
       },
     };
@@ -171,7 +171,7 @@ function getScreens(source, arg1, arg2) {
 }
 const AgeGateConstants = fn(1112);
 ({ AgeGateAnalyticAction: metroRequire, AgeGateSource: closure_7 } = AgeGateConstants);
-let closure_8 = fn(18437).ExistingUserAgeGateScreens;
+let closure_8 = fn(18466).ExistingUserAgeGateScreens;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       source = source.source;
       const channelId = source.channelId;
       let obj = source(576);
-      const shouldAgeVerifyForAgeGate = source(6164).useShouldAgeVerifyForAgeGate();
+      const shouldAgeVerifyForAgeGate = source(6601).useShouldAgeVerifyForAgeGate();
       dependencyMap = noop.useRef(shouldAgeVerifyForAgeGate);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
@@ -207,13 +207,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      const obj2 = source(6164);
+      const obj2 = source(6601);
       const stateFromStores = source(504).useStateFromStores(first, tmp7, tmp8);
       if (cResult[4] === stateFromStores) {
         if (cResult[5] === source) {
           let tmp10 = cResult[6];
         }
-        const tmp14 = channelId(5521)(tmp10);
+        const tmp14 = channelId(5565)(tmp10);
         if (cResult[7] !== source) {
           class I {
             constructor() {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const watchAgeVerificationStatusChange = tmp(6165).useWatchAgeVerificationStatusChange(I);
+        const watchAgeVerificationStatusChange = tmp(6602).useWatchAgeVerificationStatusChange(I);
         if (cResult[9] === source) {
           class I {
             constructor() {
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp10;
         cResult[11] = tmp14;
         cResult[12] = tmp19;
-        const tmpResult2 = tmp(6165);
+        const tmpResult2 = tmp(6602);
       }
       let tmp11 = null;
       if (source === constants2.NSFW_VOICE_CHANNEL) {
@@ -320,9 +320,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const channelId = source.channelId;
       let stateFromStores;
       closure_4 = undefined;
-      const shouldAgeVerifyForAgeGate = source(6164).useShouldAgeVerifyForAgeGate();
+      const shouldAgeVerifyForAgeGate = source(6601).useShouldAgeVerifyForAgeGate();
       dependencyMap = stateFromStores.useRef(shouldAgeVerifyForAgeGate);
-      let obj = source(6164);
+      let obj = source(6601);
       const items = [closure_4];
       const items1 = [channelId];
       stateFromStores = source(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
@@ -338,11 +338,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       stateFromStores = tmp5;
-      const tmp7 = channelId(5521)(tmp5);
+      const tmp7 = channelId(5565)(tmp5);
       closure_4 = tmp7;
       const obj3 = source(504);
       const items2 = [source];
-      const watchAgeVerificationStatusChange = source(6165).useWatchAgeVerificationStatusChange(
+      const watchAgeVerificationStatusChange = source(6602).useWatchAgeVerificationStatusChange(
         obj2.useCallback(() => {
           if (ref.current) {
             AgeGateModalActionCreators.closeAgeGateModal(source);
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.initialRouteName = closure_8.AgeGate;
         const intl = tmp(1128).intl;
         obj4.headerBackTitle = intl.string(tmp(1128).t["13/7kX"]);
-        return jsx(tmp(6965).Navigator, obj4);
+        return jsx(tmp(7043).Navigator, obj4);
       }
-      const tmpResult = source(6165);
+      const tmpResult = source(6602);
     };

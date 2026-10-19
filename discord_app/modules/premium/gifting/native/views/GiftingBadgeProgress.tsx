@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2685 from "../../GiftingBadge.messages.js";
+import _modDef2622 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8590).getSingleRequirementThreshold;
+let closure_4 = fn(8606).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = hasOwnProperty(View, obj2);
       return hasOwnProperty(View, obj);
     };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj3 = {
   container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 },
   content: null,
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj9 = { count: progress, threshold: tmp19 };
-          obj8.children = intl.format(_modDef2685.iIpfQe, obj9);
+          obj8.children = intl.format(_modDef2622.iIpfQe, obj9);
           tmp34 = hasOwnProperty(Text_Text.Text, obj8);
         }
         cResult[4] = tmp5;
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl = util.intl;
         const obj9 = { count: progress, threshold: tmp6 };
-        obj8.children = intl.format(_modDef2685.iIpfQe, obj9);
+        obj8.children = intl.format(_modDef2622.iIpfQe, obj9);
         tmp16Result = hasOwnProperty(Text_Text.Text, obj8);
       }
       obj7.children = tmp16Result;

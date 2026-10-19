@@ -41,7 +41,7 @@ let closure_3 = async function _openConversationFocusLink(arg0) {
           } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

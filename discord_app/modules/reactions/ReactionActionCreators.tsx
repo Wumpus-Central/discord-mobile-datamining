@@ -4,8 +4,8 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import EmojiUtils from "../../utils/EmojiUtils.tsx";
-import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import MessageReactionsTypes from "../messages/MessageReactionsTypes.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../threads/ThreadActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -150,7 +150,7 @@ let closure_15 = async function _getReactors(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -271,7 +271,7 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -711,7 +711,7 @@ let closure_23 = async function _removeReaction(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -867,7 +867,7 @@ let closure_23 = async function _removeReaction(arg0) {
                     if (burst != null) {
                       burst = burst.burst;
                     }
-                    const AccessibilityAnnouncer = channelId(5065).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = channelId(4952).AccessibilityAnnouncer;
                     intl = channelId(1128).intl;
                     if (!burst) {
                       const obj6 = { name: tmp2.name };

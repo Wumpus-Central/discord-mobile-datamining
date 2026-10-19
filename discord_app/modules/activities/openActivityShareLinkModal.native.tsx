@@ -11,7 +11,7 @@ export const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 export const openActivityShareLinkModal = function openActivityShareLinkModal(arg0) {
   ({ applicationId, customId, linkId, message, onShare } = arg0);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(15520, dependencyMap.paths),
+    asyncRequireImpl(15548, dependencyMap.paths),
     { applicationId, customId, linkId, message, onShare },
     ACTIVITY_SHARE_LINK_MODAL,
   );

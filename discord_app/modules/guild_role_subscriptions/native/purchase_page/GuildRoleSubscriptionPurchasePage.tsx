@@ -3,10 +3,10 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef11410 from "../../../../../_runtime/metro/11410__.js";
+import _modDef11431 from "../../../../../_runtime/metro/11431__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1087);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   heroImage: { aspectRatio: 4, width: "100%" },
@@ -206,7 +206,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp12 = tmp5;
         if (tmp5) {
-          const obj4 = { source: _modDef11410, style: tmp4.socialBadgeArrow };
+          const obj4 = { source: _modDef11431, style: tmp4.socialBadgeArrow };
           tmp12 = closure_1_14(native.Icon, obj4);
         }
         cResult[5] = tmp5;
@@ -248,7 +248,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }),
       ];
       if (tmp5Result) {
-        const obj3 = { source: _modDef11410, style: tmp.socialBadgeArrow };
+        const obj3 = { source: _modDef11431, style: tmp.socialBadgeArrow };
         tmp5Result = closure_1_14(native.Icon, obj3);
       }
       items[2] = tmp5Result;

@@ -1,15 +1,15 @@
 // discord_app/modules/video_calls/native/components/SingleScreenshare.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ScreenshareParticipantDefault from "ScreenshareParticipant.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(10662);
+const ChannelCallStore = fn(10675);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { stageStreamContainer: { backgroundColor: nativeDefault.colors.BLACK } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

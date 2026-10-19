@@ -69,6 +69,7 @@ export const NativeFeatures = {
   CLIPS: "clips",
   CLIPS_THUMBNAIL: "clips_thumbnail",
   CLIPS_RECORDING_READY_EVENTS: "clips_recording_ready_events",
+  UNIFIED_CAPTURE_BROKER: "unified_capture_broker",
   GO_LIVE_HARDWARE: "go_live_hardware",
   IMAGE_QUALITY_MEASUREMENT: "image_quality_measurement",
   SCREEN_CAPTURE_KIT: "screen_capture_kit",

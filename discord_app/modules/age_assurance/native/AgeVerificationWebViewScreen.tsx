@@ -1,8 +1,8 @@
 // discord_app/modules/age_assurance/native/AgeVerificationWebViewScreen.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinkingDefault from "../../../lib/native/Linking.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
 import AgeVerificationUtils from "../AgeVerificationUtils.tsx";
 import AgeVerificationURLActionCreators from "../AgeVerificationURLActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -10,8 +10,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6173).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(7765);
+let closure_6 = fn(6604).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(7828);
 ({
   AgeVerificationIncodeResultStatus: closure_7,
   buildIncodeFallbackSessionInjection: closure_8,
@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
 let c13 = 15000;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: null, loadingOverlay: null, webView: null };
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
 obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

@@ -7,7 +7,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5104);
+const GuildPowerupsConstants = fn(5143);
 ({
   GuildPowerupType: closure_7,
   POWERUPS_INCLUDED_IN_LEVEL: closure_8,

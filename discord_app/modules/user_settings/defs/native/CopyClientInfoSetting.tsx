@@ -2,10 +2,10 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import DeviceUtils from "../../../../utils/native/DeviceUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
-import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import DeviceUtils from "../../../../utils/native/DeviceUtils.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
@@ -74,11 +74,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subLabel(576).c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
-        let result = tmp(11113).isIOSAnchoredChatScrollerEnabled();
+        let result = tmp(11128).isIOSAnchoredChatScrollerEnabled();
         const t = tmp(1128).t;
         const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
         cResult[0] = stringResult;
-        const tmpResult = tmp(11113);
+        const tmpResult = tmp(11128);
       } else {
         subLabel = cResult[0];
         const _Symbol = Symbol;
@@ -100,7 +100,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               const result = ToastUtils.presentCopiedToClipboard();
             },
           };
-          const tmp12 = closure_4(tmp(7171).ActionSheetRow, obj2);
+          const tmp12 = closure_4(tmp(7240).ActionSheetRow, obj2);
           cResult[2] = tmp12;
           let tmp10 = tmp12;
         } else {
@@ -429,18 +429,18 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6393).ClipboardListIcon,
+  IconComponent: fn(6788).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_9 }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(2044).DeveloperMode.useSetting,
+  usePredicate: fn(4776).DeveloperMode.useSetting,
   withArrow: true,
 });
 const size = fn(2);

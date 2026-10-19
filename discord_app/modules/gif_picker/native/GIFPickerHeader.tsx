@@ -7,17 +7,17 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = SearchField(1128);
-const Text_Text = SearchField(5187);
-const Pressables = SearchField(6462);
-const SearchField2 = SearchField(7016);
-const GifProvider = SearchField(10036);
-const ChevronLargeLeftIcon = SearchField(10045);
+const Text_Text = SearchField(5195);
+const Pressables = SearchField(6856);
+const SearchField2 = SearchField(7093);
+const GifProvider = SearchField(10050);
+const ChevronLargeLeftIcon = SearchField(10059);
 require = fn;
 const View = fn(17).View;
 fn(1087).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_8 },
   headerContainer: null,
@@ -28,14 +28,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10038).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10052).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10038).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10052).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6579).InputHeights.MD,
+  height: fn(6972).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -404,7 +404,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6579).InputHeights.MD,
+  height: fn(6972).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,

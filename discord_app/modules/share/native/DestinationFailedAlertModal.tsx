@@ -5,8 +5,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import GroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1098).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     borderWidth: 1,
@@ -215,11 +215,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           user,
           guildId: "Boolean",
           status: true,
-          isMobileOnline: false,
-          isVROnline: null,
-          size: true,
-          avatarDecoration: null,
-          autoStatusCutout: false,
+          isMobileOnline: "done",
+          isVROnline: true,
+          size: null,
+          avatarDecoration: "sku",
+          autoStatusCutout: null,
         };
         if (StatusTypes.OFFLINE !== status) {
           class A {
@@ -261,7 +261,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           name = UserUtilsDefault.getName(user);
         }
         obj3.children = name;
-        items2[1] = closure_10(tmp(5187).Text, obj3);
+        items2[1] = closure_10(tmp(5195).Text, obj3);
         tmp16[1] = items2;
         tmp14Result = closure_11(View, tmp16);
       }
@@ -294,11 +294,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           user,
           guildId: "Boolean",
           status: true,
-          isMobileOnline: false,
-          isVROnline: null,
-          size: true,
-          avatarDecoration: null,
-          autoStatusCutout: false,
+          isMobileOnline: "done",
+          isVROnline: true,
+          size: null,
+          avatarDecoration: "sku",
+          autoStatusCutout: null,
         };
         let tmp13 = null;
         if (StatusTypes.OFFLINE !== status) {
@@ -321,7 +321,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           stateFromStores = UserUtilsDefault.getName(user);
         }
         obj5.children = stateFromStores;
-        items2[1] = closure_10(tmp2(5187).Text, obj5);
+        items2[1] = closure_10(tmp2(5195).Text, obj5);
         obj3.children = items2;
         tmp9Result = closure_11(View, obj3);
       }
@@ -398,18 +398,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           ellipsizeMode: "tail",
           children: tmp11,
         };
-        const tmp16 = closure_10(tmp(5187).Text, obj3);
+        const tmp16 = closure_10(tmp(5195).Text, obj3);
         cResult[6] = tmp11;
         cResult[7] = tmp4.label;
         cResult[8] = tmp16;
         tmp14 = tmp16;
       }
       const tmpResult = channel(504);
-      const tmp13 = closure_10(channel(12729).GuildIconWithChannelType, {
+      const tmp13 = closure_10(channel(12749).GuildIconWithChannelType, {
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(12729).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(12749).GuildIconWithChannelTypeSizes.SMALL_32,
       });
       cResult[3] = channel;
       cResult[4] = stateFromStores;
@@ -419,7 +419,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(12729).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(12749).GuildIconWithChannelTypeSizes.SMALL_32,
       };
     }
   : function FailedChannelRow(channel) {
@@ -437,13 +437,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(504);
       const tmp3 = useChannelNameDefault(channel);
       const items1 = [
-        closure_10(channel(12729).GuildIconWithChannelType, {
+        closure_10(channel(12749).GuildIconWithChannelType, {
           "aria-label": "",
           guild: stateFromStores,
           channel,
-          size: channel(12729).GuildIconWithChannelTypeSizes.SMALL_32,
+          size: channel(12749).GuildIconWithChannelTypeSizes.SMALL_32,
         }),
-        closure_10(channel(5187).Text, {
+        closure_10(channel(5195).Text, {
           style: tmp.label,
           variant: "text-md/medium",
           lineClamp: 1,

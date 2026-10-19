@@ -2,12 +2,12 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef13848 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef13882 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj10 = { uri: _modDef13848 };
+        const obj10 = { uri: _modDef13882 };
         cResult[16] = obj10;
         let tmp18 = obj10;
       } else {
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
       const obj3 = { style: twoWayLinkStyles.container, children: null };
       const obj4 = { style: twoWayLinkStyles.content, children: null };
-      const memo = noop.useMemo(() => ({ uri: _modDef13848 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef13882 }), []);
       const items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), ,];
       const obj6 = {
         variant: "heading-xl/bold",

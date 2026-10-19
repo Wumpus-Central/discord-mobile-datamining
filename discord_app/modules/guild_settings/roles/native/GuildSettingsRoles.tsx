@@ -5,8 +5,8 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -37,8 +37,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const isEveryoneRole = fn(2123).isEveryoneRole;
-let closure_15 = fn(18801).GuildSettingsRoleEditSections;
+const isEveryoneRole = fn(4855).isEveryoneRole;
+let closure_15 = fn(18836).GuildSettingsRoleEditSections;
 const Constants = fn(1087);
 ({
   GuildSettingsSections: closure_16,
@@ -49,7 +49,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },
@@ -1660,7 +1660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj8 = {
             style: tmp.emptyRolesIcon,
             size: tmp3(tmp4[46]).Icon.Sizes.LARGE,
-            source: require("../../../../../_runtime/metro/08897__.js"),
+            source: require("../../../../../_runtime/metro/08913__.js"),
           };
           obj7.leading = tmp37(tmp3(tmp4[46]).Icon, obj8);
           let obj9 = { variant: "text-md/semibold", color: "interactive-text-default", children: null };

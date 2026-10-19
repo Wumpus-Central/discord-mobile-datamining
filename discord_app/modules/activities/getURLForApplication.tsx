@@ -39,7 +39,7 @@ export default function getURLForApplication(arg0) {
   }
   return activityUrlOverride;
 }
-export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(parseCsp) {
+export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(applicationId) {
   if (null == ACTIVITY_APPLICATION_HOST) {
     return null;
   } else if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
@@ -49,11 +49,11 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
     const _HermesInternal2 = HermesInternal;
     const uRL = new URL(ACTIVITY_APPLICATION_HOST, "" + window.location.protocol + "//" + window.location.host);
     const _HermesInternal3 = HermesInternal;
-    uRL.hostname = "" + parseCsp + "." + uRL.hostname;
+    uRL.hostname = "" + applicationId + "." + uRL.hostname;
     return uRL.origin;
   } else {
     const _HermesInternal = HermesInternal;
-    return "https://" + parseCsp + "." + ACTIVITY_APPLICATION_HOST;
+    return "https://" + applicationId + "." + ACTIVITY_APPLICATION_HOST;
   }
 };
 export const isUsingDevShelfActivityUrlOverride = function isUsingDevShelfActivityUrlOverride() {

@@ -15,20 +15,20 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
   count: { marginLeft: nativeDefault.space.PX_8 },
 };
 let closure_11 = createStyles.createStyles(obj);
-createStyles = fn(5191);
+createStyles = fn(4945);
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 });
-createStyles = fn(5191);
+createStyles = fn(4945);
 let obj4 = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
@@ -135,7 +135,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       ({ count, index, activeIndex, pressed, variant } = arg0);
       const tmp4 = closure_11();
       let obj = sharedValue(576);
-      sharedValue = sharedValue(4945).useSharedValue(0);
+      sharedValue = sharedValue(5014).useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function n() {
           const result = sharedValue.set(1);
@@ -151,7 +151,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
-      let obj2 = sharedValue(4945);
+      let obj2 = sharedValue(5014);
       const fn2 = function y() {
         const obj = { opacity: spring.withSpring(sharedValue.get(), closure_10), transform: null };
         const obj3 = { translateX: null };
@@ -164,12 +164,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items;
         return obj;
       };
-      const tmpResult = sharedValue(4945);
+      const tmpResult = sharedValue(5014);
       fn2.__closure = {
-        withSpring: sharedValue(5478).withSpring,
+        withSpring: sharedValue(5208).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: sharedValue(4945).interpolate,
+        interpolate: sharedValue(5014).interpolate,
       };
       fn2.__workletHash = 5074862072194;
       fn2.__initData = __initData3;
@@ -203,7 +203,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp17 = tmp20;
               }
               const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
-              const tmp16 = closure_6(tmp(5187).Text, obj5);
+              const tmp16 = closure_6(tmp(5195).Text, obj5);
               cResult[11] = tmp12;
               cResult[12] = count;
               cResult[13] = tmp16;
@@ -225,22 +225,22 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = obj6;
       tmp10 = obj6;
       let obj3 = {
-        withSpring: sharedValue(5478).withSpring,
+        withSpring: sharedValue(5208).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: sharedValue(4945).interpolate,
+        interpolate: sharedValue(5014).interpolate,
       };
     }
   : function TabItemCount(arg0) {
       let sharedValue;
       ({ count, index, activeIndex, pressed, variant } = arg0);
       const tmp = closure_11();
-      sharedValue = sharedValue(4945).useSharedValue(0);
+      sharedValue = sharedValue(5014).useSharedValue(0);
       let items = [sharedValue];
       const layoutEffect = noop.useLayoutEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj = sharedValue(4945);
+      let obj = sharedValue(5014);
       class I {
         constructor() {
           obj = { opacity: null, transform: null };
@@ -256,25 +256,25 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      let obj2 = sharedValue(4945);
+      let obj2 = sharedValue(5014);
       I.__closure = {
-        withSpring: sharedValue(5478).withSpring,
+        withSpring: sharedValue(5208).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: sharedValue(4945).interpolate,
+        interpolate: sharedValue(5014).interpolate,
       };
       I.__workletHash = 8384757524453;
       I.__initData = __initData4;
       const animatedStyle = obj2.useAnimatedStyle(I);
       let obj3 = {
-        withSpring: sharedValue(5478).withSpring,
+        withSpring: sharedValue(5208).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: sharedValue(4945).interpolate,
+        interpolate: sharedValue(5014).interpolate,
       };
       let obj4 = {
         style: null,
-        children: closure_6(sharedValue(5187).Text, {
+        children: closure_6(sharedValue(5195).Text, {
           animated: true,
           variant: "text-sm/medium",
           style: closure_16({ index, activeIndex, pressed, variant }),

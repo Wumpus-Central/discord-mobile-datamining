@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountSecurityKeysSettingTrailing() {
       const cResult = c.c(2);
@@ -100,7 +100,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(8260).MobileUserSettings.ACCOUNT,
+  parent: fn(8276).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountSecurityKeysSettingTrailing() {

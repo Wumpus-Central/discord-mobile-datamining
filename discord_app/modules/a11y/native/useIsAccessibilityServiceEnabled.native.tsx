@@ -1,6 +1,6 @@
 // discord_app/modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx
-import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled.native.tsx";
+import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import 00570__ from "../../../../_runtime/metro/00570__.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

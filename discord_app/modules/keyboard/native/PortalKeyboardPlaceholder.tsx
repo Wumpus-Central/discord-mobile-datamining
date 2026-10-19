@@ -7,8 +7,8 @@ import KeyboardTypes from "KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight.native.tsx";
 import useKeyboardTypeDefault from "useKeyboardType.tsx";
-import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight.tsx";
+import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverrides.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   let absoluteFillObject = null;
   if (obj.isIOS()) {

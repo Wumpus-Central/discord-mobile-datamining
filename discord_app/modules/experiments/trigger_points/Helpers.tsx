@@ -1,7 +1,7 @@
 // discord_app/modules/experiments/trigger_points/Helpers.tsx
 import ApexExperimentStore from "../apex/ApexExperimentStore.tsx";
 
-const CommonTriggerPoints = fn(5113).CommonTriggerPoints;
+const CommonTriggerPoints = fn(5152).CommonTriggerPoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {

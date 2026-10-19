@@ -11,12 +11,13 @@ import Server from "../../../flow/Server.tsx";
 import CommunicationDisabledUtils from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import GuildLeaderboardTypes from "../../guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import ReactionUtils from "../../reactions/ReactionUtils.tsx";
-import ToastUtils from "../../toast/native/ToastUtils.tsx";
-import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import Client from "../../../flow/Client.tsx";
-import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
+import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import MediaFormatTesters from "../MediaFormatTesters.tsx";
@@ -29,7 +30,6 @@ import ExplicitMediaRedactionModels from "../../explicit_media_redaction/Explici
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
-import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import Tracking from "../../forums/tracking/Tracking.tsx";
 import PopularMusicSystemMessageTypes from "../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
@@ -217,8 +217,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9683).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8014);
+let closure_5 = fn(9697).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8077);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1087);
 ({

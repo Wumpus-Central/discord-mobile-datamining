@@ -2,9 +2,9 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import LightbulbIcon from "../../../../design/components/Icon/native/redesign/generated/LightbulbIcon.tsx";
 import AnalyticsIcon from "../../../../design/components/Icon/native/redesign/generated/AnalyticsIcon.tsx";
@@ -88,7 +88,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { height: "100%" },
   contentPadding: { padding: 16 },

@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
-import _modDef2589 from "../FamilyCenter.messages.js";
+import _modDef2526 from "../FamilyCenter.messages.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
@@ -119,25 +119,25 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (readOnly === undefined) {
         readOnly = false;
       }
-      const scheduleRuleDateRange = rule(13514).getScheduleRuleDateRange(rule);
-      let obj = rule(13514);
-      const obj2 = rule(13514);
+      const scheduleRuleDateRange = rule(13548).getScheduleRuleDateRange(rule);
+      let obj = rule(13548);
+      const obj2 = rule(13548);
       const obj3 = {
         label: scheduleRuleDateRange,
-        subLabel: rule(13514).formatDays(rule.days),
+        subLabel: rule(13548).formatDays(rule.days),
         trailing: null,
         arrow: null,
         onPress: null,
       };
       const intl = rule(1128).intl;
       const string = intl.string;
-      const tmp4 = _modDef2589;
+      const tmp4 = _modDef2526;
       if (rule.enabled) {
         let stringResult = string(tmp4["8vDHRq"]);
       } else {
         stringResult = string(tmp4["4z9fN+"]);
       }
-      obj3.trailing = closure_5(rule(5187).Text, {
+      obj3.trailing = closure_5(rule(5195).Text, {
         variant: "text-sm/medium",
         color: "text-subtle",
         children: stringResult,
@@ -153,7 +153,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }
       obj3.onPress = fn;
-      return closure_5(rule(6457).TableRow, obj3);
+      return closure_5(rule(6851).TableRow, obj3);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };

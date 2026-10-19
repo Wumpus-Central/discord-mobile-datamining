@@ -66,7 +66,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp20 = jsx(onTrackPress(9327).NitroWheelIcon, { size: "sm", color: "white" });
+          const tmp20 = jsx(onTrackPress(9343).NitroWheelIcon, { size: "sm", color: "white" });
           cResult[7] = tmp20;
           let tmp18 = tmp20;
         } else {
@@ -112,7 +112,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
           obj2.disabled = stateFromStores;
-          const tmp24 = jsx(onTrackPress(5480).BaseTextButton, {
+          const tmp24 = jsx(onTrackPress(5206).BaseTextButton, {
             textElement: tmp14,
             text: tmp17,
             accessibilityLabel: tmp11,
@@ -155,7 +155,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
           allowFontScaling: false,
           children: tmp11,
         };
-        tmp15 = jsx(onTrackPress(5187).Text, {
+        tmp15 = jsx(onTrackPress(5195).Text, {
           variant: "text-xs/semibold",
           color: "text-overlay-light",
           allowFontScaling: false,

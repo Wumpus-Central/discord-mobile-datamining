@@ -2,8 +2,8 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UserUtilsDefault from "../utils/UserUtils.tsx";
 import shared from "../design/shared.tsx";
+import UserUtilsDefault from "../utils/UserUtils.tsx";
 import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import openQuarantineModeInfoModalDefault from "../modules/quarantine/openQuarantineModeInfoModal.native.tsx";
 import ContextMenuActionCreators from "ContextMenuActionCreators.tsx";
@@ -87,8 +87,8 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1087);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7294).ClearFriendRequestFilters;
-const SafetyToastType = fn(7295).SafetyToastType;
+const ClearFriendRequestFilters = fn(7361).ClearFriendRequestFilters;
+const SafetyToastType = fn(7362).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -216,7 +216,7 @@ let obj2 = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(5065).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = closure_0(4952).AccessibilityAnnouncer;
         const intl = closure_0(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(closure_0(1128).t.n6Jo3E));
       });
@@ -308,8 +308,8 @@ let obj2 = {
         obj3.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
       })
       .catch(() => {
-        channelId(7301).showFailedToast();
-        const AccessibilityAnnouncer = userId(5065).AccessibilityAnnouncer;
+        channelId(7368).showFailedToast();
+        const AccessibilityAnnouncer = userId(4952).AccessibilityAnnouncer;
         const intl = userId(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1128).t.n6Jo3E));
       });
@@ -334,8 +334,8 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7301).showFailedToast();
-        const AccessibilityAnnouncer = id(5065).AccessibilityAnnouncer;
+        channelId(7368).showFailedToast();
+        const AccessibilityAnnouncer = id(4952).AccessibilityAnnouncer;
         const intl = id(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(id(1128).t.n6Jo3E));
       });

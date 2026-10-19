@@ -289,10 +289,10 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   }
   closure_129_1 = navigationReplace;
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
-  return "Reflect";
+  return "test";
 };
-const isGuildVocalChannelType = fn(2072).isGuildVocalChannelType;
-const isGuildLurker = fn(2086).isGuildLurker;
+const isGuildVocalChannelType = fn(4804).isGuildVocalChannelType;
+const isGuildLurker = fn(4818).isGuildLurker;
 const Constants = fn(1087);
 ({ ChannelTypes: c10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);

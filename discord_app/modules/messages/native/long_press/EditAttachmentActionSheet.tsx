@@ -3,8 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -18,7 +18,7 @@ import MessageStore from "../../../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(5185).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(4950).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 let MessageAttachmentFlags = fn(1087).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7Result3 = first1(first2.useState(false), 2);
       first2 = tmp7Result3[0];
       closure_6 = tmp7Result3[1];
-      const tmp5 = attachment(8667)(attachment);
+      const tmp5 = attachment(8683)(attachment);
       [tmp17, c7] = first1(first2.useState(), 2);
       let intl = util.intl;
       let stringResult = intl.string(util.t.Y8ujqr);

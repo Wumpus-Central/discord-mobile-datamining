@@ -4,7 +4,7 @@ import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplic
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = rSUACb(1128);
-const HelpdeskUtilsDefault = tmp2(2131);
+const HelpdeskUtilsDefault = tmp2(2068);
 require = fn;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const ReactCompilerGating = fn(558);

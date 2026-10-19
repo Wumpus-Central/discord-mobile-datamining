@@ -4,8 +4,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -22,7 +22,7 @@ const Constants = fn(1087);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -377,12 +377,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != channel) {
         tmp9 = null;
         if (null != GuildStore.getGuild(channel.guild_id)) {
-          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6436).GuildIconSizes.LARGE };
+          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6831).GuildIconSizes.LARGE };
           tmp9 = React6(GuildIconDefault, obj2);
         }
       }
-      closure_13(tmp5(4903).presentFriendRequestAcceptedToast);
-      const obj3 = { header: React6(tmp5(7117).BottomSheetTitleHeader, { title: stringResult }), children: null };
+      closure_13(tmp5(5624).presentFriendRequestAcceptedToast);
+      const obj3 = { header: React6(tmp5(7194).BottomSheetTitleHeader, { title: stringResult }), children: null };
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
       let plainText;
@@ -403,10 +403,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp14Result2 = null != tmp8;
       if (tmp14Result2) {
         const obj8 = { variant: "text-md/normal", children: tmp8.visible };
-        tmp14Result2 = React6(tmp5(5187).Text, obj8);
+        tmp14Result2 = React6(tmp5(5195).Text, obj8);
       }
       items1[1] = tmp14Result2;
       obj4.children = items1;
       obj3.children = collapsed(View, obj4);
-      return React6(tmp5(7175).ActionSheet, obj3);
+      return React6(tmp5(7244).ActionSheet, obj3);
     };

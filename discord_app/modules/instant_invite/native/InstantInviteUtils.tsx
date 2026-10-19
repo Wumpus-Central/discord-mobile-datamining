@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/native/InstantInviteUtils.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import InviteCodeUtils from "../InviteCodeUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import StreamerApplicationSelectors from "../../go_live/utils/StreamerApplicationSelectors.tsx";
@@ -181,9 +181,9 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj3);
   const tmpResult = InviteCodeUtils;
 }
-const ChannelRecordBase = fn(2072).ChannelRecordBase;
-const InviteTargetTypes = fn(7689).InviteTargetTypes;
-const IOS_COPY_TO_PASTEBOARD = fn(8961).IOS_COPY_TO_PASTEBOARD;
+const ChannelRecordBase = fn(4804).ChannelRecordBase;
+const InviteTargetTypes = fn(7752).InviteTargetTypes;
+const IOS_COPY_TO_PASTEBOARD = fn(8977).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_14, InviteOptionsType: closure_15, Permissions: closure_16 } = Constants);
 const size = fn(2);

@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import DurationsDefault from "../../../utils/Durations.tsx";
 import native from "../../../design/void/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 let c7 = -120;
 let closure_8 = 6 * DurationsDefault.Millis.SECOND;
 let closure_9 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   voiceChannelEffectEmojiContainer: null,
   voiceChannelEffectEmojiContainerTileNotch: null,

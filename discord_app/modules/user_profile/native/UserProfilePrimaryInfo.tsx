@@ -3,9 +3,9 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
@@ -28,16 +28,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8581).getBadgeName;
-let Constants = fn(7181);
+const getBadgeName = fn(8597).getBadgeName;
+let Constants = fn(7250);
 ({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: closure_9, UserProfileThemeTypes } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_11, UserSettingsSections: closure_12 } = Constants);
-const GuildTagBadgeSize = fn(8155).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8592).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8218).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8608).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -100,7 +100,7 @@ const dependencyMap2 = {
     guildTagHorizontalPadding: 6,
   },
 };
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_20 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {
@@ -340,7 +340,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10566).EffectDisplayType.STATIC,
+          effectDisplayType: user(10580).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -366,7 +366,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10566).EffectDisplayType.STATIC,
+          effectDisplayType: user(10580).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -377,11 +377,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
         const items1 = [closure_14(UsernameWithEffectsDefault, obj8), renderBotTag()];
         if (showChevron) {
-          showChevron = closure_14(tmp13(10859).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+          showChevron = closure_14(tmp13(10871).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
         }
         items1[2] = showChevron;
         obj7.children = items1;
-        tmp12Result = closure_15(user(6462).PressableOpacity, obj7);
+        tmp12Result = closure_15(user(6856).PressableOpacity, obj7);
         tmp13 = user;
       }
       return tmp12Result;

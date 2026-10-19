@@ -1,8 +1,8 @@
 // discord_app/modules/haptics/HapticUtils.native.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import haptics_HapticFeedbackTypesDefault from "HapticFeedbackTypes.tsx";
-import Patterns from "../../../_runtime/05158_Patterns.js";
 import DeviceUtils from "../../utils/native/DeviceUtils.tsx";
+import haptics_HapticFeedbackTypesDefault from "HapticFeedbackTypes.tsx";
+import Patterns from "../../../_runtime/05175_Patterns.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");

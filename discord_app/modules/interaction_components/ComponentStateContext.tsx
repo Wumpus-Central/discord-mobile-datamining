@@ -593,11 +593,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      const obj5 = channel(8262);
-      const isThreadModerator = channel(7246).useIsThreadModerator(channel);
-      const tmpResult = channel(7246);
+      const obj5 = channel(8278);
+      const isThreadModerator = channel(7315).useIsThreadModerator(channel);
+      const tmpResult = channel(7315);
       let tmp9 = !stateFromStores;
-      const canUnarchiveThread = channel(7246).useCanUnarchiveThread(channel);
+      const canUnarchiveThread = channel(7315).useCanUnarchiveThread(channel);
       if (stateFromStores) {
         tmp9 = stateFromStores1;
       }
@@ -1038,7 +1038,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                   state: first1,
                   executeStateUpdate: tmp12,
                   isDisabled: false,
-                  visualState: tmp(5545).ActionComponentState.NORMAL,
+                  visualState: tmp(5977).ActionComponentState.NORMAL,
                   error,
                 };
                 class S {

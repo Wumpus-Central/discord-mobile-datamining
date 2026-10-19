@@ -5,12 +5,12 @@ import util from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import spring from "../../../animation/reanimated/spring/spring.tsx";
 import useAlertStore2 from "useAlertStore.native.tsx";
 import OverlayViewDefault from "../../../void/OverlayView/native/OverlayView.tsx";
 import Dialog from "../../Dialog/native/Dialog.native.tsx";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import Stack_Stack from "../../Stack/native/Stack.native.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -35,8 +35,8 @@ function dismissTopAlert() {
     if (first != null) {
       key = first.key;
     }
-    tmp(5401).dismissAlert(key);
-    const tmpResult = tmp(5401);
+    tmp(5865).dismissAlert(key);
+    const tmpResult = tmp(5865);
     tmp(1274).batchUpdates(() => {
       const useAlertStore = context(context2[13]).useAlertStore;
       return useAlertStore.setState({ alerts });
@@ -49,7 +49,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_9, StyleSheet: c10, ScrollView: closure_11 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 },
   content: null,
@@ -74,7 +74,7 @@ obj.body = { alignItems: "center" };
 obj.contentText = { textAlign: "center" };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
-let context = noop.createContext(fn(4922).TransitionStates.YEETED);
+let context = noop.createContext(fn(4999).TransitionStates.YEETED);
 let context2 = noop.createContext(fn(1098).NOOP);
 const context3 = noop.createContext(0);
 const context4 = noop.createContext("");
@@ -109,8 +109,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         first1 = cResult[0];
       }
       let obj = context(576);
-      const alertStore = context(5401).useAlertStore(first1);
-      const tmpResult = context(5401);
+      const alertStore = context(5865).useAlertStore(first1);
+      const tmpResult = context(5865);
       const fn2 = function f() {
         value = closure_2.get();
         if (typeof withAlertModalSpring === "function") {
@@ -136,13 +136,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           throw new TypeError("Trying to call a non-function");
         }
       };
-      const tmpResult2 = context(4945);
+      const tmpResult2 = context(5014);
       fn2.__closure = {
         withAlertModalSpring,
         sharedVisible: tmp5[1],
         sharedTransitionState,
-        TransitionStates: context(4922).TransitionStates,
-        runOnJS: context(4945).runOnJS,
+        TransitionStates: context(4999).TransitionStates,
+        runOnJS: context(5014).runOnJS,
         cleanUp: context,
       };
       fn2.__workletHash = 4470729133936;
@@ -166,7 +166,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp14;
       }
-      const tmp15 = closure_12(context(5463).Backdrop, {
+      const tmp15 = closure_12(context(5545).Backdrop, {
         blur: "strong",
         style: animatedStyle,
         onDismiss: tmp11,
@@ -182,7 +182,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = _slicedToArray(closure_35(), 2);
       const sharedTransitionState = tmp2[0];
       dependencyMap = tmp4;
-      const alertStore = context(5401).useAlertStore((arg0) => {
+      const alertStore = context(5865).useAlertStore((arg0) => {
         const first = arg0.alerts[0];
         let dismissable;
         if (first != null) {
@@ -190,7 +190,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return false !== dismissable;
       });
-      let obj = context(5401);
+      let obj = context(5865);
       let fn = function t() {
         value = closure_2.get();
         if (typeof withAlertModalSpring === "function") {
@@ -216,13 +216,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           throw new TypeError("Trying to call a non-function");
         }
       };
-      let obj2 = context(4945);
+      let obj2 = context(5014);
       fn.__closure = {
         withAlertModalSpring,
         sharedVisible: tmp2[1],
         sharedTransitionState,
-        TransitionStates: context(4922).TransitionStates,
-        runOnJS: context(4945).runOnJS,
+        TransitionStates: context(4999).TransitionStates,
+        runOnJS: context(5014).runOnJS,
         cleanUp: context,
       };
       fn.__workletHash = 10548540937715;
@@ -236,7 +236,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.onDismiss = tmp10;
       const intl = tmp5(1128).intl;
       obj4.accessibilityLabel = intl.string(context(1128).t.Xkfav5);
-      return closure_12(context(5463).Backdrop, obj4);
+      return closure_12(context(5545).Backdrop, obj4);
     };
 ReactCompilerGating = fn(558);
 const __initData3 = {
@@ -261,9 +261,9 @@ const memoResult = noop.memo(
           first = cResult[0];
         }
         let obj = items(576);
-        const alertStore = items(5401).useAlertStore(first);
-        const tmpResult = items(5401);
-        const sharedValue = items(4945).useSharedValue(0);
+        const alertStore = items(5865).useAlertStore(first);
+        const tmpResult = items(5865);
+        const sharedValue = items(5014).useSharedValue(0);
         if (cResult[1] !== alertStore) {
           if (0 === alertStore.length) {
             items = [];
@@ -363,13 +363,13 @@ const memoResult = noop.memo(
             }
           }
           let obj2 = { wrapChildren: A, items: cResult[2], renderItem: tmp16, getItemKey: getAlertModalItemKey };
-          const tmp20 = closure_12(tmp(4922).TransitionGroup, obj2);
+          const tmp20 = closure_12(tmp(4999).TransitionGroup, obj2);
           cResult[10] = cResult[2];
           cResult[11] = tmp16;
           cResult[12] = A;
           cResult[13] = tmp20;
         }
-        const tmpResult2 = items(4945);
+        const tmpResult2 = items(5014);
       }
     : function AlertModalContainer() {
         const tmp = closure_15();
@@ -1083,7 +1083,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         useAlertStore2.dismissAlert(context);
       }, items);
     };
-withAlertModalSpring.__closure = { withSpring: fn(5478).withSpring, MODAL_SPRING: obj3 };
+withAlertModalSpring.__closure = { withSpring: fn(5208).withSpring, MODAL_SPRING: obj3 };
 withAlertModalSpring.__workletHash = 7851172244290;
 withAlertModalSpring.__initData = {
   code: "function withAlertModalSpring_AlertModalNativeTsx5(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}",

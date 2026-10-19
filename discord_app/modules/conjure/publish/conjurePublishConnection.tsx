@@ -2,7 +2,6 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
-import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 
 require = fn;
@@ -326,12 +325,7 @@ export const draftPatchNotes = function draftPatchNotes(c0) {
       };
       const result = map1.set(closure_0, obj4);
       try {
-        const project = ConjureProjectStore.getProject(closure_0);
-        let name;
-        if (project != null) {
-          name = project.name;
-        }
-        conjureSocket.sendDraftPatchNotes(combined, name);
+        conjureSocket.sendDraftPatchNotes(combined);
       } catch (error) {
         obj2.delete(tmp4);
         obj.clearTimeout(tmp3);

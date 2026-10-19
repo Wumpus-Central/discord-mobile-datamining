@@ -4,8 +4,8 @@ import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import GuildRecord from "../../../records/GuildRecord.tsx";
-import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -130,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14081, dependencyMap.paths),
+      asyncRequireImpl(14114, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

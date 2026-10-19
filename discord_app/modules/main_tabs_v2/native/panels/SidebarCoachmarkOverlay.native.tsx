@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import LayerContext from "../../../../design/components/Layers/native/LayerContext.native.tsx";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

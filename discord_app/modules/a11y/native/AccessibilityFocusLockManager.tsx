@@ -1,7 +1,7 @@
 // discord_app/modules/a11y/native/AccessibilityFocusLockManager.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled.native.tsx";
+import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
 require = fn;
@@ -41,9 +41,9 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
     }
   }
   if (self._focusLockEnabled) {
-    item10014(5403).disableFocusLock();
+    item10014(5867).disableFocusLock();
     self._focusLockEnabled = false;
-    const obj = item10014(5403);
+    const obj = item10014(5867);
   }
 };
 prototype["_initialize"] = function _initialize() {

@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import UserSettings from "../user_settings/UserSettings.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import isClipsEnabled from "isClipsEnabled.tsx";
@@ -20,8 +20,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(7696).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8029);
+const getSystemAnalyticsInfo = fn(7759).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8092);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
@@ -31,7 +31,8 @@ const ClipsConstants = fn(8029);
 } = ClipsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6154).StreamTypes;
+const StreamTypes = fn(6591).StreamTypes;
+const Features = fn(5680).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -56,13 +57,22 @@ class ClipsManager extends tmp4 {
         return applyArgumentsResult.handleClipsAllowVoiceRecordingUpdate();
       },
       STREAM_START() {
-        return applyArgumentsResult.applyNativeClipsSettings();
+        const mediaEngine = MediaEngineStore.getMediaEngine();
+        if (!mediaEngine.supports(Features.UNIFIED_CAPTURE_BROKER)) {
+          const result = applyArgumentsResult.applyNativeClipsSettings();
+        }
       },
       STREAM_DELETE(arg0) {
-        return applyArgumentsResult.handleStreamEnded(arg0);
+        const mediaEngine = MediaEngineStore.getMediaEngine();
+        if (!mediaEngine.supports(Features.UNIFIED_CAPTURE_BROKER)) {
+          applyArgumentsResult.handleStreamEnded(arg0);
+        }
       },
       STREAM_CLOSE(arg0) {
-        return applyArgumentsResult.handleStreamEnded(arg0);
+        const mediaEngine = MediaEngineStore.getMediaEngine();
+        if (!mediaEngine.supports(Features.UNIFIED_CAPTURE_BROKER)) {
+          applyArgumentsResult.handleStreamEnded(arg0);
+        }
       },
       RUNNING_GAME_TOGGLE_DETECTION(arg0) {
         return applyArgumentsResult.handleClipsInitOnToggleDetection(arg0);
@@ -266,7 +276,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
                   });
                   return { gpuModels: closure_128_1, classification: tmp2.classifyHardware(closure_128_1) };
                 }
-                const processUtils = tmp3(closure_2_3[18]).processUtils;
+                const processUtils = tmp3(closure_2_3[19]).processUtils;
                 await processUtils.getSystemInfo();
                 const gpus2 = value.gpus;
                 closure_128_2 = gpus2.map((model) => model.model);
@@ -294,7 +304,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           gpuModels = closure_128_0.gpuModels;
           classification = closure_128_0.classification;
           const obj8 = { classification, version, gpu_models: gpuModels, clip_runtime };
-          tmp3(c3[15]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
+          tmp3(c3[16]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
           c3 = 0;
           c5 = 3;
           const obj = { value: classification, done: true };

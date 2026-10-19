@@ -1,10 +1,10 @@
 // discord_app/modules/forwarding/native/ForwardModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import ToastUtils from "../../toast/native/ToastUtils.tsx";
-import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(12692).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10520).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12712).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10534).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -425,9 +425,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (forwardOptions(source[27])(message, closure_129_1)) {
                       const promise = new Promise((arg0) => {
                         closure_0 = arg0;
-                        closure_1_0(5401).openAlert(
+                        closure_1_0(5865).openAlert(
                           "staff-to-non-staff-forward",
-                          closure_1_15(forwardOptions(12698), {
+                          closure_1_15(forwardOptions(12718), {
                             onConfirm() {
                               return closure_0(true);
                             },

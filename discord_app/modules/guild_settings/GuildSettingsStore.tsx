@@ -5,11 +5,11 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _modDef2050 from "../../../_runtime/metro/02050__.js";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import PlainRecord from "../../lib/PlainRecord.tsx";
 import GuildRecord from "../../records/GuildRecord.tsx";
-import _modDef4797 from "../../../_runtime/metro/04797__.js";
 import GlobalDiscoveryServersConstants from "../global_discovery_servers/GlobalDiscoveryServersConstants.tsx";
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils.tsx";
 import GuildSettingsVanityURLActionCreators from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
@@ -112,7 +112,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef4797(created_at);
+  obj.createdAt = _modDef2050(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

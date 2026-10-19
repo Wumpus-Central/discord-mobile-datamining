@@ -5,6 +5,7 @@ import EmbeddedAppTypes from "../../embedded_apps/EmbeddedAppTypes.tsx";
 import leaveEmbeddedActivity from "../leaveEmbeddedActivity.tsx";
 import makeIframeIdDefault from "../../embedded_apps/utils/makeIframeId.tsx";
 import createWebViewControllerDefault from "../../embedded_apps/native/utils/createWebViewController.tsx";
+import makeShellBridgeSecretDefault from "../../embedded_apps/shim_host/native/makeShellBridgeSecret.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 require = fn;
@@ -13,13 +14,18 @@ let result = size.fileFinishedImporting("modules/activities/native/activityWebVi
 
 export const getOrCreateActivityWebViewController = function getOrCreateActivityWebViewController(applicationId) {
   if (null != _undefined) {
-    return _undefined.iframeId;
+    const obj = { iframeId: _undefined.iframeId, shellBridgeSecret: _undefined.shellBridgeSecret };
+    return obj;
   } else {
-    let tmp5 = makeIframeIdDefault();
-    const obj = { contextSource: null, getOrigin: null, onDisallowedNavigation: null };
-    let obj2 = { type: EmbeddedAppTypes.EmbeddedContextSourceType.ACTIVITY, applicationId };
-    obj.contextSource = obj2;
-    obj.getOrigin = function getOrigin() {
+    let obj2 = { iframeId: null, shellBridgeSecret: null };
+    let obj3 = { contextSource: null, shellBridgeSecret: null, getOrigin: null, onDisallowedNavigation: null };
+    let obj4 = { type: null, applicationId: null };
+    const tmp6 = makeIframeIdDefault();
+    obj4.type = EmbeddedAppTypes.EmbeddedContextSourceType.ACTIVITY;
+    obj4.applicationId = applicationId;
+    obj3.contextSource = obj4;
+    obj3.shellBridgeSecret = makeShellBridgeSecretDefault();
+    obj3.getOrigin = function getOrigin() {
       const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
       let tmp2;
       if (null != connectedActivityLocation) {
@@ -33,7 +39,7 @@ export const getOrCreateActivityWebViewController = function getOrCreateActivity
       }
       return tmp2;
     };
-    obj.onDisallowedNavigation = function onDisallowedNavigation() {
+    obj3.onDisallowedNavigation = function onDisallowedNavigation() {
       const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
       let tmp2;
       if (null != connectedActivityLocation) {
@@ -57,8 +63,11 @@ export const getOrCreateActivityWebViewController = function getOrCreateActivity
       }
       tmp5 = null != connectedActivityLocation && null != tmp2;
     };
-    _undefined = createWebViewControllerDefault(tmp5, obj);
-    return tmp5;
+    const tmp7Result = createWebViewControllerDefault(tmp6, obj3);
+    _undefined = tmp7Result;
+    obj2.iframeId = tmp7Result.iframeId;
+    obj2.shellBridgeSecret = _undefined.shellBridgeSecret;
+    return obj2;
   }
 };
 export const releaseActivityWebView = function releaseActivityWebView() {

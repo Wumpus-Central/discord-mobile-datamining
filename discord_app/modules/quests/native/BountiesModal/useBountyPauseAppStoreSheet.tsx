@@ -9,7 +9,7 @@ import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOver
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(6228).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6658).QuestsExperimentLocations;
 const ComponentActions = fn(1087).ComponentActions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

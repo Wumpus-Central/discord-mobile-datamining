@@ -6,10 +6,10 @@ import util from "../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
 import UserSettings from "../../../../user_settings/UserSettings.tsx";
 import ReactionUtils from "../../../../reactions/ReactionUtils.tsx";
+import MessageReactionsTypes from "../../../../messages/MessageReactionsTypes.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
-import MessageReactionsTypes from "../../../../messages/MessageReactionsTypes.tsx";
 import reactions_ReactionUtils from "../../../../reactions/native/ReactionUtils.tsx";
 import useEmojiColorPalette from "../../../../emojis/hooks/useEmojiColorPalette.tsx";
 import useReactionPermissionsDefault from "../../../../messages/useReactionPermissions.tsx";
@@ -105,7 +105,7 @@ class BurstReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     display: "flex",

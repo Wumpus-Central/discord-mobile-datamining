@@ -9,7 +9,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 let closure_3 = ["channelId", "messageId", "emoji", "isFullscreen", "onComplete", "withFadeOut"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (null == burstReactionAnimationSource) {
               return null;
             } else {
-              const tmp25 = importDefault(tmp14 ? 8236 : 6385);
+              const tmp25 = importDefault(tmp14 ? 5188 : 5189);
               if (cResult[15] === tmp8) {
                 if (cResult[16] === tmp14) {
                   let num13 = 1.2;
@@ -157,6 +157,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(obj3);
         obj4.source = burstReactionAnimationSource;
-        return jsx(importDefault(withFadeOut ? 8236 : 6385), { style: tmp2.content, loop: false, speed: null });
+        return jsx(importDefault(withFadeOut ? 5188 : 5189), { style: tmp2.content, loop: false, speed: null });
       }
     };

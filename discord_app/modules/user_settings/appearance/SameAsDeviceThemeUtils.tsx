@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx
 import ClientThemesUtils from "../../client_themes/ClientThemesUtils.tsx";
-import ThemeActionCreators from "../ThemeActionCreators.tsx";
 import shared from "../../../design/shared.tsx";
+import ThemeActionCreators from "../ThemeActionCreators.tsx";
 import UserSettingsActionCreatorsDefault from "../../../actions/UserSettingsActionCreators.tsx";
 import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgroundStore.tsx";
 import ThemeStore from "../ThemeStore.tsx";

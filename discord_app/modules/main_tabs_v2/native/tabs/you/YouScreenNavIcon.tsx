@@ -13,13 +13,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(13932).ICON_SIZE.md;
+const md = fn(13966).ICON_SIZE.md;
 const padding = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
 let c8 = "text-default";
-const point = { shape: fn(9308).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(9324).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_10 = createStyles.createStyles((width) => {
   const obj = {
     borderRadius: nativeDefault.modules.button.BORDER_RADIUS,
@@ -57,8 +57,8 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function YouScreenNavIcon(arg0) {
-        const cResult = c.c(22);
-        ({ onPress, IconComponent, accessibilityLabel, label, showRedDot, ref } = arg0);
+        const cResult = c.c(23);
+        ({ onPress, IconComponent, accessibilityLabel, label, showRedDot, ref, testID } = arg0);
         const youScreenNavIconMeasurement = YouScreenNavIconMeasurer.useYouScreenNavIconMeasurement();
         const containerRef = youScreenNavIconMeasurement.containerRef;
         const tmp6 = closure_10(youScreenNavIconMeasurement.width);
@@ -108,9 +108,11 @@ export default noop.memo(
                         if (cResult[18] === tmp6.container) {
                           if (cResult[19] === tmp20) {
                             if (cResult[20] === tmp23) {
-                              let tmp27 = cResult[21];
+                              if (cResult[21] === testID) {
+                                let tmp27 = cResult[22];
+                              }
+                              return tmp27;
                             }
-                            return tmp27;
                           }
                         }
                       }
@@ -125,6 +127,7 @@ export default noop.memo(
                   accessibilityValue: tmp18,
                   onPress,
                   hitSlop: nativeDefault.space.PX_8,
+                  testID,
                   children: null,
                 };
                 items = [tmp11, tmp23];
@@ -137,7 +140,8 @@ export default noop.memo(
                 cResult[18] = tmp6.container;
                 cResult[19] = tmp20;
                 cResult[20] = tmp23;
-                cResult[21] = tmp30;
+                cResult[21] = testID;
+                cResult[22] = tmp30;
                 tmp27 = tmp30;
               }
               const obj5 = {
@@ -179,12 +183,13 @@ export default noop.memo(
         tmp11 = tmp12;
         const tmpResult = YouScreenNavIconMeasurer;
       }
-    : function YouScreenNavIcon(ref) {
-        ({ accessibilityLabel, label, showRedDot } = ref);
-        ({ onPress, IconComponent } = ref);
+    : function YouScreenNavIcon(arg0) {
+        ({ accessibilityLabel, label, showRedDot } = arg0);
+        ({ onPress, IconComponent } = arg0);
         if (showRedDot === undefined) {
           showRedDot = false;
         }
+        ({ ref, testID } = arg0);
         const youScreenNavIconMeasurement = YouScreenNavIconMeasurer.useYouScreenNavIconMeasurement();
         const tmp4 = closure_10(youScreenNavIconMeasurement.width);
         const tmp6 = React4(IconComponent, { size: "md", color: TEXT_DEFAULT });
@@ -213,15 +218,17 @@ export default noop.memo(
           accessibilityValue: null,
           onPress: null,
           hitSlop: null,
+          testID: null,
           children: null,
         };
         const obj2 = { size: "md", color: TEXT_DEFAULT };
-        obj7.ref = mergeProps.mergeRefs(ref.ref, youScreenNavIconMeasurement.containerRef);
+        obj7.ref = mergeProps.mergeRefs(ref, youScreenNavIconMeasurement.containerRef);
         obj7.style = tmp4.container;
         obj7.accessibilityLabel = accessibilityLabel;
         obj7.accessibilityValue = tmp12;
         obj7.onPress = onPress;
         obj7.hitSlop = nativeDefault.space.PX_8;
+        obj7.testID = testID;
         const items1 = [tmp7];
         const obj8 = {
           style: tmp4.label,

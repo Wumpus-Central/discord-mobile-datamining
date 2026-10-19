@@ -10,9 +10,9 @@ export default function findCodedLinkUrls(content) {
     let items = findCodedLinkUrlsUsingRegexDefault(content);
   } else {
     items = [];
-    const _default = tmp(5179).default;
-    const parseToASTResult = tmp(5179).default.parseToAST(content, true, { allowLinks: true });
-    tmp(8274).walkAst(parseToASTResult, (type) => {
+    const _default = tmp(5667).default;
+    const parseToASTResult = tmp(5667).default.parseToAST(content, true, { allowLinks: true });
+    tmp(8290).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === MarkupTypes.AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -21,7 +21,7 @@ export default function findCodedLinkUrls(content) {
         items.push(type.target);
       }
     });
-    const tmpResult = tmp(8274);
+    const tmpResult = tmp(8290);
   }
   return items;
 }

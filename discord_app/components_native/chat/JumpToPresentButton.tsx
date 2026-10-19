@@ -8,11 +8,11 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9683);
+let useChatBottomManagerUIStore = fn(9697);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.round,
@@ -225,10 +225,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp;
       });
       const obj = channelId(504);
-      const isVoicePanelMounted = channelId(11418).useIsVoicePanelMounted(channelId);
-      const obj2 = channelId(11418);
-      const isVoicePanelOpen = channelId(11418).useIsVoicePanelOpen(channelId);
-      const obj3 = channelId(11418);
+      const isVoicePanelMounted = channelId(11439).useIsVoicePanelMounted(channelId);
+      const obj2 = channelId(11439);
+      const isVoicePanelOpen = channelId(11439).useIsVoicePanelOpen(channelId);
+      const obj3 = channelId(11439);
       const items1 = [MessageStore];
       const stateFromStores = channelId(504).useStateFromStores(
         items1,
@@ -255,15 +255,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [tmp.container, tmp10];
       obj5.style = items3;
       if (tmp5) {
-        const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12927), onPress: channelId.onJumpToPresent };
-        let tmp12Result = jsx(screenIndex(12926), {
+        const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12959), onPress: channelId.onJumpToPresent };
+        let tmp12Result = jsx(screenIndex(12958), {
           accessibilityLabel: stringResult,
-          icon: screenIndex(12927),
+          icon: screenIndex(12959),
           onPress: channelId.onJumpToPresent,
         });
-        const tmp16 = screenIndex(12926);
+        const tmp16 = screenIndex(12958);
       } else {
-        tmp12Result = jsx(tmp3(12928).MemoedVoicePanelDismissChatButton, {});
+        tmp12Result = jsx(tmp3(12960).MemoedVoicePanelDismissChatButton, {});
       }
       obj5.children = tmp12Result;
       return <View style={null}>{null}</View>;

@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import CheckpointExperiments from "../CheckpointExperiments.tsx";
-import openCheckpointModalDefault from "components/openCheckpointModal.tsx";
+import openCheckpoint from "../openCheckpoint.native.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
@@ -24,8 +24,9 @@ export const onTapCheckpointCard = function onTapCheckpointCard(arg0) {
     }
     const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
     obj2.track(AnalyticEvents.CHECKPOINT_CARD_CLICKED, obj3);
-    openCheckpointModalDefault("message_component");
-    const tmpResult2 = AppAnalyticsUtils;
+    const tmpResult3 = AppAnalyticsUtils;
+    openCheckpoint.openCheckpoint("message_component");
+    const tmpResult4 = openCheckpoint;
   }
   obj = CheckpointExperiments;
 };

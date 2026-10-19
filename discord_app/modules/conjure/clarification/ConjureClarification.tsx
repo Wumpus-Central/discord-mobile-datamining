@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/ConjureClarification.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -16,13 +16,13 @@ let closure_5 = {
 };
 let closure_6 = { channel: "#", role: "@", user: "@", project: "" };
 let obj = { channel: null, role: null, user: null, project: null };
-let items = [_modDef3883["9+dfPT"], _modDef3883.pGSJqE];
+let items = [_modDef3820["9+dfPT"], _modDef3820.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3883["2VkCoD"], _modDef3883.c8YlX8];
+let items1 = [_modDef3820["2VkCoD"], _modDef3820.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3883.GZIAxl, _modDef3883["4bptbQ"]];
+let items2 = [_modDef3820.GZIAxl, _modDef3820["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3883.twlOb6, _modDef3883.twlOb6];
+const items3 = [_modDef3820.twlOb6, _modDef3820.twlOb6];
 obj.project = items3;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
@@ -40,7 +40,7 @@ export const clarificationDraftPlaceholder = function clarificationDraftPlacehol
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef3883;
+  const tmp4 = _modDef3820;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 };
 export const isClarificationComplete = function isClarificationComplete(questions, arg1) {

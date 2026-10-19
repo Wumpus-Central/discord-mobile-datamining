@@ -2,8 +2,8 @@
 import LogAggregator from "../../../debug/LogAggregator.tsx";
 import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(6579).InputHeights.MD,
-  width: fn(6579).InputHeights.MD,
+  height: fn(6972).InputHeights.MD,
+  width: fn(6972).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };

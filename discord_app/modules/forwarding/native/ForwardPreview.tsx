@@ -5,8 +5,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import utils_ImageUtilsDefault from "../../../utils/native/ImageUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import checkpoint_CheckpointMessageComponentUtils from "../../checkpoint/CheckpointMessageComponentUtils.tsx";
 import ImageIcon from "../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -27,7 +27,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = new tmp4(8013)();
+            const obj3 = new tmp4(8076)();
             obj3.setOptions({
               renderEmbeds: false,
               renderReactions: false,
@@ -141,7 +141,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               message: tmp15,
               rowGenerator: tmp10,
             };
-            const tmp19 = closure_5(tmp4(9673), obj2);
+            const tmp19 = closure_5(tmp4(9687), obj2);
             cResult[10] = tmp8;
             cResult[11] = tmp15;
             cResult[12] = tmp19;
@@ -174,12 +174,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = fn;
       }
       const obj = attachmentCount(576);
-      const tmp7 = attachmentCount(5191).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
+      const tmp7 = attachmentCount(4945).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
       cResult[0] = TEXT_SUBTLE;
       cResult[1] = tmp5;
       cResult[2] = tmp7;
       tmp6 = tmp7;
-      const tmpResult = attachmentCount(5191);
+      const tmpResult = attachmentCount(4945);
     }
   : function MessagePreview(content) {
       ({ message, attachmentCount } = content);
@@ -190,7 +190,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         TEXT_SUBTLE = tmp(587).colors.TEXT_SUBTLE;
       }
       const tmp3 = useThemeDefault();
-      const tmp4 = attachmentCount(5191).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+      const tmp4 = attachmentCount(4945).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
       importDefault = tmp4;
       const items = [tmp4.seeMoreLabelColor, attachmentCount];
       const callback = noop.useCallback((message) => {
@@ -245,7 +245,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         message: null,
         rowGenerator: null,
       };
-      let obj = attachmentCount(5191);
+      let obj = attachmentCount(4945);
       const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
       obj2.message = message.merge(obj3);
       obj2.rowGenerator = memo;

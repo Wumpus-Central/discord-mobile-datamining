@@ -55,8 +55,6 @@ export default {
     return Promise.reject(error);
   },
   getDetectableGames() {},
-  reportUnverifiedGame() {},
-  uploadIcon() {},
   deleteEntry() {},
   launch() {
     return Promise.resolve();
@@ -118,8 +116,8 @@ export default {
                       const join_url = body.body.join_url;
                       const secret = body.body.secret;
                       if (null != join_url) {
-                        activityChannelId(4901).openURL(join_url, constants2.SAFARI);
-                        const obj3 = activityChannelId(4901);
+                        activityChannelId(5622).openURL(join_url, constants2.SAFARI);
+                        const obj3 = activityChannelId(5622);
                         const obj2 = {
                           type: "ACTIVITY_JOIN",
                           applicationId: null,
@@ -148,8 +146,8 @@ export default {
                         const _HermesInternal = HermesInternal;
                         const combined =
                           "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                        activityChannelId(4901).openURL(combined, constants2.SAFARI);
-                        const obj6 = activityChannelId(4901);
+                        activityChannelId(5622).openURL(combined, constants2.SAFARI);
+                        const obj6 = activityChannelId(5622);
                         const obj12 = {
                           type: "ACTIVITY_JOIN",
                           applicationId: null,

@@ -1,6 +1,6 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef4797 from "../../../_runtime/metro/04797__.js";
+import _modDef2050 from "../../../_runtime/metro/02050__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import AuthSessionsStore from "AuthSessionsStore.tsx";
@@ -89,8 +89,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef4797(arg0).fromNow();
-    const obj = _modDef4797(arg0);
+    stringResult = _modDef2050(arg0).fromNow();
+    const obj = _modDef2050(arg0);
   }
   return stringResult;
 };

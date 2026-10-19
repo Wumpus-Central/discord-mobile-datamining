@@ -83,7 +83,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17137);
+const JankScreenConstants = fn(17166);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
@@ -180,21 +180,18 @@ export const setJankVoicePanelFocus = function setJankVoicePanelFocus(arg0) {
 };
 export const attachJankActionSheetReporter = function attachJankActionSheetReporter() {
   if (!c15) {
-    if (obj.isAndroid()) {
-      c15 = true;
-      let length = ActionSheetStore.getStack().length;
-      ActionSheetStore.addChangeListener(() => {
-        length = ActionSheetStore.getStack().length;
-        const tmp2 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
-        const obj = NativeJankSessionModuleDefault;
-        if (tmp) {
-          obj.surfaceClosed(tmp2);
-        } else {
-          obj.setScreenContext(tmp2, timestampProducer);
-        }
-        tmp = length < length;
-      });
-    }
-    obj = length(1384);
+    c15 = true;
+    ActionSheetStore.getStack().length;
+    ActionSheetStore.addChangeListener(() => {
+      length = ActionSheetStore.getStack().length;
+      const tmp2 = composeJankSurfaceName(getJankScreenName.getBaseScreenName);
+      const obj = NativeJankSessionModuleDefault;
+      if (tmp) {
+        obj.surfaceClosed(tmp2);
+      } else {
+        obj.setScreenContext(tmp2, timestampProducer);
+      }
+      tmp = length < length;
+    });
   }
 };

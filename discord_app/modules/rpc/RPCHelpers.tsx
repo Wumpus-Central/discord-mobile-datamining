@@ -3,8 +3,8 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import UrlDefault from "../../../_runtime/01389_Url.js";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
@@ -242,8 +242,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(2072).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(5895);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4804).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6332);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1087);
 ({
@@ -372,7 +372,7 @@ export const transformChannel = function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(5509).getName(dependencyMap, id.id, user),
+            nick: closure_1(5944).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -381,7 +381,7 @@ export const transformChannel = function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9167)(user);
+          obj.user = closure_1(9183)(user);
           return obj;
         }
       });

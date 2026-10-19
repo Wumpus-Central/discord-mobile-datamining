@@ -12,17 +12,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(7208).WishlistRecommendationReason;
+let constants = fn(7277).WishlistRecommendationReason;
 const PremiumConstants = fn(1394);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1089).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8581).UserProfileSections;
+const UserProfileSections = fn(8597).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = {
     title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 },
@@ -448,6 +448,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                                 const obj15 = {
                                   style: wishlistItemShadow.title,
                                   variant: "text-lg/semibold",
+                                  accessibilityRole: "header",
                                   children: tmp21,
                                 };
                                 const tmp33 = closure_14(tmp(WISHLIST_IN_DM_LENGTH_MOBILE[29]).Text, obj15);
@@ -1063,7 +1064,12 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
         if (totalUnownedWishlistItemCount > WISHLIST_IN_DM_LENGTH_MOBILE) {
           sku = memo[WISHLIST_IN_DM_LENGTH_MOBILE - 1];
         }
-        let obj6 = { style: tmp12.title, variant: "text-lg/semibold", children: obj5.title };
+        let obj6 = {
+          style: tmp12.title,
+          variant: "text-lg/semibold",
+          accessibilityRole: "header",
+          children: obj5.title,
+        };
         const items5 = [closure_14(tmp(tmp19Result3[29]).Text, obj6), ,];
         let obj7 = { style: tmp12.subtitle, variant: "text-sm/medium", color: "text-muted", children: subtitle };
         items5[1] = closure_14(tmp(tmp19Result3[29]).Text, obj7);

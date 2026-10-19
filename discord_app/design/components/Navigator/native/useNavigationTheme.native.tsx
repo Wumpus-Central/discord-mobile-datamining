@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Link from "../../../../../_runtime/01506_Link.js";
-import useToken from "../../../tokens/native/useToken.tsx";
 import shared from "../../../shared.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;

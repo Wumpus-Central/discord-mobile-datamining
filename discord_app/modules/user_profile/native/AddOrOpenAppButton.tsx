@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/AddOrOpenAppButton.tsx
 import c from "../../../../_runtime/00576_c.js";
-import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ApplicationUtils from "../../../utils/native/ApplicationUtils.tsx";
 import getApplicationInstallURL from "../../applications/getApplicationInstallURL.tsx";
@@ -11,7 +11,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const getSection = fn(9549).getSection;
+const getSection = fn(9564).getSection;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
 const jsx = fn(21).jsx;
@@ -44,7 +44,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const customInstallUrl = application.customInstallUrl;
               if (null != customInstallUrl) {
                 if (!obj2.isDiscordUrl(customInstallUrl)) {
-                  let PlusSmallIcon = tmp(7972).LinkExternalSmallIcon;
+                  let PlusSmallIcon = tmp(8035).LinkExternalSmallIcon;
                 }
                 const _Symbol = Symbol;
                 if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -191,7 +191,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   onAccessibilityAction: C,
                   icon: tmp13,
                 };
-                const tmp18 = jsx(tmp(5479).Button, {
+                const tmp18 = jsx(tmp(5205).Button, {
                   text: tmp11,
                   onPress: tmp4,
                   onLongPress: tmp5,
@@ -206,7 +206,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp18;
                 obj2 = guildId(1386);
               }
-              PlusSmallIcon = tmp(9371).PlusSmallIcon;
+              PlusSmallIcon = tmp(9387).PlusSmallIcon;
             }
           }
         }
@@ -264,7 +264,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const customInstallUrl = application.customInstallUrl;
       if (null != customInstallUrl) {
         if (!obj2.isDiscordUrl(customInstallUrl)) {
-          let PlusSmallIcon = application(7972).LinkExternalSmallIcon;
+          let PlusSmallIcon = application(8035).LinkExternalSmallIcon;
           let tmp6 = application;
         }
         const items1 = [application];
@@ -298,7 +298,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.onAccessibilityAction = callback1;
         const obj4 = { size: "sm", color: guildId(587).colors.WHITE };
         obj3.icon = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
-        return jsx(tmp6(5479).Button, {
+        return jsx(tmp6(5205).Button, {
           text: null,
           onPress: null,
           onLongPress: null,
@@ -307,7 +307,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           icon: null,
         });
       }
-      PlusSmallIcon = application(9371).PlusSmallIcon;
+      PlusSmallIcon = application(9387).PlusSmallIcon;
       tmp6 = application;
     };
 ReactCompilerGating = fn(558);
@@ -539,18 +539,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   if (application1 == null) {
                     c3 = 1;
                     c4 = 1;
-                    const obj7 = { value: tmp2(6357).fetchApplication(profileApplication.id), done: false };
+                    const obj7 = { value: tmp2(6757).fetchApplication(profileApplication.id), done: false };
                     return obj7;
                   } else {
                     closure_129_1 = closure_0;
                     closure_130_3(false);
                     if (null != closure_129_0) {
-                      tmp2(5155).hideAllActionSheets();
-                      const obj5 = tmp2(5155);
+                      tmp2(5171).hideAllActionSheets();
+                      const obj5 = tmp2(5171);
                       const obj8 = { recipientIds: closure_130_1 };
                       c3 = 2;
                       c4 = 1;
-                      const obj10 = { value: tmp2(7290).openPrivateChannel(obj8), done: false };
+                      const obj10 = { value: tmp2(7357).openPrivateChannel(obj8), done: false };
                       return obj10;
                     } else {
                       c4 = 3;

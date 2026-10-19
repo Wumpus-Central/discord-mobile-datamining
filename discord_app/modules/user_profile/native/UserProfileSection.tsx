@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileSection.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useProfileThemeValues from "../useProfileThemeValues.native.tsx";
 import FormDivider from "../../../design/void/Form/native/FormDivider.tsx";
@@ -14,7 +14,7 @@ let closure_2 = ["title", "headerIcon", "trailingIcon", "showContainer", "childr
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" },
   title: { flexDirection: "row" },

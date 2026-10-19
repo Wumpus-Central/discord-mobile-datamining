@@ -1,7 +1,7 @@
 // discord_app/design/void/ThemedIcon/native/ThemedIcon.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import useToken from "../../../tokens/native/useToken.tsx";
 import IconDefault from "../../Icon/native/Icon.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

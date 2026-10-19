@@ -1,7 +1,7 @@
 // discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import native from "../../../utils/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import native from "../../../utils/native.tsx";
 import TableRow from "TableRow.native.tsx";
 import TableRadioGroup from "TableRadioGroup.native.tsx";
 import FormRadio from "../../Forms/native/FormRadio.native.tsx";

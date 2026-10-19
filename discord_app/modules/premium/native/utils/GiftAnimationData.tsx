@@ -1,20 +1,6 @@
 // discord_app/modules/premium/native/utils/GiftAnimationData.tsx
 import PremiumConstants from "../../PremiumConstants.tsx";
 import PremiumGiftingUtils from "../../PremiumGiftingUtils.tsx";
-import _mod10492 from "../../../../../_runtime/metro/10492__.js";
-import _mod10493 from "../../../../../_runtime/metro/10493__.js";
-import _mod10494 from "../../../../../_runtime/metro/10494__.js";
-import _mod10495 from "../../../../../_runtime/metro/10495__.js";
-import _mod10496 from "../../../../../_runtime/metro/10496__.js";
-import _mod10497 from "../../../../../_runtime/metro/10497__.js";
-import _mod10498 from "../../../../../_runtime/metro/10498__.js";
-import _mod10499 from "../../../../../_runtime/metro/10499__.js";
-import _mod10500 from "../../../../../_runtime/metro/10500__.js";
-import _mod10501 from "../../../../../_runtime/metro/10501__.js";
-import _mod10502 from "../../../../../_runtime/metro/10502__.js";
-import _mod10503 from "../../../../../_runtime/metro/10503__.js";
-import _mod10504 from "../../../../../_runtime/metro/10504__.js";
-import _mod10505 from "../../../../../_runtime/metro/10505__.js";
 import _mod10506 from "../../../../../_runtime/metro/10506__.js";
 import _mod10507 from "../../../../../_runtime/metro/10507__.js";
 import _mod10508 from "../../../../../_runtime/metro/10508__.js";
@@ -25,6 +11,20 @@ import _mod10512 from "../../../../../_runtime/metro/10512__.js";
 import _mod10513 from "../../../../../_runtime/metro/10513__.js";
 import _mod10514 from "../../../../../_runtime/metro/10514__.js";
 import _mod10515 from "../../../../../_runtime/metro/10515__.js";
+import _mod10516 from "../../../../../_runtime/metro/10516__.js";
+import _mod10517 from "../../../../../_runtime/metro/10517__.js";
+import _mod10518 from "../../../../../_runtime/metro/10518__.js";
+import _mod10519 from "../../../../../_runtime/metro/10519__.js";
+import _mod10520 from "../../../../../_runtime/metro/10520__.js";
+import _mod10521 from "../../../../../_runtime/metro/10521__.js";
+import _mod10522 from "../../../../../_runtime/metro/10522__.js";
+import _mod10523 from "../../../../../_runtime/metro/10523__.js";
+import _mod10524 from "../../../../../_runtime/metro/10524__.js";
+import _mod10525 from "../../../../../_runtime/metro/10525__.js";
+import _mod10526 from "../../../../../_runtime/metro/10526__.js";
+import _mod10527 from "../../../../../_runtime/metro/10527__.js";
+import _mod10528 from "../../../../../_runtime/metro/10528__.js";
+import _mod10529 from "../../../../../_runtime/metro/10529__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
@@ -43,67 +43,67 @@ export const getLottieType = function getLottieType(giftStyle) {
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10492;
+      return _mod10506;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10493;
+      return _mod10507;
     } else {
-      return _mod10494;
+      return _mod10508;
     }
   } else if (PremiumGiftStyles.CAKE === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10495;
+      return _mod10509;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10496;
+      return _mod10510;
     } else {
-      return _mod10497;
+      return _mod10511;
     }
   } else if (PremiumGiftStyles.CHEST === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10498;
+      return _mod10512;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10499;
+      return _mod10513;
     } else {
-      return _mod10500;
+      return _mod10514;
     }
   } else if (PremiumGiftStyles.COFFEE === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10501;
+      return _mod10515;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10502;
+      return _mod10516;
     } else {
-      return _mod10503;
+      return _mod10517;
     }
   } else if (PremiumGiftStyles.SEASONAL_STANDARD_BOX === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10504;
+      return _mod10518;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10505;
+      return _mod10519;
     } else {
-      return _mod10506;
+      return _mod10520;
     }
   } else if (PremiumGiftStyles.SEASONAL_CAKE === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10507;
+      return _mod10521;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10508;
+      return _mod10522;
     } else {
-      return _mod10509;
+      return _mod10523;
     }
   } else if (PremiumGiftStyles.SEASONAL_CHEST === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10510;
+      return _mod10524;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10511;
+      return _mod10525;
     } else {
-      return _mod10512;
+      return _mod10526;
     }
   } else if (PremiumGiftStyles.SEASONAL_COFFEE === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10513;
+      return _mod10527;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10514;
+      return _mod10528;
     } else {
-      return _mod10515;
+      return _mod10529;
     }
   } else {
     if (PremiumGiftStyles.SNOWGLOBE !== giftStyle) {

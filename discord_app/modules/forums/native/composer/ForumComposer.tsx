@@ -9,8 +9,8 @@ import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js"
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import sanitizeThreadNameDefault from "../../../threads/sanitizeThreadName.tsx";
 import MessageParser from "../../../messages/MessageParser.tsx";
 import Tracking from "../../tracking/Tracking.tsx";
@@ -106,7 +106,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9365).TagIcon;
+      obj6.IconComponent = tmp2(9381).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -136,12 +136,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1631).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1631).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(10785, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(10798, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7365).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7431).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10012).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10026).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -153,9 +153,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1128).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1128).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9252).ReactionIcon;
+      obj7.IconComponent = tmp2(9268).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7365).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7431).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -173,13 +173,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(8471).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(8487).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5479).Button, obj9);
+    obj8.children = closure_29(tmp2(5205).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -193,9 +193,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(13752).KeyboardIcon;
+      let ImageIcon = tmp2(13786).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(8487).ImageIcon;
+      ImageIcon = tmp2(8503).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -207,7 +207,7 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7365).HeaderActionButton, obj11);
+    closure_29(tmp2(7431).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -219,12 +219,12 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(7510).DraftType;
-const SlowmodeType = fn(7640).SlowmodeType;
+const DraftType = fn(7577).DraftType;
+const SlowmodeType = fn(7703).SlowmodeType;
 let Constants = fn(1087);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(2075).ChannelFlags;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ChannelFlags = fn(4807).ChannelFlags;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 let closure_27 = fn(1127).OpenThreadAnalyticsLocations;
 Constants = fn(1098);
@@ -232,7 +232,7 @@ Constants = fn(1098);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -848,7 +848,7 @@ export default function ForumComposer(parentChannel) {
             let content;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "test", done: true };
           }
         } else {
           if (1 === tmp8) {

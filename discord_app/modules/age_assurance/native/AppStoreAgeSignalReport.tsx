@@ -258,8 +258,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(6177).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(6177);
+      result = tmp4(5605).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5605);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

@@ -4,13 +4,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
 import themes from "../../../../design/utils/shared/themes.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05491_LinearGradient.js";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
+import LinearGradientDefault from "../../../../../_runtime/05219_LinearGradient.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
 import guild_profile_GuildProfileUtils from "../GuildProfileUtils.tsx";
 import GuildProfileHeaderDefault from "GuildProfileHeader.tsx";
@@ -24,7 +24,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   colorBanner: { height: 140, width: "100%" },
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp5Result) {
         const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-        tmp5Result = closure_7(guildProfile(5187).Text, obj3);
+        tmp5Result = closure_7(guildProfile(5195).Text, obj3);
       }
       const items2 = [
         tmp5Result,

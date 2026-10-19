@@ -3,8 +3,8 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
-import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import TrackSectionHeaderDefault from "TrackSectionHeader.tsx";
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     marginTop: nativeDefault.space.PX_32,

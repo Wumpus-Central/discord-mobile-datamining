@@ -3,8 +3,8 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -36,8 +36,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(14360).LinkExternalMediumIcon };
-          const tmp9 = closure_4(tmp(6465).TableRowIcon, obj2);
+          const obj2 = { IconComponent: tmp(14393).LinkExternalMediumIcon };
+          const tmp9 = closure_4(tmp(6859).TableRowIcon, obj2);
           cResult[2] = tmp9;
           let tmp7 = tmp9;
         } else {
@@ -59,7 +59,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const tmp12 = closure_4(tmp(8857).RowButton, obj3);
+        const tmp12 = closure_4(tmp(8873).RowButton, obj3);
         cResult[3] = link_description;
         cResult[4] = link_text;
         cResult[5] = tmp5;
@@ -83,12 +83,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const obj2 = { IconComponent: url(14360).LinkExternalMediumIcon };
-        obj.trailing = closure_4(url(6465).TableRowIcon, obj2);
+        const obj2 = { IconComponent: url(14393).LinkExternalMediumIcon };
+        obj.trailing = closure_4(url(6859).TableRowIcon, obj2);
         obj.onPress = function onLinkPress() {
           LinkingDefault.openURL(url);
         };
-        tmp3 = closure_4(url(8857).RowButton, obj);
+        tmp3 = closure_4(url(8873).RowButton, obj);
       }
       return tmp3;
     };

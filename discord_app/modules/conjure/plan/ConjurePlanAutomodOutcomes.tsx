@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/ConjurePlanAutomodOutcomes.tsx
 import util from "../../../intl/index.native.tsx";
+import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
 import GuildDisableCommunicationConstants from "../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
-import _modDef3883 from "../intl/ConjureUntranslated.messages.js";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -15,28 +15,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883.Vi4cjL);
+      return intl.string(_modDef3820.Vi4cjL);
     },
     blockedStyle: false,
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883.YdnZ8q);
+      return intl.string(_modDef3820.YdnZ8q);
     },
     blockedStyle: true,
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883.QGrx9O);
+      return intl.string(_modDef3820.QGrx9O);
     },
     blockedStyle: true,
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883.RGzFNK);
+      return intl.string(_modDef3820.RGzFNK);
     },
     blockedStyle: false,
   },
@@ -45,21 +45,21 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883.YdnZ8q);
+      return intl.string(_modDef3820.YdnZ8q);
     },
     tone: "red",
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883["8ockl9"]);
+      return intl.string(_modDef3820["8ockl9"]);
     },
     tone: "blurple",
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3883.RGzFNK);
+      return intl.string(_modDef3820.RGzFNK);
     },
     tone: "green",
   },

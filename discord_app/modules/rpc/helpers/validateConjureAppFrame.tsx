@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/helpers/validateConjureAppFrame.tsx
+import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import isConjureApplicationDefault from "../../conjure/shared/isConjureApplication.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
-import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import ConjureProjectStore from "../../conjure/projects/ConjureProjectStore.tsx";

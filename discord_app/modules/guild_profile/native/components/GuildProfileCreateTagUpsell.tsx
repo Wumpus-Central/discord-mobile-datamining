@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({
   upsell: { minHeight: 44, alignItems: "center", justifyContent: "center" },
 });
@@ -21,9 +21,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guildId = guildId.guildId;
       const tmp4 = closure_5();
       let obj = guildId(576);
-      const guildTagCreationUpsell = guildId(13948).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = guildId(13981).useGuildTagCreationUpsell(
         "GuildProfileCreateTagUpsell",
-        creatableGuilds(13950),
+        creatableGuilds(13983),
       );
       creatableGuilds = guildTagCreationUpsell.creatableGuilds;
       if (guildTagCreationUpsell.isUpsellVisible) {
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
             const intl = tmp(1128).intl;
             obj3.children = intl.string(tmp(1128).t.J0YWRq);
-            const tmp11 = jsx(tmp(5187).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+            const tmp11 = jsx(tmp(5195).Text, { variant: "text-md/medium", color: "text-muted", children: null });
             cResult[3] = tmp11;
             let tmp9 = tmp11;
           } else {
@@ -70,15 +70,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      const obj2 = guildId(13948);
+      const obj2 = guildId(13981);
     }
   : function GuildProfileCreateTagUpsell(guildId) {
       guildId = guildId.guildId;
       let creatableGuilds;
       const tmp = closure_5();
-      const guildTagCreationUpsell = guildId(13948).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = guildId(13981).useGuildTagCreationUpsell(
         "GuildProfileCreateTagUpsell",
-        creatableGuilds(13950),
+        creatableGuilds(13983),
       );
       creatableGuilds = guildTagCreationUpsell.creatableGuilds;
       let tmp5 = null;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
         const intl = tmp2(1128).intl;
         obj3.children = intl.string(tmp2(1128).t.J0YWRq);
-        obj2.children = jsx(tmp2(5187).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+        obj2.children = jsx(tmp2(5195).Text, { variant: "text-md/medium", color: "text-muted", children: null });
         tmp5 = (
           <Pressable
             style={tmp.upsell}

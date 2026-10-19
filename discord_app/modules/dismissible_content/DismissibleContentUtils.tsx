@@ -497,15 +497,15 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(2054).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(2060);
+const DCFEventTypes = fn(4786).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4792);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: c10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let c14 = 2592000000;
 const ReactCompilerGating = fn(558);
@@ -556,8 +556,8 @@ function getGuildNextNumTimesDismissed(arg0, stateFromStores) {
   return num + 1;
 }
 let items = [
-  fn(2052).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
-  fn(2052).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
+  fn(4784).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
+  fn(4784).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -753,7 +753,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "a" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

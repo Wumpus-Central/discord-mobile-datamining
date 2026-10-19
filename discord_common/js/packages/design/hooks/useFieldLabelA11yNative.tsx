@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import utils_getNodeText from "../utils/getNodeText.tsx";
+import getNodeText from "../utils/getNodeText.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -47,8 +47,8 @@ export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnable
       if (!tmp6) {
         let nodeText = accessibilityLabel;
         if (accessibilityLabel == null) {
-          nodeText = utils_getNodeText.getNodeText(label);
-          const tmpResult = utils_getNodeText;
+          nodeText = getNodeText.getNodeText(label);
+          const tmpResult = getNodeText;
         }
         tmp9 = nodeText;
       }
@@ -73,7 +73,7 @@ export const useFieldLabelA11yNative = ReactCompilerGating.isReactCompilerEnable
       let tmp5;
       if (!tmp3) {
         if (accessibilityLabel == null) {
-          accessibilityLabel = utils_getNodeText.getNodeText(label);
+          accessibilityLabel = getNodeText.getNodeText(label);
         }
         tmp5 = accessibilityLabel;
       }

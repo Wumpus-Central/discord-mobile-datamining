@@ -8,8 +8,8 @@ import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx"
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
-import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
+import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import MainTabsNavigatorPanelContext from "../panels/MainTabsNavigatorPanelContext.tsx";
 import getJankSurfaceName from "../../../jank_stats/native/getJankSurfaceName.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -22,16 +22,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9612);
+const ChannelDetailsStore = fn(9627);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9600).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9615).ONYX_BORDER_WIDTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let c16 = 150;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   memberListPreview: null,
   content: null,

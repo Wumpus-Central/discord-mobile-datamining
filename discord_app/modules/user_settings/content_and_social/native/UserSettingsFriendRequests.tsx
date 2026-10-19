@@ -19,14 +19,14 @@ const result = size.fileFinishedImporting(
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserSettingsFriendRequests() {
       const cResult = setting(576).c(23);
-      let FriendSourceFlagsSetting = setting(2044).FriendSourceFlagsSetting;
+      let FriendSourceFlagsSetting = setting(4776).FriendSourceFlagsSetting;
       setting = FriendSourceFlagsSetting.useSetting();
       if (cResult[0] !== setting) {
-        const flags = tmp(6961).computeFlags(setting);
+        const flags = tmp(7039).computeFlags(setting);
         cResult[0] = setting;
         cResult[1] = flags;
         let tmp5 = flags;
-        const tmpResult = tmp(6961);
+        const tmpResult = tmp(7039);
       } else {
         tmp5 = cResult[1];
       }
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp5.all) {
         const obj2 = { label: tmp9, value: tmp5.all, onValueChange: tmp11 };
-        const tmp14 = closure_7(tmp(7172).TableSwitchRow, obj2);
+        const tmp14 = closure_7(tmp(7241).TableSwitchRow, obj2);
         cResult[5] = tmp5.all;
         cResult[6] = tmp14;
         let tmp12 = tmp14;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { title: tmp7, hasIcons: false, children: null };
           const items = [tmp12, tmp18, tmp24];
           obj4.children = items;
-          obj3.children = closure_8(tmp(6542).TableRowGroup, obj4);
+          obj3.children = closure_8(tmp(6935).TableRowGroup, obj4);
           const tmp31 = closure_7(View, obj3);
           cResult[19] = tmp24;
           cResult[20] = tmp12;
@@ -291,12 +291,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[22] = tmp31;
         }
         const obj6 = { label: tmp20, value: tmp5.mutualGuilds, onValueChange: tmp23 };
-        const tmp26 = closure_7(tmp(7172).TableSwitchRow, obj6);
+        const tmp26 = closure_7(tmp(7241).TableSwitchRow, obj6);
         cResult[16] = tmp5.mutualGuilds;
         cResult[17] = tmp23;
         cResult[18] = tmp26;
       }
-      const tmp19 = closure_7(setting(7172).TableSwitchRow, {
+      const tmp19 = closure_7(setting(7241).TableSwitchRow, {
         label: tmp15,
         value: tmp5.mutualFriends,
         onValueChange: R,
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { label: tmp15, value: tmp5.mutualFriends, onValueChange: R };
     }
   : function UserSettingsFriendRequests() {
-      let FriendSourceFlagsSetting = setting(2044).FriendSourceFlagsSetting;
+      let FriendSourceFlagsSetting = setting(4776).FriendSourceFlagsSetting;
       setting = FriendSourceFlagsSetting.useSetting();
       const items = [setting];
       const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return FriendSourceFlagsSetting.updateSetting(tmp3);
       };
-      const items1 = [closure_7(setting(7172).TableSwitchRow, obj3), ,];
+      const items1 = [closure_7(setting(7241).TableSwitchRow, obj3), ,];
       const obj4 = { label: null, value: null, onValueChange: null };
       const intl3 = setting(1128).intl;
       obj4.label = intl3.string(setting(1128).t.IqlCSq);
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return FriendSourceFlagsSetting.updateSetting(addFlagResult);
       };
-      items1[1] = closure_7(setting(7172).TableSwitchRow, obj4);
+      items1[1] = closure_7(setting(7241).TableSwitchRow, obj4);
       const obj5 = { label: null, value: null, onValueChange: null };
       const intl4 = setting(1128).intl;
       obj5.label = intl4.string(setting(1128).t.mozb8f);
@@ -359,8 +359,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return FriendSourceFlagsSetting.updateSetting(addFlagResult);
       };
-      items1[2] = closure_7(setting(7172).TableSwitchRow, obj5);
+      items1[2] = closure_7(setting(7241).TableSwitchRow, obj5);
       obj2.children = items1;
-      obj.children = closure_8(setting(6542).TableRowGroup, obj2);
+      obj.children = closure_8(setting(6935).TableRowGroup, obj2);
       return closure_7(View, obj);
     };

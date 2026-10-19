@@ -48,7 +48,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -160,7 +160,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
           } = closure_0);
           c2 = 1;
           c3 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -181,13 +181,13 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(4834).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4869).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(11267)(
+                  shouldClosePopout(11281)(
                     tmp,
                     channel,
                     () => {
@@ -203,7 +203,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(4834);
+              const obj2 = closure_1_0(4869);
             });
             c2 = 2;
             c3 = 1;
@@ -272,7 +272,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -417,7 +417,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp5) {

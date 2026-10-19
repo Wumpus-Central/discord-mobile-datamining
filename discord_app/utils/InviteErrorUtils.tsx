@@ -1,7 +1,7 @@
 // discord_app/utils/InviteErrorUtils.tsx
 import util from "../intl/index.native.tsx";
-import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
 import PremiumUtilsDefault from "PremiumUtils.tsx";
+import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
 require = fn;

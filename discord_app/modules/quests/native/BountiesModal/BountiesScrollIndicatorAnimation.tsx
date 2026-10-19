@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
 import BountiesScrollIndicatorRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollIndicatorRive.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

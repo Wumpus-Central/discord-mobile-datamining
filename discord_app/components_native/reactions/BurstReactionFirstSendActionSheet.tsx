@@ -6,15 +6,15 @@ import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
 import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import burst_reactions_BurstReactionEffectUtils from "../../modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx";
 import DismissibleContentUnsafeUtils from "../../modules/dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import getDeviceSpecificString from "../../modules/intl/overrides/getDeviceSpecificString.tsx";
+import BurstReactionAnimationPreviewDefault from "../../modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx";
+import MessageReactionsTypes from "../../modules/messages/MessageReactionsTypes.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../design/components/Sheet/native/BottomSheet.native.tsx";
-import MessageReactionsTypes from "../../modules/messages/MessageReactionsTypes.tsx";
-import burst_reactions_BurstReactionEffectUtils from "../../modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx";
-import getDeviceSpecificString from "../../modules/intl/overrides/getDeviceSpecificString.tsx";
-import BurstReactionAnimationPreviewDefault from "../../modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 },
   fill: null,
@@ -260,7 +260,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(8232, dependencyMap.paths),
+      asyncRequireImpl(4944, dependencyMap.paths),
       "BurstReactionFirstSendActionSheet",
       obj4,
     );

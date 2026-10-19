@@ -13,7 +13,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({
   wrapper: { minHeight: 16 },
   listStyle: { flex: 0 },
@@ -51,7 +51,7 @@ export default noop.memo(
                 }
               }
             }
-            return { channelId: "ix", type: "WHITE_500" };
+            return { channelId: "unicodeVersion", type: true };
           };
           cResult[0] = items;
           cResult[1] = fn;
@@ -235,7 +235,7 @@ export default noop.memo(
               }
             }
           }
-          return { channelId: "ix", type: "WHITE_500" };
+          return { channelId: "unicodeVersion", type: true };
         });
         if ("private" === stateFromStoresObject.type) {
           let obj2 = { style: tmp.wrapper, children: null };

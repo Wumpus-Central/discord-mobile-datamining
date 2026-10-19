@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2589 from "../FamilyCenter.messages.js";
+import _modDef2526 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2589.BxbvS7);
+        const stringResult = intl.string(_modDef2526.BxbvS7);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef2589.BxbvS7);
+      obj2.children = intl.string(_modDef2526.BxbvS7);
       const items = [React4(Text_Text.Text, obj2)];
       const tmp = closure_6();
       items[1] = React4(TableRowGroup.TableRowGroup, {

@@ -1,8 +1,8 @@
 // discord_app/design/shared.tsx
-import themes from "utils/shared/themes.tsx";
-import Colors from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
 import design_shared from "../../discord_common/js/packages/design/shared.tsx";
 import StickerTypes from "../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
+import themes from "utils/shared/themes.tsx";
+import Colors from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/shared.tsx");

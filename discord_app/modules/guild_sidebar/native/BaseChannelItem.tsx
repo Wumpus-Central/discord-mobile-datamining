@@ -9,16 +9,16 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const utils_PlatformUtils = Text(1385);
-const Text_Text = Text(5187);
+const Text_Text = Text(5195);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11900);
+const RedesignChannelListConstants = fn(11920);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(6223).UnreadSetting;
+const UnreadSetting = fn(6653).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     rowPaddingNoIcon: { paddingHorizontal: 6 },
@@ -628,9 +628,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1[3] = channelInfo;
         obj.children = items1;
         if (flag) {
-          let AnimatedPressableHighlight = hideIcon(13041);
+          let AnimatedPressableHighlight = hideIcon(13073);
         } else {
-          AnimatedPressableHighlight = mode(8817).AnimatedPressableHighlight;
+          AnimatedPressableHighlight = mode(8833).AnimatedPressableHighlight;
         }
         obj2 = {};
         const merged1 = Object.assign(merged);
@@ -645,8 +645,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
         }
         obj3.resolvedUnreadSetting = ALL_MESSAGES;
-        closure_10(hideIcon(13040), obj3);
-        const tmp9 = hideIcon(13040);
+        closure_10(hideIcon(13072), obj3);
+        const tmp9 = hideIcon(13072);
       }
     };
 export const ChannelModes = obj2;

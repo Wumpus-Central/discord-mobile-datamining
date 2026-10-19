@@ -2,8 +2,8 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import PriceUtils from "../../../utils/PriceUtils.tsx";
 import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore.tsx";
 

@@ -8,7 +8,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const PremiumTypes = fn(1394).PremiumTypes;
-const Features = fn(5216).Features;
+const Features = fn(5680).Features;
 const ApexExperiment = fn(1455);
 let obj2 = {
   kind: "user",

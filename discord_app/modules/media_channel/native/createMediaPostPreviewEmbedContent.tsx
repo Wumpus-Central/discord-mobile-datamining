@@ -1,10 +1,10 @@
 // discord_app/modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import LinkUtils from "../../links/LinkUtils.tsx";
 import MediaPostEmbedUtils from "../MediaPostEmbedUtils.tsx";
 import MediaPostThumbnailUtils from "../MediaPostThumbnailUtils.tsx";
 import MediaFormatTesters from "../../messages/MediaFormatTesters.tsx";
-import LinkUtils from "../../links/LinkUtils.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import useAuthorWithProcessedColor from "../../messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx";
@@ -106,7 +106,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(14336)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(14369)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

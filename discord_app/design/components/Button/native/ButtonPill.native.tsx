@@ -1,16 +1,16 @@
 // discord_app/design/components/Button/native/ButtonPill.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
+import shared from "../../../shared.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import shared from "../../../shared.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants2 from "ButtonConstants.native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import ButtonShine from "ButtonShine.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05491_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05219_LinearGradient.js";
 import ButtonEllipsis from "ButtonEllipsis.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,19 +23,19 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 300;
-let ButtonConstants = fn(5484);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(5484).SMALL_BUTTON_HEIGHT, fn(5484).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5484);
+let ButtonConstants = fn(5211);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5211).SMALL_BUTTON_HEIGHT, fn(5211).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5211);
 const paddingVertical2 = ButtonConstants.getButtonPadding(
-  fn(5484).MEDIUM_BUTTON_HEIGHT,
-  fn(5484).MEDIUM_BUTTON_ICON_SIZE,
+  fn(5211).MEDIUM_BUTTON_HEIGHT,
+  fn(5211).MEDIUM_BUTTON_ICON_SIZE,
 );
-ButtonConstants = fn(5484);
+ButtonConstants = fn(5211);
 const paddingVertical3 = ButtonConstants.getButtonPadding(
-  fn(5484).LARGE_BUTTON_HEIGHT,
-  fn(5484).LARGE_BUTTON_ICON_SIZE,
+  fn(5211).LARGE_BUTTON_HEIGHT,
+  fn(5211).LARGE_BUTTON_ICON_SIZE,
 );
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_14 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = {

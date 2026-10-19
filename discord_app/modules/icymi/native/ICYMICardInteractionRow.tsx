@@ -6,11 +6,11 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
+import MessageReactionsTypes from "../../messages/MessageReactionsTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
-import MessageReactionsTypes from "../../messages/MessageReactionsTypes.tsx";
 import canAddNewReactionsDefault from "../../reactions/canAddNewReactions.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
 import messages_MessagesUtils from "../../messages/native/MessagesUtils.tsx";
@@ -197,7 +197,7 @@ const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 20;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" },

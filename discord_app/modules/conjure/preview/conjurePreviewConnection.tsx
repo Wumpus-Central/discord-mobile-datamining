@@ -3,6 +3,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureChatConnection from "../chat/conjureChatConnection.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
+import conjurePreviewTicket from "conjurePreviewTicket.tsx";
 import ConjurePreviewActionCreators from "ConjurePreviewActionCreators.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
@@ -12,9 +13,10 @@ import conjureMediaTickets from "../connection/conjureMediaTickets.tsx";
 import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import conjurePreviewModeRequests from "conjurePreviewModeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-let closure_4 = async function _getPreviewScreenshotUrl() {
+let closure_5 = async function _getPreviewScreenshotUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await conjureMediaTickets.getMediaTicket(closure_0);
@@ -28,7 +30,7 @@ let closure_4 = async function _getPreviewScreenshotUrl() {
   const _HermesInternal = HermesInternal;
   return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_130_0) + "?" + closure_130_4;
 };
-let closure_5 = async function _uploadOverlayBackground(arg0) {
+let closure_6 = async function _uploadOverlayBackground(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -94,7 +96,7 @@ let closure_5 = async function _uploadOverlayBackground(arg0) {
     }
   })();
 };
-let closure_6 = async function _resetOverlayBackground(arg0) {
+let closure_7 = async function _resetOverlayBackground(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -154,7 +156,7 @@ let closure_6 = async function _resetOverlayBackground(arg0) {
     }
   }
 };
-let closure_7 = async function _getOverlayBackgroundUrl() {
+let closure_8 = async function _getOverlayBackgroundUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await conjureMediaTickets.getMediaTicket(closure_0);
@@ -165,7 +167,7 @@ let closure_7 = async function _getOverlayBackgroundUrl() {
   const _HermesInternal = HermesInternal;
   return "" + closure_130_1.baseUrl + "/agent/overlay-background?" + uRLSearchParams;
 };
-let closure_8 = async function _relayCaptureRequest(arg0, arg1, arg2) {
+let closure_9 = async function _relayCaptureRequest(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   let probe = arg2;
@@ -196,7 +198,7 @@ let closure_8 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     ({ probe: obj4.probe, spec: obj4.spec, build: obj4.build } = probe);
     closure_131_4 = asyncGeneratorStep(async () => {
       closure_2_1.sendCaptureAck(user.id, "accepted");
-      await v3(closure_1_2[3]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[4]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return value;
     });
     obj7.onAccepted = function onAccepted() {
@@ -212,7 +214,7 @@ let closure_8 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     obj7.resolveUploadUrl = function resolveUploadUrl() {
       return (function getClientCaptureUploadUrl() {
         const self = this;
-        const apply = closure_1_10.apply;
+        const apply = closure_1_11.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -237,7 +239,7 @@ let closure_8 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     return value;
   })();
 };
-let closure_9 = async function _relayControlRequest(arg0) {
+let closure_10 = async function _relayControlRequest(arg0) {
   closure_131_0 = closure_0;
   closure_131_1 = closure_1;
   closure_131_2 = user;
@@ -250,7 +252,7 @@ let closure_9 = async function _relayControlRequest(arg0) {
     request,
     asyncGeneratorStep(async () => {
       closure_2_1.sendControlAck(user.id, "accepted");
-      await v3(closure_1_2[3]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[4]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return null != value;
     }),
   );
@@ -274,7 +276,7 @@ let closure_9 = async function _relayControlRequest(arg0) {
   }
   return value;
 };
-let closure_10 = async function _getClientCaptureUploadUrl() {
+let closure_11 = async function _getClientCaptureUploadUrl() {
   closure_1 = tmp2;
   await conjureMediaTickets.getMediaTicket(closure_0);
   closure_129_0 = value;
@@ -304,7 +306,7 @@ export const previewFrameHandlers = {
     }
     (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_1_8.apply;
+      const apply = closure_1_9.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -314,7 +316,7 @@ export const previewFrameHandlers = {
     })(projectId, projectId.ws, probe).catch(() => {});
     const promise = (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_1_8.apply;
+      const apply = closure_1_9.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -328,7 +330,7 @@ export const previewFrameHandlers = {
     ConjurePreviewActionCreators.wakeConjurePreview(projectId);
     (function relayControlRequest() {
       const self = this;
-      const apply = closure_1_9.apply;
+      const apply = closure_1_10.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -371,6 +373,22 @@ export const previewFrameHandlers = {
   },
 };
 export const previewStepHandlers = {
+  preview_app_published(has_activity, projectId) {
+    projectId = projectId.projectId;
+    const project = ConjureProjectStore.getProject(projectId);
+    let prop;
+    if (project != null) {
+      prop = project.preview_application_id;
+    }
+    if (null != prop) {
+      const result = ConjurePublishActionCreators.refreshPreviewApplication(prop);
+      result.catch(() => {});
+      if (true === has_activity.has_activity) {
+        const result1 = conjurePreviewTicket.prefetchConjurePreviewTicket(projectId, { known: true });
+        const tmp4Result = conjurePreviewTicket;
+      }
+    }
+  },
   preview_ready(integration_installed, projectId) {
     projectId = projectId.projectId;
     conjureChatConnection.appendTurnStep(projectId, integration_installed);
@@ -411,7 +429,7 @@ export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(proj
 };
 export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
   const self = this;
-  const apply = closure_4.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -421,7 +439,7 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
 };
 export const uploadOverlayBackground = function uploadOverlayBackground() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -431,7 +449,7 @@ export const uploadOverlayBackground = function uploadOverlayBackground() {
 };
 export const resetOverlayBackground = function resetOverlayBackground() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -441,7 +459,7 @@ export const resetOverlayBackground = function resetOverlayBackground() {
 };
 export const getOverlayBackgroundUrl = function getOverlayBackgroundUrl() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

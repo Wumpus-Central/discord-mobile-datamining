@@ -4,11 +4,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import MessageEmbedTypes from "../../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 import util from "../../../intl/index.native.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import useMessageAuthor from "../../messages/useMessageAuthor.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import useMessageAuthor from "../../messages/useMessageAuthor.tsx";
 import InAppNotificationUtils from "InAppNotificationUtils.tsx";
 import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
 import ChannelRowPreview from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
@@ -20,13 +20,13 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13524);
+const InAppNotificationConstants = fn(13558);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 const PlatformUtils = fn(1385);
 let obj3 = {
   italic: {
@@ -35,7 +35,7 @@ let obj3 = {
   },
 };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5191);
+createStyles = fn(4945);
 let obj6 = {
   embedContainer: null,
   embedAccentBar: null,
@@ -83,7 +83,7 @@ obj6.embedTextContainer = {
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "ix" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "emoji" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

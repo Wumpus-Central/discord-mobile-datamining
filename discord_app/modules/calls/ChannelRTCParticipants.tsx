@@ -1,11 +1,11 @@
 // discord_app/modules/calls/ChannelRTCParticipants.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
+import ContentClassificationReference from "../content_classification/ContentClassificationReference.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import getParticipantUserKeyDefault from "getParticipantUserKey.tsx";
 import useIsSpeaking from "../../hooks/useIsSpeaking.tsx";
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
-import ContentClassificationReference from "../content_classification/ContentClassificationReference.tsx";
 import useAvatarDecoration from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import FramesStore from "../frames/FramesStore.tsx";
@@ -60,13 +60,13 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5214);
+const CallConstants = fn(5593);
 ({ isStreamParticipant: closure_14, ParticipantTypes: closure_15 } = CallConstants);
 let Constants = fn(1087);
 ({ ActivityTypes: closure_16, ChannelTypes: closure_17 } = Constants);
-const FramesConstants = fn(6296);
+const FramesConstants = fn(6724);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-Constants = fn(5216);
+Constants = fn(5680);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -255,11 +255,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f94095) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f95396) {
   const self = this;
-  const userId = f94095;
+  const userId = f95396;
   let flag;
-  if (this.participants[f94095] != null) {
+  if (this.participants[f95396] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -297,10 +297,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f940
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f94101, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f95402, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f94101] != null) {
+  if (this.participants[f95402] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemAIShimmer.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import AIShimmer from "../../../../design/visual-identities/ai/AIShimmer/AIShimmer.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({
   container: { padding: 16 },
   buttonRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },

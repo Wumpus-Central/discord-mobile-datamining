@@ -5,8 +5,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1087).Routes;
-const StaticChannelRoute = fn(2075).StaticChannelRoute;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const StaticChannelRoute = fn(4807).StaticChannelRoute;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,15 +49,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
         const obj2 = {
-          imageSource: markAsDismissed(17375),
+          imageSource: markAsDismissed(17404),
           header: tmp6,
           body: tmp7,
           cta: tmp8,
           onCTAPress: tmp4,
           markAsDismissed,
         };
-        const tmp16 = jsx(markAsDismissed(17374), {
-          imageSource: markAsDismissed(17375),
+        const tmp16 = jsx(markAsDismissed(17403), {
+          imageSource: markAsDismissed(17404),
           header: tmp6,
           body: tmp7,
           cta: tmp8,
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = markAsDismissed;
         cResult[8] = tmp16;
         tmp12 = tmp16;
-        const tmp15 = markAsDismissed(17374);
+        const tmp15 = markAsDismissed(17403);
       }
       function handleCTAPress() {
         router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function IAPUpsellActionSheet(arg0) {
       ({ guildId: require, markAsDismissed } = arg0);
       const obj = {
-        imageSource: markAsDismissed(17375),
+        imageSource: markAsDismissed(17404),
         header: null,
         body: null,
         cta: null,
@@ -101,8 +101,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         markAsDismissed(ContentDismissActionType.UNKNOWN);
       };
       obj.markAsDismissed = markAsDismissed;
-      return jsx(markAsDismissed(17374), {
-        imageSource: markAsDismissed(17375),
+      return jsx(markAsDismissed(17403), {
+        imageSource: markAsDismissed(17404),
         header: null,
         body: null,
         cta: null,

@@ -4,6 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../../image_upload/ImageLoaderUtils.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import MoreHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,7 +19,7 @@ const Constants = fn(1087);
 ({ GuildFeatures: c10, JoinGuildSources: closure_11, AnalyticEvents: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
@@ -116,12 +118,13 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   _slicedToArray = undefined;
   let stateFromStores;
   let useReducedMotion;
+  let name;
   const tmp = closure_15();
   [loading, _slicedToArray] = stateFromStores.useState(false);
   let items = [useReducedMotion];
   stateFromStores = guild(onDismiss[11]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj2 = guild(onDismiss[11]);
-  const items1 = [GuildStore, LurkingStore];
+  const items1 = [GuildStore, name];
   const items2 = [guild.id];
   const stateFromStores1 = guild(onDismiss[11]).useStateFromStores(
     items1,
@@ -398,6 +401,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   if (num2 == null) {
     num2 = 0;
   }
+  name = guild.name;
   const description = guild.description;
   let obj4 = { style: tmp.card, children: null };
   let obj5 = { style: tmp.bannerContainer, children: null };
@@ -438,7 +442,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
       accessibilityRole: "header",
       style: tmp.guildName,
       lineClamp: 1,
-      children: guild.name,
+      children: name,
     }),
   ];
   obj12.children = items11;
@@ -485,48 +489,73 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   obj16.children = items15;
   const items17 = [closure_14(stateFromStores1, obj16)];
   if (stateFromStores1) {
-    const obj25 = { variant: "active", size: "md", text: null, onPress: null, grow: true };
+    const obj25 = { variant: "active", size: "md", text: null, accessibilityLabel: null, onPress: null, grow: true };
     const intl5 = tmp4(tmp5[20]).intl;
     obj25.text = intl5.string(tmp4(tmp5[20]).t.KLOhbO);
+    const intl6 = tmp4(tmp5[20]).intl;
+    const obj26 = { guildName: name };
+    obj25.accessibilityLabel = intl6.formatToPlainString(tmp4(tmp5[20]).t["3IpLLa"], obj26);
     obj25.onPress = callback1;
-    let obj27 = obj25;
+    let obj29 = obj25;
   } else if ("preview" === guild.cardAction) {
-    const obj26 = { variant: "primary", size: "md", loading, text: null, onPress: null, grow: true };
-    const intl4 = tmp4(tmp5[20]).intl;
-    obj26.text = intl4.string(tmp4(tmp5[20]).t.SKNnqq);
-    obj26.onPress = callback2;
-    obj27 = obj26;
-  } else {
-    obj27 = { variant: "primary", size: "md", loading, text: null, onPress: null, grow: true };
+    const obj27 = {
+      variant: "primary",
+      size: "md",
+      loading,
+      text: null,
+      accessibilityLabel: null,
+      onPress: null,
+      grow: true,
+    };
     const intl3 = tmp4(tmp5[20]).intl;
-    obj27.text = intl3.string(tmp4(tmp5[20]).t.VJlc0S);
-    obj27.onPress = callback;
+    obj27.text = intl3.string(tmp4(tmp5[20]).t.SKNnqq);
+    const intl4 = tmp4(tmp5[20]).intl;
+    const obj28 = { guildName: name };
+    obj27.accessibilityLabel = intl4.formatToPlainString(tmp4(tmp5[20]).t["/2nToO"], obj28);
+    obj27.onPress = callback2;
+    obj29 = obj27;
+  } else {
+    obj29 = {
+      variant: "primary",
+      size: "md",
+      loading,
+      text: null,
+      accessibilityLabel: null,
+      onPress: null,
+      grow: true,
+    };
+    const intl7 = tmp4(tmp5[20]).intl;
+    obj29.text = intl7.string(tmp4(tmp5[20]).t.VJlc0S);
+    const intl8 = tmp4(tmp5[20]).intl;
+    const obj30 = { guildName: name };
+    obj29.accessibilityLabel = intl8.formatToPlainString(tmp4(tmp5[20]).t.uyJSNf, obj30);
+    obj29.onPress = callback;
   }
-  const obj28 = { children: null };
-  items17[1] = closure_13(guild(onDismiss[26]).Button, obj27);
-  obj28.children = items17;
-  items13[1] = closure_14(stateFromStores1, obj28);
+  const obj31 = { children: null };
+  items17[1] = closure_13(guild(onDismiss[26]).Button, obj29);
+  obj31.children = items17;
+  items13[1] = closure_14(stateFromStores1, obj31);
   obj11.children = items13;
   items10[2] = closure_14(stateFromStores1, obj11);
   let tmp17Result4 = memo2.length > 0;
   if (tmp17Result4) {
-    const obj29 = { style: tmp.dismissButton, children: null };
-    const obj30 = {
+    const obj32 = { style: tmp.dismissButton, children: null };
+    const obj33 = {
       items: memo2,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
         const obj = { ref: ref.ref };
         const merged1 = Object.assign(merged);
-        obj.icon = closure_1_13(guild(onDismiss[29]).MoreHorizontalIcon, { size: "sm" });
+        obj.icon = map1(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm" });
         obj.size = "sm";
         obj.variant = "secondary-overlay";
-        const intl = guild(onDismiss[20]).intl;
-        obj.accessibilityLabel = intl.string(guild(onDismiss[20]).t.ogxXGq);
-        return closure_1_13(guild(onDismiss[28]).IconButton, obj);
+        const intl = util.intl;
+        obj.accessibilityLabel = intl.formatToPlainString(util.t.nosl52, { guildName: name });
+        return map1(IconButton.IconButton, obj);
       },
     };
-    obj29.children = closure_13(tmp4(tmp5[27]).ContextMenu, obj30);
-    tmp17Result4 = closure_13(tmp16, obj29);
+    obj32.children = closure_13(tmp4(tmp5[27]).ContextMenu, obj33);
+    tmp17Result4 = closure_13(tmp16, obj32);
   }
   items10[3] = tmp17Result4;
   obj4.children = items10;

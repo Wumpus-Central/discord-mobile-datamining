@@ -1,8 +1,8 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsGradient.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
+import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import TabsGradientDefault from "../../../../../design/components/Tabs/native/TabsGradient.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items;
     }
   : function useGradientColors() {
-      token = token(4913).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+      token = token(5213).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       let items = [token];
       return noop.useMemo(() => {
         const items = [token, ColorUtils.hexWithOpacity(token, 0)];

@@ -2,8 +2,8 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage7 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import shared from "../../design/shared.tsx";
 import CrossPlatformNativeUtilsDefault from "../../utils/CrossPlatformNativeUtils.native.tsx";
+import shared from "../../design/shared.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import GameModeStore from "../game_mode/GameModeStore.tsx";
 import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
@@ -92,7 +92,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1087);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(5185);
+const MessageConstants = fn(4950);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,

@@ -1,14 +1,14 @@
 // discord_app/design/components/Navigator/native/SceneLoadingIndicator.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import ActivityIndicator_ActivityIndicator from "../../ActivityIndicator/native/ActivityIndicator.native.tsx";
 import NavScrim from "NavScrim.android.tsx";
+import ActivityIndicator_ActivityIndicator from "../../ActivityIndicator/native/ActivityIndicator.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_5 = createStyles.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

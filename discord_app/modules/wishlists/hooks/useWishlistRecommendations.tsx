@@ -17,7 +17,7 @@ import WishlistRecommendationsStore from "../WishlistRecommendationsStore.tsx";
 import WishlistRecommendationRecord from "../records/WishlistRecommendationRecord.tsx";
 
 require = fn;
-let closure_8 = fn(7208).WishlistRecommendationReason;
+let closure_8 = fn(7277).WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
 let combinedSkusToUserAndReason = {
   state: "success",
@@ -47,7 +47,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === userIdsAndWishlistIds) {
           let tmp8 = cResult[4];
         }
-        const fetchWishlists = applicationIdsFilter(9271).useFetchWishlists(tmp8);
+        const fetchWishlists = applicationIdsFilter(9287).useFetchWishlists(tmp8);
         ({ wishlists, isFetching, errors } = fetchWishlists);
         if (cResult[5] === applicationIdsFilter) {
           if (cResult[6] === wishlists) {
@@ -376,7 +376,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = wishlists;
         cResult[7] = obj3;
         tmp10 = obj3;
-        const tmpResult2 = applicationIdsFilter(9271);
+        const tmpResult2 = applicationIdsFilter(9287);
       }
       const obj4 = { wishlistIdsAndUsers: userIdsAndWishlistIds, source };
       cResult[2] = source;

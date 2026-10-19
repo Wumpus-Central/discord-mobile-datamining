@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13444 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-1x.png.js";
-import _modDef13445 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-2x.png.js";
-import _modDef13446 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-3x.png.js";
+import _modDef13478 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-1x.png.js";
+import _modDef13479 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-2x.png.js";
+import _modDef13480 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13444 }, 3: null };
-let obj2 = { uri: _modDef13444 };
-obj[2] = { uri: _modDef13445 };
-const obj3 = { uri: _modDef13445 };
-obj[3] = { uri: _modDef13446 };
+let obj = { 1: null, 2: { uri: _modDef13478 }, 3: null };
+let obj2 = { uri: _modDef13478 };
+obj[2] = { uri: _modDef13479 };
+const obj3 = { uri: _modDef13479 };
+obj[3] = { uri: _modDef13480 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13446 };
+const obj4 = { uri: _modDef13480 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx",

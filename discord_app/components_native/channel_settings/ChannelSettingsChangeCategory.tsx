@@ -3,9 +3,9 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
+import useChannelName from "../../modules/channel/useChannelName.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import Stack_Stack from "../../design/components/Stack/native/Stack.native.tsx";
-import useChannelName from "../../modules/channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import TableRow from "../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -313,7 +313,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_14(Stack_Stack.Stack, obj2);
   return map1(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(4922).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(4999).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channelId(504);
       const navigation = channelId(1505).useNavigation();
       const tmpResult3 = channelId(1505);
-      const appChannelBotUserId = channelId(11185).useAppChannelBotUserId(stateFromStores);
+      const appChannelBotUserId = channelId(11200).useAppChannelBotUserId(stateFromStores);
       _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       if (cResult[3] === appChannelBotUserId) {
         if (cResult[4] === stateFromStores) {
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = navigation;
       cResult[6] = tmp12;
       tmp11 = tmp12;
-      const tmpResult4 = channelId(11185);
+      const tmpResult4 = channelId(11200);
     }
   : function ConnectedChannelSettingsChangeCategory(channelId) {
       channelId = channelId.channelId;
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(504);
       const navigation = channelId(1505).useNavigation();
       const obj2 = channelId(1505);
-      const appChannelBotUserId = channelId(11185).useAppChannelBotUserId(channel);
+      const appChannelBotUserId = channelId(11200).useAppChannelBotUserId(channel);
       _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
     };

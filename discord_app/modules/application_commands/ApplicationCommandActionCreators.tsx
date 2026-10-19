@@ -3,9 +3,9 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
-import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore.tsx";
 

@@ -2,8 +2,8 @@
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import SemanticColorContext from "SemanticColorContext.native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
+import SemanticColorContext from "SemanticColorContext.native.tsx";
 
 require = fn;
 function getCachedTokenColor(BACKGROUND_BASE_LOW, themeContext, theme) {

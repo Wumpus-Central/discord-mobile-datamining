@@ -3,8 +3,8 @@ import VoicePanelPIPUtils from "../pip/VoicePanelPIPUtils.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(10680).VoicePanelModes;
-const ParticipantTypes = fn(5214).ParticipantTypes;
+const VoicePanelModes = fn(10693).VoicePanelModes;
+const ParticipantTypes = fn(5593).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
@@ -33,6 +33,7 @@ export default function calculatePIPState(
     blockList: pIPBlockList,
     panelMode: focusedId.mode,
     showSecondaryPIP: focusedId.showSecondaryPIP,
+    canShowActivities: true,
   });
   let type1;
   if (pIPParticipantToShow != null) {
@@ -65,6 +66,7 @@ export default function calculatePIPState(
     blockList: pIPBlockList,
     panelMode: focusedId.mode,
     showSecondaryPIP: focusedId.showSecondaryPIP,
+    canShowActivities: true,
   };
   let id1;
   if (pIPParticipantToShow != null) {

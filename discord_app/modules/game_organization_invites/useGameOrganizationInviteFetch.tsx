@@ -4,7 +4,7 @@ import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteA
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GameOrganizationInviteStore from "GameOrganizationInviteStore.tsx";
 
-const constants = fn(10810).GameOrganizationInviteStates;
+const constants = fn(10822).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1087).QueryIds.GAME_ORGANIZATION_INVITE,

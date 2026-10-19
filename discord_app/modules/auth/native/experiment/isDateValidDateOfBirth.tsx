@@ -1,5 +1,5 @@
 // discord_app/modules/auth/native/experiment/isDateValidDateOfBirth.tsx
-import _modDef4797 from "../../../../../_runtime/metro/04797__.js";
+import _modDef2050 from "../../../../../_runtime/metro/02050__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/experiment/isDateValidDateOfBirth.tsx");
@@ -7,8 +7,8 @@ const result = size.fileFinishedImporting("modules/auth/native/experiment/isDate
 export default function isDateValidDateOfBirth(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    tmp = _modDef4797().diff(arg0, "days") >= 1;
-    const obj = _modDef4797();
+    tmp = _modDef2050().diff(arg0, "days") >= 1;
+    const obj = _modDef2050();
   }
   return tmp;
 }

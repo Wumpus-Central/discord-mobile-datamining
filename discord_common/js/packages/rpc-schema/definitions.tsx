@@ -1274,7 +1274,7 @@ const obj41 = {
     return obj;
   },
 };
-const obj44 = {
+const obj45 = {
   embeddedAppSDK: true,
   request: "Array",
   response(boolean) {
@@ -1282,7 +1282,7 @@ const obj44 = {
     return obj;
   },
 };
-const obj45 = {
+const obj46 = {
   embeddedAppSDK: true,
   request: "Array",
   response(boolean) {
@@ -1290,7 +1290,7 @@ const obj45 = {
     return obj;
   },
 };
-const obj46 = {
+const obj47 = {
   embeddedAppSDK: true,
   request: "Array",
   response(string) {
@@ -1298,7 +1298,7 @@ const obj46 = {
     return obj;
   },
 };
-const obj50 = {
+const obj51 = {
   embeddedAppSDK: true,
   request: "Array",
   response(string) {
@@ -1313,7 +1313,7 @@ const obj50 = {
     return obj;
   },
 };
-const obj51 = {
+const obj52 = {
   embeddedAppSDK: true,
   request: "Array",
   response(array) {
@@ -1323,7 +1323,7 @@ const obj51 = {
     return obj;
   },
 };
-const obj52 = {
+const obj53 = {
   embeddedAppSDK: true,
   request: "Array",
   response(array) {
@@ -1333,13 +1333,13 @@ const obj52 = {
     return obj;
   },
 };
-const obj56 = {
+const obj57 = {
   request: "Array",
   response(arg0) {
     return Channel(arg0).allow(null);
   },
 };
-const obj61 = {
+const obj62 = {
   request: "Array",
   response(array) {
     const obj = { guilds: null };
@@ -2107,7 +2107,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Reflect",
+    response: "test",
   },
   [helpers.RPCCommand.GET_CONTEXT]: obj36,
   [helpers.RPCCommand.GET_USER]: {
@@ -2165,6 +2165,21 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
+  [helpers.RPCCommand.SET_AUDIO_SESSION_TYPE]: {
+    request(string) {
+      const obj = { type: null };
+      const stringResult = string.string();
+      obj.type = string
+        .string()
+        .valid("auto", "playback", "transient", "transient-solo", "ambient", "play-and-record")
+        .required();
+      return obj;
+    },
+    response(boolean) {
+      const obj = { success: boolean.boolean().required() };
+      return obj;
+    },
+  },
   [helpers.RPCCommand.CAPTURE_LOG]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2176,11 +2191,11 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "Reflect",
+    response: "test",
   },
-  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj44,
-  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj45,
-  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj46,
+  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj45,
+  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj46,
+  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj47,
   [helpers.RPCCommand.SET_ORIENTATION_LOCK_STATE]: {
     embeddedAppSDK: true,
     request(number) {
@@ -2195,7 +2210,7 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "OrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "Reflect",
+    response: "test",
   },
   [helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
@@ -2208,7 +2223,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "context", response: "add" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "color", response: "next" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2225,9 +2240,9 @@ export const RPCCommandSchemas = {
       return boolean.object(obj).default({ opened: null });
     },
   },
-  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj50,
-  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj51,
-  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj52,
+  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj51,
+  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj52,
+  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj53,
   [helpers.RPCCommand.START_PURCHASE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2280,7 +2295,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj56,
+  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj57,
   [helpers.RPCCommand.SELECT_VOICE_CHANNEL]: {
     request(string) {
       const obj = { channel_id: null, timeout: null, force: null, navigate: null };
@@ -2426,7 +2441,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_GUILDS]: obj61,
+  [helpers.RPCCommand.GET_GUILDS]: obj62,
   [helpers.RPCCommand.AUTHORIZE]: {
     embeddedAppSDK: true,
     request(string) {

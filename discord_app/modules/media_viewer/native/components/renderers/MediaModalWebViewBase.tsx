@@ -1,8 +1,8 @@
 // discord_app/modules/media_viewer/native/components/renderers/MediaModalWebViewBase.tsx
-import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import WebViewDefault from "../../../../../../_runtime/07788_WebView.js";
+import LinkingDefault from "../../../../../lib/native/Linking.tsx";
+import WebViewDefault from "../../../../../../_runtime/07851_WebView.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -40,7 +40,7 @@ const PlayerState = {
   VIDEO_CUED: 8,
   [8]: "VIDEO_CUED",
 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles({
   loading: {
     top: 0,

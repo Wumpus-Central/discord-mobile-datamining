@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import shared from "../../../shared.tsx";
+import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import TextInput from "../../../components/TextInput/native/TextInput.native.tsx";
 import TextArea2 from "../../../components/TextInput/native/TextArea.native.tsx";
@@ -39,7 +39,7 @@ let closure_2 = [
 ];
 const KeyboardThemes = fn(1087).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
   placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },

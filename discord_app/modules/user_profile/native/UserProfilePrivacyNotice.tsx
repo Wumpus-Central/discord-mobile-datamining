@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
-import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -15,14 +15,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1211);
-const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(2052);
+const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(4784);
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol3 = Symbol;
                         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp38 = closure_7(tmp(6485).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                          const tmp38 = closure_7(tmp(6879).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                           cResult[25] = tmp38;
                           let tmp36 = tmp38;
                         } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           style: tmp4.closeButton,
                           children: tmp36,
                         };
-                        const tmp41 = closure_7(tmp(6462).PressableOpacity, obj4);
+                        const tmp41 = closure_7(tmp(6856).PressableOpacity, obj4);
                         cResult[26] = tmp4.closeButton;
                         cResult[27] = tmp35;
                         cResult[28] = tmp41;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const container = tmp4.container;
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_7(tmp(5145).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+          const tmp19 = closure_7(tmp(5648).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
           cResult[13] = tmp19;
           let str2 = tmp19;
         } else {
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp20 = cResult[15];
         }
-        const Text = tmp(5187).Text;
+        const Text = tmp(5195).Text;
         const text = tmp4.text;
         const intl = tmp(1128).intl;
         const obj7 = { privacySettingsLink: first };

@@ -47,7 +47,7 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
           let conversation;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -103,8 +103,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(6412).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5169).CONVERSATION_QUERY_PARAM;
+fn(6807).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5568).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -120,7 +120,7 @@ export const consumeConversationFocusParam = function consumeConversationFocusPa
     return null;
   } else {
     str.delete(CONVERSATION_QUERY_PARAM);
-    const tryParseChannelPathResult = channelId(5522).tryParseChannelPath(pathname);
+    const tryParseChannelPathResult = channelId(5567).tryParseChannelPath(pathname);
     channelId = undefined;
     if (tryParseChannelPathResult != null) {
       channelId = tryParseChannelPathResult.channelId;

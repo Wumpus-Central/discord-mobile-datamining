@@ -2,8 +2,8 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import MarkupUtilsDefault from "../../../../markup/MarkupUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import MarkupUtilsDefault from "../../../../markup/MarkupUtils.tsx";
 import TableRowDivider from "../../../../../design/components/TableRow/native/TableRowDivider.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   termsContainer: {
     padding: 16,
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = rules(1128).intl;
       obj2.children = intl.string(rules(1128).t.prJqwT);
       let items = [
-        closure_5(rules(5187).Text, obj2),
+        closure_5(rules(5195).Text, obj2),
         closure_5(View, {
           accessibilityRole: "list",
           children: rules.map((rule, index) => {

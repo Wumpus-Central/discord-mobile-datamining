@@ -174,7 +174,7 @@ let closure_11 = async function _startLurking(arg0) {
   }
   closure_133_2 = obj5;
   closure_133_3 = closure_3;
-  return "Reflect";
+  return "test";
 };
 function makeDiscoverableGuild(body) {
   const obj = {

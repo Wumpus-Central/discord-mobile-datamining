@@ -2,6 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import v1 from "../../../_runtime/01281_v1.js";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import getPlatformDefault from "utils/getPlatform.tsx";
 import ThermalUtilsDefault from "../device/ThermalUtils.native.tsx";
 import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
@@ -11,7 +12,6 @@ import activityLaunchErrorUtils from "utils/activityLaunchErrorUtils.tsx";
 import pendingFrameLaunch from "utils/pendingFrameLaunch.tsx";
 import EmbeddedActivityLocationKind from "../../../discord_common/js/shared/shared-constants/EmbeddedActivityLocationKind.tsx";
 import getShelfItemDataDefault from "getShelfItemData.tsx";
-import getPlatformDefault from "utils/getPlatform.tsx";
 import QuestMatchingUtils from "../quests/utils/QuestMatchingUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStore from "../applications/ApplicationStore.tsx";

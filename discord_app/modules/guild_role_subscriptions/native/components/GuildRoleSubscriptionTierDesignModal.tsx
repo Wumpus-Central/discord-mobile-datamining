@@ -19,11 +19,11 @@ const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16263).GuildRoleSubscriptionsTierScenes;
+const constants = fn(16292).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1087).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   memberPreviews: { paddingHorizontal: 16, paddingTop: 26 },
   member: {
@@ -295,7 +295,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp29 = React6(FormImagePickerDefault, obj9);
     }
   : function Content() {
-      const tmp3 = role(14912)();
+      const tmp3 = role(14944)();
       const editStateContext = require("EditStateContextProvider").useEditStateContext();
       ({ editStateId, guildId } = editStateContext);
       const obj = require("EditStateContextProvider");
@@ -324,7 +324,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
       const intl = tmp4(1128).intl;
       obj7.children = intl.string(require("util").t.sEr1zr);
-      items1[1] = closure_9(role(8949), obj7);
+      items1[1] = closure_9(role(8965), obj7);
       const obj8 = {
         description: null,
         image: null,
@@ -334,7 +334,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         setImage: null,
         disabled: null,
       };
-      const tmpResult = role(8949);
+      const tmpResult = role(8965);
       const intl2 = tmp4(1128).intl;
       obj8.description = intl2.string(require("util").t.Glqj9m);
       obj8.image = tmp10;
@@ -344,13 +344,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return closure_0({ icon: icon.uri, unicodeEmoji: "r" });
       };
       obj8.disabled = roleSubscriptionSettingsDisabled;
-      items1[2] = closure_9(role(18954), obj8);
+      items1[2] = closure_9(role(18989), obj8);
       const obj9 = { style: tmp3.header, children: null };
-      const tmpResult3 = role(18954);
+      const tmpResult3 = role(18989);
       const intl3 = tmp4(1128).intl;
       obj9.children = intl3.string(require("util").t["W7hH+z"]);
-      items1[3] = closure_9(role(8949), obj9);
-      items1[4] = closure_9(role(18990), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+      items1[3] = closure_9(role(8965), obj9);
+      items1[4] = closure_9(role(19025), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
       obj6.children = items1;
       return closure_10(closure_11, obj6);
     };

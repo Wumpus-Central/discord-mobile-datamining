@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import RoleSubscriptionEmojiUtils from "../../guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow.tsx";
 import HeaderRow from "GuildSettingsModalEmoji/HeaderRow.tsx";
 import EmptyServerSettingsEmoji from "../../../design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx";
@@ -23,8 +23,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(9845).fetchEmoji, 1000);
-const createStyles = fn(5191);
+let closure_11 = apply.throttle(fn(9859).fetchEmoji, 1000);
+const createStyles = fn(4945);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },

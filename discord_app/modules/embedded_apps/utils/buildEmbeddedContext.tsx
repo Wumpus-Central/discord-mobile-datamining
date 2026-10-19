@@ -8,8 +8,8 @@ import InteractionStore from "../../interactions/InteractionStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const asLaunched = fn(6296).asLaunched;
-const MOBILE = fn(11332).ActivityPlatform.MOBILE;
+const asLaunched = fn(6724).asLaunched;
+const MOBILE = fn(11349).ActivityPlatform.MOBILE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/buildEmbeddedContext.tsx");
 

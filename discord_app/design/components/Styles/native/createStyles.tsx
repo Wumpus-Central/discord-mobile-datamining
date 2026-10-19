@@ -2,9 +2,9 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import SemanticColorContext from "../../../tokens/native/SemanticColorContext.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import SemanticColorContext from "../../../tokens/native/SemanticColorContext.native.tsx";
 import MobileThemesUtils from "../../../../modules/client_themes/native/MobileThemesUtils.tsx";
 import timing from "../../../animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../animation/reanimated/timing/timingPresets.tsx";
@@ -162,7 +162,7 @@ export const createStyles = function createStyles(rect) {
         items = undefined;
         const cResult = closure_0(576).c(4);
         const obj = closure_0(576);
-        const themeContext = closure_0(4922).useThemeContext();
+        const themeContext = closure_0(4999).useThemeContext();
         if (cResult[0] === items) {
           if (cResult[1] === themeContext) {
             obj4 = cResult[2];
@@ -176,7 +176,7 @@ export const createStyles = function createStyles(rect) {
         }
         let fromEntries = globalThis;
         const items1 = [];
-        const obj2 = closure_0(4922);
+        const obj2 = closure_0(4999);
         items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
         const tmp6 = createCacheKey();
         value = items.get(tmp6);
@@ -235,7 +235,7 @@ export const createStyles = function createStyles(rect) {
     : function useStyles() {
         items = [...arguments];
         let obj3;
-        const themeContext = closure_0(4922).useThemeContext();
+        const themeContext = closure_0(4999).useThemeContext();
         const items1 = [];
         items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
         const tmp2 = createCacheKey();
@@ -285,7 +285,7 @@ export const createStyles = function createStyles(rect) {
           const result = obj2.set(tmp2, obj3);
           return obj3;
         }
-        const obj = closure_0(4922);
+        const obj = closure_0(4999);
         obj2 = themeContext;
       };
 };

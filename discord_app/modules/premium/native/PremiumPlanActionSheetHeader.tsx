@@ -1,16 +1,16 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
+import LinearGradientDefault from "../../../../_runtime/05219_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import LinearGradientDefault from "../../../../_runtime/05491_LinearGradient.js";
-import _modDef7424 from "../../../../_runtime/metro/07424__.js";
-import _modDef7425 from "../../../../_runtime/metro/07425__.js";
-import _modDef7426 from "../../../../_runtime/metro/07426__.js";
-import _modDef7427 from "../../../../_runtime/metro/07427__.js";
-import _modDef7428 from "../../../../_runtime/metro/07428__.js";
-import _modDef7429 from "../../../../_runtime/metro/07429__.js";
-import _modDef7430 from "../../../../_runtime/metro/07430__.js";
-import _modDef7431 from "../../../../_runtime/metro/07431__.js";
+import _modDef7491 from "../../../../_runtime/metro/07491__.js";
+import _modDef7492 from "../../../../_runtime/metro/07492__.js";
+import _modDef7493 from "../../../../_runtime/metro/07493__.js";
+import _modDef7494 from "../../../../_runtime/metro/07494__.js";
+import _modDef7495 from "../../../../_runtime/metro/07495__.js";
+import _modDef7496 from "../../../../_runtime/metro/07496__.js";
+import _modDef7497 from "../../../../_runtime/metro/07497__.js";
+import _modDef7498 from "../../../../_runtime/metro/07498__.js";
 import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,10 +20,10 @@ require = fn;
 const View = fn(17).View;
 const PremiumConstants = fn(1394);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = fn(7423).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7490).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   header: { height: 112, justifyContent: "center", alignItems: "center" },
   logoContainer: { position: "absolute", top: 16, left: 16 },
@@ -51,11 +51,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== premiumType) {
         function getLogo() {
           if (React4.TIER_0 === premiumType) {
-            return _modDef7424;
+            return _modDef7491;
           } else if (React4.TIER_1 === premiumType) {
-            return _modDef7425;
+            return _modDef7492;
           } else if (React4.TIER_2 === premiumType) {
-            return _modDef7426;
+            return _modDef7493;
           }
         }
         cResult[0] = premiumType;
@@ -67,11 +67,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== premiumType) {
         function getWumpus() {
           if (React4.TIER_0 === premiumType) {
-            return _modDef7427;
+            return _modDef7494;
           } else if (React4.TIER_1 === premiumType) {
-            return _modDef7428;
+            return _modDef7495;
           } else if (React4.TIER_2 === premiumType) {
-            return _modDef7429;
+            return _modDef7496;
           }
         }
         cResult[2] = premiumType;
@@ -88,11 +88,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] !== premiumType) {
             function getClouds() {
               if (React4.TIER_0 === premiumType) {
-                return _modDef7430;
+                return _modDef7497;
               } else if (React4.TIER_1 === premiumType) {
                 return null;
               } else if (React4.TIER_2 === premiumType) {
-                return _modDef7431;
+                return _modDef7498;
               }
             }
             cResult[8] = premiumType;
@@ -118,11 +118,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp21 = cResult[17];
               }
               if (cResult[18] !== premiumType) {
-                const premiumTypeDisplayName = tmp(4864).getPremiumTypeDisplayName(premiumType);
+                const premiumTypeDisplayName = tmp(2054).getPremiumTypeDisplayName(premiumType);
                 cResult[18] = premiumType;
                 cResult[19] = premiumTypeDisplayName;
                 let tmp24 = premiumTypeDisplayName;
-                const tmpResult = tmp(4864);
+                const tmpResult = tmp(2054);
               } else {
                 tmp24 = cResult[19];
               }
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         shouldShowDiscountUpsell: true,
                         useWhiteBackground: true,
                       };
-                      tmp41 = closure_7(tmp(7432).PremiumPill, obj8);
+                      tmp41 = closure_7(tmp(7499).PremiumPill, obj8);
                     }
                     cResult[31] = discountOffer;
                     cResult[32] = tmp14;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   useWhiteBackground: true,
                   hideTrialCountdown: true,
                 };
-                tmp38 = closure_7(tmp(7432).PremiumPill, obj9);
+                tmp38 = closure_7(tmp(7499).PremiumPill, obj9);
               }
               cResult[26] = tmp9;
               cResult[27] = premiumType;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[30] = tmp38;
               tmp37 = tmp38;
             }
-            tmp(4864);
+            tmp(2054);
             let tmp19 = null != discountOffer;
             if (tmp19) {
               const discount = discountOffer.discount;
@@ -383,12 +383,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp14 = LinearGradientDefault;
       obj2.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
       if (React4.TIER_0 === premiumType) {
-        let tmp13Result = _modDef7430;
+        let tmp13Result = _modDef7497;
       } else {
         tmp13Result = null;
         if (React4.TIER_1 !== premiumType) {
           if (React4.TIER_2 === premiumType) {
-            tmp13Result = _modDef7431;
+            tmp13Result = _modDef7498;
           }
         }
       }
@@ -396,11 +396,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp13Result, ,];
         const obj3 = { style: tmp.logoContainer, children: null };
         if (React4.TIER_0 === premiumType) {
-          let tmp13Result8 = _modDef7424;
+          let tmp13Result8 = _modDef7491;
         } else if (React4.TIER_1 === premiumType) {
-          tmp13Result8 = _modDef7425;
+          tmp13Result8 = _modDef7492;
         } else if (React4.TIER_2 === premiumType) {
-          tmp13Result8 = _modDef7426;
+          tmp13Result8 = _modDef7493;
         }
         const obj4 = { source: tmp13Result8, resizeMode: "contain" };
         const items1 = [React5(FastImageDefault, obj4), ,];
@@ -432,11 +432,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items[1] = closure_1_8(View, obj3);
         const tmp13Result7 = FastImageDefault;
         if (React4.TIER_0 === premiumType) {
-          let tmp13Result10 = _modDef7427;
+          let tmp13Result10 = _modDef7494;
         } else if (React4.TIER_1 === premiumType) {
-          tmp13Result10 = _modDef7428;
+          tmp13Result10 = _modDef7495;
         } else if (React4.TIER_2 === premiumType) {
-          tmp13Result10 = _modDef7429;
+          tmp13Result10 = _modDef7496;
         }
         const obj7 = { source: tmp13Result10, style: null, resizeMode: "contain" };
         const items2 = [tmp.imgWumpus];
@@ -456,12 +456,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13Result9 = FastImageDefault;
       } else {
         if (React4.TIER_0 === premiumType) {
-          let tmp13Result12 = _modDef7430;
+          let tmp13Result12 = _modDef7497;
         } else {
           tmp13Result12 = null;
           if (React4.TIER_1 !== premiumType) {
             if (React4.TIER_2 === premiumType) {
-              tmp13Result12 = _modDef7431;
+              tmp13Result12 = _modDef7498;
             }
           }
         }

@@ -1,8 +1,8 @@
 // discord_app/design/components/TableRow/native/TableRowGroup.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import TableRowDivider from "TableRowDivider.native.tsx";
 import TableRowGroupContext from "TableRowGroupContext.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flexShrink: 0 },
   content: {

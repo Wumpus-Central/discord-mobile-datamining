@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
-import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const prototype = function HeroBlockRecord(unpublished_at) {

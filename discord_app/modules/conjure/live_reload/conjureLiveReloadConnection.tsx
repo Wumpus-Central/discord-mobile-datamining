@@ -14,6 +14,7 @@ export const liveReloadFrameHandlers = {
       error: null,
       phase: null,
       step: null,
+      background: null,
     };
     let error = enabled.error;
     if (error == null) {
@@ -30,6 +31,7 @@ export const liveReloadFrameHandlers = {
       step = null;
     }
     obj2.step = step;
+    obj2.background = true === enabled.background;
     DispatcherDefault.dispatch(obj2);
   },
 };

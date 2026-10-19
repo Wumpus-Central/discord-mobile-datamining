@@ -1,16 +1,16 @@
 // discord_app/modules/checkpoint/native/showNitroLockedToast.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3141 from "../Checkpoint2026.messages.js";
+import _modDef3078 from "../Checkpoint2026.messages.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 
 require = fn;
 let obj = {};
-obj[fn(5561).CheckpointTrait.FACE] = _modDef3141["4IdR/H"];
-obj[fn(5561).CheckpointTrait.OUTFIT] = _modDef3141.NuujPd;
-obj[fn(5561).CheckpointTrait.HAT] = _modDef3141.o1Zign;
-obj[fn(5561).CheckpointTrait.WEARABLE] = _modDef3141.C0CzoH;
-obj[fn(5561).CheckpointTrait.AURA] = _modDef3141["+9TbTS"];
-obj[fn(5561).CheckpointTrait.SHOES] = _modDef3141.sTG4TS;
+obj[fn(5993).CheckpointTrait.FACE] = _modDef3078["4IdR/H"];
+obj[fn(5993).CheckpointTrait.OUTFIT] = _modDef3078.NuujPd;
+obj[fn(5993).CheckpointTrait.HAT] = _modDef3078.o1Zign;
+obj[fn(5993).CheckpointTrait.WEARABLE] = _modDef3078.C0CzoH;
+obj[fn(5993).CheckpointTrait.AURA] = _modDef3078["+9TbTS"];
+obj[fn(5993).CheckpointTrait.SHOES] = _modDef3078.sTG4TS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");
 

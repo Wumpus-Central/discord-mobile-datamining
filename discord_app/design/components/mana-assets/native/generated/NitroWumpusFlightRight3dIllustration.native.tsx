@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef16764 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-1x.png.js";
-import _modDef16765 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js";
-import _modDef16766 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-3x.png.js";
+import _modDef16793 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-1x.png.js";
+import _modDef16794 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js";
+import _modDef16795 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16764 }, 3: null };
-let obj2 = { uri: _modDef16764 };
-obj[2] = { uri: _modDef16765 };
-const obj3 = { uri: _modDef16765 };
-obj[3] = { uri: _modDef16766 };
+let obj = { 1: null, 2: { uri: _modDef16793 }, 3: null };
+let obj2 = { uri: _modDef16793 };
+obj[2] = { uri: _modDef16794 };
+const obj3 = { uri: _modDef16794 };
+obj[3] = { uri: _modDef16795 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef16766 };
+const obj4 = { uri: _modDef16795 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx",

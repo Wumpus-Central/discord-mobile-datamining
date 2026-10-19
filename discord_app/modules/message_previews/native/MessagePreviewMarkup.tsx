@@ -1,10 +1,10 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
 import privDefault from "../../../../_runtime/01459_priv.js";
 import _modDef1951 from "../../../../_runtime/metro/01951__.js";
+import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import combineMarkupRulesDefault from "../../markup/combineMarkupRules.tsx";
 import MarkupRulesDefault from "../../markup/MarkupRules.tsx";
-import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import MarkupMessagePreviewReactRulesDefault from "../../markup/native/MarkupMessagePreviewReactRules.tsx";
 
 require = fn;

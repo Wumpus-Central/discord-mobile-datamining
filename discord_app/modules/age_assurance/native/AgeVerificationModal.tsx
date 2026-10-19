@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/AgeVerificationModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinkingDefault from "../../../lib/native/Linking.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -113,10 +113,10 @@ function AgeVerifyScreen(uri) {
       "\n  window.open = function(url) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({type: 'AGEKEY_BREAKOUT', url: url}));\n    return null;\n  };\n",
   });
 }
-let closure_4 = fn(6173).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(6604).AGE_VERIFICATION_MODAL_KEY;
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

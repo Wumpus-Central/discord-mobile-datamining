@@ -1,8 +1,8 @@
 // discord_app/modules/tiny_bronco/TinyBroncoNoticeVisibility.tsx
 import c from "../../../_runtime/00576_c.js";
 import Server from "../../flow/Server.tsx";
-import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;

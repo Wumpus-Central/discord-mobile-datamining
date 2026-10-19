@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import shared from "../../../shared.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import components_Button_Button from "../../../components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import LegacyText_LegacyTextDefault from "../../LegacyText/native/LegacyText.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Fonts = fn(1087).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { alignItems: "center", justifyContent: "center", padding: 16 },
   title: null,

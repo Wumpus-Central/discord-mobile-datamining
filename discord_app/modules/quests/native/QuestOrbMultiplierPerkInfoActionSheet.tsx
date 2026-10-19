@@ -4,15 +4,15 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3689 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
-import LinkingDefault from "../../../lib/native/Linking.tsx";
+import _modDef3626 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
 import NitroQuestOrbsMultiplierRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/NitroQuestOrbsMultiplierRive.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import useTypeConsolidationTextTransform from "../../design/useTypeConsolidationTextTransform.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetHeaderBar from "../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
+import useTypeConsolidationTextTransform from "../../design/useTypeConsolidationTextTransform.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
 import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
@@ -26,7 +26,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 },
   contentContainer: null,
@@ -548,7 +548,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
-          const stringResult1 = intl.string(_modDef3689.c5usUr);
+          const stringResult1 = intl.string(_modDef3626.c5usUr);
           cResult[2] = stringResult1;
           let tmp8 = stringResult1;
         } else {
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else if (cResult[4] !== multiplier) {
           const intl3 = util.intl;
           const obj4 = { bonusOrbMultiplier: multiplier };
-          const formatResult2 = intl3.format(_modDef3689.UkrcSH, obj4);
+          const formatResult2 = intl3.format(_modDef3626.UkrcSH, obj4);
           cResult[4] = multiplier;
           cResult[5] = formatResult2;
           tmp15 = formatResult2;
@@ -625,15 +625,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
       multiplier = multiplier.multiplier;
       const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-      const result = multiplier(9466).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+      const result = multiplier(9507).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
       dependencyMap = result;
-      let obj = multiplier(9466);
+      let obj = multiplier(9507);
       const items = [orbMultiplierEligibility];
       const items1 = [result, orbMultiplierEligibility, multiplier];
       const memo = noop.useMemo(() => {
         if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
           const intl2 = util.intl;
-          let stringResult = intl2.string(_modDef3689.c5usUr);
+          let stringResult = intl2.string(_modDef3626.c5usUr);
         } else {
           const intl = util.intl;
           stringResult = intl.string(util.t.Csf5Ol);
@@ -644,7 +644,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
           const intl2 = util.intl;
           const obj2 = { bonusOrbMultiplier: multiplier };
-          let formatResult = intl2.format(_modDef3689.UkrcSH, obj2);
+          let formatResult = intl2.format(_modDef3626.UkrcSH, obj2);
         } else {
           const intl = util.intl;
           const format = intl.format;
@@ -662,14 +662,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
       let obj3 = {
         visible:
-          orbMultiplierEligibility === multiplier(9466).QuestOrbMultiplierEligibilityType.NITRO ||
-          orbMultiplierEligibility === multiplier(9466).QuestOrbMultiplierEligibilityType.UPSELL,
+          orbMultiplierEligibility === multiplier(9507).QuestOrbMultiplierEligibilityType.NITRO ||
+          orbMultiplierEligibility === multiplier(9507).QuestOrbMultiplierEligibilityType.UPSELL,
         children: null,
       };
       const tmp4 =
-        orbMultiplierEligibility === multiplier(9466).QuestOrbMultiplierEligibilityType.NITRO ||
-        orbMultiplierEligibility === multiplier(9466).QuestOrbMultiplierEligibilityType.UPSELL;
+        orbMultiplierEligibility === multiplier(9507).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(9507).QuestOrbMultiplierEligibilityType.UPSELL;
       obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-      obj2.children = closure_8(orbMultiplierEligibility(16206), obj3);
-      return closure_8(multiplier(7118).BottomSheet, obj2);
+      obj2.children = closure_8(orbMultiplierEligibility(16235), obj3);
+      return closure_8(multiplier(5226).BottomSheet, obj2);
     };

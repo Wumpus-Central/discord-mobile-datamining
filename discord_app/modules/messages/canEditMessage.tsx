@@ -1,7 +1,7 @@
 // discord_app/modules/messages/canEditMessage.tsx
+import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
 import MessageRecordUtils from "MessageRecordUtils.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
-import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

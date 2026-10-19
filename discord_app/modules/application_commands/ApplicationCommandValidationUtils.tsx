@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandValidationUtils.tsx
 import util from "../../intl/index.native.tsx";
-import ApplicationCommandConstants from "ApplicationCommandConstants.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
+import ApplicationCommandConstants from "ApplicationCommandConstants.tsx";
 import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils.tsx";
 import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators.tsx";
 import size from "../../../_runtime/metro/00002__.js";

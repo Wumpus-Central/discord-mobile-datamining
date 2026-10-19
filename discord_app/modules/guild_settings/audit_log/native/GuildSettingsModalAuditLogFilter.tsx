@@ -2,9 +2,9 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06374_fuzzysearch.js";
+import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import fuzzysearchDefault from "../../../../../_runtime/06775_fuzzysearch.js";
 import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
 import DetailedGuildIdentityUserRowDefault from "../../native/DetailedGuildIdentityUserRow.tsx";
 import AuditLogUtils from "../AuditLogUtils.tsx";
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1087).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 },
   allUsersIconContainer: { height: 30, width: 30, alignItems: "center" },
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
-                              const tmp26 = closure_9(filterType(7016).SearchField, obj5);
+                              const tmp26 = closure_9(filterType(7093).SearchField, obj5);
                               cResult[25] = tmp20;
                               cResult[26] = tmp26;
                               let tmp24 = tmp26;

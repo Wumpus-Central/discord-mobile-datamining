@@ -4,9 +4,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import ArrowLargeLeftIcon from "../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -18,7 +18,7 @@ let closure_5 = ["title", "children", "onBack"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 },
   headerSpacer: null,
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             obj3.ItemSeparatorComponent = tmp12;
             obj3.contentContainerStyle = tmp15;
             obj3.renderItem = tmp16;
-            const tmp21 = closure_8(tmp(7091).BottomSheetFlashList, obj3);
+            const tmp21 = closure_8(tmp(7168).BottomSheetFlashList, obj3);
             cResult[16] = arr;
             cResult[17] = tmp5;
             cResult[18] = tmp10.list;
@@ -177,7 +177,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         index = index.index;
         return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
       };
-      return closure_8(data(7091).BottomSheetFlashList, obj);
+      return closure_8(data(7168).BottomSheetFlashList, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -259,7 +259,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
         return closure_2_8(Form.FormDivider, { style: divider.divider });
       };
-      return closure_8(renderItem(6584).BottomSheetSectionList, obj);
+      return closure_8(renderItem(5230).BottomSheetSectionList, obj);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");

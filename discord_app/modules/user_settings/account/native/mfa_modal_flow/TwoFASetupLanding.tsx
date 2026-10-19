@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef15806 from "../../../../../../_runtime/metro/15806__.js";
+import _modDef15835 from "../../../../../../_runtime/metro/15835__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   authIcon: { width: 120, height: 120, marginBottom: 32 },
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
       ({ container, container: container2 } = tmp4);
       if (cResult[0] !== tmp4.authIcon) {
-        const obj3 = { source: _modDef15806, style: tmp4.authIcon };
+        const obj3 = { source: _modDef15835, style: tmp4.authIcon };
         const tmp10 = React4(FastImageDefault, obj3);
         cResult[0] = tmp4.authIcon;
         cResult[1] = tmp10;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { bottom: true, style: tmp.container, children: null };
       const obj5 = { source: null, style: null };
-      obj5.source = _modDef15806;
+      obj5.source = _modDef15835;
       obj5.style = tmp.authIcon;
       const items = [React4(FastImageDefault, obj5), ,];
       const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

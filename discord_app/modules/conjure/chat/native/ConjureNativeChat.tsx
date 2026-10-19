@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05491_LinearGradient.js";
-import _modDef6520 from "../../../../../_runtime/metro/06520__.js";
+import _modDef3820 from "../../intl/ConjureUntranslated.messages.js";
+import LinearGradientDefault from "../../../../../_runtime/05219_LinearGradient.js";
+import _modDef6914 from "../../../../../_runtime/metro/06914__.js";
 import conjureChatTurns from "../conjureChatTurns.tsx";
 import conjurePublishCard from "../../publish/conjurePublishCard.tsx";
 import ConjureTodoState from "../../agent_activity/ConjureTodoState.tsx";
@@ -29,7 +29,7 @@ import ConjureChatStore from "../ConjureChatStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let ConjureConnectionStore = fn(10978);
+let ConjureConnectionStore = fn(10990);
 ({
   ensureConnection: closure_7,
   interruptTurn: closure_8,
@@ -49,7 +49,7 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flex: 1 },
   transcript: { flex: 1 },
@@ -143,7 +143,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj7 = { style: transcript, maskElement: tmp23, children };
-              const tmp30 = value2(_modDef6520, obj7);
+              const tmp30 = value2(_modDef6914, obj7);
               cResult[11] = children;
               cResult[12] = tmp3.transcript;
               cResult[13] = tmp23;
@@ -187,7 +187,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = items;
         obj2.maskElement = constants(View, obj3);
         obj2.children = children;
-        tmp3 = value2(_modDef6520, obj2);
+        tmp3 = value2(_modDef6914, obj2);
       }
       return tmp3;
     };
@@ -883,10 +883,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp = closure_24();
       items = [memo];
       const stateFromStores = projectId(504).useStateFromStores(items, () => "active" === memo.getState(), []);
-      const tmp6 = num(12126)(projectId);
-      const tmp7 = num(12127)(projectId);
+      const tmp6 = num(12146)(projectId);
+      const tmp7 = num(12147)(projectId);
       let obj = projectId(504);
-      const conjureRemixStartedAt = projectId(12127).useConjureRemixStartedAt(projectId);
+      const conjureRemixStartedAt = projectId(12147).useConjureRemixStartedAt(projectId);
       let obj3 = stateFromStores1;
       const items1 = [stateFromStores, projectId];
       const effect = stateFromStores1.useEffect(() => {
@@ -894,12 +894,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           React5(projectId);
         }
       }, items1);
-      let obj2 = projectId(12127);
-      const ackConjureProjectWhileViewing = projectId(11001).useAckConjureProjectWhileViewing(
+      let obj2 = projectId(12147);
+      const ackConjureProjectWhileViewing = projectId(11013).useAckConjureProjectWhileViewing(
         projectId,
         stateFromStores,
       );
-      const obj4 = projectId(11001);
+      const obj4 = projectId(11013);
       const items2 = [c14];
       const items3 = [projectId];
       stateFromStores1 = projectId(504).useStateFromStores(
@@ -1015,7 +1015,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items23,
       );
       const tmp2Result15 = projectId(504);
-      const chatEmptyStateResult = projectId(12129).chatEmptyState({
+      const chatEmptyStateResult = projectId(12149).chatEmptyState({
         historyLoaded: stateFromStores9,
         historyUnavailable: stateFromStores10,
         connState: stateFromStores8,
@@ -1026,7 +1026,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items24 = [memo];
       set = obj3.useMemo(() => ConjureTodoState.supersededChecklists(memo), items24);
-      const tmp2Result16 = projectId(12129);
+      const tmp2Result16 = projectId(12149);
       const items25 = [memo1];
       const items26 = [projectId];
       stateFromStores11 = projectId(504).useStateFromStores(
@@ -1051,7 +1051,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onToggleChecklist = obj3.useCallback((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
-        _undefined2((get) => projectId(12133).toggleConjureCard(get, closure_0, closure_1));
+        _undefined2((get) => projectId(12153).toggleConjureCard(get, closure_0, closure_1));
       }, []);
       const items28 = [memo];
       closure_17 = obj3.useMemo(() => conjurePendingPlan.planVersions(memo), items28);
@@ -1066,7 +1066,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onTogglePlan = obj3.useCallback((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
-        _undefined3((get) => projectId(12133).toggleConjureCard(get, closure_0, closure_1));
+        _undefined3((get) => projectId(12153).toggleConjureCard(get, closure_0, closure_1));
       }, []);
       const items29 = [memo];
       closure_21 = obj3.useMemo(
@@ -1113,7 +1113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items30 = [projectId];
       closure_22 = obj3.useCallback(() => {
         const intl = util.intl;
-        conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3883.EMgIuY));
+        conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3820.EMgIuY));
       }, items30);
       const items31 = [projectId];
       onPickIdea = obj3.useCallback((implementation_prompt) => {
@@ -1124,11 +1124,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         2,
       );
       const items32 = [projectId];
-      [tmp38, tmp39] = stateFromStores(num(12137)(projectId), 2);
+      [tmp38, tmp39] = stateFromStores(num(12157)(projectId), 2);
       const items33 = [projectId];
       const callback1 = obj3.useCallback(() => {
         const intl = util.intl;
-        collapsed(projectId, intl.string(_modDef3883["t5CN3+"]));
+        collapsed(projectId, intl.string(_modDef3820["t5CN3+"]));
       }, items32);
       closure_24 = obj3.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
         conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt, {
@@ -1136,7 +1136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           attachments,
         });
       }, items33);
-      const tmp19Result9 = stateFromStores(num(12137)(projectId), 2);
+      const tmp19Result9 = stateFromStores(num(12157)(projectId), 2);
       [c25, c26] = stateFromStores(obj3.useState(null), 2);
       const tmp19Result11 = stateFromStores(obj3.useState(null), 2);
       dismissedAppBuildRequestId = tmp19Result11[0];
@@ -1339,7 +1339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items43);
       const items44 = [callback7];
-      const memo7 = obj3.useMemo(() => ({ itemVisiblePercentThreshold: projectId(12139).MIN_VISIBLE_PERCENT }), []);
+      const memo7 = obj3.useMemo(() => ({ itemVisiblePercentThreshold: projectId(12159).MIN_VISIBLE_PERCENT }), []);
       const callback10 = obj3.useCallback((arg0) => {
         set = new Set();
         const iter = arg0.viewableItems[Symbol.iterator]();
@@ -1355,13 +1355,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items44);
       if (stateFromStores5) {
         const intl3 = tmp2(1128).intl;
-        memo6 = intl3.string(tmp5(3883).mKK6wB);
+        memo6 = intl3.string(tmp5(3820).mKK6wB);
       } else if (stateFromStores4) {
         const intl2 = tmp2(1128).intl;
-        memo6 = intl2.string(tmp5(3883).xnCAaP);
+        memo6 = intl2.string(tmp5(3820).xnCAaP);
       } else if (memo6 == null) {
         let intl = tmp2(1128).intl;
-        memo6 = intl.string(tmp5(3883).L9EDub);
+        memo6 = intl.string(tmp5(3820).L9EDub);
       }
       const items45 = [memo, memo4];
       let tmp75;
@@ -1390,12 +1390,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let checklistLiveResult = null == tmp75;
       if (!checklistLiveResult) {
-        checklistLiveResult = tmp2(12130).checklistLive(tmp75);
-        const tmp2Result19 = tmp2(12130);
+        checklistLiveResult = tmp2(12150).checklistLive(tmp75);
+        const tmp2Result19 = tmp2(12150);
       }
       if (null != tmp75) {
-        const tmp2Result20 = tmp2(12140);
-        const conjureTurnStartedAtResult = tmp2(12140).conjureTurnStartedAt(tmp75);
+        const tmp2Result20 = tmp2(12160);
+        const conjureTurnStartedAtResult = tmp2(12160).conjureTurnStartedAt(tmp75);
       }
       const items46 = [memo5];
       let tmp79;
@@ -1541,13 +1541,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_2_8(projectId);
       }, items53);
       if ("open" !== stateFromStores8) {
-        connectionLabelResult = tmp2(12143).connectionLabel(stateFromStores8);
-        const tmp2Result21 = tmp2(12143);
+        connectionLabelResult = tmp2(12163).connectionLabel(stateFromStores8);
+        const tmp2Result21 = tmp2(12163);
       }
       const tmp19Result14 = stateFromStores(obj3.useState(false), 2);
       const obj12 = { style: tmp.container, children: null };
-      const conjureControlActive = projectId(11037).useConjureControlActive(projectId);
-      const items54 = [c15(num(12144), { thinking: stateFromStores3, bleedBottom: num(1633)().bottom }), ,];
+      const conjureControlActive = projectId(11052).useConjureControlActive(projectId);
+      const items54 = [c15(num(12164), { thinking: stateFromStores3, bleedBottom: num(1633)().bottom }), ,];
       const obj13 = { style: tmp.transcriptArea, children: null };
       const obj14 = { clearance: tmp56, children: null };
       const obj15 = {
@@ -1573,7 +1573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ListEmptyComponent: null,
         renderItem: null,
       };
-      const tmp2Result22 = projectId(11037);
+      const tmp2Result22 = projectId(11052);
       const tmp96 = c25;
       const tmp2Result23 = projectId(1384);
       obj15.removeClippedSubviews = projectId(1384).isIOS() && undefined;
@@ -1632,7 +1632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj23 = { children: null };
       obj22.onAskForIdeas = tmp104;
       obj22.onShow = callback12;
-      const items57 = [c15(num(12147), obj22), c15(projectId(11660).ConjureHostApprovalCards, { projectId })];
+      const items57 = [c15(num(12167), obj22), c15(projectId(11681).ConjureHostApprovalCards, { projectId })];
       obj23.children = items57;
       obj15.ListFooterComponent = closure_17(tmp102, obj23);
       let tmp105 = "loading" === chatEmptyStateResult;
@@ -1747,12 +1747,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj.onRestoreVersion = tmp21;
           return value2(tmp3, obj);
         };
-        obj14.children = tmp95(tmp2(7091).FlashList, obj15);
+        obj14.children = tmp95(tmp2(7168).FlashList, obj15);
         const items58 = [tmp95(tmp96, obj14), ,];
         let tmp95Result6 = null;
         if (tmp27) {
           const obj24 = { projectId };
-          tmp95Result6 = tmp95(tmp5(12311), obj24);
+          tmp95Result6 = tmp95(tmp5(12331), obj24);
         }
         items58[1] = tmp95Result6;
         let tmp95Result7 = null;
@@ -1765,8 +1765,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             todosLive: checklistLiveResult,
             agents: memo9,
           };
-          tmp95Result7 = tmp95(tmp5(12312), obj25);
-          const tmp5Result4 = tmp5(12312);
+          tmp95Result7 = tmp95(tmp5(12332), obj25);
+          const tmp5Result4 = tmp5(12332);
         }
         items58[2] = tmp95Result7;
         obj13.children = items58;
@@ -1799,14 +1799,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj27.connFailed = "failed" === stateFromStores8;
         obj27.thinkingOpen = tmp27;
         obj27.onToggleThinking = callback;
-        const items59 = [tmp95(tmp5(12315), obj27), , ,];
+        const items59 = [tmp95(tmp5(12335), obj27), , ,];
         let tmp95Result8 = null;
         if (null != tmp7) {
           const obj28 = { style: tmp.notice, children: null };
           const obj29 = { type: "critical", role: "alert", message: tmp7.message, action: null };
           const obj30 = { text: tmp7.retry.text, onPress: tmp7.retry.onClick };
           obj29.action = obj30;
-          obj28.children = tmp95(tmp2(7837).NewInlineNotice, obj29);
+          obj28.children = tmp95(tmp2(7900).NewInlineNotice, obj29);
           tmp95Result8 = tmp95(tmp94, obj28);
         }
         items59[1] = tmp95Result8;
@@ -1814,7 +1814,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp6) {
           const obj31 = { style: tmp.notice, children: null };
           ({ message: obj49.message, onDismiss: obj49.onDismiss } = tmp6);
-          obj31.children = tmp95(tmp2(7837).NewInlineNotice, {
+          obj31.children = tmp95(tmp2(7900).NewInlineNotice, {
             type: "warning",
             role: "status",
             message: null,
@@ -1834,14 +1834,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           hidden: null,
         };
         let tmp114;
-        const tmp5Result5 = tmp5(12315);
+        const tmp5Result5 = tmp5(12335);
         if (stateFromStores3) {
           tmp114 = callback14;
         }
         obj33.onInterrupt = tmp114;
         obj33.onDraftHasTextChange = tmp39;
         obj33.hidden = hidden;
-        items59[3] = tmp95(tmp5(12324), obj33);
+        items59[3] = tmp95(tmp5(12344), obj33);
         obj26.children = items59;
         items54[2] = tmp93(tmp94, obj26);
         obj12.children = items54;
@@ -1850,13 +1850,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj34 = { style: tmp.placeholder, children: null };
         const intl4 = tmp2(1128).intl;
         if ("unavailable" === chatEmptyStateResult) {
-          let AyiQEp = tmp5(3883).Td4Sf4;
+          let AyiQEp = tmp5(3820).Td4Sf4;
         } else {
-          AyiQEp = tmp5(3883).AyiQEp;
+          AyiQEp = tmp5(3820).AyiQEp;
         }
         const obj35 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
-        obj34.children = tmp95(tmp2(5187).Text, obj35);
+        obj34.children = tmp95(tmp2(5195).Text, obj35);
         tmp95(tmp94, obj34);
       }
-      const tmp5Result = num(12147);
+      const tmp5Result = num(12167);
     };

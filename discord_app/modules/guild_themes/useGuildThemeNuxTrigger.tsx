@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let constants = fn(2065).DismissibleContentGroupName;
+let constants = fn(4797).DismissibleContentGroupName;
 let c5 = 2000;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

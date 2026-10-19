@@ -8,14 +8,14 @@ import Server from "../../flow/Server.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
+import isForwardMessage from "../forwarding/isForwardMessage.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import isMessageMentioned from "../messages/isMessageMentioned.tsx";
 import AgeGateUtils from "../age_gate/AgeGateUtils.tsx";
 import isChannelFocused from "../panels/isChannelFocused.native.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
 import ThreadNotificationSettings from "../threads/ThreadNotificationSettings.tsx";
-import isForwardMessage from "../forwarding/isForwardMessage.tsx";
 import MessageParserDefault from "../messages/MessageParser.tsx";
 import IsolateString from "../bidi/IsolateString.tsx";
 import SystemMessageUtilsDefault from "../../utils/SystemMessageUtils.tsx";
@@ -162,7 +162,7 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(2072);
+const ChannelRecord = fn(4804);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1087);
 ({
@@ -174,7 +174,7 @@ const Constants = fn(1087);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(6298).ActivityPanelModes;
+const ActivityPanelModes = fn(5570).ActivityPanelModes;
 const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

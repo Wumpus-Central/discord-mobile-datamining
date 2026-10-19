@@ -221,10 +221,10 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
                     nextPromise = promise.then(
                       () => {
                         const intl = closure_0(1128).intl;
-                        return closure_0(12136).sendConjureCardReply(
+                        return closure_0(12156).sendConjureCardReply(
                           closure_1_0,
                           "" +
-                            intl.formatToPlainString(closure_1(3883).jZlNst, {
+                            intl.formatToPlainString(closure_1(3820).jZlNst, {
                               name: projectId.name,
                               projectId: projectId.projectId,
                             }) +
@@ -277,10 +277,10 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
               nextPromise = promise.then(
                 () => {
                   const intl = closure_0(1128).intl;
-                  return closure_0(12136).sendConjureCardReply(
+                  return closure_0(12156).sendConjureCardReply(
                     closure_1_0,
                     "" +
-                      intl.formatToPlainString(closure_1(3883).jZlNst, {
+                      intl.formatToPlainString(closure_1(3820).jZlNst, {
                         name: projectId.name,
                         projectId: projectId.projectId,
                       }) +
@@ -373,10 +373,10 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
             sendAppBuildRequest(closure_0, found.projectId, trimmed).then(
               () => {
                 const intl = closure_0(1128).intl;
-                return closure_0(12136).sendConjureCardReply(
+                return closure_0(12156).sendConjureCardReply(
                   closure_1_0,
                   "" +
-                    intl.formatToPlainString(closure_1(3883).jZlNst, { name: found.name, projectId: found.projectId }) +
+                    intl.formatToPlainString(closure_1(3820).jZlNst, { name: found.name, projectId: found.projectId }) +
                     "\n\n" +
                     trimmed,
                 );

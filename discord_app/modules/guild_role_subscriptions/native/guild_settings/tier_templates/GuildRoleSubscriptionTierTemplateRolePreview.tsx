@@ -5,8 +5,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import utils_ColorUtilsAll from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     flexDirection: "row",

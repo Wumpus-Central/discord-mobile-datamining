@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkPill.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
-import themes from "../../../design/utils/shared/themes.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
+import themes from "../../../design/utils/shared/themes.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
 import hooks_QuestHooks from "../hooks/QuestHooks.tsx";
+import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
 import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   fullGradientContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -371,7 +371,7 @@ export const QuestOrbMultiplierPerkPill = ReactCompilerGating.isReactCompilerEna
         obj16.style = items3;
         if (!tmp13) {
           const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-          tmp21Result = tmp21(orbMultiplierEligibility(5491), obj18);
+          tmp21Result = tmp21(orbMultiplierEligibility(5219), obj18);
         }
         const items4 = [tmp21Result];
         const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

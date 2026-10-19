@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../UserProfileStore.tsx";
 
 const require = fn;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const cooldownDurationMs = 90 * DurationsDefault.Millis.DAY;
 let closure_7 = 90 * DurationsDefault.Millis.DAY;
 const ReactCompilerGating = fn(558);

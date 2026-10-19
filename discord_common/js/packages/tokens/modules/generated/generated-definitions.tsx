@@ -3,7 +3,43 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const obj = { Modules: null };
 const obj2 = {
-  button: null,
+  badge: null,
+  button: {
+    BORDER_RADIUS: {
+      resolve(enabledExperiments) {
+        enabledExperiments = enabledExperiments.enabledExperiments;
+        if (0 === enabledExperiments.length) {
+          return 2147483647;
+        } else {
+          const iter = enabledExperiments[Symbol.iterator]();
+          while (iter !== undefined) {
+            if ("mobile-visual-refresh" === iter.next()) {
+              iter.return();
+              return 8;
+            }
+          }
+          return 2147483647;
+        }
+      },
+    },
+    BORDER_RADIUS_LG: {
+      resolve(enabledExperiments) {
+        enabledExperiments = enabledExperiments.enabledExperiments;
+        if (0 === enabledExperiments.length) {
+          return 2147483647;
+        } else {
+          const iter = enabledExperiments[Symbol.iterator]();
+          while (iter !== undefined) {
+            if ("mobile-visual-refresh" === iter.next()) {
+              iter.return();
+              return 12;
+            }
+          }
+          return 2147483647;
+        }
+      },
+    },
+  },
   channels: {
     NAME_LINE_HEIGHT: {
       resolve(density) {
@@ -2801,42 +2837,13 @@ const obj2 = {
   },
 };
 const obj3 = {
-  BORDER_RADIUS: {
-    resolve(enabledExperiments) {
-      enabledExperiments = enabledExperiments.enabledExperiments;
-      if (0 === enabledExperiments.length) {
-        return 2147483647;
-      } else {
-        const iter = enabledExperiments[Symbol.iterator]();
-        while (iter !== undefined) {
-          if ("mobile-visual-refresh" === iter.next()) {
-            iter.return();
-            return 8;
-          }
-        }
-        return 2147483647;
-      }
-    },
-  },
-  BORDER_RADIUS_LG: {
-    resolve(enabledExperiments) {
-      enabledExperiments = enabledExperiments.enabledExperiments;
-      if (0 === enabledExperiments.length) {
-        return 2147483647;
-      } else {
-        const iter = enabledExperiments[Symbol.iterator]();
-        while (iter !== undefined) {
-          if ("mobile-visual-refresh" === iter.next()) {
-            iter.return();
-            return 12;
-          }
-        }
-        return 2147483647;
-      }
+  BORDER_WIDTH: {
+    resolve() {
+      return 0;
     },
   },
 };
-obj2.button = obj3;
+obj2.badge = obj3;
 obj.Modules = obj2;
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx",

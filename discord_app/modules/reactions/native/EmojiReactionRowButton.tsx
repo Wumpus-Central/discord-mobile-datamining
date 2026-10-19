@@ -13,7 +13,7 @@ require = fn;
 const Platform = fn(17).Platform;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = {
@@ -28,7 +28,7 @@ let closure_6 = createStyles.createStyles((width) => {
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(5191);
+createStyles = fn(4945);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = {

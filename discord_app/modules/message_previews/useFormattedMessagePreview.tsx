@@ -2,8 +2,8 @@
 import _mod12 from "../../../_runtime/metro/00012__.js";
 import MessageTypes from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import util from "../../intl/index.native.tsx";
-import useMessageAuthorDefault from "../messages/useMessageAuthor.tsx";
 import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
+import useMessageAuthorDefault from "../messages/useMessageAuthor.tsx";
 import useIsCallActiveDefault from "../calls/mobile/useIsCallActive.tsx";
 import SystemMessageUtilsDefault from "../../utils/SystemMessageUtils.tsx";
 import VoiceSessionUtils from "../messages/VoiceSessionUtils.tsx";
@@ -454,7 +454,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
         }
         const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
         const tmpResult6 = tmp(504);
-        const tmpResult7 = tmp(5883);
+        const tmpResult7 = tmp(6320);
         const obj2 = {
           message: author,
           channel: id,

@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/useStageSpeakingForCurrentUser.tsx
+import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -126,11 +126,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isVerifiedAdult = channelId(6165).useIsVerifiedAdult();
-      const obj2 = channelId(6165);
-      const obj3 = channelId(6177);
+      const isVerifiedAdult = channelId(6602).useIsVerifiedAdult();
+      const obj2 = channelId(6602);
+      const obj3 = channelId(5605);
       return (
-        channelId(6177).useIsFeatureAgeGated(channelId(6176).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5605).useIsFeatureAgeGated(channelId(6607).AgeGatedFeature.STAGE_SPEAKING) &&
         !isVerifiedAdult &&
         stateFromStores
       );
@@ -236,11 +236,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isAgeVerified = channelId(6165).useIsAgeVerified();
-      const obj2 = channelId(6165);
-      const obj3 = channelId(6177);
+      const isAgeVerified = channelId(6602).useIsAgeVerified();
+      const obj2 = channelId(6602);
+      const obj3 = channelId(5605);
       return (
-        channelId(6177).useIsFeatureAgeGated(channelId(6176).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5605).useIsFeatureAgeGated(channelId(6607).AgeGatedFeature.STAGE_SPEAKING) &&
         !isAgeVerified &&
         stateFromStores
       );

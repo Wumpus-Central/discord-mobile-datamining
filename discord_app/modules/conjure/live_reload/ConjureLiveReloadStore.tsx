@@ -13,13 +13,27 @@ ConjureLiveReloadStore.prototype["getLiveReload"] = function getLiveReload(arg0)
   return value;
 };
 const conjureLiveReloadStore = new ConjureLiveReloadStore(DispatcherDefault, {
-  CONJURE_LIVE_RELOAD_SET: function handleLiveReloadSet(enabled) {
-    const result = map.set(enabled.projectId, {
-      enabled: enabled.enabled,
-      error: enabled.error,
-      phase: enabled.phase,
-      step: enabled.step,
+  CONJURE_LIVE_RELOAD_SET: function handleLiveReloadSet(background) {
+    background = background.background;
+    if (true === background) {
+      const obj2 = { background };
+      let obj3 = obj2;
+    } else {
+      obj3 = {};
+    }
+    const merged = Object.assign(obj3);
+    const result = map.set(background.projectId, {
+      enabled: background.enabled,
+      error: background.error,
+      phase: background.phase,
+      step: background.step,
     });
+    const obj = {
+      enabled: background.enabled,
+      error: background.error,
+      phase: background.phase,
+      step: background.step,
+    };
   },
 });
 const size = fn(2);

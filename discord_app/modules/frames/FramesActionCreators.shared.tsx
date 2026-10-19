@@ -1,9 +1,9 @@
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
+import createProxyTicket from "../activities/createProxyTicket.tsx";
 import leaveFrame from "leaveFrame.tsx";
 import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
-import createProxyTicket from "../activities/createProxyTicket.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import FramesStore from "FramesStore.tsx";
 
@@ -60,7 +60,7 @@ let closure_11 = async function _launchFrame(arg0) {
           closure_130_10 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -251,7 +251,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11041);
+    obj2 = obj2(11056);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -427,14 +427,14 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(6296);
+const FramesConstants = fn(6724);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
   getFrameIntentForSurface: closure_7,
   makeFrameId: closure_8,
 } = FramesConstants);
-const ActivityPanelModes = fn(6298).ActivityPanelModes;
+const ActivityPanelModes = fn(5570).ActivityPanelModes;
 let c10 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

@@ -2,11 +2,11 @@
 import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
 import ChannelRowPreview from "../../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
 import useMessagePreviewsDefault from "../../../main_tabs_v2/useMessagePreviews.tsx";
@@ -18,7 +18,7 @@ import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(6223).UnreadSetting;
+const UnreadSetting = fn(6653).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -73,7 +73,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       );
       return obj;
     };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   pressable: { flex: 1 },
   pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },

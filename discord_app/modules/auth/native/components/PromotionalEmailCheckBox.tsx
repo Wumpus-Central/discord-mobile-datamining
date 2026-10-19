@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6187);
+const PromoEmailConsentStore = fn(6617);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { checked: tmp6Result };
-          const tmp16 = closure_6(tmp(6455).FormCheckbox, obj2);
+          const tmp16 = closure_6(tmp(6849).FormCheckbox, obj2);
           cResult[6] = tmp6Result;
           cResult[7] = tmp16;
         } else {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.checkboxLabel,
           children: promoEmailOptInLabel,
         };
-        const tmp19 = closure_6(tmp(5187).Text, obj4);
+        const tmp19 = closure_6(tmp(5195).Text, obj4);
         cResult[8] = promoEmailOptInLabel;
         cResult[9] = tmp4.checkboxLabel;
         cResult[10] = tmp19;
@@ -174,14 +174,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj5 = { checked: tmp3 };
-        const items = [closure_6(tmp4(6455).FormCheckbox, obj5)];
+        const items = [closure_6(tmp4(6849).FormCheckbox, obj5)];
         const obj6 = {
           variant: "text-xs/medium",
           color: "text-muted",
           style: tmp.checkboxLabel,
           children: promoEmailOptInLabel,
         };
-        items[1] = closure_6(tmp4(5187).Text, obj6);
+        items[1] = closure_6(tmp4(5195).Text, obj6);
         obj4.children = items;
         obj3.children = closure_7(closure_3, obj4);
         tmp8 = closure_6(closure_2, obj3);

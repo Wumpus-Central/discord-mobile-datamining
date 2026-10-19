@@ -6,7 +6,7 @@ import DismissibleContentShownStateStore from "../dismissible_content/Dismissibl
 
 require = fn;
 const NOOP = fn(1087).NOOP;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 let items = [];
 const module_570 = fn(570);
 const state = module_570.create(() => ({ suggestions: items, dismiss: NOOP }));
@@ -81,7 +81,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = DismissibleContentShownStateStore(first);
       if (cResult[1] !== tmp5) {
         if (tmp5) {
-          items = [tmp(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+          items = [tmp(4784).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
           let items1 = items;
         } else {
           items1 = [];
@@ -89,7 +89,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp5;
         cResult[2] = items1;
       } else {
-        const tmp8 = _slicedToArray(tmp(7376).useSelectedDismissibleContent(cResult[2]), 2);
+        const tmp8 = _slicedToArray(tmp(7442).useSelectedDismissibleContent(cResult[2]), 2);
         _require = tmp9;
         if (cResult[3] !== tmp8[1]) {
           const fn2 = function _() {
@@ -125,7 +125,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = cResult[6];
           tmp14 = cResult[7];
         }
-        const tmp15 = tmp8[0] === tmp(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
+        const tmp15 = tmp8[0] === tmp(4784).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
         const layoutEffect1 = noop.useLayoutEffect(tmp13, tmp14);
         if (cResult[8] === tmp5) {
           if (cResult[9] === tmp15) {
@@ -138,14 +138,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp15;
         cResult[10] = obj2;
         tmp17 = obj2;
-        const tmpResult = tmp(7376);
+        const tmpResult = tmp(7442);
       }
       const obj = require("c");
     }
   : function useFavoritesGuildSuggestionsVisibility() {
       const tmp = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
       if (tmp) {
-        items = [tmp2(2052).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+        items = [tmp2(4784).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
         let items1 = items;
       } else {
         items1 = [];

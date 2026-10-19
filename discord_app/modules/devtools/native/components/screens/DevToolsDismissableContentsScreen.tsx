@@ -4,16 +4,16 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import UserSettingsProtoActionCreators from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06374_fuzzysearch.js";
+import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
+import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
+import fuzzysearchDefault from "../../../../../../_runtime/06775_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SearchField from "../../../../../design/components/TextField/native/SearchField.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import SearchEmpty from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
-import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
 import toggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import DoubleCheckmarkIcon from "../../../../../design/components/Icon/native/redesign/generated/DoubleCheckmarkIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -26,7 +26,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -820,8 +820,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ref = initialSearchQuery.useRef(null);
       importDefault = initialSearchQuery.useRef(0);
       const tmp2 = useSafeAreaInsetsDefault();
-      let obj = ref(11401);
-      [dependencyMap, tmp5] = ref(11401).useLocalStorageState("devtools-dc-search", "");
+      let obj = ref(11422);
+      [dependencyMap, tmp5] = ref(11422).useLocalStorageState("devtools-dc-search", "");
       _slicedToArray = tmp5;
       initialSearchQuery = _slicedToArray(
         initialSearchQuery.useState(() => {
@@ -862,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
         return items;
       });
-      let tmp4 = _slicedToArray(ref(11401).useLocalStorageState("devtools-dc-search", ""), 2);
+      let tmp4 = _slicedToArray(ref(11422).useLocalStorageState("devtools-dc-search", ""), 2);
       let items = [closure_6];
       const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
         dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -953,6 +953,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.renderItem = callback3;
       obj4.onScroll = callback2;
-      obj3.children = dailyCapOverridden(ref(7091).FlashList, obj4);
+      obj3.children = dailyCapOverridden(ref(7168).FlashList, obj4);
       return dailyCapOverridden(first1, obj3);
     };

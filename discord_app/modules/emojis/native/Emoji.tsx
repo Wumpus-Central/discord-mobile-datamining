@@ -2,14 +2,14 @@
 import c from "../../../../_runtime/00576_c.js";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7099 from "../../../../_runtime/metro/07099__.js";
-import _modDef7100 from "../../../../_runtime/metro/07100__.js";
+import _modDef7176 from "../../../../_runtime/metro/07176__.js";
+import _modDef7177 from "../../../../_runtime/metro/07177__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 const native = LegacyText(1202);
 const PlatformUtils = LegacyText(1384);
-const shared = LegacyText(5065);
+const shared = LegacyText(4952);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onError: null,
               };
               if (LegacyTextResult.isThemeDark(ThemeStore.theme)) {
-                let tmp9Result = _modDef7099;
+                let tmp9Result = _modDef7176;
               } else {
-                tmp9Result = _modDef7100;
+                tmp9Result = _modDef7177;
               }
               obj5.placeholder = tmp9Result;
               const obj6 = { uri: tmp2 };
@@ -129,9 +129,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               onError: null,
             };
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp9Result = _modDef7099;
+              let tmp9Result = _modDef7176;
             } else {
-              tmp9Result = _modDef7100;
+              tmp9Result = _modDef7177;
             }
             obj4.placeholder = tmp9Result;
             const obj5 = { uri: uRL };

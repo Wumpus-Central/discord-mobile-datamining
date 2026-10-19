@@ -9,9 +9,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const Text_Text = CheckmarkLargeIcon(5187);
-const components_Button_Button = CheckmarkLargeIcon(5479);
-const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6473);
+const Text_Text = CheckmarkLargeIcon(5195);
+const components_Button_Button = CheckmarkLargeIcon(5205);
+const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6867);
 require = fn;
 function getLabel(arg0, arg1) {
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === arg0) {
@@ -42,7 +42,7 @@ function getLabel(arg0, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     padding: 8,

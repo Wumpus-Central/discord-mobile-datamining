@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 let items = [,];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1394).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -1053,12 +1053,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const tmp4Result8 = tmp4(tmp2[34]);
           }
         } else {
-          const obj44 = {
-            style: tmp13.avatar,
-            guildId: "r",
-            size: "<string:1090519600>",
-            user: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}",
-          };
+          const obj44 = { style: tmp13.avatar, guildId: "r", size: "r", user: false };
           const AvatarSizes = tmp(tmp2[29]).AvatarSizes;
           obj44.size = tmp65Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
           obj44.user = recipientUser;

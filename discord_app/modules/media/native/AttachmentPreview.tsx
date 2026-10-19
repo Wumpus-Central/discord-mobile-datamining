@@ -3,31 +3,31 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef12011 from "../../../../_runtime/metro/12011__.js";
-import _modDef12012 from "../../../../_runtime/metro/12012__.js";
-import _modDef12013 from "../../../../_runtime/metro/12013__.js";
-import _modDef12014 from "../../../../_runtime/metro/12014__.js";
-import _modDef12015 from "../../../../_runtime/metro/12015__.js";
-import _modDef12016 from "../../../../_runtime/metro/12016__.js";
-import _modDef12017 from "../../../../_runtime/metro/12017__.js";
-import _modDef12018 from "../../../../_runtime/metro/12018__.js";
-import _modDef12019 from "../../../../_runtime/metro/12019__.js";
-import _modDef12020 from "../../../../_runtime/metro/12020__.js";
-import _modDef12021 from "../../../../_runtime/metro/12021__.js";
-import _modDef12022 from "../../../../_runtime/metro/12022__.js";
-import _modDef12023 from "../../../../_runtime/metro/12023__.js";
-import _modDef12024 from "../../../../_runtime/metro/12024__.js";
+import _modDef12031 from "../../../../_runtime/metro/12031__.js";
+import _modDef12032 from "../../../../_runtime/metro/12032__.js";
+import _modDef12033 from "../../../../_runtime/metro/12033__.js";
+import _modDef12034 from "../../../../_runtime/metro/12034__.js";
+import _modDef12035 from "../../../../_runtime/metro/12035__.js";
+import _modDef12036 from "../../../../_runtime/metro/12036__.js";
+import _modDef12037 from "../../../../_runtime/metro/12037__.js";
+import _modDef12038 from "../../../../_runtime/metro/12038__.js";
+import _modDef12039 from "../../../../_runtime/metro/12039__.js";
+import _modDef12040 from "../../../../_runtime/metro/12040__.js";
+import _modDef12041 from "../../../../_runtime/metro/12041__.js";
+import _modDef12042 from "../../../../_runtime/metro/12042__.js";
+import _modDef12043 from "../../../../_runtime/metro/12043__.js";
+import _modDef12044 from "../../../../_runtime/metro/12044__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -53,20 +53,20 @@ let obj = {
 };
 let closure_7 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef12011,
-  acrobat: _modDef12012,
-  ae: _modDef12013,
-  ai: _modDef12014,
-  audio: _modDef12015,
-  code: _modDef12016,
-  document: _modDef12017,
-  image: _modDef12018,
-  photoshop: _modDef12019,
-  sketch: _modDef12020,
-  spreadsheet: _modDef12021,
-  unknown: _modDef12022,
-  video: _modDef12023,
-  webcode: _modDef12024,
+  archive: _modDef12031,
+  acrobat: _modDef12032,
+  ae: _modDef12033,
+  ai: _modDef12034,
+  audio: _modDef12035,
+  code: _modDef12036,
+  document: _modDef12037,
+  image: _modDef12038,
+  photoshop: _modDef12039,
+  sketch: _modDef12040,
+  spreadsheet: _modDef12041,
+  unknown: _modDef12042,
+  video: _modDef12043,
+  webcode: _modDef12044,
 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
       if (tmp4 == null) {
-        tmp4 = _modDef12022;
+        tmp4 = _modDef12042;
       }
       if (cResult[0] === tmp4) {
         if (cResult[1] === tmp3.attachmentFileIcon) {
@@ -106,7 +106,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp2 = obj4[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef12022;
+          tmp2 = _modDef12042;
         }
         return tmp2;
       }, items);
@@ -606,7 +606,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(9215).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(9231).CirclePlayIcon;
       tmp6 = hasOwnProperty(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = hasOwnProperty(View, obj8);

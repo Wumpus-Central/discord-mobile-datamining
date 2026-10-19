@@ -31,16 +31,17 @@ function handleHistoryLoadSettle(status) {
   ({ projectId, scope } = status);
   if ("failed" !== status.status) {
     const obj2 = { status: "loaded", truncated: tmp2, count: tmp };
-    value = map2.get(projectId);
+    value = map1.get(projectId);
     if (null == value) {
       const _Map2 = Map;
       map = new Map();
-      const result = map2.set(projectId, map);
+      const result = obj4.set(projectId, map);
       value = map;
     }
     const result1 = value.set(scope, obj2);
+    obj4 = map1;
   } else {
-    value4 = map2.get(projectId);
+    value4 = map1.get(projectId);
     let value5;
     if (value4 != null) {
       value5 = value4.get(scope);
@@ -61,11 +62,11 @@ function handleHistoryLoadSettle(status) {
       num = 0;
     }
     obj.count = num;
-    let value6 = map2.get(projectId);
+    let value6 = obj6.get(projectId);
     if (null == value6) {
       const _Map = Map;
       map1 = new Map();
-      const result2 = map2.set(projectId, map1);
+      const result2 = obj6.set(projectId, map1);
       value6 = map1;
     }
     const result3 = value6.set(scope, obj);
@@ -74,9 +75,8 @@ function handleHistoryLoadSettle(status) {
 let closure_2 = [];
 let map = new Map();
 let c4 = 0;
+let closure_5 = { status: "idle", truncated: false, count: 0 };
 let map1 = new Map();
-let closure_6 = { status: "idle", truncated: false, count: 0 };
-const map2 = new Map();
 const Store = initializeDefault.Store;
 class ConjureDebugLogStore extends Store {}
 const prototype = ConjureDebugLogStore.prototype;
@@ -91,44 +91,14 @@ prototype["getLogs"] = function getLogs(projectId) {
   }
   return snapshotResult;
 };
-prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
-  value = map.get(arg0);
-  if (null == value) {
-    return 0;
-  } else {
-    let num = map1.get(arg0);
-    if (num == null) {
-      num = 0;
-    }
-    let num2 = 0;
-    const values = value.values();
-    const iter = values[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp6 = nextResult;
-      let tmp7 = nextResult.key > num;
-      if (tmp7) {
-        tmp7 = "error" === tmp6.log.level;
-      }
-      if (tmp7) {
-        tmp7 = true !== tmp6.log.historical;
-      }
-      if (tmp7) {
-        num2 = num2 + 1;
-      }
-      continue;
-    }
-    return num2;
-  }
-};
 prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
-  value = map2.get(arg0);
+  value = map1.get(arg0);
   value2 = undefined;
   if (value != null) {
     value2 = value.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_5;
   }
   return value2;
 };
@@ -136,14 +106,11 @@ const conjureDebugLogStore = new ConjureDebugLogStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (0 === map.size) {
       if (0 === map1.size) {
-        if (0 === map2.size) {
-          return false;
-        }
+        return false;
       }
     }
     map.clear();
     map1.clear();
-    map2.clear();
   },
   CONJURE_HISTORY_LOAD_SETTLE: handleHistoryLoadSettle,
   CONJURE_DEBUG_BACKLOG: function handleDebugBacklog(arg0) {
@@ -171,38 +138,10 @@ const conjureDebugLogStore = new ConjureDebugLogStore(DispatcherDefault, {
     }
   },
   CONJURE_LOG_APPEND: handleLogAppend,
-  CONJURE_LOGS_SEEN: function handleLogsSeen(projectId) {
-    projectId = projectId.projectId;
-    let num = 0;
-    value = map.get(projectId);
-    let values;
-    if (value != null) {
-      values = value.values();
-    }
-    if (values == null) {
-      values = closure_2;
-    }
-    while (tmp2 !== undefined) {
-      let _Math = Math;
-      num = Math.max(num, tmp3.key);
-      continue;
-    }
-    let num2 = map1.get(projectId);
-    if (num2 == null) {
-      num2 = 0;
-    }
-    if (num2 >= num) {
-      return false;
-    } else {
-      const result = map1.set(projectId, num);
-    }
-    tmp2 = values[Symbol.iterator]();
-  },
   CONJURE_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {
     projectId = projectId.projectId;
     map.delete(projectId);
     map1.delete(projectId);
-    map2.delete(projectId);
   },
 });
 const size = fn(2);

@@ -1,17 +1,17 @@
 // discord_app/modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== title) {
         const obj2 = { title };
-        const tmp8 = jsx(onChange(7117).BottomSheetTitleHeader, { title });
+        const tmp8 = jsx(onChange(7194).BottomSheetTitleHeader, { title });
         cResult[2] = title;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { contentStyles: tmp4.content, header: tmp6, children: tmp14 };
-            const tmp19 = jsx(onChange(7118).BottomSheet, {
+            const tmp19 = jsx(onChange(5226).BottomSheet, {
               contentStyles: tmp4.content,
               header: tmp6,
               children: tmp14,
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { value, onChange: tmp5, hasIcons: false, children: cResult[5] };
-        const tmp16 = jsx(onChange(6540).TableRadioGroup, {
+        const tmp16 = jsx(onChange(6933).TableRadioGroup, {
           value,
           onChange: tmp5,
           hasIcons: false,

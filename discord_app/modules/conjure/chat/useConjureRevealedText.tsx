@@ -324,7 +324,7 @@ export const useConjureRevealedText = ReactCompilerGating.isReactCompilerEnabled
                 const obj2 = { target, length: target.length };
                 dependencyMap(obj2);
               }
-              obj = closure_0(12209);
+              obj = closure_0(12229);
             }
             obj = conjurePageVisibility;
             return conjurePageVisibility.subscribePageVisibility(flushIfHidden);
@@ -346,8 +346,8 @@ export const useConjureRevealedText = ReactCompilerGating.isReactCompilerEnabled
         obj5 = { target, length: null };
         if (streaming) {
           ({ target, length } = tmp2);
-          let length2 = target(12208).reconcileRevealedLength(target, target, length);
-          const targetResult = target(12208);
+          let length2 = target(12228).reconcileRevealedLength(target, target, length);
+          const targetResult = target(12228);
         } else {
           length2 = target.length;
         }

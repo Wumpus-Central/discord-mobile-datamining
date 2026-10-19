@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import utils_ImageUtils from "../../../../utils/native/ImageUtils.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import shared from "../../../../design/shared.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useNativeForumPostHandlersDefault from "hooks/useNativeForumPostHandlers.tsx";
 import SpoilerIconDefault from "../../../markup/native/SpoilerIcon.tsx";
 import MessageAttachmentUtils from "../../../messages/MessageAttachmentUtils.tsx";
@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let closure_12 = Math.min(PixelRatio.get(), 4);
 let closure_13 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   mediaContainer: { position: "relative", overflow: "hidden" },
   thumbnailBorder: { borderRadius: nativeDefault.radii.sm },
@@ -258,10 +258,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== isMediaPost) {
           const obj2 = {};
           const merged = Object.assign(isMediaPost);
-          const tmp29 = closure_9(ref(12874), obj2);
+          const tmp29 = closure_9(ref(12906), obj2);
           cResult[0] = isMediaPost;
           cResult[1] = tmp29;
-          const tmp25 = ref(12874);
+          const tmp25 = ref(12906);
         }
       } else {
         if (tmpResult.isAndroid()) {
@@ -287,7 +287,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[5];
         }
         if (null != isMediaPost.obscureReason) {
-          const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7271).AGE_VERIFICATION_OBSCURABLE_REASONS;
+          const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7340).AGE_VERIFICATION_OBSCURABLE_REASONS;
           if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(isMediaPost.obscureReason)) {
             if (tmp7) {
               if (cResult[6] === isMediaPost.containerStyle) {
@@ -336,7 +336,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                     onPress: M,
                     children: tmp8,
                   };
-                  const tmp38 = closure_9(tmp(6462).PressableOpacity, obj5);
+                  const tmp38 = closure_9(tmp(6856).PressableOpacity, obj5);
                   cResult[10] = tmp8;
                   cResult[11] = tmp38;
                 } else {
@@ -418,9 +418,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (obscureReason.isMediaPost) {
         const obj2 = {};
         const merged = Object.assign(obscureReason);
-        let tmp6Result = closure_9(ref(12874), obj2);
+        let tmp6Result = closure_9(ref(12906), obj2);
         let tmp12 = closure_9;
-        const tmp19 = ref(12874);
+        const tmp19 = ref(12906);
       } else {
         if (tmp3Result.isAndroid()) {
           const obj3 = {};
@@ -436,7 +436,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3Result = tmp3(1384);
       }
       if (null != obscureReason.obscureReason) {
-        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7271).AGE_VERIFICATION_OBSCURABLE_REASONS;
+        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7340).AGE_VERIFICATION_OBSCURABLE_REASONS;
         if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
           if (shouldAgeVerifyForReason) {
             const obj5 = { style: null, ref: null, children: null };
@@ -447,14 +447,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
               activeOpacity: 0,
               onPress() {
-                const obj = ref(7764);
+                const obj = ref(7827);
                 const result = obj.showAgeVerificationGetStartedModal({
-                  entryPoint: obscureReason(6174).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW,
+                  entryPoint: obscureReason(6605).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW,
                 });
               },
               children: tmp6Result,
             };
-            obj5.children = tmp12(tmp3(6462).PressableOpacity, obj6);
+            obj5.children = tmp12(tmp3(6856).PressableOpacity, obj6);
             let tmp12Result = tmp12(closure_5, obj5);
           }
           return tmp12Result;
@@ -478,7 +478,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           },
           children: tmp6Result,
         };
-        obj7.children = tmp12(tmp3(6462).PressableOpacity, obj8);
+        obj7.children = tmp12(tmp3(6856).PressableOpacity, obj8);
         tmp12Result = tmp12(closure_5, obj7);
       } else {
         const obj9 = { style: null, ref: null, children: null };

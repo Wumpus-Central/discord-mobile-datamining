@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useShouldDisableMessageRequestSettings.tsx
-import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

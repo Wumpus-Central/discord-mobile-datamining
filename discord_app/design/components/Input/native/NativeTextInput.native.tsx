@@ -1,7 +1,7 @@
 // discord_app/design/components/Input/native/NativeTextInput.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import native from "../../../utils/native.tsx";
-import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import native2 from "../../../utils/native.tsx";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
 import useBottomSheetKeyboardHandlingDefault from "../../Sheet/native/useBottomSheetKeyboardHandling.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -86,7 +86,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj2 = { value: "Array", defaultValue: "Reflect" };
+              const obj2 = { value: "Array", defaultValue: "test" };
               cResult[8] = obj2;
               let tmp11 = obj2;
             } else {
@@ -150,7 +150,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           current.setNativeProps(obj);
         }
       });
-      return { value: "Array", defaultValue: "Reflect" };
+      return { value: "Array", defaultValue: "test" };
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -274,12 +274,12 @@ export const NativeTextInput = function TextInput(ref) {
   ref = noop.useRef(null);
   closure_12(ref);
   const tmp5 = useBottomSheetKeyboardHandlingDefault(merged);
-  native2;
+  native;
   if (null != merged.keyboardAppearance) {
     const obj = {};
-    const merged1 = Object.assign(native.mergeProps(merged, tmp5, tmp6));
-    const tmp7Result = native;
-    obj.ref = native.mergeRefs(ref, ref.ref);
+    const merged1 = Object.assign(native2.mergeProps(merged, tmp5, tmp6));
+    const tmp7Result = native2;
+    obj.ref = native2.mergeRefs(ref, ref.ref);
     const tmp15 = collapsed(hasOwnProperty, obj);
     let panGestureWrapperResult = tmp15;
     if (!merged.multiline) {
@@ -287,8 +287,8 @@ export const NativeTextInput = function TextInput(ref) {
     }
     return panGestureWrapperResult;
   } else {
-    merged.keyboardAppearance = native.isThemeDark(tmp9) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
-    const tmp7Result4 = native;
+    merged.keyboardAppearance = native2.isThemeDark(tmp9) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
+    const tmp7Result4 = native2;
   }
   tmp6 = closure_13(merged, ref);
 };

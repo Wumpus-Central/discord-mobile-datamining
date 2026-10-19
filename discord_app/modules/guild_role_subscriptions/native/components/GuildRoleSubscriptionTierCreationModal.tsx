@@ -10,7 +10,7 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(16263);
+const GuildRoleSubscriptionsConstants = fn(16292);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: closure_9 } =
   GuildRoleSubscriptionsConstants);
 const jsx = fn(21).jsx;
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { guildId, editStateId, groupListingId, children: null };
       let obj3 = {
         guildId,
-        children: jsx(groupListingId(18963), {
+        children: jsx(groupListingId(18998), {
           guildId,
           modalKey,
           onDone: function handleCreate() {
@@ -329,9 +329,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           steps: memo,
         }),
       };
-      obj2.children = jsx(guildId(18948).RoleSubscriptionSettingsDisabledContextProvider, {
+      obj2.children = jsx(guildId(18983).RoleSubscriptionSettingsDisabledContextProvider, {
         guildId,
-        children: jsx(groupListingId(18963), {
+        children: jsx(groupListingId(18998), {
           guildId,
           modalKey,
           onDone: function handleCreate() {
@@ -347,5 +347,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           steps: memo,
         }),
       });
-      return jsx(guildId(18971).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
+      return jsx(guildId(19006).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
     };

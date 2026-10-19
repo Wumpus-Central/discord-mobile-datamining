@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/utils/EmojiColorUtils.tsx
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
+import EmojiUtilsPlatformedDefault from "../../../utils/EmojiUtilsPlatformed.native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import utils_ColorDefault from "../../../utils/Color.tsx";
-import EmojiUtilsPlatformedDefault from "../../../utils/EmojiUtilsPlatformed.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {

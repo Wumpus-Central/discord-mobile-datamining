@@ -1,9 +1,9 @@
 // discord_app/modules/gif_picker/native/GIFPickerItemActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import GIFPickerActionCreators from "../../../actions/GIFPickerActionCreators.tsx";
 import GifIcon from "../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },
@@ -33,17 +33,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       const tmp4 = closure_7();
       if (cResult[0] !== item.url) {
-        const gifUrlKeyResult = tmp(10035).gifUrlKey(item.url);
+        const gifUrlKeyResult = tmp(10049).gifUrlKey(item.url);
         cResult[0] = item.url;
         cResult[1] = gifUrlKeyResult;
         let tmp5 = gifUrlKeyResult;
-        const tmpResult = tmp(10035);
+        const tmpResult = tmp(10049);
       } else {
         tmp5 = cResult[1];
       }
       let obj = item(576);
-      const isFavoriteGIF = item(10039).useIsFavoriteGIF(tmp5);
-      const tmpResult2 = item(10039);
+      const isFavoriteGIF = item(10053).useIsFavoriteGIF(tmp5);
+      const tmpResult2 = item(10053);
       ({ width, height } = isFavoriteGIF(1499)());
       const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, (0.5 * height) / item.height);
       const result = item.width * bound;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function w() {
-            isFavoriteGIF(5155).hideActionSheet();
+            isFavoriteGIF(5171).hideActionSheet();
           };
           cResult[5] = fn;
           let tmp13 = fn;
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let obj3 = { children: null };
                 const items1 = [tmp26, tmp30];
                 obj3.children = items1;
-                const tmp32 = closure_6(tmp(6214).ButtonGroup, obj3);
+                const tmp32 = closure_6(tmp(6644).ButtonGroup, obj3);
                 cResult[27] = tmp26;
                 cResult[28] = tmp30;
                 cResult[29] = tmp32;

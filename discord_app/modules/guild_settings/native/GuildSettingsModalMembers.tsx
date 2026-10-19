@@ -27,8 +27,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let items = [fn(8972).AutocompleterResultTypes.USER];
-const createStyles = fn(5191);
+let items = [fn(8988).AutocompleterResultTypes.USER];
+const createStyles = fn(4945);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   searchFieldContainer: null,
@@ -287,10 +287,10 @@ let closure_22 = noop.memo(
           let formatToPlainStringResult;
           if (found.length > 0) {
             const user = UserStore.getUser(guildMember.userId);
-            let str = guildMember(5509).getNickname(guild.id, undefined, user);
+            let str = guildMember(5944).getNickname(guild.id, undefined, user);
             if (str == null) {
-              str = tmp9(5057).getGlobalName(user);
-              const tmp9Result = tmp9(5057);
+              str = tmp9(4994).getGlobalName(user);
+              const tmp9Result = tmp9(4994);
             }
             if (str == null) {
               let username;
@@ -307,7 +307,7 @@ let closure_22 = noop.memo(
             const intl = tmp2(1128).intl;
             const obj3 = { memberName: str, roleNames: joined };
             formatToPlainStringResult = intl.formatToPlainString(tmp2(1128).t["6eGpWx"], obj3);
-            const obj2 = guildMember(5509);
+            const obj2 = guildMember(5944);
             tmp9 = guildMember;
           }
           const obj4 = {
@@ -333,7 +333,7 @@ let closure_22 = noop.memo(
           };
           obj4.start = start;
           obj4.end = end;
-          return closure_17(guildMember(10612), obj4);
+          return closure_17(guildMember(10626), obj4);
         }
         const obj = guild(1505);
       },
@@ -961,12 +961,12 @@ export default noop.memo(
                 items: membersManagementActions,
                 children(ref) {
                   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-                  const obj = { source: closure_1_1(8937), accessibilityLabel: null, ref: null };
+                  const obj = { source: closure_1_1(8953), accessibilityLabel: null, ref: null };
                   const intl = closure_1_0(1128).intl;
                   obj.accessibilityLabel = intl.string(closure_1_0(1128).t.ogxXGq);
                   obj.ref = ref.ref;
                   const merged1 = Object.assign(merged);
-                  return closure_1_17(closure_1_0(7365).HeaderActionButton, obj);
+                  return closure_1_17(closure_1_0(7431).HeaderActionButton, obj);
                 },
               });
             },

@@ -20,8 +20,8 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8005).getActiveLinkUserIds();
-  let obj = activeLinkUserIds(8005);
+  activeLinkUserIds = activeLinkUserIds(8068).getActiveLinkUserIds();
+  let obj = activeLinkUserIds(8068);
   const obj3 = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1128).intl;
   obj3.title = intl.string(activeLinkUserIds(1128).t.QJKKrT);

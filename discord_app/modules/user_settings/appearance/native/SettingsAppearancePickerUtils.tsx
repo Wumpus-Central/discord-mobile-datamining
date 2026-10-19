@@ -4,10 +4,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import getSystemThemeDefault from "../../../themes/getSystemTheme.native.tsx";
 import ClientThemesTypes from "../../../client_themes/ClientThemesTypes.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import utils_ColorDefault from "../../../../utils/Color.tsx";
 import MobileThemesUtils from "../../../client_themes/native/MobileThemesUtils.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -148,8 +148,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(5064)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5064)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4943)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4943)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -266,7 +266,7 @@ export const useLaunchWelcomeSystemTheme = ReactCompilerGating.isReactCompilerEn
     }
   : function useLaunchWelcomeSystemTheme() {
       const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-      token = token(4913).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+      token = token(5213).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
       let items = [token];
       return noop.useMemo(() => {
         const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

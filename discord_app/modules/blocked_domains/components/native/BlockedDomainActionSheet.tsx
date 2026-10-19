@@ -4,17 +4,17 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import TrafficConeSpotIllustration from "../../../../design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import TrafficConeSpotIllustration from "../../../../design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx";
 import URLCallout from "../../../safety_common/native/URLCallout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   title: { textAlign: "center" },

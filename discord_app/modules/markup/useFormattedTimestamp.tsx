@@ -1,6 +1,6 @@
 // discord_app/modules/markup/useFormattedTimestamp.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef4797 from "../../../_runtime/metro/04797__.js";
+import _modDef2050 from "../../../_runtime/metro/02050__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(tmp6, tmp7);
         if ("R" === parsed.format) {
           if (null == tmp5) {
-            let TIMESTAMP_FORMATS = tmp(8428).TIMESTAMP_FORMATS;
+            let TIMESTAMP_FORMATS = tmp(8444).TIMESTAMP_FORMATS;
             let formatted = TIMESTAMP_FORMATS.R(parsed.parsed);
             parsed = parsed.parsed;
             cResult[4] = parsed;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let result = 1000 * closure_1_6;
           const _Math = Math;
           const parsed = tmp.parsed;
-          const absolute = Math.abs(parsed.diff(_modDef4797()));
+          const absolute = Math.abs(parsed.diff(_modDef2050()));
           let obj = dependencyMap2[Symbol.iterator]();
           while (obj !== undefined) {
             let tmp14 = _slicedToArray(tmp11, 2);
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let _setInterval = setInterval;
             format = setInterval(() => {
               const obj = { parsed: closure_0.parsed, formatted: null };
-              const TIMESTAMP_FORMATS = closure_0(8428).TIMESTAMP_FORMATS;
+              const TIMESTAMP_FORMATS = closure_0(8444).TIMESTAMP_FORMATS;
               obj.formatted = TIMESTAMP_FORMATS.R(closure_0.parsed);
               closure_1_1(obj);
             }, result);
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let result = 1000 * closure_1_6;
           const _Math = Math;
           const parsed = tmp.parsed;
-          const absolute = Math.abs(parsed.diff(_modDef4797()));
+          const absolute = Math.abs(parsed.diff(_modDef2050()));
           let obj = dependencyMap2[Symbol.iterator]();
           while (obj !== undefined) {
             let tmp14 = _slicedToArray(tmp11, 2);
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let _setInterval = setInterval;
             format = setInterval(() => {
               const obj = { parsed: closure_0.parsed, formatted: null };
-              const TIMESTAMP_FORMATS = closure_0(8428).TIMESTAMP_FORMATS;
+              const TIMESTAMP_FORMATS = closure_0(8444).TIMESTAMP_FORMATS;
               obj.formatted = TIMESTAMP_FORMATS.R(closure_0.parsed);
               closure_1_1(obj);
             }, result);

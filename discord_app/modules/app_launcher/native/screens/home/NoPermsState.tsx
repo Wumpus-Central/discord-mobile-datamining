@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     paddingVertical: 16,
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState() {
       const cResult = c.c(10);
       const tmp4 = closure_6();
-      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11944 : 11945);
+      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11964 : 11965);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function EmptyState() {
       const tmp = closure_6();
-      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11944 : 11945);
+      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11964 : 11965);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );

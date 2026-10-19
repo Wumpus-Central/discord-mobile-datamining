@@ -1,8 +1,8 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ChatInputActionButtonDefault from "ChatInputActionButton.tsx";
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem.tsx";
 import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift.tsx";
@@ -26,7 +26,7 @@ function renderChatInputActionButtonGiftAndThread(id, styleButton, state, cleanu
     const intl = onPress(1128).intl;
     obj2.accessibilityLabel = intl.string(onPress(1128).t["4WNcpu"]);
     obj2.disabled = !canStartThreads;
-    obj2.IconComponent = onPress(12898).ThreadPlusIcon;
+    obj2.IconComponent = onPress(12930).ThreadPlusIcon;
     obj2.onPress = function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     };
@@ -61,9 +61,9 @@ function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   return str;
 }
 const View = fn(17).View;
-const ChatInputActionType = fn(12339).ChatInputActionType;
+const ChatInputActionType = fn(12359).ChatInputActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles((height, arg1) => {
   const obj = { container: null };
   const size = { width: height + 2 * arg1, height };

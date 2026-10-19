@@ -1,12 +1,49 @@
 // discord_app/modules/embedded_apps/native/utils/createWebViewHtmlFile.tsx
 import NativeFileModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
+import bridgeProtocol from "../../../../../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx";
+import _modDef11360 from "../../../../../_runtime/metro/11360__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
+require = fn;
 function webViewShellFileName(arg0) {
   return "iframe--" + arg0 + ".html";
 }
-let closure_6 = async function _createWebViewHtmlFile(arg0) {
+function generateWebViewHtml(arg0) {
+  ({ iframeUri, iframeSandboxAttributes, referrerPolicy, shimBridgeSecret } = arg0);
+  let str = "";
+  if (null != shimBridgeSecret) {
+    const tmp3 = _modDef11360;
+    const _JSON = JSON;
+    const _JSON2 = JSON;
+    const json = JSON.stringify(shimBridgeSecret);
+    const _HermesInternal = HermesInternal;
+    str =
+      '<script type="text/javascript">' +
+      tmp3 +
+      '</script>\n      <script type="text/javascript">' +
+      bridgeProtocol.SHELL_BRIDGE_GLOBAL +
+      ".start(" +
+      json +
+      ", " +
+      JSON.stringify(closure_4) +
+      ");</script>";
+  }
+  return (
+    '\n  <html>\n  <head>\n      <style>\n      body {\n          padding: 0;\n          margin: 0;\n          width: 100vw;\n          min-height: 100vh; /* This keeps a small white gap at the bottom of the screen, the options below help prevent this. */\n          min-height: -moz-available; /* See: https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 for more info */\n          min-height: -webkit-fill-available;\n          min-height: fill-available;\n      }\n      </style>\n      <meta\n      name="viewport"\n      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"\n      />\n  </head>\n  <body>\n      ' +
+    str +
+    '\n      <script type="text/javascript">\n          window.addEventListener(\'message\', e => {\n            window.ReactNativeWebView.postMessage(JSON.stringify(e.data));\n          });\n      </script>\n      <iframe id="' +
+    closure_4 +
+    '" width="100%" height="100%" src="' +
+    iframeUri +
+    "\" frameborder=\"0\" allow=\"autoplay; encrypted-media; accelerometer; gyroscope; camera 'none'; microphone 'none'; display-capture 'none'\" allowfullscreen sandbox=\"" +
+    iframeSandboxAttributes +
+    '" referrerPolicy="' +
+    referrerPolicy +
+    '">\n      </iframe>\n  </body>\n  </html>\n'
+  );
+}
+let closure_9 = async function _createWebViewHtmlFile(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -22,7 +59,7 @@ let closure_6 = async function _createWebViewHtmlFile(arg0) {
   } else {
     try {
       c6 = 2;
-      if (0 === closure_5) {
+      if (0 === c5) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -37,17 +74,21 @@ let closure_6 = async function _createWebViewHtmlFile(arg0) {
           closure_129_1 = undefined;
           closure_129_2 = undefined;
           closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
           ({
             iframeId: closure_129_0,
             iframeUri: closure_129_1,
             iframeSandboxAttributes: closure_129_2,
             referrerPolicy: closure_129_3,
+            shimVersion: closure_129_4,
+            shellBridgeSecret: closure_129_5,
           } = closure_0);
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_5 = 1;
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -59,48 +100,42 @@ let closure_6 = async function _createWebViewHtmlFile(arg0) {
           return obj6;
         } else {
           const _HermesInternal = HermesInternal;
-          closure_129_4 = "" + closure_130_3 + "/" + closure_130_4(closure_129_0);
+          closure_129_6 = "" + closure_130_5 + "/" + closure_130_6(closure_129_0);
           const obj7 = {
             iframeUri: closure_129_1,
             iframeSandboxAttributes: closure_129_2,
             referrerPolicy: closure_129_3,
+            shimBridgeSecret: null,
           };
-          closure_129_5 = (function generateWebViewHtml(iframeUri) {
-            return (
-              '\n  <html>\n  <head>\n      <style>\n      body {\n          padding: 0;\n          margin: 0;\n          width: 100vw;\n          min-height: 100vh; /* This keeps a small white gap at the bottom of the screen, the options below help prevent this. */\n          min-height: -moz-available; /* See: https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 for more info */\n          min-height: -webkit-fill-available;\n          min-height: fill-available;\n      }\n      </style>\n      <meta\n      name="viewport"\n      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"\n      />\n  </head>\n  <body>\n      <script type="text/javascript">\n          window.addEventListener(\'message\', e => {\n            window.ReactNativeWebView.postMessage(JSON.stringify(e.data));\n          });\n      </script>\n      <iframe id="activityFrame" width="100%" height="100%" src="' +
-              iframeUri.iframeUri +
-              "\" frameborder=\"0\" allow=\"autoplay; encrypted-media; accelerometer; gyroscope; camera 'none'; microphone 'none'; display-capture 'none'\" allowfullscreen sandbox=\"" +
-              iframeUri.iframeSandboxAttributes +
-              '" referrerPolicy="' +
-              iframeUri.referrerPolicy +
-              '">\n      </iframe>\n  </body>\n  </html>\n'
-            );
-          })(obj7);
-          closure_5 = 2;
+          let tmp23 = null;
+          if (2 === closure_129_4) {
+            tmp23 = closure_129_5;
+          }
+          obj7.shimBridgeSecret = tmp23;
+          closure_129_7 = closure_130_8(obj7);
+          c5 = 2;
           c6 = 1;
           const obj8 = {
             value: (function sweepStaleWebViewHtmlFilesOnce() {
-              if (closure_5 == null) {
-                closure_5 = closure_2(function* () {
-                  c3 = 1;
-                  yield closure_0(tmp3[1]).clearFolder("cache", c3);
+              if (closure_7 == null) {
+                closure_7 = closure_3(function* () {
+                  yield tmp3(tmp19[2]).clearFolder("cache", c5);
                   if (1 === tmp7) {
                     c3 = 0;
-                    closure_128_0 = closure_2;
-                    closure_0(tmp3[2]).captureException(closure_128_0);
+                    closure_128_0 = tmp19;
+                    tmp3(tmp19[3]).captureException(closure_128_0);
                     c5 = 3;
-                    closure_0(tmp3[2]);
+                    tmp3(tmp19[3]);
                   } else if (arg0 === 1) {
                     c5 = 3;
                     throw value;
                   } else if (arg0 !== 2) {
                     c3 = 0;
                   }
-                  c3 = 0;
                   return value;
                 })();
               }
-              return closure_5;
+              return closure_7;
             })(),
             done: false,
           };
@@ -116,16 +151,16 @@ let closure_6 = async function _createWebViewHtmlFile(arg0) {
           return obj9;
         } else {
           c4 = 1;
-          const obj4 = closure_130_0(closure_130_1[1]);
-          closure_5 = 4;
+          const obj4 = closure_130_1(closure_130_2[2]);
+          c5 = 4;
           c6 = 1;
-          const obj10 = { value: obj4.writeFile("cache", closure_129_4, closure_129_5, "utf8"), done: false };
+          const obj10 = { value: obj4.writeFile("cache", closure_129_6, closure_129_7, "utf8"), done: false };
           return obj10;
         }
       } else if (3 === tmp6) {
         c4 = 0;
-        closure_129_6 = closure_3;
-        closure_130_0(closure_130_1[2]).captureException(closure_129_6);
+        closure_129_8 = closure_3;
+        closure_130_1(closure_130_2[3]).captureException(closure_129_8);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -142,25 +177,26 @@ let closure_6 = async function _createWebViewHtmlFile(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp23) {
-      closure_3 = tmp23;
+    } catch (tmp25) {
+      closure_3 = tmp25;
       if (tmp3 === c4) {
         c6 = tmp;
-        throw tmp23;
+        throw tmp25;
       } else {
-        closure_5 = tmp;
+        c5 = tmp;
       }
     }
   }
 };
+let closure_4 = fn(11050).EMBEDDED_APP_FRAME_ELEMENT_ID;
 const discord_activity_data = "discord_activity_data";
-let c5 = null;
+let c7 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewHtmlFile.tsx");
 
 export default function createWebViewHtmlFile() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

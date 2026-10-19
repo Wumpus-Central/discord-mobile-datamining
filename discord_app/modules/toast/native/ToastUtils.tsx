@@ -40,10 +40,10 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
   const obj = ToastActionCreatorsDefault;
   obj.open("TOAST_FRIEND_REQUEST_ACCEPTED", {
     text: stringResult,
-    icon: tmp2(5131).UserPlusIcon,
+    icon: tmp2(5634).UserPlusIcon,
     iconColor: "status-positive",
   });
-  const obj3 = { text: stringResult, icon: tmp2(5131).UserPlusIcon, iconColor: "status-positive" };
+  const obj3 = { text: stringResult, icon: tmp2(5634).UserPlusIcon, iconColor: "status-positive" };
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };

@@ -2,15 +2,15 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
+import shared from "../../../shared.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import shared from "../../../shared.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Icon from "../../../void/Icon/native/Icon.tsx";
+import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants from "ButtonConstants.native.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -295,9 +295,9 @@ function getButtonColorTokens(arg0) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(5191);
+let createStyles = fn(4945);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(5191);
+createStyles = fn(4945);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -520,7 +520,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_7 = tmp2;
 fn(558);
-createStyles = fn(5191);
+createStyles = fn(4945);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()

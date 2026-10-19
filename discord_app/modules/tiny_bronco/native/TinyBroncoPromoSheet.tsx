@@ -1,7 +1,7 @@
 // discord_app/modules/tiny_bronco/native/TinyBroncoPromoSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3175 from "../TinyBronco.messages.js";
+import _modDef3112 from "../TinyBronco.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
@@ -10,13 +10,13 @@ import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const TINY_BRONCO_BLOG_URL = fn(6183).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(6613).TINY_BRONCO_BLOG_URL;
 const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { illustration: null, actions: null };
 let size = { width: 198, height: 132, marginTop: nativeDefault.space.PX_16 };
 obj2.illustration = size;
@@ -32,9 +32,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_10();
       let obj = dismissOnce(576);
       const tmp = dismissOnce;
-      const isVerifiedTeen = dismissOnce(6165).useIsVerifiedTeen();
-      let obj2 = dismissOnce(6165);
-      dismissOnce = dismissOnce(15765).useDismissOnce(markAsDismissed.markAsDismissed);
+      const isVerifiedTeen = dismissOnce(6602).useIsVerifiedTeen();
+      let obj2 = dismissOnce(6602);
+      dismissOnce = dismissOnce(15794).useDismissOnce(markAsDismissed.markAsDismissed);
       if (cResult[0] !== dismissOnce) {
         const fn = function o() {
           dismissOnce(ContentDismissActionType.USER_DISMISS);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { text: null, onPress: null };
       const intl = tmp(1128).intl;
-      const obj3 = dismissOnce(15765);
+      const obj3 = dismissOnce(15794);
       if (isVerifiedTeen) {
         class M {
           constructor() {
@@ -220,14 +220,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = M;
       cResult[13] = isVerifiedTeen;
       cResult[14] = tmp15;
-      tmp14 = _modDef3175;
+      tmp14 = _modDef3112;
     }
   : function TinyBroncoPromoSheet(markAsDismissed) {
       let dismissOnce;
       const tmp = closure_10();
-      const isVerifiedTeen = dismissOnce(6165).useIsVerifiedTeen();
-      let obj = dismissOnce(6165);
-      dismissOnce = dismissOnce(15765).useDismissOnce(markAsDismissed.markAsDismissed);
+      const isVerifiedTeen = dismissOnce(6602).useIsVerifiedTeen();
+      let obj = dismissOnce(6602);
+      dismissOnce = dismissOnce(15794).useDismissOnce(markAsDismissed.markAsDismissed);
       const items = [dismissOnce];
       const items1 = [dismissOnce];
       const callback = noop.useCallback(() => {
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const intl = dismissOnce(1128).intl;
       const string = intl.string;
-      const tmp13 = _modDef3175;
+      const tmp13 = _modDef3112;
       if (isVerifiedTeen) {
         obj3.text = string(tmp13["+7NlgO"]);
         obj3.onPress = callback3;
@@ -279,15 +279,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
       const obj5 = { source: null, style: null, resizeMode: "contain" };
-      let obj2 = dismissOnce(15765);
-      obj5.source = tmp14(15766);
+      let obj2 = dismissOnce(15794);
+      obj5.source = tmp14(15795);
       obj5.style = tmp.illustration;
-      obj4.illustration = closure_8(tmp14(5128), obj5);
+      obj4.illustration = closure_8(tmp14(5631), obj5);
       const intl2 = tmp2(1128).intl;
-      obj4.title = intl2.string(tmp14(3175).GdTVPF);
+      obj4.title = intl2.string(tmp14(3112).GdTVPF);
       const intl3 = tmp2(1128).intl;
       const format = intl3.format;
-      const tmp14Result2 = tmp14(3175);
+      const tmp14Result2 = tmp14(3112);
       if (isVerifiedTeen) {
         const obj6 = { handleOnConfirmAgeHook: callback2 };
         let formatResult = format(tmp14Result2["Ga2z/E"], obj6);
@@ -298,13 +298,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.description = formatResult;
       obj4.onDismiss = callback;
       const obj8 = { size: "lg", style: tmp.actions, children: null };
-      const items5 = [closure_8(dismissOnce(5479).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
+      const items5 = [closure_8(dismissOnce(5205).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
       const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
       const intl4 = tmp2(1128).intl;
       obj10.text = intl4.string(dismissOnce(1128).t["NX+WJN"]);
       obj10.onPress = callback1;
-      items5[1] = closure_8(dismissOnce(5479).Button, obj10);
+      items5[1] = closure_8(dismissOnce(5205).Button, obj10);
       obj8.children = items5;
-      obj4.actions = closure_9(dismissOnce(6214).ButtonGroup, obj8);
-      return closure_8(dismissOnce(10635).PromoSheet, obj4);
+      obj4.actions = closure_9(dismissOnce(6644).ButtonGroup, obj8);
+      return closure_8(dismissOnce(10649).PromoSheet, obj4);
     };

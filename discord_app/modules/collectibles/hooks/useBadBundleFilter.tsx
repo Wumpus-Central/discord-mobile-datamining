@@ -44,17 +44,17 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
           found = arg0;
           if (0 !== arg0.length) {
             found = arg0.filter((product) => {
-              const obj = hasShopDiscount(9336);
+              const obj = hasShopDiscount(9352);
               if (obj2.isBundleProduct(product)) {
                 if (!tmpResult.isFreeCollectiblesProduct(product)) {
                   if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                     if (tmpResult5.isOrbsExclusiveProduct(product)) {
                       const obj3 = { product, hasShopDiscount };
-                      return null != hasShopDiscount(7541).getProductOrbPrice(obj3);
+                      return null != hasShopDiscount(7607).getProductOrbPrice(obj3);
                     } else {
-                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7542).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                      const tmpResult7 = hasShopDiscount(7542);
-                      let result = hasShopDiscount(7542).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7608).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                      const tmpResult7 = hasShopDiscount(7608);
+                      let result = hasShopDiscount(7608).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                       if (null != result) {
                         if (0 !== result.amount) {
                           let num2 = 0;
@@ -67,10 +67,10 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
                       }
                       return true;
                     }
-                    tmpResult5 = hasShopDiscount(7541);
+                    tmpResult5 = hasShopDiscount(7607);
                   }
                 }
-                tmpResult = hasShopDiscount(7542);
+                tmpResult = hasShopDiscount(7608);
               }
               return true;
             });
@@ -90,17 +90,17 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
           found = arg0;
           if (0 !== arg0.length) {
             found = arg0.filter((product) => {
-              const obj = hasShopDiscount(9336);
+              const obj = hasShopDiscount(9352);
               if (obj2.isBundleProduct(product)) {
                 if (!tmpResult.isFreeCollectiblesProduct(product)) {
                   if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                     if (tmpResult5.isOrbsExclusiveProduct(product)) {
                       const obj3 = { product, hasShopDiscount };
-                      return null != hasShopDiscount(7541).getProductOrbPrice(obj3);
+                      return null != hasShopDiscount(7607).getProductOrbPrice(obj3);
                     } else {
-                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7542).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                      const tmpResult7 = hasShopDiscount(7542);
-                      let result = hasShopDiscount(7542).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7608).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                      const tmpResult7 = hasShopDiscount(7608);
+                      let result = hasShopDiscount(7608).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                       if (null != result) {
                         if (0 !== result.amount) {
                           let num2 = 0;
@@ -113,10 +113,10 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
                       }
                       return true;
                     }
-                    tmpResult5 = hasShopDiscount(7541);
+                    tmpResult5 = hasShopDiscount(7607);
                   }
                 }
-                tmpResult = hasShopDiscount(7542);
+                tmpResult = hasShopDiscount(7608);
               }
               return true;
             });
@@ -139,17 +139,17 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(9336);
+          const obj = canUseShopDiscountsResult(9352);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7541).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(7607).getProductOrbPrice(obj3);
                 } else {
-                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7542).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(7542);
-                  let result = canUseShopDiscountsResult(7542).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7608).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(7608);
+                  let result = canUseShopDiscountsResult(7608).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;
@@ -172,10 +172,10 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(7541);
+                tmpResult5 = canUseShopDiscountsResult(7607);
               }
             }
-            tmpResult = canUseShopDiscountsResult(7542);
+            tmpResult = canUseShopDiscountsResult(7608);
           }
           return true;
         });

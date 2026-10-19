@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import useToken from "../../../../design/tokens/native/useToken.tsx";
-import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
+import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorStyleSheet from "../../../messages/native/renderer/RowGeneratorStyleSheet.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
@@ -640,7 +640,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         gifAutoPlay = false;
       }
       ({ textColor, gradientStyles, gradientColors } = arg0);
-      const tmp = gifAutoPlay(5127)();
+      const tmp = gifAutoPlay(5166)();
       let obj = createStyles;
       dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
       const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
@@ -674,7 +674,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return closure_8(gifAutoPlay(9673), {
+      return closure_8(gifAutoPlay(9687), {
         pointerEvents: "none",
         horizontalOffset: 0,
         modifyRow(message) {

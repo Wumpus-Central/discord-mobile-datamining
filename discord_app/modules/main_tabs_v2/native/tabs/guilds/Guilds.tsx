@@ -15,12 +15,12 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
 
-const native = ThemeContextProvider(4922);
-const QuestsEligibility = ThemeContextProvider(9468);
-const QuestDockExternalCoordinationContext = ThemeContextProvider(16141);
-const GuildsRenderExperiment2 = ThemeContextProvider(17145);
+const native = ThemeContextProvider(4999);
+const QuestsEligibility = ThemeContextProvider(9480);
+const QuestDockExternalCoordinationContext = ThemeContextProvider(16170);
+const GuildsRenderExperiment2 = ThemeContextProvider(17174);
 require = fn;
-const YouBarNavigatorScreens = fn(10963).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10975).YouBarNavigatorScreens;
 const ComponentActions = fn(1087).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -96,7 +96,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let ComponentDispatch = closure_0(1123).ComponentDispatch;
             const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
             let obj = isChatBesideChannelList(584);
-            let rootNavigationRef = closure_0(5073).getRootNavigationRef();
+            let rootNavigationRef = closure_0(5112).getRootNavigationRef();
             if (rootNavigationRef != null) {
               rootNavigationRef.addListener("state", handleNavigationChange);
             }
@@ -125,7 +125,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp4, tmp5);
       if (!isChatBesideChannelList) {
-        isChatBesideChannelList = isChatBesideChannelList(5075)().isChatBesideChannelList;
+        isChatBesideChannelList = isChatBesideChannelList(5114)().isChatBesideChannelList;
       }
       return isChatBesideChannelList;
     }
@@ -185,7 +185,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           let ComponentDispatch = closure_0(1123).ComponentDispatch;
           const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
           let obj = isChatBesideChannelList(584);
-          let rootNavigationRef = closure_0(5073).getRootNavigationRef();
+          let rootNavigationRef = closure_0(5112).getRootNavigationRef();
           if (rootNavigationRef != null) {
             rootNavigationRef.addListener("state", handleNavigationChange);
           }
@@ -203,7 +203,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       if (!isChatBesideChannelList) {
-        isChatBesideChannelList = isChatBesideChannelList(5075)().isChatBesideChannelList;
+        isChatBesideChannelList = isChatBesideChannelList(5114)().isChatBesideChannelList;
       }
       return isChatBesideChannelList;
     };

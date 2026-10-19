@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10520).UserRowModes;
+const UserRowModes = fn(10534).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp10;
         tmp7 = tmp10;
       }
-      const tmp6 = jsx(navigation(10521), {
+      const tmp6 = jsx(navigation(10535), {
         onSelectUser(arg0) {
           setRecipientUser(arg0);
           navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL, undefined, { pop: true });

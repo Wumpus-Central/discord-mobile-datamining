@@ -18,7 +18,7 @@ import ACOMExperiments from "../../modules/billing/native/ACOMExperiments.tsx";
 import showSpendingLimitReachedAlert from "../../modules/parent_tools/native/showSpendingLimitReachedAlert.tsx";
 import openBlockedPaymentsCountryActionSheetDefault from "../../modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx";
 import IAPUtils from "../../utils/native/IAPUtils.tsx";
-import _mod13691 from "../../../_runtime/metro/13691__.js";
+import _mod13725 from "../../../_runtime/metro/13725__.js";
 import ErrorUtilsAll from "../../utils/ErrorUtils.tsx";
 import purchaseExceptionAlerts from "../../modules/billing/native/apple/purchaseExceptionAlerts.tsx";
 import APBRequestOperations from "../../../discord_common/js/shared/shared-constants/APBRequestOperations.tsx";
@@ -96,7 +96,197 @@ function applyAppleReceipt(arg0) {
     return result;
   });
 }
-let closure_24 = async function _getTrialOfferSignature() {
+let closure_24 = async function _applyTransactionFromListener(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp8 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp4;
+          closure_1 = tmp6;
+          closure_129_0 = _require;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          currentUser = currentUser.getCurrentUser();
+          if (null != currentUser) {
+            if (null != _require.verificationResult) {
+              let formatted;
+              if (_require.appAccountToken != null) {
+                formatted = str5.toLowerCase();
+              }
+              if (formatted === str.toLowerCase()) {
+                if ("purchased" === _require.ownershipType) {
+                  if (!_require.isUpgraded) {
+                    if (null == _require.revocationDate) {
+                      c4 = 1;
+                      const _JSON = JSON;
+                      const parsed = JSON.parse(_require.jsonRepresentation);
+                      c4 = 0;
+                      const transactionReason = parsed.transactionReason;
+                      let tmp61 = "autoRenewable" === _require.productType;
+                      if (tmp61) {
+                        let tmp58 = transactionReason === _mod13725.TransactionReason.PURCHASE;
+                        if (!tmp58) {
+                          tmp58 = transactionReason === _mod13725.TransactionReason.RENEWAL;
+                        }
+                        tmp61 = tmp58;
+                      }
+                      closure_129_1 = tmp61;
+                      if (_require.productID === ProductIds.ProductIds.GENERIC_CONSUMABLE) {
+                        const advancedCommerceInfo = parsed.advancedCommerceInfo;
+                        if (advancedCommerceInfo != null) {
+                          const requestReferenceId = advancedCommerceInfo.requestReferenceId;
+                        }
+                        const GiftACOMOrderExperiment = ACOMExperiments.GiftACOMOrderExperiment;
+                        c6 = 3;
+                        return { value: "IconComponent", done: null };
+                      } else if (!tmp61) {
+                        c6 = 3;
+                        return { value: "IconComponent", done: null };
+                      }
+                      const IAPTransactionApplyExperiment = ACOMExperiments.IAPTransactionApplyExperiment;
+                      if (IAPTransactionApplyExperiment.getConfig({ location: "IAPTransactionListener" }).enabled) {
+                        if (!busy.isBusy()) {
+                          DispatcherDefault.dispatch({ type: "IAP_RESTORE_PURCHASES_START" });
+                          c4 = 2;
+                          const _String = String;
+                          closure_129_2 = String(_require.id);
+                          const product = busy.getProduct(_require.productID);
+                          const obj6 = { encodedReceipt: "", jwsRepresentation: _require.verificationResult, retries: 3, source: "transactionListener", presentmentCurrency: null, presentmentAmount: null, appStoreRegion: null };
+                          let currencyCode;
+                          if (product != null) {
+                            currencyCode = product.currencyCode;
+                          }
+                          obj6.presentmentCurrency = currencyCode;
+                          let price;
+                          if (product != null) {
+                            price = product.price;
+                          }
+                          obj6.presentmentAmount = price;
+                          let countryCode;
+                          if (product != null) {
+                            countryCode = product.countryCode;
+                          }
+                          obj6.appStoreRegion = countryCode;
+                          c5 = 4;
+                          c6 = 1;
+                          const obj7 = { value: applyAppleReceipt(obj6), done: false };
+                          return obj7;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              str = IAPUtils.convertToUUID(currentUser.id);
+            }
+          }
+          c6 = 3;
+        }
+      } else if (1 === tmp9) {
+        c4 = 0;
+        c6 = 3;
+        return { value: "IconComponent", done: null };
+      } else if (2 !== tmp9) {
+        if (3 === tmp9) {
+          c4 = 2;
+          closure_129_3 = closure_3;
+          const obj9 = { tags: { source: "IAPTransactionListener" } };
+          const result = closure_130_0(closure_130_3[16]).captureBillingException(closure_129_3, obj9);
+          const obj10 = closure_130_0(closure_130_3[16]);
+        } else if (4 === tmp9) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            closure_130_1(closure_130_3[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+            c6 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          } else {
+            const obj13 = { purchase: null };
+            const obj19 = { productId: closure_129_0.productID, transactionId: closure_129_2, transactionDate: closure_129_0.purchaseDate, transactionReceipt: "" };
+            obj13.purchase = obj19;
+            c5 = 5;
+            c6 = 1;
+            const obj20 = { value: closure_130_0(closure_130_3[19]).finishTransaction(obj13), done: false };
+            return obj20;
+          }
+        } else if (5 === tmp9) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            closure_130_1(closure_130_3[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+            c6 = 3;
+            const obj21 = { value, done: true };
+            return obj21;
+          } else if (closure_129_1) {
+            c4 = 3;
+            c5 = 6;
+            c6 = 1;
+            const obj22 = { value: closure_130_0(closure_130_3[22]).fetchSubscriptions(), done: false };
+            return obj22;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          closure_130_1(closure_130_3[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+          c6 = 3;
+          const obj24 = { value, done: true };
+          return obj24;
+        } else {
+          c4 = 2;
+        }
+        const obj25 = { product_id: closure_129_0.productID, transaction_id: closure_129_2 };
+        closure_130_1(closure_130_3[14]).track(closure_130_16.APPLE_PURCHASE_UPDATED_LISTENER_SUCCEEDED, obj25);
+        c4 = 0;
+        const obj12 = closure_130_1(closure_130_3[14]);
+        closure_130_1(closure_130_3[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+        const obj14 = closure_130_1(closure_130_3[21]);
+      }
+      c4 = 0;
+      closure_130_1(closure_130_3[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+      throw closure_3;
+    } catch (tmp76) {
+      closure_3 = tmp76;
+      if (tmp5 === c4) {
+        c6 = tmp3;
+        throw tmp76;
+      } else if (tmp2 === tmp78) {
+        c5 = tmp2;
+      } else if (tmp === tmp78) {
+        c5 = tmp;
+      } else {
+        c5 = tmp3;
+      }
+    }
+  }
+};
+let closure_25 = async function _getTrialOfferSignature() {
   c7 = 0;
   c8 = 0;
   c6 = 0;
@@ -127,7 +317,7 @@ function handlePurchaseException(code, purchase_type, arg2) {
     if (obj.isSpendingLimitError(billingError)) {
       const result = showSpendingLimitReachedAlert.showSpendingLimitReachedAlert();
       const tmpResult = showSpendingLimitReachedAlert;
-    } else if (code.code !== _mod13691.ErrorCode.E_DEFERRED_PAYMENT) {
+    } else if (code.code !== _mod13725.ErrorCode.E_DEFERRED_PAYMENT) {
       const message = code.message;
       const obj3 = {};
       const merged = Object.assign(code);
@@ -271,7 +461,7 @@ function canMakeIAPRequest() {
 }
 function clearAndMakeIAPRequest(arg0, arg1, arg2, arg3, arg4) {
   const self = this;
-  const apply = closure_31.apply;
+  const apply = closure_32.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -279,7 +469,7 @@ function clearAndMakeIAPRequest(arg0, arg1, arg2, arg3, arg4) {
   }
   return applyArgumentsResult;
 }
-let closure_31 = async function _clearAndMakeIAPRequest() {
+let closure_32 = async function _clearAndMakeIAPRequest() {
   closure_6 = tmp5;
   closure_5 = tmp2;
   closure_133_0 = closure_0;
@@ -287,12 +477,12 @@ let closure_31 = async function _clearAndMakeIAPRequest() {
   closure_133_2 = closure_2;
   closure_133_3 = closure_3;
   closure_133_4 = closure_4;
-  await _mod13691.clearTransactionIOS();
-  return closure_134_32(closure_133_0, closure_133_1, closure_133_2, closure_133_3, closure_133_4);
+  await _mod13725.clearTransactionIOS();
+  return closure_134_33(closure_133_0, closure_133_1, closure_133_2, closure_133_3, closure_133_4);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3, arg4) {
   const self = this;
-  const apply = closure_33.apply;
+  const apply = closure_34.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -300,7 +490,7 @@ function makeTrackedIAPRequest(arg0, arg1, arg2, arg3, arg4) {
   }
   return applyArgumentsResult;
 }
-let closure_33 = async function _makeTrackedIAPRequest(arg0) {
+let closure_34 = async function _makeTrackedIAPRequest(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -362,7 +552,7 @@ let closure_33 = async function _makeTrackedIAPRequest(arg0) {
       } else if (2 === tmp8) {
         c10 = 1;
         closure_135_10 = closure_9;
-        underlyingIOSError = closure_136_2(closure_136_3[38]).getUnderlyingIOSError(closure_135_10);
+        underlyingIOSError = closure_136_2(closure_136_3[39]).getUnderlyingIOSError(closure_135_10);
         if (null != underlyingIOSError) {
           if (underlyingIOSError.length > 0) {
             let str6 = underlyingIOSError;
@@ -379,7 +569,7 @@ let closure_33 = async function _makeTrackedIAPRequest(arg0) {
         if (closure_135_10.message != null) {
           str6 = str.toString();
         }
-        const obj8 = closure_136_2(closure_136_3[38]);
+        const obj8 = closure_136_2(closure_136_3[39]);
       } else if (arg0 === 1) {
         c12 = 3;
         throw value;
@@ -457,7 +647,7 @@ let closure_33 = async function _makeTrackedIAPRequest(arg0) {
 };
 function getIAPJWTRequestData(arg0) {
   const self = this;
-  const apply = closure_35.apply;
+  const apply = closure_36.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -465,7 +655,7 @@ function getIAPJWTRequestData(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_35 = async function _getIAPJWTRequestData() {
+let closure_36 = async function _getIAPJWTRequestData() {
   c2 = 0;
   c3 = 0;
   return (async (arg0) => {
@@ -478,9 +668,9 @@ let closure_35 = async function _getIAPJWTRequestData() {
       trackedActionData: {
         event: discord_common_AnalyticsUtils.NetworkActionNames.APPLE_JWT_TOKEN_CREATE,
         properties(body) {
-          if (closure_1_0.operation !== closure_0(dependencyMap[43]).APBRequestOperations.CREATE) {
-            if (closure_1_0.operation !== closure_0(dependencyMap[44]).ACRequestOperations.CREATE) {
-              if (closure_1_0.operation === closure_0(dependencyMap[44]).ACRequestOperations.MODIFY) {
+          if (closure_1_0.operation !== closure_0(dependencyMap[44]).APBRequestOperations.CREATE) {
+            if (closure_1_0.operation !== closure_0(dependencyMap[45]).ACRequestOperations.CREATE) {
+              if (closure_1_0.operation === closure_0(dependencyMap[45]).ACRequestOperations.MODIFY) {
                 const obj3 = { subscription_items_json_string: null };
                 const _JSON2 = JSON;
                 obj3.subscription_items_json_string = JSON.stringify(closure_1_0.subscription_items);
@@ -488,8 +678,8 @@ let closure_35 = async function _getIAPJWTRequestData() {
                 let obj = obj3;
                 const tmp15 = closure_2_7(closure_1_0, closure_2_5);
               } else {
-                if (closure_1_0.operation !== closure_0(dependencyMap[43]).APBRequestOperations.CHARGE) {
-                  if (closure_1_0.operation !== closure_0(dependencyMap[44]).ACRequestOperations.CHARGE) {
+                if (closure_1_0.operation !== closure_0(dependencyMap[44]).APBRequestOperations.CHARGE) {
+                  if (closure_1_0.operation !== closure_0(dependencyMap[45]).ACRequestOperations.CHARGE) {
                     obj = {};
                     const merged1 = Object.assign(closure_1_0);
                   }
@@ -521,7 +711,7 @@ let closure_35 = async function _getIAPJWTRequestData() {
             }
             const obj5 = { jwt_token_exists: str.length > 0 };
             const merged3 = Object.assign(obj);
-            return closure_0(dependencyMap[45]).exact(obj5);
+            return closure_0(dependencyMap[46]).exact(obj5);
           }
           ({ items, country_code } = closure_1_0);
           const obj6 = { subscription_items_json_string: JSON.stringify(items), request_country_code: country_code };
@@ -540,7 +730,7 @@ let closure_35 = async function _getIAPJWTRequestData() {
 };
 function updateAppleSubscription(arg0) {
   const self = this;
-  const apply = closure_37.apply;
+  const apply = closure_38.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -548,7 +738,7 @@ function updateAppleSubscription(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_37 = async function _updateAppleSubscription() {
+let closure_38 = async function _updateAppleSubscription() {
   c2 = 0;
   c1 = 0;
   return (async (arg0) => {
@@ -592,7 +782,7 @@ let closure_37 = async function _updateAppleSubscription() {
                           str = "";
                         }
                         const merged1 = Object.assign({});
-                        return closure_0(dependencyMap[45]).exact({ jwt_token_exists: str.length > 0 });
+                        return closure_0(dependencyMap[46]).exact({ jwt_token_exists: str.length > 0 });
                       }
             };
             request.trackedActionData = obj4;
@@ -650,7 +840,7 @@ function determineProductId(CANCEL) {
   }
   return ProductIds.ProductIds.GENERIC_SUBSCRIPTION;
 }
-let closure_39 = async function _cancelGenericSubscription(arg0) {
+let closure_40 = async function _cancelGenericSubscription(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -686,9 +876,9 @@ let closure_39 = async function _cancelGenericSubscription(arg0) {
             let tmp38 = require;
             let dispatchResult = dependencyMap;
             if (closure_2) {
-              let CANCEL = tmp38(dispatchResult[44]).ACRequestOperations.CANCEL;
+              let CANCEL = tmp38(dispatchResult[45]).ACRequestOperations.CANCEL;
             } else {
-              CANCEL = tmp38(dispatchResult[43]).APBRequestOperations.CANCEL;
+              CANCEL = tmp38(dispatchResult[44]).APBRequestOperations.CANCEL;
             }
             closure_131_3 = CANCEL;
             tmp38 = determineProductId(CANCEL);
@@ -715,20 +905,20 @@ let closure_39 = async function _cancelGenericSubscription(arg0) {
           const obj7 = { operation: closure_131_3, request_identifier: closure_131_0, subscription_id: closure_131_1 };
           c7 = 3;
           c8 = 1;
-          const obj8 = { value: closure_132_36(obj7), done: false };
+          const obj8 = { value: closure_132_37(obj7), done: false };
           return obj8;
         }
       } else if (2 === tmp7) {
         c6 = 0;
         closure_131_5 = closure_5;
         const obj9 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: closure_131_4 };
-        closure_132_1(closure_132_3[22]).dispatch(obj9);
+        closure_132_1(closure_132_3[21]).dispatch(obj9);
         let str = "partner_subscription";
         if (closure_131_2) {
           str = "advanced_commerce";
         }
         const obj11 = { productId: closure_131_4, requestIdentifier: closure_131_0 };
-        closure_132_28(closure_131_5, str, true, obj11);
+        closure_132_29(closure_131_5, str, true, obj11);
         c8 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
@@ -741,7 +931,7 @@ let closure_39 = async function _cancelGenericSubscription(arg0) {
         return obj12;
       } else {
         const obj13 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: closure_131_4 };
-        closure_132_1(closure_132_3[22]).dispatch(obj13);
+        closure_132_1(closure_132_3[21]).dispatch(obj13);
         c6 = 0;
         c8 = 3;
         return { value: true, done: true };
@@ -761,7 +951,7 @@ function isValidCurrency(arg0) {
   const values = Object.values(constants);
   return values.includes(arg0);
 }
-let closure_42 = async function _createGenericSubscription(arg0) {
+let closure_43 = async function _createGenericSubscription(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -803,7 +993,7 @@ let closure_42 = async function _createGenericSubscription(arg0) {
           let originalPurchase;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -813,22 +1003,22 @@ let closure_42 = async function _createGenericSubscription(arg0) {
           c6 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (closure_130_29()) {
-          if (closure_130_40(closure_129_2)) {
-            closure_129_5 = closure_130_38(closure_130_0(closure_130_3[44]).ACRequestOperations.CREATE);
+        } else if (closure_130_30()) {
+          if (closure_130_41(closure_129_2)) {
+            closure_129_5 = closure_130_39(closure_130_0(closure_130_3[45]).ACRequestOperations.CREATE);
             const obj5 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: closure_129_5 };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: closure_130_1(closure_130_3[22]).dispatch(obj5), done: false };
+            const obj7 = { value: closure_130_1(closure_130_3[21]).dispatch(obj5), done: false };
             return obj7;
           } else {
-            const obj8 = { success: false, failureReason: closure_130_41.INVALID_CURRENCY };
+            const obj8 = { success: false, failureReason: closure_130_42.INVALID_CURRENCY };
             c6 = 3;
             const obj9 = { value: obj8, done: true };
             return obj9;
           }
         } else {
-          const obj10 = { success: false, failureReason: closure_130_41.CANNOT_MAKE_REQUEST };
+          const obj10 = { success: false, failureReason: closure_130_42.CANNOT_MAKE_REQUEST };
           c6 = 3;
           const obj11 = { value: obj10, done: true };
           return obj11;
@@ -846,25 +1036,25 @@ let closure_42 = async function _createGenericSubscription(arg0) {
           c4 = 1;
           const obj13 = { request_identifier: closure_129_0, items: closure_129_1.map((planId) => ({ plan_id: planId.planId, quantity: planId.quantity })), currency: closure_129_2, country_code: closure_129_3, order_id: closure_129_4 };
           closure_129_7 = obj13;
-          const obj14 = { operation: closure_130_0(closure_130_3[44]).ACRequestOperations.CREATE };
+          const obj14 = { operation: closure_130_0(closure_130_3[45]).ACRequestOperations.CREATE };
           const merged = Object.assign(closure_129_7);
           c5 = 4;
           c6 = 1;
-          const obj16 = { value: closure_130_34(obj14), done: false };
+          const obj16 = { value: closure_130_35(obj14), done: false };
           return obj16;
         }
       } else if (3 === tmp6) {
         c4 = 0;
         closure_129_12 = closure_3;
         const obj17 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: closure_129_5 };
-        closure_130_1(closure_130_3[22]).dispatch(obj17);
+        closure_130_1(closure_130_3[21]).dispatch(obj17);
         let tmp35 = null == closure_129_4;
         if (!tmp35) {
           tmp35 = closure_129_6;
         }
         const obj19 = { productId: closure_129_5, planId: null, requestIdentifier: null, orderId: null };
-        const obj15 = closure_130_1(closure_130_3[22]);
-        const baseSubscriptionItemForSubscriptionItems = closure_130_0(closure_130_3[35]).getBaseSubscriptionItemForSubscriptionItems(closure_129_1);
+        const obj15 = closure_130_1(closure_130_3[21]);
+        const baseSubscriptionItemForSubscriptionItems = closure_130_0(closure_130_3[36]).getBaseSubscriptionItemForSubscriptionItems(closure_129_1);
         let planId;
         if (baseSubscriptionItemForSubscriptionItems != null) {
           planId = baseSubscriptionItemForSubscriptionItems.planId;
@@ -872,8 +1062,8 @@ let closure_42 = async function _createGenericSubscription(arg0) {
         obj19.planId = planId;
         obj19.requestIdentifier = closure_129_0;
         obj19.orderId = closure_129_4;
-        closure_130_28(closure_129_12, "advanced_commerce", tmp35, obj19);
-        let obj20 = closure_130_41;
+        closure_130_29(closure_129_12, "advanced_commerce", tmp35, obj19);
+        let obj20 = closure_130_42;
         if (closure_129_6) {
           let PURCHASE_INCOMPLETE = obj20.POST_PURCHASE_FAILED;
         } else {
@@ -881,7 +1071,7 @@ let closure_42 = async function _createGenericSubscription(arg0) {
         }
         obj20 = { success: false, failureReason: PURCHASE_INCOMPLETE };
         c6 = 3;
-        const obj18 = closure_130_0(closure_130_3[35]);
+        const obj18 = closure_130_0(closure_130_3[36]);
       } else if (4 === tmp6) {
         if (arg0 === 1) {
           c6 = 3;
@@ -893,7 +1083,7 @@ let closure_42 = async function _createGenericSubscription(arg0) {
           return obj21;
         } else {
           requestJSONString = value.requestJSONString;
-          const baseSubscriptionItemForSubscriptionItems1 = closure_130_0(closure_130_3[35]).getBaseSubscriptionItemForSubscriptionItems(closure_129_1);
+          const baseSubscriptionItemForSubscriptionItems1 = closure_130_0(closure_130_3[36]).getBaseSubscriptionItemForSubscriptionItems(closure_129_1);
           let planId1;
           if (baseSubscriptionItemForSubscriptionItems1 != null) {
             planId1 = baseSubscriptionItemForSubscriptionItems1.planId;
@@ -901,7 +1091,7 @@ let closure_42 = async function _createGenericSubscription(arg0) {
           const obj22 = { planId: planId1 };
           c5 = 5;
           c6 = 1;
-          const obj23 = { value: closure_130_30(closure_129_0, requestJSONString, closure_129_5, true, obj22), done: false };
+          const obj23 = { value: closure_130_31(closure_129_0, requestJSONString, closure_129_5, true, obj22), done: false };
           return obj23;
         }
       } else if (5 === tmp6) {
@@ -937,7 +1127,7 @@ let closure_42 = async function _createGenericSubscription(arg0) {
           const obj29 = { purchase: originalPurchase };
           c5 = 7;
           c6 = 1;
-          const obj30 = { value: closure_130_0(closure_130_3[21]).finishTransaction(obj29), done: false };
+          const obj30 = { value: closure_130_0(closure_130_3[19]).finishTransaction(obj29), done: false };
           return obj30;
         }
       } else if (arg0 === 1) {
@@ -950,8 +1140,8 @@ let closure_42 = async function _createGenericSubscription(arg0) {
         return obj31;
       } else {
         const obj32 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: closure_129_5 };
-        closure_130_1(closure_130_3[22]).dispatch(obj32);
-        const obj34 = { success: true, failureReason: closure_130_41.NONE };
+        closure_130_1(closure_130_3[21]).dispatch(obj32);
+        const obj34 = { success: true, failureReason: closure_130_42.NONE };
         c4 = 0;
         c6 = 3;
         const obj35 = { value: obj34, done: true };
@@ -968,7 +1158,7 @@ let closure_42 = async function _createGenericSubscription(arg0) {
     }
   }
 };
-let closure_43 = async function _modifyGenericSubscription(arg0) {
+let closure_44 = async function _modifyGenericSubscription(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1011,7 +1201,7 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             let originalPurchase;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "test", done: true };
           }
         break;
         case 1:
@@ -1022,15 +1212,15 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             c6 = 3;
             const obj5 = { value, done: true };
             return obj5;
-          } else if (closure_130_29()) {
-            GENERIC_SUBSCRIPTION = closure_130_0(closure_130_3[24]).ProductIds.GENERIC_SUBSCRIPTION;
+          } else if (closure_130_30()) {
+            GENERIC_SUBSCRIPTION = closure_130_0(closure_130_3[18]).ProductIds.GENERIC_SUBSCRIPTION;
             const obj7 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: GENERIC_SUBSCRIPTION };
             c5 = 2;
             c6 = 1;
-            const obj8 = { value: closure_130_1(closure_130_3[22]).dispatch(obj7), done: false };
+            const obj8 = { value: closure_130_1(closure_130_3[21]).dispatch(obj7), done: false };
             return obj8;
           } else {
-            const obj10 = { success: false, failureReason: closure_130_41.CANNOT_MAKE_REQUEST };
+            const obj10 = { success: false, failureReason: closure_130_42.CANNOT_MAKE_REQUEST };
             c6 = 3;
             const obj12 = { value: obj10, done: true };
             return obj12;
@@ -1047,10 +1237,10 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
           } else {
             closure_129_6 = false;
             c4 = 1;
-            const obj15 = { operation: closure_130_0(closure_130_3[44]).ACRequestOperations.MODIFY, request_identifier: closure_129_0, subscription_id: closure_129_1, subscription_items: closure_129_2.map((planId) => ({ plan_id: planId.planId, quantity: planId.quantity })), order_id: closure_129_3 };
+            const obj15 = { operation: closure_130_0(closure_130_3[45]).ACRequestOperations.MODIFY, request_identifier: closure_129_0, subscription_id: closure_129_1, subscription_items: closure_129_2.map((planId) => ({ plan_id: planId.planId, quantity: planId.quantity })), order_id: closure_129_3 };
             c5 = 4;
             c6 = 1;
-            const obj16 = { value: closure_130_34(obj15), done: false };
+            const obj16 = { value: closure_130_35(obj15), done: false };
             return obj16;
           }
         break;
@@ -1058,14 +1248,14 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
           c4 = 0;
           closure_129_13 = closure_3;
           const obj17 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: GENERIC_SUBSCRIPTION };
-          closure_130_1(closure_130_3[22]).dispatch(obj17);
+          closure_130_1(closure_130_3[21]).dispatch(obj17);
           let tmp77 = null == closure_129_3;
           if (!tmp77) {
             tmp77 = closure_129_6;
           }
           const obj18 = { productId: GENERIC_SUBSCRIPTION, planId: null, requestIdentifier: null, orderId: null };
-          const obj25 = closure_130_1(closure_130_3[22]);
-          let baseSubscriptionItemForSubscriptionItems = closure_130_0(closure_130_3[35]).getBaseSubscriptionItemForSubscriptionItems(closure_129_2);
+          const obj25 = closure_130_1(closure_130_3[21]);
+          let baseSubscriptionItemForSubscriptionItems = closure_130_0(closure_130_3[36]).getBaseSubscriptionItemForSubscriptionItems(closure_129_2);
           let planId;
           if (baseSubscriptionItemForSubscriptionItems != null) {
             planId = baseSubscriptionItemForSubscriptionItems.planId;
@@ -1073,8 +1263,8 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
           obj18.planId = planId;
           obj18.requestIdentifier = closure_129_0;
           obj18.orderId = closure_129_3;
-          closure_130_28(closure_129_13, "advanced_commerce", tmp77, obj18);
-          let obj20 = closure_130_41;
+          closure_130_29(closure_129_13, "advanced_commerce", tmp77, obj18);
+          let obj20 = closure_130_42;
           if (closure_129_6) {
             let PURCHASE_INCOMPLETE = obj20.POST_PURCHASE_FAILED;
           } else {
@@ -1082,7 +1272,7 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
           }
           obj20 = { success: false, failureReason: PURCHASE_INCOMPLETE };
           c6 = 3;
-          const obj28 = closure_130_0(closure_130_3[35]);
+          const obj28 = closure_130_0(closure_130_3[36]);
         break;
         case 4:
           if (arg0 === 1) {
@@ -1097,7 +1287,7 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             requestJSONString = value.requestJSONString;
             c5 = 5;
             c6 = 1;
-            const obj23 = { value: closure_130_0(closure_130_3[21]).clearTransactionIOS(), done: false };
+            const obj23 = { value: closure_130_0(closure_130_3[19]).clearTransactionIOS(), done: false };
             return obj23;
           }
         break;
@@ -1114,13 +1304,13 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             c5 = 6;
             c6 = 1;
             const obj26 = {
-              value: closure_130_0(closure_130_3[46]).retryACOMRequest(() => {
-                          const baseSubscriptionItemForSubscriptionItems = closure_0(closure_3[35]).getBaseSubscriptionItemForSubscriptionItems(closure_1_2);
+              value: closure_130_0(closure_130_3[47]).retryACOMRequest(() => {
+                          const baseSubscriptionItemForSubscriptionItems = closure_0(closure_3[36]).getBaseSubscriptionItemForSubscriptionItems(closure_1_2);
                           let planId;
                           if (baseSubscriptionItemForSubscriptionItems != null) {
                             planId = baseSubscriptionItemForSubscriptionItems.planId;
                           }
-                          return closure_2_32(closure_1_0, closure_1_7, closure_1_5, true, { planId });
+                          return closure_2_33(closure_1_0, closure_1_7, closure_1_5, true, { planId });
                         }),
               done: false
             };
@@ -1141,20 +1331,20 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             if ("already_applied" === closure_129_8.kind) {
               closure_129_6 = true;
               const obj29 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: GENERIC_SUBSCRIPTION };
-              closure_130_1(closure_130_3[22]).dispatch(obj29);
-              const obj9 = closure_130_1(closure_130_3[22]);
+              closure_130_1(closure_130_3[21]).dispatch(obj29);
+              const obj9 = closure_130_1(closure_130_3[21]);
               const obj30 = { title: null, body: null, isDismissable: true, hideActionSheet: true };
-              const intl = closure_130_0(closure_130_3[27]).intl;
-              obj30.title = intl.string(closure_130_0(closure_130_3[27]).t.zrhHH3);
-              const intl2 = closure_130_0(closure_130_3[27]).intl;
-              obj30.body = intl2.string(closure_130_0(closure_130_3[27]).t.PjfUXe);
-              closure_130_1(closure_130_3[29]).show(obj30);
-              const obj11 = closure_130_1(closure_130_3[29]);
+              const intl = closure_130_0(closure_130_3[28]).intl;
+              obj30.title = intl.string(closure_130_0(closure_130_3[28]).t.zrhHH3);
+              const intl2 = closure_130_0(closure_130_3[28]).intl;
+              obj30.body = intl2.string(closure_130_0(closure_130_3[28]).t.PjfUXe);
+              closure_130_1(closure_130_3[30]).show(obj30);
+              const obj11 = closure_130_1(closure_130_3[30]);
               const obj31 = { tags: null };
               const obj32 = { source: closure_130_22, purchase_type: "advanced_commerce_already_applied" };
               obj31.tags = obj32;
               const result = closure_130_0(closure_130_3[16]).captureBillingException(closure_129_8.error, obj31);
-              const obj33 = { success: false, failureReason: closure_130_41.POST_PURCHASE_FAILED };
+              const obj33 = { success: false, failureReason: closure_130_42.POST_PURCHASE_FAILED };
               c4 = 0;
               c6 = 3;
               const obj35 = { value: obj33, done: true };
@@ -1201,7 +1391,7 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             const obj40 = { purchase: originalPurchase };
             c5 = 10;
             c6 = 1;
-            const obj41 = { value: closure_130_0(closure_130_3[21]).finishTransaction(obj40), done: false };
+            const obj41 = { value: closure_130_0(closure_130_3[19]).finishTransaction(obj40), done: false };
             return obj41;
           }
         break;
@@ -1224,8 +1414,8 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
             return obj42;
           } else {
             const obj43 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: GENERIC_SUBSCRIPTION };
-            closure_130_1(closure_130_3[22]).dispatch(obj43);
-            const obj44 = { success: true, failureReason: closure_130_41.NONE };
+            closure_130_1(closure_130_3[21]).dispatch(obj43);
+            const obj44 = { success: true, failureReason: closure_130_42.NONE };
             c4 = 0;
             c6 = 3;
             const obj45 = { value: obj44, done: true };
@@ -1245,7 +1435,7 @@ let closure_43 = async function _modifyGenericSubscription(arg0) {
     }
   }
 };
-let closure_44 = async function _resubscribeGenericSubscription(arg0) {
+let closure_45 = async function _resubscribeGenericSubscription(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1285,7 +1475,7 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
           let originalPurchase;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -1295,19 +1485,19 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
           c7 = 3;
           const obj5 = { value, done: true };
           return obj5;
-        } else if (closure_131_29()) {
+        } else if (closure_131_30()) {
           const obj6 = { request_identifier: closure_130_0, subscription_id: closure_130_1 };
           closure_130_3 = obj6;
-          let obj23 = closure_131_38;
+          let obj23 = closure_131_39;
           let tmp66 = closure_131_0;
           let obj7 = closure_131_3;
           if (closure_130_2) {
-            let REACTIVATE = tmp66(obj7[44]).ACRequestOperations.REACTIVATE;
+            let REACTIVATE = tmp66(obj7[45]).ACRequestOperations.REACTIVATE;
           } else {
-            REACTIVATE = tmp66(obj7[43]).APBRequestOperations.REACTIVATE;
+            REACTIVATE = tmp66(obj7[44]).APBRequestOperations.REACTIVATE;
           }
           closure_130_4 = obj23(REACTIVATE);
-          obj23 = closure_131_1(closure_131_3[22]);
+          obj23 = closure_131_1(closure_131_3[21]);
           obj7 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: null };
           tmp66 = closure_130_4;
           obj7.productIdentifier = closure_130_4;
@@ -1329,18 +1519,18 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
         } else {
           c5 = 1;
           if (closure_130_2) {
-            const obj10 = { operation: closure_131_0(closure_131_3[44]).ACRequestOperations.REACTIVATE };
+            const obj10 = { operation: closure_131_0(closure_131_3[45]).ACRequestOperations.REACTIVATE };
             const merged = Object.assign(closure_130_3);
             c6 = 4;
             c7 = 1;
-            const obj11 = { value: closure_131_34(obj10), done: false };
+            const obj11 = { value: closure_131_35(obj10), done: false };
             return obj11;
           } else {
-            const obj12 = { operation: closure_131_0(closure_131_3[43]).APBRequestOperations.REACTIVATE };
+            const obj12 = { operation: closure_131_0(closure_131_3[44]).APBRequestOperations.REACTIVATE };
             const merged1 = Object.assign(closure_130_3);
             c6 = 5;
             c7 = 1;
-            const obj13 = { value: closure_131_36(obj12), done: false };
+            const obj13 = { value: closure_131_37(obj12), done: false };
             return obj13;
           }
         }
@@ -1348,13 +1538,13 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
         c5 = 0;
         closure_130_9 = closure_4;
         const obj15 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: closure_130_4 };
-        closure_131_1(closure_131_3[22]).dispatch(obj15);
+        closure_131_1(closure_131_3[21]).dispatch(obj15);
         let str = "partner_subscription";
         if (closure_130_2) {
           str = "advanced_commerce";
         }
         const obj16 = { productId: closure_130_4, requestIdentifier: closure_130_0 };
-        closure_131_28(closure_130_9, str, true, obj16);
+        closure_131_29(closure_130_9, str, true, obj16);
         c7 = 3;
         return { value: false, done: true };
       } else if (4 === tmp6) {
@@ -1370,7 +1560,7 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
           requestJSONString = value.requestJSONString;
           c6 = 6;
           c7 = 1;
-          const obj18 = { value: closure_131_30(closure_130_0, requestJSONString, closure_130_4, true), done: false };
+          const obj18 = { value: closure_131_31(closure_130_0, requestJSONString, closure_130_4, true), done: false };
           return obj18;
         }
       } else {
@@ -1416,7 +1606,7 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
             const obj25 = { purchase: originalPurchase };
             c6 = 8;
             c7 = 1;
-            const obj26 = { value: closure_131_0(closure_131_3[21]).finishTransaction(obj25), done: false };
+            const obj26 = { value: closure_131_0(closure_131_3[19]).finishTransaction(obj25), done: false };
             return obj26;
           }
         } else if (arg0 === 1) {
@@ -1429,7 +1619,7 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
           return obj;
         }
         const obj27 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: closure_130_4 };
-        closure_131_1(closure_131_3[22]).dispatch(obj27);
+        closure_131_1(closure_131_3[21]).dispatch(obj27);
         c5 = 0;
         c7 = 3;
         return { value: true, done: true };
@@ -1445,7 +1635,7 @@ let closure_44 = async function _resubscribeGenericSubscription(arg0) {
     }
   }
 };
-let closure_45 = async function _retryPendingPurchases(arg0) {
+let closure_46 = async function _retryPendingPurchases(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1540,7 +1730,7 @@ let closure_45 = async function _retryPendingPurchases(arg0) {
               let obj8 = { value, done: true };
               return obj8;
             } else {
-              let obj17 = closure_133_0(closure_133_3[21]);
+              let obj17 = closure_133_0(closure_133_3[19]);
               let obj9 = { purchase: null };
               let obj11 = { productId: null, transactionId: null, transactionDate: null, transactionReceipt: null };
               obj11.productId = productIdentifier;
@@ -1622,7 +1812,7 @@ let closure_45 = async function _retryPendingPurchases(arg0) {
     }
   }
 };
-let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
+let closure_47 = async function _mobilePurchaseSKU(arg0, arg1) {
   let orderId = arg0;
   closure_1 = arg1;
   c8 = 0;
@@ -1688,7 +1878,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               closure_132_22 = undefined;
               c8 = 1;
               c9 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "test", done: true };
             }
           break;
           case 1:
@@ -1699,22 +1889,22 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               c9 = 3;
               const obj6 = { value, done: true };
               return obj6;
-            } else if (closure_133_29()) {
-              if (closure_133_40(closure_132_2)) {
-                closure_132_11 = closure_133_38(closure_133_0(closure_133_3[44]).ACRequestOperations.CHARGE);
+            } else if (closure_133_30()) {
+              if (closure_133_41(closure_132_2)) {
+                closure_132_11 = closure_133_39(closure_133_0(closure_133_3[45]).ACRequestOperations.CHARGE);
                 const obj7 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: closure_132_11 };
                 c8 = 2;
                 c9 = 1;
-                const obj8 = { value: closure_133_1(closure_133_3[22]).dispatch(obj7), done: false };
+                const obj8 = { value: closure_133_1(closure_133_3[21]).dispatch(obj7), done: false };
                 return obj8;
               } else {
-                const obj11 = { success: false, failureReason: closure_133_41.INVALID_CURRENCY };
+                const obj11 = { success: false, failureReason: closure_133_42.INVALID_CURRENCY };
                 c9 = 3;
                 const obj12 = { value: obj11, done: true };
                 return obj12;
               }
             } else {
-              const obj13 = { success: false, failureReason: closure_133_41.CANNOT_MAKE_REQUEST };
+              const obj13 = { success: false, failureReason: closure_133_42.CANNOT_MAKE_REQUEST };
               c9 = 3;
               const obj14 = { value: obj13, done: true };
               return obj14;
@@ -1730,7 +1920,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               return obj15;
             } else {
               const obj16 = { sku_id: closure_132_1, load_id: closure_132_5, location_stack: closure_132_4, payment_gateway: closure_133_19.APPLE_ADVANCED_COMMERCE };
-              const result = closure_133_0(closure_133_3[47]).trackPaymentFlowStartedAnalyticsAndCTP(obj16);
+              const result = closure_133_0(closure_133_3[48]).trackPaymentFlowStartedAnalyticsAndCTP(obj16);
               closure_132_12 = false;
               c7 = 1;
               c8 = 4;
@@ -1738,7 +1928,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               const obj17 = {
                 value: (function retryPendingPurchases(arg0, arg1) {
                             const self = this;
-                            const apply = closure_1_45.apply;
+                            const apply = closure_1_46.apply;
                             if (typeof apply === "unknown") {
                               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                             } else {
@@ -1755,21 +1945,21 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
             c7 = 0;
             closure_132_23 = closure_6;
             const obj18 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: closure_132_11 };
-            closure_133_1(closure_133_3[22]).dispatch(obj18);
-            const billingError = new closure_133_0(closure_133_3[37]).BillingError(closure_132_23);
+            closure_133_1(closure_133_3[21]).dispatch(obj18);
+            const billingError = new closure_133_0(closure_133_3[38]).BillingError(closure_132_23);
             closure_132_20 = billingError;
             currentUser = closure_133_12.getCurrentUser();
             if (null != currentUser) {
               if (currentUser.isStaff()) {
                 if (closure_132_8) {
-                  if (closure_132_20.code === closure_133_0(closure_133_3[40]).ErrorCodes.BILLING_CANNOT_CHARGE_ZERO_AMOUNT) {
+                  if (closure_132_20.code === closure_133_0(closure_133_3[41]).ErrorCodes.BILLING_CANNOT_CHARGE_ZERO_AMOUNT) {
                     purchaseSKU = closure_132_10;
                     if (closure_132_10 == null) {
-                      purchaseSKU = closure_133_0(closure_133_3[48]).purchaseSKU;
+                      purchaseSKU = closure_133_0(closure_133_3[49]).purchaseSKU;
                     }
                     closure_132_22 = purchaseSKU;
                     c7 = 2;
-                    const obj19 = { countryCode: closure_132_3, expectedAmount: 0, expectedCurrency: closure_133_17.USD, loadId: closure_133_0(closure_133_3[49]).v4(), isGift: closure_132_6, giftInfoOptions: closure_132_7 };
+                    const obj19 = { countryCode: closure_132_3, expectedAmount: 0, expectedCurrency: closure_133_17.USD, loadId: closure_133_0(closure_133_3[50]).v4(), isGift: closure_132_6, giftInfoOptions: closure_132_7 };
                     c8 = 10;
                     c9 = 1;
                     const obj20 = { value: closure_132_22("collectibles", closure_132_1, obj19), done: false };
@@ -1783,15 +1973,15 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               tmp92 = closure_132_12;
             }
             const obj22 = { productId: closure_132_11, skuId: closure_132_1, isGift: closure_132_6, requestIdentifier: closure_132_0, orderId };
-            closure_133_28(closure_132_23, "collectibles", tmp92, obj22);
+            closure_133_29(closure_132_23, "collectibles", tmp92, obj22);
             if (closure_132_12) {
-              let POST_PURCHASE_FAILED = closure_133_41.POST_PURCHASE_FAILED;
+              let POST_PURCHASE_FAILED = closure_133_42.POST_PURCHASE_FAILED;
             } else {
-              POST_PURCHASE_FAILED = closure_133_27(closure_132_23);
+              POST_PURCHASE_FAILED = closure_133_28(closure_132_23);
             }
             { success: false, failureReason: null }[1] = POST_PURCHASE_FAILED;
             c9 = 3;
-            const obj21 = closure_133_1(closure_133_3[22]);
+            const obj21 = closure_133_1(closure_133_3[21]);
           break;
           case 4:
             if (arg0 === 1) {
@@ -1805,11 +1995,11 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
             } else {
               const obj24 = { sku_id: closure_132_1, request_identifier: closure_132_0, currency: closure_132_2, country_code: closure_132_3, is_gift: closure_132_6, gift_info_options: closure_132_7, order_id: orderId };
               closure_132_13 = obj24;
-              const obj26 = { operation: closure_133_0(closure_133_3[44]).ACRequestOperations.CHARGE };
+              const obj26 = { operation: closure_133_0(closure_133_3[45]).ACRequestOperations.CHARGE };
               const merged = Object.assign(closure_132_13);
               c8 = 5;
               c9 = 1;
-              const obj27 = { value: closure_133_34(obj26), done: false };
+              const obj27 = { value: closure_133_35(obj26), done: false };
               return obj27;
             }
           break;
@@ -1827,7 +2017,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               const obj29 = { skuId: closure_132_1 };
               c8 = 6;
               c9 = 1;
-              const obj30 = { value: closure_133_30(closure_132_0, requestJSONString, closure_132_11, true, obj29), done: false };
+              const obj30 = { value: closure_133_31(closure_132_0, requestJSONString, closure_132_11, true, obj29), done: false };
               return obj30;
             }
           break;
@@ -1857,8 +2047,8 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
                 const obj34 = {};
                 const merged1 = Object.assign(closure_132_7);
                 obj32.giftOptions = obj34;
-                closure_133_1(closure_133_3[22]).dispatch(obj32);
-                const obj10 = closure_133_1(closure_133_3[22]);
+                closure_133_1(closure_133_3[21]).dispatch(obj32);
+                const obj10 = closure_133_1(closure_133_3[21]);
               }
               const obj35 = { encodedReceipt: purchaseResponse.transactionReceipt, retries: 3, presentmentCurrency: closure_132_2, appStoreRegion: closure_132_3, giftInfoOptions: closure_132_7, isGift: closure_132_6, jwsRepresentation: purchaseResponse.jwsRepresentation, source: "mobilePurchaseSKU", orderId };
               c8 = 7;
@@ -1879,13 +2069,13 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
             } else {
               if (closure_132_6) {
                 const obj38 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: closure_132_19 };
-                closure_133_1(closure_133_3[22]).dispatch(obj38);
-                const obj3 = closure_133_1(closure_133_3[22]);
+                closure_133_1(closure_133_3[21]).dispatch(obj38);
+                const obj3 = closure_133_1(closure_133_3[21]);
               }
               const obj39 = { purchase: originalPurchase };
               c8 = 8;
               c9 = 1;
-              const obj40 = { value: closure_133_0(closure_133_3[21]).finishTransaction(obj39), done: false };
+              const obj40 = { value: closure_133_0(closure_133_3[19]).finishTransaction(obj39), done: false };
               return obj40;
             }
           break;
@@ -1900,11 +2090,11 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               return obj41;
             } else {
               const obj44 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: closure_132_11 };
-              closure_133_1(closure_133_3[22]).dispatch(obj44);
-              const obj43 = closure_133_1(closure_133_3[22]);
+              closure_133_1(closure_133_3[21]).dispatch(obj44);
+              const obj43 = closure_133_1(closure_133_3[21]);
               const obj46 = { sku_id: closure_132_1, load_id: closure_132_5, location_stack: closure_132_4, payment_gateway: closure_133_19.APPLE_ADVANCED_COMMERCE, is_gift: closure_132_6 };
               closure_133_1(closure_133_3[14]).track(closure_133_16.PAYMENT_FLOW_COMPLETED, obj46);
-              const obj47 = { success: true, failureReason: closure_133_41.NONE };
+              const obj47 = { success: true, failureReason: closure_133_42.NONE };
               c7 = 0;
               c9 = 3;
               const obj = { value: obj47, done: true };
@@ -1914,7 +2104,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
           case 9:
             c7 = 0;
             closure_132_24 = closure_6;
-            if (closure_132_24.code === closure_133_0(closure_133_3[40]).ErrorCodes.BILLING_PURCHASE_REQUEST_INVALID) {
+            if (closure_132_24.code === closure_133_0(closure_133_3[41]).ErrorCodes.BILLING_PURCHASE_REQUEST_INVALID) {
               const result1 = closure_133_0(closure_133_3[16]).captureBillingException(closure_132_24, {});
               const obj42 = closure_133_0(closure_133_3[16]);
             }
@@ -1929,7 +2119,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
               const obj48 = { value, done: true };
               return obj48;
             } else {
-              const obj49 = { success: true, failureReason: closure_133_41.NONE };
+              const obj49 = { success: true, failureReason: closure_133_42.NONE };
               c7 = 0;
               c9 = 3;
               const obj51 = { value: obj49, done: true };
@@ -1952,7 +2142,7 @@ let closure_46 = async function _mobilePurchaseSKU(arg0, arg1) {
   iter.next();
   return iter;
 };
-let closure_47 = async function _migrateToACOM() {
+let closure_48 = async function _migrateToACOM() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2053,7 +2243,7 @@ let closure_47 = async function _migrateToACOM() {
 let closure_4 = ["items", "country_code"];
 let closure_5 = ["subscription_items"];
 let closure_6 = ["sku_id", "country_code", "is_gift", "gift_info_options"];
-const PremiumPlanPurchasedStore = fn(7412);
+const PremiumPlanPurchasedStore = fn(7479);
 ({ setPaymentSuccess: c10, showOldPaymentFlowSuccess: closure_11 } = PremiumPlanPurchasedStore);
 const Constants = fn(1087);
 ({ SubscriptionTypes: closure_15, AnalyticEvents: closure_16, CurrencyCodes: closure_17, Endpoints: closure_18, StoreKitErrors } = Constants);
@@ -2062,9 +2252,9 @@ const jsx = fn(21).jsx;
 const localAppleReceiptHash = "localAppleReceiptHash";
 const BILLING = "BILLING";
 new LoggerDefault("BillingActionCreators.tsx");
-let items = [fn(13691).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(13725).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
-const items1 = [fn(13691).ErrorCode.E_UNKNOWN, fn(13691).ErrorCode.E_DEFERRED_PAYMENT];
+const items1 = [fn(13725).ErrorCode.E_UNKNOWN, fn(13725).ErrorCode.E_DEFERRED_PAYMENT];
 const set1 = new Set(items1);
 let obj2 = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);
@@ -2072,8 +2262,8 @@ let result = size.fileFinishedImporting("actions/native/BillingActionCreators.ts
 
 export default {
   applyAppleReceipt,
-  fetchMostRecentSubscription: fn(5980).fetchMostRecentSubscription,
-  fetchIpCountryCode: fn(5980).fetchIpCountryCode,
+  fetchMostRecentSubscription: fn(6417).fetchMostRecentSubscription,
+  fetchIpCountryCode: fn(6417).fetchIpCountryCode,
   init() {
     const self = this;
     return (async () => {
@@ -2109,10 +2299,10 @@ export default {
                 c4 = 2;
                 c5 = 3;
                 c6 = 1;
-                const obj4 = { value: closure_1(tmp38[19]).fetchStoreFront(), done: false };
+                const obj4 = { value: closure_1(tmp38[17]).fetchStoreFront(), done: false };
                 return obj4;
               }
-              obj13 = _undefined(tmp38[18]);
+              obj13 = _undefined(tmp38[23]);
             }
           } else {
             if (1 === tmp8) {
@@ -2161,11 +2351,11 @@ export default {
             return obj;
           }
           if (null != closure_129_0) {
-            const obj6 = _undefined(tmp38[20]);
+            const obj6 = _undefined(tmp38[24]);
             let premiumSubscriptionPlans = obj6.fetchPremiumSubscriptionPlans(closure_129_0.country, undefined, undefined, constants.APPLE_ADVANCED_COMMERCE);
           } else {
-            premiumSubscriptionPlans = _undefined(tmp38[20]).fetchPremiumSubscriptionPlans();
-            const obj5 = _undefined(tmp38[20]);
+            premiumSubscriptionPlans = _undefined(tmp38[24]).fetchPremiumSubscriptionPlans();
+            const obj5 = _undefined(tmp38[24]);
           }
           const items = [premiumSubscriptionPlans, , ];
           _undefined = closure_129_0;
@@ -2173,7 +2363,7 @@ export default {
             _undefined = undefined;
           }
           items[1] = closure_130_0.loadProducts(_undefined);
-          items[2] = _undefined(tmp38[17]).fetchSubscriptions();
+          items[2] = _undefined(tmp38[22]).fetchSubscriptions();
           c5 = 4;
           c6 = 1;
           const obj12 = { value: Promise.all(items), done: false };
@@ -2223,7 +2413,7 @@ export default {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: _mod13691.initConnection(), done: false };
+              const obj4 = { value: _mod13725.initConnection(), done: false };
               return obj4;
             }
           } else if (1 === tmp7) {
@@ -2231,7 +2421,7 @@ export default {
             closure_128_1 = closure_2;
             const result = closure_129_0(closure_129_3[16]).captureBillingException(closure_128_1);
             const obj5 = closure_129_0(closure_129_3[16]);
-            closure_129_1(closure_129_3[22]).dispatch({ type: "GENERIC_IAP_INIT_CONNECTION", canMakePayments: false });
+            closure_129_1(closure_129_3[21]).dispatch({ type: "GENERIC_IAP_INIT_CONNECTION", canMakePayments: false });
             c5 = 3;
             return { value: false, done: true };
           } else if (arg0 === 1) {
@@ -2245,7 +2435,7 @@ export default {
           } else {
             closure_128_0 = value;
             const obj9 = { type: "GENERIC_IAP_INIT_CONNECTION", canMakePayments: closure_128_0 };
-            closure_129_1(closure_129_3[22]).dispatch(obj9);
+            closure_129_1(closure_129_3[21]).dispatch(obj9);
             c3 = 0;
             c5 = 3;
             const obj10 = { value: closure_128_0, done: true };
@@ -2296,19 +2486,19 @@ export default {
               closure_129_1 = undefined;
               closure_129_2 = undefined;
               c4 = 1;
-              closure_1(tmp45[22]).dispatch({ type: "IAP_LOAD_PRODUCTS_START" });
-              const obj17 = closure_1(tmp45[22]);
+              closure_1(tmp45[21]).dispatch({ type: "IAP_LOAD_PRODUCTS_START" });
+              const obj17 = closure_1(tmp45[21]);
               c5 = 2;
               c6 = 1;
-              const obj7 = { value: closure_1(tmp45[19]).loadProducts(), done: false };
+              const obj7 = { value: closure_1(tmp45[17]).loadProducts(), done: false };
               return obj7;
             }
           } else {
             if (1 === tmp7) {
               c4 = 0;
               closure_129_3 = tmp45;
-              closure_1(tmp45[22]).dispatch({ type: "IAP_LOAD_PRODUCTS_FAILED" });
-              const obj11 = closure_1(tmp45[22]);
+              closure_1(tmp45[21]).dispatch({ type: "IAP_LOAD_PRODUCTS_FAILED" });
+              const obj11 = closure_1(tmp45[21]);
               const obj9 = { fingerprint: ["iap-load-products-failed"] };
               const result = closure_0(tmp45[16]).captureBillingException(closure_129_3, obj9);
               c6 = 3;
@@ -2325,14 +2515,14 @@ export default {
                   return obj10;
                 } else {
                   closure_129_1 = value;
-                  closure_129_2 = closure_1(tmp45[23]).filter(closure_129_1, (identifier) => {
-                    const GenericProductIds = closure_1_0(closure_1_3[24]).GenericProductIds;
+                  closure_129_2 = closure_1(tmp45[25]).filter(closure_129_1, (identifier) => {
+                    const GenericProductIds = closure_1_0(closure_1_3[18]).GenericProductIds;
                     return GenericProductIds.includes(identifier.identifier);
                   });
                   if (null != closure_130_0) {
                     let tmp8 = closure_130_0;
                   }
-                  const arr = closure_1(tmp45[23]);
+                  const arr = closure_1(tmp45[25]);
                 }
               } else if (arg0 === 1) {
                 c6 = 3;
@@ -2351,22 +2541,22 @@ export default {
               }
               closure_129_0 = tmp8;
               const obj13 = { type: "IAP_LOAD_PRODUCTS", products: closure_129_1 };
-              closure_1(tmp45[22]).dispatch(obj13);
-              if (closure_129_2.length === closure_0(tmp45[24]).GenericProductIds.length) {
+              closure_1(tmp45[21]).dispatch(obj13);
+              if (closure_129_2.length === closure_0(tmp45[18]).GenericProductIds.length) {
                 const obj14 = { type: "IAP_LOAD_GENERIC_PRODUCTS", products: closure_129_2, storeFront: closure_129_0 };
-                closure_1(tmp45[22]).dispatch(obj14);
-                const obj6 = closure_1(tmp45[22]);
+                closure_1(tmp45[21]).dispatch(obj14);
+                const obj6 = closure_1(tmp45[21]);
               } else {
                 const obj15 = { type: "GENERIC_IAP_SET_STORE_FRONT", storeFront: closure_129_0 };
-                closure_1(tmp45[22]).dispatch(obj15);
-                const obj4 = closure_1(tmp45[22]);
+                closure_1(tmp45[21]).dispatch(obj15);
+                const obj4 = closure_1(tmp45[21]);
               }
               c4 = 0;
-              obj2 = closure_1(tmp45[22]);
+              obj2 = closure_1(tmp45[21]);
             }
             c5 = 3;
             c6 = 1;
-            const obj16 = { value: closure_1(tmp45[19]).fetchStoreFront(), done: false };
+            const obj16 = { value: closure_1(tmp45[17]).fetchStoreFront(), done: false };
             return obj16;
           }
         } catch (tmp45) {
@@ -2434,15 +2624,15 @@ export default {
                 ({ isGift: closure_129_1, giftInfoOptions: closure_129_2, baseAnalyticsData: closure_129_3, applicationId: closure_129_4, offerId: closure_129_5, onPurchaseComplete: closure_129_6, onPurchaseError: closure_129_7, orderId: closure_129_8 } = transactionReceipt);
                 if (!IAPStore.isBusy()) {
                   if (obj33.getIsPaymentsBlocked()) {
-                    tmp7(tmp153[26])();
+                    tmp7(tmp153[27])();
                   } else {
                     const obj5 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: productId };
                     c5 = 1;
                     c6 = 1;
-                    const obj7 = { value: tmp7(tmp153[22]).dispatch(obj5), done: false };
+                    const obj7 = { value: tmp7(tmp153[21]).dispatch(obj5), done: false };
                     return obj7;
                   }
-                  obj33 = transactionReceipt(tmp153[25]);
+                  obj33 = transactionReceipt(tmp153[26]);
                 }
                 c6 = 3;
                 if (arg0 === 1) {
@@ -2456,7 +2646,7 @@ export default {
                   c4 = 1;
                   c5 = 3;
                   c6 = 1;
-                  const obj9 = { value: tmp7(tmp153[19]).canMakePayments(), done: false };
+                  const obj9 = { value: tmp7(tmp153[17]).canMakePayments(), done: false };
                   return obj9;
                 }
               }
@@ -2467,27 +2657,27 @@ export default {
               c4 = 0;
               closure_129_21 = tmp153;
               const obj10 = { type: "IAP_PURCHASE_PRODUCT_FAILURE", productIdentifier: closure_129_0 };
-              tmp7(tmp153[22]).dispatch(obj10);
+              tmp7(tmp153[21]).dispatch(obj10);
               if (closure_129_7 != null) {
                 tmp109(closure_129_21);
               }
               const obj13 = { productId: closure_129_0, isGift: closure_129_1, planId: null, orderId: null };
-              const obj24 = tmp7(tmp153[22]);
+              const obj24 = tmp7(tmp153[21]);
               let tmp122;
               if (obj27.isValidBundleProductId(closure_129_0)) {
-                const obj28 = transactionReceipt(tmp153[35]);
-                const baseSubscriptionItemForSubscriptionItems = obj28.getBaseSubscriptionItemForSubscriptionItems(transactionReceipt(tmp153[34]).getSubscriptionItemsForProduct(closure_129_0));
+                const obj28 = transactionReceipt(tmp153[36]);
+                const baseSubscriptionItemForSubscriptionItems = obj28.getBaseSubscriptionItemForSubscriptionItems(transactionReceipt(tmp153[35]).getSubscriptionItemsForProduct(closure_129_0));
                 let planId;
                 if (baseSubscriptionItemForSubscriptionItems != null) {
                   planId = baseSubscriptionItemForSubscriptionItems.planId;
                 }
                 tmp122 = planId;
-                const obj29 = transactionReceipt(tmp153[34]);
+                const obj29 = transactionReceipt(tmp153[35]);
               }
               obj13.planId = tmp122;
               obj13.orderId = closure_129_8;
               handlePurchaseException(closure_129_21, "subscription", true, obj13);
-              obj27 = transactionReceipt(tmp153[34]);
+              obj27 = transactionReceipt(tmp153[35]);
             break;
             case 3:
               if (arg0 === 1) {
@@ -2502,11 +2692,11 @@ export default {
                 currentUser2 = currentUser.getCurrentUser();
                 if (null == currentUser2) {
                   const _Error2 = Error;
-                  const intl2 = transactionReceipt(tmp153[27]).intl;
-                  const error = new Error(intl2.string(transactionReceipt(tmp153[27]).t.PjfUXe));
+                  const intl2 = transactionReceipt(tmp153[28]).intl;
+                  const error = new Error(intl2.string(transactionReceipt(tmp153[28]).t.PjfUXe));
                   throw error;
                 } else {
-                  closure_129_10 = transactionReceipt(tmp153[19]).convertToUUID(currentUser2.id);
+                  closure_129_10 = transactionReceipt(tmp153[17]).convertToUUID(currentUser2.id);
                   closure_129_11 = undefined;
                   if (null != closure_129_5) {
                     c5 = 5;
@@ -2514,7 +2704,7 @@ export default {
                     const obj15 = {
                       value: (function getTrialOfferSignature() {
                                       const self = this;
-                                      const apply = closure_1_24.apply;
+                                      const apply = closure_1_25.apply;
                                       if (typeof apply === "unknown") {
                                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                                       } else {
@@ -2526,7 +2716,7 @@ export default {
                     };
                     return obj15;
                   } else {
-                    tmp7(tmp153[19]).purchaseProduct(closure_129_0, closure_129_11, closure_129_10);
+                    tmp7(tmp153[17]).purchaseProduct(closure_129_0, closure_129_11, closure_129_10);
                     c5 = 6;
                     c6 = 1;
                     c4 = 0;
@@ -2534,12 +2724,12 @@ export default {
                     const obj16 = { value, done: true };
                     return obj16;
                   }
-                  const obj46 = transactionReceipt(tmp153[19]);
+                  const obj46 = transactionReceipt(tmp153[17]);
                 }
               } else {
                 c5 = 4;
                 c6 = 1;
-                const obj17 = { value: transactionReceipt(tmp153[17]).fetchSubscriptions(), done: false };
+                const obj17 = { value: transactionReceipt(tmp153[22]).fetchSubscriptions(), done: false };
                 return obj17;
               }
             break;
@@ -2554,8 +2744,8 @@ export default {
                 return obj18;
               } else {
                 const _Error = Error;
-                const intl = transactionReceipt(tmp153[27]).intl;
-                const error1 = new Error(intl.string(transactionReceipt(tmp153[27]).t.PjfUXe));
+                const intl = transactionReceipt(tmp153[28]).intl;
+                const error1 = new Error(intl.string(transactionReceipt(tmp153[28]).t.PjfUXe));
                 throw error1;
               }
             break;
@@ -2596,7 +2786,7 @@ export default {
                 const obj25 = {};
                 let merged = Object.assign(closure_129_2);
                 obj23.giftOptions = obj25;
-                tmp7(tmp153[22]).dispatch(obj23);
+                tmp7(tmp153[21]).dispatch(obj23);
                 let tmp61;
                 if (closure_129_6 != null) {
                   tmp61 = closure_129_6();
@@ -2651,9 +2841,9 @@ export default {
               premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
               if (null != premiumTypeSubscription) {
                 closure_1_11(() => {
-                  closure_1(paths[29]).openLazy({
+                  closure_1(paths[30]).openLazy({
                     importer() {
-                      return transactionReceipt(paths[31])(paths[30], paths.paths).then((result) => {
+                      return transactionReceipt(paths[32])(paths[31], paths.paths).then((result) => {
                         closure_0 = result.default;
                         return () => { ... };
                       });
@@ -2677,8 +2867,8 @@ export default {
               } else {
                 closure_1_10();
                 const obj37 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: closure_129_15 };
-                tmp7(tmp153[22]).dispatch(obj37);
-                const obj40 = tmp7(tmp153[22]);
+                tmp7(tmp153[21]).dispatch(obj37);
+                const obj40 = tmp7(tmp153[21]);
                 const obj42 = tmp7(tmp153[14]);
                 const obj38 = { subscription_plan_gateway_plan_id: closure_129_0, price: closure_129_17, regular_price: closure_129_17, currency: null, application_id: null };
                 let formatted;
@@ -2687,19 +2877,19 @@ export default {
                 }
                 obj38.currency = formatted;
                 obj38.application_id = closure_129_4;
-                obj42.track(constants.PAYMENT_FLOW_COMPLETED, transactionReceipt(tmp153[28]).getPaymentFlowCompletedAnalyticsFields(closure_129_3, obj38));
-                const obj43 = transactionReceipt(tmp153[28]);
+                obj42.track(constants.PAYMENT_FLOW_COMPLETED, transactionReceipt(tmp153[29]).getPaymentFlowCompletedAnalyticsFields(closure_129_3, obj38));
+                const obj43 = transactionReceipt(tmp153[29]);
                 str4 = closure_129_18;
                 const obj39 = { type: "IAP_PURCHASE_PRODUCT_SUCCESS", productIdentifier: closure_129_0 };
-                tmp7(tmp153[22]).dispatch(obj39);
+                tmp7(tmp153[21]).dispatch(obj39);
                 if (!closure_129_1) {
                   c4 = 2;
                   c5 = 10;
                   c6 = 1;
-                  const obj41 = { value: transactionReceipt(tmp153[17]).fetchSubscriptions(), done: false };
+                  const obj41 = { value: transactionReceipt(tmp153[22]).fetchSubscriptions(), done: false };
                   return obj41;
                 }
-                let obj = tmp7(tmp153[22]);
+                let obj = tmp7(tmp153[21]);
               }
             break;
             default:
@@ -2772,7 +2962,7 @@ export default {
                 let obj7 = { value: [], done: true };
                 return obj7;
               } else {
-                _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_START" });
+                _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_START" });
                 c8 = 2;
                 c10 = 3;
                 c11 = 1;
@@ -2782,7 +2972,7 @@ export default {
             }
           } else if (1 === tmp10) {
             c8 = 0;
-            _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+            _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
             throw giftOptionsForKey;
           } else if (2 === tmp10) {
             c8 = 1;
@@ -2798,7 +2988,7 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c8 = 0;
-              _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+              _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
               c11 = 3;
               const obj11 = { value, done: true };
               return obj11;
@@ -2806,7 +2996,7 @@ export default {
               const obj13 = { fullRestore: closure_135_0 };
               c10 = 4;
               c11 = 1;
-              const obj15 = { value: _self(iter2[19]).restorePurchases(obj13), done: false };
+              const obj15 = { value: _self(iter2[17]).restorePurchases(obj13), done: false };
               return obj15;
             }
           } else {
@@ -2816,7 +3006,7 @@ export default {
                 throw value;
               } else if (arg0 === 2) {
                 c8 = 0;
-                _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+                _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
                 c11 = 3;
                 const obj16 = { value, done: true };
                 return obj16;
@@ -2824,13 +3014,13 @@ export default {
                 closure_134_0 = value;
                 if (0 === closure_134_0.length) {
                   c8 = 0;
-                  _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+                  _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
                   c11 = 3;
                   const obj18 = { value: [], done: true };
                   return obj18;
                 } else {
-                  const obj27 = _self(iter2[23])(closure_134_0);
-                  closure_134_1 = _self(iter2[23])(closure_134_0).uniqBy((purchaseResponse) => {
+                  const obj27 = _self(iter2[25])(closure_134_0);
+                  closure_134_1 = _self(iter2[25])(closure_134_0).uniqBy((purchaseResponse) => {
                     let originalTransactionIdentifier = purchaseResponse.purchaseResponse.jwsRepresentation;
                     if (originalTransactionIdentifier == null) {
                       originalTransactionIdentifier = purchaseResponse.purchaseResponse.originalTransactionIdentifier;
@@ -2884,13 +3074,13 @@ export default {
                       yield closure_2_23(obj6).then((result) => {
                         closure_0 = result;
                         str1 = str1.transactionIdentifier.toString();
-                        let obj = skipDupCheck(dependencyMap[21]);
+                        let obj = skipDupCheck(dependencyMap[19]);
                         obj2 = { purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } };
-                        skipDupCheck(dependencyMap[21]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(() => { ... });
+                        skipDupCheck(dependencyMap[19]).finishTransaction({ purchase: { productId: str1.productIdentifier, transactionDate: str1.transactionDate, transactionReceipt: str1.transactionReceipt, transactionId: str1 } }).then(() => { ... });
                         if (null != result) {
                           const obj4 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key };
-                          transactionReceipt(dependencyMap[22]).dispatch(obj4);
-                          const obj3 = transactionReceipt(dependencyMap[22]);
+                          transactionReceipt(dependencyMap[21]).dispatch(obj4);
+                          const obj3 = transactionReceipt(dependencyMap[21]);
                         }
                         let tmp7 = null;
                         if (null != result) {
@@ -2922,13 +3112,13 @@ export default {
                     if (closure_134_2.length > 0) {
                       c10 = 8;
                       c11 = 1;
-                      const obj22 = { value: closure_0(iter2[17]).fetchSubscriptions(), done: false };
+                      const obj22 = { value: closure_0(iter2[22]).fetchSubscriptions(), done: false };
                       return obj22;
                     } else if (closure_134_3.length > 0) {
                       const item = closure_134_3.forEach((code) => {
                         if (!set.has(code.code)) {
-                          const result = closure_1_0(4879).captureBillingException(code);
-                          const obj = closure_1_0(4879);
+                          const result = closure_1_0(4764).captureBillingException(code);
+                          const obj = closure_1_0(4764);
                         }
                       });
                       const _Error = Error;
@@ -2936,7 +3126,7 @@ export default {
                       throw error;
                     } else {
                       c8 = 0;
-                      _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+                      _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
                       c11 = 3;
                       const obj23 = { value: closure_134_2, done: true };
                       return obj23;
@@ -2950,7 +3140,7 @@ export default {
                     closure_2 = undefined;
                     const tmp135 = closure_134_4(closure_134_5);
                   }
-                  const iter4 = _self(iter2[23])(closure_134_0).uniqBy((purchaseResponse) => {
+                  const iter4 = _self(iter2[25])(closure_134_0).uniqBy((purchaseResponse) => {
                     let originalTransactionIdentifier = purchaseResponse.purchaseResponse.jwsRepresentation;
                     if (originalTransactionIdentifier == null) {
                       originalTransactionIdentifier = purchaseResponse.purchaseResponse.originalTransactionIdentifier;
@@ -2978,7 +3168,7 @@ export default {
                     c8 = 2;
                     closure_0.return();
                     c8 = 0;
-                    _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+                    _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
                     c11 = 3;
                     const obj24 = { value, done: true };
                     return obj24;
@@ -2989,7 +3179,7 @@ export default {
                       c8 = 2;
                       closure_0.return();
                       c8 = 0;
-                      _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+                      _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
                       c11 = 3;
                       const obj25 = { value: iter3.value, done: true };
                       return obj25;
@@ -3032,7 +3222,7 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c8 = 0;
-              _self(iter2[22]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
+              _self(iter2[21]).dispatch({ type: "IAP_RESTORE_PURCHASES_END" });
               c11 = 3;
               let obj = { value, done: true };
               return obj;
@@ -3064,11 +3254,21 @@ export default {
     })();
   }
 };
+export const applyTransactionFromListener = function applyTransactionFromListener() {
+  const self = this;
+  const apply = closure_24.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
 export { getIAPJWTRequestData };
 export { updateAppleSubscription };
 export const cancelGenericSubscription = function cancelGenericSubscription(arg0, arg1, arg2) {
   const self = this;
-  const apply = closure_39.apply;
+  const apply = closure_40.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3080,7 +3280,7 @@ export { isValidCurrency };
 export const SubscriptionPurchaseFailureReason = obj2;
 export const createGenericSubscription = function createGenericSubscription(arg0) {
   const self = this;
-  const apply = closure_42.apply;
+  const apply = closure_43.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3090,7 +3290,7 @@ export const createGenericSubscription = function createGenericSubscription(arg0
 };
 export const modifyGenericSubscription = function modifyGenericSubscription(arg0) {
   const self = this;
-  const apply = closure_43.apply;
+  const apply = closure_44.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3100,7 +3300,7 @@ export const modifyGenericSubscription = function modifyGenericSubscription(arg0
 };
 export const resubscribeGenericSubscription = function resubscribeGenericSubscription(arg0, arg1) {
   const self = this;
-  const apply = closure_44.apply;
+  const apply = closure_45.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3110,7 +3310,7 @@ export const resubscribeGenericSubscription = function resubscribeGenericSubscri
 };
 export const mobilePurchaseSKU = function mobilePurchaseSKU(arg0, arg1) {
   const self = this;
-  const apply = closure_46.apply;
+  const apply = closure_47.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3120,7 +3320,7 @@ export const mobilePurchaseSKU = function mobilePurchaseSKU(arg0, arg1) {
 };
 export const migrateToACOM = function migrateToACOM() {
   const self = this;
-  const apply = closure_47.apply;
+  const apply = closure_48.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

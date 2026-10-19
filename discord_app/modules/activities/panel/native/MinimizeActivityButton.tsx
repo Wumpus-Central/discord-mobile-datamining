@@ -1,12 +1,12 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import _modDef10860 from "../../../../../_runtime/metro/10860__.js";
+import _modDef10872 from "../../../../../_runtime/metro/10872__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(6298).ActivityPanelModes;
+const ActivityPanelModes = fn(5570).ActivityPanelModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -57,7 +57,7 @@ export default noop.memo(
               tmp19 = tmp22;
             }
             const obj3 = {
-              icon: _modDef10860,
+              icon: _modDef10872,
               accessibilityLabel: tmp13,
               onPress: tmp4,
               text: activityName,
@@ -66,8 +66,8 @@ export default noop.memo(
               maxFontSizeMultiplier: 1,
               shrink: true,
             };
-            const tmp18 = jsx(setMode(5479).Button, {
-              icon: _modDef10860,
+            const tmp18 = jsx(setMode(5205).Button, {
+              icon: _modDef10872,
               accessibilityLabel: tmp13,
               onPress: tmp4,
               text: activityName,
@@ -92,15 +92,15 @@ export default noop.memo(
         }
         if (cResult[10] !== tmp4) {
           const obj4 = {
-            icon: _modDef10860,
+            icon: _modDef10872,
             accessibilityLabel: tmp6,
             onPress: tmp4,
             size: "sm",
             variant: "secondary-overlay",
             maxFontSizeMultiplier: 1,
           };
-          const tmp11 = jsx(setMode(7840).IconButton, {
-            icon: _modDef10860,
+          const tmp11 = jsx(setMode(7903).IconButton, {
+            icon: _modDef10872,
             accessibilityLabel: tmp6,
             onPress: tmp4,
             size: "sm",
@@ -125,7 +125,7 @@ export default noop.memo(
           if ("" !== activityName) {
             const obj2 = { style: tmp2.buttonParent, children: null };
             const obj3 = {
-              icon: _modDef10860,
+              icon: _modDef10872,
               accessibilityLabel: null,
               onPress: null,
               text: null,
@@ -138,8 +138,8 @@ export default noop.memo(
             obj3.accessibilityLabel = intl2.string(setMode(1128).t.brPQ5U);
             obj3.onPress = callback;
             obj3.text = activityName;
-            obj2.children = jsx(setMode(5479).Button, {
-              icon: _modDef10860,
+            obj2.children = jsx(setMode(5205).Button, {
+              icon: _modDef10872,
               accessibilityLabel: null,
               onPress: null,
               text: null,
@@ -153,7 +153,7 @@ export default noop.memo(
           return tmp3;
         }
         const obj = {
-          icon: _modDef10860,
+          icon: _modDef10872,
           accessibilityLabel: null,
           onPress: null,
           size: "sm",
@@ -163,8 +163,8 @@ export default noop.memo(
         const intl = setMode(1128).intl;
         obj.accessibilityLabel = intl.string(setMode(1128).t.brPQ5U);
         obj.onPress = callback;
-        tmp3 = jsx(setMode(7840).IconButton, {
-          icon: _modDef10860,
+        tmp3 = jsx(setMode(7903).IconButton, {
+          icon: _modDef10872,
           accessibilityLabel: null,
           onPress: null,
           size: "sm",

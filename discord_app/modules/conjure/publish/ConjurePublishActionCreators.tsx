@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/ConjurePublishActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
+import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import ConjurePreviewActionCreators from "../preview/ConjurePreviewActionCreators.tsx";
 import ApplicationWidgetConfigActions from "../../application_widget/ApplicationWidgetConfigActions.tsx";
 import conjureLiveRelaunch from "../live_reload/conjureLiveRelaunch.tsx";
@@ -54,7 +54,7 @@ let closure_9 = async function _unpublishProject(arg0) {
           ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -189,7 +189,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
           closure_130_12 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -340,7 +340,7 @@ let closure_13 = async function _refreshPublishedApplication() {
             closure_131_2 = closure_2;
             const obj4 = { type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId };
             DispatcherDefault.dispatch(obj4);
-            const items = [ApplicationActionCreators.fetchApplication(applicationId)];
+            const items = [ConjureActionCreators.fetchConjureApplication(applicationId)];
             const widgetConfigs = ApplicationWidgetConfigActions.fetchWidgetConfigs(applicationId, { force: true });
             items[1] = widgetConfigs.catch(() => {});
             c5 = 1;
@@ -424,4 +424,7 @@ export const refreshPublishedProject = function refreshPublishedProject() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+};
+export const refreshPreviewApplication = function refreshPreviewApplication(prop) {
+  return refreshPublishedApplication(prop, true, null);
 };

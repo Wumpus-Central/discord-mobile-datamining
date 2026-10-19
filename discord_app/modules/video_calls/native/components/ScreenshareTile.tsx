@@ -3,11 +3,11 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06612_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05258_LegacyBaseButton.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef11279 from "../../../../../_runtime/metro/11279__.js";
+import _modDef11293 from "../../../../../_runtime/metro/11293__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[5];
         }
         if (cResult[6] !== tmp4.image) {
-          const obj3 = { source: _modDef11279, style: tmp4.image, resizeMode: "contain" };
+          const obj3 = { source: _modDef11293, style: tmp4.image, resizeMode: "contain" };
           const tmp19 = hasOwnProperty(FastImageDefault, obj3);
           cResult[6] = tmp4.image;
           cResult[7] = tmp19;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj4 = { source: null, style: null, resizeMode: "contain" };
       const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-      obj4.source = _modDef11279;
+      obj4.source = _modDef11293;
       obj4.style = tmp.image;
       items[1] = hasOwnProperty(FastImageDefault, obj4);
       const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

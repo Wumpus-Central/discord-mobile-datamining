@@ -14,7 +14,6 @@ const frozen = Object.freeze({
 const frozen1 = Object.freeze({ GUILD_COLLABORATION: 1, PUBLIC: 2 });
 const result = size.fileFinishedImporting("modules/conjure/projects/ConjureProjectTypes.tsx");
 
-export const UNNAMED_PROJECT_NAME = "Untitled App";
 export const ConjureSupportedSurface = frozen;
 export const MIN_PROJECT_NAME_LENGTH = 2;
 export const MAX_PROJECT_NAME_LENGTH = 128;

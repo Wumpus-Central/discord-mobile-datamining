@@ -9,6 +9,18 @@ import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getCha
 import FramesConstants from "FramesConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+function findFrameByIframeId(iframeId) {
+  const values = map.values();
+  for (const item10009 of values) {
+    if (React5(item10009)) {
+      if (item10009.data.iframeId === arg0) {
+        obj.return();
+        return item10009;
+      }
+    }
+    continue;
+  }
+}
 ({
   asLaunched: c3,
   FrameIntent: closure_4,
@@ -20,6 +32,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const NOOP_TRUE = Constants.NOOP_TRUE;
 const map = new Map();
+let closure_12 = { audible: false };
 let frameId = null;
 const Store = initializeDefault.Store;
 class FramesStoreClass extends Store {}
@@ -28,6 +41,26 @@ prototype["getFrame"] = function getFrame(frameId) {
   if (null != frameId) {
     return map.get(frameId);
   }
+};
+prototype["isFramePooled"] = function isFramePooled(frameId) {
+  value = map.get(frameId);
+  let tmp2 = React5(value);
+  if (tmp2) {
+    tmp2 = "unpooled" !== value.data.poolVisibility;
+  }
+  return tmp2;
+};
+prototype["isFrameVisible"] = function isFrameVisible(frameId) {
+  value = map.get(frameId);
+  const tmp2 = React5(value);
+  let tmp3 = !tmp2;
+  if (tmp2) {
+    tmp3 = "hidden" !== value.data.poolVisibility;
+  }
+  return tmp3;
+};
+prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
+  return findFrameByIframeId(iframeId);
 };
 prototype["getMainFrame"] = function getMainFrame() {
   let tmp = null;
@@ -132,15 +165,16 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
             orientationLock: null,
             pipOrientationLock: null,
             runsInBackground: false,
-            iframeId: null,
-            hostWindowKey: null,
-            launch: null,
+            poolVisibility: "unpooled",
+            muted: false,
           };
           const _Date = Date;
           obj5.connectedSince = Date.now();
           obj5.layoutMode = constants2.FOCUSED;
           obj5.activityPanelMode = ActivityPanelModes.PANEL;
           obj5.proxyTicket = proxyTicket;
+          const merged = Object.assign(closure_12);
+          obj5.iframeId = null;
           if (hostWindowKey == null) {
             hostWindowKey = null;
           }
@@ -340,8 +374,8 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     }
     return flag;
   },
-  FRAME_IFRAME_MOUNT: function handleFrameIframeMount(arg0) {
-    ({ frameId, iframeId } = arg0);
+  FRAME_POOL_VISIBILITY_UPDATE: function handleFramePoolVisibilityUpdate(arg0) {
+    ({ frameId, poolVisibility } = arg0);
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
@@ -351,11 +385,10 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         if (flag2) {
           const obj2 = {};
           const merged = Object.assign(value);
-          const data = value.data;
           const obj3 = {};
-          const merged1 = Object.assign(data);
-          obj3.iframeId = iframeId;
-          obj3.runsInBackground = data.iframeId === iframeId && data.runsInBackground;
+          const merged1 = Object.assign(value.data);
+          obj3.poolVisibility = poolVisibility;
+          obj3.muted = "hidden" === poolVisibility;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -363,6 +396,90 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         tmp4 = flag2;
       }
       flag = tmp4;
+    }
+    return flag;
+  },
+  EMBEDDED_APP_SHIM_STATE_UPDATE: function handleEmbeddedAppShimStateUpdate(iframeId) {
+    const tmp = findFrameByIframeId(iframeId.iframeId);
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      const id = tmp.id;
+      let flag = false;
+      if (null != id) {
+        value = map.get(id);
+        let tmp6 = React5(value);
+        if (tmp6) {
+          let flag2 = tmp3(value.data);
+          if (flag2) {
+            const obj2 = {};
+            const merged = Object.assign(value);
+            const obj3 = {};
+            const merged1 = Object.assign(value.data);
+            obj3.audible = iframeId.state.audible;
+            obj2.data = obj3;
+            const result = map.set(id, obj2);
+            flag2 = true;
+          }
+          tmp6 = flag2;
+        }
+        flag = tmp6;
+      }
+      tmp2 = flag;
+    }
+    return tmp2;
+  },
+  EMBEDDED_APP_SHIM_DISCONNECT: function handleEmbeddedAppShimDisconnect(iframeId) {
+    const tmp = findFrameByIframeId(iframeId.iframeId);
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      const id = tmp.id;
+      let flag = false;
+      if (null != id) {
+        value = map.get(id);
+        let tmp6 = React5(value);
+        if (tmp6) {
+          let flag2 = tmp3(value.data);
+          if (flag2) {
+            const obj2 = {};
+            const merged = Object.assign(value);
+            const obj3 = {};
+            const merged1 = Object.assign(value.data);
+            const merged2 = Object.assign(closure_12);
+            obj2.data = obj3;
+            const result = map.set(id, obj2);
+            flag2 = true;
+          }
+          tmp6 = flag2;
+        }
+        flag = tmp6;
+      }
+      tmp2 = flag;
+    }
+    return tmp2;
+  },
+  FRAME_IFRAME_MOUNT: function handleFrameIframeMount(arg0) {
+    ({ frameId, iframeId } = arg0);
+    let flag = false;
+    if (null != frameId) {
+      value = map.get(frameId);
+      let tmp3 = React5(value);
+      if (tmp3) {
+        let flag2 = value.data.iframeId !== iframeId;
+        if (flag2) {
+          const obj2 = {};
+          const merged = Object.assign(value);
+          const obj3 = {};
+          const merged1 = Object.assign(value.data);
+          obj3.iframeId = iframeId;
+          obj3.runsInBackground = false;
+          const merged2 = Object.assign(closure_12);
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
+          flag2 = true;
+        }
+        tmp3 = flag2;
+      }
+      flag = tmp3;
     }
     return flag;
   },
@@ -381,6 +498,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
           const merged1 = Object.assign(value.data);
           obj3.iframeId = null;
           obj3.runsInBackground = false;
+          const merged2 = Object.assign(closure_12);
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;

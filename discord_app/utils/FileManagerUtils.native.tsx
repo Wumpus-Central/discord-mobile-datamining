@@ -137,8 +137,8 @@ export const moveFile = function moveFile(arg0, arg1, arg2) {
 export const removeFile = function removeFile(cache, combined) {
   return NativeFileModuleDefault.removeFile(cache, combined);
 };
-export const clearFolder = function clearFolder(cache, c3) {
-  return NativeFileModuleDefault.clearFolder(cache, c3);
+export const clearFolder = function clearFolder(cache, c5) {
+  return NativeFileModuleDefault.clearFolder(cache, c5);
 };
 export const readFile = function readFile() {
   const self = this;

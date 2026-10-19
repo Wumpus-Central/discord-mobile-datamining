@@ -1,14 +1,14 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TextInput from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
 import HeaderActionButton from "../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef18843 from "../../../../../../_runtime/metro/18843__.js";
+import _modDef18878 from "../../../../../../_runtime/metro/18878__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   wrapper: { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 },
   section: null,
@@ -102,8 +102,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      fn = self(6478).getHeaderConditionalBackButton(this.handleCancel);
-      let obj = self(6478);
+      fn = self(6872).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(6872);
     }
     let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
@@ -201,7 +201,7 @@ prototype["render"] = function render() {
     obj5.children = items1;
     const items3 = [React6(View, obj5)];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef18843, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef18878, style: styles.image, resizeMode: "contain" };
     obj12.children = closure_1_8(FastImageDefault, obj13);
     items3[1] = closure_1_8(View, obj12);
     obj4.children = items3;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           styles: tmp4,
           contentContainerStyle,
         };
-        const items3 = [closure_8(GuildSettingsModalVanityURL, obj4), closure_8(tmp(7005).NavScrim, {})];
+        const items3 = [closure_8(GuildSettingsModalVanityURL, obj4), closure_8(tmp(5553).NavScrim, {})];
         obj3.children = items3;
         tmp19 = closure_9(closure_10, obj3);
       }
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           styles: tmp,
           contentContainerStyle: guildId.contentContainerStyle,
         };
-        const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(7005).NavScrim, {})];
+        const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(5553).NavScrim, {})];
         obj5.children = items3;
         tmp10 = closure_9(closure_10, obj5);
       }

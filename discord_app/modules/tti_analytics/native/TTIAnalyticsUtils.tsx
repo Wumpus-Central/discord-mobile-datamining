@@ -2,10 +2,10 @@
 import AppStartPerformanceDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import NativeTTIManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
-import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import getMediaPerformanceClassDefault from "../../device/getMediaPerformanceClass.android.tsx";
 import AppStartInfo2 from "AppStartInfo.android.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -603,8 +603,8 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7625).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(2075).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7688).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(4807).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1281);
 const load_id = v1.v4();

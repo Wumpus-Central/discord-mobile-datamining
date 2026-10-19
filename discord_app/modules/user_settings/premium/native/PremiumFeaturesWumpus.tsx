@@ -2,15 +2,15 @@
 import c from "../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef7427 from "../../../../../_runtime/metro/07427__.js";
-import _modDef7429 from "../../../../../_runtime/metro/07429__.js";
+import _modDef7494 from "../../../../../_runtime/metro/07494__.js";
+import _modDef7496 from "../../../../../_runtime/metro/07496__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const PremiumTypes = fn(1394).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   clouds: { position: "absolute", top: 0, right: 0 },
   wumpus: { position: "absolute", top: 22, right: 22, height: 90 },
@@ -32,16 +32,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_8();
       const tmp5 = useIsWindowLargeDefault();
       if (premiumType === PremiumTypes.TIER_0) {
-        const tmp4Result = importDefault(tmp5 ? 9719 : 9720);
+        const tmp4Result = importDefault(tmp5 ? 9733 : 9734);
         if (cResult[0] !== tmp4Result) {
-          const obj2 = { wumpusImageSource: _modDef7427, cloudsImageSource: tmp4Result };
+          const obj2 = { wumpusImageSource: _modDef7494, cloudsImageSource: tmp4Result };
           cResult[0] = tmp4Result;
           cResult[1] = obj2;
         }
       } else {
-        const tmp4Result2 = importDefault(tmp5 ? 9721 : 9722);
+        const tmp4Result2 = importDefault(tmp5 ? 9735 : 9736);
         if (cResult[2] !== tmp4Result2) {
-          const obj3 = { wumpusImageSource: _modDef7429, cloudsImageSource: tmp4Result2 };
+          const obj3 = { wumpusImageSource: _modDef7496, cloudsImageSource: tmp4Result2 };
           cResult[2] = tmp4Result2;
           cResult[3] = obj3;
           let tmp8 = obj3;
@@ -105,14 +105,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [premiumType, tmp2];
       const memo = noop.useMemo(() => {
         if (premiumType === PremiumTypes.TIER_0) {
-          const obj2 = { wumpusImageSource: _modDef7427, cloudsImageSource: importDefault(closure_1 ? 9719 : 9720) };
+          const obj2 = { wumpusImageSource: _modDef7494, cloudsImageSource: importDefault(closure_1 ? 9733 : 9734) };
         } else {
           if (closure_1) {
-            let tmp4 = 9721;
+            let tmp4 = 9735;
           } else {
-            tmp4 = 9722;
+            tmp4 = 9736;
           }
-          const obj = { wumpusImageSource: _modDef7429, cloudsImageSource: importDefault(tmp4) };
+          const obj = { wumpusImageSource: _modDef7496, cloudsImageSource: importDefault(tmp4) };
           return obj;
         }
       }, items);

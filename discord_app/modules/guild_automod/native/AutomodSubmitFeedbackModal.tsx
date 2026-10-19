@@ -3,15 +3,15 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AutomodAlert from "../AutomodAlert.tsx";
 import AutomodFeedback from "../AutomodFeedback.tsx";
-import _modDef7995 from "../../../../_runtime/metro/07995__.js";
+import _modDef8058 from "../../../../_runtime/metro/08058__.js";
 import GuildAutomodActionCreators from "../GuildAutomodActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
 let c10 = 16;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   container: {
     flex: 1,
@@ -100,7 +100,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== onClose) {
-        const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef7995 };
+        const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef8058 };
         const tmp10 = React5(HeaderActionButton.HeaderActionButton, obj2);
         cResult[1] = onClose;
         cResult[2] = tmp10;
@@ -139,7 +139,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
       obj2.onPress = onClose.onClose;
-      obj2.source = _modDef7995;
+      obj2.source = _modDef8058;
       obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
       rect.children = React5(View, obj);
       return React5(common_SafeAreaView.SafeAreaPaddingView, rect);

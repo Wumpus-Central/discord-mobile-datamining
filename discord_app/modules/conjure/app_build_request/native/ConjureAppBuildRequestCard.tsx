@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_build_request/native/ConjureAppBuildRequestCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3820 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureNativeCardSurfaceDefault from "../../shared/native/ConjureNativeCardSurface.tsx";
 import ConjureClarificationProjectSheetDefault from "../../clarification/native/ConjureClarificationProjectSheet.tsx";
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjureAppBuildRequestProjectSheet = "ConjureAppBuildRequestProjectSheet";
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
   header: null,
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ projectId, canSend } = arg0);
       const tmp4 = closure_7();
       const obj = conjureAppBuildRequestForm(576);
-      conjureAppBuildRequestForm = conjureAppBuildRequestForm(12300).useConjureAppBuildRequestForm(
+      conjureAppBuildRequestForm = conjureAppBuildRequestForm(12320).useConjureAppBuildRequestForm(
         projectId,
         request,
         canSend,
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1128).intl;
-            const stringResult = intl.string(_modDef3883["29gr8j"]);
+            const stringResult = intl.string(_modDef3820["29gr8j"]);
             cResult[5] = stringResult;
             let tmp10 = stringResult;
           } else {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               accessibilityRole: "header",
               children: request.summary,
             };
-            const tmp16 = closure_4(tmp(5187).Text, obj3);
+            const tmp16 = closure_4(tmp(5195).Text, obj3);
             cResult[8] = request.summary;
             cResult[9] = tmp16;
             let tmp14 = tmp16;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp23 = closure_4(tmp(6485).XSmallIcon, { size: "sm" });
+              const tmp23 = closure_4(tmp(6879).XSmallIcon, { size: "sm" });
               cResult[13] = tmp23;
               let tmp21 = tmp23;
             } else {
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol3 = Symbol;
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
               const intl2 = tmp(1128).intl;
-              const stringResult1 = intl2.string(_modDef3883.KQUuAZ);
+              const stringResult1 = intl2.string(_modDef3820.KQUuAZ);
               cResult[14] = stringResult1;
               let tmp24 = stringResult1;
             } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress: onDismiss,
                 accessibilityLabel: tmp24,
               };
-              const tmp29 = closure_4(tmp(7840).IconButton, obj4);
+              const tmp29 = closure_4(tmp(7903).IconButton, obj4);
               cResult[15] = onDismiss;
               cResult[16] = tmp29;
               let tmp27 = tmp29;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const _Symbol4 = Symbol;
                         if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
                           const intl5 = tmp(1128).intl;
-                          const stringResult2 = intl5.string(_modDef3883.XZNsDA);
+                          const stringResult2 = intl5.string(_modDef3820.XZNsDA);
                           cResult[27] = stringResult2;
                           let tmp47 = stringResult2;
                         } else {
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           let stringResult3;
                           if (conjureAppBuildRequestForm.failed) {
                             const intl6 = tmp(1128).intl;
-                            stringResult3 = intl6.string(_modDef3883.kMZz8G);
+                            stringResult3 = intl6.string(_modDef3820.kMZz8G);
                           }
                           cResult[28] = conjureAppBuildRequestForm.failed;
                           cResult[29] = stringResult3;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               const _Symbol5 = Symbol;
                               if (cResult[35] === Symbol.for("react.memo_cache_sentinel")) {
                                 const intl7 = tmp(1128).intl;
-                                const stringResult4 = intl7.string(_modDef3883.gG4j6o);
+                                const stringResult4 = intl7.string(_modDef3820.gG4j6o);
                                 cResult[35] = stringResult4;
                                 let tmp56 = stringResult4;
                               } else {
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 onPress: null,
                               };
                               ({ sending: obj10.loading, submit: obj10.onPress } = conjureAppBuildRequestForm);
-                              const tmp62 = closure_4(tmp(5479).Button, obj7);
+                              const tmp62 = closure_4(tmp(5205).Button, obj7);
                               cResult[36] = conjureAppBuildRequestForm.sending;
                               cResult[37] = conjureAppBuildRequestForm.submit;
                               cResult[38] = !conjureAppBuildRequestForm.canSubmit;
@@ -249,10 +249,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           errorMessage: null,
                         };
                         ({ prompt: obj9.value, setPrompt: obj9.onChange } = conjureAppBuildRequestForm);
-                        obj8.maxLength = tmp(12300).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
+                        obj8.maxLength = tmp(12320).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
                         obj8.disabled = conjureAppBuildRequestForm.sending;
                         obj8.errorMessage = tmp50;
-                        const tmp55 = closure_4(tmp(7051).TextArea, obj8);
+                        const tmp55 = closure_4(tmp(7128).TextArea, obj8);
                         cResult[30] = conjureAppBuildRequestForm.prompt;
                         cResult[31] = conjureAppBuildRequestForm.sending;
                         cResult[32] = conjureAppBuildRequestForm.setPrompt;
@@ -266,8 +266,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (0 === conjureAppBuildRequestForm.projects.length) {
                   const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };
                   const intl4 = tmp(1128).intl;
-                  obj11.children = intl4.string(_modDef3883.TbbzW5);
-                  let tmp71Result = closure_4(tmp(5187).Text, obj11);
+                  obj11.children = intl4.string(_modDef3820.TbbzW5);
+                  let tmp71Result = closure_4(tmp(5195).Text, obj11);
                 } else {
                   const obj12 = { title: tmp10, hasIcons: false, children: null };
                   let name1;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (name1 == null) {
                     const intl3 = tmp(1128).intl;
-                    name1 = intl3.string(_modDef3883.twlOb6);
+                    name1 = intl3.string(_modDef3820.twlOb6);
                   }
                   const obj13 = { label: name1, subLabel: null, arrow: true, disabled: null, onPress: null };
                   let serverName1;
@@ -286,8 +286,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj13.subLabel = serverName1;
                   obj13.disabled = conjureAppBuildRequestForm.sending;
                   obj13.onPress = tmp13;
-                  obj12.children = closure_4(tmp(6457).TableRow, obj13);
-                  tmp71Result = closure_4(tmp(6542).TableRowGroup, obj12);
+                  obj12.children = closure_4(tmp(6851).TableRow, obj13);
+                  tmp71Result = closure_4(tmp(6935).TableRowGroup, obj12);
                 }
                 cResult[21] = conjureAppBuildRequestForm.projects.length;
                 cResult[22] = conjureAppBuildRequestForm.sending;
@@ -339,14 +339,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[0] = conjureAppBuildRequestForm.projects;
       cResult[1] = conjureAppBuildRequestForm.targetId;
       cResult[2] = found;
-      let obj2 = conjureAppBuildRequestForm(12300);
+      let obj2 = conjureAppBuildRequestForm(12320);
     }
   : function ConjureAppBuildRequestCard(request) {
       request = request.request;
       let conjureAppBuildRequestForm;
       ({ projectId, canSend, onDismiss } = request);
       const tmp = closure_7();
-      conjureAppBuildRequestForm = conjureAppBuildRequestForm(12300).useConjureAppBuildRequestForm(
+      conjureAppBuildRequestForm = conjureAppBuildRequestForm(12320).useConjureAppBuildRequestForm(
         projectId,
         request,
         canSend,
@@ -354,13 +354,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const projects = conjureAppBuildRequestForm.projects;
       const found = projects.find((projectId) => projectId.projectId === conjureAppBuildRequestForm.targetId);
       const intl = conjureAppBuildRequestForm(1128).intl;
-      const stringResult = intl.string(_modDef3883["29gr8j"]);
+      const stringResult = intl.string(_modDef3820["29gr8j"]);
       importDefault = stringResult;
       let obj2 = { style: tmp.card, children: null };
       const obj3 = { style: tmp.header, children: null };
       const obj4 = { style: tmp.heading, children: null };
-      const obj = conjureAppBuildRequestForm(12300);
-      obj4.children = closure_4(conjureAppBuildRequestForm(5187).Text, {
+      const obj = conjureAppBuildRequestForm(12320);
+      obj4.children = closure_4(conjureAppBuildRequestForm(5195).Text, {
         variant: "text-md/semibold",
         color: "text-default",
         accessibilityRole: "header",
@@ -370,20 +370,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         variant: "tertiary",
         size: "sm",
-        icon: closure_4(conjureAppBuildRequestForm(6485).XSmallIcon, { size: "sm" }),
+        icon: closure_4(conjureAppBuildRequestForm(6879).XSmallIcon, { size: "sm" }),
         onPress: onDismiss,
         accessibilityLabel: null,
       };
       const intl2 = conjureAppBuildRequestForm(1128).intl;
-      obj6.accessibilityLabel = intl2.string(_modDef3883.KQUuAZ);
-      items[1] = closure_4(conjureAppBuildRequestForm(7840).IconButton, obj6);
+      obj6.accessibilityLabel = intl2.string(_modDef3820.KQUuAZ);
+      items[1] = closure_4(conjureAppBuildRequestForm(7903).IconButton, obj6);
       obj3.children = items;
       const items1 = [closure_5(View, obj3), , ,];
       if (0 === conjureAppBuildRequestForm.projects.length) {
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl4 = tmp2(1128).intl;
-        obj7.children = intl4.string(tmp6(3883).TbbzW5);
-        let tmp11Result = closure_4(tmp2(5187).Text, obj7);
+        obj7.children = intl4.string(tmp6(3820).TbbzW5);
+        let tmp11Result = closure_4(tmp2(5195).Text, obj7);
       } else {
         const obj8 = { title: stringResult, hasIcons: false, children: null };
         let name;
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (name == null) {
           const intl3 = tmp2(1128).intl;
-          name = intl3.string(tmp6(3883).twlOb6);
+          name = intl3.string(tmp6(3820).twlOb6);
         }
         const obj10 = { label: name, subLabel: null, arrow: true, disabled: null, onPress: null };
         let serverName;
@@ -416,30 +416,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           ActionSheetActionCreators.showActionSheet(obj2);
         };
-        obj8.children = closure_4(tmp2(6457).TableRow, obj10);
-        tmp11Result = closure_4(tmp2(6542).TableRowGroup, obj8);
+        obj8.children = closure_4(tmp2(6851).TableRow, obj10);
+        tmp11Result = closure_4(tmp2(6935).TableRowGroup, obj8);
       }
       items1[1] = tmp11Result;
       const obj12 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
       const intl5 = tmp2(1128).intl;
-      obj12.label = intl5.string(_modDef3883.XZNsDA);
+      obj12.label = intl5.string(_modDef3820.XZNsDA);
       ({ prompt: obj9.value, setPrompt: obj9.onChange } = conjureAppBuildRequestForm);
-      obj12.maxLength = conjureAppBuildRequestForm(12300).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
+      obj12.maxLength = conjureAppBuildRequestForm(12320).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
       obj12.disabled = conjureAppBuildRequestForm.sending;
       let stringResult1;
       if (conjureAppBuildRequestForm.failed) {
         const intl6 = tmp2(1128).intl;
-        stringResult1 = intl6.string(tmp6(3883).kMZz8G);
+        stringResult1 = intl6.string(tmp6(3820).kMZz8G);
       }
       obj12.errorMessage = stringResult1;
-      items1[2] = closure_4(conjureAppBuildRequestForm(7051).TextArea, obj12);
+      items1[2] = closure_4(conjureAppBuildRequestForm(7128).TextArea, obj12);
       const obj23 = { style: tmp.footer, children: null };
       const obj24 = { variant: "primary", size: "sm", text: null, disabled: null, loading: null, onPress: null };
       const intl7 = tmp2(1128).intl;
-      obj24.text = intl7.string(_modDef3883.gG4j6o);
+      obj24.text = intl7.string(_modDef3820.gG4j6o);
       obj24.disabled = !conjureAppBuildRequestForm.canSubmit;
       ({ sending: obj11.loading, submit: obj11.onPress } = conjureAppBuildRequestForm);
-      obj23.children = closure_4(conjureAppBuildRequestForm(5479).Button, obj24);
+      obj23.children = closure_4(conjureAppBuildRequestForm(5205).Button, obj24);
       items1[3] = closure_4(View, obj23);
       obj2.children = items1;
       return closure_5(ConjureNativeCardSurfaceDefault, obj2);

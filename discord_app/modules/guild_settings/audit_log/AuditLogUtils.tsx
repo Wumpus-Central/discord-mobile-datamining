@@ -5,11 +5,11 @@ import IntegerDefault from "../../../../_runtime/00014_Integer.js";
 import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4797 from "../../../../_runtime/metro/04797__.js";
+import _modDef2050 from "../../../../_runtime/metro/02050__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
+import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
 import AutomodRuleUtils from "../../guild_automod/AutomodRuleUtils.tsx";
 import GuildFeedItemTypes from "../../../../discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx";
@@ -239,7 +239,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(18739).AuditLogChange;
+const AuditLogChange = fn(18774).AuditLogChange;
 const Constants = fn(1087);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
@@ -258,17 +258,17 @@ const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
   SystemChannelFlags: closure_28,
   AuditLogActionTypes: closure_29,
 } = Constants);
-const ChannelFlags = fn(2075).ChannelFlags;
-const AutomodTriggerType = fn(12598).AutomodTriggerType;
-const GuildOnboardingMode = fn(7067).GuildOnboardingMode;
-const GuildScheduledEventsConstants = fn(2074);
+const ChannelFlags = fn(4807).ChannelFlags;
+const AutomodTriggerType = fn(12618).AutomodTriggerType;
+const GuildOnboardingMode = fn(7144).GuildOnboardingMode;
+const GuildScheduledEventsConstants = fn(4806);
 ({
   GuildScheduledEventEntityTypes: closure_33,
   GuildScheduledEventStatus: closure_34,
   GuildScheduledEventPrivacyLevel: closure_35,
 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-let items = [fn(5220).TimeUnits.DAYS, fn(5220).TimeUnits.HOURS, fn(5220).TimeUnits.MINUTES, fn(5220).TimeUnits.SECONDS];
+let items = [fn(5684).TimeUnits.DAYS, fn(5684).TimeUnits.HOURS, fn(5684).TimeUnits.MINUTES, fn(5684).TimeUnits.SECONDS];
 let closure_38 = {
   [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true },
   [AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
@@ -646,19 +646,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(5220).TimeUnits.SECONDS]: (seconds) => {
+  [fn(5684).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(5220).TimeUnits.MINUTES]: (minutes) => {
+  [fn(5684).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(5220).TimeUnits.HOURS]: (hours) => {
+  [fn(5684).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(5220).TimeUnits.DAYS]: (days) => {
+  [fn(5684).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   },
@@ -919,7 +919,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1128).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj23 = {};
-          obj23[__3TkD(8784).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1128).t.XYZMbL;
+          obj23[__3TkD(8800).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1128).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1128).t.gb1Owj;
@@ -2641,7 +2641,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp10 = null;
                             if (tmp9) {
                               tmp10 = ((channel) =>
-                                result3(5521).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                                result3(5565).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2727,7 +2727,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(5521).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(5565).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2775,8 +2775,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
             user = authStore.getUser(id);
           }
           if (tmp225) {
-            id = items(5057).getUserTag(user);
-            let obj4 = items(5057);
+            id = items(4994).getUserTag(user);
+            let obj4 = items(4994);
           }
           obj.subtarget = id;
           tmp225 = null != user && true;
@@ -2850,8 +2850,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
               (event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id,
             );
           }
-          let obj5 = closure_0(4888);
-          const tmp245 = items(4797);
+          let obj5 = closure_0(4773);
+          const tmp245 = items(2050);
           let str5;
           if (found20 != null) {
             str5 = found20.event_exception_id;
@@ -3371,7 +3371,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 const mapped6 = newValue22.map(ChannelStore.getChannel);
                                                 const found2 = mapped6.filter((item) => null != item);
                                                 const mapped7 = found2.map((item) =>
-                                                  newValue(5521).computeChannelName(item, user, closure_1_12, true),
+                                                  newValue(5565).computeChannelName(item, user, closure_1_12, true),
                                                 );
                                                 if (null == mapped7) {
                                                   newValue5 = mapped7;
@@ -3388,7 +3388,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 const mapped8 = oldValue22.map(ChannelStore.getChannel);
                                                 const found3 = mapped8.filter((item) => null != item);
                                                 const mapped9 = found3.map((item) =>
-                                                  newValue(5521).computeChannelName(item, user, closure_1_12, true),
+                                                  newValue(5565).computeChannelName(item, user, closure_1_12, true),
                                                 );
                                                 if (null == mapped9) {
                                                   oldValue5 = mapped9;
@@ -3496,14 +3496,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               const _Date = Date;
                                               obj = DateUtils;
                                               const date = new Date(newValue2);
-                                              newValue = obj.dateFormat(_modDef4797(date), "LLLL");
+                                              newValue = obj.dateFormat(_modDef2050(date), "LLLL");
                                             }
                                             if (null != newValue.oldValue) {
                                               const oldValue2 = newValue.oldValue;
                                               const _Date2 = Date;
                                               let obj2 = DateUtils;
                                               const date1 = new Date(oldValue2);
-                                              oldValue = obj2.dateFormat(_modDef4797(date1), "LLLL");
+                                              oldValue = obj2.dateFormat(_modDef2050(date1), "LLLL");
                                             }
                                             if (!oldValue) {
                                               oldValue = newValue.oldValue;

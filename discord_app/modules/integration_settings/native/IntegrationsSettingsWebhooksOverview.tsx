@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import NavScrim from "../../../design/components/Navigator/native/NavScrim.android.tsx";
+import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import WebhooksActionCreatorsDefault from "../../../actions/WebhooksActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -20,7 +20,7 @@ import WebhooksStore from "../../../stores/WebhooksStore.tsx";
 
 require = fn;
 let closure_3 = ["channelId", "user"];
-let GuildChannelStore = fn(4843);
+let GuildChannelStore = fn(4878);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
@@ -33,7 +33,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = {
@@ -599,7 +599,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   const items = [
-    closure_20(webhookType(5187).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+    closure_20(webhookType(5195).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -609,7 +609,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17995).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(18024).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1128).intl;
       dkHRkE = webhookType(1128).t.dkHRkE;
@@ -640,7 +640,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6542).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6935).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }
@@ -661,7 +661,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_22(guild, obj);
 };
-WebhooksOverview.contextType = fn(4922).ThemeContext;
+WebhooksOverview.contextType = fn(4999).ThemeContext;
 let closure_28 = [];
 ReactCompilerGating = fn(558);
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

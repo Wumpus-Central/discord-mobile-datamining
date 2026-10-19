@@ -1,8 +1,8 @@
 // discord_app/records/MessageRecord.tsx
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
-import isForwardMessageDefault from "../modules/forwarding/isForwardMessage.tsx";
 import MessageReactionsTypes from "../modules/messages/MessageReactionsTypes.tsx";
+import isForwardMessageDefault from "../modules/forwarding/isForwardMessage.tsx";
 import ApplicationIntegrationType from "../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import Record from "../lib/Record.tsx";
 

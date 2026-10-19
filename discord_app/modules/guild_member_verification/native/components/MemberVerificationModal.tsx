@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
+import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import MemberVerificationAlertActionCreators from "../MemberVerificationAlertActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
@@ -11,12 +11,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 let View = fn(17).View;
-const MemberVerificationFormConstants = fn(6429);
+const MemberVerificationFormConstants = fn(6824);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj = {
   flex: { flex: 1 },
   flexLoading: {

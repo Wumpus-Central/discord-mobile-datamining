@@ -2,9 +2,9 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05491_LinearGradient.js";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import LinearGradientDefault from "../../../../_runtime/05219_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

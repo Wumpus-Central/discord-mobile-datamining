@@ -139,8 +139,6 @@ const frozen2 = Object.freeze({
   NETWORKING_TOKEN: "/networking/token",
   USER_GAMES_NOTIFICATIONS: "/users/@me/settings/game-notifications",
   USER_GAMES_NOTIFICATIONS_OVERRIDES: "/users/@me/settings/game-notifications/overrides",
-  UNVERIFIED_APPLICATIONS: "/unverified-applications",
-  UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
   PLATFORM_APPLICATION: "/platform-application",
   ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
   GUILD_FEATURE_ACK(channelId, outgoingAck, type) {
@@ -1899,6 +1897,7 @@ const frozen2 = Object.freeze({
   CHECKPOINT_COMPLETE: "/checkpoint/complete",
   CHECKPOINT_RESET: "/checkpoint/reset",
   QUESTS_CURRENT_QUESTS: "/quests/@me",
+  ORBS_ARCADE_GAMES: "/orbs-arcade/games/@me",
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
     return "/quests/" + arg0;
@@ -2206,8 +2205,6 @@ const obj2 = {
   NETWORKING_TOKEN: "/networking/token",
   USER_GAMES_NOTIFICATIONS: "/users/@me/settings/game-notifications",
   USER_GAMES_NOTIFICATIONS_OVERRIDES: "/users/@me/settings/game-notifications/overrides",
-  UNVERIFIED_APPLICATIONS: "/unverified-applications",
-  UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
   PLATFORM_APPLICATION: "/platform-application",
   ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
   GUILD_FEATURE_ACK(channelId, outgoingAck, type) {
@@ -3966,6 +3963,7 @@ const obj2 = {
   CHECKPOINT_COMPLETE: "/checkpoint/complete",
   CHECKPOINT_RESET: "/checkpoint/reset",
   QUESTS_CURRENT_QUESTS: "/quests/@me",
+  ORBS_ARCADE_GAMES: "/orbs-arcade/games/@me",
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
     return "/quests/" + arg0;
@@ -5793,6 +5791,7 @@ export const KeybindActions = {
   TOGGLE_CATEGORY_COLLAPSED: "TOGGLE_CATEGORY_COLLAPSED",
   SEARCH_SOUNDBOARD: "SEARCH_SOUNDBOARD",
   UPLOAD_FILE: "UPLOAD_FILE",
+  RECORD_VOICE_MESSAGE: "RECORD_VOICE_MESSAGE",
   SEARCH_EMOJIS: "SEARCH_EMOJIS",
   SEARCH_GIFS: "SEARCH_GIFS",
   SEARCH_STICKERS: "SEARCH_STICKERS",
@@ -7303,6 +7302,7 @@ export const ComponentActions = {
   CONVERSATIONS_FOCUS_MODE_CLOSE: "CONVERSATIONS_FOCUS_MODE_CLOSE",
   VOICE_MESSAGE_PLAYBACK_STARTED: "VOICE_MESSAGE_PLAYBACK_STARTED",
   VOICE_MESSAGE_BUTTON_PRESSED: "VOICE_MESSAGE_RECORDING_PRESSED",
+  RECORD_VOICE_MESSAGE: "RECORD_VOICE_MESSAGE",
   VIDEO_EMBED_PLAYBACK_STARTED: "VIDEO_EMBED_PLAYBACK_STARTED",
   VOICE_PANEL_OPEN: "VOICE_PANEL_OPEN",
   VOICE_PANEL_CLOSE: "VOICE_PANEL_CLOSE",
@@ -9027,6 +9027,9 @@ export const AnalyticEvents = {
   SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED: "slayer_storefront_purchase_eligibility_started",
   SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED: "slayer_storefront_purchase_eligibility_skipped",
   SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED: "slayer_storefront_purchase_eligibility_completed",
+  SLAYER_STOREFRONT_GAME_EXIT_PROMO_SHOWN: "slayer_storefront_game_exit_promo_shown",
+  SLAYER_STOREFRONT_GAME_EXIT_PROMO_CLOSED: "slayer_storefront_game_exit_promo_closed",
+  SLAYER_STOREFRONT_GAME_EXIT_PROMO_SKIPPED: "slayer_storefront_game_exit_promo_skipped",
   COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED: "commerce_shop_vc_gift_button_viewed",
   COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED: "commerce_shop_gifting_breadcrumb_viewed",
   USER_SERVER_PRIVACY_SETTINGS_ACTION: "user_server_privacy_settings_action",

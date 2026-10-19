@@ -8,9 +8,9 @@ import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
@@ -95,7 +95,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13042, dependencyMap.paths),
+      asyncRequireImpl(13074, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -157,12 +157,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   return closure_10(closure_11, obj7);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = {
   animatedContainer: {
     borderTopWidth: 1,
@@ -537,7 +537,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
       let tmp2 = dependencyMap;
       const cResult = channel(576).c(4);
       channel = channel.channel;
-      const DoubleTapReactionEmoji = channel(2044).DoubleTapReactionEmoji;
+      const DoubleTapReactionEmoji = channel(4776).DoubleTapReactionEmoji;
       const setting = DoubleTapReactionEmoji.useSetting();
       ({ emojiId, emojiName } = setting);
       let tmp5 = true !== setting.disableDoubleTap;
@@ -557,17 +557,17 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
         if (!tmp7) {
           let tmp10 = null != channel.lastMessageId;
           if (tmp10) {
-            tmp10 = emoji(8257)(channel);
+            tmp10 = emoji(8273)(channel);
           }
           tmp9 = tmp10;
         }
         tmp5 = tmp9;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fallbackDoubleTapDisambiguatedEmoji = tmp(8254).getFallbackDoubleTapDisambiguatedEmoji();
+        const fallbackDoubleTapDisambiguatedEmoji = tmp(8270).getFallbackDoubleTapDisambiguatedEmoji();
         cResult[0] = fallbackDoubleTapDisambiguatedEmoji;
         emoji = fallbackDoubleTapDisambiguatedEmoji;
-        const tmpResult = tmp(8254);
+        const tmpResult = tmp(8270);
       } else {
         emoji = cResult[0];
       }
@@ -578,7 +578,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
         } else {
           const _Symbol = Symbol;
           if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-            const items = [tmp(2052).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL];
+            const items = [tmp(4784).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL];
             cResult[1] = items;
             let tmp16 = items;
           } else {
@@ -598,7 +598,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
                 return tmp;
               },
             };
-            tmp2 = closure_9(emoji(10312), obj2);
+            tmp2 = closure_9(emoji(10326), obj2);
             cResult[2] = channel;
             cResult[3] = tmp2;
           }

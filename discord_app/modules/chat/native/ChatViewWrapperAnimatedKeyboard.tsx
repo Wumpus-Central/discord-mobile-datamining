@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const Easing = fn(4945).Easing;
-let obj = { duration: fn(5195).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const Easing = fn(5014).Easing;
+let obj = { duration: fn(5170).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 const __initData = {
   code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}",
 };

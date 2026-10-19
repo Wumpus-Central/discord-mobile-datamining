@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13403 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PaintIllocon-1x.png.js";
-import _modDef13404 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PaintIllocon-2x.png.js";
-import _modDef13405 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PaintIllocon-3x.png.js";
+import _modDef13437 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PaintIllocon-1x.png.js";
+import _modDef13438 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PaintIllocon-2x.png.js";
+import _modDef13439 from "../../../../../../discord_assets/assets/mana/asset-library/generated/PaintIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13403 }, 3: null };
-const obj2 = { uri: _modDef13403 };
-obj[2] = { uri: _modDef13404 };
-const obj3 = { uri: _modDef13404 };
-obj[3] = { uri: _modDef13405 };
+let obj = { 1: null, 2: { uri: _modDef13437 }, 3: null };
+const obj2 = { uri: _modDef13437 };
+obj[2] = { uri: _modDef13438 };
+const obj3 = { uri: _modDef13438 };
+obj[3] = { uri: _modDef13439 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13405 };
+const obj4 = { uri: _modDef13439 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");
 
@@ -90,7 +90,7 @@ export const PaintIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      obj.source = num(6550).getAssetSource(obj);
+      obj.source = num(6943).getAssetSource(obj);
       obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;

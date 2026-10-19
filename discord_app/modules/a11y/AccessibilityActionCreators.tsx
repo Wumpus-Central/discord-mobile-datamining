@@ -5,7 +5,7 @@ import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionC
 import AccessibilityStore from "AccessibilityStore.tsx";
 
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const StickerAnimationSettings = fn(2047).StickerAnimationSettings;
+const StickerAnimationSettings = fn(4779).StickerAnimationSettings;
 const constants = fn(1097).SettingsOverrideReasonKeys;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");

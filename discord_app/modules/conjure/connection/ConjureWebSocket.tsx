@@ -62,7 +62,7 @@ prototype["sendPublishScheduleMessage"] = function sendPublishScheduleMessage(ma
   const error = new Error("WebSocket not open");
   throw error;
 };
-prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids, project_name) {
+prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
@@ -74,7 +74,6 @@ prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachme
         content,
         nonce,
         attachment_ids,
-        project_name,
         template_id: tmp,
         remix: tmp2,
         clarification_answers: tmp3,
@@ -168,20 +167,14 @@ prototype["sendPreparePublish"] = function sendPreparePublish() {
     socket.send(JSON.stringify({ type: "prepare_publish" }));
   }
 };
-prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined, name) {
+prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
+      const _JSON = JSON;
       const obj = { type: "draft_patch_notes", nonce: combined };
-      if (null != name) {
-        const obj2 = { project_name: name };
-        let obj3 = obj2;
-      } else {
-        obj3 = {};
-      }
-      const merged = Object.assign(obj3);
       socket.send(JSON.stringify(obj));
     }
   }
@@ -457,20 +450,6 @@ prototype["sendControlAck"] = function sendControlAck(id, failed, response, mess
         const socket = self.socket;
         const _JSON = JSON;
         const obj = { type: "control_ack", id, status: failed, response, message };
-        socket.send(JSON.stringify(obj));
-      } catch (err) {}
-    }
-  }
-};
-prototype["sendAppIconAck"] = function sendAppIconAck(attachment_id, applied) {
-  const self = this;
-  if (null != this.socket) {
-    const _WebSocket = WebSocket;
-    if (self.socket.readyState === WebSocket.OPEN) {
-      try {
-        const socket = self.socket;
-        const _JSON = JSON;
-        const obj = { type: "app_icon_ack", id: attachment_id, status: applied };
         socket.send(JSON.stringify(obj));
       } catch (err) {}
     }

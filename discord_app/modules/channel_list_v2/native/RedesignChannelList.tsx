@@ -49,7 +49,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         c0 = -1;
         navigation = navigation.addListener("tabPress", (arg0) => {
           let timeout = arg0;
-          if (null != obj.coerceGuildsRoute(navigation(10952)())) {
+          if (null != obj.coerceGuildsRoute(navigation(10964)())) {
             if (-1 === timeout) {
               const _clearTimeout2 = clearTimeout;
               clearTimeout(timeout);
@@ -100,7 +100,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         c0 = -1;
         navigation = navigation.addListener("tabPress", (arg0) => {
           let timeout = arg0;
-          if (null != obj.coerceGuildsRoute(navigation(10952)())) {
+          if (null != obj.coerceGuildsRoute(navigation(10964)())) {
             if (-1 === timeout) {
               const _clearTimeout2 = clearTimeout;
               clearTimeout(timeout);
@@ -883,13 +883,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmpResult6.isFavoritesGuildId(tmp6)) {
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                cResult[14] = tmp(17418);
+                cResult[14] = tmp(17447);
                 class I {
                   constructor() {
                     return closure_1_13.getVoiceChannelId();
                   }
                 }
-                const tmpResult7 = tmp(17418);
+                const tmpResult7 = tmp(17447);
               }
               class I {
                 constructor() {
@@ -961,9 +961,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[27] = tmp25;
                 tmp18 = tmp25;
               }
-              tmpResult8 = tmp(9760);
+              tmpResult8 = tmp(9774);
             }
-            tmpResult6 = tmp(2093);
+            tmpResult6 = tmp(4825);
           }
         }
         if (cResult[11] === tmp4.style) {
@@ -1011,7 +1011,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               obj4.guild = stateFromStores;
               obj4.selectedChannelId = selectedChannelId;
               obj4.selectedVoiceChannelId = stateFromStores1;
-              return closure_17(tmp2(17418).default, obj4);
+              return closure_17(tmp2(17447).default, obj4);
             } else {
               if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
                 const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -1026,7 +1026,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp6Result;
             }
-            tmp2Result = tmp2(2093);
+            tmp2Result = tmp2(4825);
           }
         }
         const obj7 = { style: merged.style, selectedGuildId };

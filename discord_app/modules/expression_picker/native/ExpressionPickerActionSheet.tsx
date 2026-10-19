@@ -7,8 +7,8 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import NavigatorConstants from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import NavigatorConstants from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import PortalKeyboardFooterIOSDefault from "../../keyboard/native/PortalKeyboardFooterIOS.ios.tsx";
 import KeyboardUtils from "../../../utils/native/KeyboardUtils.tsx";
 import ExpressionPickerDefault from "ExpressionPicker.tsx";
@@ -16,8 +16,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-let closure_5 = fn(7119).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10027).STICKER_FORMATS;
+let closure_5 = fn(5227).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10041).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);

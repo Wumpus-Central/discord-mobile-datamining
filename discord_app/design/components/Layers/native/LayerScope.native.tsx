@@ -1,7 +1,7 @@
 // discord_app/design/components/Layers/native/LayerScope.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import LayerContext from "LayerContext.native.tsx";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -9,7 +9,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(7125).LayerContext);
+  const context = noop.useContext(zIndex(5559).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   const items = [context];

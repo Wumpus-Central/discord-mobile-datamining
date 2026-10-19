@@ -1,8 +1,8 @@
 // discord_app/design/void/Form/native/FormDivider.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import useProfileThemeValues from "../../../../modules/user_profile/useProfileThemeValues.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     divider: {},

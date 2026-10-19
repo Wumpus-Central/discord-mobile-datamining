@@ -310,7 +310,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadIntlDataDisabled() {
   return closure_9().isDisabled;
 }
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUploadIntlDataTrailing() {
       const cResult = c.c(2);
@@ -348,7 +348,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(11636).FileUpIcon,
+  IconComponent: fn(11657).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -359,7 +359,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15888).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15917).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useUploadIntlDataTrailing() {
         const cResult = c.c(2);

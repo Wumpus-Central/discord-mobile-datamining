@@ -1,10 +1,12 @@
 // discord_app/modules/app_channels/native/useAppChannelOverflowMenuItems.tsx
 import util from "../../../intl/index.native.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import FlagIcon2 from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import restartFrames from "../../frames/native/restartFrames.tsx";
 import leaveFrame from "../../frames/leaveFrame.tsx";
-import DoorExitIcon from "../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
+import DoorExitIcon2 from "../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
 import RefreshIcon from "../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import openAppChannelReportModalDefault from "../openAppChannelReportModal.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6296).isLaunched;
+const isLaunched = fn(6724).isLaunched;
 const app_channel_header_mobile = "app_channel_header_mobile";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useAppChannelOverflowMenuItems(application_id) {
       _require = application_id;
       let FlagIcon = dependencyMap;
-      const cResult = require("c").c(18);
+      const cResult = require("c").c(27);
       application_id = application_id.application_id;
       if (application_id == null) {
         application_id = null;
@@ -31,119 +33,180 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === application_id.id) {
           let tmp4 = cResult[2];
         }
-        const tmp6 = application_id(11716)(application_id, tmp4);
+        const tmp6 = application_id(11737)(application_id, tmp4);
         dependencyMap = tmp6;
+        const appChannelApplication = tmp(7292).useAppChannelApplication(application_id);
+        let bot;
+        if (appChannelApplication != null) {
+          bot = appChannelApplication.bot;
+        }
         if (null != application_id) {
-          const items = [];
-          if (!isLaunched(tmp6)) {
-            const _Symbol4 = Symbol;
-            if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl3 = tmp(1128).intl;
-              const stringResult = intl3.string(tmp(1128).t.NgA5vp);
-              cResult[14] = stringResult;
-              let tmp19 = stringResult;
+          if (cResult[4] !== tmp6) {
+            const items = [];
+            if (!isLaunched(tmp6)) {
+              cResult[4] = tmp6;
+              cResult[5] = items;
+              let tmp11 = items;
             } else {
-              tmp19 = cResult[14];
-            }
-            if (cResult[15] === application_id) {
-              if (cResult[16] === application_id) {
-                let tmp21 = cResult[17];
+              const _Symbol2 = Symbol;
+              if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl = tmp(1128).intl;
+                const stringResult = intl.string(tmp(1128).t.kHie4V);
+                cResult[6] = stringResult;
+                let tmp14 = stringResult;
+              } else {
+                tmp14 = cResult[6];
               }
-              items.push(tmp21);
-              cResult[4] = application_id;
-              cResult[5] = application_id;
-              cResult[6] = tmp6;
-              cResult[7] = items;
+              function t3() {
+                return restartFrames.restartFrame(closure_2);
+              }
+              if (cResult[7] !== t3) {
+                const obj2 = { label: tmp14, IconComponent: tmp(11651).RefreshIcon, action: t3 };
+                cResult[7] = t3;
+                cResult[8] = obj2;
+                let tmp16 = obj2;
+              } else {
+                tmp16 = cResult[8];
+              }
+              items.push(tmp16);
+              const _Symbol3 = Symbol;
+              if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl2 = tmp(1128).intl;
+                const stringResult1 = intl2.string(tmp(1128).t.VkMnR2);
+                cResult[9] = stringResult1;
+                let DoorExitIcon = stringResult1;
+              } else {
+                DoorExitIcon = cResult[9];
+              }
+              function t6() {
+                return leaveFrame.leaveFrame(id.id);
+              }
+              if (cResult[10] !== t6) {
+                const obj3 = { label: DoorExitIcon, IconComponent: null, action: null };
+                DoorExitIcon = tmp(11405).DoorExitIcon;
+                obj3.IconComponent = DoorExitIcon;
+                obj3.action = t6;
+                cResult[10] = t6;
+                cResult[11] = obj3;
+                let tmp19 = obj3;
+              } else {
+                tmp19 = cResult[11];
+              }
+              items.push(tmp19);
             }
-            const obj2 = { label: tmp19, IconComponent: null, variant: "destructive", action: null };
-            FlagIcon = tmp(9873).FlagIcon;
-            obj2.IconComponent = FlagIcon;
-            obj2.action = function action() {
+          } else {
+            tmp11 = cResult[5];
+          }
+          if (cResult[12] === application_id) {
+            if (cResult[13] === bot) {
+              if (cResult[14] === application_id) {
+                if (cResult[24] === cResult[15]) {
+                }
+                const items1 = [tmp11, cResult[15]];
+                const found = items1.filter((item) => item.length > 0);
+                cResult[24] = cResult[15];
+                cResult[25] = tmp11;
+                cResult[26] = found;
+              }
+            }
+          }
+          const items2 = [];
+          if (null == bot) {
+            const _Symbol4 = Symbol;
+            if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl4 = tmp(1128).intl;
+              const stringResult2 = intl4.string(tmp(1128).t.NgA5vp);
+              cResult[20] = stringResult2;
+              let tmp26 = stringResult2;
+            } else {
+              tmp26 = cResult[20];
+            }
+            if (cResult[21] === application_id) {
+              if (cResult[22] === application_id) {
+                let tmp28 = cResult[23];
+              }
+              items2.push(tmp28);
+              cResult[12] = application_id;
+              cResult[13] = bot;
+              cResult[14] = application_id;
+              cResult[15] = items2;
+            }
+            const obj4 = { label: tmp26, IconComponent: null, variant: "destructive", action: null };
+            FlagIcon = tmp(9887).FlagIcon;
+            obj4.IconComponent = FlagIcon;
+            obj4.action = function action() {
               return openAppChannelReportModalDefault(application_id, closure_0, app_channel_header_mobile);
             };
-            cResult[15] = application_id;
-            cResult[16] = application_id;
-            cResult[17] = obj2;
-            tmp21 = obj2;
+            cResult[21] = application_id;
+            cResult[22] = application_id;
+            cResult[23] = obj4;
+            tmp28 = obj4;
           } else {
-            const _Symbol2 = Symbol;
-            if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = tmp(1128).intl;
-              const stringResult1 = intl.string(tmp(1128).t.kHie4V);
-              cResult[8] = stringResult1;
-              let tmp11 = stringResult1;
+            const _Symbol5 = Symbol;
+            if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl3 = tmp(1128).intl;
+              const stringResult3 = intl3.string(tmp(1128).t.Sh2z9g);
+              cResult[16] = stringResult3;
+              let id = stringResult3;
             } else {
-              tmp11 = cResult[8];
+              id = cResult[16];
             }
-            if (cResult[9] !== tmp6) {
-              const obj3 = {
-                label: tmp11,
-                IconComponent: tmp(11630).RefreshIcon,
-                action() {
-                  return restartFrames.restartFrame(closure_2);
-                },
-              };
-              cResult[9] = tmp6;
-              cResult[10] = obj3;
-              let tmp13 = obj3;
-            } else {
-              tmp13 = cResult[10];
+            if (cResult[17] === bot) {
+              if (cResult[18] === application_id.id) {
+                let tmp23 = cResult[19];
+              }
+              items2.push(tmp23);
             }
-            items.push(tmp13);
-            const _Symbol3 = Symbol;
-            if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = tmp(1128).intl;
-              const stringResult2 = intl2.string(tmp(1128).t.VkMnR2);
-              cResult[11] = stringResult2;
-              let action = stringResult2;
-            } else {
-              action = cResult[11];
-            }
-            if (cResult[12] !== tmp6) {
-              const obj4 = { label: action, IconComponent: tmp(11384).DoorExitIcon, action: null };
-              action = function action() {
-                return leaveFrame.leaveFrame(id.id);
-              };
-              obj4.action = action;
-              cResult[12] = tmp6;
-              cResult[13] = obj4;
-              let tmp16 = obj4;
-            } else {
-              tmp16 = cResult[13];
-            }
-            items.push(tmp16);
+            const obj5 = {
+              label: id,
+              IconComponent: tmp(5648).CircleInformationIcon,
+              action() {
+                return showUserProfileActionSheetDefault({
+                  userId: bot.id,
+                  channelId: application_id.id,
+                  localUser: bot,
+                });
+              },
+            };
+            cResult[17] = bot;
+            id = application_id.id;
+            cResult[18] = id;
+            cResult[19] = obj5;
+            tmp23 = obj5;
           }
         } else {
           const _Symbol = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const items1 = [];
-            cResult[3] = items1;
-            let tmp8 = items1;
+            const items3 = [];
+            cResult[3] = items3;
+            let tmp10 = items3;
           } else {
-            tmp8 = cResult[3];
+            tmp10 = cResult[3];
           }
-          return tmp8;
+          return tmp10;
         }
+        const tmpResult = tmp(7292);
       }
-      const obj5 = {
+      const obj6 = {
         type: require("EmbeddedSurfaceType").EmbeddedSurfaceType.APP_CHANNEL,
         channelId: application_id.id,
         guildId: application_id.guild_id,
       };
       cResult[0] = application_id.guild_id;
       cResult[1] = application_id.id;
-      cResult[2] = obj5;
-      tmp4 = obj5;
+      cResult[2] = obj6;
+      tmp4 = obj6;
       const obj = require("c");
     }
   : function useAppChannelOverflowMenuItems(application_id) {
+      _require = application_id;
       application_id = application_id.application_id;
       if (application_id == null) {
         application_id = null;
       }
       let items = [,];
       ({ id: arr[0], guild_id: arr[1] } = application_id);
-      const memo = noop.useMemo(
+      const memo = bot.useMemo(
         () => ({
           type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL,
           channelId: application_id.id,
@@ -151,10 +214,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      const tmp3 = application_id(11716)(application_id, memo);
+      const tmp3 = application_id(11737)(application_id, memo);
       dependencyMap = tmp3;
-      const items1 = [application_id, application_id, tmp3];
-      return noop.useMemo(() => {
+      const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(application_id);
+      bot = undefined;
+      if (appChannelApplication != null) {
+        bot = appChannelApplication.bot;
+      }
+      let items1 = [application_id, bot, application_id, tmp3];
+      return bot.useMemo(() => {
         if (null == application_id) {
           return [];
         } else {
@@ -171,21 +239,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { label: null, IconComponent: null, action: null };
             const intl2 = util.intl;
             obj2.label = intl2.string(util.t.VkMnR2);
-            obj2.IconComponent = DoorExitIcon.DoorExitIcon;
+            obj2.IconComponent = DoorExitIcon2.DoorExitIcon;
             obj2.action = function action() {
               return closure_0(id[10]).leaveFrame(id.id);
             };
             items.push(obj2);
           }
-          const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
-          const intl3 = util.intl;
-          obj3.label = intl3.string(util.t.NgA5vp);
-          obj3.IconComponent = FlagIcon2.FlagIcon;
-          obj3.action = function action() {
-            return application_id(id[12])(closure_1_1, closure_1_0, app_channel_header_mobile);
+          const items1 = [];
+          if (null != bot) {
+            const obj3 = { label: null, IconComponent: null, action: null };
+            const intl3 = util.intl;
+            obj3.label = intl3.string(util.t.Sh2z9g);
+            obj3.IconComponent = CircleInformationIcon.CircleInformationIcon;
+            obj3.action = function action() {
+              return application_id(id[13])({ userId: localUser.id, channelId: closure_1_0.id, localUser });
+            };
+            items1.push(obj3);
+          }
+          const obj4 = { label: null, IconComponent: null, variant: "destructive", action: null };
+          const intl4 = util.intl;
+          obj4.label = intl4.string(util.t.NgA5vp);
+          obj4.IconComponent = FlagIcon2.FlagIcon;
+          obj4.action = function action() {
+            return application_id(id[15])(closure_1_1, closure_1_0, app_channel_header_mobile);
           };
-          items.push(obj3);
-          return items;
+          items1.push(obj4);
+          const items2 = [items, items1];
+          return items2.filter((item) => item.length > 0);
         }
       }, items1);
     };

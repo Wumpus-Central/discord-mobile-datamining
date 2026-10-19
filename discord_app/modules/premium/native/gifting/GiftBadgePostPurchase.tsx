@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef2622 from "../../gifting/GiftingBadge.messages.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2685 from "../../gifting/GiftingBadge.messages.js";
 import DismissibleContentUnsafeUtils from "../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
@@ -21,16 +21,16 @@ import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13673);
+const GiftingBadgeConstants = fn(13707);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
   getNextTierForProgress: closure_8,
 } = GiftingBadgeConstants);
-const ContentDismissActionType = fn(2065).ContentDismissActionType;
+const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },
@@ -134,9 +134,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp10 = closure_10(tmp(12673).GiftIcon, obj2);
+        const tmp10 = closure_10(tmp(12693).GiftIcon, obj2);
         const intl = tmp(1128).intl;
-        const stringResult = intl.string(_modDef2685.g86YiI);
+        const stringResult = intl.string(_modDef2622.g86YiI);
         cResult[3] = tmp10;
         cResult[4] = stringResult;
         let tmp9 = stringResult;
@@ -172,7 +172,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { grow: true, variant: "primary", icon: tmp8, text: tmp9, onPress: tmp6 };
-        const tmp13 = closure_10(tmp(5479).Button, obj3);
+        const tmp13 = closure_10(tmp(5205).Button, obj3);
         cResult[5] = tmp6;
         cResult[6] = tmp13;
       } else {
@@ -206,9 +206,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
         const intl2 = tmp(1128).intl;
-        obj4.text = intl2.string(_modDef2685["sa/cfM"]);
+        obj4.text = intl2.string(_modDef2622["sa/cfM"]);
         obj4.onPress = T;
-        const tmp15 = closure_10(tmp(5479).Button, obj4);
+        const tmp15 = closure_10(tmp(5205).Button, obj4);
         cResult[7] = tmp15;
         const tmp14 = tmp15;
       } else {
@@ -261,26 +261,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
       const callback1 = noop.useCallback(() => {
         ModalActionCreatorsDefault.pop();
-        const rootNavigationRef = onSendGift(5073).getRootNavigationRef();
+        const rootNavigationRef = onSendGift(5112).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("you");
         }
       }, []);
       const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
       const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-      obj2.icon = closure_10(onSendGift(12673).GiftIcon, {
+      obj2.icon = closure_10(onSendGift(12693).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });
       const intl = onSendGift(1128).intl;
-      obj2.text = intl.string(_modDef2685.g86YiI);
+      obj2.text = intl.string(_modDef2622.g86YiI);
       obj2.onPress = callback;
-      const items1 = [closure_10(onSendGift(5479).Button, obj2)];
+      const items1 = [closure_10(onSendGift(5205).Button, obj2)];
       const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
       const intl2 = onSendGift(1128).intl;
-      obj4.text = intl2.string(_modDef2685["sa/cfM"]);
+      obj4.text = intl2.string(_modDef2622["sa/cfM"]);
       obj4.onPress = callback1;
-      items1[1] = closure_10(onSendGift(5479).Button, obj4);
+      items1[1] = closure_10(onSendGift(5205).Button, obj4);
       obj.children = items1;
       return closure_11(View, obj);
     };
@@ -507,7 +507,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   str = "";
                 }
                 const obj3 = { tierName: str };
-                const formatResult = intl.format(_modDef2685.k8MmO8, obj3);
+                const formatResult = intl.format(_modDef2622.k8MmO8, obj3);
                 cResult[14] = newTier.name;
                 cResult[15] = formatResult;
                 let tmp21 = formatResult;
@@ -616,7 +616,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     str2 = "";
                   }
                   obj10.nextTierName = str2;
-                  obj9.children = intl2.format(_modDef2685["6QVlxw"], obj10);
+                  obj9.children = intl2.format(_modDef2622["6QVlxw"], obj10);
                   tmp28Result = collapsed(Text_Text.Text, obj9);
                 }
                 cResult[19] = giftsToNextTier;
@@ -685,7 +685,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      obj9.children = intl.format(_modDef2685.k8MmO8, { tierName: str });
+      obj9.children = intl.format(_modDef2622.k8MmO8, { tierName: str });
       const items2 = [collapsed(Text_Text.Text, obj9)];
       let tmp9Result2 = null != nextTier && null != giftsToNextTier;
       if (tmp9Result2) {
@@ -700,7 +700,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           str2 = "";
         }
         obj11.nextTierName = str2;
-        obj10.children = intl2.format(_modDef2685["6QVlxw"], obj11);
+        obj10.children = intl2.format(_modDef2622["6QVlxw"], obj11);
         tmp9Result2 = collapsed(Text_Text.Text, obj10);
       }
       items2[1] = tmp9Result2;
@@ -859,9 +859,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol3 = Symbol;
               if (cResult[23] === Symbol.for(str)) {
                 const intl3 = util.intl;
-                const stringResult = intl3.string(_modDef2685["/rBQud"]);
+                const stringResult = intl3.string(_modDef2622["/rBQud"]);
                 const intl4 = util.intl;
-                str = intl4.string(_modDef2685.DDQMlx);
+                str = intl4.string(_modDef2622.DDQMlx);
                 cResult[23] = stringResult;
                 cResult[24] = str;
                 let tmp44 = str;
@@ -883,7 +883,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   name1 = tmp19.name;
                 }
                 obj = { tierName: name1 };
-                str4 = formatToPlainString(_modDef2685.bwyQt8, obj);
+                str4 = formatToPlainString(_modDef2622.bwyQt8, obj);
               }
               tmp38 = str4;
               tmp33Result = forResult;
@@ -904,9 +904,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[21] === Symbol.for(str)) {
                 const intl = util.intl;
-                const stringResult1 = intl.string(_modDef2685.oqDrEM);
+                const stringResult1 = intl.string(_modDef2622.oqDrEM);
                 const intl2 = util.intl;
-                const stringResult2 = intl2.string(_modDef2685["Ka5s+Q"]);
+                const stringResult2 = intl2.string(_modDef2622["Ka5s+Q"]);
                 cResult[21] = stringResult1;
                 cResult[22] = stringResult2;
                 let tmp30 = stringResult2;
@@ -916,7 +916,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp30 = cResult[22];
               }
               const obj6 = {
-                title: intl6.formatToPlainString(_modDef2685.KjdBPz, obj5),
+                title: intl6.formatToPlainString(_modDef2622.KjdBPz, obj5),
                 description: tmp29,
                 progressBarTitle: tmp30,
                 progress: sum,
@@ -925,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onSendGift,
               };
               tmp33Result = collapsed(closure_14, obj6);
-              const formatToPlainStringResult1 = intl6.formatToPlainString(_modDef2685.KjdBPz, obj5);
+              const formatToPlainStringResult1 = intl6.formatToPlainString(_modDef2622.KjdBPz, obj5);
             }
           }
           const tmp27 = timestampProducer(stateFromStores, sum);
@@ -1009,11 +1009,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onSendGift: null,
           };
           const obj4 = { nextTier: str2 };
-          obj3.title = intl2.formatToPlainString(_modDef2685.KjdBPz, obj4);
+          obj3.title = intl2.formatToPlainString(_modDef2622.KjdBPz, obj4);
           const intl3 = util.intl;
-          obj3.description = intl3.string(_modDef2685.oqDrEM);
+          obj3.description = intl3.string(_modDef2622.oqDrEM);
           const intl4 = util.intl;
-          obj3.progressBarTitle = intl4.string(_modDef2685["Ka5s+Q"]);
+          obj3.progressBarTitle = intl4.string(_modDef2622["Ka5s+Q"]);
           obj3.progress = sum;
           obj3.currentTier = tmp26;
           obj3.nextTier = tmp8;
@@ -1030,9 +1030,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onSendGift: null,
           };
           const intl5 = util.intl;
-          obj5.title = intl5.string(_modDef2685["/rBQud"]);
+          obj5.title = intl5.string(_modDef2622["/rBQud"]);
           const intl6 = util.intl;
-          obj5.description = intl6.string(_modDef2685.DDQMlx);
+          obj5.description = intl6.string(_modDef2622.DDQMlx);
           let name;
           if (tmp24 != null) {
             name = tmp24.name;
@@ -1045,7 +1045,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               name1 = tmp24.name;
             }
             const obj6 = { tierName: name1 };
-            str = intl.formatToPlainString(_modDef2685.bwyQt8, obj6);
+            str = intl.formatToPlainString(_modDef2622.bwyQt8, obj6);
           }
           obj5.progressBarTitle = str;
           obj5.progress = sum;

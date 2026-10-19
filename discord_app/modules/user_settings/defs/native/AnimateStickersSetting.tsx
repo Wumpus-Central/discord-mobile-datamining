@@ -5,9 +5,9 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StickerAnimationSettings = fn(2047).StickerAnimationSettings;
+const StickerAnimationSettings = fn(4779).StickerAnimationSettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11084);
+const SettingBuilders = fn(11099);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAnimateStickerSettingOptions() {
       const cResult = c.c(1);
@@ -59,8 +59,8 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(8260).MobileUserSettings.ACCESSIBILITY,
-  useValue: fn(2044).AnimateStickers.useSetting,
+  parent: fn(8276).MobileUserSettings.ACCESSIBILITY,
+  useValue: fn(4776).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));

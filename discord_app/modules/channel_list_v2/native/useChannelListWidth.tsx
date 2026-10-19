@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/useChannelListWidth.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import useDrawerWidth from "../../screen/native/drawer/useDrawerWidth.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

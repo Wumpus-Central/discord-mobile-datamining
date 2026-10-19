@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5187);
+const Text_Text = Text(5195);
 require = fn;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1384);
@@ -99,10 +99,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         fontFamily: "System",
         fontSize: result,
-        lineHeight: "ix",
-        textAlign: "getAllEventDismissals",
+        lineHeight: "unicodeVersion",
+        textAlign: 6059676558461562000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
         width: num,
-        marginBottom: "hippodrome",
+        marginBottom:
+          -311915811926054500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -118,10 +119,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         fontFamily: "System",
         fontSize: size * num,
-        lineHeight: "ix",
-        textAlign: "getAllEventDismissals",
+        lineHeight: "unicodeVersion",
+        textAlign: 6059676558461562000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
         width: size,
-        marginBottom: "hippodrome",
+        marginBottom:
+          -311915811926054500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };

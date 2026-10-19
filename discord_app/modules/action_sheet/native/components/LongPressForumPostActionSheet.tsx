@@ -3,10 +3,10 @@ import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
-import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../ActionSheetActionCreators.tsx";
-import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
+import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import ReadStateActionCreators from "../../../../actions/ReadStateActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
@@ -194,7 +194,7 @@ function getActionSheetButtons(thread) {
           obj11.IconComponent = tmp5(tmp2[30]).TagsIcon;
           obj11.onPress = function onPress() {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(10785, dependencyMap.paths),
+              asyncRequireImpl(10798, dependencyMap.paths),
               "ForumPostTagsActionSheet",
               { thread, parentChannel, canManageThread },
             );
@@ -370,7 +370,7 @@ function getActionSheetButtons(thread) {
             const combined = "muteSettings" + thread.id;
             obj2.guildId = thread.getGuildId();
             obj2.channelId = thread.id;
-            obj.openLazy(asyncRequireImpl(10787, dependencyMap.paths), combined, obj2);
+            obj.openLazy(asyncRequireImpl(10800, dependencyMap.paths), combined, obj2);
           };
           push3(obj19);
         }
@@ -412,7 +412,7 @@ const Constants = fn(1087);
   AnalyticsSections: closure_11,
   ChannelSettingsSections: closure_12,
 } = Constants);
-const ChannelFlags = fn(2075).ChannelFlags;
+const ChannelFlags = fn(4807).ChannelFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult14 = thread(504);
       const stateFromStores3 = thread(504).useStateFromStores(tmp18, L);
       const tmpResult15 = thread(504);
-      const canMarkChannelUnread = thread(10652).useCanMarkChannelUnread(thread);
+      const canMarkChannelUnread = thread(10665).useCanMarkChannelUnread(thread);
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class L {
           constructor() {
@@ -575,17 +575,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult16 = thread(10652);
+      const tmpResult16 = thread(10665);
       const stateFromStores4 = thread(504).useStateFromStores(tmp22, tmp24);
       const tmpResult17 = thread(504);
-      const tmpResult18 = thread(7280);
-      const isThreadModerator = thread(7246).useIsThreadModerator(parentChannel);
-      const tmpResult19 = thread(7246);
-      const canManageThread = thread(7246).useCanManageThread(thread);
-      const tmpResult20 = thread(7246);
-      const canUnarchiveThread = thread(7246).useCanUnarchiveThread(thread);
-      const tmpResult21 = thread(7246);
-      const existingPin = thread(9626).useExistingPin(thread);
+      const tmpResult18 = thread(7347);
+      const isThreadModerator = thread(7315).useIsThreadModerator(parentChannel);
+      const tmpResult19 = thread(7315);
+      const canManageThread = thread(7315).useCanManageThread(thread);
+      const tmpResult20 = thread(7315);
+      const canUnarchiveThread = thread(7315).useCanUnarchiveThread(thread);
+      const tmpResult21 = thread(7315);
+      const existingPin = thread(9640).useExistingPin(thread);
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         class L {
           constructor() {
@@ -625,9 +625,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult22 = thread(9626);
+      const tmpResult22 = thread(9640);
       const stateFromStores5 = thread(504).useStateFromStores(tmp30, O);
-      const DeveloperMode = tmp(2044).DeveloperMode;
+      const DeveloperMode = tmp(4776).DeveloperMode;
       const setting = DeveloperMode.useSetting();
       if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
@@ -674,8 +674,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp37 = onClose(5521)(thread);
-      const tmp38 = onClose(10792)(thread);
+      const tmp37 = onClose(5565)(thread);
+      const tmp38 = onClose(10805)(thread);
       if (null != stateFromStores) {
         class O {
           constructor() {
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[44] = tmp2;
         }
         const obj4 = { title: tmp37, icon: tmp39 };
-        const tmp47 = jsx(tmp(10793).ActionSheetIconHeader, { title: tmp37, icon: tmp39 });
+        const tmp47 = jsx(tmp(10806).ActionSheetIconHeader, { title: tmp37, icon: tmp39 });
         cResult[46] = tmp37;
         cResult[47] = tmp39;
         cResult[48] = tmp47;
@@ -857,8 +857,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ReadStateStore.hasUnreadOrMentions(thread.id),
       );
       const obj4 = thread(504);
-      const canMarkChannelUnread = thread(10652).useCanMarkChannelUnread(thread);
-      const obj5 = thread(10652);
+      const canMarkChannelUnread = thread(10665).useCanMarkChannelUnread(thread);
+      const obj5 = thread(10665);
       const items4 = [LurkingStore];
       const stateFromStores4 = thread(504).useStateFromStores(items4, () => {
         let isLurkingResult = null != closure_2;
@@ -868,16 +868,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return isLurkingResult;
       });
       const obj6 = thread(504);
-      const firstMessage = thread(7280).useFirstForumPostMessage(thread).firstMessage;
-      const obj7 = thread(7280);
-      const isThreadModerator = thread(7246).useIsThreadModerator(parentChannel);
-      const obj8 = thread(7246);
-      const canManageThread = thread(7246).useCanManageThread(thread);
-      const obj9 = thread(7246);
-      const canUnarchiveThread = thread(7246).useCanUnarchiveThread(thread);
-      const obj10 = thread(7246);
-      const existingPin = thread(9626).useExistingPin(thread);
-      const obj11 = thread(9626);
+      const firstMessage = thread(7347).useFirstForumPostMessage(thread).firstMessage;
+      const obj7 = thread(7347);
+      const isThreadModerator = thread(7315).useIsThreadModerator(parentChannel);
+      const obj8 = thread(7315);
+      const canManageThread = thread(7315).useCanManageThread(thread);
+      const obj9 = thread(7315);
+      const canUnarchiveThread = thread(7315).useCanUnarchiveThread(thread);
+      const obj10 = thread(7315);
+      const existingPin = thread(9640).useExistingPin(thread);
+      const obj11 = thread(9640);
       const items5 = [ThreadMessageStore];
       const stateFromStores5 = thread(504).useStateFromStores(items5, () => {
         let num = ThreadMessageStore.getCount(thread.id);
@@ -886,7 +886,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return num;
       });
-      const DeveloperMode = thread(2044).DeveloperMode;
+      const DeveloperMode = thread(4776).DeveloperMode;
       const setting = DeveloperMode.useSetting();
       const obj12 = thread(504);
       const items6 = [AuthenticationStore];
@@ -898,8 +898,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj13 = thread(504);
       const tmp18 = useChannelNameDefault(thread);
       if (null != stateFromStores) {
-        const obj14 = { guild: stateFromStores, size: tmp(6436).GuildIconSizes.LARGE };
-        let tmp21 = jsx(GuildIconDefault, { guild: stateFromStores, size: tmp(6436).GuildIconSizes.LARGE });
+        const obj14 = { guild: stateFromStores, size: tmp(6831).GuildIconSizes.LARGE };
+        let tmp21 = jsx(GuildIconDefault, { guild: stateFromStores, size: tmp(6831).GuildIconSizes.LARGE });
         let tmp20 = jsx;
         const tmp17Result = GuildIconDefault;
       } else {
@@ -944,7 +944,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         favorites: useFavoritesGuildChannelActionsDefault(thread),
       });
       obj17.startExpanded = thread(1630).isMetaQuest();
-      obj17.header = tmp20(thread(10793).ActionSheetIconHeader, { title: tmp18, icon: tmp21 });
+      obj17.header = tmp20(thread(10806).ActionSheetIconHeader, { title: tmp18, icon: tmp21 });
       obj17.children = arr8.map((buttons) => {
         buttons = buttons.buttons;
         return jsx(
@@ -961,10 +961,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3 = label === intl2.string(thread(1128).t.xwMqD7);
               }
               return closure_1_14(
-                thread(7171).ActionSheetRow,
+                thread(7240).ActionSheetRow,
                 {
                   variant: str,
-                  icon: closure_1_14(thread(7171).ActionSheetRow.Icon, { IconComponent, disableColor }),
+                  icon: closure_1_14(thread(7240).ActionSheetRow.Icon, { IconComponent, disableColor }),
                   label,
                   trailing,
                   onPress() {
@@ -979,5 +979,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           buttons.sectionKey,
         );
       });
-      return tmp20(thread(7175).ActionSheet, obj17);
+      return tmp20(thread(7244).ActionSheet, obj17);
     };

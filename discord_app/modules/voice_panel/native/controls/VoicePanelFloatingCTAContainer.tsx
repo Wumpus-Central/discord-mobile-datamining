@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
 import MobileVisualRefreshExperiment from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
@@ -16,11 +16,11 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(10680).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(10683).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(10693).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(10696).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5191);
+const createStyles = fn(4945);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,
